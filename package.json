@@ -1,0 +1,35 @@
+{
+  "name": "storybook-html-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build:tailwind": "postcss src/css/base.css -o src/css/tailwind.css",
+    "build:tailwind-prod": "cross-env NODE_ENV=production postcss src/css/base.css -o src/css/tailwind.generated.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.2.5",
+    "@storybook/addon-essentials": "^6.2.5",
+    "@storybook/addon-links": "^6.2.5",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/html": "^6.2.5",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
