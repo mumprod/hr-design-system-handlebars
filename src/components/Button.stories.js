@@ -2,13 +2,13 @@ import { createButton } from "./Button";
 import button from "./Button.hbs";
 
 export default {
-  title: "Example/Button",
+  title: "Komponenten/Button",
   argTypes: {
     label: { control: "text" },
     primary: { control: "boolean" },
     backgroundColor: { control: "color" },
     size: {
-      control: { type: "select", options: ["sm", "ms", "lg","xl"] },
+      control: { type: "select", options: ["sm", "ms", "lg", "xl"] },
     },
     type: { control: { type: "select", options: ["primary", "secondary"] } },
     onClick: { action: "onClick" },
