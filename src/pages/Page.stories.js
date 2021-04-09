@@ -2,7 +2,7 @@ import { createPage } from "./Page";
 import * as HeaderStories from "../stories/Header.stories";
 
 export default {
-  title: "Example/Page",
+  title: "Seiten/Page",
   argTypes: {
     onLogin: { action: "onLogin" },
     onLogout: { action: "onLogout" },
