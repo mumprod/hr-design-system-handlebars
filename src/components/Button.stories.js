@@ -1,12 +1,9 @@
-import { createButton } from "./Button";
 import button from "./Button.hbs";
 
 export default {
   title: "Komponenten/Button",
   argTypes: {
     label: { control: "text" },
-    primary: { control: "boolean" },
-    backgroundColor: { control: "color" },
     size: {
       control: { type: "select", options: ["sm", "ms", "lg", "xl"] },
     },
@@ -40,11 +37,6 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   type: "secondary",
   label: "Button",
-  books: [
-    { title: "A book", synopsis: "With a description" },
-    { title: "Another book", synopsis: "From a very good author" },
-    { title: "Book without synopsis" },
-  ],
 };
 
 export const XLarge = Template.bind({});

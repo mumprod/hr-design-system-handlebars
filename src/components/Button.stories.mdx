@@ -1,41 +1,68 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
 
-import { createButton } from "./Button";
+import button from "./Button.hbs";
 
 <Meta
   title="Komponenten/MDX-Button"
   argTypes={{
-    label: { control: "text" },
-    primary: { control: "boolean" },
-    backgroundColor: { control: "color" },
-    size: {
-      control: { type: "select", options: ["small", "medium", "large"] },
+    label: {
+      control: "text",
+      description: "Button text",
     },
-    onClick: { action: "onClick" },
+    size: {
+      control: { type: "select", options: ["sm", "md", "lg"] },
+      description: "Größe des Buttons",
+      table: {
+        defaultValue: {
+          summary: "md",
+        },
+      },
+    },
+    type: {
+      description: "Typ des Buttons",
+      control: {
+        type: "select",
+        options: ["primary", "secondary"],
+      },
+      table: {
+        defaultValue: {
+          summary: "primary",
+        },
+      },
+    },
   }}
 />
 
 export const Template = ({ label, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return createButton({ label, ...args });
+  return button({ label, ...args });
 };
 
 # Button
 
 Let's define a story for our `Button` component:
 
-<Story
-  name="Primary"
-  args={{
-    primary: true,
-    label: "Button",
-  }}
->
-  {Template.bind({})}
-</Story>
+<Preview withToolbar>
+  <Story
+    name="Primary"
+    args={{
+      label: "Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
 
-We can drop it in a `Canvas` to get a code snippet:
+<ArgsTable story="Primary" />
+
+## Button Secondary
 
 <Canvas>
   <Story
@@ -44,17 +71,18 @@ We can drop it in a `Canvas` to get a code snippet:
       docs: {
         source: {
           code: `
-<Button class="storybook-button storybook-button--primary">Button</button>
+<Button class="storybook-button storybook-button--secondary">Button</button>
         `,
         },
       },
     }}
     args={{
       label: "Button",
+      type: "secondary",
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Secondary" />
+## Test
