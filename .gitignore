@@ -7,7 +7,6 @@
 /storybook-static
 
 # production
-/build
 /dist
 
 # misc
