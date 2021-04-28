@@ -3,7 +3,7 @@ name: "Chromatic"
 # The event that will trigger the action
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, synchronize]
 
 # What the action will do
 jobs:
