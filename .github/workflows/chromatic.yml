@@ -1,9 +1,7 @@
 # Name of our action
 name: "Chromatic"
 # The event that will trigger the action
-on:
-  pull_request:
-    types: [opened, edited]
+on: pull_request
 
 # What the action will do
 jobs:
