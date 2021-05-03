@@ -16,7 +16,8 @@
     "build-tailwind-prod": "cross-env NODE_ENV=production postcss src/css/base.css -o dist/css/tailwind.generated.css",
     "build": "npm run clean & npm run build:tailwind & node ./scripts/build.js",
     "chromatic": "npx chromatic --project-token 52c8345484f9",
-    "clean": "rimraf  dist"
+    "clean": "rimraf  dist",
+    "release": "npx auto shipit --base-branch=main"
   },
   "keywords": [],
   "devDependencies": {

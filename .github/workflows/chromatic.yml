@@ -4,6 +4,9 @@ name: "Chromatic"
 on:
   pull_request:
     types: [opened, synchronize]
+  push:
+    branches:
+      - main
 
 # What the action will do
 jobs:
