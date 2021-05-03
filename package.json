@@ -2,7 +2,7 @@
   "name": "hr-design-system-handlebars",
   "description": "Web component library of Hessischer Rundfunk",
   "author": "Hessischer Rundfunk <technikteam@hr.de>",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "main": "index.js",
   "repository": "https://github.com/szuelch/hr-design-system-handlebars",
