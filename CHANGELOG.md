@@ -1,4 +1,4 @@
-# v0.1.1 (Mon May 03 2021)
+# v0.1.0 (Mon May 03 2021)
 
 - Created initial version of HR Designsystem with a basic button component
 
