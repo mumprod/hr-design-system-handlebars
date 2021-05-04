@@ -1,3 +1,20 @@
+# v0.1.3 (Tue May 04 2021)
+
+#### 🐛 Bug Fix
+
+- add unset header step according to [#10](https://github.com/szuelch/hr-design-system-handlebars/pull/10) ([@szuelch](https://github.com/szuelch))
+- changes github commit token [#9](https://github.com/szuelch/hr-design-system-handlebars/pull/9) ([@szuelch](https://github.com/szuelch))
+- changes padding-x [#8](https://github.com/szuelch/hr-design-system-handlebars/pull/8) ([@szuelch](https://github.com/szuelch))
+- updates padding-y of button [#7](https://github.com/szuelch/hr-design-system-handlebars/pull/7) ([@szuelch](https://github.com/szuelch))
+- Improve button [#6](https://github.com/szuelch/hr-design-system-handlebars/pull/6) ([@szuelch](https://github.com/szuelch))
+- calls clean script before build script [#5](https://github.com/szuelch/hr-design-system-handlebars/pull/5) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.2 (Mon May 03 2021)
 
 #### 🐛 Bug Fix
