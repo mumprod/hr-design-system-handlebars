@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "index.js",
   "repository": "https://github.com/szuelch/hr-design-system-handlebars",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -14,7 +14,7 @@
     "build-storybook-docs": "build-storybook -s public --docs",
     "build:tailwind": "postcss src/css/base.css -o dist/css/tailwind.css",
     "build-tailwind-prod": "cross-env NODE_ENV=production postcss src/css/base.css -o dist/css/tailwind.generated.css",
-    "build": "npm run clean & npm run build:tailwind & node ./scripts/build.js",
+    "build": "npm run build:tailwind & node ./scripts/build.js",
     "chromatic": "npx chromatic --project-token 52c8345484f9",
     "clean": "rimraf  dist",
     "release": "npx auto shipit --base-branch=main"
