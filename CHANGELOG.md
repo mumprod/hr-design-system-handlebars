@@ -1,3 +1,15 @@
+# v0.1.9 (Tue May 04 2021)
+
+#### 🐛 Bug Fix
+
+- removes clean job from release action [#11](https://github.com/szuelch/hr-design-system-handlebars/pull/11) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.3 (Tue May 04 2021)
 
 #### 🐛 Bug Fix
