@@ -4,7 +4,7 @@
   "author": "Hessischer Rundfunk <technikteam@hr.de>",
   "private": false,
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/szuelch/hr-design-system-handlebars",
   "version": "0.1.9",
   "scripts": {
