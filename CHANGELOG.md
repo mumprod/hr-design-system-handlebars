@@ -1,3 +1,15 @@
+# v0.1.10 (Wed May 05 2021)
+
+#### 🐛 Bug Fix
+
+- Release update [#12](https://github.com/szuelch/hr-design-system-handlebars/pull/12) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.9 (Tue May 04 2021)
 
 #### 🐛 Bug Fix
