@@ -6,3 +6,4 @@ const run = (cmd) => execSync(cmd, { stdio: "inherit", cwd: root });
 
 // Copy hbs files into the dist folder
 run(`npx copyfiles \"./src/**/*.hbs\" dist --up=1`);
+run(`npx copyfiles \"./src/index.js\" dist --up=1`);
