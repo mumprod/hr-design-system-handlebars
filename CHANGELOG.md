@@ -1,3 +1,15 @@
+# v0.1.11 (Thu May 06 2021)
+
+#### 🐛 Bug Fix
+
+- button primary is red now [#13](https://github.com/szuelch/hr-design-system-handlebars/pull/13) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.10 (Wed May 05 2021)
 
 #### 🐛 Bug Fix
