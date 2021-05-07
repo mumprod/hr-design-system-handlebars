@@ -25,7 +25,7 @@ module.exports = {
         include: path.resolve(__dirname, "../"),
         query: {
           helperDirs: [path.resolve(__dirname, "../build/helpers")],
-          partialDirs: [path.resolve(__dirname, "../src/components")],
+          partialDirs: [path.resolve(__dirname, "../src/views")],
         },
       },
       {
