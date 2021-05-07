@@ -1,3 +1,15 @@
+# v0.1.12 (Fri May 07 2021)
+
+#### 🐛 Bug Fix
+
+- changes the folder structure of the handlebar [#14](https://github.com/szuelch/hr-design-system-handlebars/pull/14) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.11 (Thu May 06 2021)
 
 #### 🐛 Bug Fix
