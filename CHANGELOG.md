@@ -1,3 +1,15 @@
+# v0.1.13 (Tue Jun 08 2021)
+
+#### 🐛 Bug Fix
+
+- changes chromatic token [#15](https://github.com/mumprod/hr-design-system-handlebars/pull/15) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.12 (Fri May 07 2021)
 
 #### 🐛 Bug Fix
