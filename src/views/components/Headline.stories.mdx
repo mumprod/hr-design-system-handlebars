@@ -1,0 +1,55 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import headline from "./Headline.hbs";
+
+<Meta
+  title="Komponenten/Überschrift"
+  argTypes={{
+    label: {
+      control: "text",
+      description: "Überschrift Text",
+    },
+    headlineSize: {
+      control: {
+        type: "select",
+        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      },
+      description: "Größe",
+      table: {
+        defaultValue: {
+          summary: "h2",
+        },
+      },
+    },
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return headline({ text, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Überschriften` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="h1"
+    args={{
+      headlineSize: "h1",
+      text: "Überschrift",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="h1" />
