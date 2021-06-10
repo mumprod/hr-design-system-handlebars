@@ -1,3 +1,15 @@
+# v0.1.14 (Thu Jun 10 2021)
+
+#### 🐛 Bug Fix
+
+- Überschriften Komponente [#16](https://github.com/mumprod/hr-design-system-handlebars/pull/16) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.1.13 (Tue Jun 08 2021)
 
 #### 🐛 Bug Fix
