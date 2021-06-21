@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  important: "#hr-ds",
   purge: {
     content: ["./src/**/*.hbs"],
     options: {
