@@ -551,6 +551,34 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family: "DIN";
+
+  font-display: auto;
+
+  src: url("../fonts/DINPro.woff");
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "DIN";
+
+  font-display: auto;
+
+  src: url("../fonts/DINPro-Bold.woff");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-stretch: normal;
+}
+
 .container {
   width: 100%;
 }
@@ -11295,6 +11323,10 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-copy {
+  font-family: DIN, sans-serif;
 }
 
 .font-thin {
@@ -42578,6 +42610,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-copy {
+    font-family: DIN, sans-serif;
+  }
+
   .sm\:font-thin {
     font-weight: 100;
   }
@@ -73687,6 +73723,10 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-copy {
+    font-family: DIN, sans-serif;
   }
 
   .md\:font-thin {
@@ -104800,6 +104840,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-copy {
+    font-family: DIN, sans-serif;
+  }
+
   .lg\:font-thin {
     font-weight: 100;
   }
@@ -135911,6 +135955,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-copy {
+    font-family: DIN, sans-serif;
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -167020,6 +167068,10 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-copy {
+    font-family: DIN, sans-serif;
   }
 
   .\32xl\:font-thin {

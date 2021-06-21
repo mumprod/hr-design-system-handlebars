@@ -1,4 +1,5 @@
-import "../src/css/index.css";
+import "../src/assets/css/index.css";
+import "../src/assets/css/tailwind.css";
 import { themes } from "@storybook/theming";
 import hrDesignsystemDark from "./HRDesignsystemDark";
 import hrDesignsystemLight from "./HRDesignsystemLight";
