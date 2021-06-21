@@ -47,7 +47,8 @@
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.1",
+    "tailwindcss-important": "^1.0.0"
   },
   "dependencies": {}
 }
