@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         copy: ["DIN", "sans-serif"],
+        heading: ["RobotoSlab", "serif"],
       },
     },
   },
