@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { resetComponents } from "@storybook/components";
+
+<Meta title="Dokumentation/Grundlegendes/Typographie" />
+
+# Typographie
+
+In den Webauftritten des Hessischen Rundfunks werden drei unterschiedliche Schriftarten verwendet. Fließtexte (Artikel, Anreißertexte von Teasern, Navigationsmenü Punkte, etc.) gebrauchen
+die Schriftart **DIN**. Überschriften werden mit **Roboto** ausgezeichnet und Metainformationen (Copyright Hinweise, Datumsangaben bei Teasern, etc.) nutzen die Schriftart
+**Merriweather**.
+
+## Fließtexte
+
+Zur Auszeichnung von Fließtexten stehen die folgenden Utility Klassen zur verfügung:
+
+| Klasse      | Properties                                           | Erläuterung                                           |
+| :---------- | :--------------------------------------------------- | :---------------------------------------------------- |
+| `font-copy` | `font-family: DIN, sans-serif`                       | Setzt die Eigenschaft `font-family`                   |
+| `text-xs`   | `font-size: 0.75rem;` <br /> `line-height: 1rem`     | Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-sm`   | `font-size: 0.875rem;` <br /> `line-height: 1.25rem` | Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-base` | `font-size: 1rem;` <br /> `line-height: 1.5rem`      | Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-lg`   | `font-size: 1.125rem;` <br /> `line-height: 1.75rem` | Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-xl`   | `font-size: 1.25rem;` <br /> `line-height: 1.75rem`  | Setzt die Eigenschaften `font-size` und `line-height` |
+
+### Verwendung
+
+Soll der Inhalt eines bestimmten HTML-Elements als Fließtext ausgezeichnet werden, müssen ihm die Klasse `font-copy` sowie
+eine der Klassen `text-{size}` gegben werden.
+
+<div className="rounded-t-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
+  <dl className="text-violet-600">
+    <div className="flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-3">
+        xs
+      </dt>
+      <dd className="truncate text-xs font-copy">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-4">
+        sm
+      </dt>
+      <dd className="truncate text-sm font-normal font-copy">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
+        base
+      </dt>
+      <dd className="truncate text-base font-normal font-copy">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className=" mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        lg
+      </dt>
+      <dd className="truncate text-lg font-normal font-copy">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        xl
+      </dt>
+      <dd className="truncate text-xl font-normal font-copy">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+  </dl>
+</div>
+
+```html
+<p class="text-xs font-copy">The quick brown fox ...</p>
+<p class="text-sm font-copy">The quick brown fox ...</p>
+<p class="text-base font-copy">The quick brown fox ...</p>
+<p class="text-lg font-copy">The quick brown fox ...</p>
+```
+
+Sollte, aus welchen Gründen auch immer, ein Fließtext in einer anderen Größe benötigt werden, finden sich alle weiteren zu verwendenden Utility Klassen
+auf der Webseite des für unser Designsystem genutzten CSS Frameworks [Tailwind.css](https://tailwindcss.com/docs/font-size).

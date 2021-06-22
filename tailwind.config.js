@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: {
     content: ["./src/**/*.hbs"],
@@ -5,12 +7,18 @@ module.exports = {
       defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
     },
   },
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        copy: ["DIN", "sans-serif"],
+      },
+    },
   },
+  darkMode: false, // or 'media' or 'class'
   variants: {
-    extend: {},
+    extend: {
+      margin: ["important"],
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-important")()],
 };

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "DIN";
+    font-display: auto;
+    src: url("../fonts/DINPro.woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family: "DIN";
+    font-display: auto;
+    src: url("../fonts/DINPro-Bold.woff");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-bold font-sans cursor-pointer inline-block leading-none rounded-3xl;
+  }
+
+  .btn--primary {
+    @apply bg-blue-400 text-white;
+  }
+
+  .btn--secondary {
+    @apply bg-transparent text-gray-700 shadow;
+  }
+
+  .btn--sm {
+    @apply py-2.5 px-4 text-xs;
+  }
+
+  .btn--md {
+    @apply py-3 px-5 text-sm;
+  }
+
+  .btn--lg {
+    @apply py-3 px-6 text-base;
+  }
+
+  .btn--xl {
+    @apply py-3 px-6 text-lg;
+  }
+}
