@@ -13,14 +13,14 @@ die Schriftart **DIN**. Überschriften werden mit **Roboto** ausgezeichnet und M
 
 Zur Auszeichnung von Fließtexten stehen die folgenden Utility Klassen zur verfügung:
 
-| Klasse      | Properties                                           | Erläuterung                                           |
-| :---------- | :--------------------------------------------------- | :---------------------------------------------------- |
-| `font-copy` | `font-family: DIN, sans-serif`                       | Setzt die Eigenschaft `font-family`                   |
-| `text-xs`   | `font-size: 0.75rem;` <br /> `line-height: 1rem`     | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-sm`   | `font-size: 0.875rem;` <br /> `line-height: 1.25rem` | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-base` | `font-size: 1rem;` <br /> `line-height: 1.5rem`      | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-lg`   | `font-size: 1.125rem;` <br /> `line-height: 1.75rem` | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-xl`   | `font-size: 1.25rem;` <br /> `line-height: 1.75rem`  | Setzt die Eigenschaften `font-size` und `line-height` |
+| Klasse      | Properties                                          | Pixel Werte      | Erläuterung                                           |
+| :---------- | :---------------------------------------------------|----------------- | :---------------------------------------------------- |
+| `font-copy` | `font-family: DIN, sans-serif`                      |                  | Setzt die Eigenschaft `font-family`                   |
+| `text-xs`   | `font-size: 0.75rem` <br /> `line-height: 1rem`     |`12px`<br />`16px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-sm`   | `font-size: 0.875rem` <br /> `line-height: 1.25rem` |`14px`<br />`20px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-base` | `font-size: 1rem` <br /> `line-height: 1.5rem`      |`16px`<br />`24px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-lg`   | `font-size: 1.125rem` <br /> `line-height: 1.75rem` |`18px`<br />`28px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-xl`   | `font-size: 1.25rem` <br /> `line-height: 1.75rem`  |`20px`<br />`28px`| Setzt die Eigenschaften `font-size` und `line-height` |
 
 ### Verwendung
 
@@ -86,27 +86,28 @@ auf der Webseite des für unser Designsystem genutzten CSS Frameworks [Tailwind.
 
 Zur Auszeichnung von Überschriften stehen die folgenden Utility Klassen zur verfügung:
 
-| Klasse        | Properties                                           | Erläuterung                                           |
-| :------------ | :--------------------------------------------------- | :---------------------------------------------------- |
-| `font-heading`| `font-family: RobotoSlab, serif`                         | Setzt die Eigenschaft `font-family`                   |
-| `text-lg`     | `font-size: 1.125rem;` <br /> `line-height: 1.75rem` | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-xl`     | `font-size: 1.25rem;` <br /> `line-height: 1.75rem`  | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-2xl`    | `font-size: 1.5rem;` <br /> `line-height: 2rem`      | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-3xl`    | `font-size: 1.875rem;` <br /> `line-height: 2.25rem` | Setzt die Eigenschaften `font-size` und `line-height` |
-| `text-4xl`    | `font-size: 2.25rem;` <br /> `line-height: 2.5rem`   | Setzt die Eigenschaften `font-size` und `line-height` |
+| Klasse             | Properties                                          |                  | Erläuterung                                           |
+| :------------------| :---------------------------------------------------|----------------- | :---------------------------------------------------- |
+| `font-headingSerif`| `font-family: RobotoSlab, serif`                    |                  | Setzt die Eigenschaft `font-family`                   |
+| `font-heading`     | `font-family: RobotoCond, sans-serif`               |                  | Setzt die Eigenschaft `font-family`                   |
+| `text-lg`          | `font-size: 1.125rem` <br /> `line-height: 1.75rem` |`18px`<br />`28px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-xl`          | `font-size: 1.25rem` <br /> `line-height: 1.75rem`  |`20px`<br />`28px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-2xl`         | `font-size: 1.5rem` <br /> `line-height: 2rem`      |`24px`<br />`32px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-3xl`         | `font-size: 1.875rem` <br /> `line-height: 2.25rem` |`30px`<br />`36px`| Setzt die Eigenschaften `font-size` und `line-height` |
+| `text-4xl`         | `font-size: 2.25rem` <br /> `line-height: 2.5rem`   |`36px`<br />`40px`| Setzt die Eigenschaften `font-size` und `line-height` |
 
-### Verwendung
+### Verwendung RobotoSlab
 
-Soll der Inhalt eines bestimmten HTML-Elements als Überschrift ausgezeichnet werden, müssen ihm die Klasse `font-heading` sowie
+Soll der Inhalt eines bestimmten HTML-Elements als **Überschrift mit Serifen** ausgezeichnet werden, müssen ihm die Klasse `font-headingSerif` sowie
 eine der Klassen `text-{size}` gegben werden.
 
-<div className="rounded-t-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
+<div className="rounded-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
   <dl className="text-violet-600">
     <div className="mt-6 flex items-start">
       <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
         lg
       </dt>
-      <dd className="truncate text-lg font-normal font-heading">
+      <dd className="truncate text-lg font-normal font-headingSerif">
         The quick brown fox jumped over the lazy dog.
       </dd>
     </div>
@@ -114,7 +115,7 @@ eine der Klassen `text-{size}` gegben werden.
       <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
         xl
       </dt>
-      <dd className="truncate text-xl font-normal font-heading">
+      <dd className="truncate text-xl font-normal font-headingSerif">
         The quick brown fox jumped over the lazy dog.
       </dd>
     </div>
@@ -122,7 +123,7 @@ eine der Klassen `text-{size}` gegben werden.
       <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
         2xl
       </dt>
-      <dd className="truncate text-2xl font-normal font-heading">
+      <dd className="truncate text-2xl font-normal font-headingSerif">
         The quick brown fox jumped over the lazy dog.
       </dd>
     </div>
@@ -130,7 +131,7 @@ eine der Klassen `text-{size}` gegben werden.
       <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
         3xl
       </dt>
-      <dd className="truncate text-3xl font-normal font-heading">
+      <dd className="truncate text-3xl font-normal font-headingSerif">
         The quick brown fox jumped over the lazy dog.
       </dd>
     </div>
@@ -138,7 +139,64 @@ eine der Klassen `text-{size}` gegben werden.
       <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
         4xl
       </dt>
-      <dd className="truncate text-4xl font-normal font-heading">
+      <dd className="truncate text-4xl font-normal font-headingSerif">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+  </dl>
+</div>
+
+```html
+<p class="text-lg font-headingSerif">The quick brown fox ...</p>
+<p class="text-xl font-headingSerif">The quick brown fox ...</p>
+<p class="text-2xl font-headingSerif">The quick brown fox ...</p>
+<p class="text-3xl font-headingSerif">The quick brown fox ...</p>
+<p class="text-4xl font-headingSerif">The quick brown fox ...</p>
+``` 
+### Verwendung Roboto Condensed
+
+Soll der Inhalt eines bestimmten HTML-Elements als **Überschrift ohne Serifen** ausgezeichnet werden, müssen ihm die Klasse `font-heading` sowie
+eine der Klassen `text-{size}` gegben werden.
+
+<div className="rounded-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
+  <dl className="text-violet-600">
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
+        lg
+      </dt>
+      <dd className="truncate text-lg font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
+        xl
+      </dt>
+      <dd className="truncate text-xl font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className=" mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        2xl
+      </dt>
+      <dd className="truncate text-2xl  font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        3xl
+      </dt>
+      <dd className="truncate text-3xl  font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        4xl
+      </dt>
+      <dd className="truncate text-4xl  font-heading">
         The quick brown fox jumped over the lazy dog.
       </dd>
     </div>
@@ -151,4 +209,61 @@ eine der Klassen `text-{size}` gegben werden.
 <p class="text-2xl font-heading">The quick brown fox ...</p>
 <p class="text-3xl font-heading">The quick brown fox ...</p>
 <p class="text-4xl font-heading">The quick brown fox ...</p>
+``` 
+### Verwendung Roboto Condensed Bold
+
+Soll der Inhalt eines bestimmten HTML-Elements als **Überschrift ohne Serifen** und in **bold** ausgezeichnet werden, müssen ihm die Klasse `font-heading` und `font-bold` sowie
+eine der Klassen `text-{size}` gegben werden.
+
+<div className="rounded-xl overflow-hidden bg-gradient-to-r from-purple-50 to-purple-100 p-10">
+  <dl className="text-violet-600">
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
+        lg
+      </dt>
+      <dd className="truncate text-lg font-bold font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-5">
+        xl
+      </dt>
+      <dd className="truncate text-xl font-bold font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className=" mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        2xl
+      </dt>
+      <dd className="truncate text-2xl font-bold font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        3xl
+      </dt>
+      <dd className="truncate text-3xl font-bold font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+    <div className="mt-6 flex items-start">
+      <dt className="!m-0 w-16 flex-shrink-0 text-sm text-violet-600 text-opacity-50 font-mono leading-6">
+        4xl
+      </dt>
+      <dd className="truncate text-4xl font-bold font-heading">
+        The quick brown fox jumped over the lazy dog.
+      </dd>
+    </div>
+  </dl>
+</div>
+
+```html
+<p class="text-lg font-bold font-heading">The quick brown fox ...</p>
+<p class="text-xl font-bold font-heading">The quick brown fox ...</p>
+<p class="text-2xl font-bold font-heading">The quick brown fox ...</p>
+<p class="text-3xl font-bold font-heading">The quick brown fox ...</p>
+<p class="text-4xl font-bold font-heading">The quick brown fox ...</p>
 ``` 
