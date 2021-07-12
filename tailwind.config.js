@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        copy: ["DIN", "sans-serif"],
-        heading: ["RobotoSlab", "serif"],
+        copy:         ["DIN", "sans-serif"],
+        headingSerif: ["RobotoSlab", "serif"],
+        heading:      ["RobotoCond", "sans-serif"],
       },
     },
   },
