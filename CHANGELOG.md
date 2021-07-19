@@ -1,3 +1,15 @@
+# v0.2.3 (Mon Jul 19 2021)
+
+#### 🐛 Bug Fix
+
+- - New Story for Label Component [#20](https://github.com/mumprod/hr-design-system-handlebars/pull/20) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.2.2 (Mon Jul 12 2021)
 
 #### 🐛 Bug Fix
