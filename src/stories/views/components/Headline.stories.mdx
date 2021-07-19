@@ -15,15 +15,15 @@ import headline from "./Headline.hbs";
       control: "text",
       description: "Überschrift Text",
     },
-    headlineSize: {
+    headlineTag: {
       control: {
         type: "select",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        options: ["span","h1", "h2", "h3", "h4", "h5", "h6"],
       },
       description: "Größe",
       table: {
         defaultValue: {
-          summary: "h1",
+          summary: "span",
         },
       },
     },
@@ -39,6 +39,10 @@ import headline from "./Headline.hbs";
           summary: "",
         },
       },
+    },
+    font: {
+      options: ['copy', 'headingSerif','heading'],
+      control: { type: 'inline-radio' }
     },
   }}
 />
@@ -57,7 +61,7 @@ Ein toller Einleitungstext für unsere `Überschriften` Komponente:
   <Story
     name="h1"
     args={{
-      headlineSize: "h1",
+      headlineTag: "h1",
       text: "Überschrift",
     }}
   >
