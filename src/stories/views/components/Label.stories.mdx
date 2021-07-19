@@ -1,0 +1,47 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import label from "./Label.hbs";
+
+<Meta
+  title="Komponenten/Label"
+  argTypes={{
+    labelType: {
+      control: { type: "select", options: [ "", "Ticker", "Hessen am Morgen", "Pressemitteilung"] },
+      description: "Label",
+      table: {
+        defaultValue: {
+          summary: "Ticker",
+        },
+      },
+    },
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return label({ labelType, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Label` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Ticker"
+    args={{
+      labelType: "Ticker",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Ticker" />

@@ -8,6 +8,15 @@ module.exports = {
     },
   },
   theme: {
+    letterSpacing: {
+      tighter: '-.025em',
+      tight: '-.0125em',
+      normal: '0',
+      wide: '.0125em',
+      wider: '.025em',
+      widest: '.05em',
+
+    },
     extend: {
       fontFamily: {
         copy:         ["DIN", "sans-serif"],
