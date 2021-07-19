@@ -1,3 +1,27 @@
+# v0.2.2 (Mon Jul 12 2021)
+
+#### 🐛 Bug Fix
+
+- Added Roboto Condensed Font to project [#19](https://github.com/mumprod/hr-design-system-handlebars/pull/19) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.2.1 (Tue Jun 22 2021)
+
+#### 🐛 Bug Fix
+
+- Frontify6 12 [#18](https://github.com/mumprod/hr-design-system-handlebars/pull/18) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.2.0 (Tue Jun 22 2021)
 
 #### 🚀 Enhancement
