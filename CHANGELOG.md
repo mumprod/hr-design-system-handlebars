@@ -1,3 +1,15 @@
+# v0.2.4 (Tue Jul 20 2021)
+
+#### 🐛 Bug Fix
+
+- Frontify6 16 [#21](https://github.com/mumprod/hr-design-system-handlebars/pull/21) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.2.3 (Mon Jul 19 2021)
 
 #### 🐛 Bug Fix
