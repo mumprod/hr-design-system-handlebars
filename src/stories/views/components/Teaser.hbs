@@ -24,9 +24,9 @@
     {{/if}}
     <h1>
         {{#unless labelType}}
-            <span class="block font-heading text-xl mt-4">{{topline}}</span>
+            {{> ./Headline headlineTag="span" visualSize="xl" font="heading" text=topline class="mt-4"}}
         {{/unless}}
-        <span class="block font-headingSerif text-2xl mt-1">{{headline}}</span>
+            {{> ./Headline headlineTag="span" visualSize="2xl" font="headingSerif" text=headline class="mt-1"}}
     </h1>
     <div class="font-copy text-base">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
     {{#if author}}
