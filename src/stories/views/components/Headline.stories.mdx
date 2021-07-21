@@ -36,12 +36,24 @@ import headline from "./Headline.hbs";
       description: "Optische Größe",
       table: {
         defaultValue: {
-          summary: "",
+          summary: "base",
         },
       },
     },
     font: {
-      options: ['copy', 'headingSerif','heading'],
+      description: "Schriftart",
+      control: {
+        type: 'inline-radio',
+        options: ['headingSerif','heading']
+      },
+      table: {
+        defaultValue: {
+          summary: "heading",
+        },
+      },
+    },
+    bold: {
+      options: ['true', 'false'],
       control: { type: 'inline-radio' }
     },
   }}
@@ -62,7 +74,10 @@ Ein toller Einleitungstext für unsere `Überschriften` Komponente:
     name="h1"
     args={{
       headlineTag: "h1",
-      text: "Überschrift",
+      visualSize: "base",
+      font:"heading",
+      text: "Das ist eine wirklich sehr lange Headline die kein Ende zu finden scheint",
+      bold: "false",
     }}
   >
     {Template.bind({})}
