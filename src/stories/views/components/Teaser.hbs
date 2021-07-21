@@ -21,13 +21,10 @@
         <div class="mt-4">
             {{> ./Label labelType=labelType}}
         </div>
+        {{> ./Teaser-Headline headlineTag="h1" size="sm" font="headingSerif" headline=headline topline=""}}
+    {{else}}
+        {{> ./Teaser-Headline headlineTag="h1" size="lg" font="headingSerif" headline=headline topline=topline}}
     {{/if}}
-    <h1>
-        {{#unless labelType}}
-            {{> ./Headline headlineTag="span" visualSize="xl" font="heading" text=topline class="mt-4"}}
-        {{/unless}}
-            {{> ./Headline headlineTag="span" visualSize="2xl" font="headingSerif" text=headline class="mt-1"}}
-    </h1>
     <div class="font-copy text-base">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
     {{#if author}}
         <div class="font-headingSerif text-sm text-gray-500">Von {{author}}</div>
