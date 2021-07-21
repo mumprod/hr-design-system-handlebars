@@ -11,21 +11,38 @@ import headline from "./Headline.hbs";
 <Meta
   title="Komponenten/Überschrift"
   argTypes={{
-    label: {
+    text: {
       control: "text",
       description: "Überschrift Text",
     },
-    headlineSize: {
+    headlineTag: {
       control: {
         type: "select",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+        options: ["span","h1", "h2", "h3", "h4", "h5", "h6"],
       },
       description: "Größe",
       table: {
         defaultValue: {
-          summary: "h2",
+          summary: "span",
         },
       },
+    },
+    visualSize: {
+      control: {
+        type: "select",
+        options: ["","4xl","3xl","2xl","xl","lg","base","sm"],
+       
+      },
+      description: "Optische Größe",
+      table: {
+        defaultValue: {
+          summary: "",
+        },
+      },
+    },
+    font: {
+      options: ['copy', 'headingSerif','heading'],
+      control: { type: 'inline-radio' }
     },
   }}
 />
@@ -33,7 +50,7 @@ import headline from "./Headline.hbs";
 export const Template = ({ text, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return headline({ text, ...args });
+  return headline({ text, ...args }); 
 };
 
 # Button
@@ -44,7 +61,7 @@ Ein toller Einleitungstext für unsere `Überschriften` Komponente:
   <Story
     name="h1"
     args={{
-      headlineSize: "h1",
+      headlineTag: "h1",
       text: "Überschrift",
     }}
   >
