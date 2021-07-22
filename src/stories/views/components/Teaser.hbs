@@ -21,9 +21,9 @@
         <div class="mt-4">
             {{> ./Label labelType=labelType}}
         </div>
-        {{> ./Teaser-Headline headlineTag="h1" size="sm" font="headingSerif" headline=headline topline=""}}
+        {{> ./Teaser-Heading headlineTag="h2" size="lg" font="headingSerif" headline=headline topline=""}}
     {{else}}
-        {{> ./Teaser-Headline headlineTag="h1" size="lg" font="headingSerif" headline=headline topline=topline}}
+        {{> ./Teaser-Heading headlineTag="h2" size="lg" font="headingSerif" headline=headline topline=topline}}
     {{/if}}
     <div class="font-copy text-base mt-2">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
     {{#if author}}
