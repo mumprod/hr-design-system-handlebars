@@ -1,3 +1,16 @@
+# v0.2.6 (Mon Jul 26 2021)
+
+#### 🐛 Bug Fix
+
+- Feature/headline 2.0 [#23](https://github.com/mumprod/hr-design-system-handlebars/pull/23) ([@szuelch](https://github.com/szuelch) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.2.5 (Wed Jul 21 2021)
 
 #### 🐛 Bug Fix
