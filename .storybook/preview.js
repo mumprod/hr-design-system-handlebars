@@ -17,3 +17,9 @@ export const parameters = {
     manual: false,
   },
 };
+
+export const decorators = [
+  (Story) => (
+    '<div class="max-w-screen-lg mx-auto">' + Story() + '</div>'
+  ),
+];

@@ -21,15 +21,13 @@
         <div class="mt-4">
             {{> ./Label labelType=labelType}}
         </div>
+        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font=(inline-switch variant 'Serif, Sans Serif' 'headingSerif,heading') headline=headline topline=""}}
+    {{else}}
+        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font=(inline-switch variant 'Serif, Sans Serif' 'headingSerif,heading') headline=headline topline=topline}}
     {{/if}}
-    <h1>
-        {{#unless labelType}}
-            {{> ./Headline headlineTag="span" visualSize="xl" font="heading" text=topline class="mt-4"}}
-        {{/unless}}
-            {{> ./Headline headlineTag="span" visualSize="2xl" font="headingSerif" text=headline class="mt-1"}}
-    </h1>
-    <div class="font-copy text-base">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
+    
+    <div class="font-copy text-base mt-2">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
     {{#if author}}
-        <div class="font-headingSerif text-sm text-gray-500">Von {{author}}</div>
+        <div class="font-headingSerif text-sm text-gray-500 mt-1">Von {{author}}</div>
     {{/if}}
 </div>
