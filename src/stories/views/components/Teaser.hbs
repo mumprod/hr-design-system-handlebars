@@ -21,9 +21,9 @@
         <div class="mt-4">
             {{> ./Label labelType=labelType}}
         </div>
-        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font="headingSerif" headline=headline topline=""}}
+        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font=(inline-switch variant 'Serif, Sans Serif' 'headingSerif,heading') headline=headline topline=""}}
     {{else}}
-        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font="headingSerif" headline=headline topline=topline}}
+        {{> ./Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '100,66,50,33,25' 'lg,sm,sm,sm,sm,sm') font=(inline-switch variant 'Serif, Sans Serif' 'headingSerif,heading') headline=headline topline=topline}}
     {{/if}}
     
     <div class="font-copy text-base mt-2">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>
