@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
@@ -30,6 +31,20 @@ module.exports = {
         copy:         ["DIN", "sans-serif"],
         headingSerif: ["RobotoSlab", "serif"],
         heading:      ["RobotoCond", "sans-serif"],
+      },
+      colors: {
+        blue: {
+          science: '#006dc1'
+        }, 
+        black: {
+          DEFAULT:'#000000'
+        },
+        red: {
+          thunderbird: '#cc1a14'
+        },
+        labelMedia: 'var(--color-label-media)',
+        labelEvent: 'var(--color-label-event)',
+        labelBreakingnews: 'var(--color-label-breakingnews)'      
       },
     },
   },

@@ -1,0 +1,8 @@
+:root {
+  --color-primary: #005293;
+  --color-secondary: #606060;
+
+  --color-label-media: theme('colors.blue.science');
+  --color-label-event: theme('colors.black.DEFAULT');
+  --color-label-breakingnews: theme('colors.red.thunderbird');
+}

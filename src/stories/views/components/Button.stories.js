@@ -1,7 +1,7 @@
 import button from "./Button.hbs";
 
 export default {
-  title: "Komponenten/Button",
+  title: "Komponenten-Beispiele/Button",
   argTypes: {
     label: { control: "text" },
     size: {
