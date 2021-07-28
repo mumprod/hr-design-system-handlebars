@@ -2,9 +2,15 @@
   --color-primary: #005293;
   --color-secondary: #606060;
 
-  --color-label-media: theme("colors.blue.science");
-  --color-label-event: theme("colors.black.DEFAULT");
+  --color-label-media:        theme("colors.blue.science");
+  --color-label-event:        theme("colors.black.DEFAULT");
   --color-label-breakingnews: theme("colors.red.thunderbird");
+  --color-label-comment:      theme("colors.teal.deeperPool");
+  --color-label-infografik:   theme("colors.pink.ripeRaspberries");
+  --color-label-program:      theme("colors.orange.terraX");
+  --color-label-download:     theme("colors.grey.scorpion");
+  --color-label-pm:           theme("colors.blue.congress");
+  --color-label-live:         theme("colors.orange.spicyCarrot");
 }
 
 @tailwind base;
