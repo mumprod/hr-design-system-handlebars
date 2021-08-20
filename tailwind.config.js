@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: {
@@ -33,6 +32,8 @@ module.exports = {
       },
       colors: {
         blue: {
+          jellyBean: "#276b9e",
+          pacificBlue: "#009bc6",
           science: "#006dc1",
           congress: "#005293",
         },
@@ -41,14 +42,14 @@ module.exports = {
         },
         red: {
           thunderbird: "#cc1a14",
-          
+          monza: "#c20016",
         },
         pink: {
           ripeRaspberries: "#be005a",
         },
         orange: {
           terraX: "#bb4827",
-          spicyCarrot: "#d34600"
+          spicyCarrot: "#d34600",
         },
         teal: {
           deeperPool: "#097d8e",
@@ -59,12 +60,12 @@ module.exports = {
         labelMedia: "var(--color-label-media)",
         labelEvent: "var(--color-label-event)",
         labelBreakingnews: "var(--color-label-breakingnews)",
-        labelComment: "var(--color-label-comment)",     
-        labelInfografik: "var(--color-label-infografik)",  
-        labelProgram: "var(--color-label-program)",      
-        labelDownload: "var(--color-label-download)",    
-        labelPm: "var(--color-label-pm)",           
-        labelLive: "var(--color-label-live)",         
+        labelComment: "var(--color-label-comment)",
+        labelInfografik: "var(--color-label-infografik)",
+        labelProgram: "var(--color-label-program)",
+        labelDownload: "var(--color-label-download)",
+        labelPm: "var(--color-label-pm)",
+        labelLive: "var(--color-label-live)",
       },
     },
   },

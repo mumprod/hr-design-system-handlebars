@@ -1,10 +1,4 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
 
 import headline from "./Headline.hbs";
 
@@ -18,7 +12,7 @@ import headline from "./Headline.hbs";
     headlineTag: {
       control: {
         type: "select",
-        options: ["span","h1", "h2", "h3", "h4", "h5", "h6"],
+        options: ["span", "h1", "h2", "h3", "h4", "h5", "h6"],
       },
       description: "Größe",
       table: {
@@ -30,8 +24,7 @@ import headline from "./Headline.hbs";
     visualSize: {
       control: {
         type: "select",
-        options: ["","4xl","3xl","2xl","xl","lg","base","sm"],
-       
+        options: ["", "4xl", "3xl", "2xl", "xl", "lg", "base", "sm"],
       },
       description: "Optische Größe",
       table: {
@@ -43,8 +36,8 @@ import headline from "./Headline.hbs";
     font: {
       description: "Schriftart",
       control: {
-        type: 'inline-radio',
-        options: ['headingSerif','heading']
+        type: "inline-radio",
+        options: ["headingSerif", "heading"],
       },
       table: {
         defaultValue: {
@@ -53,8 +46,8 @@ import headline from "./Headline.hbs";
       },
     },
     bold: {
-      options: ['true', 'false'],
-      control: { type: 'inline-radio' }
+      options: ["true", "false"],
+      control: { type: "inline-radio" },
     },
     class: {
       control: "text",
@@ -66,7 +59,7 @@ import headline from "./Headline.hbs";
 export const Template = ({ text, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return headline({ text, ...args }); 
+  return headline({ text, ...args });
 };
 
 # Button
@@ -79,8 +72,9 @@ Ein toller Einleitungstext für unsere `Überschriften` Komponente:
     args={{
       headlineTag: "h1",
       visualSize: "base",
-      font:"heading",
-      text: "Das ist eine wirklich sehr lange Headline die kein Ende zu finden scheint",
+      font: "heading",
+      text:
+        "Das ist eine wirklich sehr lange Headline die kein Ende zu finden scheint",
       bold: "false",
     }}
   >

@@ -4,6 +4,8 @@ import {
   Story,
   Canvas,
   Preview,
+  ColorPalette,
+  ColorItem,
 } from "@storybook/addon-docs/blocks";
 
 import label from "./Label.hbs";
@@ -12,8 +14,9 @@ import label from "./Label.hbs";
   title="Komponenten/Label"
   argTypes={{
     labelType: {
-      control: { type: "select", options: 
-        [ 
+      control: {
+        type: "select",
+        options: [
           "",
           "media",
           "event",
@@ -36,7 +39,8 @@ import label from "./Label.hbs";
           "buliticker",
           "social-tv",
           "blog",
-        ]},
+        ],
+      },
       description: "Label",
       table: {
         defaultValue: {
@@ -47,7 +51,7 @@ import label from "./Label.hbs";
     labelText: {
       control: "text",
       description: "Label Text",
-    }
+    },
   }}
 />
 
@@ -66,7 +70,70 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
     name="Media"
     args={{
       labelType: "media",
-      labelText: "Media"
+      labelText: "Media",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Event"
+    args={{
+      labelType: "event",
+      labelText: "Event",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Breaking News"
+    args={{
+      labelType: "breakingnews",
+      labelText: "Breaking News",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Kommentar"
+    args={{
+      labelType: "comment",
+      labelText: "Kommentar",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Infografik"
+    args={{
+      labelType: "infografik",
+      labelText: "Infografik",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Programm"
+    args={{
+      labelType: "program",
+      labelText: "Programm",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Download"
+    args={{
+      labelType: "download",
+      labelText: "Download",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Pressemitteilung"
+    args={{
+      labelType: "pm",
+      labelText: "Pressemitteilung",
     }}
   >
     {Template.bind({})}
