@@ -1,0 +1,54 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import item from "./ServiceNavigationItem.hbs";
+
+<Meta
+  title="Komponenten/Menu/ServiceNavigationItem"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return item({ labelType, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Label` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Wetter"
+    args={{
+      label: "Wetter",
+      icon: "wetter"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Wetter" />
+
+## Teaser-Heading Sans serif large
+
+<Canvas>
+  <Story
+    name="Verkehr"
+    args={{
+      label: "Verkehr",
+      icon: "verkehr"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

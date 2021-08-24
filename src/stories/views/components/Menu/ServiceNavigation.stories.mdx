@@ -1,0 +1,36 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import menu from "./ServiceNavigation.hbs";
+
+<Meta
+  title="Komponenten/Menu/ServiceNavigation"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return menu({ labelType, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Label` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Main Menu"
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Ticker" />
