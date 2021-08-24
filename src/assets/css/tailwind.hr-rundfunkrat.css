@@ -16,6 +16,8 @@
   --color-label-download:     theme("colors.grey.scorpion");
     /* Event */
     --color-label-event:        theme("colors.black.DEFAULT");
+      /* Pressemitteilungen */
+  --color-label-pm:           theme("colors.blue.deepCerulean");
 }
 
 @tailwind base;

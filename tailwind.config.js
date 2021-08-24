@@ -36,6 +36,7 @@ module.exports = {
           pacificBlue: "#009bc6",
           science: "#006dc1",
           congress: "#005293",
+          deepCerulean: "#006eb7", 
         },
         black: {
           DEFAULT: "#000000",
@@ -46,6 +47,7 @@ module.exports = {
         },
         pink: {
           ripeRaspberries: "#be005a",
+          rose: "#e5007d",
         },
         orange: {
           terraX: "#bb4827",

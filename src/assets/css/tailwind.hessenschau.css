@@ -2,15 +2,24 @@
   --color-primary: #005293;
   --color-secondary: #606060;
 
+  /* Medieninhalte, Video, Audio, Bildergalerie */
   --color-label-media:        theme("colors.blue.science");
-  --color-label-event:        theme("colors.black.DEFAULT");
-  --color-label-breakingnews: theme("colors.red.thunderbird");
-  --color-label-comment:      theme("colors.teal.deeperPool");
-  --color-label-infografik:   theme("colors.pink.ripeRaspberries");
-  --color-label-program:      theme("colors.orange.terraX");
-  --color-label-download:     theme("colors.grey.scorpion");
-  --color-label-pm:           theme("colors.blue.congress");
+  /* Ticker, Live, Livestream */
   --color-label-live:         theme("colors.orange.spicyCarrot");
+  /* Event */
+  --color-label-event:        theme("colors.black.DEFAULT");
+  /* Eilmeldung */
+  --color-label-breakingnews: theme("colors.red.thunderbird");
+  /* Kommentar */
+  --color-label-comment:      theme("colors.teal.deeperPool");
+  /* Infografik */
+  --color-label-infografik:   theme("colors.pink.ripeRaspberries");
+  /* Sendung */
+  --color-label-program:      theme("colors.blue.pacificBlue");
+  /* Download */
+  --color-label-download:     theme("colors.grey.scorpion");
+  /* Pressemitteilungen */
+  --color-label-pm:           theme("colors.blue.deepCerulean"); 
 }
 
 @tailwind base;

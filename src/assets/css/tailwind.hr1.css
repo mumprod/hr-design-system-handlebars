@@ -10,12 +10,12 @@
   --color-label-comment:      theme("colors.teal.deeperPool");
   /* Eilmeldung */
   --color-label-breakingnews: theme("colors.red.thunderbird");
-    /* Sendung */
-    --color-label-program:      theme("colors.blue.pacificBlue");
-    /* Download */
+  /* Sendung */
+  --color-label-program:      theme("colors.blue.pacificBlue");
+  /* Download */
   --color-label-download:     theme("colors.grey.scorpion");
-    /* Event */
-    --color-label-event:        theme("colors.black.DEFAULT");
+  /* Event */
+  --color-label-event:        theme("colors.black.DEFAULT");
 }
 
 @tailwind base;
