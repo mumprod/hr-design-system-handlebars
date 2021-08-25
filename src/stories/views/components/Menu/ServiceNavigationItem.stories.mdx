@@ -52,3 +52,22 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<Canvas>
+  <Story
+    name="Verkehr mit Flyout"
+    args={{
+      label: "Verkehr",
+      icon: "verkehr",
+      flyout: {
+        columns: [
+          { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] },
+          { items: [{"title": "item2.1"},{"title": "item2.2"}] }
+        ]
+      },
+      
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

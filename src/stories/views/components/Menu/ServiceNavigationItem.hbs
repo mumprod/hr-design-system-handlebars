@@ -1,9 +1,11 @@
-<li class="flex flex-col flex-shrink-0 justify-center border-l border-gray-900 first:border-l-0">
-    
+<li class="flex flex-col flex-shrink-0 justify-center border-l border-gray-900 first:border-l-0">   
     <svg role="presentation" aria-hidden="true" class="h-9 w-full">
         <use xlink:href="./icons/svgmap.min.svg#{{icon}}"></use>
     </svg>
     <span class="w-full">
         {{label}} 
     </span>
+    {{#with flyout}}
+        {{> ./ServiceNavigationFlyout }}
+    {{/with}}
 </li>
