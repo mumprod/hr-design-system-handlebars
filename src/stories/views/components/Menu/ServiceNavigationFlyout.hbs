@@ -1,0 +1,9 @@
+<div>
+    <div class="c-subNav__header">
+       HEADER {{> ./ServiceNavigationFlyoutItem tagname="div" text="item header"}}
+    </div>
+    COLUMN
+    {{#each this.columns}}  
+        {{> ./ServiceNavigationFlyoutColumn }}
+    {{/each~}}
+</div>

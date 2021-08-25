@@ -1,0 +1,61 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import flyout from "./ServiceNavigationFlyout.hbs";
+
+<Meta
+  title="Komponenten/Menu/ServiceNavigationFlyout"
+  argTypes={{
+    columns: {
+      control: "array",
+      description: "Menü in JSON Format",
+    },
+    
+  }}
+/>
+
+
+
+export const Template = ({ ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return flyout({ ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Label` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="1-Column"
+    args={{
+      columns: [
+              { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] }
+            ]
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="1-Column" />
+
+<Canvas>
+  <Story
+    name="2-Column"
+    args={{
+      columns: [
+              { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] },
+              { items: [{"title": "item2.1"},{"title": "item2.2"}] }
+            ]
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

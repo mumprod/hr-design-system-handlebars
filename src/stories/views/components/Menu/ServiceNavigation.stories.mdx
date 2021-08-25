@@ -21,16 +21,16 @@ export const Template = ({ labelType, ...args }) => {
   return menu({ labelType, ...args });
 };
 
-# Button
+# ServiceNavigation
 
-Ein toller Einleitungstext für unsere `Label` Komponente:
+In der `ServiceNavigation` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
 
 <Preview withToolbar>
   <Story
-    name="Main Menu"
+    name="Standard"
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="Ticker" />
+<ArgsTable story="Standard" />
