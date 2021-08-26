@@ -8,6 +8,8 @@ import {
 
 import flyout from "./ServiceNavigationFlyout.hbs";
 
+import JsonData from './data.json';
+
 <Meta
   title="Komponenten/Menu/ServiceNavigationFlyout"
   argTypes={{
@@ -33,10 +35,10 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="1-Column"
+    name="1Column"
     args={{
-      columns: [
-              { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] }
+      "columns": [
+              { "items": [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] }
             ]
     }}
   >
@@ -44,16 +46,13 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   </Story>
 </Preview>
 
-<ArgsTable story="1-Column" />
+<ArgsTable story="1Column" />
 
 <Canvas>
   <Story
-    name="2-Column"
+    name="Flyout2Column"
     args={{
-      columns: [
-              { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] },
-              { items: [{"title": "item2.1"},{"title": "item2.2"}] }
-            ]
+      columns: JsonData.columns
     }}
   >
     {Template.bind({})}

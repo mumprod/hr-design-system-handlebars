@@ -8,18 +8,31 @@ import {
 
 import item from "./ServiceNavigationItem.hbs";
 
+import JsonData from './data.json';
+
+
 <Meta
   title="Komponenten/Menu/ServiceNavigationItem"
   argTypes={{
-    
+    label: {
+      control: "text",
+      description: "Label Text",
+    },
+    icon: {
+      control: "text",
+      description: "Icon",
+    },
   }}
 />
 
-export const Template = ({ labelType, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return item({ labelType, ...args });
-};
+
+export const Template = ({ ...args }) => {
+  return item({ ...args });
+}; 
+
+
+
+export const OneItem = Template.bind({});
 
 # Button
 
@@ -64,10 +77,23 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
           { items: [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] },
           { items: [{"title": "item2.1"},{"title": "item2.2"}] }
         ]
-      },
-      
+      },      
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<Canvas>
+  <Story
+    name="Verkehr mit Flyout from File"
+    args={{
+      label: "Verkehr",
+      icon: "verkehr",
+      flyout: JsonData
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
