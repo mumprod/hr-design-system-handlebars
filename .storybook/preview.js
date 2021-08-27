@@ -6,10 +6,6 @@ import hrDesignsystemLight from "./HRDesignsystemLight";
 import { withThemeDecorator } from "./withThemeDecorator";
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  docs: {
-    theme: hrDesignsystemLight,
-  },
   // Storybook a11y addon configuration
   a11y: {
     // the target DOM element
@@ -17,6 +13,8 @@ export const parameters = {
     // sets the execution mode for the addon
     manual: false,
   },
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: { expanded: true },
   customConditionalToolbar: {
     /** Defines the possible sets that can be shown */
     sets: [
@@ -46,6 +44,9 @@ export const parameters = {
     title: "Themes",
     /** Setting disable to true makes the addon disabled by default */
     // disable: true,
+  },
+  docs: {
+    theme: hrDesignsystemLight,
   },
 };
 
