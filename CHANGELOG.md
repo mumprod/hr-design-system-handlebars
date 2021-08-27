@@ -1,3 +1,20 @@
+# v0.3.0 (Fri Aug 27 2021)
+
+#### 🚀 Enhancement
+
+- Frontify6 18 v2 [#25](https://github.com/mumprod/hr-design-system-handlebars/pull/25) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- updates storybook to version 6.3.5 [#24](https://github.com/mumprod/hr-design-system-handlebars/pull/24) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.2.6 (Mon Jul 26 2021)
 
 #### 🐛 Bug Fix
