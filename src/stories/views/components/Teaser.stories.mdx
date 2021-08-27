@@ -1,10 +1,4 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
 
 import teaser from "./Teaser.hbs";
 
@@ -12,8 +6,8 @@ import teaser from "./Teaser.hbs";
   title="Komponenten/Teaser"
   argTypes={{
     variant: {
-      options: ['Serif', 'Sans Serif'],
-      control: { type: 'inline-radio' }
+      options: ["Serif", "Sans Serif"],
+      control: { type: "inline-radio" },
     },
     teaserSize: {
       control: {
@@ -28,9 +22,11 @@ import teaser from "./Teaser.hbs";
       },
     },
     labelType: {
-      control: { type: "select", options: ["", "Ticker", "Hessen am Morgen", "Pressemitteilung"] },
+      control: {
+        type: "select",
+        options: ["", "Ticker", "Hessen am Morgen", "Pressemitteilung"],
+      },
       description: "Label",
-      
     },
     topline: {
       control: "text",
@@ -69,8 +65,9 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
       teaserSize: "33",
       topline: "So plant Glasner bei der Eintracht",
       headline: "Silvas Erbe wird auf mehrere Schultern verteilt",
-      teaserText: "Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.",
-      author: "Stephan Reich"
+      teaserText:
+        "Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.",
+      author: "Stephan Reich",
     }}
   >
     {Template.bind({})}
