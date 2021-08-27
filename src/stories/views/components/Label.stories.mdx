@@ -13,7 +13,7 @@ import label from "./Label.hbs";
 <Meta
   title="Komponenten/Label"
   argTypes={{
-    labelType: {
+    type: {
       control: {
         type: "select",
         labels: {
@@ -64,36 +64,37 @@ import label from "./Label.hbs";
           "ticker",
         ],
       },
-      description: "Label",
+      description: "Art des Labels",
       table: {
         defaultValue: {
           summary: "media",
         },
       },
     },
-    labelText: {
+    text: {
       control: "text",
-      description: "Label Text",
+      description: "Beschriftung des Labels",
     },
   }}
 />
 
-export const Template = ({ labelType, ...args }) => {
+export const Template = ({ type, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return label({ labelType, ...args });
+  return label({ type, ...args });
 };
 
-# Button
+# Label
 
-Ein toller Einleitungstext für unsere `Label` Komponente:
+Teaser auf Übersichtsseiten können mit Hilfe von Labels optisch hervorgehoben werden (z.B. als Kommentar, Liveticker, Eilmeldung, etc.).
+Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
 
 <Preview withToolbar>
   <Story
     name="Download"
     args={{
-      labelType: "download",
-      labelText: "Download",
+      type: "download",
+      text: "Download",
     }}
   >
     {Template.bind({})}
@@ -101,8 +102,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Eilmeldung"
     args={{
-      labelType: "breakingnews",
-      labelText: "Eilmeldung",
+      type: "breakingnews",
+      text: "Eilmeldung",
     }}
   >
     {Template.bind({})}
@@ -110,8 +111,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Event"
     args={{
-      labelType: "event",
-      labelText: "Event",
+      type: "event",
+      text: "Event",
     }}
   >
     {Template.bind({})}
@@ -119,8 +120,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Infografik"
     args={{
-      labelType: "infografik",
-      labelText: "Infografik",
+      type: "infografik",
+      text: "Infografik",
     }}
   >
     {Template.bind({})}
@@ -128,8 +129,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Kommentar"
     args={{
-      labelType: "comment",
-      labelText: "Kommentar",
+      type: "comment",
+      text: "Kommentar",
     }}
   >
     {Template.bind({})}
@@ -137,8 +138,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Liveticker"
     args={{
-      labelType: "liveticker",
-      labelText: "Liveticker",
+      type: "liveticker",
+      text: "Liveticker",
     }}
   >
     {Template.bind({})}
@@ -146,8 +147,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Media"
     args={{
-      labelType: "media",
-      labelText: "Media",
+      type: "media",
+      text: "Media",
     }}
   >
     {Template.bind({})}
@@ -155,8 +156,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Pressemitteilung"
     args={{
-      labelType: "pm",
-      labelText: "Pressemitteilung",
+      type: "pm",
+      text: "Pressemitteilung",
     }}
   >
     {Template.bind({})}
@@ -164,12 +165,25 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
   <Story
     name="Sendung"
     args={{
-      labelType: "program",
-      labelText: "Sendung",
+      type: "program",
+      text: "Sendung",
     }}
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="Ticker" />
+## Einbindung
+
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/Label.hbs type="liveticker" text="Liveticker"}}
+```
+
+Mit folgenden Parametern kann die Komponente konfiguriert werden.
+
+| Parameter | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :-------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------- |
+| **text**  | `String` | Beliebiger Text                                                                                                                                                                                                                                                    | Die Beschriftung des Labels.                     |
+| **type**  | `String` | `analysis`, `blog`, `bulitiker`, `der-tag-in-hessen`, `download`, `brealingnews`, `event`, `fragen-und-antworten`, `glosse`,`infografik`, `interaktiv`, `comment`, `live`, `livechat`, `livestream`, `liveticker`, `media`, `pm`, `program`, `social-tv`, `ticker` | Hiermit wird das Aussehen des Labels festgelegt. |
