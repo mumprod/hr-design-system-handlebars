@@ -50,5 +50,7 @@
     "tailwindcss": "^2.1.1",
     "tailwindcss-important": "^1.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "alpinejs": "^3.2.4"
+  }
 }
