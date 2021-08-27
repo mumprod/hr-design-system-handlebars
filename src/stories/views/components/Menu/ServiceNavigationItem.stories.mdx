@@ -8,7 +8,7 @@ import {
 
 import item from "./ServiceNavigationItem.hbs";
 
-import JsonData from './data.json';
+import JsonData from './serviceIconData.json';
 
 
 <Meta
@@ -87,11 +87,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 <Canvas>
   <Story
     name="Verkehr mit Flyout from File"
-    args={{
-      label: "Verkehr",
-      icon: "verkehr",
-      flyout: JsonData
-    }}
+    args= {JsonData}
+    
   >
     {Template.bind({})}
   </Story>
