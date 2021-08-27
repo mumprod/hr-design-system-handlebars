@@ -12,7 +12,9 @@ module.exports = {
     "@storybook/addon-postcss",
     "@whitespace/storybook-addon-html",
     "@storybook/addon-a11y",
+    "storybook-conditional-toolbar-selector",
   ],
+
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.

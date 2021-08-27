@@ -1,7 +1,8 @@
 import button from "./Button.hbs";
+const colors = require("../../../../tailwind.config");
 
 export default {
-  title: "Komponenten/Button",
+  title: "Komponenten-Beispiele/Button",
   argTypes: {
     label: { control: "text" },
     size: {
@@ -15,6 +16,7 @@ export default {
 const Template = ({ label, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
+  console.log(colors);
   return button({ label, ...args });
 };
 
