@@ -1,4 +1,4 @@
-<div class="container mx-auto w-96 flex flex-wrap mx-2">
+<div x-show="dropped" @click.away="dropped = false" x-init="console.log('initialised!')"  class="w-auto h-auto left-0 md:left-auto bg-white flex flex-wrap mx-2">
     <div class="c-subNav__header w-full">
        {{> ./ServiceNavigationFlyoutItem tagname="div" text="item header"}}
     </div>   
