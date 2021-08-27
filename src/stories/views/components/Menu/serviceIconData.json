@@ -1,0 +1,24 @@
+{
+    "label": "Verkehr",
+    "icon": "verkehr",
+    "flyout": 
+        {
+        "columns": [
+            { 
+                "items": [
+                    {"title": "From JSON item1.1"},
+                    {"title": "From JSON item1.2"},
+                    {"title": "From JSON item1.3"},
+                    {"title": "From JSON item1.4"}
+                    ]
+            },
+            {
+                "items": [
+                    {"title": "item2.1 wsfdsg"},
+                    {"title": "item2.2"}
+                ]
+            }
+        ]
+        }
+    
+}

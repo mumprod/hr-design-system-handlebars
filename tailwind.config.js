@@ -75,6 +75,7 @@ module.exports = {
   variants: {
     extend: {
       margin: ["important"],
+      borderWidth: ['first'],
     },
   },
   plugins: [require("tailwindcss-important")()],
