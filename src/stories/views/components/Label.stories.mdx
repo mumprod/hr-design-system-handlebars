@@ -16,29 +16,52 @@ import label from "./Label.hbs";
     labelType: {
       control: {
         type: "select",
+        labels: {
+          analysis: "Analyse",
+          event: "Event",
+          comment: "Kommentar",
+          media: "Medieninhalte",
+          breakingnews: "Eilmeldung",
+          "der-tag-in-hessen": "Der Tag in Hessen",
+          glosse: "Glosse",
+          "fragen-und-antworten": "Fragen und Antworten",
+          infografik: "Infografik",
+          interaktiv: "Interaktiv",
+          program: "Sendung",
+          download: "Download",
+          pm: "Pressemitteilung",
+          liveticker: "Liveticker",
+          ticker: "Ticker",
+          livestream: "Livestream",
+          live: "Live",
+          livechat: "Livechat",
+          buliticker: "Bundesliga-Ticker",
+          "social-tv": "Social-TV",
+          blog: "Blog",
+        },
         options: [
           "",
-          "media",
-          "event",
-          "breakingnews",
-          "comment",
           "analysis",
+          "blog",
+          "buliticker",
           "der-tag-in-hessen",
-          "glosse",
+          "download",
+          "breakingnews",
+          "event",
           "fragen-und-antworten",
+          "glosse",
           "infografik",
           "interaktiv",
-          "program",
-          "download",
-          "pm",
-          "liveticker",
-          "ticker",
-          "livestream",
+          "comment",
           "live",
           "livechat",
-          "buliticker",
+          "livestream",
+          "liveticker",
+          "media",
+          "pm",
+          "program",
           "social-tv",
-          "blog",
+          "ticker",
         ],
       },
       description: "Label",
@@ -67,19 +90,19 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="Breaking News"
+    name="Download"
     args={{
-      labelType: "breakingnews",
-      labelText: "Breaking News",
+      labelType: "download",
+      labelText: "Download",
     }}
   >
     {Template.bind({})}
   </Story>
   <Story
-    name="Download"
+    name="Eilmeldung"
     args={{
-      labelType: "download",
-      labelText: "Download",
+      labelType: "breakingnews",
+      labelText: "Eilmeldung",
     }}
   >
     {Template.bind({})}
@@ -139,10 +162,10 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
     {Template.bind({})}
   </Story>
   <Story
-    name="Programm"
+    name="Sendung"
     args={{
       labelType: "program",
-      labelText: "Programm",
+      labelText: "Sendung",
     }}
   >
     {Template.bind({})}
