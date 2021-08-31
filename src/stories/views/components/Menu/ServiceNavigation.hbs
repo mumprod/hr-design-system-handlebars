@@ -1,5 +1,13 @@
-<ul class="flex justify-center border border-gray-900">   
-    {{> ./ServiceNavigationItem icon="videopodcast" label="Video & Podcast"}}
-    {{> ./ServiceNavigationItem icon="wetter" label="Wetter"}}
-    {{> ./ServiceNavigationItem icon="verkehr" label="Verkehr"}}
-</ul>
+<div>
+
+    <div>
+        Logo - Auslagern
+    </div>
+    {{#with this.serviceNavigationSSILinks}}
+        <ul class="flex justify-center border border-gray-900">
+            {{#each this.navigationItems}}
+                {{> ./ServiceNavigationItem }}
+            {{/each}} 
+        </ul>
+    {{/with}}
+</div>

@@ -1,4 +1,5 @@
-<li @click="dropped = !dropped" x-data="{dropped: false }" class="flex flex-col items-center border-l border-gray-900 first:border-l-0">   
+<li @click="dropped = !dropped" x-data="{dropped: false }"
+    class="relative flex flex-col items-center border-l border-gray-900 first:border-l-0">   
     <svg role="presentation" aria-hidden="true" class="h-9 w-full">
         <use xlink:href="./icons/svgmap.min.svg#{{icon}}"></use>
     </svg>
@@ -14,7 +15,7 @@
             </svg>
         </div>
     </div>
-    {{#with flyout}}
+    {{#with subNavigation}}
         {{> ./ServiceNavigationFlyout }}
     {{/with}}
 </li>
