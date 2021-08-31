@@ -4,9 +4,8 @@
 			{
 				"label":"Video & Podcast",
 				"icon":"videopodcast",
-				"flyoutStartLinkText": "Parent",
+				"flyoutStartLinkText": "Übersicht Video & Podcast",
 				"subNavigation":{
-					"flyoutStartLinkText":"Übersicht Video & Podcast",
 					"columns":[
 						{
 							"items":[
@@ -51,8 +50,8 @@
 			{
 				"label":"Wetter",
 				"icon":"wetter",
-				"subNavigation":{
-					"flyoutStartLinkText":"Übersicht Wetter",
+				"flyoutStartLinkText":"Übersicht Wetter",
+				"subNavigation":{					
 					"columns":[
 						{
 							"items":[
@@ -95,9 +94,8 @@
 			{
 				"label":"Verkehr",
 				"icon":"verkehr",
-				"flyoutStartLinkText": "test",
-				"subNavigation":{
-					"flyoutStartLinkText":"Übersicht Verkehr",
+				"flyoutStartLinkText":"Übersicht Verkehr",
+				"subNavigation":{					
 					"columns":[
 						{
 							"items":[
