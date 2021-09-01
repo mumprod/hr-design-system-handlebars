@@ -1,3 +1,15 @@
+# v0.5.0 (Wed Sep 01 2021)
+
+#### 🚀 Enhancement
+
+- Frontify data structure improvement service nav [#30](https://github.com/mumprod/hr-design-system-handlebars/pull/30) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.4.3 (Tue Aug 31 2021)
 
 #### 🐛 Bug Fix
