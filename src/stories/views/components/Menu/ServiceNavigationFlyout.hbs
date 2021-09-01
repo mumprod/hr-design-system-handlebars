@@ -1,8 +1,11 @@
-<div x-show="dropped" @click.away="dropped = false" x-init="console.log('initialised!')"  class="w-auto h-auto left-0 md:left-auto bg-white flex flex-wrap mx-2">
-    <div class="c-subNav__header w-full">
-       {{> ./ServiceNavigationFlyoutItem tagname="div" text="item header"}}
-    </div>   
-    {{#each this.columns}}  
-        {{> ./ServiceNavigationFlyoutColumn }}
-    {{/each~}}
-</div>
+{{#with this.subNavigation}}
+    <div x-show="dropped" @click.away="dropped = false" x-init="console.log('initialised!')"
+        class="absolute w-96 top-14 left-0 h-auto bg-white flex flex-wrap mx-2">
+        <div class="c-subNav__header w-full">
+            {{> ./ServiceNavigationFlyoutItem tagname="div" text=../this.flyoutStartLinkText}}
+        </div>   
+        {{#each this.columns}}  
+            {{> ./ServiceNavigationFlyoutColumn }}
+        {{/each~}}
+    </div>
+{{/with}}

@@ -8,7 +8,7 @@ import {
 
 import flyout from "./ServiceNavigationFlyout.hbs";
 
-import JsonData from './data.json';
+import JsonData from './serviceNavigationData.json';
 
 <Meta
   title="Komponenten/Menu/ServiceNavigationFlyout"
@@ -36,11 +36,7 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 <Preview withToolbar>
   <Story
     name="1Column"
-    args={{
-      "columns": [
-              { "items": [{"title": "item1.1"},{"title": "item1.2"},{"title": "item1.3"},{"title": "item1.4"}] }
-            ]
-    }}
+    args={JsonData.serviceNavigationSSILinks.navigationItems[2]}
   >
     {Template.bind({})}
   </Story>
@@ -51,9 +47,7 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 <Canvas>
   <Story
     name="Flyout2Column"
-    args={{
-      columns: JsonData.columns
-    }}
+    args={JsonData.serviceNavigationSSILinks.navigationItems[1]}
   >
     {Template.bind({})}
   </Story>

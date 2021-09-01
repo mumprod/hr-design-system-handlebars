@@ -8,6 +8,8 @@ import {
 
 import navigation from "./Navigation.hbs";
 
+import JsonData from './serviceNavigationData.json';
+
 <Meta
   title="Komponenten/Menu/Navigation"
   argTypes={{
@@ -28,6 +30,7 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 <Preview withToolbar>
   <Story
     name="Main Menu"
+    args= { JsonData }
   >
     {Template.bind({})}
   </Story>

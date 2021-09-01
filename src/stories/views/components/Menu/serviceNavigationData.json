@@ -1,51 +1,124 @@
 {
-    "serviceNavItems":[
-{
-    "label": "Verkehr",
-    "icon": "verkehr",
-    "flyout": 
-        {
-        "columns": [
-            { 
-                "items": [
-                    {"title": "From JSON item1.1"},
-                    {"title": "From JSON item1.2"},
-                    {"title": "From JSON item1.3"},
-                    {"title": "From JSON item1.4"}
-                    ]
-            },
-            {
-                "items": [
-                    {"title": "item2.1 wsfdsg"},
-                    {"title": "item2.2"}
-                ]
-            }
-        ]
-        }
-    
-},
-{
-    "label": "Verkehr",
-    "icon": "verkehr",
-    "flyout": 
-        {
-        "columns": [
-            { 
-                "items": [
-                    {"title": "From JSON item1.1"},
-                    {"title": "From JSON item1.2"},
-                    {"title": "From JSON item1.3"},
-                    {"title": "From JSON item1.4"}
-                    ]
-            },
-            {
-                "items": [
-                    {"title": "item2.1 wsfdsg"},
-                    {"title": "item2.2"}
-                ]
-            }
-        ]
-        }
-    
-}]
+	"serviceNavigationSSILinks":{
+		"navigationItems" : [
+			{
+				"label":"Video & Podcast",
+				"icon":"videopodcast",
+				"flyoutStartLinkText": "Übersicht Video & Podcast",
+				"subNavigation":{
+					"columns":[
+						{
+							"items":[
+								{
+
+									"title":"Aktuelle Sendung"
+								},
+								{
+									"title":"Archiv - alle Sendungen"
+								},
+								{
+									"title":"Newsflash"
+								},
+								{
+									"title":"DAS THEMA"
+								},
+								{
+									"title":"Die hessenschau in 100 Sekunden"
+								},
+								{
+									"title":"Podcasts"
+								},
+								{
+									"title":"hessenschau in der ARD Mediathek"
+								}
+							]
+						},
+						{
+							"items":[
+								{
+									"title":"hessenschau auf YouTube"
+									
+								},
+								{
+									"title":"Livestream hr-fernsehen"
+								}
+							]
+						}
+					]
+				}
+			},		
+			{
+				"label":"Wetter",
+				"icon":"wetter",
+				"flyoutStartLinkText":"Übersicht Wetter",
+				"subNavigation":{					
+					"columns":[
+						{
+							"items":[
+								{
+									"title":"Unwetterwarnungen"
+								},
+								{
+									"title":"Regenradar"
+								},
+								{
+									"title":"Wolkenfilm"
+								},
+								{
+									"title":"Messwerte"
+								},
+								{
+									"title":"Wetterkameras"
+								},
+								{
+									"title":"Wetterbilder-Galerie"
+								},
+								{
+									"title":"mehr Wetter"
+								}
+							]
+						},
+						{
+							"items":[
+								{
+									"title":"Thema des Tages"
+								},
+								{
+									"title":"Foto einsenden"
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"label":"Verkehr",
+				"icon":"verkehr",
+				"flyoutStartLinkText":"Übersicht Verkehr",
+				"subNavigation":{					
+					"columns":[
+						{
+							"items":[
+								{
+									"title":"Verkehrskameras"
+								},
+								{
+									"title":"Blitzer"
+								},
+								{
+									"title":"Schulausfälle"
+								},
+								{
+									"title":"Flugpläne Frankfurt / Parkhausbelegung"
+								},
+								{
+									"title":"Werden Sie hr-Staureporter!"
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
 }

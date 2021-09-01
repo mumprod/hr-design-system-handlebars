@@ -8,6 +8,8 @@ import {
 
 import menu from "./ServiceNavigation.hbs";
 
+import JsonData from './serviceNavigationData.json';
+
 <Meta
   title="Komponenten/Menu/ServiceNavigation"
   argTypes={{
@@ -28,6 +30,7 @@ In der `ServiceNavigation` Komponente werden je nach Welle und Status verschiede
 <Preview withToolbar>
   <Story
     name="Standard"
+    args= {JsonData}
   >
     {Template.bind({})}
   </Story>
