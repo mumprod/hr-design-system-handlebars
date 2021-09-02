@@ -48,6 +48,12 @@ export const parameters = {
   docs: {
     theme: hrDesignsystemLight,
   },
+  options: {
+    storySort: 
+    {
+      order: ['Komponenten',['Header',['Header','BrandNavigation','ServiceNavigation','SectionNavigation'],'Flyout'],'*']
+    } 
+  },
 };
 
 export const decorators = [withThemeDecorator];
