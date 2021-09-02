@@ -1,3 +1,10 @@
 <div>
-BrandNavigation
+
+{{#with this.brandNavigation}}
+        <ul class="flex justify-center">
+            {{#each this}}
+                {{> ./BrandNavigationItem }}
+            {{/each}} 
+        </ul>
+    {{/with}}
 </div>

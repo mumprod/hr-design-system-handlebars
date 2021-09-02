@@ -8,15 +8,15 @@ import {
 
 import item from "./BrandNavigationItem.hbs";
 
-import JsonData from '../serviceNavigationData.json';
+import JsonData from '../brandNavigationData.json';
 
 
 <Meta
   title="Komponenten/Header/BrandNavigation/BrandNavigationItem"
   argTypes={{
-    label: {
+    text: {
       control: "text",
-      description: "Label Text",
+      description: "Brand Text",
     }
   }}
 />
@@ -36,7 +36,7 @@ Ein toller Einleitungstext für unsere `BrandNavigationItem` Komponente:
   <Story
     name="hessenschau"
     args={{
-      label: "hessenschau"
+      text: "hessenschau"
     }}
   >
     {Template.bind({})}
@@ -45,12 +45,12 @@ Ein toller Einleitungstext für unsere `BrandNavigationItem` Komponente:
 
 <ArgsTable story="hessenschau" />
 
-## Regionen
+## Alle Brands
 
 <Canvas>
   <Story
     name="Brands from File"
-    args= {JsonData.serviceNavigationSSILinks.navigationItems[0]}
+    args= {JsonData.brandNavigation[2]}
     
   >
     {Template.bind({})}
