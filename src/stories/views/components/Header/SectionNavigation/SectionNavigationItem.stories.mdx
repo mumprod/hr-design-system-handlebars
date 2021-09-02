@@ -1,0 +1,66 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import item from "./SectionNavigationItem.hbs";
+
+import JsonData from '../serviceNavigationData.json';
+
+
+<Meta
+  title="Komponenten/Header/SectionNavigation/SectionNavigationItem"
+  argTypes={{
+    label: {
+      control: "text",
+      description: "Label Text",
+    },
+    icon: {
+      control: "text",
+      description: "Icon",
+    },
+  }}
+/>
+
+
+export const Template = ({ ...args }) => {
+  return item({ ...args });
+}; 
+
+
+
+export const OneItem = Template.bind({});
+
+# SectionNavigationItem
+
+Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Start"
+    args={{
+      label: "Start",
+      icon: ""
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Start" />
+
+## Regionen
+
+<Canvas>
+  <Story
+    name="Regionen mit Flyout from File"
+    args= {JsonData.serviceNavigationSSILinks.navigationItems[0]}
+    
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+

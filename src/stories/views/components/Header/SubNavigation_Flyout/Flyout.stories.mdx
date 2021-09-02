@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import flyout from "./ServiceNavigationFlyout.hbs";
+import flyout from "./Flyout.hbs";
 
-import JsonData from './serviceNavigationData.json';
+import JsonData from '../serviceNavigationData.json';
 
 <Meta
-  title="Komponenten/Menu/ServiceNavigationFlyout"
+  title="Komponenten/Header/SubNavigation_Flyout/Flyout"
   argTypes={{
     columns: {
       control: "array",
@@ -29,24 +29,24 @@ export const Template = ({ ...args }) => {
   return flyout({ ...args });
 };
 
-# Button
+# Flyout
 
-Ein toller Einleitungstext für unsere `Label` Komponente:
+Ein toller Einleitungstext für unsere `Flyout` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="1Column"
+    name="One Column"
     args={JsonData.serviceNavigationSSILinks.navigationItems[2]}
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="1Column" />
+<ArgsTable story="One Column" />
 
 <Canvas>
   <Story
-    name="Flyout2Column"
+    name="Two Column"
     args={JsonData.serviceNavigationSSILinks.navigationItems[1]}
   >
     {Template.bind({})}

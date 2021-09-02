@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import navigation from "./Navigation.hbs";
+import navigation from "./Header.hbs";
 
 import JsonData from './serviceNavigationData.json';
 
 <Meta
-  title="Komponenten/Menu/Navigation"
+  title="Komponenten/Header/Header"
   argTypes={{
     
   }}
@@ -23,17 +23,17 @@ export const Template = ({ labelType, ...args }) => {
   return navigation({ labelType, ...args });
 };
 
-# Button
+# Header
 
-Ein toller Einleitungstext für unsere `Label` Komponente:
+Ein toller Einleitungstext für unsere `Header` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="Main Menu"
+    name="Default"
     args= { JsonData }
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="Main Menu" />
+<ArgsTable story="Default" />

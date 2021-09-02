@@ -1,0 +1,39 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import menu from "./BrandNavigation.hbs";
+
+import JsonData from '../serviceNavigationData.json';
+
+<Meta
+  title="Komponenten/Header/BrandNavigation/BrandNavigation"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return menu({ labelType, ...args });
+};
+
+# BrandNavigation
+
+In der `BrandNavigation` Komponente werden die `BrandNavigationItem` dargestellt:
+
+<Preview withToolbar>
+  <Story
+    name="Default"
+    args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Default" />

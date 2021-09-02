@@ -1,0 +1,59 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import item from "./BrandNavigationItem.hbs";
+
+import JsonData from '../serviceNavigationData.json';
+
+
+<Meta
+  title="Komponenten/Header/BrandNavigation/BrandNavigationItem"
+  argTypes={{
+    label: {
+      control: "text",
+      description: "Label Text",
+    }
+  }}
+/>
+
+
+export const Template = ({ ...args }) => {
+  return item({ ...args });
+}; 
+
+export const OneItem = Template.bind({});
+
+# BrandNavigationItem
+
+Ein toller Einleitungstext für unsere `BrandNavigationItem` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="hessenschau"
+    args={{
+      label: "hessenschau"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="hessenschau" />
+
+## Regionen
+
+<Canvas>
+  <Story
+    name="Brands from File"
+    args= {JsonData.serviceNavigationSSILinks.navigationItems[0]}
+    
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+

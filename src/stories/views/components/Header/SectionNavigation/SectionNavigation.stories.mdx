@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import menu from "./ServiceNavigation.hbs";
+import menu from "./SectionNavigation.hbs";
 
-import JsonData from './serviceNavigationData.json';
+import JsonData from '../serviceNavigationData.json';
 
 <Meta
-  title="Komponenten/Menu/ServiceNavigation"
+  title="Komponenten/Header/SectionNavigation/SectionNavigation"
   argTypes={{
     
   }}
@@ -23,9 +23,9 @@ export const Template = ({ labelType, ...args }) => {
   return menu({ labelType, ...args });
 };
 
-# ServiceNavigation
+# SectionNavigation
 
-In der `ServiceNavigation` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
+In der `SectionNavigation` Komponente werden verschiedene `SectionNavigationItems` dargestellt:
 
 <Preview withToolbar>
   <Story
