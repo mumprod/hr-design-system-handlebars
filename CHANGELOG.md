@@ -1,3 +1,27 @@
+# v0.5.2 (Thu Sep 02 2021)
+
+#### 🐛 Bug Fix
+
+- run all scripts in build task sequentially [#32](https://github.com/mumprod/hr-design-system-handlebars/pull/32) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.5.1 (Thu Sep 02 2021)
+
+#### 🐛 Bug Fix
+
+- changes order of files to copy [#31](https://github.com/mumprod/hr-design-system-handlebars/pull/31) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.5.0 (Wed Sep 01 2021)
 
 #### 🚀 Enhancement
