@@ -1,4 +1,5 @@
 :root,
+/*! purgecss start ignore */
 [data-theme="default"] {
   --color-primary: #005293;
   --color-secondary: #606060;
@@ -312,6 +313,8 @@
   /* Event */
   --color-label-event: theme("colors.black.DEFAULT");
 }
+
+/*! purgecss end ignore */
 
 @tailwind base;
 @tailwind components;
