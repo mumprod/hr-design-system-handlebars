@@ -1,5 +1,5 @@
 :root,
-/* purgecss ignore */
+/*! purgecss start ignore */
 [data-theme="default"] {
   --color-primary: #005293;
   --color-secondary: #606060;
@@ -24,7 +24,6 @@
   --color-label-pm: theme("colors.blue.deepCerulean");
 }
 
-/* purgecss ignore */
 [data-theme="hessenschau"] {
   --color-primary: #005293;
   --color-secondary: #606060;
@@ -49,7 +48,6 @@
   --color-label-pm: theme("colors.blue.deepCerulean");
 }
 
-/* purgecss ignore */
 [data-theme="hr-bigband"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -70,7 +68,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr-fernsehen"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -91,7 +88,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr-inforadio"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -112,7 +108,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr-rundfunkrat"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -135,7 +130,6 @@
   --color-label-pm: theme("colors.blue.deepCerulean");
 }
 
-/* purgecss ignore */
 [data-theme="hr-werbung"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -158,7 +152,6 @@
   --color-label-pm: theme("colors.blue.deepCerulean");
 }
 
-/* purgecss ignore */
 [data-theme="hr-sinfonieorchester"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -179,7 +172,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr-bigband"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -200,7 +192,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -223,7 +214,6 @@
   --color-label-pm: theme("colors.blue.deepCerulean");
 }
 
-/* purgecss ignore */
 [data-theme="hr1"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -244,7 +234,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr2"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -265,7 +254,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr3"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -286,7 +274,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="hr4"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -307,7 +294,6 @@
   --color-label-event: theme("colors.black.DEFAULT");
 }
 
-/* purgecss ignore */
 [data-theme="you-fm"] {
   --color-primary: #c20016;
   --color-secondary: #007179;
@@ -327,6 +313,8 @@
   /* Event */
   --color-label-event: theme("colors.black.DEFAULT");
 }
+
+/*! purgecss end ignore */
 
 @tailwind base;
 @tailwind components;
