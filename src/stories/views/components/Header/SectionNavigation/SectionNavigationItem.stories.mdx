@@ -8,7 +8,7 @@ import {
 
 import item from "./SectionNavigationItem.hbs";
 
-import JsonData from '../serviceNavigationData.json';
+import JsonData from '../sectionNavigationData.json';
 
 
 <Meta
@@ -43,7 +43,10 @@ Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
     name="Start"
     args={{
       label: "Start",
-      icon: ""
+      text: "Start",
+      url: "index.html",
+			labelText: "Startseite der hessenschau",
+			subNavigationFromIndex: true
     }}
   >
     {Template.bind({})}
@@ -57,8 +60,7 @@ Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
 <Canvas>
   <Story
     name="Regionen mit Flyout from File"
-    args= {JsonData.serviceNavigationSSILinks.navigationItems[0]}
-    
+    args= {JsonData.sectionNavigationSSILinks.navigationItems[1]}
   >
     {Template.bind({})}
   </Story>

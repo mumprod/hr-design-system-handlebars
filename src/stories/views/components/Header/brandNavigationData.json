@@ -1,71 +1,73 @@
 {
-    "brandNavigation": [
-        {
-            "name": "hessenschau.DE",
-            "text": "hessenschau",
-            "site": "hessenschau",
-            "selected": true,
-            "extern": false
-        },
-        {
-            "name": "HR1",
-            "text": "hr1",
-            "site": "hr1",
-            "extern": true
-        },
-        {
-            "name": "HR2",
-            "text": "hr2-kultur",
-            "site": "hr2",
-            "extern": true
-        },
-        {
-            "name": "HR3",
-            "text": "hr3",
-            "site": "hr3",
-            "extern": true
-        },
-        {
-            "name": "HR4",
-            "text": "hr4",
-            "site": "hr4",
-            "extern": true
-        },
-        {
-            "name": "HR-info",
-            "text": "hr-iNFO",
-            "site": "hr-inforadio",
-            "extern": true
-        },
-        {
-            "name": "you-fm",
-            "text": "YOU FM",
-            "site": "you-fm",
-            "extern": true
-        },
-        {
-            "name": "HR-fernsehen",
-            "text": "hr-fernsehen",
-            "site": "hr-fernsehen",
-            "extern": true
-        },
-        {
-            "name": "HR-Sinfonieorchester",
-            "text": "hr-Sinfonieorchester",
-            "site": "hr-sinfonieorchester",
-            "extern": true
-        },
-        {
-            "name": "HR-Bigband",
-            "text": "hr-Bigband",
-            "site": "hr-bigband",
-            "extern": true
-        },
-        {
-            "name": "Der HR",
-            "text": "Der hr",
-            "site": "hr",
-            "extern": true
-        }
-    ]
+	"brandNavigationItems": 
+		[
+			{
+				"name": "hessenschau.DE",
+				"text": "hessenschau",
+				"site": "hessenschau",
+				"selected": true,
+				"extern": false
+			},
+			{
+				"name": "HR1",
+				"text": "hr1",
+				"site": "hr1",
+				"extern": true
+			},
+			{
+				"name": "HR2",
+				"text": "hr2-kultur",
+				"site": "hr2",
+				"extern": true
+			},
+			{
+				"name": "HR3",
+				"text": "hr3",
+				"site": "hr3",
+				"extern": true
+			},
+			{
+				"name": "HR4",
+				"text": "hr4",
+				"site": "hr4",
+				"extern": true
+			},
+			{
+				"name": "HR-info",
+				"text": "hr-iNFO",
+				"site": "hr-inforadio",
+				"extern": true
+			},
+			{
+				"name": "you-fm",
+				"text": "YOU FM",
+				"site": "you-fm",
+				"extern": true
+			},
+			{
+				"name": "HR-fernsehen",
+				"text": "hr-fernsehen",
+				"site": "hr-fernsehen",
+				"extern": true
+			},
+			{
+				"name": "HR-Sinfonieorchester",
+				"text": "hr-Sinfonieorchester",
+				"site": "hr-sinfonieorchester",
+				"extern": true
+			},
+			{
+				"name": "HR-Bigband",
+				"text": "hr-Bigband",
+				"site": "hr-bigband",
+				"extern": true
+			},
+			{
+				"name": "Der HR",
+				"text": "Der hr",
+				"site": "hr",
+				"extern": true
+			}
+		]
+	
 }
