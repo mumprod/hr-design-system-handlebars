@@ -14,7 +14,7 @@
     "build-storybook-with-tailwind": "npm run build:tailwind && npm run build-storybook",
     "build-storybook-docs": "build-storybook -s ./src/assets --docs",
     "build-storybook-docs-with-tailwind": "npm run build:tailwind && npm run build-storybook-docs",
-    "build:tailwind": "postcss src/assets/css/tailwind.css -o src/assets/css/index.css",
+    "build:tailwind": "postcss src/assets/css/tailwind.css -o dist/assets/css/index.css",
     "build-tailwind-prod": "cross-env NODE_ENV=production postcss src/css/base.css -o dist/css/tailwind.generated.css",
     "build": "npm run clean && npm run build:tailwind && node ./scripts/build.js",
     "chromatic": "npx chromatic --project-token 84f1628f224a",
