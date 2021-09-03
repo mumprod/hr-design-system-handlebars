@@ -1,4 +1,3 @@
-import "../src/assets/css/index.css";
 import "../src/assets/css/tailwind.css";
 
 import hrDesignsystemDark from "./HRDesignsystemDark";
@@ -49,10 +48,22 @@ export const parameters = {
     theme: hrDesignsystemLight,
   },
   options: {
-    storySort: 
-    {
-      order: ['Komponenten',['Header',['Header','BrandNavigation','ServiceNavigation','SectionNavigation'],'Flyout'],'*']
-    } 
+    storySort: {
+      order: [
+        "Komponenten",
+        [
+          "Header",
+          [
+            "Header",
+            "BrandNavigation",
+            "ServiceNavigation",
+            "SectionNavigation",
+          ],
+          "Flyout",
+        ],
+        "*",
+      ],
+    },
   },
 };
 
