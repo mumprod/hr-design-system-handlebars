@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import navigation from "./Navigation.hbs";
+import menu from "./BrandNavigation.hbs";
 
-import JsonData from './serviceNavigationData.json';
+import JsonData from '../brandNavigationData.json';
 
 <Meta
-  title="Komponenten/Menu/Navigation"
+  title="Komponenten/Header/BrandNavigation/BrandNavigation"
   argTypes={{
     
   }}
@@ -20,20 +20,20 @@ import JsonData from './serviceNavigationData.json';
 export const Template = ({ labelType, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return navigation({ labelType, ...args });
+  return menu({ labelType, ...args });
 };
 
-# Button
+# BrandNavigation
 
-Ein toller Einleitungstext für unsere `Label` Komponente:
+In der `BrandNavigation` Komponente werden die `BrandNavigationItem` dargestellt:
 
 <Preview withToolbar>
   <Story
-    name="Main Menu"
-    args= { JsonData }
+    name="Default"
+    args= {JsonData}
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="Main Menu" />
+<ArgsTable story="Default" />

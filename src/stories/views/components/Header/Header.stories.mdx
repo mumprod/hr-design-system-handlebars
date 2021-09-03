@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import menu from "./ServiceNavigation.hbs";
+import navigation from "./Header.hbs";
 
 import JsonData from './serviceNavigationData.json';
 
 <Meta
-  title="Komponenten/Menu/ServiceNavigation"
+  title="Komponenten/Header/Header"
   argTypes={{
     
   }}
@@ -20,20 +20,20 @@ import JsonData from './serviceNavigationData.json';
 export const Template = ({ labelType, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return menu({ labelType, ...args });
+  return navigation({ labelType, ...args });
 };
 
-# ServiceNavigation
+# Header
 
-In der `ServiceNavigation` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
+Ein toller Einleitungstext für unsere `Header` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="Standard"
-    args= {JsonData}
+    name="Default"
+    args= { JsonData }
   >
     {Template.bind({})}
   </Story>
 </Preview>
 
-<ArgsTable story="Standard" />
+<ArgsTable story="Default" />

@@ -1,0 +1,10 @@
+<div>
+
+{{#with this.brandNavigationItems}}
+        <ul class="flex justify-center">
+            {{#each this}}
+                {{> components/Header/BrandNavigation/BrandNavigationItem }}
+            {{/each}} 
+        </ul>
+    {{/with}}
+</div>

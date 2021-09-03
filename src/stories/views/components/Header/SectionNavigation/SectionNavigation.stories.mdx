@@ -1,0 +1,39 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import menu from "./SectionNavigation.hbs";
+
+import JsonData from '../sectionNavigationData.json';
+
+<Meta
+  title="Komponenten/Header/SectionNavigation/SectionNavigation"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return menu({ labelType, ...args });
+};
+
+# SectionNavigation
+
+In der `SectionNavigation` Komponente werden verschiedene `SectionNavigationItems` dargestellt:
+
+<Preview withToolbar>
+  <Story
+    name="Default"
+    args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Default" />

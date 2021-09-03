@@ -1,0 +1,87 @@
+{
+	"sectionNavigationSSILinks":{
+		"navigationItems" : [
+			{
+				"name": "hessenschau",
+				"text": "Start",
+				"url": "index.html",
+				"labelText": "Startseite der hessenschau",
+				"subNavigationFromIndex": true
+			},
+			{
+				"name": "regionen",
+				"text": "Regionen",
+				"url": "rheinmain/index.html",
+				"clusterItems": [
+					{
+						"name": "nordhessen",
+						"text": "Nordhessen",
+						"url": "nordhessen/index.html"
+					},
+					{
+						"name": "osthessen",
+						"text": "Osthessen",
+						"url": "osthessen/index.html"
+					},
+					{
+						"name": "mittelhessen",
+						"text": "Mittelhessen",
+						"url": "mittelhessen/index.html"
+					},
+					{
+						"name": "rheinmain",
+						"text": "Rhein-Main",
+						"url": "rheinmain/index.html"
+					},
+					{
+						"name": "suedhessen",
+						"text": "Südhessen",
+						"url": "suedhessen/index.html"
+					}
+				]
+			},
+			{
+				"name": "politik",
+				"text": "Politik",
+				"url": "politik/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "gesellschaft",
+				"text": "Gesellschaft",
+				"url": "gesellschaft/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "wirtschaft",
+				"text": "Wirtschaft",
+				"url": "wirtschaft/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "kultur",
+				"text": "Kultur",
+				"url": "kultur/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "sport",
+				"text": "Sport",
+				"url": "sport/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "panorama",
+				"text": "Panorama",
+				"url": "panorama/index.html",
+				"qualifiedRelatedContentOn404": true
+			},
+			{
+				"name": "freizeit",
+				"text": "Freizeit",
+				"url": "freizeit/index.html",
+				"qualifiedRelatedContentOn404": true
+			}
+		]
+	}
+}

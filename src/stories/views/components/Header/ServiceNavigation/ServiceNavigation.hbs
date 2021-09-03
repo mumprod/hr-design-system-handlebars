@@ -1,0 +1,13 @@
+<div>
+
+    <div>
+        Logo - Auslagern
+    </div>
+    {{#with this.serviceNavigationSSILinks}}
+        <ul class="flex justify-center border border-gray-900">
+            {{#each this.navigationItems}}
+                {{> components/Header/ServiceNavigation/ServiceNavigationItem }}
+            {{/each}} 
+        </ul>
+    {{/with}}
+</div>

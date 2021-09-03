@@ -1,12 +1,8 @@
 <div>
-
-    <div>
-        Logo - Auslagern
-    </div>
-    {{#with this.serviceNavigationSSILinks}}
+    {{#with this.sectionNavigationSSILinks}}
         <ul class="flex justify-center border border-gray-900">
             {{#each this.navigationItems}}
-                {{> ./ServiceNavigationItem }}
+                {{> components/Header/SectionNavigation/SectionNavigationItem }}
             {{/each}} 
         </ul>
     {{/with}}
