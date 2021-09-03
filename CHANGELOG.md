@@ -1,3 +1,15 @@
+# v0.6.0 (Fri Sep 03 2021)
+
+#### 🚀 Enhancement
+
+- Navigation structure and renaming [#33](https://github.com/mumprod/hr-design-system-handlebars/pull/33) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.5.2 (Thu Sep 02 2021)
 
 #### 🐛 Bug Fix
