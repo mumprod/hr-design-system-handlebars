@@ -1,3 +1,21 @@
+# v0.7.0 (Fri Sep 03 2021)
+
+#### 🚀 Enhancement
+
+- Patch/purgecss [#38](https://github.com/mumprod/hr-design-system-handlebars/pull/38) ([@szuelch](https://github.com/szuelch))
+- all theme related selectors are ignored [#36](https://github.com/mumprod/hr-design-system-handlebars/pull/36) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- small change to build a release [#35](https://github.com/mumprod/hr-design-system-handlebars/pull/35) ([@szuelch](https://github.com/szuelch))
+- adds comment in front of theme selectors [#34](https://github.com/mumprod/hr-design-system-handlebars/pull/34) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.6.0 (Fri Sep 03 2021)
 
 #### 🚀 Enhancement
