@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 :root,
 [data-theme="default"] {
   --color-primary: #005293;
@@ -297,7 +298,7 @@
   --color-primary: #c20016;
   --color-secondary: #007179;
 
-  /* Medieninhalte, Video, Audio, Bildergalerie */
+  /* Medieninhalte, Video, Audio, Bildergalerien */
   --color-label-media: theme("colors.blue.science");
   /* Ticker, Live, Livestream */
   --color-label-live: theme("colors.orange.spicyCarrot");
@@ -312,6 +313,8 @@
   /* Event */
   --color-label-event: theme("colors.black.DEFAULT");
 }
+
+/*! purgecss end ignore */
 
 @tailwind base;
 @tailwind components;
