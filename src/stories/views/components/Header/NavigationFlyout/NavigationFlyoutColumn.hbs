@@ -1,5 +1,5 @@
 <ul class="c-subNav__columns flex-grow border-gray-600 first:border-r">
-    {{#each this.items}}   
-        {{> components/Header/NavigationFlyout/NavigationFlyoutItem tagname="li" text=this.title}}
+    {{#each this }}  
+            {{> components/Header/NavigationFlyout/NavigationFlyoutItem tagname="li" text=title}}
     {{/each~}}
 </ul>
