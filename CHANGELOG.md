@@ -1,3 +1,15 @@
+# v0.7.1 (Tue Sep 07 2021)
+
+#### 🐛 Bug Fix
+
+- fixed columns template so it is compatible with delivery now [#39](https://github.com/mumprod/hr-design-system-handlebars/pull/39) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.7.0 (Fri Sep 03 2021)
 
 #### 🚀 Enhancement
