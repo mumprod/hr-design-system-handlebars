@@ -7,8 +7,7 @@ import {
 } from "@storybook/addon-docs/blocks";
 
 import navigation from "./Header.hbs";
-
-import JsonData from './serviceNavigationData.json';
+import JsonData from './navigation.json';
 
 <Meta
   title="Komponenten/Header/Header"
@@ -20,6 +19,7 @@ import JsonData from './serviceNavigationData.json';
 export const Template = ({ labelType, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
+   
   return navigation({ labelType, ...args });
 };
 
@@ -30,7 +30,7 @@ Ein toller Einleitungstext für unsere `Header` Komponente:
 <Preview withToolbar>
   <Story
     name="Default"
-    args= { JsonData }
+    args= {JsonData}
   >
     {Template.bind({})}
   </Story>

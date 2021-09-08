@@ -1,4 +1,30 @@
 <div x-data="{}"
-    x-init="console.log('alpineJS is installed')">
-    {{> components/Header/ServiceNavigation/ServiceNavigation }}
+     x-init="console.log('alpineJS is installed')"
+     class="font-copy flex flex-wrap max-w-screen justify-end lg:justify-center mx-auto border-b border-white ">
+
+    <div id="brandNavWrapper" class="bg-white w-screen flex flex-none order-1 items-center md:flex-auto">
+        {{> components/Header/BrandNavigation/BrandNavigation }}
+    </div>
+
+    <div class="flex w-full order-2">
+        <div id="logoWrapper" class="bg-blue-science flex flex-none p-2 order-1 items-center md:flex-auto">
+            // Logo auslagern
+        </div>
+
+        <div id="searchWrapper" class="bg-blue-science flex flex-1 p-2 order-2 lg:order-3 items-center justify-end md:order-3 md:flex-none lg:w-1/4">
+            // Search auslagern
+        </div>
+        
+        <div id="burgerWrapper" class="bg-blue-science flex-none p-2 order-3 lg:order-4 justify-end md:order-4 lg:hidden ">
+            // Burger auslagern
+        </div>
+
+        <div id="serviceNavWrapper" class="hidden bg-blue-science text-white flex mt-px flex-initial py-2 order-4 lg:order-2 divide-x divide-white border-b border-white w-full max-w-full justify-evenly md:flex md:mt-0 md:w-1/3 md:order-2 md:justify-end md:border-0 ">
+            {{> components/Header/ServiceNavigation/ServiceNavigation }}
+        </div>
+</div>
+        <div id="sectionNavWrapper" x-ref="sectionNavigation" class="hidden bg-blue-science flex flex-auto order-3 justify-end right-0 max-w-full w-full top-32 mx-auto md:flex md:top-15 md:w-1/2 lg:top-0 lg:relative lg:max-w-960 lg:w-full lg:justify-start">
+            {{> components/Header/SectionNavigation/SectionNavigation }}
+        </div>
+    
 </div>
