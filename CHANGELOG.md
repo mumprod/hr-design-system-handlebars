@@ -1,3 +1,15 @@
+# v0.7.2 (Wed Sep 08 2021)
+
+#### 🐛 Bug Fix
+
+- Added block template link.hbs to project [#40](https://github.com/mumprod/hr-design-system-handlebars/pull/40) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.7.1 (Tue Sep 07 2021)
 
 #### 🐛 Bug Fix
