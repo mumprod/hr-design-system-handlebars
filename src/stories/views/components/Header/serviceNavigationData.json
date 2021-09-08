@@ -5,37 +5,115 @@
 				"label":"Video & Podcast",
 				"icon":"videopodcast",
 				"flyoutStartLinkText": "Übersicht Video & Podcast",
+				"selected": "false",
+				"isCluster":"false",
+				"url": "https://www.test.de",
 				"subNavigation":{
+					"showAsFlyout":false,
+					"columnCount": "2",
+					"items": false,
 					"columns":[					
 						[
 							{
-								"title":"Aktuelle Sendung"
+								"title":"Aktuelle Sendung",
+								"link":{
+									"content":{
+										"text": "Aktuelle Sendung"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Archiv - alle Sendungen"
+								"title":"Archiv - alle Sendungen",
+								"link":{
+									"content":{
+										"text": "Archiv - alle Sendungen"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Newsflash"
+								"title":"Newsflash",
+								"link":{
+									"content":{
+										"text": "Newsflash"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"DAS THEMA"
+								"title":"DAS THEMA",
+								"link":{
+									"content":{
+										"text": "DAS THEMA"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Die hessenschau in 100 Sekunden"
+								"title":"Die hessenschau in 100 Sekunden",
+								"link":{
+									"content":{
+										"text": "Die hessenschau in 100 Sekunden"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Podcasts"
+								"title":"Podcasts",
+								"link":{
+									"content":{
+										"text": "Podcasts"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"hessenschau in der ARD Mediathek"
+								"title":"hessenschau in der ARD Mediathek",
+								"link":{
+									"content":{
+										"text": "hessenschau in der ARD Mediathek"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							}
 						],
 						[
 							{
-								"title":"hessenschau auf YouTube"							
+								"title":"hessenschau auf YouTube",
+								"link":{
+									"content":{
+										"text": "hessenschau auf YouTube"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}							
 							},
 							{
-								"title":"Livestream hr-fernsehen" 
+								"title":"Livestream hr-fernsehen",
+								"link":{
+									"content":{
+										"text": "Livestream hr-fernsehen"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								} 
 							}
 						]
 					]
@@ -49,33 +127,105 @@
 					"columns":[
 						[
 							{
-								"title":"Unwetterwarnungen"
+								"title":"Unwetterwarnungen",
+								"link":{
+									"content":{
+										"text": "Unwetterwarnungen"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Regenradar"
+								"title":"Regenradar",
+								"link":{
+									"content":{
+										"text": "Regenradar"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Wolkenfilm"
+								"title":"Wolkenfilm",
+								"link":{
+									"content":{
+										"text": "Wolkenfilm"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Messwerte"
+								"title":"Messwerte",
+								"link":{
+									"content":{
+										"text": "Messwerte"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Wetterkameras"
+								"title":"Wetterkameras",
+								"link":{
+									"content":{
+										"text": "Wetterkameras"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Wetterbilder-Galerie"
+								"title":"Wetterbilder-Galerie",
+								"link":{
+									"content":{
+										"text": "Wetterbilder-Galerie"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"mehr Wetter"
+								"title":"mehr Wetter",
+								"link":{
+									"content":{
+										"text": "mehr Wetter"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							}
 						],
 						[
 							{
-								"title":"Thema des Tages"
+								"title":"Thema des Tages",
+								"link":{
+									"content":{
+										"text": "Thema des Tages"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Foto einsenden"
+								"title":"Foto einsenden",
+								"link":{
+									"content":{
+										"text": "Foto einsenden"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							}
 						]
 						
@@ -90,19 +240,59 @@
 					"columns":[
 						[
 							{
-								"title":"Verkehrskameras"
+								"title":"Verkehrskameras",
+								"link":{
+									"content":{
+										"text": "Verkehrskameras"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Blitzer"
+								"title":"Blitzer",
+								"link":{
+									"content":{
+										"text": "Blitzer"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Schulausfälle"
+								"title":"Schulausfälle",
+								"link":{
+									"content":{
+										"text": "Schulausfälle"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Flugpläne Frankfurt / Parkhausbelegung"
+								"title":"Flugpläne Frankfurt / Parkhausbelegung",
+								"link":{
+									"content":{
+										"text": "Flugpläne Frankfurt / Parkhausbelegung"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							},
 							{
-								"title":"Werden Sie hr-Staureporter!"
+								"title":"Werden Sie hr-Staureporter!",
+								"link":{
+									"content":{
+										"text": "Werden Sie hr-Staureporter!"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
 							}
 						]
 						
