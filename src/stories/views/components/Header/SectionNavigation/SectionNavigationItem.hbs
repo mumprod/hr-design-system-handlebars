@@ -1,4 +1,4 @@
-<li class="text-white px-2 bg-blue-science list-none">   
+<li class="px-2 text-white list-none bg-blue-science">   
    {{!-- {{#if this.subNavigation }} HATNE SUBNAV{{/if}} --}}
 
     {{!-- {{#if this.subNavigation.showAsFlyout ~}}
@@ -54,7 +54,7 @@
         </a>
 
         {{#if this.subNavigation}}
-            <button onclick="void(0)" id="flyout-{{getRandom}}-3" class="c-subNav__button  js-flyout__submenuOpener js-loadScript" data-hr-flyout-menu='{}' aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+            <button onclick="void(0)" id="flyout-{{getRandom}}-3" class="c-subNav__button js-flyout__submenuOpener js-loadScript" data-hr-flyout-menu='{}' aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
                 <span class="hideCompletely">{{~this.text~}}</span>
                 {{~include "base/image/icon" _icon="arrow-down" _addClass="arrow -down icon--ignoreTouch" _iconmap="icons"~}}
                 {{~include "base/image/icon" _icon="arrow-up" _addClass="arrow -up icon--ignoreTouch" _iconmap="icons"~}}
