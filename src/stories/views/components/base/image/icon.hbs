@@ -1,0 +1,71 @@
+{{!--@
+Fügt ein SVG-basiertes Icon ein.
+Das Icon wird aus einer SVG-SpriteMap bezogen.
+
+```hbs
+{{> base/image/icon
+    _icon="..."
+    _addClass="..."
+    _areHidden=[false|true*]
+    _iconTitle=""
+    _iconDesc=""
+    _iconmap=
+
+    }}
+```
+
+`_icon`         Name des Icons, das dargestellt werden soll. Entspricht der ID in der SVG-SpriteMap.
+                Diese ergibt sich durch den Dateinamen des ursprünglichen SVG-Icons.
+                *!!! Ohne Angabe eines Icon-Namens wird kein Markup erzeugt !!!*<br>
+`_addClass`     Möglichkeit zur Angabe einer zusätzlichen CSS-Klasse. `icon` ist Standard.<br>
+`_ariaHidden`   default true
+`_iconTitle`    Title Element für SVG inklusive Aria Verknüpfung
+`_iconDesc`     Description für SVG inklusive Aria Verknüpfung. Ohne iconTitle wird iconDesc nicht ausgespielt
+`_iconmap`      Benennt das Unterverzeichnis, unter dem nach der SVG-SpriteMap gesucht wird.
+                Die SVG-SpriteMap hat immer den Namen "svgmap.min.svg".
+                Default ist `icons` (entspricht dem Standard-Icon-Set)<br>
+`_overlayIcon`  Erlaubt die Angabe eines zweiten Icon-Names, der über das erste gelegt wird.
+                Es wird davon ausgegangen, das das Overlay sich in der gleichen SVG-SpriteMap befindet.<br>
+
+Beispielaufruf:
+```hbs
+{{> base/image/icon _icon="arrow-up"}}
+```
+
+TODOs zu einem späteren Zeitpunkt:
+
+Erklärung / Hinweise / Best Practices für "Accessible SVG":
+- http://www.sitepoint.com/tips-accessible-svg/
+- http://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/
+
+--}}
+{{#if _icon}}
+<svg class="icon {{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
+        {{~#if _iconTitle }} {{changeRandom~}}
+            aria-labelledby="iconTitle--{{getRandom}}"
+            {{~#if _iconDesc }} aria-describedby="iconDesc--{{getRandom}}"{{~/if~}}
+        {{~/if~}}>
+
+    {{~#if _iconTitle ~}}
+        <title id="iconTitle--{{getRandom}}">{{_iconTitle}}</title>
+        {{~#if _iconDesc ~}}
+            <description id="iconDesc--{{getRandom}}">{{_iconDesc}}</description>
+        {{~/if~}}
+    {{~/if~}}
+
+    {{~#if _iconText ~}}
+        <g>
+            <svg>
+    {{~/if~}}
+
+        <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_icon}}"></use>
+        {{#if _overlayIcon }}
+            <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_overlayIcon}}"></use>
+        {{/if}}
+    {{~#if _iconText ~}}
+            </svg>
+        </g>
+        <text dy="0.35em" y="50%" x="50%">{{_iconText}}</text>
+    {{~/if~}}
+</svg>
+{{~/if}}
