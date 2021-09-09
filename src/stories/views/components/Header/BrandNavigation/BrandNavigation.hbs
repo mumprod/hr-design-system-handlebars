@@ -1,10 +1,11 @@
-<div>
-
-{{#with this.brandNavigationItems}}
-        <ul class="flex justify-center">
-            {{#each this}}
-                {{> components/Header/BrandNavigation/BrandNavigationItem }}
-            {{/each}} 
-        </ul>
-    {{/with}}
+<div class="container">
+    <div class="border-b text-gray border-grey">
+        {{#with this.brandNavigationItems}}
+            <ul class="flex flex-wrap py-2 text-sm">
+                {{#each this}}
+                    {{> components/Header/BrandNavigation/BrandNavigationItem }}
+                {{/each}} 
+            </ul>
+        {{/with}}
+    </div>
 </div>

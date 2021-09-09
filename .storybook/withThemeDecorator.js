@@ -7,7 +7,7 @@ const getActiveValue = ({ globals, parameters }) => {
 };
 
 export const withThemeDecorator = (StoryFn, context) => {
-  return `<div class="max-w-screen-lg mx-auto" data-theme="${getActiveValue(
+  return `<div class="max-w-full" data-theme="${getActiveValue(
     context
   )}">
   ${StoryFn()} 
