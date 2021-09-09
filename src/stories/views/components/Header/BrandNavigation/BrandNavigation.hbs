@@ -1,11 +1,14 @@
-<div class="container">
-    <div class="border-b text-gray border-grey">
-        {{#with this.brandNavigationItems}}
-            <ul class="flex flex-wrap py-2 text-sm">
-                {{#each this}}
-                    {{> components/Header/BrandNavigation/BrandNavigationItem }}
-                {{/each}} 
-            </ul>
-        {{/with}}
+<div class="container px-3.5 md:px-5 lg:px-10">
+    <div class="flex m-0 p-0 list-none content-start flex-wrap md:-mx-2.5 border-b text-gray text-sm border-grey">
+        <nav id="brandNav" class="relative cursor-pointer block h-12 leading-12 w-full px-2 align-top md:px-2.5 lg:h-10 lg:leading-8">
+            <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
+                {{#with this.brandNavigationItems}}
+                    <ul class="flex flex-wrap py-2 ">
+                        {{#each this}}
+                            {{> components/Header/BrandNavigation/BrandNavigationItem }}
+                        {{/each}} 
+                    </ul>
+                {{/with}}
+        </nav>
     </div>
 </div>
