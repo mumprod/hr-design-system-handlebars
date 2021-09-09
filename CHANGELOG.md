@@ -1,3 +1,15 @@
+# v0.8.0 (Thu Sep 09 2021)
+
+#### 🚀 Enhancement
+
+- Some tailwind stuff for the navi [#41](https://github.com/mumprod/hr-design-system-handlebars/pull/41) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.7.2 (Wed Sep 08 2021)
 
 #### 🐛 Bug Fix
