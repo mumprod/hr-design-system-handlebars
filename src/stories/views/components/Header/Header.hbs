@@ -1,12 +1,12 @@
 <div x-data="{}"
      x-init="console.log('alpineJS is installed')"
-     class="flex flex-wrap max-w-full mx-auto border-b border-white bg-blue-science font-copy lg:justify-center lg:w-full">
+     class="flex flex-wrap max-w-full border-b border-white bg-blue-science font-copy lg:justify-center lg:w-full">
 
-    <div id="brandNavWrapper" class="flex items-center justify-center order-1 w-full bg-white">
+    <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white border-b border-black">
         {{> components/Header/BrandNavigation/BrandNavigation }}
     </div>
 
-    <div class="container flex order-2">
+    <div class="container z-10 flex order-2">
 
         <div id="logoWrapper" class="flex items-center flex-none order-1 p-2 bg-blue-science md:flex-auto">
             // Logo 
