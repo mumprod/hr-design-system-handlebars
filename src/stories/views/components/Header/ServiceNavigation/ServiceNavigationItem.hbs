@@ -1,8 +1,8 @@
 <li @click="dropped = !dropped" x-data="{dropped: false }"
-    class="relative flex flex-col items-center text-white border-l border-gray-900 bg-blue-science first:border-l-0 lg:border-0 ">   
-    <svg role="presentation" aria-hidden="true" class="w-full fill-current h-9">
-        <use xlink:href="./icons/svgmap.min.svg#{{icon}}"></use>
-    </svg>
+    class="relative flex flex-col items-center text-white border-l border-gray-900 bg-blue-science first:border-l-0 lg:border-0 ">  
+
+    {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full fill-current h-9"}}
+      
     <div class="flex flex-row mt-px">
         <span class="mr-1 text-xs whitespace-nowrap">
             {{label}} 
