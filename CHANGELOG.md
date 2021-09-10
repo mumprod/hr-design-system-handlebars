@@ -1,3 +1,15 @@
+# v0.10.0 (Fri Sep 10 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1153 brand navigation [#43](https://github.com/mumprod/hr-design-system-handlebars/pull/43) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.9.0 (Fri Sep 10 2021)
 
 #### 🚀 Enhancement
