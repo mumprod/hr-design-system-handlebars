@@ -83,7 +83,7 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-important")(),
-    require('@shimyshack/tailwindcss-pseudo-element-plugin'),
+    //require('@shimyshack/tailwindcss-pseudo-element-plugin'),
     
     // plugin to separate border colors:
     ({ addUtilities, e, theme, variants }) => {

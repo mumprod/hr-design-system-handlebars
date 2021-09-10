@@ -3,12 +3,12 @@
 
         <input x-on:click="open = ! open" class="absolute top-0 right-0 z-10 inline-block w-8 h-4 opacity-0 cursor-pointer md:hidden lg:hidden" type="checkbox" id="toggleBrandNav" aria-hidden="true" tabindex="-1">
             <label class="absolute right-0 inline-block w-4 h-4 top-2 md:hidden lg:hidden" for="toggleBrandNav" aria-hidden="true" tabindex="-1">
-                <svg role="presentation" aria-hidden="true" :class="open ? 'w-4 w-full h-4 fill-current':'hidden'">
-                    <use xlink:href="./icons/svgmap.min.svg#arrow-up"></use>
-                </svg>
-                <svg role="presentation" aria-hidden="true" :class="open ? 'hidden ':'w-4 w-full h-4 fill-current' ">
-                    <use xlink:href="./icons/svgmap.min.svg#arrow-down"></use>
-                </svg>
+                <div :class="open ? '':'hidden'">
+                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 w-full h-4 fill-current"}}
+                </div>
+                <div :class="open ? 'hidden':''">
+                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 w-full h-4 fill-current"}}
+                </div>
             </label>
 
         <nav id="brandNav" :class="open ? 'h-auto relative block leading-12 w-full px-2 align-top md:px-2.5 lg:h-10 lg:leading-8 ' : 'h-12 relative cursor-pointer block leading-12 w-full px-2 align-top md:px-2.5 lg:h-10 lg:leading-8'">
