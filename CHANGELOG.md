@@ -1,3 +1,15 @@
+# v0.9.0 (Fri Sep 10 2021)
+
+#### 🚀 Enhancement
+
+- icon.hbs for storybook [#42](https://github.com/mumprod/hr-design-system-handlebars/pull/42) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.8.0 (Thu Sep 09 2021)
 
 #### 🚀 Enhancement
