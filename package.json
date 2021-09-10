@@ -51,5 +51,7 @@
     "tailwindcss": "^2.1.1",
     "tailwindcss-important": "^1.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@shimyshack/tailwindcss-pseudo-element-plugin": "^1.0.4"
+  }
 }
