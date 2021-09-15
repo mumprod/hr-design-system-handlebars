@@ -1,3 +1,15 @@
+# v0.11.0 (Wed Sep 15 2021)
+
+#### 🚀 Enhancement
+
+- Changes in assets folder stucture [#45](https://github.com/mumprod/hr-design-system-handlebars/pull/45) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.10.0 (Fri Sep 10 2021)
 
 #### 🚀 Enhancement
