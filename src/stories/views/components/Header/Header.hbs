@@ -6,23 +6,23 @@
         {{> components/Header/BrandNavigation/BrandNavigation }}
     </div>
 
-    <div class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
+    <div id="" class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
        
-        <div class="flex h-16 container px-3.5 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="flex h-16 container px-3.5 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
-            <div id="logoWrapper" class="relative flex self-center flex-auto justify-start order-1 px-2 bg-blue-science h-auto md:flex-auto md:px-2.5 md:float-left md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4 lg:pt-0 lg:pl-3">
+            <div id="serviceLogoWrapper" class="relative flex self-center flex-auto justify-start order-1 px-2 bg-blue-science h-auto md:flex-auto md:px-2.5 md:float-left md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4 lg:pt-0 lg:pl-3">
                 <a class="text-white fill-current" href="https://www.hessenschau.de/index.html" title="Startseite hessenschau . d e">
                     {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="icon flex md:hidden w-11 h-11 "}}
                     {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="hidden md:flex md:-ml-12 justify-start fill-white h-11 p-0 -ml-12"}}
                 </a>
+                <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
             </div>
-            <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
-
-
-            <div id="serviceNavWrapper" class="flex justify-end flex-initial order-4 inline-block w-full max-w-full px-2 align-top bg-blue-science lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
-                {{> components/Header/ServiceNavigation/ServiceNavigation }}
+            
+            <div id="serviceItemsWrapper" class="flex justify-end flex-initial order-4 inline-block w-full max-w-full px-2 align-top bg-blue-science lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+                {{> components/Header/ServiceNavigation/ServiceList }}
         
+                {{!-- auslagern --}}
                 <div id="searchWrapper" class="flex items-center justify-end flex-1 order-2 py-5 bg-blue-science lg:order-3 md:order-3 md:flex-none">  
                     <div class="relative hidden w-full py-px bg-white shadow-xl lg:inline-block" id="search-content">
                         <div class="text-black">
@@ -35,7 +35,7 @@
                         </svg>
                     </div>
                 </div>
-                
+                {{!-- auslagern --}}
                 <div id="burgerWrapper" class="flex justify-end flex-none order-3 p-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burger_open: false }">
@@ -52,8 +52,6 @@
                 </div>
 
             </div>
-
-           
 
         </div>
     </div>
