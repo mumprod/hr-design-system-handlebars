@@ -1,4 +1,4 @@
-import "../src/assets/css/tailwind.css";
+import "../src/assets/tailwind.css";
 
 import hrDesignsystemDark from "./HRDesignsystemDark";
 import hrDesignsystemLight from "./HRDesignsystemLight";
