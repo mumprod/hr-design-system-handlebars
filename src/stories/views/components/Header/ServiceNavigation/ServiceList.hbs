@@ -1,6 +1,6 @@
-<div class="w-full">
+<div id="serviceList" class="flex justify-end flex-initial hidden inline-block w-full max-w-full px-2 align-top md:flex md:px-5 md:flex-auto lg:px-10 lg:w-3/4 ">
     {{#with this.serviceNavigationSSILinks}}
-        <ul class="flex justify-center ">
+        <ul class="flex items-center justify-center h-full ">
             {{#each this.navigationItems}}
                 {{> components/Header/ServiceNavigation/ServiceNavigationItem }}
             {{/each}} 

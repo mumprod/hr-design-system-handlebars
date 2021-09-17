@@ -6,12 +6,12 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import menu from "./ServiceNavigation.hbs";
+import menu from "./ServiceList.hbs";
 
 import JsonData from '../navigation.json';
 
 <Meta
-  title="Komponenten/Header/ServiceNavigation/ServiceNavigation"
+  title="Komponenten/Header/ServiceNavigation/ServiceList"
   argTypes={{
     
   }}
@@ -25,7 +25,7 @@ export const Template = ({ labelType, ...args }) => {
 
 # ServiceNavigation
 
-In der `ServiceNavigation` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
+In der `ServiceList` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
 
 <Preview withToolbar>
   <Story
