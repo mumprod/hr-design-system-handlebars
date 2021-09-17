@@ -1,4 +1,5 @@
-<div x-data="{}"
+<div x-data="{  }" 
+     
      x-init="console.log('alpineJS is installed')"
      class="flex flex-wrap max-w-full border-b border-white bg-blue-science font-copy lg:justify-center lg:w-full">
 
@@ -6,7 +7,7 @@
         {{> components/Header/BrandNavigation/BrandNavigation }}
     </div>
 
-    <div id="" class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
+    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
        
         <div id="serviceNavMainContainer" class="flex h-16 container px-3.5 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
@@ -39,7 +40,13 @@
                 <div id="burgerWrapper" class="flex justify-end flex-none order-3 p-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burger_open: false }">
-                            <button class="relative w-10 h-10 text-white focus:outline-none bg-brand" @click="burger_open = !burger_open">
+                            <button class="relative w-10 h-10 text-white focus:outline-none bg-brand" 
+                                    @click=" 
+                                        burger_open = !burger_open
+                                        $dispatch('notify', 'Hello World!')
+                                        ">
+
+
                                 <span class="sr-only md:hidden">Open main menu</span>
                                 <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burger_open ? 'rotate-45' : '-mt-2'"></span>
@@ -56,7 +63,7 @@
         </div>
     </div>
 
-        <div id="sectionNavWrapper" x-ref="sectionNavigation" class="container flex flex-auto order-3 hidden bg-blue-science top-32 md:flex ">
+        <div id="sectionNavWrapper" x-ref="sectionNavigation" @notify.window="alert('sectionNav ---> burger was clicked')" class="container flex flex-auto order-3 hidden bg-blue-science top-32 md:flex ">
             {{> components/Header/SectionNavigation/SectionNavigation }}
         </div>
 </div>
