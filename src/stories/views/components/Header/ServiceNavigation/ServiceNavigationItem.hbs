@@ -1,21 +1,23 @@
-<li @click="dropped = !dropped" x-data="{dropped: false }"
-    class="relative flex flex-col items-center text-white border-l border-gray-900 bg-blue-science first:border-l-0 lg:border-0 ">  
+{{#each this.navigationItems}}
+    <li @click="dropped = !dropped" x-data="{dropped: false }"
+        class="relative flex flex-col items-center w-auto px-4 text-white bg-blue-science md:border-r md:border-white lg:border-0 ">  
 
-    {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full fill-current h-9"}}
-      
-    <div class="flex flex-row mt-px">
-        <span class="mr-1 text-xs whitespace-nowrap">
-            {{label}} 
-        </span>
-        <div class="opacity-70">
-            <svg :class="dropped ? 'hidden' : 'h-4 w-4'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            <svg :class="dropped ? 'h-4 w-4' : 'hidden'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
-            </svg>
+        {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-9 fill-current h-9 align-center"}}
+        
+        <div class="relative flex flex-row items-center justify-center z-200 b-0">
+            <span class="hidden text-xs lg:relative lg:flex lg:inline-block lg:left-0 lg:h-auto lg:w-full lg:align-center whitespace-nowrap">
+                {{label}} 
+            </span>
+            <div class="hidden opacity-70 lg:flex lg:inline-block">
+                <svg :class="dropped ? 'hidden' : 'h-4 w-4'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <svg :class="dropped ? 'h-4 w-4' : 'hidden'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                </svg>
+            </div>
         </div>
-    </div>
-    
-    {{> components/Header/NavigationFlyout/NavigationFlyout }}
-    
-</li>
+        
+        {{> components/Header/NavigationFlyout/NavigationFlyout }}
+        
+    </li>
+{{/each}}

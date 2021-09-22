@@ -1,3 +1,27 @@
+# v0.12.1 (Wed Sep 22 2021)
+
+#### 🐛 Bug Fix
+
+- Storybook Modul > SSI Helper [#47](https://github.com/mumprod/hr-design-system-handlebars/pull/47) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.12.0 (Fri Sep 17 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1152 service list and service icons [#46](https://github.com/mumprod/hr-design-system-handlebars/pull/46) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.11.0 (Wed Sep 15 2021)
 
 #### 🚀 Enhancement
