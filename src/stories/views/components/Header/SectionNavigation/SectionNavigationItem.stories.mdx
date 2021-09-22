@@ -42,11 +42,13 @@ Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
   <Story
     name="Start"
     args={{
-      label: "Start",
-      text: "Start",
-      url: "index.html",
-			labelText: "Startseite der hessenschau",
-			subNavigationFromIndex: true
+      navigationItems: [{
+        label: "Start",
+        text: "Start",
+        url: "index.html",
+        labelText: "Startseite der hessenschau",
+        subNavigationFromIndex: true
+      }]
     }}
   >
     {Template.bind({})}
@@ -60,7 +62,7 @@ Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
 <Canvas>
   <Story
     name="Regionen mit Flyout from File"
-    args= {JsonData.sectionNavigationSSILinks.navigationItems[1]}
+    args= {JsonData.sectionNavigationSSILinks[1]}
   >
     {Template.bind({})}
   </Story>

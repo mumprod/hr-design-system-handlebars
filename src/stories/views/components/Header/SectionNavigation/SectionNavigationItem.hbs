@@ -1,50 +1,52 @@
-<li  x-data="{dropped:false}" class="flex justify-start w-full h-auto p-2 text-white list-none border-b border-white lg:border-0 lg:justify-center lg:w-auto bg-blue-science hover:text-blue-science hover:bg-white ">   
-   
-    {{#if this.isCluster ~}}
-
-        <button @click="dropped = !dropped" id="flyout-{{nextRandom}}-1" onclick="void(0)" class="{{#if this.selected}} -current{{/if}} flex w-full" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
-
-    {{~else ~}}
-
-        {{#if this.subNavigation}}
-            <a id="flyout-{{nextRandom}}-1" onclick="void(0)" class="c-sectionNav__link{{#if this.selected}} -current{{/if}} link {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"{{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} data-hr-flyout-menu='{}' href="#" aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>
-        {{~else ~}} 
-            <a class="flex justify-start lg:justify-center items-center{{#if this.selected}} -current before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8 {{/if}} link js-loadScript" {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} href="#" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>
-        {{~/if}}
-
-    {{~/if }}
-
-    {{#if this.subNavigation}}
-       {{~this.text~}}
-        {{#if this.subNavigation.showAsFlyout ~}}
-            <div :class="dropped ? 'transform rotate-180 relative -right-3/4 pb-2 pt-0 lg:relative lg:right-0':'flex justify-end relative -right-3/4 pt-2 lg:relative lg:right-0'">
-                {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
-            </div>
-        {{/if}}
-
-    {{else}}
+{{#each this.navigationItems}}
+    <li  x-data="{dropped:false}" class="flex justify-start w-full h-auto p-2 text-white list-none border-b border-white lg:border-0 lg:justify-center lg:w-auto bg-blue-science hover:text-blue-science hover:bg-white ">   
     
-        {{~this.text~}}
-    {{~/if}}
+        {{#if this.isCluster ~}}
 
-    {{#if this.isCluster}}
-        </button>
-    {{else}}
-        </a>
+            <button @click="dropped = !dropped" id="flyout-{{nextRandom}}-1" onclick="void(0)" class="{{#if this.selected}} -current{{/if}} flex w-full" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+
+        {{~else ~}}
+
+            {{#if this.subNavigation}}
+                <a id="flyout-{{nextRandom}}-1" onclick="void(0)" class="c-sectionNav__link{{#if this.selected}} -current{{/if}} link {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"{{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} data-hr-flyout-menu='{}' href="#" aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>
+            {{~else ~}} 
+                <a class="flex justify-start lg:justify-center items-center{{#if this.selected}} -current before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8 {{/if}} link js-loadScript" {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} href="#" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>
+            {{~/if}}
+
+        {{~/if }}
 
         {{#if this.subNavigation}}
-            <button @click="dropped = !dropped" id="flyout-{{getRandom}}-3" class="flex w-full c-subNav__button js-flyout__submenuOpener js-loadScript" data-hr-flyout-menu='{}' aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
-                <span class="hidden">{{~this.text~}}</span>
-                <div :class="dropped ? 'transform rotate-180 relative -right-3/4 pb-2 pt-0 lg:relative lg:right-0':'flex justify-end relative -right-4/4 pt-2 lg:relative lg:right-0'">
+        {{~this.text~}}
+            {{#if this.subNavigation.showAsFlyout ~}}
+                <div :class="dropped ? 'transform rotate-180 relative -right-3/4 pb-2 pt-0 lg:relative lg:right-0':'flex justify-end relative -right-3/4 pt-2 lg:relative lg:right-0'">
                     {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                 </div>
+            {{/if}}
+
+        {{else}}
+        
+            {{~this.text~}}
+        {{~/if}}
+
+        {{#if this.isCluster}}
             </button>
+        {{else}}
+            </a>
+
+            {{#if this.subNavigation}}
+                <button @click="dropped = !dropped" id="flyout-{{getRandom}}-3" class="flex w-full c-subNav__button js-flyout__submenuOpener js-loadScript" data-hr-flyout-menu='{}' aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+                    <span class="hidden">{{~this.text~}}</span>
+                    <div :class="dropped ? 'transform rotate-180 relative -right-3/4 pb-2 pt-0 lg:relative lg:right-0':'flex justify-end relative -right-4/4 pt-2 lg:relative lg:right-0'">
+                        {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
+                    </div>
+                </button>
+            {{/if}}
+
         {{/if}}
+        
+        {{> components/Header/NavigationFlyout/NavigationFlyout }}
 
-    {{/if}}
-    
-    {{> components/Header/NavigationFlyout/NavigationFlyout }}
+    {{!--  {{include "modules/header/subNavigation/subNavigation" _navigationType="RubrikNavigation" _parent=this.text}} --}}
 
-   {{!--  {{include "modules/header/subNavigation/subNavigation" _navigationType="RubrikNavigation" _parent=this.text}} --}}
-
-</li>
+    </li>
+{{/each}}
