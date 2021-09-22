@@ -40,11 +40,8 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="Wetter"
-    args={{
-      label: "Wetter",
-      icon: "wetter"
-    }}
+    name="Wetter it Flyout"
+    args={JsonData.serviceNavigationSSILinks[1]}
   >
     {Template.bind({})}
   </Story>
@@ -57,7 +54,7 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 <Canvas>
   <Story
     name="Verkehr mit Flyout from File"
-    args= {JsonData.serviceNavigationSSILinks.navigationItems[0]}
+    args= {JsonData.serviceNavigationSSILinks[0]}
     
   >
     {Template.bind({})}
