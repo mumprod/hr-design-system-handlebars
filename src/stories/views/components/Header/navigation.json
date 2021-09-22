@@ -72,7 +72,8 @@
 	
 , 
 
-	"serviceNavigationSSILinks":{
+"serviceNavigationSSILinks":[
+	{
 		"navigationItems" : [
 			{
 				"label":"Video & Podcast",
@@ -191,8 +192,12 @@
 						]
 					]
 				}
-			},		
-			{
+			}
+		]
+	},
+	{		
+		"navigationItems" : [
+		{
 				"label":"Wetter",
 				"icon":"wetter",
 				"flyoutStartLinkText":"Übersicht Wetter",
@@ -304,8 +309,11 @@
 						
 					]
 				}
-			},
-			{
+			}
+		]
+	},{
+		"navigationItems" : [	
+		{
 				"label":"Verkehr",
 				"icon":"verkehr",
 				"flyoutStartLinkText":"Übersicht Verkehr",
@@ -374,6 +382,7 @@
 			}
 		]
 	}
+]
     
     ,
 
