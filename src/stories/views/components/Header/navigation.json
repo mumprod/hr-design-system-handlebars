@@ -384,12 +384,18 @@
 				"text": "Start",
 				"url": "index.html",
 				"labelText": "Startseite der hessenschau",
-				"subNavigationFromIndex": true
+				"subNavigationFromIndex": true,
+				"selected": true
 			},
 			{
 				"name": "regionen",
 				"text": "Regionen",
 				"url": "rheinmain/index.html",
+				"isCluster": "true",
+				"subNavigation": {
+					"showAsFlyout" :"true"
+				},
+				
 				"clusterItems": [
 					{
 						"name": "nordhessen",
@@ -422,7 +428,71 @@
 				"name": "politik",
 				"text": "Politik",
 				"url": "politik/index.html",
-				"qualifiedRelatedContentOn404": true
+				"qualifiedRelatedContentOn404": true,
+				"isCluster":"false",
+				"subNavigation": {
+					"showAsFlyout": true,
+					"columns":[
+						[
+							{
+								"title":"Verkehrskameras",
+								"link":{
+									"content":{
+										"text": "Verkehrskameras"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title":"Blitzer",
+								"link":{
+									"content":{
+										"text": "Blitzer"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title":"Schulausfälle",
+								"link":{
+									"content":{
+										"text": "Schulausfälle"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title":"Flugpläne Frankfurt / Parkhausbelegung",
+								"link":{
+									"content":{
+										"text": "Flugpläne Frankfurt / Parkhausbelegung"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title":"Direktwahlen",
+								"link":{
+									"content":{
+										"text": "Direktwahlen"
+									},
+									"url":"http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							}
+						]
+						
+					]
+				}
 			},
 			{
 				"name": "gesellschaft",

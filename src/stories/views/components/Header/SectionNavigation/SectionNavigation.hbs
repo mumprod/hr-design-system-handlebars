@@ -1,9 +1,14 @@
-<div class="bg-blue-science">
-    {{#with this.sectionNavigationSSILinks}}
-        <ul class="flex text-left text-white">
-            {{#each this.navigationItems}}
-                {{> components/Header/SectionNavigation/SectionNavigationItem }}
-            {{/each}} 
-        </ul>
-    {{/with}}
+<div class="w-full pl-2.5 lg:container md:px-5 lg:px-10 bg-blue-science">
+    <div class="flex mb-0 content-start md:-mx-2.5">
+        <div class="flex w-full">
+            <span id="sectionNavHeadline" class="hidden">Bereichsnavigation</span>
+            {{#with this.sectionNavigationSSILinks}}
+                <ul class="flex flex-col items-center w-full text-left text-white list-none lg:flex-row">
+                    {{#each this.navigationItems}}
+                        {{> components/Header/SectionNavigation/SectionNavigationItem }}
+                    {{/each}} 
+                </ul>
+            {{/with}}
+        </div>
+    </div>
 </div>

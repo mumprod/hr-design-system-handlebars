@@ -19,6 +19,15 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      right: {
+        '80' : '80%'
+      },
+      zIndex: {
+        '0':'0',
+        '50':'50',
+        '101':'101',
+        '102':'102'
+      },
       maxWidth: {
         "1/4": "25%",
         "1/3": "33.33333333%",
@@ -78,7 +87,8 @@ module.exports = {
     extend: {
       margin: ["important"],
       borderWidth: ['first'],
-      padding: ['first'],
+      padding: ['first','before'],
+      
     },
   },
   plugins: [

@@ -41,12 +41,7 @@
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burger_open: false }">
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand" 
-                                    @click=" 
-                                        burger_open = !burger_open
-                                        $dispatch('notify', 'Hello World!')
-                                        ">
-
-
+                                    @click="$dispatch('burger-click'), burger_open = !burger_open">
                                 <span class="sr-only md:hidden">Open main menu</span>
                                 <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burger_open ? 'rotate-45' : '-mt-2'"></span>
@@ -61,9 +56,10 @@
             </div>
 
         </div>
+        
     </div>
 
-        <div id="sectionNavWrapper" x-ref="sectionNavigation" @notify.window="alert('sectionNav ---> burger was clicked')" class="container flex flex-auto order-3 hidden bg-blue-science top-32 md:flex ">
-            {{> components/Header/SectionNavigation/SectionNavigation }}
+        <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-click.window="$refs.sectionNavigation.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full lg:flex bg-blue-science z-101">
+            {{> components/Header/SectionNavigation/SectionNavigation }} 
         </div>
 </div>
