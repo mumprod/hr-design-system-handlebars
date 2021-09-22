@@ -1,3 +1,15 @@
+# v0.12.1 (Wed Sep 22 2021)
+
+#### 🐛 Bug Fix
+
+- Storybook Modul > SSI Helper [#47](https://github.com/mumprod/hr-design-system-handlebars/pull/47) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.12.0 (Fri Sep 17 2021)
 
 #### 🚀 Enhancement
