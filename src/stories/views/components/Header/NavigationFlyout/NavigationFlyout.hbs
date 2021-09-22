@@ -2,7 +2,7 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div x-show="dropped" @click.away="dropped = false" class="absolute flex h-auto mx-2 bg-white top-40">
+    <div x-show="dropped" @click.away="dropped = false" class="absolute flex h-auto mx-2 mt-2 bg-white filter drop-shadow-md top-40">
 
         {{#unless ../this.isCluster ~}}
             <div class="w-full c-subNav__header">
