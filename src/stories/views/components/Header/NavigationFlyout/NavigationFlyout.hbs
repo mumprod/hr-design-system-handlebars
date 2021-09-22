@@ -1,7 +1,9 @@
 {{#with this.subNavigation}}
+
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
-    <div x-show="dropped" @click.away="dropped = false" x-init="console.log('initialised!')"
-        class="flex flex-wrap w-full h-auto mx-2 bg-white">
+
+    <div x-show="dropped" @click.away="dropped = false" class="absolute flex h-auto mx-2 bg-white top-40">
+
         {{#unless ../this.isCluster ~}}
             <div class="w-full c-subNav__header">
                 <div class="block p-5 text-gray-600 bg-blue-100 c-subNav__item hover:bg-blue-600 hover:text-white">              
@@ -11,9 +13,17 @@
                 </div>          
             </div>
         {{/unless}}
-     
-        {{#each this.columns}}  
-            {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
-        {{/each~}}
+
+        {{#if this.showAsFlyout}}
+            {{#each this.columns}}
+                {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
+            {{/each}}
+        {{else}}
+            {{#with this.items}}
+                {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
+            {{/with}}
+        {{/if}}
+
+        
     </div>
 {{/with}}

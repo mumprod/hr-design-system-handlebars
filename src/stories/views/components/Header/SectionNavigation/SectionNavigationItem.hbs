@@ -1,9 +1,9 @@
 {{#each this.navigationItems}}
-    <li  x-data="{dropped:false}" class="flex justify-start w-full h-auto p-2 text-white list-none border-b border-white lg:border-0 lg:justify-center lg:w-auto bg-blue-science hover:text-blue-science hover:bg-white ">   
+    <li  x-data="{dropped:false}" class="flex justify-start w-full h-full p-2 text-white list-none border-b border-white lg:border-0 lg:justify-center lg:w-auto bg-blue-science hover:text-blue-science hover:bg-white ">   
     
         {{#if this.isCluster ~}}
 
-            <button @click="dropped = !dropped" id="flyout-{{nextRandom}}-1" onclick="void(0)" class="{{#if this.selected}} -current{{/if}} flex w-full" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+            <button @click="dropped = !dropped" id="flyout-{{nextRandom}}-1" onclick="void(0)" class="{{#if this.selected}} -current{{/if}} flex w-full items-center leading-4" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
         {{~else ~}}
 
@@ -18,7 +18,7 @@
         {{#if this.subNavigation}}
         {{~this.text~}}
             {{#if this.subNavigation.showAsFlyout ~}}
-                <div :class="dropped ? 'transform rotate-180 relative -right-3/4 pb-2 pt-0 lg:relative lg:right-0':'flex justify-end relative -right-3/4 pt-2 lg:relative lg:right-0'">
+                <div :class="dropped ? 'transform rotate-180 relative -right-3/4 lg:ml-2 lg:relative lg:right-0':'flex justify-end relative -right-3/4 lg:ml-2 lg:relative lg:right-0'">
                     {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                 </div>
             {{/if}}

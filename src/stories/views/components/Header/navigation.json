@@ -399,7 +399,66 @@
 					"url": "rheinmain/index.html",
 					"isCluster": "true",
 					"subNavigation": {
-						"showAsFlyout": "true"
+						"showAsFlyout": true,
+						"columns": [
+							[
+								{
+									"title": "Nordhessen",
+									"link": {
+										"content": {
+											"text": "Nordhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Osthessen",
+									"link": {
+										"content": {
+											"text": "Osthessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Mittelhessen",
+									"link": {
+										"content": {
+											"text": "Mittelhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Rhein-Main",
+									"link": {
+										"content": {
+											"text": "Rhein-Main"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Südhessen",
+									"link": {
+										"content": {
+											"text": "Südhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								}
+							]
+						]
 					},
 					"clusterItems": [
 						{
@@ -440,14 +499,14 @@
 					"qualifiedRelatedContentOn404": true,
 					"isCluster": "false",
 					"subNavigation": {
-						"showAsFlyout": true,
+						"showAsFlyout": false,
 						"columns": [
 							[
 								{
-									"title": "Verkehrskameras",
+									"title": "Bundestagswahl 2021",
 									"link": {
 										"content": {
-											"text": "Verkehrskameras"
+											"text": "Bundestagswahl 2021"
 										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
@@ -455,10 +514,10 @@
 									}
 								},
 								{
-									"title": "Blitzer",
+									"title": "Landtag",
 									"link": {
 										"content": {
-											"text": "Blitzer"
+											"text": "Landtag"
 										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
@@ -466,10 +525,10 @@
 									}
 								},
 								{
-									"title": "Schulausfälle",
+									"title": "Videos aus dem Landtag",
 									"link": {
 										"content": {
-											"text": "Schulausfälle"
+											"text": "Videos aus dem Landtag"
 										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
@@ -477,10 +536,10 @@
 									}
 								},
 								{
-									"title": "Flugpläne Frankfurt / Parkhausbelegung",
+									"title": "Wahlen",
 									"link": {
 										"content": {
-											"text": "Flugpläne Frankfurt / Parkhausbelegung"
+											"text": "Wahlen"
 										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
