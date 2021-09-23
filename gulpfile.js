@@ -22,6 +22,12 @@ function svgMap() {
                     svgMin({
                         plugins: [
                             {
+                                name: 'removeAttrs',
+                                params: {
+                                    attrs: 'transform',
+                                },
+                            },
+                            {
                                 name: 'removeViewBox',
                                 active: false,
                             },
