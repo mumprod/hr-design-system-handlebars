@@ -1,3 +1,27 @@
+# v0.14.0 (Thu Sep 23 2021)
+
+#### 🚀 Enhancement
+
+- Feature/webpack feature loader [#49](https://github.com/mumprod/hr-design-system-handlebars/pull/49) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.13.0 (Thu Sep 23 2021)
+
+#### 🚀 Enhancement
+
+- Feature/svg map [#48](https://github.com/mumprod/hr-design-system-handlebars/pull/48) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.12.1 (Wed Sep 22 2021)
 
 #### 🐛 Bug Fix
