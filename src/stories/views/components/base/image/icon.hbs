@@ -58,9 +58,9 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
             <svg>
     {{~/if~}}
 
-        <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_icon}}"></use>
+        <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_icon}}"></use>
         {{#if _overlayIcon }}
-            <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_overlayIcon}}"></use>
+            <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_overlayIcon}}"></use>
         {{/if}}
     {{~#if _iconText ~}}
             </svg>
