@@ -25,7 +25,6 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             components: path.resolve(__dirname, '../src/stories/views/components'),
-            components: path.resolve(__dirname, '../src/stories/views/components'),
             hrQueryNew$: path.resolve(
                 __dirname,
                 '../src/stories/views/components/generic/hrQueryNew.js'
