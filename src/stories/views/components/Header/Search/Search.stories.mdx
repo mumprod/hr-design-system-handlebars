@@ -1,0 +1,39 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import search from "./Search.hbs";
+
+import JsonData from '../searchSuggestionData.json';
+
+<Meta
+  title="Komponenten/Header/Search/Search"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ searchString, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return search({ searchString, ...args });
+};
+
+# Search
+
+In der `Search` Komponente werden die `SearchSuggestionItem` dargestellt:
+
+<Preview withToolbar>
+  <Story
+    name="Default"
+    args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Default" />
