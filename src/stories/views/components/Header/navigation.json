@@ -79,7 +79,7 @@
 					"isCluster": "false",
 					"url": "https://www.test.de",
 					"subNavigation": {
-						"showAsFlyout": false,
+						"showAsFlyout": true,
 						"columnCount": "2",
 						"items": false,
 						"columns": [
@@ -497,67 +497,64 @@
 					"text": "Politik",
 					"url": "politik/index.html",
 					"qualifiedRelatedContentOn404": true,
-					"isCluster": "false",
+					"isCluster": false,	
 					"subNavigation": {
 						"showAsFlyout": false,
-						"columns": [
-							[
-								{
-									"title": "Bundestagswahl 2021",
-									"link": {
-										"content": {
-											"text": "Bundestagswahl 2021"
-										},
-										"url": "http://www.test.de",
-										"hasIcon": false,
-										"iconName": "extern"
-									}
-								},
-								{
-									"title": "Landtag",
-									"link": {
-										"content": {
-											"text": "Landtag"
-										},
-										"url": "http://www.test.de",
-										"hasIcon": false,
-										"iconName": "extern"
-									}
-								},
-								{
-									"title": "Videos aus dem Landtag",
-									"link": {
-										"content": {
-											"text": "Videos aus dem Landtag"
-										},
-										"url": "http://www.test.de",
-										"hasIcon": false,
-										"iconName": "extern"
-									}
-								},
-								{
-									"title": "Wahlen",
-									"link": {
-										"content": {
-											"text": "Wahlen"
-										},
-										"url": "http://www.test.de",
-										"hasIcon": false,
-										"iconName": "extern"
-									}
-								},
-								{
-									"title": "Direktwahlen",
-									"link": {
-										"content": {
-											"text": "Direktwahlen"
-										},
-										"url": "http://www.test.de",
-										"hasIcon": false,
-										"iconName": "extern"
-									}
+						"items": [
+							{  "title": "Bundestagswahl 2021",
+								"link": {
+									"content": {
+										"text": "Bundestagswahl 2021"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
 								}
-							]
+							},
+							{
+								"title": "Landtag",
+								"link": {
+									"content": {
+										"text": "Landtag"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Videos aus dem Landtag",
+								"link": {
+									"content": {
+										"text": "Videos aus dem Landtag"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Wahlen",
+								"link": {
+									"content": {
+										"text": "Wahlen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Direktwahlen",
+								"link": {
+									"content": {
+										"text": "Direktwahlen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							}				
 						]
 					}
 				}
