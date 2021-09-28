@@ -75,8 +75,8 @@
 					"label": "Video & Podcast",
 					"icon": "videopodcast",
 					"flyoutStartLinkText": "Übersicht Video & Podcast",
-					"selected": "false",
-					"isCluster": "false",
+					"selected": false,
+					"isCluster": false,
 					"url": "https://www.test.de",
 					"subNavigation": {
 						"showAsFlyout": true,
@@ -198,6 +198,9 @@
 					"icon": "wetter",
 					"flyoutStartLinkText": "Übersicht Wetter",
 					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "1",
+						"items": false,
 						"columns": [
 							[
 								{
@@ -314,6 +317,9 @@
 					"icon": "verkehr",
 					"flyoutStartLinkText": "Übersicht Verkehr",
 					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "1",
+						"items": false,
 						"columns": [
 							[
 								{
