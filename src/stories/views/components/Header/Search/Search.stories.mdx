@@ -6,12 +6,10 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import search from "./Search.hbs";
-
-import JsonData from '../searchSuggestionData.json';
+import QuickSearch from "./QuickSearch.hbs";
 
 <Meta
-  title="Komponenten/Header/Search/Search"
+  title="Komponenten/Header/Search/QuickSearch"
   argTypes={{
     
   }}
@@ -20,20 +18,13 @@ import JsonData from '../searchSuggestionData.json';
 export const Template = ({ searchString, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return search({ searchString, ...args });
+  return QuickSearch({ searchString, ...args });
 };
 
 # Search
 
-In der `Search` Komponente werden die `SearchSuggestionItem` dargestellt:
-
 <Preview withToolbar>
-  <Story
-    name="Default"
-    args= {JsonData}
-  >
+  <Story name="Default">
     {Template.bind({})}
   </Story>
 </Preview>
-
-<ArgsTable story="Default" />

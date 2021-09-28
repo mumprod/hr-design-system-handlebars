@@ -1,7 +1,16 @@
 <div id="searchWrapper" class="flex items-center justify-end flex-1 order-2 py-5 bg-blue-science lg:order-3 md:order-3 md:flex-none">  
     <div class="relative hidden w-full py-px bg-white shadow-xl lg:inline-block" id="search-content">
         <div class="text-black">
-            <input id="searchfield" type="search" placeholder="Ort oder Thema suchen" autofocus="autofocus" class="w-full p-2 text-xs leading-normal transition appearance-none text-grey-800 focus:outline-none focus:border-transparent">
+            <form role="search" action="{{resourceUrl "suche/index.nocache"}}" method="get">
+                <input type="search" 
+                       placeholder="Ort oder Thema suchen" 
+                       autofocus="autofocus" 
+                       class="w-full p-2 text-xs leading-normal transition appearance-none text-grey-800 focus:outline-none focus:border-transparent" 
+                       data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}' 
+                       name="query" type="text"  
+                       id="searchInput--{{getRandom}}" 
+                       autocomplete="off">
+            </form>
         </div>
     </div>
     <div id="search-toggle" style="padding-top:6px; padding-bottom:6px; padding-right:18px " class="h-auto bg-transparent cursor-pointer search-icon md:border-r md:border-white lg:bg-white lg:text-blue-science">
