@@ -25,6 +25,7 @@ module.exports = {
       zIndex: {
         '0':'0',
         '50':'50',
+        '100':'100',
         '101':'101',
         '102':'102'
       },
@@ -38,6 +39,9 @@ module.exports = {
       },
       margin: {
         "13" : "3.125rem"
+      },
+      inset: {
+        "42": "10.5rem"
       },
       fontFamily: {
         copy: ["DIN", "sans-serif"],
@@ -91,7 +95,8 @@ module.exports = {
       margin: ["important"],
       borderWidth: ['first','last'],
       padding: ['first'],
-      backgroundColor: ['active']
+      backgroundColor: ['active'],
+      inset: ['first']
     },
   },
   plugins: [
