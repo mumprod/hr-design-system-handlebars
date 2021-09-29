@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li  x-data="{dropped:false}" :class="dropped ? 'text-blue-science bg-white' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white lg:border-0 lg:justify-center lg:w-auto bg-blue-science active:text-blue-science active:bg-white">   
+    <li  x-data="{dropped:false}" :class="dropped ? 'text-blue-science bg-white' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white first:border-t lg:border-0 lg:justify-center lg:w-auto bg-blue-science active:text-blue-science active:bg-white">   
     
         {{#if this.isCluster ~}}
         
@@ -60,7 +60,7 @@
 
         {{/if}}
         
-        {{> components/Header/NavigationFlyout/NavigationFlyout _navigationHead="hidden" }}
+        {{> components/Header/NavigationFlyout/NavigationFlyout _navigationHead="hidden" _isSectionNav=true  }}
 
     {{!--  {{include "modules/header/subNavigation/subNavigation" _navigationType="RubrikNavigation" _parent=this.text}} --}}
 
