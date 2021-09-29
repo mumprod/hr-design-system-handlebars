@@ -2,12 +2,12 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div x-show="dropped" @click.away="dropped = false" class="relative flex w-full h-auto mt-2 bg-white lg:mx-2 lg:absolute lg:filter lg:drop-shadow-md lg:w-auto lg:top-40 c-subNav__wrapper {{#unless this.showAsFlyout}} -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}{{/unless}} js-flyout__wrapper" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
+    <div id="{{{ ../_navigationHead }}}" x-show="dropped" @click.away="dropped = false" class="absolute w-full max-w-full h-auto mt-2 bg-white lg:mx-2 lg:absolute lg:filter lg:drop-shadow-md lg:w-auto lg:top-40 c-subNav__wrapper {{#unless this.showAsFlyout}} -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}{{/unless}} js-flyout__wrapper" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
 
         {{#unless ../this.isCluster ~}}
-            <div class="w-full c-subNav__header">
+            <div class="{{{ ../_navigationHead }}} w-full c-subNav__header">
                 <div class="block p-5 text-gray-600 bg-blue-100 c-subNav__item hover:bg-blue-600 hover:text-white">              
-                    <a href="#" class="c-subNav__link -isHeaderLink link js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
+                    <a href="#" class="{{{ ../_navigationHead }}} c-subNav__link -isHeaderLink link js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
                         {{../this.flyoutStartLinkText}}
                     </a>      
                 </div>          

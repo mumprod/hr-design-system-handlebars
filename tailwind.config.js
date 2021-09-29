@@ -36,6 +36,9 @@ module.exports = {
         "3/4": "75%",
         "1/1": "100%",
       },
+      margin: {
+        "13" : "3.125rem"
+      },
       fontFamily: {
         copy: ["DIN", "sans-serif"],
         headingSerif: ["RobotoSlab", "serif"],
