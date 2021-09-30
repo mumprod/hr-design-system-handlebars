@@ -1,19 +1,29 @@
 {{#with this.subNavigation}}
-    <div x-show="dropped" @click.away="dropped = false" x-init="console.log('initialised!')"
-        class="absolute w-96 top-14 left-0 h-auto bg-white flex flex-wrap mx-2">
+
+{{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
+
+    <div x-show="dropped" @click.away="dropped = false" class="{{#if ../_isSectionNav}} relative md:top-auto lg:top-42 md:left-auto lg:left-auto {{else}} absolute top-12 lg:top-16 left-0 -mt-px md:mt-0 md:left-0 lg:left-0{{/if}} z-102 w-full h-auto bg-white md:top-16  lg:absolute lg:filter lg:drop-shadow-md lg:w-auto {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
+
         {{#unless ../this.isCluster ~}}
-            <div class="c-subNav__header w-full">
-                <div class="c-subNav__item block p-5 bg-blue-100 hover:bg-blue-600 text-gray-600 hover:text-white">              
-                    <a href="#" class="c-subNav__link -isHeaderLink link  js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
+            <div class="{{#if ../_isSectionNav}}hidden {{/if}} w-full border-t border-white whitespace-nowrap c-subNav__header">
+                <div class="block p-5 text-gray-600 bg-blue-100 nowrap c-subNav__item hover:bg-blue-600 hover:text-white">              
+                    <a href="#" class="{{{ ../_navigationHead }}} nowrap c-subNav__link -isHeaderLink link js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
                         {{../this.flyoutStartLinkText}}
                     </a>      
                 </div>          
             </div>
         {{/unless}}
-
-     
-        {{#each this.columns}}  
-            {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
-        {{/each~}}
+        
+        <div class="whitespace-nowrap {{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex {{/if}}">
+            {{#if this.showAsFlyout}}
+                {{#each this.columns}}
+                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
+                {{/each}}
+            {{else}}
+                {{#with this.items}}
+                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
+                {{/with}}
+            {{/if}}
+        </div>        
     </div>
 {{/with}}

@@ -1,6 +1,6 @@
-<div id="serviceList" class="flex justify-end flex-initial hidden inline-block w-full max-w-full px-2 align-top md:flex md:px-5 md:flex-auto lg:px-10 lg:w-3/4 ">
+<div id="serviceList" class="absolute left-0 flex justify-center flex-initial w-full h-12 max-w-full align-top border-t border-b border-white md:h-16 top-12 bg-blue-science md:border-0 md:top-auto md:w-auto md:left-auto md:relative md:justify-end md:flex md:px-5 md:flex-auto lg:px-10 lg:w-3/4 ">
     {{#with this.serviceNavigationSSILinks}}
-        <ul class="flex items-center justify-center h-full ">
+        <ul class="relative flex items-center justify-around w-full h-full lg:w-auto lg:justify-end ">
             {{#each this}}        
                 {{!-- {{> components/base/loadSSI _template='components/Header/ServiceNavigation/ServiceNavigationItem' }} --}}                    
                 {{#if (isStorybook)}}  

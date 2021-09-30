@@ -19,6 +19,16 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      right: {
+        '80' : '80%'
+      },
+      zIndex: {
+        '0':'0',
+        '50':'50',
+        '100':'100',
+        '101':'101',
+        '102':'102'
+      },
       maxWidth: {
         "1/4": "25%",
         "1/3": "33.33333333%",
@@ -26,6 +36,18 @@ module.exports = {
         "2/3": "66.66666666%",
         "3/4": "75%",
         "1/1": "100%",
+      },
+      margin: {
+        "13" : "3.125rem"
+      },
+      padding: {
+        "1.5" : "0.375rem"
+      },
+      inset: {
+        "13": "3.375rem",
+        "14": "3.5rem",
+        "15": "3.75rem",
+        "42": "10.5rem"
       },
       fontFamily: {
         copy: ["DIN", "sans-serif"],
@@ -77,14 +99,16 @@ module.exports = {
   variants: {
     extend: {
       margin: ["important"],
-      borderWidth: ['first'],
+      borderWidth: ['first','last'],
       padding: ['first'],
+      backgroundColor: ['active'],
+      inset: ['first','md:first']
     },
   },
   plugins: [
     require("tailwindcss-important")(),
     
-    // plugin to separate border colors:
+    // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
     ({ addUtilities, e, theme, variants }) => {
       const colors = flattenColorPalette(theme('borderColor'));
       delete colors['default'];
