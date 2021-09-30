@@ -199,7 +199,7 @@
 					"flyoutStartLinkText": "Übersicht Wetter",
 					"subNavigation": {
 						"showAsFlyout": true,
-						"columnCount": "1",
+						"columnCount": "2",
 						"items": false,
 						"columns": [
 							[

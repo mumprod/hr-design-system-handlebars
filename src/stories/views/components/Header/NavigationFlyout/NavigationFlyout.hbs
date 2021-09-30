@@ -3,11 +3,11 @@
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
     <div x-show="dropped" @click.away="dropped = false" 
-        class="{{#if ../_isSectionNav}} relative md:top-auto lg:top-42 md:left-auto lg:left-auto {{else}} absolute top-12 lg:top-16 left-0 -mt-px md:w-auto md:px-4 md:mt-0 md:left-0 lg:left-0 lg:w-88 divide-y divide-gray-400{{/if}} z-102 w-full h-auto bg-white md:top-16  lg:absolute md:filter md:drop-shadow-md {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
+        class="{{#if ../_isSectionNav}} relative md:top-auto lg:top-42 md:left-auto lg:left-auto w-full lg:px-4 lg:w-auto{{else}} absolute top-12 lg:top-16 left-0 -mt-px md:w-auto md:top-14 md:px-4 md:mt-0 md:left-0 lg:left-0 lg:w-88 divide-y divide-gray-400 w-full{{/if}} z-102  h-auto bg-white lg:absolute md:filter md:drop-shadow-md {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
 
         {{#unless ../this.isCluster ~}}
             <div class="{{#if ../_isSectionNav}}hidden {{/if}}w-full">
-                <div class="flex py-2 pl-8 text-base bg-white md:pl-0 justify-left text-blue-science lg:h-11">              
+                <div class="flex py-2 pl-8 text-base bg-white md:pl-0 md:pt-4 lg:pt-2 justify-left text-blue-science lg:h-11">              
                     <a href="#" class="{{{ ../_navigationHead }}} -isHeaderLink lg:leading-8 js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
                         {{../this.flyoutStartLinkText}}
                     </a>      
@@ -15,10 +15,10 @@
             </div>
         {{/unless}}
         
-        <div class="{{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex md:divide-x md:divide-gray-400 md:py-4{{/if}}">
+        <div class="{{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex md:divide-x md:divide-gray-400 lg:py-4{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
-                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}
+                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn _columns=""}}
                 {{/each}}
             {{else}}
                 {{#with this.items}}
