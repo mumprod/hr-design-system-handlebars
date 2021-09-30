@@ -1,3 +1,16 @@
+# v0.15.0 (Thu Sep 30 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 956 styling und funktion burger/section nav [#50](https://github.com/mumprod/hr-design-system-handlebars/pull/50) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@StefanVesper](https://github.com/StefanVesper)
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.14.0 (Thu Sep 23 2021)
 
 #### 🚀 Enhancement
