@@ -2,7 +2,7 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div x-show="dropped" @click.away="dropped = false" class="{{#if ../_isSectionNav}} relative {{else}} absolute top-16 left-0 md:left-auto md:first:left-0 -mt-px md:mt-0 {{/if}} z-102  w-full max-w-full h-auto bg-white lg:mx-2 lg:absolute lg:filter lg:drop-shadow-md lg:w-auto  c-subNav__wrapper {{#unless this.showAsFlyout}} -isFixed {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}} js-flyout__wrapper" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
+    <div x-show="dropped" @click.away="dropped = false" class="{{#if ../_isSectionNav}} relative md:top-auto lg:top-42 md:left-auto lg:left-auto {{else}} absolute top-12 lg:top-16 left-0 -mt-px md:mt-0 md:left-0 lg:left-0{{/if}} z-102 w-full h-auto bg-white md:top-16  lg:absolute lg:filter lg:drop-shadow-md lg:w-auto {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1">
 
         {{#unless ../this.isCluster ~}}
             <div class="{{#if ../_isSectionNav}}hidden {{/if}} w-full border-t border-white whitespace-nowrap c-subNav__header">
@@ -14,7 +14,7 @@
             </div>
         {{/unless}}
         
-        <div class="whitespace-nowrap c-subNav__content js-flyout__content {{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} flex {{/if}}">
+        <div class="whitespace-nowrap {{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex {{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
                     {{> components/Header/NavigationFlyout/NavigationFlyoutColumn }}

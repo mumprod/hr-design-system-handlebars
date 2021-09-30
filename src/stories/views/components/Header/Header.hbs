@@ -9,29 +9,29 @@
 
     <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
        
-        <div id="serviceNavMainContainer" class="flex h-16 container px-3.5 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="flex h-12 md:h-16 container px-3.5 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
             {{!-- auslagern --> ServiceLogo.hbs --}}
-            <div id="serviceLogoWrapper" class="relative flex self-center flex-auto justify-start order-1 px-2 bg-blue-science h-auto md:flex-auto md:px-2.5 md:float-left md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4 lg:pt-0 lg:pl-3">
+            <div id="serviceLogoWrapper" class="flex self-center order-1 px-2 bg-blue-science h-auto md:flex-auto md:px-2.5 md:float-left md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4 lg:pt-0 lg:pl-3">
                 <a class="text-white fill-current" href="https://www.hessenschau.de/index.html" title="Startseite hessenschau . d e">
-                    {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="icon flex md:hidden w-11 h-11 "}}
+                    {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="icon flex md:hidden w-full h-6 justify-start "}}
                     {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="hidden md:flex md:-ml-12 justify-start fill-white h-11 p-0 -ml-12"}}
                 </a>
                 <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
             </div>
             
-            <div id="serviceItemsWrapper" class="flex justify-end flex-initial order-2 inline-block w-full max-w-full px-2 align-top bg-blue-science lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full px-2 align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
                 
                 {{!-- auslagern --> ServiceSuche.hbs --}}
-                <div id="searchWrapper" class="flex items-center justify-end flex-1 order-1 py-5 bg-blue-science lg:order-3 md:order-3 md:flex-none">  
+                <div id="searchWrapper" class="flex items-center justify-end flex-1 order-1 lg:bg-white md:bg-blue-science lg:order-3 md:order-3 md:flex-none">  
                     <div class="relative hidden w-full py-px bg-white shadow-xl lg:inline-block" id="search-content">
                         <div class="text-black">
                             <input id="searchfield" type="search" placeholder="Search..." autofocus="autofocus" class="w-full p-2 text-xs leading-normal transition appearance-none text-grey-800 focus:outline-none focus:border-transparent">
                         </div>
                     </div>
-                    <div id="search-toggle" style="padding-top:6px; padding-bottom:6px; padding-right:18px " class="h-auto bg-transparent cursor-pointer search-icon md:border-r md:border-white lg:bg-white lg:text-blue-science">
+                    <div id="search-toggle" class="h-auto pr-5 bg-transparent cursor-pointer search-icon md:border-r md:border-white lg:bg-white lg:text-blue-science">
                         <svg class="inline w-6 h-6 text-white pointer-events-none fill-current lg:text-blue-science" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
                         </svg>
@@ -39,7 +39,7 @@
                 </div>
 
                 {{!-- auslagern --> ServiceBurger.hbs --}}
-                <div id="burgerWrapper" class="flex justify-end flex-none order-2 p-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
+                <div id="burgerWrapper" class="flex justify-end flex-none order-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burger_open: false }">
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand" 
@@ -61,7 +61,7 @@
         
     </div>
 
-    <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-click.window="$refs.sectionNavigation.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full mt-16 md:mt-0 lg:flex bg-blue-science z-100">
+    <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-click.window="$refs.sectionNavigation.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full mt-12 md:mt-0 lg:flex bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
     </div>
 

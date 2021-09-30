@@ -40,7 +40,13 @@ module.exports = {
       margin: {
         "13" : "3.125rem"
       },
+      padding: {
+        "1.5" : "0.375rem"
+      },
       inset: {
+        "13": "3.375rem",
+        "14": "3.5rem",
+        "15": "3.75rem",
         "42": "10.5rem"
       },
       fontFamily: {
@@ -96,7 +102,7 @@ module.exports = {
       borderWidth: ['first','last'],
       padding: ['first'],
       backgroundColor: ['active'],
-      inset: ['first']
+      inset: ['first','md:first']
     },
   },
   plugins: [

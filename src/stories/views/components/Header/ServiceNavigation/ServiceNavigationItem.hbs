@@ -1,6 +1,6 @@
 {{#each this.navigationItems}}
     <li @click="dropped = !dropped" x-data="{dropped: false }"
-        class="flex flex-col items-center w-full px-4 text-white {{#if this.selected}} font-bold  -currentService {{/if}}bg-blue-science md:border-r md:border-white lg:border-0 ">  
+        class="flex flex-col justify-center items-center w-full px-4 text-white {{#if this.selected}} font-bold  -currentService {{/if}}bg-blue-science md:border-r md:border-white lg:relative lg:h-16 lg:border-0 lg:left-0">  
 
         {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-9 fill-current h-9 align-center"}}
         

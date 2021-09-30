@@ -10,11 +10,11 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -s ./src/assets -p 6006",
-        "build-storybook": "build-storybook -s ./src/assets",
+        "build-storybook": "build-storybook -w -s ./src/assets",
         "build-storybook-with-tailwind": "npm run build:tailwind && npm run build-storybook",
         "build-storybook-docs": "build-storybook -s ./src/assets --docs",
         "build-storybook-docs-with-tailwind": "npm run build:tailwind && npm run build-storybook-docs",
-        "build:tailwind": "postcss src/assets/tailwind.css -o dist/assets/index.css",
+        "build:tailwind": "postcss src/assets/tailwind.css -o dist/assets/index.css -w",
         "build": "npm run clean && npm run build:tailwind && node ./scripts/build.js",
         "chromatic": "npx chromatic --project-token 84f1628f224a",
         "clean": "rimraf  dist",
