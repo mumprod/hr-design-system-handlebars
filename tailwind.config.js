@@ -29,6 +29,9 @@ module.exports = {
         '101':'101',
         '102':'102'
       },
+      width: {
+        "88": '22rem'
+      },
       maxWidth: {
         "1/4": "25%",
         "1/3": "33.33333333%",
@@ -102,7 +105,7 @@ module.exports = {
       borderWidth: ['first','last'],
       padding: ['first'],
       backgroundColor: ['active'],
-      inset: ['first','md:first']
+      inset: ['first']
     },
   },
   plugins: [
