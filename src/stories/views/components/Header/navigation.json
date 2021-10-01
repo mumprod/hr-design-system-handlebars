@@ -406,6 +406,7 @@
 					"isCluster": "true",
 					"subNavigation": {
 						"showAsFlyout": true,
+						"columnCount": "1",
 						"columns": [
 							[
 								{
@@ -506,6 +507,7 @@
 					"isCluster": false,	
 					"subNavigation": {
 						"showAsFlyout": false,
+						"columnCount": "1",
 						"items": [
 							{  "title": "Bundestagswahl 2021",
 								"link": {
