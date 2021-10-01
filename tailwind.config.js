@@ -35,7 +35,7 @@ module.exports = {
       },
       width: {
         "70": "17.5rem",
-        "88": '22rem'
+        "88": "22rem"
       },
       maxWidth: {
         "1/4": "25%",

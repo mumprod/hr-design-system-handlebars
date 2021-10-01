@@ -41,14 +41,15 @@
                 {{!-- auslagern --> ServiceBurger.hbs --}}
                 <div id="burgerWrapper" class="flex justify-end flex-none order-2 px-4 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
-                        <nav x-data="{ dropped: false }">
-                            <button class="relative w-10 h-10 text-white focus:outline-none bg-brand" 
-                                    @click="$dispatch('burger-click'), dropped = !dropped">
+                        <nav x-data="{ burgeropen: false }">
+                            <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
+                                    @burger-close.window="burgeropen = false" 
+                                    @click="$dispatch('burger-click'), burgeropen = !burgeropen">
                                 <span class="sr-only md:hidden">Open main menu</span>
                                 <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="dropped ? 'rotate-45' : '-mt-2'"></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': dropped } "></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': dropped, 'mt-2': !dropped }"></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burgeropen ? 'rotate-45' : '-mt-2'"></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': burgeropen } "></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': burgeropen, 'mt-2': !burgeropen }"></span>
                                 </div>
                             </button>
                         </nav>
@@ -61,7 +62,7 @@
         
     </div>
 
-    <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-click.window="$refs.sectionNavigation.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full mt-12 md:mt-0 lg:flex bg-blue-science z-100">
+    <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-close.window="$el.classList.add('hidden')" @burger-click.window="$el.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full mt-12 md:mt-0 lg:flex bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
     </div>
 
