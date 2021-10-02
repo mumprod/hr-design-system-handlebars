@@ -34,6 +34,7 @@ module.exports = {
         '102':'102'
       },
       width: {
+        "46": "11.5rem",
         "70": "17.5rem",
         "88": "22rem"
       },
@@ -108,11 +109,12 @@ module.exports = {
       padding: ['first'],
       backgroundColor: ['active'],
       inset: ['first']
-    },
+    }
   },
   plugins: [
     require("tailwindcss-important")(),
-    
+    require('@tailwindcss/aspect-ratio'),
+
     // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
     ({ addUtilities, e, theme, variants }) => {
       const colors = flattenColorPalette(theme('borderColor'));
