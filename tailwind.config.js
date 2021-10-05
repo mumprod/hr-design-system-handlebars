@@ -6,7 +6,7 @@ module.exports = {
   purge: {
     content: ["./src/**/*.hbs"],
     options: {
-      defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+      defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:./]+/g) || [],
     },
   },
   theme: {
@@ -19,6 +19,10 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      padding: {
+        "1.5": "0.375rem",
+        "2.5": "0.625rem"
+      },
       right: {
         '80' : '80%'
       },
@@ -29,19 +33,21 @@ module.exports = {
         '101':'101',
         '102':'102'
       },
+      width: {
+        "46": "11.5rem",
+        "70": "17.5rem",
+        "88": "22rem"
+      },
       maxWidth: {
         "1/4": "25%",
         "1/3": "33.33333333%",
         "1/2": "50%",
         "2/3": "66.66666666%",
         "3/4": "75%",
-        "1/1": "100%",
+        "1/1": "100%"
       },
       margin: {
         "13" : "3.125rem"
-      },
-      padding: {
-        "1.5" : "0.375rem"
       },
       inset: {
         "13": "3.375rem",
@@ -102,12 +108,12 @@ module.exports = {
       borderWidth: ['first','last'],
       padding: ['first'],
       backgroundColor: ['active'],
-      inset: ['first','md:first']
-    },
+      inset: ['first']
+    }
   },
   plugins: [
     require("tailwindcss-important")(),
-    
+
     // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
     ({ addUtilities, e, theme, variants }) => {
       const colors = flattenColorPalette(theme('borderColor'));

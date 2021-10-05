@@ -1,3 +1,15 @@
+# v0.16.0 (Tue Oct 05 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1099 navigation flyout [#51](https://github.com/mumprod/hr-design-system-handlebars/pull/51) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.15.0 (Thu Sep 30 2021)
 
 #### 🚀 Enhancement
