@@ -1,23 +1,42 @@
-<div id="searchWrapper" class="flex items-center justify-end flex-1 order-1 lg:bg-white md:bg-blue-science lg:order-3 md:order-3 md:flex-none">  
-    <form role="search" action="{{resourceUrl "suche/index.nocache"}}" method="get">
-        <div class="relative hidden w-full py-px bg-white shadow-xl lg:inline-block" id="search-content">
-            <div class="text-black">
-                <input placeholder="Ort oder Thema suchen" 
+
+    <form 
+        role="search" 
+        action="{{resourceUrl "suche/index.nocache"}}" 
+        method="get" 
+        class="flex items-center justify-end flex-1 order-1 rounded lg:bg-white md:bg-blue-science lg:order-3 md:order-3 md:flex-none"
+    >
+        <div 
+            class="relative hidden w-full py-px bg-white rounded-l shadow-xl lg:inline-block" 
+            id="search-content"
+        >
+            <div class="text-black border-r border-gray-400 rounded-l">
+                <input 
+                    placeholder="Ort oder Thema suchen" 
                     autofocus="autofocus" 
-                    class="w-full p-2 text-xs leading-normal transition appearance-none text-grey-800 focus:outline-none focus:border-transparent"
+                    class="w-full p-2 text-xs leading-normal transition rounded-l appearance-none text-blue-science-800 focus:outline-none focus:border-transparent"
                     data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'
                     name="query" 
                     type="text"
                     id="searchInput--{{getRandom}}"
                     autocomplete="off"
                 >
-                <span class="hidden" role="status" aria-live="assertive" aria-atomic="true">Type 2 or more characters for results.</span>
+                <span 
+                    class="hidden" 
+                    role="status" 
+                    aria-live="assertive" 
+                    aria-atomic="true"
+                >
+                    Type 2 or more characters for results.
+                </span>
             </div>
         </div>
-        <button aria-label="Suche starten" type="submit" class="h-auto pr-5 bg-transparent cursor-pointer search-icon md:border-r md:border-white lg:bg-white lg:text-blue-science">
+        <button 
+            aria-label='{{loca "search_input_aria_submit" }}' 
+            type="submit" 
+            class="h-auto px-2 bg-transparent cursor-pointer search-icon md:border-r md:border-white lg:bg-white lg:text-blue-science"
+        >
             <svg class="inline w-6 h-6 text-white pointer-events-none fill-current lg:text-blue-science" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
             </svg>
         </button>
     </form>
-</div>
