@@ -113,7 +113,6 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-important")(),
-    require('@tailwindcss/aspect-ratio'),
 
     // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
     ({ addUtilities, e, theme, variants }) => {

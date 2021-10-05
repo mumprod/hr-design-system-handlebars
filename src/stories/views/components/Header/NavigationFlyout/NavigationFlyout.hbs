@@ -7,7 +7,7 @@
 
         {{#unless ../this.isCluster ~}}
             <div class="{{#if ../_isSectionNav}}hidden {{/if}}w-full">
-                <div class="flex py-2 pl-8 text-base bg-white md:pl-0 md:pt-4 lg:pt-2 justify-left text-blue-science lg:h-11">              
+                <div class="flex py-2 pl-4 text-base bg-white md:pl-0 md:pt-4 lg:pt-2 justify-left text-blue-science lg:h-11">              
                     <a href="#" class="{{{ ../_navigationHead }}} -isHeaderLink lg:leading-8 js-loadScript" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
                         {{../this.flyoutStartLinkText}}
                     </a>      
@@ -18,7 +18,7 @@
         <div class="{{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex md:divide-x md:divide-gray-400 md:py-4{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
-                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn _columns=../this.columnCount }}
+                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn _columns=../this.columnCount _navtype=../../_navigationType }}
                 {{/each}}
             {{else}}
                 {{#with this.items}}
