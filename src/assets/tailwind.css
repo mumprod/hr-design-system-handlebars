@@ -361,9 +361,7 @@
         font-style: normal;
         font-stretch: condensed;
     }
-}
 
-@layer components {
     .-currentBrand {
         @apply before:absolute before:w-0 before:h-0 before:border-t-0 before:border-r-8 before:border-r-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-blue-science before:-bottom-px 
     }
@@ -374,6 +372,10 @@
         @apply before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-9 
     }
 
+}
+
+@layer components {
+    
     .btn {
         @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;
     }

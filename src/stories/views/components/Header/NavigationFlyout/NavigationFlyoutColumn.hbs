@@ -1,5 +1,5 @@
-<ul class="flex-grow c-subNav__columns">
-    {{#each this }}          
-        {{> components/Header/NavigationFlyout/NavigationFlyoutItem }}              
+<ul class="{{inline-switch _columns "1,2" "md:w-1/1,md:w-1/2"}} md:even:pl-4">
+    {{#each this }}      
+        {{> components/Header/NavigationFlyout/NavigationFlyoutItem _fromNav=../_navtype }}              
     {{/each~}}
 </ul>
