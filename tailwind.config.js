@@ -19,6 +19,9 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      transitionProperty: {
+        'height': 'height'
+       },
       padding: {
         "1.5": "0.375rem",
         "2.5": "0.625rem"
