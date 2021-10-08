@@ -1,9 +1,9 @@
 {{#each this.navigationItems}}
-    <li @click.stop="dropped = !dropped; $dispatch('burger-close'); " @click.outside="dropped = false; " 
+    <li @click.stop.debounce="dropped = !dropped; $dispatch('burger-close'); $dispatch('closeothermenus')"
         x-data="{dropped: false }" 
-        
+        id="{{nextRandom}}"
         :class="dropped ? 'bg-white text-blue-science' : ''"
-        class="flex flex-col justify-center items-center w-full h-full 
+        class="js-serviceItem flex flex-col justify-center items-center w-full h-full 
         px-4 text-white {{#if this.selected}} font-bold  -currentService {{/if}}bg-blue-science  lg:relative lg:h-16 lg:border-0 lg:left-0">  
         
         {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-9 fill-current h-9 align-center"}}
