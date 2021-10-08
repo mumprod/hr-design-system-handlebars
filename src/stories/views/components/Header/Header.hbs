@@ -21,7 +21,7 @@
                 <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
             </div>
             
-            <div id="serviceItemsWrapper"  @closeothermenus.window="closemenus"  class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+            <div id="serviceItemsWrapper" {{!--  @closeothermenus.window="closemenus"  --}} class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
                 
                 {{!-- auslagern --> ServiceSuche.hbs --}}
@@ -71,20 +71,36 @@
 
 </div>
 <script>
+    document.addEventListener('alpine:init', () => {
+        console.log('init')
+        Alpine.data('servicedropdown', () => ({
+            dropped2: false,
+            toggle() {
+                this.dropped2 = ! this.dropped2
+            }
+        }))
+    })
+
     function closemenus(e) {
         const serviceItems = document.querySelectorAll('.js-serviceItem');
         const serviceList = document.querySelector('#serviceList');
         const serviceFlyouts = serviceList.querySelectorAll('.js-flyout');
 
         for (var a=0; a<serviceFlyouts.length; a++){
-            console.log('target: '+ e.target.id)
-            console.log('flyout: '+ serviceFlyouts[a].id)
+            
             if(serviceFlyouts[a].id != e.target.id && serviceFlyouts[a].style.height == 'auto'){
+                console.log('flyout killed: '+ serviceFlyouts[a].id)
                 serviceFlyouts[a].style="overflow:hidden; height:0px"
                 serviceItems[a].classList.replace('bg-white','bg-blue-science')
-                serviceItems[a].classList.replace('text-blue-science','text-whihte')
+                serviceItems[a].classList.replace('text-blue-science','text-white')
                 
+            }  
+            if (serviceFlyouts[a].id == e.target.id && serviceFlyouts[a].style=="overflow: hidden; height: 0px") {
+                console.log('clicked on : '+ e.target.id)
+                serviceFlyouts[a].style="overflow:hidden; height:auto"
+                //serviceItems[a].dispatchEvent('click')
             }
+            
         }
     }
 

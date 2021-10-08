@@ -2,7 +2,7 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div id="{{getRandom}}" x-show="dropped" @click.outside="dropped = false" x-collapse 
+    <div id="{{getRandom}}" {{#if ../_isSectionNav}} x-show="dropped" @click.outside="dropped = false" x-collapse   {{else}} x-show="dropped2" @click.outside="dropped2 = false" x-transition.opacity.duration.300{{/if}}   
         class="js-flyout z-102 bg-white md:filter md:drop-shadow-md lg:absolute transition-all duration-1000 {{#if ../_isSectionNav}}relative w-full md:top-auto lg:top-42 md:left-auto lg:left-auto lg:pl-2.5 lg:pr-2.5 lg:w-auto{{else}}absolute w-full top-12 left-0 md:w-88 md:top-14 md:px-4 md:mt-0 md:left-0 lg:top-16 lg:left-0 divide-y divide-gray-400{{/if}} {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1" >
 
         {{#unless ../this.isCluster ~}}
