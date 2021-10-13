@@ -1,15 +1,15 @@
 <div x-data="{  }" 
      x-init="console.log('alpineJS is installed')"
-     class="flex flex-wrap max-w-full border-b border-white bg-blue-science font-copy lg:justify-center lg:w-full">
+     class="flex flex-wrap max-w-full bg-blue-science font-copy lg:justify-center lg:w-full">
 
-    <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white border-b border-black">
+    <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
         {{> components/Header/BrandNavigation/BrandNavigation }}
     </div>
 
 
-    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full border-b border-white bg-blue-science z-101">
+    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-science z-101">
        
-        <div id="serviceNavMainContainer" class="flex h-12 md:h-14 lg:h-16 container px-3.5 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="container flex h-12 px-2 md:h-14 lg:h-16 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
             {{!-- auslagern --> ServiceLogo.hbs --}}
@@ -21,7 +21,7 @@
                 <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
             </div>
             
-            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full px-2 align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
                 
                 {{!-- auslagern --> ServiceSuche.hbs --}}
@@ -31,7 +31,7 @@
                             <input id="searchfield" type="search" placeholder="Search..." autofocus="autofocus" class="w-full p-2 text-xs leading-normal transition appearance-none text-grey-800 focus:outline-none focus:border-transparent">
                         </div>
                     </div>
-                    <div id="search-toggle" class="h-auto px-5 py-4 bg-transparent cursor-pointer search-icon lg:py-1.5 lg:text-blue-science lg:bg-white">
+                    <div id="search-toggle" class="h-auto px-4 py-4 bg-transparent cursor-pointer search-icon lg:py-1.5 lg:text-blue-science lg:bg-white">
                         <svg class="inline w-6 h-6 text-white pointer-events-none fill-current lg:text-blue-science" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
                         </svg>
@@ -39,14 +39,15 @@
                 </div>
 
                 {{!-- auslagern --> ServiceBurger.hbs --}}
-                <div id="burgerWrapper" class="flex justify-end flex-none order-2 px-4 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
+                <div id="burgerWrapper" class="flex justify-end flex-none order-2 px-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burgeropen: false }">
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
                                     @burger-close.window="burgeropen = false" 
-                                    @click="$dispatch('burger-click'), burgeropen = !burgeropen">
-                                <span class="sr-only md:hidden">Open main menu</span>
-                                <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                                    @click.throttle="burgeropen = !burgeropen, $dispatch('toggle-sectionnav', burgeropen)">
+
+                                    <span class="sr-only md:hidden">Open main menu</span>
+                                    <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burgeropen ? 'rotate-45' : '-mt-2'"></span>
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': burgeropen } "></span>
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': burgeropen, 'mt-2': !burgeropen }"></span>
@@ -62,8 +63,24 @@
         
     </div>
 
-    <div id="sectionNavWrapper" x-data="{}" x-ref="sectionNavigation" @burger-close.window="$el.classList.add('hidden')" @burger-click.window="$el.classList.toggle('hidden')" class="flex justify-center order-3 hidden w-full mt-12 md:mt-0 lg:flex bg-blue-science z-100">
+    <div id="sectionNavWrapper" x-ref="sectionnavigation"
+        {{!-- wenn ein ServiceItem geöffnet wird, SectionNav schließen (geht nur mobil): --}}
+        @burger-close.window="$el.classList.add('h-0')" 
+
+        {{!-- //wenn burger geclickt wurde: --}}
+        @toggle-sectionnav.window="$event.detail == false ? $el.style.maxHeight='0px' : $el.style.maxHeight=$el.scrollHeight + 'px'" 
+
+        class="flex justify-center order-3 w-full mt-12 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
     </div>
 
 </div>
+<script>
+    window.addEventListener('resize', () => {
+        console.log('resize')
+        if(window.innerWidth < 960) {
+            document.querySelector('#sectionNavWrapper').style=""
+        }
+    })
+
+</script>

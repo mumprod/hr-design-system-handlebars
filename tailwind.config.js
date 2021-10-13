@@ -19,9 +19,14 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding'
+       },
       padding: {
         "1.5": "0.375rem",
-        "2.5": "0.625rem"
+        "2.5": "0.625rem",
+        "13": "3.25rem"
       },
       right: {
         '80' : '80%'
@@ -103,10 +108,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   variants: {
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
     extend: {
       margin: ["important"],
-      borderWidth: ['first','last'],
-      padding: ['first'],
+      borderWidth: ['responsive','first','last'],
+      padding: ['responsive','first','even','first-line'],
       backgroundColor: ['active'],
       inset: ['first']
     }
