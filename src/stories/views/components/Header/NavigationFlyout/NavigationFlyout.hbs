@@ -2,7 +2,15 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div id="{{getRandom}}" {{#if ../_isSectionNav}} x-show="dropped"  x-collapse {{else}} x-show="dropped" x-collapse{{/if}}   
+    <div id="{{getRandom}}" {{#if ../_isSectionNav}} x-show="dropped" x-collapse 
+        x-init="$watch('dropped', value => { console.log(window.innerWidth)
+                if(value == true) { 
+                    let a = $refs.sectionnavigation.scrollHeight + $el.scrollHeight; 
+                    document.querySelector('#sectionNavWrapper').style.maxHeight = a +'px' 
+                    console.log(a)
+                    } 
+                })" {{else}} x-show="dropped" x-collapse{{/if}}  
+
         class="js-flyout z-102 bg-white md:filter md:drop-shadow-md lg:absolute transition-all duration-1000 {{#if ../_isSectionNav}}relative w-full md:top-auto lg:top-42 md:left-auto lg:left-auto lg:pl-2.5 lg:pr-2.5 lg:w-auto{{else}}absolute w-full top-12 left-0 md:w-88 md:top-14 md:px-4 md:mt-0 md:left-0 lg:top-16 lg:left-0 divide-y divide-gray-400{{/if}} {{#unless this.showAsFlyout}} {{#unless ../this.selected}} -hideFlyout {{/unless}}{{/unless}}" id="flyout-{{getRandom}}-2" aria-expanded="false" aria-hidden="true" aria-labelledby="flyout-{{getRandom}}-1" >
 
         {{#unless ../this.isCluster ~}}
@@ -15,7 +23,7 @@
             </div>
         {{/unless}}
         
-        <div class="{{#if this.showAsFlyout}}-columnCount--{{this.columnCount}} md:flex md:divide-x md:divide-gray-400 md:py-4{{/if}}">
+        <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} md:divide-x md:divide-gray-400{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
                     {{> components/Header/NavigationFlyout/NavigationFlyoutColumn count=../this.columnCount navtype=../../_navigationType }}

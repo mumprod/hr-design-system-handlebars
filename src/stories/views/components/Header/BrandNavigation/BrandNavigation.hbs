@@ -1,25 +1,23 @@
 <div x-data="{ open: false }" class="container px-3.5 md:px-5 lg:px-10">
-    <div class="flex m-0 p-0 list-none content-start flex-wrap md:-mx-2.5 border-b text-gray text-sm border-grey">
-
-        <input x-on:click="open = ! open" class="absolute top-0 right-0 z-10 inline-block w-8 h-4 opacity-0 cursor-pointer md:hidden lg:hidden" type="checkbox" id="toggleBrandNav" aria-hidden="true" tabindex="-1">
-            <label class="absolute right-0 inline-block w-4 h-4 top-2 md:hidden lg:hidden" for="toggleBrandNav" aria-hidden="true" tabindex="-1">
-                <div :class="open ? '':'hidden'">
-                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 w-full h-4 fill-current"}}
-                </div>
-                <div :class="open ? 'hidden':''">
-                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 w-full h-4 fill-current"}}
-                </div>
-            </label>
-
-        <nav id="brandNav" :class="open ? 'h-auto relative block leading-12 w-full px-2 align-top md:px-2.5 lg:h-10 lg:leading-8 ' : 'h-8 relative cursor-pointer block leading-12 w-full px-2 align-top md:px-2.5 lg:h-10 lg:leading-8'">
+    <div class="flex justify-center text-sm list-none text-gray ">
+        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all ease-in-out cursor-pointer duration-400 max-h-8 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
                 {{#with this.brandNavigationItems}}
-                    <ul class="flex flex-wrap py-2 mr-16 lg:mr-0 ">
+                    <ul class="flex flex-wrap mr-16 lg:mr-0 ">
                         {{#each this}}
                             {{> components/Header/BrandNavigation/BrandNavigationItem }}
                         {{/each}} 
                     </ul>
                 {{/with}}
         </nav>
+        <input @click="open = ! open" class="z-10 hidden inline-block w-0 h-0 cursor-pointer" type="checkbox" id="toggleBrandNav" aria-hidden="true" tabindex="-1">
+            <label class="w-4 h-4 pt-2 pb-0 pl-3 pr-7 md:hidden" for="toggleBrandNav" aria-hidden="true" tabindex="-1">
+                <div :class="open ? '':'hidden'">
+                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 h-4 fill-current"}}
+                </div>
+                <div :class="open ? 'hidden':''">
+                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-4 fill-current"}}
+                </div>
+            </label>
     </div>
 </div>

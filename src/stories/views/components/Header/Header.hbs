@@ -1,15 +1,15 @@
 <div x-data="{  }" 
      x-init="console.log('alpineJS is installed')"
-     class="flex flex-wrap max-w-full border-b border-white bg-blue-science font-copy lg:justify-center lg:w-full">
+     class="flex flex-wrap max-w-full bg-blue-science font-copy lg:justify-center lg:w-full">
 
-    <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white border-b border-black">
+    <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
         {{> components/Header/BrandNavigation/BrandNavigation }}
     </div>
 
 
     <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-science z-101">
        
-        <div id="serviceNavMainContainer" class="container flex h-12 md:h-14 lg:h-16 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="container flex h-12 px-2 md:h-14 lg:h-16 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
             {{!-- auslagern --> ServiceLogo.hbs --}}
@@ -44,7 +44,8 @@
                         <nav x-data="{ burgeropen: false }">
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
                                     @burger-close.window="burgeropen = false" 
-                                    @click.throttle="$dispatch('burger-click'),burgeropen = !burgeropen">
+                                    @click.throttle="burgeropen = !burgeropen, $dispatch('toggle-sectionnav', burgeropen)">
+
                                     <span class="sr-only md:hidden">Open main menu</span>
                                     <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                                     <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burgeropen ? 'rotate-45' : '-mt-2'"></span>
@@ -62,24 +63,24 @@
         
     </div>
 
-    <div id="sectionNavWrapper" x-ref="sectionNavigation"
+    <div id="sectionNavWrapper" x-ref="sectionnavigation"
+        {{!-- wenn ein ServiceItem geöffnet wird, SectionNav schließen (geht nur mobil): --}}
         @burger-close.window="$el.classList.add('h-0')" 
-        @burger-click.window="$el.classList.toggle('h-0')" 
-        
-        class="flex justify-center order-3 w-full h-0 mt-12 overflow-hidden transition-all duration-1000 ease-in md:mt-0 lg:flex lg:h-auto bg-blue-science z-100">
+
+        {{!-- //wenn burger geclickt wurde: --}}
+        @toggle-sectionnav.window="$event.detail == false ? $el.style.maxHeight='0px' : $el.style.maxHeight=$el.scrollHeight + 'px'" 
+
+        class="flex justify-center order-3 w-full mt-12 overflow-hidden transition-all ease-in duration-400 max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
     </div>
 
 </div>
 <script>
-    document.addEventListener('alpine:init', () => {
-        console.log('init')
-        Alpine.data('servicedropdown', () => ({
-            dropped2: false,
-            toggle() {
-                this.dropped2 = ! this.dropped2
-            }
-        }))
+    window.addEventListener('resize', () => {
+        console.log('resize')
+        if(window.innerWidth < 960) {
+            document.querySelector('#sectionNavWrapper').style=""
+        }
     })
 
 </script>
