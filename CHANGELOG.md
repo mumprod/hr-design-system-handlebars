@@ -1,3 +1,15 @@
+# v0.17.0 (Wed Oct 13 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1191 transitions & effekte [#52](https://github.com/mumprod/hr-design-system-handlebars/pull/52) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.16.0 (Tue Oct 05 2021)
 
 #### 🚀 Enhancement
