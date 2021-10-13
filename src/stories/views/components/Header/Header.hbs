@@ -43,8 +43,8 @@
                     <div class="flex items-center justify-center h-full text-white fill-current">
                         <nav x-data="{ burgeropen: false }">
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
-                                    @burger-close.window="burgeropen = false" 
-                                    @click.throttle="burgeropen = !burgeropen, $dispatch('toggle-sectionnav', burgeropen)">
+                                    @burger-close.window="burgeropen = false, $dispatch('toggle-sectionnav', false)" 
+                                    @click.debounce="burgeropen = !burgeropen, $dispatch('toggle-sectionnav', burgeropen)">
 
                                     <span class="sr-only md:hidden">Open main menu</span>
                                     <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
@@ -65,10 +65,14 @@
 
     <div id="sectionNavWrapper" x-ref="sectionnavigation"
         {{!-- wenn ein ServiceItem geöffnet wird, SectionNav schließen (geht nur mobil): --}}
-        @burger-close.window="$el.classList.add('h-0')" 
+        {{!-- @burger-close.window="$el.classList.add('max-h-0') " --}}
 
         {{!-- //wenn burger geclickt wurde: --}}
-        @toggle-sectionnav.window="$event.detail == false ? $el.style.maxHeight='0px' : $el.style.maxHeight=$el.scrollHeight + 'px'" 
+        {{!-- @toggle-sectionnav.window="$event.detail == false ? $el.style.maxHeight='0px' : $el.style.maxHeight=$el.scrollHeight + 'px'"  --}}
+
+
+        @toggle-sectionnav.window="if($event.detail == false) { if (window.innerWidth < 960) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
+
 
         class="flex justify-center order-3 w-full mt-12 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
