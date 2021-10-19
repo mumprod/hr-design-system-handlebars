@@ -1,0 +1,35 @@
+<form 
+    role="search" 
+    action="{{resourceUrl "suche/index.nocache"}}" 
+    method="get" 
+    class="flex border-2 rounded flex-2 md:justify-end border-blue-congress lg:border-0 lg:border-none"
+>
+    <div 
+        class="relative w-full lg:rounded-l" 
+        id="search-content"
+    >   
+        <label for="searchInput--{{nextRandom}}" class="hidden">suchfeld</label>
+        <input 
+            placeholder='{{loca "search_input_placeholder" }}' 
+            autofocus="autofocus" 
+            class="w-full px-3 py-2 text-base placeholder-opacity-100 shadow-inner lg:rounded-l placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none focus:border-transparent"
+            data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'
+            name="query" 
+            type="text"
+            id="searchInput--{{getRandom}}"
+            autocomplete="off"
+        >   
+    </div>
+    <button 
+        aria-label='{{loca "search_input_aria_submit" }}' 
+        type="submit" 
+        class="pl-3 pr-2 cursor-pointer lg:rounded-r bg-blue-congress lg:bg-white text-blue-congress z-102"
+    >
+        <svg class="w-6 h-6 text-white fill-current bg-blue-congress lg:fill-current lg:text-blue-congress lg:bg-white" 
+             xmlns="http://www.w3.org/2000/svg" 
+             viewBox="0 0 20 20"
+        >
+            <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+        </svg>
+    </button>
+</form>

@@ -1,4 +1,9 @@
-<div id="serviceList" class="absolute left-0 flex justify-center flex-initial w-full h-12 max-w-full align-top border-t border-b border-white md:h-14 top-12 bg-blue-science md:border-0 md:top-auto md:w-auto md:left-auto md:relative md:justify-end md:flex md:flex-auto lg:px-10 lg:w-3/4 ">
+<div 
+    id="serviceList" 
+    class="absolute left-0 flex justify-center flex-initial w-full h-12 max-w-full align-top border-t border-b border-white md:h-14 top-12 bg-blue-science md:border-0 md:top-auto md:w-auto md:left-auto md:relative md:justify-end md:flex md:flex-auto lg:px-10 lg:w-3/4 "
+    @search-mobile-click.window="$el.classList.toggle('hidden')"
+    @search-mobile-click-outside.window="$el.classList.remove('hidden')"
+>
     {{#with this.serviceNavigationSSILinks}}
         <ul class="relative flex items-center justify-around w-full h-full divide-x divide-white lg:divide-x-0 lg:w-auto lg:justify-end">
             {{#each this}}        
