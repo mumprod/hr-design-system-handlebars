@@ -6,22 +6,22 @@ import {
   Preview,
 } from "@storybook/addon-docs/blocks";
 
-import QuickSearch from "./QuickSearchButton.hbs";
+import QuickSearchButton from "./QuickSearchButton.hbs";
 
 <Meta
-  title="Komponenten/Header/Search/QuickSearch"
+  title="Komponenten/Header/Search/QuickSearchButton"
   argTypes={{
     
   }}
 />
 
-export const Template = ({ searchString, ...args }) => {
+export const Template = ({ ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return QuickSearch({ searchString, ...args });
+  return QuickSearchButton({ ...args });
 };
 
-# Search
+# QuickSearchButton
 
 <Preview withToolbar>
   <Story name="Default">
