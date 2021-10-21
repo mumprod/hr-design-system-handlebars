@@ -1,4 +1,5 @@
 <form 
+    x-data="searchSuggest()"
     role="search" 
     action="{{resourceUrl "suche/index.nocache"}}" 
     method="get" 
@@ -10,15 +11,43 @@
     >   
         <label for="searchInput--{{nextRandom}}" class="hidden">suchfeld</label>
         <input 
+            @input.debounce.250="getSuggestionsForInput()" 
+            @click="active=true" name="query" x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
             autofocus="autofocus" 
             class="w-full px-3 py-2 text-base placeholder-opacity-100 shadow-inner lg:rounded-l placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none focus:border-transparent"
             data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'
-            name="query" 
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
-        >   
+        > 
+        <div class="relative" x-show="query.length > 1 && !suggestions.solrSuggestions.length == 0 && active" @click.away="active = false" x-cloak  x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-y-90" x-transition:enter-end="opacity-100 transform scale-y-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 transform scale-y-100" x-transition:leave-end="opacity-0 transform scale-y-90">
+
+        <div class="absolute w-full mt-1 bg-white border rounded shadow-xl top-100">
+
+            <div class="divide-y" x-ref="list">
+
+              <template x-for="suggestion in suggestions.solrSuggestions" :key="suggestion">
+
+                <a  x-bind:active="false"
+
+                    {{!-- x-bind:href='{{resourceUrl "suche/index.nc.html?query="}}' --}}
+
+                    href="{{resourceUrl 'suche/index.nc.html?query'}} suggestion"
+
+                    x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded hover:bg-blue-congress': true, 'lg:bg-white hover:bg-blue-congress hover:text-white':suggestion}">
+
+                  <span x-text="suggestion"></span>
+
+                </a>
+
+              </template>
+
+            </div>
+
+        </div>
+
+      </div>  
     </div>
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
@@ -33,3 +62,46 @@
         </svg>
     </button>
 </form>
+
+
+<script type="text/javascript">
+
+    function searchSuggest() {
+
+      return {
+
+        active:false,
+
+        cursorIndex: -1,
+
+        query: "",
+
+        suggestions: [],
+
+        getSuggestionsForInput() {
+
+        fetch(`https://hessenschau-dev-red.hr.de/suche/index~suggest.jsp?suggestions=${this.query}`)
+
+          //fetch({{resourceUrl "suche/index~suggest.jsp?suggestions="}}${this.query})
+
+            .then((res) =>{  return res.text()
+
+            })
+
+            .then((data) => {
+
+                data = JSON.parse(data.replace(/&quot;/g, '"'))
+
+                this.suggestions = data;
+
+                this.active = true;
+
+            });
+
+        },
+
+      };
+
+    }
+
+  </script>
