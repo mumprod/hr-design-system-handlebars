@@ -1,5 +1,5 @@
 <div 
-    class="flex items-center h-12 md:ml-8" 
+    class="flex items-center h-full md:border-r md:border-l md:border-white lg:border-none" 
     :class="searchFieldOpen ? 'bg-white mt-2 rounded-t' : 'bg-blue-congress'"
 >
     <button 
@@ -9,7 +9,7 @@
     >
         <svg 
             x-show="!searchFieldOpen"
-            class="w-6 h-6 text-white fill-current" 
+            class="h-6 text-white fill-current w-9" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
         >
@@ -17,7 +17,7 @@
         </svg>
         <svg 
             x-show="searchFieldOpen"
-            class="w-6 h-6 fill-current text-blue-congress" 
+            class="h-6 fill-current w-9 text-blue-congress" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
         >
