@@ -1,6 +1,6 @@
 <div x-data="{ open: false }" class="container px-3.5 md:px-5 lg:px-10">
-    <div class="flex justify-center text-sm list-none text-gray ">
-        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all duration-700 ease-in-out cursor-pointer max-h-8 align-center">
+    <div class="flex justify-center text-sm text-gray-400 list-none ">
+        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all duration-300 ease-in-out cursor-pointer max-h-8 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
                 {{#with this.brandNavigationItems}}
                     <ul class="flex flex-wrap lg:mr-0 ">
@@ -13,10 +13,10 @@
         <input @click="open = ! open" class="z-10 hidden inline-block w-0 h-0 cursor-pointer" type="checkbox" id="toggleBrandNav" aria-hidden="true" tabindex="-1">
             <label class="w-4 h-4 pt-2 pb-0 pl-3 pr-7 md:hidden" for="toggleBrandNav" aria-hidden="true" tabindex="-1">
                 <div :class="open ? '':'hidden'">
-                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 h-4 text-blue-science fill-current"}}
+                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 h-4 text-blue-congress fill-current"}}
                 </div>
                 <div :class="open ? 'hidden':''">
-                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-4 text-blue-science fill-current"}}
+                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-4 text-blue-congress fill-current"}}
                 </div>
             </label>
     </div>

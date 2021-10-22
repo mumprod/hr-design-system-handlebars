@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li  @click.outside="dropped = false" x-data="dropdown" :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-science' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-science ">   
+    <li  @click.outside="dropped = false" x-data="dropdown" :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress ">   
     
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
