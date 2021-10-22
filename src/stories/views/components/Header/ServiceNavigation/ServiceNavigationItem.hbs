@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li @click="dropped = !dropped; $dispatch('burger-close');" @click.outside="dropped = false" 
+    <li @click="dropped = !dropped;searchFieldOpen=false; $dispatch('burger-close');" @click.outside="dropped = false" 
         x-data="{dropped : false}" 
         id="{{nextRandom}}"
         :class="dropped ? 'bg-white text-blue-science' : ''"

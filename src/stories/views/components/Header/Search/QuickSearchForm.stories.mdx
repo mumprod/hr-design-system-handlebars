@@ -1,0 +1,30 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import QuickSearchForm from "./QuickSearchForm.hbs";
+
+<Meta
+  title="Komponenten/Header/Search/QuickSearchForm"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ searchString, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return QuickSearchForm({ searchString, ...args });
+};
+
+# Search
+
+<Preview withToolbar>
+  <Story name="Default">
+    {Template.bind({})}
+  </Story>
+</Preview>
