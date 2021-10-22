@@ -1,21 +1,21 @@
 {{#each this.navigationItems}}
-    <li  @click.outside="dropped = false" x-data="{dropped:false}" :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-science' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white md:pl-11 lg:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-science ">   
+    <li  @click.outside="dropped = false" x-data="dropdown" :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-science' : ''" class="flex flex-wrap justify-start w-full h-auto text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-science ">   
     
         {{#if this.isCluster ~}}
-        
+{{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
-                @click.stop="dropped = !dropped" 
+                @click.stop="toggle" 
                 :class="dropped ? 'first:font-bold lg:first:font-normal' : 'first:font-normal'"
-                class="pl-8 lg:pl-2 flex flex-auto w-full justify-between lg:flex-initial h-11 lg:w-full items-center leading-4 {{#if this.selected}}-currentSection{{/if}}" 
+                class="pl-8 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}}-currentSection{{/if}}" 
                 aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" 
                 data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
         {{~else ~}}
 
             {{#if this.subNavigation}}
-
+{{!-- Gilt z.B. für POLITIK:  --}}
                 <a id="flyout-{{nextRandom}}-1" 
-                    class="px-8 flex flex-auto h-11 lg:w-full items-center leading-4 {{#if this.selected}} -currentSection {{/if}} {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"
+                    class="px-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} -currentSection {{/if}} {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" 
                     :class="dropped ? 'font-bold' : 'font-normal'"
                     href="{{resourceUrl this.url}}"
@@ -23,8 +23,9 @@
             
             {{~else ~}} 
 
+{{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a 
-                    class="flex justify-start px-8 lg:first:pl-0 h-11 lg:justify-center items-center {{#if this.selected}}-currentSection pl-4 {{/if}}" 
+                    class="flex justify-start px-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}}-currentSection pl-4 md:pl-5{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     href="{{resourceUrl this.url}}" 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>
@@ -39,8 +40,8 @@
             
             {{#if this.subNavigation.showAsFlyout ~}}
                 
-                    <div class="flex items-center justify-center leading-4 w-11 h-11 lg:w-auto lg:pr-4 lg:border-0">
-                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center lg:ml-2 lg:relative lg:right-0':'flex items-center justify-center lg:ml-2 lg:relative lg:right-0'">
+                    <div class="flex items-center justify-center h-10 leading-4 w-11 lg:w-auto lg:pr-4 lg:border-0">
+                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center':'flex items-center justify-center'">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
                     </div>
@@ -64,9 +65,9 @@
             {{#if this.subNavigation}}
 
                 <button 
-                    @click.stop="dropped = !dropped" 
-                    id="flyout-{{getRandom}}-3" 
-                    class="flex items-center justify-center leading-4 border-l border-white w-11 h-11 lg:hidden" 
+                    @click.stop="toggle" 
+                    id="flyout-{{getRandom}}" 
+                    class="flex items-center justify-center h-10 leading-4 border-l border-white w-11 lg:hidden" 
                     aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 

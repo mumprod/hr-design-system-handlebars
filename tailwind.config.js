@@ -3,6 +3,7 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 
 module.exports = {
   mode: 'jit',
+ 
   purge: {
     content: ["./src/**/*.hbs"],
     options: {
@@ -10,6 +11,22 @@ module.exports = {
     },
   },
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     letterSpacing: {
       tighter: "-.025em",
       tight: "-.0125em",
@@ -39,9 +56,11 @@ module.exports = {
         '102':'102'
       },
       width: {
+        "30": "7.5rem",
         "46": "11.5rem",
         "70": "17.5rem",
-        "88": "22rem"
+        "88": "22rem",
+        "92": "23rem"
       },
       maxWidth: {
         "1/4": "25%",
@@ -58,6 +77,7 @@ module.exports = {
         "13": "3.375rem",
         "14": "3.5rem",
         "15": "3.75rem",
+        "37": "9.125rem",
         "42": "10.5rem"
       },
       fontFamily: {

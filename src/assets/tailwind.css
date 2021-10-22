@@ -375,6 +375,7 @@
 }
 
 @layer components {
+    [x-cloak] { display: none !important; }
     
     .btn {
         @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;

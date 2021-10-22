@@ -1,27 +1,27 @@
-<div x-data="{  }" 
+<div x-data="{}" 
      x-init="console.log('alpineJS is installed')"
      class="flex flex-wrap max-w-full bg-blue-science font-copy lg:justify-center lg:w-full">
 
     <div id="brandNavWrapper" class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
-        {{> components/Header/BrandNavigation/BrandNavigation }}
+        {{> components/Header/BrandNavigation/BrandNavigation }} 
     </div>
 
 
-    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-science z-101">
+    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b-2 bg-blue-science z-101">
        
-        <div id="serviceNavMainContainer" class="container flex h-12 px-2 md:h-14 lg:h-16 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="container flex h-12 px-2 md:h-14 md:px-5 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
             {{!-- auslagern --> ServiceLogo.hbs --}}
-            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full px-2 overflow-hidden bg-blue-science md:px-0 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-2 bg-blue-science md:px-0 lg:h-14 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                 <a class="text-white fill-current" href="https://www.hessenschau.de/index.html" title="Startseite hessenschau . d e">
                     {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="icon flex md:hidden w-40 h-5 items-center "}}
-                    {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="hidden md:flex items-center fill-white h-6 w-46"}}
+                    {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="hidden md:flex items-center fill-white h-8 w-52"}}
                 </a>
                 <img class="hidden brandPrintFallback" loading="lazy" alt="Startseite hessenschau . d e" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg" srcset="https://www.hessenschau.de/assets_3.28.4/base/icons/rsslogo/brandlogo--rss.jpg">
             </div>
             
-            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-science lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-science lg:h-14 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
                 
                 {{!-- auslagern --> ServiceSuche.hbs --}}
@@ -41,16 +41,16 @@
                 {{!-- auslagern --> ServiceBurger.hbs --}}
                 <div id="burgerWrapper" class="flex justify-end flex-none order-2 px-2 bg-blue-science lg:order-4 md:order-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full text-white fill-current">
-                        <nav x-data="{ burgeropen: false }">
+                        <nav x-data>
                             <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
-                                    @burger-close.window="burgeropen = false, $dispatch('toggle-sectionnav', false)" 
-                                    @click.debounce="burgeropen = !burgeropen, $dispatch('toggle-sectionnav', burgeropen)">
+                                    @burger-close.window="$store.burgeropen = false, $dispatch('toggle-sectionnav', false)" 
+                                    @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
 
                                     <span class="sr-only md:hidden">Open main menu</span>
                                     <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="burgeropen ? 'rotate-45' : '-mt-2'"></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': burgeropen } "></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': burgeropen, 'mt-2': !burgeropen }"></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="$store.burgeropen ? 'rotate-45' : '-mt-2'"></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': $store.burgeropen } "></span>
+                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': $store.burgeropen, 'mt-2': ! $store.burgeropen }"></span>
                                 </div>
                             </button>
                         </nav>
@@ -70,21 +70,53 @@
         {{!-- //wenn burger geclickt wurde: --}}
         {{!-- @toggle-sectionnav.window="$event.detail == false ? $el.style.maxHeight='0px' : $el.style.maxHeight=$el.scrollHeight + 'px'"  --}}
 
-
-        @toggle-sectionnav.window="if($event.detail == false) { if (window.innerWidth < 960) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
-
+        @toggle-sectionnav.window="if($event.detail == false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
 
         class="flex justify-center order-3 w-full mt-12 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-science z-100">
         {{> components/Header/SectionNavigation/SectionNavigation }} 
+        
     </div>
 
 </div>
 <script>
-    window.addEventListener('resize', () => {
-        console.log('resize')
-        if(window.innerWidth < 960) {
-            document.querySelector('#sectionNavWrapper').style=""
-        }
+    document.addEventListener('alpine:init', () => {
+    Alpine.store('burgeropen', false);
+
+    Alpine.store('serviceItems', {
+        current: '1',
+        items: ['1','2','3','4'],        
     })
+
+    Alpine.data('dropdown', () => ({
+        dropped: false,
+        toggle() {
+            this.dropped = ! this.dropped;    
+        }
+    }))
+
+  
+  window.addEventListener('resize', () => {
+    document.querySelector('#sectionNavWrapper').classList.add('hidden')
+    
+    if(window.innerWidth > 1024) {
+        document.querySelector('#sectionNavWrapper').style=""
+    } else {
+        document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
+        const close = new CustomEvent('burger-close')
+        window.dispatchEvent(close)  
+    }
+
+    let timeout 
+    clearTimeout(timeout)
+    timeout = setTimeout(function(){
+        document.querySelector('#sectionNavWrapper').classList.remove('hidden')
+    }, 500)
+})
+
+  })
+  
+  
+
+
 
 </script>
