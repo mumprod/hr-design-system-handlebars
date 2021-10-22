@@ -38,7 +38,6 @@
                 <div class="divide-y" x-ref="list">
                     <template x-for="suggestion in suggestions" :key="suggestion">
                       <a  x-bind:active="false"
-                          {{!-- x-bind:href='{{resourceUrl "suche/index.nc.html?query="}}' --}}
                           x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
                           x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded hover:bg-blue-congress': true, 'lg:bg-white hover:bg-blue-congress hover:text-white':suggestion}"
                       >
