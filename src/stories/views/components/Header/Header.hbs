@@ -31,10 +31,10 @@
             </div>
 
                 {{!-- auslagern --> ServiceBurger.hbs --}}
-                <div id="burgerWrapper" class="flex justify-end flex-none order-2 px-2 bg-blue-congress lg:order-4 md:order-4 lg:hidden ">
-                    <div class="flex items-center justify-center h-full text-white fill-current">
+                <div id="burgerWrapper" {{!-- :class="$store.burgeropen ? 'bg-white' : 'bg-blue-congress'" --}} class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 lg:hidden ">
+                    <div class="flex items-center justify-center h-full fill-current">
                         <nav x-data>
-                            <button class="relative w-10 h-10 text-white focus:outline-none bg-brand"
+                            <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  class="relative w-10 h-10 text-white focus:outline-none bg-brand"
                                     @burger-close.window="$store.burgeropen = false, $dispatch('toggle-sectionnav', false)" 
                                     @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
 

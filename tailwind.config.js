@@ -38,9 +38,6 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.25)',
       none: 'none',
     },
-    flex: {
-     '2': '2 2 30%',
-    },
     letterSpacing: {
       tighter: "-.025em",
       tight: "-.0125em",
