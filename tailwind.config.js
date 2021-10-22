@@ -83,7 +83,7 @@ module.exports = {
         blue: {
           jellyBean: "#276b9e",
           pacificBlue: "#009bc6",
-          science: "#005293",//"#006dc1",
+          science: "#006dc1",
           congress: "#005293",
           deepCerulean: "#006eb7",
         },
