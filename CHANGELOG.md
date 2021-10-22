@@ -1,3 +1,15 @@
+# v0.18.0 (Fri Oct 22 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 959 search [#55](https://github.com/mumprod/hr-design-system-handlebars/pull/55) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.17.2 (Tue Oct 19 2021)
 
 #### 🐛 Bug Fix
