@@ -1,6 +1,7 @@
 {{#each this.navigationItems}}
     <li @click="toggle; searchFieldOpen=false; $store.serviceItems.current = '{{nextRandom}}'; $dispatch('burger-close');" 
-        @click.outside="dropped = false" 
+        @click.outside="dropped = false"
+        @close-servicemenu.window="dropped = false" 
         x-data="dropdown"
         id="{{getRandom}}"
         :class="dropped ? 'bg-white text-blue-congress md:rounded md:mt-2' : ''"
