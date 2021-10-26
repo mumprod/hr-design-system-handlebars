@@ -4,8 +4,8 @@
         @close-servicemenu.window="dropped = false" 
         x-data="dropdown"
         id="{{getRandom}}"
-        :class="dropped ? 'bg-white text-blue-congress md:rounded md:mt-2' : ''"
-        class="js-serviceItem flex flex-col justify-center lg:pt-1.5 lg:justify-start items-center w-full h-full 
+        :class="dropped ? 'bg-white text-blue-congress md:rounded md:mt-2 md:border-0' : ''"
+        class="js-serviceItem flex flex-col justify-center lg:pt-1.5 lg:justify-start items-center w-full h-full border-r last:border-r-0 lg:border-r-0
         px-4 text-white {{#if this.selected}} font-bold  -currentService {{/if}} lg:px-4 lg:relative lg:h-14 lg:rounded lg:mt-2 lg:border-0 lg:left-0">  
         
         {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-8 lg:w-6 fill-current h-8 lg:h-6 align-center"}}

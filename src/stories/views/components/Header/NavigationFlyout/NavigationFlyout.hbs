@@ -2,14 +2,13 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div x-cloak id="{{getRandom}}" {{#if ../_isSectionNav}} x-show="dropped" x-collapse 
-        x-init="$watch('dropped', value => { console.log(window.innerWidth)
+    <div x-cloak id="{{getRandom}}" {{#if ../_isSectionNav}} 
+        x-init="$watch('dropped', value => {
                 if(value == true) { 
                     let a = $refs.sectionnavigation.scrollHeight + $el.scrollHeight; 
                     document.querySelector('#sectionNavWrapper').style.maxHeight = a +'px' 
-                    console.log(a)
                     } 
-                })" {{else}} x-show="dropped" x-collapse{{/if}}  
+                })" {{else}} {{/if}}  x-show="dropped" x-collapse
 
         class="z-102 bg-white md:filter md:drop-shadow-md lg:absolute transition-all duration-1000 lg:duration-300 {{#if ../_isSectionNav}} relative w-full md:top-auto lg:top-37 md:left-auto lg:left-auto lg:pl-4 lg:-ml-2 lg:w-30 {{else}} lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-14 md:px-4 md:mt-0 md:left-0 lg:top-16 lg:left-0 lg:pl-6 lg:-mt-2.5 divide-y divide-gray-200 {{/if}}" 
 

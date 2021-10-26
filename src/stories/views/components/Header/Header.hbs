@@ -9,7 +9,7 @@
 
     <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b-2 bg-blue-congress z-101">
        
-        <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:px-5 lg:px-10">
+        <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10">
             <span class="hidden c-serviceNav__headline" id="serviceNavHeadline">Service Navigation</span>
 
             {{!-- auslagern --> ServiceLogo.hbs --}}
@@ -31,7 +31,7 @@
             </div>
 
                 {{!-- auslagern --> ServiceBurger.hbs --}}
-                <div id="burgerWrapper" {{!-- :class="$store.burgeropen ? 'bg-white' : 'bg-blue-congress'" --}} class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 lg:hidden ">
+                <div id="burgerWrapper" {{!-- :class="$store.burgeropen ? 'bg-white' : 'bg-blue-congress'" --}} class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 md:px-4 lg:hidden ">
                     <div class="flex items-center justify-center h-full fill-current">
                         <nav x-data>
                             <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  class="relative w-10 h-10 text-white focus:outline-none bg-brand"
@@ -39,10 +39,10 @@
                                     @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
 
                                     <span class="sr-only md:hidden">Open main menu</span>
-                                    <div class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current " :class="$store.burgeropen ? 'rotate-45' : '-mt-2'"></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': $store.burgeropen } "></span>
-                                    <span aria-hidden="true" class="absolute block w-6 h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': $store.burgeropen, 'mt-2': ! $store.burgeropen }"></span>
+                                    <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                                    <span aria-hidden="true" class="absolute block w-full h-px transition duration-500 ease-in-out transform bg-current " :class="$store.burgeropen ? 'rotate-45' : '-mt-2'"></span>
+                                    <span aria-hidden="true" class="absolute block w-full h-px transition duration-500 ease-in-out transform bg-current" :class="{'opacity-0': $store.burgeropen } "></span>
+                                    <span aria-hidden="true" class="absolute block w-full h-px transition duration-500 ease-in-out transform bg-current" :class="{'-rotate-45': $store.burgeropen, 'mt-2': ! $store.burgeropen }"></span>
                                 </div>
                             </button>
                         </nav>
