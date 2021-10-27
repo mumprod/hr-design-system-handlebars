@@ -2,7 +2,7 @@
 
 {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} -hideFlyout{{/unless}}"></div>{{/unless}}
 
-    <div x-cloak id="{{getRandom}}" {{#if ../_isSectionNav}} 
+    <div x-cloak id="{{getRandom}}" x-ref="{{getRandom}}" {{#if ../_isSectionNav}}
         x-init="$watch('dropped', value => {
                 if(value == true) { 
                     let a = $refs.sectionnavigation.scrollHeight + $el.scrollHeight; 

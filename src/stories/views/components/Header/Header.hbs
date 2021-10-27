@@ -67,17 +67,27 @@
 
 </div>
 <script>
+    const close = new CustomEvent('burger-close')
+    const closesearch = new CustomEvent('search-mobile-click-outside')
+    const closesearch2 = new CustomEvent('search-close')
+
     document.addEventListener('alpine:init', () => {
     Alpine.store('burgeropen', false);
     Alpine.store('searchFieldOpen', false);
+    
     Alpine.store('serviceItems', {
+        current: '1',
+        items: ['1','2','3','4'],        
+    })
+
+    Alpine.store('openFlyoutID', {
         current: '1',
         items: ['1','2','3','4'],        
     })
 
     Alpine.data('dropdown', () => ({
         dropped: false,
-        toggle() {
+        toggle() {    
             this.dropped = ! this.dropped;    
         }
     }))
@@ -96,9 +106,7 @@
     clearTimeout(timeout)
     timeout = setTimeout(function(){
         document.querySelector('#sectionNavWrapper').classList.remove('hidden')
-        const close = new CustomEvent('burger-close')
-        const closesearch = new CustomEvent('search-mobile-click-outside')
-        const closesearch2 = new CustomEvent('search-close')
+        
         window.dispatchEvent(close)  
         window.dispatchEvent(closesearch) 
         window.dispatchEvent(closesearch2)
