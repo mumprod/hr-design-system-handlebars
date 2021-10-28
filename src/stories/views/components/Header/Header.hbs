@@ -1,6 +1,5 @@
 <div x-data="{searchFieldOpen : false}" 
-     x-init="console.log('alpineJS is installed')"
-     class="flex flex-wrap max-w-full font-copy lg:justify-center lg:w-full">
+    class="flex flex-wrap max-w-full font-copy lg:justify-center lg:w-full">
 
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
@@ -8,8 +7,7 @@
     </div>
 
 
-    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b-2 bg-blue-congress z-101">
-       
+    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b-2 bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10">
             <span class="hidden" id="serviceNavHeadline">Service Navigation</span>
 
@@ -38,9 +36,9 @@
         
     </div>
 
-    <div id="sectionNavWrapper" 
+    <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
-        @toggle-sectionnav.window="if($event.detail == false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
+        @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
         {{!-- :class="searchFieldOpen ? 'hidden' : ''"  --}}
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
@@ -76,13 +74,11 @@
     Alpine.store('searchFieldOpen', false);
     
     Alpine.store('serviceItems', {
-        current: '1',
-        items: ['1','2','3','4'],        
+        current: '1'       
     })
 
     Alpine.store('openFlyoutID', {
-        current: '1',
-        items: ['1','2','3','4'],        
+        current: '1'        
     })
 
     Alpine.data('dropdown', () => ({
