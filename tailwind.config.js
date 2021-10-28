@@ -3,6 +3,7 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 
 module.exports = {
   mode: 'jit',
+ 
   purge: {
     content: ["./src/**/*.hbs"],
     options: {
@@ -10,6 +11,22 @@ module.exports = {
     },
   },
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+     /*  'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... } */
+    },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
       DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -17,12 +34,9 @@ module.exports = {
       lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-     '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.25)',
       none: 'none',
-    },
-    flex: {
-     '2': '2 2 30%',
     },
     letterSpacing: {
       tighter: "-.025em",
@@ -33,6 +47,9 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      borderWidth: {
+       '7': '7px'
+      },  
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding'
@@ -53,9 +70,11 @@ module.exports = {
         '102':'102'
       },
       width: {
+        "30": "7.5rem",
         "46": "11.5rem",
         "70": "17.5rem",
-        "88": "22rem"
+        "88": "22rem",
+        "92": "23rem"
       },
       maxWidth: {
         "1/4": "25%",
@@ -72,6 +91,7 @@ module.exports = {
         "13": "3.375rem",
         "14": "3.5rem",
         "15": "3.75rem",
+        "37": "9.125rem",
         "42": "10.5rem"
       },
       fontFamily: {

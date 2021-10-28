@@ -1,7 +1,7 @@
-<li class="flex h-auto py-2 pl-8 text-base border-b border-gray-400 last:border-0 lg:border-0  {{inline-switch _fromNav "SectionNav,ServiceNav" "true md:pl-8 lg:pl-0,false md:pl-0 lg:pl-0" }} text-blue-science justify-start hover:underline">
+<li :class="dropped ? 'h-auto' : 'h-10'"  class="flex h-auto py-2 pl-8 text-base border-b border-gray-200 lg:last:border-0 lg:border-0  {{inline-switch _fromNav "SectionNav,ServiceNav" "true md:pl-8 lg:pl-0,false md:pl-0 lg:pl-0 lg:pr-0 break-words" }} text-blue-congress justify-start hover:underline">
     {{#>components/base/link}}
         {{content.text}}
-        {{~#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="w-4 h-4 ml-2 fill-current inline-flex" _iconmap="icons" }} {{/if}}
+        {{~#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="w-4 h-4 fill-current ml-2 inline-flex" _iconmap="icons" }} {{/if}}
 
     {{/components/base/link}} 
 </li>

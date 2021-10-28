@@ -3,13 +3,13 @@
     :class="searchFieldOpen ? 'bg-white mt-2 rounded-t' : 'bg-blue-congress'"
 >
     <button 
-        @click="searchFieldOpen = ! searchFieldOpen;$dispatch('burger-close');$dispatch('search-mobile-click')"
+        @click="searchFieldOpen = ! searchFieldOpen; $dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu')"
         aria-label='Suche öffnen'
-        class="px-2 text-white rounded-r cursor-pointer lg:hidden"
+        class="px-2 text-white rounded-r cursor-pointer md:px-4 lg:hidden"
     >
         <svg 
             x-show="!searchFieldOpen"
-            class="h-6 text-white fill-current w-9" 
+            class="h-5 text-white fill-current w-9" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
         >

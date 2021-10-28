@@ -3,6 +3,7 @@ import '../src/assets/tailwind.css'
 import hrDesignsystemDark from './HRDesignsystemDark'
 import hrDesignsystemLight from './HRDesignsystemLight'
 import { withThemeDecorator } from './withThemeDecorator'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
@@ -21,6 +22,29 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const parameters = {
+    viewport: {
+        viewports: INITIAL_VIEWPORTS,
+      },
+    backgrounds: {
+        default: 'white',
+        values: [
+            {
+                name: 'white',
+                value: '#ffffff',
+            },
+            {
+                name: 'hessenschau',
+                value: '#005293',
+            },
+        ],
+        grid: {
+            cellSize: 8,
+            opacity: 0.5,
+            cellAmount: 8,
+            offsetX: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+            offsetY: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+          }
+    },
     // Storybook a11y addon configuration
     a11y: {
         // the target DOM element
