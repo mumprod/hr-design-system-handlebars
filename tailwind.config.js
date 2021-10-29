@@ -92,6 +92,7 @@ module.exports = {
         "14": "3.5rem",
         "15": "3.75rem",
         "37": "9.125rem",
+        "38": "9.5rem",
         "42": "10.5rem"
       },
       fontFamily: {
