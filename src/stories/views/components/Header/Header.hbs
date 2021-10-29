@@ -70,44 +70,41 @@
     const closesearch2 = new CustomEvent('search-close')
 
     document.addEventListener('alpine:init', () => {
-    Alpine.store('burgeropen', false);
-    Alpine.store('searchFieldOpen', false);
-    
-    Alpine.store('serviceItems', {
-        current: '1'       
-    })
-
-    Alpine.store('openFlyoutID', {
-        current: '1'        
-    })
-
-    Alpine.data('dropdown', () => ({
-        dropped: false,
-        toggle() {    
-            this.dropped = ! this.dropped;    
-        }
-    }))
-
-  
-  window.addEventListener('resize', () => {
-
-    if (window.innerWidth > 1024) {
-        document.querySelector('#sectionNavWrapper').style=""
-    } else {
-        document.querySelector('#sectionNavWrapper').classList.add('hidden')
-        document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
-    }
-
-    let timeout 
-    clearTimeout(timeout)
-    timeout = setTimeout(function(){
-        document.querySelector('#sectionNavWrapper').classList.remove('hidden')
+        Alpine.store('burgeropen', false);
+        Alpine.store('searchFieldOpen', false);
         
-        window.dispatchEvent(close)  
-        window.dispatchEvent(closesearch) 
-        window.dispatchEvent(closesearch2)
-    }, 500)
-})
+        Alpine.store('serviceItems', {
+            current: '1'       
+        })
 
+        Alpine.store('openFlyoutID', {
+            current: '1'        
+        })
+
+        Alpine.data('dropdown', () => ({
+            dropped: false,
+            toggle() {    
+                this.dropped = ! this.dropped;    
+            }
+        }))
+    
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                document.querySelector('#sectionNavWrapper').style=""
+            } else {
+                document.querySelector('#sectionNavWrapper').classList.add('hidden')
+                document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
+            }
+
+            let timeout 
+            clearTimeout(timeout)
+            timeout = setTimeout(function(){
+                document.querySelector('#sectionNavWrapper').classList.remove('hidden')
+                
+                window.dispatchEvent(close)  
+                window.dispatchEvent(closesearch) 
+                window.dispatchEvent(closesearch2)
+            }, 500)
+        })
 })
 </script>
