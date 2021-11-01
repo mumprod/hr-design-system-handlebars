@@ -72,7 +72,7 @@
 		{
 			"navigationItems": [
 				{
-					"label": "Video & Podcast",
+					"text": "Video & Podcast",
 					"icon": "videopodcast",
 					"flyoutStartLinkText": "Übersicht Video & Podcast",
 					"selected": false,
@@ -194,7 +194,7 @@
 		{
 			"navigationItems": [
 				{
-					"label": "Wetter",
+					"text": "Wetter",
 					"icon": "wetter",
 					"flyoutStartLinkText": "Übersicht Wetter",
 					"subNavigation": {
@@ -313,7 +313,7 @@
 		{
 			"navigationItems": [
 				{
-					"label": "Verkehr",
+					"text": "Verkehr",
 					"icon": "verkehr",
 					"flyoutStartLinkText": "Übersicht Verkehr",
 					"subNavigation": {

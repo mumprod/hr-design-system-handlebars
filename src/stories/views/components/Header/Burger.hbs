@@ -3,7 +3,7 @@
         <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  
             class="relative w-10 h-10 text-white focus:outline-none bg-brand"
             @burger-close.window="$store.burgeropen = false, $dispatch('toggle-sectionnav', false)" 
-            @click="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
+            @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
 
             <span class="sr-only md:hidden">Open main menu</span>
             <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">

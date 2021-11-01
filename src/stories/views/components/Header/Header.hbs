@@ -8,15 +8,15 @@
 
 
     <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
-        <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10">
+        <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
             <span class="hidden" id="serviceNavHeadline">Service Navigation</span>
 
-            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-2 bg-blue-congress md:px-0 lg:h-14 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-3 bg-blue-congress md:px-0 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                 {{> components/Header/ServiceLogo }}
             </div>
             
             <div id="serviceItemsWrapper" 
-                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress lg:h-14 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
@@ -25,7 +25,6 @@
                 </div>
 
                 <div id="burgerWrapper" 
-                    {{!-- :class="$store.burgeropen ? 'bg-white' : 'bg-blue-congress'" --}} 
                     class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 md:px-4 lg:hidden ">
                     {{> components/Header/Burger }}    
                 </div>
@@ -39,7 +38,6 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
-        {{!-- :class="searchFieldOpen ? 'hidden' : ''"  --}}
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
@@ -65,49 +63,67 @@
 
 </div>
 <script>
-    const close = new CustomEvent('burger-close')
-    const closesearch = new CustomEvent('search-mobile-click-outside')
-    const closesearch2 = new CustomEvent('search-close')
-
     document.addEventListener('alpine:init', () => {
-    Alpine.store('burgeropen', false);
-    Alpine.store('searchFieldOpen', false);
-    
-    Alpine.store('serviceItems', {
-        current: '1'       
-    })
-
-    Alpine.store('openFlyoutID', {
-        current: '1'        
-    })
-
-    Alpine.data('dropdown', () => ({
-        dropped: false,
-        toggle() {    
-            this.dropped = ! this.dropped;    
-        }
-    }))
-
-  
-  window.addEventListener('resize', () => {
-
-    if (window.innerWidth > 1024) {
-        document.querySelector('#sectionNavWrapper').style=""
-    } else {
-        document.querySelector('#sectionNavWrapper').classList.add('hidden')
-        document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
-    }
-
-    let timeout 
-    clearTimeout(timeout)
-    timeout = setTimeout(function(){
-        document.querySelector('#sectionNavWrapper').classList.remove('hidden')
+        Alpine.store('burgeropen', false);
+        Alpine.store('searchFieldOpen', false);
         
-        window.dispatchEvent(close)  
-        window.dispatchEvent(closesearch) 
-        window.dispatchEvent(closesearch2)
-    }, 500)
-})
+        Alpine.store('serviceItems', {
+            current: '1'       
+        })
 
+        Alpine.store('openFlyoutID', {
+            current: '1'        
+        })
+
+        Alpine.data('dropdown', () => ({
+            dropped: false,
+            toggle() {    
+                this.dropped = ! this.dropped;    
+            }
+        }))
+
+        Alpine.data('flyout', () => ({     
+            init() { 
+                if(window.innerWidth < 1024) {
+                    this.$el.setAttribute("x-collapse","")
+                }   
+            },
+            check() {
+                if(window.innerWidth > 1023) {
+                    if(this.$el.hasAttribute("x-collapse")) {
+                        this.$el.removeAttribute("x-collapse")
+                        delete this.$el._x_transition; 
+                        this.$el.style.removeProperty('overflow'); 
+                        this.$el.style.removeProperty('height'); 
+                        if (! this.$el._x_isShown) this.$el.style.display = 'none'
+                    }
+                    
+                } else {
+                    console.log('is smaller')
+                    if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
+                }
+            }
+        }))
+    
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                document.querySelector('#sectionNavWrapper').style=""
+            } else {
+                document.querySelector('#sectionNavWrapper').classList.add('hidden')
+                document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
+            }
+
+            let timeout 
+            clearTimeout(timeout)
+            timeout = setTimeout(function(){
+                document.querySelector('#sectionNavWrapper').classList.remove('hidden')
+                const close = new CustomEvent('burger-close')
+                const closesearch = new CustomEvent('search-mobile-click-outside')
+                const closesearch2 = new CustomEvent('search-close')
+                window.dispatchEvent(close)  
+                window.dispatchEvent(closesearch) 
+                window.dispatchEvent(closesearch2)
+            }, 500)
+        })
 })
 </script>
