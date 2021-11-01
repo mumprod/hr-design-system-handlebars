@@ -25,7 +25,6 @@
                 </div>
 
                 <div id="burgerWrapper" 
-                    {{!-- :class="$store.burgeropen ? 'bg-white' : 'bg-blue-congress'" --}} 
                     class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 md:px-4 lg:hidden ">
                     {{> components/Header/Burger }}    
                 </div>
@@ -39,7 +38,6 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
-        {{!-- :class="searchFieldOpen ? 'hidden' : ''"  --}}
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
@@ -65,10 +63,6 @@
 
 </div>
 <script>
-    const close = new CustomEvent('burger-close')
-    const closesearch = new CustomEvent('search-mobile-click-outside')
-    const closesearch2 = new CustomEvent('search-close')
-
     document.addEventListener('alpine:init', () => {
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
@@ -87,6 +81,29 @@
                 this.dropped = ! this.dropped;    
             }
         }))
+
+        Alpine.data('flyout', () => ({     
+            init() { 
+                if(window.innerWidth < 1024) {
+                    this.$el.setAttribute("x-collapse","")
+                }   
+            },
+            check() {
+                if(window.innerWidth > 1023) {
+                    if(this.$el.hasAttribute("x-collapse")) {
+                        this.$el.removeAttribute("x-collapse")
+                        delete this.$el._x_transition; 
+                        this.$el.style.removeProperty('overflow'); 
+                        this.$el.style.removeProperty('height'); 
+                        if (! this.$el._x_isShown) this.$el.style.display = 'none'
+                    }
+                    
+                } else {
+                    console.log('is smaller')
+                    if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
+                }
+            }
+        }))
     
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
@@ -100,7 +117,9 @@
             clearTimeout(timeout)
             timeout = setTimeout(function(){
                 document.querySelector('#sectionNavWrapper').classList.remove('hidden')
-                
+                const close = new CustomEvent('burger-close')
+                const closesearch = new CustomEvent('search-mobile-click-outside')
+                const closesearch2 = new CustomEvent('search-close')
                 window.dispatchEvent(close)  
                 window.dispatchEvent(closesearch) 
                 window.dispatchEvent(closesearch2)
