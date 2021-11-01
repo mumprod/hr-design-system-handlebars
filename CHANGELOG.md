@@ -1,3 +1,16 @@
+# v0.20.0 (Mon Nov 01 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1221 service nav & icons überarbeiten [#57](https://github.com/mumprod/hr-design-system-handlebars/pull/57) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@StefanVesper](https://github.com/StefanVesper)
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.19.0 (Thu Oct 28 2021)
 
 #### 🚀 Enhancement
