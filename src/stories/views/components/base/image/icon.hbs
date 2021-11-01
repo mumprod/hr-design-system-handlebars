@@ -40,7 +40,7 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
 
 --}}
 {{#if _icon}}
-<svg class="icon {{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
+<svg class="{{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
         {{~#if _iconTitle }} {{changeRandom~}}
             aria-labelledby="iconTitle--{{getRandom}}"
             {{~#if _iconDesc }} aria-describedby="iconDesc--{{getRandom}}"{{~/if~}}
