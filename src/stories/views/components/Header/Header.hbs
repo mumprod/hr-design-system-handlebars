@@ -6,12 +6,14 @@
         {{> components/Header/BrandNavigation/BrandNavigation }} 
     </div>
 
+    <div id="serviceNavWrapper" 
+        class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
+        <div id="serviceNavMainContainer" 
+            class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
+            <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
 
-    <div id="serviceNavWrapper" class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
-        <div id="serviceNavMainContainer" class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
-            <span class="hidden" id="serviceNavHeadline">Service Navigation</span>
-
-            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-3 bg-blue-congress md:px-0 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+            <div id="serviceLogoWrapper" 
+                 class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-3 bg-blue-congress md:px-0 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                 {{> components/Header/ServiceLogo }}
             </div>
             
@@ -28,11 +30,8 @@
                     class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 md:px-4 lg:hidden ">
                     {{> components/Header/Burger }}    
                 </div>
-
             </div>
-
         </div>
-        
     </div>
 
     <div id="sectionNavWrapper"  
@@ -97,9 +96,7 @@
                         this.$el.style.removeProperty('height'); 
                         if (! this.$el._x_isShown) this.$el.style.display = 'none'
                     }
-                    
                 } else {
-                    console.log('is smaller')
                     if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
                 }
             }
