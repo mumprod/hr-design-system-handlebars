@@ -3,7 +3,7 @@
     role="search" 
     action="{{resourceUrl "suche/index.nocache"}}" 
     method="get" 
-    class="flex w-full border rounded md:justify-end md:w-1/2 border-blue-congress lg:w-full lg:border-0 lg:border-none"
+    class="flex w-full border rounded md:justify-end md:w-1/2 border-blue-congress lg:h-10 lg:w-full lg:border-0 lg:border-none"
 >
     <div 
         class="relative w-full lg:rounded-l" 
@@ -21,7 +21,7 @@
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
             autofocus="autofocus" 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 shadow-inner lg:rounded-l placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none focus:border-transparent"
+            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 shadow-inner lg:h-10 lg:rounded-l placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none focus:border-transparent"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
