@@ -8,6 +8,10 @@
     <div 
         class="relative w-full lg:rounded-l" 
         id="search-content"
+        @click.away="active=false; cursorIndex=-1"
+        @keydown.escape="active=false; cursorIndex=-1"
+        @keydown.arrow-down="moveDownList()"
+        @keydown.arrow-up="moveUpList()"
     >   
         <label for="searchInput--{{nextRandom}}" class="hidden">suchfeld</label>
         <input 
@@ -24,9 +28,7 @@
         > 
         <div 
             class="relative" 
-            x-show="query.length > 1 && !suggestions.length == 0 && active" 
-            @click.outside="active = false;" 
-
+            x-show="query.length > 1 && active"
             x-cloak  
             x-transition:enter="transition ease-out duration-200" 
             x-transition:enter-start="opacity-0 transform scale-y-90" 
@@ -37,13 +39,20 @@
         >
             <div class="absolute w-full mt-1 bg-white border rounded shadow-xl top-100">
                 <div class="divide-y" x-ref="list">
-                    <template x-for="suggestion in suggestions" :key="suggestion">
+                    <template x-for="(suggestion, index) in suggestions" :key="index">
                       <a  x-bind:active="false"
                           x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
-                          x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded hover:bg-blue-congress': true, 'lg:bg-white hover:bg-blue-congress hover:text-white':suggestion}"
+                          x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded hover:bg-blue-congress hover:text-white': true, 'bg-blue-congress text-white':index==cursorIndex }"
                       >
                           <span x-text="suggestion"></span>
                       </a>
+                  </template>
+                    <template x-if="query.length > 2 && !suggestions.length">
+                      <a 
+                          x-bind:class="{'py-1.5 px-2  text-xs flex w-full rounded text-red-monza': true}"
+                      >
+                        <span>Keine Treffer gefunden !</span>
+                        </a>
                   </template>
                 </div>
             </div>
@@ -68,14 +77,14 @@
     function searchSuggest() {
 
         return {
-            active:false,
+            active:true,
             cursorIndex: -1,
             query: "",
             suggestions: [],
 
             getSuggestionsForInput() {
 
-                suggestionDataUrl = '{{resourceUrl "suche/index~suggest.jsp"}}' + '?suggestions=' + `${this.query}`;
+                suggestionDataUrl = '{{resourceUrl "suche/index~suggest.jsp"}}' + '?suggestions=' + this.query;
 
                 fetch(suggestionDataUrl)
 
@@ -83,11 +92,34 @@
 
                     .then((data) => {
                         data = JSON.parse(data.replace(/&quot;/g, '"'))
-                        data.solrSuggestion = data.solrSuggestions.filter(solrSuggestion => solrSuggestion.toLowerCase().startsWith(this.query.toLowerCase().trim()))
-                        this.suggestions = data.solrSuggestion;
-                        this.active = true;
+                        data.solrSuggestions = this.filterStartwith(data.solrSuggestions, this.query)
+                        this.suggestions= this.filterSortbylength(data.solrSuggestions)
                     });
 
+            },
+
+            filterStartwith(data, query) {
+               return data.filter(Suggestion => Suggestion.toLowerCase().startsWith(query.toLowerCase().trim()))
+            },
+
+            filterSortbylength(data) {
+               return data.sort((a, b) => a.length - b.length)
+            },
+
+            moveDownList() {
+                    if (this.suggestions.length > 0 && this.cursorIndex < this.suggestions.length - 1) 
+                    {
+                        this.cursorIndex++;
+                        this.query = this.suggestions[this.cursorIndex];
+                    }
+            },
+
+            moveUpList() {
+                    if (this.suggestions.length > 0 && this.cursorIndex > 0) 
+                    {
+                        this.cursorIndex--;
+                        this.query = this.suggestions[this.cursorIndex];
+                    }
             },
 
         };
