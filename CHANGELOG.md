@@ -1,3 +1,16 @@
+# v0.22.1 (Wed Nov 03 2021)
+
+#### 🐛 Bug Fix
+
+- Merge remote-tracking branch 'origin/main' into DPE-959-Search [#60](https://github.com/mumprod/hr-design-system-handlebars/pull/60) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
 # v0.22.0 (Wed Nov 03 2021)
 
 #### 🚀 Enhancement
