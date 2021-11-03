@@ -37,7 +37,7 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
         
