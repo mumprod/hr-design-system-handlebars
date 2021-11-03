@@ -9,16 +9,16 @@
     <div id="serviceNavWrapper" 
         class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
-            class="container flex h-10 px-2 md:h-14 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
+            class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
             <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
 
             <div id="serviceLogoWrapper" 
-                 class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-3 bg-blue-congress md:px-0 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+                 class="flex items-center order-1 w-full px-2 overflow-hidden lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                 {{> components/Header/ServiceLogo }}
             </div>
             
             <div id="serviceItemsWrapper" 
-                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
@@ -27,7 +27,7 @@
                 </div>
 
                 <div id="burgerWrapper" 
-                    class="flex justify-end flex-none order-2 px-2 lg:order-4 md:order-4 md:px-4 lg:hidden ">
+                    class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
                     {{> components/Header/Burger }}    
                 </div>
             </div>
@@ -37,7 +37,7 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
         

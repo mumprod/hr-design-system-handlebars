@@ -5,7 +5,7 @@
     <button 
         @click="searchFieldOpen = ! searchFieldOpen; $dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu')"
         aria-label='Suche öffnen'
-        class="px-2 text-white rounded-r cursor-pointer md:px-4 lg:hidden"
+        class="text-white rounded-r cursor-pointer md:px-4 lg:hidden"
     >
         <svg 
             x-show="!searchFieldOpen"

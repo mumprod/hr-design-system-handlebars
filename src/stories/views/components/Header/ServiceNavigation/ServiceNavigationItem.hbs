@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li @click="toggle; searchFieldOpen=false; $store.serviceItems.current = '{{nextRandom}}'; $dispatch('burger-close');" 
+    <li @click.debounce.200ms="toggle; searchFieldOpen=false; $store.serviceItems.current = '{{nextRandom}}'; $dispatch('burger-close');" 
         @click.outside="dropped = false"
         @close-servicemenu.window="dropped = false" 
         x-data="dropdown"
