@@ -39,7 +39,7 @@
             
             {{#if this.subNavigation.showAsFlyout ~}}
                 
-                    <div class="flex items-center justify-center h-10 leading-4 w-11 lg:w-auto lg:pr-4 lg:border-0">
+                    <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:pr-4 lg:border-0">
                         <div :class="dropped ? 'transform rotate-180 flex items-center justify-center':'flex items-center justify-center'">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
@@ -66,7 +66,7 @@
                 <button 
                     @click.debounce="toggle" 
                     id="flyout-{{getRandom}}" 
-                    class="flex items-center justify-center h-10 leading-4 border-l border-white w-11 lg:hidden" 
+                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white lg:hidden" 
                     aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
