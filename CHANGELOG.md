@@ -1,3 +1,15 @@
+# v0.22.0 (Wed Nov 03 2021)
+
+#### 🚀 Enhancement
+
+- Service icons neu [#59](https://github.com/mumprod/hr-design-system-handlebars/pull/59) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.21.0 (Tue Nov 02 2021)
 
 #### 🚀 Enhancement
