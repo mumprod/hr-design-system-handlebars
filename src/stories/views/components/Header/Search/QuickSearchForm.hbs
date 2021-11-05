@@ -9,13 +9,12 @@
         class="relative w-full lg:rounded-l" 
         id="search-content"
         @click.away="active=false; cursorIndex=-1"
-        @keydown.escape="active=false; cursorIndex=-1"
         @keydown.arrow-down="moveDownList()"
         @keydown.arrow-up="moveUpList()"
     >   
         <label for="searchInput--{{nextRandom}}" class="hidden">suchfeld</label>
         <input 
-            @input.debounce.250="getSuggestionsForInput()" 
+            @input.debounce.250="getSuggestionsForInput();cursorIndex=-1" 
             @click="active=true" 
             name="query" 
             x-model="query"
@@ -49,9 +48,9 @@
                   </template>
                     <template x-if="query.length > 2 && !suggestions.length">
                       <a 
-                          x-bind:class="{'py-1.5 px-2  text-xs flex w-full rounded text-red-monza': true}"
+                          x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded text-red-monza': true}"
                       >
-                        <span>Keine Treffer gefunden !</span>
+                        <span>Keine Vorschläge</span>
                         </a>
                   </template>
                 </div>
