@@ -3,7 +3,8 @@
     :class="searchFieldOpen ? 'bg-white mt-2 rounded-t' : 'bg-blue-congress'"
 >
     <button 
-        @click="searchFieldOpen = ! searchFieldOpen; $dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu')"
+    @click=" searchFieldOpen = ! searchFieldOpen; dropped = false"
+        @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
         aria-label='Suche öffnen'
         class="text-white rounded-r cursor-pointer md:px-4 lg:hidden"
     >
