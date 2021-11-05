@@ -1,3 +1,15 @@
+# v0.22.2 (Fri Nov 05 2021)
+
+#### 🏎 Performance
+
+- Dpe 1224 alpine js bug with tabbing through hidden items [#61](https://github.com/mumprod/hr-design-system-handlebars/pull/61) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.22.1 (Wed Nov 03 2021)
 
 #### 🐛 Bug Fix
