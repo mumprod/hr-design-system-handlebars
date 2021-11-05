@@ -6,9 +6,9 @@
         x-init="$watch('dropped', value => {
                 if(value == true) { 
                     let a = $refs.sectionnavigation.scrollHeight + $el.scrollHeight; 
-                    document.querySelector('#sectionNavWrapper').style.maxHeight = a +'px' 
+                    $refs.sectionnavigation.style.maxHeight = a +'px' 
                     } else {let a = $refs.sectionnavigation.scrollHeight; 
-                    document.querySelector('#sectionNavWrapper').style.maxHeight = a +'px'}
+                    $refs.sectionnavigation.style.maxHeight = a +'px'}
                 })" {{else}} {{/if}}  
         x-show="dropped" 
         @resize.window.debounce="check"
