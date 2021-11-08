@@ -60,7 +60,11 @@
         "tailwindcss": "^2.2.15",
         "tailwindcss-important": "^1.0.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@alpinejs/collapse": "^3.5.0",
+        "@alpinejs/intersect": "^3.5.0",
+        "alpinejs": "^3.5.0"
+    },
     "prettier": {
         "tabWidth": 4,
         "quoteProps": "consistent",
