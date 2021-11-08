@@ -1,3 +1,53 @@
+# v0.22.3 (Fri Nov 05 2021)
+
+#### 🐛 Bug Fix
+
+- Suggestions Bugfix ! [#62](https://github.com/mumprod/hr-design-system-handlebars/pull/62) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
+# v0.22.2 (Fri Nov 05 2021)
+
+#### 🏎 Performance
+
+- Dpe 1224 alpine js bug with tabbing through hidden items [#61](https://github.com/mumprod/hr-design-system-handlebars/pull/61) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
+# v0.22.1 (Wed Nov 03 2021)
+
+#### 🐛 Bug Fix
+
+- Merge remote-tracking branch 'origin/main' into DPE-959-Search [#60](https://github.com/mumprod/hr-design-system-handlebars/pull/60) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
+# v0.22.0 (Wed Nov 03 2021)
+
+#### 🚀 Enhancement
+
+- Service icons neu [#59](https://github.com/mumprod/hr-design-system-handlebars/pull/59) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.21.0 (Tue Nov 02 2021)
 
 #### 🚀 Enhancement
