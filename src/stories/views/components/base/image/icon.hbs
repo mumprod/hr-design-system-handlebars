@@ -41,6 +41,7 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
 --}}
 {{#if _icon}}
 <svg class="{{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
+{{# if brand}} data-brand="{{brand}}"{{/if}}
         {{~#if _iconTitle }} {{changeRandom~}}
             aria-labelledby="iconTitle--{{getRandom}}"
             {{~#if _iconDesc }} aria-describedby="iconDesc--{{getRandom}}"{{~/if~}}
@@ -58,9 +59,9 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
             <svg>
     {{~/if~}}
 
-        <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_icon}}"></use>
+        <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) brand}}#{{_icon}}"></use>
         {{#if _overlayIcon }}
-            <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) }}#{{_overlayIcon}}"></use>
+            <use xlink:href="{{resourceUrl (replaceTokens "assets/base/icons/{0}/svgmap.min.svg" (defaultIfEmpty _iconmap "icons") ) brand}}#{{_overlayIcon}}"></use>
         {{/if}}
     {{~#if _iconText ~}}
             </svg>
