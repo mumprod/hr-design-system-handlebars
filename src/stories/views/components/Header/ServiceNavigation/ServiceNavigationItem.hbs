@@ -10,20 +10,24 @@
         
         {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-7 md:w-8 fill-current h-7 md:h-8 align-center"}}
         
+        
+        
         <div class="relative flex-row items-center justify-center hidden pt-px lg:flex z-200">
-            <span class="flex text-xs  whitespace-nowrap">
+            <span class="flex text-xs whitespace-nowrap">
                 {{text}} 
             </span>
-            <div class="flex  opacity-70">
-                <svg :class="dropped ? 'hidden' : 'h-4 w-4'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-                <svg :class="dropped ? 'h-4 w-4' : 'hidden'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
-                </svg>
-            </div>
+            {{#if this.subNavigation}} 
+                <div class="flex opacity-70">
+                    <div :class="dropped ? 'transform rotate-180 flex items-center justify-center ':'flex items-center justify-center '">
+                        {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
+                    </div>
+                </div>
+            {{/if}}
         </div>
+        {{#if this.subNavigation}} 
+            {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNav"  }}
+        {{/if}}
         
-        {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNav"  }}
         
     </li>
 {{/each}}

@@ -8,6 +8,7 @@ import {
 
 import navigation from "./Header.hbs";
 import JsonData from './navigation.json';
+import JsonData2 from './navigation2.json';
 
 <Meta
   title="Komponenten/Header/Header"
@@ -31,6 +32,12 @@ Ein toller Einleitungstext für unsere `Header` Komponente:
   <Story
     name="Default"
     args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 4 Icons in Service Nav"
+    args= {JsonData2}
   >
     {Template.bind({})}
   </Story>

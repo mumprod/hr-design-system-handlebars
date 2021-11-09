@@ -1,0 +1,648 @@
+{
+	"brandNavigationItems": [
+		{
+			"name": "hessenschau.DE",
+			"text": "hessenschau",
+			"site": "hessenschau",
+			"selected": true,
+			"extern": false
+		},
+		{
+			"name": "HR1",
+			"text": "hr1",
+			"site": "hr1",
+			"extern": true
+		},
+		{
+			"name": "HR2",
+			"text": "hr2-kultur",
+			"site": "hr2",
+			"extern": true
+		},
+		{
+			"name": "HR3",
+			"text": "hr3",
+			"site": "hr3",
+			"extern": true
+		},
+		{
+			"name": "HR4",
+			"text": "hr4",
+			"site": "hr4",
+			"extern": true
+		},
+		{
+			"name": "HR-info",
+			"text": "hr-iNFO",
+			"site": "hr-inforadio",
+			"extern": true
+		},
+		{
+			"name": "you-fm",
+			"text": "YOU FM",
+			"site": "you-fm",
+			"extern": true
+		},
+		{
+			"name": "HR-fernsehen",
+			"text": "hr-fernsehen",
+			"site": "hr-fernsehen",
+			"extern": true
+		},
+		{
+			"name": "HR-Sinfonieorchester",
+			"text": "hr-Sinfonieorchester",
+			"site": "hr-sinfonieorchester",
+			"extern": true
+		},
+		{
+			"name": "HR-Bigband",
+			"text": "hr-Bigband",
+			"site": "hr-bigband",
+			"extern": true
+		},
+		{
+			"name": "Der HR",
+			"text": "Der hr",
+			"site": "hr",
+			"extern": true
+		}
+	],
+
+	"serviceNavigationSSILinks": [
+		{
+			"navigationItems": [
+				{
+					"text": "Warnung",
+					"icon": "unwetterwarnungen",
+					"isCluster": false,
+					"url": "https://www.test.de",
+					"subNavigation" : false,
+					"extern": false
+
+
+					
+				}
+			]
+		},
+		{ 
+			"navigationItems": [
+				{
+					"text": "Video & Podcast",
+					"icon": "videopodcast",
+					"flyoutStartLinkText": "Übersicht Video & Podcast",
+					"selected": false,
+					"isCluster": false,
+					"url": "https://www.test.de",
+					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "2",
+						"items": false,
+						"columns": [
+							[
+								{
+									"title": "Aktuelle Sendung",
+									"link": {
+										"content": {
+											"text": "Aktuelle Sendung"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Archiv - alle Sendungen",
+									"link": {
+										"content": {
+											"text": "Archiv - alle Sendungen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Newsflash",
+									"link": {
+										"content": {
+											"text": "Newsflash"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "DAS THEMA",
+									"link": {
+										"content": {
+											"text": "DAS THEMA"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Die hessenschau in 100 Sekunden",
+									"link": {
+										"content": {
+											"text": "Die hessenschau in 100 Sekunden"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Podcasts",
+									"link": {
+										"content": {
+											"text": "Podcasts"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "hessenschau in der ARD Mediathek",
+									"link": {
+										"content": {
+											"text": "hessenschau in der ARD Mediathek"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": true,
+										"iconName": "extern"
+									}
+								}
+							],
+							[
+								{
+									"title": "hessenschau auf YouTube",
+									"link": {
+										"content": {
+											"text": "hessenschau auf YouTube"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": true,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Livestream hr-fernsehen",
+									"link": {
+										"content": {
+											"text": "Livestream hr-fernsehen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": true,
+										"iconName": "extern"
+									}
+								}
+							]
+						]
+					}
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"text": "Wetter",
+					"icon": "wetter",
+					"flyoutStartLinkText": "Übersicht Wetter",
+					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "2",
+						"items": false,
+						"columns": [
+							[
+								{
+									"title": "Unwetterwarnungen",
+									"link": {
+										"content": {
+											"text": "Unwetterwarnungen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Regenradar",
+									"link": {
+										"content": {
+											"text": "Regenradar"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Wolkenfilm",
+									"link": {
+										"content": {
+											"text": "Wolkenfilm"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Messwerte",
+									"link": {
+										"content": {
+											"text": "Messwerte"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Wetterkameras",
+									"link": {
+										"content": {
+											"text": "Wetterkameras"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Wetterbilder-Galerie",
+									"link": {
+										"content": {
+											"text": "Wetterbilder-Galerie"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "mehr Wetter",
+									"link": {
+										"content": {
+											"text": "mehr Wetter"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								}
+							],
+							[
+								{
+									"title": "Thema des Tages",
+									"link": {
+										"content": {
+											"text": "Thema des Tages"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": true,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Foto einsenden",
+									"link": {
+										"content": {
+											"text": "Foto einsenden"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": true,
+										"iconName": "extern"
+									}
+								}
+							]
+						]
+					}
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"text": "Verkehr",
+					"icon": "verkehr",
+					"flyoutStartLinkText": "Übersicht Verkehr",
+					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "1",
+						"items": false,
+						"columns": [
+							[
+								{
+									"title": "Verkehrskameras",
+									"link": {
+										"content": {
+											"text": "Verkehrskameras"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Blitzer",
+									"link": {
+										"content": {
+											"text": "Blitzer"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Schulausfälle",
+									"link": {
+										"content": {
+											"text": "Schulausfälle"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Flugpläne Frankfurt / Parkhausbelegung",
+									"link": {
+										"content": {
+											"text": "Flugpläne Frankfurt / Parkhausbelegung"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Werden Sie hr-Staureporter!",
+									"link": {
+										"content": {
+											"text": "Werden Sie hr-Staureporter!"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								}
+							]
+						]
+					}
+				}
+			]
+		}
+	],
+	"sectionNavigationSSILinks": [
+		{
+			"navigationItems": [
+				{
+					"name": "hessenschau",
+					"text": "Start",
+					"url": "index.html",
+					"labelText": "Startseite der hessenschau",
+					"subNavigationFromIndex": true,
+					"selected": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "regionen",
+					"text": "Regionen",
+					"url": "rheinmain/index.html",
+					"isCluster": "true",
+					"subNavigation": {
+						"showAsFlyout": true,
+						"columnCount": "1",
+						"columns": [
+							[
+								{
+									"title": "Nordhessen",
+									"link": {
+										"content": {
+											"text": "Nordhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Osthessen",
+									"link": {
+										"content": {
+											"text": "Osthessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Mittelhessen",
+									"link": {
+										"content": {
+											"text": "Mittelhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Rhein-Main",
+									"link": {
+										"content": {
+											"text": "Rhein-Main"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								},
+								{
+									"title": "Südhessen",
+									"link": {
+										"content": {
+											"text": "Südhessen"
+										},
+										"url": "http://www.test.de",
+										"hasIcon": false,
+										"iconName": "extern"
+									}
+								}
+							]
+						]
+					},
+					"clusterItems": [
+						{
+							"name": "nordhessen",
+							"text": "Nordhessen",
+							"url": "nordhessen/index.html"
+						},
+						{
+							"name": "osthessen",
+							"text": "Osthessen",
+							"url": "osthessen/index.html"
+						},
+						{
+							"name": "mittelhessen",
+							"text": "Mittelhessen",
+							"url": "mittelhessen/index.html"
+						},
+						{
+							"name": "rheinmain",
+							"text": "Rhein-Main",
+							"url": "rheinmain/index.html"
+						},
+						{
+							"name": "suedhessen",
+							"text": "Südhessen",
+							"url": "suedhessen/index.html"
+						}
+					]
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "politik",
+					"text": "Politik",
+					"url": "politik/index.html",
+					"qualifiedRelatedContentOn404": true,
+					"isCluster": false,	
+					"subNavigation": {
+						"showAsFlyout": false,
+						"columnCount": "1",
+						"items": [
+							{  "title": "Bundestagswahl 2021",
+								"link": {
+									"content": {
+										"text": "Bundestagswahl 2021"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Landtag",
+								"link": {
+									"content": {
+										"text": "Landtag"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Videos aus dem Landtag",
+								"link": {
+									"content": {
+										"text": "Videos aus dem Landtag"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Wahlen",
+								"link": {
+									"content": {
+										"text": "Wahlen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Direktwahlen",
+								"link": {
+									"content": {
+										"text": "Direktwahlen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							}				
+						]
+					}
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "gesellschaft",
+					"text": "Gesellschaft",
+					"url": "gesellschaft/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "wirtschaft",
+					"text": "Wirtschaft",
+					"url": "wirtschaft/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "kultur",
+					"text": "Kultur",
+					"url": "kultur/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "sport",
+					"text": "Sport",
+					"url": "sport/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "panorama",
+					"text": "Panorama",
+					"url": "panorama/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
+					"name": "freizeit",
+					"text": "Freizeit",
+					"url": "freizeit/index.html",
+					"qualifiedRelatedContentOn404": true
+				}
+			]
+		}
+	]
+}
