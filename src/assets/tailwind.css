@@ -371,12 +371,19 @@
     .-currentSection {
         @apply before:relative before:w-0 before:h-0 before:mr-2 before:-mt-0.5 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-9 
     }
+    .-warnung {
+        @apply text-red-600 !important;
+        @apply fill-black
+    }
 
+    .-videopodcast, .-wetter, .-verkehr {
+        @apply fill-white
+    }
 }
 
 @layer components {
     [x-cloak] { display: none !important; }
-    
+   
     .btn {
         @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;
     }

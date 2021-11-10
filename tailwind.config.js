@@ -11,6 +11,11 @@ module.exports = {
     },
   },
   theme: {
+    fill: {
+      current: 'currentColor',
+      black: '#000000',
+      white: '#ffffff'
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -47,6 +52,9 @@ module.exports = {
       widest: ".05em",
     },
     extend: {
+      fill: {
+        black : '#000000'
+      },
       borderWidth: {
        '7': '7px'
       },  
@@ -147,7 +155,7 @@ module.exports = {
     extend: {
       margin: ["important"],
       borderWidth: ['responsive','first','last'],
-      padding: ['responsive','first','even','first-line'],
+      padding: ['responsive','first','even'],
       backgroundColor: ['active'],
       inset: ['first']
     }

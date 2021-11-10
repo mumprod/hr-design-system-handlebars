@@ -1,7 +1,8 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks'
 
-import navigation from './Header.hbs'
-import JsonData from './navigation.json'
+import navigation from "./Header.hbs";
+import JsonData from './navigation.json';
+import JsonData2 from './navigation2.json';
 
 <Meta title="Komponenten/Header/Header" argTypes={{}} />
 
@@ -18,9 +19,18 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Header` Komponente:
 
 <Preview withToolbar>
-    <Story name="Default" args={JsonData}>
-        {Template.bind({})}
-    </Story>
+  <Story
+    name="Default"
+    args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 4 Icons in Service Nav"
+    args= {JsonData2}
+  >
+    {Template.bind({})}
+  </Story>
 </Preview>
 
 <ArgsTable story="Default" />
