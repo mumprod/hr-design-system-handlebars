@@ -16,6 +16,15 @@ jobs:
         # the list of steps that the action will go through
         steps:
             - uses: actions/checkout@v2
+            - name: Prepare repository
+              run: git fetch --unshallow --tags
+            - name: Unset header
+              # checkout@v2 adds a header that makes branch protection report errors ):
+              run: git config --local --unset http.https://github.com/.extraheader
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
             - uses: bahmutov/npm-install@v1.6.0
             - name: Create Release
               env:
