@@ -1,13 +1,26 @@
+# v0.22.4 (Tue Nov 10 2021)
+
+#### 🐛 Bug Fix
+
+-   Suggestions Bugfix ! [#62](https://github.com/mumprod/hr-design-system-handlebars/pull/62) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+-   [@elbaciri](https://github.com/elbaciri)
+-   selbaciri (zouhair1)
+
+---
+
 # v0.22.3 (Fri Nov 05 2021)
 
 #### 🐛 Bug Fix
 
-- Suggestions Bugfix ! [#62](https://github.com/mumprod/hr-design-system-handlebars/pull/62) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+-   Suggestions Bugfix ! [#62](https://github.com/mumprod/hr-design-system-handlebars/pull/62) (zouhair1 [@elbaciri](https://github.com/elbaciri))
 
 #### Authors: 2
 
-- [@elbaciri](https://github.com/elbaciri)
-- selbaciri (zouhair1)
+-   [@elbaciri](https://github.com/elbaciri)
+-   selbaciri (zouhair1)
 
 ---
 
@@ -15,11 +28,11 @@
 
 #### 🏎 Performance
 
-- Dpe 1224 alpine js bug with tabbing through hidden items [#61](https://github.com/mumprod/hr-design-system-handlebars/pull/61) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1224 alpine js bug with tabbing through hidden items [#61](https://github.com/mumprod/hr-design-system-handlebars/pull/61) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -27,12 +40,12 @@
 
 #### 🐛 Bug Fix
 
-- Merge remote-tracking branch 'origin/main' into DPE-959-Search [#60](https://github.com/mumprod/hr-design-system-handlebars/pull/60) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+-   Merge remote-tracking branch 'origin/main' into DPE-959-Search [#60](https://github.com/mumprod/hr-design-system-handlebars/pull/60) (zouhair1 [@elbaciri](https://github.com/elbaciri))
 
 #### Authors: 2
 
-- [@elbaciri](https://github.com/elbaciri)
-- selbaciri (zouhair1)
+-   [@elbaciri](https://github.com/elbaciri)
+-   selbaciri (zouhair1)
 
 ---
 
@@ -40,11 +53,11 @@
 
 #### 🚀 Enhancement
 
-- Service icons neu [#59](https://github.com/mumprod/hr-design-system-handlebars/pull/59) ([@StefanVesper](https://github.com/StefanVesper))
+-   Service icons neu [#59](https://github.com/mumprod/hr-design-system-handlebars/pull/59) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -52,11 +65,11 @@
 
 #### 🚀 Enhancement
 
-- first commit [#58](https://github.com/mumprod/hr-design-system-handlebars/pull/58) ([@StefanVesper](https://github.com/StefanVesper))
+-   first commit [#58](https://github.com/mumprod/hr-design-system-handlebars/pull/58) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -64,12 +77,12 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1221 service nav & icons überarbeiten [#57](https://github.com/mumprod/hr-design-system-handlebars/pull/57) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+-   Dpe 1221 service nav & icons überarbeiten [#57](https://github.com/mumprod/hr-design-system-handlebars/pull/57) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 2
 
-- [@StefanVesper](https://github.com/StefanVesper)
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@StefanVesper](https://github.com/StefanVesper)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -77,11 +90,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1191 fff some more fixes [#56](https://github.com/mumprod/hr-design-system-handlebars/pull/56) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1191 fff some more fixes [#56](https://github.com/mumprod/hr-design-system-handlebars/pull/56) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -89,11 +102,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 959 search [#55](https://github.com/mumprod/hr-design-system-handlebars/pull/55) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+-   Dpe 959 search [#55](https://github.com/mumprod/hr-design-system-handlebars/pull/55) ([@hanswurstsalat](https://github.com/hanswurstsalat))
 
 #### Authors: 1
 
-- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+-   Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
 
 ---
 
@@ -101,11 +114,11 @@
 
 #### 🐛 Bug Fix
 
-- bugfix [#54](https://github.com/mumprod/hr-design-system-handlebars/pull/54) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   bugfix [#54](https://github.com/mumprod/hr-design-system-handlebars/pull/54) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -113,11 +126,11 @@
 
 #### 🐛 Bug Fix
 
-- some quick fixes [#53](https://github.com/mumprod/hr-design-system-handlebars/pull/53) ([@StefanVesper](https://github.com/StefanVesper))
+-   some quick fixes [#53](https://github.com/mumprod/hr-design-system-handlebars/pull/53) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -125,11 +138,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1191 transitions & effekte [#52](https://github.com/mumprod/hr-design-system-handlebars/pull/52) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1191 transitions & effekte [#52](https://github.com/mumprod/hr-design-system-handlebars/pull/52) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -137,11 +150,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1099 navigation flyout [#51](https://github.com/mumprod/hr-design-system-handlebars/pull/51) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1099 navigation flyout [#51](https://github.com/mumprod/hr-design-system-handlebars/pull/51) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -149,12 +162,12 @@
 
 #### 🚀 Enhancement
 
-- Dpe 956 styling und funktion burger/section nav [#50](https://github.com/mumprod/hr-design-system-handlebars/pull/50) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+-   Dpe 956 styling und funktion burger/section nav [#50](https://github.com/mumprod/hr-design-system-handlebars/pull/50) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 2
 
-- [@StefanVesper](https://github.com/StefanVesper)
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@StefanVesper](https://github.com/StefanVesper)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -162,11 +175,11 @@
 
 #### 🚀 Enhancement
 
-- Feature/webpack feature loader [#49](https://github.com/mumprod/hr-design-system-handlebars/pull/49) ([@szuelch](https://github.com/szuelch))
+-   Feature/webpack feature loader [#49](https://github.com/mumprod/hr-design-system-handlebars/pull/49) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -174,11 +187,11 @@
 
 #### 🚀 Enhancement
 
-- Feature/svg map [#48](https://github.com/mumprod/hr-design-system-handlebars/pull/48) ([@szuelch](https://github.com/szuelch))
+-   Feature/svg map [#48](https://github.com/mumprod/hr-design-system-handlebars/pull/48) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -186,11 +199,11 @@
 
 #### 🐛 Bug Fix
 
-- Storybook Modul > SSI Helper [#47](https://github.com/mumprod/hr-design-system-handlebars/pull/47) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Storybook Modul > SSI Helper [#47](https://github.com/mumprod/hr-design-system-handlebars/pull/47) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -198,11 +211,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1152 service list and service icons [#46](https://github.com/mumprod/hr-design-system-handlebars/pull/46) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1152 service list and service icons [#46](https://github.com/mumprod/hr-design-system-handlebars/pull/46) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -210,11 +223,11 @@
 
 #### 🚀 Enhancement
 
-- Changes in assets folder stucture [#45](https://github.com/mumprod/hr-design-system-handlebars/pull/45) ([@szuelch](https://github.com/szuelch))
+-   Changes in assets folder stucture [#45](https://github.com/mumprod/hr-design-system-handlebars/pull/45) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -222,11 +235,11 @@
 
 #### 🚀 Enhancement
 
-- Dpe 1153 brand navigation [#43](https://github.com/mumprod/hr-design-system-handlebars/pull/43) ([@StefanVesper](https://github.com/StefanVesper))
+-   Dpe 1153 brand navigation [#43](https://github.com/mumprod/hr-design-system-handlebars/pull/43) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -234,11 +247,11 @@
 
 #### 🚀 Enhancement
 
-- icon.hbs for storybook [#42](https://github.com/mumprod/hr-design-system-handlebars/pull/42) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   icon.hbs for storybook [#42](https://github.com/mumprod/hr-design-system-handlebars/pull/42) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -246,11 +259,11 @@
 
 #### 🚀 Enhancement
 
-- Some tailwind stuff for the navi [#41](https://github.com/mumprod/hr-design-system-handlebars/pull/41) ([@StefanVesper](https://github.com/StefanVesper))
+-   Some tailwind stuff for the navi [#41](https://github.com/mumprod/hr-design-system-handlebars/pull/41) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -258,11 +271,11 @@
 
 #### 🐛 Bug Fix
 
-- Added block template link.hbs to project [#40](https://github.com/mumprod/hr-design-system-handlebars/pull/40) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Added block template link.hbs to project [#40](https://github.com/mumprod/hr-design-system-handlebars/pull/40) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -270,11 +283,11 @@
 
 #### 🐛 Bug Fix
 
-- fixed columns template so it is compatible with delivery now [#39](https://github.com/mumprod/hr-design-system-handlebars/pull/39) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   fixed columns template so it is compatible with delivery now [#39](https://github.com/mumprod/hr-design-system-handlebars/pull/39) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -282,17 +295,17 @@
 
 #### 🚀 Enhancement
 
-- Patch/purgecss [#38](https://github.com/mumprod/hr-design-system-handlebars/pull/38) ([@szuelch](https://github.com/szuelch))
-- all theme related selectors are ignored [#36](https://github.com/mumprod/hr-design-system-handlebars/pull/36) ([@szuelch](https://github.com/szuelch))
+-   Patch/purgecss [#38](https://github.com/mumprod/hr-design-system-handlebars/pull/38) ([@szuelch](https://github.com/szuelch))
+-   all theme related selectors are ignored [#36](https://github.com/mumprod/hr-design-system-handlebars/pull/36) ([@szuelch](https://github.com/szuelch))
 
 #### 🐛 Bug Fix
 
-- small change to build a release [#35](https://github.com/mumprod/hr-design-system-handlebars/pull/35) ([@szuelch](https://github.com/szuelch))
-- adds comment in front of theme selectors [#34](https://github.com/mumprod/hr-design-system-handlebars/pull/34) ([@szuelch](https://github.com/szuelch))
+-   small change to build a release [#35](https://github.com/mumprod/hr-design-system-handlebars/pull/35) ([@szuelch](https://github.com/szuelch))
+-   adds comment in front of theme selectors [#34](https://github.com/mumprod/hr-design-system-handlebars/pull/34) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -300,11 +313,11 @@
 
 #### 🚀 Enhancement
 
-- Navigation structure and renaming [#33](https://github.com/mumprod/hr-design-system-handlebars/pull/33) ([@StefanVesper](https://github.com/StefanVesper))
+-   Navigation structure and renaming [#33](https://github.com/mumprod/hr-design-system-handlebars/pull/33) ([@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 1
 
-- [@StefanVesper](https://github.com/StefanVesper)
+-   [@StefanVesper](https://github.com/StefanVesper)
 
 ---
 
@@ -312,11 +325,11 @@
 
 #### 🐛 Bug Fix
 
-- run all scripts in build task sequentially [#32](https://github.com/mumprod/hr-design-system-handlebars/pull/32) ([@szuelch](https://github.com/szuelch))
+-   run all scripts in build task sequentially [#32](https://github.com/mumprod/hr-design-system-handlebars/pull/32) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -324,11 +337,11 @@
 
 #### 🐛 Bug Fix
 
-- changes order of files to copy [#31](https://github.com/mumprod/hr-design-system-handlebars/pull/31) ([@szuelch](https://github.com/szuelch))
+-   changes order of files to copy [#31](https://github.com/mumprod/hr-design-system-handlebars/pull/31) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -336,11 +349,11 @@
 
 #### 🚀 Enhancement
 
-- Frontify data structure improvement service nav [#30](https://github.com/mumprod/hr-design-system-handlebars/pull/30) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Frontify data structure improvement service nav [#30](https://github.com/mumprod/hr-design-system-handlebars/pull/30) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -348,11 +361,11 @@
 
 #### 🐛 Bug Fix
 
-- removes debug messages [#29](https://github.com/mumprod/hr-design-system-handlebars/pull/29) ([@szuelch](https://github.com/szuelch))
+-   removes debug messages [#29](https://github.com/mumprod/hr-design-system-handlebars/pull/29) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -360,11 +373,11 @@
 
 #### 🐛 Bug Fix
 
-- debug log messages [#28](https://github.com/mumprod/hr-design-system-handlebars/pull/28) ([@szuelch](https://github.com/szuelch))
+-   debug log messages [#28](https://github.com/mumprod/hr-design-system-handlebars/pull/28) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -372,17 +385,15 @@
 
 #### 🐛 Bug Fix
 
-- Patch/release test [#27](https://github.com/mumprod/hr-design-system-handlebars/pull/27) ([@szuelch](https://github.com/szuelch))
+-   Patch/release test [#27](https://github.com/mumprod/hr-design-system-handlebars/pull/27) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
 # v0.4.1 (Tue Aug 31 2021)
-
-
 
 ---
 
@@ -390,12 +401,12 @@
 
 #### 🚀 Enhancement
 
-- Frontify6 22 [#26](https://github.com/mumprod/hr-design-system-handlebars/pull/26) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
+-   Frontify6 22 [#26](https://github.com/mumprod/hr-design-system-handlebars/pull/26) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
 
 #### Authors: 2
 
-- [@StefanVesper](https://github.com/StefanVesper)
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@StefanVesper](https://github.com/StefanVesper)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -403,16 +414,16 @@
 
 #### 🚀 Enhancement
 
-- Frontify6 18 v2 [#25](https://github.com/mumprod/hr-design-system-handlebars/pull/25) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
+-   Frontify6 18 v2 [#25](https://github.com/mumprod/hr-design-system-handlebars/pull/25) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
 
 #### 🐛 Bug Fix
 
-- updates storybook to version 6.3.5 [#24](https://github.com/mumprod/hr-design-system-handlebars/pull/24) ([@szuelch](https://github.com/szuelch))
+-   updates storybook to version 6.3.5 [#24](https://github.com/mumprod/hr-design-system-handlebars/pull/24) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 2
 
-- [@szuelch](https://github.com/szuelch)
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@szuelch](https://github.com/szuelch)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -420,12 +431,12 @@
 
 #### 🐛 Bug Fix
 
-- Feature/headline 2.0 [#23](https://github.com/mumprod/hr-design-system-handlebars/pull/23) ([@szuelch](https://github.com/szuelch) [@vascoeduardo](https://github.com/vascoeduardo))
+-   Feature/headline 2.0 [#23](https://github.com/mumprod/hr-design-system-handlebars/pull/23) ([@szuelch](https://github.com/szuelch) [@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 2
 
-- [@szuelch](https://github.com/szuelch)
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@szuelch](https://github.com/szuelch)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -433,11 +444,11 @@
 
 #### 🐛 Bug Fix
 
-- Frontify6 15 [#22](https://github.com/mumprod/hr-design-system-handlebars/pull/22) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Frontify6 15 [#22](https://github.com/mumprod/hr-design-system-handlebars/pull/22) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -445,11 +456,11 @@
 
 #### 🐛 Bug Fix
 
-- Frontify6 16 [#21](https://github.com/mumprod/hr-design-system-handlebars/pull/21) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Frontify6 16 [#21](https://github.com/mumprod/hr-design-system-handlebars/pull/21) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -457,11 +468,11 @@
 
 #### 🐛 Bug Fix
 
-- - New Story for Label Component [#20](https://github.com/mumprod/hr-design-system-handlebars/pull/20) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   -   New Story for Label Component [#20](https://github.com/mumprod/hr-design-system-handlebars/pull/20) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -469,11 +480,11 @@
 
 #### 🐛 Bug Fix
 
-- Added Roboto Condensed Font to project [#19](https://github.com/mumprod/hr-design-system-handlebars/pull/19) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Added Roboto Condensed Font to project [#19](https://github.com/mumprod/hr-design-system-handlebars/pull/19) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -481,11 +492,11 @@
 
 #### 🐛 Bug Fix
 
-- Frontify6 12 [#18](https://github.com/mumprod/hr-design-system-handlebars/pull/18) ([@vascoeduardo](https://github.com/vascoeduardo))
+-   Frontify6 12 [#18](https://github.com/mumprod/hr-design-system-handlebars/pull/18) ([@vascoeduardo](https://github.com/vascoeduardo))
 
 #### Authors: 1
 
-- [@vascoeduardo](https://github.com/vascoeduardo)
+-   [@vascoeduardo](https://github.com/vascoeduardo)
 
 ---
 
@@ -493,11 +504,11 @@
 
 #### 🚀 Enhancement
 
-- Feature/frontify6 11 [#17](https://github.com/mumprod/hr-design-system-handlebars/pull/17) ([@szuelch](https://github.com/szuelch))
+-   Feature/frontify6 11 [#17](https://github.com/mumprod/hr-design-system-handlebars/pull/17) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -505,11 +516,11 @@
 
 #### 🐛 Bug Fix
 
-- Überschriften Komponente [#16](https://github.com/mumprod/hr-design-system-handlebars/pull/16) ([@szuelch](https://github.com/szuelch))
+-   Überschriften Komponente [#16](https://github.com/mumprod/hr-design-system-handlebars/pull/16) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -517,11 +528,11 @@
 
 #### 🐛 Bug Fix
 
-- changes chromatic token [#15](https://github.com/mumprod/hr-design-system-handlebars/pull/15) ([@szuelch](https://github.com/szuelch))
+-   changes chromatic token [#15](https://github.com/mumprod/hr-design-system-handlebars/pull/15) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -529,11 +540,11 @@
 
 #### 🐛 Bug Fix
 
-- changes the folder structure of the handlebar [#14](https://github.com/szuelch/hr-design-system-handlebars/pull/14) ([@szuelch](https://github.com/szuelch))
+-   changes the folder structure of the handlebar [#14](https://github.com/szuelch/hr-design-system-handlebars/pull/14) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -541,11 +552,11 @@
 
 #### 🐛 Bug Fix
 
-- button primary is red now [#13](https://github.com/szuelch/hr-design-system-handlebars/pull/13) ([@szuelch](https://github.com/szuelch))
+-   button primary is red now [#13](https://github.com/szuelch/hr-design-system-handlebars/pull/13) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -553,11 +564,11 @@
 
 #### 🐛 Bug Fix
 
-- Release update [#12](https://github.com/szuelch/hr-design-system-handlebars/pull/12) ([@szuelch](https://github.com/szuelch))
+-   Release update [#12](https://github.com/szuelch/hr-design-system-handlebars/pull/12) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -565,11 +576,11 @@
 
 #### 🐛 Bug Fix
 
-- removes clean job from release action [#11](https://github.com/szuelch/hr-design-system-handlebars/pull/11) ([@szuelch](https://github.com/szuelch))
+-   removes clean job from release action [#11](https://github.com/szuelch/hr-design-system-handlebars/pull/11) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -577,16 +588,16 @@
 
 #### 🐛 Bug Fix
 
-- add unset header step according to [#10](https://github.com/szuelch/hr-design-system-handlebars/pull/10) ([@szuelch](https://github.com/szuelch))
-- changes github commit token [#9](https://github.com/szuelch/hr-design-system-handlebars/pull/9) ([@szuelch](https://github.com/szuelch))
-- changes padding-x [#8](https://github.com/szuelch/hr-design-system-handlebars/pull/8) ([@szuelch](https://github.com/szuelch))
-- updates padding-y of button [#7](https://github.com/szuelch/hr-design-system-handlebars/pull/7) ([@szuelch](https://github.com/szuelch))
-- Improve button [#6](https://github.com/szuelch/hr-design-system-handlebars/pull/6) ([@szuelch](https://github.com/szuelch))
-- calls clean script before build script [#5](https://github.com/szuelch/hr-design-system-handlebars/pull/5) ([@szuelch](https://github.com/szuelch))
+-   add unset header step according to [#10](https://github.com/szuelch/hr-design-system-handlebars/pull/10) ([@szuelch](https://github.com/szuelch))
+-   changes github commit token [#9](https://github.com/szuelch/hr-design-system-handlebars/pull/9) ([@szuelch](https://github.com/szuelch))
+-   changes padding-x [#8](https://github.com/szuelch/hr-design-system-handlebars/pull/8) ([@szuelch](https://github.com/szuelch))
+-   updates padding-y of button [#7](https://github.com/szuelch/hr-design-system-handlebars/pull/7) ([@szuelch](https://github.com/szuelch))
+-   Improve button [#6](https://github.com/szuelch/hr-design-system-handlebars/pull/6) ([@szuelch](https://github.com/szuelch))
+-   calls clean script before build script [#5](https://github.com/szuelch/hr-design-system-handlebars/pull/5) ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
@@ -594,24 +605,24 @@
 
 #### 🐛 Bug Fix
 
-- Feature/improve button [#4](https://github.com/szuelch/hr-design-system-handlebars/pull/4) ([@szuelch](https://github.com/szuelch))
+-   Feature/improve button [#4](https://github.com/szuelch/hr-design-system-handlebars/pull/4) ([@szuelch](https://github.com/szuelch))
 
 #### ⚠️ Pushed to `main`
 
-- fixes sytax errors ([@szuelch](https://github.com/szuelch))
-- adds release github action ([@szuelch](https://github.com/szuelch))
-- changes package visibility to public ([@szuelch](https://github.com/szuelch))
+-   fixes sytax errors ([@szuelch](https://github.com/szuelch))
+-   adds release github action ([@szuelch](https://github.com/szuelch))
+-   changes package visibility to public ([@szuelch](https://github.com/szuelch))
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
 
 ---
 
 # v0.1.0 (Mon May 03 2021)
 
-- Created initial version of HR Designsystem with a basic button component
+-   Created initial version of HR Designsystem with a basic button component
 
 #### Authors: 1
 
-- [@szuelch](https://github.com/szuelch)
+-   [@szuelch](https://github.com/szuelch)
