@@ -1,3 +1,28 @@
+# v0.23.0 (Wed Nov 10 2021)
+
+#### 🚀 Enhancement
+
+- Feature/test release [#70](https://github.com/mumprod/hr-design-system-handlebars/pull/70) ([@szuelch](https://github.com/szuelch))
+- Dpe 1224 alpine js bug with tabbing through hidden items [#71](https://github.com/mumprod/hr-design-system-handlebars/pull/71) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### 🐛 Bug Fix
+
+- adds version entry in changelog [#69](https://github.com/mumprod/hr-design-system-handlebars/pull/69) ([@szuelch](https://github.com/szuelch))
+- raised the version number [#68](https://github.com/mumprod/hr-design-system-handlebars/pull/68) ([@szuelch](https://github.com/szuelch))
+- replaces reading npm cache with [#67](https://github.com/mumprod/hr-design-system-handlebars/pull/67) ([@szuelch](https://github.com/szuelch))
+- print cached module size [#66](https://github.com/mumprod/hr-design-system-handlebars/pull/66) ([@szuelch](https://github.com/szuelch))
+- Feature/svgmap [#65](https://github.com/mumprod/hr-design-system-handlebars/pull/65) ([@szuelch](https://github.com/szuelch))
+- add Page-Component [#63](https://github.com/mumprod/hr-design-system-handlebars/pull/63) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Feature/storybook update [#64](https://github.com/mumprod/hr-design-system-handlebars/pull/64) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 3
+
+- [@StefanVesper](https://github.com/StefanVesper)
+- [@szuelch](https://github.com/szuelch)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.22.3 (Fri Nov 05 2021)
 
 #### 🐛 Bug Fix
