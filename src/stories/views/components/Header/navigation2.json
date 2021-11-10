@@ -73,21 +73,20 @@
 		{
 			"navigationItems": [
 				{
+					"id": "warnung",
 					"text": "Warnung",
 					"icon": "unwetterwarnungen",
 					"isCluster": false,
 					"url": "https://www.test.de",
 					"subNavigation" : false,
-					"extern": false
-
-
-					
+					"extern": false					
 				}
 			]
 		},
 		{ 
 			"navigationItems": [
 				{
+					"id": "videopodcast",
 					"text": "Video & Podcast",
 					"icon": "videopodcast",
 					"flyoutStartLinkText": "Übersicht Video & Podcast",
@@ -210,6 +209,7 @@
 		{
 			"navigationItems": [
 				{
+					"id": "wetter",
 					"text": "Wetter",
 					"icon": "wetter",
 					"flyoutStartLinkText": "Übersicht Wetter",
@@ -329,6 +329,7 @@
 		{
 			"navigationItems": [
 				{
+					"id": "verkehr",
 					"text": "Verkehr",
 					"icon": "verkehr",
 					"flyoutStartLinkText": "Übersicht Verkehr",
