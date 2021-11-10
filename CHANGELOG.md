@@ -1,3 +1,17 @@
+# v0.25.0 (Wed Nov 10 2021)
+
+#### 🚀 Enhancement
+
+- adds prepare repository action [#74](https://github.com/mumprod/hr-design-system-handlebars/pull/74) ([@szuelch](https://github.com/szuelch))
+- test commit [#73](https://github.com/mumprod/hr-design-system-handlebars/pull/73) ([@szuelch](https://github.com/szuelch))
+- test commit [#72](https://github.com/mumprod/hr-design-system-handlebars/pull/72) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.23.0 (Wed Nov 10 2021)
 
 #### 🚀 Enhancement
