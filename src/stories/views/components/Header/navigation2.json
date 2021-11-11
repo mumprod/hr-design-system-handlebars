@@ -74,7 +74,7 @@
 			"navigationItems": [
 				{
 					"id": "warnung",
-					"text": "Warnung",
+					"text": "Warnung!",
 					"icon": "unwetterwarnungen",
 					"isCluster": false,
 					"url": "https://www.test.de",
