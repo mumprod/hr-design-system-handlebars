@@ -1,3 +1,15 @@
+# v0.25.1 (Thu Nov 11 2021)
+
+#### 🐛 Bug Fix
+
+- - removes *.min.svg icons in svgmap folders [#75](https://github.com/mumprod/hr-design-system-handlebars/pull/75) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.25.0 (Wed Nov 10 2021)
 
 #### 🚀 Enhancement
