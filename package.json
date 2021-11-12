@@ -6,7 +6,7 @@
     "license": "MIT",
     "main": "dist/index.js",
     "repository": "https://github.com/szuelch/hr-design-system-handlebars",
-    "version": "0.25.0",
+    "version": "0.26.0",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -s ./src/assets -p 6006",
@@ -19,7 +19,7 @@
         "chromatic": "npx chromatic --project-token 84f1628f224a",
         "clean": "rimraf  dist",
         "release": "npx auto shipit --base-branch=main",
-        "svgmap": "gulp"
+        "optimize-svgs": "gulp"
     },
     "keywords": [],
     "devDependencies": {
