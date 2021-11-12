@@ -3,6 +3,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs/b
 import navigation from "./Header.hbs";
 import JsonData from './navigation.json';
 import JsonData2 from './navigation2.json';
+import JsonData3 from './navigation3.json';
 
 <Meta title="Komponenten/Header/Header" argTypes={{}} />
 
@@ -26,8 +27,14 @@ Ein toller Einleitungstext für unsere `Header` Komponente:
     {Template.bind({})}
   </Story>
   <Story
-    name="With 4 Icons in Service Nav"
+    name="4 Icons in Service Nav"
     args= {JsonData2}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Subnav in Desktopview (buggy)"
+    args= {JsonData3}
   >
     {Template.bind({})}
   </Story>

@@ -35,8 +35,10 @@
     </div>
 
     <div id="sectionNavWrapper"  
+        x-data="sectionNavWrapperHandler" 
+        @resize.window="resizehandler"
         x-ref="sectionnavigation"
-        @toggle-sectionnav.window="if($event.detail === false) { if (window.innerWidth < 1024) { $el.style.maxHeight='0px' } else { $el.style = '' } } else { $el.style.maxHeight = $el.scrollHeight + 'px' }"  
+        @toggle-sectionnav.window="toggler"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
@@ -85,7 +87,18 @@
             init() { 
                 if(window.innerWidth < 1024) {
                     this.$el.setAttribute("x-collapse","")
-                }   
+                }    
+            },
+            watcher() {
+                this.$watch('dropped', value => {
+                if(value == true) { 
+                    let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
+                } else {
+                    let a = this.$refs.sectionnavigation.scrollHeight; 
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                    }
+                })   
             },
             check() {
                 if(window.innerWidth > 1023) {
@@ -102,25 +115,36 @@
             }
         }))
     
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 1024) {
-                document.querySelector('#sectionNavWrapper').style=""
-            } else {
-                document.querySelector('#sectionNavWrapper').classList.add('hidden')
-                document.querySelector('#sectionNavWrapper').style.maxHeight="0px"
-            }
+        Alpine.data('sectionNavWrapperHandler', () => ({
+            init() {},     
+            resizehandler() { 
+                if(window.innerWidth > 1024) {
+                    this.$el.setAttribute("style","")
+                } else {
+                    this.$el.classList.add('hidden')
+                    this.$el.style.maxHeight="0px"
+                }
 
-            let timeout 
-            clearTimeout(timeout)
-            timeout = setTimeout(function(){
-                document.querySelector('#sectionNavWrapper').classList.remove('hidden')
-                const close = new CustomEvent('burger-close')
-                const closesearch = new CustomEvent('search-mobile-click-outside')
-                const closesearch2 = new CustomEvent('search-close')
-                window.dispatchEvent(close)  
-                window.dispatchEvent(closesearch) 
-                window.dispatchEvent(closesearch2)
-            }, 500)
-        })
+                let timeout 
+                clearTimeout(timeout)
+                timeout = setTimeout(() => {
+                    this.$el.classList.remove('hidden')
+                    this.$dispatch('burger-close')
+                    this.$dispatch('search-mobile-click-outside')
+                    this.$dispatch('search-close')
+                }, 500)
+            },
+            toggler() {
+                if(this.$event.detail === false) { 
+                    if (window.innerWidth < 1024) { 
+                        this.$el.style.maxHeight='0px' 
+                    } else { 
+                        this.$el.style = '' 
+                    }
+                } else { 
+                    this.$el.style.maxHeight = this.$el.scrollHeight + 'px' 
+                }
+            }
+        }))
 })
 </script>

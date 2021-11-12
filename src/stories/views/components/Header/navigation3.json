@@ -70,19 +70,7 @@
 	],
 
 	"serviceNavigationSSILinks": [
-		{
-			"navigationItems": [
-				{
-					"id": "warnung",
-					"text": "Warnung!",
-					"icon": "unwetterwarnungen",
-					"isCluster": false,
-					"url": "https://www.test.de",
-					"subNavigation" : false,
-					"extern": false					
-				}
-			]
-		},
+		
 		{ 
 			"navigationItems": [
 				{
@@ -410,7 +398,7 @@
 					"url": "index.html",
 					"labelText": "Startseite der hessenschau",
 					"subNavigationFromIndex": true,
-					"selected": true
+					"selected": false
 				}
 			]
 		},
@@ -521,7 +509,9 @@
 					"text": "Politik",
 					"url": "politik/index.html",
 					"qualifiedRelatedContentOn404": true,
-					"isCluster": false,	
+					"isCluster": false,
+					"selected": true,	
+					"showAsFlyout" : false,
 					"subNavigation": {
 						"showAsFlyout": false,
 						"columnCount": "1",
