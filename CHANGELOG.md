@@ -1,3 +1,15 @@
+# v0.26.0 (Fri Nov 12 2021)
+
+#### 🚀 Enhancement
+
+- Alle svgs und die entsprechenden optimierungs Skripte sind aus dem Delivery übernommen [#76](https://github.com/mumprod/hr-design-system-handlebars/pull/76) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.25.1 (Thu Nov 11 2021)
 
 #### 🐛 Bug Fix
