@@ -1,3 +1,15 @@
+# v0.27.0 (Fri Nov 12 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 1220 sub nav der section nav im desktop view [#77](https://github.com/mumprod/hr-design-system-handlebars/pull/77) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- [@StefanVesper](https://github.com/StefanVesper)
+
+---
+
 # v0.26.0 (Fri Nov 12 2021)
 
 #### 🚀 Enhancement
