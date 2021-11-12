@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/addon-docs'
+import { resetComponents } from '@storybook/components'
+
+<Meta title="Dokumentation/Grundlegendes/SVG Optimierung" />
+
+# SVG Optimierung
+
+Die Icons im Designsystem liegen ausschließlich als Vektorgrafiken im SVG Format vor. Sie werden von einem Designer\*in meist in Adobe Indesign erstellt.
+Das Markup (XML) dieser Dateien enthält, wenn wir sie von den Designer\*innen erhalten, zumeist sehr viele unnötige Elemente (Kommentare, Stylesheet Deklarationen, etc.).
+
+Aus Gründen der Performance werden Icons, die in mehreren Komponenten verwendet werden zu Sets zusammengefasst und in Form sogenannter SVG-Maps ausgeliefert.
+Diese sind vergleichbar zu Sprite-Maps, bei denen mehrere Pixelgrafiken in einer Datei zusammengefasst werden. Der Vorteil hierbei ist, dass nicht jedes Icon
+einzeln, sondern gleich die ganze Map heruntergeladen werden kann und somit die Zahl der Requests drastisch reduziert wird.  
+Mithilfe eines Skripts können beliebig viele SVG-Maps erzeugt werden. Wie das ganze funktioniert wird im Folgenden beschrieben.
+
+## Erzeugung von SVG-Maps
+
+Zur Erzeugung der SVG-Maps ist in der Datei `package.json` ein Skript
