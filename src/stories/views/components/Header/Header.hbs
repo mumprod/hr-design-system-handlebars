@@ -36,7 +36,7 @@
 
     <div id="sectionNavWrapper"  
         x-data="sectionNavWrapperHandler" 
-        @resize.window="handler"
+        @resize.window="resizehandler"
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggler"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
@@ -87,7 +87,18 @@
             init() { 
                 if(window.innerWidth < 1024) {
                     this.$el.setAttribute("x-collapse","")
-                }   
+                }    
+            },
+            watcher() {
+                this.$watch('dropped', value => {
+                if(value == true) { 
+                    let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
+                } else {
+                    let a = this.$refs.sectionnavigation.scrollHeight; 
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                    }
+                })   
             },
             check() {
                 if(window.innerWidth > 1023) {
@@ -106,7 +117,7 @@
     
         Alpine.data('sectionNavWrapperHandler', () => ({
             init() {},     
-            handler() { 
+            resizehandler() { 
                 if(window.innerWidth > 1024) {
                     this.$el.setAttribute("style","")
                 } else {
@@ -118,9 +129,9 @@
                 clearTimeout(timeout)
                 timeout = setTimeout(() => {
                     this.$el.classList.remove('hidden')
-                    window.$dispatch('burger-close')
-                    window.$dispatch('search-mobile-click-outside')
-                    window.$dispatch('search-close')
+                    this.$dispatch('burger-close')
+                    this.$dispatch('search-mobile-click-outside')
+                    this.$dispatch('search-close')
                 }, 500)
             },
             toggler() {
