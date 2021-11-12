@@ -19,7 +19,7 @@
         "chromatic": "npx chromatic --project-token 84f1628f224a",
         "clean": "rimraf  dist",
         "release": "npx auto shipit --base-branch=main",
-        "svgmap": "gulp"
+        "optimize-svgs": "gulp"
     },
     "keywords": [],
     "devDependencies": {
