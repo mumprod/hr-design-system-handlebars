@@ -21,25 +21,11 @@ function createSvgMaps() {
             return src(`${iconsDir}/svgmap/*.svg`)
                 .pipe(
                     svgMin({
+                        multipass: true,
                         plugins: [
-                            {
-                                name: 'removeAttrs',
-                                params: {
-                                    attrs: 'transform',
-                                },
-                            },
-                            {
-                                name: 'removeViewBox',
-                                active: false,
-                            },
-                            {
-                                name: 'inlineStyles',
-                                active: false,
-                            },
-                            {
-                                name: 'removeUnknownsAndDefaults',
-                                active: false,
-                            },
+                            { name: 'convertStyleToAttrs', active: true },
+                            { name: 'removeViewBox', active: false },
+                            { name: 'removeUnknownsAndDefaults', active: false },
                         ],
                     })
                 )
