@@ -1,3 +1,27 @@
+# v0.29.0 (Mon Nov 15 2021)
+
+#### 🚀 Enhancement
+
+- Feature/svgmin update [#79](https://github.com/mumprod/hr-design-system-handlebars/pull/79) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.28.0 (Fri Nov 12 2021)
+
+#### 🚀 Enhancement
+
+- to stay compatible with old components [#78](https://github.com/mumprod/hr-design-system-handlebars/pull/78) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.27.0 (Fri Nov 12 2021)
 
 #### 🚀 Enhancement
