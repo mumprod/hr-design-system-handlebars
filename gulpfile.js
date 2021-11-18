@@ -47,6 +47,11 @@ function createSvgMaps() {
                                 $(this).removeAttr('preserve--fill')
                                 $(this).attr('fill', value)
                             })
+                            $('[preserve--style]').map(function () {
+                                let value = $(this).attr('preserve--style')
+                                $(this).removeAttr('preserve--style')
+                                $(this).attr('style', value)
+                            })
                         },
                         parserOptions: { xmlMode: true },
                     })
@@ -66,18 +71,9 @@ function createSvgMapsForBrands() {
                     .pipe(
                         svgMin({
                             plugins: [
-                                {
-                                    name: 'removeAttrs',
-                                    params: {
-                                        attrs: 'transform',
-                                    },
-                                },
+                                { name: 'convertStyleToAttrs', active: true },
                                 {
                                     name: 'removeViewBox',
-                                    active: false,
-                                },
-                                {
-                                    name: 'inlineStyles',
                                     active: false,
                                 },
                                 {
@@ -104,6 +100,11 @@ function createSvgMapsForBrands() {
                                     let value = $(this).attr('preserve--fill')
                                     $(this).removeAttr('preserve--fill')
                                     $(this).attr('fill', value)
+                                })
+                                $('[preserve--style]').map(function () {
+                                    let value = $(this).attr('preserve--style')
+                                    $(this).removeAttr('preserve--style')
+                                    $(this).attr('style', value)
                                 })
                             },
                             parserOptions: { xmlMode: true },
