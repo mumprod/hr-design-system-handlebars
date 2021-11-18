@@ -1,3 +1,15 @@
+# v0.29.1 (Thu Nov 18 2021)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: svgmap for hr3 isn't correctly generated [#80](https://github.com/mumprod/hr-design-system-handlebars/pull/80) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.29.0 (Mon Nov 15 2021)
 
 #### 🚀 Enhancement
