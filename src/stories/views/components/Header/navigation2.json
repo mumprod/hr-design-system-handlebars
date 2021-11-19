@@ -521,7 +521,7 @@
 					"text": "Politik",
 					"url": "politik/index.html",
 					"qualifiedRelatedContentOn404": true,
-					"isCluster": false,	
+					"isCluster": false, 
 					"subNavigation": {
 						"showAsFlyout": false,
 						"columnCount": "1",

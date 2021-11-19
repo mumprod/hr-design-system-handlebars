@@ -3,14 +3,14 @@
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
         :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress h-auto' : 'h-10'" 
-        class="flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress ">   
+        class="{{#if this.selected}} -currentSection {{/if}} flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress ">   
     
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
                 @click.debounce="toggle" 
                 :class="dropped ? 'first:font-bold lg:first:font-normal' : 'first:font-normal'"
-                class="pl-8 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}}-currentSection{{/if}}" 
+                class="pl-8 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}" 
                 aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" 
                 data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
@@ -20,14 +20,15 @@
 {{!-- Gilt z.B. für POLITIK:  --}}
                 <a href="{{resourceUrl this.url}}" 
                     id="flyout-{{nextRandom}}-1"
-                    :class="dropped ? 'font-bold' : 'font-normal'"
-                    class="px-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} -currentSection {{/if}} {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"
+                    
+                    :class="dropped ? 'font-bold' : ''"
+                    class="px-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}} {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2"
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~else ~}} 
 {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a href="{{resourceUrl this.url}}" 
-                    class="flex justify-start px-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}}-currentSection pl-4 md:pl-5{{/if}}" 
+                    class="flex justify-start px-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}} font-bold pl-4 md:pl-5{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~/if}}

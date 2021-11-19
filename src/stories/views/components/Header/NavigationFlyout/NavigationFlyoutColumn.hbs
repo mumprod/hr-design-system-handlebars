@@ -1,7 +1,7 @@
-<ul class="{{inline-switch count "1,2" "md:w-1/1, md:w-1/1 lg:w-1/2"}} {{inline-switch navtype "ServiceNav,SectionNav" "border-b border-gray-200 md:border-0, border-0"}} {{#unless ../this.showAsFlyout}}  {{/unless}}  lg:even:pl-4 ">
+<ul class="{{inline-switch count '1,2' 'md:w-1/1, md:w-1/1 lg:w-1/2'}} {{inline-switch navtype 'ServiceNav,SectionNav' 'border-b border-gray-200 md:border-0,border-0'}} lg:even:pl-4 {{#if selected}} lg:flex {{/if}} ">
     {{#each this}} 
         {{#if this.title}}    
-            {{> components/Header/NavigationFlyout/NavigationFlyoutItem _fromNav=../navtype ~}}
+            {{> components/Header/NavigationFlyout/NavigationFlyoutItem parentselected=../selected _fromNav=../navtype ~}}
         {{/if}}
     {{/each~}}
 </ul>
