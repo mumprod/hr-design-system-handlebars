@@ -88,7 +88,7 @@
 				{
 					"id": "videopodcast",
 					"text": "Video & Podcast",
-					"icon": "videopodcast",
+					"icon": "videopodcast-ds",
 					"flyoutStartLinkText": "Übersicht Video & Podcast",
 					"selected": false,
 					"isCluster": false,
@@ -211,7 +211,7 @@
 				{
 					"id": "wetter",
 					"text": "Wetter",
-					"icon": "wetter",
+					"icon": "wetter-ds",
 					"flyoutStartLinkText": "Übersicht Wetter",
 					"subNavigation": {
 						"showAsFlyout": true,
@@ -331,7 +331,7 @@
 				{
 					"id": "verkehr",
 					"text": "Verkehr",
-					"icon": "verkehr",
+					"icon": "verkehr-ds",
 					"flyoutStartLinkText": "Übersicht Verkehr",
 					"subNavigation": {
 						"showAsFlyout": true,
