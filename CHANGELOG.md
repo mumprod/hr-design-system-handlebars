@@ -1,3 +1,15 @@
+# v0.29.2 (Mon Nov 22 2021)
+
+#### 🐛 Bug Fix
+
+- dynamic aria-tags in flyouts [#82](https://github.com/mumprod/hr-design-system-handlebars/pull/82) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.29.1 (Thu Nov 18 2021)
 
 #### 🐛 Bug Fix
