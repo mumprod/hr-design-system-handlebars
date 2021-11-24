@@ -1,0 +1,37 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import page from "./Page.hbs";
+import NavigationData from '../Header/navigation.json';
+
+<Meta
+  title="Komponenten/Page/Page"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({  ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  
+  return page({  ...args });
+};
+
+# Page
+
+<Preview withToolbar>
+  <Story
+    name="Default"
+    args= {NavigationData}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Default" />

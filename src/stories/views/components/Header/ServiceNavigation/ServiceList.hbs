@@ -1,0 +1,17 @@
+<div 
+    id="serviceList" 
+    class="absolute left-0 flex justify-center flex-initial w-full h-10 max-w-full align-top border-t border-white md:h-12 top-10 bg-blue-congress md:border-0 md:top-auto md:w-auto md:left-auto md:relative md:justify-end md:flex md:flex-auto lg:h-16 lg:pl-0 lg:pr-4 lg:w-3/4 "
+>
+    {{#with this.serviceNavigationSSILinks}}
+        <ul class="relative flex items-center justify-around w-full h-full -itemCount-{{ count }} lg:w-auto lg:justify-end lg:pt-2">
+            {{#each this}}        
+                {{!-- {{> components/base/loadSSI _template='components/Header/ServiceNavigation/ServiceNavigationItem' }} --}}                    
+                {{#if (isStorybook)}}  
+                    {{> components/Header/ServiceNavigation/ServiceNavigationItem }}   
+                {{else}}
+                    {{{this}}}
+                {{/if}}          
+            {{/each}} 
+        </ul>
+    {{/with}}
+</div>

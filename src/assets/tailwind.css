@@ -1,0 +1,420 @@
+/*! purgecss start ignore */
+:root,
+[data-theme='default'] {
+    --color-primary: #005293;
+    --color-secondary: #606060;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Infografik */
+    --color-label-infografik: theme('colors.pink.ripeRaspberries');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Pressemitteilungen */
+    --color-label-pm: theme('colors.blue.deepCerulean');
+}
+
+[data-theme='hessenschau'] {
+    --color-primary: #005293;
+    --color-secondary: #606060;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Infografik */
+    --color-label-infografik: theme('colors.pink.ripeRaspberries');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Pressemitteilungen */
+    --color-label-pm: theme('colors.blue.deepCerulean');
+}
+
+[data-theme='hr-bigband'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr-fernsehen'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr-inforadio'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr-rundfunkrat'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+    /* Pressemitteilungen */
+    --color-label-pm: theme('colors.blue.deepCerulean');
+}
+
+[data-theme='hr-werbung'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+    /* Pressemitteilungen */
+    --color-label-pm: theme('colors.blue.deepCerulean');
+}
+
+[data-theme='hr-sinfonieorchester'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr-bigband'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+    /* Pressemitteilungen */
+    --color-label-pm: theme('colors.blue.deepCerulean');
+}
+
+[data-theme='hr1'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr2'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.pink.rose');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr3'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='hr4'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerie */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+[data-theme='you-fm'] {
+    --color-primary: #c20016;
+    --color-secondary: #007179;
+
+    /* Medieninhalte, Video, Audio, Bildergalerien */
+    --color-label-media: theme('colors.blue.science');
+    /* Ticker, Live, Livestream */
+    --color-label-live: theme('colors.orange.spicyCarrot');
+    /* Kommentar */
+    --color-label-comment: theme('colors.teal.deeperPool');
+    /* Eilmeldung */
+    --color-label-breakingnews: theme('colors.red.thunderbird');
+    /* Sendung */
+    --color-label-program: theme('colors.blue.pacificBlue');
+    /* Download */
+    --color-label-download: theme('colors.grey.scorpion');
+    /* Event */
+    --color-label-event: theme('colors.black.DEFAULT');
+}
+
+/*! purgecss end ignore */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'DIN';
+        font-display: auto;
+        src: url('fonts/DINPro.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'DIN';
+        font-display: auto;
+        src: url('fonts/DINPro-Bold.woff');
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'RobotoSlab';
+        font-display: auto;
+        src: url('fonts/RobotoSlabbed.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'RobotoCond';
+        font-display: auto;
+        src: url('fonts/RobotoCondensed.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: condensed;
+    }
+    @font-face {
+        font-family: 'RobotoCond';
+        font-display: auto;
+        src: url('fonts/RobotoCondensed-Bold.woff');
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: condensed;
+    }
+
+    .-currentBrand {
+        @apply md:before:absolute md:before:w-0 md:before:h-0 md:before:border-t-0 md:before:border-r-8 md:before:border-r-transparent md:before:border-l-8 md:before:border-l-white md:before:border-b-8 md:before:border-blue-congress md:before:mt-6 
+    }
+    .-currentService {
+        @apply before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-13 
+    }
+    .-currentSection {
+        @apply before:relative before:w-0 before:h-0 before:mr-2 before:-mt-0.5 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-9 
+    }
+    .-warnung {
+        @apply text-red-600 !important;
+        @apply fill-black
+    }
+
+    .-videopodcast, .-wetter, .-verkehr {
+        @apply fill-white
+    }
+}
+
+@layer components {
+    [x-cloak] { display: none !important; }
+   
+    .btn {
+        @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;
+    }
+
+    .btn--primary {
+        @apply text-white bg-blue-400;
+    }
+
+    .btn--secondary {
+        @apply text-gray-700 bg-transparent shadow;
+    }
+
+    .btn--sm {
+        @apply py-2.5 px-4 text-xs;
+    }
+
+    .btn--md {
+        @apply px-5 py-3 text-sm;
+    }
+
+    .btn--lg {
+        @apply px-6 py-3 text-base;
+    }
+
+    .btn--xl {
+        @apply px-6 py-3 text-lg;
+    }
+}
+
+@layer utilities {
+    .placeholder-text-xs::placeholder{
+      @apply text-xs
+    }
+}

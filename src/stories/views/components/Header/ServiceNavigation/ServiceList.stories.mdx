@@ -1,0 +1,39 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+import menu from "./ServiceList.hbs";
+
+import JsonData from '../navigation.json';
+
+<Meta
+  title="Komponenten/Header/ServiceNavigation/ServiceList"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ labelType, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return menu({ labelType, ...args });
+};
+
+# ServiceNavigation
+
+In der `ServiceList` Komponente werden je nach Welle und Status verschiedene `ServiceNavigationItems` dargestellt:
+
+<Preview withToolbar>
+  <Story
+    name="Default"
+    args= {JsonData}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="Default" />

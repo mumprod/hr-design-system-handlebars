@@ -1,5 +1,7 @@
-<ul class="c-subNav__columns flex-grow border-gray-600 first:border-r">
-    {{#each this }}          
-        {{> components/Header/NavigationFlyout/NavigationFlyoutItem }}              
+<ul class="{{inline-switch count "1,2" "md:w-1/1, md:w-1/1 lg:w-1/2"}} {{inline-switch navtype "ServiceNav,SectionNav" "border-b border-gray-200 md:border-0, border-0"}} {{#unless ../this.showAsFlyout}}  {{/unless}}  lg:even:pl-4 ">
+    {{#each this}} 
+        {{#if this.title}}    
+            {{> components/Header/NavigationFlyout/NavigationFlyoutItem _fromNav=../navtype ~}}
+        {{/if}}
     {{/each~}}
 </ul>
