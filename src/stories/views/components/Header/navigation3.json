@@ -510,7 +510,7 @@
 					"url": "politik/index.html",
 					"qualifiedRelatedContentOn404": true,
 					
-					"selected": true,	
+					"selected": false,	
 				
 					"subNavigation": {
 						"showAsFlyout": false,
