@@ -22,7 +22,7 @@
                     id="flyout-{{nextRandom}}-1"
                     
                     :class="dropped ? 'font-bold' : ''"
-                    class="pl-4 pr-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}} {{#if this.subNavigation.showAsFlyout ~}}-has-flyout js-flyout__link js-loadScript{{/if}}"
+                    class="pl-4 pr-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2"
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~else ~}} 
