@@ -611,7 +611,90 @@
 					"name": "sport",
 					"text": "Sport",
 					"url": "sport/index.html",
-					"qualifiedRelatedContentOn404": true
+					"qualifiedRelatedContentOn404": true,
+					"selected": true,	
+					"subNavigation": {
+						"showAsFlyout": false,
+						"columnCount": "1",
+						"items": [
+							{  "title": "Eintracht Frankfurt",
+								"link": {
+									"content": {
+										"text": "Eintracht Frankfurt"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "SV Darmstadt 98",
+								"link": {
+									"content": {
+										"text": "SV Darmstadt 98"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Fußball",
+								"link": {
+									"content": {
+										"text": "Fußball"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Ergebnisse & Tabellen",
+								"link": {
+									"content": {
+										"text": "Ergebnisse & Tabellen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Mehr Sport",
+								"link": {
+									"content": {
+										"text": "Mehr Sport"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Videos",
+								"link": {
+									"content": {
+										"text": "Videos"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "heimspiel!",
+								"link": {
+									"content": {
+										"text": "heimspiel!"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": true,
+									"iconName": "extern"
+								}
+							}				
+						]
+					}
 				}
 			]
 		},

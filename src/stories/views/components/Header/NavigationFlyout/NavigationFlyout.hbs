@@ -1,6 +1,6 @@
 {{#with this.subNavigation}}
 
-{{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} {{/unless}}"></div>{{/unless}}
+{{!-- {{#unless this.showAsFlyout}}<div class="c-subNav__spacer -isFixed {{#unless ../this.selected}} {{/unless}}">{{/unless}} --}}
 
     <div x-cloak
         x-data="flyoutHandler" 
@@ -12,7 +12,7 @@
         
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()" {{/if}}  
         
-        class="z-102 bg-white md:filter md:drop-shadow-md lg:absolute {{#if ../_isSectionNav}} relative w-full md:top-auto lg:top-38 md:left-auto lg:left-auto lg:pl-4 lg:-ml-2 lg:mt-px lg:w-30 {{else}} lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 md:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 {{/if}}" 
+        class="z-102 bg-white md:filter md:drop-shadow-md lg:absolute {{#if ../_isSectionNav}} relative md:top-auto lg:top-38 md:left-auto lg:pl-4 lg:-ml-2 lg:mt-px w-full {{#if ../this.selected}} lg:mt-0 lg:filter-none lg:left-0 {{else}} lg:left-auto lg:w-30 {{/if}}{{else}} lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 md:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 {{/if}}" 
 
         aria-labelledby="flyout-{{getRandom}}-1" 
         x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('aria-hidden', !dropped)"
@@ -38,5 +38,6 @@
                 {{/with}}
             {{/if}}
         </div>
-    </div>
+    {{!-- {{#unless this.showAsFlyout}}</div>{{/unless}} --}}
+</div>
 {{/with}}
