@@ -145,7 +145,7 @@
                     }
                     if (scrollAmount < two) {
                         console.log('scrollamount < two')
-                        this.$dispatch('toggle-sectionnav')
+                        this.$dispatch('toggle-sectionnav', false)
                         document.querySelector('#burgerWrapper').classList.add('lg:hidden');
                     }
                     if (scrollAmount < three) {
@@ -153,7 +153,7 @@
                     }
 
                     if (scrollAmount < contentOffset) {
-                        {{!-- fireEvent('hr:global:userScrolledToTop') --}}
+                        
                         console.log('scrollamount < contentOffset')
                     }
                 }
