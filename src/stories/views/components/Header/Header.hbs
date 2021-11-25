@@ -1,6 +1,5 @@
 <div x-data="headerHandler" 
-    @scroll.window.debounce.150ms="checkScrollPosition(); window.pageYOffset > 120 ? scrolledFromTop = true : scrolledFromTop = false"
-    
+    @scroll.window.debounce.150ms="checkScrollPosition(); "
     id="headerWrapper"
     class="flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
 
@@ -48,9 +47,8 @@
         
     </div>
     
-    <div 
+    <div id="searchWrapper" 
         x-show="searchFieldOpen"
-        id="searchWrapper" 
         class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden"
         @search-close.window="searchFieldOpen = false"
         @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
@@ -111,14 +109,12 @@
         }))
         
         Alpine.data('headerHandler', () => ({  
-            searchFieldOpen : false, 
+            searchFieldOpen : false,
+            scrolledFromTop : false, 
             lastScrollTop : 0, 
             checkScrollPosition() {
-                
+                window.pageYOffset > 120 ? window.scrolledFromTop = true : window.scrolledFromTop = false
                 let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                let halfOfHeight =
-                    window.innerHeight ||
-                    (document.documentElement || document.body).clientHeight / 2
                 let one = 500, two = 900, three = 1300
                 let contentOffset = document.querySelector('#content').offsetTop
                 
@@ -127,33 +123,26 @@
                         console.log('scrollamount > contentOffset')
                     }
                     if (scrollAmount > one) {
-                        console.log('scrollamount > one')
                         document.querySelector('#headerWrapper').classList.add('-translate-y-8');
                     }
                     if (scrollAmount > two) {
-                        console.log('scrollamount > two')
                         this.$dispatch('toggle-sectionnav', false)
                         document.querySelector('#burgerWrapper').classList.remove('lg:hidden');
                     }
                     if (scrollAmount > three) {
-                        console.log('scrollamount > three')
                     }
                 } else {
-                    if (scrollAmount < one) {
-                        console.log('scrollamount < one')
-                        document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
-                    }
+                    if (scrollAmount < three) {}
                     if (scrollAmount < two) {
-                        console.log('scrollamount < two')
                         this.$dispatch('toggle-sectionnav')
                         document.querySelector('#burgerWrapper').classList.add('lg:hidden');
                     }
-                    if (scrollAmount < three) {
-                        console.log('scrollamount < three')   
+                    if (scrollAmount < one) {
+                        document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
                     }
-
+                    
+                   
                     if (scrollAmount < contentOffset) {
-                        
                         console.log('scrollamount < contentOffset')
                     }
                 }
@@ -215,7 +204,7 @@
             toggleSectionNav() {
                 console.log('toggleSectionNav!!')
                 if(this.$event.detail === false) { 
-                    if (window.innerWidth < 1024 || scrolledFromTop == true) { 
+                    if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
                     } else { 
                         this.$el.style = '' 
