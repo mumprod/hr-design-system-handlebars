@@ -1,5 +1,5 @@
 <div x-data="headerHandler" 
-    @scroll.window.debounce.150ms="checkScrollPosition()"
+    @scroll.window.debounce.150ms="checkScrollPosition(); window.pageYOffset > 120 ? scrolledFromTop = true : scrolledFromTop = false"
     
     id="headerWrapper"
     class="flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
@@ -113,10 +113,6 @@
         Alpine.data('headerHandler', () => ({  
             searchFieldOpen : false, 
             lastScrollTop : 0, 
-            init() { 
-                
-            },
-            
             checkScrollPosition() {
                 
                 let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
@@ -124,9 +120,8 @@
                     window.innerHeight ||
                     (document.documentElement || document.body).clientHeight / 2
                 let one = 500, two = 900, three = 1300
-                
                 let contentOffset = document.querySelector('#content').offsetTop
-                console.log(scrollAmount)
+                
                 if (scrollAmount > this.lastScrollTop) {
                     if (scrollAmount > contentOffset) {
                         console.log('scrollamount > contentOffset')
@@ -137,12 +132,11 @@
                     }
                     if (scrollAmount > two) {
                         console.log('scrollamount > two')
-                        document.querySelector('#sectionNavWrapper').classList.add('-translate-y-10');
+                        this.$dispatch('toggle-sectionnav', false)
                         document.querySelector('#burgerWrapper').classList.remove('lg:hidden');
                     }
                     if (scrollAmount > three) {
                         console.log('scrollamount > three')
-                       
                     }
                 } else {
                     if (scrollAmount < one) {
@@ -151,16 +145,14 @@
                     }
                     if (scrollAmount < two) {
                         console.log('scrollamount < two')
-                        document.querySelector('#sectionNavWrapper').classList.remove('-translate-y-10');
+                        this.$dispatch('toggle-sectionnav')
                         document.querySelector('#burgerWrapper').classList.add('lg:hidden');
                     }
                     if (scrollAmount < three) {
-                        console.log('scrollamount < three')
-                        
+                        console.log('scrollamount < three')   
                     }
 
                     if (scrollAmount < contentOffset) {
-                        
                         {{!-- fireEvent('hr:global:userScrolledToTop') --}}
                         console.log('scrollamount < contentOffset')
                     }
@@ -221,8 +213,9 @@
                 }, 500)
             },
             toggleSectionNav() {
+                console.log('toggleSectionNav!!')
                 if(this.$event.detail === false) { 
-                    if (window.innerWidth < 1024) { 
+                    if (window.innerWidth < 1024 || scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
                     } else { 
                         this.$el.style = '' 
