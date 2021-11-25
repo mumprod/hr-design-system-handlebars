@@ -38,7 +38,7 @@
         x-data="sectionNavWrapperHandler" 
         @resize.window="resizehandler"
         x-ref="sectionnavigation"
-        @toggle-sectionnav.window="toggler"  
+        @toggle-sectionnav.window="toggleSectionNav"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
@@ -65,17 +65,38 @@
 </div>
 <script>
     document.addEventListener('alpine:init', () => {
+
+        const mydata = Alpine.reactive({ screensize: window.innerWidth })
+        const defaultBreakpoints = {
+                xs: 0,
+                sm: 640,
+                md: 768,
+                lg: 1024,
+                xl: 1280,
+                '2xl': 1536,
+            }
+        const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
+            ? window.AlpineMagicHelpersConfig.breakpoints
+            : defaultBreakpoints
+
+        let update
+        window.addEventListener('resize', () => {
+            clearTimeout(update)
+            update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
+        })    
+              
+        Alpine.magic('screen', el => (breakpoint) => {
+            const width = mydata.screensize
+            if (Number.isInteger(breakpoint)) return breakpoint <= width
+            if (breakpoints[breakpoint] === undefined) {
+                throw Error('Undefined $screen property: ' + breakpoint + '. Supported properties: ' + Object.keys(breakpoints).join(', '))
+            }
+            return breakpoints[breakpoint] <= width
+        })
+
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
         
-        Alpine.store('serviceItems', {
-            current: '1'       
-        })
-
-        Alpine.store('openFlyoutID', {
-            current: '1'        
-        })
-
         Alpine.data('dropdown', () => ({
             dropped: false,
             toggle() {    
@@ -83,15 +104,15 @@
             }
         }))
 
-        Alpine.data('flyout', () => ({     
+        Alpine.data('flyoutHandler', () => ({   
             init() { 
                 if(window.innerWidth < 1024) {
                     this.$el.setAttribute("x-collapse","")
-                }    
+                }  
             },
-            watcher() {
+            sectionNavFlyoutWatcher() {
                 this.$watch('dropped', value => {
-                if(value == true) { 
+                if(value == true ) { 
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
                     this.$refs.sectionnavigation.style.maxHeight = a +'px' 
                 } else {
@@ -100,7 +121,7 @@
                     }
                 })   
             },
-            check() {
+            setFlyoutAnimationStyle() {
                 if(window.innerWidth > 1023) {
                     if(this.$el.hasAttribute("x-collapse")) {
                         this.$el.removeAttribute("x-collapse")
@@ -134,7 +155,7 @@
                     this.$dispatch('search-close')
                 }, 500)
             },
-            toggler() {
+            toggleSectionNav() {
                 if(this.$event.detail === false) { 
                     if (window.innerWidth < 1024) { 
                         this.$el.style.maxHeight='0px' 

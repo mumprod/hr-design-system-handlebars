@@ -41,8 +41,8 @@ export const parameters = {
             cellSize: 8,
             opacity: 0.5,
             cellAmount: 8,
-            offsetX: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
-            offsetY: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+            offsetX: 0, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+            offsetY: 0, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
           }
     },
     // Storybook a11y addon configuration
