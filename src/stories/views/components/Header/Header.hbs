@@ -1,5 +1,8 @@
-<div x-data="{searchFieldOpen : false}" 
-    class="flex flex-wrap max-w-full font-copy lg:justify-center lg:w-full">
+<div x-data="headerHandler" 
+    @scroll.window="checkScrollPosition(); window.pageYOffset > 160 ? scrolledFromTop = true : scrolledFromTop = false"
+    
+    id="headerWrapper"
+    class="flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
@@ -64,8 +67,11 @@
 
 </div>
 <script>
+    
+
     document.addEventListener('alpine:init', () => {
 
+        
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
@@ -101,6 +107,54 @@
             dropped: false,
             toggle() {    
                 this.dropped = ! this.dropped;    
+            }
+        }))
+        
+        Alpine.data('headerHandler', () => ({  
+            searchFieldOpen : false, 
+            
+            init() { 
+                
+            },
+            
+            checkScrollPosition() {
+                let lastScrollTop = 0
+                let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
+                let halfOfHeight =
+                    window.innerHeight ||
+                    (document.documentElement || document.body).clientHeight / 2
+                let one = 300, two = 500, three = 800
+                
+                let contentOffset = document.querySelector('#content').offsetTop
+
+                if (scrollAmount > lastScrollTop) {
+                    if (scrollAmount > contentOffset) {
+                        console.log('scrollamount > contentOffset')
+                    }
+                    if (scrollAmount > one) {
+                        console.log('scrollamount > one')
+                        document.querySelector('#headerWrapper').classList.add('-translate-y-8');
+                    }
+                    if (scrollAmount > two) {
+                        console.log('scrollamount > two')
+                        document.querySelector('#sectionNavWrapper').classList.add('-translate-y-10');
+                    }
+                    if (scrollAmount > three) {
+                        console.log('scrollamount > three')
+                        document.querySelector('#burgerWrapper').classList.remove('lg:hidden');
+                    }
+                } else {
+                    if (scrollAmount < halfOfHeight) {
+                        console.log('scrollamount < halfOfHeight')
+                        document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
+                    }
+                    if (scrollAmount < contentOffset) {
+                        
+                        {{!-- fireEvent('hr:global:userScrolledToTop') --}}
+                        console.log('scrollamount < contentOffset')
+                    }
+                }
+                lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
             }
         }))
 
