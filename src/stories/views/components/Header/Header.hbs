@@ -126,22 +126,30 @@
                         document.querySelector('#headerWrapper').classList.add('-translate-y-8');
                     }
                     if (scrollAmount > two) {
-                        this.$dispatch('toggle-sectionnav', false)
-                        document.querySelector('#burgerWrapper').classList.remove('lg:hidden');
+                       document.querySelector('.logo-compact').classList.remove('hidden')
+                       document.querySelector('.logo-mobile').classList.add('hidden')
+                       document.querySelector('.logo-desk').classList.add('lg:hidden')
                     }
                     if (scrollAmount > three) {
+                        this.$dispatch('toggle-sectionnav', false)
+                        {{!-- document.querySelector('#burgerWrapper').classList.remove('lg:hidden'); --}}
+                        
                     }
                 } else {
-                    if (scrollAmount < three) {}
+                    this.$screen('lg') ? this.$dispatch('toggle-sectionnav') : null
+
+                    if (scrollAmount < three) {
+                        {{!-- document.querySelector('#burgerWrapper').classList.add('lg:hidden'); --}}
+                    }
                     if (scrollAmount < two) {
-                        this.$dispatch('toggle-sectionnav')
-                        document.querySelector('#burgerWrapper').classList.add('lg:hidden');
+                        document.querySelector('.logo-compact').classList.add('hidden')
+                       document.querySelector('.logo-mobile').classList.remove('hidden')
+                       document.querySelector('.logo-desk').classList.remove('lg:hidden')
                     }
                     if (scrollAmount < one) {
                         document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
                     }
-                    
-                   
+    
                     if (scrollAmount < contentOffset) {
                         console.log('scrollamount < contentOffset')
                     }
@@ -206,10 +214,12 @@
                 if(this.$event.detail === false) { 
                     if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
+                        window.setTimeout(this.$el.classList.add('lg:hidden'), 500)
                     } else { 
-                        this.$el.style = '' 
+                        this.$el.style.maxHeight = '' 
                     }
                 } else { 
+                    this.$el.classList.remove('lg:hidden')
                     this.$el.style.maxHeight = this.$el.scrollHeight + 'px' 
                 }
             }
