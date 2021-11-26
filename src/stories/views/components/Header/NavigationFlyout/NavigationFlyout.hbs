@@ -10,7 +10,7 @@
         
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()" {{/if}}  
         
-        class="bg-white md:filter md:drop-shadow-md lg:absolute {{#if ../_isSectionNav}} relative md:top-auto lg:top-38 md:left-auto lg:pl-4 lg:-ml-2 lg:mt-px w-full {{#if ../this.selected}} z-101 lg:mt-0 lg:filter-none lg:left-0 {{else}} z-102 lg:left-auto lg:w-30 {{/if}} {{else}} z-102 lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 md:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 {{/if}}" 
+        class="bg-white md:filter md:drop-shadow-md lg:absolute {{#if ../_isSectionNav}} relative md:top-auto lg:top-35 md:left-auto lg:pl-4 lg:-ml-2 lg:mt-px w-full {{#if ../this.selected}} z-101 lg:mt-0 lg:filter-none lg:left-0 {{else}} z-102 lg:left-auto lg:w-30 {{/if}} {{else}} z-102 lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 md:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 {{/if}}" 
 
         aria-labelledby="flyout-{{getRandom}}-1" 
         x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('aria-hidden', !dropped)"
