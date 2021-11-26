@@ -1,7 +1,7 @@
 <div x-data="headerHandler" 
     @scroll.window.debounce.150ms="checkScrollPosition(); "
     id="headerWrapper"
-    class="fixed top-0 flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
+    class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
@@ -65,11 +65,7 @@
 
 </div>
 <script>
-    
-
     document.addEventListener('alpine:init', () => {
-
-        
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
@@ -211,15 +207,18 @@
             },
             toggleSectionNav() {
                 console.log('toggleSectionNav!!')
+                
                 if(this.$event.detail === false) { 
+                   
                     if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
-                        window.setTimeout(this.$el.classList.add('lg:hidden'), 500)
+                        {{!-- window.setTimeout(this.$el.classList.add('lg:hidden'), 500) --}}
                     } else { 
                         this.$el.style.maxHeight = '' 
                     }
                 } else { 
-                    this.$el.classList.remove('lg:hidden')
+                    
+                    {{!-- this.$el.classList.remove('lg:hidden') --}}
                     this.$el.style.maxHeight = this.$el.scrollHeight + 'px' 
                 }
             }
