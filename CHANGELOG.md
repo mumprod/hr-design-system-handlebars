@@ -1,3 +1,15 @@
+# v0.31.0 (Mon Nov 29 2021)
+
+#### 🚀 Enhancement
+
+- adds logos for cluster-teaser [#84](https://github.com/mumprod/hr-design-system-handlebars/pull/84) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.30.0 (Wed Nov 24 2021)
 
 #### 🚀 Enhancement
