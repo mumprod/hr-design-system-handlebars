@@ -1,23 +1,68 @@
-<div x-data="{ open: false }" class="container px-3.5 md:px-5 lg:px-10">
+<div x-data="slider()"
+        x-init="checkIfScrollable($refs.container)"
+        @resize.window="checkIfScrollable($refs.container)"
+        class="container md:px-5 lg:px-10 px-3.5 ">
+
     <div class="flex justify-center text-sm text-gray-400 list-none ">
-        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all duration-300 ease-in-out cursor-pointer max-h-8 align-center">
+
+        <template x-if="isScrollable">
+            <div>
+                <button class="absolute left-0 w-12 h-full arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay">
+                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="mr-4 pb-1 inline-block w-3.5 h-3.5 text-blue-congress fill-current"}}
+                </button>
+                <button class="absolute right-0 w-12 h-full group arrow-right-background disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay">
+                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="ml-4 pb-1 inline-block w-3.5 h-3.5 text-blue-congress fill-current "}}
+                </button>
+            </div>
+        </template>
+
+        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-8 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-8 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
-                {{#with this.brandNavigationItems}}
-                    <ul class="flex flex-wrap lg:mr-0 ">
-                        {{#each this}}
-                            {{> components/Header/BrandNavigation/BrandNavigationItem }}
-                        {{/each}} 
-                    </ul>
-                {{/with}}
+            {{#with this.brandNavigationItems}}
+                <ul class="flex pl-0.5 pr-3 md:px-0 flex-nowrap lg:mr-0">
+                    {{#each this}}
+                        {{> components/Header/BrandNavigation/BrandNavigationItem }}
+                    {{/each}} 
+                </ul>
+            {{/with}}
         </nav>
-        <input @click="open = ! open" class="z-10 hidden inline-block w-0 h-0 cursor-pointer" type="checkbox" id="toggleBrandNav" aria-hidden="true" tabindex="-1">
-            <label class="w-4 h-4 pt-2 pl-0.5 pb-0 md:hidden" for="toggleBrandNav" aria-hidden="true" tabindex="-1">
-                <div :class="open ? '':'hidden'">
-                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-4 h-4 text-blue-congress fill-current"}}
-                </div>
-                <div :class="open ? 'hidden':''">
-                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-4 text-blue-congress fill-current"}}
-                </div>
-            </label>
+
     </div>
+    
 </div>
+
+<script type="text/javascript">
+
+function slider() {
+
+  return {
+      
+    isScrollable:false,
+    arrowLeftDisplay:false,
+    arrowRightDisplay:true,
+
+    arrowsDisplay(e) {
+        e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
+        e.scrollLeft + e.offsetWidth == e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
+    },
+
+    prev(e) {
+      e.scrollLeft -= 200;
+    },
+
+    next(e) {
+     e.scrollLeft += 200;
+    },
+
+    updateIndex(e) {
+        this.arrowsDisplay(e);
+    },
+    
+    checkIfScrollable(e){
+        e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
+        this.arrowsDisplay(e);
+    }
+  };
+}
+
+</script>
