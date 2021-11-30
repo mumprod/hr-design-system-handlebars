@@ -1,3 +1,16 @@
+# v0.31.1 (Tue Nov 30 2021)
+
+#### 🐛 Bug Fix
+
+- making brandnavi slidable [#85](https://github.com/mumprod/hr-design-system-handlebars/pull/85) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
 # v0.31.0 (Mon Nov 29 2021)
 
 #### 🚀 Enhancement
