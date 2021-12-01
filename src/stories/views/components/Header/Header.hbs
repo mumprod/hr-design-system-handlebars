@@ -1,5 +1,5 @@
 <div x-data="headerHandler" 
-    @scroll.window.debounce.150ms="checkScrollPosition(); "
+    @scroll.window.debounce.150ms="checkScrollPosition()"
     id="headerWrapper"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
 
@@ -37,9 +37,9 @@
     </div>
 
     <div id="sectionNavWrapper"  
-        x-data="sectionNavWrapperHandler" 
-        @resize.window="resizehandler"
-        x-ref="sectionnavigation"
+        x-data="sectionNavWrapperHandler"
+        x-ref="sectionnavigation" 
+        @resize.window="resetNav"
         @toggle-sectionnav.window="toggleSectionNav"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
@@ -65,7 +65,9 @@
 
 </div>
 <script>
+    //Main Alpine Init Listener
     document.addEventListener('alpine:init', () => {
+
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
@@ -78,13 +80,11 @@
         const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
             ? window.AlpineMagicHelpersConfig.breakpoints
             : defaultBreakpoints
-
         let update
         window.addEventListener('resize', () => {
             clearTimeout(update)
             update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
-        })    
-              
+        })             
         Alpine.magic('screen', el => (breakpoint) => {
             const width = mydata.screensize
             if (Number.isInteger(breakpoint)) return breakpoint <= width
@@ -105,49 +105,47 @@
         }))
         
         Alpine.data('headerHandler', () => ({  
-            searchFieldOpen : false,
-            scrolledFromTop : false, 
+            searchFieldOpen : false, 
             lastScrollTop : 0, 
             checkScrollPosition() {
-                window.pageYOffset > 120 ? window.scrolledFromTop = true : window.scrolledFromTop = false
                 let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                let one = 500, two = 900, three = 1300
+                let one = 500, two = 800, three = 1200, scrolledFromTop
                 let contentOffset = document.querySelector('#content').offsetTop
                 
                 if (scrollAmount > this.lastScrollTop) {
                     if (scrollAmount > contentOffset) {
-                        console.log('scrollamount > contentOffset')
+                       window.scrolledFromTop = true;
                     }
                     if (scrollAmount > one) {
                         document.querySelector('#headerWrapper').classList.add('-translate-y-8');
                     }
                     if (scrollAmount > two) {
-                       document.querySelector('.logo-compact').classList.remove('hidden')
-                       document.querySelector('.logo-mobile').classList.add('hidden')
-                       document.querySelector('.logo-desk').classList.add('lg:hidden')
+                        this.$dispatch('toggle-sectionnav', false)
+                        document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20')
                     }
                     if (scrollAmount > three) {
-                        this.$dispatch('toggle-sectionnav', false)
-                        {{!-- document.querySelector('#burgerWrapper').classList.remove('lg:hidden'); --}}
-                        
+                        document.querySelector('.logo-compact').classList.remove('hidden')
+                        document.querySelector('.logo-mobile').classList.add('hidden')
+                        document.querySelector('.logo-desk').classList.add('lg:hidden')
+
                     }
                 } else {
-                    this.$screen('lg') ? this.$dispatch('toggle-sectionnav') : null
-
+                    this.$screen('lg') ? this.$dispatch('toggle-sectionnav', true) : null
+                    document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20') 
                     if (scrollAmount < three) {
-                        {{!-- document.querySelector('#burgerWrapper').classList.add('lg:hidden'); --}}
+                        
                     }
                     if (scrollAmount < two) {
                         document.querySelector('.logo-compact').classList.add('hidden')
-                       document.querySelector('.logo-mobile').classList.remove('hidden')
-                       document.querySelector('.logo-desk').classList.remove('lg:hidden')
+                        document.querySelector('.logo-mobile').classList.remove('hidden')
+                        document.querySelector('.logo-desk').classList.remove('lg:hidden')
                     }
                     if (scrollAmount < one) {
                         document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
                     }
     
                     if (scrollAmount < contentOffset) {
-                        console.log('scrollamount < contentOffset')
+                        window.scrolledFromTop = false;
                     }
                 }
                 this.lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
@@ -155,12 +153,14 @@
         }))
 
         Alpine.data('flyoutHandler', () => ({   
-            init() { 
+            init() {
+                //Initial: x-collapse only on mobile/tablet 
                 if(window.innerWidth < 1024) {
                     this.$el.setAttribute("x-collapse","")
                 }  
             },
             sectionNavFlyoutWatcher() {
+                //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
                 if(value == true ) { 
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
@@ -179,7 +179,9 @@
                         this.$el.style.removeProperty('overflow'); 
                         this.$el.style.removeProperty('height'); 
                         if (! this.$el._x_isShown) this.$el.style.display = 'none'
+                        if(this.$el.hasAttribute("hidden")) this.$el.removeAttribute("hidden")
                     }
+                    
                 } else {
                     if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
                 }
@@ -187,38 +189,35 @@
         }))
     
         Alpine.data('sectionNavWrapperHandler', () => ({
-            init() {},     
-            resizehandler() { 
-                if(window.innerWidth > 1024) {
+            //Resets the sectionNav to its initial state, depending on the screen size. Sends events to reset the burger and the search    
+            resetNav() { 
+                if(window.innerWidth > 1023) {
                     this.$el.setAttribute("style","")
                 } else {
                     this.$el.classList.add('hidden')
                     this.$el.style.maxHeight="0px"
                 }
-
                 let timeout 
                 clearTimeout(timeout)
                 timeout = setTimeout(() => {
                     this.$el.classList.remove('hidden')
-                    this.$dispatch('burger-close')
-                    this.$dispatch('search-mobile-click-outside')
-                    this.$dispatch('search-close')
+                    this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
+                    this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
+                    this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                 }, 500)
             },
             toggleSectionNav() {
-                console.log('toggleSectionNav!!')
-                
-                if(this.$event.detail === false) { 
-                   
+                console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)
+                //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
+                //true = sectionNav öffnet (maxheight = scrollheight)   
+                //Function is also used to toggle sectionNav on scroll, so the condition is OR (needs to be refactored)            
+                if(this.$event.detail === false) {                   
                     if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
-                        {{!-- window.setTimeout(this.$el.classList.add('lg:hidden'), 500) --}}
                     } else { 
                         this.$el.style.maxHeight = '' 
                     }
                 } else { 
-                    
-                    {{!-- this.$el.classList.remove('lg:hidden') --}}
                     this.$el.style.maxHeight = this.$el.scrollHeight + 'px' 
                 }
             }
