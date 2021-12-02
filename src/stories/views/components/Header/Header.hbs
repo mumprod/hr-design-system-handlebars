@@ -1,4 +1,4 @@
-<div x-data="headerHandler" 
+<div x-data="headerWrapperHandler" 
     @scroll.window.debounce.150ms="checkScrollPosition()"
     id="headerWrapper"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
@@ -104,7 +104,7 @@
             }
         }))
         
-        Alpine.data('headerHandler', () => ({  
+        Alpine.data('headerWrapperHandler', () => ({  
             searchFieldOpen : false, 
             lastScrollTop : 0, 
             checkScrollPosition() {
@@ -211,10 +211,10 @@
                 }, 500)
             },
             toggleSectionNav() {
-                console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)
                 //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
                 //true = sectionNav öffnet (maxheight = scrollheight)   
-                //Function is also used to toggle sectionNav on scroll, so the condition is OR (needs to be refactored)            
+                //function is also used to toggle sectionNav on scroll, so the condition is OR (needs to be refactored)
+                console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)            
                 if(this.$event.detail === false) {                   
                     if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
                         this.$el.style.maxHeight='0px' 
