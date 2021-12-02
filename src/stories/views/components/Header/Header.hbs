@@ -41,7 +41,7 @@
         x-ref="sectionnavigation" 
         @resize.window="resetNav"
         @toggle-sectionnav.window="toggleSectionNav"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all ease-in-out duration-250 max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
         
@@ -117,7 +117,7 @@
                        window.scrolledFromTop = true;
                     }
                     if (scrollAmount > one) {
-                        document.querySelector('#headerWrapper').classList.add('-translate-y-8');
+                        this.$el.classList.add('-translate-y-8');
                     }
                     if (scrollAmount > two) {
                         this.$dispatch('toggle-sectionnav', false)
@@ -127,21 +127,21 @@
                         document.querySelector('.logo-compact').classList.remove('hidden')
                         document.querySelector('.logo-mobile').classList.add('hidden')
                         document.querySelector('.logo-desk').classList.add('lg:hidden')
-
                     }
                 } else {
                     this.$screen('lg') ? this.$dispatch('toggle-sectionnav', true) : null
-                    document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20') 
+                    
                     if (scrollAmount < three) {
-                        
+                        document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20')
                     }
+
                     if (scrollAmount < two) {
                         document.querySelector('.logo-compact').classList.add('hidden')
                         document.querySelector('.logo-mobile').classList.remove('hidden')
                         document.querySelector('.logo-desk').classList.remove('lg:hidden')
                     }
                     if (scrollAmount < one) {
-                        document.querySelector('#headerWrapper').classList.remove('-translate-y-8');
+                        this.$el.classList.remove('-translate-y-8');
                     }
     
                     if (scrollAmount < contentOffset) {
@@ -172,6 +172,7 @@
                 })   
             },
             setFlyoutAnimationStyle() {
+                //sets/cleansup the x-collapse attributes depending on window.innerWidth, gets fired @resize.window in NavigationFlyout.hbs
                 if(window.innerWidth > 1023) {
                     if(this.$el.hasAttribute("x-collapse")) {
                         this.$el.removeAttribute("x-collapse")
@@ -194,9 +195,12 @@
                 if(window.innerWidth > 1023) {
                     this.$el.setAttribute("style","")
                 } else {
+                    // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
                     this.$el.classList.add('hidden')
                     this.$el.style.maxHeight="0px"
                 }
+
+                // timeout is used to dispatch events after the resize is done
                 let timeout 
                 clearTimeout(timeout)
                 timeout = setTimeout(() => {
