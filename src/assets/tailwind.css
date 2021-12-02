@@ -418,3 +418,21 @@
       @apply text-xs
     }
 }
+
+.hide-scroll-bar {
+    -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+  }
+.hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+.arrow-left-background{
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
+    transition: transform 150ms ease-in-out 0s;
+}
+.arrow-right-background{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
+    transition: transform 150ms ease-in-out 0s;
+}
