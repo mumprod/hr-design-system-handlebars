@@ -121,7 +121,7 @@
                     }
                     if (scrollAmount > two) {
                         this.$dispatch('toggle-sectionnav', false)
-                        if(document.querySelector('.isSelectedAndOpen')) document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20')
+                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); window.setTimeout(document.querySelector('.isSelectedAndOpen').parentNode.classList.add('opacity-0'),500)}
                         !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                     }
                     if (scrollAmount > three) {
@@ -133,7 +133,7 @@
                     this.$screen('lg') ? this.$dispatch('toggle-sectionnav', true) : null
                     
                     if (scrollAmount < three) {
-                        if(document.querySelector('.isSelectedAndOpen')) document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20')
+                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20'); document.querySelector('.isSelectedAndOpen').parentNode.classList.remove('opacity-0')}
                         !this.$screen('lg') ? document.querySelector('#serviceList').classList.remove('-translate-y-20') : null
                     }
 
