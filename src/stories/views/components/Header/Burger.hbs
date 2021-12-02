@@ -5,7 +5,7 @@
 
             @burger-close.window="$store.burgeropen = false, $dispatch('toggle-sectionnav', false); window.innerHeight > document.querySelector('#sectionNavWrapper').scrollHeight ? document.body.classList.toggle('overflow-hidden') : null " 
 
-            @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen);  window.innerHeight > document.querySelector('#sectionNavWrapper').scrollHeight ? document.body.classList.toggle('overflow-hidden') : null ">
+            @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen);   document.querySelector('#serviceList').classList.remove('-translate-y-20'); window.innerHeight > document.querySelector('#sectionNavWrapper').scrollHeight ? document.body.classList.toggle('overflow-hidden') : null ">
 
             <span class="sr-only md:hidden">Open main menu</span>
             <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">

@@ -1,6 +1,6 @@
 <div x-data="{ open: false }" class="container px-3.5 md:px-5 lg:px-10">
     <div class="flex justify-center text-sm text-gray-400 list-none ">
-        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all duration-300 ease-in-out cursor-pointer max-h-8 align-center">
+        <nav x-ref="brandNav" :style="open ? 'max-height: ' + $refs.brandNav.scrollHeight + 'px' : ''" class="w-full overflow-hidden leading-8 transition-all duration-500 ease-in-out cursor-pointer max-h-8 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
                 {{#with this.brandNavigationItems}}
                     <ul class="flex flex-wrap lg:mr-0 ">

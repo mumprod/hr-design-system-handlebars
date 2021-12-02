@@ -1,7 +1,7 @@
 <div x-data="headerWrapperHandler" 
     @scroll.window.debounce.150ms="checkScrollPosition()"
     id="headerWrapper"
-    class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-200 transform font-copy lg:justify-center lg:w-full ">
+    class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
@@ -41,7 +41,7 @@
         x-ref="sectionnavigation" 
         @resize.window="resetNav"
         @toggle-sectionnav.window="toggleSectionNav"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all ease-in-out duration-250 max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }} 
         
@@ -121,7 +121,8 @@
                     }
                     if (scrollAmount > two) {
                         this.$dispatch('toggle-sectionnav', false)
-                        document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20')
+                        if(document.querySelector('.isSelectedAndOpen')) document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20')
+                        !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                     }
                     if (scrollAmount > three) {
                         document.querySelector('.logo-compact').classList.remove('hidden')
@@ -132,7 +133,8 @@
                     this.$screen('lg') ? this.$dispatch('toggle-sectionnav', true) : null
                     
                     if (scrollAmount < three) {
-                        document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20')
+                        if(document.querySelector('.isSelectedAndOpen')) document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20')
+                        !this.$screen('lg') ? document.querySelector('#serviceList').classList.remove('-translate-y-20') : null
                     }
 
                     if (scrollAmount < two) {

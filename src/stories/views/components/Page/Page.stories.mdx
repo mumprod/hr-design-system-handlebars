@@ -7,7 +7,8 @@ import {
 } from "@storybook/addon-docs/blocks";
 
 import page from "./Page.hbs";
-import NavigationData from '../Header/navigation3.json';
+import NavigationData from '../Header/navigation.json';
+import NavigationData2 from '../Header/navigation3.json';
 
 <Meta
   title="Komponenten/Page/Page"
@@ -29,6 +30,12 @@ export const Template = ({  ...args }) => {
   <Story
     name="Default"
     args= {NavigationData}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With subnav open"
+    args= {NavigationData2}
   >
     {Template.bind({})}
   </Story>
