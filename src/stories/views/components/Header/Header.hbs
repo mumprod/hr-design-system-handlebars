@@ -1,5 +1,5 @@
 <div x-data="headerWrapperHandler" 
-    @scroll.window.debounce.150ms="checkScrollPosition()"
+    @scroll.window="checkScrollPosition()"
     id="headerWrapper"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
@@ -109,7 +109,7 @@
             lastScrollTop : 0, 
             checkScrollPosition() {
                 let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                let one = 500, two = 800, three = 1200, scrolledFromTop
+                let one = 200, two = 500, three = 900, scrolledFromTop
                 let contentOffset = document.querySelector('#content').offsetTop
                 
                 if (scrollAmount > this.lastScrollTop) {
@@ -121,7 +121,8 @@
                     }
                     if (scrollAmount > two) {
                         this.$dispatch('toggle-sectionnav', false)
-                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); window.setTimeout(document.querySelector('.isSelectedAndOpen').parentNode.classList.add('opacity-0'),500)}
+                        window.setTimeout(()=>{document.querySelector('.-currentSection').classList.add('opacity-0')},300)
+                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
                         !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                     }
                     if (scrollAmount > three) {
@@ -133,7 +134,8 @@
                     this.$screen('lg') ? this.$dispatch('toggle-sectionnav', true) : null
                     
                     if (scrollAmount < three) {
-                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20'); document.querySelector('.isSelectedAndOpen').parentNode.classList.remove('opacity-0')}
+                        window.setTimeout(()=>{document.querySelector('.-currentSection').classList.remove('opacity-0')},100)
+                        if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20');}
                         !this.$screen('lg') ? document.querySelector('#serviceList').classList.remove('-translate-y-20') : null
                     }
 
