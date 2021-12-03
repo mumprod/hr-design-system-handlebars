@@ -1,5 +1,5 @@
 <div x-data="mainNavigationHandler()" 
-    @scroll.window="checkScrollPosition()"
+    @scroll.window.debounce="checkScrollPosition()"
     @resize.window="resetNav()"
     id="headerWrapper"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
@@ -73,7 +73,7 @@
                 checkScrollPosition(){
                     console.log('scrollposition:'+ window.lastScrollTop)
                     let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                    let set = false, one = 200, two = 500, three = 900
+                    let set = false, one = 300, two = 700, three = 1000
                     let contentOffset = document.querySelector('#content').offsetTop
                     
                     if (scrollAmount > window.lastScrollTop) {
@@ -83,7 +83,7 @@
                         if (scrollAmount > one) {
                             this.$el.classList.add('-translate-y-8');
                         }
-                        if (scrollAmount > two && set == false && scrollAmount < three) {
+                        if (scrollAmount > two) {
                             
                             this.$refs.sectionnavigation.style.maxHeight='0px' 
                             
@@ -93,7 +93,6 @@
 
                             !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                             
-                            set = true
                         }
                         if (scrollAmount > three) {
                             document.querySelector('.logo-compact').classList.remove('hidden')
@@ -101,6 +100,7 @@
                             document.querySelector('.logo-desk').classList.add('lg:hidden')
                         }
                     } else {
+
                         this.$screen('lg') ? this.$refs.sectionnavigation.style.maxHeight = this.$refs.sectionnavigation.scrollHeight + 'px' : null
                         
                         if (scrollAmount < three) {
