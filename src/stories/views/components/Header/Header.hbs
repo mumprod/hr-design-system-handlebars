@@ -84,23 +84,24 @@
                             this.$el.classList.add('-translate-y-8');
                         }
                         if (scrollAmount > two) {
-                            
+                            // set the sectionNav to maxHeight 0
                             this.$refs.sectionnavigation.style.maxHeight='0px' 
-                            
+                            // shitty fix to hide the ::before on the .-currentSection after the transition
                             window.setTimeout( () => { document.querySelector('.-currentSection').classList.add('opacity-0') }, 300)
-
+                            // if there is a submenu open, move it out of view
                             if(document.querySelector('.isSelectedAndOpen')) { document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
-
+                            // hide the serviceList on mobile/tablet
                             !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                             
                         }
                         if (scrollAmount > three) {
+                            //logo shizzle here
                             document.querySelector('.logo-compact').classList.remove('hidden')
                             document.querySelector('.logo-mobile').classList.add('hidden')
                             document.querySelector('.logo-desk').classList.add('lg:hidden')
                         }
                     } else {
-
+                        // shitty fix to reset the sectionNav as the user scrolls back up
                         this.$screen('lg') ? this.$refs.sectionnavigation.style.maxHeight = this.$refs.sectionnavigation.scrollHeight + 'px' : null
                         
                         if (scrollAmount < three) {
