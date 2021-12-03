@@ -1,4 +1,4 @@
-<div x-data="headerWrapperHandler()" 
+<div x-data="mainNavigationHandler()" 
     @scroll.window="checkScrollPosition()"
     @resize.window="resetNav()"
     id="headerWrapper"
@@ -28,7 +28,7 @@
                 <div class="hidden lg:flex">
                     {{> components/Header/Search/QuickSearchForm }}
                 </div>
-
+                
                 <div id="burgerWrapper" 
                     class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
                     {{> components/Header/Burger }}    
@@ -38,13 +38,11 @@
     </div>
 
     <div id="sectionNavWrapper"  
-        x-ref="sectionnavigation" 
-        
+        x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
     >
-        {{> components/Header/SectionNavigation/SectionNavigation }} 
-        
+        {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
     
     <div id="searchWrapper" 
@@ -65,7 +63,7 @@
 
 </div>
 <script>
-    function headerWrapperHandler() {
+    function mainNavigationHandler() {
             return {
                 searchFieldOpen: false,
                 init(){
@@ -140,6 +138,7 @@
                         this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                     }, 500)
                 }, 
+
                 toggleSectionNav() {
                 //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
                 //true = sectionNav öffnet (maxheight = scrollheight)   
