@@ -67,15 +67,16 @@
             return {
                 searchFieldOpen: false,
                 init(){
-                    let lastScrollTop = 0
+                    window.lastScrollTop = 0
                     this.checkScrollPosition()
                 },
                 checkScrollPosition(){
+                    console.log('check:'+ window.lastScrollTop)
                     let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
                     let one = 200, two = 500, three = 900, scrolledFromTop
                     let contentOffset = document.querySelector('#content').offsetTop
                     
-                    if (scrollAmount > this.lastScrollTop) {
+                    if (scrollAmount > window.lastScrollTop) {
                         if (scrollAmount > contentOffset) {
                             window.scrolledFromTop = true;
                             console.log('scrolled over contentoffset')
@@ -85,7 +86,7 @@
                         }
                         if (scrollAmount > two) {
                             this.$dispatch('toggle-sectionnav', false)
-                            window.setTimeout(()=>{document.querySelector('.-currentSection').classList.add('opacity-0')},300)
+                            window.setTimeout( () => { document.querySelector('.-currentSection').classList.add('opacity-0') }, 300)
                             if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
                             !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
                         }
@@ -116,7 +117,7 @@
                             window.scrolledFromTop = false;
                         }
                     }
-                    this.lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
+                    window.lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
                 },
 
                 resetNav() { 
@@ -143,18 +144,18 @@
                 //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
                 //true = sectionNav öffnet (maxheight = scrollheight)   
                 //function is also used to toggle sectionNav on scroll, so the condition is OR (needs to be refactored)
-                console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)   
+                    console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)   
                          
-                if(this.$event.detail === false) {                   
-                    if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
-                        this.$refs.sectionnavigation.style.maxHeight='0px' 
+                    if(this.$event.detail === false) {                   
+                        if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
+                            this.$refs.sectionnavigation.style.maxHeight='0px' 
+                        } else { 
+                            this.$refs.sectionnavigation.style.maxHeight = '' 
+                        }
                     } else { 
-                        this.$refs.sectionnavigation.style.maxHeight = '' 
+                        this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
                     }
-                } else { 
-                    this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
-                }
-            }   
+                }   
                 
             }
         }
