@@ -73,26 +73,26 @@
                 checkScrollPosition(){
                     console.log('scrollposition:'+ window.lastScrollTop)
                     let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                    let set = false, one = 200, two = 500, three = 900, scrolledFromTop
+                    let set = false, one = 200, two = 500, three = 900
                     let contentOffset = document.querySelector('#content').offsetTop
                     
                     if (scrollAmount > window.lastScrollTop) {
                         if (scrollAmount > contentOffset) {
-                            window.scrolledFromTop = true;
                             console.log('scrolled over contentoffset')
                         }
                         if (scrollAmount > one) {
                             this.$el.classList.add('-translate-y-8');
                         }
                         if (scrollAmount > two && set == false && scrollAmount < three) {
-                            if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
-                                this.$refs.sectionnavigation.style.maxHeight='0px' 
-                            } else { 
-                                this.$refs.sectionnavigation.style.maxHeight = '' 
-                            }
+                            
+                            this.$refs.sectionnavigation.style.maxHeight='0px' 
+                            
                             window.setTimeout( () => { document.querySelector('.-currentSection').classList.add('opacity-0') }, 300)
-                            if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
+
+                            if(document.querySelector('.isSelectedAndOpen')) { document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
+
                             !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
+                            
                             set = true
                         }
                         if (scrollAmount > three) {
@@ -101,7 +101,7 @@
                             document.querySelector('.logo-desk').classList.add('lg:hidden')
                         }
                     } else {
-                        this.$screen('lg') ? this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' : null
+                        this.$screen('lg') ? this.$refs.sectionnavigation.style.maxHeight = this.$refs.sectionnavigation.scrollHeight + 'px' : null
                         
                         if (scrollAmount < three) {
                             window.setTimeout(()=>{document.querySelector('.-currentSection').classList.remove('opacity-0')},100)
@@ -119,7 +119,7 @@
                         }
         
                         if (scrollAmount < contentOffset) {
-                            window.scrolledFromTop = false;
+                            console.log('scrolled below contentoffset')
                         }
                     }
                     window.lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
@@ -148,11 +148,9 @@
                 toggleSectionNav() {
                 //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
                 //true = sectionNav öffnet (maxheight = scrollheight)   
-                //function is also used to toggle sectionNav on scroll, so the condition is OR (needs to be refactored)
-                    console.log('toggleSectionNav, Event: ' + this.$event.detail + ' --- page was scrolled: ' + window.scrolledFromTop)   
-                         
+                    console.log('toggleSectionNav, Event: ' + this.$event.detail )    
                     if(this.$event.detail === false) {                   
-                        if (window.innerWidth < 1024 || window.scrolledFromTop == true) { 
+                        if (window.innerWidth < 1024) { 
                             this.$refs.sectionnavigation.style.maxHeight='0px' 
                         } else { 
                             this.$refs.sectionnavigation.style.maxHeight = '' 
