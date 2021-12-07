@@ -1,3 +1,15 @@
+# v0.32.0 (Tue Dec 07 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 964 scroll verhalten haupt navigation [#86](https://github.com/mumprod/hr-design-system-handlebars/pull/86) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.31.1 (Tue Nov 30 2021)
 
 #### 🐛 Bug Fix
