@@ -1,9 +1,9 @@
-<div x-data="mainNavigationHandler()" 
-    @scroll.window.debounce="checkScrollPosition()"
-    @resize.window="resetNav()"
-    id="headerWrapper"
+<div id="headerWrapper"
+    x-data="mainNavigationHandler()"
+    x-init="init()"
+    @resize.window="resetNav()"   
+    :class="`${percent}` > 20 ? '-translate-y-8' : ''"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
-
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
         {{> components/Header/BrandNavigation/BrandNavigation }} 
@@ -39,8 +39,9 @@
 
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
-        @toggle-sectionnav.window="toggleSectionNav"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        @toggle-sectionnav.window="toggleSectionNav"
+        :class="`${percent}` > 50 ? '-translate-y-40' : ''"  
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
@@ -63,69 +64,18 @@
 
 </div>
 <script>
-    function mainNavigationHandler() {
+    const mainNavigationHandler = () => {
             return {
                 searchFieldOpen: false,
                 init(){
-                    window.lastScrollTop = 0
-                    this.checkScrollPosition()
+                    window.addEventListener('scroll', () => {
+                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+                        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        this.percent = Math.round((winScroll / height) * 100)
+                    })
                 },
-                checkScrollPosition(){
-                    console.log('scrollposition:'+ window.lastScrollTop)
-                    let scrollAmount = window.pageYOffset || document.documentElement.scrollTop
-                    let set = false, one = 300, two = 700, three = 1000
-                    let contentOffset = document.querySelector('#content').offsetTop
-                    
-                    if (scrollAmount > window.lastScrollTop) {
-                        if (scrollAmount > contentOffset) {
-                            console.log('scrolled over contentoffset')
-                        }
-                        if (scrollAmount > one) {
-                            this.$el.classList.add('-translate-y-8');
-                        }
-                        if (scrollAmount > two) {
-                            // set the sectionNav to maxHeight 0
-                            this.$refs.sectionnavigation.style.maxHeight='0px' 
-                            // shitty fix to hide the ::before on the .-currentSection after the transition
-                            window.setTimeout( () => { document.querySelector('.-currentSection').classList.add('opacity-0') }, 300)
-                            // if there is a submenu open, move it out of view
-                            if(document.querySelector('.isSelectedAndOpen')) { document.querySelector('.isSelectedAndOpen').classList.add('-translate-y-20'); }
-                            // hide the serviceList on mobile/tablet
-                            !this.$screen('lg') ? document.querySelector('#serviceList').classList.add('-translate-y-20') : null
-                            
-                        }
-                        if (scrollAmount > three) {
-                            //logo shizzle here
-                            document.querySelector('.logo-compact').classList.remove('hidden')
-                            document.querySelector('.logo-mobile').classList.add('hidden')
-                            document.querySelector('.logo-desk').classList.add('lg:hidden')
-                        }
-                    } else {
-                        // shitty fix to reset the sectionNav as the user scrolls back up
-                        this.$screen('lg') ? this.$refs.sectionnavigation.style.maxHeight = this.$refs.sectionnavigation.scrollHeight + 'px' : null
-                        
-                        if (scrollAmount < three) {
-                            window.setTimeout(()=>{document.querySelector('.-currentSection').classList.remove('opacity-0')},100)
-                            if(document.querySelector('.isSelectedAndOpen')) {document.querySelector('.isSelectedAndOpen').classList.remove('-translate-y-20');}
-                            !this.$screen('lg') ? document.querySelector('#serviceList').classList.remove('-translate-y-20') : null
-                        }
-
-                        if (scrollAmount < two) {
-                            document.querySelector('.logo-compact').classList.add('hidden')
-                            document.querySelector('.logo-mobile').classList.remove('hidden')
-                            document.querySelector('.logo-desk').classList.remove('lg:hidden')
-                        }
-                        if (scrollAmount < one) {
-                            this.$el.classList.remove('-translate-y-8');
-                        }
-        
-                        if (scrollAmount < contentOffset) {
-                            console.log('scrolled below contentoffset')
-                        }
-                    }
-                    window.lastScrollTop = scrollAmount <= 0 ? 0 : scrollAmount
-                },
-
+                circumference: 30 * 2 * Math.PI,
+                percent: 0,
                 resetNav() { 
                     if(window.innerWidth > 1023) {
                         this.$refs.sectionnavigation.setAttribute("style","")
@@ -152,7 +102,7 @@
                     console.log('toggleSectionNav, Event: ' + this.$event.detail )    
                     if(this.$event.detail === false) {                   
                         if (window.innerWidth < 1024) { 
-                            this.$refs.sectionnavigation.style.maxHeight='0px' 
+                            this.$refs.sectionnavigation.style.maxHeight='0px'
                         } else { 
                             this.$refs.sectionnavigation.style.maxHeight = '' 
                         }
