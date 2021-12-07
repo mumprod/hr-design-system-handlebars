@@ -23,12 +23,11 @@
                 window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
             },
             burgerClick(){
-                console.log('click')
                 this.$store.burgeropen = !this.$store.burgeropen
                 this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);   
                 this.$refs.serviceList.classList.remove('-translate-y-40'); 
                 this.$refs.sectionnavigation.classList.remove('-translate-y-40')
-                window.innerHeight > document.querySelector('#sectionNavWrapper').scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
+                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
             }
         }
     }
