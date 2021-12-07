@@ -1,5 +1,9 @@
-<div x-data="{searchFieldOpen : false}" 
-    class="flex flex-wrap max-w-full font-copy lg:justify-center lg:w-full">
+<div id="headerWrapper"
+    x-data="mainNavigationHandler()"
+    x-init="init()"
+    @resize.window="resetNav()"   
+    :class="`${percent}` > 0 ? '-translate-y-8' : ''"
+    class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
@@ -10,6 +14,7 @@
         class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
+
             <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
 
             <div id="serviceLogoWrapper" 
@@ -22,32 +27,31 @@
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
+
                 <div class="hidden lg:flex">
                     {{> components/Header/Search/QuickSearchForm }}
                 </div>
-
+            
                 <div id="burgerWrapper" 
                     class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
                     {{> components/Header/Burger }}    
                 </div>
+                
             </div>
         </div>
     </div>
 
     <div id="sectionNavWrapper"  
-        x-data="sectionNavWrapperHandler" 
-        @resize.window="resizehandler"
         x-ref="sectionnavigation"
-        @toggle-sectionnav.window="toggleSectionNav"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-200 ease-in-out max-h-0 md:mt-0 lg:flex lg:h-auto lg:max-h-full bg-blue-congress z-100"
+        @toggle-sectionnav.window="toggleSectionNav"
+        :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
     >
-        {{> components/Header/SectionNavigation/SectionNavigation }} 
-        
+        {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
     
-    <div 
+    <div id="searchWrapper" 
         x-show="searchFieldOpen"
-        id="searchWrapper" 
         class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden"
         @search-close.window="searchFieldOpen = false"
         @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
@@ -64,8 +68,64 @@
 
 </div>
 <script>
-    document.addEventListener('alpine:init', () => {
+    const mainNavigationHandler = () => {
+            return {
+                searchFieldOpen: false,
+                init(){
+                    let lastScrollTop = 0
+                    window.addEventListener('scroll', () => {
+                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+                        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        this.percent = Math.round((winScroll / height) * 100)
+                        winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
+                        lastScrollTop = winScroll
+                        console.log(this.scrollingDown)
+                    })
+                },
+                percent: 0,
+                scrollingDown: true,
+                shouldSectionNavBeHidden() {
+                    return this.percent > 30  && this.scrollingDown   
+                },
+                resetNav() { 
+                    if(window.innerWidth > 1023) {
+                        this.$refs.sectionnavigation.setAttribute("style","")
+                    } else {
+                        // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
+                        this.$refs.sectionnavigation.classList.add('hidden')
+                        this.$refs.sectionnavigation.style.maxHeight="0px"
+                    }
+                    // timeout is used to dispatch events after the resize is done
+                    let timeout 
+                    clearTimeout(timeout)
+                    timeout = setTimeout(() => {
+                        this.$refs.sectionnavigation.classList.remove('hidden')
+                        this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
+                        this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
+                        this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
+                    }, 500)
+                }, 
+                toggleSectionNav() {
+                //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
+                //true = sectionNav öffnet (maxheight = scrollheight)   
+                    console.log('toggleSectionNav, Event: ' + this.$event.detail )    
+                    if(this.$event.detail === false) {                   
+                        if (window.innerWidth < 1024) { 
+                            this.$refs.sectionnavigation.style.maxHeight='0px'
+                        } else { 
+                            this.$refs.sectionnavigation.style.maxHeight = '' 
+                        }
+                    } else { 
+                        this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
+                    }
+                }   
+                
+            }
+        }
 
+
+    //Main Alpine Init Listener
+    document.addEventListener('alpine:init', () => {
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
@@ -78,13 +138,12 @@
         const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
             ? window.AlpineMagicHelpersConfig.breakpoints
             : defaultBreakpoints
-
         let update
         window.addEventListener('resize', () => {
             clearTimeout(update)
             update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
-        })    
-              
+        })  
+
         Alpine.magic('screen', el => (breakpoint) => {
             const width = mydata.screensize
             if (Number.isInteger(breakpoint)) return breakpoint <= width
@@ -103,14 +162,17 @@
                 this.dropped = ! this.dropped;    
             }
         }))
-
+        
+        // There are several Flyouts sharing the same functionality and context, so put the data in an Alpine.data to make it reusable
         Alpine.data('flyoutHandler', () => ({   
-            init() { 
+            init() {
+                //Initial: x-collapse only on mobile/tablet 
                 if(window.innerWidth < 1024) {
                     this.$el.setAttribute("x-collapse","")
                 }  
             },
             sectionNavFlyoutWatcher() {
+                //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
                 if(value == true ) { 
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
@@ -122,6 +184,7 @@
                 })   
             },
             setFlyoutAnimationStyle() {
+                //sets/cleansup the x-collapse attributes depending on window.innerWidth, gets fired @resize.window in NavigationFlyout.hbs
                 if(window.innerWidth > 1023) {
                     if(this.$el.hasAttribute("x-collapse")) {
                         this.$el.removeAttribute("x-collapse")
@@ -129,43 +192,14 @@
                         this.$el.style.removeProperty('overflow'); 
                         this.$el.style.removeProperty('height'); 
                         if (! this.$el._x_isShown) this.$el.style.display = 'none'
+                        if(this.$el.hasAttribute("hidden")) this.$el.removeAttribute("hidden")
                     }
+                    
                 } else {
                     if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
                 }
             }
         }))
     
-        Alpine.data('sectionNavWrapperHandler', () => ({
-            init() {},     
-            resizehandler() { 
-                if(window.innerWidth > 1024) {
-                    this.$el.setAttribute("style","")
-                } else {
-                    this.$el.classList.add('hidden')
-                    this.$el.style.maxHeight="0px"
-                }
-
-                let timeout 
-                clearTimeout(timeout)
-                timeout = setTimeout(() => {
-                    this.$el.classList.remove('hidden')
-                    this.$dispatch('burger-close')
-                    this.$dispatch('search-mobile-click-outside')
-                    this.$dispatch('search-close')
-                }, 500)
-            },
-            toggleSectionNav() {
-                if(this.$event.detail === false) { 
-                    if (window.innerWidth < 1024) { 
-                        this.$el.style.maxHeight='0px' 
-                    } else { 
-                        this.$el.style = '' 
-                    }
-                } else { 
-                    this.$el.style.maxHeight = this.$el.scrollHeight + 'px' 
-                }
-            }
-        }))
 })
 </script>

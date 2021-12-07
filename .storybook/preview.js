@@ -92,6 +92,7 @@ export const parameters = {
             order: [
                 'Komponenten',
                 [
+                    'Page',
                     'Header',
                     ['Header', 'BrandNavigation', 'ServiceNavigation', 'SectionNavigation'],
                     'Flyout',

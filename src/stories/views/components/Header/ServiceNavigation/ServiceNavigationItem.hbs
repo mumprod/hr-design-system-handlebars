@@ -1,5 +1,6 @@
 {{#each this.navigationItems}}
-    <li @click.debounce.200ms="toggle; searchFieldOpen=false; $dispatch('burger-close');" 
+
+    <li @click.debounce.200ms="toggle; searchFieldOpen=false; !$screen('lg') ? $dispatch('burger-close') : null" 
         @click.outside="dropped = false"
         @close-servicemenu.window="dropped = false" 
         x-data="dropdown"

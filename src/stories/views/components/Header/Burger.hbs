@@ -1,9 +1,9 @@
-<div class="flex items-center justify-center h-full fill-current">
-    <nav x-data>
+<div x-data="burger()" class="flex items-center justify-center h-full fill-current">
+    <nav >
         <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  
             class="relative w-10 h-10 text-white focus:outline-none bg-brand"
-            @burger-close.window="$store.burgeropen = false, $dispatch('toggle-sectionnav', false)" 
-            @click.debounce="$store.burgeropen = !$store.burgeropen, $dispatch('toggle-sectionnav',  $store.burgeropen)">
+            @burger-close.window="burgerClose()" 
+            @click.debounce="burgerClick()">
 
             <span class="sr-only md:hidden">Open main menu</span>
             <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
@@ -14,3 +14,21 @@
         </button>
     </nav>
 </div>
+<script>
+    const burger = () => {
+        return {
+            burgerClose(){
+                this.$store.burgeropen = false
+                this.$dispatch('toggle-sectionnav', false); 
+                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
+            },
+            burgerClick(){
+                this.$store.burgeropen = !this.$store.burgeropen
+                this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);   
+                this.$refs.serviceList.classList.remove('-translate-y-40'); 
+                this.$refs.sectionnavigation.classList.remove('-translate-y-40')
+                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
+            }
+        }
+    }
+</script>
