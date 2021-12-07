@@ -40,7 +40,7 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
-        :class="`${percent}` > 50 ? '-translate-y-40' : ''"  
+        :class="`${percent}` > 50  && `${scrollingDown}` ? '-translate-y-40' : ''"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
@@ -68,13 +68,18 @@
             return {
                 searchFieldOpen: false,
                 init(){
+                    let lastScrollTop = 0
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
                         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
                         this.percent = Math.round((winScroll / height) * 100)
+                        winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
+                        lastScrollTop = winScroll
+                        console.log(this.scrollingDown)
                     })
                 },
                 percent: 0,
+                scrollingDown: true,
                 resetNav() { 
                     if(window.innerWidth > 1023) {
                         this.$refs.sectionnavigation.setAttribute("style","")
