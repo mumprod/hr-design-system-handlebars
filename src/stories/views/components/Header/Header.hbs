@@ -2,8 +2,9 @@
     x-data="mainNavigationHandler()"
     x-init="init()"
     @resize.window="resetNav()"   
-    :class="`${percent}` > 20 ? '-translate-y-8' : ''"
+    :class="`${percent}` > 0 ? '-translate-y-8' : ''"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
         {{> components/Header/BrandNavigation/BrandNavigation }} 
@@ -13,6 +14,7 @@
         class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
+
             <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
 
             <div id="serviceLogoWrapper" 
@@ -25,14 +27,16 @@
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
+
                 <div class="hidden lg:flex">
                     {{> components/Header/Search/QuickSearchForm }}
                 </div>
-                
+            
                 <div id="burgerWrapper" 
                     class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
                     {{> components/Header/Burger }}    
                 </div>
+                
             </div>
         </div>
     </div>
@@ -40,7 +44,7 @@
     <div id="sectionNavWrapper"  
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
-        :class="`${percent}` > 50  && `${scrollingDown}` ? '-translate-y-40' : ''"  
+        :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
         class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
@@ -80,6 +84,9 @@
                 },
                 percent: 0,
                 scrollingDown: true,
+                shouldSectionNavBeHidden() {
+                    return this.percent > 30  && this.scrollingDown   
+                },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
                         this.$refs.sectionnavigation.setAttribute("style","")
@@ -88,7 +95,6 @@
                         this.$refs.sectionnavigation.classList.add('hidden')
                         this.$refs.sectionnavigation.style.maxHeight="0px"
                     }
-
                     // timeout is used to dispatch events after the resize is done
                     let timeout 
                     clearTimeout(timeout)
@@ -99,7 +105,6 @@
                         this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                     }, 500)
                 }, 
-
                 toggleSectionNav() {
                 //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
                 //true = sectionNav öffnet (maxheight = scrollheight)   
