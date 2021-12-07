@@ -63,6 +63,10 @@ module.exports = {
         'height': 'height',
         'spacing': 'margin, padding'
        },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
+       }, 
       padding: {
         "1.5": "0.375rem",
         "2.5": "0.625rem",
