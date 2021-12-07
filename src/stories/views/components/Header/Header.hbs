@@ -41,7 +41,7 @@
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
         :class="`${percent}` > 50 ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
@@ -116,7 +116,6 @@
 
     //Main Alpine Init Listener
     document.addEventListener('alpine:init', () => {
-
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
