@@ -5,6 +5,11 @@
     :class="`${percent}` > 0 ? '-translate-y-8' : ''"
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
+    <div id="anchorNavWrapper" 
+        class="hidden">
+        {{> components/Header/AnchorNavigation/AnchorNavigation }} 
+    </div>
+
     <div id="brandNavWrapper" 
         class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
         {{> components/Header/BrandNavigation/BrandNavigation }} 
