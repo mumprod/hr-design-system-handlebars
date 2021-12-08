@@ -1,9 +1,12 @@
-module.exports = function (text, brand) {
+module.exports = function (text, options) {
     var resourceUrl
 
     if (text.includes('assets/base/')) {
-        if (text.includes('assets/base/icons/logo/') && brand) {
-            resourceUrl = text.replace('assets/base/icons/logo', `./brand/${brand}/icons/logo`)
+        if (text.includes('assets/base/icons/logo/') && options.hash['_brand']) {
+            resourceUrl = text.replace(
+                'assets/base/icons/logo',
+                `./brand/${options.hash['_brand']}/icons/logo`
+            )
         } else {
             resourceUrl = text.replace('assets/base/', './')
         }

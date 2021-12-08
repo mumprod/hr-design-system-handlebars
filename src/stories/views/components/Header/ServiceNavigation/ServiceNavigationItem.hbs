@@ -11,9 +11,9 @@
               
         {{else}} > 
             {{#if this.extern}}
-                <a href="{{this.url}}" target="_blank" class="flex flex-col items-center js-loadScript" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{this.url}}" target="_blank" class="flex flex-col items-center js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{else}}
-                <a href="{{resourceUrl this.url}}" class="flex flex-col items-center js-loadScript" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{resourceUrl this.url}}" class="flex flex-col items-center js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{/if}}
         {{/if}}
         

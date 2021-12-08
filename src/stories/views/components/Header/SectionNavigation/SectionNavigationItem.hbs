@@ -10,9 +10,9 @@
             <button id="button-{{nextRandom}}-1" 
                 @click.debounce="toggle" 
                 :class="dropped ? 'first:font-bold lg:first:font-normal' : 'first:font-normal'"
-                class="pl-4 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}" 
+                class="js-load pl-4 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}" 
                 aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" 
-                data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+                data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
         {{~else ~}}
 
@@ -22,15 +22,15 @@
                     id="flyout-{{nextRandom}}-1"
                     
                     :class="dropped ? 'font-bold' : ''"
-                    class="pl-4 pr-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}"
+                    class="js-load pl-4 pr-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2"
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~else ~}} 
 {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a href="{{resourceUrl this.url}}" 
-                    class="flex justify-start pl-4 pr-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}} font-bold pl-4 md:pl-5{{/if}}" 
+                    class="js-load flex justify-start pl-4 pr-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}} font-bold pl-4 md:pl-5{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~/if}}
 
         {{~/if }}
@@ -68,9 +68,9 @@
                 <button 
                     @click.debounce="toggle" 
                     id="flyout-{{getRandom}}-1" 
-                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white lg:hidden" 
+                    class="js-load flex items-center justify-center w-10 h-10 leading-4 border-l border-white lg:hidden" 
                     aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" 
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
                     <span class="hidden">{{~this.text~}}</span>
                     
