@@ -7,20 +7,20 @@
 
     <div id="anchorNavWrapper" 
         class="hidden">
-        {{> components/Header/AnchorNavigation/AnchorNavigation }} 
+        {{> components/Header/AnchorNavigation/AnchorNavigation }}
     </div>
 
     <div id="brandNavWrapper" 
-        class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
+        class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
         {{> components/Header/BrandNavigation/BrandNavigation }} 
     </div>
 
     <div id="serviceNavWrapper" 
-        class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
+        class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101 ">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
 
-            <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
+            <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
             <div id="serviceLogoWrapper" 
                  class="flex items-center order-1 w-full px-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
@@ -28,7 +28,7 @@
             </div>
             
             <div id="serviceItemsWrapper" 
-                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
@@ -50,14 +50,14 @@
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
         :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
     
     <div id="searchWrapper" 
         x-show="searchFieldOpen"
-        class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden"
+        class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
         @search-close.window="searchFieldOpen = false"
         @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
         x-transition:enter="transition ease-out duration-200" 
@@ -73,7 +73,7 @@
 
 </div>
 <script>
-    const mainNavigationHandler = () => {
+    var mainNavigationHandler = () => {
             return {
                 searchFieldOpen: false,
                 init(){

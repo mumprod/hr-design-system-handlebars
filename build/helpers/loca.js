@@ -9,12 +9,12 @@ module.exports = function(text, options) {
         "anchor_subNav": "Subnavigation des Bereichs {0} anspringen",
         "search_input_aria_submit": "Suche starten",
         "search_input_placeholder": "Ort oder Thema suchen",
-        "feature_box_anchor": "Livestream Player anspringen"
+        "feature_box_anchor": "Livestream Player anspringen",
+        "header_homepage_link_title": "Startseite hessenschau . d e"
     }
 
     for (let key in locas){
         if(key == text){
-            console.log("text:"+text+" Key:" + key + " -> " + locas[key])
             loca = text.replace(text,locas[key])
             return loca
         } 
