@@ -1,44 +1,28 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks'
 
-import page from "./Page.hbs";
-import NavigationData from '../Header/navigation.json';
-import NavigationData2 from '../Header/navigation3.json';
+import page from './Page.hbs'
+import NavigationData from '../Header/navigation.json'
+import NavigationData2 from '../Header/navigation3.json'
 
-<Meta
-  title="Komponenten/Page/Page"
-  argTypes={{
-    
-  }}
-/>
+<Meta title="Komponenten/Page/Page" argTypes={{}} />
 
-export const Template = ({  ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  
-  return page({  ...args });
-};
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return page({ brand, ...args })
+}
 
 # Page
 
 <Preview withToolbar>
-  <Story
-    name="Default"
-    args= {NavigationData}
-  >
-    {Template.bind({})}
-  </Story>
-  <Story
-    name="With subnav open"
-    args= {NavigationData2}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Default" args={NavigationData}>
+        {Template.bind({})}
+    </Story>
+    <Story name="With subnav open" args={NavigationData2}>
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="Default" />
