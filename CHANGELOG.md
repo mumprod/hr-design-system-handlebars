@@ -1,3 +1,15 @@
+# v0.32.1 (Wed Dec 08 2021)
+
+#### 🐛 Bug Fix
+
+- added AnchorNav / new loca.js (accepts object with locas now) [#87](https://github.com/mumprod/hr-design-system-handlebars/pull/87) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.32.0 (Tue Dec 07 2021)
 
 #### 🚀 Enhancement
