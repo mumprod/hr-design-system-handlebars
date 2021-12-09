@@ -1,59 +1,51 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import item from "./SectionNavigationItem.hbs";
+import item from './SectionNavigationItem.hbs'
 
-import JsonData from '../navigation.json';
-
+import JsonData from '../navigation.json'
 
 <Meta
-  title="Komponenten/Header/SectionNavigation/SectionNavigationItem"
-  argTypes={{
-    label: {
-      control: "text",
-      description: "Label Text",
-    },
-    icon: {
-      control: "text",
-      description: "Icon",
-    },
-  }}
+    title="Komponenten/Header/SectionNavigation/SectionNavigationItem"
+    argTypes={{
+        label: {
+            control: 'text',
+            description: 'Label Text',
+        },
+        icon: {
+            control: 'text',
+            description: 'Icon',
+        },
+    }}
 />
 
-
 export const Template = ({ ...args }) => {
-  return item({ ...args });
-}; 
+    return item({ ...args })
+}
 
-
-
-export const OneItem = Template.bind({});
+export const OneItem = Template.bind({})
 
 # SectionNavigationItem
 
 Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="Start"
-    args={{
-      navigationItems: [{
-        label: "Start",
-        text: "Start",
-        url: "index.html",
-        labelText: "Startseite der hessenschau",
-        subNavigationFromIndex: true,
-        selected: true
-      }]
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="Start"
+        args={{
+            navigationItems: [
+                {
+                    label: 'Start',
+                    text: 'Start',
+                    url: 'index.html',
+                    labelText: 'Startseite der hessenschau',
+                    subNavigationFromIndex: true,
+                    selected: true,
+                },
+            ],
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="Start" />
@@ -61,11 +53,7 @@ Ein toller Einleitungstext für unsere `SectionNavigationItem` Komponente:
 ## Regionen
 
 <Canvas>
-  <Story
-    name="Regionen mit Flyout from File"
-    args= {JsonData.sectionNavigationSSILinks[1]}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Regionen mit Flyout from File" args={JsonData.sectionNavigationSSILinks[1]}>
+        {Template.bind({})}
+    </Story>
 </Canvas>
-
