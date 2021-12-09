@@ -66,7 +66,7 @@ module.exports = {
         config.plugins.push(
             new FlatContextPlugin(
                 '/feature',
-                path.resolve(__dirname, '../src/stories/views'),
+                path.resolve(__dirname, '../src/stories/views/'),
                 /\.feature\.js$/
             )
         )
