@@ -376,7 +376,7 @@
         @apply fill-black
     }
 
-    .-videopodcast, .-wetter, .-verkehr {
+    .-video-podcast, .-weather, .-traffic {
         @apply fill-white
     }
 }

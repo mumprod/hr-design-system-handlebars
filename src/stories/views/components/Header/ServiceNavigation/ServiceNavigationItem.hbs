@@ -1,11 +1,11 @@
 {{#each this.navigationItems}}
-{{!-- :style="`${percent}` > 30 && $screen('lg') ? 'opacity:0' : ''"  --}}
+{{!--   --}}
     <li @click.debounce.200ms="toggle; searchFieldOpen=false; !$screen('lg') ? $dispatch('burger-close') : null" 
         @click.outside="dropped = false"
         @close-servicemenu.window="dropped = false" 
         x-data="dropdown"
         id="{{getRandom}}"
-        class="{{inline-switch this.id "wetter,warnung,verkehr,videopodcast" "-wetter, -warnung, -verkehr, -videopodcast" }} h-10 md:h-full flex flex-col justify-center cursor-pointer lg:pt-1 lg:justify-start items-center w-full border-r last:border-r-0 lg:border-r-0 px-4 text-white {{#if this.selected}}  -currentService {{/if}} lg:px-3 lg:relative lg:h-16 lg:rounded lg:border-0 lg:left-0"
+        class="{{inline-switch this.id "weather,warnung,traffic,video-podcast" "-weather, -warnung, -traffic, -video-podcast" }} h-10 md:h-full flex flex-col justify-center cursor-pointer lg:pt-1 lg:justify-start items-center w-full border-r last:border-r-0 lg:border-r-0 px-4 text-white {{#if this.selected}}  -currentService {{/if}} lg:px-3 lg:relative lg:h-16 lg:rounded lg:border-0 lg:left-0"
 
         {{#if this.subNavigation}} :class="dropped ? 'bg-white fill-current text-blue-congress lg:rounded-t lg:border-0' : ''" > 
               
@@ -17,9 +17,9 @@
             {{/if}}
         {{/if}}
         
-        {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-7 md:w-8  h-7 md:h-8 align-center"}}
+        {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-auto align-center"}}
         
-        <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'"  class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
+        <div :style="`${percent}` > 30 && $screen('lg') ? 'display:none' : ''" :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'"  class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
             <span class="flex text-xs whitespace-nowrap">
                 {{text}} 
             </span>

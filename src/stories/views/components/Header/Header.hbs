@@ -80,7 +80,8 @@
                     let lastScrollTop = 0
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-                        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        let height = document.documentElement.clientHeight
                         this.percent = Math.round((winScroll / height) * 100)
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                         lastScrollTop = winScroll
@@ -89,7 +90,7 @@
                 percent: 0,
                 scrollingDown: true,
                 shouldSectionNavBeHidden() {
-                    return this.percent > 30  && this.scrollingDown   
+                    return this.percent > 50  && this.scrollingDown   
                 },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
