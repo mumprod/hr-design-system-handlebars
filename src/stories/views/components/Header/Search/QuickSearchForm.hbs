@@ -7,6 +7,7 @@
 >
     <div 
         class="relative w-full lg:rounded-l" 
+        {{!-- :class="`${percent}` > 50 ? 'lg:hidden' : ''" --}}
         id="search-content"
         @click.away="active=false; cursorIndex=-1"
         @keydown.arrow-down="moveDownList()"
@@ -59,10 +60,12 @@
     </div>
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
-        type="submit" 
-        class="pl-3 pr-2 cursor-pointer lg:rounded-r bg-blue-congress lg:bg-white text-blue-congress z-102"
+        type="submit"
+        {{!-- :class="`${percent}` > 50 ? 'lg:bg-blue-congress lg:text-white' : 'lg:bg-white lg:text-blue-congress'"  --}}
+        class="pl-3 pr-2 cursor-pointer lg:rounded-r bg-blue-congress text-blue-congress lg:bg-white lg:text-blue-congress z-102"
     >
-        <svg class="w-6 h-6 text-white fill-current bg-blue-congress lg:fill-current lg:text-blue-congress lg:bg-white" 
+        <svg class="w-6 h-6 text-white fill-current bg-blue-congress lg:fill-current lg:bg-white lg:text-blue-congress"
+           {{!--  :class="`${percent}` > 50 ? 'lg:bg-blue-congress lg:text-white' : 'lg:bg-white lg:text-blue-congress'"  --}}
              xmlns="http://www.w3.org/2000/svg" 
              viewBox="0 0 20 20"
         >
