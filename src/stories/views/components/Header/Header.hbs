@@ -50,7 +50,7 @@
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
         :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-1000 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
@@ -84,7 +84,6 @@
                         this.percent = Math.round((winScroll / height) * 100)
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                         lastScrollTop = winScroll
-                        console.log(this.scrollingDown)
                     })
                 },
                 percent: 0,
@@ -184,15 +183,15 @@
                     this.$refs.sectionnavigation.style.maxHeight = a +'px' 
                 } else {
                     let a = this.$refs.sectionnavigation.scrollHeight; 
-                    this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
                     }
                 })   
             },
             setFlyoutAnimationStyle() {
                 //sets/cleansup the x-collapse attributes depending on window.innerWidth, gets fired @resize.window in NavigationFlyout.hbs
                 if(window.innerWidth > 1023) {
-                    if(this.$el.hasAttribute("x-collapse")) {
-                        this.$el.removeAttribute("x-collapse")
+                    if(this.$el.hasAttribute("x-collapse.duration.500ms")) {
+                        this.$el.removeAttribute("x-collapse.duration.500ms")
                         delete this.$el._x_transition; 
                         this.$el.style.removeProperty('overflow'); 
                         this.$el.style.removeProperty('height'); 
@@ -201,7 +200,7 @@
                     }
                     
                 } else {
-                    if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
+                    if(!this.$el.hasAttribute("x-collapse.duration.500ms")) this.$el.setAttribute("x-collapse.duration.500ms","")
                 }
             }
         }))

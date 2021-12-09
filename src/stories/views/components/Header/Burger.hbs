@@ -20,6 +20,7 @@
             burgerClose(){
                 this.$store.burgeropen = false
                 this.$dispatch('toggle-sectionnav', false); 
+                document.querySelector('.js-pageOverlay').classList.toggle('hidden')
                 window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
             },
             burgerClick(){
@@ -27,6 +28,9 @@
                 this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);   
                 this.$refs.serviceList.classList.remove('-translate-y-40'); 
                 this.$refs.sectionnavigation.classList.remove('-translate-y-40')
+
+                document.querySelector('.js-pageOverlay').classList.toggle('hidden')
+
                 window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
             }
         }
