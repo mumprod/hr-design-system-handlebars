@@ -2,6 +2,7 @@ const path = require('path')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
 
 module.exports = {
+    staticDirs: ['../src/assets'],
     stories: [
         '../src/stories/Introduction.stories.mdx',
         '../src/**/*.stories.mdx',
@@ -66,7 +67,7 @@ module.exports = {
         config.plugins.push(
             new FlatContextPlugin(
                 '/feature',
-                path.resolve(__dirname, '../src/stories/views'),
+                path.resolve(__dirname, '../src/stories/views/'),
                 /\.feature\.js$/
             )
         )

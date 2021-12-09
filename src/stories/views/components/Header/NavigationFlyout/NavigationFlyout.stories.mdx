@@ -1,54 +1,39 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import flyout from "./NavigationFlyout.hbs";
+import flyout from './NavigationFlyout.hbs'
 
-import JsonData from '../serviceNavigationData.json';
+import JsonData from '../serviceNavigationData.json'
 
 <Meta
-  title="Komponenten/Header/NavigationFlyout/NavigationFlyout"
-  argTypes={{
-    columns: {
-      control: "array",
-      description: "Menü in JSON Format",
-    },
-    
-  }}
+    title="Komponenten/Header/NavigationFlyout/NavigationFlyout"
+    argTypes={{
+        columns: {
+            control: 'array',
+            description: 'Menü in JSON Format',
+        },
+    }}
 />
 
-
-
 export const Template = ({ ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return flyout({ ...args });
-};
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return flyout({ ...args })
+}
 
 # Flyout
 
 Ein toller Einleitungstext für unsere `NavigationFlyout` Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="One Column"
-    args={JsonData.serviceNavigationSSILinks[2].navigationItems[0]}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="One Column" args={JsonData.serviceNavigationSSILinks[2].navigationItems[0]}>
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="One Column" />
 
 <Canvas>
-  <Story
-    name="Two Column"
-    args={JsonData.serviceNavigationSSILinks[1].navigationItems[0]}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Two Column" args={JsonData.serviceNavigationSSILinks[1].navigationItems[0]}>
+        {Template.bind({})}
+    </Story>
 </Canvas>

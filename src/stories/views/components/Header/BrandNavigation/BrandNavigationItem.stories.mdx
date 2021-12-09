@@ -1,46 +1,38 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import item from "./BrandNavigationItem.hbs";
+import item from './BrandNavigationItem.hbs'
 
-import JsonData from '../navigation.json';
-
+import JsonData from '../navigation.json'
 
 <Meta
-  title="Komponenten/Header/BrandNavigation/BrandNavigationItem"
-  argTypes={{
-    text: {
-      control: "text",
-      description: "Brand Text",
-    }
-  }}
+    title="Komponenten/Header/BrandNavigation/BrandNavigationItem"
+    argTypes={{
+        text: {
+            control: 'text',
+            description: 'Brand Text',
+        },
+    }}
 />
 
-
 export const Template = ({ ...args }) => {
-  return item({ ...args });
-}; 
+    return item({ ...args })
+}
 
-export const OneItem = Template.bind({});
+export const OneItem = Template.bind({})
 
 # BrandNavigationItem
 
 Ein toller Einleitungstext für unsere `BrandNavigationItem` Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="hessenschau"
-    args={{
-      text: "hessenschau"
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="hessenschau"
+        args={{
+            text: 'hessenschau',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="hessenschau" />
@@ -48,12 +40,7 @@ Ein toller Einleitungstext für unsere `BrandNavigationItem` Komponente:
 ## Alle Brands
 
 <Canvas>
-  <Story
-    name="Brands from File"
-    args= {JsonData.brandNavigationItems[2]}
-    
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Brands from File" args={JsonData.brandNavigationItems[2]}>
+        {Template.bind({})}
+    </Story>
 </Canvas>
-

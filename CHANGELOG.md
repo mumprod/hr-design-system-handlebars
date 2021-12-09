@@ -1,3 +1,15 @@
+# v0.32.2 (Wed Dec 08 2021)
+
+#### 🐛 Bug Fix
+
+- Feature/resource url helper [#88](https://github.com/mumprod/hr-design-system-handlebars/pull/88) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.32.1 (Wed Dec 08 2021)
 
 #### 🐛 Bug Fix
