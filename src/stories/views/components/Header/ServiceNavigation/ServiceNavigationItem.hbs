@@ -20,7 +20,7 @@
             {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full h-full"}}
         </div>
         <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
-            <div class="flex transition-all duration-200 ease-in-out" :class="`${percent}` > 50 ? 'opacity-0 w-20' : ''">
+            <div class="flex transition-all duration-200 ease-in-out" :class="`${percent}` > 50 ? 'opacity-0' : ''">
                 <span class="flex text-xs whitespace-nowrap">
                     {{text}} 
                 </span>
