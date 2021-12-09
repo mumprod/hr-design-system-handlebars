@@ -9,10 +9,10 @@
     "version": "0.32.2",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "storybook": "start-storybook -s ./src/assets -p 6006",
-        "build-storybook": "build-storybook -s ./src/assets",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
         "build-storybook-with-tailwind": "npm run build:tailwind && npm run build-storybook",
-        "build-storybook-docs": "build-storybook -s ./src/assets --docs",
+        "build-storybook-docs": "build-storybook --docs",
         "build-storybook-docs-with-tailwind": "npm run build:tailwind && npm run build-storybook-docs",
         "build:tailwind": "postcss src/assets/tailwind.css -o dist/assets/index.css",
         "build": "npm run clean && npm run build:tailwind && node ./scripts/build.js",

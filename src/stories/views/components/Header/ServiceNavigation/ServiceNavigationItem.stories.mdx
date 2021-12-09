@@ -1,50 +1,37 @@
-import {
-  ArgsTable,
-  Meta,
-  Story,
-  Canvas,
-  Preview,
-} from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import item from "./ServiceNavigationItem.hbs";
+import item from './ServiceNavigationItem.hbs'
 
-import JsonData from '../navigation.json';
-
+import JsonData from '../navigation.json'
 
 <Meta
-  title="Komponenten/Header/ServiceNavigation/ServiceNavigationItem"
-  argTypes={{
-    label: {
-      control: "text",
-      description: "Label Text",
-    },
-    icon: {
-      control: "text",
-      description: "Icon",
-    },
-  }}
+    title="Komponenten/Header/ServiceNavigation/ServiceNavigationItem"
+    argTypes={{
+        label: {
+            control: 'text',
+            description: 'Label Text',
+        },
+        icon: {
+            control: 'text',
+            description: 'Icon',
+        },
+    }}
 />
 
-
 export const Template = ({ ...args }) => {
-  return item({ ...args });
-}; 
+    return item({ ...args })
+}
 
-
-
-export const OneItem = Template.bind({});
+export const OneItem = Template.bind({})
 
 # Button
 
 Ein toller Einleitungstext für unsere `Label` Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="Wetter mit Flyout"
-    args={JsonData.serviceNavigationSSILinks[1]}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Wetter mit Flyout" args={JsonData.serviceNavigationSSILinks[1]}>
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="Wetter" />
@@ -52,12 +39,7 @@ Ein toller Einleitungstext für unsere `Label` Komponente:
 ## Teaser-Heading Sans serif large
 
 <Canvas>
-  <Story
-    name="Verkehr mit Flyout from File"
-    args= {JsonData.serviceNavigationSSILinks[0]}
-    
-  >
-    {Template.bind({})}
-  </Story>
+    <Story name="Verkehr mit Flyout from File" args={JsonData.serviceNavigationSSILinks[0]}>
+        {Template.bind({})}
+    </Story>
 </Canvas>
-
