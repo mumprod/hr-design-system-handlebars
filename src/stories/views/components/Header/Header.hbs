@@ -2,7 +2,7 @@
     x-data="mainNavigationHandler()"
     x-init="init()"
     @resize.window="resetNav()"   
-    :class="`${percent}` > 0 ? '-translate-y-8' : ''"
+    :class="`${percent}` > 0 ? '-translate-y-8' : ''  "
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="anchorNavWrapper" 
@@ -16,7 +16,8 @@
     </div>
 
     <div id="serviceNavWrapper" 
-        class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101 ">   
+        :class="shouldServiceNavBeHidden() ? '-translate-y-40' : '' "
+        class="relative flex justify-center order-2 w-full transition-all duration-500 md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
 
@@ -78,19 +79,25 @@
                 searchFieldOpen: false,
                 init(){
                     let lastScrollTop = 0
+                    let height = 1600
+
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
                         // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                        let height = document.documentElement.clientHeight
                         this.percent = Math.round((winScroll / height) * 100)
+                        // this.percent = Math.round((winScroll * 100)/height)
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                         lastScrollTop = winScroll
+                        console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
                     })
                 },
                 percent: 0,
                 scrollingDown: true,
                 shouldSectionNavBeHidden() {
                     return this.percent > 50  && this.scrollingDown   
+                },
+                shouldServiceNavBeHidden() {
+                    return this.percent > 90  && this.scrollingDown  
                 },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
