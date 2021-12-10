@@ -79,7 +79,7 @@
                 searchFieldOpen: false,
                 init(){
                     let lastScrollTop = 0
-                    let height = 1600
+                    let height = document.documentElement.clientHeight
 
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
