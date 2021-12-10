@@ -17,18 +17,15 @@ module.exports = {
       white: '#ffffff'
     },
     screens: {
+      'print': {'raw': 'print'},
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
-
       'md': '768px',
       // => @media (min-width: 768px) { ... }
-
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
-
      /*  'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
-
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... } */
     },
@@ -84,6 +81,7 @@ module.exports = {
         '103':'103'
       },
       width: {
+        "18" : "4.5rem",
         "30": "7.5rem",
         "46": "11.5rem",
         "70": "17.5rem",
@@ -167,7 +165,7 @@ module.exports = {
     extend: {
       margin: ["important"],
       borderWidth: ['responsive','first','last'],
-      padding: ['responsive','first','even'],
+      padding: ['responsive','first','even','last'],
       backgroundColor: ['active'],
       inset: ['first']
     }

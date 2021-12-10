@@ -2,25 +2,26 @@
     x-data="mainNavigationHandler()"
     x-init="init()"
     @resize.window="resetNav()"   
-    :class="`${percent}` > 0 ? '-translate-y-8' : ''"
+    :class="`${percent}` > 0 ? '-translate-y-8' : ''  "
     class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
     <div id="anchorNavWrapper" 
         class="hidden">
-        {{> components/Header/AnchorNavigation/AnchorNavigation }} 
+        {{> components/Header/AnchorNavigation/AnchorNavigation }}
     </div>
 
     <div id="brandNavWrapper" 
-        class="relative z-0 flex items-center justify-center order-1 w-full bg-white">
+        class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
         {{> components/Header/BrandNavigation/BrandNavigation }} 
     </div>
 
     <div id="serviceNavWrapper" 
-        class="relative flex justify-center order-2 w-full md:border-white md:border-b bg-blue-congress z-101">   
+        :class="shouldServiceNavBeHidden() ? '-translate-y-40' : '' "
+        class="relative flex justify-center order-2 w-full transition-all duration-500 md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
 
-            <span id="serviceNavHeadline" class="hidden">Service Navigation</span>
+            <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
             <div id="serviceLogoWrapper" 
                  class="flex items-center order-1 w-full px-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
@@ -28,7 +29,7 @@
             </div>
             
             <div id="serviceItemsWrapper" 
-                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 ">
+                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
                 {{> components/Header/ServiceNavigation/ServiceList }}
 
                 {{> components/Header/Search/QuickSearchButton }}
@@ -50,14 +51,14 @@
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
         :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out lg:duration-1000 lg:overflow-visible max-h-0 md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-1000 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
     
     <div id="searchWrapper" 
         x-show="searchFieldOpen"
-        class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden"
+        class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
         @search-close.window="searchFieldOpen = false"
         @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
         x-transition:enter="transition ease-out duration-200" 
@@ -78,19 +79,25 @@
                 searchFieldOpen: false,
                 init(){
                     let lastScrollTop = 0
+                    let height = 1600
+
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-                        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
                         this.percent = Math.round((winScroll / height) * 100)
+                        // this.percent = Math.round((winScroll * 100)/height)
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                         lastScrollTop = winScroll
-                        console.log(this.scrollingDown)
+                        console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
                     })
                 },
                 percent: 0,
                 scrollingDown: true,
                 shouldSectionNavBeHidden() {
-                    return this.percent > 30  && this.scrollingDown   
+                    return this.percent > 50  && this.scrollingDown   
+                },
+                shouldServiceNavBeHidden() {
+                    return this.percent > 90  && this.scrollingDown  
                 },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
@@ -160,14 +167,14 @@
 
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
-        
+
         Alpine.data('dropdown', () => ({
             dropped: false,
             toggle() {    
-                this.dropped = ! this.dropped;    
+                this.dropped = ! this.dropped; 
             }
         }))
-        
+
         // There are several Flyouts sharing the same functionality and context, so put the data in an Alpine.data to make it reusable
         Alpine.data('flyoutHandler', () => ({   
             init() {
@@ -184,15 +191,15 @@
                     this.$refs.sectionnavigation.style.maxHeight = a +'px' 
                 } else {
                     let a = this.$refs.sectionnavigation.scrollHeight; 
-                    this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
                     }
                 })   
             },
             setFlyoutAnimationStyle() {
                 //sets/cleansup the x-collapse attributes depending on window.innerWidth, gets fired @resize.window in NavigationFlyout.hbs
                 if(window.innerWidth > 1023) {
-                    if(this.$el.hasAttribute("x-collapse")) {
-                        this.$el.removeAttribute("x-collapse")
+                    if(this.$el.hasAttribute("x-collapse.duration.500ms")) {
+                        this.$el.removeAttribute("x-collapse.duration.500ms")
                         delete this.$el._x_transition; 
                         this.$el.style.removeProperty('overflow'); 
                         this.$el.style.removeProperty('height'); 
@@ -201,10 +208,9 @@
                     }
                     
                 } else {
-                    if(!this.$el.hasAttribute("x-collapse")) this.$el.setAttribute("x-collapse","")
+                    if(!this.$el.hasAttribute("x-collapse.duration.500ms")) this.$el.setAttribute("x-collapse.duration.500ms","")
                 }
             }
         }))
-    
 })
 </script>

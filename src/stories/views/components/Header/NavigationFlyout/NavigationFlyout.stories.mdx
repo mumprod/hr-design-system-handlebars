@@ -2,11 +2,14 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import flyout from './NavigationFlyout.hbs'
 
-import JsonData from '../serviceNavigationData.json'
+import JsonData from '../navigation.json'
 
 <Meta
     title="Komponenten/Header/NavigationFlyout/NavigationFlyout"
     argTypes={{
+        dropped: {
+            control: 'boolean',
+        },
         columns: {
             control: 'array',
             description: 'Menü in JSON Format',
