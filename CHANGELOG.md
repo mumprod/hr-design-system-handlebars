@@ -1,3 +1,15 @@
+# v0.32.4 (Fri Dec 10 2021)
+
+#### 🐛 Bug Fix
+
+- Some fixes on the navi [#92](https://github.com/mumprod/hr-design-system-handlebars/pull/92) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.32.3 (Fri Dec 10 2021)
 
 #### 🐛 Bug Fix
