@@ -17,7 +17,7 @@
 
     <div id="serviceNavWrapper" 
         :class="shouldServiceNavBeHidden() ? '-translate-y-40' : '' "
-        class="relative flex justify-center order-2 w-full transition-all duration-500 md:border-white md:border-b bg-blue-congress z-101">   
+        class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
         <div id="serviceNavMainContainer" 
             class="container flex h-10 pl-2 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16">
 
@@ -51,7 +51,7 @@
         x-ref="sectionnavigation"
         @toggle-sectionnav.window="toggleSectionNav"
         :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-1000 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
     >
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
@@ -79,7 +79,7 @@
                 searchFieldOpen: false,
                 init(){
                     let lastScrollTop = 0
-                    let height = 1600
+                    let height = document.documentElement.clientHeight
 
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop
