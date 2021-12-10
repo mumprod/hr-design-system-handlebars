@@ -160,14 +160,14 @@
 
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
-        
+
         Alpine.data('dropdown', () => ({
             dropped: false,
             toggle() {    
-                this.dropped = ! this.dropped;    
+                this.dropped = ! this.dropped; 
             }
         }))
-        
+
         // There are several Flyouts sharing the same functionality and context, so put the data in an Alpine.data to make it reusable
         Alpine.data('flyoutHandler', () => ({   
             init() {
@@ -205,6 +205,5 @@
                 }
             }
         }))
-    
 })
 </script>
