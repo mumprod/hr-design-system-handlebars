@@ -1,13 +1,13 @@
 
 <a x-cloak 
-    :class="`${percent}` < 30 ? 'opacity-0' : 'opacity-100'" 
+    :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'" 
     class="absolute flex text-white fill-current print:hidden" 
     href="https://www.hessenschau.de/index.html" 
     title="Startseite hessenschau . d e">
     {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="logo-compact w-7 h-7 lg:w-10 lg:h-10 items-center "}}
 </a>
 <a 
-    :class="`${percent}` < 30 ? 'opacity-100' : 'opacity-0'" 
+    :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'" 
     class="flex text-white fill-current print:hidden" 
     href="https://www.hessenschau.de/index.html" 
     title="Startseite hessenschau . d e">
