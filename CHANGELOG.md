@@ -1,3 +1,18 @@
+# v0.32.3 (Fri Dec 10 2021)
+
+#### 🐛 Bug Fix
+
+- Some cosmetics [#91](https://github.com/mumprod/hr-design-system-handlebars/pull/91) ([@StefanVesper](https://github.com/StefanVesper))
+- updates deprecated features according to [#90](https://github.com/mumprod/hr-design-system-handlebars/pull/90) ([@szuelch](https://github.com/szuelch))
+- Feature/storybook update [#89](https://github.com/mumprod/hr-design-system-handlebars/pull/89) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.32.2 (Wed Dec 08 2021)
 
 #### 🐛 Bug Fix
