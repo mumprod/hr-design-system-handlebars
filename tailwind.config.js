@@ -81,6 +81,7 @@ module.exports = {
         '103':'103'
       },
       width: {
+        "18" : "4.5rem",
         "30": "7.5rem",
         "46": "11.5rem",
         "70": "17.5rem",
@@ -164,7 +165,7 @@ module.exports = {
     extend: {
       margin: ["important"],
       borderWidth: ['responsive','first','last'],
-      padding: ['responsive','first','even'],
+      padding: ['responsive','first','even','last'],
       backgroundColor: ['active'],
       inset: ['first']
     }

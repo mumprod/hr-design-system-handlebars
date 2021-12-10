@@ -18,7 +18,7 @@
         {{#unless ../this.isCluster ~}}
             <div class="{{#if ../_isSectionNav}} hidden {{/if}}w-full">
                 <div class="flex pt-4 pb-2 pl-4 text-base font-bold bg-white md:pl-0 md:pt-4 lg:pt-1 lg:pb-0 justify-left text-blue-congress ">              
-                    <a href="#" class="-isHeaderLink lg:leading-10 js-load" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}'>
+                    <a href="#" class="-isHeaderLink lg:leading-10 js-load" {{!-- data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{_navigationType}}::{{_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}' --}}>
                         {{../this.flyoutStartLinkText}}
                     </a>      
                 </div>          
