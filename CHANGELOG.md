@@ -1,3 +1,16 @@
+# v0.32.5 (Mon Dec 20 2021)
+
+#### 🐛 Bug Fix
+
+- Remove the text "No suggestions" [#93](https://github.com/mumprod/hr-design-system-handlebars/pull/93) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
 # v0.32.4 (Fri Dec 10 2021)
 
 #### 🐛 Bug Fix
