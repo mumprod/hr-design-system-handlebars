@@ -1,17 +1,17 @@
 <div x-data="slider()"
         x-init="checkIfScrollable($refs.container)"
         @resize.window="checkIfScrollable($refs.container)"
-        class="container md:px-5 lg:px-10 px-3.5 ">
+        class="container md:px-5 lg:px-10 px-3.5 h-10 lg:h-full">
 
-    <div class="flex justify-center text-sm text-gray-400 list-none ">
+    <div class="flex justify-center text-xs list-none text-grey-scorpion ">
 
         <template x-if="isScrollable">
             <div>
                 <button class="absolute left-0 w-12 h-full arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay">
-                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="mr-4 pb-1 inline-block w-3.5 h-3.5 text-blue-congress fill-current"}}
+                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 mr-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current"}}
                 </button>
                 <button class="absolute right-0 w-12 h-full group arrow-right-background disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay">
-                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="ml-4 pb-1 inline-block w-3.5 h-3.5 text-blue-congress fill-current "}}
+                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 ml-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current "}}
                 </button>
             </div>
         </template>

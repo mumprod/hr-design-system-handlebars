@@ -56,7 +56,8 @@
         {{> components/Header/SectionNavigation/SectionNavigation }}
     </div>
     
-    <div id="searchWrapper" 
+    <div 
+        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
         x-show="searchFieldOpen"
         class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
         @search-close.window="searchFieldOpen = false"
@@ -179,6 +180,9 @@
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
         Alpine.store('serviceNavIsOpen', false);
+        Alpine.store('searchID', {
+            current: '{{nextRandom}}'        
+        })
 
         // context for all dropdowns
         Alpine.data('dropdown', () => ({

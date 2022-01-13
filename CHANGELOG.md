@@ -1,3 +1,28 @@
+# v0.32.7 (Wed Jan 12 2022)
+
+#### 🐛 Bug Fix
+
+- add missing aria-tags [#94](https://github.com/mumprod/hr-design-system-handlebars/pull/94) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.32.6 (Wed Jan 05 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1337 [#95](https://github.com/mumprod/hr-design-system-handlebars/pull/95) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.32.5 (Mon Dec 20 2021)
 
 #### 🐛 Bug Fix
