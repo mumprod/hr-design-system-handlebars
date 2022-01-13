@@ -1,7 +1,7 @@
 <div x-data="slider()"
         x-init="checkIfScrollable($refs.container)"
         @resize.window="checkIfScrollable($refs.container)"
-        class="container md:px-5 lg:px-10 px-3.5 h-10 lg:h-full">
+        class="container md:px-5 lg:px-10 px-3.5 h-10">
 
     <div class="flex justify-center text-xs list-none text-grey-scorpion ">
 
@@ -16,7 +16,7 @@
             </div>
         </template>
 
-        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-8 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-8 align-center">
+        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-10 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
             {{#with this.brandNavigationItems}}
                 <ul class="flex pl-0.5 pr-3 md:px-0 flex-nowrap lg:mr-0">
