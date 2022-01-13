@@ -88,16 +88,23 @@
                         // this.percent = Math.round((winScroll * 100)/height)
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                         lastScrollTop = winScroll
-                        console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
+                        // console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
+                        
                     })
                 },
                 percent: 0,
                 scrollingDown: true,
                 shouldSectionNavBeHidden() {
-                    return this.percent > 50  && this.scrollingDown   
+                    return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false
                 },
                 shouldServiceNavBeHidden() {
-                    return this.percent > 90  && this.scrollingDown  
+                    return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
+                },
+                shouldServiceIconsBeHidden() {
+                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown) 
+                },
+                shouldFlyoutBeHidden() {
+                    return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
                 },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
@@ -138,6 +145,7 @@
 
     //Main Alpine Init Listener
     document.addEventListener('alpine:init', () => {
+        // Utilities for $screen magic
         const mydata = Alpine.reactive({ screensize: window.innerWidth })
         const defaultBreakpoints = {
                 xs: 0,
@@ -156,6 +164,8 @@
             update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
         })  
 
+        //Alpine magic: screen 
+        // todo: this needs to be implemented as a plugin instead of here
         Alpine.magic('screen', el => (breakpoint) => {
             const width = mydata.screensize
             if (Number.isInteger(breakpoint)) return breakpoint <= width
@@ -165,12 +175,20 @@
             return breakpoints[breakpoint] <= width
         })
 
+        // Alpine.stores for global variables 
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
+        Alpine.store('serviceNavIsOpen', false);
 
+        // context for all dropdowns
         Alpine.data('dropdown', () => ({
             dropped: false,
-            toggle() {    
+            toggle(who) {
+                if (who === 'service'){
+                    searchFieldOpen = false;
+                    this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
+                    this.$store.burgeropen == true ? this.$dispatch('burger-close') : null    
+                }
                 this.dropped = ! this.dropped; 
             }
         }))
