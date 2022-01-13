@@ -19,12 +19,12 @@
 
         {{/if}}
 
-        <div class="w-7 md:w-8 h-7 md:h-8" :class="`${percent}` > 50 ? 'lg:w-9 lg:h-9 lg:mt-1.5 lg:mx-2' : ''">
+        <div class="w-7 md:w-8 h-7 md:h-8" >
             {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full h-full"}}
         </div>
 
         <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
-            <div class="flex" :class="`${percent}` > 50 ? 'opacity-0 w-16' : ''">
+            <div class="flex" >
                 <span class="flex text-xs whitespace-nowrap">
                     {{text}} 
                 </span>
