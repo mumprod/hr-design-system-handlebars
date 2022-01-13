@@ -1,5 +1,5 @@
 <div x-data="burger()" class="flex items-center justify-center h-full fill-current">
-    <nav >
+    <nav>
         <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  
             class="relative w-10 h-10 text-white focus:outline-none bg-brand"
             @burger-close.window="burgerClose()" 
@@ -20,18 +20,20 @@
             burgerClose(){
                 this.$store.burgeropen = false
                 this.$dispatch('toggle-sectionnav', false); 
+                // this.percent > 0 ? this.toggleYtranslate() : null;
                 //document.querySelector('.js-pageOverlay').classList.toggle('hidden')
                 window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.remove('overflow-hidden') : null 
             },
             burgerClick(){
                 this.$store.burgeropen = !this.$store.burgeropen
-                this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);   
+                this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);  
+                this.percent > 50 ? this.removeYtranslate() : null;
+                // document.querySelector('.js-pageOverlay').classList.toggle('hidden')
+                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
+            },
+            removeYtranslate(){
                 this.$refs.serviceList.classList.remove('-translate-y-40'); 
                 this.$refs.sectionnavigation.classList.remove('-translate-y-40')
-
-                // document.querySelector('.js-pageOverlay').classList.toggle('hidden')
-
-                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
             }
         }
     }
