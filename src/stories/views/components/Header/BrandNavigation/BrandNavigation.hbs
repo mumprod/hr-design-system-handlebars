@@ -1,22 +1,22 @@
 <div x-data="slider()"
         x-init="checkIfScrollable($refs.container)"
         @resize.window="checkIfScrollable($refs.container)"
-        class="container md:px-5 lg:px-10 px-3.5 h-10 lg:h-full">
+        class="container md:px-5 lg:px-10 px-3.5 h-10">
 
     <div class="flex justify-center text-xs list-none text-grey-scorpion ">
 
         <template x-if="isScrollable">
             <div>
-                <button class="absolute left-0 w-12 h-full arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay">
+                <button class="absolute left-0 w-12 h-full pt-1 arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay">
                     {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 mr-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current"}}
                 </button>
-                <button class="absolute right-0 w-12 h-full group arrow-right-background disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay">
+                <button class="absolute right-0 w-12 h-full pt-1 group arrow-right-background disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay">
                     {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 ml-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current "}}
                 </button>
             </div>
         </template>
 
-        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-8 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-8 align-center">
+        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-10 align-center">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
             {{#with this.brandNavigationItems}}
                 <ul class="flex pl-0.5 pr-3 md:px-0 flex-nowrap lg:mr-0">

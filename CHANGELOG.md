@@ -1,3 +1,15 @@
+# v0.33.0 (Thu Jan 13 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1358 stickyness desktop / diverse fixes in mobile view  flyouts on scroll etc [#96](https://github.com/mumprod/hr-design-system-handlebars/pull/96) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.32.7 (Wed Jan 12 2022)
 
 #### 🐛 Bug Fix

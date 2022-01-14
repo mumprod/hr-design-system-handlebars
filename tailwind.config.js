@@ -42,6 +42,9 @@ module.exports = {
             widest: '.05em',
         },
         extend: {
+            lineHeight: {
+                11: '2.75rem',
+            },
             fill: {
                 black: '#000000',
             },
@@ -66,12 +69,13 @@ module.exports = {
                 80: '80%',
             },
             zIndex: {
-                0: '0',
-                50: '50',
-                100: '100',
-                101: '101',
-                102: '102',
-                103: '103',
+                '0': '0',
+                '50': '50',
+                '100': '100',
+                '101': '101',
+                '102': '102',
+                '103': '103',
+                '-1000': '-1000',
             },
             width: {
                 18: '4.5rem',
@@ -154,7 +158,6 @@ module.exports = {
     },
     plugins: [
         require('tailwindcss-important')(),
-
         // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
         ({ addUtilities, e, theme, variants }) => {
             const colors = flattenColorPalette(theme('borderColor'))
