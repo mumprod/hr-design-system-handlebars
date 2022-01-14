@@ -1,12 +1,9 @@
 module.exports = function (input, cases, values) {
-  const caseArray = cases.split(",");
-  const valueArray = values.split(",");
-  const defaultValue =
-    caseArray.length < valueArray.length
-      ? valueArray[valueArray.length - 1]
-      : "";
+    console.log(`Test:${input}`)
+    const casesArray = eval(cases)
+    const valuesArray = eval(values)
+    const defaultValue =
+        casesArray.length < valuesArray.length ? valuesArray[valuesArray.length - 1] : ''
 
-  return caseArray.indexOf(input) > -1
-    ? valueArray[caseArray.indexOf(input)]
-    : defaultValue;
-};
+    return casesArray.indexOf(input) > -1 ? valuesArray[casesArray.indexOf(input)] : defaultValue
+}
