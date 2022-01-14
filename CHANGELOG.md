@@ -1,3 +1,15 @@
+# v0.34.0 (Fri Jan 14 2022)
+
+#### 🚀 Enhancement
+
+- chore: update tailwind.css and its dependencies from version 2.0 to 3.0 [#97](https://github.com/mumprod/hr-design-system-handlebars/pull/97) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.33.0 (Thu Jan 13 2022)
 
 #### 🚀 Enhancement
