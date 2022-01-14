@@ -103,7 +103,7 @@
                     return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
                 },
                 shouldServiceIconsBeHidden() {
-                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown) 
+                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown == true) || (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false  && this.scrollingDown == false) 
                 },
                 shouldFlyoutBeHidden() {
                     return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
@@ -192,7 +192,9 @@
                 if (who === 'service'){
                     searchFieldOpen = false;
                     this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
-                    this.$store.burgeropen == true ? this.$dispatch('burger-close') : null    
+                    this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
+
+                    this.$store.serviceNavIsOpen == true && !this.$screen('lg') ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')   
                 }
                 this.dropped = ! this.dropped; 
             }
