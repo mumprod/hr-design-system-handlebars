@@ -1,5 +1,5 @@
 <li :class="dropped ? 'h-auto' : 'h-10'"  
-    class="{{inline-switch _fromNav "SectionNav,ServiceNav" "md:pl-4 lg:pl-0,md:pl-0 lg:pl-0 lg:pr-0 break-words"}} {{#if parentselected}}lg:whitespace-nowrap lg:pr-4  {{/if}} flex h-auto py-2 pl-4 text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline ">
+    class="{{inline-switch _fromNav '["SectionNav","ServiceNav"]' '["md:pl-4 lg:pl-0","md:pl-0 lg:pl-0 lg:pr-0 break-words"]'}} {{#if parentselected}}lg:whitespace-nowrap lg:pr-4  {{/if}} flex h-auto py-2 pl-4 text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline ">
     {{#>components/base/link}}
         {{content.text}}
         {{~#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="w-4 h-4 fill-current ml-2 inline-flex" _iconmap="icons" }} {{/if}}

@@ -5,7 +5,7 @@
         @close-servicemenu.window="dropped = false" 
         x-data="dropdown"
         id="{{getRandom}}"
-        class="{{inline-switch this.id "weather,warnung,traffic,video-podcast" "-weather, -warnung, -traffic, -video-podcast" }} h-10 md:h-full flex flex-col justify-center cursor-pointer lg:pt-1 lg:justify-start items-center w-full border-r last:border-r-0 lg:border-r-0 px-4 text-white {{#if this.selected}}  -currentService {{/if}} lg:px-3 lg:relative lg:h-16 lg:rounded lg:border-0 lg:left-0 lg:last:pr-8"
+        class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} h-10 md:h-full flex flex-col justify-center cursor-pointer lg:pt-1 lg:justify-start items-center w-full border-r last:border-r-0 lg:border-r-0 px-4 text-white {{#if this.selected}}  -currentService {{/if}} lg:px-3 lg:relative lg:h-16 lg:rounded lg:border-0 lg:left-0 lg:last:pr-8"
 
         {{#if this.subNavigation}} :class="dropped ? 'bg-white fill-current text-blue-congress lg:rounded-t lg:border-0' : ''" > 
               

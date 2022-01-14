@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
 
 module.exports = {
-    content: ['./src/**/*.hbs', './src/**/*.mdx'],
+    content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs}'],
     theme: {
         fill: {
             current: 'currentColor',
