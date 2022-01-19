@@ -1,3 +1,16 @@
+# v0.34.1 (Wed Jan 19 2022)
+
+#### 🐛 Bug Fix
+
+- Runde Ecken für Rubriken-Flyout [#98](https://github.com/mumprod/hr-design-system-handlebars/pull/98) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.34.0 (Fri Jan 14 2022)
 
 #### 🚀 Enhancement
