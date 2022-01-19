@@ -3,7 +3,7 @@
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
         :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress h-auto' : 'h-10'" 
-        class="{{#if this.selected}} -currentSection {{/if}} flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress ">   
+        class="{{#if this.selected}} -currentSection {{/if}} flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress lg:rounded-t">   
     
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
@@ -68,7 +68,7 @@
                 <button 
                     @click.debounce.100ms="toggle()" 
                     id="flyout-{{getRandom}}-1" 
-                    class="js-load flex items-center justify-center w-10 h-10 leading-4 border-l border-white lg:hidden" 
+                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white js-load lg:hidden" 
                     aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" 
                     data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
