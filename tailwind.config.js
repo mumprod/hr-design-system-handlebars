@@ -79,7 +79,10 @@ module.exports = {
                 92: '23rem',
             },
             height: {
+                22: '5.5rem',
+                30: '7.5rem',
                 35: '8.75rem',
+                45: '11.25rem',
             },
             maxWidth: {
                 '1/4': '25%',

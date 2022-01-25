@@ -1,3 +1,15 @@
+# v0.34.2 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Dynamic hight for <header> tag depending on hasOpenSubNavigation [#100](https://github.com/mumprod/hr-design-system-handlebars/pull/100) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.1 (Wed Jan 19 2022)
 
 #### 🐛 Bug Fix

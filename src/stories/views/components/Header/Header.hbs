@@ -1,80 +1,82 @@
-<div id="headerWrapper"
-    x-data="mainNavigationHandler()"
-    x-init="init()"
-    @resize.window="resetNav()"   
-    :class="`${percent}` > 0 ? '-translate-y-10' : ''  "
-    class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+<header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-45{{else}}lg:h-36{{/if}} md:h-22 h-30">   
+    <div id="headerWrapper"
+        x-data="mainNavigationHandler()"
+        x-init="init()"
+        @resize.window="resetNav()"   
+        :class="`${percent}` > 0 ? '-translate-y-10' : ''  "
+        class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
-    <div id="anchorNavWrapper" 
-        class="hidden">
-        {{> components/Header/AnchorNavigation/AnchorNavigation }}
-    </div>
+        <div id="anchorNavWrapper" 
+            class="hidden">
+            {{> components/Header/AnchorNavigation/AnchorNavigation }}
+        </div>
 
-    <div id="brandNavWrapper" 
-        class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
-        {{> components/Header/BrandNavigation/BrandNavigation }} 
-    </div>
+        <div id="brandNavWrapper" 
+            class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
+            {{> components/Header/BrandNavigation/BrandNavigation }} 
+        </div>
 
-    <div id="serviceNavWrapper" 
-        :class="shouldServiceNavBeHidden() ? '-translate-y-40' : ''"
-        
-        class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
-        <div id="serviceNavMainContainer" 
-            class="container flex h-10 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
-
-            <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
-
-            <div id="serviceLogoWrapper" 
-                 class="flex items-center order-1 w-full pl-4 pr-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
-                {{> components/Header/ServiceLogo }}
-            </div>
+        <div id="serviceNavWrapper" 
+            :class="shouldServiceNavBeHidden() ? '-translate-y-40' : ''"
             
-            <div id="serviceItemsWrapper" 
-                class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
-                {{> components/Header/ServiceNavigation/ServiceList }}
+            class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
+            <div id="serviceNavMainContainer" 
+                class="container flex h-10 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
 
-                {{> components/Header/Search/QuickSearchButton }}
+                <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
-                <div class="hidden lg:flex">
-                    {{> components/Header/Search/QuickSearchForm }}
-                </div>
-            
-                <div id="burgerWrapper" 
-                    class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
-                    {{> components/Header/Burger }}    
+                <div id="serviceLogoWrapper" 
+                    class="flex items-center order-1 w-full pl-4 pr-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+                    {{> components/Header/ServiceLogo }}
                 </div>
                 
+                <div id="serviceItemsWrapper" 
+                    class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
+                    {{> components/Header/ServiceNavigation/ServiceList }}
+
+                    {{> components/Header/Search/QuickSearchButton }}
+
+                    <div class="hidden lg:flex">
+                        {{> components/Header/Search/QuickSearchForm }}
+                    </div>
+                
+                    <div id="burgerWrapper" 
+                        class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
+                        {{> components/Header/Burger }}    
+                    </div>
+                    
+                </div>
             </div>
         </div>
+
+        <div id="sectionNavWrapper"  
+            x-ref="sectionnavigation"
+            @toggle-sectionnav.window="toggleSectionNav"
+            :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
+            class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+        >
+            {{> components/Header/SectionNavigation/SectionNavigation }}
+        </div>
+        
+        <div 
+            x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
+            x-show="searchFieldOpen"
+            class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
+            @search-close.window="searchFieldOpen = false"
+            @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
+            x-transition:enter="transition ease-out duration-200" 
+            x-transition:enter-start="opacity-0 transform scale-y-90" 
+            x-transition:enter-end="opacity-100 transform scale-y-100" 
+            x-transition:leave="transition ease-in duration-100" 
+            x-transition:leave-start="opacity-100 transform scale-y-100" 
+            x-transition:leave-end="opacity-0 transform scale-y-90">
+
+            {{> components/Header/Search/QuickSearchForm }}
+
+        </div>
+
     </div>
-
-    <div id="sectionNavWrapper"  
-        x-ref="sectionnavigation"
-        @toggle-sectionnav.window="toggleSectionNav"
-        :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
-        class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
-    >
-        {{> components/Header/SectionNavigation/SectionNavigation }}
-    </div>
-    
-    <div 
-        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
-        x-show="searchFieldOpen"
-        class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
-        @search-close.window="searchFieldOpen = false"
-        @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
-        x-transition:enter="transition ease-out duration-200" 
-        x-transition:enter-start="opacity-0 transform scale-y-90" 
-        x-transition:enter-end="opacity-100 transform scale-y-100" 
-        x-transition:leave="transition ease-in duration-100" 
-        x-transition:leave-start="opacity-100 transform scale-y-100" 
-        x-transition:leave-end="opacity-0 transform scale-y-90">
-
-        {{> components/Header/Search/QuickSearchForm }}
-
-    </div>
-
-</div>
+</header>
 <script>
     var mainNavigationHandler = () => {
             return {
