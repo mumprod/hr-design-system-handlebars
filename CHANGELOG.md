@@ -1,3 +1,16 @@
+# v0.34.4 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Anpassungen Flyouts und Section Navigation [#102](https://github.com/mumprod/hr-design-system-handlebars/pull/102) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.34.3 (Tue Jan 25 2022)
 
 #### 🐛 Bug Fix
