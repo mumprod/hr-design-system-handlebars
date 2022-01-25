@@ -28,8 +28,8 @@
             aria-haspopup="listbox" 
             aria-autocomplete="list" 
             x-effect="$el.setAttribute('aria-expanded', (query.length > 1 && active && suggestions.length > 0))"
-            aria-owns="suggestionlist"
-            aria-controls="suggestionlist"
+            aria-owns="suggestionlist--{{getRandom}}"
+            aria-controls="suggestionlist--{{getRandom}}"
         > 
         <div 
             class="relative" 
@@ -44,7 +44,7 @@
         >
             <ul 
                 role="listbox" 
-                id="suggestionlist" 
+                id="suggestionlist--{{getRandom}}" 
                 aria-label="Suche öffnen"
                 x-effect="$el.setAttribute('aria-expanded', query.length > 1 && active && suggestions.length > 0);$el.setAttribute('aria-hidden', !(query.length > 1 && active && suggestions.length > 0))"
                 class="absolute w-full mt-1 bg-white border divide-y rounded shadow-xl top-100"
