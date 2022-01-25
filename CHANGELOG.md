@@ -1,3 +1,15 @@
+# v0.34.6 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Navi:Bug: Abstand des ersten Eintrages in der SubNav in Desktop [#104](https://github.com/mumprod/hr-design-system-handlebars/pull/104) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.5 (Tue Jan 25 2022)
 
 #### 🐛 Bug Fix
