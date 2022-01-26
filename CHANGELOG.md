@@ -1,3 +1,15 @@
+# v0.34.7 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- remove class link [#106](https://github.com/mumprod/hr-design-system-handlebars/pull/106) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.34.6 (Tue Jan 25 2022)
 
 #### 🐛 Bug Fix
