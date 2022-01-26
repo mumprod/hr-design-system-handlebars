@@ -1,3 +1,15 @@
+# v0.34.9 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- Some fixes on mobile scroll/flyout behaviour  still buggy but better than before   ) [#99](https://github.com/mumprod/hr-design-system-handlebars/pull/99) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.8 (Wed Jan 26 2022)
 
 #### 🐛 Bug Fix
