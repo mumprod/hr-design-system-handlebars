@@ -1,3 +1,15 @@
+# v0.34.8 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1388: Abstand letztes Sevice Icon zu groß [#105](https://github.com/mumprod/hr-design-system-handlebars/pull/105) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.7 (Wed Jan 26 2022)
 
 #### 🐛 Bug Fix
