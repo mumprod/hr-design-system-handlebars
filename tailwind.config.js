@@ -11,6 +11,7 @@ module.exports = {
         },
         screens: {
             print: { raw: 'print' },
+            xs: '360px',
             sm: '640px',
             // => @media (min-width: 640px) { ... }
             md: '768px',

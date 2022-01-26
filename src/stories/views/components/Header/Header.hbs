@@ -3,7 +3,7 @@
         x-data="mainNavigationHandler()"
         x-init="init()"
         @resize.window="resetNav()"   
-        :class="`${percent}` > 0 ? '-translate-y-10' : ''  "
+        :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
         class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
         <div id="anchorNavWrapper" 
@@ -17,7 +17,7 @@
         </div>
 
         <div id="serviceNavWrapper" 
-            :class="shouldServiceNavBeHidden() ? '-translate-y-40' : ''"
+            :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
             
             class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
             <div id="serviceNavMainContainer" 
@@ -52,13 +52,13 @@
         <div id="sectionNavWrapper"  
             x-ref="sectionnavigation"
             @toggle-sectionnav.window="toggleSectionNav"
-            :class="shouldSectionNavBeHidden() ? '-translate-y-40' : ''"  
+            :class="shouldSectionNavBeHidden() ? '-mt-40' : ''"  
             class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
         >
             {{> components/Header/SectionNavigation/SectionNavigation }}
         </div>
         
-        <div 
+        <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
             x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
             x-show="searchFieldOpen"
             class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
@@ -74,26 +74,26 @@
             {{> components/Header/Search/QuickSearchForm }}
 
         </div>
-
+        
     </div>
+   
 </header>
+
 <script>
     var mainNavigationHandler = () => {
             return {
                 searchFieldOpen: false,
                 init(){
                     let lastScrollTop = 0
-                    let height = document.documentElement.clientHeight
+                    let height = top.innerHeight
 
                     window.addEventListener('scroll', () => {
-                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-                        // let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                        this.percent = Math.round((winScroll / height) * 100)
-                        // this.percent = Math.round((winScroll * 100)/height)
+                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
+                        //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                        this.percent = Math.round((winScroll / height) * 100)
                         lastScrollTop = winScroll
-                        // console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
-                        
+                        //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)       
                     })
                 },
                 percent: 0,
@@ -105,11 +105,12 @@
                     return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
                 },
                 shouldServiceIconsBeHidden() {
-                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown) 
+                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown == true) || (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false  && this.scrollingDown == false) 
                 },
                 shouldFlyoutBeHidden() {
                     return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
                 },
+                
                 resetNav() { 
                     if(window.innerWidth > 1023) {
                         this.$refs.sectionnavigation.setAttribute("style","")
@@ -185,18 +186,34 @@
         Alpine.store('serviceNavIsOpen', false);
         Alpine.store('searchID', {
             current: '{{nextRandom}}'        
+        });
+        Alpine.store('serviceID', {
+            open: false,
+            current: '0'        
         })
 
         // context for all dropdowns
         Alpine.data('dropdown', () => ({
             dropped: false,
-            toggle(who) {
-                if (who === 'service'){
-                    searchFieldOpen = false;
-                    this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
-                    this.$store.burgeropen == true ? this.$dispatch('burger-close') : null    
-                }
+            toggle() {
                 this.dropped = ! this.dropped; 
+            },
+            toggleServiceNav(){
+                searchFieldOpen = false;  
+
+                this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : this.$store.serviceNavIsOpen = true; 
+                this.$el.id == this.$store.serviceID.current && this.dropped == false ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')  
+                  
+                console.log('currentID: '+ this.$store.serviceID.current)
+                console.log('target-id: '+this.$event.target.id)
+                console.log('element-id: '+this.$el.id)
+                console.log('serviceNav is open:'+ this.$store.serviceNavIsOpen)
+                
+                this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
+                
+                this.$store.serviceID.current = this.$el.id
+
+               
             }
         }))
 

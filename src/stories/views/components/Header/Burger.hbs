@@ -4,7 +4,7 @@
             class="relative w-10 h-10 text-white focus:outline-none bg-brand"
             @burger-close.window="burgerClose()" 
             @click.debounce="burgerClick()"
-            @click.outside="burgerClose()"
+            
         >
 
             <span class="sr-only md:hidden">Open main menu</span>
@@ -23,19 +23,18 @@
                 this.$store.burgeropen = false
                 this.$dispatch('toggle-sectionnav', false); 
                 // this.percent > 0 ? this.toggleYtranslate() : null;
-                //document.querySelector('.js-pageOverlay').classList.toggle('hidden')
-                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.remove('overflow-hidden') : null 
             },
             burgerClick(){
                 this.$store.burgeropen = !this.$store.burgeropen
+                this.$store.serviceNavIsOpen = false
                 this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);  
                 this.percent > 50 ? this.removeYtranslate() : null;
-                // document.querySelector('.js-pageOverlay').classList.toggle('hidden')
-                window.innerHeight > this.$refs.sectionnavigation.scrollHeight ? document.body.classList.toggle('overflow-hidden') : null 
+                
+                window.innerHeight > this.$refs.sectionnavigation.scrollHeight && this.$store.burgeropen == false ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden') 
             },
             removeYtranslate(){
-                this.$refs.serviceList.classList.remove('-translate-y-40'); 
-                this.$refs.sectionnavigation.classList.remove('-translate-y-40')
+                this.$refs.serviceList.classList.remove('-mt-40'); 
+                this.$refs.sectionnavigation.classList.remove('-mt-40')
             }
         }
     }
