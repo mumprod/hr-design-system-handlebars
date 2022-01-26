@@ -74,9 +74,11 @@
             {{> components/Header/Search/QuickSearchForm }}
 
         </div>
-
+        <div onclick="void(0)" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
     </div>
+   
 </header>
+
 <script>
     var mainNavigationHandler = () => {
             return {
@@ -87,17 +89,11 @@
 
                     window.addEventListener('scroll', () => {
                         let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
-
                         winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
-
                         //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-
                         this.percent = Math.round((winScroll / height) * 100)
-                        
-                        
                         lastScrollTop = winScroll
-                        console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
-                        
+                        console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)      
                     })
                 },
                 percent: 0,
@@ -113,6 +109,9 @@
                 },
                 shouldFlyoutBeHidden() {
                     return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
+                },
+                shouldOverlayBeShown() {
+                    return (!this.$screen('lg') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
                 },
                 resetNav() { 
                     if(window.innerWidth > 1023) {
@@ -189,6 +188,10 @@
         Alpine.store('serviceNavIsOpen', false);
         Alpine.store('searchID', {
             current: '{{nextRandom}}'        
+        });
+        Alpine.store('serviceID', {
+            open: false,
+            current: '0'        
         })
 
         // context for all dropdowns
@@ -196,11 +199,16 @@
             dropped: false,
             toggle(who) {
                 if (who === 'service'){
-                    searchFieldOpen = false;
+                    searchFieldOpen = false; 
                     this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
+                    console.log('serviceNav is open:'+ this.$store.serviceNavIsOpen)
+                    console.log(this.$event.target.id +'     '+ this.$store.serviceID.current)
+                    
                     this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
+                    
+                    this.shouldOverlayBeShown() ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
 
-                    this.$store.serviceNavIsOpen == true && !this.$screen('lg') ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')   
+                     
                 }
                 this.dropped = ! this.dropped; 
             }
