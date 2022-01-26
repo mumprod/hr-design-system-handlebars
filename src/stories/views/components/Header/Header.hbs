@@ -61,7 +61,7 @@
         <div 
             x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
             x-show="searchFieldOpen"
-            class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
+            class="flex justify-end order-4 w-full max-w-full p-2 px-4 ml-auto -mt-10 bg-white md:w-1/2 md:max-w-1/2 md:drop-shadow-md md:mt-0 z-101 lg:hidden print:hidden"
             @search-close.window="searchFieldOpen = false"
             @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
             x-transition:enter="transition ease-out duration-200" 
