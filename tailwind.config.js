@@ -35,6 +35,9 @@ module.exports = {
             boxShadow: {
                 inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.25)',
             },
+            dropShadow: {
+                'md': '0 5px 3px rgb(0 0 0 / 0.07)',
+              },
             lineHeight: {
                 11: '2.75rem',
             },

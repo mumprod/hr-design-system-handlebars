@@ -1,3 +1,52 @@
+# v0.34.6 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Navi:Bug: Abstand des ersten Eintrages in der SubNav in Desktop [#104](https://github.com/mumprod/hr-design-system-handlebars/pull/104) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.5 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- add click.outside-handler [#103](https://github.com/mumprod/hr-design-system-handlebars/pull/103) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.34.4 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Anpassungen Flyouts und Section Navigation [#102](https://github.com/mumprod/hr-design-system-handlebars/pull/102) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.3 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- accessibility-rework [#101](https://github.com/mumprod/hr-design-system-handlebars/pull/101) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.34.2 (Tue Jan 25 2022)
 
 #### 🐛 Bug Fix
