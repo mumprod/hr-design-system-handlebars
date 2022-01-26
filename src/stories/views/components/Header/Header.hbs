@@ -3,7 +3,7 @@
         x-data="mainNavigationHandler()"
         x-init="init()"
         @resize.window="resetNav()"   
-        :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10' : `${percent}` > 50 ? '-mt-40' : ''  "
+        :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
         class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
 
         <div id="anchorNavWrapper" 
@@ -74,7 +74,7 @@
             {{> components/Header/Search/QuickSearchForm }}
 
         </div>
-        <div onclick="void(0)" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
+        
     </div>
    
 </header>
@@ -110,9 +110,7 @@
                 shouldFlyoutBeHidden() {
                     return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
                 },
-                shouldOverlayBeShown() {
-                    return (!this.$screen('lg') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
-                },
+                
                 resetNav() { 
                     if(window.innerWidth > 1023) {
                         this.$refs.sectionnavigation.setAttribute("style","")
@@ -201,19 +199,21 @@
                 this.dropped = ! this.dropped; 
             },
             toggleServiceNav(){
-                searchFieldOpen = false;                
-                this.$store.serviceID.current = this.$el.id
-                this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen 
-                
-                console.log('dropped: '+this.dropped)    
+                searchFieldOpen = false;  
+
+                this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : this.$store.serviceNavIsOpen = true; 
+                this.$el.id == this.$store.serviceID.current && this.dropped == false ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')  
+                  
+                console.log('currentID: '+ this.$store.serviceID.current)
                 console.log('target-id: '+this.$event.target.id)
                 console.log('element-id: '+this.$el.id)
                 console.log('serviceNav is open:'+ this.$store.serviceNavIsOpen)
-                console.log('currentID: '+ this.$store.serviceID.current)
                 
                 this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
                 
-                this.shouldOverlayBeShown() ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
+                this.$store.serviceID.current = this.$el.id
+
+               
             }
         }))
 
