@@ -19,12 +19,9 @@
 
     <body itemscope itemtype="http://schema.org/WebPage">
         <div class="js-pageSwap">
+                      
+            {{> components/Header/Header }}          
             
-           
-            {{> components/Header/Header }}
-
-            
-            <div x-data="overlayHandler()" onclick="void(0)" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
             <main 
                 onclick="void(0)" 
                 role="main" 
@@ -168,14 +165,5 @@
             </main>
 
         </div>
-        <script>
-            var overlayHandler = () => {
-                return {
-                    shouldOverlayBeShown() {
-                            return (!this.$screen('lg') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
-                        }  
-                }
-            }
-        </script>
     </body>
 </html>

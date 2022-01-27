@@ -1,186 +1,183 @@
-<header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-45{{else}}lg:h-36{{/if}} md:h-22 h-30">   
-    <div id="headerWrapper"
-        x-data="mainNavigationHandler()"
-        x-init="init()"
-        @resize.window="resetNav()"
-        @click.outside="$dispatch('burger-close')"   
-        :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
-        class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
-        
-        <div id="anchorNavWrapper" 
-            class="hidden">
-            {{> components/Header/AnchorNavigation/AnchorNavigation }}
-        </div>
+<div x-data="mainNavigationHandler()" x-init="init()">
 
-        <div id="brandNavWrapper" 
-            class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
-            {{> components/Header/BrandNavigation/BrandNavigation }} 
-        </div>
-
-        <div id="serviceNavWrapper" 
-            :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
+    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-45{{else}}lg:h-36{{/if}} md:h-22 h-30">   
+        <div x-data id="headerWrapper"
             
-            class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
-            <div id="serviceNavMainContainer" 
-                class="container flex h-10 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
+            @resize.window="resetNav()"
+            {{!-- @click.outside="$dispatch('burger-close')"  --}}  
+            :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
+            class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+            
+            <div id="anchorNavWrapper" 
+                class="hidden">
+                {{> components/Header/AnchorNavigation/AnchorNavigation }}
+            </div>
 
-                <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
+            <div id="brandNavWrapper" 
+                class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
+                {{> components/Header/BrandNavigation/BrandNavigation }} 
+            </div>
 
-                <div id="serviceLogoWrapper" 
-                    class="flex items-center order-1 w-full pl-4 pr-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
-                    {{> components/Header/ServiceLogo }}
-                </div>
+            <div id="serviceNavWrapper" 
+                :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                <div id="serviceItemsWrapper" 
-                    class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
-                    {{> components/Header/ServiceNavigation/ServiceList }}
+                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
+                <div id="serviceNavMainContainer" 
+                    class="container flex h-10 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
 
-                    {{> components/Header/Search/QuickSearchButton }}
+                    <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
-                    <div class="hidden lg:flex">
-                        {{> components/Header/Search/QuickSearchForm }}
-                    </div>
-                
-                    <div id="burgerWrapper" 
-                        class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
-                        {{> components/Header/Burger }}    
+                    <div id="serviceLogoWrapper" 
+                        class="flex items-center order-1 w-full pl-4 pr-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+                        {{> components/Header/ServiceLogo }}
                     </div>
                     
+                    <div id="serviceItemsWrapper" 
+                        class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
+                        {{> components/Header/ServiceNavigation/ServiceList }}
+
+                        {{> components/Header/Search/QuickSearchButton }}
+
+                        <div class="hidden lg:flex">
+                            {{> components/Header/Search/QuickSearchForm }}
+                        </div>
+                    
+                        <div id="burgerWrapper" 
+                            class="flex justify-end flex-none order-2 lg:order-4 md:order-4 md:px-4 lg:hidden "> 
+                            {{> components/Header/Burger }}    
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="sectionNavWrapper"  
-            x-ref="sectionnavigation"
-            @toggle-sectionnav.window="toggleSectionNav"
-            :class="shouldSectionNavBeHidden() ? '-mt-40' : ''"  
-            class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
-        >
-            {{> components/Header/SectionNavigation/SectionNavigation }}
-        </div>
-        
-        <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
-            x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
-            x-show="searchFieldOpen"
-            class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
-            @search-close.window="searchFieldOpen = false"
-            @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
-            x-transition:enter="transition ease-out duration-200" 
-            x-transition:enter-start="opacity-0 transform scale-y-90" 
-            x-transition:enter-end="opacity-100 transform scale-y-100" 
-            x-transition:leave="transition ease-in duration-100" 
-            x-transition:leave-start="opacity-100 transform scale-y-100" 
-            x-transition:leave-end="opacity-0 transform scale-y-90">
+            <div id="sectionNavWrapper"  
+                x-ref="sectionnavigation"
+                @toggle-sectionnav.window="toggleSectionNav"
+                :class="shouldSectionNavBeHidden() ? '-mt-40' : ''"  
+                class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+            >
+                {{> components/Header/SectionNavigation/SectionNavigation }}
+            </div>
+            
+            <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
+                x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
+                x-show="searchFieldOpen"
+                class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
+                @search-close.window="searchFieldOpen = false"
+                @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
+                x-transition:enter="transition ease-out duration-200" 
+                x-transition:enter-start="opacity-0 transform scale-y-90" 
+                x-transition:enter-end="opacity-100 transform scale-y-100" 
+                x-transition:leave="transition ease-in duration-100" 
+                x-transition:leave-start="opacity-100 transform scale-y-100" 
+                x-transition:leave-end="opacity-0 transform scale-y-90">
 
-            {{> components/Header/Search/QuickSearchForm }}
+                {{> components/Header/Search/QuickSearchForm }}
 
+            </div>
+            
         </div>
-        
-    </div>
-   
-</header>
+    
+    </header>
+
+    <div x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
+
+</div>
 
 <script>
     var mainNavigationHandler = () => {
-            return {
-                searchFieldOpen: false,
-                init(){
-                    let lastScrollTop = 0
-                    let height = top.innerHeight
+                return {
+                    searchFieldOpen: false,
+                    init(){
+                        let lastScrollTop = 0
+                        let height = top.innerHeight
 
-                    window.addEventListener('scroll', () => {
-                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
-                        winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
-                        //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                        this.percent = Math.round((winScroll / height) * 100)
-                        lastScrollTop = winScroll
-                        //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)       
-                    })
-                },
-                percent: 0,
-                scrollingDown: true,
-                shouldSectionNavBeHidden() {
-                    return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false
-                },
-                shouldServiceNavBeHidden() {
-                    return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
-                },
-                shouldServiceIconsBeHidden() {
-                    return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown == true) || (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false  && this.scrollingDown == false) 
-                },
-                shouldFlyoutBeHidden() {
-                    return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
-                },
-                
-                resetNav() { 
-                    if(window.innerWidth > 1023) {
-                        this.$refs.sectionnavigation.setAttribute("style","")
-                    } else {
-                        // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
-                        this.$refs.sectionnavigation.classList.add('hidden')
-                        this.$refs.sectionnavigation.style.maxHeight="0px"
-                    }
-                    // timeout is used to dispatch events after the resize is done
-                    let timeout 
-                    clearTimeout(timeout)
-                    timeout = setTimeout(() => {
-                        this.$refs.sectionnavigation.classList.remove('hidden')
-                        this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
-                        this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
-                        this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
-                    }, 500)
-                }, 
-                toggleSectionNav() {
-                //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
-                //true = sectionNav öffnet (maxheight = scrollheight)   
-                    console.log('toggleSectionNav, Event: ' + this.$event.detail )    
-                    if(this.$event.detail === false) {                   
-                        if (window.innerWidth < 1024) { 
-                            this.$refs.sectionnavigation.style.maxHeight='0px'
-                        } else { 
-                            this.$refs.sectionnavigation.style.maxHeight = '' 
+                        window.addEventListener('scroll', () => {
+                            let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
+                            winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
+                            //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+                            this.percent = Math.round((winScroll / height) * 100)
+                            lastScrollTop = winScroll
+                            //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)       
+                        })
+                    },
+                    percent: 0,
+                    scrollingDown: true,
+                    shouldSectionNavBeHidden() {
+                        return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false
+                    },
+                    shouldServiceNavBeHidden() {
+                        return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
+                    },
+                    shouldServiceIconsBeHidden() {
+                        return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown == true) || (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false  && this.scrollingDown == false) 
+                    },
+                    shouldFlyoutBeHidden() {
+                        return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
+                    },
+                    
+                    resetNav() { 
+                        if(window.innerWidth > 1023) {
+                            this.$refs.sectionnavigation.setAttribute("style","")
+                        } else {
+                            // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
+                            this.$refs.sectionnavigation.classList.add('hidden')
+                            this.$refs.sectionnavigation.style.maxHeight="0px"
                         }
-                    } else { 
-                        this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
+                        // timeout is used to dispatch events after the resize is done
+                        let timeout 
+                        clearTimeout(timeout)
+                        timeout = setTimeout(() => {
+                            this.$refs.sectionnavigation.classList.remove('hidden')
+                            this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
+                            this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
+                            this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
+                        }, 500)
+                    }, 
+                    toggleSectionNav() {
+                    //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
+                    //true = sectionNav öffnet (maxheight = scrollheight)   
+                        console.log('toggleSectionNav, Event: ' + this.$event.detail )    
+                        if(this.$event.detail === false) {                   
+                            if (window.innerWidth < 1024) { 
+                                this.$refs.sectionnavigation.style.maxHeight='0px'
+                            } else { 
+                                this.$refs.sectionnavigation.style.maxHeight = '' 
+                            }
+                        } else { 
+                            this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
+                        }
+                    },
+                    allowScrolling(mode){
+                        if(!this.$screen('lg') && !this.$screen('md')){
+                            mode == true ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')
+                        }            
+
                     }
-                }   
-                
+                       
+                    
+                }
             }
-        }
 
-
+            var overlayHandler = () => {
+                return {
+                    shouldOverlayBeShown() {
+                            return (!this.$screen('lg') && !this.$screen('md') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
+                        },
+                    overlayWasClicked() {
+                        this.$store.serviceNavIsOpen ? this.$store.serviceNavIsOpen = false : null
+                        this.$dispatch('burger-close')
+                        this.$dispatch('close-servicemenu')
+                        // this.$dispatch('allowScrolling', true )
+                        this.allowScrolling(true)
+                    }  
+                }
+            }
+            
     //Main Alpine Init Listener
     document.addEventListener('alpine:init', () => {
-        // Utilities for $screen magic
-        const mydata = Alpine.reactive({ screensize: window.innerWidth })
-        const defaultBreakpoints = {
-                xs: 0,
-                sm: 640,
-                md: 768,
-                lg: 1024,
-                xl: 1280,
-                '2xl': 1536,
-            }
-        const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
-            ? window.AlpineMagicHelpersConfig.breakpoints
-            : defaultBreakpoints
-        let update
-        window.addEventListener('resize', () => {
-            clearTimeout(update)
-            update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
-        })  
-
-        //Alpine magic: screen 
-        // todo: this needs to be implemented as a plugin instead of here
-        Alpine.magic('screen', el => (breakpoint) => {
-            const width = mydata.screensize
-            if (Number.isInteger(breakpoint)) return breakpoint <= width
-            if (breakpoints[breakpoint] === undefined) {
-                throw Error('Undefined $screen property: ' + breakpoint + '. Supported properties: ' + Object.keys(breakpoints).join(', '))
-            }
-            return breakpoints[breakpoint] <= width
-        })
-
+        
         // Alpine.stores for global variables 
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
@@ -200,12 +197,12 @@
                 this.dropped = ! this.dropped; 
             },
             toggleServiceNav(){
-                searchFieldOpen = false;  
+                this.dropped = ! this.dropped;
+                this.$store.searchFieldOpen = false;
+                //this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
 
-                this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : this.$store.serviceNavIsOpen = true; 
-                
-                this.$el.id == this.$store.serviceID.current && this.dropped == false ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')  
-                  
+                this.$el.id != this.$store.serviceID.current ? this.$store.serviceNavIsOpen = true : this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : null; 
+
                 console.log('currentID: '+ this.$store.serviceID.current)
                 console.log('target-id: '+this.$event.target.id)
                 console.log('element-id: '+this.$el.id)
@@ -213,9 +210,9 @@
                 
                 this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
                 
+                
                 this.$store.serviceID.current = this.$el.id
-
-               
+                this.allowScrolling(!this.$store.serviceNavIsOpen)
             }
         }))
 
@@ -256,5 +253,34 @@
                 }
             }
         }))
-})
+// Utilities for $screen magic
+        const mydata = Alpine.reactive({ screensize: window.innerWidth })
+        const defaultBreakpoints = {
+                xs: 0,
+                sm: 640,
+                md: 768,
+                lg: 1024,
+                xl: 1280,
+                '2xl': 1536,
+            }
+        const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
+            ? window.AlpineMagicHelpersConfig.breakpoints
+            : defaultBreakpoints
+        let update
+        window.addEventListener('resize', () => {
+            clearTimeout(update)
+            update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
+        })  
+
+        //Alpine magic: screen 
+        // todo: this needs to be implemented as a plugin instead of here
+        Alpine.magic('screen', el => (breakpoint) => {
+            const width = mydata.screensize
+            if (Number.isInteger(breakpoint)) return breakpoint <= width
+            if (breakpoints[breakpoint] === undefined) {
+                throw Error('Undefined $screen property: ' + breakpoint + '. Supported properties: ' + Object.keys(breakpoints).join(', '))
+            }
+            return breakpoints[breakpoint] <= width
+        })
+    })
 </script>
