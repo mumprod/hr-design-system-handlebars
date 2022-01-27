@@ -3,7 +3,7 @@
     :class="searchFieldOpen ? 'bg-white mt-2 rounded-t sm:mt-0 sm:rounded-none' : 'bg-blue-congress'"
 >
     <button  
-        @click=" searchFieldOpen = ! searchFieldOpen; dropped = false"
+        @click=" searchFieldOpen = ! searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; allowScrolling(true)"
         @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
         class="h-full text-white cursor-pointer md:px-4 lg:hidden"
         x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen)"

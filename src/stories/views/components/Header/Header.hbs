@@ -1,10 +1,9 @@
 <div x-data="mainNavigationHandler()" x-init="init()">
 
     <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-45{{else}}lg:h-36{{/if}} md:h-22 h-30">   
-        <div x-data id="headerWrapper"
-            
-            @resize.window="resetNav()"
-            {{!-- @click.outside="$dispatch('burger-close')"  --}}  
+        <div x-data 
+            id="headerWrapper"
+            @resize.window="resetNav()" 
             :class="`${percent}` > 0 ? '-mt-10 lg:-mt-8' : ''  "
             class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
             
@@ -199,18 +198,16 @@
             toggleServiceNav(){
                 this.dropped = ! this.dropped;
                 this.$store.searchFieldOpen = false;
-                //this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen
-
+                
                 this.$el.id != this.$store.serviceID.current ? this.$store.serviceNavIsOpen = true : this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : null; 
-
+                
+                this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
+                
                 console.log('currentID: '+ this.$store.serviceID.current)
                 console.log('target-id: '+this.$event.target.id)
                 console.log('element-id: '+this.$el.id)
                 console.log('serviceNav is open:'+ this.$store.serviceNavIsOpen)
-                
-                this.$store.burgeropen == true ? this.$dispatch('burger-close') : null
-                
-                
+
                 this.$store.serviceID.current = this.$el.id
                 this.allowScrolling(!this.$store.serviceNavIsOpen)
             }
