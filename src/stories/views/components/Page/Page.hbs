@@ -24,7 +24,7 @@
             {{> components/Header/Header }}
 
             
-            <div onclick="void(0)" class="z-50 hidden block h-screen bg-gray-800 opacity-70 js-pageOverlay"></div>
+            <div x-data="overlayHandler()" onclick="void(0)" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
             <main 
                 onclick="void(0)" 
                 role="main" 
@@ -92,6 +92,44 @@
                     <div class="flex mt-8">
                         {{> components/Teaser/Teaser 
                                 variant="Serif"
+                                teaserSize="50"
+                                topline="So plant Glasner bei der Eintracht"
+                                headline="Silvas Erbe wird auf mehrere Schultern verteilt"
+                                teaserText="Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus."
+                                author="Stephan Reich"
+                        }}
+
+                        {{> components/Teaser/Teaser 
+                                variant="Serif"
+                                teaserSize="50"
+                                topline="So plant Glasner bei der Eintracht"
+                                headline="Silvas Erbe wird auf mehrere Schultern verteilt"
+                                teaserText="Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus."
+                                author="Stephan Reich"
+                        }}
+                    </div>
+                    <div class="flex mt-8">
+                        {{> components/Teaser/Teaser 
+                                variant="Serif"
+                                teaserSize="50"
+                                topline="So plant Glasner bei der Eintracht"
+                                headline="Silvas Erbe wird auf mehrere Schultern verteilt"
+                                teaserText="Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus."
+                                author="Stephan Reich"
+                        }}
+
+                        {{> components/Teaser/Teaser 
+                                variant="Serif"
+                                teaserSize="50"
+                                topline="So plant Glasner bei der Eintracht"
+                                headline="Silvas Erbe wird auf mehrere Schultern verteilt"
+                                teaserText="Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus."
+                                author="Stephan Reich"
+                        }}
+                    </div>
+                    <div class="flex mt-8">
+                        {{> components/Teaser/Teaser 
+                                variant="Serif"
                                 teaserSize="25"
                                 topline="So plant Glasner bei der Eintracht"
                                 headline="Silvas Erbe wird auf mehrere Schultern verteilt"
@@ -130,5 +168,14 @@
             </main>
 
         </div>
+        <script>
+            var overlayHandler = () => {
+                return {
+                    shouldOverlayBeShown() {
+                            return (!this.$screen('lg') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
+                        }  
+                }
+            }
+        </script>
     </body>
 </html>
