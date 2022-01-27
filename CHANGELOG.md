@@ -1,3 +1,15 @@
+# v0.34.13 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1391 Navi: Bug: Regionen Flyout(Cluster) fehlerhaft wenn Eintrag länger [#109](https://github.com/mumprod/hr-design-system-handlebars/pull/109) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.12 (Thu Jan 27 2022)
 
 #### 🐛 Bug Fix
