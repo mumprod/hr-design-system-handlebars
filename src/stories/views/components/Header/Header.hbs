@@ -5,7 +5,7 @@
             
             @resize.window="resetNav()"
             {{!-- @click.outside="$dispatch('burger-close')"  --}}  
-            :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
+            :class="`${percent}` > 0 ? '-mt-10 lg:-mt-8' : ''  "
             class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
             
             <div id="anchorNavWrapper" 
@@ -54,7 +54,7 @@
             <div id="sectionNavWrapper"  
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
-                :class="shouldSectionNavBeHidden() ? '-mt-40' : ''"  
+                :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
                 class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
             >
                 {{> components/Header/SectionNavigation/SectionNavigation }}
