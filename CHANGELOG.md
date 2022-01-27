@@ -1,3 +1,16 @@
+# v0.34.12 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- Tablet: first service icon border-left missing [#110](https://github.com/mumprod/hr-design-system-handlebars/pull/110) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.34.11 (Thu Jan 27 2022)
 
 #### 🐛 Bug Fix
