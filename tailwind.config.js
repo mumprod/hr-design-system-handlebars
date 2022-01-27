@@ -22,6 +22,7 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... } */
+            tablet: {'min': '768px', 'max': '1023px'},
         },
         letterSpacing: {
             tighter: '-.025em',
