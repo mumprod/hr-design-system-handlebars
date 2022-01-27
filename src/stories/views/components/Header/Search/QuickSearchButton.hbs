@@ -1,11 +1,11 @@
 <div 
     class="flex items-center h-full md:border-r md:border-l md:border-white lg:border-none" 
-    :class="searchFieldOpen ? 'bg-white mt-2 rounded-t' : 'bg-blue-congress'"
+    :class="searchFieldOpen ? 'bg-white mt-2 rounded-t sm:mt-0 sm:rounded-none' : 'bg-blue-congress'"
 >
     <button  
         @click=" searchFieldOpen = ! searchFieldOpen; dropped = false"
         @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
-        class="text-white rounded-r cursor-pointer md:px-4 lg:hidden"
+        class="h-full text-white cursor-pointer md:px-4 lg:hidden"
         x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen)"
         aria-label="Suche öffnen" 
     >

@@ -30,7 +30,7 @@
         
         <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} w-full lg:px-10 lg:container {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
-                {{#each this.columns}}
+            {{#each this.columns}}
                     {{> components/Header/NavigationFlyout/NavigationFlyoutColumn count=../this.columnCount navtype=../../_navigationType ~}}
                 {{/each}}
             {{else}}
