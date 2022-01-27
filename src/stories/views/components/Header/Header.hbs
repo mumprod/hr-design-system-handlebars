@@ -2,10 +2,11 @@
     <div id="headerWrapper"
         x-data="mainNavigationHandler()"
         x-init="init()"
-        @resize.window="resetNav()"   
+        @resize.window="resetNav()"
+        @click.outside="$dispatch('burger-close')"   
         :class="`${percent}` > 0 && `${percent}` < 50 ? '-mt-10 lg:-mt-8' : `${percent}` > 50  && `${percent}` < 90 ? '-mt-10 h-10' : `${percent}` > 90  && !$screen('lg') ? '-mt-40' : ''  "
         class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
-
+        
         <div id="anchorNavWrapper" 
             class="hidden">
             {{> components/Header/AnchorNavigation/AnchorNavigation }}
@@ -31,7 +32,7 @@
                 </div>
                 
                 <div id="serviceItemsWrapper" 
-                    class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top md:relative bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
+                    class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
                     {{> components/Header/ServiceNavigation/ServiceList }}
 
                     {{> components/Header/Search/QuickSearchButton }}
@@ -61,7 +62,7 @@
         <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
             x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
             x-show="searchFieldOpen"
-            class="flex justify-end order-4 w-full max-w-full p-2 px-4 ml-auto -mt-10 bg-white md:w-1/2 md:max-w-1/2 md:drop-shadow-md md:mt-0 z-101 lg:hidden print:hidden"
+            class="flex justify-end order-4 w-full max-w-full p-2 px-4 -mt-10 bg-white md:mt-0 z-101 lg:hidden print:hidden"
             @search-close.window="searchFieldOpen = false"
             @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
             x-transition:enter="transition ease-out duration-200" 
@@ -202,6 +203,7 @@
                 searchFieldOpen = false;  
 
                 this.$el.id == this.$store.serviceID.current ? this.$store.serviceNavIsOpen = !this.$store.serviceNavIsOpen : this.$store.serviceNavIsOpen = true; 
+                
                 this.$el.id == this.$store.serviceID.current && this.dropped == false ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')  
                   
                 console.log('currentID: '+ this.$store.serviceID.current)

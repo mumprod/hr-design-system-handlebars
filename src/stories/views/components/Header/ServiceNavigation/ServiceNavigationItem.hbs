@@ -2,7 +2,7 @@
 
     <li id="{{nextRandom}}" 
         @click.debounce.100ms="toggle(); toggleServiceNav(); " 
-        @click.outside="dropped = false"
+        @click.outside="dropped = false; $store.serviceNavIsOpen = false;document.body.classList.remove('overflow-hidden'); "
         @close-servicemenu.window="dropped = false; " 
         x-data="dropdown"
         id="{{getRandom}}"

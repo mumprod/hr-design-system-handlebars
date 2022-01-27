@@ -1,3 +1,15 @@
+# v0.34.11 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- fixes clickoutside on flyouts [#108](https://github.com/mumprod/hr-design-system-handlebars/pull/108) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.10 (Thu Jan 27 2022)
 
 #### 🐛 Bug Fix
