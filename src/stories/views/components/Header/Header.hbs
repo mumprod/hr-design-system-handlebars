@@ -250,34 +250,5 @@
                 }
             }
         }))
-// Utilities for $screen magic
-        const mydata = Alpine.reactive({ screensize: window.innerWidth })
-        const defaultBreakpoints = {
-                xs: 0,
-                sm: 640,
-                md: 768,
-                lg: 1024,
-                xl: 1280,
-                '2xl': 1536,
-            }
-        const breakpoints = (window.AlpineMagicHelpersConfig && window.AlpineMagicHelpersConfig.breakpoints)
-            ? window.AlpineMagicHelpersConfig.breakpoints
-            : defaultBreakpoints
-        let update
-        window.addEventListener('resize', () => {
-            clearTimeout(update)
-            update = setTimeout(() => { mydata.screensize = window.innerWidth }, 150)
-        })  
-
-        //Alpine magic: screen 
-        // todo: this needs to be implemented as a plugin instead of here
-        Alpine.magic('screen', el => (breakpoint) => {
-            const width = mydata.screensize
-            if (Number.isInteger(breakpoint)) return breakpoint <= width
-            if (breakpoints[breakpoint] === undefined) {
-                throw Error('Undefined $screen property: ' + breakpoint + '. Supported properties: ' + Object.keys(breakpoints).join(', '))
-            }
-            return breakpoints[breakpoint] <= width
-        })
     })
 </script>
