@@ -22,7 +22,7 @@
                 
                 class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
                 <div id="serviceNavMainContainer" 
-                    class="container flex h-10 md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
+                    class="flex w-full h-10 lg:container md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
 
                     <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
@@ -80,7 +80,7 @@
     
     </header>
 
-    <div x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
+    <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 lg:hidden opacity-70"></div>
 
 </div>
 
