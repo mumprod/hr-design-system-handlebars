@@ -1,3 +1,15 @@
+# v0.34.16 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- re-added tablet-css, integrates alpine-collective´s toolkit (https://github.com/alpine-collective/toolkit), uses alpine.data for mainNavigationHandler [#114](https://github.com/mumprod/hr-design-system-handlebars/pull/114) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.15 (Thu Jan 27 2022)
 
 #### 🐛 Bug Fix
