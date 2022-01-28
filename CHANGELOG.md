@@ -1,3 +1,15 @@
+# v0.34.19 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- - reverted navigation JSON Adjustments because not necessary [#116](https://github.com/mumprod/hr-design-system-handlebars/pull/116) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.18 (Fri Jan 28 2022)
 
 #### 🐛 Bug Fix
