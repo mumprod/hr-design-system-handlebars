@@ -192,7 +192,12 @@
 							]
 						]
 					}
-				},{
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
 					"id": "weather",
 					"text": "Wetter",
 					"icon": "wetter-ds",
@@ -307,7 +312,12 @@
 							]
 						]
 					}
-				},{
+				}
+			]
+		},
+		{
+			"navigationItems": [
+				{
 					"id": "traffic",
 					"text": "Verkehr",
 					"icon": "verkehr-ds",
@@ -390,7 +400,11 @@
 					"labelText": "Startseite der hessenschau",
 					"subNavigationFromIndex": true,
 					"selected": false
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "regionen",
 					"text": "Regionen",
@@ -486,7 +500,11 @@
 							"url": "suedhessen/index.html"
 						}
 					]
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "politik",
 					"text": "Politik",
@@ -555,25 +573,41 @@
 							}				
 						]
 					}
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "gesellschaft",
 					"text": "Gesellschaft",
 					"url": "gesellschaft/index.html",
 					"qualifiedRelatedContentOn404": true
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "wirtschaft",
 					"text": "Wirtschaft",
 					"url": "wirtschaft/index.html",
 					"qualifiedRelatedContentOn404": true
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "kultur",
 					"text": "Kultur",
 					"url": "kultur/index.html",
 					"qualifiedRelatedContentOn404": true
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "sport",
 					"text": "Sport",
@@ -662,13 +696,21 @@
 							}				
 						]
 					}
-				},		
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "panorama",
 					"text": "Panorama",
 					"url": "panorama/index.html",
 					"qualifiedRelatedContentOn404": true
-				},
+				}
+			]
+		},
+		{
+			"navigationItems": [
 				{
 					"name": "freizeit",
 					"text": "Freizeit",
