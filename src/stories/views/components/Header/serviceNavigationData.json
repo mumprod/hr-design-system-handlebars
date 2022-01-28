@@ -119,7 +119,11 @@
                             ]
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            "navigationItems": [
                 {
                     "label": "Wetter",
                     "icon": "wetter-ds",
@@ -231,7 +235,11 @@
                             ]
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            "navigationItems": [
                 {
                     "label": "Verkehr",
                     "icon": "verkehr-ds",
