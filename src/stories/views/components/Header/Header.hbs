@@ -145,7 +145,8 @@
                     this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
-                }, 500)
+                    this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
+                }, 250)
             }, 
             toggleSectionNav() {
             //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
@@ -158,7 +159,7 @@
                         this.$refs.sectionnavigation.style.maxHeight = '' 
                     }
                 } else {
-                    let winheightcorr = parseInt(window.innerHeight)- this.$refs.sectionnavigation.offsetTop
+                    let winheightcorr = parseInt(window.innerHeight) - this.$refs.sectionnavigation.offsetTop
                     let navheight = parseInt(this.$refs.sectionnavigation.scrollHeight)
                 
                     if(navheight > winheightcorr){
@@ -182,7 +183,7 @@
         // context for the overlay
         Alpine.data('overlayHandler', () => ({
                     shouldOverlayBeShown() {
-                            return (!this.$screen('lg') && !this.$screen('md') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
+                            return (!this.$screen('lg') && ( this.$store.burgeropen == true || this.$store.serviceNavIsOpen == true  ))
                         },
                     overlayWasClicked() {
                         this.$store.serviceNavIsOpen ? this.$store.serviceNavIsOpen = false : null
@@ -222,7 +223,7 @@
                     window.setTimeout(function(){
                         if (myFlyout.scrollHeight > window.innerHeight-myFlyout.offsetTop) {
                             myFlyout.style.height = 'auto'
-                            myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop +'px'
+                            window.innerHeight <= 414 && window.innerWidth < 768 ? myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 80 +'px' : myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 40 +'px' 
                             myFlyout.style.overflowY = 'scroll'
                         } else {
                             myFlyout.style.maxHeight = ''
