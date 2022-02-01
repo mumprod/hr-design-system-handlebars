@@ -146,7 +146,7 @@
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                     this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
-                }, 500)
+                }, 250)
             }, 
             toggleSectionNav() {
             //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
