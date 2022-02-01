@@ -145,6 +145,7 @@
                     this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
+                    this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
                 }, 500)
             }, 
             toggleSectionNav() {
