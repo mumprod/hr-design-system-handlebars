@@ -215,23 +215,18 @@
 
                 this.allowScrolling(!this.$store.serviceNavIsOpen)
                 
-                let myId= this.$el.id
-                let myFlyout = document.querySelector('#flyout-'+myId)
+                let myFlyout = document.querySelector('#flyout-'+this.$el.id)
 
                 if (this.$store.serviceNavIsOpen == true && this.dropped == true) {
                     window.setTimeout(function(){
-                        console.log(window.innerHeight-100)
-                        console.log(myFlyout.offsetTop)
                         if (myFlyout.scrollHeight > window.innerHeight-myFlyout.offsetTop) {
-                            console.log('joooooo')
                             myFlyout.style.height = 'auto'
                             myFlyout.style.maxHeight = window.innerHeight-100 +'px'
                             myFlyout.style.overflowY = 'scroll'
                         } else {
-                            console.log('NNoooooo')
                             myFlyout.style.maxHeight = ''
                             myFlyout.style.overflowY = 'hidden'}
-                    },250)
+                    },150)
                 }
             }
         }))
