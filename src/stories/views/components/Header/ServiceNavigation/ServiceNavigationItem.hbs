@@ -2,7 +2,7 @@
 
     <li id="{{nextRandom}}" 
         @click.debounce.100ms="toggleServiceNav()" 
-        @click.outside="dropped = false;"
+        @click.outside="dropped = false; "
         @close-servicemenu.window="dropped = false; "
 
         x-data="dropdown"

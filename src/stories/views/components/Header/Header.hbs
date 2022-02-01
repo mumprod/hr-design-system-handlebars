@@ -129,7 +129,6 @@
             shouldFlyoutBeHidden() {
                 return (this.percent > 50  && this.scrollingDown && this.$screen('lg') )
             },
-            
             resetNav() { 
                 if(window.innerWidth > 1023) {
                     this.$refs.sectionnavigation.setAttribute("style","")
@@ -158,13 +157,22 @@
                     } else { 
                         this.$refs.sectionnavigation.style.maxHeight = '' 
                     }
-                } else { 
-                    this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
+                } else {
+                    let winheightcorr = parseInt(window.innerHeight)- this.$refs.sectionnavigation.offsetTop
+                    let navheight = parseInt(this.$refs.sectionnavigation.scrollHeight)
+                
+                    if(navheight > winheightcorr){
+                        this.$refs.sectionnavigation.style.overflowY = 'scroll'
+                        this.$refs.sectionnavigation.style.maxHeight = winheightcorr+'px' 
+                        
+                    } else {
+                        this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
+                    }
                 }
             },
             allowScrolling(mode){
-                if(!this.$screen('lg') && !this.$screen('md')){
-                    mode == true ? document.body.classList.remove('overflow-hidden') : document.body.classList.add('overflow-hidden')
+                if(this.$screen(0) && !this.$screen('lg')){
+                    mode == false ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
                 }            
             }
 
@@ -204,7 +212,27 @@
                 console.log('serviceNav is open:'+ this.$store.serviceNavIsOpen)
 
                 this.$store.serviceID.current = this.$el.id
+
                 this.allowScrolling(!this.$store.serviceNavIsOpen)
+                
+                let myId= this.$el.id
+                let myFlyout = document.querySelector('#flyout-'+myId)
+
+                if (this.$store.serviceNavIsOpen == true && this.dropped == true) {
+                    window.setTimeout(function(){
+                        console.log(window.innerHeight-100)
+                        console.log(myFlyout.offsetTop)
+                        if (myFlyout.scrollHeight > window.innerHeight-myFlyout.offsetTop) {
+                            console.log('joooooo')
+                            myFlyout.style.height = 'auto'
+                            myFlyout.style.maxHeight = window.innerHeight-100 +'px'
+                            myFlyout.style.overflowY = 'scroll'
+                        } else {
+                            console.log('NNoooooo')
+                            myFlyout.style.maxHeight = ''
+                            myFlyout.style.overflowY = 'hidden'}
+                    },250)
+                }
             }
         }))
 
@@ -220,11 +248,18 @@
                 //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
                 if(value == true ) { 
-                    let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight; 
-                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
+                    let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight;
+                    if (a < window.innerHeight) {
+                        this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                    } else {
+                        this.$refs.sectionnavigation.style.maxHeight = window.innerHeight -100 +'px'
+                        this.$refs.sectionnavigation.style.overflowY = 'scroll'
+                    } 
                 } else {
                     let a = this.$refs.sectionnavigation.scrollHeight; 
                     this.$refs.sectionnavigation.style.maxHeight = a +'px' 
+                    this.$refs.sectionnavigation.style.overflowY = 'hidden'
                     }
                 })   
             },
