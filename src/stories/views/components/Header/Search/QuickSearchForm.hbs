@@ -19,8 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            autofocus="autofocus" 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 border rounded-l shadow-inner link-focus-inset lg:border-0 lg:border-none border-blue-congress lg:h-10 placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none"
+            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 border rounded-l shadow-inner lg:border-0 lg:border-none border-blue-congress lg:h-10 placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -56,7 +55,7 @@
                         <a  
                             x-bind:active="false"
                             x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
-                            x-bind:class="{'py-1.5 px-2  text-base flex w-full rounded hover:bg-blue-congress hover:text-white': true, 'bg-blue-congress text-white':index==cursorIndex }"
+                            x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full rounded hover:bg-blue-congress hover:text-white': true, 'bg-blue-congress text-white':index==cursorIndex }"
                         >
                             <span x-text="suggestion"></span>
                         </a>
