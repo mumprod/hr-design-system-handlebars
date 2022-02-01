@@ -1,3 +1,28 @@
+# v0.34.21 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1376 [#120](https://github.com/mumprod/hr-design-system-handlebars/pull/120) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.20 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Navi: Element State "Focus" stylen [#117](https://github.com/mumprod/hr-design-system-handlebars/pull/117) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.19 (Fri Jan 28 2022)
 
 #### 🐛 Bug Fix
