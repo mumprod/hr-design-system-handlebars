@@ -221,7 +221,7 @@
                     window.setTimeout(function(){
                         if (myFlyout.scrollHeight > window.innerHeight-myFlyout.offsetTop) {
                             myFlyout.style.height = 'auto'
-                            myFlyout.style.maxHeight = window.innerHeight-100 +'px'
+                            myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop +'px'
                             myFlyout.style.overflowY = 'scroll'
                         } else {
                             myFlyout.style.maxHeight = ''
@@ -242,19 +242,22 @@
             sectionNavFlyoutWatcher() {
                 //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
-                if(value == true ) { 
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight;
-                    if (a < window.innerHeight) {
-                        this.$refs.sectionnavigation.style.maxHeight = a +'px'
-                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                    if(value == true ) { 
+                        
+                        if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
+                            this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                            this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                        } else {
+                            this.$refs.sectionnavigation.style.maxHeight = window.innerHeight - this.$refs.sectionnavigation.offsetTop +'px'
+                            this.$refs.sectionnavigation.style.overflowY = 'scroll'
+                        } 
                     } else {
-                        this.$refs.sectionnavigation.style.maxHeight = window.innerHeight -100 +'px'
-                        this.$refs.sectionnavigation.style.overflowY = 'scroll'
-                    } 
-                } else {
-                    let a = this.$refs.sectionnavigation.scrollHeight; 
-                    this.$refs.sectionnavigation.style.maxHeight = a +'px' 
-                    this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                       if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
+                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                       } else {
+                          this.$refs.sectionnavigation.style.overflowY = 'scroll' 
+                       }
                     }
                 })   
             },
