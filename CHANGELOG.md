@@ -1,3 +1,15 @@
+# v0.34.24 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- fixes overlay and scrolling in flyouts on different screensizes [#121](https://github.com/mumprod/hr-design-system-handlebars/pull/121) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.23 (Tue Feb 01 2022)
 
 #### 🐛 Bug Fix
