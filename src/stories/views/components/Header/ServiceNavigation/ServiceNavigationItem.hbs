@@ -1,48 +1,52 @@
 {{#each this.navigationItems}}
+    <li class="flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0  text-white {{#if this.selected}}  -currentService {{/if}}  " >
+        {{#if this.subNavigation}} 
+            <button id="{{nextRandom}}" 
+            @click.debounce.100ms="toggleServiceNav()" 
+            @click.outside="dropped = false;"
+            @close-servicemenu.window="dropped = false; "
 
-    <li id="{{nextRandom}}" 
-        @click.debounce.100ms="toggleServiceNav()" 
-        @click.outside="dropped = false;"
-        @close-servicemenu.window="dropped = false; "
+            x-data="dropdown"
+            id="{{getRandom}}"
+            
+            class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} 
+                     flex flex-col justify-center lg:justify-start h-full items-center px-4 lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 text-left link-focus-inset-white"
 
-        x-data="dropdown"
-        id="{{getRandom}}"
-        
-        class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} h-10 md:h-full flex flex-col justify-center cursor-pointer lg:pt-1 lg:justify-start items-center w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 px-4 text-white {{#if this.selected}}  -currentService {{/if}} lg:px-3 lg:relative lg:h-16 lg:rounded lg:border-0 lg:left-0 lg:hover:underline"
-
-        {{#if this.subNavigation}} :class="dropped ? 'bg-white fill-current text-blue-congress lg:rounded-t lg:border-0 lg:underline' : ''" > 
+            :class="dropped ? 'bg-white fill-current text-blue-congress lg:border-0 lg:underline' : ''" > 
               
-        {{else}} > 
+        {{else}}
 
             {{#if this.extern}}
-                <a href="{{this.url}}" target="_blank" class="flex flex-col items-center js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{this.url}}" target="_blank" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:rounded-t link-focus-inset-white js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{else}}
-                <a href="{{resourceUrl this.url}}" class="flex flex-col items-center js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{resourceUrl this.url}}" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset-white js-load" id="flyout-{{nextRandom}}-1" data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{/if}}
 
         {{/if}}
 
-        <div class="w-7 md:w-8 h-7 md:h-8" >
-            {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full h-full"}}
-        </div>
-
-        <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
-            <div class="flex" >
-                <span class="flex text-xs whitespace-nowrap">
-                    {{text}} 
-                </span>
-                {{#if this.subNavigation}} 
-                    <div class="flex lg:pl-1">
-                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center ':'flex items-center justify-center '">
-                            {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
-                        </div>
-                    </div>
+            <div class="w-7 md:w-8 h-7 md:h-8" >
+                {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full h-full"}}
             </div>
-        </div>        
-        {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNav"  }}
-                {{else}}
-        </div>
-        </a>
-                {{/if}}   
+
+            <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">
+                <div class="flex" >
+                    <span class="flex text-xs whitespace-nowrap">
+                        {{text}} 
+                    </span>
+                    {{#if this.subNavigation}} 
+                        <div class="flex lg:pl-1">
+                            <div :class="dropped ? 'transform rotate-180 flex items-center justify-center ':'flex items-center justify-center '">
+                                {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
+                            </div>
+                        </div>
+                    {{/if}}   
+                </div>
+            </div>  
+        {{#if this.subNavigation}}       
+            {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNav"  }}
+            </button>
+        {{else}}       
+            </a>
+        {{/if}}   
     </li>
 {{/each}}
