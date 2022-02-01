@@ -1,3 +1,15 @@
+# v0.34.20 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Navi: Element State "Focus" stylen [#117](https://github.com/mumprod/hr-design-system-handlebars/pull/117) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.19 (Fri Jan 28 2022)
 
 #### 🐛 Bug Fix

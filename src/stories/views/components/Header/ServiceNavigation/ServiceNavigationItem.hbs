@@ -33,7 +33,7 @@
                 </span>
                 {{#if this.subNavigation}} 
                     <div class="flex lg:pl-1">
-                        <div :class="dropped ? 'transform rotate-180':''" class="flex items-center justify-center">
+                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center ':'flex items-center justify-center '">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
                     </div>
