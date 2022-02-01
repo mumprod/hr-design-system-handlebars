@@ -1,8 +1,7 @@
-<a x-cloak 
-    class="relative flex items-center text-white fill-current lg:items-end link-focus-white print:hidden" 
+<a class="relative flex items-center text-white fill-current lg:items-end link-focus-white print:hidden" 
     href="https://www.hessenschau.de/index.html" 
     title="Startseite hessenschau . d e">
-    <span class="absolute transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" >
+    <span x-cloak class="absolute transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" >
         {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="logo-compact w-7 h-7 lg:w-10 lg:h-10 items-center "}}
     </span>
     <span class="transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
