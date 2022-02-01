@@ -1,19 +1,13 @@
-
-<a x-cloak 
-    :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" 
-    class="absolute flex text-white transition-all duration-500 ease-in-out fill-current link-focus-white print:hidden" 
+<a class="relative flex items-center text-white fill-current lg:items-end link-focus-white print:hidden" 
     href="https://www.hessenschau.de/index.html" 
     title="Startseite hessenschau . d e">
-    {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="logo-compact w-7 h-7 lg:w-10 lg:h-10 items-center "}}
+    <span x-cloak class="absolute transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" >
+        {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="logo-compact w-7 h-7 lg:w-10 lg:h-10 items-center "}}
+    </span>
+    <span class="transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
+        {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk flex items-center fill-white w-40 h-5 md:h-7 md:w-40 lg:h-8 lg:w-52"}}
+    </span> 
 </a>
-<a 
-    :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'"
-    class="flex text-white transition-all duration-500 ease-in-out fill-current link-focus-white print:hidden" 
-    href="https://www.hessenschau.de/index.html" 
-    title="Startseite hessenschau . d e">  
-    {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk flex items-center fill-white w-40 h-5 md:h-7 md:w-40 lg:h-8 lg:w-52"}}
-</a>
-
 <img class="hidden print:block" 
     loading="lazy" 
     alt="{{loca "header_homepage_link_title"}}" 
