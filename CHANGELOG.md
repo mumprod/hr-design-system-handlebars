@@ -1,3 +1,15 @@
+# v0.34.22 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1386 scrolling im flyout [#119](https://github.com/mumprod/hr-design-system-handlebars/pull/119) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.21 (Tue Feb 01 2022)
 
 #### 🐛 Bug Fix
