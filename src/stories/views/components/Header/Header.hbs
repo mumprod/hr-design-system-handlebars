@@ -166,6 +166,7 @@
                         this.$refs.sectionnavigation.style.maxHeight = winheightcorr+'px' 
                         
                     } else {
+                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
                         this.$refs.sectionnavigation.style.maxHeight = this.$el.scrollHeight + 'px' 
                     }
                 }
