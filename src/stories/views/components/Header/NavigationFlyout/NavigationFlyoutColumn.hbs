@@ -2,7 +2,7 @@
     {{~#if selected~}}<div class="lg:container lg:flex">{{~/if~}}      
     {{~#each this ~}} 
         {{~#if this.title~}}    
-            {{> components/Header/NavigationFlyout/NavigationFlyoutItem parentselected=../selected _fromNav=../navtype _flyout=../this._flyout ~}}
+            {{> components/Header/NavigationFlyout/NavigationFlyoutItem parentselected=../selected _fromNav=../navtype _flyout=../_flyout ~}}
         {{~/if~}}       
     {{~/each~}}
     {{~#if selected~}}</div>{{~/if~}}
