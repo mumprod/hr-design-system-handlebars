@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Dokumentation/Handlebar-Helper/Inline-Switch Helper" />
+
+# Inline-Switch Helper
+
+Der Inline-Switch Helper wird verwendet, um in einem Handlebar Template innerhalb eines Ausdrucks eine Fallunterscheidung basierend auf dem Wert eine bestimmten Variablen durchzuführen.
+Der Helper wurde eingefügt, da [Tailwind.css](https://tailwindcss.com/docs/content-configuration#class-detection-in-depth) immer vollständige CSS Klassennamen
+in Templates benötigt, um im Buildschritt das generierte CSS von nicht verwendeten Klassen zu bereinigen.
+
+## Aufbau und Verwendung
+
+Der Helper muss, wie im Folgenden gezeigt, mit drei Parametern initialisiert werden.
+
+```javascript
+{{inline-switch INPUT 'CASES[]' 'VALUES[]'}}
+```
+
+Neben der auszuwertenden Variablen `INPUT`, müssen im Array `CASES`die möglichen Auswahlwerte und im Array `VALUES` die möglichen Rückgabewerte, z.B. CSS Klassennamen, etc.
+angegeben werden. Die einzelnen Werte in den Arrays müssen, damit dert Helper korrekt funktioniert, allesamt als `Strings`angegeben werden. Schauen wir uns dazu folgendes
+Beispiel an:
+
+```javascript
+{{inline-switch INPUT '["CASE1", "CASE2", "CASE3"]' '["VALUE1", "VALUE2", "VALUE3", "DEFAULT_VALUE"]'}}
+```
+
+Die Zuordnung von `CASE`zu `VALUE` erfolgt basierend auf der Position des jeweiligen Wertes im Array. Ist der Wert der Variablen `INPUT` beispielsweise `CASE1`, wird
+diesem Fall der Wert `VALUE1` aus dem `VALUES` Array zu gewiesen. Ist der Wert `CASE3` wird diesem Fall der Wert `VALUE3` zugewiesen, da dieser an der dritten Stelle
+im `VALUES` Array steht. Enthält die Variable `INPUT` einen Wert, der nicht im `CASES` Array vorhanden ist, wird diesem Fall der Wert `DEFAULT_VALUE` zugewiesen. Damit
+ein Default-Wert zugewiesen werden kann, sollte im `VALUES` Array immer genau ein Wert mehr vorhanden sein als im `CASES` Array. Fehlt dieser Wert, wird vom Helper
+ein leerer `String` zurück gegeben.
+
+Sollen in einem Template in einem `button` fallweise unterschiedliche CSS-Klassen ausgegeben werden, muss der Helper wie nachfolgend gezeigt eingesetzt werden.
+
+```javascript
+<button class="js-load btn {{inline-switch size '["sm","lg","xl"]' '["btn--sm","btn--lg","btn--xl","btn--md"]'}} {{inline-switch type '["secondary"]' '["btn--secondary","btn--primary"]'}}" >
+    {{label}}
+</button>
+```
