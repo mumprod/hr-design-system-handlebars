@@ -22,12 +22,12 @@
                 
                 class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
                 <div id="serviceNavMainContainer" 
-                    class="flex w-full h-10 lg:container md:h-12 md:pl-5 md:pr-0 lg:px-10 lg:h-16 z-101">
+                    class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-101">
 
                     <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
                     <div id="serviceLogoWrapper" 
-                        class="flex items-center order-1 w-full pl-4 pr-2 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
+                        class="flex items-center order-1 w-full pl-4 pr-2 md:pl-5 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                         {{> components/Header/ServiceLogo }}
                     </div>
                     
@@ -54,7 +54,7 @@
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
                 :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
-                class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+                class="flex justify-center order-3 w-full mt-10 overflow-hidden transition-all duration-500 ease-in-out tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:duration-500 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
             >
                 {{> components/Header/SectionNavigation/SectionNavigation }}
             </div>
@@ -62,7 +62,7 @@
             <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
                 x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen);$el.setAttribute('aria-hidden', !searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
                 x-show="searchFieldOpen"
-                class="flex justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 -mt-10 bg-white drop-shadow-md md:mt-0 z-101 lg:hidden print:hidden"
+                class="flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 -mt-10 bg-white drop-shadow-md md:mt-0 z-101 lg:hidden print:hidden"
                 @search-close.window="searchFieldOpen = false"
                 @click.outside="searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
                 x-transition:enter="transition ease-out duration-200" 

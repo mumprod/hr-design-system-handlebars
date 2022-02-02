@@ -81,6 +81,7 @@ module.exports = {
                 70: '17.5rem',
                 88: '22rem',
                 92: '23rem',
+                'half-screen': '50vw'
             },
             height: {
                 22: '5.5rem',
@@ -99,6 +100,8 @@ module.exports = {
             margin: {
                 13: '3.125rem',
                 30: '7.5rem',
+                'half-screen': '50vw',
+
             },
             inset: {
                 '13': '3.375rem',
