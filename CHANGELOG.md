@@ -1,3 +1,15 @@
+# v0.34.27 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- - removed this from _flyout call so delivery works as expected [#124](https://github.com/mumprod/hr-design-system-handlebars/pull/124) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.26 (Wed Feb 02 2022)
 
 #### 🐛 Bug Fix
