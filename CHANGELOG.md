@@ -1,3 +1,15 @@
+# v0.34.28 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Url in service nav Flyout was missing [#125](https://github.com/mumprod/hr-design-system-handlebars/pull/125) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.27 (Wed Feb 02 2022)
 
 #### 🐛 Bug Fix
