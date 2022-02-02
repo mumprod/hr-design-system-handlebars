@@ -146,6 +146,7 @@
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                     this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
+                    this.$screen('lg') ? this.allowScrolling(true) : null
                 }, 250)
             }, 
             toggleSectionNav() {
@@ -175,6 +176,9 @@
             allowScrolling(mode){
                 if(this.$screen(0) && !this.$screen('lg')){
                     mode == false ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
+                }
+                if(this.$screen('lg') && mode == true){
+                    document.body.classList.remove('overflow-hidden')
                 }            
             }
 
