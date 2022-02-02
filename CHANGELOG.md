@@ -1,3 +1,15 @@
+# v0.34.25 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe-1400 Tablet View: Flyouts 50% bis zum Rand [#122](https://github.com/mumprod/hr-design-system-handlebars/pull/122) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
 # v0.34.24 (Tue Feb 01 2022)
 
 #### 🐛 Bug Fix
