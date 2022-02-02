@@ -1,30 +1,30 @@
 <div 
     class="flex items-center h-8 md:h-full md:border-r md:border-l md:border-white lg:border-none" 
-    :class="searchFieldOpen ? 'bg-white mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-blue-congress'"
+    :class="$store.searchFieldOpen == true ? 'bg-white mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-blue-congress'"
 >
     <button  
-        @click=" searchFieldOpen = ! searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; allowScrolling(true)"
+        @click="$store.searchFieldOpen = ! $store.searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; allowScrolling(!$store.searchFieldOpen)"
         @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
         class="h-full text-white cursor-pointer md:px-4 lg:hidden"
-        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', searchFieldOpen)"
+        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen == true)"
         aria-label="Suche öffnen" 
     >
         <svg 
-            x-show="!searchFieldOpen"
+            x-show="$store.searchFieldOpen == false"
             class="h-5 text-white fill-current w-9" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
             role="presentation" 
-            x-effect="$el.setAttribute('aria-hidden', searchFieldOpen)"
+            x-effect="$el.setAttribute('aria-hidden', $store.searchFieldOpen == true)"
         >
             <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
         </svg>
         <svg 
-            x-show="searchFieldOpen"
+            x-show="$store.searchFieldOpen == true"
             class="h-6 fill-current w-9 text-blue-congress" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
-            x-effect="$el.setAttribute('aria-hidden', !searchFieldOpen)"
+            x-effect="$el.setAttribute('aria-hidden', $store.searchFieldOpen == false)"
         >
             <path d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
         </svg>
