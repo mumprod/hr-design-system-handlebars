@@ -79,7 +79,7 @@
                     "flyoutStartLinkText": "Übersicht Video & Podcast",
                     "selected": false,
                     "isCluster": false,
-                    "url": "https://www.test.de",
+                    "url": "https://www.video-podcast.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "2",
@@ -200,6 +200,7 @@
                     "text": "Wetter",
                     "icon": "wetter-ds",
                     "flyoutStartLinkText": "Übersicht Wetter",
+                    "url": "https://www.weather.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "2",
@@ -320,6 +321,7 @@
                     "text": "Verkehr",
                     "icon": "verkehr-ds",
                     "flyoutStartLinkText": "Übersicht Verkehr",
+                    "url": "https://www.traffic.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "1",
