@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0  text-white {{#if this.selected}}  -currentService {{/if}}  " >
+    <li class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-white" >
         {{#if this.subNavigation}} 
             <button id="{{nextRandom}}" 
             @click.debounce.100ms="toggleServiceNav()" 
@@ -9,7 +9,7 @@
             x-data="dropdown"
             id="{{getRandom}}"
             
-            class="flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white"
+            class="flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
 
             :class="dropped ? 'bg-white fill-current text-blue-congress lg:border-0 lg:underline' : ''" > 
               
