@@ -13,14 +13,14 @@
             </div>
 
             <div id="brandNavWrapper" 
-                class="relative z-0 flex items-center justify-center order-1 w-full bg-white print:hidden">
+                class="relative flex items-center justify-center order-1 w-full bg-white z-101 print:hidden">
                 {{> components/Header/BrandNavigation/BrandNavigation }} 
             </div>
 
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-101">   
+                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-102">   
                 <div id="serviceNavMainContainer" 
                     class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-101">
 
