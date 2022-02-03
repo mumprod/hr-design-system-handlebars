@@ -21,6 +21,14 @@
         "release": "npx auto shipit --base-branch=main",
         "optimize-svgs": "gulp"
     },
+    "browserslist": [
+        "last 2 versions",
+        "IE 11",
+        "Firefox ESR",
+        "iOS >= 8",
+        "Safari >= 8",
+        "> 2.5% in DE"
+    ],
     "keywords": [],
     "devDependencies": {
         "@babel/cli": "^7.13.16",
