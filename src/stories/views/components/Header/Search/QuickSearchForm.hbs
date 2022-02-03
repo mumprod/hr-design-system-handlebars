@@ -33,25 +33,22 @@
         <div 
             class="relative" 
             x-show="query.length > 1 && active && suggestions.length"
-            x-cloak  
-            x-transition:enter="transition ease-out duration-200" 
-            x-transition:enter-start="opacity-0 transform scale-y-90" 
-            x-transition:enter-end="opacity-100 transform scale-y-100" 
-            x-transition:leave="transition ease-in duration-100" 
-            x-transition:leave-start="opacity-100 transform scale-y-100" 
-            x-transition:leave-end="opacity-0 transform scale-y-90"
+            x-cloak
+            x-transition:leave="transition ease-in duration-100"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
         >
             <ul 
                 role="listbox" 
                 id="suggestionlist--{{getRandom}}" 
                 aria-label="Suche öffnen"
                 x-effect="$el.setAttribute('aria-expanded', query.length > 1 && active && suggestions.length > 0);$el.setAttribute('aria-hidden', !(query.length > 1 && active && suggestions.length > 0))"
-                class="absolute w-full mt-1 bg-white border divide-y rounded shadow-xl top-100"
+                class="absolute w-full mt-0.5 bg-white border rounded divide-y shadow-xl top-100"
                 x-ref="list"
             >
                 
                 <template x-for="(suggestion, index) in suggestions" :key="index">
-                    <li>
+                    <li class="first-of-type:border-none">
                         <a  
                             x-bind:active="false"
                             x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
