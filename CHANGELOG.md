@@ -1,3 +1,125 @@
+# v0.34.31 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1376 [#128](https://github.com/mumprod/hr-design-system-handlebars/pull/128) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.30 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- some fixes in autocomplete search [#127](https://github.com/mumprod/hr-design-system-handlebars/pull/127) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.29 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- changed z-index of brandNavWrapper so it dont overlaps sectionNavWrap… [#126](https://github.com/mumprod/hr-design-system-handlebars/pull/126) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.28 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Url in service nav Flyout was missing [#125](https://github.com/mumprod/hr-design-system-handlebars/pull/125) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.27 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- - removed this from _flyout call so delivery works as expected [#124](https://github.com/mumprod/hr-design-system-handlebars/pull/124) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.26 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1402 + DPE-1403 + DPE-1404 [#123](https://github.com/mumprod/hr-design-system-handlebars/pull/123) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.25 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe-1400 Tablet View: Flyouts 50% bis zum Rand [#122](https://github.com/mumprod/hr-design-system-handlebars/pull/122) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.24 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- fixes overlay and scrolling in flyouts on different screensizes [#121](https://github.com/mumprod/hr-design-system-handlebars/pull/121) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.23 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Navi: Element State "Focus" stylen [#118](https://github.com/mumprod/hr-design-system-handlebars/pull/118) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.22 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1386 scrolling im flyout [#119](https://github.com/mumprod/hr-design-system-handlebars/pull/119) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.34.21 (Tue Feb 01 2022)
 
 #### 🐛 Bug Fix
