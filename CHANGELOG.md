@@ -1,3 +1,15 @@
+# v0.35.1 (Fri Feb 04 2022)
+
+#### 🐛 Bug Fix
+
+- activate optimizeUniversalDefaults in tailwind config [#130](https://github.com/mumprod/hr-design-system-handlebars/pull/130) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.0 (Fri Feb 04 2022)
 
 #### 🚀 Enhancement
