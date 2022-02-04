@@ -21,6 +21,14 @@
         "release": "npx auto shipit --base-branch=main",
         "optimize-svgs": "gulp"
     },
+    "browserslist": [
+        "last 2 versions",
+        "IE 11",
+        "Firefox ESR",
+        "iOS >= 10",
+        "Safari >= 10",
+        "> 2.5% in DE"
+    ],
     "keywords": [],
     "devDependencies": {
         "@babel/cli": "^7.13.16",
@@ -54,6 +62,7 @@
         "path": "^0.12.7",
         "postcss": "^8.4.5",
         "postcss-cli": "^8.3.1",
+        "postcss-preset-env": "^7.3.1",
         "prettier": "^2.2.1",
         "rimraf": "^3.0.2",
         "storybook-conditional-toolbar-selector": "^1.0.3",
