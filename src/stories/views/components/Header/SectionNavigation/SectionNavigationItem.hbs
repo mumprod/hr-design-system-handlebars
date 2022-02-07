@@ -47,7 +47,7 @@
             {{#if this.subNavigation.showAsFlyout ~}}
                 
                     <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:border-0 lg:pl-1">
-                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center':'flex items-center justify-center'">
+                        <div class="flex items-center justify-center" :class="dropped ? 'transform rotate-180':''">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
                     </div>
@@ -83,7 +83,7 @@
 
                     <span class="hidden">{{~this.text~}}</span>
                     
-                    <div :class="dropped ? 'transform rotate-180 flex items-center justify-center lg:ml-2 lg:relative lg:right-0':'flex items-center justify-center lg:ml-2 lg:relative lg:right-0'">
+                    <div class="flex items-center justify-center lg:ml-2 lg:relative lg:right-0" :class="dropped ? 'transform rotate-180 ':''">
                         {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                     </div>
                 </button>
