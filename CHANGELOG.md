@@ -1,3 +1,15 @@
+# v0.35.2 (Mon Feb 07 2022)
+
+#### 🐛 Bug Fix
+
+- - static Version number for alpine js packages 3.8.1 [#131](https://github.com/mumprod/hr-design-system-handlebars/pull/131) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.1 (Fri Feb 04 2022)
 
 #### 🐛 Bug Fix
