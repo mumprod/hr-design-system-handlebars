@@ -69,7 +69,11 @@
         "tailwindcss": "^3.0.13",
         "tailwindcss-important": "^1.0.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@alpine-collective/toolkit": "^1.0.0",
+        "@alpinejs/collapse": "^3.8.1",
+        "alpinejs": "^3.8.1"
+    },
     "prettier": {
         "tabWidth": 4,
         "quoteProps": "consistent",
