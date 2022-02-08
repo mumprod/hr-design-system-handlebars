@@ -134,8 +134,8 @@
                     this.$refs.sectionnavigation.setAttribute("style","")
                 } else {
                     // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
-                    this.$refs.sectionnavigation.classList.add('hidden')
-                    this.$refs.sectionnavigation.style.maxHeight="0px"
+                    // this.$refs.sectionnavigation.classList.add('hidden')
+                    // this.$refs.sectionnavigation.style.maxHeight="0px"
                 }
                 // timeout is used to dispatch events after the resize is done
                 let timeout 
@@ -144,7 +144,7 @@
                     this.$refs.sectionnavigation.classList.remove('hidden')
                     this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
                     this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
-                    this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
+                  //  this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                     this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
                     this.$screen('lg') ? this.allowScrolling(true) : null
                 }, 250)
