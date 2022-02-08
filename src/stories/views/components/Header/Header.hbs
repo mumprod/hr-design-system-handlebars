@@ -1,6 +1,6 @@
 <div x-data="mainNavigationHandler()" x-init="init()">
 
-    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-45{{else}}lg:h-36{{/if}} md:h-22 h-30">   
+    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-big{{else}}lg:h-header-small{{/if}} md:h-22 h-30">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
