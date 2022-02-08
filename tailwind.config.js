@@ -91,6 +91,8 @@ module.exports = {
                 30: '7.5rem',
                 35: '8.75rem',
                 45: '11.25rem',
+                'header-small': '8.8125rem',
+                'header-big': '11.0625rem', 
             },
             maxWidth: {
                 '1/4': '25%',
