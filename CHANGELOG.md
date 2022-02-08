@@ -1,3 +1,15 @@
+# v0.35.4 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- installed alpineJS modules [#133](https://github.com/mumprod/hr-design-system-handlebars/pull/133) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.3 (Tue Feb 08 2022)
 
 #### 🐛 Bug Fix
