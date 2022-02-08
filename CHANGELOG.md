@@ -1,3 +1,15 @@
+# v0.35.6 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- - fixed header height [#135](https://github.com/mumprod/hr-design-system-handlebars/pull/135) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.5 (Tue Feb 08 2022)
 
 #### 🐛 Bug Fix
