@@ -1,3 +1,15 @@
+# v0.35.3 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- - arrows are position correctly also without JS [#132](https://github.com/mumprod/hr-design-system-handlebars/pull/132) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.2 (Mon Feb 07 2022)
 
 #### 🐛 Bug Fix
