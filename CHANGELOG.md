@@ -1,3 +1,15 @@
+# v0.35.7 (Wed Feb 09 2022)
+
+#### 🐛 Bug Fix
+
+- position:absolute for sectionNavWrapper [#136](https://github.com/mumprod/hr-design-system-handlebars/pull/136) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.6 (Tue Feb 08 2022)
 
 #### 🐛 Bug Fix
