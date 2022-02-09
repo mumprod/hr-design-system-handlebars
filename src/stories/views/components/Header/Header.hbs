@@ -97,7 +97,8 @@
         Alpine.store('serviceID', {
             open: false,
             current: '0'        
-        })
+        });
+        Alpine.store('navIsVisible', true);
 
         // context for the main header element
         Alpine.data('mainNavigationHandler', () =>({
@@ -112,11 +113,20 @@
                     //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
                     this.percent = Math.round((winScroll / height) * 100)
                     lastScrollTop = winScroll
-                    //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)       
+                    //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent) 
+                    this.$store.navIsVisible = !this.isNavHidden()
+                    //console.log(this.$store.navIsVisible);      
                 })
             },
             percent: 0,
             scrollingDown: true,
+            isNavHidden() {
+                if(this.$screen('lg')) {
+                    return this.shouldSectionNavBeHidden()
+                } else {
+                    return this.shouldServiceNavBeHidden()
+                }
+            },
             shouldSectionNavBeHidden() {
                 return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false
             },
