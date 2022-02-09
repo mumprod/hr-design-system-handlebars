@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs'
+import { resetComponents } from '@storybook/components'
+import icon from './views/components/base/image/icon.hbs'
+
+<Meta title="Dokumentation/Grundlegendes/Icons" />
+
+# Icons
+
+-   [Optimierung von Icons und Erzeugung von SVG-Maps](#optimierung-von-icons-und-erzeugung-von-svg-maps)
+    -   [Global zu verwendende Icons](#global-zu-verwendende-icons)
+    -   [Markenspezifische Icons](#markenspezifische-icons)
+    -   [Sonderfälle](#sonderfälle)
+
+---
+
+Die Icons im Designsystem liegen ausschließlich als Vektorgrafiken im SVG Format vor. Sie werden von einem Designer\*in meist in Adobe Illustrator erstellt.
+Das Markup (XML) dieser Dateien enthält, wenn wir sie von den Designer\*innen erhalten, zumeist sehr viele unnötige Elemente (Kommentare, Stylesheet Deklarationen, etc.).
+
+Die Icons durchlaufen daher mehrere automatisierte Schritte zur Optimierung. Neben einer Minifizierung, bei der unnötige Elemente aus dem Markup entfernt und Leerzeichen Eliminiert
+werden, werden aus Performancegründen Icons, die in mehreren Komponenten verwendet werden zu Sets zusammengefasst und in Form sogenannter SVG-Maps ausgeliefert.
+Diese sind vergleichbar zu Sprite-Maps, bei denen mehrere Pixelgrafiken in einer Datei zusammengefasst werden. Der Vorteil hierbei ist, dass nicht jedes Icon
+einzeln, sondern gleich die ganze Map heruntergeladen werden kann und somit die Zahl der Requests drastisch reduziert wird.  
+Mithilfe eines Skripts können beliebig viele SVG-Maps erzeugt werden. Wie das ganze funktioniert wird im Folgenden beschrieben.
+
+## Optimierung von Icons und Erzeugung von SVG-Maps
+
+Zur Optimierung der Icons und der Erzeugung von SVG-Maps ist in der Datei `package.json` ein Skript `optimze-svgs` konfiguriert. Es kann durch Aufruf von `npm run optimize-svgs`
+ausgeführt werden. Das Skript, welches mit Hilfe des Taskrunners [Gulp](https://gulpjs.com/) geschrieben wurde, führt automatisiert hintereinander verschiedene Aufgaben aus.
+
+### Global zu verwendende Icons
+
+Global zu verwendende Icons werden nur optimiert und zu einer SVG-Map zusammengefasst, wenn sie in einem Ordner `svgmap` im Verzeichnis
+`src/assets/icons/NAME_SVGMAP` abgelegt werden. Soll z.B. eine SVG-Map aller EPG-Icons erzeugt werden, müssen diese dazu im Ordner `src/assets/icons/epg/svgmap`abgelegt werden.
+Für jede SVG-Map werden nacheinander die folgenden Schritte abgearbeitet:
+
+-   Minifizierung der Icons mittels `gulp-svgmin` ([https://github.com/ben-eb/gulp-svgmin](https://github.com/ben-eb/gulp-svgmin))
+-   Erzeugung und Zusammenfassung der Icons in einer SVG-Map mit `gulp-svgstore` ([https://github.com/w0rm/gulp-svgstore](https://github.com/w0rm/gulp-svgstore))
+-   Entfernung aller `fill`-Attribute, sofern diese nicht zuvor in den Einzel SVG händisch mit dem Prefix `preserve--` versehen wurden oder ihnen der Wert `currentColor`gegeben wurde
+-   Abspeichern der SVG-Map unter dem Namen `svgmap.min.svg` im Verzeichnis `src/assets/icons/NAME_SVGMAP`
+
+### Markenspezifische Icons
+
+Auch Icons, die nur von jeweils einer Marke verwendet werden, werden optimiert und in SVG-Maps zusammengefasst. Entsprechende Icons müssen dazu in einem Verzeichnis der
+Form `src/assets/brand/NAME_MARKE/icons/NAME_SVGMAP/svgmap` abgelegt werden. Konkret bedeutet das z.B. für die Marken Logos von hr3, dass sie unter dem Pfad
+`src/assets/hr3/icons/logo/svgmap` abgelegt werden müssen. Alle weiteren Schritte entsprechen denen der globalen Icons. Lediglich der Ablageort der Datei
+`svgmap.min.svg` ist mit `src/assets/brand/NAME_BRAND/icons/NAME_SVGMAP` ein anderer.
+
+### Sonderfälle
+
+Als Sonderfälle gelten derzeit Karten (Wetter, Verkehr, etc.) im SVG-Format. Diese werden auch optimiert und minifiziert, aber nicht in SVG-Maps zusammengefasst.
+Sie müssen im Verzeichnis `src/assets/icons/NAME_FEATURE` abgelegt werden. Optimiert werden alle Karten, deren Name nach dem Schema `NAME_KARTE.src.svg` aufgebaut ist.
+Die fertig optimierten Karten werden unter dem Namen `NAME_KARTE.min.svg` im gleichen Ordner abgespeichert. Die Datei `regiomap_regions_cities.src.svg` im Verzeichnis
+`src/assets/icons/weather` wird demgemäß als `regiomap_regions_cities.min.svg` abgespeichert.
