@@ -1,3 +1,21 @@
+# v0.35.8 (Wed Feb 09 2022)
+
+#### 🐛 Bug Fix
+
+- New Verkehricon [#138](https://github.com/mumprod/hr-design-system-handlebars/pull/138) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### 📝 Documentation
+
+- Feature/svg optimization docs [#137](https://github.com/mumprod/hr-design-system-handlebars/pull/137) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.35.7 (Wed Feb 09 2022)
 
 #### 🐛 Bug Fix
