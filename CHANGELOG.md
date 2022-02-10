@@ -1,3 +1,16 @@
+# v0.35.10 (Thu Feb 10 2022)
+
+#### 🐛 Bug Fix
+
+- bugfix: (Safari) Categories-Flyout is not displayed [#141](https://github.com/mumprod/hr-design-system-handlebars/pull/141) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.35.9 (Thu Feb 10 2022)
 
 #### 🐛 Bug Fix
