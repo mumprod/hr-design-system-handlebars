@@ -259,21 +259,23 @@
                 //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight;
-                    if(value == true ) { 
+                    if(window.innerWidth < 1024) { 
+                        if(value == true ) { 
                         
-                        if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
-                            this.$refs.sectionnavigation.style.maxHeight = a +'px'
-                            this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                            if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
+                                this.$refs.sectionnavigation.style.maxHeight = a +'px'
+                                this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                            } else {
+                                this.$refs.sectionnavigation.style.maxHeight = window.innerHeight - this.$refs.sectionnavigation.offsetTop +'px'
+                                this.$refs.sectionnavigation.style.overflowY = 'scroll'
+                            } 
                         } else {
-                            this.$refs.sectionnavigation.style.maxHeight = window.innerHeight - this.$refs.sectionnavigation.offsetTop +'px'
-                            this.$refs.sectionnavigation.style.overflowY = 'scroll'
-                        } 
-                    } else {
-                       if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
-                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
-                       } else {
-                          this.$refs.sectionnavigation.style.overflowY = 'scroll' 
-                       }
+                            if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
+                                this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                            } else {
+                                this.$refs.sectionnavigation.style.overflowY = 'scroll' 
+                            }
+                        }
                     }
                 })   
             },
