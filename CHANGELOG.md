@@ -1,3 +1,15 @@
+# v0.35.11 (Thu Feb 10 2022)
+
+#### 🐛 Bug Fix
+
+- navIsVisible store holds information if Navigation is open ore closed [#139](https://github.com/mumprod/hr-design-system-handlebars/pull/139) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.10 (Thu Feb 10 2022)
 
 #### 🐛 Bug Fix
