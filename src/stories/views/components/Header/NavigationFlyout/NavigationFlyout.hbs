@@ -16,7 +16,15 @@
                 {{#if this.showAsFlyout}} lg:rounded-b lg:pl-4{{/if}}" 
 
         aria-labelledby="flyout-{{getRandom}}-1" 
-        x-effect="$el.setAttribute('aria-expanded', dropped); $el.setAttribute('aria-hidden', !dropped)"
+        {{#if this.showAsFlyout}}
+            x-effect="$el.setAttribute('aria-expanded', dropped); $el.setAttribute('aria-hidden', !dropped)"
+        {{else}}
+            {{#if ../this.selected}} 
+                x-effect="$el.setAttribute('aria-expanded', $screen('lg') || dropped); $el.setAttribute('aria-hidden', !($screen('lg') || dropped))"
+            {{else}}  
+                x-effect="$el.setAttribute('aria-expanded', dropped); $el.setAttribute('aria-hidden', !dropped)"
+            {{/if}} 
+        {{/if}}    
     >
         {{#unless ../this.isCluster ~}}
             {{#unless ../_isSectionNav}}

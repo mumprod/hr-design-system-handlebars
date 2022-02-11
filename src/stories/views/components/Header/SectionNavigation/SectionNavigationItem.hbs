@@ -26,7 +26,7 @@
                     class="link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     aria-haspopup="true" 
-                    x-effect="$el.setAttribute('aria-expanded', dropped)"
+                    x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'))"
                     aria-owns="flyout-{{getRandom}}"
                     aria-controls="flyout-{{getRandom}}"
                     data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
