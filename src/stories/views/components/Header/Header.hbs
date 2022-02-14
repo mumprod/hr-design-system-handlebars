@@ -1,6 +1,6 @@
 <div x-data="mainNavigationHandler()" x-init="init()">
 
-    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-big{{else}}lg:h-header-small{{/if}} md:h-22 h-30">   
+    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
@@ -20,7 +20,7 @@
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-102">   
+                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-102">   
                 <div id="serviceNavMainContainer" 
                     class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-101">
 
