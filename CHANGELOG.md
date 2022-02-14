@@ -1,3 +1,16 @@
+# v0.35.13 (Mon Feb 14 2022)
+
+#### 🐛 Bug Fix
+
+- Remove Border in tablet [#144](https://github.com/mumprod/hr-design-system-handlebars/pull/144) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.12 (Fri Feb 11 2022)
 
 #### 🐛 Bug Fix
