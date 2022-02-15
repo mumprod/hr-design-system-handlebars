@@ -54,7 +54,7 @@
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
                 :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
-                class="flex justify-center order-3 w-full overflow-hidden transition-all duration-500 ease-in-out tablet:absolute tablet:top-22 tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:duration-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+                class="flex justify-center order-3 w-full overflow-hidden duration-500 transition-max-height lg:transition-margin-top lg:duration-500 tablet:absolute tablet:top-22 tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
             >
                 {{> components/Header/SectionNavigation/SectionNavigation }}
             </div>
