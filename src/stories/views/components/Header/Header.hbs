@@ -1,6 +1,6 @@
 <div x-data="mainNavigationHandler()" x-init="init()">
 
-    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-big{{else}}lg:h-header-small{{/if}} md:h-22 h-30">   
+    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
@@ -20,7 +20,7 @@
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white md:border-b bg-blue-congress z-102">   
+                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-102">   
                 <div id="serviceNavMainContainer" 
                     class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-101">
 
@@ -103,11 +103,21 @@
         // context for the main header element
         Alpine.data('mainNavigationHandler', () =>({
             
+            throttle(fn, wait) {
+                console.log("throttle");
+                var time = Date.now();
+                return function() {
+                    if ((time + wait - Date.now()) < 0) {
+                    fn();
+                    time = Date.now();
+                    }
+                }
+            },
             init(){
                 let lastScrollTop = 0
                 let height = top.innerHeight
 
-                window.addEventListener('scroll', () => {
+                window.addEventListener('scroll', this.throttle( () => {
                     let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
                     winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                     //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -116,7 +126,7 @@
                     //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent) 
                     this.$store.navIsVisible = !this.isNavHidden()
                     //console.log(this.$store.navIsVisible);      
-                })
+                },50))
             },
             percent: 0,
             scrollingDown: true,
