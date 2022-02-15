@@ -113,11 +113,21 @@
                     }
                 }
             },
+            debounce (callback, wait) {
+                let timeoutId = null;
+                return (...args) => {
+                    window.clearTimeout(timeoutId);
+                    timeoutId = window.setTimeout(() => {
+                    callback.apply(null, args);
+                    }, wait);
+                };
+
+            },
             init(){
                 let lastScrollTop = 0
                 let height = top.innerHeight
 
-                window.addEventListener('scroll', this.throttle( () => {
+                window.addEventListener('scroll', this.debounce( () => {
                     let winScroll = document.body.scrollTop || document.documentElement.scrollTop 
                     winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
                     //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
