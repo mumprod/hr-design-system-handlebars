@@ -1,3 +1,15 @@
+# v0.35.17 (Tue Feb 15 2022)
+
+#### 🐛 Bug Fix
+
+- debounce instead of throttle [#148](https://github.com/mumprod/hr-design-system-handlebars/pull/148) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.35.16 (Tue Feb 15 2022)
 
 #### 🐛 Bug Fix
