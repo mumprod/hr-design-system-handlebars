@@ -54,6 +54,7 @@ module.exports = {
             transitionProperty: {
                 'max-height': 'max-height',
                 'height': 'height',
+                'margin-top': 'margin-top',
                 'spacing': 'margin, padding',
             },
             transitionDuration: {
