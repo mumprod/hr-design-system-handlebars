@@ -1,8 +1,8 @@
 <li :class="dropped ? 'h-auto' : 'h-10'"  
-    class="{{inline-switch _fromNav "SectionNav,ServiceNav" "md:pl-4 lg:pl-0,md:pl-0 lg:pl-0 lg:pr-0 break-words"}} {{#if parentselected}}lg:whitespace-nowrap lg:pr-4  {{/if}} flex h-auto py-2 pl-4 text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline ">
-    {{#>components/base/link}}
+    class="pl-4 {{#if _flyout}}lg:px-0 {{else}}lg:px-2 lg:first-of-type:pl-0 {{/if}}{{#if parentselected}}lg:whitespace-nowrap{{/if}} flex h-auto text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline">
+    
+    {{#>components/base/link _cssClasses=(inline-switch _fromNav '["SectionNav","ServiceNav"]' '["link-focus-inset py-2 w-full","link-focus py-2 md:pl-0 lg:pl-0 lg:pr-0 break-words w-full"]') }}
         {{content.text}}
         {{~#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="w-4 h-4 fill-current ml-2 inline-flex" _iconmap="icons" }} {{/if}}
-    {{/components/base/link}} 
-   
+    {{/components/base/link}}  
 </li>

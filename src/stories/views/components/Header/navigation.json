@@ -1,4 +1,5 @@
 {
+    "hasOpenSubNavigation": false,
     "brandNavigationItems": [
         {
             "name": "hessenschau.DE",
@@ -72,13 +73,13 @@
         {
             "navigationItems": [
                 {
-                    "id": "videopodcast",
+                    "id": "video-podcast",
                     "text": "Video & Podcast",
                     "icon": "videopodcast-ds",
                     "flyoutStartLinkText": "Übersicht Video & Podcast",
                     "selected": false,
                     "isCluster": false,
-                    "url": "https://www.test.de",
+                    "url": "https://www.video-podcast.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "2",
@@ -195,10 +196,11 @@
         {
             "navigationItems": [
                 {
-                    "id": "wetter",
+                    "id": "weather",
                     "text": "Wetter",
                     "icon": "wetter-ds",
                     "flyoutStartLinkText": "Übersicht Wetter",
+                    "url": "https://www.weather.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "2",
@@ -315,10 +317,11 @@
         {
             "navigationItems": [
                 {
-                    "id": "verkehr",
+                    "id": "traffic",
                     "text": "Verkehr",
                     "icon": "verkehr-ds",
                     "flyoutStartLinkText": "Übersicht Verkehr",
+                    "url": "https://www.traffic.de",
                     "subNavigation": {
                         "showAsFlyout": true,
                         "columnCount": "1",

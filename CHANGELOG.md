@@ -1,3 +1,732 @@
+# v0.35.15 (Tue Feb 15 2022)
+
+#### 🐛 Bug Fix
+
+- - removed animation for sectionNavWrapper in desktop [#146](https://github.com/mumprod/hr-design-system-handlebars/pull/146) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.14 (Tue Feb 15 2022)
+
+#### 🐛 Bug Fix
+
+- debounced scroll Listener to prevent flickering [#145](https://github.com/mumprod/hr-design-system-handlebars/pull/145) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.13 (Mon Feb 14 2022)
+
+#### 🐛 Bug Fix
+
+- Remove Border in tablet [#144](https://github.com/mumprod/hr-design-system-handlebars/pull/144) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.12 (Fri Feb 11 2022)
+
+#### 🐛 Bug Fix
+
+- accessibility rework 2 [#142](https://github.com/mumprod/hr-design-system-handlebars/pull/142) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.35.11 (Thu Feb 10 2022)
+
+#### 🐛 Bug Fix
+
+- navIsVisible store holds information if Navigation is open ore closed [#139](https://github.com/mumprod/hr-design-system-handlebars/pull/139) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.10 (Thu Feb 10 2022)
+
+#### 🐛 Bug Fix
+
+- bugfix: (Safari) Categories-Flyout is not displayed [#141](https://github.com/mumprod/hr-design-system-handlebars/pull/141) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.35.9 (Thu Feb 10 2022)
+
+#### 🐛 Bug Fix
+
+- accessibility-rework [#140](https://github.com/mumprod/hr-design-system-handlebars/pull/140) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.35.8 (Wed Feb 09 2022)
+
+#### 🐛 Bug Fix
+
+- New Verkehricon [#138](https://github.com/mumprod/hr-design-system-handlebars/pull/138) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### 📝 Documentation
+
+- Feature/svg optimization docs [#137](https://github.com/mumprod/hr-design-system-handlebars/pull/137) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.35.7 (Wed Feb 09 2022)
+
+#### 🐛 Bug Fix
+
+- position:absolute for sectionNavWrapper [#136](https://github.com/mumprod/hr-design-system-handlebars/pull/136) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.6 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- - fixed header height [#135](https://github.com/mumprod/hr-design-system-handlebars/pull/135) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.5 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: "mobile" search field closes on touch [#134](https://github.com/mumprod/hr-design-system-handlebars/pull/134) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.35.4 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- installed alpineJS modules [#133](https://github.com/mumprod/hr-design-system-handlebars/pull/133) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.3 (Tue Feb 08 2022)
+
+#### 🐛 Bug Fix
+
+- - arrows are position correctly also without JS [#132](https://github.com/mumprod/hr-design-system-handlebars/pull/132) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.2 (Mon Feb 07 2022)
+
+#### 🐛 Bug Fix
+
+- - static Version number for alpine js packages 3.8.1 [#131](https://github.com/mumprod/hr-design-system-handlebars/pull/131) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.1 (Fri Feb 04 2022)
+
+#### 🐛 Bug Fix
+
+- activate optimizeUniversalDefaults in tailwind config [#130](https://github.com/mumprod/hr-design-system-handlebars/pull/130) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.35.0 (Fri Feb 04 2022)
+
+#### 🚀 Enhancement
+
+- Feature/frontify6 31 [#129](https://github.com/mumprod/hr-design-system-handlebars/pull/129) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.34.31 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1376 [#128](https://github.com/mumprod/hr-design-system-handlebars/pull/128) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.30 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- some fixes in autocomplete search [#127](https://github.com/mumprod/hr-design-system-handlebars/pull/127) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.29 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- changed z-index of brandNavWrapper so it dont overlaps sectionNavWrap… [#126](https://github.com/mumprod/hr-design-system-handlebars/pull/126) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.28 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Url in service nav Flyout was missing [#125](https://github.com/mumprod/hr-design-system-handlebars/pull/125) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.27 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- - removed this from _flyout call so delivery works as expected [#124](https://github.com/mumprod/hr-design-system-handlebars/pull/124) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.26 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1402 + DPE-1403 + DPE-1404 [#123](https://github.com/mumprod/hr-design-system-handlebars/pull/123) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.25 (Wed Feb 02 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe-1400 Tablet View: Flyouts 50% bis zum Rand [#122](https://github.com/mumprod/hr-design-system-handlebars/pull/122) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.24 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- fixes overlay and scrolling in flyouts on different screensizes [#121](https://github.com/mumprod/hr-design-system-handlebars/pull/121) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.23 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Navi: Element State "Focus" stylen [#118](https://github.com/mumprod/hr-design-system-handlebars/pull/118) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.22 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1386 scrolling im flyout [#119](https://github.com/mumprod/hr-design-system-handlebars/pull/119) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.21 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1376 [#120](https://github.com/mumprod/hr-design-system-handlebars/pull/120) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.20 (Tue Feb 01 2022)
+
+#### 🐛 Bug Fix
+
+- Navi: Element State "Focus" stylen [#117](https://github.com/mumprod/hr-design-system-handlebars/pull/117) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.19 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- - reverted navigation JSON Adjustments because not necessary [#116](https://github.com/mumprod/hr-design-system-handlebars/pull/116) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.18 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- - several bugs have been fixed [#115](https://github.com/mumprod/hr-design-system-handlebars/pull/115) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.17 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- navigation json structure was wrong [#113](https://github.com/mumprod/hr-design-system-handlebars/pull/113) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.16 (Fri Jan 28 2022)
+
+#### 🐛 Bug Fix
+
+- re-added tablet-css, integrates alpine-collective´s toolkit (https://github.com/alpine-collective/toolkit), uses alpine.data for mainNavigationHandler [#114](https://github.com/mumprod/hr-design-system-handlebars/pull/114) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.15 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- fixes click on search when overlay was visible before [#112](https://github.com/mumprod/hr-design-system-handlebars/pull/112) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.14 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- oh mann ey... [#111](https://github.com/mumprod/hr-design-system-handlebars/pull/111) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.13 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1391 Navi: Bug: Regionen Flyout(Cluster) fehlerhaft wenn Eintrag länger [#109](https://github.com/mumprod/hr-design-system-handlebars/pull/109) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.12 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- Tablet: first service icon border-left missing [#110](https://github.com/mumprod/hr-design-system-handlebars/pull/110) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.11 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- fixes clickoutside on flyouts [#108](https://github.com/mumprod/hr-design-system-handlebars/pull/108) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.10 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1389 [#107](https://github.com/mumprod/hr-design-system-handlebars/pull/107) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.9 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- Some fixes on mobile scroll/flyout behaviour  still buggy but better than before   ) [#99](https://github.com/mumprod/hr-design-system-handlebars/pull/99) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.34.8 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1388: Abstand letztes Sevice Icon zu groß [#105](https://github.com/mumprod/hr-design-system-handlebars/pull/105) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.7 (Wed Jan 26 2022)
+
+#### 🐛 Bug Fix
+
+- remove class link [#106](https://github.com/mumprod/hr-design-system-handlebars/pull/106) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.34.6 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Navi:Bug: Abstand des ersten Eintrages in der SubNav in Desktop [#104](https://github.com/mumprod/hr-design-system-handlebars/pull/104) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.5 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- add click.outside-handler [#103](https://github.com/mumprod/hr-design-system-handlebars/pull/103) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.34.4 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Anpassungen Flyouts und Section Navigation [#102](https://github.com/mumprod/hr-design-system-handlebars/pull/102) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.3 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- accessibility-rework [#101](https://github.com/mumprod/hr-design-system-handlebars/pull/101) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.34.2 (Tue Jan 25 2022)
+
+#### 🐛 Bug Fix
+
+- Dynamic hight for <header> tag depending on hasOpenSubNavigation [#100](https://github.com/mumprod/hr-design-system-handlebars/pull/100) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- [@vascoeduardo](https://github.com/vascoeduardo)
+
+---
+
+# v0.34.1 (Wed Jan 19 2022)
+
+#### 🐛 Bug Fix
+
+- Runde Ecken für Rubriken-Flyout [#98](https://github.com/mumprod/hr-design-system-handlebars/pull/98) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.34.0 (Fri Jan 14 2022)
+
+#### 🚀 Enhancement
+
+- chore: update tailwind.css and its dependencies from version 2.0 to 3.0 [#97](https://github.com/mumprod/hr-design-system-handlebars/pull/97) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.33.0 (Thu Jan 13 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1358 stickyness desktop / diverse fixes in mobile view  flyouts on scroll etc [#96](https://github.com/mumprod/hr-design-system-handlebars/pull/96) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.32.7 (Wed Jan 12 2022)
+
+#### 🐛 Bug Fix
+
+- add missing aria-tags [#94](https://github.com/mumprod/hr-design-system-handlebars/pull/94) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.32.6 (Wed Jan 05 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1337 [#95](https://github.com/mumprod/hr-design-system-handlebars/pull/95) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.32.5 (Mon Dec 20 2021)
+
+#### 🐛 Bug Fix
+
+- Remove the text "No suggestions" [#93](https://github.com/mumprod/hr-design-system-handlebars/pull/93) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
+# v0.32.4 (Fri Dec 10 2021)
+
+#### 🐛 Bug Fix
+
+- Some fixes on the navi [#92](https://github.com/mumprod/hr-design-system-handlebars/pull/92) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.32.3 (Fri Dec 10 2021)
+
+#### 🐛 Bug Fix
+
+- Some cosmetics [#91](https://github.com/mumprod/hr-design-system-handlebars/pull/91) ([@StefanVesper](https://github.com/StefanVesper))
+- updates deprecated features according to [#90](https://github.com/mumprod/hr-design-system-handlebars/pull/90) ([@szuelch](https://github.com/szuelch))
+- Feature/storybook update [#89](https://github.com/mumprod/hr-design-system-handlebars/pull/89) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.32.2 (Wed Dec 08 2021)
+
+#### 🐛 Bug Fix
+
+- Feature/resource url helper [#88](https://github.com/mumprod/hr-design-system-handlebars/pull/88) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.32.1 (Wed Dec 08 2021)
+
+#### 🐛 Bug Fix
+
+- added AnchorNav / new loca.js (accepts object with locas now) [#87](https://github.com/mumprod/hr-design-system-handlebars/pull/87) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.32.0 (Tue Dec 07 2021)
+
+#### 🚀 Enhancement
+
+- Dpe 964 scroll verhalten haupt navigation [#86](https://github.com/mumprod/hr-design-system-handlebars/pull/86) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.31.1 (Tue Nov 30 2021)
+
+#### 🐛 Bug Fix
+
+- making brandnavi slidable [#85](https://github.com/mumprod/hr-design-system-handlebars/pull/85) (zouhair1 [@elbaciri](https://github.com/elbaciri))
+
+#### Authors: 2
+
+- [@elbaciri](https://github.com/elbaciri)
+- selbaciri (zouhair1)
+
+---
+
+# v0.31.0 (Mon Nov 29 2021)
+
+#### 🚀 Enhancement
+
+- adds logos for cluster-teaser [#84](https://github.com/mumprod/hr-design-system-handlebars/pull/84) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.30.0 (Wed Nov 24 2021)
 
 #### 🚀 Enhancement

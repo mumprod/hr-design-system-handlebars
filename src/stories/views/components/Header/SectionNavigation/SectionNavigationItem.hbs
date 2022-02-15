@@ -2,17 +2,18 @@
     <li x-data="dropdown"
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
-        :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress h-auto' : 'h-10'" 
-        class="{{#if this.selected}} -currentSection {{/if}} flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:pl-4 lg:first:pl-0 first:border-t md:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:justify-center lg:w-auto bg-blue-congress ">   
-    
+        :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress h-auto' : 'h-10 lg:hover:underline'" 
+        class="first:lg:-ml-4 {{#if this.selected}}-currentSection lg:justify-center {{/if}}flex flex-wrap justify-start w-full text-white list-none border-b border-white md:pl-0 lg:first:pl-0 first:border-t lg:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-blue-congress lg:rounded-t">   
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
-                @click.debounce="toggle" 
-                :class="dropped ? 'first:font-bold lg:first:font-normal' : 'first:font-normal'"
-                class="pl-4 lg:pl-0 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}" 
-                aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" 
-                data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+                @click.debounce.100ms="toggle()" 
+                :class="dropped ? 'first:font-bold lg:first:font-normal lg:underline' : 'first:font-normal'"
+                class="link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-4 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold{{/if}}" 
+                x-effect="$el.setAttribute('aria-expanded', dropped)"
+                aria-owns="flyout-{{getRandom}}" 
+                aria-controls="flyout-{{getRandom}}" 
+                data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
         {{~else ~}}
 
@@ -22,15 +23,19 @@
                     id="flyout-{{nextRandom}}-1"
                     
                     :class="dropped ? 'font-bold' : ''"
-                    class="pl-4 pr-8 lg:pl-0 lg:pr-4 flex flex-auto h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold {{/if}}"
-                    {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2"
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
+                    class="link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
+                    {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
+                    aria-haspopup="true" 
+                    x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'))"
+                    aria-owns="flyout-{{getRandom}}"
+                    aria-controls="flyout-{{getRandom}}"
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~else ~}} 
 {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a href="{{resourceUrl this.url}}" 
-                    class="flex justify-start pl-4 pr-8 lg:first:pl-0 lg:first:pr-4 h-10 lg:justify-center items-center {{#if this.selected}} font-bold pl-4 md:pl-5{{/if}}" 
+                    class="link-focus-inset-white js-load flex justify-start pl-4 pr-4 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
             {{~/if}}
 
         {{~/if }}
@@ -41,8 +46,8 @@
             
             {{#if this.subNavigation.showAsFlyout ~}}
                 
-                    <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:pr-4 lg:border-0">
-                        <div :class="dropped ? 'transform rotate-180 flex items-center justify-center':'flex items-center justify-center'">
+                    <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:border-0 lg:pl-1">
+                        <div class="flex items-center justify-center" :class="dropped ? 'transform rotate-180':''">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
                     </div>
@@ -66,15 +71,19 @@
             {{#if this.subNavigation}}
 
                 <button 
-                    @click.debounce="toggle" 
-                    id="flyout-{{getRandom}}-1" 
-                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white lg:hidden" 
-                    aria-haspopup="true" aria-expanded="false" aria-owns="flyout-{{getRandom}}-2" aria-controls="flyout-{{getRandom}}-2" aria-labelledby="flyout-{{getRandom}}-1" 
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
+                    @click.debounce.100ms="toggle()" 
+                    id="button-{{getRandom}}-1" 
+                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white js-load lg:hidden" 
+                    aria-haspopup="true"  
+                    x-effect="$el.setAttribute('aria-expanded', dropped)"
+                    aria-owns="flyout-{{getRandom}}" 
+                    aria-controls="flyout-{{getRandom}}" 
+                    aria-labelledby="flyout-{{getRandom}}-1" 
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
                     <span class="hidden">{{~this.text~}}</span>
                     
-                    <div :class="dropped ? 'transform rotate-180 flex items-center justify-center lg:ml-2 lg:relative lg:right-0':'flex items-center justify-center lg:ml-2 lg:relative lg:right-0'">
+                    <div class="flex items-center justify-center lg:ml-2 lg:relative lg:right-0" :class="dropped ? 'transform rotate-180 ':''">
                         {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                     </div>
                 </button>

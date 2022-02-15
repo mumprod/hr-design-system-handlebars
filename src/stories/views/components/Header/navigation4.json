@@ -1,5 +1,5 @@
 {
-	"hasOpenSubNavigation": false,
+	"hasOpenSubNavigation": true,
 	"brandNavigationItems": [
 		{
 			"name": "hessenschau.DE",
@@ -78,8 +78,8 @@
 					"id": "video-podcast",
 					"text": "Video & Podcast",
 					"icon": "videopodcast-ds",
-					"flyoutStartLinkText": "Übersicht Video & Podcast",					
-					"selected": false,
+					"flyoutStartLinkText": "Übersicht Video & Podcast",
+					"selected": true,
 					"isCluster": false,
 					"url": "https://www.video-podcast.de",
 					"subNavigation": {
@@ -202,7 +202,7 @@
 					"text": "Wetter",
 					"icon": "wetter-ds",
 					"flyoutStartLinkText": "Übersicht Wetter",
-					"url": "https://www.weather.de",
+					"url": "https://www.wetter.de",
 					"subNavigation": {
 						"showAsFlyout": true,
 						"columnCount": "2",
@@ -315,18 +315,6 @@
 					}
 				}
 			]
-		},{
-			"navigationItems": [
-				{
-					"id": "warnung",
-					"text": "Warnung!",
-					"icon": "unwetterwarnungen",
-					"isCluster": false,
-					"url": "https://www.unwetterwarnungen.de",
-					"subNavigation" : false,
-					"extern": false					
-				}
-			]
 		},
 		{
 			"navigationItems": [
@@ -335,7 +323,7 @@
 					"text": "Verkehr",
 					"icon": "verkehr-ds",
 					"flyoutStartLinkText": "Übersicht Verkehr",
-					"url": "https://www.traffic.de",
+					"url": "https://www.verkehr.de",
 					"subNavigation": {
 						"showAsFlyout": true,
 						"columnCount": "1",
@@ -413,7 +401,7 @@
 					"url": "index.html",
 					"labelText": "Startseite der hessenschau",
 					"subNavigationFromIndex": true,
-					"selected": true
+					"selected": false
 				}
 			]
 		},
@@ -524,7 +512,9 @@
 					"text": "Politik",
 					"url": "politik/index.html",
 					"qualifiedRelatedContentOn404": true,
-					"isCluster": false, 
+					
+					"selected": false,	
+				
 					"subNavigation": {
 						"showAsFlyout": false,
 						"columnCount": "1",
@@ -624,7 +614,90 @@
 					"name": "sport",
 					"text": "Sport",
 					"url": "sport/index.html",
-					"qualifiedRelatedContentOn404": true
+					"qualifiedRelatedContentOn404": true,
+					"selected": true,	
+					"subNavigation": {
+						"showAsFlyout": false,
+						"columnCount": "1",
+						"items": [
+							{  "title": "Eintracht Frankfurt",
+								"link": {
+									"content": {
+										"text": "Eintracht Frankfurt"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "SV Darmstadt 98",
+								"link": {
+									"content": {
+										"text": "SV Darmstadt 98"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Fußball",
+								"link": {
+									"content": {
+										"text": "Fußball"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Ergebnisse & Tabellen",
+								"link": {
+									"content": {
+										"text": "Ergebnisse & Tabellen"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Mehr Sport",
+								"link": {
+									"content": {
+										"text": "Mehr Sport"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "Videos",
+								"link": {
+									"content": {
+										"text": "Videos"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": false,
+									"iconName": "extern"
+								}
+							},
+							{
+								"title": "heimspiel!",
+								"link": {
+									"content": {
+										"text": "heimspiel!"
+									},
+									"url": "http://www.test.de",
+									"hasIcon": true,
+									"iconName": "extern"
+								}
+							}				
+						]
+					}
 				}
 			]
 		},
