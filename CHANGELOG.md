@@ -1,3 +1,15 @@
+# v0.35.15 (Tue Feb 15 2022)
+
+#### 🐛 Bug Fix
+
+- - removed animation for sectionNavWrapper in desktop [#146](https://github.com/mumprod/hr-design-system-handlebars/pull/146) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.14 (Tue Feb 15 2022)
 
 #### 🐛 Bug Fix
