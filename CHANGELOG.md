@@ -1,3 +1,17 @@
+# v0.35.18 (Wed Feb 16 2022)
+
+#### 🐛 Bug Fix
+
+- moved statechange to separate clickhandler without debounce [#150](https://github.com/mumprod/hr-design-system-handlebars/pull/150) ([@StefanVesper](https://github.com/StefanVesper))
+- remove margin-top on search-container [#149](https://github.com/mumprod/hr-design-system-handlebars/pull/149) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.35.17 (Tue Feb 15 2022)
 
 #### 🐛 Bug Fix
