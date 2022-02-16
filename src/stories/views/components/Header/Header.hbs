@@ -62,7 +62,7 @@
             <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
                 x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen);$el.setAttribute('aria-hidden', !$store.searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
                 x-show="$store.searchFieldOpen"
-                class="flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 -mt-10 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
+                class="flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
                 @search-close.window="$store.searchFieldOpen = false"
                 @click.outside="$store.searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false"
                 x-transition:enter="transition ease-out duration-200" 
