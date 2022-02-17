@@ -14,10 +14,9 @@
 
                 :class="dropped ? 'bg-white fill-current text-blue-congress lg:border-0 lg:underline' : ''" 
 
-                aria-label="{{this.text}}-Menü öffnen"
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}"
-                x-effect="$el.setAttribute('aria-expanded', $store.serviceNavIsOpen)"
+                x-effect="$el.setAttribute('aria-expanded', $store.serviceNavIsOpen);$el.setAttribute('aria-label', $store.serviceNavIsOpen ? '{{this.text}}-Menü schließen' : '{{this.text}}-Menü öffnen')"
             >
               
         {{else}}
@@ -32,6 +31,7 @@
 
             <div class="w-7 md:w-8 h-7 md:h-8" >
                 {{> components/base/image/icon _icon=this.icon _iconmap="icons" _addClass="w-full h-full"}}
+                <span class="sr-only lg:hidden">{{this.text}}</span>
             </div>
 
             <div :class="dropped ? 'text-blue-congress fill-current' : 'text-white fill-white'" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-200">

@@ -10,7 +10,7 @@
                 @click.debounce.100ms="toggle()" 
                 :class="dropped ? 'first:font-bold lg:first:font-normal lg:underline' : 'first:font-normal'"
                 class="link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-4 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold{{/if}}" 
-                x-effect="$el.setAttribute('aria-expanded', dropped)"
+                x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}" 
                 data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
@@ -75,7 +75,7 @@
                     id="button-{{getRandom}}-1" 
                     class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white js-load lg:hidden" 
                     aria-haspopup="true"  
-                    x-effect="$el.setAttribute('aria-expanded', dropped)"
+                    x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
                     aria-owns="flyout-{{getRandom}}" 
                     aria-controls="flyout-{{getRandom}}" 
                     aria-labelledby="flyout-{{getRandom}}-1" 
