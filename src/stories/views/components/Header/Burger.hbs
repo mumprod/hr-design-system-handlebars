@@ -7,7 +7,7 @@
             @click.debounce="burgerClick()" 
             aria-owns="sectionNav" 
             aria-controls="sectionNav"
-            x-effect="$el.setAttribute('aria-expanded', $store.burgeropen)"           
+            x-effect="$el.setAttribute('aria-expanded', $store.burgeropen);$el.setAttribute('aria-label', $store.burgeropen ? 'Navigation schließen' : 'Navigation öffnen')"
         >
             <span class="sr-only md:hidden">Open main menu</span>
             <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
