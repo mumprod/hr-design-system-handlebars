@@ -1,3 +1,15 @@
+# v0.35.20 (Fri Feb 18 2022)
+
+#### 🐛 Bug Fix
+
+- fixes flashing search on reload and "dropped not defined" on link in … [#152](https://github.com/mumprod/hr-design-system-handlebars/pull/152) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.35.19 (Thu Feb 17 2022)
 
 #### 🐛 Bug Fix
