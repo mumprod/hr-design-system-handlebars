@@ -1,3 +1,15 @@
+# v0.35.21 (Fri Feb 18 2022)
+
+#### 🐛 Bug Fix
+
+- tabindex on navi-links [#153](https://github.com/mumprod/hr-design-system-handlebars/pull/153) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.35.20 (Fri Feb 18 2022)
 
 #### 🐛 Bug Fix
