@@ -59,7 +59,7 @@
                 {{> components/Header/SectionNavigation/SectionNavigation }}
             </div>
             
-            <div :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
+            <div x-cloak :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
                 x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen);$el.setAttribute('aria-hidden', !$store.searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
                 x-show="$store.searchFieldOpen"
                 class="flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
@@ -103,16 +103,6 @@
         // context for the main header element
         Alpine.data('mainNavigationHandler', () =>({
             
-            throttle(fn, wait) {
-                console.log("throttle");
-                var time = Date.now();
-                return function() {
-                    if ((time + wait - Date.now()) < 0) {
-                    fn();
-                    time = Date.now();
-                    }
-                }
-            },
             debounce (callback, wait) {
                 let timeoutId = null;
                 return (...args) => {
