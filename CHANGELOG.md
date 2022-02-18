@@ -1,3 +1,15 @@
+# v0.35.23 (Fri Feb 18 2022)
+
+#### 🐛 Bug Fix
+
+- x-cloak on search button wrapper [#155](https://github.com/mumprod/hr-design-system-handlebars/pull/155) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.35.22 (Fri Feb 18 2022)
 
 #### 🐛 Bug Fix
