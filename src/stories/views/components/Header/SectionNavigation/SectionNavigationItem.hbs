@@ -26,7 +26,7 @@
                     class="link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     aria-haspopup="true" 
-                    x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'))"
+                    x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'));$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
                     aria-owns="flyout-{{getRandom}}"
                     aria-controls="flyout-{{getRandom}}"
                     data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
@@ -35,7 +35,9 @@
                 <a href="{{resourceUrl this.url}}" 
                     class="link-focus-inset-white js-load flex justify-start pl-4 pr-4 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
-                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
+                    data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'
+                    x-effect="$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
+                >
             {{~/if}}
 
         {{~/if }}
