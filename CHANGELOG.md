@@ -1,3 +1,15 @@
+# v0.35.29 (Tue Feb 22 2022)
+
+#### 🐛 Bug Fix
+
+- removed removeYtranslate() call to fix DPE-1464 bug [#161](https://github.com/mumprod/hr-design-system-handlebars/pull/161) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.28 (Tue Feb 22 2022)
 
 #### 🐛 Bug Fix
