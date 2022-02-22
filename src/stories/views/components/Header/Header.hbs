@@ -88,6 +88,8 @@
     //Main Alpine Init Listener
     document.addEventListener('alpine:init', () => {       
         // Alpine.stores for global variables 
+        Alpine.store('clientHeight', document.documentElement.clientHeight || document.body.clientHeight)
+        Alpine.store('clientWidth', document.documentElement.clientWidth || document.body.clientWidth)
         Alpine.store('burgeropen', false);
         Alpine.store('searchFieldOpen', false);
         Alpine.store('serviceNavIsOpen', false);
@@ -157,17 +159,31 @@
                     // this.$refs.sectionnavigation.classList.add('hidden')
                     // this.$refs.sectionnavigation.style.maxHeight="0px"
                 }
+
+                let nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+                let nowClientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+                let nextNowClientHeight = this.$store.clientHeight;
+                if (nextNowClientHeight >= nowClientHeight && this.$store.clientWidth == nowClientWidth) {
+                    // Event handling of keyboard pop-up
+                    nextNowClientHeight = nowClientHeight
+                    this.$store.clientWidth = nowClientWidth
+                }
+                else{
                 // timeout is used to dispatch events after the resize is done
-                let timeout 
-                clearTimeout(timeout)
-                timeout = setTimeout(() => {
-                    this.$refs.sectionnavigation.classList.remove('hidden')
-                    this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
-                    this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
-                  //  this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
-                    this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
-                    this.$screen('lg') ? this.allowScrolling(true) : null
-                }, 250)
+                    let timeout 
+                    clearTimeout(timeout)
+                    timeout = setTimeout(() => {
+                        this.$refs.sectionnavigation.classList.remove('hidden')
+                        this.$store.burgeropen == true ? this.$dispatch('burger-close') :null
+                        this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
+                        this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
+                        this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
+                        this.$screen('lg') ? this.allowScrolling(true) : null
+                    }, 250)
+                    // Event handling of keyboard pop-up
+                    nextNowClientHeight = nowClientHeight
+                    this.$store.clientWidth = nowClientWidth
+                }
             }, 
             toggleSectionNav() {
             //false = sectionNav schließt ( mobile/tablet? --> maxHeight = 0  ///  desktop? just clear maxHeight attribute )  
