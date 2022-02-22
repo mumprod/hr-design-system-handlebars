@@ -178,7 +178,7 @@
                         this.$store.searchFieldOpen === true ? this.$dispatch('search-mobile-click-outside') :null
                         this.$store.searchFieldOpen === true ? this.$dispatch('search-close') :null
                         this.$store.serviceNavIsOpen === true ? this.$dispatch('close-servicemenu') :null
-                        this.$screen('lg') ? this.allowScrolling(true) : null
+                        this.allowScrolling(true)
                     }, 250)
                     // Event handling of keyboard pop-up
                     nextNowClientHeight = nowClientHeight
