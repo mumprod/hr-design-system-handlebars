@@ -211,10 +211,10 @@
             },
             allowScrolling(mode){
                 if(this.$screen(0) && !this.$screen('lg')){
-                    mode == false ? document.body.classList.add('overflow-hidden','fixed', 'w-full') : document.body.classList.remove('overflow-hidden', 'fixed', 'w-full')
+                    mode == false ? document.body.classList.add('overflow-hidden','h-full','w-full') : document.body.classList.remove('overflow-hidden','h-full','w-full')
                 }
                 if(this.$screen('lg') && mode == true){
-                    document.body.classList.remove('overflow-hidden', 'fixed', 'w-full')
+                    document.body.classList.remove('overflow-hidden','h-full','w-full')
                 }            
             }
 
