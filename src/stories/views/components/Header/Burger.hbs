@@ -21,19 +21,21 @@
 <script>
     var burger = () => {
         return {
-            burgerClose(){
+            burgerClose(){               
                 this.$store.burgeropen = false
                 this.$dispatch('toggle-sectionnav', false); 
             },
-            burgerClick(){
+            burgerClick(){               
                 this.$store.serviceNavIsOpen = false
                 this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);  
-                this.percent > 50 ? this.removeYtranslate() : null;
-                this.allowScrolling(!this.$store.burgeropen)
+                // Todo: not doing anything! can be removed?
+                // this.percent > 50 ? this.removeYtranslate() : null;
+                this.allowScrolling(!this.$store.burgeropen)              
             },
             removeYtranslate(){
-                this.$refs.serviceList.classList.remove('-mt-40'); 
-                this.$refs.sectionnavigation.classList.remove('-mt-40')
+                // Todo: not doing anything! can be removed?
+                //this.$refs.serviceList.classList.remove('-mt-40'); 
+                //this.$refs.sectionnavigation.classList.remove('-mt-40')
             }
         }
     }
