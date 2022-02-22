@@ -1,3 +1,15 @@
+# v0.35.25 (Tue Feb 22 2022)
+
+#### 🐛 Bug Fix
+
+- changed overlay z-index so TopThemen Nav in ticker is covert [#157](https://github.com/mumprod/hr-design-system-handlebars/pull/157) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.24 (Tue Feb 22 2022)
 
 #### 🐛 Bug Fix
