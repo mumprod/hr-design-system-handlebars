@@ -1,3 +1,16 @@
+# v0.35.24 (Tue Feb 22 2022)
+
+#### 🐛 Bug Fix
+
+- window.resize due to virtual keyboard in Android causes issues... [#156](https://github.com/mumprod/hr-design-system-handlebars/pull/156) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.35.23 (Fri Feb 18 2022)
 
 #### 🐛 Bug Fix
