@@ -1,3 +1,15 @@
+# v0.35.27 (Tue Feb 22 2022)
+
+#### 🐛 Bug Fix
+
+- remove 'fixed' class from body on resize to desktop mode [#159](https://github.com/mumprod/hr-design-system-handlebars/pull/159) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.26 (Tue Feb 22 2022)
 
 #### 🐛 Bug Fix
