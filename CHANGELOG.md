@@ -1,3 +1,15 @@
+# v0.35.31 (Wed Feb 23 2022)
+
+#### 🐛 Bug Fix
+
+- removed .. from url [#163](https://github.com/mumprod/hr-design-system-handlebars/pull/163) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.30 (Wed Feb 23 2022)
 
 #### 🐛 Bug Fix
