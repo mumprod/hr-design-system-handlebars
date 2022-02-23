@@ -1,5 +1,6 @@
 <div 
-    id="serviceList" 
+    id="serviceList"
+    @click.outside="$store.serviceNavIsOpen = false; allowScrolling(!$store.searchFieldOpen && !$store.burgeropen)"
     x-ref="serviceList"
     :class="shouldServiceIconsBeHidden() ? '-mt-40' : ''"
     class="absolute left-0 flex justify-center flex-initial w-full h-10 max-w-full align-top border-t border-white -z-1000 md:z-101 md:h-12 top-10 bg-blue-congress md:border-0 md:top-auto md:w-auto md:left-auto md:static md:justify-end md:flex md:flex-auto lg:h-16 lg:pl-0 lg:pr-4 lg:w-3/4 "
