@@ -16,7 +16,7 @@
 
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}"
-                x-effect="$el.setAttribute('aria-expanded', $store.serviceNavIsOpen);$el.setAttribute('aria-label', $store.serviceNavIsOpen ? '{{this.text}}-Menü schließen' : '{{this.text}}-Menü öffnen')"
+                x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('aria-label', dropped ? '{{this.text}}-Menü schließen' : '{{this.text}}-Menü öffnen')"
             >
               
         {{else}}
