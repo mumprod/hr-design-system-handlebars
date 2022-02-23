@@ -1,3 +1,15 @@
+# v0.35.32 (Wed Feb 23 2022)
+
+#### 🐛 Bug Fix
+
+- fix aria-bug in ServiceNav [#164](https://github.com/mumprod/hr-design-system-handlebars/pull/164) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.35.31 (Wed Feb 23 2022)
 
 #### 🐛 Bug Fix
