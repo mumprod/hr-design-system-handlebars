@@ -4,7 +4,7 @@
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
-            :class="`${percent}` > 0 ? '-mt-10 lg:-mt-8' : ''  "
+            :class="shouldBrandNavBeHidden() ? '-mt-10 lg:-mt-8' : ''  "
             class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
             
             <div id="anchorNavWrapper" 
@@ -79,7 +79,7 @@
         </div>
     
     </header>
-    <div x-ref="myOverlay"></div>
+    <div x-ref="myOverlay">
         <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-100 lg:hidden opacity-70"></div>
     </div>
 </div>
@@ -138,6 +138,9 @@
                 } else {
                     return this.shouldServiceNavBeHidden()
                 }
+            },
+            shouldBrandNavBeHidden() {
+                return this.percent > 0 
             },
             shouldSectionNavBeHidden() {
                 return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false && this.$screen('lg')
@@ -212,12 +215,12 @@
             disableScrolling() {
                 document.body.classList.add('overflow-hidden','h-full','w-full')
                 this.$refs.myOverlay.ontouchmove = (e) => e.preventDefault();
-                console.log("enable")
+                console.log("disableScrolling" + this.$refs.myOverlay.firstChild)
             },
             enableScrolling() {
                 document.body.classList.remove('overflow-hidden','h-full','w-full')
                 this.$refs.myOverlay.ontouchmove = (e) => true;
-                console.log("disable")
+                console.log("enableScrolling" + this.$refs.myOverlay.firstChild)
             },
             toggleScrolling(mode){
                 if(this.$screen(0) && !this.$screen('lg')){
