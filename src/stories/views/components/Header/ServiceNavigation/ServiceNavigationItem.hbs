@@ -10,13 +10,14 @@
                 x-data="dropdown"
                 id="{{getRandom}}"
                 
-                class="flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
+                class="js-load flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
 
                 :class="dropped ? 'bg-white fill-current text-blue-congress lg:border-0 lg:underline' : ''" 
 
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}"
                 x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('aria-label', dropped ? '{{this.text}}-Menü schließen' : '{{this.text}}-Menü öffnen')"
+                data-new-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'
             >
               
         {{else}}
@@ -49,7 +50,7 @@
                 </div>
             </div>  
         {{#if this.subNavigation}}       
-            {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNav"  }}
+            {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=false  _navigationType="ServiceNavigation" _parent=this.text }}
             </button>
         {{else}}       
             </a>

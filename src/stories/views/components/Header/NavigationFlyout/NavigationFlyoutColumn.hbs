@@ -1,8 +1,8 @@
-<ul class="{{inline-switch count '["1","2"]' '["md:w-1/1", "md:w-1/1 lg:w-1/2"]'}} {{inline-switch navtype '["ServiceNav","SectionNav"]' '["border-b border-gray-200 md:border-0","border-0"]'}} lg:even:pl-4 lg:odd:pr-4 {{#if selected}} lg:flex lg:justify-center lg:h-9 {{/if}} ">
+<ul class="{{inline-switch count '["1","2"]' '["md:w-1/1", "md:w-1/1 lg:w-1/2"]'}} {{inline-switch navtype '["ServiceNavigation","RubrikNavigation"]' '["border-b border-gray-200 md:border-0","border-0"]'}} lg:even:pl-4 lg:odd:pr-4 {{#if selected}} lg:flex lg:justify-center lg:h-9 {{/if}} ">
     {{~#if selected~}}<div class="lg:container lg:flex">{{~/if~}}      
     {{~#each this ~}} 
-        {{~#if this.title~}}    
-            {{> components/Header/NavigationFlyout/NavigationFlyoutItem parentselected=../selected _fromNav=../navtype _flyout=../_flyout ~}}
+        {{~#if this.title~}}
+            {{> components/Header/NavigationFlyout/NavigationFlyoutItem _parentselected=../selected _fromNav=../navtype _flyout=../_flyout _parent=../_parent ~}}
         {{~/if~}}       
     {{~/each~}}
     {{~#if selected~}}</div>{{~/if~}}
