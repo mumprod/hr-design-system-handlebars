@@ -1,3 +1,15 @@
+# v0.35.34 (Fri Feb 25 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1407 iOS mobile/tablet: auf Endgerät ist body noch scrollbar [#168](https://github.com/mumprod/hr-design-system-handlebars/pull/168) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.33 (Wed Feb 23 2022)
 
 #### 🐛 Bug Fix
