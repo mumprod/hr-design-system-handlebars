@@ -215,12 +215,12 @@
             disableScrolling() {
                 document.body.classList.add('overflow-hidden','h-full','w-full')
                 this.$refs.myOverlay.ontouchmove = (e) => e.preventDefault();
-                console.log("disableScrolling" + this.$refs.myOverlay.firstChild)
+                console.log("disableScrolling")
             },
             enableScrolling() {
                 document.body.classList.remove('overflow-hidden','h-full','w-full')
                 this.$refs.myOverlay.ontouchmove = (e) => true;
-                console.log("enableScrolling" + this.$refs.myOverlay.firstChild)
+                console.log("enableScrolling")
             },
             toggleScrolling(mode){
                 if(this.$screen(0) && !this.$screen('lg')){
