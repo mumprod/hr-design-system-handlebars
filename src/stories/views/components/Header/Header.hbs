@@ -140,7 +140,7 @@
                 }
             },
             shouldSectionNavBeHidden() {
-                return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false
+                return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false && this.$screen('lg')
             },
             shouldServiceNavBeHidden() {
                 return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false) 
