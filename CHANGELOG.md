@@ -1,3 +1,15 @@
+# v0.35.35 (Fri Feb 25 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1472 - shouldSectionNavBeHidden only in desktop view [#167](https://github.com/mumprod/hr-design-system-handlebars/pull/167) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.34 (Fri Feb 25 2022)
 
 #### 🐛 Bug Fix
