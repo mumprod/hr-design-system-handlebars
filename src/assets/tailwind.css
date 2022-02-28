@@ -369,7 +369,7 @@
         @apply before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12 
     }
     .-currentSection {
-        @apply before:relative before:w-0 before:h-0 before:-mr-2 before:mt-3 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8 
+        @apply before:absolute before:w-0 before:h-0 before:mr-2 before:-ml-4 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent before:mb-0.5 lg:before:mb-0  lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:ml-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8 
     }
     .-warnung {
         @apply text-red-600 !important;

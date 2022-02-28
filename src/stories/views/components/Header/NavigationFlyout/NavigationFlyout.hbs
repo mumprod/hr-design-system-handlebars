@@ -9,9 +9,12 @@
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()"  :class ="shouldFlyoutBeHidden() ? 'hidden' : ''" {{/if}}  
         
         class="bg-white md:filter md:drop-shadow-md lg:absolute  
-               {{#if ../_isSectionNav}} relative md:top-auto md:left-auto lg:mt-10 w-full transition-all duration-500 ease-in-out
-                    {{#if ../this.selected}} isSelectedAndOpen  lg:ml-0 z-101 lg:border-b lg:border-blue-congress lg:filter-none lg:left-0 flex justify-center
-                    {{else}} z-102 lg:left-auto lg:w-auto {{/if}}
+                {{#if ../_isSectionNav}} relative md:top-auto md:left-auto lg:mt-10 w-full transition-all duration-500 ease-in-out
+                    {{#unless this.showAsFlyout}}
+                        {{#if ../this.selected}}
+                            isSelectedAndOpen  lg:ml-0 z-101 lg:border-b lg:border-blue-congress lg:filter-none lg:left-0 flex justify-center
+                        {{else}} z-102 lg:left-auto lg:w-auto {{/if}}
+                    {{else}} z-102 lg:left-auto lg:w-auto {{/unless}}
                 {{else}} z-102 lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 lg:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 tablet:w-half-screen tablet:ml-half-screen tablet:right-0 tablet:left-auto {{/if}}
                 {{#if this.showAsFlyout}} lg:rounded-b lg:pl-4{{/if}}" 
 
