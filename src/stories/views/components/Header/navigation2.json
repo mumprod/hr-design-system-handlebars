@@ -413,7 +413,7 @@
 					"url": "index.html",
 					"labelText": "Startseite der hessenschau",
 					"subNavigationFromIndex": true,
-					"selected": true
+					"selected": false
 				}
 			]
 		},
@@ -424,6 +424,7 @@
 					"text": "Regionen",
 					"url": "rheinmain/index.html",
 					"isCluster": "true",
+					"selected": true,
 					"subNavigation": {
 						"showAsFlyout": true,
 						"columnCount": "1",
