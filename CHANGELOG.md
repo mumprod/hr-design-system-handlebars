@@ -1,3 +1,22 @@
+# v0.35.40 (Thu Mar 03 2022)
+
+#### 🐛 Bug Fix
+
+- MacOS Safari: ServiceNav-Flyout without shadow because of overflowY='hidden' [#177](https://github.com/mumprod/hr-design-system-handlebars/pull/177) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+- Build/skip tests [#176](https://github.com/mumprod/hr-design-system-handlebars/pull/176) ([@szuelch](https://github.com/szuelch))
+- Build/skip tests [#175](https://github.com/mumprod/hr-design-system-handlebars/pull/175) ([@szuelch](https://github.com/szuelch))
+- change bg-color for testing reasons [#174](https://github.com/mumprod/hr-design-system-handlebars/pull/174) ([@szuelch](https://github.com/szuelch))
+- Build/skip tests [#173](https://github.com/mumprod/hr-design-system-handlebars/pull/173) ([@szuelch](https://github.com/szuelch))
+- Build/skip tests [#172](https://github.com/mumprod/hr-design-system-handlebars/pull/172) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.35.39 (Mon Feb 28 2022)
 
 #### 🐛 Bug Fix
