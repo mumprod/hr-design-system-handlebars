@@ -1,3 +1,15 @@
+# v0.35.41 (Thu Mar 03 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1491 - Pfeil vom Burger erscheint auch ohne Burger [#178](https://github.com/mumprod/hr-design-system-handlebars/pull/178) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.35.40 (Thu Mar 03 2022)
 
 #### 🐛 Bug Fix
