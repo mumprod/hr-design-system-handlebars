@@ -1,6 +1,6 @@
 {{#with this.link}}
     <a {{#with this.webviewUrl}}data-webviewurl="{{this}}"{{/with}} href="{{this.url}}" {{#with this.webviewUrl}}{{/with}} 
-        class="{{#if ../_cssClasses}} {{../_cssClasses}}{{/if}}{{#if _doTracking}} js-load{{else}}{{#if ../this.content.isFileDownload}} js-loadScript{{/if}}{{/if}}{{#if _isSelected}} {{defaultIfEmpty _selectedCssClass "-current"}}{{/if}}"
+        class="sb-link {{#if ../_cssClasses}} {{../_cssClasses}}{{/if}}{{#if _doTracking}} js-load{{else}}{{#if ../this.content.isFileDownload}} js-loadScript{{/if}}{{/if}}{{#if _isSelected}} {{defaultIfEmpty _selectedCssClass "-current"}}{{/if}}"
         {{#if ../_doNavigationTracking}}
         data-new-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "1","clickLabel":"{{../_clickLabelType}}{{#if ../_clickLabelPrefix1}}::{{../_clickLabelPrefix1}}{{/if}}::{{../_clickLabelPrefix2}}-Link geklickt"}]}'
         {{/if}}
