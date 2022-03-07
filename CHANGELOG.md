@@ -1,3 +1,15 @@
+# v0.36.1 (Mon Mar 07 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: adds storybook hook class [#181](https://github.com/mumprod/hr-design-system-handlebars/pull/181) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.36.0 (Mon Mar 07 2022)
 
 #### 🚀 Enhancement
