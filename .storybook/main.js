@@ -11,7 +11,14 @@ module.exports = {
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
-        '@storybook/addon-postcss',
+        {
+            name: '@storybook/addon-postcss',
+            options: {
+                postcssLoaderOptions: {
+                    implementation: require('postcss'),
+                },
+            },
+        },
         '@whitespace/storybook-addon-html',
         '@storybook/addon-a11y',
         'storybook-conditional-toolbar-selector',
@@ -26,6 +33,7 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             components: path.resolve(__dirname, '../src/stories/views/components'),
+            tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
             hrQueryNew$: path.resolve(
                 __dirname,
                 '../src/stories/views/components/generic/hrQueryNew.js'
@@ -39,12 +47,13 @@ module.exports = {
                 '../build/webpack/feature-loader/initializer/loader.js'
             ),
         }
+
         config.module.rules.push(
             {
                 test: /\.handlebars|hbs$/,
                 loader: 'handlebars-loader',
                 include: path.resolve(__dirname, '../'),
-                query: {
+                options: {
                     helperDirs: [path.resolve(__dirname, '../build/helpers')],
                     partialDirs: [path.resolve(__dirname, '../src/stories/views')],
                 },
