@@ -1,3 +1,15 @@
+# v0.37.0 (Wed Mar 09 2022)
+
+#### 🚀 Enhancement
+
+- Build/tailwind [#184](https://github.com/mumprod/hr-design-system-handlebars/pull/184) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.36.2 (Wed Mar 09 2022)
 
 #### 🐛 Bug Fix
