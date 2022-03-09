@@ -361,7 +361,7 @@
         font-style: normal;
         font-stretch: condensed;
     }
-    .grid-page{
+    .grid-page {
         grid-template-columns: 
           [full-start] minmax(1rem, 1fr) 
           [main-start] minmax(0, 64rem) [main-end]
@@ -381,6 +381,27 @@
           grid-column: main;
         }
       }
+    .headline--separator {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .headline--separator:before,
+    .headline--separator:after {
+        content: '';
+        border-top: 1px solid;
+        margin: 3px 20px 0 0;
+        flex: 1 0 20px;
+    }
+    
+    .headline--separator:after {
+        margin: 3px 0 0 20px;
+    }
+
+
     .-currentBrand {
         @apply lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-white lg:before:border-b-8 lg:before:border-blue-congress lg:before:mt-6
     }
