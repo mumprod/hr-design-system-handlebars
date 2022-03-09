@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li class="{{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-white" >
+    <li class="sb-service-navigation-item {{inline-switch this.id '["weather","warnung","traffic","video-podcast"]' '["-weather", "-warnung", "-traffic", "-video-podcast"]' }} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-white" >
         {{#if this.subNavigation}} 
             <button 
                 id="{{nextRandom}}" 
