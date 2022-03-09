@@ -1,3 +1,44 @@
+# v0.36.2 (Wed Mar 09 2022)
+
+#### 🐛 Bug Fix
+
+- Height Menu&Service flyout ist not 100% if that higher than viewport [#182](https://github.com/mumprod/hr-design-system-handlebars/pull/182) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.36.1 (Mon Mar 07 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: adds storybook hook class [#181](https://github.com/mumprod/hr-design-system-handlebars/pull/181) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.36.0 (Mon Mar 07 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: every component gets a [#180](https://github.com/mumprod/hr-design-system-handlebars/pull/180) ([@szuelch](https://github.com/szuelch))
+
+#### 📝 Documentation
+
+- FEATURE: configures chromatic to make [#179](https://github.com/mumprod/hr-design-system-handlebars/pull/179) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.35.41 (Thu Mar 03 2022)
 
 #### 🐛 Bug Fix
