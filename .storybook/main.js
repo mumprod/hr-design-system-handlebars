@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
 
 module.exports = {
@@ -78,7 +79,46 @@ module.exports = {
                 '/feature',
                 path.resolve(__dirname, '../src/stories/views/'),
                 /\.feature\.js$/
-            )
+            ),
+            {
+                apply: (compiler) => {
+                    compiler.hooks.afterCompile.tap('UpdateTailwindPlugin', (compilation) => {
+                        if (
+                            undefined != compilation.compiler.watchFileSystem &&
+                            Object.keys(compilation.compiler.watchFileSystem.watcher.mtimes)
+                                .length > 0
+                        ) {
+                            if (
+                                !Object.keys(
+                                    compilation.compiler.watchFileSystem.watcher.mtimes
+                                ).some((value) => value.includes('tailwind.css'))
+                            ) {
+                                fs.readFile(
+                                    path.resolve(__dirname, '../src/assets/tailwind.css'),
+                                    'utf8',
+                                    (err, data) => {
+                                        if (err) {
+                                            console.error(err)
+                                            return
+                                        }
+                                        fs.writeFile(
+                                            path.resolve(__dirname, '../src/assets/tailwind.css'),
+                                            data,
+                                            (err) => {
+                                                if (err) {
+                                                    console.error(err)
+                                                    return
+                                                }
+                                                //file written successfully
+                                            }
+                                        )
+                                    }
+                                )
+                            }
+                        }
+                    })
+                },
+            }
         )
 
         config.stats = 'verbose'
