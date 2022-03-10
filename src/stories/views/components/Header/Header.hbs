@@ -1,4 +1,4 @@
-<div x-data="mainNavigationHandler()" x-init="init()">
+<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()">
 
     <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
@@ -62,7 +62,7 @@
             <div x-cloak :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
                 x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen);$el.setAttribute('aria-hidden', !$store.searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
                 x-show="$store.searchFieldOpen"
-                class="flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
+                class="sb-quick-search-flyout flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
                 @search-close.window="$store.searchFieldOpen = false"
                 @click.outside="$store.searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false; toggleScrolling(!$store.serviceNavIsOpensearchFieldOpen && !$store.burgeropen)"
                 x-transition:enter="transition ease-out duration-200" 
@@ -196,15 +196,16 @@
                     if (window.innerWidth < 1024) { 
                         this.$refs.sectionnavigation.style.maxHeight='0px'
                     } else { 
-                        this.$refs.sectionnavigation.style.maxHeight = '' 
+                        this.$refs.sectionnavigation.style.maxHeight = ''
                     }
                 } else {
                     let winheightcorr = parseInt(window.innerHeight) - this.$refs.sectionnavigation.offsetTop
                     let navheight = parseInt(this.$refs.sectionnavigation.scrollHeight)
+                    let brandNavHeight = this.percent > 0 ? 40 : 0 
                 
                     if(navheight > winheightcorr){
                         this.$refs.sectionnavigation.style.overflowY = 'scroll'
-                        this.$refs.sectionnavigation.style.maxHeight = winheightcorr+'px' 
+                        this.$refs.sectionnavigation.style.maxHeight = winheightcorr + brandNavHeight +'px'
                         
                     } else {
                         this.$refs.sectionnavigation.style.overflowY = 'hidden'
@@ -271,12 +272,13 @@
                 this.toggleScrolling(!this.$store.serviceNavIsOpen)
                 
                 let myFlyout = document.querySelector('#flyout-'+this.$el.id)
+                let brandNavHeight = this.percent > 0 ? 40 : 0 
 
                 if (this.$store.serviceNavIsOpen == true && this.dropped == true) {
                     window.setTimeout(function(){
                         if (myFlyout.scrollHeight > window.innerHeight-myFlyout.offsetTop) {
                             myFlyout.style.height = 'auto'
-                            window.innerHeight <= 414 && window.innerWidth < 768 ? myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 80 +'px' : myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 40 +'px' 
+                            window.innerWidth < 768 ? myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 80 + brandNavHeight +'px' : myFlyout.style.maxHeight = window.innerHeight-myFlyout.offsetTop - 40 + brandNavHeight +'px' 
                             myFlyout.style.overflowY = 'scroll'
                         } else {
                             myFlyout.style.maxHeight = ''
@@ -299,6 +301,7 @@
                 //Adds scrollheight of the flyout to sectionNav container to make sure all following items stay visible
                 this.$watch('dropped', value => {
                     let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight;
+                    let brandNavHeight = this.percent > 0 ? 40 : 0
                     if(window.innerWidth < 1024) { 
                         if(value == true ) { 
                         
@@ -306,7 +309,7 @@
                                 this.$refs.sectionnavigation.style.maxHeight = a +'px'
                                 this.$refs.sectionnavigation.style.overflowY = 'hidden'
                             } else {
-                                this.$refs.sectionnavigation.style.maxHeight = window.innerHeight - this.$refs.sectionnavigation.offsetTop +'px'
+                                this.$refs.sectionnavigation.style.maxHeight = window.innerHeight - this.$refs.sectionnavigation.offsetTop + brandNavHeight +'px'
                                 this.$refs.sectionnavigation.style.overflowY = 'scroll'
                             } 
                         } else {
