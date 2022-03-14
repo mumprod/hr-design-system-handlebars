@@ -1,105 +1,104 @@
 
-<div class="grid bg-gray-500 grid-page">
-
-  <div class="grid grid-cols-12 px-8 py-6 bg-white col-full sm:col-main gap-x-6 gap-y-6">
-
-    <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
-    {{#>components/Grid/GridItem size="12"}}
-      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-        12/12 = 100%    
-      </div>
-    {{/components/Grid/GridItem}} 
-      
-    </div>  
-  <div class="grid bg-blue-400 col-full grid-page">
-      <div class="grid grid-cols-12 px-8 py-6 bg-blue-400 col-full sm:col-main gap-x-6 gap-y-9">
-          <h2 class="text-4xl headline--separator col-span-full">Gruppen 100% mit blauen Hintergrung bis Rand</h2>
-          {{#>components/Grid/GridItem size="6"}}
-          <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-            6/12 = 50%    
-          </div>
-          {{/components/Grid/GridItem}}  
-          {{#>components/Grid/GridItem size="6"}}
-          <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-            6/12 = 50%    
-          </div>
-          {{/components/Grid/GridItem}} 
-      </div>
-  </div>
-  <div class="grid grid-cols-12 px-8 py-6 bg-white col-full sm:col-main gap-x-6 gap-y-6">
+<div class="grid bg-gray-100 grid-page">
+  <div class="grid grid-cols-12 px-8 py-6 bg-green-300 col-full sm:col-main gap-x-6 gap-y-6">
+    <a href="#">this</a>
+    {{#>components/Grid/GridGroup size="100"}}
       <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
-    {{#>components/Grid/GridItem size="6"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      6/12 = 50%    
-    </div>
-    {{/components/Grid/GridItem}}  
-    {{#>components/Grid/GridItem size="6"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      6/12 = 50%    
-    </div>
-    {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="12"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          12/12 = 100%    
+        </div>
+      {{/components/Grid/GridItem}}   
+    {{/components/Grid/GridGroup}} 
+    {{#>components/Grid/GridGroupFull  }}    
+      <h2 class="text-4xl headline--separator col-span-full">Gruppen 100% mit blauen Hintergrung bis Rand</h2>
+      {{#>components/Grid/GridItem size="6"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          6/12 = 50%    
+        </div>
+      {{/components/Grid/GridItem}}  
+      {{#>components/Grid/GridItem size="6"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          6/12 = 50%    
+        </div>
+      {{/components/Grid/GridItem}} 
+    {{/components/Grid/GridGroupFull}} 
 
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>
-    {{/components/Grid/GridItem}} 
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>  
-    {{/components/Grid/GridItem}} 
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>   
-    {{/components/Grid/GridItem}}
-  </div>
-  <div class="grid grid-cols-12 px-8 py-8 bg-blue-400 rounded-tl-3xl rounded-br-3xl col-full sm:col-main gap-x-6 gap-y-6">
-    <h2 class="text-4xl headline--separator col-span-full">Gruppen 100% Blaue Box</h2>
-    {{#>components/Grid/GridItem size="3"}}
-    <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
-      3/12 = 25%    
-    </div> 
-    {{/components/Grid/GridItem}}
-    
-    {{#>components/Grid/GridItem size="3"}}
-    <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
-      3/12 = 25%    
-    </div> 
-    {{/components/Grid/GridItem}}
+    {{#>components/Grid/GridGroup size="100"}}
 
-    {{#>components/Grid/GridItem size="3"}}
-    <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
-      3/12 = 25%    
-    </div>   
-    {{/components/Grid/GridItem}}
+      <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
+      {{#>components/Grid/GridItem size="6"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        6/12 = 50%    
+      </div>
+      {{/components/Grid/GridItem}}  
+      {{#>components/Grid/GridItem size="6"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        6/12 = 50%    
+      </div>
+      {{/components/Grid/GridItem}} 
 
-    {{#>components/Grid/GridItem size="3"}}
-    <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
-      3/12 = 25%    
-    </div>    
-    {{/components/Grid/GridItem}} 
-  </div>
-  <div class="grid grid-cols-12 px-8 py-6 bg-white col-full sm:col-main gap-x-6 gap-y-6">
-    <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>
-    {{/components/Grid/GridItem}} 
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>  
-    {{/components/Grid/GridItem}} 
-    {{#>components/Grid/GridItem size="4"}}
-    <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-      4/12 = 33%    
-    </div>   
-    {{/components/Grid/GridItem}}  
-  </div>
-  <div class="grid grid-cols-12 px-8 py-6 bg-white col-full sm:col-main gap-x-6 gap-y-6">
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>  
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>   
+      {{/components/Grid/GridItem}}
+    {{/components/Grid/GridGroup}}
+    {{#>components/Grid/GridGroupTabbed }}
+        <h2 class="text-4xl headline--separator col-span-full">Gruppen 100% Tabbed</h2>
+        {{#>components/Grid/GridItem size="3"}}
+        <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
+          3/12 = 25%    
+        </div> 
+        {{/components/Grid/GridItem}}
+        
+        {{#>components/Grid/GridItem size="3"}}
+        <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
+          3/12 = 25%    
+        </div> 
+        {{/components/Grid/GridItem}}
+
+        {{#>components/Grid/GridItem size="3"}}
+        <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
+          3/12 = 25%    
+        </div>   
+        {{/components/Grid/GridItem}}
+
+        {{#>components/Grid/GridItem size="3"}}
+        <div class="flex items-center justify-center text-4xl text-white bg-gray-500 aspect-video">
+          3/12 = 25%    
+        </div>    
+        {{/components/Grid/GridItem}} 
+      
+    {{/components/Grid/GridGroupTabbed}} 
+    {{#>components/Grid/GridGroup}} 
+      <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>  
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="4"}}
+      <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+        4/12 = 33%    
+      </div>   
+      {{/components/Grid/GridItem}}  
+    {{/components/Grid/GridGroup}} 
     {{#>components/Grid/GridGroup size="50"}}
       <h2 class="text-4xl headline--separator col-span-full">Gruppen 50%</h2>
       {{#>components/Grid/GridItem size="12"}}
@@ -115,14 +114,42 @@
     {{/components/Grid/GridGroup}} 
     {{#>components/Grid/GridGroup size="50"}}
       <h2 class="text-4xl headline--separator col-span-full">Gruppen 50%</h2>
-      {{#>components/Grid/GridItem size="12"}}
+      {{#>components/Grid/GridItem size="6"}}
         <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
           6/12 = 50%    
         </div>
       {{/components/Grid/GridItem}} 
-      {{#>components/Grid/GridItem size="12"}}
+      {{#>components/Grid/GridItem size="6"}}
         <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
           6/12 = 50%    
+        </div>  
+      {{/components/Grid/GridItem}} 
+    {{/components/Grid/GridGroup}} 
+  </div>
+  <div class="grid grid-cols-12 px-8 py-6 bg-green-300 col-full sm:col-main gap-x-6 gap-y-6">
+    {{#>components/Grid/GridGroup size="66"}}
+      <h2 class="text-4xl headline--separator col-span-full">Gruppen 66%</h2>
+      {{#>components/Grid/GridItem size="12"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          8/12 = 66%    
+        </div>
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="12"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          8/12 = 66%    
+        </div>  
+      {{/components/Grid/GridItem}} 
+    {{/components/Grid/GridGroup}} 
+    {{#>components/Grid/GridGroup size="33"}}
+      <h2 class="text-4xl headline--separator col-span-full">Gruppen 33%</h2>
+      {{#>components/Grid/GridItem size="12"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          4/12 = 33%    
+        </div>
+      {{/components/Grid/GridItem}} 
+      {{#>components/Grid/GridItem size="12"}}
+        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+          4/12 = 33%    
         </div>  
       {{/components/Grid/GridItem}} 
     {{/components/Grid/GridGroup}} 
