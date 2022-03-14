@@ -1,3 +1,17 @@
+# v0.37.1 (Mon Mar 14 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1487 Grid [#183](https://github.com/mumprod/hr-design-system-handlebars/pull/183) ([@vascoeduardo](https://github.com/vascoeduardo))
+- FEATURE: adds webpackplugin that always saves [#185](https://github.com/mumprod/hr-design-system-handlebars/pull/185) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.37.0 (Wed Mar 09 2022)
 
 #### 🚀 Enhancement
