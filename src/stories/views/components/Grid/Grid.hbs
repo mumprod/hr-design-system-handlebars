@@ -1,13 +1,14 @@
 
 <div class="grid bg-gray-100 grid-page">
-  <div class="grid grid-cols-12 px-8 py-6 bg-green-300 col-full sm:col-main gap-x-6 gap-y-6">
-    <a href="#">this</a>
+  <div class="grid grid-cols-12 py-6 bg-green-300 sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">   
     {{#>components/Grid/GridGroup size="100"}}
       <h2 class="text-4xl headline--separator col-span-full">Gruppen 100%</h2>
       {{#>components/Grid/GridItem size="12"}}
-        <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
-          12/12 = 100%    
-        </div>
+        <a href="#">
+          <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
+            12/12 = 100%    
+          </div>
+        </a>
       {{/components/Grid/GridItem}}   
     {{/components/Grid/GridGroup}} 
     {{#>components/Grid/GridGroupFull  }}    
@@ -125,8 +126,6 @@
         </div>  
       {{/components/Grid/GridItem}} 
     {{/components/Grid/GridGroup}} 
-  </div>
-  <div class="grid grid-cols-12 px-8 py-6 bg-green-300 col-full sm:col-main gap-x-6 gap-y-6">
     {{#>components/Grid/GridGroup size="66"}}
       <h2 class="text-4xl headline--separator col-span-full">Gruppen 66%</h2>
       {{#>components/Grid/GridItem size="12"}}
