@@ -1,0 +1,33 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
+
+import grid from "./Grid.hbs";
+
+<Meta
+  title="Komponenten/Grid"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return grid({ text, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Grid` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="main"
+    args={{
+      
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="main" />
