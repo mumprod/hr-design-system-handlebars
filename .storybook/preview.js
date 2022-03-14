@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const parameters = {
-    layout: 'fullscreen',
+    //layout: 'fullscreen',
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
