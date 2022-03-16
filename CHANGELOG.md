@@ -1,3 +1,16 @@
+# v0.37.2 (Wed Mar 16 2022)
+
+#### 🐛 Bug Fix
+
+- Adding Animation to ServiceList [#186](https://github.com/mumprod/hr-design-system-handlebars/pull/186) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.37.1 (Mon Mar 14 2022)
 
 #### 🐛 Bug Fix
