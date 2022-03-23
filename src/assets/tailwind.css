@@ -381,7 +381,7 @@
           grid-column: main;
         }
       }
-    .headline--separator {
+    .headline--barrier {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -389,15 +389,15 @@
         text-align: center;
     }
     
-    .headline--separator:before,
-    .headline--separator:after {
+    .headline--barrier:before,
+    .headline--barrier:after {
         content: '';
         border-top: 1px solid;
         margin: 3px 20px 0 0;
         flex: 1 0 20px;
     }
     
-    .headline--separator:after {
+    .headline--barrier:after {
         margin: 3px 0 0 20px;
     }
 
