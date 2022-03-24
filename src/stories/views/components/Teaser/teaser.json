@@ -93,6 +93,7 @@
                             ],
                             "link": {
                                 "url": "/teaser1",
+
                                 "webviewUrl": "/teaser1#webview",
                                 "isTargetBlank": false,
                                 "hasIcon": false,
