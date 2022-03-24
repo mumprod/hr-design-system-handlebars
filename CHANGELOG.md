@@ -1,3 +1,17 @@
+# v0.37.4 (Thu Mar 24 2022)
+
+#### 🐛 Bug Fix
+
+- rename class headline--barrier to headline--separator [#190](https://github.com/mumprod/hr-design-system-handlebars/pull/190) (zouhair1 [@szuelch](https://github.com/szuelch) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.37.3 (Mon Mar 21 2022)
 
 #### 🐛 Bug Fix
