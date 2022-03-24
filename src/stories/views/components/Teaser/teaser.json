@@ -5,25 +5,23 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100%",
             "hasLink": "true",
-            "link":{
+            "link": {
                 "url": "#gruppe1"
             },
-            "logicItems":[
+            "logicItems": [
                 {
-                    "logicitem":{
-                        "includeModel":{
-                            "cacheKey": {
-
-                            },
+                    "logicitem": {
+                        "includeModel": {
+                            "cacheKey": {},
                             "byline": "Byline",
                             "title": "Title",
                             "extendedTitle": "extendedTitle",
-                            "teasertype": "standard",                          
+                            "teasertype": "standard",
                             "teasersize": "100",
                             "teaserDate": {
-                                "htmlDate":"20.02.1983",
+                                "htmlDate": "20.02.1983",
                                 "date": "20.02.1983",
-                                "dateSeparatorTime": "20.02.1983"    
+                                "dateSeparatorTime": "20.02.1983"
                             },
                             "teaserInfo": {
                                 "showTeaserInfo": true,
@@ -32,12 +30,12 @@
                                 "showTeaserInfoAll": true,
                                 "showTeaserInfoDate": true,
                                 "showTeaserInfoDateTime": true,
-                                "showTeaserInfoProgramRef":true
+                                "showTeaserInfoProgramRef": true
                             },
-                            "teaserImage":{
+                            "teaserImage": {
                                 "copyrightWithLinks": ""
                             },
-                            "duration":{
+                            "duration": {
                                 "inMinutes": "2:30"
                             },
                             "realTeasersize": "100",
@@ -66,24 +64,24 @@
                             "hideEditableByline": true,
                             "doTracking": true,
                             "trackingForArdMediatheksLink": false,
-                            "showMediatheksLink":false,
+                            "showMediatheksLink": false,
                             "showAirdate": false,
                             "showProfileInfoAsByline": false,
                             "obsolet_brandOfTeaser": "hessenschau",
                             "headingSize": "h1",
                             "icon": true,
-                            "shorttext":"shorttext",
+                            "shorttext": "shorttext",
                             "sophoraId": "test-100",
                             "profiles": "Autoren",
                             "airdateDate": {
-                                "htmlDate":"20.02.1983",
+                                "htmlDate": "20.02.1983",
                                 "date": "20.02.1983",
-                                "dateSeparatorTime": "20.02.1983"    
+                                "dateSeparatorTime": "20.02.1983"
                             },
                             "airdateWithoutTime": {
-                                "htmlDate":"20.02.1983",
+                                "htmlDate": "20.02.1983",
                                 "date": "20.02.1983",
-                                "dateSeparatorTime": "20.02.1983"    
+                                "dateSeparatorTime": "20.02.1983"
                             },
                             "geotag": [
                                 {
@@ -93,7 +91,7 @@
                                     "title": "Offenbach"
                                 }
                             ],
-                            "link":{
+                            "link": {
                                 "url": "/teaser1",
                                 "webviewUrl": "/teaser1#webview",
                                 "isTargetBlank": false,
@@ -102,20 +100,20 @@
                                 "readMoreText": {
                                     "readMoreScreenreader": "readMoreScreenreader",
                                     "readMore": "read More",
-                                    "readMoreLong" : "read More Long"
+                                    "readMoreLong": "read More Long"
                                 }
                             },
                             "content": {
-                                "teaserImage":"",
-                                "teasertype":"",
-                                "imageVariant":"",
+                                "teaserImage": "",
+                                "teasertype": "",
+                                "imageVariant": "",
                                 "isFileDownload": false,
                                 "readMoreText": {
                                     "readMoreScreenreader": "readMoreScreenreader",
                                     "readMore": "read More"
                                 },
                                 "trackingData": {
-                                    "secondLevelId":"2",
+                                    "secondLevelId": "2",
                                     "pageName": "hessenschau"
                                 },
                                 "label": {
@@ -129,10 +127,9 @@
                                         "bylineText": "BylineText"
                                     }
                                 }
-                            
                             }
                         }
-                    }                    
+                    }
                 }
             ]
         }
