@@ -15,7 +15,7 @@
                             "includePath": "components/teaser/teaser-default",
                             "includeModel": {
                                 "byline": "Byline",
-                                "title": "Title",
+                                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                                 "topline": "Überglücklich, aber ohne Mama",
                                 "extendedTitle": null,
                                 "teasertype": "standard",
@@ -58,9 +58,6 @@
                                             }
                                         ]
                                     }
-                                },
-                                "duration": {
-                                    "inMinutes": "2:30"
                                 },
                                 "hasMediaButtons": false,
                                 "dontLazyload": true,
