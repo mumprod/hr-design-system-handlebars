@@ -1,3 +1,20 @@
+# v0.38.0 (Mon Mar 28 2022)
+
+#### 🚀 Enhancement
+
+- DOC: adds installation instructions [#199](https://github.com/mumprod/hr-design-system-handlebars/pull/199) ([@szuelch](https://github.com/szuelch))
+- CHORE: update to node.js version [#198](https://github.com/mumprod/hr-design-system-handlebars/pull/198) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1520 [#197](https://github.com/mumprod/hr-design-system-handlebars/pull/197) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.37.6 (Thu Mar 24 2022)
 
 #### 🐛 Bug Fix
