@@ -1,4 +1,4 @@
-nvm## name of our action
+## name of our action
 name: Release
 
 # the event that will trigger the action
