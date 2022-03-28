@@ -16,10 +16,10 @@ jobs:
         # The list of steps that the action will go through
         steps:
             - uses: actions/checkout@v1
-            - name: Use Node.js lts/gallium
+            - name: Use Node.js 16.x
               uses: actions/setup-node@v1
               with:
-                  node-version: lts/gallium
+                  node-version: 16.x
             - run: npm ci
               #👇 Adds Chromatic as a step in the workflow
             - uses: chromaui/action@v1
