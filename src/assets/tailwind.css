@@ -22,6 +22,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #006dc1;
 }
 
 [data-theme='hessenschau'] {
@@ -46,6 +48,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #006dc1;
 }
 
 [data-theme='hr-bigband'] {
@@ -66,6 +70,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-fernsehen'] {
@@ -86,6 +92,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-inforadio'] {
@@ -106,6 +114,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -128,6 +138,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-werbung'] {
@@ -150,6 +162,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -170,6 +184,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-bigband'] {
@@ -190,6 +206,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr'] {
@@ -212,6 +230,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr1'] {
@@ -232,6 +252,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr2'] {
@@ -252,6 +274,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr3'] {
@@ -272,6 +296,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr4'] {
@@ -292,6 +318,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='you-fm'] {
@@ -312,6 +340,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 /*! purgecss end ignore */
