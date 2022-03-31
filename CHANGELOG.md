@@ -1,3 +1,20 @@
+# v0.38.1 (Thu Mar 31 2022)
+
+#### 🐛 Bug Fix
+
+- add topline-component [#201](https://github.com/mumprod/hr-design-system-handlebars/pull/201) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### 📝 Documentation
+
+- DOCS: adds section to nvm in readme [#200](https://github.com/mumprod/hr-design-system-handlebars/pull/200) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.38.0 (Mon Mar 28 2022)
 
 #### 🚀 Enhancement
