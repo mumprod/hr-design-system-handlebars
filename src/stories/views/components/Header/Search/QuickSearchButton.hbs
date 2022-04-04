@@ -1,13 +1,12 @@
 <div 
-    class="flex items-center h-8 md:h-full md:border-r md:border-l md:border-white lg:border-none" 
+    x-cloak class="sb-quick-search-button flex items-center h-8 md:h-full md:border-r md:border-l md:border-white lg:border-none" 
     :class="$store.searchFieldOpen == true ? 'bg-white mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-blue-congress'"
 >
     <button  
-        @click="$store.searchFieldOpen = ! $store.searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; allowScrolling(!$store.searchFieldOpen)"
+        @click="$store.searchFieldOpen = ! $store.searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; toggleScrolling(!$store.searchFieldOpen)"
         @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
         class="h-full text-white cursor-pointer md:px-4 lg:hidden"
-        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen == true)"
-        aria-label="Suche öffnen" 
+        x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen == true);$el.setAttribute('aria-label', $store.searchFieldOpen == true ? 'Suche schließen' : 'Suche öffnen')"
     >
         <svg 
             x-show="$store.searchFieldOpen == false"

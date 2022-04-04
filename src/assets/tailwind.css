@@ -22,6 +22,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #006dc1;
 }
 
 [data-theme='hessenschau'] {
@@ -46,6 +48,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #006dc1;
 }
 
 [data-theme='hr-bigband'] {
@@ -66,6 +70,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-fernsehen'] {
@@ -86,6 +92,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-inforadio'] {
@@ -106,6 +114,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -128,6 +138,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-werbung'] {
@@ -150,6 +162,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -170,6 +184,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr-bigband'] {
@@ -190,6 +206,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr'] {
@@ -212,6 +230,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr1'] {
@@ -232,6 +252,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr2'] {
@@ -252,6 +274,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr3'] {
@@ -272,6 +296,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='hr4'] {
@@ -292,6 +318,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 [data-theme='you-fm'] {
@@ -312,6 +340,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Dachzeile */
+    --color-topline: #c20016;
 }
 
 /*! purgecss end ignore */
@@ -361,41 +391,84 @@
         font-style: normal;
         font-stretch: condensed;
     }
+    .grid-page {
+        grid-template-columns:
+            [full-start] minmax(1rem, 1fr)
+            [main-start] minmax(0, 64rem) [main-end]
+            minmax(1rem, 1fr) [full-end];
+    }
+
+    .col-main {
+        grid-column: main;
+    }
+
+    .col-full {
+        grid-column: full;
+    }
+
+    .sm\:col-main {
+        @media (min-width: 640px) {
+            grid-column: main;
+        }
+    }
+    .headline--barrier {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headline--barrier:before,
+    .headline--barrier:after {
+        content: '';
+        border-top: 1px solid;
+        margin: 3px 20px 0 0;
+        flex: 1 0 20px;
+    }
+
+    .headline--barrier:after {
+        margin: 3px 0 0 20px;
+    }
 
     .-currentBrand {
-        @apply lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-white lg:before:border-b-8 lg:before:border-blue-congress lg:before:mt-6
+        @apply lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-white lg:before:border-b-8 lg:before:border-blue-congress lg:before:mt-6;
     }
     .-currentService {
-        @apply before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12 
+        @apply before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12;
     }
     .-currentSection {
-        @apply before:relative before:w-0 before:h-0 before:-mr-2 before:mt-3 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8 
+        @apply before:w-0 before:h-0 before:mr-2 before:-ml-4 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent before:mb-0.5 lg:before:absolute lg:before:mb-0  lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:ml-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8;
     }
     .-warnung {
         @apply text-red-600 !important;
-        @apply fill-black
+        @apply fill-black;
     }
 
-    .-video-podcast, .-weather, .-traffic {
-        @apply fill-white
+    .-video-podcast,
+    .-weather,
+    .-traffic {
+        @apply fill-white;
     }
-    .link-focus-inset{
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-grey-scorpion/50
+    .link-focus-inset {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-grey-scorpion/50;
     }
-    .link-focus{
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-grey-scorpion/50
+    .link-focus {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-grey-scorpion/50;
     }
-    .link-focus-inset-white{
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-white/50
+    .link-focus-inset-white {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-white/50;
     }
-    .link-focus-white{
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-white/50
+    .link-focus-white {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-white/50;
     }
 }
 
 @layer components {
-    [x-cloak] { display: none !important; }
-   
+    [x-cloak] {
+        display: none !important;
+    }
+
     .btn {
         @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;
     }
@@ -426,25 +499,25 @@
 }
 
 @layer utilities {
-    .placeholder-text-xs::placeholder{
-      @apply text-xs
+    .placeholder-text-xs::placeholder {
+        @apply text-xs;
     }
 }
 
 .hide-scroll-bar {
     -ms-overflow-style: none;
-        scrollbar-width: none;
-        scroll-behavior: smooth;
-  }
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
 .hide-scroll-bar::-webkit-scrollbar {
     display: none;
-  }
+}
 
-.arrow-left-background{
+.arrow-left-background {
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
     transition: transform 150ms ease-in-out 0s;
 }
-.arrow-right-background{
+.arrow-right-background {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
     transition: transform 150ms ease-in-out 0s;
 }

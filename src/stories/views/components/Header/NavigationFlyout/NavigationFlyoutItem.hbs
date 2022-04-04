@@ -1,8 +1,8 @@
 <li :class="dropped ? 'h-auto' : 'h-10'"  
-    class="pl-4 {{#if _flyout}}lg:px-0 {{else}}lg:px-2 lg:first-of-type:pl-0 {{/if}}{{#if parentselected}}lg:whitespace-nowrap{{/if}} flex h-auto text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline">
+    class="sb-navigation-flyout-item pl-4 {{#if _flyout}}lg:px-0 {{else}}lg:px-2 lg:first-of-type:pl-0 {{/if}}{{#if _parentselected}}lg:whitespace-nowrap{{/if}} flex h-auto text-base border-b border-gray-200 lg:last:border-0 lg:border-0 text-blue-congress justify-start hover:underline">
     
-    {{#>components/base/link _cssClasses=(inline-switch _fromNav '["SectionNav","ServiceNav"]' '["link-focus-inset py-2 w-full","link-focus py-2 md:pl-0 lg:pl-0 lg:pr-0 break-words w-full"]') }}
-        {{content.text}}
+    {{#>components/base/link _cssClasses=(inline-switch _fromNav '["RubrikNavigation","ServiceNavigation"]' '["link-focus-inset py-2 w-full","link-focus py-2 md:pl-0 lg:pl-0 lg:pr-0 break-words w-full"]') _doNavigationTracking="true" _clickLabelType=_fromNav _clickLabelPrefix1=_parent _clickLabelPrefix2=this.link.content.text }}
+        {{content.text}}      
         {{~#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="w-4 h-4 fill-current ml-2 inline-flex" _iconmap="icons" }} {{/if}}
     {{/components/base/link}}  
 </li>

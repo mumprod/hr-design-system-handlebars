@@ -167,6 +167,7 @@ module.exports = {
                 labelDownload: 'var(--color-label-download)',
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
+                toplineColor: 'var(--color-topline)',
             },
         },
     },

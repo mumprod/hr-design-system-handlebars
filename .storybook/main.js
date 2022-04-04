@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
 
 module.exports = {
@@ -11,7 +12,14 @@ module.exports = {
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
-        '@storybook/addon-postcss',
+        {
+            name: '@storybook/addon-postcss',
+            options: {
+                postcssLoaderOptions: {
+                    implementation: require('postcss'),
+                },
+            },
+        },
         '@whitespace/storybook-addon-html',
         '@storybook/addon-a11y',
         'storybook-conditional-toolbar-selector',
@@ -26,6 +34,7 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             components: path.resolve(__dirname, '../src/stories/views/components'),
+            tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
             hrQueryNew$: path.resolve(
                 __dirname,
                 '../src/stories/views/components/generic/hrQueryNew.js'
@@ -39,12 +48,13 @@ module.exports = {
                 '../build/webpack/feature-loader/initializer/loader.js'
             ),
         }
+
         config.module.rules.push(
             {
                 test: /\.handlebars|hbs$/,
                 loader: 'handlebars-loader',
                 include: path.resolve(__dirname, '../'),
-                query: {
+                options: {
                     helperDirs: [path.resolve(__dirname, '../build/helpers')],
                     partialDirs: [path.resolve(__dirname, '../src/stories/views')],
                 },
@@ -69,7 +79,46 @@ module.exports = {
                 '/feature',
                 path.resolve(__dirname, '../src/stories/views/'),
                 /\.feature\.js$/
-            )
+            ),
+            {
+                apply: (compiler) => {
+                    compiler.hooks.afterCompile.tap('UpdateTailwindPlugin', (compilation) => {
+                        if (
+                            undefined != compilation.compiler.watchFileSystem &&
+                            Object.keys(compilation.compiler.watchFileSystem.watcher.mtimes)
+                                .length > 0
+                        ) {
+                            if (
+                                !Object.keys(
+                                    compilation.compiler.watchFileSystem.watcher.mtimes
+                                ).some((value) => value.includes('tailwind.css'))
+                            ) {
+                                fs.readFile(
+                                    path.resolve(__dirname, '../src/assets/tailwind.css'),
+                                    'utf8',
+                                    (err, data) => {
+                                        if (err) {
+                                            console.error(err)
+                                            return
+                                        }
+                                        fs.writeFile(
+                                            path.resolve(__dirname, '../src/assets/tailwind.css'),
+                                            data,
+                                            (err) => {
+                                                if (err) {
+                                                    console.error(err)
+                                                    return
+                                                }
+                                                //file written successfully
+                                            }
+                                        )
+                                    }
+                                )
+                            }
+                        }
+                    })
+                },
+            }
         )
 
         config.stats = 'verbose'

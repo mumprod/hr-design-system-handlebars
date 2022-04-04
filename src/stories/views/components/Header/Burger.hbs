@@ -1,12 +1,13 @@
-<div x-data="burger()" class="flex items-center justify-center h-full fill-current">
+<div x-data="burger()" class="sb-burger flex items-center justify-center h-full fill-current">
     <nav>
         <button {{!-- :class="$store.burgeropen ? 'text-blue-congress' : 'text-white'" --}}  
             class="relative w-10 h-10 text-white tablet:w-18 tablet:h-12 focus:outline-none bg-brand"
-            @burger-close.window="burgerClose()" 
+            @burger-close.window="burgerClose()"
+            @click="$store.burgeropen = !$store.burgeropen" 
             @click.debounce="burgerClick()" 
             aria-owns="sectionNav" 
             aria-controls="sectionNav"
-            x-effect="$el.setAttribute('aria-expanded', $store.burgeropen)"           
+            x-effect="$el.setAttribute('aria-expanded', $store.burgeropen);$el.setAttribute('aria-label', $store.burgeropen ? 'Navigation schließen' : 'Navigation öffnen')"
         >
             <span class="sr-only md:hidden">Open main menu</span>
             <div class="absolute block w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
@@ -20,21 +21,21 @@
 <script>
     var burger = () => {
         return {
-            burgerClose(){
+            burgerClose(){               
                 this.$store.burgeropen = false
                 this.$dispatch('toggle-sectionnav', false); 
             },
-            burgerClick(){
-                this.$store.burgeropen = !this.$store.burgeropen
+            burgerClick(){               
                 this.$store.serviceNavIsOpen = false
                 this.$dispatch('toggle-sectionnav',  this.$store.burgeropen);  
-                this.percent > 50 ? this.removeYtranslate() : null;
-                this.allowScrolling(!this.$store.burgeropen)
-                
+                // Todo: not doing anything! can be removed?
+                // this.percent > 50 ? this.removeYtranslate() : null;
+                this.toggleScrolling(!this.$store.burgeropen)              
             },
             removeYtranslate(){
-                this.$refs.serviceList.classList.remove('-mt-40'); 
-                this.$refs.sectionnavigation.classList.remove('-mt-40')
+                // Todo: not doing anything! can be removed?
+                //this.$refs.serviceList.classList.remove('-mt-40'); 
+                //this.$refs.sectionnavigation.classList.remove('-mt-40')
             }
         }
     }
