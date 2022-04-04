@@ -54,78 +54,7 @@ export const Template = ({ topline, ...args }) => {
 
 Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
 
-## Teaser-Heading Sans serif sm
-
-<Preview withToolbar>
-  <Story
-    name="Sans Serif small"
-    args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "heading",
-      size: "sm",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Preview>
-
-<ArgsTable story="Sans Serif small" />
-
-## Teaser-Heading Sans serif large
-
-<Canvas>
-  <Story
-    name="Sans Serif large"
-    parameters={{
-      docs: {
-        source: {
-          code: `
-<Button class="storybook-button storybook-button--secondary">Button</button>
-        `,
-        },
-      },
-    }}
-    args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "heading",
-      size: "lg",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Teaser-Heading Serif small
-
-<Canvas>
-  <Story
-    name="Serif small"
-    parameters={{
-      docs: {
-        source: {
-          code: `
-<Button class="storybook-button storybook-button--secondary">Button</button>
-        `,
-        },
-      },
-    }}
-    args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "headingSerif",
-      size: "sm",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Teaser-Heading Serif large
+## Teaser-Heading serif large
 
 <Canvas>
   <Story
@@ -145,6 +74,60 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       headlineTag: "h1",
       font: "headingSerif",
       size: "lg",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Serif large" />
+
+## Teaser-Heading Serif small
+
+<Canvas>
+  <Story
+    name="Serif medium"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button class="storybook-button storybook-button--secondary">Button</button>
+        `,
+        },
+      },
+    }}
+    args={{
+      topline: "Das ist eine wirklich sehr lange Topline",
+      headline: "Das ist eine wirklich sehr lange Headline",
+      headlineTag: "h1",
+      font: "headingSerif",
+      size: "md",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Teaser-Heading Serif large
+
+<Canvas>
+  <Story
+    name="Serif small"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button class="storybook-button storybook-button--secondary">Button</button>
+        `,
+        },
+      },
+    }}
+    args={{
+      topline: "Das ist eine wirklich sehr lange Topline",
+      headline: "Das ist eine wirklich sehr lange Headline",
+      headlineTag: "h1",
+      font: "headingSerif",
+      size: "sm",
     }}
   >
     {Template.bind({})}
