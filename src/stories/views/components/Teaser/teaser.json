@@ -129,22 +129,22 @@
                                             "responsiveImage": {
                                                 "asPicture": true,
                                                 "asImage": false,
-                                                "fallback": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg",
+                                                "fallback": "https://picsum.photos/id/188/480/210",
                                                 "sources": [
                                                     {
                                                         "media": "all and (max-width: 43.688em)",
                                                         "sizes": "100vw",
-                                                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium__extended.jpg 640w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9.jpg 960w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__retina.jpg 1920w"
+                                                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
                                                     },
                                                     {
                                                         "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
                                                         "sizes": "100vw",
-                                                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
                                                     },
                                                     {
                                                         "media": "all and (min-width: 64em)",
                                                         "sizes": "960px",
-                                                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
                                                     }
                                                 ]
                                             }
