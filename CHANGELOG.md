@@ -1,3 +1,15 @@
+# v0.39.0 (Mon Apr 04 2022)
+
+#### 🚀 Enhancement
+
+- DPE-1159 responsive image [#44](https://github.com/mumprod/hr-design-system-handlebars/pull/44) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.38.1 (Thu Mar 31 2022)
 
 #### 🐛 Bug Fix
