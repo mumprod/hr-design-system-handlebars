@@ -1,3 +1,15 @@
+# v0.39.2 (Mon Apr 04 2022)
+
+#### 🐛 Bug Fix
+
+- add aria-label [#203](https://github.com/mumprod/hr-design-system-handlebars/pull/203) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.39.1 (Mon Apr 04 2022)
 
 #### 🐛 Bug Fix
