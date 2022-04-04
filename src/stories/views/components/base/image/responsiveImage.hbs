@@ -1,0 +1,49 @@
+{{!--
+
+`_type`
+`_variant`
+`_alttext`       Alternativ-Text des Bildes.<br>
+`_addClass`      Möglichkeit zur Angabe einer zusätzlichen CSS-Klasse. `image` ist Standard.<br>
+`_addClassImg`
+`_noDelay`       Bilder ohne verzögerung anzeigen, also direkt ins dom schreiben
+`_errorHandler`  JavaScript-Code, der ausgeführt wird, wenn das Bild nicht geladen werden kann. Wird z.B. für Fehlerhandling für EDP-Images genutzt.<br>
+'_disableNoScript' don't add no script fallback
+
+--}}
+{{#withParam this.responsiveImage _type _variant }}
+    {{#if this.asPicture}}
+        <picture class="picture {{~#if ../_addClass}} {{../_addClass}}{{/if}}">
+            {{#unless _disableNoScript}}
+                <noscript>
+                    <img class="image {{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}">
+                </noscript>
+            {{/unless}}
+            {{#with this.sources}}
+                {{#each this}}
+                    <source{{#with this.media}} media="{{this}}"{{/with}}
+                           {{#with this.sizes}} sizes="{{this}}"{{/with}}
+                           {{#with this.srcset}} srcset="{{this}}"{{/with}}>
+                {{/each}}
+            {{/with}}
+                <img class="image {{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
+        </picture>
+    {{/if}}
+
+    {{#if this.asImage}}
+        {{#with this.sources.[0]}}
+            {{~#with ../../_addClass }}<div class="{{this}}">{{/with}}
+            {{#unless ../../_disableNoScript}}
+                <noscript>
+                    <img class="image {{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
+                </noscript>
+            {{/unless}}
+            <img {{#with this.sizes}}sizes="{{this}}" {{/with~}}
+                    loading="{{#if ../../_noDelay}}auto{{else}}lazy{{/if}}"
+                 {{#with this.srcset}} {{#if ../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}" class="image imageSimple {{~#with ../../_addClassImg }} {{this}}{{/with}}" {{~#if ../../_errorHandler}} onerror="this.onerror=null; {{../../_errorHandler}}" {{~/if}}>
+            {{~#with ../../_addClass }}</div>{{/with}}
+        {{/with}}
+
+    {{/if}}
+{{/withParam}}
