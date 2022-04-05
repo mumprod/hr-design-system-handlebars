@@ -1,8 +1,8 @@
 <a href="#" class="hover:text-toplineColor">
     <{{headlineTag}} class="{{inline-switch font '["headingSerif","heading"]' '["font-headingSerif","font-heading"]'}} {{inline-switch bold '["true","false"]' '["font-bold"]'}} {{class}}" >
         {{#if topline}}
-            {{> components/Topline text=topline }}
+            {{> components/Teaser/Topline text=topline }}
         {{/if}}
-        {{> components/Title text=headline }}
+        {{> components/Teaser/Title text=headline }}
     </{{headlineTag}}>
 </a>

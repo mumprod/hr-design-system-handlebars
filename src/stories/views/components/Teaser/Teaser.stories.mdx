@@ -3,7 +3,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './Teaser.hbs'
 
 <Meta
-    title="Komponenten/Teaser"
+    title="Komponenten/Teaser/Standard"
     argTypes={{
         variant: {
             options: ['Serif', 'Sans Serif'],
@@ -12,7 +12,7 @@ import teaser from './Teaser.hbs'
         teaserSize: {
             control: {
                 type: 'select',
-                options: ['xl', 'lg', 'md', 'sm'],
+                options: ['xxl','xl', 'lg', 'md', 'sm'],
             },
             description: 'Teaser Größe',
             table: {
@@ -68,6 +68,23 @@ export const Template = ({ variant, ...args }) => {
 # Button
 
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Preview withToolbar>
+    <Story
+        name="Standard Hero"
+        args={{
+            variant: 'Serif',
+            teaserSize: 'xxl',
+            topline: 'So plant Glasner bei der Eintracht',
+            headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
+            teaserText:
+                'Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.',
+            author: 'Stephan Reich',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
 
 <Preview withToolbar>
     <Story
