@@ -1,3 +1,15 @@
+# v0.40.0 (Tue Apr 05 2022)
+
+#### 🚀 Enhancement
+
+- Adjusted font sizes to fit design requirements [#204](https://github.com/mumprod/hr-design-system-handlebars/pull/204) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.39.2 (Mon Apr 04 2022)
 
 #### 🐛 Bug Fix
