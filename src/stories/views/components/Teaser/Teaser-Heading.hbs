@@ -1,6 +1,8 @@
-<{{headlineTag}} class="{{inline-switch font '["headingSerif","heading"]' '["font-headingSerif","font-heading"]'}} {{inline-switch bold '["true","false"]' '["font-bold"]'}} {{class}}" >
-    {{#if topline}}
-        {{> components/Topline text=topline }}
-    {{/if}}
-    <span class="block {{inline-switch size '["lg","sm"]' '["text-3xl","text-2xl","text-2xl"]'}} {{inline-switch font '["headingSerif","heading"]' '["font-headingSerif","font-heading font-bold"]'}} mt-1.5">{{headline}}</span>
-</{{headlineTag}}>
+<a href="#" class="hover:text-toplineColor">
+    <{{headlineTag}} class="{{inline-switch font '["headingSerif","heading"]' '["font-headingSerif","font-heading"]'}} {{inline-switch bold '["true","false"]' '["font-bold"]'}} {{class}}" >
+        {{#if topline}}
+            {{> components/Topline text=topline }}
+        {{/if}}
+        {{> components/Title text=headline }}
+    </{{headlineTag}}>
+</a>

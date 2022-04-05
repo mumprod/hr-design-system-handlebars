@@ -20,9 +20,9 @@
         <div class="mt-4">
             {{> components/Label type=labelType text=labelText}}
         </div>
-        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '["100","66","50","33","25"]' '["lg","sm","sm","sm","sm","sm"]') font=(inline-switch variant '["Serif", "Sans Serf"]' '["headingSerif","heading"]') headline=headline topline=""}}
+        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '["100","66","50","33","25"]' '["lg","md","md","md","sm","sm"]') font=(inline-switch variant '["Serif", "Sans Serf"]' '["headingSerif","heading"]') headline=headline topline=""}}
     {{else}}
-        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '["100","66","50","33","25"]' '["lg","sm","sm","sm","sm","sm"]') font=(inline-switch variant '["Serif", "Sans Serif"]' '["headingSerif","heading"]') headline=headline topline=topline}}
+        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=(inline-switch teaserSize '["100","66","50","33","25"]' '["lg","md","md","md","sm","sm"]') font=(inline-switch variant '["Serif", "Sans Serif"]' '["headingSerif","heading"]') headline=headline topline=topline}}
     {{/if}}
     
     <div class="mt-2 text-base font-copy">{{teaserText}} <a class="text-indigo-500" href="#">[<span class="no-underline hover:underline">mehr</span>]</a></div>

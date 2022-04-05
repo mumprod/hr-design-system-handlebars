@@ -36,6 +36,10 @@ module.exports = {
             widest: '.05em',
         },
         extend: {
+            fontSize: {                
+                '22Px': ['1.375rem', '1.875rem'],
+                '33Px': ['2.063rem', '2.5rem'],
+            },
             boxShadow: {
                 inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
             },
