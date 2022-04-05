@@ -1,0 +1,26 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+
+import teaser from './Teaser-default.hbs'
+import JsonData from './teaser_article.json'
+
+<Meta title="Komponenten/Teaser/Standard" argTypes={{}} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Header
+
+Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Preview withToolbar>
+    <Story name="Default" args={JsonData}>
+        {Template.bind({})}
+    </Story>   
+</Preview>
+
+<ArgsTable story="Default" />
