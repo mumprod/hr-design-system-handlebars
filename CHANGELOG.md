@@ -1,3 +1,15 @@
+# v0.41.0 (Wed Apr 06 2022)
+
+#### 🚀 Enhancement
+
+- Bild für Standard-Teaser [#206](https://github.com/mumprod/hr-design-system-handlebars/pull/206) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.40.1 (Wed Apr 06 2022)
 
 #### 🐛 Bug Fix
