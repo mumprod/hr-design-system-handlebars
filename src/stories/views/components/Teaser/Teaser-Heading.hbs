@@ -1,5 +1,5 @@
-{{#>components/base/link _cssClasses="c-teaser__headlineLink" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="headlineLink" }} 
-    <{{~ ../headlineTag }} class=" {{../class}}" >
+{{#>components/base/link _cssClasses="hover:text-toplineColor" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="headlineLink" }} 
+    <{{~ ../headlineTag }} class="mt-4 {{../class}}" >
         {{#if ../topline}}
             {{> components/Teaser/Topline text=../topline }}
         {{/if}}
