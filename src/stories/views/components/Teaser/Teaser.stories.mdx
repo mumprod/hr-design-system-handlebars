@@ -3,7 +3,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './Teaser.hbs'
 
 <Meta
-    title="Komponenten/Teaser"
+    title="Komponenten/Teaser/Standard"
     argTypes={{
         variant: {
             options: ['Serif', 'Sans Serif'],
@@ -12,12 +12,12 @@ import teaser from './Teaser.hbs'
         teaserSize: {
             control: {
                 type: 'select',
-                options: ['100', '66', '50', '33', '25'],
+                options: ['xxl','xl', 'lg', 'md', 'sm'],
             },
             description: 'Teaser Größe',
             table: {
                 defaultValue: {
-                    summary: '100',
+                    summary: 'xl',
                 },
             },
         },
@@ -50,6 +50,13 @@ import teaser from './Teaser.hbs'
             description: 'Autor',
         },
     }}
+    decorators={[
+        (Story) => {
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+  ${Story()} 
+  </div></div>`
+        },
+    ]}
 />
 
 export const Template = ({ variant, ...args }) => {
@@ -64,10 +71,10 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
     <Story
-        name="standard"
+        name="Standard Hero"
         args={{
             variant: 'Serif',
-            teaserSize: '33',
+            teaserSize: 'xxl',
             topline: 'So plant Glasner bei der Eintracht',
             headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
             teaserText:
@@ -79,4 +86,70 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
     </Story>
 </Preview>
 
-<ArgsTable story="standard" />
+<Preview withToolbar>
+    <Story
+        name="Standard xl"
+        args={{
+            variant: 'Serif',
+            teaserSize: 'xl',
+            topline: 'So plant Glasner bei der Eintracht',
+            headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
+            teaserText:
+                'Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.',
+            author: 'Stephan Reich',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+<Preview withToolbar>
+    <Story
+        name="Standard lg"
+        args={{
+            variant: 'Serif',
+            teaserSize: 'lg',
+            topline: 'So plant Glasner bei der Eintracht',
+            headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
+            teaserText:
+                'Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.',
+            author: 'Stephan Reich',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+<Preview withToolbar>
+    <Story
+        name="Standard md"
+        args={{
+            variant: 'Serif',
+            teaserSize: 'md',
+            topline: 'So plant Glasner bei der Eintracht',
+            headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
+            teaserText:
+                'Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.',
+            author: 'Stephan Reich',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+<Preview withToolbar>
+    <Story
+        name="Standard sm"
+        args={{
+            variant: 'Serif',
+            teaserSize: 'sm',
+            topline: 'So plant Glasner bei der Eintracht',
+            headline: 'Silvas Erbe wird auf mehrere Schultern verteilt',
+            teaserText:
+                'Nach dem Abgang von André Silva und dem Zugang von Santos Borré hat Trainer Oliver Glasner Einblicke in seine Offensivideen für Eintracht Frankfurt gegeben. Er plant mit den Flanken von Filip Kostic und spricht ein Sonderlob für einen Youngster aus.',
+            author: 'Stephan Reich',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
