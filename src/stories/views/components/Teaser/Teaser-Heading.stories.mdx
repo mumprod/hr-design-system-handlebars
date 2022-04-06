@@ -3,7 +3,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
 import teaserHeading from "./Teaser-Heading.hbs";
 
 <Meta
-  title="Komponenten/TeaserHeading"
+  title="Komponenten/Teaser/Komponenten/TeaserHeading"
   argTypes={{
     topline: {
       control: "text",
@@ -29,7 +29,7 @@ import teaserHeading from "./Teaser-Heading.hbs";
       description: "Schriftart",
       control: {
         type: "inline-radio",
-        options: ["headingSerif", "heading"],
+        options: ["font-headingSerif", "font-heading"],
       },
       table: {
         defaultValue: {
@@ -58,7 +58,7 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
 
 <Canvas>
   <Story
-    name="Serif large"
+    name="Serif Hero"
     parameters={{
       docs: {
         source: {
@@ -72,8 +72,11 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       topline: "Das ist eine wirklich sehr lange Topline",
       headline: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
-      font: "headingSerif",
-      size: "lg",
+      font: "font-headingSerif",
+      size: "xxl",
+      link: {
+              url: "/teaser1"
+            }
     }}
   >
     {Template.bind({})}
@@ -100,8 +103,11 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       topline: "Das ist eine wirklich sehr lange Topline",
       headline: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
-      font: "headingSerif",
+      font: "font-headingSerif",
       size: "md",
+      link: {
+              url: "/teaser1"
+            }
     }}
   >
     {Template.bind({})}
@@ -126,8 +132,11 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       topline: "Das ist eine wirklich sehr lange Topline",
       headline: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
-      font: "headingSerif",
+      font: "font-headingSerif",
       size: "sm",
+      link: {
+              url: "/teaser1"
+            }
     }}
   >
     {Template.bind({})}

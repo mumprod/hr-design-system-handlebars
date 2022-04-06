@@ -39,7 +39,7 @@ module.exports = {
         extend: {
             fontSize: {                
                 '2xl':['1.375rem', '2rem'],
-                '4xl':['2rem', '2.25rem'],
+                '4xl':['2.125rem', '2.25rem'],
             },
             boxShadow: {
                 inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
