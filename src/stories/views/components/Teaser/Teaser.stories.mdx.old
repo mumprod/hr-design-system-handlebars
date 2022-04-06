@@ -1,6 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import teaser from './Teaser.hbs'
+import teaser from './Teaser-default.hbs'
+import JsonData from './teaser_article.json'
 
 <Meta
     title="Komponenten/Teaser/Standard"

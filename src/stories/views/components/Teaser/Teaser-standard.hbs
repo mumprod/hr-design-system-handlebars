@@ -1,0 +1,18 @@
+<article class="col-span-12 {{inline-switch teasersize '["sm","md","lg"]' '["md:col-span-3","md:col-span-4","md:col-span-6"]'}}">
+    {{#>components/base/link _cssClasses="" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="mediaLink" }}
+        {{~> components/base/image/responsiveImage this.content.teaserImage _type=this.content.teasertype _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content mediaPlayerLoader__mediaplayerArea" ~}}
+    {{/components/base/link}}  
+    {{#if labelType}}
+        <div class="mt-4">
+            {{> components/Label type=labelType text=labelText}}
+        </div>
+        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=teasersize font=(inline-switch serifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') headline=title topline=""}}
+    {{else}}
+        {{> components/Teaser/Teaser-Heading headlineTag="h2" size=teasersize font=(inline-switch serifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') headline=title topline=topline}}
+    {{/if}}
+    
+    <div class="mt-2 text-base font-copy">{{shorttext}}</div>
+    {{#if profiles}}
+        <div class="mt-1 text-sm text-gray-500 font-headingSerif">{{profiles}}</div>
+    {{/if}}
+</article>
