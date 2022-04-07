@@ -8,12 +8,7 @@
     {{#with this.serviceNavigationSSILinks}}
         <ul class="flex justify-around w-full h-full -itemCount-{{ count }} lg:w-auto lg:justify-end lg:pt-1">
             {{#each this}}        
-                {{!-- {{> components/base/loadSSI _template='components/Header/ServiceNavigation/ServiceNavigationItem' }} --}}                    
-                {{#if (isStorybook)}}  
-                    {{> components/Header/ServiceNavigation/ServiceNavigationItem }}   
-                {{else}}
-                    {{{this}}}
-                {{/if}}          
+                {{> components/base/loadSSI templatePath='components/Header/ServiceNavigation/ServiceNavigationItem' }}               
             {{/each}} 
         </ul>
     {{/with}}
