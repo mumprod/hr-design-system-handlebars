@@ -103,7 +103,7 @@
                                     "type": "Ticker",
                                     "loca": "ticker",
                                     "byline": {
-                                        "bylineSsi": "ssi",
+                                        "bylineSsi": "BylineText aus ssi",
                                         "bylineText": "BylineText"
                                     }
                                 },
@@ -161,7 +161,7 @@
                                             "type": "Ticker",
                                             "loca": "ticker",
                                             "byline": {
-                                                "bylineSsi": "ssi",
+                                                "bylineSsi": "BylineText aus ssi",
                                                 "bylineText": "BylineText"
                                             }
                                         }
