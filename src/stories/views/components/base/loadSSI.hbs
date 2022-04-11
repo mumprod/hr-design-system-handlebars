@@ -1,5 +1,5 @@
 {{#if (isStorybook)}}  
-    {{> (lookup . '_template') }}   
+    {{> components/base/loadDynamic templatePath=templatePath}} 
 {{else}}
     {{{this}}}
 {{/if}}        
