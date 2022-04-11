@@ -23,24 +23,14 @@
             "teaserImage": {
                 "copyrightWithLinks": "",
                 "responsiveImage": {
-                    "asPicture": true,
-                    "asImage": false,
+                    "asPicture": false,
+                    "asImage": true,
                     "fallback": "https://picsum.photos/id/188/480/210",
                     "sources": [
                         {
-                            "media": "all and (max-width: 43.688em)",
-                            "sizes": "100vw",
-                            "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                        },
-                        {
-                            "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                            "sizes": "100vw",
-                            "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                        },
-                        {
-                            "media": "all and (min-width: 64em)",
-                            "sizes": "960px",
-                            "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                            
+                            "sizes": "(min-width: 1010px) 960px, 100vw",
+                            "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                         }
                     ]
                 }
@@ -105,24 +95,14 @@
                     "teaserImage": {
                         "copyrightWithLinks": "",
                         "responsiveImage": {
-                            "asPicture": true,
-                            "asImage": false,
+                            "asPicture": false,
+                            "asImage": true,
                             "fallback": "https://picsum.photos/id/188/480/210",
                             "sources": [
                                 {
-                                    "media": "all and (max-width: 43.688em)",
-                                    "sizes": "100vw",
-                                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                                },
-                                {
-                                    "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                                    "sizes": "100vw",
-                                    "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                                },
-                                {
-                                    "media": "all and (min-width: 64em)",
-                                    "sizes": "960px",
-                                    "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    
+                                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                                 }
                             ]
                         }
