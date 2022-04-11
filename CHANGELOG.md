@@ -1,3 +1,27 @@
+# v0.42.2 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- responsiveImage 2.0 [#209](https://github.com/mumprod/hr-design-system-handlebars/pull/209) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.1 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1496 [#208](https://github.com/mumprod/hr-design-system-handlebars/pull/208) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.0 (Thu Apr 07 2022)
 
 #### 🚀 Enhancement

@@ -39,7 +39,7 @@
             {{/unless}}
             <img {{#with this.sizes}}sizes="{{this}}" {{/with~}}
                     loading="{{#if ../../_noDelay}}auto{{else}}lazy{{/if}}"
-                 {{#with this.srcset}} {{#if ../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
+                 {{#with this.srcset}} {{#if ../../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                 alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}" class="image imageSimple {{~#with ../../_addClassImg }} {{this}}{{/with}}" {{~#if ../../_errorHandler}} onerror="this.onerror=null; {{../../_errorHandler}}" {{~/if}}>
             {{~#with ../../_addClass }}</div>{{/with}}
