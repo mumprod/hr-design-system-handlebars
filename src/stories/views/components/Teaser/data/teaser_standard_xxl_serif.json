@@ -85,14 +85,6 @@
                 "avDocument": "",
                 "image": ""
             },
-            "label": {
-                "type": "Ticker",
-                "loca": "ticker",
-                "byline": {
-                    "bylineSsi": "BylineText aus ssi",
-                    "bylineText": "BylineText"
-                }
-            },
             "geotag": [
                 {
                     "title": "Wolfhagen"
@@ -142,14 +134,6 @@
                     "trackingData": {
                         "secondLevelId": "2",
                         "pageName": "hessenschau"
-                    },
-                    "label": {
-                        "type": "Ticker",
-                        "loca": "ticker",
-                        "byline": {
-                            "bylineSsi": "BylineText aus ssi",
-                            "bylineText": "BylineText"
-                        }
                     }
                 }
             }

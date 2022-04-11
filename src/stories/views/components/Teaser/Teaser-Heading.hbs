@@ -4,10 +4,10 @@
             {{> components/Label type=loca text=type}}
         </div>
     {{/with~}}    
-    <{{~ ../headlineTag }} class="mt-4 {{../class}}" >
+    <{{~ ../headlineTag }} class="{{../class}}" >
         {{#with this.content.topline}}
             {{> components/Teaser/Topline text=this readMore=../this.readMoreText.readMoreScreenreader}}
         {{/with}}
-        {{> components/Teaser/Title text=../this.title font=../font }}
+        {{> components/Teaser/Title text=../this.title font=../font size=../size }}
     </{{~ ../headlineTag }}>
 {{/components/base/link}}   
