@@ -13,6 +13,6 @@
     
     <div class="mt-2 text-base font-copy">{{shorttext}}</div>
     {{#if profiles}}
-        <div class="mt-1 text-sm text-gray-500 font-headingSerif">{{profiles}}</div>
+        {{> components/Teaser/Byline text=profiles}}
     {{/if}}
 </article>
