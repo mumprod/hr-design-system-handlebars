@@ -12,6 +12,9 @@ let hero_teaser_with_label  =  structuredClone(hero_teaser);
 addLabel(hero_teaser_with_label, ticker_label.label);
 
 <Meta   title="Komponenten/Teaser/Standard"
+        parameters={{
+            layout: 'fullscreen',
+        }}
         argTypes={{
             teasersize: {
                 control: {
@@ -48,7 +51,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
-    <Story name="Standard Hero" args={hero_teaser}>
+    <Story  name="Standard Hero" args={hero_teaser}>
         {Template.bind({})} 
     </Story>
     <Story name="Standard Hero with Label" args={hero_teaser_with_label}>
