@@ -1,3 +1,15 @@
+# v0.42.0 (Thu Apr 07 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: employs a loadDynamic template as a [#207](https://github.com/mumprod/hr-design-system-handlebars/pull/207) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.41.0 (Wed Apr 06 2022)
 
 #### 🚀 Enhancement
