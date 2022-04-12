@@ -9,7 +9,7 @@
             {{> components/Teaser/Teaser-Heading headlineTag="h2" size=teasersize font=(inline-switch serifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') headline=title topline=topline}}            
         </header>
         <section class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
-            <div class="hidden mt-2 text-base font-copy md:block">{{shorttext}}</div>
+            <div class="{{inline-switch teasersize '["xxl"]' '["","hidden md:block"]'}} mt-2 text-base font-copy">{{shorttext}}</div>
             {{#if profiles}}
                 {{> components/Teaser/Byline text=profiles}}
             {{/if}}
