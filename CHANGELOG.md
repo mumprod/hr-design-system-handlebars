@@ -1,3 +1,15 @@
+# v0.42.4 (Tue Apr 12 2022)
+
+#### 🐛 Bug Fix
+
+- responsiveImage 2.1 [#213](https://github.com/mumprod/hr-design-system-handlebars/pull/213) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.3 (Tue Apr 12 2022)
 
 #### 🐛 Bug Fix
