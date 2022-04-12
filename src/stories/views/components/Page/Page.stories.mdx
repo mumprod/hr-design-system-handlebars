@@ -6,7 +6,10 @@ import NavigationData2 from '../Header/navigation2.json'
 import NavigationData3 from '../Header/navigation3.json'
 import NavigationData4 from '../Header/navigation4.json'
 import hero_teaser from '../Teaser/data/teaser_standard_xxl_serif.json'
-const result = Object.assign({}, NavigationData, hero_teaser);
+const NavigationDataWithTeaser  = structuredClone(Object.assign({}, NavigationData, hero_teaser))
+const NavigationDataWithTeaser2 = structuredClone(Object.assign({}, NavigationData2, hero_teaser))
+const NavigationDataWithTeaser3 = structuredClone(Object.assign({}, NavigationData3, hero_teaser))
+const NavigationDataWithTeaser4 = structuredClone(Object.assign({}, NavigationData4, hero_teaser))
 
 <Meta
     title="Komponenten/Page/Page"
@@ -25,16 +28,16 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 # Page
 
 <Preview withToolbar>
-    <Story name="Default" args={result}>
+    <Story name="Default" args={NavigationDataWithTeaser}>
         {Template.bind({})}
     </Story>
-    <Story name="With Unwetter" args={NavigationData2}>
+    <Story name="With Unwetter" args={NavigationDataWithTeaser2}>
         {Template.bind({})}
     </Story>
-    <Story name="With subnav open" args={NavigationData3}>
+    <Story name="With subnav open" args={NavigationDataWithTeaser3}>
         {Template.bind({})}
     </Story>
-    <Story name="With subnav open and Service Nav Item active" args={NavigationData4}>
+    <Story name="With subnav open and Service Nav Item active" args={NavigationDataWithTeaser4}>
         {Template.bind({})}
     </Story>
 </Preview>
