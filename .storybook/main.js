@@ -33,6 +33,7 @@ module.exports = {
         // Make whatever fine-grained changes you need
         config.resolve.alias = {
             ...config.resolve.alias,
+            scripts: path.resolve(__dirname, '../scripts'),
             components: path.resolve(__dirname, '../src/stories/views/components'),
             tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
             hrQueryNew$: path.resolve(
