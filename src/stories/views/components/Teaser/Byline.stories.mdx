@@ -1,0 +1,35 @@
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
+
+import byline from "./Byline.hbs";
+
+<Meta
+  title="Komponenten/Teaser/Komponenten/Byline"
+  argTypes={{
+    text: {
+      control: "text",
+      description: "Bylinetext",
+    },
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<span>${topline}</span>`;
+  return byline({ text, ...args });
+};
+
+# Byline
+
+<Preview withToolbar>
+  <Story
+    name="default"
+    args={{
+      text:
+        "Dies ist die Byline",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="default" />
