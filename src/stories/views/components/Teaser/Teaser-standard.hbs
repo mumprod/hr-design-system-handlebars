@@ -11,7 +11,7 @@
         <section class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
             <div class="hidden mt-2 text-base font-copy md:block">{{shorttext}}</div>
             {{#if profiles}}
-                <div class="mt-1 text-sm text-gray-500 font-headingSerif">{{profiles}}</div>
+                {{> components/Teaser/Byline text=profiles}}
             {{/if}}
         </section>
     </div>

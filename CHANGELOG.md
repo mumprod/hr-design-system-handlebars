@@ -1,3 +1,27 @@
+# v0.42.3 (Tue Apr 12 2022)
+
+#### 🐛 Bug Fix
+
+- add byline-component [#212](https://github.com/mumprod/hr-design-system-handlebars/pull/212) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.42.2 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- responsiveImage 2.0 [#209](https://github.com/mumprod/hr-design-system-handlebars/pull/209) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.1 (Mon Apr 11 2022)
 
 #### 🐛 Bug Fix
