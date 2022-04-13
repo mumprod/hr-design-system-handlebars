@@ -50,9 +50,9 @@
 
     const loadInclude = function (includePath) {
         try {
-            return fs.readFileSync(`${options.paths.assets.json}/${includePath}`, 'UTF-8')
+            return fs.readFileSync(`${options.paths.assets.fixtures}/${includePath}`, 'UTF-8')
         } catch (error) {
-            console.error(`Can\'t read file: ${options.paths.assets.json}/${includePath}`)
+            console.error(`Can\'t read file: ${options.paths.assets.fixtures}/${includePath}`)
             return JSON.stringify({})
         }
     }

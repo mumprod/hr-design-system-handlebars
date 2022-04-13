@@ -2,7 +2,7 @@ module.exports = {
     paths: {
         root: './',
         assets: {
-            json: 'src/assets/json',
+            fixtures: 'src/assets/fixtures',
         },
         dist: {
             components: 'src/stories/views/components',
