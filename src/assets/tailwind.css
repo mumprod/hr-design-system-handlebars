@@ -394,7 +394,7 @@
     .grid-page {
         grid-template-columns:
             [full-start] minmax(1rem, 1fr)
-            [main-start] minmax(0, 64rem) [main-end]
+            [main-start] minmax(0, 63rem) [main-end]
             minmax(1rem, 1fr) [full-end];
     }
 
