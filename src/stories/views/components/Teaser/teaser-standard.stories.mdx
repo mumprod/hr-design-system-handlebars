@@ -1,15 +1,11 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import teaser from './Teaser-standard.hbs'
-import hero_teaser from './data/teaser_standard_xxl_serif.json'
+import xxl_teaser from './data/teaser_standard_xxl_serif.json'
 import xl_teaser from './data/teaser_standard_xl_serif.json'
 import lg_teaser from './data/teaser_standard_lg_serif.json'
 import md_teaser from './data/teaser_standard_md_serif.json'
 import sm_teaser from './data/teaser_standard_sm_serif.json'
-import testInclude from './data/test-include.json'
-const JSONIncluder = require('scripts/jsoninclude.js')
-const testTeaser = JSONIncluder.parse(JSON.stringify(testInclude))
-console.log(testTeaser)
 
 <Meta
     title="Komponenten/Teaser/Standard"
@@ -49,7 +45,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
-    <Story name="Standard Hero" args={testTeaser}>
+    <Story name="Standard Hero" args={xxl_teaser}>
         {Template.bind({})}
     </Story>
     <Story name="Standard XL" args={xl_teaser}>

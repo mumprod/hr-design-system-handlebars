@@ -6,6 +6,9 @@ const svgMin = require('gulp-svgmin')
 const path = require('path')
 const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
+const jsonTransform = require('gulp-json-transform')
+const JSONIncluder = require('./scripts/jsoninclude.js')
+const options = require('./config.js')
 
 // css file paths
 const iconsDirRoot = 'src/assets/icons'
@@ -199,4 +202,28 @@ function minimizeSvgSrcFiles() {
     )
 }
 
+function parseJson() {
+    return src([
+        `${options.paths.assets.json}/**/*.json`,
+        `!${options.paths.assets.json}/**/*.inc.json`,
+    ])
+        .pipe(
+            jsonTransform(function (data, file) {
+                const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
+                return jsonWithIncludes
+            })
+        )
+        .pipe(
+            rename(function (path) {
+                return {
+                    dirname: path.dirname,
+                    basename: path.basename.replace('src', 'min'),
+                    extname: path.extname,
+                }
+            })
+        )
+        .pipe(dest(options.paths.dist.components))
+}
+
 exports.default = series(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
+exports.parseJson = parseJson

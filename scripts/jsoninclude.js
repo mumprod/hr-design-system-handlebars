@@ -4,8 +4,9 @@
 ;(function () {
     'use strict'
 
-    var _ = require('underscore'),
-        rekursion = 0
+    const _ = require('underscore'),
+        fs = require('fs'),
+        options = require('../config.js')
 
     JSON.minify = JSON.minify || require('node-json-minify')
 
@@ -15,6 +16,7 @@
     var setObjectValue = function (obj, value, path) {
         var aPath = path.split('.'),
             parent = obj
+        console.log(parent)
 
         for (var i = 0; i < aPath.length - 1; i++) {
             if (!parent.hasOwnProperty(aPath[i])) {
@@ -48,16 +50,13 @@
         return parent
     }
 
-    const loadInclude = async function (includePath) {
-        let includedJson = {}
+    const loadInclude = function (includePath) {
         try {
-            includedJson = await import(`../src/stories/views/${includePath}`)
+            return fs.readFileSync(`${options.paths.assets.json}/${includePath}`, 'UTF-8')
         } catch (error) {
-            console.error(`Can\'t import file: src/stories/views/${includePath}`)
+            console.error(`Can\'t read file: ${options.paths.assets.json}/${includePath}`)
             return JSON.stringify({})
         }
-
-        return JSON.stringify(includedJson)
     }
 
     /**
@@ -68,37 +67,36 @@
             try {
                 //read include
 
-                loadInclude(v['@->jsoninclude']).then(function (includedStringifiedJson) {
-                    //parse as JSON
-                    let includeJSON = parse(includedStringifiedJson)
-                    console.log(includeJSON)
-                    //get specified content
-                    if (v['@->contentpath'] !== undefined) {
-                        includeJSON = getObjectValue(includeJSON, v['@->contentpath'])
-                    }
+                let includedStringifiedJson = loadInclude(v['@->jsoninclude'])
+                //parse as JSON
+                let includeJSON = parse(includedStringifiedJson)
+                console.log(includeJSON)
+                //get specified content
+                if (v['@->contentpath'] !== undefined) {
+                    includeJSON = getObjectValue(includeJSON, v['@->contentpath'])
+                }
 
-                    if (v['@->extends'] !== undefined) {
-                        includeJSON = _.extend(includeJSON, v['@->extends'])
-                    }
+                if (v['@->extends'] !== undefined) {
+                    includeJSON = _.extend(includeJSON, v['@->extends'])
+                }
 
-                    //override values
-                    if (v['@->overrides'] !== undefined) {
-                        for (var i = 0; i < v['@->overrides'].length; i++) {
-                            if (
-                                v['@->overrides'][i]['@->contentpath'] !== undefined &&
-                                v['@->overrides'][i]['@->value'] !== undefined
-                            ) {
-                                setObjectValue(
-                                    includeJSON,
-                                    v['@->overrides'][i]['@->value'],
-                                    v['@->overrides'][i]['@->contentpath']
-                                )
-                            }
+                //override values
+                if (v['@->overrides'] !== undefined) {
+                    for (var i = 0; i < v['@->overrides'].length; i++) {
+                        if (
+                            v['@->overrides'][i]['@->contentpath'] !== undefined &&
+                            v['@->overrides'][i]['@->value'] !== undefined
+                        ) {
+                            setObjectValue(
+                                includeJSON,
+                                v['@->overrides'][i]['@->value'],
+                                v['@->overrides'][i]['@->contentpath']
+                            )
                         }
                     }
-                    console.log(includeJSON)
-                    return includeJSON
-                })
+                }
+                console.log(includeJSON)
+                return includeJSON
             } catch (e) {
                 console.error(
                     "Can't parse JSONInclude! " + type(e) === '[object Object]'
