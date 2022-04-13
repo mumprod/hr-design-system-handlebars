@@ -1,3 +1,15 @@
+# v0.42.5 (Wed Apr 13 2022)
+
+#### 🐛 Bug Fix
+
+- Page story update use new teaser now [#214](https://github.com/mumprod/hr-design-system-handlebars/pull/214) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.4 (Tue Apr 12 2022)
 
 #### 🐛 Bug Fix
