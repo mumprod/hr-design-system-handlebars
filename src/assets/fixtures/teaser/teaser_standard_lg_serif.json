@@ -1,5 +1,5 @@
 {
-    "@->jsoninclude": "teaser/data/teasers.inc.json",
+    "@->jsoninclude": "teaser/teasers.inc.json",
     "@->contentpath": "teaser-1",
     "@->overrides": [
         {

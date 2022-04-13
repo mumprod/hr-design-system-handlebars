@@ -218,8 +218,8 @@ function parseJson() {
         .pipe(
             rename(function (path) {
                 return {
-                    dirname: path.dirname,
-                    basename: path.basename.replace('src', 'min'),
+                    dirname: `${path.dirname}/fixtures`,
+                    basename: path.basename,
                     extname: path.extname,
                 }
             })
