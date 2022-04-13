@@ -16,7 +16,6 @@
     var setObjectValue = function (obj, value, path) {
         var aPath = path.split('.'),
             parent = obj
-        console.log(parent)
 
         for (var i = 0; i < aPath.length - 1; i++) {
             if (!parent.hasOwnProperty(aPath[i])) {
@@ -45,7 +44,6 @@
 
             parent = parent[aPath[i]]
         }
-        console.log(parent)
 
         return parent
     }
@@ -70,7 +68,6 @@
                 let includedStringifiedJson = loadInclude(v['@->jsoninclude'])
                 //parse as JSON
                 let includeJSON = parse(includedStringifiedJson)
-                console.log(includeJSON)
                 //get specified content
                 if (v['@->contentpath'] !== undefined) {
                     includeJSON = getObjectValue(includeJSON, v['@->contentpath'])
@@ -95,7 +92,6 @@
                         }
                     }
                 }
-                console.log(includeJSON)
                 return includeJSON
             } catch (e) {
                 console.error(
@@ -113,7 +109,6 @@
         }
 
         //nothing to do
-        console.log(v)
         return v
     }
 
@@ -122,9 +117,7 @@
      */
     var parse = function (text) {
         try {
-            let result = JSON.parse(JSON.minify(text), executeJSONInclude)
-            console.log(result)
-            return result
+            return JSON.parse(JSON.minify(text), executeJSONInclude)
         } catch (e) {
             console.error(`Can't parse json! ${e}`)
             throw {

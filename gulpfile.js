@@ -1,4 +1,4 @@
-const { src, dest, series } = require('gulp')
+const { src, dest, series, watch } = require('gulp')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
 const svgStore = require('gulp-svgstore')
@@ -8,6 +8,7 @@ const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
 const jsonTransform = require('gulp-json-transform')
 const JSONIncluder = require('./scripts/jsoninclude.js')
+
 const options = require('./config.js')
 
 // css file paths
@@ -225,5 +226,10 @@ function parseJson() {
         .pipe(dest(options.paths.dist.components))
 }
 
+function watchForChanges() {
+    watch(`${options.paths.assets.json}/**/*.json`, series(parseJson))
+    console.log('Watching for Changes..\n')
+}
+
 exports.default = series(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
-exports.parseJson = parseJson
+exports.parseJson = series(parseJson, watchForChanges)
