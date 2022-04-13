@@ -32,16 +32,16 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 # Page
 
 <Preview withToolbar>
-    <Story name="Default" args={NavigationData}>
+    <Story name="Default" args={NavigationDataWithTeaser}>
         {Template.bind({})}
     </Story>
-    <Story name="With Unwetter" args={NavigationData2}>
+    <Story name="With Unwetter" args={NavigationDataWithTeaser2}>
         {Template.bind({})}
     </Story>
-    <Story name="With subnav open" args={NavigationData3}>
+    <Story name="With subnav open" args={NavigationDataWithTeaser3}>
         {Template.bind({})}
     </Story>
-    <Story name="With subnav open and Service Nav Item active" args={NavigationData4}>
+    <Story name="With subnav open and Service Nav Item active" args={NavigationDataWithTeaser4}>
         {Template.bind({})}
     </Story>
 </Preview>
