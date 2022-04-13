@@ -8,6 +8,7 @@ const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
 const jsonTransform = require('gulp-json-transform')
 const JSONIncluder = require('./scripts/jsoninclude.js')
+const log = require('fancy-log')
 
 const options = require('./config.js')
 
@@ -152,7 +153,7 @@ function minimizeSvgSrcFiles() {
                 .pipe(
                     cheerio({
                         run: function ($, file) {
-                            console.log(file.basename)
+                            log(file.basename)
                             if (
                                 file.dirname.includes('unweather') &&
                                 file.basename === 'regiomap.src.svg'
@@ -205,8 +206,8 @@ function minimizeSvgSrcFiles() {
 
 function parseJson() {
     return src([
-        `${options.paths.assets.json}/**/*.json`,
-        `!${options.paths.assets.json}/**/*.inc.json`,
+        `${options.paths.assets.fixtures}/**/*.json`,
+        `!${options.paths.assets.fixtures}/**/*.inc.json`,
     ])
         .pipe(
             jsonTransform(function (data, file) {
@@ -228,7 +229,7 @@ function parseJson() {
 
 function watchForChanges() {
     watch(`${options.paths.assets.json}/**/*.json`, series(parseJson))
-    console.log('Watching for Changes..\n')
+    log('Watching for Changes..\n')
 }
 
 exports.default = series(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
