@@ -1,0 +1,8 @@
+<section class="c-teaserGroup -s{{this.teasersize}}">
+    {{~#if this.hasGroupTitle}}
+        <{{#if _isRelatedContent}}h4{{else}}h2{{/if}} class="c-teaserGroup__headline headline--separator text__headline">{{#if this.hasLink}}<a class="link" href="{{this.link.url}}">{{/if}}<span class="headline--separator__text">{{this.groupTitle}}</span>{{#if this.hasLink}}</a>{{/if}}</{{#if _isRelatedContent}}h4{{else}}h2{{/if}}>
+    {{/if}}
+    <div class="c-teaserGroup__content">
+        {{~> components/Teaser/teaser_logic ~}}
+    </div>
+</section>
