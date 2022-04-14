@@ -15,7 +15,7 @@
         "build-storybook-docs": "build-storybook --docs",
         "build-storybook-docs-with-tailwind": "npm run build:tailwind && npm run build-storybook-docs",
         "build:tailwind": "postcss src/assets/tailwind.css -o dist/assets/index.css",
-        "build": "npm run clean && npm run build:tailwind && node ./scripts/build.js",
+        "build": "npm run clean && npm run build:tailwind && node ./build/scripts/build.js",
         "chromatic": "npx chromatic --project-token 84f1628f224a",
         "clean": "rimraf  dist",
         "release": "npx auto shipit --base-branch=main",

@@ -6,7 +6,7 @@
 
     const _ = require('underscore'),
         fs = require('fs'),
-        options = require('../config.js')
+        options = require('../../config.js')
 
     JSON.minify = JSON.minify || require('node-json-minify')
 

@@ -7,7 +7,7 @@ const path = require('path')
 const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
 const jsonTransform = require('gulp-json-transform')
-const JSONIncluder = require('./scripts/jsoninclude.js')
+const JSONIncluder = require('./build/scripts/jsoninclude.js')
 const log = require('fancy-log')
 
 const options = require('./config.js')
