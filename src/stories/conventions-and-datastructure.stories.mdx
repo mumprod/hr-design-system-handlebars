@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs'
+import { resetComponents } from '@storybook/components'
+import icon from './views/components/base/image/icon.hbs'
+
+<Meta title="Dokumentation/Grundlegendes/Konventionen und Datenstrukturen" />
+
+# Konventionen und Datenstrukturen
+
+Dieses Kapitel richtet sich vor allem an die Entwickler des Designsystems. Es erläutert den grundlegenden Aufbau der Datenstruktur und legt Konventionen für die Benennung von Dateien fest.
+
+## Aufbau der Datenstruktur des Designsystems
+
+Im folgenden werden kurz die Ordner, deren Inhalte und andere für das Designsystem wichtige Dateien beschrieben
+
+### .github
+
+Der Ordner `.github` beinhaltet Definitionen von Github Action Workflows. Diese Dateien legen fest und steuern was beim Erstellen und Mergen eines Pullrequests alles passiert. Der Workflow
+`chromatic.yml` definiert, dass beim Erstellen eines Pullrequests unser Designsystem in das Testingframework [Chromatic](https://www.chromatic.com/) hochgeladen, dort eine Storybook Instanz gebaut und danach
+verschiedene automatisierte Tests durchlaufen werden. Der Workflow `release.yml` ist für das Bauen eines Releases zuständig. Er wird durch das Mergen eines Pullrequests angestoßen.
+Welche Art oder ob überhaupt ein Release gebaut wird, legt das Label (z.B. Major, Minor, Patch, Bug oder Documentation) fest, welches dem Pullrequest zugewiesen wird. Wird ein Release gebaut,
+erhöht sich automatisch die Versionsnummer in der `package.json` Datei, ein Changelogeintrag mit den Commit Messages wird in der Datei `CHANGELOG.md` erstellt, eine neue Version des Designsystems
+als NPM Package `hr-design-system-handlebars` wird gebaut und in die NPM Registry unter [npmjs.com](https://www.npmjs.com/package/hr-design-system-handlebars) abgelegt.
+
+### .storybook
+
+Im Verzeichnis `.storybook` werden für den Betrieb von Storybook essentielle Dateien abgelegt. Die Datei `main.js` beinhaltet die grundlegende Konfiguration
+von Storybook. Sie legt u.a. fest in welchen Verzeichnissen Stories abgelegt und welche Addons genutzt werden und gestattet es eigene Webpack- sowie Babel-Konfiguration
+einzusetzen. Weitere Details hierzu und zu den anderen Konfigurationsdateien können der offiziellen Dokumentation unter [https://storybook.js.org/docs/react/configure/overview](https://storybook.js.org/docs/react/configure/overview) entnommen werden.
+
+## build
+
+Der Ordner `build` enthält derzeit drei Unterordner. Dies sind der Ordner `helpers`, in dem Helper Dateien für die vom Designsystem genutzte Templateengine
+[handlebars] (https://handlebarsjs.com/) hinterlegt sind, der Ordner `webpack/feature-loader`, in dem alle notwendigen Dateien für den im Designsystem genutzten
+Javascript Featureloader liegen und der Ordner `scripts`, in dem Javascripts abgelegt werden, die im Zuge des Buildprozesses Verwenundg finden.
+
+## dist
+
+In den Ordner `dist` werden bei einem Release verschiedene Dateien (u.a. die Templates und alle weitere Assets) kopiert.
+
+## src
+
+Im `src` Ordner liegen zum einen sämtliche Assets, wie Icons, Schriftarten, Javascripte und Testdaten und zum anderen werden hier im Unterordner `stories`
+alle Storybook Stories sowie die damit zu entwickelnden Handlebar Templates abgelegt. Weitere Details zum Ablageort und Konventionen zur Benennung von Stories und Templates
+können dem Kapitel [Konventionen zur Bennung und dem Ablageort von Dateien](#konventionen-zur-bennung-und-dem-ablageort-von-dateien) entnommen werden.
+
+## Andere wichtige Dateien
+
+Die in der folgenden Tabelle genannten Dateien müssen alle direkt im Wurzelverzeichnis des Projektes abgelegt werden, damit das Designsystem korrekt gebaut werden kann.
+
+| Dateiname            | Erläuterung                                                                                                                                                                                                                                                                                          |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.gitignore`         | In dieser Datei sind alle Dateien angegeben, die von Git nicht versioniert werden sollen.                                                                                                                                                                                                            |
+| `CHANGELOG.md`       | Diese Datei enthält wie der Name bereits erahnen lässt das Changelog des Designsystems. Diese Datei wird bei jedem Release automatisch erweitert.                                                                                                                                                    |
+| `config.js`          | Diese Datei enthält Pfade zu verschiedenen Ordnern im Designsystem. Sie wird derzeit vor allem von verschiedenen Gulp Tasks verwendet. Sie kann beliebig erweitert werden und überall da genutzt werden, wo in einem Javascript auf bestimmt Pfade zugegriffen werden soll.                          |
+| `gulpfile.js`        | [Gulp](https://gulpjs.com/) ist wie das in unserem Delivery Projekt eingesetzt Grunt ein Taskrunnner und wird zur automatisierung bestimmter Aufgaben während des Builds verwendet. In der Datei `gulpfile.js` werden alle notwendigen Tasks beschrieben.                                            |
+| `postcss.config.js`  | Das von uns eingesetzte CSS Utility Framework [Tailwindcss](https://tailwindcss.com/) betreiben wir mit Hilfe von [PostCSS](https://postcss.org/). In dieser Datei wird konfiguriert wie PostCSS arbeitet. Wir legen hier fest, dass das Plugin `tailwindcss` und `postcss-preset-env` genutzt wird. |
+| `tailwind.config.js` | In dieser Datei wird das von uns im Designsystem eingesetzte CSS Utility Framework TailwindCSS konfiguriert. Weiterführende Informationen können hierzu in der [offiziellen Dokumentation](https://tailwindcss.com/docs/configuration) des Frameworks eingesehen werden.                             |
+
+## Konventionen zur Bennung und dem Ablageort von Dateien
