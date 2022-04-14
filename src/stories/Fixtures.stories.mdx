@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs'
+import { resetComponents } from '@storybook/components'
+import icon from './views/components/base/image/icon.hbs'
+
+<Meta title="Dokumentation/Grundlegendes/Testdatenbereitstellung" />
+
+# Bereitstellung von Testdaten für Stories
+
+-   [Verwendung von JSON Daten als Testdaten innerhalb von Stories](#verwendung-von-json-daten-als-testdaten-innerhalb-von-stories)
+
+---
+
+Mit Hilfe von Storybook lässt sich das Frontend einer Webseite/Webapp sehr gut modular und strukturiert entwickeln. Vergleichbar mit [Testgetriebener Softwareentwicklung](https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung)
+werden die einzelnen Komponenten nach und nach mit Hilfe von Stories aufgebaut und weiter verfeinert. Einzelne Stories entsprechen Testfällen. Sie dokumentieren direkt bei der Entwicklung die unterschiedlichen
+Ausprägungen der Komponenten und gestatten es auch Edge Cases schnell und einfach zu testen. Anders als bei Tests auf unserem Delivery System, bei dem die Testdaten aus dem CMS kommen und über die
+Zeit Veränderungen unterliegen können, sind die Testdaten in Storybook statisch. Sie werden entweder fest in den einzelnen Stories eingegeben oder werden in Form von JSON Daten zu Verfügung gestellt.
+Im Gegensatz zur manuellen Eingabe von Testdaten in den einzelnen Stories, können JSON Daten mehrfach verwendet werden und z.B. die Inhalte für einen oder mehrere Teaser sehr schnell
+und komfortabel bereitgestellt werden.
+
+Aber auch die Bereitstellung von Testdaten über JSON Dateien ist nicht immer einfach. Gerade bei komplexeren Komponenten (z.b. Navigationen, Teaser, etc.) sind mitunter umfangreiche Datenstrukturen
+nötig. Soll beispielsweise nur eine Eigenschaft (z.B. der Titel eines Teasers) geändert werden, muss die komplette JSON Datei kopiert und darin händisch die entsprechende Anpassung gemacht werden.
+Diese ist aufwändig und fehleranfällig. Zur Vereinfachung des Prozesses wurde eine Möglichkeit geschaffen, um innerhalb von JSON Dateien Inhalte aus anderen JSON Dateien einzubinden und
+auf einfache Weise einzelne Eigenschaften zu überschreiben.
+
+Im folgenden wird kurz beschrieben wie man in Storybook JSON Daten als Testdaten einsetzt und im weiteren Verlauf erläutert wie innerhalb von JSON Daten Inhalte aus anderen JSON Dateien
+inkludiert und einzelne Eigenschaften überschrieben werden können.
+
+## Verwendung von JSON Daten als Testdaten innerhalb von Stories
