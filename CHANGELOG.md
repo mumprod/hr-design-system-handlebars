@@ -1,3 +1,16 @@
+# v0.42.8 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- add teaserText-component [#217](https://github.com/mumprod/hr-design-system-handlebars/pull/217) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.42.7 (Tue Apr 19 2022)
 
 #### 🐛 Bug Fix
