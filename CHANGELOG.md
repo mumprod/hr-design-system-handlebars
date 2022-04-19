@@ -1,3 +1,15 @@
+# v0.42.7 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- extend byline [#216](https://github.com/mumprod/hr-design-system-handlebars/pull/216) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.42.6 (Wed Apr 13 2022)
 
 #### 🐛 Bug Fix
