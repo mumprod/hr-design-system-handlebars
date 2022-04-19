@@ -40,7 +40,7 @@
             "dontLazyload": true,
             "realTeasersize": "100",
             "isStandardTeaser": true,
-            "isHeroTeaser": true,
+            "isHeroTeaser": false,
             "isMediaTeaser": false,
             "isGuide": false,
             "isProgram": false,
