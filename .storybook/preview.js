@@ -92,6 +92,9 @@ export const parameters = {
     options: {
         storySort: {
             order: [
+                'Einführung',
+                'Grundlegendes',
+                ['Konventionen und Datenstrukturen', 'Testdatenbereitstellung', '*'],
                 'Komponenten',
                 [
                     'Page',
