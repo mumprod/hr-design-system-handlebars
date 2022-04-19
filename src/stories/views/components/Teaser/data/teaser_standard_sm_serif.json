@@ -7,9 +7,10 @@
             "teasertype": "standard",
             "teasersize": "sm",
             "teaserDate": {
+                "htmlDateTime": "2022-04-17T19:30+0200",
                 "htmlDate": "20.02.1983",
-                "date": "20.02.1983",
-                "dateSeparatorTime": "20.02.1983"
+                "date": "17.04.22",
+                "dateSeparatorTime": "17.04.22, 19:30"
             },
             "teaserInfo": {
                 "showTeaserInfo": true,
@@ -71,6 +72,7 @@
             "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
             "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
             "profiles": "Von Alf Haubitz und Alice Merton",
+            "documentSection": "Gesellschaft",
             "teaserLead": {
                 "avDocument": "",
                 "image": ""

@@ -1,1 +1,74 @@
-<span class="block mt-2 text-xs text-grey-scorpion font-headingSerif">{{text}}</span>
+<p class="mt-2 text-xs text-grey-scorpion font-headingSerif">
+    
+    {{!--Teaser-Info--}}
+    {{#with this.teaserInfo}}
+        {{#if this.showTeaserInfo~}}
+            {{~#if this.showTeaserInfoDate}}
+                {{~#with ../teaserDate}}
+                    <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                {{/with~}}
+                {{#if this.showTeaserInfoSection}}
+                    <span class="mx-px">|</span>
+                {{else}}
+                    {{#if ../profiles}}
+                        <span class="mx-px">|</span>
+                    {{/if}}
+                {{/if}}
+            {{else}}
+                {{~#if this.showTeaserInfoDateTime}}
+                    {{~#with ../teaserDate}}
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
+                    {{/with~}}
+                    {{#if this.showTeaserInfoSection}}
+                        <span class="mx-px">|</span>
+                    {{else}}
+                        {{#if ../profiles}}
+                            <span class="mx-px">|</span>
+                        {{/if}}
+                    {{/if}}
+                {{/if~}}
+            {{/if~}}    
+
+            {{~#if this.showTeaserInfoSection}}
+                <span class="uppercase">
+                    {{../documentSection~}}
+                </span>
+                {{#if ../profiles}}
+                    <span class="mx-px">|</span>
+                {{/if}}
+            {{/if}}
+
+        {{/if}}
+    {{/with}}
+
+    {{!--Profiles--}}
+    {{#if profiles}}
+        <span>{{profiles}}</span>
+    {{/if}}
+
+    {{!--
+    Gap here only if comments exists and at least one of those elements above 
+    is shown. Really ugly because we don't have any or-helper yet...
+    --}}
+    {{#if commentLink}}
+        {{#if profiles}}
+            <span class="mr-2.5"></span>
+        {{else}}
+            {{#if teaserInfo.showTeaserInfoSection}}
+                <span class="mr-2.5"></span>
+            {{else}}
+                {{#if teaserInfo.showTeaserInfoDate}}
+                    <span class="mr-2.5"></span>
+                {{else}}
+                    {{#if teaserInfo.showTeaserInfoDateTime}}
+                        <span class="mr-2.5"></span>
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+
+    {{!--Comments--}}
+    {{> components/Teaser/Comments}}
+
+</p>
