@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs'
+import { Meta, Preview } from '@storybook/addon-docs'
 import { resetComponents } from '@storybook/components'
 import icon from './views/components/base/image/icon.hbs'
 
@@ -27,23 +27,23 @@ Im Verzeichnis `.storybook` werden für den Betrieb von Storybook essentielle Da
 von Storybook. Sie legt u.a. fest in welchen Verzeichnissen Stories abgelegt und welche Addons genutzt werden und gestattet es eigene Webpack- sowie Babel-Konfiguration
 einzusetzen. Weitere Details hierzu und zu den anderen Konfigurationsdateien können der offiziellen Dokumentation unter [https://storybook.js.org/docs/react/configure/overview](https://storybook.js.org/docs/react/configure/overview) entnommen werden.
 
-## build
+### build
 
 Der Ordner `build` enthält derzeit drei Unterordner. Dies sind der Ordner `helpers`, in dem Helper Dateien für die vom Designsystem genutzte Templateengine
 [handlebars] (https://handlebarsjs.com/) hinterlegt sind, der Ordner `webpack/feature-loader`, in dem alle notwendigen Dateien für den im Designsystem genutzten
 Javascript Featureloader liegen und der Ordner `scripts`, in dem Javascripts abgelegt werden, die im Zuge des Buildprozesses Verwenundg finden.
 
-## dist
+### dist
 
 In den Ordner `dist` werden bei einem Release verschiedene Dateien (u.a. die Templates und alle weitere Assets) kopiert.
 
-## src
+### src
 
 Im `src` Ordner liegen zum einen sämtliche Assets, wie Icons, Schriftarten, Javascripte und Testdaten und zum anderen werden hier im Unterordner `stories`
 alle Storybook Stories sowie die damit zu entwickelnden Handlebar Templates abgelegt. Weitere Details zum Ablageort und Konventionen zur Benennung von Stories und Templates
 können dem Kapitel [Konventionen zur Bennung und dem Ablageort von Dateien](#konventionen-zur-bennung-und-dem-ablageort-von-dateien) entnommen werden.
 
-## Andere wichtige Dateien
+### Andere wichtige Dateien
 
 Die in der folgenden Tabelle genannten Dateien müssen alle direkt im Wurzelverzeichnis des Projektes abgelegt werden, damit das Designsystem korrekt gebaut werden kann.
 
@@ -56,4 +56,103 @@ Die in der folgenden Tabelle genannten Dateien müssen alle direkt im Wurzelverz
 | `postcss.config.js`  | Das von uns eingesetzte CSS Utility Framework [Tailwindcss](https://tailwindcss.com/) betreiben wir mit Hilfe von [PostCSS](https://postcss.org/). In dieser Datei wird konfiguriert wie PostCSS arbeitet. Wir legen hier fest, dass das Plugin `tailwindcss` und `postcss-preset-env` genutzt wird. |
 | `tailwind.config.js` | In dieser Datei wird das von uns im Designsystem eingesetzte CSS Utility Framework TailwindCSS konfiguriert. Weiterführende Informationen können hierzu in der [offiziellen Dokumentation](https://tailwindcss.com/docs/configuration) des Frameworks eingesehen werden.                             |
 
-## Konventionen zur Bennung und dem Ablageort von Dateien
+## Namenskonventionen
+
+Bei der Benennung von Assets (z.B. Stories, Handlebar-Komponenten) sind ein paar Regeln einzuhalten. Grundsätzlich sind für alle Bezeichner ausschließlic
+englische Begriffe und Worte zu verwenden. Für die unterschiedlichen Assets im speziellen gelten die nachfolgend genannten Regeln und Konventionen.
+
+### Stories
+
+Die Namen von Storybook Stories sollen sich, wenn möglich, an den Namen der Komponenten orientieren, die damit getestet werden. Eine Komponenten
+`Button.hbs` sollte beispielsweise mit einer Story `Button.stories.mdx` getestet werden.
+Der Name einer Story wird immer in [Pascal Case](https://de.wikipedia.org/wiki/Binnenmajuskel) Notation geschrieben. Diese ist der Camel Case Notation
+sehr ähnlich, jedoch wird hier auch der erste Buchstabe des ersten Wortes groß geschrieben.
+
+<div class="bg-red-200 !mt-4 p-4">
+    <h4 class="!text-red-900 font-bold">Falsch</h4>
+    <pre class="!bg-white !leading-8 !p-4">
+        conventions-and-datastructure.stories.mdx
+        <br />
+        teaserHeadings.stories.mdx
+    </pre>
+</div>
+<div class="bg-green-200 !mt-4 p-4">
+    <h4 class="!text-green-900 font-bold">Korrekt</h4>
+    <pre class="!bg-white !p-4 !leading-8">
+        ConventionAndDatastructure.stories.mdx
+        <br />
+        TeaserHeadings.stories.mdx
+    </pre>
+</div>
+
+### Handlebar Komponenten
+
+Die Namen von Handlebar-Komponenten werden wie auch die Namen der Stories in Pascal-Case Notation geschrieben. Alle Worte in den Dateinamen
+sind auszuschreiben und nicht abzukürzen.
+
+<div class="bg-red-200 !mt-4 p-4">
+    <h4 class="!text-red-900 font-bold">Falsch</h4>
+    <pre class="!bg-white !leading-8 !p-4">
+        Teaser-Heading.hbs
+        <br />
+        teaserStandard.hbs
+        <br />
+        BrandNavItem.hbs
+    </pre>
+</div>
+<div class="bg-green-200 !mt-4 p-4">
+    <h4 class="!text-green-900 font-bold">Korrekt</h4>
+    <pre class="!bg-white !p-4 !leading-8">
+        TeaserHeading.hbs
+        <br />
+        TeaserStandard.hbs
+        <br />
+        BrandNavigationItem.hbs
+    </pre>
+</div>
+
+Die Namen von Parametern in Handlebar-Komponenten werden in [Camel-Case](https://en.wikipedia.org/wiki/Camel_case) Notation geschrieben.
+Alle Worte, die einen Namen bilden, sind auszuschreiben und nicht abzukürzen.
+
+<div class="bg-red-200 !mt-4 p-4">
+    <h4 class="!text-red-900 font-bold">Falsch</h4>
+    <pre class="!bg-white !leading-8 !p-4">
+        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true DoTracking=(if
+        this.doTracking 'true') ClickLabelPrefix1=this.realTeasersize
+        ClickLabelPrefix2="mediaLink"&#125;&#125;
+    </pre>
+</div>
+<div class="bg-green-200 !mt-4 p-4">
+    <h4 class="!text-green-900 font-bold">Korrekt</h4>
+    <pre class="!bg-white !p-4 !leading-8">
+        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true doTracking=(if
+        this.doTracking 'true') clickLabelPrefix1=this.realTeasersize
+        clickLabelPrefix2="mediaLink"&#125;&#125;
+    </pre>
+</div>
+
+### Ordnernamen
+
+Die Namen von Ordnern werden in [Kebap-Case](https://kulturbanause.de/faq/was-ist-kebab-case/) Notation geschrieben. Das heißt sie fangen grundsätzlich mit kleinen Buchstaben an und werden,
+sofern sie aus mehreren Worten zusammengesetzt werden, mit Minus voneinander getrennt.
+
+<div class="bg-red-200 !mt-4 p-4">
+    <h4 class="!text-red-900 font-bold">Falsch</h4>
+    <pre class="!bg-white !leading-8 !p-4">
+        Header/ <br />
+        |- AnchorNavigation <br />
+        |- NavigationFlyout
+    </pre>
+</div>
+<div class="bg-green-200 !mt-4 p-4">
+    <h4 class="!text-green-900 font-bold">Korrekt</h4>
+    <pre class="!bg-white !p-4 !leading-8">
+        header/ <br />
+        |- Anchor-navigation <br />
+        |- navigation-flyout
+    </pre>
+</div>
+
+### Javascript
+
+### Allgemeines
