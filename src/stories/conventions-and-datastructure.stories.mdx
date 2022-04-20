@@ -10,6 +10,39 @@ Dieses Kapitel richtet sich vor allem an die Entwickler des Designsystems. Es er
 
 ## Aufbau der Datenstruktur des Designsystems
 
+<Preview>
+    <pre>
+        {`
+.github/
+|——— workflows/
+.storybook/ 
+build/ 
+|——— helpers/ 
+|——— scripts/ 
+|——— webpack/ 
+dist/ 
+src/
+|——— assets/ 
+|    |——— brand/ 
+|    |——— fixtures/ 
+|    |——— fonts/ 
+|    |——— icons/ 
+|    |——— js/ 
+|    |——— tailwind.css 
+|——— stories/ 
+|    |——— views/
+.gitignore
+CHANGELOG.md
+config.js
+gulpfile.js
+package.json
+postcss.config.js
+README.md
+tailwind.config.js
+`}
+    </pre>
+</Preview>
+
 Im folgenden werden kurz die Ordner, deren Inhalte und andere für das Designsystem wichtige Dateien beschrieben
 
 ### .github
@@ -39,7 +72,27 @@ In den Ordner `dist` werden bei einem Release verschiedene Dateien (u.a. die Tem
 
 ### src
 
-Im `src` Ordner liegen zum einen sämtliche Assets, wie Icons, Schriftarten, Javascripte und Testdaten und zum anderen werden hier im Unterordner `stories`
+<Preview>
+    <pre>
+        {`
+src/
+|——— assets/ 
+|    |——— brand/ 
+|    |——— fixtures/ 
+|    |——— fonts/ 
+|    |——— icons/ 
+|    |——— js/ 
+|    |——— tailwind.css 
+|——— stories/ 
+|    |——— views/
+|    |    |——— base/
+|    |    |——— components/   
+|    |    |——— pages/     
+`}
+    </pre>
+</Preview>
+
+Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im `src` Ordner liegen zum einen sämtliche Assets, wie Icons, Schriftarten, Javascripte und Testdaten und zum anderen werden hier im Unterordner `stories`
 alle Storybook Stories sowie die damit zu entwickelnden Handlebar Templates abgelegt. Weitere Details zum Ablageort und Konventionen zur Benennung von Stories und Templates
 können dem Kapitel [Konventionen zur Bennung und dem Ablageort von Dateien](#konventionen-zur-bennung-und-dem-ablageort-von-dateien) entnommen werden.
 
@@ -71,17 +124,15 @@ sehr ähnlich, jedoch wird hier auch der erste Buchstabe des ersten Wortes groß
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        conventions-and-datastructure.stories.mdx
-        <br />
-        teaserHeadings.stories.mdx
+        {`conventions-and-datastructure.stories.mdx 
+teaserHeadings.stories.mdx`}
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        ConventionAndDatastructure.stories.mdx
-        <br />
-        TeaserHeadings.stories.mdx
+        {`ConventionAndDatastructure.stories.mdx 
+TeaserHeadings.stories.mdx`}
     </pre>
 </div>
 
@@ -93,21 +144,17 @@ sind auszuschreiben und nicht abzukürzen.
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        Teaser-Heading.hbs
-        <br />
-        teaserStandard.hbs
-        <br />
-        BrandNavItem.hbs
+        {`Teaser-Heading.hbs 
+teaserStandard.hbs 
+BrandNavItem.hbs`}
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        TeaserHeading.hbs
-        <br />
-        TeaserStandard.hbs
-        <br />
-        BrandNavigationItem.hbs
+        {`TeaserHeading.hbs 
+TeaserStandard.hbs 
+BrandNavigationItem.hbs`}
     </pre>
 </div>
 
@@ -139,17 +186,17 @@ sofern sie aus mehreren Worten zusammengesetzt werden, mit Minus voneinander get
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        Header/ <br />
-        |- AnchorNavigation <br />
-        |- NavigationFlyout
+        {`Header/ 
+|— AnchorNavigation 
+|— NavigationFlyout`}
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        header/ <br />
-        |- anchor-navigation <br />
-        |- navigation-flyout
+        {`header/ 
+|— anchor-navigation 
+|— navigation-flyout`}
     </pre>
 </div>
 
