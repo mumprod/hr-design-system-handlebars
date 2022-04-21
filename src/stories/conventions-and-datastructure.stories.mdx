@@ -92,9 +92,18 @@ src/
     </pre>
 </Preview>
 
-Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im `src` Ordner liegen zum einen sämtliche Assets, wie Icons, Schriftarten, Javascripte und Testdaten und zum anderen werden hier im Unterordner `stories`
-alle Storybook Stories sowie die damit zu entwickelnden Handlebar Templates abgelegt. Weitere Details zum Ablageort und Konventionen zur Benennung von Stories und Templates
-können dem Kapitel [Konventionen zur Bennung und dem Ablageort von Dateien](#konventionen-zur-bennung-und-dem-ablageort-von-dateien) entnommen werden.
+Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `assets` finden sich die Folgenden Ordner und Dateien
+
+-   **brand** — In diesem Ordner liegen markenspezifische Assets, wie z.B. Icons und Logos. Für jede Marke findet sich darin ein eigener Unterordner.
+-   **fixtures** — Dieser Ordner enthält alle Testdaten. Für jede zu testende Komponente muss ein separater Ordner angelegt werden.
+    Dessen Name muss dem Namen des Ordners der zu testenden Komponente entsprechen. Liegen beispielsweise alle Bestandteile der zu testenden
+    Komponente Teaser in einem Order `src/stories/views/components/teaser`, müssen die Testdaten dafür in einem Ordner `src/assets/fixtures/teaser`
+    abgelegt werden.
+-   **fonts** — Alle im Designsystem zu verwendenden Schriften werden in diesem Ordner abgelegt.
+-   **icons** — Alle global im Designsystem zu verwendenden Icons werden in diesem Ordner abgelegt. Im Designsystem werden ausschließlich
+    SVG-Maps verwendet. Wie diese erzeugt werden und was dafür alles beachtet werden muss, kann in Kapitel [Icons](?path=/story/grundlegendes-icons--page) nachgelesen werden.
+-   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. in ihr werden alle Utlityklassen des tailwind.css Frameworks eingebunden,
+    benutzerdefinierte CSS Klassen geschrieben sowie CSS-Custom Properties fürs Theming der einzelnen Marken definiert.
 
 ### Andere wichtige Dateien
 
