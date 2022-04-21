@@ -394,7 +394,7 @@
     .grid-page {
         grid-template-columns:
             [full-start] minmax(1rem, 1fr)
-            [main-start] minmax(0, 64rem) [main-end]
+            [main-start] minmax(0, 63rem) [main-end]
             minmax(1rem, 1fr) [full-end];
     }
 
@@ -411,6 +411,50 @@
             grid-column: main;
         }
     }
+    /*! ****************************/
+    /*! Aspect Ratio with fallback */
+    /*! ****************************/
+    .ar-16-9 {
+        aspect-ratio: 16 / 9    
+    }
+
+    @supports not (aspect-ratio: 16 / 9) {
+        .ar-16-9::before {
+            float: left;
+            padding-top: 56.25%;
+            content: '';
+        }
+
+        .ar-16-19::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+    
+    .ar-1-1 {
+        aspect-ratio: 1 / 1    
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+        .ar-1-1::before {
+            float: left;
+            padding-top: 100%;
+            content: '';
+        }
+
+        .ar-1-1::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+
+    /*! ********************************/
+    /*! Aspect Ratio with fallback end */
+    /*! ********************************/
+
     .headline--barrier {
         display: flex;
         width: 100%;

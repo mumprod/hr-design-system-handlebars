@@ -5,7 +5,7 @@
             "serifHeading": true,
             "extendedTitle": null,
             "teasertype": "standard",
-            "teasersize": "100",
+            "teasersize": "xl",
             "teaserDate": {
                 "htmlDateTime": "2022-04-17T19:30+0200",
                 "htmlDate": "20.02.1983",
@@ -17,31 +17,21 @@
                 "showTeaserInfoSection": true,
                 "showTeaserInfoChannel": true,
                 "showTeaserInfoAll": true,
-                "showTeaserInfoDate": false,
+                "showTeaserInfoDate": true,
                 "showTeaserInfoDateTime": true,
                 "showTeaserInfoProgramRef": true
             },
             "teaserImage": {
                 "copyrightWithLinks": "",
                 "responsiveImage": {
-                    "asPicture": true,
-                    "asImage": false,
+                    "asPicture": false,
+                    "asImage": true,
                     "fallback": "https://picsum.photos/id/188/480/210",
                     "sources": [
                         {
-                            "media": "all and (max-width: 43.688em)",
-                            "sizes": "100vw",
-                            "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                        },
-                        {
-                            "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                            "sizes": "100vw",
-                            "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                        },
-                        {
-                            "media": "all and (min-width: 64em)",
-                            "sizes": "960px",
-                            "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                            
+                            "sizes": "(min-width: 1010px) 960px, 100vw",
+                            "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                         }
                     ]
                 }
@@ -50,7 +40,7 @@
             "dontLazyload": true,
             "realTeasersize": "100",
             "isStandardTeaser": true,
-            "isHeroTeaser": true,
+            "isHeroTeaser": false,
             "isMediaTeaser": false,
             "isGuide": false,
             "isProgram": false,
@@ -115,24 +105,14 @@
                     "teaserImage": {
                         "copyrightWithLinks": "",
                         "responsiveImage": {
-                            "asPicture": true,
-                            "asImage": false,
+                            "asPicture": false,
+                            "asImage": true,
                             "fallback": "https://picsum.photos/id/188/480/210",
                             "sources": [
                                 {
-                                    "media": "all and (max-width: 43.688em)",
-                                    "sizes": "100vw",
-                                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                                },
-                                {
-                                    "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                                    "sizes": "100vw",
-                                    "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                                },
-                                {
-                                    "media": "all and (min-width: 64em)",
-                                    "sizes": "960px",
-                                    "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    
+                                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                                 }
                             ]
                         }
@@ -144,14 +124,6 @@
                     "trackingData": {
                         "secondLevelId": "2",
                         "pageName": "hessenschau"
-                    },
-                    "label": {
-                        "type": "Ticker",
-                        "loca": "ticker",
-                        "byline": {
-                            "bylineSsi": "BylineText aus ssi",
-                            "bylineText": "BylineText"
-                        }
                     }
                 }
             }

@@ -1,0 +1,10 @@
+{
+    "label": {
+        "type": "Ticker",
+        "loca": "ticker",
+        "byline": {
+            "bylineSsi": "BylineText aus ssi",
+            "bylineText": "BylineText"
+        }
+    }
+}

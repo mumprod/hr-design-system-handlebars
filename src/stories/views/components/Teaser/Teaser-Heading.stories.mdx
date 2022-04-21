@@ -5,11 +5,15 @@ import teaserHeading from "./Teaser-Heading.hbs";
 <Meta
   title="Komponenten/Teaser/Komponenten/TeaserHeading"
   argTypes={{
-    topline: {
-      control: "text",
-      description: "Topline Text",
+    link:{
+      content:{
+        topline: {
+          control: "text",
+          description: "Topline Text",
+        }
+      }
     },
-    headline: {
+    title: {
       control: "text",
       description: "Headline Text",
     },
@@ -38,7 +42,7 @@ import teaserHeading from "./Teaser-Heading.hbs";
       },
     },
     size: {
-      options: ["lg", "sm"],
+      options: ["xxl", "md", "sm"],
       control: { type: "inline-radio" },
     },
   }}
@@ -69,12 +73,14 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       },
     }}
     args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
+      title: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
       font: "font-headingSerif",
       size: "xxl",
       link: {
+              content: {
+                topline: "Das ist eine wirklich sehr lange Topline"
+              },
               url: "/teaser1"
             }
     }}
@@ -100,12 +106,14 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       },
     }}
     args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
+      title: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
       font: "font-headingSerif",
       size: "md",
       link: {
+              content: {
+                topline: "Das ist eine wirklich sehr lange Topline"
+              },
               url: "/teaser1"
             }
     }}
@@ -129,14 +137,16 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
       },
     }}
     args={{
-      topline: "Das ist eine wirklich sehr lange Topline",
-      headline: "Das ist eine wirklich sehr lange Headline",
+      title: "Das ist eine wirklich sehr lange Headline",
       headlineTag: "h1",
       font: "font-headingSerif",
       size: "sm",
       link: {
-              url: "/teaser1"
-            }
+        content: {
+          topline: "Das ist eine wirklich sehr lange Topline"
+        },
+        url: "/teaser1"
+      }
     }}
   >
     {Template.bind({})}
