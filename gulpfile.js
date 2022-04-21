@@ -228,7 +228,7 @@ function parseJson() {
 }
 
 function watchForChanges() {
-    watch(`${options.paths.assets.json}/**/*.json`, series(parseJson))
+    watch(`${options.paths.assets.fixtures}/**/*.json`, series(parseJson))
     log('Watching for Changes..\n')
 }
 
