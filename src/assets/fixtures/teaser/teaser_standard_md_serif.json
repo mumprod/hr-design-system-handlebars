@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser-1",
+    "@->contentpath": "teaser",
     "@->overrides": [
         {
             "@->contentpath": "teasersize",

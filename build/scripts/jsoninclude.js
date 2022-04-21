@@ -72,7 +72,6 @@
                 if (v['@->contentpath'] !== undefined) {
                     includeJSON = getObjectValue(includeJSON, v['@->contentpath'])
                 }
-
                 if (v['@->extends'] !== undefined) {
                     includeJSON = _.extend(includeJSON, v['@->extends'])
                 }

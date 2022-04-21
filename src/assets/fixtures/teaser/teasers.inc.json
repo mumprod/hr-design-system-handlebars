@@ -1,5 +1,5 @@
 {
-    "teaser-1": {
+    "teaser": {
         "byline": "Byline",
         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
         "topline": "Überglücklich, aber ohne Mama",
@@ -24,24 +24,13 @@
         "teaserImage": {
             "copyrightWithLinks": "",
             "responsiveImage": {
-                "asPicture": true,
-                "asImage": false,
-                "fallback": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg",
+                "asPicture": false,
+                "asImage": true,
+                "fallback": "https://picsum.photos/id/188/480/210",
                 "sources": [
                     {
-                        "media": "all and (max-width: 43.688em)",
-                        "sizes": "100vw",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium__extended.jpg 640w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9.jpg 960w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__retina.jpg 1920w"
-                    },
-                    {
-                        "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                        "sizes": "100vw",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
-                    },
-                    {
-                        "media": "all and (min-width: 64em)",
-                        "sizes": "960px",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                        "sizes": "(min-width: 1010px) 960px, 100vw",
+                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                     }
                 ]
             }
@@ -86,14 +75,6 @@
             "avDocument": "",
             "image": ""
         },
-        "label": {
-            "type": "Ticker",
-            "loca": "ticker",
-            "byline": {
-                "bylineSsi": "ssi",
-                "bylineText": "BylineText"
-            }
-        },
         "geotag": [
             {
                 "title": "Wolfhagen"
@@ -114,24 +95,13 @@
                 "teaserImage": {
                     "copyrightWithLinks": "",
                     "responsiveImage": {
-                        "asPicture": true,
-                        "asImage": false,
+                        "asPicture": false,
+                        "asImage": true,
                         "fallback": "https://picsum.photos/id/188/480/210",
                         "sources": [
                             {
-                                "media": "all and (max-width: 43.688em)",
-                                "sizes": "100vw",
-                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                            },
-                            {
-                                "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                                "sizes": "100vw",
-                                "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                            },
-                            {
-                                "media": "all and (min-width: 64em)",
-                                "sizes": "960px",
-                                "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                "sizes": "(min-width: 1010px) 960px, 100vw",
+                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                             }
                         ]
                     }
@@ -143,22 +113,14 @@
                 "trackingData": {
                     "secondLevelId": "2",
                     "pageName": "hessenschau"
-                },
-                "label": {
-                    "type": "Ticker",
-                    "loca": "ticker",
-                    "byline": {
-                        "bylineSsi": "ssi",
-                        "bylineText": "BylineText"
-                    }
                 }
             }
         }
     },
-    "teaser-2": {
+    "teaserWithComments": {
         "byline": "Byline",
-        "title": "Ein zweiter Teaser",
-        "topline": "Topline Teaser 2",
+        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+        "topline": "Überglücklich, aber ohne Mama",
         "serifHeading": true,
         "extendedTitle": "",
         "teasertype": "standard",
@@ -180,26 +142,29 @@
         "teaserImage": {
             "copyrightWithLinks": "",
             "responsiveImage": {
-                "asPicture": true,
-                "asImage": false,
-                "fallback": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg",
+                "asPicture": false,
+                "asImage": true,
+                "fallback": "https://picsum.photos/id/188/480/210",
                 "sources": [
                     {
-                        "media": "all and (max-width: 43.688em)",
-                        "sizes": "100vw",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium__extended.jpg 640w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9.jpg 960w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__retina.jpg 1920w"
-                    },
-                    {
-                        "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                        "sizes": "100vw",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
-                    },
-                    {
-                        "media": "all and (min-width: 64em)",
-                        "sizes": "960px",
-                        "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                        "sizes": "(min-width: 1010px) 960px, 100vw",
+                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                     }
                 ]
+            }
+        },
+        "commentLink": {
+            "link": {
+                "url": "/teaser1-comments",
+                "webviewUrl": "/teaser1-comments#webview",
+                "isTargetBlank": false,
+                "readMoreText": {
+                    "readMoreScreenreader": "Zu den Kommentaren des Artikels"
+                },
+                "content": {
+                    "commentNumber": "666",
+                    "hasOneComment": false
+                }
             }
         },
         "hasMediaButtons": false,
@@ -242,14 +207,6 @@
             "avDocument": "",
             "image": ""
         },
-        "label": {
-            "type": "Ticker",
-            "loca": "ticker",
-            "byline": {
-                "bylineSsi": "ssi",
-                "bylineText": "BylineText"
-            }
-        },
         "geotag": [
             {
                 "title": "Wolfhagen"
@@ -270,24 +227,13 @@
                 "teaserImage": {
                     "copyrightWithLinks": "",
                     "responsiveImage": {
-                        "asPicture": true,
-                        "asImage": false,
+                        "asPicture": false,
+                        "asImage": true,
                         "fallback": "https://picsum.photos/id/188/480/210",
                         "sources": [
                             {
-                                "media": "all and (max-width: 43.688em)",
-                                "sizes": "100vw",
-                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                            },
-                            {
-                                "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
-                                "sizes": "100vw",
-                                "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
-                            },
-                            {
-                                "media": "all and (min-width: 64em)",
-                                "sizes": "960px",
-                                "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                "sizes": "(min-width: 1010px) 960px, 100vw",
+                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                             }
                         ]
                     }
@@ -299,14 +245,6 @@
                 "trackingData": {
                     "secondLevelId": "2",
                     "pageName": "hessenschau"
-                },
-                "label": {
-                    "type": "Ticker",
-                    "loca": "ticker",
-                    "byline": {
-                        "bylineSsi": "ssi",
-                        "bylineText": "BylineText"
-                    }
                 }
             }
         }
