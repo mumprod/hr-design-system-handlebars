@@ -111,61 +111,77 @@ Die in der folgenden Tabelle genannten Dateien müssen alle direkt im Wurzelverz
 
 ## Namenskonventionen
 
-Bei der Benennung von Assets (z.B. Stories, Handlebar-Komponenten) sind ein paar Regeln einzuhalten. Grundsätzlich sind für alle Bezeichner ausschließlich
-englische Begriffe und Worte zu verwenden. Für die unterschiedlichen Assets im speziellen gelten die nachfolgend genannten Regeln und Konventionen.
+Bei der Benennung von Assets (z.B. Stories, Handlebar-Komponenten) sind einige Regeln einzuhalten. Als Bestandteile von Namen sind
+ausschließlich englische Begriffe und Worte erlaubt. Die Dateinamen müssen weiterhin in [Snake-Case](https://en.wikipedia.org/wiki/Snake_case) Notation
+geschrieben werden. Das bedeutet, dass sie ausschließlich aus Kleinbuchstaben bestehen dürfen. Sofern sie aus mehreren unabhängigen Worten
+zusammengesetzt sind, müssen diese mit Unterstrichen voneinander getrennt werden. Alle Worte in den Namen müssen ausgeschrieben und keine
+abkürzungen verwendet werden. Wie dies bei den konkreten Assets aussieht und was darüber
+hinaus beachtet werden muss, wird im Folgenden beschrieben.
 
 ### Stories
 
-Die Namen von Storybook Stories sollen sich, wenn möglich, an den Namen der Komponenten orientieren, die damit getestet werden. Eine Komponenten
-`Button.hbs` sollte beispielsweise mit einer Story `Button.stories.mdx` getestet werden.
-Der Name einer Story wird immer in [Pascal Case](https://de.wikipedia.org/wiki/Binnenmajuskel) Notation geschrieben. Diese ist der Camel Case Notation
-sehr ähnlich, jedoch wird hier auch der erste Buchstabe des ersten Wortes groß geschrieben.
+Die Namen von Storybook Stories sollen sich, wenn möglich, an den Namen der Komponenten orientieren, die damit getestet werden.
+Eine Komponente `button.hbs` sollte beispielsweise mit einer Story `button.stories.mdx` getestet werden.
 
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
-    <pre class="!bg-white !leading-8 !p-4">
-        {`conventions-and-datastructure.stories.mdx 
-teaserHeadings.stories.mdx`}
+    <pre class="!bg-white !leading-6 !p-4">
+        {`conventions-and-datastructure.stories.mdx //Name in Kebap-Case
+teaserHeadings.stories.mdx //Name in Camel-Case
+SvgOptimization.stories.mdx //Name in Pascal Case`}
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
-    <pre class="!bg-white !p-4 !leading-8">
-        {`ConventionAndDatastructure.stories.mdx 
-TeaserHeadings.stories.mdx`}
+    <pre class="!bg-white !p-4 !leading-6">
+        {`// Namen in Snake-Case
+convention_and_datastructure.stories.mdx 
+teaser_headings.stories.mdx
+svg_optimization.stories.mdx`}
     </pre>
 </div>
 
 ### Handlebar Komponenten
 
-Die Namen von Handlebar-Komponenten werden wie auch die Namen der Stories in Pascal-Case Notation geschrieben. Alle Worte in den Dateinamen
-sind auszuschreiben und nicht abzukürzen.
+Für die Namen von Handlebar-Komponenten gelten die gleichen Regeln wie für Stories.
 
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        {`Teaser-Heading.hbs 
-teaserStandard.hbs 
-BrandNavItem.hbs`}
+        {`teaser-heading.hbs //Kebap-Case
+teaserStandard.hbs //Camel-Case
+TeaserText.hbs //Pascal-Case`}
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        {`TeaserHeading.hbs 
-TeaserStandard.hbs 
-BrandNavigationItem.hbs`}
+        {`// Snake-Case
+teaser_heading.hbs 
+teaser_standard.hbs
+teaser_text.hbs`}
     </pre>
 </div>
 
-Die Namen von Parametern in Handlebar-Komponenten werden in [Camel-Case](https://en.wikipedia.org/wiki/Camel_case) Notation geschrieben.
-Alle Worte, die einen Namen bilden, sind auszuschreiben und nicht abzukürzen.
+Namen und deren einzelnen Bestandteile sind immer auszuschreiben. Abkürzungen sollen nicht verwendet werden.
+
+<div class="bg-red-200 !mt-4 p-4">
+    <h4 class="!text-red-900 font-bold">Falsch</h4>
+    <pre class="!bg-white !leading-8 !p-4">{`brand_nav_item.hbs`}</pre>
+</div>
+<div class="bg-green-200 !mt-4 p-4">
+    <h4 class="!text-green-900 font-bold">Korrekt</h4>
+    <pre class="!bg-white !p-4 !leading-8">{`brand_navigation_item.hbs`}</pre>
+</div>
+
+Die Namen von Parametern in Handlebar-Komponenten sind, anders als der Datainame, in
+[Camel-Case](https://en.wikipedia.org/wiki/Camel_case) Notation zu schreiben.
 
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true DoTracking=(if
-        this.doTracking 'true') ClickLabelPrefix1=this.realTeasersize
+        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true do-tracking=(if
+        this.doTracking 'true') click_label_prefix1=this.realTeasersize
         ClickLabelPrefix2="mediaLink"&#125;&#125;
     </pre>
 </div>
@@ -177,6 +193,14 @@ Alle Worte, die einen Namen bilden, sind auszuschreiben und nicht abzukürzen.
         clickLabelPrefix2="mediaLink"&#125;&#125;
     </pre>
 </div>
+
+### JSON
+
+Im Designsystem werden Testdaten für Komponenten mittels JSON-Dateien bereitgestellt. Auch diese Dateinamen werden in Snake-Case Notation
+geschrieben. Anders als bei den anderen Assets, werden zwei verschiedene Arten von JSON-Dateien unterschieden. Es gibt JSON-Dateien, die
+direkt in Storybook-Stories als Testdaten verwendet werden und JSON-Dateien, die ausschließlich in andere JSON-Dateien inkludiert werden,
+aber nie direkt in Stories verwendet werden. Die zu inkludierenden JSON-Dateien sind nach dem Namensschema `name_des_includes.inc.json`
+zu benennen.
 
 ### Ordnernamen
 
@@ -199,7 +223,3 @@ sofern sie aus mehreren Worten zusammengesetzt werden, mit Minus voneinander get
 |— navigation-flyout`}
     </pre>
 </div>
-
-### Javascript
-
-### Allgemeines
