@@ -1,0 +1,57 @@
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
+
+import teaserTextComponent from "./teaserText.hbs";
+
+<Meta
+  title="Komponenten/Teaser/Komponenten/teaserText"
+  argTypes={{
+    text: {
+      control: "text",
+      description: "teaserText",
+    },
+    size: {
+      options: ["xl", "lg", "md", "sm"],
+      control: { type: "inline-radio" },
+    },
+    font : {
+     table: {
+          disable: true
+        }
+    },
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  return teaserTextComponent({ text, ...args });
+};
+
+# teaserText
+
+Beispiele für die teaserText-Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Teasertext"
+    args={{
+        text: "Dies ist der Teasertext eines normalen Teasers",
+        size: "xl",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Teasertext Hero-Teaser"
+    args={{
+        text: "Dies ist der Teasertext eines Hero-Teasers",
+        size: "xxl",
+        font: "md:text-base md:leading-4 lg:leading-5",
+    }}
+    parameters={{ 
+        controls: { 
+            exclude: ['size'] 
+        } 
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>

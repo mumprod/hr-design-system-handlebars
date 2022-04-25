@@ -1,3 +1,40 @@
+# v0.42.8 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- add teaserText-component [#217](https://github.com/mumprod/hr-design-system-handlebars/pull/217) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.42.7 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- extend byline [#216](https://github.com/mumprod/hr-design-system-handlebars/pull/216) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.42.6 (Wed Apr 13 2022)
+
+#### 🐛 Bug Fix
+
+- - added aspect ratio classes with fallback to tailwind.css [#215](https://github.com/mumprod/hr-design-system-handlebars/pull/215) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.5 (Wed Apr 13 2022)
 
 #### 🐛 Bug Fix
