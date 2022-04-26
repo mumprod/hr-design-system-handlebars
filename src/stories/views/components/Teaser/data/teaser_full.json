@@ -1,7 +1,7 @@
 {
     "logicItems": [
         {
-            "includePath": "components/teaser/teaser-group/group-default",
+            "includePath": "components/Teaser/teaser-group",
             "includeModel": {
                 "hasLink": true,
                 "link": "#gruppe1",
@@ -12,7 +12,7 @@
                     {
                         "isSsi": true,
                         "logicItem": {
-                            "includePath": "components/teaser/teaser-default",
+                            "includePath": "components/Teaser/Teaser-standard",
                             "includeModel": {
                                 "byline": "Byline",
                                 "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
