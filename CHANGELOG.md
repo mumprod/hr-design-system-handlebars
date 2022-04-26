@@ -1,3 +1,15 @@
+# v0.42.10 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Teaser Text and Headline fine tuning [#220](https://github.com/mumprod/hr-design-system-handlebars/pull/220) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.9 (Tue Apr 26 2022)
 
 #### 🐛 Bug Fix
