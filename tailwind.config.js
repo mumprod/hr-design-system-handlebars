@@ -38,7 +38,7 @@ module.exports = {
 
         extend: {
             fontSize: {  
-                'sm':['0.875rem', '1.125rem'], 
+                'sm':['0.875rem', '1.188rem'], 
                 'base':['1rem', '1.25rem'],                 
                 'lg':['1.125rem', '1.5rem'],              
                 '2xl':['1.375rem', '1.75rem'],
