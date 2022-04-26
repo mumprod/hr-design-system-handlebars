@@ -1,3 +1,15 @@
+# v0.42.9 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1551 - group logic implementation [#218](https://github.com/mumprod/hr-design-system-handlebars/pull/218) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.8 (Tue Apr 19 2022)
 
 #### 🐛 Bug Fix
