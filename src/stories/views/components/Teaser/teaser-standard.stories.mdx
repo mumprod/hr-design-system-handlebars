@@ -16,6 +16,8 @@ let hero_teaser_with_comments  =  structuredClone(hero_teaser);
 addCommentLink(hero_teaser_with_comments, comments.commentLink);
 let md_teaser_with_comments  =  structuredClone(md_teaser);
 addCommentLink(md_teaser_with_comments, comments.commentLink);
+let sm_teaser_with_comments  =  structuredClone(sm_teaser);
+addCommentLink(sm_teaser_with_comments, comments.commentLink);
 
 <Meta   title="Komponenten/Teaser/Standard"
         parameters={{
@@ -72,7 +74,7 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
     <Story name="Standard MD" args={md_teaser_with_comments}>
         {Template.bind({})}
     </Story>   
-    <Story name="Standard SM" args={sm_teaser}>
+    <Story name="Standard SM" args={sm_teaser_with_comments}>
         {Template.bind({})}
     </Story>   
    
