@@ -1,7 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import teaser from './teaser_logic.hbs'
-import index_site from './data/teaser_full.json' 
+import index_site from '../data/teaser_full.json' 
 
 <Meta   title="Komponenten/Teaser/Logic"
         parameters={{
@@ -9,6 +9,15 @@ import index_site from './data/teaser_full.json'
         }}
         argTypes={{
         }} 
+        decorators={[
+            (Story) => {
+                return `<div class="grid bg-gray-100 grid-page">
+                            <div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">    
+                                ${Story()} 
+                            </div>
+                        </div>`
+            },
+        ]}
         />
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
