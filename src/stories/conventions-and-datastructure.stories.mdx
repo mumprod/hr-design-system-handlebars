@@ -102,8 +102,13 @@ Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `a
 -   **fonts** — Alle im Designsystem zu verwendenden Schriften werden in diesem Ordner abgelegt.
 -   **icons** — Alle global im Designsystem zu verwendenden Icons werden in diesem Ordner abgelegt. Im Designsystem werden ausschließlich
     SVG-Maps verwendet. Wie diese erzeugt werden und was dafür alles beachtet werden muss, kann in Kapitel [Icons](?path=/story/grundlegendes-icons--page) nachgelesen werden.
--   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. in ihr werden alle Utlityklassen des tailwind.css Frameworks eingebunden,
+-   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. In ihr werden alle Utlityklassen des tailwind.css Frameworks eingebunden,
     benutzerdefinierte CSS Klassen geschrieben sowie CSS-Custom Properties fürs Theming der einzelnen Marken definiert.
+
+Im Ordner `stories` werden die Storybook Stories in Form von .mdx Dateien sowie die dazugehörigen Handlebars Komponenten abgelegt. Aus Kompatibilitätsgründen
+zu den bestehenden Handlebar Komponenten im `hrcms-delivery` Projekt liegen diese in einem weiteren Unterordner `views/components`.
+Je nach konkreter Komponente, werden diese dann weiter in Ordner mit dem entsprechenden Komponentennamen unterteilt. Alle die `Teaser`Komponente
+betreffenden Assets werden z.B. im Ordner `teaser` abgelegt.
 
 ### Andere wichtige Dateien
 
