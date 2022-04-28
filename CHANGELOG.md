@@ -1,3 +1,16 @@
+# v0.43.0 (Thu Apr 28 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1547 - alternative Teaser Init [#222](https://github.com/mumprod/hr-design-system-handlebars/pull/222) (zouhair1 [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- selbaciri (zouhair1)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.11 (Thu Apr 28 2022)
 
 #### 🐛 Bug Fix
