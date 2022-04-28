@@ -1,9 +1,9 @@
 import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
 import 'core-js/actual/structured-clone';
-import { addCommentLink } from './jsonHelper';
+import { addCommentLink } from '../jsonHelper';
 import byline from "./Byline.hbs";
-import comments from './data/teaser_commentLink.json';
-import teaser from './data/teaser_article.json';
+import comments from '../data/teaser_commentLink.json';
+import teaser from '../data/teaser_article.json';
 let byline_with_comments  =  structuredClone(teaser);
 addCommentLink(byline_with_comments, comments.commentLink);
 
