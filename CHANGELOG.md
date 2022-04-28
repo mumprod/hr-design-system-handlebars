@@ -1,3 +1,15 @@
+# v0.43.1 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- Zusatzinformationen neben Label [#223](https://github.com/mumprod/hr-design-system-handlebars/pull/223) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.43.0 (Thu Apr 28 2022)
 
 #### 🚀 Enhancement
