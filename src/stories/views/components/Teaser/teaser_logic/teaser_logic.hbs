@@ -1,7 +1,7 @@
 {{~#each this.logicItems}}
     {{~#if this.isSsi~}}        
         {{#if (isStorybook)}}  
-            {{> components/Teaser/teaser_logic.ssi.hbs }} 
+            {{> components/Teaser/teaser_logic/teaser_logic.ssi.hbs }} 
         {{else}}
             {{{this.ssi}}}
         {{/if}} 
