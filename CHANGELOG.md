@@ -1,3 +1,15 @@
+# v0.42.11 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- - some refactoring and file relocating [#221](https://github.com/mumprod/hr-design-system-handlebars/pull/221) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.10 (Tue Apr 26 2022)
 
 #### 🐛 Bug Fix
