@@ -53,6 +53,7 @@ module.exports = {
               },
             lineHeight: {
                 11: '2.75rem',
+                5.5 : '1.375rem',
             },
             fill: {
                 black: '#000000',
