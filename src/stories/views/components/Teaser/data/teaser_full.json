@@ -83,7 +83,7 @@
                                 "headingSize": "h1",
                                 "icon": "ortsmarke",
                                 "imageVariant": "topteaser",
-                                "shorttext": "shorttext",
+                                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
                                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
                                 "profiles": "Von Alf Haubitz und Alice Merton",
                                 "documentSection": "Gesellschaft",
@@ -93,11 +93,7 @@
                                 },
                                 "label": {
                                     "type": "Ticker",
-                                    "loca": "ticker",
-                                    "byline": {
-                                        "bylineSsi": "BylineText aus ssi",
-                                        "bylineText": "BylineText"
-                                    }
+                                    "loca": "ticker"
                                 },
                                 "geotag": [
                                     {
@@ -134,18 +130,13 @@
                                         "teasertype": "standard",
                                         "imageVariant": "topteaser",
                                         "isFileDownload": false,
-                                        "topline": "Überglücklich, aber ohne Mama",
                                         "trackingData": {
                                             "secondLevelId": "2",
                                             "pageName": "hessenschau"
                                         },
                                         "label": {
                                             "type": "Ticker",
-                                            "loca": "ticker",
-                                            "byline": {
-                                                "bylineSsi": "BylineText aus ssi",
-                                                "bylineText": "BylineText"
-                                            }
+                                            "loca": "ticker"
                                         }
                                     }
                                 }
@@ -226,7 +217,7 @@
                                 "headingSize": "h1",
                                 "icon": "ortsmarke",
                                 "imageVariant": "topteaser",
-                                "shorttext": "shorttext",
+                                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
                                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
                                 "profiles": "Von Alf Haubitz und Alice Merton",
                                 "documentSection": "Gesellschaft",
@@ -281,15 +272,8 @@
                                         "trackingData": {
                                             "secondLevelId": "2",
                                             "pageName": "hessenschau"
-                                        },
-                                        "label": {
-                                            "type": "Ticker",
-                                            "loca": "ticker",
-                                            "byline": {
-                                                "bylineSsi": "BylineText aus ssi",
-                                                "bylineText": "BylineText"
-                                            }
                                         }
+                                        
                                     }
                                 }
                             }
@@ -380,7 +364,7 @@
                                 "headingSize": "h1",
                                 "icon": "ortsmarke",
                                 "imageVariant": "topteaser",
-                                "shorttext": "shorttext",
+                                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
                                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
                                 "profiles": "Von Alf Haubitz und Alice Merton",
                                 "documentSection": "Gesellschaft",
@@ -431,7 +415,6 @@
                                         "teasertype": "standard",
                                         "imageVariant": "topteaser",
                                         "isFileDownload": false,
-                                        "topline": "Überglücklich, aber ohne Mama",
                                         "trackingData": {
                                             "secondLevelId": "2",
                                             "pageName": "hessenschau"
@@ -440,7 +423,7 @@
                                             "type": "Ticker",
                                             "loca": "ticker",
                                             "byline": {
-                                                "bylineSsi": "BylineText aus ssi",
+                                                "bylineSsi": " Von Alf Haubitz und Alice Merton",
                                                 "bylineText": "BylineText"
                                             }
                                         }
@@ -523,7 +506,7 @@
                                 "headingSize": "h1",
                                 "icon": "ortsmarke",
                                 "imageVariant": "topteaser",
-                                "shorttext": "shorttext",
+                                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
                                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
                                 "profiles": "Von Alf Haubitz und Alice Merton",
                                 "documentSection": "Gesellschaft",
@@ -578,14 +561,6 @@
                                         "trackingData": {
                                             "secondLevelId": "2",
                                             "pageName": "hessenschau"
-                                        },
-                                        "label": {
-                                            "type": "Ticker",
-                                            "loca": "ticker",
-                                            "byline": {
-                                                "bylineSsi": "BylineText aus ssi",
-                                                "bylineText": "BylineText"
-                                            }
                                         }
                                     }
                                 }
