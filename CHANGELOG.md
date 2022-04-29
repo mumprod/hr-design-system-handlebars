@@ -1,3 +1,64 @@
+# v0.43.1 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- Zusatzinformationen neben Label [#223](https://github.com/mumprod/hr-design-system-handlebars/pull/223) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.43.0 (Thu Apr 28 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1547 - alternative Teaser Init [#222](https://github.com/mumprod/hr-design-system-handlebars/pull/222) (zouhair1 [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- selbaciri (zouhair1)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.11 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- - some refactoring and file relocating [#221](https://github.com/mumprod/hr-design-system-handlebars/pull/221) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.10 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Teaser Text and Headline fine tuning [#220](https://github.com/mumprod/hr-design-system-handlebars/pull/220) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.9 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1551 - group logic implementation [#218](https://github.com/mumprod/hr-design-system-handlebars/pull/218) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.42.8 (Tue Apr 19 2022)
 
 #### 🐛 Bug Fix
