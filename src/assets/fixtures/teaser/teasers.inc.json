@@ -65,6 +65,7 @@
         "showAirdate": false,
         "showProfileInfoAsByline": false,
         "obsolet_brandOfTeaser": "hessenschau",
+        "documentSection": "Gesellschaft",
         "headingSize": "h1",
         "icon": "ortsmarke",
         "imageVariant": "topteaser",
@@ -167,6 +168,7 @@
                 }
             }
         },
+        "documentSection": "Gesellschaft",
         "hasMediaButtons": false,
         "dontLazyload": true,
         "realTeasersize": "100",
