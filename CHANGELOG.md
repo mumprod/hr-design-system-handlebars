@@ -1,3 +1,20 @@
+# v0.44.1 (Mon May 02 2022)
+
+#### 🐛 Bug Fix
+
+- Renaming files to snake case [#226](https://github.com/mumprod/hr-design-system-handlebars/pull/226) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 📝 Documentation
+
+- Feature/dpe 1550 [#227](https://github.com/mumprod/hr-design-system-handlebars/pull/227) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.44.0 (Mon May 02 2022)
 
 #### 🚀 Enhancement
