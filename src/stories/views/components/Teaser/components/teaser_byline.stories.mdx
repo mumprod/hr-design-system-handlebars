@@ -1,13 +1,13 @@
 import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
 import 'core-js/actual/structured-clone';
 import { addCommentLink } from '../jsonHelper';
-import byline from "./Byline.hbs";
+import byline from "./teaser_byline.hbs";
 import comments from '../data/teaser_commentLink.json';
 import teaser from '../data/teaser_article.json';
 let byline_with_comments  =  structuredClone(teaser);
 addCommentLink(byline_with_comments, comments.commentLink);
 
-<Meta title="Komponenten/Teaser/Komponenten/Byline"/>
+<Meta title="Komponenten/Teaser/Komponenten/Teaser_Byline"/>
 
 export const Template = ({ ...args }) => {
   return byline({ ...args });
