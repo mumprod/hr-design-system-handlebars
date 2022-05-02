@@ -1,0 +1,16 @@
+{
+    "commentLink": {
+        "link": {
+            "url": "/teaser1-comments",
+            "webviewUrl": "/teaser1-comments#webview",
+            "isTargetBlank": false,
+            "readMoreText": {
+                "readMoreScreenreader": "Zu den Kommentaren des Artikels"
+            },
+            "content": {
+                "commentNumber": "666",
+                "hasOneComment": false
+            }
+        }    
+    }
+}

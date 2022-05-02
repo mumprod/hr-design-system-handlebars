@@ -1,0 +1,93 @@
+import { Meta } from '@storybook/addon-docs'
+import { resetComponents } from '@storybook/components'
+import icon from './views/components/base/image/icon.hbs'
+
+<Meta title="Grundlegendes/Testdatenbereitstellung" />
+
+# Bereitstellung von Testdaten für Stories
+
+-   [Verwendung von JSON Daten als Testdaten innerhalb von Stories](#verwendung-von-json-daten-als-testdaten-innerhalb-von-stories)
+
+---
+
+Mit Hilfe von Storybook lässt sich das Frontend einer Webseite/Webapp sehr gut modular und strukturiert entwickeln. Vergleichbar mit [Testgetriebener Softwareentwicklung](https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung)
+werden die einzelnen Komponenten nach und nach mit Hilfe von Stories aufgebaut und weiter verfeinert.
+Einzelne Stories entsprechen Testfällen. Sie dokumentieren direkt bei der Entwicklung die unterschiedlichen Ausprägungen der Komponenten
+und gestatten es auch Edge Cases schnell und einfach zu testen. Anders als bei Tests auf unserem Delivery System, bei dem die Testdaten
+aus dem CMS kommen und über die Zeit Veränderungen unterliegen können, sind die Testdaten in Storybook statisch. Sie werden entweder fest
+in den einzelnen Stories eingegeben oder werden in Form von JSON Daten zu Verfügung gestellt.
+Im Gegensatz zur manuellen Eingabe von Testdaten in den einzelnen Stories, können JSON Daten mehrfach verwendet werden und z.B.
+die Inhalte für einen oder mehrere Teaser sehr schnell und komfortabel bereitgestellt werden.
+
+Aber auch die Bereitstellung von Testdaten über JSON Dateien ist nicht immer einfach. Gerade bei komplexeren Komponenten
+(z.b. Navigationen, Teaser, etc.) sind mitunter umfangreiche Datenstrukturen nötig.
+Soll dann beispielsweise nur eine Eigenschaft (z.B. der Titel eines Teasers) geändert werden, muss meist die komplette JSON Datei kopiert
+und darin händisch die entsprechende Anpassung gemacht werden. Dies ist aufwändig und fehleranfällig. Zur Vereinfachung des Prozesses
+wurde eine Möglichkeit geschaffen, um innerhalb von JSON Dateien Inhalte aus anderen JSON Dateien einzubinden, auf einfache Weise
+einzelne Eigenschaften zu überschreiben sowie neue Eigenschaften hinzuzufügen.
+
+Im Folgenden wird kurz beschrieben wie man in Storybook JSON Daten als Testdaten einsetzt, wo sie abgelegt werden müssen und wie
+bestimmte Inhalte durch Inkludierung in anderen Dateien mehrfach verwendet werden können.
+
+## Verwendung von JSON Daten als Testdaten innerhalb von Stories
+
+Alle Testdaten müssen, damit sie den entsprechenden Komponenten korrekt zur Verfügung gestellt werden können, im Verzeichnis
+`src/assets/fixtures/name-des-features` abgelegt werden. Pro Feature kann eine unbegrenzte Anzahl an Testdaten bereitgestellt werden.
+Beim Erstellen der JSON-Testdaten wird zwischen den eigentlichen Testdaten, die direkt in den Stories referenziert werden und denen, die
+lediglich in anderen JSON-Dateien inkludiert werden unterschrieden. Die JSON-Dateien, die zu inkludierende Daten enthalten, werden im
+Dateinamen mit dem Postfix `inc` gekennzeichnet (z.B. `teasers.inc.json` oder `teaser_labels.inc.json`).
+
+### Inkludieren von JSON-Daten
+
+JSON besitz nativ keine Möglichkeit Daten aus anderen JSON-Dateien zu inkludieren. Aus diesem Grunde wurde ein Skript geschrieben, welches
+alle JSON-Dateien im Verzeichnis `src/assets/fixtures`, die nicht das Postfix `inc` im Dateinamen tragen, parsed und auf das Vorkommen
+des Tokens `@->jsoninclude` untersucht. Das Token ermöglicht es einen Pfad einer zu inkludierenden JSON-Datei angegeben werden, deren Inhalt dann an Stelle des
+Tokens eingebunden wird. Das Skript wird durch den Befehl `npm run parseJson` aufgerufen und standardmäßig im Watch-Modus ausgeführt. D.h.
+Im folgenden Beispiel wird dieser genauer gezeigt.
+
+```json
+
+// src/assets/fixtures/feature-name/feature_name.inc.json
+{
+    "title": "Test Überschrift",
+    "text": "Lorem Ipsum Dolor Sit Amet",
+    "objectName": {
+        "name": "Test Objekt",
+        "size": "small"
+    }
+}
+
+// src/assets/fixtures/feature-name/feature_name.json
+{
+    "article": {
+        "@->jsoninclude": "feature-name/feature_name.inc.json"
+    }
+}
+
+// wird zu feature_name.json in src/stories/views/components/feature-name/fixtures
+{
+    "article": {
+        "title": "Test Überschrift",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt",
+            "size": "small"
+        }
+    }
+}
+```
+
+In der Datei `src/assets/fixtures/feature-name/feature_name.json` wird im `article` Objekt dem Token
+`@->jsoniclude` als Wert der Pfad der zu inkludierenden JSON-Datei übergeben. Nach Ausführung
+
+Schauen wir uns das ganze am Beispiel der Testdaten für die Teaser-Komponente näher an. Teaser gibt es auf den Webseiten
+des Hessischen Rundfunks in unterschiedlichen Ausprägungen und Formen. Es gibt Teaser mit Überschrift und Copytext unter dem Bild,
+welche mit Überschrift und Copytext neben dem Bild und andere mit Überschrift und Copytext auf dem Bild. All diese Teaserformen können
+zudem zusätzlich mal mehr und mal weniger weitere Eigenschaften, wie z.B. ein Datum, ein Label, eine Dachzeile oder einen Autorennamen,
+besitzen. Im optimalen Fall werden für jede Ausprägung und Teaserform eigene Stories und damit separate Testfälle bereitgestellt.
+Die Datenstruktur der Testdaten unterscheidet sich meist nur um ein paar wenige Eigenschaften.
+
+Um jetzt für jede dieser Stories angepasste Testdaten bereitstellen zu können und nicht händisch die JSON-Datenstruktur eines Teasers
+kopieren, einzelne Eigenschaften anpassen und diese als separate JSON-Datei abgespeichert werden. Dies kann sehr kompliziert und
+dementsprechend fehleranfällig sein. Dank der im Folgenden beschriebenen Möglichkeit einzelne Inhalte von JSON-Datenstrukturen
+wiederzuverwenden, zu überschreiben oder

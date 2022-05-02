@@ -1,0 +1,18 @@
+{
+    "ticker": {
+        "type": "Ticker",
+        "loca": "ticker",
+        "byline": {
+            "bylineSsi": "BylineText aus ssi",
+            "bylineText": "BylineText"
+        }
+    },
+    "media": {
+        "type": "Media",
+        "loca": "media",
+        "byline": {
+            "bylineSsi": "BylineText aus ssi",
+            "bylineText": "BylineText"
+        }
+    }
+}
