@@ -1,4 +1,4 @@
-{{#>components/Grid/GridGroup size=this.teaserSize }}  
+{{#>components/grid/grid_group size=this.teaserSize }}  
         {{~#if this.hasGroupTitle}}
             <h2 class="text-4xl headline--barrier col-span-full">
                 {{~#if this.hasLink}}<a class="link" href="{{this.link.url}}">{{/if~}}
@@ -6,5 +6,5 @@
                 {{~#if this.hasLink}}</a>{{/if~}}
             </h2>
         {{/if}}        
-        {{~> components/Teaser/teaser_logic/teaser_logic ~}}
-{{/components/Grid/GridGroup}}  
+        {{~> components/teaser/teaser_logic/teaser_logic ~}}
+{{/components/grid/grid_group}}  
