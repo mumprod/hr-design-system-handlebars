@@ -10,7 +10,12 @@ module.exports = function(text, options) {
         "search_input_aria_submit": "Suche starten",
         "search_input_placeholder": "Ort oder Thema suchen",
         "feature_box_anchor": "Livestream Player anspringen",
-        "header_homepage_link_title": "Startseite hessenschau . d e"
+        "header_homepage_link_title": "Startseite hessenschau . d e",
+        "comment_anchor_1": "zu den ",
+        "comment_label_text": "Kommentar",
+        "comment_label_text_many": "Kommentare",
+        "comment_anchor_2": " Kommentaren des Artikels springen",
+        "date_simple_at": options + " Uhr"
     }
 
     for (let key in locas){

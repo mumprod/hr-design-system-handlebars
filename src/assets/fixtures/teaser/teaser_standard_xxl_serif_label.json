@@ -1,0 +1,28 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "link.content.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker"
+            }
+        },
+        {
+            "@->contentpath": "link.content.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker"
+            }
+        }
+    ]
+}

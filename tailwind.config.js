@@ -35,7 +35,16 @@ module.exports = {
             wider: '.025em',
             widest: '.05em',
         },
+
         extend: {
+            fontSize: {  
+                'xs':['0.75rem', '1.063rem'], 
+                'sm':['0.875rem', '1.188rem'], 
+                'base':['1rem', '1.25rem'],                 
+                'lg':['1.125rem', '1.5rem'],              
+                '2xl':['1.375rem', '1.75rem'],
+                '4xl':['2.125rem', '2.375rem'],
+            },
             boxShadow: {
                 inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
             },
@@ -44,6 +53,7 @@ module.exports = {
               },
             lineHeight: {
                 11: '2.75rem',
+                5.5 : '1.375rem',
             },
             fill: {
                 black: '#000000',
@@ -167,6 +177,7 @@ module.exports = {
                 labelDownload: 'var(--color-label-download)',
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
+                toplineColor: 'var(--color-topline)',
             },
         },
     },

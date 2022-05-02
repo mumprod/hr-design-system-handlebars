@@ -1,0 +1,324 @@
+{
+    "teaser-1": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser-default",
+            "includeModel": {
+                "byline": "Byline",
+                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                "topline": "Überglücklich, aber ohne Mama",
+                "extendedTitle": "",
+                "teasertype": "standard",
+                "teasersize": "100",
+                "teaserDate": {
+                    "htmlDate": "20.02.1983",
+                    "date": "20.02.1983",
+                    "dateSeparatorTime": "20.02.1983"
+                },
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": true,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": true
+                },
+                "teaserImage": {
+                    "copyrightWithLinks": "",
+                    "responsiveImage": {
+                        "asPicture": true,
+                        "asImage": false,
+                        "fallback": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg",
+                        "sources": [
+                            {
+                                "media": "all and (max-width: 43.688em)",
+                                "sizes": "100vw",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium__extended.jpg 640w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9.jpg 960w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__retina.jpg 1920w"
+                            },
+                            {
+                                "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
+                                "sizes": "100vw",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                            },
+                            {
+                                "media": "all and (min-width: 64em)",
+                                "sizes": "960px",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                            }
+                        ]
+                    }
+                },
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "realTeasersize": "100",
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "headingSize": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "shorttext",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "Von Alf Haubitz und Alice Merton",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "label": {
+                    "type": "Ticker",
+                    "loca": "ticker",
+                    "byline": {
+                        "bylineSsi": "ssi",
+                        "bylineText": "BylineText"
+                    }
+                },
+                "geotag": [
+                    {
+                        "title": "Wolfhagen"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    },
+                    "content": {
+                        "teaserImage": {
+                            "copyrightWithLinks": "",
+                            "responsiveImage": {
+                                "asPicture": true,
+                                "asImage": false,
+                                "fallback": "https://picsum.photos/id/188/480/210",
+                                "sources": [
+                                    {
+                                        "media": "all and (max-width: 43.688em)",
+                                        "sizes": "100vw",
+                                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
+                                    },
+                                    {
+                                        "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
+                                        "sizes": "100vw",
+                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    },
+                                    {
+                                        "media": "all and (min-width: 64em)",
+                                        "sizes": "960px",
+                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    }
+                                ]
+                            }
+                        },
+                        "teasertype": "standard",
+                        "imageVariant": "topteaser",
+                        "isFileDownload": false,
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
+                        },
+                        "label": {
+                            "type": "Ticker",
+                            "loca": "ticker",
+                            "byline": {
+                                "bylineSsi": "ssi",
+                                "bylineText": "BylineText"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "teaser-2": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser-default",
+            "includeModel": {
+                "byline": "Byline",
+                "title": "Ein zweiter Teaser",
+                "topline": "Topline Teaser 2",
+                "extendedTitle": "",
+                "teasertype": "standard",
+                "teasersize": "100",
+                "teaserDate": {
+                    "htmlDate": "20.02.1983",
+                    "date": "20.02.1983",
+                    "dateSeparatorTime": "20.02.1983"
+                },
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": true,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": true
+                },
+                "teaserImage": {
+                    "copyrightWithLinks": "",
+                    "responsiveImage": {
+                        "asPicture": true,
+                        "asImage": false,
+                        "fallback": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg",
+                        "sources": [
+                            {
+                                "media": "all and (max-width: 43.688em)",
+                                "sizes": "100vw",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__medium__extended.jpg 640w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9.jpg 960w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to9__retina.jpg 1920w"
+                            },
+                            {
+                                "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
+                                "sizes": "100vw",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                            },
+                            {
+                                "media": "all and (min-width: 64em)",
+                                "sizes": "960px",
+                                "srcset": "https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__small.jpg 320w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__medium.jpg 480w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7.jpg 992w, https://hessenschau-dev-red.hr.de/gesellschaft/rueckkehr-nach-abschiebung-102~_v-16to7__retina.jpg 1920w"
+                            }
+                        ]
+                    }
+                },
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "realTeasersize": "100",
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "headingSize": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "shorttext",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "Von Alf Haubitz und Alice Merton",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "label": {
+                    "type": "Ticker",
+                    "loca": "ticker",
+                    "byline": {
+                        "bylineSsi": "ssi",
+                        "bylineText": "BylineText"
+                    }
+                },
+                "geotag": [
+                    {
+                        "title": "Wolfhagen"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    },
+                    "content": {
+                        "teaserImage": {
+                            "copyrightWithLinks": "",
+                            "responsiveImage": {
+                                "asPicture": true,
+                                "asImage": false,
+                                "fallback": "https://picsum.photos/id/188/480/210",
+                                "sources": [
+                                    {
+                                        "media": "all and (max-width: 43.688em)",
+                                        "sizes": "100vw",
+                                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
+                                    },
+                                    {
+                                        "media": "all and (min-width: 43.750em) and (max-width: 63.938em)",
+                                        "sizes": "100vw",
+                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    },
+                                    {
+                                        "media": "all and (min-width: 64em)",
+                                        "sizes": "960px",
+                                        "srcset": "https://picsum.photos/id/188/320/140 320w, https://picsum.photos/id/188/480/210 480w, https://picsum.photos/id/188/992/434 992w, https://picsum.photos/id/188/1920/840 1920w"
+                                    }
+                                ]
+                            }
+                        },
+                        "teasertype": "standard",
+                        "imageVariant": "topteaser",
+                        "isFileDownload": false,
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
+                        },
+                        "label": {
+                            "type": "Ticker",
+                            "loca": "ticker",
+                            "byline": {
+                                "bylineSsi": "ssi",
+                                "bylineText": "BylineText"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

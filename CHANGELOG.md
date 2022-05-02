@@ -1,3 +1,333 @@
+# v0.44.0 (Mon May 02 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1550 [#224](https://github.com/mumprod/hr-design-system-handlebars/pull/224) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.43.1 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- Zusatzinformationen neben Label [#223](https://github.com/mumprod/hr-design-system-handlebars/pull/223) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.43.0 (Thu Apr 28 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1547 - alternative Teaser Init [#222](https://github.com/mumprod/hr-design-system-handlebars/pull/222) (zouhair1 [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- selbaciri (zouhair1)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.11 (Thu Apr 28 2022)
+
+#### 🐛 Bug Fix
+
+- - some refactoring and file relocating [#221](https://github.com/mumprod/hr-design-system-handlebars/pull/221) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.10 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Teaser Text and Headline fine tuning [#220](https://github.com/mumprod/hr-design-system-handlebars/pull/220) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.9 (Tue Apr 26 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1551 - group logic implementation [#218](https://github.com/mumprod/hr-design-system-handlebars/pull/218) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.8 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- add teaserText-component [#217](https://github.com/mumprod/hr-design-system-handlebars/pull/217) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.42.7 (Tue Apr 19 2022)
+
+#### 🐛 Bug Fix
+
+- extend byline [#216](https://github.com/mumprod/hr-design-system-handlebars/pull/216) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.42.6 (Wed Apr 13 2022)
+
+#### 🐛 Bug Fix
+
+- - added aspect ratio classes with fallback to tailwind.css [#215](https://github.com/mumprod/hr-design-system-handlebars/pull/215) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.5 (Wed Apr 13 2022)
+
+#### 🐛 Bug Fix
+
+- Page story update use new teaser now [#214](https://github.com/mumprod/hr-design-system-handlebars/pull/214) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.4 (Tue Apr 12 2022)
+
+#### 🐛 Bug Fix
+
+- responsiveImage 2.1 [#213](https://github.com/mumprod/hr-design-system-handlebars/pull/213) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.3 (Tue Apr 12 2022)
+
+#### 🐛 Bug Fix
+
+- add byline-component [#212](https://github.com/mumprod/hr-design-system-handlebars/pull/212) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.42.2 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- responsiveImage 2.0 [#209](https://github.com/mumprod/hr-design-system-handlebars/pull/209) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.1 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1496 [#208](https://github.com/mumprod/hr-design-system-handlebars/pull/208) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.42.0 (Thu Apr 07 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: employs a loadDynamic template as a [#207](https://github.com/mumprod/hr-design-system-handlebars/pull/207) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.41.0 (Wed Apr 06 2022)
+
+#### 🚀 Enhancement
+
+- Bild für Standard-Teaser [#206](https://github.com/mumprod/hr-design-system-handlebars/pull/206) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.40.1 (Wed Apr 06 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1533 - Datenstruktur in JSON überarbeiten [#205](https://github.com/mumprod/hr-design-system-handlebars/pull/205) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.40.0 (Tue Apr 05 2022)
+
+#### 🚀 Enhancement
+
+- Adjusted font sizes to fit design requirements [#204](https://github.com/mumprod/hr-design-system-handlebars/pull/204) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.39.2 (Mon Apr 04 2022)
+
+#### 🐛 Bug Fix
+
+- add aria-label [#203](https://github.com/mumprod/hr-design-system-handlebars/pull/203) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.39.1 (Mon Apr 04 2022)
+
+#### 🐛 Bug Fix
+
+- add title-component [#202](https://github.com/mumprod/hr-design-system-handlebars/pull/202) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.39.0 (Mon Apr 04 2022)
+
+#### 🚀 Enhancement
+
+- DPE-1159 responsive image [#44](https://github.com/mumprod/hr-design-system-handlebars/pull/44) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.38.1 (Thu Mar 31 2022)
+
+#### 🐛 Bug Fix
+
+- add topline-component [#201](https://github.com/mumprod/hr-design-system-handlebars/pull/201) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### 📝 Documentation
+
+- DOCS: adds section to nvm in readme [#200](https://github.com/mumprod/hr-design-system-handlebars/pull/200) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.38.0 (Mon Mar 28 2022)
+
+#### 🚀 Enhancement
+
+- DOC: adds installation instructions [#199](https://github.com/mumprod/hr-design-system-handlebars/pull/199) ([@szuelch](https://github.com/szuelch))
+- CHORE: update to node.js version [#198](https://github.com/mumprod/hr-design-system-handlebars/pull/198) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1520 [#197](https://github.com/mumprod/hr-design-system-handlebars/pull/197) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.37.6 (Thu Mar 24 2022)
+
+#### 🐛 Bug Fix
+
+- testtest [#196](https://github.com/mumprod/hr-design-system-handlebars/pull/196) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+- test [#194](https://github.com/mumprod/hr-design-system-handlebars/pull/194) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.37.5 (Thu Mar 24 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1524 [#191](https://github.com/mumprod/hr-design-system-handlebars/pull/191) (zouhair1 [@szuelch](https://github.com/szuelch) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.37.4 (Thu Mar 24 2022)
+
+#### 🐛 Bug Fix
+
+- rename class headline--barrier to headline--separator [#190](https://github.com/mumprod/hr-design-system-handlebars/pull/190) (zouhair1 [@szuelch](https://github.com/szuelch) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.37.3 (Mon Mar 21 2022)
 
 #### 🐛 Bug Fix

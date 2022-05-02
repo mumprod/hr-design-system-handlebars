@@ -1,4 +1,4 @@
-const { src, dest, series } = require('gulp')
+const { src, dest, series, watch } = require('gulp')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
 const svgStore = require('gulp-svgstore')
@@ -6,6 +6,11 @@ const svgMin = require('gulp-svgmin')
 const path = require('path')
 const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
+const jsonTransform = require('gulp-json-transform')
+const JSONIncluder = require('./build/scripts/jsoninclude.js')
+const log = require('fancy-log')
+
+const options = require('./config.js')
 
 // css file paths
 const iconsDirRoot = 'src/assets/icons'
@@ -148,7 +153,7 @@ function minimizeSvgSrcFiles() {
                 .pipe(
                     cheerio({
                         run: function ($, file) {
-                            console.log(file.basename)
+                            log(file.basename)
                             if (
                                 file.dirname.includes('unweather') &&
                                 file.basename === 'regiomap.src.svg'
@@ -199,4 +204,33 @@ function minimizeSvgSrcFiles() {
     )
 }
 
+function parseJson() {
+    return src([
+        `${options.paths.assets.fixtures}/**/*.json`,
+        `!${options.paths.assets.fixtures}/**/*.inc.json`,
+    ])
+        .pipe(
+            jsonTransform(function (data, file) {
+                const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
+                return jsonWithIncludes
+            })
+        )
+        .pipe(
+            rename(function (path) {
+                return {
+                    dirname: `${path.dirname}/fixtures`,
+                    basename: path.basename,
+                    extname: path.extname,
+                }
+            })
+        )
+        .pipe(dest(options.paths.dist.components))
+}
+
+function watchForChanges() {
+    watch(`${options.paths.assets.fixtures}/**/*.json`, series(parseJson))
+    log('Watching for Changes..\n')
+}
+
 exports.default = series(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
+exports.parseJson = series(parseJson, watchForChanges)
