@@ -23,6 +23,13 @@
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "ticker"
             }
+        },
+        {
+            "@->contentpath": "link.content.teaserImage",   
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "standard_1"
+            }     
         }
     ]
 }
