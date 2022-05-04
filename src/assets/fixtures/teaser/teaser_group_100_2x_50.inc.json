@@ -1,0 +1,210 @@
+{
+    "teaser_1_100": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 1 x 100% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": {                        
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "xxl"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "teaser_2_50": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 2 x 50% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": {                        
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "lg"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "lg"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "teaser_3_33": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 3 x 33% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": {                        
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "md"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "md"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "md"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "teaser_4_25": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 4 x 25% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": {                        
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "sm"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "sm"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "sm"
+                                }
+                            ]
+                        }
+                    }
+                }, 
+                {
+                    "isSsi": true,
+                    "logicItem": {
+                        "includePath": "components/teaser/teaser_standard",
+                        "includeModel": { 
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserWithComments",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teasersize",
+                                    "@->value": "sm"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
