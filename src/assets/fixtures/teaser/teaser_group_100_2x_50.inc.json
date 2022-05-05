@@ -9,20 +9,8 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": {                        
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaser",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "xxl"
-                                }
-                            ]
-                        }
-                    }
+                    "@->jsoninclude": "teaser/teaser_standard_xxl_serif.json"
+                   
                 }
             ]
         }
@@ -37,36 +25,19 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": {                        
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaser",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "lg"
-                                }
-                            ]
-                        }
-                    }
-                }, 
+                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json"
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "lg"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "standard_4"
+                            }     
                         }
-                    }
+                    ]
                 }
             ]
         }
@@ -81,52 +52,40 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": {                        
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaser",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "md"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_1"
+                            }     
                         }
-                    }
-                }, 
+                    ]
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "md"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_2"
+                            }     
                         }
-                    }
-                }, 
+                    ]
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "md"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_3"
+                            }     
                         }
-                    }
+                    ]
                 }
             ]
         }
@@ -141,68 +100,52 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": {                        
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaser",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "sm"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_1"
+                            }     
                         }
-                    }
-                }, 
+                    ]
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "sm"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_2"
+                            }     
                         }
-                    }
-                }, 
+                    ]
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "sm"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_3"
+                            }     
                         }
-                    }
-                }, 
+                    ]
+                },
                 {
-                    "isSsi": true,
-                    "logicItem": {
-                        "includePath": "components/teaser/teaser_standard",
-                        "includeModel": { 
-                            "@->jsoninclude": "teaser/teasers.inc.json",
-                            "@->contentpath": "teaserWithComments",
-                            "@->overrides": [
-                                {
-                                    "@->contentpath": "teasersize",
-                                    "@->value": "sm"
-                                }
-                            ]
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_4"
+                            }     
                         }
-                    }
+                    ]
                 }
             ]
         }

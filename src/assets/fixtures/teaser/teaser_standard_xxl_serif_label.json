@@ -3,22 +3,22 @@
     "@->contentpath": "teaser",
     "@->overrides": [
         {
-            "@->contentpath": "topline",
+            "@->contentpath": "logicItem.includeModel.topline",
             "@->value": ""
         },
         {
-            "@->contentpath": "link.content.topline",
+            "@->contentpath": "logicItem.includeModel.link.content.topline",
             "@->value": ""
         },
         {
-            "@->contentpath": "label",
+            "@->contentpath": "logicItem.includeModel.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "ticker"
             }
         },
         {
-            "@->contentpath": "link.content.label",
+            "@->contentpath": "logicItem.includeModel.link.content.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "ticker"
