@@ -1,13 +1,4 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaserWithComments",
-    "@->overrides": [
-        {
-            "@->contentpath": "link.content.teaserImage",   
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "standard_1"
-            }     
-        }
-    ]
+    "@->contentpath": "teaserWithComments"
 }

@@ -5,13 +5,6 @@
         {
             "@->contentpath": "teasersize",
             "@->value": "lg"
-        },
-        {
-            "@->contentpath": "link.content.teaserImage",   
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "standard_1"
-            }     
         }
     ]
 }

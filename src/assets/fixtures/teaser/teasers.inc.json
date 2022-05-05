@@ -21,19 +21,9 @@
             "showTeaserInfoDateTime": true,
             "showTeaserInfoProgramRef": true
         },
-        "teaserImage": {
-            "copyrightWithLinks": "",
-            "responsiveImage": {
-                "asPicture": false,
-                "asImage": true,
-                "fallback": "https://picsum.photos/id/188/480/210",
-                "sources": [
-                    {
-                        "sizes": "(min-width: 1010px) 960px, 100vw",
-                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
-                    }
-                ]
-            }
+        "teaserImage":{
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "standard_1"
         },
         "hasMediaButtons": false,
         "dontLazyload": true,
@@ -82,6 +72,10 @@
             }
         ],
         "link": {
+            "teaserImage":{
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "standard_1"
+            },
             "url": "/teaser1",
             "webviewUrl": "/teaser1#webview",
             "isTargetBlank": false,
@@ -93,20 +87,6 @@
                 "readMoreLong": "read More Long"
             },
             "content": {
-                "teaserImage": {
-                    "copyrightWithLinks": "",
-                    "responsiveImage": {
-                        "asPicture": false,
-                        "asImage": true,
-                        "fallback": "https://picsum.photos/id/188/480/210",
-                        "sources": [
-                            {
-                                "sizes": "(min-width: 1010px) 960px, 100vw",
-                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
-                            }
-                        ]
-                    }
-                },
                 "teasertype": "standard",
                 "imageVariant": "topteaser",
                 "isFileDownload": false,
@@ -140,19 +120,9 @@
             "showTeaserInfoDateTime": true,
             "showTeaserInfoProgramRef": true
         },
-        "teaserImage": {
-            "copyrightWithLinks": "",
-            "responsiveImage": {
-                "asPicture": false,
-                "asImage": true,
-                "fallback": "https://picsum.photos/id/188/480/210",
-                "sources": [
-                    {
-                        "sizes": "(min-width: 1010px) 960px, 100vw",
-                        "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
-                    }
-                ]
-            }
+        "teaserImage":{
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "standard_1"
         },
         "commentLink": {
             "link": {
@@ -226,19 +196,9 @@
                 "readMoreLong": "read More Long"
             },
             "content": {
-                "teaserImage": {
-                    "copyrightWithLinks": "",
-                    "responsiveImage": {
-                        "asPicture": false,
-                        "asImage": true,
-                        "fallback": "https://picsum.photos/id/188/480/210",
-                        "sources": [
-                            {
-                                "sizes": "(min-width: 1010px) 960px, 100vw",
-                                "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
-                            }
-                        ]
-                    }
+                "teaserImage":{
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "standard_1"
                 },
                 "teasertype": "standard",
                 "imageVariant": "topteaser",
