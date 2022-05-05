@@ -3,7 +3,7 @@
     "@->contentpath": "teaser",
     "@->overrides": [
         {
-            "@->contentpath": "teasersize",
+            "@->contentpath": "logicItem.includeModel.teasersize",
             "@->value": "xl"
         }
     ]

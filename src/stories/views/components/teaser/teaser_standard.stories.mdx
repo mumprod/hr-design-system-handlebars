@@ -49,25 +49,25 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
-    <Story name="Standard Hero" args={xxlTeaserSerif}>
+    <Story name="Standard Hero" args={xxlTeaserSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard Hero mit Label" args={xxlTeaserSerifWithLabel}>
+    <Story name="Standard Hero mit Label" args={xxlTeaserSerifWithLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard Hero Mit Kommentaren" args={xxlTeaserSerifWithComments}>
+    <Story name="Standard Hero Mit Kommentaren" args={xxlTeaserSerifWithComments.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard XL" args={xlTeaserSerif}>
+    <Story name="Standard XL" args={xlTeaserSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard LG" args={lgTeaserSerif}>
+    <Story name="Standard LG" args={lgTeaserSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard MD" args={mdTeaserSerif}>
+    <Story name="Standard MD" args={mdTeaserSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard SM" args={smTeaserSerif}>
+    <Story name="Standard SM" args={smTeaserSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
