@@ -2,7 +2,7 @@
             "byline": "Byline",
             "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
             "topline": "Überglücklich, aber ohne Mama",
-            "serifHeading": true,
+            "isSerifHeading": true,
             "extendedTitle": null,
             "teasertype": "standard",
             "teasersize": "100",
