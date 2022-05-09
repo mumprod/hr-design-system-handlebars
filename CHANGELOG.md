@@ -1,3 +1,16 @@
+# v0.44.4 (Mon May 09 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1471 Markup bei Section Nav aufräumen [#225](https://github.com/mumprod/hr-design-system-handlebars/pull/225) ([@hanswurstsalat](https://github.com/hanswurstsalat) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.44.3 (Mon May 09 2022)
 
 #### 🐛 Bug Fix
