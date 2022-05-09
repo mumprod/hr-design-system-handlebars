@@ -6,7 +6,7 @@
     </figure>
     <div class="{{inline-switch teasersize '["sm", "xxl"]' '["basis-3/5 md:flex-full" , "basis-2/5"]'}} ">
         <header class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
-            {{> components/teaser/components/teaser_heading headlineTag="h2" size=teasersize font=(inline-switch serifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]')}}            
+            {{> components/teaser/components/teaser_heading headlineTag="h2" size=teasersize font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]')}}            
         </header>
         <section class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
             {{> components/teaser/components/teaser_text text=shorttext size=teasersize }}
