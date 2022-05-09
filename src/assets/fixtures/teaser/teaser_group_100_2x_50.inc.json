@@ -1,0 +1,153 @@
+{
+    "teaser_1_100": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 1 x 100% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_xxl_serif.json"
+                   
+                }
+            ]
+        }
+    },
+    "teaser_2_50": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 2 x 50% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "standard_4"
+                            }     
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "teaser_3_33": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 3 x 33% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_1"
+                            }     
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_2"
+                            }     
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "md_3"
+                            }     
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "teaser_4_25": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "groupTitle": "Gruppe 100% - 4 x 25% Teaser",
+            "teaserSize": "100",
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_1"
+                            }     
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_2"
+                            }     
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_3"
+                            }     
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "sm_4"
+                            }     
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -6,7 +6,11 @@ import icon from './views/components/base/image/icon.hbs'
 
 # Bereitstellung von Testdaten für Stories
 
--   [Verwendung von JSON Daten als Testdaten innerhalb von Stories](#verwendung-von-json-daten-als-testdaten-innerhalb-von-stories)
+-   [Erstellung von JSON-Testdaten](#erstellung-von-json-testdaten)
+    -   [Inkludieren von JSON-Testdaten mit @->jsoninclude](#inkludieren-von-json-testdaten-mit--jsoninclude)
+    -   [Überschreiben von Inhalten mit @->overrides](#überschreiben-von-inhalten-mit--overrides)
+    -   [Hinzufügen von Inhalten mit @->extends](#hinzufügen-von-inhalten-mit--extends)
+-   [Verwendung von JSON-Testdaten in Stories](#verwendung-von-json-testdaten-in-stories)
 
 ---
 
@@ -26,28 +30,40 @@ und darin händisch die entsprechende Anpassung gemacht werden. Dies ist aufwän
 wurde eine Möglichkeit geschaffen, um innerhalb von JSON Dateien Inhalte aus anderen JSON Dateien einzubinden, auf einfache Weise
 einzelne Eigenschaften zu überschreiben sowie neue Eigenschaften hinzuzufügen.
 
-Im Folgenden wird kurz beschrieben wie man in Storybook JSON Daten als Testdaten einsetzt, wo sie abgelegt werden müssen und wie
-bestimmte Inhalte durch Inkludierung in anderen Dateien mehrfach verwendet werden können.
+Im Folgenden wird kurz beschrieben wie man JSON-Testdaten für Storybook erstellt, wo sie abgelegt werden müssen und wie sie konkret in
+Stories genutzt werden.
 
-## Verwendung von JSON Daten als Testdaten innerhalb von Stories
+## Erstellung von JSON-Testdaten
 
 Alle Testdaten müssen, damit sie den entsprechenden Komponenten korrekt zur Verfügung gestellt werden können, im Verzeichnis
-`src/assets/fixtures/name-des-features` abgelegt werden. Pro Feature kann eine unbegrenzte Anzahl an Testdaten bereitgestellt werden.
-Beim Erstellen der JSON-Testdaten wird zwischen den eigentlichen Testdaten, die direkt in den Stories referenziert werden und denen, die
+`src/assets/fixtures/component-name` abgelegt werden. Für jede im Verzeichnis `src/stories/views/components` angelegte Komponente
+muss ein Ordner gleichen Namens erstellt werden. Sollen Beispielsweise Testdaten für die Komponente `Teaser` im Verzeichnis
+`src/stories/views/components/teaser` erstellt werden, müssen diese im Ordner `src/assets/fixtures/teaser` abgelegt werden. Pro Komponente
+kann eine unbegrenzte Anzahl an Testdaten bereitgestellt werden.
+
+Beim Erstellen der JSON-Testdaten wird zwischen den eigentlichen Testdaten und denen, die
 lediglich in anderen JSON-Dateien inkludiert werden unterschrieden. Die JSON-Dateien, die zu inkludierende Daten enthalten, werden im
 Dateinamen mit dem Postfix `inc` gekennzeichnet (z.B. `teasers.inc.json` oder `teaser_labels.inc.json`).
 
-### Inkludieren von JSON-Daten
+Durch Ausführung des NPM-Skripts `parseJson` mit dem Befehl `npm run parseJson`, werden alle JSON-Dateien im Verzeichnis
+`src/assets/fixtures` geparsed, sämtliche `Includes`, `Extends` und `Overrides` aufgelöst und die fertigen Testdaten in Form von JSON-Dateien
+gleichen Namens nach `src/stories/views/components/component-name/fixtures` kopiert. Alle Testdaten unter `src/assets/fixtures/teaser`
+werden auf diese Weise beispielsweise nach `src/stories/views/components/teaser/fixtures` kopiert. Das Skript läuft standardmäßig im
+Watch-Modus. Das heißt es wird nicht nach einmaliger Ausführung beendet, sondern läuft, sofern es nicht manuell mit `strg + c` abgebrochen
+wird, im Hintergrund immer weiter und lauscht auf Änderungen an den JSON-Dateien und parsed diese gegebenenfalls neu.
 
-JSON besitz nativ keine Möglichkeit Daten aus anderen JSON-Dateien zu inkludieren. Aus diesem Grunde wurde ein Skript geschrieben, welches
-alle JSON-Dateien im Verzeichnis `src/assets/fixtures`, die nicht das Postfix `inc` im Dateinamen tragen, parsed und auf das Vorkommen
-des Tokens `@->jsoninclude` untersucht. Das Token ermöglicht es einen Pfad einer zu inkludierenden JSON-Datei angegeben werden, deren Inhalt dann an Stelle des
-Tokens eingebunden wird. Das Skript wird durch den Befehl `npm run parseJson` aufgerufen und standardmäßig im Watch-Modus ausgeführt. D.h.
-Im folgenden Beispiel wird dieser genauer gezeigt.
+Wie das Inkludieren, Überschreiben und Erweitern von JSON-Testdaten im Detail funktioniert wird in den anschließenden Kapiteln beschrieben.
+
+### Inkludieren von JSON-Testdaten mit @->jsoninclude
+
+JSON besitz keine native Möglichkeit, um Daten aus anderen JSON-Dateien zu inkludieren. Mittels des einleitend genannten NPM-Skripts und
+der Eigenschaft `@->jsoninclude`, kann dies aber dennoch möglich gemacht werden. Hierzu muss als Wert der Eigenschaft lediglich der Pfad
+der zu inkludierenden JSON-Datei angegeben werden. Das Skript sorgt dafür, dass in der JSON-Datenstruktur an Stelle des `@->jsoninclude` der
+Inhalt der zu inkludierenden Datei eingebunden wird. Zu sehen ist dies in folgendem Beispiel.
 
 ```json
 
-// src/assets/fixtures/feature-name/feature_name.inc.json
+// src/assets/fixtures/component-name/component_name.inc.json
 {
     "title": "Test Überschrift",
     "text": "Lorem Ipsum Dolor Sit Amet",
@@ -57,14 +73,14 @@ Im folgenden Beispiel wird dieser genauer gezeigt.
     }
 }
 
-// src/assets/fixtures/feature-name/feature_name.json
+// src/assets/fixtures/component-name/component_name.json
 {
     "article": {
-        "@->jsoninclude": "feature-name/feature_name.inc.json"
+        "@->jsoninclude": "component-name/component_name.inc.json"
     }
 }
 
-// wird zu feature_name.json in src/stories/views/components/feature-name/fixtures
+// wird zu component_name.json in src/stories/views/components/component-name/fixtures
 {
     "article": {
         "title": "Test Überschrift",
@@ -77,17 +93,325 @@ Im folgenden Beispiel wird dieser genauer gezeigt.
 }
 ```
 
-In der Datei `src/assets/fixtures/feature-name/feature_name.json` wird im `article` Objekt dem Token
-`@->jsoniclude` als Wert der Pfad der zu inkludierenden JSON-Datei übergeben. Nach Ausführung
+In der Datei `src/assets/fixtures/component-name/component_name.json` wird im `article` Objekt dem Token
+`@->jsoniclude` als Wert der Pfad der zu inkludierenden JSON-Datei übergeben. Nach Ausführung des `parseJson` Skriptes wird deren Inhalt
+an die Stelle des Token `@->jsoninclude` geschrieben und in der Datei
+`src/stories/views/components/component-name/fixtures/component_name.json` gespeichert.
 
-Schauen wir uns das ganze am Beispiel der Testdaten für die Teaser-Komponente näher an. Teaser gibt es auf den Webseiten
-des Hessischen Rundfunks in unterschiedlichen Ausprägungen und Formen. Es gibt Teaser mit Überschrift und Copytext unter dem Bild,
-welche mit Überschrift und Copytext neben dem Bild und andere mit Überschrift und Copytext auf dem Bild. All diese Teaserformen können
-zudem zusätzlich mal mehr und mal weniger weitere Eigenschaften, wie z.B. ein Datum, ein Label, eine Dachzeile oder einen Autorennamen,
-besitzen. Im optimalen Fall werden für jede Ausprägung und Teaserform eigene Stories und damit separate Testfälle bereitgestellt.
-Die Datenstruktur der Testdaten unterscheidet sich meist nur um ein paar wenige Eigenschaften.
+Es muss jedoch nicht immer der komplette Inhalt einer Datei inkludiert werden. Soll nur ein bestimmter Teil der JSON-Datenstruktur
+eingebunden werden, kann dies mittels des Tokens `@->contentpath` erreicht werden. Schauen wir uns dazu folgendes Beispiel an.
 
-Um jetzt für jede dieser Stories angepasste Testdaten bereitstellen zu können und nicht händisch die JSON-Datenstruktur eines Teasers
-kopieren, einzelne Eigenschaften anpassen und diese als separate JSON-Datei abgespeichert werden. Dies kann sehr kompliziert und
-dementsprechend fehleranfällig sein. Dank der im Folgenden beschriebenen Möglichkeit einzelne Inhalte von JSON-Datenstrukturen
-wiederzuverwenden, zu überschreiben oder
+```json
+
+// src/assets/fixtures/component-name/component_name.inc.json
+{
+    "varianteA":{
+        "title": "Test Überschrift A",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt A",
+            "size": "small"
+        }
+    },
+    "varianteB":{
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+
+// src/assets/fixtures/component-name/component_name.json
+{
+    "article": {
+        "@->jsoninclude": "component-name/component_name.inc.json",
+        "@->contentpath": "varianteB"
+    }
+}
+
+// wird zu component_name.json in src/stories/views/components/component-name/fixtures
+{
+    "article": {
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+```
+
+Im `article` Objekt der Datei `src/assets/fixtures/component-name/component_name.json` wird mit dem `@->jsoninclude` Token angegeben, dass
+der Inhalt der Datei `component-name/component_name.inc.json` eingebunden werden soll. Allerdings wird mit dem Token `@->contentpath`
+festgelegt, dass lediglich der Inhalt des Objektes `varianteB` inkludiert werden soll. Nach Ausführung des `jsonParse` Skriptes findet
+sich in der Datei `src/stories/views/components/component-name/fixtures/component_name.json` auch lediglich der Inhalt des Objektes `varianteB`.
+Es muss folglich nicht für jedes zu inkludierende JSON ein eigene Include-Datei angelegt werden, sondern es können auch ganz einfach
+in einer Datei mehrere Includes zusammengefasst werden.
+
+### Überschreiben von Inhalten mit @->overrides
+
+Mit den Tokens `@->jsoninclude` und `@->contentpath` lassen sich komfortabel die kompletten Inhalte oder nur ein bestimmter Teil
+einer JSON-Datei 1:1 in einer Anderen einbinden. Soll, wie z.B. bei den Teasern, eine große Anzahl an Testdaten erstellt werden, die
+sich lediglich in ein paar wenigen Eigenschaften unterscheiden, müsste in der Include-Datei für jede Variante ein eigener Testdatensatz
+angelegt werden. Da dies gerade bei komplexeren Datenstrukturen mitunter kompliziert werden kann, wurde mit dem Token `@->overrides` die
+Möglichkeit geschaffen bestimmte Eigenschaften der einzubindenden JSON-Datenstruktur zu überschreiben. Wie dies funktioniert, kann in
+folgendem Beispiel nachvollzogen werden.
+
+```json
+
+// src/assets/fixtures/component-name/component_name.inc.json
+{
+    "varianteA":{
+        "title": "Test Überschrift A",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt A",
+            "size": "small"
+        }
+    },
+    "varianteB":{
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+
+// src/assets/fixtures/component-name/component_name.json
+{
+    "article": {
+        "@->jsoninclude": "component-name/component_name.inc.json",
+        "@->contentpath": "varianteB",
+        "@->overrides": [
+            {
+                "@->contentpath":"title",
+                "@->value": "Überschriebene Überschrift B"
+            },
+            {
+                "@->contentpath":"objectName",
+                "@->value": {
+                    "name": "Überschriebenes Test Objekt B",
+                    "size": "large"
+                }
+            },
+        ]
+    }
+}
+
+// wird zu component_name.json in src/stories/views/components/component-name/fixtures
+{
+    "article": {
+        "title": "Überschriebene Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Überschriebenes Test Objekt B",
+            "size": "large"
+        }
+    }
+}
+```
+
+In der Datei `src/assets/fixtures/component-name/component_name.json` wird im `article` Objekt per `@->jsoninclude` die Datei
+`component-name/component_name.inc.json` referenziert und daraus das Objekt `varianteB` inkludiert. Dem Token `@->overrides`
+wird ein JSON-Array übergeben und darin definiert, dass die Eigenschaften `title` und `objectName` mit einem neuen Wert überschrieben
+werden sollen. Für jede zu überschreibende Eigenschaft muss hierfür ein JSON-Objekt definiert werde, weches die Eigenschaften
+`@->contentpath` für den Namen der zu überschreibenden Eigenschaft und `@->value` für den neuen Wert der Eigenschaft haben muss.
+Als Wert kann ein einfacher String genauso wie ein JSON-Objekt oder ein JSON-Array angegeben werden.
+
+Soll lediglich eine bestimmte Eigenschaft eines JSON-Objektes überschrieben werden, muss nicht das komplette Objekt überschrieben werden.
+Über die `@->contentpath` Eigenschaft kann gezielt eine bestimmte Eigenschaft selektiert und dann überschrieben werden. Dies wird in
+folgendem Beispiel gezeigt.
+
+```json
+
+// src/assets/fixtures/component-name/component_name.inc.json
+{
+    "varianteA":{
+        "title": "Test Überschrift A",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt A",
+            "size": "small"
+        }
+    },
+    "varianteB":{
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+
+// src/assets/fixtures/component-name/component_name.json
+{
+    "article": {
+        "@->jsoninclude": "component-name/component_name.inc.json",
+        "@->contentpath": "varianteB",
+        "@->overrides": [
+            {
+                "@->contentpath":"objectName.name",
+                "@->value": "Überschriebenes Test Objekt B",
+            },
+        ]
+    }
+}
+
+// wird zu component_name.json in src/stories/views/components/component-name/fixtures
+{
+    "article": {
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Überschriebenes Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+```
+
+Im `article` Objekt der Datei `src/assets/fixtures/component-name/component_name.json` wird im `@->overrides` ganz gezielt die Eigenschaft
+`name` des JSON-Objekts `objectName` überschrieben. Verschachtelte Eigenschaften können im `@->contentpath` ganz einfach selektiert
+werden, indem die einzelnen Bestandteile des Pfades mit Punkten voneinander getrennt werden. Im konkreten Beispiel wird die `name`
+Eigenschaft durch den Selektor `objectName.name` eindeutig angesprochen.
+
+### Hinzufügen von Inhalten mit @->extends
+
+Mit der Eigenschaft `@->extends` ist es möglich mittels `@->jsoninclude` und `@->contentpath` inkludierte JSON-Datenstrukturen, um
+zusätzliche Eigenschaften zu erweitern. Die Eigenschaften können sowohl direkt in Form zusätzlicher JSON-Objekte angegeben oder mittels
+`@->jsoninclude` aus anderen Dateien importiert werden. Das folgende Beispiel zeigt dies genauer.
+
+```json
+
+// src/assets/fixtures/component-name/component_name.inc.json
+{
+    "varianteA":{
+        "title": "Test Überschrift A",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt A",
+            "size": "small"
+        }
+    },
+    "varianteB":{
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Test Objekt B",
+            "size": "small"
+        }
+    }
+}
+
+// src/assets/fixtures/component-name/component_name_extends.inc.json
+{
+    "test": "Test Value",
+    "testObject": {
+        "name": "Blablub"
+    }
+}
+
+// src/assets/fixtures/component-name/component_name.json
+{
+    "article": {
+        "@->jsoninclude": "component-name/component_name.inc.json",
+        "@->contentpath": "varianteB",
+        "@->extends": {
+            "@->jsoninclude": "component-name/component_name_extends.inc.json"
+        },
+        "@->overrides": [
+            {
+                "@->contentpath":"objectName.name",
+                "@->value": "Überschriebenes Test Objekt B",
+            },
+        ]
+    }
+}
+
+// wird zu component_name.json in src/stories/views/components/component-name/fixtures
+{
+    "article": {
+        "title": "Test Überschrift B",
+        "text": "Lorem Ipsum Dolor Sit Amet",
+        "objectName": {
+            "name": "Überschriebenes Test Objekt B",
+            "size": "small"
+        },
+        "test": "Test Value",
+        "testObject": {
+            "name": "Blablub"
+        }
+    }
+}
+```
+
+In der aus den vorangegangenen Beispielen bekannten Datei `src/assets/fixtures/component-name/component_name.json` wird hier zunächst im
+`article` Objekt wieder mittels `@->jsoninclude` der Inhalt des JSON-Objektes `varianteB` aus der Datei
+`src/assets/fixtures/component-name/component_name.inc.json` eingebunden, bevor dieser per `@->extends` um den Inhalt der Datei  
+`src/assets/fixtures/component-name/component_name_extends.inc.json` erweitert wird. Wie auch beim `@->include` wäre es hier auch möglich
+mittels der `@->contentpath` Eigenschaft lediglich einen bestimmten Teil der JSON-Datenstruktur als Erweiterung zu verwenden.
+
+## Verwendung von JSON-Testdaten in Stories
+
+Die JSON-Testdaten im Verzeichnis `src/stories/views/components/name-der-komponente/fixtures` können in Stories ganz einfach
+verwendet werden. Sie müssen lediglich mit Hilfe eines Javascript Import-Statements einer Variablen zugewiesen werden. Sie
+stehen danach als Javascript-Objekt zur Verfügung. Um sie in einer Story zu nutzen, müssen sie dieser über den `args` Parameter zugewiesen
+werden. Das folgende Beispiel soll dies verdeutlichen.
+
+```javascript
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import xxlTeaserSerifWithLabel from './fixtures/teaser_standard_xxl_serif_label.json'
+import xxlTeaserSerifWithComments from './fixtures/teaser_standard_xxl_serif_comments.json'
+import xxlTeaserSerif from './fixtures/teaser_standard_xxl_serif.json'
+import xlTeaserSerif from './fixtures/teaser_standard_xl_serif.json'
+import lgTeaserSerif from './fixtures/teaser_standard_lg_serif.json'
+import mdTeaserSerif from './fixtures/teaser_standard_md_serif.json'
+import smTeaserSerif from './fixtures/teaser_standard_sm_serif.json'
+
+// ...
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Header
+
+Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Preview withToolbar>
+    <Story name="Standard Hero" args={xxlTeaserSerif}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard Hero mit Label" args={xxlTeaserSerifWithLabel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard Hero Mit Kommentaren" args={xxlTeaserSerifWithComments}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard XL" args={xlTeaserSerif}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard LG" args={lgTeaserSerif}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard MD" args={mdTeaserSerif}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard SM" args={smTeaserSerif}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+```
+
+Für die unterschiedlichen Teaservarianten werden die Testdaten in Variablen importiert und den konkreten Stories über den `args` Parameter
+übergeben.

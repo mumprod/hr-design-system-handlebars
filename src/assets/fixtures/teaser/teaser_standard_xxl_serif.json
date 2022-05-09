@@ -1,4 +1,4 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser"
+    "@->contentpath": "teaser"   
 }

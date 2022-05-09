@@ -1,0 +1,49 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import 'core-js/actual/structured-clone';
+import page from './page.hbs'
+import NavigationData from '../Header/navigation.json'
+import NavigationData2 from '../Header/navigation2.json'
+import NavigationData3 from '../Header/navigation3.json'
+import NavigationData4 from '../Header/navigation4.json'
+import hero_teaser from '../teaser/data/teaser_standard_xxl_serif.json'
+const NavigationDataWithTeaser  = structuredClone(Object.assign({}, NavigationData, hero_teaser))
+const NavigationDataWithTeaser2 = structuredClone(Object.assign({}, NavigationData2, hero_teaser))
+const NavigationDataWithTeaser3 = structuredClone(Object.assign({}, NavigationData3, hero_teaser))
+const NavigationDataWithTeaser4 = structuredClone(Object.assign({}, NavigationData4, hero_teaser))
+
+<Meta
+    title="Komponenten/Page/Page"
+    argTypes={{}}
+    parameters={{
+        chromatic: { 
+            viewports: [360, 768, 1024]
+        },
+        layout: 'fullscreen' }}
+/>
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return page({ brand, ...args })
+}
+
+# Page
+
+<Preview withToolbar>
+    <Story name="Default" args={NavigationDataWithTeaser}>
+        {Template.bind({})}
+    </Story>
+    <Story name="With Unwetter" args={NavigationDataWithTeaser2}>
+        {Template.bind({})}
+    </Story>
+    <Story name="With subnav open" args={NavigationDataWithTeaser3}>
+        {Template.bind({})}
+    </Story>
+    <Story name="With subnav open and Service Nav Item active" args={NavigationDataWithTeaser4}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+<ArgsTable story="Default" />

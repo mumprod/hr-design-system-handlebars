@@ -1,0 +1,62 @@
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
+
+import titleComponent from "./teaser_title.hbs";
+
+<Meta
+  title="Komponenten/Teaser/Komponenten/Titel"
+  argTypes={{
+    text: {
+      control: "text",
+      description: "Titel",
+    },
+    size: {
+      options: ["xxl","xl","lg", "md", "sm"],
+      control: { type: "inline-radio" },
+    },
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<span>${title}</span>`;
+  return titleComponent({ text, ...args });
+};
+
+# Titel
+
+Beispiele für die Titel-Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="Titel Serif - Hero"
+    args={{
+        text: "Dies ist der Titel eines 100%-Teasers",
+        size: "xxl",
+        font: "font-headingSerif"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Titel Serif - normal"
+    args={{
+        text: "Dies ist der Titel eines 66%-, 50%- oder 33%-Teasers",
+        size: "md",
+        font: "font-headingSerif"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Titel Serif - small"
+    args={{
+        text: "Dies ist der Titel eines 25%-Teasers",
+        size: "sm",
+        font: "font-headingSerif"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="title-large" />

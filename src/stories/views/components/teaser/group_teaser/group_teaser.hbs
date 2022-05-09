@@ -1,0 +1,10 @@
+{{#>components/grid/grid_group size=this.teaserSize }}  
+        {{~#if this.hasGroupTitle}}
+            <h2 class="text-4xl headline--barrier col-span-full">
+                {{~#if this.hasLink}}<a class="link" href="{{this.link.url}}">{{/if~}}
+                    <span class="headline--separator__text">{{this.groupTitle}}</span>
+                {{~#if this.hasLink}}</a>{{/if~}}
+            </h2>
+        {{/if}}        
+        {{~> components/teaser/teaser_logic/teaser_logic ~}}
+{{/components/grid/grid_group}}  

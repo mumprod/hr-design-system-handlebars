@@ -1,9 +1,0 @@
-{{~#with this.logicItem~}}
-    {{~#with this.includeModel~}}
-        {{~#if (isStorybook)~}}
-            {{~> components/base/loadDynamic templatePath=../includePath ~}}
-        {{~else~}}
-            {{~> (lookup ../. 'includePath')~}}
-        {{~/if~}}
-    {{~/with~}}
-{{~/with~}}

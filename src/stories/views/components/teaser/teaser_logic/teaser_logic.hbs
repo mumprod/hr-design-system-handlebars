@@ -1,0 +1,17 @@
+{{~#each this.logicItems}}
+    {{~#if this.isSsi~}}        
+        {{#if (isStorybook)}}  
+            {{> components/teaser/teaser_logic/teaser_logic.ssi.hbs }} 
+        {{else}}
+            {{{this.ssi}}}
+        {{/if}} 
+    {{~else}}
+        {{~#with this.includeModel~}}
+            {{~#if (isStorybook)~}}
+                {{~> components/base/load_dynamic templatePath=../includePath ~}} 
+            {{~else~}}
+                {{~> (lookup ../. 'includePath')~}}
+            {{~/if~}}
+        {{~/with~}}
+    {{~/if~}}
+{{/each~}}
