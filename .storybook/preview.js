@@ -8,7 +8,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
-import 'components/header/header_alpine'
+import 'components/header/header_alpine.js'
 
 function loadDelayedImages(){setTimeout((function(){var t,e=document.images,s=[],a=function(t){void 0!==window.picturefill&&window.picturefill({reevaluate:!0,elements:t})};for(var i=0;i<e.length;++i)(t=e[i].dataset?e[i].dataset.srcset:e[i].getAttribute("data-srcset"))&&(0===e[i].getBoundingClientRect().top?s.push(e[i]):e[i].setAttribute("srcset",t));a(e),setTimeout((function(){var t;for(var i=0;i<s.length;++i)t=s[i].dataset?s[i].dataset.srcset:s[i].getAttribute("data-srcset"),s[i].setAttribute("srcset",t);a(s)}),900)}),0)}
     
