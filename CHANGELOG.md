@@ -1,3 +1,15 @@
+# v0.45.0 (Thu May 12 2022)
+
+#### 🚀 Enhancement
+
+- Externalise script from header.hbs & renaming of header components [#231](https://github.com/mumprod/hr-design-system-handlebars/pull/231) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.44.4 (Mon May 09 2022)
 
 #### 🐛 Bug Fix
