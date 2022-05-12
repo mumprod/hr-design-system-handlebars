@@ -3,7 +3,7 @@
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
         :class="dropped ? 'border-b-0 lg:bg-white lg:text-blue-congress h-auto' : 'h-10 lg:hover:underline'" 
-        class="sb-section-navigation-item flex flex-wrap justify-start w-full text-white list-none border-b border-white first:lg:-ml-4 md:pl-0 lg:first:pl-0 first:border-t lg:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-blue-congress lg:rounded-t">   
+        class="flex flex-wrap justify-start w-full text-white list-none border-b border-white sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:first:pl-0 first:border-t lg:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-blue-congress lg:rounded-t">   
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
@@ -94,7 +94,7 @@
 
         {{/if}}
         
-        {{> components/Header/NavigationFlyout/NavigationFlyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
+        {{> components/header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
 
     </li>
 {{/each}}
