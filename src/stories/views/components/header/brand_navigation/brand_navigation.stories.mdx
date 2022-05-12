@@ -1,10 +1,10 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import menu from './SectionNavigation.hbs'
+import menu from './brand_navigation.hbs'
 
-import JsonData from '../navigation.json'
+import JsonData from '../brandNavigationData.json'
 
-<Meta title="Komponenten/Header/SectionNavigation/SectionNavigation" argTypes={{}} />
+<Meta title="Komponenten/Header/BrandNavigation/BrandNavigation" argTypes={{}} />
 
 export const Template = ({ labelType, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -12,9 +12,9 @@ export const Template = ({ labelType, ...args }) => {
     return menu({ labelType, ...args })
 }
 
-# SectionNavigation
+# BrandNavigation
 
-In der `SectionNavigation` Komponente werden verschiedene `SectionNavigationItems` dargestellt:
+In der `BrandNavigation` Komponente werden die `BrandNavigationItem` dargestellt:
 
 <Preview withToolbar>
     <Story name="Default" args={JsonData}>
