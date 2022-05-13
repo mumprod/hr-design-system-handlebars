@@ -1,3 +1,15 @@
+# v0.46.0 (Fri May 13 2022)
+
+#### 🚀 Enhancement
+
+- renamed folders header and search to site_header and navigation_search [#233](https://github.com/mumprod/hr-design-system-handlebars/pull/233) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.45.1 (Fri May 13 2022)
 
 #### 🐛 Bug Fix
