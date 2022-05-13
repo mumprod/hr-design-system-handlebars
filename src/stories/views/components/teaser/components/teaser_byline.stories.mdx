@@ -1,11 +1,8 @@
 import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
-import 'core-js/actual/structured-clone';
-import { addCommentLink } from '../jsonHelper';
 import byline from "./teaser_byline.hbs";
-import comments from '../data/teaser_commentLink.json';
-import teaser from '../data/teaser_article.json';
-let byline_with_comments  =  structuredClone(teaser);
-addCommentLink(byline_with_comments, comments.commentLink);
+import teaserWithoutComments from '../fixtures/teaser_standard_xxl_serif.json';
+import teaserWithComments from '../fixtures/teaser_standard_xxl_serif_comments.json';
+import teaserWithoutTeaserinfo from '../fixtures/teaser_comments_without_teaserinfo.json';
 
 <Meta title="Komponenten/Teaser/Komponenten/Byline"/>
 
@@ -16,13 +13,13 @@ export const Template = ({ ...args }) => {
 # Byline
 
 <Preview withToolbar>
-  <Story name="default" args={teaser}>
+  <Story name="default" args={teaserWithoutComments.logicItem.includeModel}>
     {Template.bind({})}
   </Story>
-  <Story name="with comments" args={byline_with_comments}>
+  <Story name="with comments" args={teaserWithComments.logicItem.includeModel}>
     {Template.bind({})} 
   </Story>
-  <Story name="comments only" args={comments}>
+  <Story name="comments only" args={teaserWithoutTeaserinfo.logicItem.includeModel}>
     {Template.bind({})} 
   </Story>
 </Preview>
