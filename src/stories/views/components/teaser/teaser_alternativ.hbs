@@ -1,14 +1,14 @@
-<article class="col-span-12 flex gap-y-4 gap-x-5 {{inline-switch teasersize '["sm","md","lg"]' '["px-5 flex-row ","md:col-span-4 flex-row","md:col-span-6 flex-row","flex-row"]'}} ">
-    <figure class="{{inline-switch teasersize '["sm", "xxl"]' '["basis-2/5 md:flex-full ar-1-1 md:ar-16-9","basis-3/5 ar-16-9", "ar-16-9"]'}} ">
-        {{#>components/base/link _cssClasses="" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="mediaLink" }}
+<article class="col-span-12 flex gap-y-4 gap-x-5 {{inline-switch teasersize '["25","33","50"]' '["px-5 flex-row ","md:col-span-4 flex-row","md:col-span-6 flex-row","flex-row"]'}} ">
+    <figure class="{{inline-switch teasersize '["25", "hero"]' '["basis-2/5 md:flex-full ar-1-1 md:ar-16-9","basis-3/5 ar-16-9", "ar-16-9"]'}} ">
+        {{#>components/base/link _cssClasses="" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
             {{~> components/base/image/responsive_image this.content.teaserImage _type=this.content.teasertype _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content mediaPlayerLoader__mediaplayerArea" ~}}
         {{/components/base/link}}  
     </figure>
-    <div class="{{inline-switch teasersize '["sm", "xxl"]' '["basis-3/5 md:flex-full" , "basis-2/5"]'}} ">
-        <header class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
+    <div class="{{inline-switch teasersize '["25", "hero"]' '["basis-3/5 md:flex-full" , "basis-2/5"]'}} ">
+        <header class="md:px-0 {{inline-switch teasersize '["25"]' '["","px-5"]'}}">
             {{> components/teaser/components/teaser_heading headlineTag="h2" size=teasersize font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]')}}            
         </header>
-        <section class="md:px-0 {{inline-switch teasersize '["sm"]' '["","px-5"]'}}">
+        <section class="md:px-0 {{inline-switch teasersize '["25"]' '["","px-5"]'}}">
             {{> components/teaser/components/teaser_text text=shorttext size=teasersize }}
             {{> components/teaser/components/teaser_byline}} 
         </section>
