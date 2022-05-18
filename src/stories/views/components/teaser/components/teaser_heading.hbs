@@ -1,13 +1,11 @@
-{{#>components/base/link _cssClasses="hover:text-toplineColor" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="headlineLink" }} 
-    {{#with this.content.label}}
-        <div class="leading-5.5">
-            {{> components/label/label type=loca text=type}}
-        </div>
-    {{/with~}}    
-    <{{~ this.content.headlineTag ~}}>
-        {{#if this.content.topline}}
-            {{> components/teaser/components/teaser_topline text=this.content.topline readMore=this.readMoreText.readMoreScreenreader}}
-        {{/if}}
-        {{> components/teaser/components/teaser_title text=this.content.title font=(if ../font ../font this.content.headingFont) size=(if ../size ../size this.content.headingSize) }}
-    </{{~ this.content.headlineTag ~}}>
-{{/components/base/link}}   
+{{#with this.label}}
+    <div class="leading-5.5">
+        {{> components/label/label type=loca text=type}}
+    </div>
+{{/with~}}    
+<{{~ this.headlineTag ~}}>
+    {{#if this.topline}}
+        {{> components/teaser/components/teaser_topline text=this.topline readMore=this.readMore}}
+    {{/if}}
+    {{> components/teaser/components/teaser_title text=this.title fontVariant=this.fontVariant size=this.size }}
+</{{~ this.headlineTag ~}}>
