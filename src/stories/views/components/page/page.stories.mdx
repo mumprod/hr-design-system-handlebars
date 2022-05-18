@@ -1,24 +1,33 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import 'core-js/actual/structured-clone';
+import 'core-js/actual/structured-clone'
 import page from './page.hbs'
 import NavigationData from '../site_header/navigation.json'
 import NavigationData2 from '../site_header/navigation2.json'
 import NavigationData3 from '../site_header/navigation3.json'
 import NavigationData4 from '../site_header/navigation4.json'
-import hero_teaser from '../teaser/data/teaser_standard_xxl_serif.json'
-const NavigationDataWithTeaser  = structuredClone(Object.assign({}, NavigationData, hero_teaser))
-const NavigationDataWithTeaser2 = structuredClone(Object.assign({}, NavigationData2, hero_teaser))
-const NavigationDataWithTeaser3 = structuredClone(Object.assign({}, NavigationData3, hero_teaser))
-const NavigationDataWithTeaser4 = structuredClone(Object.assign({}, NavigationData4, hero_teaser))
+import hero_teaser from '../teaser/fixtures/teaser_standard_hero_serif.json'
+const NavigationDataWithTeaser = structuredClone(
+    Object.assign({}, NavigationData, hero_teaser.logicItem.includeModel)
+)
+const NavigationDataWithTeaser2 = structuredClone(
+    Object.assign({}, NavigationData2, hero_teaser.logicItem.includeModel)
+)
+const NavigationDataWithTeaser3 = structuredClone(
+    Object.assign({}, NavigationData3, hero_teaser.logicItem.includeModel)
+)
+const NavigationDataWithTeaser4 = structuredClone(
+    Object.assign({}, NavigationData4, hero_teaser.logicItem.includeModel)
+)
 
 <Meta
     title="Komponenten/Page/Page"
     argTypes={{}}
     parameters={{
-        chromatic: { 
-            viewports: [360, 768, 1024]
+        chromatic: {
+            viewports: [360, 768, 1024],
         },
-        layout: 'fullscreen' }}
+        layout: 'fullscreen',
+    }}
 />
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
