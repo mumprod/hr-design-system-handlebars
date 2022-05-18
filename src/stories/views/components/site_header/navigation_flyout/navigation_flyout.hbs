@@ -44,11 +44,11 @@
         <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} w-full lg:px-10 lg:container {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
-                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn count=../this.columnCount navtype=../../_navigationType _parent=../../_parent _flyout=true~}}
+                    {{> components/site_header/navigation_flyout/navigation_flyout_column count=../this.columnCount navtype=../../_navigationType _parent=../../_parent _flyout=true~}}
                 {{/each}}
             {{else}}
                 {{#with this.items}}
-                    {{> components/Header/NavigationFlyout/NavigationFlyoutColumn selected=../../this.selected navtype=../../_navigationType _parent=../../_parent _flyout=false ~}}
+                    {{> components/site_header/navigation_flyout/navigation_flyout_column selected=../../this.selected navtype=../../_navigationType _parent=../../_parent _flyout=false ~}}
                 {{/with}}
             {{/if}}
         </div>

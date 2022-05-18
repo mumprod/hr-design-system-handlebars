@@ -1,3 +1,39 @@
+# v0.46.0 (Fri May 13 2022)
+
+#### 🚀 Enhancement
+
+- renamed folders header and search to site_header and navigation_search [#233](https://github.com/mumprod/hr-design-system-handlebars/pull/233) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.45.1 (Fri May 13 2022)
+
+#### 🐛 Bug Fix
+
+- some refactoring [#232](https://github.com/mumprod/hr-design-system-handlebars/pull/232) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.45.0 (Thu May 12 2022)
+
+#### 🚀 Enhancement
+
+- Externalise script from header.hbs & renaming of header components [#231](https://github.com/mumprod/hr-design-system-handlebars/pull/231) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.44.4 (Mon May 09 2022)
 
 #### 🐛 Bug Fix

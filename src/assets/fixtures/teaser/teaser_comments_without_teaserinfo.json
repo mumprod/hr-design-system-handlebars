@@ -1,0 +1,14 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserWithComments",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+            "@->value": false
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.profiles",
+            "@->value": ""
+        }
+    ]
+}
