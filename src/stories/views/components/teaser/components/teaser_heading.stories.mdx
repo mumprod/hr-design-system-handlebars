@@ -1,58 +1,60 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import teaserHeading from "./teaser_heading.hbs";
+import teaserHeading from './teaser_heading.hbs'
 
 <Meta
-  title="Komponenten/Teaser/Komponenten/Teaserheading"
-  argTypes={{
-    link:{
-      content:{
+    title="Komponenten/Teaser/Komponenten/Teaserheading"
+    argTypes={{
         topline: {
-          control: "text",
-          description: "Topline Text",
-        }
-      }
-    },
-    title: {
-      control: "text",
-      description: "Headline Text",
-    },
-    headlineTag: {
-      control: {
-        type: "select",
-        options: ["span", "h1", "h2", "h3", "h4", "h5", "h6"],
-      },
-      description: "Größe",
-      table: {
-        defaultValue: {
-          summary: "span",
+            control: 'text',
+            description: 'Text der Dachzeile',
         },
-      },
-    },
-    font: {
-      description: "Schriftart",
-      control: {
-        type: "inline-radio",
-        options: ["font-headingSerif", "font-heading"],
-      },
-      table: {
-        defaultValue: {
-          summary: "heading",
+        title: {
+            control: 'text',
+            description: 'Text der Überschrift',
         },
-      },
-    },
-    size: {
-      options: ["xxl", "md", "sm"],
-      control: { type: "inline-radio" },
-    },
-  }}
+        headlineTag: {
+            control: {
+                type: 'select',
+                options: ['span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+            },
+            description: 'HTML-Tag der Überschrift',
+            table: {
+                defaultValue: {
+                    summary: 'span',
+                },
+            },
+        },
+        fontVariant: {
+            description: 'Schriftvariante',
+            control: {
+                type: 'inline-radio',
+                options: ['serif', 'sans-serif'],
+            },
+            table: {
+                defaultValue: {
+                    summary: 'serif',
+                },
+            },
+        },
+        size: {
+            options: ['hero', '100', '50', '33', '25'],
+            control: { type: 'select' },
+            description: 'Größe der Überschrift',
+            table: {
+                defaultValue: {
+                    summary: 'hero',
+                },
+            },
+        },
+    }}
 />
 
 export const Template = ({ topline, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return teaserHeading({ topline, ...args });
-};
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return teaserHeading({ topline, ...args })
+}
 
 # Teaser-Heading
 
@@ -61,32 +63,27 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
 ## Teaser-Heading serif large
 
 <Canvas>
-  <Story
-    name="Serif Hero"
-    parameters={{
-      docs: {
-        source: {
-          code: `
+    <Story
+        name="Serif Hero"
+        parameters={{
+            docs: {
+                source: {
+                    code: `
 <Button class="storybook-button storybook-button--secondary">Button</button>
         `,
-        },
-      },
-    }}
-    args={{
-      title: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "font-headingSerif",
-      size: "xxl",
-      link: {
-              content: {
-                topline: "Das ist eine wirklich sehr lange Topline"
-              },
-              url: "/teaser1"
-            }
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+                },
+            },
+        }}
+        args={{
+            topline: 'Das ist eine wirklich sehr lange Topline',
+            title: 'Das ist eine wirklich sehr lange Headline',
+            headlineTag: 'h1',
+            fontVariant: 'serif',
+            size: 'hero',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Canvas>
 
 <ArgsTable story="Serif large" />
@@ -94,61 +91,51 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
 ## Teaser-Heading Serif small
 
 <Canvas>
-  <Story
-    name="Serif medium"
-    parameters={{
-      docs: {
-        source: {
-          code: `
+    <Story
+        name="Serif medium"
+        parameters={{
+            docs: {
+                source: {
+                    code: `
 <Button class="storybook-button storybook-button--secondary">Button</button>
         `,
-        },
-      },
-    }}
-    args={{
-      title: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "font-headingSerif",
-      size: "md",
-      link: {
-              content: {
-                topline: "Das ist eine wirklich sehr lange Topline"
-              },
-              url: "/teaser1"
-            }
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+                },
+            },
+        }}
+        args={{
+            topline: 'Das ist eine wirklich sehr lange Topline',
+            title: 'Das ist eine wirklich sehr lange Headline',
+            headlineTag: 'h1',
+            fontVariant: 'serif',
+            size: '33',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Canvas>
 
 ## Teaser-Heading Serif large
 
 <Canvas>
-  <Story
-    name="Serif small"
-    parameters={{
-      docs: {
-        source: {
-          code: `
+    <Story
+        name="Serif small"
+        parameters={{
+            docs: {
+                source: {
+                    code: `
 <Button class="storybook-button storybook-button--secondary">Button</button>
         `,
-        },
-      },
-    }}
-    args={{
-      title: "Das ist eine wirklich sehr lange Headline",
-      headlineTag: "h1",
-      font: "font-headingSerif",
-      size: "sm",
-      link: {
-        content: {
-          topline: "Das ist eine wirklich sehr lange Topline"
-        },
-        url: "/teaser1"
-      }
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+                },
+            },
+        }}
+        args={{
+            topline: 'Das ist eine wirklich sehr lange Topline',
+            title: 'Das ist eine wirklich sehr lange Headline',
+            headlineTag: 'h1',
+            fontVariant: 'serif',
+            size: '25',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Canvas>

@@ -14,15 +14,15 @@ import smTeaserSerif from './fixtures/teaser_standard_25_serif.json'
         layout: 'fullscreen',
     }}
     argTypes={{
-        teasersize: {
+        teaserSize: {
             control: {
                 type: 'select',
-                options: ['xxl', 'xl', 'lg', 'md', 'sm'],
+                options: ['hero', '100', '50', '33', '25'],
             },
             description: 'Teaser Größe',
             table: {
                 defaultValue: {
-                    summary: 'xxl',
+                    summary: 'hero',
                 },
             },
         },
