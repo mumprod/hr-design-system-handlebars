@@ -1,11 +1,11 @@
-{{#with this.label}}
+{{#with label}}
     <div class="leading-5.5">
         {{> components/label/label type=loca text=type}}
     </div>
 {{/with~}}    
-<{{~ this.headlineTag ~}}>
-    {{#if this.topline}}
-        {{> components/teaser/components/teaser_topline text=this.topline readMore=this.readMore}}
+<{{~ headlineTag ~}}>
+    {{#if topline}}
+        {{> components/teaser/components/teaser_topline text=topline readMore=readMore}}
     {{/if}}
-    {{> components/teaser/components/teaser_title text=this.title fontVariant=this.fontVariant size=this.size }}
-</{{~ this.headlineTag ~}}>
+    {{> components/teaser/components/teaser_title text=title fontVariant=fontVariant size=size }}
+</{{~ headlineTag ~}}>
