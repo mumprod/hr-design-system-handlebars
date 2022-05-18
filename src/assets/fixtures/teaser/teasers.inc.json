@@ -7,7 +7,7 @@
                 "byline": "Byline",
                 "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                 "topline": "Überglücklich, aber ohne Mama",
-                "isSerifHeading": true,
+                "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teasertype": "standard",
                 "teaserSize": "100",
@@ -59,7 +59,7 @@
                 "showProfileInfoAsByline": false,
                 "obsolet_brandOfTeaser": "hessenschau",
                 "documentSection": "Gesellschaft",
-                "headingSize": "h1",
+                "headlineTag": "h1",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
                 "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
@@ -86,18 +86,21 @@
                         "readMoreLong": "read More Long"
                     },
                     "content": {
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "teasertype": "standard",
+                        "headlineTag": "h1",
+                        "headingFontVariant": "serif",
                         "imageVariant": "topteaser",
                         "isFileDownload": false,
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        },
                         "teaserImage": {
                             "@->jsoninclude": "teaser/teaser_images.inc.json",
                             "@->contentpath": "standard_1"
+                        },
+                        "teaserSize": "100",
+                        "teasertype": "standard",
+                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
                         }
                     }
                 }
@@ -112,7 +115,7 @@
                 "byline": "Byline",
                 "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                 "topline": "Überglücklich, aber ohne Mama",
-                "isSerifHeading": true,
+                "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teasertype": "standard",
                 "teaserSize": "100",
@@ -178,7 +181,7 @@
                 "showAirdate": false,
                 "showProfileInfoAsByline": false,
                 "obsolet_brandOfTeaser": "hessenschau",
-                "headingSize": "h1",
+                "headlineTag": "h1",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
                 "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
@@ -205,18 +208,21 @@
                         "readMoreLong": "read More Long"
                     },
                     "content": {
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "teasertype": "standard",
+                        "headlineTag": "h1",
+                        "headingFontVariant": "serif",
                         "imageVariant": "topteaser",
                         "isFileDownload": false,
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        },
                         "teaserImage": {
                             "@->jsoninclude": "teaser/teaser_images.inc.json",
                             "@->contentpath": "standard_1"
+                        },
+                        "teaserSize": "100",
+                        "teasertype": "standard",
+                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
                         }
                     }
                 }
