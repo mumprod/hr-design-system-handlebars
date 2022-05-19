@@ -4,13 +4,17 @@
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
-            "@->value": "25"
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "sm_4"
+                "@->contentpath": "md_2"
             }
         }
     ]

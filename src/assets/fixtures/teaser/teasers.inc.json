@@ -9,7 +9,7 @@
                 "topline": "Überglücklich, aber ohne Mama",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
-                "teasertype": "standard",
+                "teaserType": "standard",
                 "teaserSize": "hero",
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -96,7 +96,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "teasertype": "standard",
+                        "teaserType": "standard",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
                         "trackingData": {
@@ -118,7 +118,7 @@
                 "topline": "Überglücklich, aber ohne Mama",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
-                "teasertype": "standard",
+                "teaserType": "standard",
                 "teaserSize": "hero",
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -139,17 +139,18 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
-                "commentLink": {
-                    "link": {
-                        "url": "/teaser1-comments",
-                        "webviewUrl": "/teaser1-comments#webview",
-                        "isTargetBlank": false,
-                        "readMoreText": {
-                            "readMoreScreenreader": "Zu den Kommentaren des Artikels"
-                        },
-                        "content": {
-                            "commentNumber": "666",
-                            "hasOneComment": false
+                "commentsSsi": {
+                    "commentNumber": "666",
+                    "hasOneComment": false,
+                    "hasManyComments": true,
+                    "commentLink": {
+                        "link": {
+                            "url": "/teaser1-comments",
+                            "webviewUrl": "/teaser1-comments#webview",
+                            "isTargetBlank": false,
+                            "readMoreText": {
+                                "readMoreScreenreader": "Zu den Kommentaren des Artikels"
+                            }
                         }
                     }
                 },
@@ -219,7 +220,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "teasertype": "standard",
+                        "teaserType": "standard",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
                         "trackingData": {
