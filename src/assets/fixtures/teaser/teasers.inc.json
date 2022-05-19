@@ -22,7 +22,7 @@
                     "showTeaserInfoSection": true,
                     "showTeaserInfoChannel": true,
                     "showTeaserInfoAll": true,
-                    "showTeaserInfoDate": true,
+                    "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
                     "showTeaserInfoProgramRef": true
                 },
@@ -131,7 +131,7 @@
                     "showTeaserInfoSection": true,
                     "showTeaserInfoChannel": true,
                     "showTeaserInfoAll": true,
-                    "showTeaserInfoDate": true,
+                    "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
                     "showTeaserInfoProgramRef": true
                 },
