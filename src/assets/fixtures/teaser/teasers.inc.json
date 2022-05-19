@@ -12,9 +12,10 @@
                 "teasertype": "standard",
                 "teaserSize": "hero",
                 "teaserDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
                     "htmlDate": "20.02.1983",
-                    "date": "20.02.1983",
-                    "dateSeparatorTime": "20.02.1983"
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
                 },
                 "teaserInfo": {
                     "showTeaserInfo": true,
@@ -120,9 +121,10 @@
                 "teasertype": "standard",
                 "teaserSize": "hero",
                 "teaserDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
                     "htmlDate": "20.02.1983",
-                    "date": "20.02.1983",
-                    "dateSeparatorTime": "20.02.1983"
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
                 },
                 "teaserInfo": {
                     "showTeaserInfo": true,
