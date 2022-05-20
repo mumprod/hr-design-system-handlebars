@@ -1,1 +1,13 @@
-<span class="block {{inline-switch size '["xxl","xl","sm"]' '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg ","text-2xl "]'}} {{font}} mt-0.5">{{text}}</span>
+<span
+    class='block mt-0.5
+        {{inline-switch
+            size
+            '["hero","100","25"]'
+            '[" text-2xl md:text-4xl"," text-2xl md:text-4xl"," text-lg"," text-2xl"]'
+        }}
+        {{inline-switch
+            fontVariant
+            '["serif", "sans-serif"]'
+            '[" font-headingSerif"," font-heading font-bold"," font-headingSerif"]'
+        }}'
+>{{text}}</span>

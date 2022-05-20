@@ -9,8 +9,7 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_xxl_serif.json"
-                   
+                    "@->jsoninclude": "teaser/teaser_standard_hero_serif.json"
                 }
             ]
         }
@@ -25,17 +24,17 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_50_serif.json"
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_lg_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_50_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "standard_4"
-                            }     
+                            }
                         }
                     ]
                 }
@@ -52,38 +51,38 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "md_1"
-                            }     
+                            }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "md_2"
-                            }     
+                            }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_md_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "md_3"
-                            }     
+                            }
                         }
                     ]
                 }
@@ -100,50 +99,50 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "sm_1"
-                            }     
+                            }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "sm_2"
-                            }     
+                            }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "sm_3"
-                            }     
+                            }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_sm_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                                 "@->contentpath": "sm_4"
-                            }     
+                            }
                         }
                     ]
                 }

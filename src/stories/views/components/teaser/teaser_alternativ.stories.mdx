@@ -1,50 +1,43 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import 'core-js/actual/structured-clone';
-import { addLabel, removeLabel, changeTeaserSize } from './labelHelper';
-import { addCommentLink } from './jsonHelper';
+import 'core-js/actual/structured-clone'
+import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
+import { addCommentLink } from './jsonHelper'
 import teaser from './teaser_alternativ.hbs'
-import hero_teaser from './data/teaser_standard_xxl_serif.json' 
-import xl_teaser from './data/teaser_standard_xl_serif.json'
-import lg_teaser from './data/teaser_standard_lg_serif.json'
-import md_teaser from './data/teaser_standard_md_serif.json'
-import sm_teaser from './data/teaser_standard_sm_serif.json'
-import ticker_label from './data/ticker_label.json';
-import comments from './data/teaser_commentLink.json';
-let hero_teaser_with_label  =  structuredClone(hero_teaser);
-addLabel(hero_teaser_with_label, ticker_label.label);
-let hero_teaser_with_comments  =  structuredClone(hero_teaser);
-addCommentLink(hero_teaser_with_comments, comments.commentLink);
-let md_teaser_with_comments  =  structuredClone(md_teaser);
-addCommentLink(md_teaser_with_comments, comments.commentLink);
-let sm_teaser_with_comments  =  structuredClone(sm_teaser);
-addCommentLink(sm_teaser_with_comments, comments.commentLink);
+import heroTeaser from './fixtures/teaser_alternative_hero_serif.json'
+import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.json'
+import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
+import teaser100 from './fixtures/teaser_alternative_100_serif.json'
+import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser33 from './fixtures/teaser_alternative_33_serif.json'
+import teaser25 from './fixtures/teaser_alternative_25_serif.json'
 
-<Meta   title="Komponenten/Teaser/Alternativ"
-        parameters={{
-            layout: 'fullscreen',
-        }}
-        argTypes={{
-            teasersize: {
-                control: {
-                    type: 'select',
-                    options: ['xxl','xl', 'lg', 'md', 'sm'],
+<Meta
+    title="Komponenten/Teaser/Alternativ"
+    parameters={{
+        layout: 'fullscreen',
+    }}
+    argTypes={{
+        teasersize: {
+            control: {
+                type: 'select',
+                options: ['hero', '100', '50', '33', '25'],
+            },
+            description: 'Teaser Größe',
+            table: {
+                defaultValue: {
+                    summary: 'hero',
                 },
-                description: 'Teaser Größe',
-                table: {
-                    defaultValue: {
-                        summary: 'xxl',
-                    },
-                },
-            }
-        }} 
-        decorators={[
-            (Story) => {
-                return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            },
+        },
+    }}
+    decorators={[
+        (Story) => {
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
                 ${Story()} 
                 </div></div>`
-            },
-        ]}
-        />
+        },
+    ]}
+/>
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -59,23 +52,28 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
-    <Story  name="Alternativ Hero" args={hero_teaser_with_comments}>
-        {Template.bind({})} 
-    </Story>
-    <Story name="Alternativ Hero with Label" args={hero_teaser_with_label}>
-        {Template.bind({})} 
-    </Story>   
-    <Story name="Alternativ XL" args={xl_teaser}>
-        {Template.bind({})}
-    </Story>  
-    <Story name="Alternativ LG" args={lg_teaser}>
+    <Story name="Alternativ Hero" args={heroTeaser.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Alternativ MD" args={md_teaser_with_comments}>
+    <Story
+        name="Alternativ Hero mit Kommentaren"
+        args={heroTeaserWithComments.logicItem.includeModel}
+    >
         {Template.bind({})}
-    </Story>   
-    <Story name="Alternativ SM" args={sm_teaser_with_comments}>
+    </Story>
+    <Story name="Alternativ Hero mit Label" args={heroTeaserWithLabel.logicItem.includeModel}>
         {Template.bind({})}
-    </Story>   
-   
+    </Story>
+    <Story name="Alternativ 100" args={teaser100.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 33" args={teaser33.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 25" args={teaser25.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
 </Preview>

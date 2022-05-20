@@ -1,0 +1,21 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "25"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "sm_4"
+            }
+        }
+    ]
+}
