@@ -90,10 +90,8 @@
 							[
 								{
 									"title": "Aktuelle Sendung",
+									"text": "Aktuelle Sendung",
 									"link": {
-										"content": {
-											"text": "Aktuelle Sendung"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -101,10 +99,8 @@
 								},
 								{
 									"title": "Archiv - alle Sendungen",
+									"text": "Archiv - alle Sendungen",
 									"link": {
-										"content": {
-											"text": "Archiv - alle Sendungen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -112,10 +108,8 @@
 								},
 								{
 									"title": "Newsflash",
+									"text": "Newsflash",
 									"link": {
-										"content": {
-											"text": "Newsflash"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -123,10 +117,8 @@
 								},
 								{
 									"title": "DAS THEMA",
+									"text": "DAS THEMA",
 									"link": {
-										"content": {
-											"text": "DAS THEMA"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -134,10 +126,8 @@
 								},
 								{
 									"title": "Die hessenschau in 100 Sekunden",
+									"text": "Die hessenschau in 100 Sekunden",
 									"link": {
-										"content": {
-											"text": "Die hessenschau in 100 Sekunden"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -145,10 +135,8 @@
 								},
 								{
 									"title": "Podcasts",
+									"text": "Podcasts",
 									"link": {
-										"content": {
-											"text": "Podcasts"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -156,10 +144,8 @@
 								},
 								{
 									"title": "hessenschau in der ARD Mediathek",
+									"text": "hessenschau in der ARD Mediathek",
 									"link": {
-										"content": {
-											"text": "hessenschau in der ARD Mediathek"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": true,
 										"iconName": "extern"
@@ -169,10 +155,8 @@
 							[
 								{
 									"title": "hessenschau auf YouTube",
+									"text": "hessenschau auf YouTube",
 									"link": {
-										"content": {
-											"text": "hessenschau auf YouTube"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": true,
 										"iconName": "extern"
@@ -180,10 +164,8 @@
 								},
 								{
 									"title": "Livestream hr-fernsehen",
+									"text": "Livestream hr-fernsehen",
 									"link": {
-										"content": {
-											"text": "Livestream hr-fernsehen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": true,
 										"iconName": "extern"
@@ -211,10 +193,8 @@
 							[
 								{
 									"title": "Unwetterwarnungen",
+									"text": "Unwetterwarnungen",
 									"link": {
-										"content": {
-											"text": "Unwetterwarnungen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -222,10 +202,8 @@
 								},
 								{
 									"title": "Regenradar",
+									"text": "Regenradar",
 									"link": {
-										"content": {
-											"text": "Regenradar"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -233,10 +211,8 @@
 								},
 								{
 									"title": "Wolkenfilm",
+									"text": "Wolkenfilm",
 									"link": {
-										"content": {
-											"text": "Wolkenfilm"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -244,10 +220,8 @@
 								},
 								{
 									"title": "Messwerte",
+									"text": "Messwerte",
 									"link": {
-										"content": {
-											"text": "Messwerte"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -255,10 +229,8 @@
 								},
 								{
 									"title": "Wetterkameras",
+									"text": "Wetterkameras",
 									"link": {
-										"content": {
-											"text": "Wetterkameras"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -266,10 +238,8 @@
 								},
 								{
 									"title": "Wetterbilder-Galerie",
+									"text": "Wetterbilder-Galerie",
 									"link": {
-										"content": {
-											"text": "Wetterbilder-Galerie"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -277,10 +247,8 @@
 								},
 								{
 									"title": "mehr Wetter",
+									"text": "mehr Wetter",
 									"link": {
-										"content": {
-											"text": "mehr Wetter"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -290,10 +258,8 @@
 							[
 								{
 									"title": "Thema des Tages",
+									"text": "Thema des Tages",
 									"link": {
-										"content": {
-											"text": "Thema des Tages"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": true,
 										"iconName": "extern"
@@ -301,10 +267,8 @@
 								},
 								{
 									"title": "Foto einsenden",
+									"text": "Foto einsenden",
 									"link": {
-										"content": {
-											"text": "Foto einsenden"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": true,
 										"iconName": "extern"
@@ -332,10 +296,8 @@
 							[
 								{
 									"title": "Verkehrskameras",
+									"text": "Verkehrskameras",
 									"link": {
-										"content": {
-											"text": "Verkehrskameras"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -343,10 +305,8 @@
 								},
 								{
 									"title": "Blitzer",
+									"text": "Blitzer",
 									"link": {
-										"content": {
-											"text": "Blitzer"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -354,10 +314,8 @@
 								},
 								{
 									"title": "Schulausfälle",
+									"text": "Schulausfälle",
 									"link": {
-										"content": {
-											"text": "Schulausfälle"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -365,10 +323,8 @@
 								},
 								{
 									"title": "Flugpläne Frankfurt / Parkhausbelegung",
+									"text": "Flugpläne Frankfurt / Parkhausbelegung",
 									"link": {
-										"content": {
-											"text": "Flugpläne Frankfurt / Parkhausbelegung"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -376,10 +332,8 @@
 								},
 								{
 									"title": "Werden Sie hr-Staureporter!",
+									"text": "Werden Sie hr-Staureporter!",
 									"link": {
-										"content": {
-											"text": "Werden Sie hr-Staureporter!"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -419,10 +373,8 @@
 							[
 								{
 									"title": "Nordhessen",
+									"text": "Nordhessen",
 									"link": {
-										"content": {
-											"text": "Nordhessen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -430,10 +382,8 @@
 								},
 								{
 									"title": "Osthessen",
+									"text": "Osthessen",
 									"link": {
-										"content": {
-											"text": "Osthessen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -441,10 +391,8 @@
 								},
 								{
 									"title": "Mittelhessen",
+									"text": "Mittelhessen",
 									"link": {
-										"content": {
-											"text": "Mittelhessen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -452,10 +400,8 @@
 								},
 								{
 									"title": "Rhein-Main",
+									"text": "Rhein-Main",
 									"link": {
-										"content": {
-											"text": "Rhein-Main"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -463,10 +409,8 @@
 								},
 								{
 									"title": "Südhessen",
+									"text": "Südhessen",
 									"link": {
-										"content": {
-											"text": "Südhessen"
-										},
 										"url": "http://www.test.de",
 										"hasIcon": false,
 										"iconName": "extern"
@@ -520,10 +464,8 @@
 						"columnCount": "1",
 						"items": [
 							{  "title": "Bundestagswahl 2021",
+								"text": "Bundestagswahl 2021",
 								"link": {
-									"content": {
-										"text": "Bundestagswahl 2021"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -531,10 +473,8 @@
 							},
 							{
 								"title": "Landtag",
+								"text": "Landtag",
 								"link": {
-									"content": {
-										"text": "Landtag"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -542,10 +482,8 @@
 							},
 							{
 								"title": "Videos aus dem Landtag",
+								"text": "Videos aus dem Landtag",
 								"link": {
-									"content": {
-										"text": "Videos aus dem Landtag"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -553,10 +491,8 @@
 							},
 							{
 								"title": "Wahlen",
+								"text": "Wahlen",
 								"link": {
-									"content": {
-										"text": "Wahlen"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -564,10 +500,8 @@
 							},
 							{
 								"title": "Direktwahlen",
+								"text": "Direktwahlen",
 								"link": {
-									"content": {
-										"text": "Direktwahlen"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -621,10 +555,8 @@
 						"columnCount": "1",
 						"items": [
 							{  "title": "Eintracht Frankfurt",
+								"text": "Eintracht Frankfurt",
 								"link": {
-									"content": {
-										"text": "Eintracht Frankfurt"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -632,10 +564,8 @@
 							},
 							{
 								"title": "SV Darmstadt 98",
+								"text": "SV Darmstadt 98",
 								"link": {
-									"content": {
-										"text": "SV Darmstadt 98"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -643,10 +573,8 @@
 							},
 							{
 								"title": "Fußball",
+								"text": "Fußball",
 								"link": {
-									"content": {
-										"text": "Fußball"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -654,10 +582,8 @@
 							},
 							{
 								"title": "Ergebnisse & Tabellen",
+								"text": "Ergebnisse & Tabellen",
 								"link": {
-									"content": {
-										"text": "Ergebnisse & Tabellen"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -665,10 +591,8 @@
 							},
 							{
 								"title": "Mehr Sport",
+								"text": "Mehr Sport",
 								"link": {
-									"content": {
-										"text": "Mehr Sport"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -676,10 +600,8 @@
 							},
 							{
 								"title": "Videos",
+								"text": "Videos",
 								"link": {
-									"content": {
-										"text": "Videos"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": false,
 									"iconName": "extern"
@@ -687,10 +609,8 @@
 							},
 							{
 								"title": "heimspiel!",
+								"text": "heimspiel!",
 								"link": {
-									"content": {
-										"text": "heimspiel!"
-									},
 									"url": "http://www.test.de",
 									"hasIcon": true,
 									"iconName": "extern"
