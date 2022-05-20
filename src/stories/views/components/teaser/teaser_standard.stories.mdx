@@ -1,12 +1,12 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
-import xxlTeaserSerifWithLabel from './fixtures/teaser_standard_hero_serif_label.json'
-import xxlTeaserSerifWithComments from './fixtures/teaser_standard_hero_serif_comments.json'
-import xxlTeaserSerif from './fixtures/teaser_standard_hero_serif.json'
-import xlTeaserSerif from './fixtures/teaser_standard_100_serif.json'
-import lgTeaserSerif from './fixtures/teaser_standard_50_serif.json'
-import mdTeaserSerif from './fixtures/teaser_standard_33_serif.json'
-import smTeaserSerif from './fixtures/teaser_standard_25_serif.json'
+import teaserHeroSerifWithLabel from './fixtures/teaser_standard_hero_serif_label.json'
+import teaserHeroSerifWithComments from './fixtures/teaser_standard_hero_serif_comments.json'
+import teaserHeroSerif from './fixtures/teaser_standard_hero_serif.json'
+import teaser100Serif from './fixtures/teaser_standard_100_serif.json'
+import teaser50Serif from './fixtures/teaser_standard_50_serif.json'
+import teaser33Serif from './fixtures/teaser_standard_33_serif.json'
+import teaser25Serif from './fixtures/teaser_standard_25_serif.json'
 
 <Meta
     title="Komponenten/Teaser/Standard"
@@ -49,28 +49,28 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
-    <Story name="Standard Hero" args={xxlTeaserSerif.logicItem.includeModel}>
+    <Story name="Standard Hero" args={teaserHeroSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard Hero mit Label" args={xxlTeaserSerifWithLabel.logicItem.includeModel}>
+    <Story name="Standard Hero mit Label" args={teaserHeroSerifWithLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story
         name="Standard Hero Mit Kommentaren"
-        args={xxlTeaserSerifWithComments.logicItem.includeModel}
+        args={teaserHeroSerifWithComments.logicItem.includeModel}
     >
         {Template.bind({})}
     </Story>
-    <Story name="Standard XL" args={xlTeaserSerif.logicItem.includeModel}>
+    <Story name="Standard 100" args={teaser100Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard LG" args={lgTeaserSerif.logicItem.includeModel}>
+    <Story name="Standard 50" args={teaser50Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard MD" args={mdTeaserSerif.logicItem.includeModel}>
+    <Story name="Standard 33" args={teaser33Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard SM" args={smTeaserSerif.logicItem.includeModel}>
+    <Story name="Standard 25" args={teaser25Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
