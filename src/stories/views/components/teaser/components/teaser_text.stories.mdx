@@ -1,57 +1,57 @@
-import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Preview } from '@storybook/addon-docs'
 
-import teaserTextComponent from "./teaser_text.hbs";
+import teaserTextComponent from './teaser_text.hbs'
 
 <Meta
-  title="Komponenten/Teaser/Komponenten/Teasertext"
-  argTypes={{
-    text: {
-      control: "text",
-      description: "teaserText",
-    },
-    size: {
-      options: ["xl", "lg", "md", "sm"],
-      control: { type: "inline-radio" },
-    },
-    font : {
-     table: {
-          disable: true
-        }
-    },
-  }}
+    title="Komponenten/Teaser/Komponenten/Teasertext"
+    argTypes={{
+        text: {
+            control: 'text',
+            description: 'teaserText',
+        },
+        size: {
+            options: ['hero', '100', '50', '33', '25'],
+            control: { type: 'inline-radio' },
+        },
+        font: {
+            table: {
+                disable: true,
+            },
+        },
+    }}
 />
 
 export const Template = ({ text, ...args }) => {
-  return teaserTextComponent({ text, ...args });
-};
+    return teaserTextComponent({ text, ...args })
+}
 
 # teaserText
 
 Beispiele für die teaserText-Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="Teasertext"
-    args={{
-        text: "Dies ist der Teasertext eines normalen Teasers",
-        size: "lg",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-  <Story
-    name="Teasertext Hero-Teaser"
-    args={{
-        text: "Dies ist der Teasertext eines Hero-Teasers",
-        size: "xxl",
-        font: "md:text-base md:leading-4 lg:leading-5",
-    }}
-    parameters={{ 
-        controls: { 
-            exclude: ['size'] 
-        } 
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="Teasertext"
+        args={{
+            text: 'Dies ist der Teasertext eines normalen Teasers',
+            size: '50',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+    <Story
+        name="Teasertext Hero-Teaser"
+        args={{
+            text: 'Dies ist der Teasertext eines Hero-Teasers',
+            size: 'hero',
+            font: 'md:text-base md:leading-4 lg:leading-5',
+        }}
+        parameters={{
+            controls: {
+                exclude: ['size'],
+            },
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Preview>
