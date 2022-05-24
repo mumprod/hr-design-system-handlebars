@@ -1,3 +1,15 @@
+# v0.47.1 (Tue May 24 2022)
+
+#### 🐛 Bug Fix
+
+- add poster-teaser [#235](https://github.com/mumprod/hr-design-system-handlebars/pull/235) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.47.0 (Fri May 20 2022)
 
 #### 🚀 Enhancement
