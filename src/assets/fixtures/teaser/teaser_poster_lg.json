@@ -1,0 +1,29 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teasersize",
+            "@->value": "50"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.readMoreText.readMoreLong",
+            "@->value": "Zum Artikel"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "poster_1"
+            }     
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",   
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "poster_1"
+            }     
+        }
+
+    ]
+}

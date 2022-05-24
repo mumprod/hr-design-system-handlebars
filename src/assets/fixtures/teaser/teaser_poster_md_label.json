@@ -1,0 +1,74 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teasersize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.title",
+            "@->value": "Liveticker ausm Urlaub"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.readMoreText.readMoreLong",
+            "@->value": "Zum Ticker"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "poster_2"
+            }     
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",   
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "poster_2"
+            }     
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "byline.bylineSsi",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "byline.bylineText",
+                        "@->value": ""
+                    }
+                ]    
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "byline.bylineSsi",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "byline.bylineText",
+                        "@->value": ""
+                    }
+                ]    
+            }
+        }        
+    ]
+}

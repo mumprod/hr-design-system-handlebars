@@ -207,5 +207,34 @@
                 }
             ]
         }
-    }
+    },
+    "poster_1":{     
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "https://picsum.photos/id/189/480/480",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                    "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w, https://picsum.photos/id/189/1920/1080 1920w"
+                }
+            ]
+        }       
+    }, 
+    "poster_2":{     
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "https://picsum.photos/id/164/480/480",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                    "srcset": "https://picsum.photos/id/164/320/320 320w, https://picsum.photos/id/164/480/480 480w, https://picsum.photos/id/164/640/640 640w, https://picsum.photos/id/164/960/960 960w, https://picsum.photos/id/164/1920/1080 1920w"
+                }
+            ]
+        }       
+    }   
+
 }
