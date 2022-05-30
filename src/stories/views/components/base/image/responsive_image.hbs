@@ -12,10 +12,10 @@
 --}}
 {{#withParam this.responsiveImage type variant }}
     {{#if this.asPicture}}
-        <picture class="picture {{~#if ../addClass}} {{../addClass}}{{/if}}">
+        <picture class="{{~#if ../addClass}} {{../addClass}}{{/if}}">
             {{#unless _disableNoScript}}
                 <noscript>
-                    <img class="image {{~#if ../addClassImg}} {{../addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../alttext}}{{../alttext}}{{else}}{{../this.alttext}}{{/if}}">
+                    <img class="{{~#if ../addClassImg}} {{../addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../alttext}}{{../alttext}}{{else}}{{../this.alttext}}{{/if}}">
                 </noscript>
             {{/unless}}
             {{#with this.sources}}
@@ -25,7 +25,7 @@
                            {{#with this.srcset}} srcset="{{this}}"{{/with}}>
                 {{/each}}
             {{/with}}
-                <img class="image {{~#if ../addClassImg}} {{../addClassImg}}{{/if}}" loading="{{#if ../noDelay}}auto{{else}}lazy{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../alttext}}{{../alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../errorHandler }} onerror="this.onerror=null; {{../errorHandler}}"{{/if}}>
+                <img class="{{~#if ../addClassImg}} {{../addClassImg}}{{/if}}" loading="{{#if ../noDelay}}auto{{else}}lazy{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../alttext}}{{../alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../errorHandler }} onerror="this.onerror=null; {{../errorHandler}}"{{/if}}>
         </picture>
     {{/if}}
 
@@ -34,14 +34,14 @@
             {{~#with ../../addClass }}<div class="{{this}}">{{/with}}
             {{#unless ../../disableNoScript}}
                 <noscript>
-                    <img class="image {{~#if ../../addClassImg}} {{../../addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../alttext}}{{../../alttext}}{{else}}{{../../this.alttext}}{{/if}}">
+                    <img class="{{~#if ../../addClassImg}} {{../../addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../alttext}}{{../../alttext}}{{else}}{{../../this.alttext}}{{/if}}">
                 </noscript>
             {{/unless}}
             <img {{#with this.sizes}}sizes="{{this}}" {{/with~}}
                     loading="{{#if ../../noDelay}}auto{{else}}lazy{{/if}}"
                  {{#with this.srcset}} {{#if ../../../noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                alt="{{#if ../../alttext}}{{../../alttext}}{{else}}{{../../this.alttext}}{{/if}}" class="image imageSimple {{~#with ../../addClassImg }} {{this}}{{/with}}" {{~#if ../../errorHandler}} onerror="this.onerror=null; {{../../errorHandler}}" {{~/if}}>
+                alt="{{#if ../../alttext}}{{../../alttext}}{{else}}{{../../this.alttext}}{{/if}}" class="{{~#with ../../addClassImg }} {{this}}{{/with}}" {{~#if ../../errorHandler}} onerror="this.onerror=null; {{../../errorHandler}}" {{~/if}}>
             {{~#with ../../addClass }}</div>{{/with}}
         {{/with}}
 
