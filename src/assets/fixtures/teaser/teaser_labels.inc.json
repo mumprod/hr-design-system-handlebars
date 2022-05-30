@@ -1,15 +1,15 @@
 {
     "ticker": {
-        "type": "Ticker",
-        "loca": "ticker",
+        "type": "ticker",
+        "loca": "label_ticker",
         "byline": {
             "bylineSsi": "BylineText aus ssi",
             "bylineText": "BylineText"
         }
     },
     "media": {
-        "type": "Media",
-        "loca": "media",
+        "type": "media",
+        "loca": "label_media",
         "byline": {
             "bylineSsi": "BylineText aus ssi",
             "bylineText": "BylineText"

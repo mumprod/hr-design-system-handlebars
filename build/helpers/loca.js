@@ -15,7 +15,9 @@ module.exports = function(text, options) {
         "comment_label_text": "Kommentar",
         "comment_label_text_many": "Kommentare",
         "comment_anchor_2": " Kommentaren des Artikels springen",
-        "date_simple_at": options + " Uhr"
+        "date_simple_at": options + " Uhr",
+        "label_ticker":"Ticker",
+        "label_media":"Media",
     }
 
     for (let key in locas){
