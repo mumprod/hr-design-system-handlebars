@@ -1,3 +1,27 @@
+# v0.47.3 (Mon May 30 2022)
+
+#### 🐛 Bug Fix
+
+- - fixed label call in teaser_heading.hbs [#237](https://github.com/mumprod/hr-design-system-handlebars/pull/237) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.47.2 (Mon May 30 2022)
+
+#### 🐛 Bug Fix
+
+- - removed css classes from responsive_image.hbs [#236](https://github.com/mumprod/hr-design-system-handlebars/pull/236) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.47.1 (Tue May 24 2022)
 
 #### 🐛 Bug Fix
