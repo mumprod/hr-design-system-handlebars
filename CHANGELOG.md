@@ -1,3 +1,15 @@
+# v0.47.5 (Tue Jun 07 2022)
+
+#### 🐛 Bug Fix
+
+- some new code in header_alpine.js [#239](https://github.com/mumprod/hr-design-system-handlebars/pull/239) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.47.4 (Thu Jun 02 2022)
 
 #### 🐛 Bug Fix
