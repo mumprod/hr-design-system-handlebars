@@ -6,7 +6,6 @@ import teaser from './teaser_alternativ.hbs'
 import hero_teaser from './data/teaser_standard_xxl_serif.json' 
 import xl_teaser from './data/teaser_standard_xl_serif.json'
 import lg_teaser from './data/teaser_standard_lg_serif.json'
-import md_teaser from './data/teaser_standard_md_serif.json'
 import sm_teaser from './data/teaser_standard_sm_serif.json'
 import ticker_label from './data/ticker_label.json';
 import comments from './data/teaser_commentLink.json';
@@ -14,10 +13,6 @@ let hero_teaser_with_label  =  structuredClone(hero_teaser);
 addLabel(hero_teaser_with_label, ticker_label.label);
 let hero_teaser_with_comments  =  structuredClone(hero_teaser);
 addCommentLink(hero_teaser_with_comments, comments.commentLink);
-let md_teaser_with_comments  =  structuredClone(md_teaser);
-addCommentLink(md_teaser_with_comments, comments.commentLink);
-let sm_teaser_with_comments  =  structuredClone(sm_teaser);
-addCommentLink(sm_teaser_with_comments, comments.commentLink);
 
 <Meta   title="Komponenten/Teaser/Alternativ"
         parameters={{
@@ -27,7 +22,7 @@ addCommentLink(sm_teaser_with_comments, comments.commentLink);
             teasersize: {
                 control: {
                     type: 'select',
-                    options: ['xxl','xl', 'lg', 'md', 'sm'],
+                    options: ['xxl','xl', 'lg', 'sm'],
                 },
                 description: 'Teaser Größe',
                 table: {
@@ -65,16 +60,13 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
     <Story name="Alternativ Hero with Label" args={hero_teaser_with_label}>
         {Template.bind({})} 
     </Story>   
-    <Story name="Alternativ XL" args={xl_teaser}>
+    <Story name="Alternativ XL (100%)" args={xl_teaser}>
         {Template.bind({})}
     </Story>  
-    <Story name="Alternativ LG" args={lg_teaser}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Alternativ MD" args={md_teaser_with_comments}>
+    <Story name="Alternativ LG (50%)" args={lg_teaser}>
         {Template.bind({})}
     </Story>   
-    <Story name="Alternativ SM" args={sm_teaser_with_comments}>
+    <Story name="Alternativ SM (25%)" args={sm_teaser}>
         {Template.bind({})}
     </Story>   
    
