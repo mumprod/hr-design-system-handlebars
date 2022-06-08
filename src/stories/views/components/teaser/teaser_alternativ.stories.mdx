@@ -8,8 +8,6 @@ import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.
 import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
-import teaser33 from './fixtures/teaser_alternative_33_serif.json'
-import teaser25 from './fixtures/teaser_alternative_25_serif.json'
 
 <Meta
     title="Komponenten/Teaser/Alternativ"
@@ -20,7 +18,7 @@ import teaser25 from './fixtures/teaser_alternative_25_serif.json'
         teasersize: {
             control: {
                 type: 'select',
-                options: ['hero', '100', '50', '33', '25'],
+                options: ['hero', '100', '50'],
             },
             description: 'Teaser Größe',
             table: {
@@ -68,12 +66,6 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
         {Template.bind({})}
     </Story>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Alternativ 33" args={teaser33.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Alternativ 25" args={teaser25.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
