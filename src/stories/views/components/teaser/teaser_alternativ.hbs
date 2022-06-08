@@ -1,20 +1,22 @@
-<article class="col-span-12 flex gap-y-4 gap-x-5 {{inline-switch this.teaserSize '["25","33","50"]' '["px-5 flex-row ","md:col-span-4 flex-row","md:col-span-6 flex-row","flex-row"]'}} ">
-    <figure class="{{inline-switch this.teaserSize '["25", "hero"]' '["basis-2/5 md:flex-full ar-1-1 md:ar-16-9","basis-3/5 ar-16-9", "ar-16-9"]'}} ">
-        {{#>components/base/link _cssClasses="" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
-            {{~> components/base/image/responsive_image this.teaserImage type=this.teasertype variant=this.imageVariant noDelay=../_noDelay addClassImg="" ~}}
+<article class="col-span-12 flex gap-y-4 gap-x-5 {{inline-switch this.teaserSize '["50"]' '["md:col-span-6 flex-row","flex-row"]'}} ">
+    <figure class="{{inline-switch this.teaserSize '["hero"]' '["basis-3/5 ar-16-9", "ar-16-9"]'}} ">
+        {{#>components/base/link css="" isAriaHidden=true doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="mediaLink" }}
+            {{~> components/base/image/responsive_image this.teaserImage type=this.teasertype variant=this.imageVariant noDelay=../noDelay addClassImg="" ~}}
         {{/components/base/link}}  
     </figure>
-    <div class="{{inline-switch this.teaserSize '["25", "hero"]' '["basis-3/5 md:flex-full" , "basis-2/5"]'}} ">
-        <header class="md:px-0 {{inline-switch teasersize '["25"]' '["","px-5"]'}}">
-            {{> components/teaser/components/teaser_heading fontVariant=this.headingFontVariant
-                headlineTag=this.headlineTag 
-                label=this.label 
-                readMore=this.link.readMoreText.readMoreScreenreader 
-                size=this.teaserSize 
-                title=this.title 
-                topline=this.topline}}            
+    <div class="{{inline-switch this.teaserSize '["hero"]' '["basis-2/5"]'}} ">
+        <header class="px-5 md:px-0">
+            {{#>components/base/link css="hover:text-toplineColor" doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="headlineLink" }}
+                {{> components/teaser/components/teaser_heading fontVariant=this.headingFontVariant
+                    headlineTag=this.headlineTag 
+                    label=this.label 
+                    readMore=this.link.readMoreText.readMoreScreenreader 
+                    size=this.teaserSize 
+                    title=this.title 
+                    topline=this.topline}} 
+            {{/components/base/link}}               
         </header>
-        <section class="md:px-0 {{inline-switch this.teaserSize '["25"]' '["","px-5"]'}}">
+        <section class="px-5 md:px-0">
             {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize }}
             {{> components/teaser/components/teaser_byline}} 
         </section>

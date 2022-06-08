@@ -1,6 +1,6 @@
 {{#with this.commentLink}}
     <span class="whitespace-nowrap">
-        {{#>components/base/link css="hover:underline decoration-1" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize _clickLabelPrefix2="comment" }}
+        {{#>components/base/link css="hover:underline decoration-1" isAriaHidden=true doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="comment" }}
             {{> components/base/image/icon _icon="kommentar" _iconmap="icons" _addClass="mr-0.5 inline w-5 h-5 text-toplineColor fill-current"}}
             <span class="sr-only">{{loca "comment_anchor_1"}}</span>
             <span class="text-toplineColor">{{../../this.commentNumber}}</span>
