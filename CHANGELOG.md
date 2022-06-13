@@ -1,3 +1,15 @@
+# v0.47.7 (Mon Jun 13 2022)
+
+#### 🐛 Bug Fix
+
+- - adjusted teaserText size and Teaser Title Sizes [#242](https://github.com/mumprod/hr-design-system-handlebars/pull/242) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.47.6 (Wed Jun 08 2022)
 
 #### 🐛 Bug Fix
