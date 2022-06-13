@@ -1,13 +1,3 @@
-<span
-    class='block mt-0.5
-        {{inline-switch
-            size
-            '["hero","100","25"]'
-            '[" text-2xl md:text-4xl"," text-2xl md:text-4xl"," text-lg"," text-2xl"]'
-        }}
-        {{inline-switch
-            fontVariant
-            '["serif", "sans-serif"]'
-            '[" font-headingSerif"," font-heading font-bold"," font-headingSerif"]'
-        }}'
->{{text}}</span>
+<span class='block mt-0.5 {{> components/teaser/components/teaser_title_classes size=size teaserType=teaserType fontVariant=fontVariant}}'>
+    {{~text~}}
+</span>

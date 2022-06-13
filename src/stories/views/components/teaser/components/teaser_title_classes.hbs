@@ -1,0 +1,21 @@
+{{#switch teaserType~}}
+    {{~#case "standard"~}}   
+        {{~inline-switch
+            size
+            '["hero","100","25"]'
+            '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
+        ~}}              
+    {{~/case~}}
+    {{~#case "alternative"~}}
+        {{~inline-switch
+            size
+            '["hero","100","50"]'
+            '["text-2xl md:text-3xl","text-2xl md:text-3xl","text-2xl"]'
+        ~}}       
+    {{~/case~}}
+{{~/switch~}}
+{{~inline-switch
+    fontVariant
+    '["serif", "sans-serif"]'
+    '[" font-headingSerif"," font-heading font-bold"," font-headingSerif"]'
+~}}
