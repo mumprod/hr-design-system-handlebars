@@ -1,3 +1,15 @@
+# v0.47.8 (Tue Jun 14 2022)
+
+#### 🐛 Bug Fix
+
+- adds support for detect scroll initiated by user or browser [#241](https://github.com/mumprod/hr-design-system-handlebars/pull/241) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.47.7 (Mon Jun 13 2022)
 
 #### 🐛 Bug Fix
