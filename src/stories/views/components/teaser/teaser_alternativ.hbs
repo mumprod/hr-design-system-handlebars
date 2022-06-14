@@ -1,11 +1,11 @@
-<article class="col-span-12 flex gap-y-4 gap-x-5 {{inline-switch this.teaserSize '["50"]' '["md:col-span-6 flex-row","flex-row"]'}} ">
-    <figure class="{{inline-switch this.teaserSize '["hero"]' '["basis-3/5 ar-16-9", "ar-16-9"]'}} ">
+<article class="col-span-12 flex gap-y-5 gap-x-3 md:gap-x-5 md:px-0 {{inline-switch this.teaserSize '["50","100","hero"]' '["px-5 md:col-span-6 flex-row","flex-col md:flex-row","flex-col md:flex-row"]'}} ">
+    <figure class="ar-16-9 {{inline-switch this.teaserSize '["50","100","hero"]' '["basis-2/5 md:basis-1/3", "basis-1/3" , "basis-2/3"]'}} ">
         {{#>components/base/link css="" isAriaHidden=true doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="mediaLink" }}
             {{~> components/base/image/responsive_image this.teaserImage type=this.teasertype variant=this.imageVariant noDelay=../noDelay addClassImg="" ~}}
         {{/components/base/link}}  
     </figure>
-    <div class="{{inline-switch this.teaserSize '["hero"]' '["basis-2/5"]'}} ">
-        <header class="px-5 md:px-0">
+    <div class="{{inline-switch this.teaserSize '["50","100","hero"]' '["basis-3/5 md:basis-2/3","basis-2/3","basis-1/3"]'}} ">
+        <header class="md:px-0 px-5 {{inline-switch this.teaserSize '["50"]' '["px-0"]'}}">
             {{#>components/base/link css="hover:text-toplineColor" doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="headlineLink" }}
                 {{> components/teaser/components/teaser_heading fontVariant=this.headingFontVariant
                     headlineTag=this.headlineTag 
@@ -16,7 +16,7 @@
                     topline=this.topline}} 
             {{/components/base/link}}               
         </header>
-        <section class="px-5 md:px-0">
+        <section class="md:px-0 px-5 {{inline-switch this.teaserSize '["50"]' '["px-0"]'}}">
             {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize }}
             {{> components/teaser/components/teaser_byline}} 
         </section>
