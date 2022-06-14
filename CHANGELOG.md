@@ -1,3 +1,15 @@
+# v0.47.9 (Tue Jun 14 2022)
+
+#### 🐛 Bug Fix
+
+- - outsourced title class logic to own template [#243](https://github.com/mumprod/hr-design-system-handlebars/pull/243) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.47.8 (Tue Jun 14 2022)
 
 #### 🐛 Bug Fix
