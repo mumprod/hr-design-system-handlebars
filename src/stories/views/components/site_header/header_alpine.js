@@ -32,6 +32,15 @@ document.addEventListener('alpine:init', () => {
         init(){
             let lastScrollTop = 0
             let height = top.innerHeight
+            
+            let userScroll = false;
+            window.userScroll = userScroll;
+
+            function mouseEvent(e) {
+                userScroll = true;
+                window.userScroll = true;
+            }
+            window.addEventListener('wheel', mouseEvent, false);
 
             window.addEventListener('scroll', this.debounce( () => {
                 let winScroll = document.body.scrollTop || document.documentElement.scrollTop
@@ -42,8 +51,10 @@ document.addEventListener('alpine:init', () => {
                 //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
                 this.$store.navIsVisible = !this.isNavHidden()
                 this.$store.subNavIsVisible = !this.isSubNavHidden()
-                //console.log(this.$store.navIsVisible);
-            },50))
+
+                //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
+
+            },50), {passive: true})
         },
         percent: 0,
         scrollingDown: true,
@@ -69,10 +80,19 @@ document.addEventListener('alpine:init', () => {
             return this.percent > 0
         },
         shouldSectionNavBeHidden() {
-            return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false && this.$screen('lg')
+            if(window.userScroll == true){
+                return this.percent > 50  && this.scrollingDown && this.$store.burgeropen == false && this.$screen('lg')
+            } else {
+                return this.percent > 50  && this.$store.burgeropen == false && this.$screen('lg')
+            }
+
         },
         shouldServiceNavBeHidden() {
-            return (this.percent > 90  && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false)
+            if(window.userScroll == true) {
+                return (this.percent > 90 && !this.$screen('lg') && this.scrollingDown && this.$store.burgeropen == false)
+            } else {
+                return (this.percent > 90 && !this.$screen('lg') && this.$store.burgeropen == false)
+            }
         },
         shouldServiceIconsBeHidden() {
             return (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false && this.scrollingDown == true) || (this.percent > 50 && !this.$screen('md') && this.$store.burgeropen == false && this.$store.serviceNavIsOpen == false  && this.scrollingDown == false)
