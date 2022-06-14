@@ -1,3 +1,15 @@
+# v0.47.11 (Tue Jun 14 2022)
+
+#### 🐛 Bug Fix
+
+- - deleted old data folder for teasers [#244](https://github.com/mumprod/hr-design-system-handlebars/pull/244) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.47.10 (Tue Jun 14 2022)
 
 #### 🐛 Bug Fix
