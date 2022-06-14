@@ -1,0 +1,14 @@
+{
+   "video":{     
+        "avDocument": {
+            "isVideo": true
+        },
+        "image": ""      
+   },
+   "audio":{   
+        "avDocument": {
+             "isAudio": true
+        },
+        "image": ""   
+    } 
+}

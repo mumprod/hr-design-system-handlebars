@@ -1,8 +1,10 @@
 <article class="col-span-12 flex gap-y-3 gap-x-4 {{inline-switch this.teaserSize '["25","33","50"]' '["px-5 md:px-0 md:col-span-3 flex-row md:flex-col","md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
     <figure class="{{inline-switch this.teaserSize '["25"]' '["basis-2/5 md:flex-full ar-1-1 md:ar-16-9", "ar-16-9"]'}} ">
-        {{#>components/base/link isAriaHidden=true doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="mediaLink" }}
-            {{~> components/base/image/responsive_image this.teaserImage type=this.teasertype variant=this.imageVariant noDelay=../noDelay addClassImg="" ~}}
-        {{/components/base/link}}  
+        {{~#if this.allowAVConsumption ~}}
+            {{> components/teaser/components/teaser_av_consumption }}
+        {{else}}    
+            {{> components/teaser/components/teaser_image }}
+        {{/if}}
     </figure>
     <div class="{{inline-switch this.teaserSize '["25"]' '["basis-3/5 md:flex-full"]'}} ">
         <header class="md:px-0 {{inline-switch teaserSize '["25"]' '["","px-5"]'}}">

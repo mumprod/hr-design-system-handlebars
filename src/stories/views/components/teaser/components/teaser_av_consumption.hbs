@@ -1,0 +1,8 @@
+{{#with this.teaserLead.avDocument}}
+    {{~#if this.isVideo ~}}
+        {{~> components/video/video_element ~}}
+    {{~/if~}}
+    {{~#if this.isAudio ~}}
+        isAudio
+    {{~/if~}}
+{{/with}}
