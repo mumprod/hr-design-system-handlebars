@@ -2,7 +2,7 @@
     <figure class="ar-1-1" aria-hidden="true">
         {{~> components/base/image/responsive_image this.teaserImage type=this.teaserType variant=this.content.imageVariant noDelay=../_noDelay addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
     </figure> 
-    <div class="absolute flex justify-center w-full h-full bg-gradient-to-t from-black rounded-br-3xl" aria-hidden="true">
+    <div class="absolute flex justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl" aria-hidden="true">
         <div class="self-center block mx-4 text-center text-white">
             {{> components/teaser/components/teaser_heading headlineTag="h2" size=teaserSize font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
         </div>
