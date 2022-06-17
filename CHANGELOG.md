@@ -1,3 +1,15 @@
+# v0.47.13 (Fri Jun 17 2022)
+
+#### 🐛 Bug Fix
+
+- obere runde Ecke auch in Farbverlauf [#248](https://github.com/mumprod/hr-design-system-handlebars/pull/248) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.47.12 (Fri Jun 17 2022)
 
 #### 🐛 Bug Fix
