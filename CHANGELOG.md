@@ -1,3 +1,16 @@
+# v0.47.14 (Tue Jun 21 2022)
+
+#### 🐛 Bug Fix
+
+- 100% & 50% Alternativ in mobile 100% Standard [#249](https://github.com/mumprod/hr-design-system-handlebars/pull/249) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.47.13 (Fri Jun 17 2022)
 
 #### 🐛 Bug Fix
