@@ -1,3 +1,77 @@
+# v0.47.17 (Mon Jun 27 2022)
+
+#### 🐛 Bug Fix
+
+- Alternativ-Teaser Documentation [#252](https://github.com/mumprod/hr-design-system-handlebars/pull/252) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.47.16 (Mon Jun 27 2022)
+
+#### 🐛 Bug Fix
+
+- add documentation [#251](https://github.com/mumprod/hr-design-system-handlebars/pull/251) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.47.15 (Thu Jun 23 2022)
+
+#### 🐛 Bug Fix
+
+- Posterteaser-final [#250](https://github.com/mumprod/hr-design-system-handlebars/pull/250) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.47.14 (Tue Jun 21 2022)
+
+#### 🐛 Bug Fix
+
+- 100% & 50% Alternativ in mobile 100% Standard [#249](https://github.com/mumprod/hr-design-system-handlebars/pull/249) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.47.13 (Fri Jun 17 2022)
+
+#### 🐛 Bug Fix
+
+- obere runde Ecke auch in Farbverlauf [#248](https://github.com/mumprod/hr-design-system-handlebars/pull/248) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.47.12 (Fri Jun 17 2022)
+
+#### 🐛 Bug Fix
+
+- rework poster-teaser + documentation [#247](https://github.com/mumprod/hr-design-system-handlebars/pull/247) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.47.11 (Tue Jun 14 2022)
 
 #### 🐛 Bug Fix

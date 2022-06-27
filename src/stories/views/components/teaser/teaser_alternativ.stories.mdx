@@ -45,11 +45,29 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Header
+# Alternativ-Teaser 
 
-Ein toller Einleitungstext für unsere `Teaser` Komponente:
+## Beschreibung
+
+
+Der Alternativ-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
+
+<b>Alternativ Hero:</b> <br/>
+    Desktop = Bild(2/3) neben Text(1/3) <br/>
+    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+
+<b>Alternativ 100%:</b> <br/>
+    Desktop = Bild(1/3) neben Text(2/3) <br/>
+    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+
+<b>Alternativ 50%:</b> <br/>
+    Desktop = Bild(1/3) neben Text(2/3) <br/>
+    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+
+Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
 
 <Preview withToolbar>
+    <b>Alternativ Hero</b>
     <Story name="Alternativ Hero" args={heroTeaser.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
@@ -62,10 +80,32 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
     <Story name="Alternativ Hero mit Label" args={heroTeaserWithLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <b>Alternativ 100%</b>
     <Story name="Alternativ 100" args={teaser100.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <b>Alternativ 50%</b>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
+
+## Sub-Komponenten
+
+Die Alternativ-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+    <li>components/base/image/<b>responsive_image</b></li>
+    <li>components/base/<b>link</b></li>
+    <li>components/teaser/components/<b>teaser_heading</b></li>
+    <li>components/teaser/components/<b>teaser_text</b></li>
+    <li>components/teaser/components/<b>teaser_byline</b></li>
+</ul>
+
+## Verwendung
+
+Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_alternativ}}    
+```

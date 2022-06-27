@@ -1,13 +1,14 @@
-<article class="relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch teasersize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
-    <figure class="ar-1-1">
-        {{~> components/base/image/responsive_image this.teaserImage type="poster" variant=this.content.imageVariant noDelay=../_noDelay addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
+<article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+    <figure class="ar-1-1" aria-hidden="true">
+        {{~> components/base/image/responsive_image this.teaserImage type=this.teaserType variant=this.content.imageVariant noDelay=../_noDelay addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
     </figure> 
-    <div class="absolute flex justify-center w-full h-full ar-1-1 bg-gradient-to-t from-black rounded-br-3xl">
-        <div class="self-center block mx-4 text-center text-white">
-            {{> components/teaser/components/teaser_heading headlineTag="h2" isPosterTeaser=true size=teasersize font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
+    <div class="absolute flex justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl" aria-hidden="true">
+        <div class="self-center block mx-8 text-center text-white">
+            {{> components/teaser/components/teaser_heading headlineTag="h2" size=teaserSize font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
         </div>
     </div>
-    {{#>components/base/link css="absolute flex w-full h-full justify-center" doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teasersize clickLabelPrefix2="mediaLink" }}
-        <button class="self-end px-2 text-white border border-white mb-7">{{this.link.readMoreText.readMoreLong}}</button>
-    {{/components/base/link}}  
+    {{#>components/base/link css="absolute flex w-full h-full justify-center" isAriaHidden=true doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="mediaLink" }}
+        <div class="self-end px-2 {{inline-switch teaserSize '["33","50"]' '["mb-8","mb-8 md:mb-16"]'}} text-white border border-white font-heading">{{this.link.readMoreText.readMoreLong}}</div>
+    {{/components/base/link}} 
+    <span class="sr-only">{{this.link.readMoreText.readMoreLong}}: {{this.title}}</span> 
 </article>

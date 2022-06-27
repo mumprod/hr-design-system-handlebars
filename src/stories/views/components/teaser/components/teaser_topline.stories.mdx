@@ -3,7 +3,7 @@ import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
 import topline from "./teaser_topline.hbs";
 
 <Meta
-  title="Komponenten/Teaser/Komponenten/Dachzeile"
+  title="Komponenten/Teaser/Komponenten/Topline"
   argTypes={{
     text: {
       control: "text",
@@ -20,11 +20,33 @@ export const Template = ({ text, ...args }) => {
 
 # Topline
 
-Beispieltext für die Topline-Komponente:
+## Beschreibung
+
+In der Topline-Komponente wird die Dachzeile des Artikels dargestellt.
+
+
+## Parameter
+
+Die Topline-Komponente benötigt folgende Parameter:
+
+<ul>
+    <li><b>teaserType</b></li>
+    <li><b>readMore</b></li>
+    <li><b>text</b></li>
+</ul>
+
+
+## Verwendung
+
+Die Topline-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/components/teaser_topline text=topline readMore=readMore teaserType=teaserType}}    
+```
 
 <Preview withToolbar>
   <Story
-    name="topline-1"
+    name="default"
     args={{
       text:
         "Dies ist die Dachzeile",
@@ -34,4 +56,4 @@ Beispieltext für die Topline-Komponente:
   </Story>
 </Preview>
 
-<ArgsTable story="topline-1" />
+<ArgsTable story="default" />
