@@ -1,6 +1,19 @@
 module.exports = function (text, options) {
     var resourceUrl
-
+    // ARD PLAYER Folder
+    if (text.includes('assets/vendor/ardplayer/')){
+        resourceUrl = text.replace(
+            'assets/',
+            './'
+        )
+    }
+    // VENDOR Folder
+    if (text.includes('assets/js/vendor/')){
+        resourceUrl = text.replace(
+            'assets/js/vendor',
+            './vendor/js'
+        )
+    }
     if (text.includes('assets/base/')) {
         if (text.includes('assets/base/icons/logo/') && options.hash['_brand']) {
             resourceUrl = text.replace(
