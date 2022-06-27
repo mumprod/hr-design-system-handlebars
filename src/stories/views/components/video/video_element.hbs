@@ -1,5 +1,5 @@
 <div class="ar--16x9 c-videoplayer">
-    <div id="{{nextRandom}}" class="js-load" data-new-hr-mediaplayer-loader='{
+    <div id="{{nextRandom}}" class="relative js-load" data-new-hr-mediaplayer-loader='{
         "type": "ondemand",
         "position": "{{if _isTeaser 'teaser' 'page'}}",
         "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
@@ -26,7 +26,7 @@
         "mediaMetadata":{{this.mediaMetadata}},
         "ardplayerUrl": "{{resourceUrl "assets/js/vendor/ardplayer-hr-6.3.4.d39f03b6.js"}}",
         "smarttagUrl": "{{resourceUrl "assets/js/vendor/smarttagProd.js"}}",
-        "agfAppId": "TODO"
+        "agfAppId": "TODO",
         "baseUrl":"{{resourceUrl 'assets/vendor/ardplayer/'}}"
         {{#with this.providerKeyWithSublines}}
             ,"streamUrlSublines": "{{this}}"
@@ -62,16 +62,16 @@
         {{#if _isTeaser}}
             {{#with _teaser}}
                 {{~#if ../_isCopyText~}}
-                    {{~> components/base/image/responsive_image this.content.teaserImage _type=(if this.content.teasertype this.content.teasertype 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
+                    {{~> components/base/image/responsive_image this.teaserImage type=(if this.content.teasertype this.content.teasertype 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
                 {{else}}
                     {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
                                  _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
-                                 _clickLabelPrefix2="mediaLink" }}
-                        {{~> components/base/image/responsive_image this.content.teaserImage _type=(if this.content.teasertype this.content.teasertype 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
+                                 _clickLabelPrefix2="mediaLink" }}                       
+                        {{~> components/base/image/responsive_image this.teaserImage type=(if this.content.teasertype this.content.teasertype 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
                     {{/components/base/link }}
                 {{/if}}
             {{/with}}
-            {{> components/Button _isButton="true" _addClass="c-form__button js-mediaplayer__button mediaPlayerLoader__mediaIconButton" _showIcon=true _icon="play" _addIconClass="mediaPlayerLoader__mediaIconButton-svg" _label="Video"}}
+            {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video"}}
         {{/if}}
     </div>
 </div>
