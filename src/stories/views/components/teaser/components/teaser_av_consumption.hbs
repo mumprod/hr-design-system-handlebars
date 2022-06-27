@@ -1,6 +1,6 @@
 {{#with this.teaserLead.avDocument}}
     {{~#if this.isVideo ~}}
-        {{~> components/video/video_element ~}}
+        {{~> components/video/video_element _isTeaser=true _teaser=../this ~}}
     {{~/if~}}
     {{~#if this.isAudio ~}}
         isAudio
