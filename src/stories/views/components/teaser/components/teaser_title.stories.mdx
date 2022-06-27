@@ -42,7 +42,39 @@ export const Template = ({ text, ...args }) => {
 
 # Titel
 
-Beispiele für die Titel-Komponente:
+## Beschreibung
+
+In der Titel-Komponente wird der Titel des Artikels dargestellt. Textgröße und Schriftart werden
+anhand der Parameter <b>teaserType</b> und <b>fontVariant</b> in der inkludierten Sub-Komponente <b>teaser_title_classes</b> ermitelt.
+
+## Sub-Komponenten
+
+Die Titel-Komponente inkludiert folgende Komponenten:
+
+<ul>
+    <li>components/teaser/components/<b>teaser_title_classes</b></li>
+</ul>
+
+
+## Parameter
+
+Die Titel-Komponente benötigt folgende Parameter:
+
+<ul>
+    <li><b>text</b></li>
+    <li><b>fontVariant</b></li>
+    <li><b>size</b></li>
+    <li><b>teaserType</b></li>
+</ul>
+
+
+## Verwendung
+
+Die Titel-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/components/teaser_title text=title fontVariant=fontVariant size=size teaserType=teaserType}}   
+```
 
 <Preview withToolbar>
     <Story
@@ -80,4 +112,4 @@ Beispiele für die Titel-Komponente:
     </Story>
 </Preview>
 
-<ArgsTable story="title-large" />
+<ArgsTable story="Titel Serif - Hero" />

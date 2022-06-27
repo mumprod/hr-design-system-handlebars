@@ -57,18 +57,6 @@ Inhalt dieses spans: Zusatztext + ": " + Titel
 
 Der Poster-Teaser soll nur als 50%- bzw. 33%-Teaser verwendet werden. Diese Restriktion muss cms-seitig implementiert werden.
 
-<Preview withToolbar>
-    <Story name="Poster 50" args={teserPosterLg.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Poster 33" args={teserPosterMd.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Poster 33 mit Label" args={teserPosterMdLabel.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-</Preview>
-
 
 ## Sub-Komponenten
 
@@ -105,3 +93,17 @@ Die Poster-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 ```html
 {{> components/teaser/teaser_poster}}    
 ```
+
+<Preview withToolbar>
+    <Story name="Poster 50" args={teserPosterLg.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Poster 33" args={teserPosterMd.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Poster 33 mit Label" args={teserPosterMdLabel.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+<ArgsTable story="Poster 50" />
