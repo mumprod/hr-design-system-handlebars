@@ -1,3 +1,15 @@
+# v0.47.16 (Mon Jun 27 2022)
+
+#### 🐛 Bug Fix
+
+- add documentation [#251](https://github.com/mumprod/hr-design-system-handlebars/pull/251) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.47.15 (Thu Jun 23 2022)
 
 #### 🐛 Bug Fix
