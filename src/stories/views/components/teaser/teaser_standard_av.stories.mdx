@@ -1,0 +1,50 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import teaser from './teaser_standard.hbs'
+
+import teaser50av from './fixtures/teaser_standard_50_serif_av_consumption.json'
+
+<Meta
+    title="Komponenten/Teaser/AV-Standard"
+    parameters={{
+        layout: 'fullscreen',
+    }}
+    argTypes={{
+        teaserSize: {
+            control: {
+                type: 'select',
+                options: ['hero', '100', '50', '33', '25'],
+            },
+            description: 'Teaser Größe',
+            table: {
+                defaultValue: {
+                    summary: 'hero',
+                },
+            },
+        },
+    }}
+    decorators={[
+        (Story) => {
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+                ${Story()} 
+                </div></div>`
+        },
+    ]}
+/>
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Header
+
+Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Preview withToolbar>
+    <Story name="Standard 50% AV" args={teaser50av.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+</Preview>

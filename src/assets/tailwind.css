@@ -565,3 +565,10 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
     transition: transform 150ms ease-in-out 0s;
 }
+.c-videoplayer .ardplayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

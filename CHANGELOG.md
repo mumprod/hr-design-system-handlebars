@@ -1,3 +1,40 @@
+# v0.47.18 (Tue Jun 28 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1572 kick off [#246](https://github.com/mumprod/hr-design-system-handlebars/pull/246) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.47.17 (Mon Jun 27 2022)
+
+#### 🐛 Bug Fix
+
+- Alternativ-Teaser Documentation [#252](https://github.com/mumprod/hr-design-system-handlebars/pull/252) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.47.16 (Mon Jun 27 2022)
+
+#### 🐛 Bug Fix
+
+- add documentation [#251](https://github.com/mumprod/hr-design-system-handlebars/pull/251) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.47.15 (Thu Jun 23 2022)
 
 #### 🐛 Bug Fix
