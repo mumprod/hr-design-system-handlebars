@@ -20,7 +20,6 @@ module.exports = {
                 },
             },
         },
-        '@whitespace/storybook-addon-html',
         '@storybook/addon-a11y',
         'storybook-conditional-toolbar-selector',
     ],
