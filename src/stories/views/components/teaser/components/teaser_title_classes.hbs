@@ -1,24 +1,20 @@
 {{#switch teaserType~}}
-    {{~#case "standard"~}}   
+    {{~#case 'standard-ds'~}}
         {{~inline-switch
             size
             '["hero","100","25"]'
             '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
-        ~}}              
+        ~}}
     {{~/case~}}
-    {{~#case "alternative"~}}
+    {{~#case 'alternative-ds'~}}
         {{~inline-switch
             size
             '["hero","100","50"]'
             '["text-2xl md:text-3xl","text-2xl md:text-3xl","text-2xl"]'
-        ~}}       
+        ~}}
     {{~/case~}}
-    {{~#case "poster"~}}
-        {{~inline-switch
-            size
-            '["50","33"]'
-            '["text-2xl md:text-4xl","text-2xl"]'
-        ~}}     
+    {{~#case 'poster-ds'~}}
+        {{~inline-switch size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
     {{~/case~}}
 {{~/switch~}}
 {{~inline-switch
