@@ -1,6 +1,6 @@
 <div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()">
 
-    <header class="relative z-101 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
+    <header class="relative z-10000 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
@@ -13,16 +13,16 @@
             </div>
 
             <div id="brandNavWrapper" 
-                class="relative flex items-center justify-center order-1 w-full bg-white z-101 print:hidden">
+                class="relative flex items-center justify-center order-1 w-full bg-white z-10000 print:hidden">
                 {{> components/site_header/brand_navigation/brand_navigation }} 
             </div>
 
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-102">   
+                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-10002">   
                 <div id="serviceNavMainContainer" 
-                    class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-101">
+                    class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-10001">
 
                     <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
@@ -54,7 +54,7 @@
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
                 :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
-                class="flex justify-center order-3 w-full overflow-hidden duration-500 transition-max-height lg:transition-margin-top lg:duration-500 tablet:absolute tablet:top-22 tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-100 print:hidden"
+                class="flex justify-center order-3 w-full overflow-hidden duration-500 transition-max-height lg:transition-margin-top lg:duration-500 tablet:absolute tablet:top-22 tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-blue-congress z-10000 print:hidden"
             >
                 {{> components/site_header/section_navigation/section_navigation }}
             </div>
@@ -62,7 +62,7 @@
             <div x-cloak :class="shouldServiceNavBeHidden() ? 'hidden -mt-40' : ''"
                 x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen);$el.setAttribute('aria-hidden', !$store.searchFieldOpen);$el.setAttribute('aria-labelledby', 'flyout-' + $store.searchID.current + '-1')" 
                 x-show="$store.searchFieldOpen"
-                class="sb-quick-search-flyout flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-102 lg:hidden print:hidden"
+                class="sb-quick-search-flyout flex tablet:w-half-screen tablet:ml-half-screen justify-end order-4 w-full max-w-full p-2 px-5 py-3.5 bg-white drop-shadow-md md:mt-0 z-10002 lg:hidden print:hidden"
                 @search-close.window="$store.searchFieldOpen = false"
                 @click.outside="$store.searchFieldOpen = false; $dispatch('search-mobile-click-outside'); dropped = false; toggleScrolling(!$store.serviceNavIsOpensearchFieldOpen && !$store.burgeropen)"
                 x-transition:enter="transition ease-out duration-200" 
@@ -80,6 +80,6 @@
     
     </header>
     <div x-ref="myOverlay">
-        <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-100 lg:hidden opacity-70"></div>
+        <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-10000 lg:hidden opacity-70"></div>
     </div>
 </div>
