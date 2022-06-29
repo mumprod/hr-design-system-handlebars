@@ -9,7 +9,7 @@
                 "topline": "Überglücklich, aber ohne Mama",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
-                "teaserType": "standard",
+                "teaserType": "standard-ds",
                 "teaserSize": "hero",
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -96,7 +96,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "teaserType": "standard",
+                        "teaserType": "standard-ds",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
                         "trackingData": {
@@ -118,7 +118,7 @@
                 "topline": "Überglücklich, aber ohne Mama",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
-                "teaserType": "standard",
+                "teaserType": "standard-ds",
                 "teaserSize": "hero",
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -220,7 +220,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "teaserType": "standard",
+                        "teaserType": "standard-ds",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
                         "trackingData": {
