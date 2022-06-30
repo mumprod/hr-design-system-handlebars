@@ -1,3 +1,5 @@
-.placeholder-text-xs::placeholder {
-    @apply text-xs;
+@layer utilities {
+    .placeholder-text-xs::placeholder {
+        @apply text-xs;
+    }
 }
