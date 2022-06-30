@@ -1,0 +1,31 @@
+[x-cloak] {
+    display: none !important;
+}
+
+.btn {
+    @apply inline-block font-sans font-bold leading-none cursor-pointer rounded-3xl;
+}
+
+.btn--primary {
+    @apply text-white bg-blue-400;
+}
+
+.btn--secondary {
+    @apply text-gray-700 bg-transparent shadow;
+}
+
+.btn--sm {
+    @apply py-2.5 px-4 text-xs;
+}
+
+.btn--md {
+    @apply px-5 py-3 text-sm;
+}
+
+.btn--lg {
+    @apply px-6 py-3 text-base;
+}
+
+.btn--xl {
+    @apply px-6 py-3 text-lg;
+}
