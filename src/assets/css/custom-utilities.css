@@ -2,4 +2,95 @@
     .placeholder-text-xs::placeholder {
         @apply text-xs;
     }
+
+    /*! ****************************/
+    /*! Aspect Ratio with fallback */
+    /*! ****************************/
+    .ar-16-9 {
+        aspect-ratio: 16 / 9;
+    }
+
+    @supports not (aspect-ratio: 16 / 9) {
+        .ar-16-9::before {
+            float: left;
+            padding-top: 56.25%;
+            content: '';
+        }
+
+        .ar-16-19::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .ar-1-1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+        .ar-1-1::before {
+            float: left;
+            padding-top: 100%;
+            content: '';
+        }
+
+        .ar-1-1::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    /*! ********************************/
+    /*! Aspect Ratio with fallback end */
+    /*! ********************************/
+
+    .-video-podcast,
+    .-weather,
+    .-traffic {
+        @apply fill-white;
+    }
+
+    .grid-page {
+        grid-template-columns:
+            [full-start] minmax(1rem, 1fr)
+            [main-start] minmax(0, 63rem) [main-end]
+            minmax(1rem, 1fr) [full-end];
+    }
+
+    .col-main {
+        grid-column: main;
+    }
+
+    .col-full {
+        grid-column: full;
+    }
+
+    .-currentBrand {
+        @apply lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-white lg:before:border-b-8 lg:before:border-blue-congress lg:before:mt-6;
+    }
+    .-currentService {
+        @apply before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12;
+    }
+    .-currentSection {
+        @apply before:w-0 before:h-0 before:mr-2 before:-ml-4 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent before:mb-0.5 lg:before:absolute lg:before:mb-0  lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:ml-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8;
+    }
+    .-warnung {
+        @apply text-red-600 !important;
+        @apply fill-black;
+    }
+
+    .link-focus-inset {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-grey-scorpion/50;
+    }
+    .link-focus {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-grey-scorpion/50;
+    }
+    .link-focus-inset-white {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-white/50;
+    }
+    .link-focus-white {
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-white/50;
+    }
 }
