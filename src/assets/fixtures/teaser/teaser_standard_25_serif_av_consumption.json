@@ -16,6 +16,13 @@
                 "@->jsoninclude": "teaser/teaser_lead.inc.json",
                 "@->contentpath": "video"
             }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "sm_4"
+            }
         }
     ]
 }

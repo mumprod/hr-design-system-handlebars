@@ -4,6 +4,9 @@
     {{~#if _name}} name="{{_name}}"{{/if}} 
     class="bg-blue-500 hover:bg-blue-700 text-white rounded-full border-4 border-white p-1 {{_addClass}}{{#if _webview}} -webview{{/if}}"
     {{~#if _value}} value="{{_value}}"{{/if}}
+    {{~#if _alpineClick}} @click="{{_alpineClick}}"{{/if}}
+
+
 >
     {{~#if _showIcon~}}
         {{> components/base/image/icon _icon=_icon _iconmap=_iconmap _addClass=_addIconClass _webview=_webview}}
