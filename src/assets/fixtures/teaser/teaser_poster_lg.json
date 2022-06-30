@@ -4,7 +4,7 @@
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "poster"
+            "@->value": "poster-ds"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
@@ -15,19 +15,18 @@
             "@->value": "Zum Artikel"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",   
+            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                 "@->contentpath": "poster_1"
-            }     
+            }
         },
         {
-            "@->contentpath": "logicItem.includeModel.teaserImage",   
+            "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
                 "@->contentpath": "poster_1"
-            }     
+            }
         }
-
     ]
 }
