@@ -1,0 +1,42 @@
+@layer base {
+    @font-face {
+        font-family: 'DIN';
+        font-display: auto;
+        src: url('fonts/DINPro.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'DIN';
+        font-display: auto;
+        src: url('fonts/DINPro-Bold.woff');
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'RobotoSlab';
+        font-display: auto;
+        src: url('fonts/RobotoSlabbed.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    @font-face {
+        font-family: 'RobotoCond';
+        font-display: auto;
+        src: url('fonts/RobotoCondensed.woff');
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: condensed;
+    }
+    @font-face {
+        font-family: 'RobotoCond';
+        font-display: auto;
+        src: url('fonts/RobotoCondensed-Bold.woff');
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: condensed;
+    }
+}
