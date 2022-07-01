@@ -1,0 +1,35 @@
+{
+    "wandaPageId" : "2109595548",
+    "tabbedGroup": [
+        {
+            "title": "Teasergruppe 1"
+        },
+        {
+            "title": "Teasergruppe 2"
+        },
+        {
+            "title": "Teasergruppe 3"
+        },
+        {
+            "title": "Teasergruppe 4"
+        }
+    ],
+    "logicItems": [
+        {
+            "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
+            "@->contentpath": "tabbox_teasergroup_1"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
+            "@->contentpath": "tabbox_teasergroup_2"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
+            "@->contentpath": "tabbox_teasergroup_3"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
+            "@->contentpath": "tabbox_teasergroup_4"
+        }
+    ]
+}
