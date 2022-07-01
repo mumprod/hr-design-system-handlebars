@@ -1,3 +1,15 @@
+# v0.49.1 (Fri Jul 01 2022)
+
+#### 🐛 Bug Fix
+
+- add json for tabbox [#258](https://github.com/mumprod/hr-design-system-handlebars/pull/258) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.49.0 (Thu Jun 30 2022)
 
 #### 🚀 Enhancement
