@@ -1,3 +1,15 @@
+# v0.49.2 (Tue Jul 05 2022)
+
+#### 🐛 Bug Fix
+
+- jsoninclude used in header now [#259](https://github.com/mumprod/hr-design-system-handlebars/pull/259) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.1 (Fri Jul 01 2022)
 
 #### 🐛 Bug Fix
