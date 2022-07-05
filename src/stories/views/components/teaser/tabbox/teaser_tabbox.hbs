@@ -1,0 +1,15 @@
+<div class="w-full p-5">
+
+    <b><u>Tabbox-Data</u></b><br/><br/>
+
+    wanda-Id: {{this.wandaPageId}}<br/><br/>
+
+    Tabs:<br/>
+    {{~#each this.tabbedGroup~}}
+        {{this.title}}<br/>
+    {{~/each~}}
+    <br/>
+    <b>Teasergruppen:</b><hr/>
+    {{~> components/teaser/teaser_logic/teaser_logic ~}}
+
+</div>
