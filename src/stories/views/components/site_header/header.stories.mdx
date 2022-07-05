@@ -1,11 +1,21 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import navigation from './header.hbs'
-import JsonData from './navigation.json'
-import JsonData2 from './navigation2.json'
-import JsonData3 from './navigation3.json'
+import JsonData from './fixtures/site_header_default.json'
+import JsonData2 from './fixtures/site_header_mit_warnung.json'
+import JsonData3 from './fixtures/site_header_mit_submenu.json'
 
-<Meta title="Komponenten/Header/Header" argTypes={{}} />
+<Meta title="Komponenten/Header/Header" 
+    argTypes={{}} 
+    parameters={{
+        chromatic: {
+            viewports: [360, 768, 1024],
+        },
+        layout: 'fullscreen',
+        docs: { inlineStories : false, iframeHeight: 400 }
+    }}    
+    
+/>
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -19,16 +29,22 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 Ein toller Einleitungstext für unsere `Header` Komponente:
 
-<Preview withToolbar>
+<Canvas>
     <Story name="Default" args={JsonData}>
         {Template.bind({})}
     </Story>
+</Canvas>
+
+<Canvas>
     <Story name="4 Icons in Service Nav" args={JsonData2}>
         {Template.bind({})}
     </Story>
+</Canvas>
+
+<Canvas>
     <Story name="Subnav in Desktopview" args={JsonData3}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 <ArgsTable story="Default" />
