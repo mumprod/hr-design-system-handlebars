@@ -5,6 +5,7 @@ import NavigationData from '../site_header/fixtures/site_header_default.json'
 import NavigationData2 from '../site_header/fixtures/site_header_mit_warnung.json'
 import NavigationData3 from '../site_header/fixtures/site_header_mit_submenu.json'
 import NavigationData4 from '../site_header/fixtures/site_header_mit_submenu_service_selected.json'
+
 import hero_teaser from '../teaser/fixtures/teaser_standard_hero_serif.json'
 const NavigationDataWithTeaser = structuredClone(
     Object.assign({}, NavigationData, hero_teaser.logicItem.includeModel)
@@ -24,9 +25,10 @@ const NavigationDataWithTeaser4 = structuredClone(
     argTypes={{}}
     parameters={{
         chromatic: {
-            viewports: [360, 768, 1024],
+            viewports: [360, 768, 1024]
         },
         layout: 'fullscreen',
+        docs: { inlineStories : false, iframeHeight: 400 }
     }}
 />
 
@@ -40,19 +42,28 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 # Page
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story name="Default" args={NavigationDataWithTeaser}>
         {Template.bind({})}
     </Story>
+</Canvas>
+
+<Canvas>
     <Story name="With Unwetter" args={NavigationDataWithTeaser2}>
         {Template.bind({})}
     </Story>
+</Canvas>
+
+<Canvas>
     <Story name="With subnav open" args={NavigationDataWithTeaser3}>
         {Template.bind({})}
     </Story>
+</Canvas>
+
+<Canvas>
     <Story name="With subnav open and Service Nav Item active" args={NavigationDataWithTeaser4}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 <ArgsTable story="Default" />
