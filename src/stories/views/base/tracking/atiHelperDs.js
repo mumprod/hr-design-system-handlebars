@@ -1,5 +1,5 @@
 
-import TrackingCookie from '../../components/externalService/trackingCookie.subfeature'
+import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
 
 const isTrackingAllowed = () => {
     const trackingCookie = new TrackingCookie()

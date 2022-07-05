@@ -1,5 +1,5 @@
-import { fireEvent, hr$, listen, loadScript } from 'hrQueryNew'
-import TrackingCookie from '../../externalService/trackingCookie.subfeature'
+import { fireEvent, hr$, listen, loadScript } from 'hrQueryDs'
+import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
 
 const VideoLivestream = function (options, rootElement) {
     'use strict'
