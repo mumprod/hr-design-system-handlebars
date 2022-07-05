@@ -1,3 +1,15 @@
+# v0.49.5 (Tue Jul 05 2022)
+
+#### 🐛 Bug Fix
+
+- renamed stories and deleted unused stories and files [#262](https://github.com/mumprod/hr-design-system-handlebars/pull/262) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.4 (Tue Jul 05 2022)
 
 #### 🐛 Bug Fix
