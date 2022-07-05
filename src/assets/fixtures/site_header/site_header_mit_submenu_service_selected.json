@@ -1,5 +1,5 @@
 {   
-    "hasOpenSubNavigation": false,
+    "hasOpenSubNavigation": true,
     "brandNavigationItems": {
         "@->jsoninclude": "site_header/brandNavigation.inc.json"
     },
