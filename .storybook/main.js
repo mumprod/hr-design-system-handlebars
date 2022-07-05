@@ -34,10 +34,11 @@ module.exports = {
             ...config.resolve.alias,
             scripts: path.resolve(__dirname, '../scripts'),
             components: path.resolve(__dirname, '../src/stories/views/components'),
+            base: path.resolve(__dirname, '../src/stories/views/base'),
             tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
-            hrQueryNew$: path.resolve(
+            hrQueryDs$: path.resolve(
                 __dirname,
-                '../src/stories/views/components/generic/hrQueryNew.js'
+                '../src/stories/views/components/generic/hrQueryDs.js'
             ),
             initializer$: path.resolve(
                 __dirname,

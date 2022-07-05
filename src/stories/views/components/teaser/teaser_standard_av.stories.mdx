@@ -2,6 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
 
 import teaser50av from './fixtures/teaser_standard_50_serif_av_consumption.json'
+import teaser25av from './fixtures/teaser_standard_25_serif_av_consumption.json'
 
 <Meta
     title="Komponenten/Teaser/AV-Standard"
@@ -45,6 +46,9 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
 <Preview withToolbar>
     <Story name="Standard 50% AV" args={teaser50av.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 25" args={teaser25av.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>

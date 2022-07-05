@@ -1,5 +1,5 @@
-import { fireEvent, hr$, listen, loadScript } from 'hrQueryNew'
-import TrackingCookie from '../externalService/trackingCookie.subfeature'
+import { fireEvent, hr$, listen, loadScript } from 'hrQueryDs'
+import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
 
 const VideoOnDemandPlayer = function (options, rootElement) {
     'use strict'
@@ -28,8 +28,8 @@ console.log('VideoOnDemandPlayer');
         mediaCollection,
         mediaStreamArray = []
 
-     	console.log(skinPath);
-    /*    console.log(isAdaptiveStream);
+    /* 	console.log(skinPath);
+        console.log(isAdaptiveStream);
         console.log(basePlayerUrl);
         console.log(previewImageUrl);
         console.log(adaptiveStreamingUrl);
@@ -341,8 +341,14 @@ console.log('VideoOnDemandPlayer');
                 player.pause()
             }
         })
+        // listen('hr:global:startVideo:'+playerId, function (event) {
+        //     if (event.detail == 'ardplayer') {
+        //         player.play()
+        //     }
+        // })
+       
     }
-
+    
     if (trackingCookie.isTrackingAccepted('agf') && window.gfkConnector && agfMetadata) {
         gfkConnector.init(function (gfkLinkID) {
             agfMetadata.nol_c20 = 'p20,' + gfkLinkID
@@ -350,6 +356,15 @@ console.log('VideoOnDemandPlayer');
         })
     } else {
         setupPlayer()
+    }
+
+    return {
+        play: function() {
+            player.play()
+        },
+        pause: function() {
+            player.pause()
+        }
     }
 }
 
