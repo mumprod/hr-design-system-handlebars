@@ -95,6 +95,9 @@ src/
 Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `assets` finden sich die Folgenden Ordner und Dateien
 
 -   **brand** — In diesem Ordner liegen markenspezifische Assets, wie z.B. Icons und Logos. Für jede Marke findet sich darin ein eigener Unterordner.
+-   **css** — Dieser Ordner enthält die drei CSS Dateien `custom-base.css`, `custom-components.css` und `custom-utilities.css`. In diesen Dateien
+    können bestehende tailwind CSS Klassen überschrieben, bzw. eigene Utility Klassen hinzugefügt werden. Die Dateien werden zusammen mit den
+    Tailwind Basis Klassen in der Datei `tailwind.css` importiert.
 -   **fixtures** — Dieser Ordner enthält alle Testdaten. Für jede zu testende Komponente muss ein separater Ordner angelegt werden.
     Dessen Name muss dem Namen des Ordners der zu testenden Komponente entsprechen. Liegen beispielsweise alle Bestandteile der zu testenden
     Komponente Teaser in einem Order `src/stories/views/components/teaser`, müssen die Testdaten dafür in einem Ordner `src/assets/fixtures/teaser`
@@ -102,8 +105,9 @@ Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `a
 -   **fonts** — Alle im Designsystem zu verwendenden Schriften werden in diesem Ordner abgelegt.
 -   **icons** — Alle global im Designsystem zu verwendenden Icons werden in diesem Ordner abgelegt. Im Designsystem werden ausschließlich
     SVG-Maps verwendet. Wie diese erzeugt werden und was dafür alles beachtet werden muss, kann in Kapitel [Icons](?path=/story/grundlegendes-icons--page) nachgelesen werden.
--   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. In ihr werden alle Utlityklassen des tailwind.css Frameworks eingebunden,
-    benutzerdefinierte CSS Klassen geschrieben sowie CSS-Custom Properties fürs Theming der einzelnen Marken definiert.
+-   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. In ihr werden alle Utilityklassen des tailwind.css Frameworks sowie die
+    Benutzerdefienierten CSS Klassen aus den Dateien `custom-base.css`, `custom-components.css` und `custom-utilities.css` eingebunden. Es werden zudem
+    die CSS-Custom Properties fürs Theming der einzelnen Marken definiert.
 
 Im Ordner `stories` werden die Storybook Stories in Form von .mdx Dateien sowie die dazugehörigen Handlebars Komponenten abgelegt. Aus Kompatibilitätsgründen
 zu den bestehenden Handlebar Komponenten im `hrcms-delivery` Projekt liegen diese in einem weiteren Unterordner `views/components`.

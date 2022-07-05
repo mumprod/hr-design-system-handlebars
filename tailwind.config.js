@@ -1,9 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     experimental: {
-        optimizeUniversalDefaults: true
+        optimizeUniversalDefaults: true,
     },
     content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs}'],
     theme: {
@@ -25,7 +26,7 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... } */
-            tablet: {'min': '768px', 'max': '1023px'},
+            tablet: { min: '768px', max: '1023px' },
         },
         letterSpacing: {
             tighter: '-.025em',
@@ -37,24 +38,24 @@ module.exports = {
         },
 
         extend: {
-            fontSize: {  
-                'xs':['0.75rem', '1.063rem'], 
-                'sm':['0.875rem', '1.188rem'], 
-                'base':['1rem', '1.375rem'],                 
-                'lg':['1.125rem', '1.5rem'],  
-                'xl':['1.25rem', '1.675rem'],              
-                '2xl':['1.375rem', '1.75rem'],
-                '4xl':['2.125rem', '2.375rem'],
+            fontSize: {
+                'xs': ['0.75rem', '1.063rem'],
+                'sm': ['0.875rem', '1.188rem'],
+                'base': ['1rem', '1.375rem'],
+                'lg': ['1.125rem', '1.5rem'],
+                'xl': ['1.25rem', '1.675rem'],
+                '2xl': ['1.375rem', '1.75rem'],
+                '4xl': ['2.125rem', '2.375rem'],
             },
             boxShadow: {
                 inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
             },
             dropShadow: {
-                'md': '0 5px 3px rgb(0 0 0 / 0.07)',
-              },
+                md: '0 5px 3px rgb(0 0 0 / 0.07)',
+            },
             lineHeight: {
                 11: '2.75rem',
-                5.5 : '1.375rem',
+                5.5: '1.375rem',
             },
             fill: {
                 black: '#000000',
@@ -96,23 +97,23 @@ module.exports = {
                 22: '5.5rem',
             },
             width: {
-                18: '4.5rem',
-                30: '7.5rem',
-                46: '11.5rem',
-                70: '17.5rem',
-                88: '22rem',
-                92: '23rem',
-                'half-screen': '50vw'
+                '18': '4.5rem',
+                '30': '7.5rem',
+                '46': '11.5rem',
+                '70': '17.5rem',
+                '88': '22rem',
+                '92': '23rem',
+                'half-screen': '50vw',
             },
             height: {
-                22: '5.5rem',
-                30: '7.5rem',
-                35: '8.75rem',
-                45: '11.25rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+                '35': '8.75rem',
+                '45': '11.25rem',
                 'header-lg-small': '8.8125rem',
-                'header-lg-big': '11.0625rem', 
+                'header-lg-big': '11.0625rem',
                 'header-md': '5.5625rem',
-                'header-sm': '7.5625rem',  
+                'header-sm': '7.5625rem',
             },
             maxWidth: {
                 '1/4': '25%',
@@ -123,10 +124,9 @@ module.exports = {
                 '1/1': '100%',
             },
             margin: {
-                13: '3.125rem',
-                30: '7.5rem',
+                '13': '3.125rem',
+                '30': '7.5rem',
                 'half-screen': '50vw',
-
             },
             inset: {
                 '13': '3.375rem',

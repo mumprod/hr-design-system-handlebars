@@ -1,3 +1,39 @@
+# v0.49.2 (Tue Jul 05 2022)
+
+#### 🐛 Bug Fix
+
+- jsoninclude used in header now [#259](https://github.com/mumprod/hr-design-system-handlebars/pull/259) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.49.1 (Fri Jul 01 2022)
+
+#### 🐛 Bug Fix
+
+- add json for tabbox [#258](https://github.com/mumprod/hr-design-system-handlebars/pull/258) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.49.0 (Thu Jun 30 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1655 [#257](https://github.com/mumprod/hr-design-system-handlebars/pull/257) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.48.0 (Wed Jun 29 2022)
 
 #### 🚀 Enhancement

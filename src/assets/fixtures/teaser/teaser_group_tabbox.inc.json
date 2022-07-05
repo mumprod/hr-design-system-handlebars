@@ -1,0 +1,102 @@
+{
+    "tabbox_teasergroup_1": {
+        "includePath": "components/teaser/tabbox/group_tabbox",
+        "includeModel": {
+            "title": "Teasergruppe 1",
+            "link": {
+                "url": "#linkurl_teasergruppe_1"
+            },
+            "hasGroupTitle": true,
+            "groupTitle": "Teasergruppe 1",
+            "teaserSize": "100",
+            "isFirstTeaser": true,
+            "teaserIndex": 0,
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                }
+            ]
+        }
+    },
+    "tabbox_teasergroup_2": {
+        "includePath": "components/teaser/tabbox/group_tabbox",
+        "includeModel": {
+            "title": "Teasergruppe 2",
+            "link": {
+                "url": "#linkurl_teasergruppe_2"
+            },
+            "hasGroupTitle": true,
+            "groupTitle": "Teasergruppe 2",
+            "teaserSize": "100",
+            "isFirstTeaser": false,
+            "teaserIndex": 1,
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                }
+            ]
+        }
+    },
+    "tabbox_teasergroup_3": {
+        "includePath": "components/teaser/tabbox/group_tabbox",
+        "includeModel": {
+            "title": "Teasergruppe 3",
+            "link": {
+                "url": "#linkurl_teasergruppe_3"
+            },
+            "hasGroupTitle": true,
+            "groupTitle": "Teasergruppe 3",
+            "teaserSize": "100",
+            "isFirstTeaser": false,
+            "teaserIndex": 2,
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                }
+            ]
+        }
+    },
+    "tabbox_teasergroup_4": {
+        "includePath": "components/teaser/tabbox/group_tabbox",
+        "includeModel": {
+            "title": "Teasergruppe 4",
+            "link": {
+                "url": "#linkurl_teasergruppe_4"
+            },
+            "hasGroupTitle": true,
+            "groupTitle": "Teasergruppe 4",
+            "teaserSize": "100",
+            "isFirstTeaser": false,
+            "teaserIndex": 3,
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                },
+                {
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="w-full">
+    <br/>
+    teaserSize: {{this.teaserSize}}<br/>
+    isFirstTeaser: {{this.isFirstTeaser}}<br/>
+    hasGroupTitle: {{this.hasGroupTitle}}<br/>
+    teaserIndex: {{this.teaserIndex}}<br/>
+    groupTitle: {{this.groupTitle}}<br/>
+    link.url:{{this.link.url}}<br/>
+    title: {{this.title}}<br/>
+    <br/>
+    <b>Teaser:</b><br/>
+    {{~#each this.logicItems}}
+        {{this.logicItem.includeModel.title}}<br/>
+    {{/each~}}
+    <br/><hr/>
+</div>
