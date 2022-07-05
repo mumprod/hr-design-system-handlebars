@@ -7,7 +7,7 @@
                 "url": "index.html",
                 "labelText": "Startseite der hessenschau",
                 "subNavigationFromIndex": true,
-                "selected": true
+                "selected": false
             }
         ]
     },
