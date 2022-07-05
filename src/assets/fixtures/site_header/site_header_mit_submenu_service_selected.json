@@ -1,0 +1,16 @@
+{   
+    "hasOpenSubNavigation": false,
+    "brandNavigationItems": {
+        "@->jsoninclude": "site_header/brandNavigation.inc.json"
+    },
+    "serviceNavigationSSILinks":
+    {
+        "@->jsoninclude": "site_header/serviceNavigation_selected.inc.json"       
+    },
+    
+    "sectionNavigationSSILinks":
+    {
+        "@->jsoninclude": "site_header/sectionNavigation_mit_submenu.inc.json"
+    }
+    
+}
