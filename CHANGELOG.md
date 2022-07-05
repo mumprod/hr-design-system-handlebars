@@ -1,3 +1,15 @@
+# v0.49.4 (Tue Jul 05 2022)
+
+#### 🐛 Bug Fix
+
+- removes unused json files, renames header stories [#260](https://github.com/mumprod/hr-design-system-handlebars/pull/260) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.3 (Tue Jul 05 2022)
 
 #### 🐛 Bug Fix
