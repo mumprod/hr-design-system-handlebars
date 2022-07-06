@@ -1,3 +1,16 @@
+# v0.49.7 (Wed Jul 06 2022)
+
+#### 🐛 Bug Fix
+
+- Standard-Teaser Documentation [#264](https://github.com/mumprod/hr-design-system-handlebars/pull/264) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.49.6 (Wed Jul 06 2022)
 
 #### 🐛 Bug Fix
