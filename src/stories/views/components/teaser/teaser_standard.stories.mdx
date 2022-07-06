@@ -44,9 +44,44 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Header
+# Standard-Teaser 
 
-Ein toller Einleitungstext für unsere `Teaser` Komponente:
+## Beschreibung
+
+
+Der Standard-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
+
+<b>Standard Hero:</b> <br/>
+    Desktop = Text unter dem Bild <br/>
+    Mobile = Text unter dem Bild mit Teasertext <br/>
+
+<b>Standard 100%, 50%, 33%:</b> <br/>
+    Desktop = Text unter dem Bild <br/>
+    Mobile = Text unter dem Bild ohne Teasertext <br/>
+
+<b>Standard 25%:</b> <br/>
+    Desktop = Text unter dem Bild ohne Teasertext <br/>
+    Mobile =  Bild(1x1) neben Text ohne Teasertext <br/>
+
+## Sub-Komponenten
+
+Die Standard-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+    <li>components/teaser/components/<b>teaser_lead</b></li>
+    <li>components/base/<b>link</b></li>
+    <li>components/teaser/components/<b>teaser_heading</b></li>
+    <li>components/teaser/components/<b>teaser_text</b></li>
+    <li>components/teaser/components/<b>teaser_byline</b></li>
+</ul>
+
+## Verwendung
+
+Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_standard}}    
+```
 
 <Preview withToolbar>
     <Story name="Standard Hero" args={teaserHeroSerif.logicItem.includeModel}>
@@ -74,3 +109,4 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
         {Template.bind({})}
     </Story>
 </Preview>
+
