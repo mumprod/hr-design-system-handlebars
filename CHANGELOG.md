@@ -1,3 +1,15 @@
+# v0.49.8 (Thu Jul 07 2022)
+
+#### 🐛 Bug Fix
+
+- adds listener for touchmove (mobile) [#265](https://github.com/mumprod/hr-design-system-handlebars/pull/265) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.7 (Wed Jul 06 2022)
 
 #### 🐛 Bug Fix
