@@ -41,6 +41,7 @@ document.addEventListener('alpine:init', () => {
                 window.userScroll = true;
             }
             window.addEventListener('wheel', mouseEvent, false);
+            window.addEventListener('touchmove', mouseEvent, false)
 
             window.addEventListener('scroll', this.debounce( () => {
                 let winScroll = document.body.scrollTop || document.documentElement.scrollTop
