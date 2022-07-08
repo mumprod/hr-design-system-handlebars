@@ -1,5 +1,5 @@
 <div class="c-videoplayer">
-    <div x-show="videoStart" x-transition.duration.100ms id="{{nextRandom}}" class="js-load" data-new-hr-mediaplayer-loader-ds='{
+    <div x-show="avStart" x-transition.duration.100ms id="{{nextRandom}}" class="js-load" data-new-hr-mediaplayer-loader-ds='{
         "type": "ondemand",
         "position": "{{if _isTeaser 'teaser' 'page'}}",
         "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
@@ -63,7 +63,7 @@
     </div>
     
     {{#if _isTeaser}}
-    <div class="relative" x-show="!videoStart" x-transition.duration.100ms>
+    <div class="relative" x-show="!avStart" x-transition.duration.100ms>
         {{#with _teaser}}
             
                 {{~#if ../_isCopyText~}}
@@ -77,7 +77,7 @@
                 {{/if}}
              
         {{/with}}
-        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _alpineClick="videoStart = !videoStart"}}
+        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _alpineClick="avStart = !avStart"}}
     </div>   
     {{/if}}
     
