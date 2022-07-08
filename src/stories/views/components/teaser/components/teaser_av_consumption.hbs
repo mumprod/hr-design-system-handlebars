@@ -3,6 +3,6 @@
         {{~> components/video/video_element _isTeaser=true _teaser=../this ~}}
     {{~/if~}}
     {{~#if this.isAudio ~}}
-        isAudio
+         {{~> components/audio/audio_element _isTeaser=true _teaser=../this  _audioUrl=this.audioUrl ~}}             
     {{~/if~}}
 {{/with}}

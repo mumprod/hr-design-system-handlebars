@@ -6,8 +6,7 @@ import VideoLivestream from 'components/video/livestream/videoLivestreamDs.subfe
 
 const MediaplayerLoader = function (context) {
     'use strict'
-    
- 
+
     const { options } = context,
         { element: rootElement } = context,
         type = options.type,
@@ -19,60 +18,51 @@ const MediaplayerLoader = function (context) {
         rootParent = rootElement.parentNode,
         mediaplayerButton = hr$('.js-mediaplayer__button', rootParent)[0];
     
-    let video = false; 
-
-
-    const removeVideoHover = function () {
-        rootElement.parentNode.parentNode.classList.remove('-imageHover')
-        rootElement.parentNode.parentNode.parentNode.classList.remove('-imageHover')
-    }
-
-    const removeAudioHover = function () {
-        audioContent.classList.remove('hide')
-        audioContent.parentNode.parentNode.parentNode.parentNode.classList.remove('-imageHover')
-        audioContent.parentNode.parentNode.parentNode.classList.remove('-imageHover')
-        mediaplayerButton.parentNode.removeChild(mediaplayerButton)
-    }
+    let avObject = false; 
+    console.log("MediaplayerLoader", options);
 
     const loadLivestream = function () {
         new VideoLivestream(options)
-        removeVideoHover()
+        
         uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
     }
-
-    
+  
     const unloadPlayer = function() {
         console.log("video.pause()");
-        video.pause();
+        avObject.pause();
     }
 
     const loadOnDemand = function () {    
-        if(!video){
-            console.log("loadOnDemand");
-            video = new VideoOnDemandPlayer(options)
-            removeVideoHover()
+        if(!avObject){
+            console.log("load OnDemand");
+            avObject = new VideoOnDemandPlayer(options)
             uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
             listenOnce('player_colosed', unloadPlayer)  
         } else {
             console.log("video.play()");
             listenOnce('player_colosed', unloadPlayer) 
-            video.play();
+            avObject.play();
         }
     }
 
     const loadAudio = function () {
-        new AudioElement(options, rootElement)
-        removeAudioHover()
-        uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
+        if(!avObject){
+            console.log("load Audio");
+            avObject = new AudioElement(options, rootElement)        
+            uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
+            listenOnce('player_colosed', unloadPlayer) 
+        } else {
+            console.log("Audio.play()");
+            listenOnce('player_colosed', unloadPlayer) 
+            avObject.play();
+        }
     }
 
-
-   
     switch (type) {
         case 'live':
             console.log('live');
             if (position === 'teaser') {
-                listenOnce('click', loadLivestream, mediaplayerButton)
+                listen('click', loadLivestream, mediaplayerButton)
             } else {
                 loadLivestream()
             }
@@ -91,7 +81,7 @@ const MediaplayerLoader = function (context) {
         case 'audio':
             console.log('audio');
             if (position === 'teaser') {
-                listenOnce('click', loadAudio, mediaplayerButton)
+                listen('click', loadAudio, mediaplayerButton)
             } else {
                 audioContent.classList.remove('hide')
                 new AudioElement(options, rootElement)
