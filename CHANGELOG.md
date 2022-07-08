@@ -1,3 +1,15 @@
+# v0.49.9 (Fri Jul 08 2022)
+
+#### 🐛 Bug Fix
+
+- adds detection for scrollbar use [#266](https://github.com/mumprod/hr-design-system-handlebars/pull/266) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.8 (Thu Jul 07 2022)
 
 #### 🐛 Bug Fix
