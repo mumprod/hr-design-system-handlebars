@@ -40,6 +40,19 @@ document.addEventListener('alpine:init', () => {
                 userScroll = true;
                 window.userScroll = true;
             }
+            const clickedOnScrollbar = function(mouseX){
+                if( document.documentElement.offsetWidth <= mouseX ){
+                  return true;
+                }
+              }
+              
+            const mouseDownHandler = function(e){
+                if( clickedOnScrollbar(e.clientX) ){
+                  console.log("clicked on scrollbar");
+                    mouseEvent()
+                }
+            };
+            window.addEventListener('mousedown', mouseDownHandler, false)
             window.addEventListener('wheel', mouseEvent, false);
             window.addEventListener('touchmove', mouseEvent, false)
 
