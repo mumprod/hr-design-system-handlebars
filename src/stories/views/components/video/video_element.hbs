@@ -1,84 +1,81 @@
-<div class="c-videoplayer">
-    <div x-show="avStart" x-transition.duration.100ms id="{{nextRandom}}" class="js-load" data-new-hr-mediaplayer-loader-ds='{
-        "type": "ondemand",
-        "position": "{{if _isTeaser 'teaser' 'page'}}",
-        "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
-        "containerId": "{{getRandom}}",
-        "streamUrl":"{{this.videoUrl}}",
-        "isAdaptiveStream": {{if this.adaptiveStreamingUrl "true" "false"}},
-        {{#if _videoKey}}
-            "videoKey": "{{_videoKey}}",
-        {{/if}}
-        {{#if this.adaptiveStreamingUrl}}
-            "adaptiveStreamingUrl":"{{this.adaptiveStreamingUrl}}", 
-            "videoResolutionLevels": [
-                {{#each this.videoResolutionLevels}}
-            {{#unless @last}}
-                        { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }, 
-                    {{else}}
-                        { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }
-                    {{/unless}}
-        {{/each}}
-            ],
-        {{/if}}
-        {{#with this.videoSubtitleUrl}}"subtitle":"{{this}}",{{/with}}
-        "skinPath":"{{resourceUrl 'assets/vendor/ardplayer/ardplayer-hr-6.3.4.055f7511.css'}}",
-        "mediaMetadata":{{this.mediaMetadata}},
-        "ardplayerUrl": "{{resourceUrl "assets/js/vendor/ardplayer-hr-6.3.4.d39f03b6.js"}}",
-        "smarttagUrl": "{{resourceUrl "assets/js/vendor/smarttagProd.js"}}",
-        "agfAppId": "TODO",
-        "baseUrl":"{{resourceUrl 'assets/vendor/ardplayer/'}}"
-        {{#with this.providerKeyWithSublines}}
-            ,"streamUrlSublines": "{{this}}"
-        {{/with}}
-        {{#if _poster~}}
-            ,"previewImageUrl":{
-                    "s": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                    "m": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                    "l": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                    "xl": "{{if _poster.url.16to9 _poster.url.16to9_retina _poster}}"
-                }
-        {{else}}
-            {{#if this.teaseritem ~}}
-                ,"previewImageUrl":{
-                    "s": "{{this.teaseritem.[0].url.16to9}}",
-                    "m": "{{this.teaseritem.[0].url.16to9}}",
-                    "l": "{{this.teaseritem.[0].url.16to9}}",
-                    "xl": "{{this.teaseritem.[0].url.16to9_retina}}"
-                }
-            {{else}}
-               ,"previewImageUrl" : "{{resourceUrl 'assets/base/video/dummy.jpg'}}"
-            {{/if~}}
-        {{/if~}}
-        {{#if _isTeaser}}
-        ,"autoplay":"true"
-        {{/if}}   
-    }'>{{!-- geotag --}}
-        {{#unless _hideGeotag}}
-            {{~#with _geotag}}
-                <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
-            {{/with~}}
-        {{/unless}}
-        
-    </div>
-    
-    {{#if _isTeaser}}
-    <div class="relative" x-show="!avStart" x-transition.duration.100ms>
-        {{#with _teaser}}
-            
-                {{~#if ../_isCopyText~}}
-                    {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
-                {{else}}
-                    {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
-                                _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
-                                _clickLabelPrefix2="mediaLink" }}                       
-                        {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
-                    {{/components/base/link }}
-                {{/if}}
-             
-        {{/with}}
-        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _alpineClick="avStart = !avStart"}}
-    </div>   
+<div x-show="avStart" id="{{nextRandom}}" class="ar-16-9 js-load" data-new-hr-mediaplayer-loader-ds='{
+    "type": "ondemand",
+    "position": "{{if _isTeaser 'teaser' 'page'}}",
+    "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
+    "containerId": "{{getRandom}}",
+    "streamUrl":"{{this.videoUrl}}",
+    "isAdaptiveStream": {{if this.adaptiveStreamingUrl "true" "false"}},
+    {{#if _videoKey}}
+        "videoKey": "{{_videoKey}}",
     {{/if}}
+    {{#if this.adaptiveStreamingUrl}}
+        "adaptiveStreamingUrl":"{{this.adaptiveStreamingUrl}}", 
+        "videoResolutionLevels": [
+            {{#each this.videoResolutionLevels}}
+        {{#unless @last}}
+                    { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }, 
+                {{else}}
+                    { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }
+                {{/unless}}
+    {{/each}}
+        ],
+    {{/if}}
+    {{#with this.videoSubtitleUrl}}"subtitle":"{{this}}",{{/with}}
+    "skinPath":"{{resourceUrl 'assets/vendor/ardplayer/ardplayer-hr-6.3.4.055f7511.css'}}",
+    "mediaMetadata":{{this.mediaMetadata}},
+    "ardplayerUrl": "{{resourceUrl "assets/js/vendor/ardplayer-hr-6.3.4.d39f03b6.js"}}",
+    "smarttagUrl": "{{resourceUrl "assets/js/vendor/smarttagProd.js"}}",
+    "agfAppId": "TODO",
+    "baseUrl":"{{resourceUrl 'assets/vendor/ardplayer/'}}"
+    {{#with this.providerKeyWithSublines}}
+        ,"streamUrlSublines": "{{this}}"
+    {{/with}}
+    {{#if _poster~}}
+        ,"previewImageUrl":{
+                "s": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
+                "m": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
+                "l": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
+                "xl": "{{if _poster.url.16to9 _poster.url.16to9_retina _poster}}"
+            }
+    {{else}}
+        {{#if this.teaseritem ~}}
+            ,"previewImageUrl":{
+                "s": "{{this.teaseritem.[0].url.16to9}}",
+                "m": "{{this.teaseritem.[0].url.16to9}}",
+                "l": "{{this.teaseritem.[0].url.16to9}}",
+                "xl": "{{this.teaseritem.[0].url.16to9_retina}}"
+            }
+        {{else}}
+            ,"previewImageUrl" : "{{resourceUrl 'assets/base/video/dummy.jpg'}}"
+        {{/if~}}
+    {{/if~}}
+    {{#if _isTeaser}}
+    ,"autoplay":"true"
+    {{/if}}   
+}'>{{!-- geotag --}}
+    {{#unless _hideGeotag}}
+        {{~#with _geotag}}
+            <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
+        {{/with~}}
+    {{/unless}}
     
 </div>
+
+{{#if _isTeaser}}
+<div class="relative {{_aspectRatio}}" x-show="!avStart" >
+    {{#with _teaser}}
+        
+            {{~#if ../_isCopyText~}}
+                {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
+            {{else}}
+                {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
+                            _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
+                            _clickLabelPrefix2="mediaLink" }}                       
+                    {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
+                {{/components/base/link }}
+            {{/if}}
+            
+    {{/with}}
+    {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _srOnly="true" _alpineClick="avStart = !avStart"}}
+</div>   
+{{/if}}
