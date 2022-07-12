@@ -7,6 +7,14 @@
             "@->value": "25"
         },
         {
+            "@->contentpath": "logicItem.includeModel.is25Teaser",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.is25Teaser",
+            "@->value": "true"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
