@@ -18,6 +18,7 @@ module.exports = function(text, options) {
         "date_simple_at": options + " Uhr",
         "label_ticker":"Ticker",
         "label_media":"Media",
+        "group_tabbed_more":"weitere Meldungen aus " + options,
     }
 
     for (let key in locas){
