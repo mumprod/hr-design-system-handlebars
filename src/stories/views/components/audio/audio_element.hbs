@@ -17,25 +17,19 @@
             {{/with~}}
         {{/unless}}
         <div 
-        {{!-- TODO Refactor this to use something like is25Teaser --}}
-        {{#switch _teaserSize~}}
-            {{~#case "25"}}    
+            {{~#if _is25Teaser}} 
                 class="relative"  
                 :class="avStart ? 'ar-16-9' : '{{_aspectRatio}}'"
-            {{/case~}}
-            {{~#default "class='relative ar-16-9'"}}    
-            {{/default~}}
-        {{~/switch~}}   
-        
-        
+            {{else}}
+                class="relative {{_aspectRatio}}"   
+            {{~/if~}}      
         >
             {{~#if _isTeaser~}}
-            <div {{!-- TODO Refactor this to use something like is25Teaser --}}
-                {{#switch _teaserSize~}}
-                    {{~#case "25"}}
-                        x-show="!avStart"
-                    {{/case~}}
-                {{~/switch~}}>
+            <div 
+                {{~#if _is25Teaser}}
+                    x-show="!avStart"
+                {{~/if~}}
+                >               
                 {{#with _teaser}}
                     {{~#if _isCopyText~}}
                         {{> components/base/image/responsive_image this.teaserImage _type=(if this.teasertype this.teasertype 'story') _variant=(if this.imageVariant this.imageVariant '100-copytext')  _addClassImg="ar__content" _addClass=_addClass _noDelay=../_noDelay}}
@@ -53,14 +47,12 @@
                 {{> components/base/image/responsive_image this.teaseritem _type=_type _variant=_variant _addClass=_addClass _addClassImg="ar__content" _noDelay=_noDelay }}
             {{~/if~}}
 
-             {{!-- TODO Refactor this to use something like is25Teaser --}}
-            {{#switch _teaserSize~}}
-                {{~#case "25"}}      
-                    <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
-                        {{> components/base/image/icon _icon="audio" _iconmap="icons" _addClass="w-12 h-12 fill-white " }}
-                    </div>
-                {{/case~}}
-            {{~/switch~}}
+
+            {{~#if _is25Teaser~}}
+                <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
+                    {{> components/base/image/icon _icon="audio" _iconmap="icons" _addClass="w-12 h-12 fill-white " }}
+                </div>
+            {{~/if~}}
 
             {{~#with _audioUrl ~}}
                 <audio x-show="avStart" class="absolute bottom-0 w-full{{~#with _addClassAudio }} {{this}}{{/with}}"
