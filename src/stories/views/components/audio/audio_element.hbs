@@ -30,7 +30,12 @@
         
         >
             {{~#if _isTeaser~}}
-            <div x-show="!avStart">
+            <div {{!-- TODO Refactor this to use something like is25Teaser --}}
+                {{#switch _teaserSize~}}
+                    {{~#case "25"}}
+                        x-show="!avStart"
+                    {{/case~}}
+                {{~/switch~}}>
                 {{#with _teaser}}
                     {{~#if _isCopyText~}}
                         {{> components/base/image/responsive_image this.teaserImage _type=(if this.teasertype this.teasertype 'story') _variant=(if this.imageVariant this.imageVariant '100-copytext')  _addClassImg="ar__content" _addClass=_addClass _noDelay=../_noDelay}}
@@ -48,6 +53,7 @@
                 {{> components/base/image/responsive_image this.teaseritem _type=_type _variant=_variant _addClass=_addClass _addClassImg="ar__content" _noDelay=_noDelay }}
             {{~/if~}}
 
+             {{!-- TODO Refactor this to use something like is25Teaser --}}
             {{#switch _teaserSize~}}
                 {{~#case "25"}}      
                     <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
