@@ -33,10 +33,73 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('Looks like we are in development mode!')
 }
 
+const customViewports = {
+    hrMin: {
+        name: 'hr: Min - 320px',
+        styles: {
+          width: '320px',
+          height: '600px',
+        },
+    },
+    hrXs: {
+        name: 'hr: XS - 360px',
+        styles: {
+            width: '360px',
+            height: '600px',
+        },
+    },
+    hrSmSmaller: {
+        name: 'hr: SM - 639px',
+        styles: {
+            width: '639px',
+            height: '800px',
+        },
+    },
+    hrSm: {
+        name: 'hr: SM - 640px',
+        styles: {
+            width: '640px',
+            height: '800px',
+        },
+    },
+    hrMdSmaller: {
+        name: 'hr: MD - 767px',
+        styles: {
+            width: '767px',
+            height: '1000px',
+        },
+    },
+    hrMd: {
+        name: 'hr: MD - 768px',
+        styles: {
+            width: '768px',
+            height: '1000px',
+        },
+    },
+    hrLgSmaller: {
+        name: 'hr: LG - 1023px',
+        styles: {
+            width: '1023px',
+            height: '1000px',
+        },
+    },
+    hrLg: {
+        name: 'hr: LG - 1024px',
+        styles: {
+            width: '1024px',
+            height: '1000px',
+        },
+    },
+  };
+
 export const parameters = {
     //layout: 'fullscreen',
     viewport: {
-        viewports: INITIAL_VIEWPORTS,
+        viewports: {
+            ...customViewports,
+            ...INITIAL_VIEWPORTS,
+           
+         },
     },
     backgrounds: {
         default: 'white',
