@@ -1,3 +1,15 @@
+# v0.49.10 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- refactoring and better component order [#268](https://github.com/mumprod/hr-design-system-handlebars/pull/268) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.49.9 (Fri Jul 08 2022)
 
 #### 🐛 Bug Fix
