@@ -1,0 +1,69 @@
+<div x-show="avStart" id="{{nextRandom}}" class="ar-16-9 js-load" data-new-hr-mediaplayer-loader-ds='{
+    "type": "live",
+    "position": "{{if _isTeaser 'teaser' 'page'}}",
+    "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
+    "config": {
+    "containerId": "{{getRandom}}",
+    {{#with _deactivateSubtitles}}
+        "deactivateSubtitles": "{{this}}",
+    {{/with}}
+    "streamUrl":"{{this.providerKey}}",
+    "skinPath":"{{resourceUrl 'assets/vendor/ardplayer/ardplayer-hr-6.3.4.055f7511.css'}}",
+    "mediaMetadata":{{this.mediaMetadata}},
+    "ardplayerUrl": "{{resourceUrl "assets/js/vendor/ardplayer-hr-6.3.4.d39f03b6.js"}}",
+    "smarttagUrl": "{{resourceUrl "assets/js/vendor/smarttagProd.js"}}",
+    "agfAppId": "{{configProperty "tracking.agf.apid"}}",
+    "baseUrl":"{{resourceUrl 'assets/vendor/ardplayer/'}}"
+        {{#if _posterImage~}}
+        ,"previewImageUrl":{
+                "s": "{{_posterImage.url.16to9}}",
+                "m": "{{_posterImage.url.16to9}}",
+                "l": "{{_posterImage.url.16to9}}",
+                "xl": "{{_posterImage.url.16to9_retina}}"
+            }
+    {{else}}
+        {{#if teaseritem ~}}
+            ,"previewImageUrl":{
+                "s": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
+                "m": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
+                "l": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
+                "xl": "{{if teaseritem.[0] teaseritem.[0].url.16to9_retina teaseritem.url.16to9_retina }}"
+            }
+        {{else}}
+           ,"previewImageUrl" : "{{resourceUrl 'assets/base/video/dummy.jpg'}}"
+        {{/if~}}
+    {{/if~}}
+        {{#if _overlay}}
+        ,"overlay":"true"
+        ,"overlayId":"{{getRandom}}"
+    {{else}}
+        ,"overlay":"false"
+    {{/if}}
+        {{#if _isTeaser}}
+        ,"autoplay":"true"
+    {{/if}}
+    }}'>
+        {{!-- geotag --}}
+        {{#unless _hideGeotag}}
+            {{~#with _geotag}}
+                <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
+            {{/with~}}
+        {{/unless}}
+</div>
+{{#if _isTeaser}}
+    <div class="relative {{_aspectRatio}}" x-show="!avStart" > 
+        {{#with _teaser}}
+            {{~#if _isCopyText~}}
+                {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext' _addClassImg="ar__content" _noDelay=../_noDelay ~}}                
+            {{else}}
+                
+                {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
+                        _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
+                        _clickLabelPrefix2="mediaLink" }}                                      
+                    {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext'  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}                             
+                {{/components/base/link }}
+            {{/if}}
+        {{/with}}
+        {{> components/button/button_round _isButton="true" _addClass="bg-red-500 hover:bg-red-700 absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Live" _srOnly="true" _alpineClick="avStart = !avStart"}}   
+    </div>
+{{/if}}

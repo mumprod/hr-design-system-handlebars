@@ -249,6 +249,15 @@ const VideoLivestream = function (options, rootElement) {
     } else {
         fetchPlayerStyle(skinPath).then(initPlayer())
     }
+
+    return {
+        play: function() {
+            player.play()
+        },
+        pause: function() {
+            player.pause()
+        }
+    }
 }
 
 export default VideoLivestream

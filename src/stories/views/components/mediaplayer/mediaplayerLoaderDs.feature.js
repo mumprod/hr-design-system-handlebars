@@ -21,15 +21,22 @@ const MediaplayerLoader = function (context) {
     let avObject = false; 
     console.log("MediaplayerLoader", options);
 
-    const loadLivestream = function () {
-        new VideoLivestream(options)
-        
-        uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
-    }
-  
     const unloadPlayer = function() {
         console.log("video.pause()");
         avObject.pause();
+    }
+
+    const loadLivestream = function () {
+        if(!avObject){
+            console.log("load Livestream");
+            avObject = new VideoLivestream(options)            
+            uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
+            listenOnce('player_colosed', unloadPlayer) 
+        } else {
+            console.log("video.play()");
+            listenOnce('player_colosed', unloadPlayer) 
+            avObject.play();
+        }
     }
 
     const loadOnDemand = function () {    
