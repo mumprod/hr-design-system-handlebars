@@ -111,7 +111,7 @@
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif_video.json",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
@@ -123,7 +123,7 @@
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif_video.json",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
@@ -135,7 +135,7 @@
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
+                    "@->jsoninclude": "teaser/teaser_standard_25_serif_audio.json",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
