@@ -3,6 +3,10 @@
     "@->contentpath": "teaser",
     "@->overrides": [
         {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.teaserSize",
             "@->value": "33"
         },
