@@ -2,16 +2,19 @@
     "wandaPageId" : "2109595548",
     "tabbedGroup": [
         {
-            "title": "Teasergruppe 1"
+            "title": "Nordhessen"
         },
         {
-            "title": "Teasergruppe 2"
+            "title": "Mittelhessen"
         },
         {
-            "title": "Teasergruppe 3"
+            "title": "Osthessen"
         },
         {
-            "title": "Teasergruppe 4"
+            "title": "Rhein-Main"
+        },
+        {
+            "title": "Südhessen"
         }
     ],
     "logicItems": [
@@ -30,6 +33,10 @@
         {
             "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
             "@->contentpath": "tabbox_teasergroup_4"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_tabbox.inc.json",
+            "@->contentpath": "tabbox_teasergroup_5"
         }
     ]
 }

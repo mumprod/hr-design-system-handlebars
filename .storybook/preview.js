@@ -173,8 +173,9 @@ export const parameters = {
                 [
                     'Page',
                     'Header',
-                    ['Header', 'BrandNavigation', 'ServiceNavigation', 'SectionNavigation'],
-                    'Flyout',
+                    'Teaser',
+                    'grid',
+                    'Label'
                 ],
                 '*',
             ],

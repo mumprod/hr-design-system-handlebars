@@ -31,42 +31,39 @@ document.addEventListener('alpine:init', () => {
         },
         init(){
             let lastScrollTop = 0
-            let height = top.innerHeight
-            
+            let height = window.innerHeight
             let userScroll = false;
             window.userScroll = userScroll;
 
-            function mouseEvent(e) {
+            const mouseEvent = () => {
                 userScroll = true;
                 window.userScroll = true;
-                console.log('user action detected')
+                //console.log('user action detected')
             }
 
             const clickedOnScrollbar = mouseX => {
                 return document.documentElement.offsetWidth <= mouseX ? true : false; 
             }
               
-            const mouseDownHandler = (e) => {
+            const mouseDownHandler = e => {
                 clickedOnScrollbar(e.clientX) ? mouseEvent() : null
             };
+
+            const scrollHandler = () => {
+                let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+                winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
+                this.percent = Math.round((winScroll / height) * 100)
+                lastScrollTop = winScroll
+                this.$store.navIsVisible = !this.isNavHidden()
+                this.$store.subNavIsVisible = !this.isSubNavHidden()
+                //console.log('winscroll: '+winScroll+' screen height: '+height + '  percent scrolled: '+ this.percent)
+                //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
+            }
 
             window.addEventListener('mousedown', mouseDownHandler, false)
             window.addEventListener('wheel', mouseEvent, false);
             window.addEventListener('touchmove', mouseEvent, false)
-
-            window.addEventListener('scroll', this.debounce( () => {
-                let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-                winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
-                //let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                this.percent = Math.round((winScroll / height) * 100)
-                lastScrollTop = winScroll
-                //console.log('winscroll: '+winScroll+' height: '+height + '  percent: '+ this.percent)
-                this.$store.navIsVisible = !this.isNavHidden()
-                this.$store.subNavIsVisible = !this.isSubNavHidden()
-
-                //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
-
-            },50), {passive: true})
+            window.addEventListener('scroll', this.debounce( scrollHandler,50), { passive: true })
         },
         percent: 0,
         scrollingDown: true,

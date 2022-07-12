@@ -1,16 +1,25 @@
-<div class="w-full">
-    <br/>
-    teaserSize: {{this.teaserSize}}<br/>
-    isFirstTeaser: {{this.isFirstTeaser}}<br/>
-    hasGroupTitle: {{this.hasGroupTitle}}<br/>
-    teaserIndex: {{this.teaserIndex}}<br/>
-    groupTitle: {{this.groupTitle}}<br/>
-    link.url:{{this.link.url}}<br/>
-    title: {{this.title}}<br/>
-    <br/>
-    <b>Teaser:</b><br/>
-    {{~#each this.logicItems}}
-        {{this.logicItem.includeModel.title}}<br/>
-    {{/each~}}
-    <br/><hr/>
-</div>
+<section class="pb-7 {{#if this.isFirstTeaser}}-active{{/if}}">
+    {{~#if this.hasGroupTitle~}}
+        <h3 class="sr-only">
+            <a class="" href="#tgp{{this.teaserIndex}}">
+                <span class="">{{this.groupTitle}}</span>
+                <span class="">
+                    {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
+                    {{> components/base/image/icon _icon="arrow-up" _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
+                </span>
+            </a>
+        </h3>
+    {{~/if~}}
+
+    <a class="w-0" name="tgp{{this.teaserIndex}}"></a>
+    <div class="grid content-start grid-cols-12 px-0 md:px-8 colspan-12 gap-x-6 gap-y-6">
+        {{~> components/teaser/teaser_logic/teaser_logic ~}}
+    </div>
+    {{~#if this.link~}}
+        <div class="flex justify-center">
+            <a class="text-base pt-7 font-heading text-toplineColor hover:underline" href="{{this.link.url}}">
+                {{~loca "group_tabbed_more" this.title~}}
+            </a>
+        </div>
+    {{~/if~}}
+</section> 
