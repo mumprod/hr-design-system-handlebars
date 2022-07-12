@@ -1,7 +1,7 @@
 <div x-show="avStart" id="{{nextRandom}}" class="ar-16-9 js-load" data-new-hr-mediaplayer-loader-ds='{
     "type": "ondemand",
     "position": "{{if _isTeaser 'teaser' 'page'}}",
-    "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
+    "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
     "containerId": "{{getRandom}}",
     "streamUrl":"{{this.videoUrl}}",
     "isAdaptiveStream": {{if this.adaptiveStreamingUrl "true" "false"}},
