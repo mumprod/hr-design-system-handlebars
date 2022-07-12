@@ -1,3 +1,15 @@
+# v0.49.11 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- add tabbox-canvas + teaser + link [#269](https://github.com/mumprod/hr-design-system-handlebars/pull/269) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.49.10 (Tue Jul 12 2022)
 
 #### 🐛 Bug Fix
