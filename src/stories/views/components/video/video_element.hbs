@@ -62,20 +62,20 @@
 </div>
 
 {{#if _isTeaser}}
-<div class="relative {{_aspectRatio}}" x-show="!avStart" >
-    {{#with _teaser}}
-        
-            {{~#if ../_isCopyText~}}
-                {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
-            {{else}}
-                {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
-                            _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
-                            _clickLabelPrefix2="mediaLink" }}                       
-                    {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
-                {{/components/base/link }}
-            {{/if}}
+    <div class="relative {{_aspectRatio}}" x-show="!avStart" >
+        {{#with _teaser}}
             
-    {{/with}}
-    {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _srOnly="true" _alpineClick="avStart = !avStart"}}
-</div>   
+                {{~#if ../_isCopyText~}}
+                    {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="ar__content" _noDelay=../_noDelay ~}}
+                {{else}}
+                    {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
+                                _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
+                                _clickLabelPrefix2="mediaLink" }}                       
+                        {{~> components/base/image/responsive_image this.teaserImage type=(if this.teaserType this.teaserType 'story') variant=(if this.content.imageVariant this.content.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}
+                    {{/components/base/link }}
+                {{/if}}
+                
+        {{/with}}
+        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Video" _srOnly="true" _alpineClick="avStart = !avStart"}}
+    </div>   
 {{/if}}

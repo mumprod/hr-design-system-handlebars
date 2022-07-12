@@ -1,5 +1,4 @@
-<div class="ar--16x9 c-videoplayer">
-    <div id="{{nextRandom}}" class="js-load" data-new-hr-mediaplayer-loader-ds='{
+<div x-show="avStart" id="{{nextRandom}}" class="ar-16-9 js-load" data-new-hr-mediaplayer-loader-ds='{
     "type": "live",
     "position": "{{if _isTeaser 'teaser' 'page'}}",
     "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
@@ -50,20 +49,21 @@
                 <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
             {{/with~}}
         {{/unless}}
-        {{#if _isTeaser}}
-            {{#with _teaser}}
-                {{~#if _isCopyText~}}
-                    {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext' _addClassImg="ar__content" _noDelay=../_noDelay ~}}                
-                {{else}}
-                    
-                    {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
-                            _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
-                            _clickLabelPrefix2="mediaLink" }}                                      
-                        {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext'  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}                             
-                    {{/components/base/link }}
-                {{/if}}
-            {{/with}}
-            {{> components/button/button_round _isButton="true" _addClass="bg-red-500 hover:bg-red-700 absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Live" _srOnly="true" _alpineClick="avStart = !avStart"}}
-        {{/if}}
-    </div>
 </div>
+{{#if _isTeaser}}
+    <div class="relative {{_aspectRatio}}" x-show="!avStart" > 
+        {{#with _teaser}}
+            {{~#if _isCopyText~}}
+                {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext' _addClassImg="ar__content" _noDelay=../_noDelay ~}}                
+            {{else}}
+                
+                {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
+                        _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
+                        _clickLabelPrefix2="mediaLink" }}                                      
+                    {{~> components/base/image/responsive_image this.teaserImage _type='story' _variant='100-copytext'  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../../_noDelay ~}}                             
+                {{/components/base/link }}
+            {{/if}}
+        {{/with}}
+        {{> components/button/button_round _isButton="true" _addClass="bg-red-500 hover:bg-red-700 absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Live" _srOnly="true" _alpineClick="avStart = !avStart"}}   
+    </div>
+{{/if}}
