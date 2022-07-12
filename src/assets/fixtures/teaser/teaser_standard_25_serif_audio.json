@@ -7,6 +7,14 @@
             "@->value": "25"
         },
         {
+            "@->contentpath": "logicItem.includeModel.is25Teaser",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.is25Teaser",
+            "@->value": "true"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.allowAVConsumption",
             "@->value": "true"
         },
@@ -14,7 +22,7 @@
             "@->contentpath": "logicItem.includeModel.teaserLead",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "video"
+                "@->contentpath": "audio"
             }
         },
         {

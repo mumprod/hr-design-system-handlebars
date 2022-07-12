@@ -1,8 +1,8 @@
 {{#with this.teaserLead.avDocument}}
     {{~#if this.isVideo ~}}
-        {{~> components/video/video_element _isTeaser=true _teaser=../this ~}}
+        {{~> components/video/video_element _isTeaser=true _teaser=../this _aspectRatio=../_aspectRatio ~}}
     {{~/if~}}
     {{~#if this.isAudio ~}}
-        isAudio
+         {{~> components/audio/audio_element _isTeaser=true _teaser=../this  _audioUrl=this.audioUrl _variant=this.imageVariant _noDelay=../_noDelay _aspectRatio=../_aspectRatio _is25Teaser=../_is25Teaser _teaserSize=../_teaserSize~}}             
     {{~/if~}}
 {{/with}}

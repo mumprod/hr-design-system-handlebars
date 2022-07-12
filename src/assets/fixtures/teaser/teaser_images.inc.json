@@ -8,12 +8,12 @@
             "fallback": "https://picsum.photos/id/188/480/270",
             "sources": [
                 {
-                    "media": "all and (max-width: 39.938em)",
+                    "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
                     "srcset": "https://picsum.photos/id/188/320/320 320w, https://picsum.photos/id/188/480/480 480w, https://picsum.photos/id/188/640/640 640w, https://picsum.photos/id/188/960/960 960w"
                 },
                 {
-                    "media": "all and (min-width: 40em) and (max-width: 58.938em)",
+                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
                     "sizes": "25vw",
                     "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w"
                 },
@@ -34,12 +34,12 @@
             "fallback": "https://picsum.photos/id/189/480/270",
             "sources": [
                 {
-                    "media": "all and (max-width: 39.938em)",
+                    "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
                     "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w"
                 },
                 {
-                    "media": "all and (min-width: 40em) and (max-width: 58.938em)",
+                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
                     "sizes": "25vw",
                     "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w, https://picsum.photos/id/189/960/540 960w"
                 },
@@ -60,12 +60,12 @@
             "fallback": "https://picsum.photos/id/190/480/270",
             "sources": [
                 {
-                    "media": "all and (max-width: 39.938em)",
+                    "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
                     "srcset": "https://picsum.photos/id/190/320/320 320w, https://picsum.photos/id/190/480/480 480w, https://picsum.photos/id/190/640/640 640w, https://picsum.photos/id/190/960/960 960w"
                 },
                 {
-                    "media": "all and (min-width: 40em) and (max-width: 58.938em)",
+                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
                     "sizes": "25vw",
                     "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w, https://picsum.photos/id/190/960/540 960w"
                 },
@@ -86,12 +86,12 @@
             "fallback": "https://picsum.photos/id/191/480/270",
             "sources": [
                 {
-                    "media": "all and (max-width: 39.938em)",
+                    "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
                     "srcset": "https://picsum.photos/id/191/320/320 320w, https://picsum.photos/id/191/480/480 480w, https://picsum.photos/id/191/640/640 640w, https://picsum.photos/id/191/960/960 960w"
                 },
                 {
-                    "media": "all and (min-width: 40em) and (max-width: 58.938em)",
+                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
                     "sizes": "25vw",
                     "srcset": "https://picsum.photos/id/191/320/180 320w, https://picsum.photos/id/191/480/270 480w, https://picsum.photos/id/191/640/360 640w, https://picsum.photos/id/191/960/540 960w"
                 },
