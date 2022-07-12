@@ -3,7 +3,7 @@
         data-new-hr-mediaplayer-loader-ds='{
             "type": "audio", 
             "position": "{{if _isTeaser 'teaser' 'page'}}",
-            "teaserSize" : "{{if ../../this.teasersize ../../this.teasersize '00' }}",
+            "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
             "playbackUnsupported":"{{loca "audio_unsupported"}}",
             "playbackError":"{{loca "audio_playback_error"}}",
             "playbackFileNotFound":"{{loca "audio_fileNotFound"}}",
@@ -16,8 +16,21 @@
                 <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
             {{/with~}}
         {{/unless}}
-        <div class="relative {{_aspectRatio}}">
+        <div 
+        {{!-- TODO Refactor this to use something like is25Teaser --}}
+        {{#switch _teaserSize~}}
+            {{~#case "25"}}    
+                class="relative"  
+                :class="avStart ? 'ar-16-9' : '{{_aspectRatio}}'"
+            {{/case~}}
+            {{~#default "class='relative ar-16-9'"}}    
+            {{/default~}}
+        {{~/switch~}}   
+        
+        
+        >
             {{~#if _isTeaser~}}
+            <div x-show="!avStart">
                 {{#with _teaser}}
                     {{~#if _isCopyText~}}
                         {{> components/base/image/responsive_image this.teaserImage _type=(if this.teasertype this.teasertype 'story') _variant=(if this.imageVariant this.imageVariant '100-copytext')  _addClassImg="ar__content" _addClass=_addClass _noDelay=../_noDelay}}
@@ -30,9 +43,18 @@
                     {{~/if~}}
                 {{~/with~}}
                 {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-4 mx-4 js-mediaplayer__button" _showIcon=true _icon="play" _addIconClass="w-6 h-6 inline" _label="Audio" _srOnly="true" _alpineClick="avStart = !avStart" _x-show="!avStart"}}
+            </div>
             {{else}}
                 {{> components/base/image/responsive_image this.teaseritem _type=_type _variant=_variant _addClass=_addClass _addClassImg="ar__content" _noDelay=_noDelay }}
             {{~/if~}}
+
+            {{#switch _teaserSize~}}
+                {{~#case "25"}}      
+                    <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
+                        {{> components/base/image/icon _icon="audio" _iconmap="icons" _addClass="w-12 h-12 fill-white " }}
+                    </div>
+                {{/case~}}
+            {{~/switch~}}
 
             {{~#with _audioUrl ~}}
                 <audio x-show="avStart" class="absolute bottom-0 w-full{{~#with _addClassAudio }} {{this}}{{/with}}"
