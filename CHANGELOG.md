@@ -1,3 +1,15 @@
+# v0.49.16 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: updates the configuration of the [#273](https://github.com/mumprod/hr-design-system-handlebars/pull/273) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.49.15 (Wed Jul 13 2022)
 
 #### 🐛 Bug Fix
