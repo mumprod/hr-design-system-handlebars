@@ -1,3 +1,15 @@
+# v0.49.15 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- add js-functionality to tabbox [#272](https://github.com/mumprod/hr-design-system-handlebars/pull/272) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.49.14 (Tue Jul 12 2022)
 
 #### 🐛 Bug Fix
