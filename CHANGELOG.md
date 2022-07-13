@@ -1,3 +1,15 @@
+# v0.49.17 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- - new SVGs are used for Round buttons [#274](https://github.com/mumprod/hr-design-system-handlebars/pull/274) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.49.16 (Wed Jul 13 2022)
 
 #### 🐛 Bug Fix
