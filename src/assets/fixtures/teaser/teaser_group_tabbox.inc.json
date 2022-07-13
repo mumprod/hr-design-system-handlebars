@@ -191,13 +191,31 @@
             "teaserIndex": 3,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -216,13 +234,55 @@
             "teaserIndex": 4,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json"
+                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        }
+                    ]
                 }
             ]
         }

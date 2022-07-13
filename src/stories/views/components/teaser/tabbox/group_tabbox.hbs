@@ -1,4 +1,7 @@
-<section class="pb-7 {{#if this.isFirstTeaser}}-active{{/if}}">
+<section 
+    x-show="tab === '{{this.groupTitle}}'"
+    class="pb-7 {{#if this.isFirstTeaser}}active{{/if}}"
+>
     {{~#if this.hasGroupTitle~}}
         <h3 class="sr-only">
             <a class="" href="#tgp{{this.teaserIndex}}">
@@ -22,4 +25,4 @@
             </a>
         </div>
     {{~/if~}}
-</section> 
+</section>
