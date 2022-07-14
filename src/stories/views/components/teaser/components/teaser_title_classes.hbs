@@ -1,4 +1,16 @@
-{{#switch teaserType~}}
+{{!-- 
+This handlebars template is responisible to render the needed classnames for Teaser headlines
+As we use tailwind css no cascade is used to style components. As Teaser Headline Sizes dependent
+on 4 parameters the logic was outsourced to this file.
+
+the 4 parameters are:
+- teaserType
+- size
+- _isMobile1to1
+- fontVariant
+
+--}}
+{{~#switch teaserType~}}
     {{~#case 'standard-ds'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
