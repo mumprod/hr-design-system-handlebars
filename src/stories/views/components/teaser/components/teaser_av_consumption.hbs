@@ -9,3 +9,6 @@
          {{~> components/video/livestream/video_livestream _isTeaser=true _teaser=../this  _audioUrl=this.audioUrl _variant=this.imageVariant _noDelay=../_noDelay _aspectRatio=../_aspectRatio _is25Teaser=../_is25Teaser _teaserSize=../_teaserSize~}}             
     {{~/if~}}
 {{/with}}
+{{#if _is25Teaser~}}  
+        {{> components/button/button_transparent _showIcon="true" _title="Mediaplayer schließen" _icon="arrow-up" _iconmap="icons"_addIconClass="w-3 h-3 fill-current" _addClass="md:hidden absolute top-full right-0" _x-show="avStart" _alpineClick="avStart = false; $dispatch('player_colosed')"}}
+{{~/if~}}
