@@ -11,7 +11,7 @@
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
                 "teaserSize": "hero",
-                "is25Teaser": false,
+                "isMobile1to1": false,
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
                     "htmlDate": "20.02.1983",
@@ -97,7 +97,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "is25Teaser": false,
+                        "isMobile1to1": false,
                         "teaserType": "standard-ds",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
@@ -122,7 +122,7 @@
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
                 "teaserSize": "hero",
-                "is25Teaser": false,
+                "isMobile1to1": false,
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
                     "htmlDate": "20.02.1983",
@@ -223,7 +223,7 @@
                             "@->contentpath": "standard_1"
                         },
                         "teaserSize": "hero",
-                        "is25Teaser": false,
+                        "isMobile1to1": false,
                         "teaserType": "standard-ds",
                         "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
                         "topline": "Überglücklich, aber ohne Mama",
