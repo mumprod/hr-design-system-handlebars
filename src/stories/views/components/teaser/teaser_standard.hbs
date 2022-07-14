@@ -1,16 +1,17 @@
 <article class="col-span-12 flex gap-y-3 gap-x-4 
-{{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4 flex-col"," md:col-span-6 flex-col"," flex-col"]'}}
-{{~#if this.isMobile1to1}} js-is1to1 px-5 md:px-0 md:flex-col{{/if~}} 
+{{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}
+{{~#if this.isMobile1to1}} js-is1to1 px-5 md:px-0 md:flex-col{{else}} flex-col{{/if~}} 
  "
     x-data="{ avStart: false }"
     {{#if this.isMobile1to1}}
             :class="avStart ? 'flex-col' : 'flex-row'"
     {{/if}}   
     >
-    <figure class="relative {{inline-switch this.teaserSize '["25"]' '["basis-2/5 md:flex-full ar-1-1 md:ar-16-9", "ar-16-9"]'}} ">    
+    <figure class="relative 
+    {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
         {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
     </figure>
-    <div class="{{inline-switch this.teaserSize '["25"]' '["basis-3/5 md:flex-full"]'}} ">
+    <div class="{{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}">
         <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
             {{#>components/base/link css="hover:text-toplineColor" doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="headlineLink" }} 
                 {{> components/teaser/components/teaser_heading 
@@ -21,7 +22,8 @@
                 size=this.teaserSize 
                 title=this.title 
                 topline=this.topline 
-                teaserType=this.teaserType}}            
+                teaserType=this.teaserType
+                _isMobile1to1=this.isMobile1to1}}            
             {{/components/base/link}}   
         </header>
         <section class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
