@@ -32,23 +32,25 @@ document.addEventListener('alpine:init', () => {
         init(){
             let lastScrollTop = 0
             let height = window.innerHeight
+
+            //Globale Variable, true = user initiated scroll / false = programmatic scroll via JS (e.g. click on Anchor Link)
             let userScroll = false;
             window.userScroll = userScroll;
 
+            // gets fired when user initated scroll happened, global variable is used in Ticker-Topnews and other anchor links to prevent expanding of the navigation if scrollposition gets corrected by JS. 
             const mouseEvent = () => {
                 userScroll = true;
                 window.userScroll = true;
-                //console.log('user action detected')
             }
-
+            // detect if the user clicked/dragged the scrollbar manually
             const clickedOnScrollbar = mouseX => {
                 return document.documentElement.offsetWidth <= mouseX ? true : false; 
             }
-              
+            // if clicked on scrollbar, fire user initiated mouse event
             const mouseDownHandler = e => {
                 clickedOnScrollbar(e.clientX) ? mouseEvent() : null
             };
-
+            // main scroll handler, defines scroll direction, percent of viewport scrolled, visibility of navigation and subnavigation
             const scrollHandler = () => {
                 let winScroll = document.body.scrollTop || document.documentElement.scrollTop
                 winScroll > lastScrollTop ? this.scrollingDown = true : this.scrollingDown = false
