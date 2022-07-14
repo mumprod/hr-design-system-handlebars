@@ -17,7 +17,7 @@
             {{/with~}}
         {{/unless}}
         <div 
-            {{~#if _is25Teaser}} 
+            {{~#if _isMobile1to1}} 
                 class="relative"  
                 :class="avStart ? 'ar-16-9' : '{{_aspectRatio}}'"
             {{else}}
@@ -26,7 +26,7 @@
         >
             {{~#if _isTeaser~}}
             <div 
-                {{~#if _is25Teaser}}
+                {{~#if _isMobile1to1}}
                     x-show="!avStart"
                 {{~/if~}}
                 >               
@@ -48,7 +48,7 @@
             {{~/if~}}
 
 
-            {{~#if _is25Teaser~}}
+            {{~#if _isMobile1to1~}}
                 <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
                     {{> components/base/image/icon _icon="audio" _iconmap="icons" _addClass="w-12 h-12 fill-white " }}
                 </div>
