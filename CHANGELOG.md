@@ -1,3 +1,16 @@
+# v0.50.1 (Fri Jul 15 2022)
+
+#### 🐛 Bug Fix
+
+- add json for ClusterTeaser [#278](https://github.com/mumprod/hr-design-system-handlebars/pull/278) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.50.0 (Fri Jul 15 2022)
 
 #### 🚀 Enhancement
