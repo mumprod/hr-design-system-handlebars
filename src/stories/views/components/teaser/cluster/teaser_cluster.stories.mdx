@@ -1,0 +1,28 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+
+import cluster from './teaser_cluster.hbs'
+import clusterData from '../fixtures/teaser_cluster.json' 
+
+<Meta   title="Komponenten/Teaser/Cluster"
+        parameters={{
+            layout: 'fullscreen',
+        }}
+        argTypes={{
+        }} 
+        
+        />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return cluster({ brand, ...args })
+}
+
+
+<Preview withToolbar>
+    <Story  name="test" args={clusterData}>
+        {Template.bind({})} 
+    </Story> 
+</Preview>
