@@ -93,8 +93,26 @@ Mobil:
 <br />
 
 ***
-<br />
 
+Navigation mit zusätzlichem Service-Item:
+
+<Canvas>
+    <Story name="Mit Warnung" args={JsonData2}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+***
+
+Navigation mit zusätzlicher Subnavigation: 
+
+<Canvas>
+    <Story name="Mit Subnavigation" args={JsonData3}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+<br />
 
 <a name="scrollverhalten" />
 
@@ -142,8 +160,6 @@ Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Vi
 <br />
 
 ***
-
-
 
 <br />
 <a href="#top">Back to top</a>
@@ -228,7 +244,8 @@ Für die Erklärung können die Kommentare direkt in der Datei herangezogen werd
 ### Sub-Komponenten
 <br />
 
-<b>Anchor Navigation</b> <br/>
+<b>Anchor Navigation</b> 
+<br />
 
 **anchor_navigation.hbs** Inkludiert folgende Subkomponenten:
 
@@ -243,9 +260,11 @@ In dieser (nicht sichtbaren) Sub-Komponente werden Anchorlinks zu den Teilbereic
 </div>
 ``` 
 
-<hr/>
+***
+
 <br/>
-<b>Brand Navigation</b> <br/>
+<b>Brand Navigation</b>
+<br />
 
 **brand_navigation.hbs** inkludiert folgende Subkomponenten:
 
@@ -259,9 +278,11 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 </div>
 ```
 
-<hr/>
-<br/>
+***
+
+<br />
 <b>Service Navigation</b>
+<br />
 
 **service_navigation.hbs** inkludiert folgende Subkomponenten:
 
@@ -271,7 +292,7 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 * navigation_flyout.hbs
 * navigation_search.hbs
 * burger.hbs
-<br/>
+<br />
 
 Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-Items und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br /> 
 Die gesamte ServiceNavigation liegt innerhalb des **"serviceNavWrapper"**. Bei mobilem Viewport wird dieser Wrapper beim Scrollen der Seite mit Hilfe der Funktion **"shouldServiceNavBeHidden()"** ein- bzw. ausgeblendet. 
@@ -304,11 +325,21 @@ Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die 
 </div> 
 ```
 
-Innerhalb der Komponente **'service_list'** befinden sich die Service-Navigation-Items. Es existieren derzeit folgende Items: "Warnung", "Video/Podcast", "Verkehr", "Wetter". Das "Warnung"-Item führt direkt zu einer Verlinkten Seite. Ein Click auf die anderen Items öffnet jeweils ein Flyout, in welchem Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen dargstellt sind. 
+Innerhalb der Service-List Komponente **(service_list.hbs)** befinden sich die Service-Navigation-Items. Ein Click auf ein Item öffnet entweder direkt eine Zielseite oder ein Flyout mit Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen. Standard-Items sind "Video/Podcast", "Verkehr" und "Wetter". Bei Unwetterwarnungen wird zusätzlich ein "Warnung"-Item angezeigt. 
 Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeHidden()"** je nach Scrollposition die Service-Icons ausgeblendet werden.  
 <br />
-
+Service-Navigation Flyout Desktop:
+<br /><br />
 <img src="/images/navi_flyout_service.png" />
+<br />
+
+***
+
+<br />
+<br />
+Service-Navigation Flyout Tablet/Mobil:
+<br /><br />
+<img src="/images/navi_tablet_flyout_service.png" />
 <br />
 <br />
 <a href="#top">Back to top</a>
@@ -323,40 +354,22 @@ Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeH
 * section_navigation_item.hbs
 * navigation_flyout.hbs
 
-<br/>
-Die Section-Navigation stellt die Links zu den einzelnen Themenbereichen der Hessenschau bereit. Die Navigation-Items der Section Navigation können je nach Einstellung vom CMS direkt zur Themen-Indexseite verlinken oder ihrerseits ein Submenu öffnen, über dessen Einträge dann Themenbereiche angesteuert werden können: 
+<br />
+Die Section-Navigation stellt die Links zu den einzelnen Themenbereichen der Hessenschau bereit. Die Navigation-Items der Section Navigation können je nach Einstellung vom CMS direkt zur Themen-Indexseite verlinken oder ihrerseits ein Flyout öffnen, über dessen Einträge dann Themenbereiche angesteuert werden können: 
+<br />
+<br />
+Section-Navigation Flyout Desktop:
 <br />
 <br />
 <img src="/images/navi_flyout_section.png" />
-<br/><br/> 
+<br /><br /> 
 Bei den Viewports "mobil" und "tablet" wird die Section-Navigation in Form eines Burger-Menus dargstellt:
 <br />
 <br />
 <img src="/images/navi_mobil_burger_open.png" />
-<br/><br/> 
-<hr/>
+<br /><br /> 
+
+***
+
 <br />
 <a href="#top">Back to top</a>
-
-
-### Header-Komponente mit Warnung-Item in der ServiceList:
-
-Hier ist die Navigation mit zusätzlichem Service-Item zu sehen. 
-
-<Canvas>
-    <Story name="Mit Warnung" args={JsonData2}>
-        {Template.bind({})}
-    </Story>
-</Canvas>
-
-### Header-Komponente mit Subnavigation:
-
-Hier ist die Navigation mit zusätzlicher Subnavigation zu sehen. 
-
-<Canvas>
-    <Story name="Mit Subnavigation" args={JsonData3}>
-        {Template.bind({})}
-    </Story>
-</Canvas>
-
-<ArgsTable story="Default" />
