@@ -1,3 +1,15 @@
+# v0.50.3 (Fri Jul 15 2022)
+
+#### 🐛 Bug Fix
+
+- removes loader from main.js + some more doku [#279](https://github.com/mumprod/hr-design-system-handlebars/pull/279) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.50.2 (Fri Jul 15 2022)
 
 #### 🐛 Bug Fix
