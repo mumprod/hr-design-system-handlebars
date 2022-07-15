@@ -1,3 +1,15 @@
+# v0.50.2 (Fri Jul 15 2022)
+
+#### 🐛 Bug Fix
+
+- refactor header.stories.mdx [#276](https://github.com/mumprod/hr-design-system-handlebars/pull/276) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.50.1 (Fri Jul 15 2022)
 
 #### 🐛 Bug Fix
