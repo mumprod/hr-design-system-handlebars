@@ -27,10 +27,19 @@ function createSvgMaps() {
                 .pipe(
                     svgMin({
                         multipass: true,
+                        full: true,
                         plugins: [
-                            { name: 'convertStyleToAttrs', active: true },
-                            { name: 'removeViewBox', active: false },
-                            { name: 'removeUnknownsAndDefaults', active: false },
+                            {
+                                name: 'preset-default',
+                                params: {
+                                    overrides: {
+                                        removeViewBox: false,
+                                        removeUnknownsAndDefaults: false,
+                                    },
+                                },
+                            },
+
+                            'convertStyleToAttrs',
                         ],
                     })
                 )
@@ -75,16 +84,18 @@ function createSvgMapsForBrands() {
                 return src(`${iconsDir}/svgmap/*.svg`)
                     .pipe(
                         svgMin({
+                            full: true,
                             plugins: [
-                                { name: 'convertStyleToAttrs', active: true },
                                 {
-                                    name: 'removeViewBox',
-                                    active: false,
+                                    name: 'preset-default',
+                                    params: {
+                                        overrides: {
+                                            removeViewBox: false,
+                                            removeUnknownsAndDefaults: false,
+                                        },
+                                    },
                                 },
-                                {
-                                    name: 'removeUnknownsAndDefaults',
-                                    active: false,
-                                },
+                                'convertStyleToAttrs',
                             ],
                         })
                     )
@@ -128,25 +139,27 @@ function minimizeSvgSrcFiles() {
             return src(`${iconsDir}/*.src.svg`)
                 .pipe(
                     svgMin({
+                        full: true,
                         plugins: [
-                            { name: 'convertStyleToAttrs', active: true },
                             {
-                                name: 'convertPathData',
+                                name: 'preset-default',
                                 params: {
-                                    straightCurves: false,
+                                    overrides: {
+                                        removeViewBox: false,
+                                        cleanupAttrs: false,
+                                        collapseGroups: false,
+                                        cleanupIDs: false,
+                                        convertPathData: {
+                                            straightCurves: false,
+                                        },
+                                        convertTransform: {
+                                            shortScale: false,
+                                            floatPrecision: 2,
+                                        },
+                                    },
                                 },
                             },
-                            {
-                                name: 'convertTransform',
-                                params: {
-                                    shortScale: false,
-                                    floatPrecision: 2,
-                                },
-                            },
-                            { name: 'collapseGroups', active: false },
-                            { name: 'cleanupAttrs', active: false },
-                            { name: 'cleanupIDs', active: false },
-                            { name: 'removeViewBox', active: false },
+                            'convertStyleToAttrs',
                         ],
                     })
                 )

@@ -1,0 +1,72 @@
+<div class="c-audioElement">
+    <div id="{{nextRandom}}" class="{{~#with _addClass }} {{this}}{{/with}} js-load" 
+        data-hr-mediaplayer-loader-ds='{
+            "type": "audio", 
+            "position": "{{if _isTeaser 'teaser' 'page'}}",
+            "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
+            "playbackUnsupported":"{{loca "audio_unsupported"}}",
+            "playbackError":"{{loca "audio_playback_error"}}",
+            "playbackFileNotFound":"{{loca "audio_fileNotFound"}}",
+            "mediaMetadata":{{this.mediaMetadata}} {{#if _isTeaser}},
+            "autoplay":"true"{{/if}} }'
+        >
+        {{!-- geotag --}}
+        {{#unless _hideGeotag}}
+            {{~#with _geotag}}
+                <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
+            {{/with~}}
+        {{/unless}}
+        <div 
+            {{~#if _isMobile1to1}} 
+                class="relative"  
+                :class="avStart ? 'ar-16-9' : '{{_aspectRatio}}'"
+            {{else}}
+                class="relative {{_aspectRatio}}"   
+            {{~/if~}}      
+        >
+            {{~#if _isTeaser~}}
+            <div 
+                {{~#if _isMobile1to1}}
+                    x-show="!avStart"
+                {{~/if~}}
+                >               
+                {{#with _teaser}}
+                    {{~#if _isCopyText~}}
+                        {{> components/base/image/responsive_image this.teaserImage _type=(if this.teasertype this.teasertype 'story') _variant=(if this.imageVariant this.imageVariant '100-copytext')  _addClassImg="ar__content" _addClass=_addClass _noDelay=../_noDelay}}
+                    {{else}}
+                        {{#>components/base/link _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
+                                    _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
+                                    _clickLabelPrefix2="mediaLink" }}
+                            {{> components/base/image/responsive_image this.teaserImage _type=(if this.teasertype this.teasertype 'story') _variant=(if this.imageVariant this.imageVariant '100-copytext')  _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _addClass=_addClass _noDelay=../../_noDelay}}
+                        {{/components/base/link}} 
+                    {{~/if~}}
+                {{~/with~}}
+                {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-5 mx-5 text-blue-jellyBean hover:fill-blue-jellyBean js-mediaplayer__button" _showIcon=true _icon="audio_button" _label="Audio" _srOnly="true" _alpineClick="avStart = !avStart" _x-show="!avStart"}}
+            </div>
+            {{else}}
+                {{> components/base/image/responsive_image this.teaseritem _type=_type _variant=_variant _addClass=_addClass _addClassImg="ar__content" _noDelay=_noDelay }}
+            {{~/if~}}
+
+
+            {{~#if _isMobile1to1~}}
+                <div x-show="avStart" class="flex items-center justify-center ar-16-9 bg-blue-jellyBean">
+                    {{> components/base/image/icon _icon="audio" _iconmap="icons" _addClass="w-12 h-12 fill-white " }}
+                </div>
+            {{~/if~}}
+
+            {{~#with _audioUrl ~}}
+                <audio x-show="avStart" class="absolute bottom-0 w-full{{~#with _addClassAudio }} {{this}}{{/with}}"
+                    controls="controls" preload="none" controlsList="nodownload" oncontextmenu="return false;">
+                    <source src="{{this}}" type='audio/mpeg'>
+                </audio>
+                {{~#if ../this.isPodcast~}}
+                    <a href="{{../this.podcastDownloadUrl}}" class="downloadLink button-invert js-load"{{#with
+                            ../this.trackingData}}
+                    data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+                        {{> components/base/image/icon _icon='download-button' _addClass="icon--media"}}
+                    </a>
+                {{~/if~}}
+            {{~/with~}}
+        </div>
+    </div>
+</div>

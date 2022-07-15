@@ -113,6 +113,15 @@ const AudioElement = function (options, rootElement) {
     }
 
     listen('hr:global:stopOtherAVs', shouldIStopPlaying)
+
+    return {
+        play: function() {
+            audio.play()
+        },
+        pause: function() {
+            audio.pause()
+        }
+    }
 }
 
 export default AudioElement

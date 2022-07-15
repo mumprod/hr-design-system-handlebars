@@ -1,15 +1,21 @@
-<div class="w-full p-5">
-
-    <b><u>Tabbox-Data</u></b><br/><br/>
-
-    wanda-Id: {{this.wandaPageId}}<br/><br/>
-
-    Tabs:<br/>
-    {{~#each this.tabbedGroup~}}
-        {{this.title}}<br/>
-    {{~/each~}}
-    <br/>
-    <b>Teasergruppen:</b><hr/>
+<div 
+  x-data="{ tab: '{{this.tabbedGroup.[0].title}}' }"
+  class="grid grid-cols-12 pt-6 md:pt-7 bg-[#dce8f0] mx-0 md:rounded-tl-3xl md:rounded-br-3xl col-main gap-x-6 gap-y-6"
+>
+  <section class="col-span-full" data-hr-group-tabbed='{"wandaPageId":"{{this.wandaPageId}}"}'>
+    <div class="flex flex-wrap justify-center mb-7 mx-1.5" role="tablist">
+      {{~#each this.tabbedGroup~}}
+        <button  onclick="window.location.href='#tgp{{@index}}';"
+                 :class="tab === '{{this.title}}' ? 'text-white bg-blue-congress' : 'bg-white text-blue-congress'" 
+                 x-on:click.prevent="tab = '{{this.title}}'"  
+                 class="text-base font-heading py-1 px-2 m-1.5" 
+                 type="button" 
+                 role="tab"
+        >
+          {{this.title}}
+        </button>
+      {{~/each~}}
+    </div>
     {{~> components/teaser/teaser_logic/teaser_logic ~}}
-
+  </section>
 </div>

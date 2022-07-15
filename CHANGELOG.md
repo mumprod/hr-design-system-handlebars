@@ -1,3 +1,111 @@
+# v0.50.0 (Fri Jul 15 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Changes the name of the js feature [#277](https://github.com/mumprod/hr-design-system-handlebars/pull/277) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.49.18 (Thu Jul 14 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1635 [#275](https://github.com/mumprod/hr-design-system-handlebars/pull/275) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.49.17 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- - new SVGs are used for Round buttons [#274](https://github.com/mumprod/hr-design-system-handlebars/pull/274) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.49.16 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: updates the configuration of the [#273](https://github.com/mumprod/hr-design-system-handlebars/pull/273) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.49.15 (Wed Jul 13 2022)
+
+#### 🐛 Bug Fix
+
+- add js-functionality to tabbox [#272](https://github.com/mumprod/hr-design-system-handlebars/pull/272) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.49.14 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1683 [#271](https://github.com/mumprod/hr-design-system-handlebars/pull/271) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.49.13 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1576 [#267](https://github.com/mumprod/hr-design-system-handlebars/pull/267) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.49.12 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- add loca-tag for linktext in tabbox [#270](https://github.com/mumprod/hr-design-system-handlebars/pull/270) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.49.11 (Tue Jul 12 2022)
+
+#### 🐛 Bug Fix
+
+- add tabbox-canvas + teaser + link [#269](https://github.com/mumprod/hr-design-system-handlebars/pull/269) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.49.10 (Tue Jul 12 2022)
 
 #### 🐛 Bug Fix

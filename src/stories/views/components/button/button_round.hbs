@@ -1,19 +1,18 @@
-<button 
-    {{~#if _aria}} aria-label="{{_aria}}"{{/if}} 
-    {{~#if _isButton}} type="button"{{else}} type="submit"{{/if~}} 
-    {{~#if _name}} name="{{_name}}"{{/if}} 
-    class="bg-blue-500 hover:bg-blue-700 text-white rounded-full border-4 border-white p-1 {{_addClass}}{{#if _webview}} -webview{{/if}}"
-    {{~#if _value}} value="{{_value}}"{{/if}}
-    {{~#if _alpineClick}} @click="{{_alpineClick}}"{{/if}}
-
-
->
-    {{~#if _showIcon~}}
-        {{> components/base/image/icon _icon=_icon _iconmap=_iconmap _addClass=_addIconClass _webview=_webview}}
-    {{/if~}}
-    {{~#if _label~}}
-        <span class="sr-only">
-            {{~_label~}}
-        </span>
-    {{/if~}}
-</button>
+{{> components/button/button 
+    _aria=_aria
+    _isButton=_isButton
+    _title=_title
+    _name=_name
+    _label=_label
+    _value=_value
+    _showIcon="true"
+    _icon=_icon
+    _iconmap=_iconmap
+    _addIconClass="w-10 h-10 inline"
+    _addClass="fill-white hover:text-white"
+    _addClass2=_addClass
+    _webview=_webview
+    _x-show=_x-show
+    _alpineClick=_alpineClick
+    _srOnly=_srOnly
+}}

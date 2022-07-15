@@ -12,6 +12,8 @@ module.exports = {
             current: 'currentColor',
             black: '#000000',
             white: '#ffffff',
+            'blue-jellyBean': '#006dc1',
+            'orange-spicyCarrot': '#d34600'
         },
         screens: {
             print: { raw: 'print' },
