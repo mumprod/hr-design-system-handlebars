@@ -1,0 +1,18 @@
+<div class="w-full p-5">
+
+    <b><u>Schlagzeilen-Box</u></b><br/><br/>
+    <b>Title:</b> {{this.title}}<br/>
+    <b>teaserLogo:</b> {{this.teaserLogo}}<br/>
+    <b>showFirstImageOrGenreImage:</b> {{this.showFirstImageOrGenreImage}}<br/>
+    <b>HideTitle:</b> {{this.HideTitle}}<br/>
+    <b>showGenreImage:</b> {{this.showGenreImage}}<br/>
+    <b>showFirstImage:</b> {{this.showFirstImage}}<br/>
+    <br/>
+
+    <b>clusterTeaserItems:</b><br/>
+    {{~#each this.clusterTeaserItems}}
+        {{this.logicItem.includeModel.title}}<br/>
+    {{/each~}}
+    <br/><hr/>
+
+</div>
