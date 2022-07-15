@@ -1,6 +1,6 @@
 <div class="c-audioElement">
     <div id="{{nextRandom}}" class="{{~#with _addClass }} {{this}}{{/with}} js-load" 
-        data-new-hr-mediaplayer-loader-ds='{
+        data-hr-mediaplayer-loader-ds='{
             "type": "audio", 
             "position": "{{if _isTeaser 'teaser' 'page'}}",
             "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
@@ -62,7 +62,7 @@
                 {{~#if ../this.isPodcast~}}
                     <a href="{{../this.podcastDownloadUrl}}" class="downloadLink button-invert js-load"{{#with
                             ../this.trackingData}}
-                    data-new-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+                    data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
                         {{> components/base/image/icon _icon='download-button' _addClass="icon--media"}}
                     </a>
                 {{~/if~}}

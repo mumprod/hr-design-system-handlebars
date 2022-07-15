@@ -2,13 +2,13 @@
     <a {{#with this.webviewUrl}}data-webviewurl="{{this}}"{{/with}} href="{{this.url}}" {{#with this.webviewUrl}}{{/with}} 
         class="sb-link{{#if ../css}} {{../css}}{{/if}}{{#if ../doTracking}} js-load{{else}}{{#if ../this.content.isFileDownload}} js-loadScript{{/if}}{{/if}}{{#if ../isSelected}} {{defaultIfEmpty ../selectedCssClass "-current"}}{{/if}}"
         {{#if ../doNavigationTracking}}
-        data-new-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "1","clickLabel":"{{../clickLabelType}}{{#if ../clickLabelPrefix1}}::{{../clickLabelPrefix1}}{{/if}}::{{../clickLabelPrefix2}}-Link geklickt"}]}'
+        data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "1","clickLabel":"{{../clickLabelType}}{{#if ../clickLabelPrefix1}}::{{../clickLabelPrefix1}}{{/if}}::{{../clickLabelPrefix2}}-Link geklickt"}]}'
         {{/if}}
         {{#if ../doTracking}}
-            {{#with this.content.trackingData}}data-new-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "{{#if ../this.content.isFileDownload}}{{this.pageName}}{{else}}mediabuttonclick::{{../../clickLabelPrefix1}}::{{../../clickLabelPrefix2}}{{/if}}"}]}'{{/with}}
+            {{#with this.content.trackingData}}data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "{{#if ../this.content.isFileDownload}}{{this.pageName}}{{else}}mediabuttonclick::{{../../clickLabelPrefix1}}::{{../../clickLabelPrefix2}}{{/if}}"}]}'{{/with}}
         {{else}}
             {{#if ../this.content.isFileDownload}}
-                {{#with this.content.trackingData}}data-new-hr-click-tracking='{"settings": [{"type":"download","secondLevelId": "{{this.secondLevelId}}","clickLabel": "{{this.pageName}}"}]}'{{/with}}
+                {{#with this.content.trackingData}}data-hr-click-tracking='{"settings": [{"type":"download","secondLevelId": "{{this.secondLevelId}}","clickLabel": "{{this.pageName}}"}]}'{{/with}}
             {{/if}}
         {{/if}}
         {{#if this.isTargetBlank}} target="_blank"  rel="noopener{{#if this.hasNoReferrerFlag}} noreferrer{{/if}}"{{/if}}
