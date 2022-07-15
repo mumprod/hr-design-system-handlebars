@@ -353,6 +353,10 @@
 
 /*! purgecss end ignore */
 
+.sbdocs-content {
+    max-width:1140px !important;
+}
+
 .hide-scroll-bar {
     -ms-overflow-style: none;
     scrollbar-width: none;

@@ -72,6 +72,18 @@ module.exports = {
                     },
                 ],
                 include: path.resolve(__dirname, '../'),
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|jpg|jpeg|gif|svg)$/,
+                use: [
+                  {
+                    loader: "file-loader",
+                    options: {
+                      name: "[path][name].[ext]",
+                      context: "",
+                    },
+                  },
+                ],
             }
         )
 
