@@ -1,3 +1,15 @@
+# v0.50.0 (Fri Jul 15 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Changes the name of the js feature [#277](https://github.com/mumprod/hr-design-system-handlebars/pull/277) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.49.18 (Thu Jul 14 2022)
 
 #### 🐛 Bug Fix
