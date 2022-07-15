@@ -1,3 +1,15 @@
+# v0.50.4 (Fri Jul 15 2022)
+
+#### 🐛 Bug Fix
+
+- Changed alternative 100% and 50% teaser to 1to1 in mobile [#280](https://github.com/mumprod/hr-design-system-handlebars/pull/280) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.50.3 (Fri Jul 15 2022)
 
 #### 🐛 Bug Fix
