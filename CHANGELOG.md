@@ -1,3 +1,15 @@
+# v0.50.5 (Mon Jul 18 2022)
+
+#### 🐛 Bug Fix
+
+- fix anchor-bug, add pseudo-button [#282](https://github.com/mumprod/hr-design-system-handlebars/pull/282) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.50.4 (Fri Jul 15 2022)
 
 #### 🐛 Bug Fix
