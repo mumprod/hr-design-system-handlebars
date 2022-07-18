@@ -1,0 +1,44 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "50"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative-ds"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "md_2_tab"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserLead",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_lead.inc.json",
+                "@->contentpath": "audio"
+            }
+        }
+    ]
+}
