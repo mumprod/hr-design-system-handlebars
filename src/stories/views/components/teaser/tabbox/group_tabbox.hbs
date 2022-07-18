@@ -19,10 +19,8 @@
         {{~> components/teaser/teaser_logic/teaser_logic ~}}
     </div>
     {{~#if this.link~}}
-        <div class="flex justify-center">
-            <a class="text-base pt-7 font-heading text-toplineColor hover:underline" href="{{this.link.url}}">
-                {{~loca "group_tabbed_more" this.title~}}
-            </a>
+        <div class="flex justify-center pt-7">
+            {{~> components/button/button_pseudo _linkTitle=(loca "group_tabbed_more" this.title) ~}}
         </div>
     {{~/if~}}
 </section>
