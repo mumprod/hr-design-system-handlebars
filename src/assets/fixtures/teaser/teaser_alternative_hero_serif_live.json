@@ -7,18 +7,18 @@
             "@->value": "components/teaser/teaser_alternative"
         },
         {
-            "@->contentpath": "logicItem.includeModel.teaserSize",
-            "@->value": "25"
-        },
-        {
             "@->contentpath": "logicItem.includeModel.teaserType",
             "@->value": "alternative-ds"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
+            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserLead",
             "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "sm_4"
+                "@->jsoninclude": "teaser/teaser_lead.inc.json",
+                "@->contentpath": "live"
             }
         }
     ]
