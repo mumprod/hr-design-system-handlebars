@@ -7,6 +7,7 @@
       {{~#each this.tabbedGroup~}}
         <button  onclick="window.location.href='#tgp{{@index}}';"
                  :class="tab === '{{this.title}}' ? 'text-white bg-blue-congress' : 'bg-white text-blue-congress'" 
+                 x-effect="$el.removeAttribute('onclick')"
                  x-on:click.prevent="tab = '{{this.title}}'"  
                  class="text-base font-heading py-1 px-2 m-1.5" 
                  type="button" 
