@@ -10,7 +10,7 @@
         },
         {
             "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
-            "@->contentpath": "teaser_3_33"
+            "@->contentpath": "teaser_3_33_highlight"
         },
         {
             "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
