@@ -6,11 +6,19 @@
         },
         {
             "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
+            "@->contentpath": "teaser_3_33_highlight"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
             "@->contentpath": "teaser_2_50"
         },
         {
             "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
-            "@->contentpath": "teaser_3_33_highlight"
+            "@->contentpath": "teaser_4_25"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
+            "@->contentpath": "tabBoxTeaser"
         },
         {
             "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",

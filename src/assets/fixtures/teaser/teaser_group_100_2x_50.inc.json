@@ -165,7 +165,7 @@
         }
     },
     "teaser_3_33_highlight": {
-        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includePath": "components/teaser/group_teaser/group_highlight",
         "includeModel": {
             "hasLink": true,
             "link": "#gruppe1",
@@ -212,5 +212,9 @@
                 }
             ]
         }
+    },
+    "tabBoxTeaser": {
+        "@->jsoninclude": "teaser/teaser_tabbox.json"
     }
 }
+
