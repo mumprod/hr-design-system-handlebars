@@ -1,0 +1,34 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
+
+
+import grid from "./group_teaser.hbs";
+
+<Meta
+  title="Komponenten/Teaser/Gruppen"
+  argTypes={{
+    
+  }}
+/>
+
+export const Template = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return grid({ text, ...args });
+};
+
+# Button
+
+Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
+
+<Preview withToolbar>
+  <Story
+    name="main"
+    args={{
+      
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="main" />
