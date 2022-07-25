@@ -31,7 +31,7 @@
         @apply px-6 py-3 text-lg;
     }
 
-    .headline--barrier {
+    .headline-barrier {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -39,15 +39,24 @@
         text-align: center;
     }
 
-    .headline--barrier:before,
-    .headline--barrier:after {
+    .headline-barrier:before,
+    .headline-barrier:after {
         content: '';
         border-top: 1px solid;
-        margin: 3px 20px 0 0;
+        margin: 3px 10px 0 0;
         flex: 1 0 20px;
     }
 
-    .headline--barrier:after {
-        margin: 3px 0 0 20px;
+    .headline-barrier:after {
+        margin: 3px 0 0 10px;
+        
+    }
+    @media screen(md) {
+        .headline-barrier:after {
+            margin: 3px 0 0 20px;           
+        }
+        .headline-barrier:before {
+            margin: 3px 20px 0 0;           
+        }
     }
 }
