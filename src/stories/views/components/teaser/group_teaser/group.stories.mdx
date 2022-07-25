@@ -1,19 +1,38 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
 
 
-import grid from "./group_teaser.hbs";
+import groupTeaser from "./group_teaser.hbs";
+import groupHighlight from "./group_highlight.hbs";
+import teaserGroup100 from '../fixtures/teaser_group_100.json' 
 
 <Meta
   title="Komponenten/Teaser/Gruppen"
   argTypes={{
     
   }}
+  parameters={{
+        layout: 'fullscreen',
+  }}
+  decorators={[
+    (Story) => {
+        return `<div class="grid my-5 grid-page">
+                  <div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">
+                    ${Story()}
+                  </div>
+                </div>`
+    },
+  ]}
 />
 
-export const Template = ({ text, ...args }) => {
+export const Template1 = ({ text, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return grid({ text, ...args });
+  return groupTeaser({ text, ...args });
+};
+export const Template2 = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return groupHighlight({ text, ...args });
 };
 
 # Button
@@ -22,12 +41,16 @@ Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
 
 <Preview withToolbar>
   <Story
-    name="main"
-    args={{
-      
-    }}
+    name="100% Gruppe mit Überschrift"
+    args={teaserGroup100.includeModel} 
   >
-    {Template.bind({})}
+    {Template1.bind({})}
+  </Story>
+  <Story
+    name="100% Gruppe mit Überschrift Highlight"
+    args={teaserGroup100.includeModel} 
+  >
+    {Template2.bind({})}
   </Story>
 </Preview>
 
