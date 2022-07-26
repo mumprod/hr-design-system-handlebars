@@ -1,5 +1,5 @@
 import { hr$, listenOnce, fireEvent, listen } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelperDs.subfeature'
+import { uxAction } from 'base/tracking/atiHelper.subfeature'
 import VideoOnDemandPlayer from 'components/video/videoOnDemandPlayerDs.subfeature'
 import AudioElement from 'components/audio/audioElementDs.subfeature'
 import VideoLivestream from 'components/video/livestream/videoLivestreamDs.subfeature'

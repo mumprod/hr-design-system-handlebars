@@ -1,6 +1,6 @@
 import { fireEvent, hr$, listen } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelperDs.subfeature'
-import ATIMediaHelper from 'base/tracking/atiMediaHelperDs.subfeature'
+import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import ATIMediaHelper from 'base/tracking/atiMediaHelper.subfeature'
 
 const AudioElement = function (options, rootElement) {
     'use strict'
