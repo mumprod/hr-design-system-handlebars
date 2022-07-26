@@ -1,9 +1,9 @@
-import { fireEvent, hr$, listen, loadScript } from 'hrQueryDs'
+import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
 import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
 
 const VideoOnDemandPlayer = function (options, rootElement) {
     'use strict'
-console.log('VideoOnDemandPlayer');
+    console.log('VideoOnDemandPlayer')
     const skinPath = options.skinPath,
         isAdaptiveStream = options.isAdaptiveStream,
         basePlayerUrl = options.baseUrl,
@@ -86,7 +86,7 @@ console.log('VideoOnDemandPlayer');
     }
 
     const setupPlayer = function () {
-        if (isAdaptiveStream == true) {     
+        if (isAdaptiveStream == true) {
             loadFileFromUrl(adaptiveStreamingUrl)
         } else {
             mediaStreamArray[0] = {
@@ -112,7 +112,6 @@ console.log('VideoOnDemandPlayer');
 
     const fetchPlayerStyle = function (url, id) {
         return new Promise(function (resolve, reject) {
-            
             if (document.getElementById(id)) {
                 resolve('Style wurde bereits geladen')
                 console.log('style was already loaded before')
@@ -346,9 +345,8 @@ console.log('VideoOnDemandPlayer');
         //         player.play()
         //     }
         // })
-       
     }
-    
+
     if (trackingCookie.isTrackingAccepted('agf') && window.gfkConnector && agfMetadata) {
         gfkConnector.init(function (gfkLinkID) {
             agfMetadata.nol_c20 = 'p20,' + gfkLinkID
@@ -359,12 +357,12 @@ console.log('VideoOnDemandPlayer');
     }
 
     return {
-        play: function() {
+        play: function () {
             player.play()
         },
-        pause: function() {
+        pause: function () {
             player.pause()
-        }
+        },
     }
 }
 

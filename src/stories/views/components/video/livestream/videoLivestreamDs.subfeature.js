@@ -1,4 +1,4 @@
-import { fireEvent, hr$, listen, loadScript } from 'hrQueryDs'
+import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
 import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
 
 const VideoLivestream = function (options, rootElement) {
@@ -251,12 +251,12 @@ const VideoLivestream = function (options, rootElement) {
     }
 
     return {
-        play: function() {
+        play: function () {
             player.play()
         },
-        pause: function() {
+        pause: function () {
             player.pause()
-        }
+        },
     }
 }
 
