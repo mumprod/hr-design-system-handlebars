@@ -1,19 +1,27 @@
 {
     "logicItems": [
         {
-            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
             "@->contentpath": "teaser_1_100"
         },
         {
-            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
+            "@->contentpath": "teaser_3_33_highlight"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
             "@->contentpath": "teaser_2_50"
         },
         {
-            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
-            "@->contentpath": "teaser_3_33"
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
+            "@->contentpath": "teaser_4_25"
         },
         {
-            "@->jsoninclude": "teaser/teaser_group_100_2x_50.inc.json",
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
+            "@->contentpath": "tabBoxTeaser"
+        },
+        {
+            "@->jsoninclude": "teaser/teaser_groups.inc.json",
             "@->contentpath": "teaser_4_25"
         }
     ]
