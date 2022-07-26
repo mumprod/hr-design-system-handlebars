@@ -1,6 +1,6 @@
 
-<div class="grid bg-gray-100 grid-page">
-  <div class="grid grid-cols-12 py-6 bg-green-300 sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">   
+<div class="grid grid-page">
+  <div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">
     {{#>components/grid/grid_group size="100"}}
       <h2 class="text-4xl headline--barrier col-span-full">Gruppen 100%</h2>
       {{#>components/grid/grid_item size="12"}}
@@ -11,7 +11,7 @@
         </a>
       {{/components/grid/grid_item}}   
     {{/components/grid/grid_group}} 
-    {{#>components/grid/grid_group_full  }}    
+    {{#>components/grid/grid_group_highlight  }}    
       <h2 class="text-4xl headline--barrier col-span-full">Gruppen 100% mit blauen Hintergrung bis Rand</h2>
       {{#>components/grid/grid_item size="6"}}
         <div class="flex items-center justify-center text-5xl text-white bg-gray-500 aspect-video">
@@ -23,7 +23,7 @@
           6/12 = 50%    
         </div>
       {{/components/grid/grid_item}} 
-    {{/components/grid/grid_group_full}} 
+    {{/components/grid/grid_group_highlight}} 
 
     {{#>components/grid/grid_group size="100"}}
 

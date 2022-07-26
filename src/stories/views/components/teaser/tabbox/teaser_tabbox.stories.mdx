@@ -15,7 +15,9 @@ import tabboxData from '../fixtures/teaser_tabbox.json'
         decorators={[
         (Story) => {
             return `<div class="grid my-5 grid-page">
-                ${Story()} 
+                    <div>
+                        ${Story()}
+                    </div> 
                 </div>`
         },
     ]}
@@ -31,7 +33,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 
 <Preview withToolbar>
-    <Story  name="Beispiel 1" args={tabboxData}>
+    <Story  name="Beispiel 1" args={tabboxData.includeModel}>
         {Template.bind({})} 
     </Story> 
 </Preview>
