@@ -1,4 +1,4 @@
-import { hr$ } from 'hrQueryDs'
+import { hr$ } from 'hrQuery'
 const Foo = (context) => {
     const { options } = context
     const { element: rootElement } = context
