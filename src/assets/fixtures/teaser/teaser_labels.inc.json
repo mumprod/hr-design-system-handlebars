@@ -14,5 +14,13 @@
             "bylineSsi": "BylineText aus ssi",
             "bylineText": "BylineText"
         }
+    },
+    "download": {
+        "type": "download",
+        "loca": "label_download",
+        "byline": {
+            "bylineSsi": "ZIP - 3mb",
+            "bylineText": "BylineText"
+        }
     }
 }
