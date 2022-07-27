@@ -1,3 +1,5 @@
-{{#>components/base/link css="px-2 border text-toplineColor border-toplineColor font-heading hover:underline" }}
-    {{_linkTitle}}
+{{#>components/base/link }}
+    <span class="px-4 py-2.5 border {{inline-switch _color '["white","grey"]' '["text-white border-white","text-grey-scorpion border-grey-scorpion","text-toplineColor border-toplineColor"]'}} font-heading hover:bg-white hover:text-toplineColor hover:border-toplineColor">
+        {{_linkTitle}}
+    </span>
 {{/components/base/link}}
