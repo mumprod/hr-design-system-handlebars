@@ -14,7 +14,6 @@ const MediaplayerLoader = function (context) {
         teaserSize = options.teaserSize,
         config = options.config,
         audioContent = hr$('.js-audioElement__audio', rootElement)[0],
-        // containerId = options.containerId,
         rootParent = rootElement.parentNode,
         mediaplayerButton = hr$('.js-mediaplayer__button', rootParent)[0]
 
