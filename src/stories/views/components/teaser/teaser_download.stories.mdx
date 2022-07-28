@@ -1,8 +1,11 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
 
+import teaser25Download from './fixtures/teaser_standard_25_serif_download.json'
 import teaser50Download from './fixtures/teaser_standard_50_serif_download.json'
-
+import teaser100Download from './fixtures/teaser_standard_100_serif_download.json'
+import teaserAlternative50Download from './fixtures/teaser_alternative_50_serif_download.json'
+import teaserAlternative100Download from './fixtures/teaser_alternative_100_serif_download.json'
 
 <Meta
     title="Komponenten/Teaser/Download"
@@ -41,7 +44,19 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 }
 
 <Preview withToolbar>
+    <Story name="Download 25" args={teaser25Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
     <Story name="Download 50" args={teaser50Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Download 100" args={teaser100Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Download alternative 50" args={teaserAlternative50Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Download alternative 100" args={teaserAlternative100Download.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
