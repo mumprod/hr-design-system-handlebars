@@ -1,3 +1,27 @@
+# v0.51.2 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: hrQuery is moved out of the components [#289](https://github.com/mumprod/hr-design-system-handlebars/pull/289) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.51.1 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: All js files that get loaded by [#288](https://github.com/mumprod/hr-design-system-handlebars/pull/288) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.51.0 (Wed Jul 27 2022)
 
 #### 🚀 Enhancement

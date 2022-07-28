@@ -36,10 +36,7 @@ module.exports = {
             components: path.resolve(__dirname, '../src/stories/views/components'),
             base: path.resolve(__dirname, '../src/stories/views/base'),
             tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
-            hrQuery$: path.resolve(
-                __dirname,
-                '../src/stories/views/components/generic/hrQuery.subfeature.js'
-            ),
+            hrQuery$: path.resolve(__dirname, '../src/stories/views/generic/hrQuery.subfeature.js'),
             initializer$: path.resolve(
                 __dirname,
                 '../build/webpack/feature-loader/initializer/initializer.js'
