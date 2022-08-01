@@ -17,6 +17,7 @@ module.exports = function(text, options) {
         "comment_anchor_2": " Kommentaren des Artikels springen",
         "date_simple_at": options + " Uhr",
         "label_ticker":"Ticker",
+        "label_download":"Download",
         "label_media":"Media",
         "group_tabbed_more":"weitere Meldungen aus " + options,
     }

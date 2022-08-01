@@ -8,6 +8,7 @@ import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.
 import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
 
 <Meta
     title="Komponenten/Teaser/Alternativ"
@@ -67,6 +68,10 @@ Der Alternativ-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (
     Desktop = Bild(33%) neben Text(66%) <br/>
     Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
 
+<b>Alternativ 50% mit Download:</b> <br/>
+    Desktop = Bild(33%) neben Text(66%) <br/>
+    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>    
+
 Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
 
 ## Sub-Komponenten
@@ -109,6 +114,9 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     </Story>
     <b>Alternativ 50%</b>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 50 mit Download" args={teaser50Download.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
