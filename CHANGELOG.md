@@ -1,3 +1,15 @@
+# v0.52.2 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- - added ugly closing and openeing div again [#291](https://github.com/mumprod/hr-design-system-handlebars/pull/291) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.52.1 (Tue Aug 02 2022)
 
 #### 🐛 Bug Fix
