@@ -13,7 +13,7 @@ import JsonData3 from './fixtures/site_header_mit_submenu.json'
             viewports: [360, 768, 1024],
         },
         layout: 'fullscreen',
-        docs: { inlineStories : false, iframeHeight: 200 },
+        docs: { inlineStories : false, iframeHeight: 240 },
         viewport: {
       viewports: INITIAL_VIEWPORTS
     },
@@ -69,7 +69,6 @@ Die wesentlichen Funktionen und Features der Navigation sind mit dem Javascript-
 Für das CSS wird das Framework [**TailwindCSS**](https://www.tailwindcss.com) verwendet.
 
 
-
 <a name="varianten" />
 
 ### Varianten
@@ -94,16 +93,24 @@ Mobil:
 
 ***
 
-Navigation mit zusätzlichem Service-Item:
+<br />
+<br />
+<br />
+<br />
+Navigation mit zusätzlichem Service-Item: 
 
 <Canvas>
-    <Story name="Mit Warnung" args={JsonData2}>
+    <Story name="Mit Warnung" args={JsonData2}>bla
         {Template.bind({})}
     </Story>
 </Canvas>
 
 ***
 
+<br />
+<br />
+<br />
+<br />
 Navigation mit zusätzlicher Subnavigation: 
 
 <Canvas>
@@ -294,10 +301,10 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 * burger.hbs
 <br />
 
-Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-Items und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br /> 
+Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-List **(service_list.hbs)** und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br /> 
 Die gesamte ServiceNavigation liegt innerhalb des **"serviceNavWrapper"**. Bei mobilem Viewport wird dieser Wrapper beim Scrollen der Seite mit Hilfe der Funktion **"shouldServiceNavBeHidden()"** ein- bzw. ausgeblendet. 
 
-Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service_list.hbs)** und die Komponente für die Suchfunktion **(navigation_search.hbs)**. 
+Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service_list.hbs)** , die Komponente für die Suchfunktion **(navigation_search.hbs)** sowie für mobil/Tablet das Burger-Menu **(burger.hbs)**. 
 
 **header.hbs:**
 
