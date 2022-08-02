@@ -1,3 +1,63 @@
+# v0.52.0 (Mon Aug 01 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1675 Download Teaser [#290](https://github.com/mumprod/hr-design-system-handlebars/pull/290) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v0.51.2 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: hrQuery is moved out of the components [#289](https://github.com/mumprod/hr-design-system-handlebars/pull/289) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.51.1 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: All js files that get loaded by [#288](https://github.com/mumprod/hr-design-system-handlebars/pull/288) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.51.0 (Wed Jul 27 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1567 [#286](https://github.com/mumprod/hr-design-system-handlebars/pull/286) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.50.8 (Wed Jul 27 2022)
+
+#### 🐛 Bug Fix
+
+- re-style buttons [#287](https://github.com/mumprod/hr-design-system-handlebars/pull/287) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.50.7 (Tue Jul 26 2022)
 
 #### 🐛 Bug Fix

@@ -1,0 +1,40 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserDownload",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative-ds"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "md_1_tab"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "download"
+            }
+        }
+    ]
+}

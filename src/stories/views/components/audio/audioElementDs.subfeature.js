@@ -1,6 +1,6 @@
-import { fireEvent, hr$, listen } from 'hrQueryDs'
-import { uxAction } from 'base/tracking/atiHelperDs'
-import ATIMediaHelper from 'base/tracking/atiMediaHelperDs'
+import { fireEvent, hr$, listen } from 'hrQuery'
+import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import ATIMediaHelper from 'base/tracking/atiMediaHelper.subfeature'
 
 const AudioElement = function (options, rootElement) {
     'use strict'
@@ -115,12 +115,12 @@ const AudioElement = function (options, rootElement) {
     listen('hr:global:stopOtherAVs', shouldIStopPlaying)
 
     return {
-        play: function() {
+        play: function () {
             audio.play()
         },
-        pause: function() {
+        pause: function () {
             audio.pause()
-        }
+        },
     }
 }
 

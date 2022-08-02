@@ -1,4 +1,4 @@
-import { getJSONCookie, setJSONCookie } from 'hrQueryDs'
+import { getJSONCookie, setJSONCookie } from 'hrQuery'
 
 const TrackingCookie = function () {
     let cookie = {}
