@@ -1,3 +1,15 @@
+# v0.52.1 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- better wording in mdx [#285](https://github.com/mumprod/hr-design-system-handlebars/pull/285) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.52.0 (Mon Aug 01 2022)
 
 #### 🚀 Enhancement
