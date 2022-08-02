@@ -22,5 +22,13 @@
             "bylineSsi": "ZIP - 3mb",
             "bylineText": "BylineText"
         }
+    },
+    "event": {
+        "type": "event",
+        "loca": "label_event",
+        "byline": {
+            "bylineSsi": "01.09.22, 20:00 Uhr",
+            "bylineText": "BylineText"
+        }
     }
 }
