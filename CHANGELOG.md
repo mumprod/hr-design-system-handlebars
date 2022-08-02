@@ -1,3 +1,63 @@
+# v0.52.2 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- - added ugly closing and openeing div again [#291](https://github.com/mumprod/hr-design-system-handlebars/pull/291) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.52.1 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- better wording in mdx [#285](https://github.com/mumprod/hr-design-system-handlebars/pull/285) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.52.0 (Mon Aug 01 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1675 Download Teaser [#290](https://github.com/mumprod/hr-design-system-handlebars/pull/290) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v0.51.2 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: hrQuery is moved out of the components [#289](https://github.com/mumprod/hr-design-system-handlebars/pull/289) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.51.1 (Thu Jul 28 2022)
+
+#### 🐛 Bug Fix
+
+- FEATURE: All js files that get loaded by [#288](https://github.com/mumprod/hr-design-system-handlebars/pull/288) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.51.0 (Wed Jul 27 2022)
 
 #### 🚀 Enhancement
