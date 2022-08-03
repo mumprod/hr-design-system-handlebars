@@ -1,7 +1,7 @@
 {{~#with this.logicItem~}}
     {{~#with this.includeModel~}}
         {{~#if (isStorybook)~}}
-            {{~> components/base/load_dynamic templatePath=../includePath ~}}
+            {{~> components/base/load_dynamic _templatePath=../includePath ~}}
         {{~else~}}
             {{~> (lookup ../. 'includePath')~}}
         {{~/if~}}

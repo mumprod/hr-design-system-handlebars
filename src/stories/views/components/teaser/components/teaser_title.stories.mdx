@@ -5,11 +5,11 @@ import titleComponent from './teaser_title.hbs'
 <Meta
     title="Komponenten/Teaser/Komponenten/Titel"
     argTypes={{
-        text: {
+        _text: {
             control: 'text',
             description: 'Titel',
         },
-        size: {
+        _size: {
             options: ['hero', '100', '50', '33', '25'],
             control: { type: 'select' },
             description: 'Größe der Überschrift',
@@ -19,7 +19,7 @@ import titleComponent from './teaser_title.hbs'
                 },
             },
         },
-        fontVariant: {
+        _fontVariant: {
             description: 'Schriftvariante',
             control: {
                 type: 'inline-radio',
@@ -34,10 +34,10 @@ import titleComponent from './teaser_title.hbs'
     }}
 />
 
-export const Template = ({ text, ...args }) => {
+export const Template = ({ _text, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<span>${title}</span>`;
-    return titleComponent({ text, ...args })
+    return titleComponent({ _text, ...args })
 }
 
 # Titel
@@ -89,10 +89,10 @@ teaserType=teaserType}}
     <Story
         name="Titel Serif - Hero"
         args={{
-            text: 'Dies ist der Titel eines 100%-Teasers',
-            size: 'hero',
-            fontVariant: 'serif',
-            teaserType: 'standard-ds',
+            _text: 'Dies ist der Titel eines 100%-Teasers',
+            _size: 'hero',
+            _fontVariant: 'serif',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}
@@ -100,10 +100,10 @@ teaserType=teaserType}}
     <Story
         name="Titel Serif - normal"
         args={{
-            text: 'Dies ist der Titel eines 66%-, 50%- oder 33%-Teasers',
-            size: '33',
-            fontVariant: 'serif',
-            teaserType: 'standard-ds',
+            _text: 'Dies ist der Titel eines 66%-, 50%- oder 33%-Teasers',
+            _size: '33',
+            _fontVariant: 'serif',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}
@@ -111,10 +111,10 @@ teaserType=teaserType}}
     <Story
         name="Titel Serif - small"
         args={{
-            text: 'Dies ist der Titel eines 25%-Teasers',
-            size: '25',
-            fontVariant: 'serif',
-            teaserType: 'standard-ds',
+            _text: 'Dies ist der Titel eines 25%-Teasers',
+            _size: '25',
+            _fontVariant: 'serif',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}

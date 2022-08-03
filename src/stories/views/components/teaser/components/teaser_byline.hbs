@@ -19,7 +19,7 @@
 
                 {{~#if this.showTeaserInfoSection}}
                     <span class="uppercase">
-                        {{../documentSection~}}
+                        {{../this.documentSection~}}
                     </span>                    
                     <span class="mx-px last-of-type:hidden">|</span>                    
                 {{/if}}
@@ -28,13 +28,13 @@
         {{/with}}
 
         {{!--Profiles--}}
-        {{#if profiles}}
-            <span>{{profiles}}</span>            
+        {{#if this.profiles}}
+            <span>{{this.profiles}}</span>            
             <span class="mx-px last-of-type:hidden">|</span>            
         {{/if}}    
 
     {{!--Comments--}}
     {{#with this.commentsSsi}}
-        {{> components/base/loadSSI templatePath='components/teaser/components/teaser_comments' }}    
+        {{> components/base/loadSSI _templatePath='components/teaser/components/teaser_comments' }}    
     {{/with}}
 </p>
