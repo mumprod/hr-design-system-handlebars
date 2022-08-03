@@ -1,3 +1,15 @@
+# v0.53.0 (Wed Aug 03 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: The items in a group are not [#292](https://github.com/mumprod/hr-design-system-handlebars/pull/292) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.52.2 (Tue Aug 02 2022)
 
 #### 🐛 Bug Fix
