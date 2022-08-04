@@ -4,11 +4,11 @@
     </figure> 
     <div class="absolute flex justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl" aria-hidden="true">
         <div class="self-center block mx-8 text-center text-white">
-            {{> components/teaser/components/teaser_heading _headlineTag="h2" _size=teaserSize _font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
+            {{> components/teaser/components/teaser_heading _headlineTag="h2" _label=this.label _readMore=this.link.readMoreText.readMoreScreenreader _size=this.teaserSize _title=this.title _topline=this.topline _teaserType=this.teaserType _font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
         </div>
     </div>
     {{#>components/base/link _css="absolute flex w-full h-full justify-center" _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
-        <div class="self-end {{inline-switch teaserSize '["33","50"]' '["mb-8 px-2","mb-8 md:mb-16 px-4 py-2.5"]'}} text-white border border-white font-heading hover:bg-white hover:text-toplineColor hover:border-toplineColor">{{this.link.readMoreText.readMoreLong}}</div>
+        <div class="self-end {{inline-switch this.teaserSize '["33","50"]' '["mb-8 px-2","mb-8 md:mb-16 px-4 py-2.5"]'}} text-white border border-white font-heading hover:bg-white hover:text-toplineColor hover:border-toplineColor">{{this.link.readMoreText.readMoreLong}}</div>
     {{/components/base/link}} 
     <span class="sr-only">{{this.link.readMoreText.readMoreLong}}: {{this.title}}</span> 
 </article>

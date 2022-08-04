@@ -5,15 +5,15 @@ import teaserTextComponent from './teaser_text.hbs'
 <Meta
     title="Komponenten/Teaser/Komponenten/Teasertext"
     argTypes={{
-        text: {
+        _text: {
             control: 'text',
             description: 'teaserText',
         },
-        size: {
+        _size: {
             options: ['hero', '100', '50', '33', '25'],
             control: { type: 'inline-radio' },
         },
-        font: {
+        _font: {
             table: {
                 disable: true,
             },
@@ -21,8 +21,8 @@ import teaserTextComponent from './teaser_text.hbs'
     }}
 />
 
-export const Template = ({ text, ...args }) => {
-    return teaserTextComponent({ text, ...args })
+export const Template = ({ _text, ...args }) => {
+    return teaserTextComponent({ _text, ...args })
 }
 
 # teaserText
@@ -33,8 +33,8 @@ Beispiele für die teaserText-Komponente:
     <Story
         name="Teasertext"
         args={{
-            text: 'Dies ist der Teasertext eines normalen Teasers',
-            size: '50',
+            _text: 'Dies ist der Teasertext eines normalen Teasers',
+            _size: '50',
         }}
     >
         {Template.bind({})}
@@ -42,9 +42,9 @@ Beispiele für die teaserText-Komponente:
     <Story
         name="Teasertext Hero-Teaser"
         args={{
-            text: 'Dies ist der Teasertext eines Hero-Teasers',
-            size: 'hero',
-            font: 'md:text-base md:leading-4 lg:leading-5',
+            _text: 'Dies ist der Teasertext eines Hero-Teasers',
+            _size: 'hero',
+            _font: 'md:text-base md:leading-4 lg:leading-5',
         }}
         parameters={{
             controls: {
