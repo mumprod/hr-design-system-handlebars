@@ -5,15 +5,15 @@ import teaserHeading from './teaser_heading.hbs'
 <Meta
     title="Komponenten/Teaser/Komponenten/Teaserheading"
     argTypes={{
-        topline: {
+        _topline: {
             control: 'text',
             description: 'Text der Dachzeile',
         },
-        title: {
+        _title: {
             control: 'text',
             description: 'Text der Überschrift',
         },
-        headlineTag: {
+        _headlineTag: {
             control: {
                 type: 'select',
                 options: ['span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
@@ -25,7 +25,7 @@ import teaserHeading from './teaser_heading.hbs'
                 },
             },
         },
-        fontVariant: {
+        _fontVariant: {
             description: 'Schriftvariante',
             control: {
                 type: 'inline-radio',
@@ -37,7 +37,7 @@ import teaserHeading from './teaser_heading.hbs'
                 },
             },
         },
-        size: {
+        _size: {
             options: ['hero', '100', '50', '33', '25'],
             control: { type: 'select' },
             description: 'Größe der Überschrift',
@@ -50,10 +50,10 @@ import teaserHeading from './teaser_heading.hbs'
     }}
 />
 
-export const Template = ({ topline, ...args }) => {
+export const Template = ({ _topline, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return teaserHeading({ topline, ...args })
+    return teaserHeading({ _topline, ...args })
 }
 
 # Teaser-Heading
@@ -75,12 +75,12 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
             },
         }}
         args={{
-            topline: 'Das ist eine wirklich sehr lange Topline',
-            title: 'Das ist eine wirklich sehr lange Headline',
-            headlineTag: 'h1',
-            fontVariant: 'serif',
-            size: 'hero',
-            teaserType: 'standard-ds',
+            _topline: 'Das ist eine wirklich sehr lange Topline',
+            _title: 'Das ist eine wirklich sehr lange Headline',
+            _headlineTag: 'h1',
+            _fontVariant: 'serif',
+            _size: 'hero',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}
@@ -104,12 +104,12 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
             },
         }}
         args={{
-            topline: 'Das ist eine wirklich sehr lange Topline',
-            title: 'Das ist eine wirklich sehr lange Headline',
-            headlineTag: 'h1',
-            fontVariant: 'serif',
-            size: '33',
-            teaserType: 'standard-ds',
+            _topline: 'Das ist eine wirklich sehr lange Topline',
+            _title: 'Das ist eine wirklich sehr lange Headline',
+            _headlineTag: 'h1',
+            _fontVariant: 'serif',
+            _size: '33',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}
@@ -131,12 +131,12 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
             },
         }}
         args={{
-            topline: 'Das ist eine wirklich sehr lange Topline',
-            title: 'Das ist eine wirklich sehr lange Headline',
-            headlineTag: 'h1',
-            fontVariant: 'serif',
-            size: '25',
-            teaserType: 'standard-ds',
+            _topline: 'Das ist eine wirklich sehr lange Topline',
+            _title: 'Das ist eine wirklich sehr lange Headline',
+            _headlineTag: 'h1',
+            _fontVariant: 'serif',
+            _size: '25',
+            _teaserType: 'standard-ds',
         }}
     >
         {Template.bind({})}
