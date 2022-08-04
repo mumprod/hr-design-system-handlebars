@@ -49,6 +49,22 @@
                 "audioAuthor": "Audio Author",
                 "hasStatus": false,
                 "hasTeaserItem": true,
+                "moreThenOneEvent": false,
+                "moreThenTwoEvents": false,
+                "firstInstant":{
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Do",
+                        "day": "9"
+                    }
+                },
+                "lastInstant":{
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Fr",
+                        "day": "10"
+                    }
+                },
                 "allowAVConsumption": false,
                 "displayEpgInfos": false,
                 "aspectRatio": "ar--teaserTop",
@@ -160,6 +176,8 @@
                 "audioAuthor": "Audio Author",
                 "hasStatus": false,
                 "hasTeaserItem": true,
+                "moreThenOneEvent": false,
+                "moreThenTwoEvents": false,
                 "firstInstant":{
                     "startDate": {
                         "monthNameShort": "APR",
@@ -169,9 +187,9 @@
                 },
                 "lastInstant":{
                     "startDate": {
-                        "monthNameShort": "JUL",
-                        "weekdayNameShort": "D0",
-                        "day": "7"
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Fr",
+                        "day": "10"
                     }
                 },
                 "allowAVConsumption": false,

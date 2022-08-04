@@ -1,6 +1,8 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard_event.hbs'
-import teaser33EventSerif from './fixtures/teaser_standard_33_serif_event.json'
+import teaser33EventSerif from './fixtures/teaser_standard_33_serif_single_event.json'
+import teaser33TwoEventsSerif from './fixtures/teaser_standard_33_serif_two_events.json'
+import teaser33MultipleEventsSerif from './fixtures/teaser_standard_33_serif_multiple_events.json'
 
 <Meta
     title="Komponenten/Teaser/Event"
@@ -11,7 +13,7 @@ import teaser33EventSerif from './fixtures/teaser_standard_33_serif_event.json'
         teaserSize: {
             control: {
                 type: 'select',
-                options: ['hero', '100', '50', '33', '25'],
+                options: ['33'],
             },
             description: 'Teaser Größe',
             table: {
@@ -45,9 +47,17 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 Der Standard-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
 
-<b>Standard 33 Event:</b> <br/>
+<b>Standard 33 Single Event:</b> <br/>
     Desktop = Text unter dem Bild <br/>
     Mobile = Text unter dem Bild mit Teasertext <br/>
+
+<b>Standard 33 Two Events:</b> <br/>
+    Desktop = Text unter dem Bild <br/>
+    Mobile = Text unter dem Bild mit Teasertext <br/>
+
+<b>Standard 33 Multiple Events:</b> <br/>
+    Desktop = Text unter dem Bild <br/>
+    Mobile = Text unter dem Bild mit Teasertext <br/>        
 
 
 ## Sub-Komponenten
@@ -71,7 +81,13 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 ```
 
 <Preview withToolbar>
-    <Story name="Standard 33 event" args={teaser33EventSerif.logicItem.includeModel}>
+    <Story name="Standard 33 single event" args={teaser33EventSerif.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 33 two events" args={teaser33TwoEventsSerif.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 33 multiple events" args={teaser33MultipleEventsSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
