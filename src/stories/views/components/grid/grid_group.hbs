@@ -1,3 +1,9 @@
-<section class="grid grid-cols-12 items-start bg-white content-start gap-x-6 gap-y-6 col-span-12 {{inline-switch _size '["100","66","50","33","25"]' '["","md:col-span-8","md:col-span-6","md:col-span-4","md:col-span-3"]'}}">
-    {{> @partial-block }}
-</section>
+{{~#if _backgroundColor}}
+    {{#>components/grid/grid_group_highlight _backgroundColor=this.backgroundColor }}  
+        {{> @partial-block }}
+    {{/components/grid/grid_group_highlight }}
+{{else}}
+    {{#>components/grid/grid_group_standard _size=this.teaserSize }}  
+        {{> @partial-block }}
+    {{/components/grid/grid_group_standard }}
+{{/if}}
