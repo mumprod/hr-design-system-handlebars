@@ -1,6 +1,6 @@
 {{#>components/grid/grid_group size=this.teaserSize _backgroundColor=this.backgroundColor }}  
     {{~#if this.hasGroupTitle}}
-        <h2 class="text-4xl col-span-full py-4{{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}} ">
+        <h2 class="text-4xl col-span-full py-4 font-headingSerif{{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
             {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-blue-science" href="{{this.link.url}}">{{/if~}}
                 {{this.groupTitle}}
             {{~#if this.hasLink}}</a>{{/if~}}
