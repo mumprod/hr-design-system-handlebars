@@ -10,48 +10,48 @@
    
     {{#if this.isEvent}}
         {{#if this.moreThenOneEvent}}
-        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-4 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
         <figure class="relative 
             {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
         </figure>
-        <div class="absolute align-middle justify-left w-1/4 h-full bg-gradient-to-t from-white" aria-hidden="true">
-            <div class="self-center block mx-6 text-center text-black">
-                <p class="text-4xl font-headingSerif font-bold">{{> components/teaser/components/teaser_text text=this.firstInstant.startDate.day }}   </p>
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.monthNameShort  }} </p>
-                +
-                <p class="text-4xl font-headingSerif font-bold">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.day }}   </p>
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.monthNameShort  }} </p>
+        <div class="absolute align-middle justify-left w-16 h-full bg-gradient-to-t from-white" aria-hidden="true">
+            <div class="pt-4 self-center block mx-4 text-center text-black">
+                <span class="text-xl font-headingSerif font-bold">{{ this.firstInstant.startDate.day }}   </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
+                +<br>
+                <span class="text-xl font-headingSerif font-bold">{{this.lastInstant.startDate.day }}   </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
             </div>
         </div>
         </article>
         {{else if this.moreThenTwoEvents}}
-        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-4 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
         <figure class="relative 
             {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
         </figure>
-        <div class="absolute align-middle justify-left w-1/4 h-full bg-gradient-to-t from-white" aria-hidden="true">
-            <div class="self-center block mx-6 text-center text-black">
-                <p class="text-4xl font-headingSerif font-bold">{{> components/teaser/components/teaser_text text=this.firstInstant.startDate.day }}   </p>
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.monthNameShort  }} </p>
-                |
-                <p class="text-4xl font-headingSerif font-bold">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.day }}   </p>
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.monthNameShort  }} </p>
+        <div class="absolute align-middle justify-left w-16 h-full bg-gradient-to-t from-white" aria-hidden="true">
+            <div class="pt-4 self-center block mx-4 text-center text-black">
+                <span class="text-xl font-headingSerif font-bold">{{ this.firstInstant.startDate.day }}   </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
+                |<br>
+                <span class="text-xl font-headingSerif font-bold">{{this.lastInstant.startDate.day }}   </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
             </div>
         </div>
         </article>
         {{else}}
-        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+        <article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-4 gap-x-4 {{inline-switch teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
         <figure class="relative 
             {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
         </figure>
-        <div class="absolute flex justify-left w-1/4 h-full bg-gradient-to-t from-white" aria-hidden="true">
-            <div class="self-center block mx-6 text-center text-black">
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.weekdayNameShort  }} </p>
-                <p class="text-4xl font-headingSerif font-bold">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.day }}   </p>
-                <p class="text-3xl font-headingSerif">{{> components/teaser/components/teaser_text text=this.lastInstant.startDate.monthNameShort  }} </p>
+        <div class="absolute flex justify-left w-16 h-full bg-gradient-to-t from-white" aria-hidden="true">
+            <div class="self-center block mx-4 text-center text-black">
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.weekdayNameShort  }} </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.day  }} </span>
+                <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
             </div>
         </div>
         </article>
