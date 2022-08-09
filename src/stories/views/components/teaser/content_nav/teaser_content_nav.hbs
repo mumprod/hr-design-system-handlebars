@@ -1,0 +1,16 @@
+<div class="c-teaser -s{{this.teasersize}} -v{{this.realTeasersize~}}">
+
+    {{#if this.contentNav.isDropdown}}
+        {{> components/content_nav/content_nav _modifier="-as-dropdown" }}
+    
+    {{else this.contentNav.isList }}
+
+        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-button -at-{0}" this.realTeasersize) }}
+
+    {{else}}
+
+        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-mixed -at-{0}" this.realTeasersize) }}
+    
+    {{/if}}
+    
+</div>

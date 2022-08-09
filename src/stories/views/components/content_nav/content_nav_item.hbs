@@ -1,0 +1,9 @@
+<li class="c-content-nav__item{{#if this.isSelected}} -current{{/if}}">
+    {{#decorator "base/link" _doNavigationTracking="true" _clickLabelType="Contentnavigation" _clickLabelPrefix1=this.content.title _cssClasses="c-content-nav__link js-loadScript" _isSelected=this.isSelected}}
+        <span class="c-content-nav__link-icon">
+            {{> base/image/icon _icon="arrow-right" _addClass=""}}
+        </span>
+        <span class="c-content-nav__link-text js-title">{{this.content.title}}</span>
+        {{#if this.hasIcon}}{{> base/image/icon _icon=this.iconName _addClass="icon--primary icon--textRight" _iconmap="icons"}}{{/if}}
+    {{/decorator}}
+</li>

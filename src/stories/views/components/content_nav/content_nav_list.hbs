@@ -1,0 +1,23 @@
+<ul class="c-content-nav__list">
+    {{~#each this.contentNavEntries~}}
+        {{~#if this.isGroup~}}
+        
+            {{#if ../isDropdown}}            
+                
+                <li class="c-content-nav__group">
+                    <div class="c-content-nav__group-title">{{this.title}}</div>
+                    <ul class="c-content-nav__group-list">
+                        {{~#each this.navigationGroup~}}
+                            {{> components/content_nav/content_nav_item }}
+                        {{~/each~}}
+                    </ul>
+                </li>
+                
+            {{/if}}
+        {{else}}
+            
+            {{> components/content_nav/content_nav_item }}
+            
+        {{~/if~}}
+    {{~/each~}}
+</ul>
