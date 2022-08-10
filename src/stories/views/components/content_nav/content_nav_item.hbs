@@ -1,9 +1,10 @@
-<li class="c-content-nav__item{{#if this.isSelected}} -current{{/if}}">
-    {{#decorator "base/link" _doNavigationTracking="true" _clickLabelType="Contentnavigation" _clickLabelPrefix1=this.content.title _cssClasses="c-content-nav__link js-loadScript" _isSelected=this.isSelected}}
-        <span class="c-content-nav__link-icon">
-            {{> base/image/icon _icon="arrow-right" _addClass=""}}
+<li class="mr-6 mb-6 w-auto hover:fill-white hover:text-white {{#if this.isSelected}} -current{{/if}}">
+     {{#>components/base/link.hbs _doNavigationTracking="true" _clickLabelType="Contentnavigation" _clickLabelPrefix1=this.title _css="flex items-center p-2 block bg-white hover:bg-blue-science border whitespace-nowrap overflow-hidden js-loadScript" _isSelected=this.isSelected}}
+        <span class="c-content-nav__link-icon ">
+            {{>components/base/image/icon _icon="arrow-right" _addClass="h-4 w-4 mr-2 " }}
         </span>
-        <span class="c-content-nav__link-text js-title">{{this.content.title}}</span>
-        {{#if this.hasIcon}}{{> base/image/icon _icon=this.iconName _addClass="icon--primary icon--textRight" _iconmap="icons"}}{{/if}}
-    {{/decorator}}
+        <span class="c-content-nav__link-text js-title">{{this.title}}</span>
+        {{#if this.hasIcon}}{{> components/base/image/icon _icon=this.iconName _addClass="icon--primary icon--textRight" _iconmap="icons"}}{{/if}} 
+    {{/components/base/link.hbs}} 
+    
 </li>

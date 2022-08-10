@@ -1,6 +1,7 @@
-<div class="c-teaser -s{{this.teasersize}} -v{{this.realTeasersize~}}">
+<div class="col-span-12 mt-12 px-3 inline-block w-full max-w-full flex c-teaser -s{{this.teasersize}} -v{{this.realTeasersize~}} ">
 
     {{#if this.contentNav.isDropdown}}
+        
         {{> components/content_nav/content_nav _modifier="-as-dropdown" }}
     
     {{else this.contentNav.isList }}
@@ -11,6 +12,6 @@
 
         {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-mixed -at-{0}" this.realTeasersize) }}
     
-    {{/if}}
+    {{/if}} 
     
 </div>

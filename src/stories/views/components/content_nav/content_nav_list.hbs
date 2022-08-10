@@ -1,5 +1,6 @@
-<ul class="c-content-nav__list">
+<ul class="flex flex-wrap p-0 m-0">
     {{~#each this.contentNavEntries~}}
+    
         {{~#if this.isGroup~}}
         
             {{#if ../isDropdown}}            
@@ -17,7 +18,7 @@
         {{else}}
             
             {{> components/content_nav/content_nav_item }}
-            
+           
         {{~/if~}}
     {{~/each~}}
 </ul>

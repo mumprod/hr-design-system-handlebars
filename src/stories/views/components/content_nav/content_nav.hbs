@@ -5,7 +5,7 @@
         </nav>
 
     {{else}}
-        {{#decorator "base/menu/o-dropdown"
+        {{#>components/base/menu/o-dropdown
                      _componentClass="c-content-nav"
                      _modifier=../_modifier
                      _iconOpen="arrow-down"
@@ -30,7 +30,7 @@
 
             </div>
 
-        {{/decorator}}
+        {{/components/base/menu/o-dropdown}}
 
     {{/if}}
 {{/with}}
