@@ -16,7 +16,7 @@
                     {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
                     {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
                 </figure>
-                <div class="absolute flex justify-left w-16 h-full bg-gradient-to-t from-white
+                <div class="absolute flex justify-center w-16 h-full bg-gradient-to-t from-white
                     {{inline-switch teaserSize '["100"]' '["bottom-0 w-full h-2/5 bg-neutral-200 opacity-80"]'}}" 
                     aria-hidden="true">
                     <div class="self-center block mx-4 text-center text-black">
@@ -57,8 +57,8 @@
                     {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
                     {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
                 </figure>
-                <div class="absolute align-middle justify-left w-16 h-full bg-gradient-to-t from-white" aria-hidden="true">
-                    <div class="pt-4 self-center block mx-4 text-center text-black">
+                <div class="absolute flex justify-center w-16 h-full bg-gradient-to-t from-white" aria-hidden="true">
+                    <div class="self-center block mx-4 text-center text-black">
                         <span class="text-xl font-headingSerif font-bold">{{ this.firstInstant.startDate.day }}   </span>
                         <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
                         |<br>
@@ -74,7 +74,7 @@
                         {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
                         {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
                     </figure>
-                    <div class="absolute flex justify-left w-16 h-full bg-gradient-to-t from-white
+                    <div class="absolute flex justify-center w-16 h-full bg-gradient-to-t from-white
                     {{inline-switch teaserSize '["100"]' '["bottom-0 w-full h-2/5 bg-neutral-200 opacity-80"]'}}" 
                     aria-hidden="true">
                         <div class="self-center block mx-4 text-center text-black">
@@ -83,9 +83,7 @@
                             <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
                         </div>
                         <div class="mt-4 {{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}
-                        {{inline-switch teaserSize '["50"]' '[" hidden"]'}}
-                        {{inline-switch teaserSize '["33"]' '[" hidden"]'}}
-                        {{inline-switch teaserSize '["66"]' '[" hidden"]'}}">
+                        {{inline-switch teaserSize '["50","33","66"]' '[" hidden"," hidden"," hidden"]'}}">
                             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                                 {{#>components/base/link css="hover:text-toplineColor" }} 
                                 {{> components/teaser/components/teaser_heading 
