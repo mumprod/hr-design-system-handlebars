@@ -4,7 +4,6 @@ import teaser33SingleEventSerif from './fixtures/teaser_standard_33_serif_single
 import teaser33TwoEventsSerif from './fixtures/teaser_standard_33_serif_two_events.json'
 import teaser33MultipleEventsSerif from './fixtures/teaser_standard_33_serif_multiple_events.json'
 import teaser50SingleEventSerif from './fixtures/teaser_standard_50_serif_single_event.json'
-import teaser66SingleEventSerif from './fixtures/teaser_standard_66_serif_single_event.json'
 import teaser100SingleEventSerif from './fixtures/teaser_standard_100_serif_single_event.json'
 import teaser100TwoEventsSerif from './fixtures/teaser_standard_100_serif_two_events.json'
 
@@ -17,7 +16,7 @@ import teaser100TwoEventsSerif from './fixtures/teaser_standard_100_serif_two_ev
         teaserSize: {
             control: {
                 type: 'select',
-                options: ['33', '50', '66', '100'],
+                options: ['33', '50', '100'],
             },
             description: 'Teaser Größe',
             table: {
@@ -95,9 +94,6 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
         {Template.bind({})}
     </Story>
     <Story name="Standard 50 single event" args={teaser50SingleEventSerif.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Standard 66 single event" args={teaser66SingleEventSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story name="Standard 100 single event" args={teaser100SingleEventSerif.logicItem.includeModel}>
