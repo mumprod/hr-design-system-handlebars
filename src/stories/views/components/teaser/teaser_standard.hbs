@@ -16,9 +16,9 @@
             <div class="flex flex-col items-center justify-center p-4 border-dashed border-r border-gray-800">
                 {{> components/event/instant_dates}}
             </div>
-            {{> components/teaser/components/teaser_body _outerCssClasses="p-4"}}
+            {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'p-4 basis-3/5 md:flex-full' 'p-4')}}
         {{/components/teaser/components/teaser_image_overlay}}
     {{else}}
-        {{> components/teaser/components/teaser_body}}
+        {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'basis-3/5 md:flex-full')}}
     {{/if}}
 </article>
