@@ -1,4 +1,4 @@
-<article class="col-span-12 flex md:flex-row gap-y-3 gap-x-4 md:px-0{{~inline-switch this.teaserSize '["hero","100","50"]' '[" flex-col"," px-5 md:flex-row"," md:col-span-6 px-5 md:flex-row"]'~}}"
+<article class="col-span-12 flex items-start md:flex-row gap-y-3 gap-x-4 md:px-0{{#unless this.isEvent}}{{~inline-switch this.teaserSize '["hero","100","50"]' '[" flex-col"," px-5 md:flex-row"," md:col-span-6 px-5 md:flex-row"]'~}}{{else}} flex-col{{/unless}}"
     x-data="{ avStart: false }"
     {{#if this.isMobile1to1}}
             :class="avStart ? 'flex-col' : 'flex-row'"

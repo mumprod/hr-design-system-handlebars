@@ -1,11 +1,14 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import teaser from './teaser_standard_event.hbs'
+import teaser from './teaser_standard.hbs'
+import teaserAlternative from './teaser_alternativ.hbs'
 import teaser33SingleEventSerif from './fixtures/teaser_standard_33_serif_single_event.json'
 import teaser33TwoEventsSerif from './fixtures/teaser_standard_33_serif_two_events.json'
 import teaser33MultipleEventsSerif from './fixtures/teaser_standard_33_serif_multiple_events.json'
 import teaser50SingleEventSerif from './fixtures/teaser_standard_50_serif_single_event.json'
 import teaser100SingleEventSerif from './fixtures/teaser_standard_100_serif_single_event.json'
 import teaser100TwoEventsSerif from './fixtures/teaser_standard_100_serif_two_events.json'
+import teaserAlternative100SingleEventSerif from './fixtures/teaser_alternative_100_serif_single_event.json'
+import teaserAlternative100TwoEventsSerif from './fixtures/teaser_alternative_100_serif_two_events.json'
 
 <Meta
     title="Komponenten/Teaser/Event"
@@ -43,36 +46,52 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Standard-Teaser 
+export const TemplateAlternative = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaserAlternative({ brand, ...args })
+}
+
+# Standard-Teaser
 
 ## Beschreibung
 
-
 Der Standard-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
 
-<b>Standard 33 Single Event:</b> <br/>
-    Desktop = Text unter dem Bild <br/>
-    Mobile = Text unter dem Bild mit Teasertext <br/>
+<b>Standard 33 Single Event:</b> <br />
+Desktop = Text unter dem Bild <br />
+Mobile = Text unter dem Bild mit Teasertext <br />
 
-<b>Standard 33 Two Events:</b> <br/>
-    Desktop = Text unter dem Bild <br/>
-    Mobile = Text unter dem Bild mit Teasertext <br/>
+<b>Standard 33 Two Events:</b> <br />
+Desktop = Text unter dem Bild <br />
+Mobile = Text unter dem Bild mit Teasertext <br />
 
-<b>Standard 33 Multiple Events:</b> <br/>
-    Desktop = Text unter dem Bild <br/>
-    Mobile = Text unter dem Bild mit Teasertext <br/>        
-
+<b>Standard 33 Multiple Events:</b> <br />
+Desktop = Text unter dem Bild <br />
+Mobile = Text unter dem Bild mit Teasertext <br />{' '}
 
 ## Sub-Komponenten
 
 Die Standard-Teaser-Komponente inkludiert folgende Komponenten:
 
 <ul>
-    <li>components/teaser/components/<b>teaser_lead</b></li>
-    <li>components/base/<b>link</b></li>
-    <li>components/teaser/components/<b>teaser_heading</b></li>
-    <li>components/teaser/components/<b>teaser_text</b></li>
-    <li>components/teaser/components/<b>teaser_byline</b></li>
+    <li>
+        components/teaser/components/<b>teaser_lead</b>
+    </li>
+    <li>
+        components/base/<b>link</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_heading</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_text</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_byline</b>
+    </li>
 </ul>
 
 ## Verwendung
@@ -80,7 +99,7 @@ Die Standard-Teaser-Komponente inkludiert folgende Komponenten:
 Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/teaser/teaser_standard_event}}    
+{{> components/teaser/teaser_standard_event}}
 ```
 
 <Preview withToolbar>
@@ -90,7 +109,10 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Standard 33 two events" args={teaser33TwoEventsSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard 33 multiple events" args={teaser33MultipleEventsSerif.logicItem.includeModel}>
+    <Story
+        name="Standard 33 multiple events"
+        args={teaser33MultipleEventsSerif.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
     <Story name="Standard 50 single event" args={teaser50SingleEventSerif.logicItem.includeModel}>
@@ -102,5 +124,16 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Standard 100 two events" args={teaser100TwoEventsSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <Story
+        name="Alternative 100 single event"
+        args={teaserAlternative100SingleEventSerif.logicItem.includeModel}
+    >
+        {TemplateAlternative.bind({})}
+    </Story>
+    <Story
+        name="Alternative 100 two events"
+        args={teaserAlternative100TwoEventsSerif.logicItem.includeModel}
+    >
+        {TemplateAlternative.bind({})}
+    </Story>
 </Preview>
-

@@ -31,6 +31,7 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
+                "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
                 "isStandardTeaser": true,
@@ -51,14 +52,14 @@
                 "hasTeaserItem": true,
                 "moreThenOneEvent": false,
                 "moreThenTwoEvents": false,
-                "firstInstant":{
+                "firstInstant": {
                     "startDate": {
                         "monthNameShort": "APR",
                         "weekdayNameShort": "Do",
                         "day": "9"
                     }
                 },
-                "lastInstant":{
+                "lastInstant": {
                     "startDate": {
                         "monthNameShort": "APR",
                         "weekdayNameShort": "Fr",
@@ -158,6 +159,7 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
+                "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
                 "isStandardTeaser": true,
@@ -178,14 +180,14 @@
                 "hasTeaserItem": true,
                 "moreThenOneEvent": false,
                 "moreThenTwoEvents": false,
-                "firstInstant":{
+                "firstInstant": {
                     "startDate": {
                         "monthNameShort": "APR",
                         "weekdayNameShort": "Do",
                         "day": "9"
                     }
                 },
-                "lastInstant":{
+                "lastInstant": {
                     "startDate": {
                         "monthNameShort": "APR",
                         "weekdayNameShort": "Fr",
@@ -285,6 +287,7 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
+                "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
                 "isStandardTeaser": true,
@@ -412,6 +415,7 @@
                     }
                 },
                 "documentSection": "Gesellschaft",
+                "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
                 "isStandardTeaser": true,

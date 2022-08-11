@@ -1,0 +1,20 @@
+<div class="{{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}">
+    <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+        {{#>components/base/link css="hover:text-toplineColor" doTracking=(if this.doTracking 'true') clickLabelPrefix1=this.teaserSize clickLabelPrefix2="headlineLink" }} 
+            {{> components/teaser/components/teaser_heading 
+            fontVariant=this.headingFontVariant
+            headlineTag=this.headlineTag 
+            label=this.label 
+            readMore=this.link.readMoreText.readMoreScreenreader 
+            size=this.teaserSize 
+            title=this.title 
+            topline=this.topline 
+            teaserType=this.teaserType
+            _isMobile1to1=this.isMobile1to1}}            
+        {{/components/base/link}}   
+    </header>
+    <div class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+        {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize _cssClasses=_teaserTextCssClasses }}
+        {{> components/teaser/components/teaser_byline}} 
+    </div>
+</div>

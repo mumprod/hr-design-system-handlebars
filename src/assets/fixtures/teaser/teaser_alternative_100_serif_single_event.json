@@ -3,8 +3,16 @@
     "@->contentpath": "teaserEvent",
     "@->overrides": [
         {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.teaserSize",
-            "@->value": "33"
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative-ds"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserImage",
@@ -18,24 +26,6 @@
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "event"
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.moreThenTwoEvents",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.lastInstant",
-            "@->value": {
-                "startDate": {
-                    "monthNameShort": "APR",
-                    "weekdayNameShort": "Su",
-                    "day": "12"
-                }
             }
         }
     ]
