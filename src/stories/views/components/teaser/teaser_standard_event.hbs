@@ -26,9 +26,9 @@
                         <span class="text-xl font-headingSerif font-bold">{{this.lastInstant.startDate.day}}</span>
                         <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort}} </span>
                     </div>
-                    <div class="mt-4 {{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}
-                        {{inline-switch teaserSize '["50"]' '[" hidden"]'}}
-                        {{inline-switch teaserSize '["33"]' '[" hidden"]'}}">
+                    <div class="{{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}
+                        {{inline-switch teaserSize '["100"]' '["border-l-2 border-dotted pt-5 pl-4 border-slate-600"]'}}
+                        {{inline-switch teaserSize '["50","33"]' '[" hidden"," hidden"]'}}">
                             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                                 {{#>components/base/link css="hover:text-toplineColor" }} 
                                 {{> components/teaser/components/teaser_heading 
@@ -81,7 +81,8 @@
                             <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.day  }} </span>
                             <span class="text-xl font-headingSerif">{{this.lastInstant.startDate.monthNameShort  }} </span>
                         </div>
-                        <div class="mt-4 {{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}
+                        <div class=" {{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}
+                        {{inline-switch teaserSize '["100"]' '["border-l-2 border-dotted pt-5 pl-4 border-slate-600"]'}}
                         {{inline-switch teaserSize '["50","33"]' '[" hidden"," hidden"]'}}">
                             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                                 {{#>components/base/link css="hover:text-toplineColor" }} 
