@@ -13,7 +13,7 @@ import label from './label.hbs'
 <Meta
     title="Komponenten/Label"
     argTypes={{
-        type: {
+        _type: {
             control: {
                 type: 'select',
                 labels: {
@@ -71,17 +71,17 @@ import label from './label.hbs'
                 },
             },
         },
-        text: {
+        _text: {
             control: 'text',
             description: 'Beschriftung des Labels',
         },
     }}
 />
 
-export const Template = ({ type, ...args }) => {
+export const Template = ({ _type, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return label({ type, ...args })
+    return label({ _type, ...args })
 }
 
 # Label
@@ -93,8 +93,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Download"
         args={{
-            type: 'download',
-            text: 'Download',
+            _type: 'download',
+            _text: 'Download',
         }}
     >
         {Template.bind({})}
@@ -102,8 +102,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Eilmeldung"
         args={{
-            type: 'breakingnews',
-            text: 'Eilmeldung',
+            _type: 'breakingnews',
+            _text: 'Eilmeldung',
         }}
     >
         {Template.bind({})}
@@ -111,8 +111,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Event"
         args={{
-            type: 'event',
-            text: 'Event',
+            _type: 'event',
+            _text: 'Event',
         }}
     >
         {Template.bind({})}
@@ -120,8 +120,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Infografik"
         args={{
-            type: 'infografik',
-            text: 'Infografik',
+            _type: 'infografik',
+            _text: 'Infografik',
         }}
     >
         {Template.bind({})}
@@ -129,8 +129,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Kommentar"
         args={{
-            type: 'comment',
-            text: 'Kommentar',
+            _type: 'comment',
+            _text: 'Kommentar',
         }}
     >
         {Template.bind({})}
@@ -138,8 +138,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Liveticker"
         args={{
-            type: 'liveticker',
-            text: 'Liveticker',
+            _type: 'liveticker',
+            _text: 'Liveticker',
         }}
     >
         {Template.bind({})}
@@ -147,8 +147,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Media"
         args={{
-            type: 'media',
-            text: 'Media',
+            _type: 'media',
+            _text: 'Media',
         }}
     >
         {Template.bind({})}
@@ -156,8 +156,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Pressemitteilung"
         args={{
-            type: 'pm',
-            text: 'Pressemitteilung',
+            _type: 'pm',
+            _text: 'Pressemitteilung',
         }}
     >
         {Template.bind({})}
@@ -165,8 +165,8 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     <Story
         name="Sendung"
         args={{
-            type: 'program',
-            text: 'Sendung',
+            _type: 'program',
+            _text: 'Sendung',
         }}
     >
         {Template.bind({})}
@@ -183,7 +183,7 @@ Die Komponente wird in Form eines Handlebar Partials eingebunden.
 
 Mit folgenden Parametern kann die Komponente konfiguriert werden.
 
-| Parameter | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
-| :-------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------- |
-| **text**  | `String` | Beliebiger Text                                                                                                                                                                                                                                                    | Die Beschriftung des Labels.                     |
-| **type**  | `String` | `analysis`, `blog`, `bulitiker`, `der-tag-in-hessen`, `download`, `brealingnews`, `event`, `fragen-und-antworten`, `glosse`,`infografik`, `interaktiv`, `comment`, `live`, `livechat`, `livestream`, `liveticker`, `media`, `pm`, `program`, `social-tv`, `ticker` | Hiermit wird das Aussehen des Labels festgelegt. |
+| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :--------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------- |
+| **\_text** | `String` | Beliebiger Text                                                                                                                                                                                                                                                    | Die Beschriftung des Labels.                     |
+| **\_type** | `String` | `analysis`, `blog`, `bulitiker`, `der-tag-in-hessen`, `download`, `brealingnews`, `event`, `fragen-und-antworten`, `glosse`,`infografik`, `interaktiv`, `comment`, `live`, `livechat`, `livestream`, `liveticker`, `media`, `pm`, `program`, `social-tv`, `ticker` | Hiermit wird das Aussehen des Labels festgelegt. |
