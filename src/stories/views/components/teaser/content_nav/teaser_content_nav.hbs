@@ -6,11 +6,11 @@
     
     {{else this.contentNav.isList }}
 
-        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-button -at-{0}" this.realTeasersize) }}
+        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-button -at-{0}" this.realTeasersize) _teasersize=this.teasersize}}
 
     {{else}}
 
-        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-mixed -at-{0}" this.realTeasersize) }}
+        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-mixed -at-{0}" this.realTeasersize) _teasersize=this.teasersize }}
     
     {{/if}} 
     

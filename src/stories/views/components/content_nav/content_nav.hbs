@@ -1,13 +1,14 @@
 {{#with this.contentNav}}
     {{#if this.isList}}
         <nav class="c-content-nav {{../_modifier}}">
-            {{> components/content_nav/content_nav_list }}
+            {{> components/content_nav/content_nav_list _teasersize=../_teasersize}}
         </nav>
 
-    {{else}}
+    {{else}} 
         {{#>components/base/menu/dropdown
                      _componentClass="c-content-nav"
                      _modifier=../_modifier
+                     _teasersize=../_teasersize
                      _iconOpen="arrow-down"
                      _iconClose="arrow-up"
                      _buttonText=(defaultIfEmpty this.selectedItem.title ../../title)
@@ -23,7 +24,7 @@
                     </div>
                 {{/if}}
 
-                {{> components/content_nav/content_nav_list }}
+                {{> components/content_nav/content_nav_list  _teasersize=../_teasersize}}
 
             </div>
 

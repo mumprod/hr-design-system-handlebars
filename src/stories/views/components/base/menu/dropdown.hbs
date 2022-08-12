@@ -7,7 +7,7 @@
 
     <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
 
-    <div x-show="($screen('md') || $screen('lg') ? false : true)" class="flex w-full h-10 px-2 py-2 mb-2 overflow-hidden border rounded-sm border-blue-congress whitespace-nowrap text-blue-congress fill-congress">
+    <div x-show="($screen('md') || $screen('lg')) && {{_teasersize}}==100  ? false : true" class="flex w-full h-10 px-2 py-2 mb-2 overflow-hidden border rounded-sm border-blue-congress whitespace-nowrap text-blue-congress fill-congress">
         <span class="text-base self-center w-full {{_componentClass}}__button-text">
                 {{_buttonText}}
         </span>
