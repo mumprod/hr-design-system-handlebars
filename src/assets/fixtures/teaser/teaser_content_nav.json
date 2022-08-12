@@ -13,17 +13,15 @@
             {
             "title" : "Arbeitsmarkt",            
             "isGroup" : false,
-            "hasIcon": false,
-            "iconName": "extern",
             "isSelected" : true,
             "link" : {
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
                 "isTargetBlank": true,
                 "hasIcon": true,
-                "iconName": "verkehr"
+                "iconName": "extern"
                 },
-            "navigationGroup" : null
+            "navigationGroup" : [{}]
             },
             {
                 "title" : "Banken",

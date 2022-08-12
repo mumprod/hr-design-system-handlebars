@@ -13,7 +13,9 @@ module.exports = {
             black: '#000000',
             white: '#ffffff',
             'blue-jellyBean': '#006dc1',
-            'orange-spicyCarrot': '#d34600'
+            'orange-spicyCarrot': '#d34600',
+            congress: '#005293',
+            science: '#006dc1'
         },
         screens: {
             print: { raw: 'print' },
