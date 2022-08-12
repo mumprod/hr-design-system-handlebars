@@ -6,7 +6,7 @@ import { addCommentLink } from '../jsonHelper'
 import teaser from './teaser_content_nav.hbs'
 
 import contentNav1 from '../fixtures/teaser_content_nav.json'
-
+import contentNav2 from '../fixtures/teaser_content_nav2.json'
 
 <Meta
     title="Komponenten/Teaser/Content-Navi"
@@ -58,5 +58,8 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <Story name="Liste 100%" args={contentNav1}>
         {Template.bind({})}
     </Story>
-    
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 100%" args={contentNav2}>
+        {Template.bind({})}
+    </Story>
 </Preview>
