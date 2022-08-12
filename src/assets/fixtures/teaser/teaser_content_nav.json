@@ -1,32 +1,30 @@
 { 
-    "realTeasersize" : "100",    
+    "realTeasersize" : "100",
+    "teasersize" : "100",
+
     "contentNav" : {
         "title"       : "Geiler Titel",
-        "teaserSize" : "100",
+        
         "isDropdown" : false,
         "isList" : true,
         "isMixed" : false,
         "isAutoSuggest" : false,
         "contentNavEntries": [
             {
-            "title" : "Arbeitsmarkt",
+            "title" : "Arbeitsmarkt",            
+            "isGroup" : false,
+            "hasIcon": false,
+            "iconName": "extern",
+            "isSelected" : true,
             "link" : {
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
-                "isTargetBlank": false,
-                "hasIcon": false,
-                "iconName": "iconName",
-                "readMoreText": {
-                    "readMoreScreenreader": "Zum Artikel",
-                    "readMore": "mehr",
-                    "readMoreLong": "read More Long"
-                }
+                "isTargetBlank": true,
+                "hasIcon": true,
+                "iconName": "verkehr"
+                },
+            "navigationGroup" : null
             },
-            
-            "isGroup" : false,
-            "isSelected" : true
-            },
-
             {
                 "title" : "Banken",
                 "link" : {
