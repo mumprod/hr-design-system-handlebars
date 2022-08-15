@@ -1,6 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
 import teaserAlternative from './teaser_alternativ.hbs'
+import teaserEventCalendar from '../../components/event/event_calendar.hbs'
 import teaser33SingleEventSerif from './fixtures/teaser_standard_33_serif_single_event.json'
 import teaser33TwoEventsSerif from './fixtures/teaser_standard_33_serif_two_events.json'
 import teaser33MultipleEventsSerif from './fixtures/teaser_standard_33_serif_multiple_events.json'
@@ -9,6 +10,7 @@ import teaser100SingleEventSerif from './fixtures/teaser_standard_100_serif_sing
 import teaser100TwoEventsSerif from './fixtures/teaser_standard_100_serif_two_events.json'
 import teaserAlternative100SingleEventSerif from './fixtures/teaser_alternative_100_serif_single_event.json'
 import teaserAlternative100TwoEventsSerif from './fixtures/teaser_alternative_100_serif_two_events.json'
+import teaserEventCalendar100Serif from './fixtures/teaser_event_calendar_100_serif.json'
 
 <Meta
     title="Komponenten/Teaser/Event"
@@ -52,6 +54,14 @@ export const TemplateAlternative = (args, { globals: { customConditionalToolbar 
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     return teaserAlternative({ brand, ...args })
+}
+
+export const TemplateEventCalendarTeaser = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaserEventCalendar({ brand, ...args })
 }
 
 # Standard-Teaser
@@ -135,5 +145,11 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
         args={teaserAlternative100TwoEventsSerif.logicItem.includeModel}
     >
         {TemplateAlternative.bind({})}
+    </Story>
+    <Story
+        name="Event Calendar Teaser"
+        args={teaserEventCalendar100Serif.logicItem.includeModel}
+    >
+        {teaserEventCalendar.bind({})}
     </Story>
 </Preview>

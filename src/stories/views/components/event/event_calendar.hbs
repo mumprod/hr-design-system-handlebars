@@ -1,0 +1,26 @@
+<article class="flex col-span-12">
+    
+<article class="flex col-span-12 border md:flex-row gap-x-4 md:px-0">
+    
+    <div class="flex flex-col p-4 border-dashed border-r border-gray-400">
+                {{> components/event/instant_dates}}
+            </div>
+    <header class="pt-4 md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+        {{#>components/base/link _css="hover:text-toplineColor" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="headlineLink" }} 
+            {{> components/teaser/components/teaser_heading 
+            _fontVariant=this.headingFontVariant
+            _headlineTag=this.headlineTag 
+            _label=this.label 
+            _readMore=this.link.readMoreText.readMoreScreenreader 
+            _size=this.teaserSize 
+            _title=this.title 
+            _topline=this.topline 
+            _teaserType=this.teaserType
+            _isMobile1to1=this.isMobile1to1}}            
+        {{/components/base/link}}   
+    </header>
+    <figure class="relative ar-16-9">
+        {{> components/teaser/components/teaser_image }}
+    </figure>
+</article>
+</article>
