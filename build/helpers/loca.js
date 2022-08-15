@@ -19,6 +19,7 @@ module.exports = function(text, options) {
         "label_ticker":"Ticker",
         "label_download":"Download",
         "label_media":"Media",
+        "label_event":"Konzert",
         "group_tabbed_more":"weitere Meldungen aus " + options,
     }
 

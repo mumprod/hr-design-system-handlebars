@@ -1,0 +1,21 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserEvent",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.displayTeaserBodyAsImageOverlay",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "event"
+            }
+        }
+    ]
+}
