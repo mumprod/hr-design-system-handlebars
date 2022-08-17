@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" 
+<nav x-data="contentNavigationHandler()" x-init="init()"
     class="w-full {{_componentClass}} {{_modifier}}"
     id="dropdown--{{nextRandom}}"
     tabindex="0"
@@ -7,7 +7,7 @@
 
     <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
 
-    <div x-show="($screen('md') || $screen('lg')) && {{_teasersize}}==100  ? false : true" class="flex w-full h-10 px-2 py-2 mb-2 overflow-hidden border rounded-sm border-blue-congress whitespace-nowrap text-blue-congress fill-congress">
+    <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" class="flex w-full h-10 px-2 py-2 overflow-hidden border rounded-sm border-blue-congress whitespace-nowrap text-blue-congress fill-congress">
         <span class="text-base self-center w-full {{_componentClass}}__button-text">
                 {{_buttonText}}
         </span>
@@ -23,8 +23,65 @@
         
     
     </div>
-    <div x-show="($screen('md') ? true : open)" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible {{_componentClass}}__content">
+    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible {{_componentClass}}__content">
        {{> @partial-block }}
     </div>
     
 </nav>
+<script type="text/javascript">
+document.addEventListener('alpine:init', () => {
+    Alpine.data('contentNavigationHandler', () =>({    
+        open: false,
+        
+        init(){  
+        },
+
+        shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
+            if (isDropdown){
+                if (teasersize == 100) {
+                    return true
+                } 
+
+            } 
+
+            if (isMixed) {
+                console.log(this.$screen('sm'))
+                if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
+                    if (this.$screen('lg')) return false
+                    if (this.$screen('md')) return false
+                    if (this.$screen('xs')) return true
+                } else if (teasersize === 33 || teasersize === 25) { 
+                    return true 
+                }
+
+                // return (this.$screen('md') || this.$screen('lg')) ? true : open
+            }
+
+
+        },
+
+        shouldContentBeShown(teasersize,isDropdown,isMixed){
+            console.log(teasersize)
+            console.log(isDropdown)
+            console.log(isMixed)
+
+            if (isDropdown){                   
+                return this.open                
+            } 
+            
+            if (isMixed) {
+                console.log(teasersize)
+                if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
+                    if (this.$screen('lg')) return true
+                    if (this.$screen('md')) return true
+                    if (this.$screen('xs')) return this.open
+                } else if (teasersize === 33 || teasersize === 25) { 
+                    return this.open
+                }
+            }
+
+            return false 
+        }
+    }))   
+})
+</script>

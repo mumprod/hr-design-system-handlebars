@@ -5,8 +5,19 @@ import { addCommentLink } from '../jsonHelper'
 
 import teaser from './teaser_content_nav.hbs'
 
-import contentNav1 from '../fixtures/teaser_content_nav.json'
-import contentNav2 from '../fixtures/teaser_content_nav2.json'
+import contentNavList_100 from '../fixtures/teaser_content_nav_list_100.json'
+import contentNavList_66 from '../fixtures/teaser_content_nav_list_66.json'
+import contentNavList_50 from '../fixtures/teaser_content_nav_list_50.json'
+import contentNavList_33 from '../fixtures/teaser_content_nav_list_33.json'
+import contentNavList_25 from '../fixtures/teaser_content_nav_list_25.json'
+
+import contentNavMixed_100 from '../fixtures/teaser_content_nav_mixed_100.json'
+import contentNavMixed_66 from '../fixtures/teaser_content_nav_mixed_66.json'
+import contentNavMixed_50 from '../fixtures/teaser_content_nav_mixed_50.json'
+import contentNavMixed_33 from '../fixtures/teaser_content_nav_mixed_33.json'
+import contentNavMixed_25 from '../fixtures/teaser_content_nav_mixed_25.json'
+
+import contentNavDropdown_acc_100 from '../fixtures/teaser_content_nav_acc_dropdown_100.json'
 
 <Meta
     title="Komponenten/Teaser/Content-Navi"
@@ -15,6 +26,7 @@ import contentNav2 from '../fixtures/teaser_content_nav2.json'
         chromatic: {
             viewports: [360, 768, 1024],
         },
+        docs: { inlineStories : false, iframeHeight: 240 }
     }}
     argTypes={{
         teaserSize: {
@@ -55,11 +67,49 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 <Preview withToolbar>
     
     <b>Liste 100%</b>
-    <Story name="Liste 100%" args={contentNav1}>
+    <Story name="Liste 100%" args={contentNavList_100}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 66%</b>
+    <Story name="Liste 66%" args={contentNavList_66}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 50%</b>
+    <Story name="Liste 50%" args={contentNavList_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 33%</b>
+    <Story name="Liste 33%" args={contentNavList_33}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 25%</b>
+    <Story name="Liste 25%" args={contentNavList_25}>
         {Template.bind({})}
     </Story>
     <b>Gemischt 100%</b>
-    <Story name="Gemischt 100%" args={contentNav2}>
+    <Story name="Gemischt 100%" args={contentNavMixed_100}>
         {Template.bind({})}
     </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 66%" args={contentNavMixed_66}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 50%" args={contentNavMixed_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 33%" args={contentNavMixed_33}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 25%</b>
+    <Story name="Gemischt 25%" args={contentNavMixed_25}>
+        {Template.bind({})}
+    </Story>
+    <b>Akzentuiert Dropdown 100%</b>
+    <Story name="Akzentuiert Dropdown 100" args={contentNavDropdown_acc_100}>
+        {Template.bind({})}
+    </Story>    
 </Preview>
+
+<ArgsTable story="Akzentuiert Dropdown 100" />

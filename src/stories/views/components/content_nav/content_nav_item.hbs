@@ -1,9 +1,9 @@
-<li class="{{inline-switch _teasersize '["100","50"]' '["w-full md:w-fit","w-full","w-full md:w-fit"]'}} text-base font-copy list-none mb-2 md:mr-2 fill-congress hover:fill-white text-blue-congress hover:text-white hover:underline {{#if this.isSelected}} -current{{/if}}">
+<li :class="{{_isdropdown}} ? '!w-full md:!w-full !mb-0 md:!mr-0 first:border-t first:border-t-blue-science border-t-0' : '' " class="{{inline-switch _teasersize '["100","66","50","33","25"]' '["w-full md:w-fit mb-2 md:mr-2","w-full md:w-fit mb-2 md:mr-2","w-full","w-full","w-full"]'}} border border-blue-congress overflow-hidden text-base font-copy list-none fill-congress hover:fill-white text-blue-congress hover:text-white hover:underline {{#if this.isSelected}} -current{{/if}} c-content-nav__item">
      {{#>components/base/link.hbs 
         _doNavigationTracking="true" 
         _clickLabelType="Contentnavigation" 
         _clickLabelPrefix1=this.title 
-        _css="flex items-center p-2 h-10 bg-white hover:bg-blue-congress border border-blue-congress rounded-sm whitespace-nowrap overflow-hidden" 
+        _css="flex items-center p-2 h-10 bg-white hover:bg-blue-congress rounded-sm whitespace-nowrap overflow-hidden" 
         _isSelected=this.isSelected
         _selectedCssClass="is-selected"
      }}
@@ -19,5 +19,4 @@
         {{/if}}
 
     {{/components/base/link.hbs}} 
-    
 </li>

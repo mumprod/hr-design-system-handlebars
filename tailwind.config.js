@@ -154,6 +154,7 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
+                    accented: '#d8e9f6'
                 },
                 black: {
                     DEFAULT: '#000000',
