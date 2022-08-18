@@ -1,6 +1,6 @@
 { 
-    "realTeasersize" : "100",
-    "teasersize" : "100",
+    "realTeasersize" : "50",
+    "teasersize" : "50",
 
     "contentNav" : {
         "title"       : "Geiler Titel",

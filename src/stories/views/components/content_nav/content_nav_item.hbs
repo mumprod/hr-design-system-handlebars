@@ -1,4 +1,4 @@
-<li :class="{{_isdropdown}} ? '!w-full md:!w-full mb-2 md:mb-0 md:!mr-0 border-l-0 border-r-0 border-t-0 border-b !rounded-none' 
+<li :class="{{_isdropdown}} ? '!w-full md:!w-full mb-2 md:mb-0 md:!mr-0 border-l-0 border-r-0 border-t-0 border-b last:border-b-0 !rounded-none px-4' 
             : {{_ismixed}} && {{_teasersize}} === 100 ? '!w-full md:!w-fit border rounded md:!mr-2 !mb-2 ' 
             : {{_ismixed}} && {{_teasersize}} === 66 ? '!w-full md:!w-fit border rounded md:!mr-2 !mb-2 '
             : {{_ismixed}} && {{_teasersize}} <= 50 ? '!w-full border-b !mb-0 last:border-b-0'

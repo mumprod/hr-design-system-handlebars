@@ -18,6 +18,10 @@ import contentNavMixed_33 from '../fixtures/teaser_content_nav_mixed_33.json'
 import contentNavMixed_25 from '../fixtures/teaser_content_nav_mixed_25.json'
 
 import contentNavDropdown_acc_100 from '../fixtures/teaser_content_nav_acc_dropdown_100.json'
+import contentNavDropdown_acc_66 from '../fixtures/teaser_content_nav_acc_dropdown_66.json'
+import contentNavDropdown_acc_50 from '../fixtures/teaser_content_nav_acc_dropdown_50.json'
+import contentNavDropdown_acc_33 from '../fixtures/teaser_content_nav_acc_dropdown_33.json'
+import contentNavDropdown_acc_25 from '../fixtures/teaser_content_nav_acc_dropdown_25.json'
 
 <Meta
     title="Komponenten/Teaser/Content-Navi"
@@ -109,7 +113,22 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <b>Akzentuiert Dropdown 100%</b>
     <Story name="Akzentuiert Dropdown 100" args={contentNavDropdown_acc_100}>
         {Template.bind({})}
+    </Story>
+    <b>Akzentuiert Dropdown 66%</b>
+    <Story name="Akzentuiert Dropdown 66" args={contentNavDropdown_acc_66}>
+        {Template.bind({})}
+    </Story>
+    <b>Akzentuiert Dropdown 50%</b>
+    <Story name="Akzentuiert Dropdown 50" args={contentNavDropdown_acc_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Akzentuiert Dropdown 33%</b>
+    <Story name="Akzentuiert Dropdown 33" args={contentNavDropdown_acc_33}>
+        {Template.bind({})}
+    </Story>
+    <b>Akzentuiert Dropdown 25%</b>
+    <Story name="Akzentuiert Dropdown 25" args={contentNavDropdown_acc_25}>
+        {Template.bind({})}
     </Story>    
+    
 </Preview>
-
-<ArgsTable story="Akzentuiert Dropdown 100" />
