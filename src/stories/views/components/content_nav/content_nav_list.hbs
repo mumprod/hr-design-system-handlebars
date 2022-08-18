@@ -1,4 +1,4 @@
-<ul class="flex flex-wrap w-full p-0 m-0 md:drop-shadow-xl">
+<ul class="flex flex-wrap w-full px-4 m-0 ">
     {{~#each this.contentNavEntries~}}
           
         {{~#if this.isGroup~}}
@@ -17,7 +17,7 @@
             {{/if}}
         {{else}}
             
-            {{> components/content_nav/content_nav_item  _teasersize=../_teasersize _isdropdown = ../isDropdown}}
+            {{> components/content_nav/content_nav_item  _teasersize=../_teasersize _isdropdown=../isDropdown _ismixed=../isMixed _islist=../isList}}
  
         {{~/if~}}
     {{~/each~}}

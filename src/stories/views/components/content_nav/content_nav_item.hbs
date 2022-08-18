@@ -1,4 +1,11 @@
-<li :class="{{_isdropdown}} ? '!w-full md:!w-full !mb-0 md:!mr-0 first:border-t first:border-t-blue-science border-t-0' : '' " class="{{inline-switch _teasersize '["100","66","50","33","25"]' '["w-full md:w-fit mb-2 md:mr-2","w-full md:w-fit mb-2 md:mr-2","w-full","w-full","w-full"]'}} border border-blue-congress overflow-hidden text-base font-copy list-none fill-congress hover:fill-white text-blue-congress hover:text-white hover:underline {{#if this.isSelected}} -current{{/if}} c-content-nav__item">
+<li :class="{{_isdropdown}} ? '!w-full md:!w-full mb-2 md:mb-0 md:!mr-0 border-l-0 border-r-0 border-t-0 border-b !rounded-none' 
+            : {{_ismixed}} && {{_teasersize}} === 100 ? '!w-full md:!w-fit border rounded md:!mr-2 !mb-2 ' 
+            : {{_ismixed}} && {{_teasersize}} === 66 ? '!w-full md:!w-fit border rounded md:!mr-2 !mb-2 '
+            : {{_ismixed}} && {{_teasersize}} <= 50 ? '!w-full border-b !mb-0 last:border-b-0'
+            : {{_islist}} ? 'border rounded mb-2 ' 
+            : '' " 
+
+class="{{inline-switch _teasersize '["100","66","50","33","25"]' '["w-full md:w-fit md:mr-2","w-fit mb-2 md:mr-2","w-full mb-2","w-full mb-2","w-full mb-2"]'}} overflow-hidden text-base font-copy list-none border-blue-congress fill-congress hover:fill-white text-blue-congress hover:text-white hover:underline {{#if this.isSelected}} -current{{/if}} c-content-nav__item">
      {{#>components/base/link.hbs 
         _doNavigationTracking="true" 
         _clickLabelType="Contentnavigation" 
@@ -9,7 +16,7 @@
      }}
 
         <span>
-            {{>components/base/image/icon _icon="arrow-right" _addClass=" h-4 w-4 mr-2" }}
+            {{>components/base/image/icon _icon="arrow-right" _addClass=" h-4 w-4 mr-2" }} 
         </span>
 
         <span class="mt-1 text-base font-copy js-title">{{this.title}}</span>
