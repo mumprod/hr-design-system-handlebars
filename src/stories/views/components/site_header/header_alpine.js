@@ -347,15 +347,7 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.data('contentNavigationHandler', () =>({    
         open: false,
-        init(){  
-        },
-        //shadow-[0_13px_27px_-2px_rgba(50,50,93,0.25)]
-        addDependentCss(isMixed,isDropdown,teasersize){
-            if(isMixed && teasersize < 66 || isMixed && window.innerWidth < 768 || isDropdown) {
-                this.$el.classList.add('shadow-xl') 
-            }
-        },
-
+    
         shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
             if (isDropdown){
                 return true
