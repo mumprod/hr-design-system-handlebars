@@ -1,11 +1,11 @@
 
                 {{#>components/base/link link=this.logicItem.includeModel.link css="group" doTracking=(if this.logicItem.includeModel.doTracking 'true') clickLabelPrefix1="clusterTeaserLink" clickLabelPrefix2="Link" }} 
                     {{> components/teaser/components/teaser_heading
-                        headlineTag=this.logicItem.includeModel.headlineTag 
-                        label=this.logicItem.includeModel.label 
-                        size=this.logicItem.includeModel.teaserSize
-                        title=this.logicItem.includeModel.title 
-                        teaserType="cluster"
+                        _headlineTag=this.logicItem.includeModel.headlineTag 
+                        _label=this.logicItem.includeModel.label 
+                        _size=this.logicItem.includeModel.teaserSize
+                        _title=this.logicItem.includeModel.title 
+                        _teaserType="cluster"
                         _ordered=_ordered
                         _titleBlue='true' }}           
                 {{/components/base/link}}
