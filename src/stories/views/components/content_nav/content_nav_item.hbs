@@ -1,6 +1,5 @@
-<li :class="{{_isdropdown}} ? '!w-full md:!w-full mb-2 md:mb-0 md:!mr-0 border-l-0 border-r-0 border-t-0 border-b last:border-b-0 !rounded-none px-4' 
-            : {{_ismixed}} && {{_teasersize}} === 100 ? '!w-full md:!w-fit md:!mr-2 !mb-0 md:!mb-2 md:border md:rounded' 
-            : {{_ismixed}} && {{_teasersize}} === 66 ? '!w-full md:!w-fit  md:!mr-2 !mb-0 md:!mb-2 md:border md:rounded'
+<li :class="{{_isdropdown}} ? '!w-full md:!w-full mb-2 md:mb-0 md:!mr-0 border-l-0 border-r-0 border-t-0 border-b last:border-b-0 !rounded-none ' 
+            : {{_ismixed}} && {{_teasersize}} >= 66 ? '!w-full md:!w-fit md:!mr-2 !mb-0 md:!mb-2 md:border md:rounded' 
             : {{_ismixed}} && {{_teasersize}} <= 50 ? '!w-full border-b !mb-0 last:border-b-0'
             : {{_islist}} ? 'border rounded mb-2 ' 
             : '' " 
@@ -10,7 +9,7 @@ class="{{inline-switch _teasersize '["100","66","50","33","25"]' '["w-full md:w-
         _doNavigationTracking="true" 
         _clickLabelType="Contentnavigation" 
         _clickLabelPrefix1=this.title 
-        _css="flex items-center p-2 h-8 bg-white hover:bg-blue-congress rounded-sm whitespace-nowrap overflow-hidden" 
+        _css="flex items-center py-2 px-4 h-8 bg-white hover:bg-blue-congress rounded-sm whitespace-nowrap overflow-hidden" 
         _isSelected=this.isSelected
         _selectedCssClass="is-selected"
      }}

@@ -1,33 +1,33 @@
-<nav x-data="contentNavigationHandler()" x-init="init()"
+<nav x-data="contentNavigationHandler()" 
+    x-init="init()"
     class="w-full {{_componentClass}} {{_modifier}} " 
     id="dropdown--{{nextRandom}}"
     tabindex="0"
     role="navigation"
     aria-labelledby="dropdown__label--{{getRandom}}">
-
     <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
-    <div class="" {{!-- :class="{{this.isDropdown}} == true ? 'bg-blue-accented !p-4 ' : '' " --}}>
-        <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" class="flex w-full h-8 p-2 overflow-hidden bg-white border rounded border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
-            <span class="text-base self-center w-full {{_componentClass}}__button-text">
-                    {{_buttonText}}
+    <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
+        class="flex w-full h-8 overflow-hidden bg-white border rounded border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
+        
+        <span class="text-base p-2 self-center w-full {{_componentClass}}__button-text">
+                {{_buttonText}}
+        </span>
+        <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
+            <span x-on:click="open = ! open" :class="open ? 'hidden' : ''"  class="flex self-center -open">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
             </span>
-            <div class="flex self-center justify-end w-auto px-2 py-1">
-                <span x-on:click="open = ! open" :class="open ? 'hidden' : ''"  class="flex justify-end o-dropdown__button-icon {{_componentClass}}__button-icon -open">
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
-                </span>
 
-                <span x-on:click="open = ! open" :class="open ? '' : 'hidden'" class="o-dropdown__button-icon {{_componentClass}}__button-icon -close">
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
-                </span>
-            </div>
-        </div>        
-    
-    </div>
+            <span x-on:click="open = ! open" :class="open ? '' : 'hidden'" class="flex self-center -close">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
+            </span>
+        </div>
+
+    </div>        
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible {{_componentClass}}__content">
        {{> @partial-block }}
     </div>
-    
 </nav>
+
 <script type="text/javascript">
 document.addEventListener('alpine:init', () => {
     Alpine.data('contentNavigationHandler', () =>({    
@@ -38,10 +38,7 @@ document.addEventListener('alpine:init', () => {
 
         shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
             if (isDropdown){
-                
-                    return true
-                 
-
+                return true
             } 
 
             if (isMixed) {
@@ -53,18 +50,10 @@ document.addEventListener('alpine:init', () => {
                 } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
                     return true 
                 }
-
-                // return (this.$screen('md') || this.$screen('lg')) ? true : open
             }
-
-
         },
 
         shouldContentBeShown(teasersize,isDropdown,isMixed){
-            console.log(teasersize)
-            console.log(isDropdown)
-            console.log(isMixed)
-
             if (isDropdown){                   
                 return this.open                
             } 
