@@ -167,12 +167,14 @@ module.exports = {
                 orange: {
                     terraX: '#bb4827',
                     spicyCarrot: '#d34600',
+                    bridesmaid: '#FCF2ED'
                 },
                 teal: {
                     deeperPool: '#097d8e',
                 },
                 grey: {
                     scorpion: '#606060',
+                    alto: '#e0e0e0'
                 },
                 labelMedia: 'var(--color-label-media)',
                 labelEvent: 'var(--color-label-event)',

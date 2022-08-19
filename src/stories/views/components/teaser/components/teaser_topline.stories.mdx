@@ -1,22 +1,22 @@
-import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Preview } from '@storybook/addon-docs'
 
-import topline from "./teaser_topline.hbs";
+import topline from './teaser_topline.hbs'
 
 <Meta
-  title="Komponenten/Teaser/Komponenten/Topline"
-  argTypes={{
-    text: {
-      control: "text",
-      description: "Dachzeilentext",
-    },
-  }}
+    title="Komponenten/Teaser/Komponenten/Topline"
+    argTypes={{
+        _text: {
+            control: 'text',
+            description: 'Dachzeilentext',
+        },
+    }}
 />
 
-export const Template = ({ text, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<span>${topline}</span>`;
-  return topline({ text, ...args });
-};
+export const Template = ({ _text, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<span>${topline}</span>`;
+    return topline({ _text, ...args })
+}
 
 # Topline
 
@@ -24,36 +24,40 @@ export const Template = ({ text, ...args }) => {
 
 In der Topline-Komponente wird die Dachzeile des Artikels dargestellt.
 
-
 ## Parameter
 
 Die Topline-Komponente benötigt folgende Parameter:
 
 <ul>
-    <li><b>teaserType</b></li>
-    <li><b>readMore</b></li>
-    <li><b>text</b></li>
+    <li>
+        <b>teaserType</b>
+    </li>
+    <li>
+        <b>readMore</b>
+    </li>
+    <li>
+        <b>text</b>
+    </li>
 </ul>
-
 
 ## Verwendung
 
 Die Topline-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/teaser/components/teaser_topline text=topline readMore=readMore teaserType=teaserType}}    
+{{> components/teaser/components/teaser_topline text=topline readMore=readMore
+teaserType=teaserType}}
 ```
 
 <Preview withToolbar>
-  <Story
-    name="default"
-    args={{
-      text:
-        "Dies ist die Dachzeile",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="default"
+        args={{
+            _text: 'Dies ist die Dachzeile',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="default" />

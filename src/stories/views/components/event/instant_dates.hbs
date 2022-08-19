@@ -1,0 +1,21 @@
+{{#if this.moreThenOneEvent}}
+    {{#with this.firstInstant}}
+        <span class='text-2xl font-headingSerif font-bold'>{{this.startDate.day}}</span>
+        <span class='text-sm font-headingSerif'>{{this.startDate.monthNameShort}}</span>
+    {{/with}}
+    {{#if this.moreThenTwoEvents}}
+        <span class='text-sm font-headingSerif'>|</span>
+    {{else}}
+        <span class='text-sm font-headingSerif'>+</span>
+    {{/if}}
+    {{#with this.lastInstant}}
+        <span class='text-2xl font-headingSerif font-bold'>{{this.startDate.day}}</span>
+        <span class='text-sm font-headingSerif'>{{this.startDate.monthNameShort}}</span>
+    {{/with}}
+{{else}}
+    {{#with this.firstInstant}}
+        <span class='text-sm font-headingSerif'>{{this.startDate.weekdayNameShort}}</span>
+        <span class='text-2xl font-headingSerif font-bold'>{{this.startDate.day}}</span>
+        <span class='text-sm font-headingSerif'>{{this.startDate.monthNameShort}}</span>
+    {{/with}}
+{{/if}}

@@ -165,12 +165,13 @@
         }
     },
     "teaser_3_33_highlight": {
-        "includePath": "components/teaser/group_teaser/group_highlight",
+        "includePath": "components/teaser/group_teaser/group_teaser",
         "includeModel": {
             "hasLink": true,
             "link": "#gruppe1",
+            "backgroundColor": "1",
             "hasGroupTitle": true,
-            "groupTitle": "Gruppe 100% - 3 x 33% Teaser",
+            "groupTitle": "Gruppe 100% new - 3 x 33% Teaser",
             "teaserSize": "100",
             "isHighlightGroup": true,
             "logicItems": [
