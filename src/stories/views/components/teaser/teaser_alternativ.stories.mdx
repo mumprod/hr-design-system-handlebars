@@ -8,22 +8,23 @@ import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.
 import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
 
 <Meta
     title="Komponenten/Teaser/Alternativ"
     parameters={{
         layout: 'fullscreen',
         chromatic: {
-            viewports: [360, 768, 1024]
+            viewports: [360, 768, 1024],
         },
     }}
     argTypes={{
-        teasersize: {
+        teaserSize: {
             control: {
                 type: 'select',
                 options: ['hero', '100', '50'],
             },
-            description: 'Teaser Größe',
+            description: 'Teaser Größ',
             table: {
                 defaultValue: {
                     summary: 'hero',
@@ -48,24 +49,27 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Alternativ-Teaser 
+# Alternativ-Teaser
 
 ## Beschreibung
 
-
 Der Alternativ-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
 
-<b>Alternativ Hero:</b> <br/>
-    Desktop = Bild(66%) neben Text(33%) <br/>
-    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+<b>Alternativ Hero:</b> <br />
+Desktop = Bild(66%) neben Text(33%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
 
-<b>Alternativ 100%:</b> <br/>
-    Desktop = Bild(33%) neben Text(66%) <br/>
-    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+<b>Alternativ 100%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
 
-<b>Alternativ 50%:</b> <br/>
-    Desktop = Bild(33%) neben Text(66%) <br/>
-    Mobile = Verhalten wie bei 100% Standard-Teaser <br/>
+<b>Alternativ 50%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 50% mit Download:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />{' '}
 
 Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
 
@@ -74,11 +78,21 @@ Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
 Die Alternativ-Teaser-Komponente inkludiert folgende Komponenten:
 
 <ul>
-    <li>components/base/image/<b>responsive_image</b></li>
-    <li>components/base/<b>link</b></li>
-    <li>components/teaser/components/<b>teaser_heading</b></li>
-    <li>components/teaser/components/<b>teaser_text</b></li>
-    <li>components/teaser/components/<b>teaser_byline</b></li>
+    <li>
+        components/base/image/<b>responsive_image</b>
+    </li>
+    <li>
+        components/base/<b>link</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_heading</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_text</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_byline</b>
+    </li>
 </ul>
 
 ## Verwendung
@@ -86,7 +100,7 @@ Die Alternativ-Teaser-Komponente inkludiert folgende Komponenten:
 Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/teaser/teaser_alternativ}}    
+{{> components/teaser/teaser_alternativ}}
 ```
 
 <Preview withToolbar>
@@ -109,6 +123,9 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     </Story>
     <b>Alternativ 50%</b>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 50 mit Download" args={teaser50Download.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>

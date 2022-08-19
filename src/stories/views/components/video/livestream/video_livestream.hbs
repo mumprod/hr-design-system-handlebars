@@ -22,12 +22,12 @@
                 "xl": "{{_posterImage.url.16to9_retina}}"
             }
     {{else}}
-        {{#if teaseritem ~}}
+        {{#if this.teaseritem ~}}
             ,"previewImageUrl":{
-                "s": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
-                "m": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
-                "l": "{{if teaseritem.[0] teaseritem.[0].url.16to9 teaseritem.url.16to9 }}",
-                "xl": "{{if teaseritem.[0] teaseritem.[0].url.16to9_retina teaseritem.url.16to9_retina }}"
+                "s": "{{if this.teaseritem.[0] this.teaseritem.[0].url.16to9 this.teaseritem.url.16to9 }}",
+                "m": "{{if this.teaseritem.[0] this.teaseritem.[0].url.16to9 this.teaseritem.url.16to9 }}",
+                "l": "{{if this.teaseritem.[0] this.teaseritem.[0].url.16to9 this.teaseritem.url.16to9 }}",
+                "xl": "{{if this.teaseritem.[0] this.teaseritem.[0].url.16to9_retina this.teaseritem.url.16to9_retina }}"
             }
         {{else}}
            ,"previewImageUrl" : "{{resourceUrl 'assets/base/video/dummy.jpg'}}"

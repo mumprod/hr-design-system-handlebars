@@ -3,9 +3,9 @@
         {{> components/label/label _type=this.type _text=(loca this.loca)}}
     </div>
 {{/with~}}    
-<{{~ headlineTag ~}}>
-    {{#if topline}}
-        {{> components/teaser/components/teaser_topline text=topline readMore=readMore teaserType=teaserType}}
+<{{~ _headlineTag ~}}>
+    {{#if _topline}}
+        {{> components/teaser/components/teaser_topline _text=_topline _readMore=_readMore _teaserType=_teaserType}}
     {{/if}}
-    {{> components/teaser/components/teaser_title text=title fontVariant=fontVariant size=size teaserType=teaserType _isMobile1to1=_isMobile1to1 _titleBlue=_titleBlue}}
-</{{~ headlineTag ~}}>
+    {{> components/teaser/components/teaser_title _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
+</{{~ _headlineTag ~}}>

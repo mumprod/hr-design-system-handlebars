@@ -1,3 +1,100 @@
+# v0.54.0 (Mon Aug 15 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1673 [#296](https://github.com/mumprod/hr-design-system-handlebars/pull/296) ([@Sunny1112358](https://github.com/Sunny1112358) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.53.3 (Fri Aug 05 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1694 [#295](https://github.com/mumprod/hr-design-system-handlebars/pull/295) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.53.2 (Thu Aug 04 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1567 [#294](https://github.com/mumprod/hr-design-system-handlebars/pull/294) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.53.1 (Thu Aug 04 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1567 [#293](https://github.com/mumprod/hr-design-system-handlebars/pull/293) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.53.0 (Wed Aug 03 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: The items in a group are not [#292](https://github.com/mumprod/hr-design-system-handlebars/pull/292) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.52.2 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- - added ugly closing and openeing div again [#291](https://github.com/mumprod/hr-design-system-handlebars/pull/291) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.52.1 (Tue Aug 02 2022)
+
+#### 🐛 Bug Fix
+
+- better wording in mdx [#285](https://github.com/mumprod/hr-design-system-handlebars/pull/285) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.52.0 (Mon Aug 01 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1675 Download Teaser [#290](https://github.com/mumprod/hr-design-system-handlebars/pull/290) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.51.2 (Thu Jul 28 2022)
 
 #### 🐛 Bug Fix
