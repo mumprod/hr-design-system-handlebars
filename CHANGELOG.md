@@ -1,3 +1,16 @@
+# v0.54.1 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- cluster-teaser [#297](https://github.com/mumprod/hr-design-system-handlebars/pull/297) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.54.0 (Mon Aug 15 2022)
 
 #### 🚀 Enhancement
