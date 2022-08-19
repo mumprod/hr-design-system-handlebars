@@ -1,3 +1,15 @@
+# v0.55.3 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part4 [#304](https://github.com/mumprod/hr-design-system-handlebars/pull/304) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.55.2 (Fri Aug 19 2022)
 
 #### 🐛 Bug Fix
