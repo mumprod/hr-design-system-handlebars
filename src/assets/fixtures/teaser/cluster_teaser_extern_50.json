@@ -1,0 +1,17 @@
+{
+    "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "50"
+        },
+        {
+            "@->contentpath": "teaserLogo",
+            "@->value": "sportschau"
+        },
+        {
+            "@->contentpath": "headlineListItems.link",
+            "@->value": ""
+        }
+    ]
+}

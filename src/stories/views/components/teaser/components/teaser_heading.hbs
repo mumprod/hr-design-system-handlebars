@@ -1,5 +1,5 @@
 {{#with label}}
-    <div class="leading-5.5">
+    <div class="leading-5.5{{#if ../_ordered}} pl-8 {{/if}}">
         {{> components/label/label type=this.type text=(loca this.loca)}}
     </div>
 {{/with~}}    
@@ -7,5 +7,5 @@
     {{#if topline}}
         {{> components/teaser/components/teaser_topline text=topline readMore=readMore teaserType=teaserType}}
     {{/if}}
-    {{> components/teaser/components/teaser_title text=title fontVariant=fontVariant size=size teaserType=teaserType _isMobile1to1=_isMobile1to1}}
+    {{> components/teaser/components/teaser_title text=title fontVariant=fontVariant size=size teaserType=teaserType _isMobile1to1=_isMobile1to1 _titleBlue=_titleBlue}}
 </{{~ headlineTag ~}}>
