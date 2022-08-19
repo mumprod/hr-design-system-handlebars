@@ -13,17 +13,17 @@
                 {{_buttonText}}
         </span>
         <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
-            <span x-on:click="open = ! open" :class="open ? 'hidden' : ''"  class="flex self-center -open">
+            <span x-on:click="open = ! open;" :class="open ? 'hidden' : ''"  class="flex self-center -open">
             {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
             </span>
 
-            <span x-on:click="open = ! open" :class="open ? '' : 'hidden'" class="flex self-center -close">
+            <span x-on:click="open = ! open;  $dispatch('resetinput')" :class="open ? '' : 'hidden'" class="flex self-center -close">
             {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
             </span>
         </div>
 
     </div>        
-    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible {{_componentClass}}__content">
+    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible">
        {{> @partial-block }}
     </div>
 </nav>
@@ -42,7 +42,6 @@ document.addEventListener('alpine:init', () => {
             } 
 
             if (isMixed) {
-                console.log(this.$screen('sm'))
                 if (teasersize === 100 || teasersize === 66 ) {
                     if (this.$screen('lg')) return false
                     if (this.$screen('md')) return false
@@ -56,10 +55,8 @@ document.addEventListener('alpine:init', () => {
         shouldContentBeShown(teasersize,isDropdown,isMixed){
             if (isDropdown){                   
                 return this.open                
-            } 
-            
+            }  
             if (isMixed) {
-                console.log(teasersize)
                 if (teasersize === 100 || teasersize === 66 ) {
                     if (this.$screen('lg')) return true
                     if (this.$screen('md')) return true

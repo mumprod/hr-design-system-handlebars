@@ -56,11 +56,11 @@ const AutoSuggest = function (context) {
         for (let i = 0; i < words.length; i++) {
             if (
                 words[i].toLowerCase().indexOf(value.toLowerCase(), 0) === 0 &&
-                hr$('.dropdown__item--current', elem).length === 0
+                hr$('.-current', elem).length === 0
             ) {
                 hasMatch = true
                 words[i] =
-                    "<span class='autoSuggest__highlight'>" +
+                    "<span style='color:#ff9000' >" +
                     words[i].slice(0, value.length) +
                     '</span>' +
                     words[i].slice(value.length)
@@ -98,6 +98,11 @@ const AutoSuggest = function (context) {
     
 
     inputEl.addEventListener('input', handleInput)
+
+    window.addEventListener('resetinput', () => {
+        resetList()
+        removeHighlight()
+    } )
 }
 
 export default AutoSuggest
