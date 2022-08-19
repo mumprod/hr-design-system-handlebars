@@ -54,7 +54,7 @@ module.exports = {
             },
             boxShadow: {
                 'inner': 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
-                'dropdown': 'outset 0 7px 29px 0 rgb(100, 100, 111, 0.2)'
+                'dropdown': '0 13px 27px -2px rgba(100, 100, 111, 0.2)'
             },
             dropShadow: {
                 'md': '0 5px 3px rgb(0 0 0 / 0.07)',
