@@ -1,0 +1,30 @@
+{
+    "april": {
+        "month": "April",
+        "startDate": "01",
+        "endDate": "30",
+        "now":"",
+        "urlProvider":""
+    },
+    "may": {
+        "month": "May",
+        "startDate": "01",
+        "endDate": "31",
+        "now":"",
+        "urlProvider":""
+    },
+    "june": {
+        "month": "June",
+        "startDate": "01",
+        "endDate": "30",
+        "now":"",
+        "urlProvider":""
+    },
+    "july": {
+        "month": "July",
+        "startDate": "01",
+        "endDate": "31",
+        "now":"",
+        "urlProvider":""
+    }
+}

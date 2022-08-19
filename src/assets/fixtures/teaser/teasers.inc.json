@@ -526,6 +526,14 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
+                "eventCalendar": {
+                    "eventCalendarMonth": {
+                        "@->jsoninclude": "event/event_calendar_months.inc.json",
+                        "@->contentpath": "april"
+                    },
+                    "hasSelectedEvents": true,
+                    "hasFutureEventsFromNow": true
+                },
                 "displayTeaserBodyAsImageOverlay": true,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
