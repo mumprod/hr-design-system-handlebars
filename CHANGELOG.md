@@ -1,3 +1,55 @@
+# v0.54.3 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1656 [#299](https://github.com/mumprod/hr-design-system-handlebars/pull/299) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.54.2 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1656 [#298](https://github.com/mumprod/hr-design-system-handlebars/pull/298) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.54.1 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- cluster-teaser [#297](https://github.com/mumprod/hr-design-system-handlebars/pull/297) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.54.0 (Mon Aug 15 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1673 [#296](https://github.com/mumprod/hr-design-system-handlebars/pull/296) ([@Sunny1112358](https://github.com/Sunny1112358) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.53.3 (Fri Aug 05 2022)
 
 #### 🐛 Bug Fix

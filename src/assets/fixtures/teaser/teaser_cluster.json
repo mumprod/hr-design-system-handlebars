@@ -1,14 +1,18 @@
 {
-    "title"       : "Schlagzeilen",
+    "title"       : "Neuste Beiträge",
     "teaserLogo"  : "hessenschau_de",
+    "isHessenschauLogo" : true,
     "showFirstImageOrGenreImage" : false,
     "HideTitle"   : false,
     "showGenreImage" : false,
     "showFirstImage" : false,
+    "_ordered" : true,
+
+    "teaserSize" : "50",
 
     "clusterTeaserItems": [
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
         },
         {
             "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
@@ -17,10 +21,17 @@
             "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
         },
         {
             "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
         }
-    ]
+    ],
+
+    "headlineListItems" :{
+        "title" : "Neue Beiträge auf einen Blick",
+        "link"  : {
+            "url": "https://www.hessenschau.de"
+        }
+    }
 }
