@@ -29,3 +29,49 @@
 
     {{/if}}
 {{/with}}
+
+<script type="text/javascript">
+
+document.addEventListener('alpine:init', () => {
+    
+    Alpine.data('contentNavigationHandler', () =>({    
+        open: false,
+        
+        init(){  
+        },
+
+        shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
+            if (isDropdown){
+                return true
+            } 
+
+            if (isMixed) {
+                if (teasersize === 100 || teasersize === 66 ) {
+                    if (this.$screen('lg')) return false
+                    if (this.$screen('md')) return false
+                    if (this.$screen('xs')) return true
+                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                    return true 
+                }
+            }
+        },
+
+        shouldContentBeShown(teasersize,isDropdown,isMixed){
+            if (isDropdown){                   
+                return this.open                
+            }  
+            if (isMixed) {
+                if (teasersize === 100 || teasersize === 66 ) {
+                    if (this.$screen('lg')) return true
+                    if (this.$screen('md')) return true
+                    if (this.$screen('xs')) return this.open
+                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                    return this.open
+                }
+            }
+
+            return false 
+        }
+    }))   
+})
+</script>

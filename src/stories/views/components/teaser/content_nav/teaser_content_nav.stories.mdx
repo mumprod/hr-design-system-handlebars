@@ -28,19 +28,18 @@ import contentNavDropdown_50 from '../fixtures/teaser_content_nav_dropdown_50.js
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 768, 1024],
-        },
-        docs: { inlineStories : false, iframeHeight: 240 }
+        }
     }}
     argTypes={{
-        teaserSize: {
+        teasersize: {
             control: {
                 type: 'select',
-                options: ['hero', '100', '50'],
+                options: ['100', '66', '50', '33', '25'],
             },
             description: 'Teaser Größe',
             table: {
                 defaultValue: {
-                    summary: 'hero',
+                    summary: '100',
                 },
             },
         },
