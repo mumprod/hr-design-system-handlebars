@@ -1,6 +1,6 @@
 { 
-    "realTeasersize" : "25",
-    "teasersize" : "25",
+    "realTeasersize" : "100",
+    "teasersize" : "100",
 
     "contentNav" : {
         "title"       : "Geiler Titel",
@@ -8,7 +8,7 @@
         "isDropdown" : true,
         "isList" : false,
         "isMixed" : false,
-        "isAutosuggest" : true,
+        "isAutosuggest" : false,
         "selectedItem": {
             "title" : "Themen Wirtschaft"
         },
