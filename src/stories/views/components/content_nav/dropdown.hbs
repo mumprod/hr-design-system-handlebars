@@ -1,11 +1,12 @@
-<nav x-data="contentNavigationHandler()" 
-    x-init="init()"
+<nav  
     class="w-full {{_componentClass}} {{_modifier}} " 
     id="dropdown--{{nextRandom}}"
     tabindex="0"
     role="navigation"
     aria-labelledby="dropdown__label--{{getRandom}}">
+
     <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
+
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         class="flex w-full h-8 overflow-hidden bg-white border rounded border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
         
@@ -22,8 +23,10 @@
             </span>
         </div>
 
-    </div>        
+    </div>    
+
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible">
        {{> @partial-block }}
     </div>
+    
 </nav>

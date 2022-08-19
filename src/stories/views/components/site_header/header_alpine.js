@@ -347,10 +347,7 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.data('contentNavigationHandler', () =>({    
         open: false,
-        
-        init(){  
-        },
-
+    
         shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
             if (isDropdown){
                 return true
