@@ -1,0 +1,129 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import 'core-js/actual/structured-clone'
+import { addLabel, removeLabel, changeTeaserSize } from '../labelHelper'
+import { addCommentLink } from '../jsonHelper'
+
+import teaser from './teaser_content_nav.hbs'
+
+import contentNavList_100 from '../fixtures/teaser_content_nav_list_100.json'
+import contentNavList_66 from '../fixtures/teaser_content_nav_list_66.json'
+import contentNavList_50 from '../fixtures/teaser_content_nav_list_50.json'
+import contentNavList_33 from '../fixtures/teaser_content_nav_list_33.json'
+import contentNavList_25 from '../fixtures/teaser_content_nav_list_25.json'
+
+import contentNavMixed_100 from '../fixtures/teaser_content_nav_mixed_100.json'
+import contentNavMixed_66 from '../fixtures/teaser_content_nav_mixed_66.json'
+import contentNavMixed_50 from '../fixtures/teaser_content_nav_mixed_50.json'
+import contentNavMixed_33 from '../fixtures/teaser_content_nav_mixed_33.json'
+import contentNavMixed_25 from '../fixtures/teaser_content_nav_mixed_25.json'
+
+import contentNavDropdown_autosuggest_100 from '../fixtures/teaser_content_nav_dropdown_autosuggest_100.json'
+import contentNavDropdown_100 from '../fixtures/teaser_content_nav_dropdown_100.json'
+import contentNavDropdown_autosuggest_50 from '../fixtures/teaser_content_nav_dropdown_autosuggest_50.json'
+import contentNavDropdown_50 from '../fixtures/teaser_content_nav_dropdown_50.json'
+
+<Meta
+    title="Komponenten/Teaser/Content-Navi"
+    parameters={{
+        layout: 'fullscreen',
+        chromatic: {
+            viewports: [360, 768, 1024],
+        },
+        docs: { inlineStories : false, iframeHeight: 240 }
+    }}
+    argTypes={{
+        teaserSize: {
+            control: {
+                type: 'select',
+                options: ['hero', '100', '50'],
+            },
+            description: 'Teaser Größe',
+            table: {
+                defaultValue: {
+                    summary: 'hero',
+                },
+            },
+        },
+    }}
+    decorators={[
+        (Story) => {
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+                ${Story()} 
+                </div></div>`
+        },
+    ]}
+/>
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Content-Navi-Teaser
+
+## Beschreibung
+
+
+<Preview withToolbar>
+    
+    <b>Liste 100%</b>
+    <Story name="Liste 100%" args={contentNavList_100}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 66%</b>
+    <Story name="Liste 66%" args={contentNavList_66}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 50%</b>
+    <Story name="Liste 50%" args={contentNavList_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 33%</b>
+    <Story name="Liste 33%" args={contentNavList_33}>
+        {Template.bind({})}
+    </Story>
+    <b>Liste 25%</b>
+    <Story name="Liste 25%" args={contentNavList_25}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 100%" args={contentNavMixed_100}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 66%" args={contentNavMixed_66}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 50%" args={contentNavMixed_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 100%</b>
+    <Story name="Gemischt 33%" args={contentNavMixed_33}>
+        {Template.bind({})}
+    </Story>
+    <b>Gemischt 25%</b>
+    <Story name="Gemischt 25%" args={contentNavMixed_25}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown 100%</b>
+    <Story name="Dropdown 100%" args={contentNavDropdown_100}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown 100% Autosuggest</b>
+    <Story name="Dropdown 100% Autosuggest" args={contentNavDropdown_autosuggest_100}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown 50%</b>
+    <Story name="Dropdown 50%" args={contentNavDropdown_50}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown 50% Autosuggest</b>
+    <Story name="Dropdown 50% Autosuggest" args={contentNavDropdown_autosuggest_50}>
+        {Template.bind({})}
+    </Story>  
+    
+</Preview>

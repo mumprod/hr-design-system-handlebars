@@ -1,0 +1,43 @@
+<nav class="o-dropdown {{_componentClass}} {{_modifier}}"
+     id="o-dropdown--{{nextRandom}}"
+     tabindex="0"
+     role="navigation"
+     aria-labelledby="o-dropdown__label--{{getRandom}}">
+
+    <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
+
+    <input class="o-dropdown__no-js-toggle {{_componentClass}}__toggle js-load"
+           id="o-dropdown__no-js-toggle--{{getRandom}}"
+           type="checkbox"
+           aria-hidden="true"
+           data-hr-toggle-class='{
+           "id":"{{getRandom}}",
+            "reactTo":"click",
+            "reactToOutside":"close",
+            "onInit":"close",
+            "toggleClass":"-isActive",
+            "toggleOnFocus": "#o-dropdown--{{getRandom}}",
+            "toggleCheck":true,
+            "closeOthers": true,
+            "onTarget":"#o-dropdown--{{getRandom}}"
+        }'/>
+    <label class="o-dropdown__button {{_componentClass}}__button"
+           for="o-dropdown__no-js-toggle--{{getRandom}}"
+           title="{{_labelTitle}}"
+           onclick="">
+        
+        <span class="o-dropdown__button-text {{_componentClass}}__button-text">
+            {{_buttonText}}
+        </span>
+        <span class="o-dropdown__button-icon {{_componentClass}}__button-icon -open">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="arrow--down icon--ignoreTouch" _iconmap="icons"~}}
+        </span>
+        <span class="o-dropdown__button-icon {{_componentClass}}__button-icon -close">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="arrow--up icon--ignoreTouch" _iconmap="icons"~}}
+        </span>
+    </label>
+
+    <div aria-haspopup="true" class="o-dropdown__content {{_componentClass}}__content">
+       {{> @partial-block }}
+    </div>
+</nav>

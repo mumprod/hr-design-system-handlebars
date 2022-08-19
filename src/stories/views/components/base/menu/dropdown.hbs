@@ -1,0 +1,73 @@
+<nav x-data="contentNavigationHandler()" 
+    x-init="init()"
+    class="w-full {{_componentClass}} {{_modifier}} " 
+    id="dropdown--{{nextRandom}}"
+    tabindex="0"
+    role="navigation"
+    aria-labelledby="dropdown__label--{{getRandom}}">
+    <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
+    <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
+        class="flex w-full h-8 overflow-hidden bg-white border rounded border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
+        
+        <span class="text-base p-2 self-center w-full {{_componentClass}}__button-text">
+                {{_buttonText}}
+        </span>
+        <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
+            <span x-on:click="open = ! open;" :class="open ? 'hidden' : ''"  class="flex self-center -open">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
+            </span>
+
+            <span x-on:click="open = ! open;  $dispatch('resetinput')" :class="open ? '' : 'hidden'" class="flex self-center -close">
+            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
+            </span>
+        </div>
+
+    </div>        
+    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="md:relative md:left-0 md:h-auto md:overflow-visible">
+       {{> @partial-block }}
+    </div>
+</nav>
+
+<script type="text/javascript">
+document.addEventListener('alpine:init', () => {
+    Alpine.data('contentNavigationHandler', () =>({    
+        open: false,
+        
+        init(){  
+        },
+
+        shouldDropdownBeShown(teasersize,isDropdown,isMixed){  
+            if (isDropdown){
+                return true
+            } 
+
+            if (isMixed) {
+                if (teasersize === 100 || teasersize === 66 ) {
+                    if (this.$screen('lg')) return false
+                    if (this.$screen('md')) return false
+                    if (this.$screen('xs')) return true
+                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                    return true 
+                }
+            }
+        },
+
+        shouldContentBeShown(teasersize,isDropdown,isMixed){
+            if (isDropdown){                   
+                return this.open                
+            }  
+            if (isMixed) {
+                if (teasersize === 100 || teasersize === 66 ) {
+                    if (this.$screen('lg')) return true
+                    if (this.$screen('md')) return true
+                    if (this.$screen('xs')) return this.open
+                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                    return this.open
+                }
+            }
+
+            return false 
+        }
+    }))   
+})
+</script>

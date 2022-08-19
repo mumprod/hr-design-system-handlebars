@@ -216,7 +216,9 @@ document.addEventListener('alpine:init', () => {
             }
         }
 
-    }))
+    }));
+
+    
 
     // context for the overlay
     Alpine.data('overlayHandler', () => ({
