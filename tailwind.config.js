@@ -206,5 +206,6 @@ module.exports = {
 
             addUtilities(utilities, variants('borderColor'))
         },
+        require('tailwindcss-counter')(),
     ],
 }

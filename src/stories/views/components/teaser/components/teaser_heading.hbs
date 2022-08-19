@@ -1,6 +1,6 @@
-{{#with _label}}
-    <div class="leading-5.5">
-        {{> components/label/label _type=this.type _text=(loca this.loca)}}
+{{#with label}}
+    <div class="leading-5.5{{#if ../_ordered}} pl-8 {{/if}}">
+        {{> components/label/label type=this.type text=(loca this.loca)}}
     </div>
 {{/with~}}    
 <{{~ _headlineTag ~}}>
