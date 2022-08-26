@@ -1,0 +1,133 @@
+{
+    "video-1": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "__small" },
+                        { "minWidth": 320, "value": "__medium" },
+                        { "minWidth": 480, "value": "__medium_extended" },
+                        { "minWidth": 640, "value": "" },
+                        { "minWidth": 960, "value": "__retina" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {}
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "videoLanguageCode": "de",
+                    "media": [
+                        {
+                            "url": "https://hr-vh.akamaihd.net/i/video/as/hessenschau/2022_03/hrLogo_220317201045_L422955_,480x270-50p-700kbit,512x288-25p-500kbit,640x360-50p-1200kbit,960x540-50p-1600kbit,1280x720-50p-3200kbit,1920x1080-50p-5000kbit,.mp4.csmil/master.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "isAdaptiveQualitySelectable": true,
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                {
+                    "kind": "normal",
+                    "languageCode": "de",
+                    "sources": [
+                        {
+                            "kind": "webvtt",
+                            "url": "https://hr-a.akamaihd.net/video/as/hessenschau/2022_03/hrLogo_220317201045_L422955_512x288-25p-500kbit.vtt"
+                        }
+                    ]
+                }
+            ],
+            "meta": {
+                "durationSeconds": 1644,
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://hessenschau-dev-red.hr.de/tv-sendung/hs_thumbnail_ganze_sendung_17_03_2022_pur-jpg_-100~_t-1647545493058_v-16to9{size}.jpg"
+                    }
+                ],
+                "title": "Auszubildende dringend gesucht | hessenschau vom 17.03.2022",
+                "synopsis": "Erstaufnahme der Geflüchteten in Gießen / Bund-Länder-Treffen zu Geflüchteten aus der Ukraine / Zu wenig Lebensmittelkontrollen / Mehr Ausbildungsplätze als Bewerber / Dokumentation über Sinti und Roma / Nachwuchs im Frankfurter Zoo / Eintracht vor dem Europa League-Spiel"
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "8423",
+        "type": "videoOndemand",
+        "cssUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "atiSmarttagUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/smarttagProd.js",
+        "isAutoplay": true,
+        "teaserSize": "100"
+    },
+    "video-livestream-hr-fernsehen": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "isDvrEnabled": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "__small" },
+                        { "minWidth": 320, "value": "__medium" },
+                        { "minWidth": 480, "value": "__medium_extended" },
+                        { "minWidth": 640, "value": "" },
+                        { "minWidth": 960, "value": "__retina" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/",
+                "isForcedVideoView": true
+            },
+            "pluginData": {}
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "videoLanguageCode": "de",
+                    "media": [
+                        {
+                            "url": "https://hrhlsde.akamaized.net/hls/live/2024526/hrhlsde/index.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "maxHResolutionPx": 8000,
+                            "isAdaptiveQualitySelectable": true,
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                { "kind": "normal", "languageCode": "de", "sources": [{ "kind": "webvtt" }] }
+            ],
+            "live": { "dvrWindowSeconds": 7200 },
+            "meta": {
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://hr-fernsehen-dev-red.hr.de/livestream/bild-tv_02_ausgabe_web-100~_t-1603117468342_v-16to9{size}.jpg"
+                    }
+                ],
+                "title": "Jetzt hr-fernsehen live sehen!"
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "6819",
+        "type": "videoLivestream",
+        "cssUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "atiSmarttagUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/smarttagProd.js",
+        "teaserSize": "00",
+        "isAutoplay": true
+    }
+}

@@ -1,58 +1,5 @@
-<div x-show="avStart" id="{{nextRandom}}" class="h-auto ar-16-9 js-load" data-hr-mediaplayer-loader-ds='{
-    "type": "ondemand",
-    "position": "{{if _isTeaser 'teaser' 'page'}}",
-    "teaserSize" : "{{if _teaserSize _teaserSize '00' }}",
-    "containerId": "{{getRandom}}",
-    "streamUrl":"{{this.videoUrl}}",
-    "isAdaptiveStream": {{if this.adaptiveStreamingUrl "true" "false"}},
-    {{#if _videoKey}}
-        "videoKey": "{{_videoKey}}",
-    {{/if}}
-    {{#if this.adaptiveStreamingUrl}}
-        "adaptiveStreamingUrl":"{{this.adaptiveStreamingUrl}}", 
-        "videoResolutionLevels": [
-            {{#each this.videoResolutionLevels}}
-        {{#unless @last}}
-                    { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }, 
-                {{else}}
-                    { "url":"{{this.url}}", "verticalResolution": {{this.verticalResolution}} }
-                {{/unless}}
-    {{/each}}
-        ],
-    {{/if}}
-    {{#with this.videoSubtitleUrl}}"subtitle":"{{this}}",{{/with}}
-    "skinPath":"{{resourceUrl 'assets/vendor/ardplayer/ardplayer-hr-6.3.4.055f7511.css'}}",
-    "mediaMetadata":{{this.mediaMetadata}},
-    "ardplayerUrl": "{{resourceUrl "assets/js/vendor/ardplayer-hr-6.3.4.d39f03b6.js"}}",
-    "smarttagUrl": "{{resourceUrl "assets/js/vendor/smarttagProd.js"}}",
-    "agfAppId": "TODO",
-    "baseUrl":"{{resourceUrl 'assets/vendor/ardplayer/'}}"
-    {{#with this.providerKeyWithSublines}}
-        ,"streamUrlSublines": "{{this}}"
-    {{/with}}
-    {{#if _poster~}}
-        ,"previewImageUrl":{
-                "s": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                "m": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                "l": "{{if _poster.url.16to9 _poster.url.16to9 _poster}}",
-                "xl": "{{if _poster.url.16to9 _poster.url.16to9_retina _poster}}"
-            }
-    {{else}}
-        {{#if this.teaseritem ~}}
-            ,"previewImageUrl":{
-                "s": "{{this.teaseritem.[0].url.16to9}}",
-                "m": "{{this.teaseritem.[0].url.16to9}}",
-                "l": "{{this.teaseritem.[0].url.16to9}}",
-                "xl": "{{this.teaseritem.[0].url.16to9_retina}}"
-            }
-        {{else}}
-            ,"previewImageUrl" : "{{resourceUrl 'assets/base/video/dummy.jpg'}}"
-        {{/if~}}
-    {{/if~}}
-    {{#if _isTeaser}}
-    ,"autoplay":"true"
-    {{/if}}   
-}'>{{!-- geotag --}}
+
+<div x-show="avStart" id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto js-load js-video-ondemand" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>{{!-- geotag --}}
     {{#unless _hideGeotag}}
         {{~#with _geotag}}
             <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
@@ -60,6 +7,7 @@
     {{/unless}}
     
 </div>
+
 
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
