@@ -64,7 +64,6 @@ const ArdPlayerLoader = function (options, rootElement) {
             playerConfig.pluginData['trackingAgf@all'].isEnabled = false
         }
         whenAvailable('ardplayer', function () {
-            console.log('before player create')
             player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
             bindPlayerEvents()
         })
@@ -103,13 +102,11 @@ const ArdPlayerLoader = function (options, rootElement) {
         })
 
         listen('player_closed', function (event) {
-            console.log('player stop')
             player.stop()
         })
 
         listen('player_start', function (event) {
             if (player) {
-                console.log('Play')
                 if (undefined != mediaCollection.live) {
                     player.seekToLive()
                 }
