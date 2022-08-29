@@ -24,9 +24,8 @@
                 {{/if}}
                 
         {{/with}}
-        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-5 mx-5 text-blue-jellyBean hover:fill-blue-jellyBean js-mediaplayer__button" _showIcon=true _icon="audio_button" _label="Audio" _srOnly="true" _alpineClick="avStart = !avStart" _x-show="!avStart"}}
+        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-5 mx-5 text-blue-jellyBean hover:fill-blue-jellyBean js-mediaplayer__button" _showIcon=true _icon="audio_button" _label="Audio" _srOnly="true" _alpineClick="avStart = !avStart; $dispatch('player_start')" _x-show="!avStart"}}
         {{~#if _isPodcast~}}
-        Hallo
             <a href="{{this.podcastDownloadUrl}}" class="downloadLink button-invert js-load"{{#with
                     this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>

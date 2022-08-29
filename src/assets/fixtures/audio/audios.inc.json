@@ -18,7 +18,14 @@
                 "isForcedAutoplay": true,
                 "isForcedVideoView": true
             },
-            "pluginData": {}
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
         },
         "mediaCollection": {
             "streams": [

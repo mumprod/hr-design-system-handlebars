@@ -20,6 +20,6 @@
                 {{/components/base/link }}
             {{/if}}
         {{/with}}
-        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-5 mx-5 text-orange-spicyCarrot hover:fill-orange-spicyCarrot js-mediaplayer__button" _showIcon=true _icon="play_button" _label="Live" _srOnly="true" _alpineClick="avStart = !avStart"}}   
+        {{> components/button/button_round _isButton="true" _addClass="absolute bottom-0 right-0 my-5 mx-5 text-orange-spicyCarrot hover:fill-orange-spicyCarrot js-mediaplayer__button" _showIcon=true _icon="play_button" _label="Live" _srOnly="true" _alpineClick="avStart = !avStart; $dispatch('player_start')"}}   
     </div>
 {{/if}}

@@ -18,7 +18,14 @@
                 "isForcedAutoplay": true,
                 "isForcedVideoView": true
             },
-            "pluginData": {}
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
         },
         "mediaCollection": {
             "streams": [
@@ -88,7 +95,14 @@
                 "baseUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/",
                 "isForcedVideoView": true
             },
-            "pluginData": {}
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
         },
         "mediaCollection": {
             "streams": [

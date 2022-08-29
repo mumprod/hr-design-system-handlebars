@@ -1,4 +1,4 @@
-import { hr$, listenOnce } from 'hrQuery'
+import { hr$, listenOnce, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/atiHelper.subfeature'
 import ArdPlayerLoader from 'components/mediaplayer/ardPlayerLoader.subfeature'
 

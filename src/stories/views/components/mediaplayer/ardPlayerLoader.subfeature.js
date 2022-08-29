@@ -14,7 +14,10 @@ const ArdPlayerLoader = function (options, rootElement) {
         player
 
     const setupPlayer = function () {
-        if (undefined != playerConfig.pluginData['trackingAti@all']) {
+        if (
+            undefined != playerConfig.pluginData['trackingAti@all'] &&
+            playerConfig.pluginData['trackingAti@all'].isEnabled
+        ) {
             playerConfig.pluginData['trackingAti@all'].config.cookieSecure =
                 'https:' === document.location.protocol
         }
@@ -49,7 +52,10 @@ const ArdPlayerLoader = function (options, rootElement) {
     }
 
     const createPlayer = function () {
-        if (trackingCookie.isTrackingAccepted('ati')) {
+        if (
+            trackingCookie.isTrackingAccepted('ati') &&
+            playerConfig.pluginData['trackingAti@all'].isEnabled
+        ) {
             loadScript('js-smarttagProd', smarttagUrl)
         } else {
             playerConfig.pluginData['trackingAti@all'].isEnabled = false
@@ -58,6 +64,7 @@ const ArdPlayerLoader = function (options, rootElement) {
             playerConfig.pluginData['trackingAgf@all'].isEnabled = false
         }
         whenAvailable('ardplayer', function () {
+            console.log('before player create')
             player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
             bindPlayerEvents()
         })
@@ -92,6 +99,21 @@ const ArdPlayerLoader = function (options, rootElement) {
         listen('hr:global:stopOtherAVs', function (event) {
             if (event.detail != 'ardplayer') {
                 player.pause()
+            }
+        })
+
+        listen('player_closed', function (event) {
+            console.log('player stop')
+            player.stop()
+        })
+
+        listen('player_start', function (event) {
+            if (player) {
+                console.log('Play')
+                if (undefined != mediaCollection.live) {
+                    player.seekToLive()
+                }
+                player.play()
             }
         })
     }
