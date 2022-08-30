@@ -13,7 +13,7 @@ import contentNavMixed_autosuggest from '../fixtures/teaser_content_nav_mixed_au
 
 import contentNavDropdown_autosuggest from '../fixtures/teaser_content_nav_dropdown_autosuggest_100.json'
 import contentNavDropdown from '../fixtures/teaser_content_nav_dropdown_100.json'
-
+import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdown_subgroups.json'
 
 <Meta
     title="Komponenten/Teaser/Content-Navi"
@@ -88,6 +88,10 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     </Story>
     <b>Dropdown</b>
     <Story name="Dropdown" args={contentNavDropdown}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown mit Subgruppen</b>
+    <Story name="Dropdown mit Subgruppen" args={contentNavDropdown_subgroups}>
         {Template.bind({})}
     </Story>
     <b>Dropdown Autosuggest</b>

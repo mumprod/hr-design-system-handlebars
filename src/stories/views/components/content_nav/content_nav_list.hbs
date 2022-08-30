@@ -1,5 +1,5 @@
-<ul :class="{{this.isMixed}} && {{_teasersize}} < 66 || ({{this.isMixed}} && window.innerWidth < 768) || {{this.isDropdown}} ? 'shadow-[0_13px_27px_-2px_rgba(50,50,93,0.25)] !px-0 ' : ''" 
-    class="flex flex-wrap w-full px-2 m-0 last:border-b-0">
+<ul :class="({{this.isMixed}} && {{_teasersize}} < 66) || ({{this.isMixed}} && window.innerWidth < 768) || {{this.isDropdown}} ? 'shadow-[0_13px_27px_-2px_rgba(50,50,93,0.25)] !px-0 ' : ''" 
+    class="flex flex-wrap w-full px-2 md:!px-0 last:border-b-0">
     
     {{~#each this.contentNavEntries~}}
           
@@ -7,11 +7,11 @@
         
             {{#if ../isDropdown}}            
                 
-                <li class="c-content-nav__group">
-                    <div class="c-content-nav__group-title">{{this.title}}</div>
+                <li class="w-full h-auto overflow-hidden text-base text-black list-none bg-gray-200 border-b border-blue-congress font-copy fill-congress c-content-nav__group">
+                    <div class="p-2 c-content-nav__group-title">{{this.title}}</div>
                     <ul class="c-content-nav__group-list">
                         {{~#each this.navigationGroup~}}
-                            {{> components/content_nav/content_nav_item }}
+                            {{> components/content_nav/content_nav_item  _teasersize=../../_teasersize _isdropdown=../../isDropdown _ismixed=../../isMixed _islist=../../isList _isflow=../../isFlow}}
                         {{~/each~}}
                     </ul>
                 </li>
