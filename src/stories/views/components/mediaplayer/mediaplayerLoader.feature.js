@@ -9,7 +9,7 @@ const MediaplayerLoader = function (context) {
         { element: rootElement } = context,
         isAutoplay = options.isAutoplay,
         teaserSize = options.teaserSize,
-        mediaplayerButton = hr$('.js-mediaplayer__button', rootElement)[0]
+        mediaplayerButton = hr$('.js-mediaplayer__button', rootElement.parentNode)[0]
 
     const removeVideoHover = function () {
         rootElement.parentNode.parentNode.classList.remove('-imageHover')
