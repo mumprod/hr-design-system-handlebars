@@ -1,0 +1,143 @@
+{
+    "video-1": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "./vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "videoLanguageCode": "de",
+                    "media": [
+                        {
+                            "url": "https://hr-vh.akamaihd.net/i/video/as/hessenschau/2022_03/hrLogo_220317201045_L422955_,480x270-50p-700kbit,512x288-25p-500kbit,640x360-50p-1200kbit,960x540-50p-1600kbit,1280x720-50p-3200kbit,1920x1080-50p-5000kbit,.mp4.csmil/master.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "isAdaptiveQualitySelectable": true,
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                {
+                    "kind": "normal",
+                    "languageCode": "de",
+                    "sources": [
+                        {
+                            "kind": "webvtt",
+                            "url": "https://hr-a.akamaihd.net/video/as/hessenschau/2022_03/hrLogo_220317201045_L422955_512x288-25p-500kbit.vtt"
+                        }
+                    ]
+                }
+            ],
+            "meta": {
+                "durationSeconds": 1644,
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://picsum.photos/id/188/{size}"
+                    }
+                ],
+                "title": "Auszubildende dringend gesucht | hessenschau vom 17.03.2022",
+                "synopsis": "Erstaufnahme der Geflüchteten in Gießen / Bund-Länder-Treffen zu Geflüchteten aus der Ukraine / Zu wenig Lebensmittelkontrollen / Mehr Ausbildungsplätze als Bewerber / Dokumentation über Sinti und Roma / Nachwuchs im Frankfurter Zoo / Eintracht vor dem Europa League-Spiel"
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "8423",
+        "type": "videoOndemand",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "isAutoplay": true,
+        "teaserSize": "100"
+    },
+    "video-livestream-hr-fernsehen": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "isDvrEnabled": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "./vendor/ardplayer/",
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "videoLanguageCode": "de",
+                    "media": [
+                        {
+                            "url": "https://hrhlsde.akamaized.net/hls/live/2024526/hrhlsde/index.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "maxHResolutionPx": 8000,
+                            "isAdaptiveQualitySelectable": true,
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                { "kind": "normal", "languageCode": "de", "sources": [{ "kind": "webvtt" }] }
+            ],
+            "live": { "dvrWindowSeconds": 7200 },
+            "meta": {
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://picsum.photos/id/188/{size}"
+                    }
+                ],
+                "title": "Jetzt hr-fernsehen live sehen!"
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "6819",
+        "type": "videoLivestream",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "teaserSize": "00",
+        "isAutoplay": true
+    }
+}

@@ -43,6 +43,7 @@
                 "isTicker": false,
                 "isAudio": false,
                 "isVideo": false,
+                "isPodcast": false,
                 "isPodcastEpisode": false,
                 "isExtOrBrandLink": false,
                 "isAuthor": false,
