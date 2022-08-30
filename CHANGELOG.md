@@ -1,3 +1,15 @@
+# v0.56.2 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: mediaPlayerButton is selected correctly. [#307](https://github.com/mumprod/hr-design-system-handlebars/pull/307) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.56.1 (Tue Aug 30 2022)
 
 #### 🐛 Bug Fix
