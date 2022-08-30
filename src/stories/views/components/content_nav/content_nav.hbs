@@ -3,7 +3,11 @@
         <nav class="c-content-nav {{../_modifier}} ">
             {{> components/content_nav/content_nav_list _teasersize=../_teasersize}}
         </nav>
-    {{else}}
+    {{else if this.isFlow}}
+        <nav class="c-content-nav {{../_modifier}} ">
+            {{> components/content_nav/content_nav_list _teasersize=../_teasersize}}
+        </nav>
+    {{else}} 
         {{#>components/content_nav/dropdown
                      _componentClass="c-content-nav"
                      _teasersize=../_teasersize

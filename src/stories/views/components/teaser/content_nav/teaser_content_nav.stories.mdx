@@ -6,6 +6,7 @@ import { addCommentLink } from '../jsonHelper'
 import teaser from './teaser_content_nav.hbs'
 
 import contentNavList from '../fixtures/teaser_content_nav_list_100.json'
+import contentNavFlow from '../fixtures/teaser_content_nav_flow_100.json'
 
 import contentNavMixed from '../fixtures/teaser_content_nav_mixed_100.json'
 import contentNavMixed_autosuggest from '../fixtures/teaser_content_nav_mixed_autosuggest.json'
@@ -71,6 +72,10 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 <Preview withToolbar>    
     <b>Liste</b>
     <Story name="Liste" args={contentNavList}>
+        {Template.bind({})}
+    </Story>
+    <b>Fluss</b>
+    <Story name="Fluss" args={contentNavFlow}>
         {Template.bind({})}
     </Story>
     <b>Gemischt</b>

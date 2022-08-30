@@ -1,3 +1,27 @@
+# v0.56.1 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- first try with groups, diverse changes in css, adds load_dynamic for … [#306](https://github.com/mumprod/hr-design-system-handlebars/pull/306) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.0 (Tue Aug 30 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1567 [#305](https://github.com/mumprod/hr-design-system-handlebars/pull/305) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.55.3 (Fri Aug 19 2022)
 
 #### 🐛 Bug Fix
