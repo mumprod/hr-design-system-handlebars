@@ -5,19 +5,16 @@
     "contentNav" : {
         "title"       : "Geiler Titel",
         
-        "isDropdown" : true,
+        "isDropdown" : false,
         "isList" : false,
-        "isFlow" : false,
+        "isFlow" : true,
         "isMixed" : false,
-        "isAutosuggest" : false,
-        "selectedItem": {
-            "title" : "Themen Wirtschaft"
-        },
+        "isAutoSuggest" : false,
         "contentNavEntries": [
             {
             "title" : "Arbeitsmarkt",            
             "isGroup" : false,
-            "isSelected" : false,
+            "isSelected" : true,
             "link" : {
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
@@ -25,10 +22,7 @@
                 "hasIcon": true,
                 "iconName": "extern"
                 },
-            "navigationGroup" : [
-                {
-                }
-            ]
+            "navigationGroup" : [{}]
             },
             {
                 "title" : "Banken",

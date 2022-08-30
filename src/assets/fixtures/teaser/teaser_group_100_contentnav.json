@@ -1,0 +1,4 @@
+{
+    "@->jsoninclude": "teaser/teaser_groups.inc.json",
+    "@->contentpath": "teaser_contentnav"
+}
