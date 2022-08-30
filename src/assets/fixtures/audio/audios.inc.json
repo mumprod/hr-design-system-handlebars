@@ -5,16 +5,15 @@
                 "isAutoplay": true,
                 "imageTemplateConfig": {
                     "size": [
-                        { "minWidth": 0, "value": "__small" },
-                        { "minWidth": 320, "value": "__medium" },
-                        { "minWidth": 480, "value": "__medium_extended" },
-                        { "minWidth": 640, "value": "" },
-                        { "minWidth": 960, "value": "__retina" }
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
                     ]
                 }
             },
             "web": {
-                "baseUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/",
+                "baseUrl": "./vendor/ardplayer/",
                 "isForcedAutoplay": true,
                 "isForcedVideoView": true
             },
@@ -46,7 +45,7 @@
                 "images": [
                     {
                         "kind": "preview",
-                        "url": "https://hessenschau-dev-red.hr.de/sport/fussball/eintracht-frankfurt/hinteregger-146~_t-1647558297491_v-16to9{size}.jpg"
+                        "url": "https://picsum.photos/id/188/{size}"
                     }
                 ],
                 "title": "Das Eintracht-Tor in der Reportage: \"Hinteregger schädelt den rein\"",
@@ -57,9 +56,8 @@
         },
         "playerId": "2563",
         "type": "audioOndemand",
-        "cssUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
-        "jsUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/ardplayer-hr-6.3.4.8ea4ea3d.js",
-        "atiSmarttagUrl": "https://hessenschau-dev-red.hr.de/assets_3.57.0-SNAPSHOT/js/vendor/smarttagProd.js",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
         "teaserSize": "100"
     }
