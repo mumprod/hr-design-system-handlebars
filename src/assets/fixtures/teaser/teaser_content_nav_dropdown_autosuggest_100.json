@@ -7,6 +7,7 @@
         
         "isDropdown" : true,
         "isList" : false,
+        "isFlow" : false,
         "isMixed" : false,
         "isAutosuggest" : true,
         "selectedItem": {

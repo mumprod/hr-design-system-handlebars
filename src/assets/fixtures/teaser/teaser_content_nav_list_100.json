@@ -1,12 +1,12 @@
 { 
     "realTeasersize" : "100",
     "teasersize" : "100",
-
     "contentNav" : {
         "title"       : "Geiler Titel",
         
         "isDropdown" : false,
         "isList" : true,
+        "isFlow" : false,
         "isMixed" : false,
         "isAutoSuggest" : false,
         "contentNavEntries": [

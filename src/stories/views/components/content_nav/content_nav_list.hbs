@@ -1,6 +1,5 @@
-<ul {{!-- x-init="addDependentCssToUl({{this.isMixed}},{{this.isDropdown}},{{_teasersize}})"   --}}
-:class="{{this.isMixed}} && {{_teasersize}} < 66 || ({{this.isMixed}} && window.innerWidth < 768) || {{this.isDropdown}} ? 'shadow-[0_13px_27px_-2px_rgba(50,50,93,0.25)]' : ''" 
-    class="flex flex-wrap w-full m-0 last:border-b-0">
+<ul :class="{{this.isMixed}} && {{_teasersize}} < 66 || ({{this.isMixed}} && window.innerWidth < 768) || {{this.isDropdown}} ? 'shadow-[0_13px_27px_-2px_rgba(50,50,93,0.25)] !px-0 ' : ''" 
+    class="flex flex-wrap w-full px-2 m-0 last:border-b-0">
     
     {{~#each this.contentNavEntries~}}
           
@@ -20,7 +19,7 @@
             {{/if}}
         {{else}}
             
-            {{> components/content_nav/content_nav_item  _teasersize=../_teasersize _isdropdown=../isDropdown _ismixed=../isMixed _islist=../isList}}
+            {{> components/content_nav/content_nav_item  _teasersize=../_teasersize _isdropdown=../isDropdown _ismixed=../isMixed _islist=../isList _isflow=../isFlow}}
  
         {{~/if~}}
     {{~/each~}}
