@@ -7,10 +7,8 @@ const MediaplayerLoader = function (context) {
 
     const { options } = context,
         { element: rootElement } = context,
-        type = options.type,
         isAutoplay = options.isAutoplay,
         teaserSize = options.teaserSize,
-        audioContent = hr$('.js-audioElement__audio', rootElement)[0],
         mediaplayerButton = hr$('.js-mediaplayer__button', rootElement)[0]
 
     const removeVideoHover = function () {
@@ -25,6 +23,7 @@ const MediaplayerLoader = function (context) {
     }
 
     if (isAutoplay) {
+        console.log('isAutoplay')
         listenOnce('click', loadArdPlayerLoader, mediaplayerButton)
     } else {
         loadArdPlayerLoader()

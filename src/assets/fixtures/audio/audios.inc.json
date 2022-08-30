@@ -60,5 +60,68 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
         "teaserSize": "100"
+    },
+    "audio-event-livestream": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "isDvrEnabled": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "./vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "isAudioOnly": true,
+                    "media": [
+                        {
+                            "url": "https://hlshr3.akamaized.net/hls/live/2016536/hr3/master.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                { "kind": "normal", "languageCode": "de", "sources": [{ "kind": "webvtt" }] }
+            ],
+            "live": { "dvrWindowSeconds": 7200 },
+            "meta": {
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://picsum.photos/id/188/{size}"
+                    }
+                ],
+                "title": "Test Audio Event",
+                "synopsis": "Das Sicherheitspersonal hat am frühen Dienstagmorgen seinen Warnstreik am Frankfurter Flughafen gestartet. Reisende ab Frankfurt können sich den Weg zum Airport direkt sparen. Ein spezielles Team kümmert sich um Gestrandete."
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "1694",
+        "type": "audioLivestream",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "isAutoplay": true,
+        "teaserSize": "50"
     }
 }
