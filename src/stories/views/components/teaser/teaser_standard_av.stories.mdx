@@ -4,6 +4,7 @@ import teaser from './teaser_standard.hbs'
 import teaser50video from './fixtures/teaser_standard_50_serif_video.json'
 import teaser25video from './fixtures/teaser_standard_25_serif_video.json'
 import teaser50audio from './fixtures/teaser_standard_50_serif_audio.json'
+import teaser50podcast from './fixtures/teaser_standard_50_serif_podcast.json'
 import teaser50audioLivestream from './fixtures/teaser_standard_50_serif_audio_livestream.json'
 import teaser25audio from './fixtures/teaser_standard_25_serif_audio.json'
 import teaser25audioLivestream from './fixtures/teaser_standard_25_serif_audio_livestream.json'
@@ -67,6 +68,9 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
         {Template.bind({})}
     </Story>
     <Story name="Standard 25% Audio" args={teaser25audio.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 50% Podcast" args={teaser50podcast.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story

@@ -61,6 +61,88 @@
         "isAutoplay": true,
         "teaserSize": "100"
     },
+    "audio-podcast": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "http://localhost:8080/site/hessenschau/assets_2.85.0/vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "site": "551103",
+                    "config": { "getCollectDomainSSL": "logs1406.xiti.com", "secure": true },
+                    "page": {
+                        "name": "muslim_fashion__mehr_als_ein_kopftuch__podcast:audio:audioPlay",
+                        "level2": "4",
+                        "chapter1": "Audio-Start",
+                        "chapter2": "OnDemand",
+                        "customVars": {
+                            "site": {
+                                "1": "podcast-episode-43976",
+                                "2": "hr-nt:podcastEpisode",
+                                "5": "202203230802"
+                            }
+                        }
+                    },
+                    "richMedia": {
+                        "mediaType": "audio",
+                        "playerId": "4076",
+                        "mediaLevel2": "4",
+                        "mediaLabel": "muslim_fashion__mehr_als_ein_kopftuch__podcast:audioPlay",
+                        "mediaTheme1": "OnDemand",
+                        "duration": "3040",
+                        "broadcastMode": "clip"
+                    }
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "isAudioOnly": true,
+                    "media": [
+                        {
+                            "url": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                            "mimeType": "audio/mp3",
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "meta": {
+                "durationSeconds": 3040,
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://picsum.photos/id/188/{size}"
+                    }
+                ],
+                "title": "Muslim Fashion. Mehr als ein Kopftuch.",
+                "synopsis": "Wo immer die Ausstellung \"Contemporary Muslim Fashion“ ins Museum kommt,  entfacht sie heftige Diskussionen. Nachdem die Schau in San Francisco für Furore sorgte, wird sie demnächst im Frankfurter Museum für Angewandte Kunst als erste Station in Europa gezeigt. Die \"Modest Fashion“, die dezente Mode, so das Schlagwort für die verhüllende, aber keineswegs unsichtbar machende Mode, spaltet das feministische Lager: Ist sie eine Momentaufnahme aktueller muslimischer Kleidungsstile aus aller Welt oder Werbung für die weibliche Verschleierung? In jedem Fall zeigt die Ausstellung, dass die Verhüllung des weiblichen Körpers und der Frisur nicht nur trist, sondern auch schön sein kann - und für manche Trägerinnen befreiend. Und sie ist durchaus politisch, diskutiert gesetzliche Kleiderordnungen und die Frage politischer Symbolik. Inzwischen wollen auch westliche Firmen von der Vielfalt muslimischer Mode profitieren. Sie haben die Konsumentinnen im Nahen Osten und Südostasien als kaufkräftige Klientel entdeckt. Dort ist ein riesiger Markt zu erschließen. Nicht selten wagen sie sich damit an die Grenzen religiöser und gesellschaftlicher Akzeptanz. Kann Mode solche Grenzen überwinden? "
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "4076",
+        "type": "audioOndemand",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "isAutoplay": true,
+        "teaserSize": "50"
+    },
     "audio-event-livestream": {
         "playerConfig": {
             "generic": {
