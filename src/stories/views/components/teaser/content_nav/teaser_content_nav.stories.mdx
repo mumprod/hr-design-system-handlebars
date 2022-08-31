@@ -21,19 +21,20 @@ import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdow
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 768, 1024],
-        }
+        },
     }}
     argTypes={{
         realTeasersize: {
             table: {
                 disable: true
-            }
+            },
         },
         contentNav: {
             table: {
-                disable: true
-            }
-        },
+                expanded: false,
+                disable: false,
+            },
+        },        
         teasersize: {
             control: {
                 type: 'select',

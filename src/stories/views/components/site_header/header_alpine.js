@@ -354,11 +354,11 @@ document.addEventListener('alpine:init', () => {
             } 
 
             if (isMixed) {
-                if (teasersize === 100 || teasersize === 66 ) {
+                if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
                     if (this.$screen('lg')) return false
                     if (this.$screen('md')) return false
                     if (this.$screen('xs')) return true
-                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                } else if (teasersize === 33 || teasersize === 25 ) { 
                     return true 
                 }
             }
@@ -369,11 +369,11 @@ document.addEventListener('alpine:init', () => {
                 return this.open                
             }  
             if (isMixed) {
-                if (teasersize === 100 || teasersize === 66 ) {
+                if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
                     if (this.$screen('lg')) return true
                     if (this.$screen('md')) return true
                     if (this.$screen('xs')) return this.open
-                } else if (teasersize === 33 || teasersize === 25 || teasersize === 50) { 
+                } else if (teasersize === 33 || teasersize === 25 ) { 
                     return this.open
                 }
             }
@@ -396,7 +396,7 @@ document.addEventListener('alpine:init', () => {
                     break;
                 case 50:
                     classes.push('w-full')
-                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','!mb-0','border-b','last:border-b-0') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','border','mb-2', 'md:!mr-2') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
                     break;
                 case 33:
                     classes.push('w-full')
