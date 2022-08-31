@@ -6,7 +6,7 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
-    content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs}'],
+    content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs,js}'],
     theme: {
         
         fill: {
