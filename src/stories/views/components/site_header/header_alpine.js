@@ -379,6 +379,40 @@ document.addEventListener('alpine:init', () => {
             }
 
             return false 
+        }, 
+
+        chooseListItemStyles(teasersize, isList, isMixed, isDropdown, isFlow){
+            let classes = []
+            
+            switch (teasersize) {
+                case 100:
+                    classes.push('w-full','md:w-fit')
+                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','md:!w-fit','!mb-0','md:!mb-2','md:mr-2','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0','md:!border') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    break;
+                case 66:
+                    classes.push('w-fit')
+                    isList == true ? classes.push('border','mb-2','mr-2') : isMixed ? classes.push('!w-full','md:!w-fit','!mb-0','md:!mb-2','md:mr-2','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0','md:!border') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    console.log(classes)
+                    break;
+                case 50:
+                    classes.push('w-full')
+                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','!mb-0','border-b','last:border-b-0') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    break;
+                case 33:
+                    classes.push('w-full')
+                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','!mb-0','border-b','last:border-b-0') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    break;
+                case 25:
+                    classes.push('w-full')
+                    isList ? classes.push('border','mb-2', 'md:!mr-2') : isMixed ? classes.push('!w-full','!mb-0','border-b','last:border-b-0') : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0') : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2') : ''
+                    break;
+
+            }
+
+            for (let i = 0; i < classes.length; i++) {
+                this.$el.classList.add(classes[i])
+            }
+            
         }
     }))  
 })
