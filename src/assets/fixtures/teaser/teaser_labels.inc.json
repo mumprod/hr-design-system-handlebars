@@ -7,6 +7,14 @@
             "bylineText": "BylineText"
         }
     },
+    "podcast": {
+        "type": "media",
+        "loca": "label_podcast",
+        "byline": {
+            "bylineSsi": "BylineText aus ssi",
+            "bylineText": "BylineText"
+        }
+    },
     "media": {
         "type": "media",
         "loca": "label_media",
