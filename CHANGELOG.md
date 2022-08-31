@@ -1,3 +1,15 @@
+# v0.56.6 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- adds autosuggest to list and flow, several refactoring [#311](https://github.com/mumprod/hr-design-system-handlebars/pull/311) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.56.5 (Wed Aug 31 2022)
 
 #### 🐛 Bug Fix
