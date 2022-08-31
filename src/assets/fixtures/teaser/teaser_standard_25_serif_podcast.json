@@ -1,0 +1,43 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "25"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserLead",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_lead.inc.json",
+                "@->contentpath": "podcast"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "podcast"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "sm_4"
+            }
+        }
+    ]
+}

@@ -22,7 +22,7 @@
             "isAudio": true,
             "toModel": {
                 "audioElement": {
-                    "isPodcast": true,
+                    "isPodcast": false,
                     "ardPlayerConfig": {
                         "@->jsoninclude": "audio/audios.inc.json",
                         "@->contentpath": "audio-1"
@@ -48,6 +48,25 @@
                     "ardPlayerJsonConfig": {
                         "@->jsoninclude": "audio/audios.inc.json",
                         "@->contentpath": "audio-event-livestream"
+                    }
+                }
+            }
+        },
+        "image": ""
+    },
+    "podcast": {
+        "avDocument": {
+            "isPodcast": true,
+            "toModel": {
+                "audioElement": {
+                    "isPodcast": true,
+                    "ardPlayerConfig": {
+                        "@->jsoninclude": "audio/audios.inc.json",
+                        "@->contentpath": "audio-podcast"
+                    },
+                    "ardPlayerJsonConfig": {
+                        "@->jsoninclude": "audio/audios.inc.json",
+                        "@->contentpath": "audio-podcast"
                     }
                 }
             }

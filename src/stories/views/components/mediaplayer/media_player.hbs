@@ -19,11 +19,11 @@
             {{/if}}
         {{/with}}
         {{> components/button/button_round _isButton="true" _addClass=(if _isLivestream 'absolute bottom-0 right-0 my-5 mx-5 text-orange-spicyCarrot hover:fill-orange-spicyCarrot js-mediaplayer__button' 'absolute bottom-0 right-0 my-5 mx-5 text-blue-jellyBean hover:fill-blue-jellyBean js-mediaplayer__button') _showIcon=true _icon=_mediaButtonIcon _label=_mediaButtonLabel _srOnly="true" _alpineClick="avStart = !avStart; $dispatch('player_start')"}}   
-        {{~#if _isPodcast~}}
-            <a href="{{this.podcastDownloadUrl}}" class="downloadLink button-invert js-load"{{#with
+        {{~#if this.isPodcast~}}
+            <a href="{{this.podcastDownloadUrl}}" class="absolute top-0 right-0 m-5 js-load"{{#with
                     this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
-                {{> components/base/image/icon _icon='download-button' _addClass="icon--media"}}
+                {{> components/base/image/icon _icon='download-button' _addClass="w-10 h-10"}}
             </a>
         {{~/if~}}
     </div>
