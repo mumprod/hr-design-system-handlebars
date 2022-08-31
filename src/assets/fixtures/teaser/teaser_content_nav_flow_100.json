@@ -9,7 +9,7 @@
         "isList" : false,
         "isFlow" : true,
         "isMixed" : false,
-        "isAutoSuggest" : false,
+        "isAutosuggest" : true,
         "contentNavEntries": [
             {
             "title" : "Arbeitsmarkt",            
