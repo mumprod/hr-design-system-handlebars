@@ -22,7 +22,7 @@
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
                 "isTargetBlank": true,
-                "hasIcon": true,
+                "hasIcon": false,
                 "iconName": "extern"
                 },
             "navigationGroup" : [
