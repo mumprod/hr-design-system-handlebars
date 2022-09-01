@@ -1,3 +1,15 @@
+# v0.56.7 (Thu Sep 01 2022)
+
+#### 🐛 Bug Fix
+
+- adds some of mithras designs [#312](https://github.com/mumprod/hr-design-system-handlebars/pull/312) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.56.6 (Wed Aug 31 2022)
 
 #### 🐛 Bug Fix
