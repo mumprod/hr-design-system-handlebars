@@ -1,14 +1,14 @@
 {{#with this.contentNav}} 
     {{#if this.isList}} 
         <nav class="c-content-nav"> 
-            <div x-on:click.outside ="open = false;" class="flex flex-wrap {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
+            <div x-on:click.outside ="$store.contentNavDropdownIsOpen = false;" class="flex flex-wrap mt-2 md:mt-0 {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
                 {{#if this.isAutosuggest}}
                     data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"", "unmatchedClass":"hidden"}'
                 {{/if}}
                 >
                 {{#if this.isAutosuggest}}
-                    <div class="flex w-full h-10 my-2 c-content-nav__autosuggest border-blue-congress align-center">
-                        <input x-ref="autosuggestInput" class="w-full pl-4 focus:outline-none js-autosuggest-input" type="text"
+                    <div class="flex w-full h-10 mx-2 mb-2 md:mx-0 c-content-nav__autosuggest border-blue-congress align-center">
+                        <input x-ref="autosuggestInput" class="w-full h-10 pl-2 bg-gray-200 placeholder:text-gray-800 focus:outline-none js-autosuggest-input" type="text"
                                 placeholder="Eintrag filtern"/>
                     </div>
                 {{/if}}
@@ -19,14 +19,14 @@
         </nav>
     {{else if this.isFlow}}
         <nav class="c-content-nav">
-            <div x-on:click.outside ="open = false;" class="flex flex-wrap {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
+            <div x-on:click.outside ="$store.contentNavDropdownIsOpen = false" class="flex flex-wrap mt-2 md:mt-0 {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
                 {{#if this.isAutosuggest}}
                     data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"", "unmatchedClass":"hidden"}'
                 {{/if}}
                 >
                 {{#if this.isAutosuggest}}
-                    <div class="flex w-full h-10 my-2 c-content-nav__autosuggest border-blue-congress align-center">
-                        <input x-ref="autosuggestInput" class="w-full pl-4 focus:outline-none js-autosuggest-input" type="text"
+                    <div class="flex w-full h-10 mx-2 mb-2 md:mx-0 c-content-nav__autosuggest border-blue-congress align-center">
+                        <input x-ref="autosuggestInput" class="w-full h-10 pl-2 bg-gray-200 placeholder:text-gray-800 focus:outline-none js-autosuggest-input" type="text"
                                 placeholder="Eintrag filtern"/>
                     </div>
                 {{/if}}
@@ -43,14 +43,14 @@
                      _buttonText=(defaultIfEmpty this.selectedItem.title ../../title)
                      _hiddenNavigationLabel="Unternavigation"
         }} 
-            <div x-on:click.outside ="open = false;" class="flex flex-wrap {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
+            <div x-on:click.outside ="$store.contentNavDropdownIsOpen = false" class="flex flex-wrap mt-0 {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
                 {{#if this.isAutosuggest}}
                     data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"", "unmatchedClass":"hidden"}'
                 {{/if}}
                 >
                 {{#if this.isAutosuggest}}
-                    <div class="flex w-full h-10 my-2 c-content-nav__autosuggest border-blue-congress align-center">
-                        <input x-ref="autosuggestInput" class="w-full pl-4 focus:outline-none js-autosuggest-input" type="text"
+                    <div class="flex w-full h-10 mt-2 md:mx-0 c-content-nav__autosuggest border-blue-congress align-center">
+                        <input x-ref="autosuggestInput" class="w-full h-8 pl-2 bg-gray-200 placeholder:text-gray-800 focus:outline-none js-autosuggest-input" type="text"
                                 placeholder="Eintrag filtern"/>
                     </div>
                 {{/if}}

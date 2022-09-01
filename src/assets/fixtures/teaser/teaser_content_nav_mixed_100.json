@@ -1,10 +1,8 @@
 { 
-    "realTeasersize" : "100",
     "teasersize" : "100",
 
     "contentNav" : {
         "title"       : "Geiler Titel",
-        
         "isDropdown" : false,
         "isList" : false,
         "isFlow" : false,
@@ -22,7 +20,7 @@
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
                 "isTargetBlank": true,
-                "hasIcon": true,
+                "hasIcon": false,
                 "iconName": "extern"
                 },
             "navigationGroup" : [{}]
