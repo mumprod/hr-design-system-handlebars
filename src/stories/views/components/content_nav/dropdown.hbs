@@ -5,7 +5,7 @@
     role="navigation"
     aria-labelledby="dropdown__label--{{getRandom}}">
 
-    <span id="o-dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
+    <span id="dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
 
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         :class="$store.contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
@@ -15,15 +15,23 @@
                 {{_buttonText}}
         </span>
         <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
-            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  class="flex self-center">
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
+            <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" 
+                :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  
+                class="flex self-center">
+                
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-2 w-4" _iconmap="icons"~}}
+                
             </span>
-            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen; $dispatch('resetinput')" :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" class="flex self-center">
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
+            <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen; $dispatch('resetinput')" 
+                :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" 
+                class="flex self-center">
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-2 w-4" _iconmap="icons"~}}
             </span>
         </div>
     </div>    
-    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="p-0 m-0 z-10000 md:relative md:left-0 md:h-auto md:overflow-visible">
+    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
+        aria-haspopup="true" 
+        class="p-0 m-0 z-10000 md:relative md:left-0 md:h-auto md:overflow-visible">
        {{> @partial-block }}
     </div>
     

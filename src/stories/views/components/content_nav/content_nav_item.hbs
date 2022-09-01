@@ -9,14 +9,14 @@ class="h-10 md:mx-0 overflow-hidden text-base font-copy list-none border-blue-co
         _selectedCssClass="is-selected"
      }}
         
-        <span class="flex mt-1 text-base grow font-copy js-title">{{this.title}}</span>
+        <span class="flex text-base grow font-copy js-title">{{this.title}}</span>
 
         {{#if this.link.hasIcon}}
             {{> components/base/image/icon _icon=this.link.iconName _addClass="mt-1 ml-2 h-4 w-4" _iconmap="icons"}}
         {{/if}}
 
         <span>
-            {{>components/base/image/icon _icon="arrow-right" _addClass=" h-4 w-4 ml-2" }} 
+            {{>components/base/image/icon _icon="arrow-right" _addClass="-mt-0.5 h-2 w-4 ml-2" }} 
         </span>
 
     {{/components/base/link.hbs}} 
