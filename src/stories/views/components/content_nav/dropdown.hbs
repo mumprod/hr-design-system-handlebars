@@ -1,5 +1,5 @@
 <nav  
-    class="w-full px-2 md:px-0 {{_componentClass}} {{_modifier}} " 
+    class="w-full px-2 md:px-0 {{_componentClass}} " 
     id="dropdown--{{nextRandom}}"
     tabindex="0"
     role="navigation"
@@ -9,23 +9,20 @@
 
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         :class="$store.contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
-        class="relative flex w-full h-10 overflow-hidden bg-white border z-10002 border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
+        class="relative flex w-full h-10 mb-2 overflow-hidden bg-white border z-10002 border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
         
-        <span class="text-base p-2 self-center w-full {{_componentClass}}__button-text">
+        <span class="self-center w-full p-2 text-base">
                 {{_buttonText}}
         </span>
         <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
-            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  class="flex self-center -open">
-            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
+            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  class="flex self-center">
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-4 w-4" _iconmap="icons"~}}
             </span>
-
-            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen;  $dispatch('resetinput')" :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" class="flex self-center -close">
-            {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
+            <span x-on:click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen; $dispatch('resetinput')" :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" class="flex self-center">
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
             </span>
         </div>
-
     </div>    
-
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" aria-haspopup="true" class="p-0 m-0 z-10000 md:relative md:left-0 md:h-auto md:overflow-visible">
        {{> @partial-block }}
     </div>
