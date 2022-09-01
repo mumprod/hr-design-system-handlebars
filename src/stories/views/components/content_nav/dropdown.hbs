@@ -14,18 +14,18 @@
         <span class="self-center w-full p-2 text-base">
                 {{_buttonText}}
         </span>
-        <div class="flex self-center w-auto h-full px-2 py-1 border-l border-blue-congress">
+        <div class="flex self-center w-auto h-full px-3 py-1 border-l border-blue-congress">
             <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" 
                 :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  
                 class="flex self-center">
                 
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="flex justify-end h-2 w-4" _iconmap="icons"~}}
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
                 
             </span>
             <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen; $dispatch('resetinput')" 
                 :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" 
                 class="flex self-center">
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-2 w-4" _iconmap="icons"~}}
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
             </span>
         </div>
     </div>    
