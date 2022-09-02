@@ -180,7 +180,9 @@ module.exports = {
                 },
                 grey: {
                     scorpion: '#606060',
-                    alto: '#e0e0e0'
+                    alto: '#e0e0e0',
+                    light: '#F8F8F8',
+                    dark: '#707070'
                 },
                 labelMedia: 'var(--color-label-media)',
                 labelEvent: 'var(--color-label-event)',

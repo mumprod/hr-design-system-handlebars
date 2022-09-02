@@ -1,19 +1,18 @@
 { 
+    "realTeasersize" : "100",
     "teasersize" : "100",
 
     "contentNav" : {
         "title"       : "Geiler Titel",
+        "isListOrFlow" : true,
         "isDropdown" : false,
         "isList" : false,
-        "isFlow" : false,
-        "isMixed" : true,
-        "isAutoSuggest" : false,
-        "selectedItem": {
-            "title" : "Themen Wirtschaft"
-        },
+        "isFlow" : true,
+        "isMixed" : false,
+        "isAutosuggest" : true,
         "contentNavEntries": [
             {
-            "title" : "Hier steht ein viel zu langer Titel,der mittels truncate gekürzt wird",            
+            "title" : "Arbeitsmarkt",            
             "isGroup" : false,
             "isSelected" : false,
             "link" : {

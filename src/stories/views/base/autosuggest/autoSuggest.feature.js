@@ -60,7 +60,7 @@ const AutoSuggest = function (context) {
             ) {
                 hasMatch = true
                 words[i] =
-                    "<span style='color:#ff9000' >" +
+                    "<span class='text-yellow-400' style='' >" +
                     words[i].slice(0, value.length) +
                     '</span>' +
                     words[i].slice(value.length)

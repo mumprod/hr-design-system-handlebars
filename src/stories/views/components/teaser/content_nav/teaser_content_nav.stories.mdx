@@ -6,8 +6,9 @@ import { addCommentLink } from '../jsonHelper'
 import teaser from './teaser_content_nav.hbs'
 
 import contentNavList from '../fixtures/teaser_content_nav_list_100.json'
+import contentNavList_autosuggest from '../fixtures/teaser_content_nav_list_autosuggest.json'
 import contentNavFlow from '../fixtures/teaser_content_nav_flow_100.json'
-
+import contentNavFlow_autosuggest from '../fixtures/teaser_content_nav_flow_autosuggest.json'
 import contentNavMixed from '../fixtures/teaser_content_nav_mixed_100.json'
 import contentNavMixed_autosuggest from '../fixtures/teaser_content_nav_mixed_autosuggest.json'
 
@@ -75,24 +76,32 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <Story name="Liste" args={contentNavList}>
         {Template.bind({})}
     </Story>
+    <b>Liste mit Filter</b>
+    <Story name="Liste mit Filter" args={contentNavList_autosuggest}>
+        {Template.bind({})}
+    </Story>
     <b>Fluss</b>
     <Story name="Fluss" args={contentNavFlow}>
+        {Template.bind({})}
+    </Story>
+    <b>Fluss mit Filter</b>
+    <Story name="Fluss mit Filter" args={contentNavFlow_autosuggest}>
         {Template.bind({})}
     </Story>
     <b>Gemischt</b>
     <Story name="Gemischt" args={contentNavMixed}>
         {Template.bind({})}
     </Story>
-    <b>Gemischt Autosuggest</b>
-    <Story name="Gemischt Autosuggest" args={contentNavMixed_autosuggest}>
+    <b>Gemischt mit Filter</b>
+    <Story name="Gemischt mit Filter" args={contentNavMixed_autosuggest}>
         {Template.bind({})}
     </Story>
     <b>Dropdown</b>
     <Story name="Dropdown" args={contentNavDropdown}>
         {Template.bind({})}
     </Story>
-    <b>Dropdown Autosuggest</b>
-    <Story name="Dropdown Autosuggest" args={contentNavDropdown_autosuggest}>
+    <b>Dropdown mit Filter</b>
+    <Story name="Dropdown mit Filter" args={contentNavDropdown_autosuggest}>
         {Template.bind({})}
     </Story>
     <b>Dropdown mit Subgruppen</b>

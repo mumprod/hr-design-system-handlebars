@@ -1,23 +1,15 @@
 {{#with this.contentNav}} 
-    {{#if this.isList}} 
-        <nav class="c-content-nav"> 
+    {{#if this.isListOrFlow}}
+        <nav class="w-full c-content-nav">
             {{> components/content_nav/content_nav_container 
                 _teasersize=../_teasersize 
                 _maindivclass="flex flex-wrap mt-2 md:mt-0" 
-                _inputcontainerclass="flex w-full h-10 mx-2 md:mx-0 border-blue-congress align-center"
-            }}
-        </nav>
-    {{else if this.isFlow}}
-        <nav class="c-content-nav">
-            {{> components/content_nav/content_nav_container 
-                _teasersize=../_teasersize 
-                _maindivclass="flex flex-wrap mt-2 md:mt-0" 
-                _inputcontainerclass="flex w-full h-10 mx-2 md:mx-0 border-blue-congress align-center "
+                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-2 md:mx-0 border-blue-congress align-center"
             }}    
         </nav>
-    {{else}}  
+    {{else}}
         {{#>components/content_nav/dropdown
-                     _componentClass="c-content-nav"
+                     _componentClass="c-content-nav w-full"
                      _teasersize=../_teasersize
                      _iconOpen="arrow-down"
                      _iconClose="arrow-up"
@@ -27,7 +19,7 @@
             {{> components/content_nav/content_nav_container 
                 _teasersize=_teasersize 
                 _maindivclass="flex flex-wrap mt-0" 
-                _inputcontainerclass="flex w-full h-10 mx-0 border-blue-congress align-center "
+                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
             }}
         {{/components/content_nav/dropdown}}
     {{/if}}
