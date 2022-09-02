@@ -1,3 +1,15 @@
+# v0.56.10 (Fri Sep 02 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1689 : new JSON Key 'isListOrFlow' and some design tweaks [#315](https://github.com/mumprod/hr-design-system-handlebars/pull/315) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.56.9 (Fri Sep 02 2022)
 
 #### 🐛 Bug Fix
