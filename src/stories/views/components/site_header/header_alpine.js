@@ -404,7 +404,7 @@ document.addEventListener('alpine:init', () => {
                 case 50:
                     classes.push('w-full')
                     isList ? classes.push('border','mb-2','hover:no-underline') 
-                    : isMixed ? classes.push('!w-full','border','md:mb-2', 'md:!mr-2','last:mb-0','border-gray-400','border-l-0','border-r-0','border-t-0','md:border','md:border-blue-congress','hover:underline','hover:!bg-white','hover:text-blue-congress','hover:fill-congress','md:hover:!bg-blue-congress','md:hover:!text-white','md:hover:fill-white','md:hover:no-underline') 
+                    : isMixed ? classes.push('!w-full','border','md:mb-2','last:mb-0','border-gray-400','border-l-0','border-r-0','border-t-0','md:border','md:border-blue-congress','hover:underline','hover:!bg-white','hover:text-blue-congress','hover:fill-congress','md:hover:!bg-blue-congress','md:hover:!text-white','md:hover:fill-white','md:hover:no-underline') 
                     : isDropdown ? classes.push('!w-full','md:!w-full','md:mb-0','md:!mr-0','border-l-0','border-r-0','border-t-0','border-b','last:border-b-0','border-gray-400','hover:underline','hover:!text-blue-congress','hover:!bg-white','hover:!fill-congress') 
                     : isFlow ? classes.push('!w-fit','!mr-2','border','mb-2','hover:no-underline') 
                     : ''
