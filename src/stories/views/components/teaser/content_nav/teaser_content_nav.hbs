@@ -1,17 +1,9 @@
 <div  x-data="contentNavigationHandler()" class="col-span-12 flex gap-y-3 gap-x-4  {{inline-switch this.teasersize '["100","66","50","33","25"]' '["flex-col","md:col-span-9 md:flex-row ","md:col-span-6 md:flex-row "," md:col-span-4 md:flex-row "," md:col-span-3 md:flex-row "]'}}">
-
-    {{#if this.contentNav.isDropdown}}
-        
-        {{> components/content_nav/content_nav _modifier="-as-dropdown" _teasersize=this.teasersize}}
-    
+    {{#if this.contentNav.isDropdown}}        
+        {{> components/content_nav/content_nav _teasersize=this.teasersize}}    
     {{else this.contentNav.isList }}
-
-        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-button -at-{0}" this.realTeasersize) _teasersize=this.teasersize}}
-
+        {{> components/content_nav/content_nav _teasersize=this.teasersize}}
     {{else}}
-
-        {{> components/content_nav/content_nav _modifier=(replaceTokens "-as-mixed -at-{0}" this.realTeasersize) _teasersize=this.teasersize }}
-    
-    {{/if}} 
-    
+        {{> components/content_nav/content_nav _teasersize=this.teasersize }}    
+    {{/if}}    
 </div>

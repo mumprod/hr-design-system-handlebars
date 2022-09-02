@@ -21,19 +21,20 @@ import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdow
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 768, 1024],
-        }
+        },
     }}
     argTypes={{
         realTeasersize: {
             table: {
                 disable: true
-            }
+            },
         },
         contentNav: {
             table: {
-                disable: true
-            }
-        },
+                expanded: false,
+                disable: false,
+            },
+        },        
         teasersize: {
             control: {
                 type: 'select',
@@ -90,12 +91,12 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <Story name="Dropdown" args={contentNavDropdown}>
         {Template.bind({})}
     </Story>
-    <b>Dropdown mit Subgruppen</b>
-    <Story name="Dropdown mit Subgruppen" args={contentNavDropdown_subgroups}>
-        {Template.bind({})}
-    </Story>
     <b>Dropdown Autosuggest</b>
     <Story name="Dropdown Autosuggest" args={contentNavDropdown_autosuggest}>
+        {Template.bind({})}
+    </Story>
+    <b>Dropdown mit Subgruppen</b>
+    <Story name="Dropdown mit Subgruppen" args={contentNavDropdown_subgroups}>
         {Template.bind({})}
     </Story>
 </Preview>

@@ -1,3 +1,63 @@
+# v0.56.8 (Thu Sep 01 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part9 [#313](https://github.com/mumprod/hr-design-system-handlebars/pull/313) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.7 (Thu Sep 01 2022)
+
+#### 🐛 Bug Fix
+
+- adds some of mithras designs [#312](https://github.com/mumprod/hr-design-system-handlebars/pull/312) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.6 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- adds autosuggest to list and flow, several refactoring [#311](https://github.com/mumprod/hr-design-system-handlebars/pull/311) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.5 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part6 [#310](https://github.com/mumprod/hr-design-system-handlebars/pull/310) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.4 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1567 [#309](https://github.com/mumprod/hr-design-system-handlebars/pull/309) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.56.3 (Tue Aug 30 2022)
 
 #### 🐛 Bug Fix

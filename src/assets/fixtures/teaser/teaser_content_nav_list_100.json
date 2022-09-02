@@ -8,7 +8,7 @@
         "isList" : true,
         "isFlow" : false,
         "isMixed" : false,
-        "isAutoSuggest" : false,
+        "isAutosuggest" : true,
         "contentNavEntries": [
             {
             "title" : "Arbeitsmarkt",            
@@ -18,7 +18,7 @@
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",
                 "isTargetBlank": true,
-                "hasIcon": true,
+                "hasIcon": false,
                 "iconName": "extern"
                 },
             "navigationGroup" : [{}]
