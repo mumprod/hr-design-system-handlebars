@@ -17,7 +17,7 @@
             {
             "title" : "Arbeitsmarkt",            
             "isGroup" : false,
-            "isSelected" : true,
+            "isSelected" : false,
             "link" : {
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",

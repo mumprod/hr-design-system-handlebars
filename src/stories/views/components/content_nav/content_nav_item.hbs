@@ -1,15 +1,16 @@
 <li x-init="chooseListItemStyles({{_teasersize}},{{_islist}},{{_ismixed}},{{_isdropdown}},{{_isflow}})" 
-class="h-10 md:mx-0 overflow-hidden text-base font-copy list-none border-blue-congress fill-congress text-blue-congress bg-white hover:bg-blue-congress hover:fill-white hover:text-white hover:underline {{#if this.isSelected}} font-bold -current{{/if}} c-content-nav__item">
-     {{#>components/base/link.hbs 
+    class="h-10 md:mx-0 overflow-hidden text-base font-copy list-none border-blue-congress fill-congress text-blue-congress bg-white hover:bg-blue-congress hover:fill-white hover:text-white hover:underline {{#if this.isSelected}} font-bold -current{{/if}} c-content-nav__item"
+>
+    {{#>components/base/link.hbs 
         _doNavigationTracking="true" 
         _clickLabelType="Contentnavigation" 
         _clickLabelPrefix1=this.title 
         _css="flex items-center py-2 px-2 h-10 whitespace-nowrap overflow-hidden" 
         _isSelected=this.isSelected
         _selectedCssClass="is-selected"
-     }}
+    }}
         
-        <span class="flex text-base grow font-copy js-title">{{this.title}}</span>
+        <span class="block text-base grow font-copy js-title truncate ... ">{{this.title}}</span>
 
         {{#if this.link.hasIcon}}
             {{> components/base/image/icon _icon=this.link.iconName _addClass="ml-2 h-4 w-4" _iconmap="icons"}}
