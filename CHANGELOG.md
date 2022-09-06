@@ -1,3 +1,15 @@
+# v0.56.12 (Tue Sep 06 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1689 content navi next steps [#316](https://github.com/mumprod/hr-design-system-handlebars/pull/316) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.56.11 (Mon Sep 05 2022)
 
 #### 🐛 Bug Fix
