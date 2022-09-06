@@ -12,7 +12,18 @@ import teaserGroup100contentnav from '../fixtures/teaser_group_100_contentNav.js
 <Meta
   title="Komponenten/Teaser/Gruppen"
   argTypes={{
-    
+    teaserSize: {
+            control: {
+                type: 'select',
+                options: ['100', '66', '50', '33', '25'],
+            },
+            description: 'Teaser Größe',
+            table: {
+                defaultValue: {
+                    summary: '100',
+                },
+            },
+        },
   }}
   parameters={{
         layout: 'fullscreen',
@@ -59,7 +70,7 @@ Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
     {groupTeaserTemplate.bind({})}
   </Story>
   <Story
-    name="100% Gruppe mit Content Navigation"
+    name="100% Gruppe mit Content Navigation Aufklapp"
     args={teaserGroup100contentnav.includeModel} 
   >
     {groupTeaserTemplate.bind({})}
