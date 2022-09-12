@@ -28,19 +28,24 @@
 
     "clusterTeaserItems": [
         {
-            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item1"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item2"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item3"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item4"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item5"
         }
     ],
 
