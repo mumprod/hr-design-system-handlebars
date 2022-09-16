@@ -1,3 +1,16 @@
+# v0.56.13 (Fri Sep 16 2022)
+
+#### 🐛 Bug Fix
+
+- Fixing hs-logo for print view - Dpe 1710 [#318](https://github.com/mumprod/hr-design-system-handlebars/pull/318) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.56.12 (Tue Sep 06 2022)
 
 #### 🐛 Bug Fix
