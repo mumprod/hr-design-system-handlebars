@@ -16,11 +16,11 @@
         "responsiveImage": {
             "asPicture": false,
             "asImage": true,
-            "fallback": "https://picsum.photos/id/188/480/270",
+            "fallback": "https://picsum.photos/id/101/480/270",
             "sources": [
                 {
                     "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
+                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w, https://picsum.photos/id/101/960/540 960w, https://picsum.photos/id/101/1920/1080 1920w"
                 }
             ]
         }
