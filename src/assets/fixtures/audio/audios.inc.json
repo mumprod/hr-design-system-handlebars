@@ -45,7 +45,7 @@
                 "images": [
                     {
                         "kind": "preview",
-                        "url": "https://picsum.photos/id/188/{size}"
+                        "url": "https://picsum.photos/id/101/{size}"
                     }
                 ],
                 "title": "Das Eintracht-Tor in der Reportage: \"Hinteregger schädelt den rein\"",
@@ -127,7 +127,7 @@
                 "images": [
                     {
                         "kind": "preview",
-                        "url": "https://picsum.photos/id/188/{size}"
+                        "url": "https://picsum.photos/id/101/{size}"
                     }
                 ],
                 "title": "Muslim Fashion. Mehr als ein Kopftuch.",
@@ -190,7 +190,7 @@
                 "images": [
                     {
                         "kind": "preview",
-                        "url": "https://picsum.photos/id/188/{size}"
+                        "url": "https://picsum.photos/id/101/{size}"
                     }
                 ],
                 "title": "Test Audio Event",
