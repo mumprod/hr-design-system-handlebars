@@ -340,6 +340,56 @@
                 }
             ]
         }       
-    }   
+    } ,
+    "cluster_1":{
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "https://picsum.photos/id/1062/480/270",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "srcset": "https://picsum.photos/id/1062/320/180 320w, https://picsum.photos/id/1062/480/270 480w, https://picsum.photos/id/1062/640/360 640w, https://picsum.photos/id/1062/960/540 960w, https://picsum.photos/id/1062/1920/1080 1920w"
+                },
+                {
+                    "media": "all and (min-width: 48em)",
+                    "srcset": "https://picsum.photos/id/1062/320/320 320w, https://picsum.photos/id/1062/480/480 480w, https://picsum.photos/id/1062/640/640 640w, https://picsum.photos/id/1062/960/960 960w"
+                }
+            ]
+        }
+
+    },
+    "cluster_2": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "https://picsum.photos/id/1062/480/270",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                    "srcset": "https://picsum.photos/id/1062/320/180 320w, https://picsum.photos/id/1062/480/270 480w, https://picsum.photos/id/1062/640/360 640w, https://picsum.photos/id/1062/960/540 960w, https://picsum.photos/id/1062/1920/1080 1920w"
+                }
+            ]
+        }
+    },
+    "cluster_3": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "https://picsum.photos/id/188/480/270",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1010px) 960px, 100vw",
+                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
+                }
+            ]
+        }
+    }  
 
 }

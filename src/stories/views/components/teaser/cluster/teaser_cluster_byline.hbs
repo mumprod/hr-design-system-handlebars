@@ -1,0 +1,35 @@
+
+<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif {{#if _ordered}} pl-8 {{/if}}">
+    {{!--Teaser-Info--}}
+    {{#with this.teaserInfo}}
+        {{#if this.showTeaserInfo~}}
+           {{~#if this.showTeaserInfoSection}}
+              <span class="uppercase">
+                 {{../this.documentSection~}}
+              </span>
+              <span class="mx-px last-of-type:hidden">|</span>
+           {{/if}}
+           {{~#if this.showTeaserInfoDate}}
+              {{~#with ../this.teaserDate}}
+                 <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+              {{/with~}}
+              <span class="mx-px last-of-type:hidden">|</span>
+           {{else}}
+               {{~#if this.showTeaserInfoDateTime}}
+                  {{~#with ../this.teaserDate}}
+                      <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
+                  {{/with~}}
+                  <span class="mx-px last-of-type:hidden">|</span>
+               {{/if~}}
+           {{/if~}}
+        {{/if}}
+    {{/with}}
+
+    {{!--Profiles--}}
+    {{#if this.showProfileInfoAsByline}}
+        {{#if this.profiles}}
+           <span>{{this.profiles}}</span>
+           <span class="mx-px last-of-type:hidden">|</span>
+        {{/if}}
+    {{/if}}
+</p>

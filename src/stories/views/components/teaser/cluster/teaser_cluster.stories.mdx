@@ -13,6 +13,9 @@ import clusterTeaserExtern33 from '../fixtures/cluster_teaser_extern_33.json'
 import clusterTeaserGenre100 from '../fixtures/cluster_teaser_100_genre.json'
 import clusterTeaserGenre50 from '../fixtures/cluster_teaser_50_genre.json'
 import clusterTeaserGenre33 from '../fixtures/cluster_teaser_33_genre.json'
+import clusterTeaserImage100 from '../fixtures/cluster_teaser_100_image.json'
+import clusterTeaserImage50 from '../fixtures/cluster_teaser_50_image.json'
+import clusterTeaserImage33 from '../fixtures/cluster_teaser_33_image.json'
 
 <Meta   title="Komponenten/Teaser/Cluster"
         parameters={{
@@ -56,6 +59,15 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
         {Template.bind({})}
     </Story>
     <Story name="Schlagzeilen mit Genrebild 33" args={clusterTeaserGenre33}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Schlagzeilen mit Teaserbild 100" args={clusterTeaserImage100}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Schlagzeilen mit Teaserbild 50" args={clusterTeaserImage50}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Schlagzeilen mit Teaserbild 33" args={clusterTeaserImage33}>
         {Template.bind({})}
     </Story>
     <Story name="Meistgeklickt/Wanda 100" args={clusterTeaserOrdered100}>

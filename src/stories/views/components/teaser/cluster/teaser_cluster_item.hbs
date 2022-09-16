@@ -1,41 +1,12 @@
-
-                {{#>components/base/link link=this.logicItem.includeModel.link _css="group" _doTracking=(if this.logicItem.includeModel.doTracking 'true') _clickLabelPrefix1="clusterTeaserLink" _clickLabelPrefix2="Link" }} 
-                    {{> components/teaser/components/teaser_heading
-                        _headlineTag=this.logicItem.includeModel.headlineTag 
-                        _label=this.logicItem.includeModel.label 
-                        _size=this.logicItem.includeModel.teaserSize
-                        _title=this.logicItem.includeModel.title 
-                        _teaserType="cluster"
-                        _ordered=_ordered
-                        _titleBlue='true' }}           
-                {{/components/base/link}}
-
-                {{!--Teaser-Info--}}
-                <p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif {{#if _ordered}} pl-8 {{/if}}">  
-                {{#with this.logicItem.includeModel.teaserInfo}}
-                    {{#if this.showTeaserInfo~}}
-                        {{~#if this.showTeaserInfoSection}}
-                            <span class="uppercase">
-                                {{../this.logicItem.includeModel.documentSection~}}
-                            </span>                    
-                            <span class="mx-px last-of-type:hidden">|</span>                    
-                        {{/if}}
-                        {{~#if this.showTeaserInfoDate}}
-                            {{~#with ../this.logicItem.includeModel.teaserDate}}
-                                <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                            {{/with~}}                    
-                            <span class="mx-px last-of-type:hidden">|</span>                    
-                        {{else}}
-                            {{~#if this.showTeaserInfoDateTime}}
-                                {{~#with ../this.logicItem.includeModel.teaserDate}}
-                                    <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
-                                {{/with~}}                        
-                                <span class="mx-px last-of-type:hidden">|</span>                        
-                            {{/if~}}
-                        {{/if~}}    
-
-                    {{/if}}
-                {{/with}}
-    	        </p>
-                {{!--Teaser-Info--}}
-                
+{{#>components/base/link _css="group" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1="clusterTeaserLink" _clickLabelPrefix2="Link" }}
+    {{> components/teaser/components/teaser_heading
+        _headlineTag="h1"
+        _label=this.label
+        _size=_size
+        _title=this.title
+        _teaserType="cluster"
+        _ordered=_ordered
+        _titleBlue='true' 
+        _firstItem=_firstItem}}
+{{/components/base/link}}
+{{> components/teaser/cluster/teaser_cluster_byline}}
