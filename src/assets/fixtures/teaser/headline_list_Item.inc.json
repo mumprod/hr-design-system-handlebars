@@ -4,7 +4,7 @@
         "url": "/teaser1",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "standard_1"
+            "@->contentpath": "cluster_3"
         },
         "teaserSize": "hero",
         "showLabel": false,
