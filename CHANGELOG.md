@@ -1,3 +1,15 @@
+# v0.56.14 (Fri Sep 16 2022)
+
+#### 🐛 Bug Fix
+
+- replaced image #188 to fix render problems [#322](https://github.com/mumprod/hr-design-system-handlebars/pull/322) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.56.13 (Fri Sep 16 2022)
 
 #### 🐛 Bug Fix
