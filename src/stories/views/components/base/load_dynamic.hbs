@@ -1,4 +1,7 @@
 {{#switch _templatePath}}
+    {{#case "components/teaser/content_nav/teaser_content_nav"}}
+        {{> components/teaser/content_nav/teaser_content_nav}}
+    {{/case}}
     {{#case "components/site_header/service_navigation/service_navigation_item"}}
         {{> components/site_header/service_navigation/service_navigation_item}}
     {{/case}}
@@ -10,6 +13,9 @@
     {{/case}}
     {{#case "components/teaser/tabbox/teaser_tabbox"}}
         {{> components/teaser/tabbox/teaser_tabbox}}
+    {{/case}}
+    {{#case "components/teaser/cluster/teaser_cluster"}}
+        {{> components/teaser/cluster/teaser_cluster}}
     {{/case}}
     {{#case "components/teaser/teaser_standard"}}
         {{> components/teaser/teaser_standard}}

@@ -6,14 +6,17 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
-    content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs}'],
+    content: ['./src/stories/*.mdx', './src/stories/views/**/*.{mdx,hbs,js}'],
     theme: {
+        
         fill: {
             current: 'currentColor',
             black: '#000000',
             white: '#ffffff',
             'blue-jellyBean': '#006dc1',
-            'orange-spicyCarrot': '#d34600'
+            'orange-spicyCarrot': '#d34600',
+            congress: '#005293',
+            science: '#006dc1'
         },
         screens: {
             print: { raw: 'print' },
@@ -25,9 +28,9 @@ module.exports = {
             lg: '1024px',
             // => @media (min-width: 1024px) { ... }
             /*  'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... } */
+            // => @media (min-width: 1280px) { ... }
+            '2xl': '1536px',
+            // => @media (min-width: 1536px) { ... } */
             tablet: { min: '768px', max: '1023px' },
         },
         letterSpacing: {
@@ -50,10 +53,12 @@ module.exports = {
                 '4xl': ['2.125rem', '2.375rem'],
             },
             boxShadow: {
-                inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
+                'inner': 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
+                'dropdown': '0 13px 27px -2px rgba(100, 100, 111, 0.2)'
             },
             dropShadow: {
-                md: '0 5px 3px rgb(0 0 0 / 0.07)',
+                'md': '0 5px 3px rgb(0 0 0 / 0.07)',
+                'dropdown': '0 7px 29px 0 rgb(100, 100, 111, 0.2)'
             },
             lineHeight: {
                 11: '2.75rem',
@@ -152,6 +157,7 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
+                    accented: '#d8e9f6'
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -174,7 +180,9 @@ module.exports = {
                 },
                 grey: {
                     scorpion: '#606060',
-                    alto: '#e0e0e0'
+                    alto: '#e0e0e0',
+                    light: '#F8F8F8',
+                    dark: '#707070'
                 },
                 labelMedia: 'var(--color-label-media)',
                 labelEvent: 'var(--color-label-event)',
@@ -207,5 +215,6 @@ module.exports = {
 
             addUtilities(utilities, variants('borderColor'))
         },
+        require('tailwindcss-counter')(),
     ],
 }

@@ -1,6 +1,5 @@
 <div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()">
-
-    <header class="relative z-10001 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
+    <header class="print:hidden relative z-10001 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
@@ -13,7 +12,7 @@
             </div>
 
             <div id="brandNavWrapper" 
-                class="relative flex items-center justify-center order-1 w-full bg-white z-10000 print:hidden">
+                class="relative flex items-center justify-center order-1 w-full bg-white z-10000">
                 {{> components/site_header/brand_navigation/brand_navigation }} 
             </div>
 
@@ -32,7 +31,7 @@
                     </div>
                     
                     <div id="serviceItemsWrapper"                
-                        class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
+                        class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0">
                         {{> components/site_header/service_navigation/service_list }}
 
                         {{> components/site_header/navigation_search/quick_search_button }}
@@ -42,7 +41,7 @@
                         </div>
                     
                         <div id="burgerWrapper" 
-                            class="flex justify-end flex-none order-2 lg:order-4 md:order-4 lg:hidden "> 
+                            class="flex justify-end flex-none order-2 lg:order-4 md:order-4 lg:hidden"> 
                             {{> components/site_header/burger }}    
                         </div>
                         
@@ -76,9 +75,14 @@
 
             </div>
             
-        </div>
-    
+        </div> 
     </header>
+    <div class="justify-center hidden w-full scale-50 brand-logo_print print:flex">
+        <img loading="lazy" 
+            alt="{{loca "header_homepage_link_title"}}" 
+            src="{{resourceUrl "assets/base/icons/rsslogo/brandlogo--rss.jpg" _brand=(if this.brand this.brand)}}" 
+            />
+    </div>
     <div x-ref="myOverlay">
         <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-10000 lg:hidden opacity-70"></div>
     </div>

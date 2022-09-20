@@ -1,3 +1,285 @@
+# v0.56.15 (Fri Sep 16 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1645 [#323](https://github.com/mumprod/hr-design-system-handlebars/pull/323) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.56.14 (Fri Sep 16 2022)
+
+#### 🐛 Bug Fix
+
+- replaced image #188 to fix render problems [#322](https://github.com/mumprod/hr-design-system-handlebars/pull/322) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.56.13 (Fri Sep 16 2022)
+
+#### 🐛 Bug Fix
+
+- Fixing hs-logo for print view - Dpe 1710 [#318](https://github.com/mumprod/hr-design-system-handlebars/pull/318) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.56.12 (Tue Sep 06 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1689 content navi next steps [#316](https://github.com/mumprod/hr-design-system-handlebars/pull/316) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.11 (Mon Sep 05 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1656 [#300](https://github.com/mumprod/hr-design-system-handlebars/pull/300) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.56.10 (Fri Sep 02 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1689 : new JSON Key 'isListOrFlow' and some design tweaks [#315](https://github.com/mumprod/hr-design-system-handlebars/pull/315) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.9 (Fri Sep 02 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1567 [#314](https://github.com/mumprod/hr-design-system-handlebars/pull/314) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.56.8 (Thu Sep 01 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part9 [#313](https://github.com/mumprod/hr-design-system-handlebars/pull/313) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.7 (Thu Sep 01 2022)
+
+#### 🐛 Bug Fix
+
+- adds some of mithras designs [#312](https://github.com/mumprod/hr-design-system-handlebars/pull/312) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.6 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- adds autosuggest to list and flow, several refactoring [#311](https://github.com/mumprod/hr-design-system-handlebars/pull/311) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.5 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part6 [#310](https://github.com/mumprod/hr-design-system-handlebars/pull/310) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.4 (Wed Aug 31 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1567 [#309](https://github.com/mumprod/hr-design-system-handlebars/pull/309) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.56.3 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part6 [#308](https://github.com/mumprod/hr-design-system-handlebars/pull/308) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.2 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: mediaPlayerButton is selected correctly. [#307](https://github.com/mumprod/hr-design-system-handlebars/pull/307) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.56.1 (Tue Aug 30 2022)
+
+#### 🐛 Bug Fix
+
+- first try with groups, diverse changes in css, adds load_dynamic for … [#306](https://github.com/mumprod/hr-design-system-handlebars/pull/306) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.56.0 (Tue Aug 30 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1567 [#305](https://github.com/mumprod/hr-design-system-handlebars/pull/305) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.55.3 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Content nav part4 [#304](https://github.com/mumprod/hr-design-system-handlebars/pull/304) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.55.2 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- moved script to header_alpine.js [#303](https://github.com/mumprod/hr-design-system-handlebars/pull/303) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.55.1 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- bugfix [#302](https://github.com/mumprod/hr-design-system-handlebars/pull/302) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.55.0 (Fri Aug 19 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1689 teaser content navi [#301](https://github.com/mumprod/hr-design-system-handlebars/pull/301) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.54.3 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1656 [#299](https://github.com/mumprod/hr-design-system-handlebars/pull/299) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.54.2 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1656 [#298](https://github.com/mumprod/hr-design-system-handlebars/pull/298) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.54.1 (Fri Aug 19 2022)
+
+#### 🐛 Bug Fix
+
+- cluster-teaser [#297](https://github.com/mumprod/hr-design-system-handlebars/pull/297) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
 # v0.54.0 (Mon Aug 15 2022)
 
 #### 🚀 Enhancement

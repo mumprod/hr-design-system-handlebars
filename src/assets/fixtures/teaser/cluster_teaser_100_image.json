@@ -1,0 +1,50 @@
+{
+    "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "title",
+            "@->value": "NEUESTE BEITRÄGE"
+        },
+                {
+            "@->contentpath": "teaserLogo",
+            "@->value": "hessenschau_de"
+        },
+        {
+            "@->contentpath": "isHessenschauLogo",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "showImage",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "showFirstImage",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "clusterTeaserItems",
+            "@->value": [
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item2"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item3"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item4"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item5"
+                }
+            ]
+        }
+    ]
+}

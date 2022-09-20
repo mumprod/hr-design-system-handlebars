@@ -1,0 +1,56 @@
+{
+    "title"       : "",
+    "teaserLogo"  : "",
+    "isHessenschauLogo" : false,
+    "showFirstImageOrGenreImage" : false,
+    "HideTitle"   : false,
+    "showGenreImage" : false,
+    "showFirstImage" : false,
+    "showImage" : false,
+    "_ordered" : false,
+
+    "teaserSize" : "100",
+
+    "genreImage": {
+        "@->jsoninclude": "teaser/teaser_images.inc.json",
+        "@->contentpath": "standard_1"
+    },
+
+    "teaserType": "headlinelist",
+    "aspectRatio": "ar--16x9",
+    "imageVariant": "33",
+    "firstEntry": {
+        "@->jsoninclude": "teaser/headline_list_item.inc.json",
+        "@->contentpath": "item1"
+    },
+
+    "clusterTeaserItems": [
+        {
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item1"
+        },
+        {
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item2"
+        },
+        {
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item3"
+        },
+        {
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item4"
+        },
+        {
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item5"
+        }
+    ],
+
+    "headlineListItems" :{
+        "title" : "Neue Beiträge auf einen Blick",
+        "link"  : {
+            "url": "https://www.hessenschau.de"
+        }
+    }
+}
