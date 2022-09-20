@@ -529,7 +529,7 @@
                 "eventCalendar": {
                     "eventCalendarMonth": {
                         "@->jsoninclude": "event/event_calendar_months.inc.json",
-                        "@->contentpath": "april"
+                        "@->contentpath": "sm_1"
                     },
                     "hasSelectedEvents": true,
                     "hasFutureEventsFromNow": true

@@ -21,7 +21,7 @@ module.exports = function(text, options) {
         "label_media":"Media",
         "label_event":"Konzert",
         "group_tabbed_more":"weitere Meldungen aus " + options,
-        "header_event_calendar_title": "Eventkalender"
+        "event_calendar_backlink": "Eventkalender"
     }
 
     for (let key in locas){

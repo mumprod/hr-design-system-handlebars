@@ -41,6 +41,6 @@
     },
     "eventCalendar": {
         "type": "eventCalendar",
-        "loca": "header_event_calendar_title"
+        "loca": "event_calendar_backlink"
     }
 }

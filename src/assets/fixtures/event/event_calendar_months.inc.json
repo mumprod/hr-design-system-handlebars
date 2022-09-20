@@ -1,30 +1,51 @@
 {
-    "april": {
-        "month": "April",
-        "startDate": "01",
-        "endDate": "30",
-        "now":"",
-        "urlProvider":""
+    "months": {
+        "0": {
+            "month": "2017-08",
+            "startDate": "2017-08-01",
+            "endDate": "2022-12-31",
+            "now":"2022-08-29",
+            "urlProvider":""
+        },
+        "1": {
+            "month": "2017-09",
+            "startDate": "2017-08-01",
+            "endDate": "2022-12-31",
+            "now":"2022-08-29",
+            "urlProvider":""
+        },
+        "2": {
+            "month": "2017-10",
+            "startDate": "2017-08-01",
+            "endDate": "2022-12-31",
+            "now":"2022-08-29",
+            "urlProvider":""
+        },
+        "3": {
+            "month": "2017-11",
+            "startDate": "2017-08-01",
+            "endDate": "2022-12-31",
+            "now":"2022-08-29",
+            "urlProvider":""
+        }
     },
-    "may": {
-        "month": "May",
-        "startDate": "01",
-        "endDate": "31",
-        "now":"",
-        "urlProvider":""
+    "startDate": {
+        "year": "2017",
+        "month": "8",
+        "day": "1"
     },
-    "june": {
-        "month": "June",
-        "startDate": "01",
-        "endDate": "30",
-        "now":"",
-        "urlProvider":""
+    "endDate": {
+        "year": "2022",
+        "month": "12",
+        "day": "31"
     },
-    "july": {
-        "month": "July",
-        "startDate": "01",
-        "endDate": "31",
-        "now":"",
-        "urlProvider":""
+    "selectedDate": {
+        "year": "2022",
+        "month": "8",
+        "day": "29"
+    },
+    "selectedMonth": "",
+    "urlProvider": {
+        "calendarDocument": ""
     }
 }

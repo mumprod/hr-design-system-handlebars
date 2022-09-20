@@ -186,6 +186,7 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                labelEventCalendarTitle: 'var(--color-label-event-calendar-title)'
             },
         },
     },
