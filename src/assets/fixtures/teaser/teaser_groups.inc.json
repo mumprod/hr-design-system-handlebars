@@ -15,7 +15,7 @@
         }
     },
     "teaser_contentnav": {
-        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includePath": "components/teaser/group_teaser/group_teaser_accented",
         "includeModel": {
             "hasLink": false,
             "link": "#gruppe1",
@@ -23,7 +23,7 @@
             "groupTitle": "Akzentuier-Gruppe 100%, 1 x 100% ContentNav Aufklapp ",
             "teaserSize": "100",
             "isHighlightGroup": true,
-            "accentedGroup" : true,
+            
             "backgroundColor": "1",
             "logicItems": [
                 {
