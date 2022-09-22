@@ -1,8 +1,5 @@
-console.log("PodcastPlayer loaded", window.playaudio);  
-
-window.playaudio = (context) => {
+export default function playaudio () {
     return {
-        context,
         init: false,
         currentlyPlaying: false,
         currentTime: "00:00",
@@ -64,19 +61,3 @@ window.playaudio = (context) => {
         }
     }
 }
-console.log("PodcastPlayer loaded", window.playaudio);  
-
-// const { options } = context,
-// { element: rootElement } = context;
-
-// console.log("removeAttribute('x-ignore')", rootElement);
-
-// console.log("Alpine", window.Alpine);
-// window.Alpine.start()
-// rootElement.removeAttribute('x-ignore');
-const elements = document.querySelectorAll('[x-ignore]');
-elements[0].removeAttribute('x-ignore');
-window.Alpine.initTree(elements[0].parentNode);
-// console.log(this);
-
-export default window.playaudio
