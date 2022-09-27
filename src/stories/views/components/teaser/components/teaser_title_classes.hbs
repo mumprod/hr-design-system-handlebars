@@ -38,7 +38,11 @@ the 4 parameters are:
         {{~inline-switch _size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
     {{~/case~}}
     {{~#case 'cluster'~}}
-      text-lg
+        {{#if _firstItem}}
+            {{~inline-switch _size '["100"]' '[" text-lg md:text-2xl"," text-lg"]'}}
+        {{else}}
+            text-lg 
+        {{/if}}
     {{~/case~}}
 {{~/switch~}}
 {{~inline-switch
