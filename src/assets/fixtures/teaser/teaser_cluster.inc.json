@@ -6,7 +6,7 @@
     "HideTitle"   : false,
     "showGenreImage" : false,
     "showFirstImage" : false,
-    "_ordered" : false,
+    "isOrdered" : false,
 
     "teaserSize" : "100",
 
