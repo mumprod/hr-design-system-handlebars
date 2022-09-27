@@ -80,8 +80,10 @@ src/
 |    |——— brand/ 
 |    |——— fixtures/ 
 |    |——— fonts/ 
-|    |——— icons/ 
-|    |——— js/ 
+|    |——— icons/
+|    |——— images/ 
+|    |——— js/
+|    |——— vendor/ 
 |    |——— tailwind.css 
 |——— stories/ 
 |    |——— views/
@@ -105,9 +107,11 @@ Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `a
 -   **fonts** — Alle im Designsystem zu verwendenden Schriften werden in diesem Ordner abgelegt.
 -   **icons** — Alle global im Designsystem zu verwendenden Icons werden in diesem Ordner abgelegt. Im Designsystem werden ausschließlich
     SVG-Maps verwendet. Wie diese erzeugt werden und was dafür alles beachtet werden muss, kann in Kapitel [Icons](?path=/story/grundlegendes-icons--page) nachgelesen werden.
+-   **images** — Ordner für Bilder, die in Docs verwendet werden.
+-   **js** — Dieser Ordner enthält alle Scriptdateien für Alpine-Komponenten, die asynchron nachgeladen werden.
+-   **vendor** — Hier liegen die 3rd-party Javascripte
 -   **tailwind.css** — Dies ist die Haupt CSS Datei des Designsystems. In ihr werden alle Utilityklassen des tailwind.css Frameworks sowie die
-    Benutzerdefienierten CSS Klassen aus den Dateien `custom-base.css`, `custom-components.css` und `custom-utilities.css` eingebunden. Es werden zudem
-    die CSS-Custom Properties fürs Theming der einzelnen Marken definiert.
+    Benutzerdefienierten CSS Klassen aus den Da
 
 Im Ordner `stories` werden die Storybook Stories in Form von .mdx Dateien sowie die dazugehörigen Handlebars Komponenten abgelegt. Aus Kompatibilitätsgründen
 zu den bestehenden Handlebar Komponenten im `hrcms-delivery` Projekt liegen diese in einem weiteren Unterordner `views/components`.
@@ -122,7 +126,7 @@ Die in der folgenden Tabelle genannten Dateien müssen alle direkt im Wurzelverz
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `.gitignore`         | In dieser Datei sind alle Dateien angegeben, die von Git nicht versioniert werden sollen.                                                                                                                                                                                                            |
 | `CHANGELOG.md`       | Diese Datei enthält wie der Name bereits erahnen lässt das Changelog des Designsystems. Diese Datei wird bei jedem Release automatisch erweitert.                                                                                                                                                    |
-| `config.js`          | Diese Datei enthält Pfade zu verschiedenen Ordnern im Designsystem. Sie wird derzeit vor allem von verschiedenen Gulp Tasks verwendet. Sie kann beliebig erweitert werden und überall da genutzt werden, wo in einem Javascript auf bestimmt Pfade zugegriffen werden soll.                          |
+| `config.js`          | Diese Datei enthält Pfade zu verschiedenen Ordnern im Designsystem. Sie wird derzeit vor allem von verschiedenen Gulp Tasks verwendet. Sie kann beliebig erweitert werden und überall da genutzt werden, wo in einem Javascript auf bestimmte Pfade zugegriffen werden soll.                          |
 | `gulpfile.js`        | [Gulp](https://gulpjs.com/) ist wie das in unserem Delivery Projekt eingesetzt Grunt ein Taskrunnner und wird zur automatisierung bestimmter Aufgaben während des Builds verwendet. In der Datei `gulpfile.js` werden alle notwendigen Tasks beschrieben.                                            |
 | `postcss.config.js`  | Das von uns eingesetzte CSS Utility Framework [Tailwindcss](https://tailwindcss.com/) betreiben wir mit Hilfe von [PostCSS](https://postcss.org/). In dieser Datei wird konfiguriert wie PostCSS arbeitet. Wir legen hier fest, dass das Plugin `tailwindcss` und `postcss-preset-env` genutzt wird. |
 | `tailwind.config.js` | In dieser Datei wird das von uns im Designsystem eingesetzte CSS Utility Framework TailwindCSS konfiguriert. Weiterführende Informationen können hierzu in der [offiziellen Dokumentation](https://tailwindcss.com/docs/configuration) des Frameworks eingesehen werden.                             |

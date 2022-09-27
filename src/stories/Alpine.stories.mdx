@@ -1,0 +1,10 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Grundlegendes/Umgang mit AlpineJS" />
+
+# AlpineJS:
+
+## Asynchrones Nachladen von Alpine Komponenten
+
+Mittels der Alpine-Erweiterung "Async-Apline"  ([https://github.com/Accudio/async-alpine](https://github.com/Accudio/async-alpine)) können Alpine-Komponenten zur Laufzeit dem DOM hinzugefügt werden. Normalerweise ist dies nicht möglich, da AlpineJS prinzipiell von statischem Markup ausgeht, das beim Initialisieren von AlpineJS einmalig auf Alpine-Komponenten überprüft wird.
+Das asynchrone Nachladen erleichtert die Trennung der einzelnen Komponenten voneinander, jegliches Javascript, das zur Komponente gehört, wird erst geladen, wenn auch die jeweilige Komponente geladen wird.   
