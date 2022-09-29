@@ -529,8 +529,8 @@
                 },
                 "eventCalendar": {
                     "eventCalendarMonth": {
-                        "@->jsoninclude": "event/event_calendar_months.inc.json",
-                        "@->contentpath": "sm_1"
+                        "@->jsoninclude": "event/event_calendar_teaser_months.inc.json",
+                        "@->contentpath": "eventDate"
                     },
                     "hasSelectedEvents": true,
                     "hasFutureEventsFromNow": true
