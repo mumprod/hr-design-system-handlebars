@@ -1,4 +1,4 @@
-const { src, dest, series, watch } = require('gulp')
+const { src, dest, series, parallel, watch } = require('gulp')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
 const svgStore = require('gulp-svgstore')
@@ -8,6 +8,7 @@ const cheerio = require('gulp-cheerio')
 const rename = require('gulp-rename')
 const jsonTransform = require('gulp-json-transform')
 const JSONIncluder = require('./build/scripts/jsoninclude.js')
+const htmlToJs = require('gulp-html-to-js')
 const log = require('fancy-log')
 
 const options = require('./config.js')
@@ -245,5 +246,39 @@ function watchForChanges() {
     log('Watching for Changes..\n')
 }
 
-exports.default = series(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
+function watchFiles() {
+    watch(`${options.paths.assets.fixtures}/**/*.json`, parseJson)
+    watch(`${options.paths.assets.views}/**/*.hbs`, convertPartialsToJs)
+    watch(
+        [`${options.paths.assets.brand}/**/*.svg`, `!${options.paths.assets.brand}/**/*.min.svg`],
+        createSvgMapsForBrands
+    )
+    watch(
+        [
+            `${options.paths.assets.icons}/**/*.svg`,
+            `!${options.paths.assets.icons}/**/*.src.svg`,
+            `!${options.paths.assets.icons}/**/*.min.svg`,
+        ],
+        createSvgMaps
+    )
+    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles)
+}
+
+async function convertPartialsToJs() {
+    src(`${options.paths.assets.views}/**/*.hbs`)
+        .pipe(htmlToJs({ concat: 'handlebar-partials.js' }))
+        .pipe(dest(options.paths.dist.handlebarPartials))
+}
+
+exports.default = series(
+    parallel(
+        createSvgMaps,
+        createSvgMapsForBrands,
+        minimizeSvgSrcFiles,
+        parseJson,
+        convertPartialsToJs
+    ),
+    watchFiles
+)
 exports.parseJson = series(parseJson, watchForChanges)
+exports.convertPartialsToJs = convertPartialsToJs

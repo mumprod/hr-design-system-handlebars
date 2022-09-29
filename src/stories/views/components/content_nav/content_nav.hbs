@@ -16,7 +16,7 @@
             }}    
         </nav>
     {{else}}  
-        {{#>components/content_nav/dropdown
+        {{#decorator 'components/content_nav/dropdown'
                      _componentClass="c-content-nav"
                      _teasersize=../_teasersize
                      _iconOpen="arrow-down"
@@ -29,6 +29,6 @@
                 _maindivclass="flex flex-wrap mt-0" 
                 _inputcontainerclass="flex w-full h-10 mx-0 border-blue-congress align-center "
             }}
-        {{/components/content_nav/dropdown}}
+        {{/decorator}}
     {{/if}}
 {{/with}} 
