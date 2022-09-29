@@ -46,7 +46,7 @@
         }
     ],
 
-    "headlineListItems" :{
+    "headlineListOverview" :{
         "title" : "Neue Beiträge auf einen Blick",
         "link"  : {
             "url": "https://www.hessenschau.de"
