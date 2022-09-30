@@ -1,3 +1,15 @@
+# v0.58.0 (Fri Sep 30 2022)
+
+#### 🚀 Enhancement
+
+- Adds async alpine.script.js to dynamically load alpine components [#327](https://github.com/mumprod/hr-design-system-handlebars/pull/327) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.57.0 (Tue Sep 27 2022)
 
 #### 🚀 Enhancement
