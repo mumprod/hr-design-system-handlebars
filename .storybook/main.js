@@ -73,11 +73,11 @@ module.exports = {
                         'default',
                     ],
                     ignoreHelpers: true,
+                    ignorePartials: true,
                     runtime: path.resolve(__dirname, '../build/handlebars/handlebars'),
                     precompileOptions: {
                         knownHelpersOnly: false,
                     },
-                    partialDirs: [path.resolve(__dirname, '../src/stories/views')],
                 },
             },
             {
