@@ -195,7 +195,14 @@ var helpers = {
                     `./brand/${options.hash['_brand']}/icons/logo`
                 )
             } else {
-                resourceUrl = text.replace('assets/base/', './')
+                if (text.includes('assets/base/icons/rsslogo/') && options.hash['_brand']) {
+                    resourceUrl = text.replace(
+                        'assets/base/icons/rsslogo',
+                        `./brand/${options.hash['_brand']}/icons/rsslogo`
+                    )
+                } else {
+                    resourceUrl = text.replace('assets/base/', './')
+                }
             }
         }
         if (text.includes('suche/index.nocache'))

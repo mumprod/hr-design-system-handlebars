@@ -6,41 +6,44 @@
     "HideTitle"   : false,
     "showGenreImage" : false,
     "showFirstImage" : false,
+    "showImage" : false,
     "_ordered" : false,
 
     "teaserSize" : "100",
 
     "genreImage": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/188/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
-                }
-            ]
-        }
+        "@->jsoninclude": "teaser/teaser_images.inc.json",
+        "@->contentpath": "standard_1"
+    },
+
+    "teaserType": "headlinelist",
+    "aspectRatio": "ar--16x9",
+    "imageVariant": "33",
+    "firstEntry": {
+        "@->jsoninclude": "teaser/headline_list_item.inc.json",
+        "@->contentpath": "item1"
     },
 
     "clusterTeaserItems": [
         {
-            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item1"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item2"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item3"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_hero_serif_label.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item4"
         },
         {
-            "@->jsoninclude": "teaser/teaser_standard_100_serif.json"
+            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+            "@->contentpath": "item5"
         }
     ],
 

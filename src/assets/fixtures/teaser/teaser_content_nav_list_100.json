@@ -1,19 +1,18 @@
-{ 
-    "realTeasersize" : "100",
+{
     "teasersize" : "100",
     "contentNav" : {
         "title"       : "Geiler Titel",
-        
+        "isListOrFlow" : true,
         "isDropdown" : false,
         "isList" : true,
         "isFlow" : false,
         "isMixed" : false,
-        "isAutosuggest" : true,
+        "isAutosuggest" : false,
         "contentNavEntries": [
             {
             "title" : "Arbeitsmarkt",            
             "isGroup" : false,
-            "isSelected" : true,
+            "isSelected" : false,
             "link" : {
                 "url": "/teaser1",
                 "webviewUrl": "/teaser1#webview",

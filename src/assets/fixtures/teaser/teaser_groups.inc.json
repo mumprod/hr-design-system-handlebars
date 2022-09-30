@@ -17,22 +17,21 @@
     "teaser_contentnav": {
         "includePath": "components/teaser/group_teaser/group_teaser",
         "includeModel": {
-            "hasLink": true,
+            "hasLink": false,
             "link": "#gruppe1",
             "hasGroupTitle": true,
-            "groupTitle": "Gruppe 100% - 1 x 100% ContentNavTeaser",
+            "groupTitle": "Akzentuier-Gruppe 100%, 1 x 100% ContentNav Aufklapp ",
             "teaserSize": "100",
-            "isAccentedGroup" : true,
             "isHighlightGroup": true,
+            "accentedGroup" : true,
             "backgroundColor": "1",
             "logicItems": [
                 {
                     "isSsi": true,
-                    "isAccentedGroup" : true,
                     "logicItem": {
                         "includePath": "components/teaser/content_nav/teaser_content_nav",
                         "includeModel": {
-                            "@->jsoninclude": "teaser/teaser_content_nav_list_100.json"
+                            "@->jsoninclude": "teaser/teaser_content_nav_dropdown_100.json"
                         }
 
                     }

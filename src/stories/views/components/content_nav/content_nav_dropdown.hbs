@@ -9,22 +9,20 @@
 
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         :class="$store.contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
-        class="relative flex w-full h-10 mb-2 overflow-hidden bg-white border z-10002 border-blue-congress whitespace-nowrap text-blue-congress fill-congress"  >
-        
-        <span class="self-center w-full p-2 text-base">
-                {{_buttonText}}
-        </span>
+        class="relative flex w-full h-10 mb-2 overflow-hidden bg-white border z-10002 border-blue-congress whitespace-nowrap text-blue-congress fill-congress"
+    >
+        <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full px-3 py-1 border-l border-blue-congress">
             <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen" 
                 :class="$store.contentNavDropdownIsOpen ? 'hidden' : ''"  
-                class="flex self-center">
-                
-                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
-                
+                class="flex self-center"
+            >
+                {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}    
             </span>
             <span @click="$store.contentNavDropdownIsOpen = !$store.contentNavDropdownIsOpen; $dispatch('resetinput')" 
                 :class="$store.contentNavDropdownIsOpen ? '' : 'hidden'" 
-                class="flex self-center">
+                class="flex self-center"
+            >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
             </span>
         </div>
