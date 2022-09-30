@@ -18,11 +18,11 @@
             "@->value": "hessenschau_de"
         },
         {
-            "@->contentpath": "_ordered",
+            "@->contentpath": "isOrdered",
             "@->value": "true"
         },
         {
-            "@->contentpath": "headlineListItems.link",
+            "@->contentpath": "headlineListOverview.link",
             "@->value": ""
         }
     ]
