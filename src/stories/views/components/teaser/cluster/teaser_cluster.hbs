@@ -10,11 +10,11 @@
                     <span class="text-lg md:text-2xl border-blue-congress {{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}">{{this.title}}</span>
                 {{/if}}
             </h2>
-            {{> components/teaser/cluster/teaser_cluster_list _ordered=this._ordered}} 
+            {{> components/teaser/cluster/teaser_cluster_list _ordered=this.isOrdered}} 
     </div>
-    {{~#with this.headlineListItems}}
+    {{~#with this.headlineListOverview}}
         {{~#if this.link~}}
-            <div class="flex mx-5 py-12 {{~inline-switch ../this.teaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
+            <div class="flex mx-5 py-11 {{~inline-switch ../this.teaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
                 {{~> components/button/button_pseudo  _color="blue" _linkTitle=this.title~}}
             </div>
         {{~/if~}}
