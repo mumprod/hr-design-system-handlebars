@@ -38,6 +38,15 @@ Mit dem Befehl
 npm run storybook
 ```
 
-kann das Designsystem lokal gestartet werden.
+kann das Designsystem lokal gestartet werden. Um immer mit den aktuellsten Assets zu arbeiten, sollte zudem
+noch in einem anderen Terminal Fenster der Befehl
+
+```
+npm run optimize-assets
+```
+
+aufgerufen werden. Dieser sorgt dafür, dass den Stories immer die derzeit aktuellsten statischen Daten (Fixtures)
+bereitgestellt werden und erzeugt zudem immer optimierte Versionen unserer Icons. Das Skript läuft im Watch-Modus
+sodass änderungen an Dateien automatisch erkannt und die entsprechenden Optimierungs-Operationen neu ausgeführt werden.
 
 Weitere Infos zum HR Designsystem und dessen Gebrauch folgen in den kommenden Wochen.
