@@ -19,7 +19,7 @@
     {{~#with this.clusterTeaserItems}}
         {{~#if ../this.isOrdered}}<ol class="mx-5 list-none divide-y divide-white divide-solid counter-reset border-t border-white {{~#if ../this.showGenreImage}}{{~inline-switch ../this.teaserSize '["100"]' '[" md:-pt-5 md:border-none"]'}}{{/if~}}">{{else}}<ul class="mx-5 divide-y divide-white divide-solid border-t border-white {{~#if ../this.showGenreImage}}{{~inline-switch ../this.teaserSize '["100"]' '[" md:-pt-5 md:border-none"]'}}{{/if~}}">{{/if}}
             {{~#each this~}}
-                <li class="{{~#if ../../this.isOrdered}} -ordered {{/if}} py-5 {{#if ../../this.headlineListItems.link}} last-of-type:pb-0{{/if~}} {{~#if ../../this.showGenreImage}}{{~inline-switch ../../this.teaserSize '["100"]' '[" md:first-of-type:pt-0"]'}}{{/if~}}">
+                <li class="{{~#if ../../this.isOrdered}} -ordered {{/if}} py-5 {{#if ../../this.headlineListOverview.link}} last-of-type:pb-0{{/if~}} {{~#if ../../this.showGenreImage}}{{~inline-switch ../../this.teaserSize '["100"]' '[" md:first-of-type:pt-0"]'}}{{/if~}}">
                     {{> components/teaser/cluster/teaser_cluster_item _size=../this.teaserSize _ordered=../../this.isOrdered }} 
                 </li>
             {{~/each}}
