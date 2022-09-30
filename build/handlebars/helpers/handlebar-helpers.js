@@ -117,7 +117,6 @@ var helpers = {
     },
 
     'decorator_body': function () {
-        console.log('in decorator_body')
         return undefined != decoratorStack ? new handlebars.SafeString(decoratorStack(this)) : ''
     },
 
@@ -216,7 +215,6 @@ var helpers = {
     },
 
     'inline-switch': function (input, cases, values) {
-        // console.log(`Test:${input} Cases:${cases} values:${values}`)
         const casesArray = eval(cases)
         const valuesArray = eval(values)
         const defaultValue =
