@@ -1,7 +1,6 @@
 'use strict'
 
-const partials = require('../partials/handlebar-partials-test'),
-    fs = require('fs'),
+const fs = require('fs'),
     path = require('path')
 let handlebars
 
@@ -272,6 +271,34 @@ var helpers = {
             } else {
                 return arguments.length <= 4 ? arguments[1] : ''
             }
+        }
+    },
+
+    'ifCond': function (v1, operator, v2, options) {
+        var options = arguments[3]
+        switch (operator) {
+            case '==':
+                return v1 == v2 ? options.fn(this) : options.inverse(this)
+            case '===':
+                return v1 === v2 ? options.fn(this) : options.inverse(this)
+            case '!=':
+                return v1 != v2 ? options.fn(this) : options.inverse(this)
+            case '!==':
+                return v1 !== v2 ? options.fn(this) : options.inverse(this)
+            case '<':
+                return v1 < v2 ? options.fn(this) : options.inverse(this)
+            case '<=':
+                return v1 <= v2 ? options.fn(this) : options.inverse(this)
+            case '>':
+                return v1 > v2 ? options.fn(this) : options.inverse(this)
+            case '>=':
+                return v1 >= v2 ? options.fn(this) : options.inverse(this)
+            case '&&':
+                return v1 && v2 ? options.fn(this) : options.inverse(this)
+            case '||':
+                return v1 || v2 ? options.fn(this) : options.inverse(this)
+            default:
+                return options.inverse(this)
         }
     },
 
