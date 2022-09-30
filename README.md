@@ -49,4 +49,4 @@ aufgerufen werden. Dieser sorgt dafür, dass den Stories immer die derzeit aktue
 bereitgestellt werden und erzeugt zudem immer optimierte Versionen unserer Icons. Das Skript läuft im Watch-Modus
 sodass änderungen an Dateien automatisch erkannt und die entsprechenden Optimierungs-Operationen neu ausgeführt werden.
 
-Weitere Infos zum HR Designsystem und dessen Gebrauch folgen in den kommenden Wochen.
+Weitere Details und Grundlagen zum Gebrauch des Designsystems können direkt in dessen Dokumentation eingesehen werden.
