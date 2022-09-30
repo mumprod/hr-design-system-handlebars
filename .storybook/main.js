@@ -28,7 +28,6 @@ module.exports = {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
         // You can change the configuration based on that.
         // 'PRODUCTION' is used when building the static version of storybook.
-
         // Make whatever fine-grained changes you need
         config.resolve.alias = {
             ...config.resolve.alias,
@@ -49,13 +48,48 @@ module.exports = {
 
         config.module.rules.push(
             {
-                test: /\.handlebars|hbs$/,
+                test: /\.hbs$/,
                 loader: 'handlebars-loader',
-                include: path.resolve(__dirname, '../'),
+                //include: path.resolve(__dirname, '../'),
+
                 options: {
-                    helperDirs: [path.resolve(__dirname, '../build/helpers')],
-                    partialDirs: [path.resolve(__dirname, '../src/stories/views')],
+                    debug: false,
+                    knownHelpers: [
+                        'partial',
+                        'block',
+                        'append',
+                        'decorator',
+                        'decorator_body',
+                        'defaultIfEmpty',
+                        'if',
+                        'inline-switch',
+                        'json',
+                        'withParam',
+                        'loca',
+                        'resourceUrl',
+                        'isStorybook',
+                        'switch',
+                        'case',
+                        'default',
+                    ],
+                    ignoreHelpers: true,
+                    ignorePartials: true,
+                    runtime: path.resolve(__dirname, '../build/handlebars/handlebars'),
+                    precompileOptions: {
+                        knownHelpersOnly: false,
+                    },
                 },
+            },
+            {
+                test: /\.handlebars$/i,
+                use: [
+                    {
+                        loader: 'raw-loader',
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                ],
             },
             {
                 test: /\,css&/,

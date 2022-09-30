@@ -32,7 +32,6 @@
                         "includeModel": {
                             "@->jsoninclude": "teaser/teaser_content_nav_dropdown_50.json"
                         }
-
                     }
                 }
             ]
@@ -242,4 +241,3 @@
         "@->jsoninclude": "teaser/teaser_tabbox.json"
     }
 }
-
