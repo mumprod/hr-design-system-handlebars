@@ -1,7 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import podcast from './podcast.hbs'
-
+import json from '../fixtures/teaser_podcast.json'
 
 <Meta   title="Komponenten/Teaser/Podcast"
         parameters={{
@@ -33,7 +33,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 
 <Preview withToolbar>
-    <Story  name="Beispiel 1" >
+    <Story  name="Beispiel 1" args={json.logicItem.includeModel}>
         {Template.bind({})} 
     </Story> 
 </Preview>
