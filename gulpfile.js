@@ -280,5 +280,6 @@ exports.default = series(
     ),
     watchFiles
 )
+exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
 exports.convertPartialsToJs = convertPartialsToJs
