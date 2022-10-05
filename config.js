@@ -7,6 +7,11 @@ module.exports = {
             views: 'src/stories/views',
             brand: 'src/assets/brand',
             icons: 'src/assets/icons',
+            js: 'src/assets/js',
+            vendor: 'src/assets/vendor',
+        },
+        build: {
+            modernizr: 'build/modernizr',
         },
         dist: {
             components: 'src/stories/views/components',

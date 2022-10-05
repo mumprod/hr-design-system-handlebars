@@ -10,6 +10,9 @@ const jsonTransform = require('gulp-json-transform')
 const JSONIncluder = require('./build/scripts/jsoninclude.js')
 const htmlToJs = require('gulp-html-to-js')
 const log = require('fancy-log')
+const modernizr = require('gulp-modernizr')
+const modernizrConfig = require('./build/modernizr/config.json')
+const concat = require('gulp-concat')
 
 const options = require('./config.js')
 
@@ -261,7 +264,11 @@ function watchFiles() {
         ],
         createSvgMaps
     )
-    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles)
+    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles),
+        watch(
+            `${options.paths.build.modernizr}/**/*.{js,json}`,
+            series(createModernizr, addCustomModernizrTests)
+        )
 }
 
 async function convertPartialsToJs() {
@@ -270,16 +277,30 @@ async function convertPartialsToJs() {
         .pipe(dest(options.paths.dist.handlebarPartials))
 }
 
+function createModernizr() {
+    return src(`${options.paths.assets.views}/**/*.js`)
+        .pipe(modernizr(require('./build/modernizr/config.json')))
+        .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
+}
+
+function addCustomModernizrTests() {
+    return src(['./src/assets/vendor/modernizr/modernizr.js', './build/modernizr/customTests.js'])
+        .pipe(concat('modernizr.cust.js'))
+        .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
+}
+
 exports.default = series(
     parallel(
         createSvgMaps,
         createSvgMapsForBrands,
         minimizeSvgSrcFiles,
         parseJson,
-        convertPartialsToJs
+        convertPartialsToJs,
+        series(createModernizr, addCustomModernizrTests)
     ),
     watchFiles
 )
 exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
+exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.convertPartialsToJs = convertPartialsToJs
