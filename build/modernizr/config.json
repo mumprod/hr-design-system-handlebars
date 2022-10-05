@@ -1,0 +1,19 @@
+{
+    "options": ["setClasses"],
+    "tests": [
+        "json",
+        "classlist",
+        "picture",
+        "sizes",
+        "promises",
+        "formvalidation",
+        "input",
+        "inputtypes",
+        "flexbox",
+        "flexboxlegacy",
+        "flexboxtweener",
+        "iosorandroid",
+        ["cssgrid", "cssgridlegacy"]
+    ],
+    "uglify": false
+}

@@ -45,7 +45,7 @@ Beim Erstellen der JSON-Testdaten wird zwischen den eigentlichen Testdaten und d
 lediglich in anderen JSON-Dateien inkludiert werden unterschrieden. Die JSON-Dateien, die zu inkludierende Daten enthalten, werden im
 Dateinamen mit dem Postfix `inc` gekennzeichnet (z.B. `teasers.inc.json` oder `teaser_labels.inc.json`).
 
-Durch Ausführung des NPM-Skripts `parseJson` mit dem Befehl `npm run parseJson`, werden alle JSON-Dateien im Verzeichnis
+Durch Ausführung des NPM-Skripts `optimize-assets` (dieses Skript sollte Standardmäßig parallel zum Start von Storybook ausgeführt werden), werden alle JSON-Dateien im Verzeichnis
 `src/assets/fixtures` geparsed, sämtliche `Includes`, `Extends` und `Overrides` aufgelöst und die fertigen Testdaten in Form von JSON-Dateien
 gleichen Namens nach `src/stories/views/components/component-name/fixtures` kopiert. Alle Testdaten unter `src/assets/fixtures/teaser`
 werden auf diese Weise beispielsweise nach `src/stories/views/components/teaser/fixtures` kopiert. Das Skript läuft standardmäßig im
