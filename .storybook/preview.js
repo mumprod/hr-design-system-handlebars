@@ -8,24 +8,46 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
-import 'components/site_header/header_alpine'
+import '../src/assets/vendor/alpine/header_alpine'
 
-function loadDelayedImages(){setTimeout((function(){var t,e=document.images,s=[],a=function(t){void 0!==window.picturefill&&window.picturefill({reevaluate:!0,elements:t})};for(var i=0;i<e.length;++i)(t=e[i].dataset?e[i].dataset.srcset:e[i].getAttribute("data-srcset"))&&(0===e[i].getBoundingClientRect().top?s.push(e[i]):e[i].setAttribute("srcset",t));a(e),setTimeout((function(){var t;for(var i=0;i<s.length;++i)t=s[i].dataset?s[i].dataset.srcset:s[i].getAttribute("data-srcset"),s[i].setAttribute("srcset",t);a(s)}),900)}),0)}
+function loadDelayedImages() {
+    setTimeout(function () {
+        var t,
+            e = document.images,
+            s = [],
+            a = function (t) {
+                void 0 !== window.picturefill && window.picturefill({ reevaluate: !0, elements: t })
+            }
+        for (var i = 0; i < e.length; ++i)
+            (t = e[i].dataset ? e[i].dataset.srcset : e[i].getAttribute('data-srcset')) &&
+                (0 === e[i].getBoundingClientRect().top
+                    ? s.push(e[i])
+                    : e[i].setAttribute('srcset', t))
+        a(e),
+            setTimeout(function () {
+                var t
+                for (var i = 0; i < s.length; ++i)
+                    (t = s[i].dataset ? s[i].dataset.srcset : s[i].getAttribute('data-srcset')),
+                        s[i].setAttribute('srcset', t)
+                a(s)
+            }, 900)
+    }, 0)
+}
 
-let eventSrcUrl = null;
+let eventSrcUrl = null
 
 document.addEventListener('DOMContentLoaded', function (event) {
-    console.log('DOM fully loaded and parsed') 
-    if(eventSrcUrl != event.srcElement.URL) {
+    console.log('DOM fully loaded and parsed')
+    if (eventSrcUrl != event.srcElement.URL) {
         eventSrcUrl = event.srcElement.URL
-        
-        console.log('Start feature initialization' )
+
+        console.log('Start feature initialization')
 
         Initializer.run(document, loadFeature)
-        setTimeout(loadDelayedImages,200);
+        setTimeout(loadDelayedImages, 200)
     } else {
-        console.log("second DOMContentLoaded Event was blocked!");
-    }   
+        console.log('second DOMContentLoaded Event was blocked!')
+    }
 })
 
 if (process.env.NODE_ENV !== 'production') {
@@ -37,8 +59,8 @@ const customViewports = {
     hrMin: {
         name: 'hr: Min - 320px',
         styles: {
-          width: '320px',
-          height: '600px',
+            width: '320px',
+            height: '600px',
         },
     },
     hrXs: {
@@ -90,7 +112,7 @@ const customViewports = {
             height: '1000px',
         },
     },
-  };
+}
 
 export const parameters = {
     //layout: 'fullscreen',
@@ -98,8 +120,7 @@ export const parameters = {
         viewports: {
             ...customViewports,
             ...INITIAL_VIEWPORTS,
-           
-         },
+        },
     },
     backgrounds: {
         default: 'white',
@@ -170,13 +191,7 @@ export const parameters = {
                 'Grundlegendes',
                 ['Konventionen und Datenstrukturen', 'Testdatenbereitstellung', '*'],
                 'Komponenten',
-                [
-                    'Page',
-                    'Header',
-                    'Teaser',
-                    'grid',
-                    'Label'
-                ],
+                ['Page', 'Header', 'Teaser', 'grid', 'Label'],
                 '*',
             ],
         },

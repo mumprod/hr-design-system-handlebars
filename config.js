@@ -8,6 +8,7 @@ module.exports = {
             brand: 'src/assets/brand',
             icons: 'src/assets/icons',
             js: 'src/assets/js',
+            vendor: 'src/assets/vendor',
         },
         dist: {
             components: 'src/stories/views/components',

@@ -276,13 +276,13 @@ async function convertPartialsToJs() {
 function createModernizr() {
     return src(`${options.paths.assets.views}/**/*.js`)
         .pipe(modernizr(modernizrConfig))
-        .pipe(dest(options.paths.assets.js))
+        .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
 }
 
 function addCustomModernizrTests() {
-    return src(['./src/assets/js/modernizr.js', './build/modernizr/customTests.js'])
+    return src(['./src/assets/vendor/modernizr/modernizr.js', './build/modernizr/customTests.js'])
         .pipe(concat('modernizr.cust.js'))
-        .pipe(dest(options.paths.assets.js))
+        .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
 }
 
 exports.default = series(
