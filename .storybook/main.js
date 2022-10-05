@@ -3,7 +3,7 @@ const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
 
 module.exports = {
-    staticDirs: ['../src/assets'],
+    staticDirs: ['../src/assets', '../src/assets/js'],
     stories: [
         '../src/stories/Introduction.stories.mdx',
         '../src/**/*.stories.mdx',

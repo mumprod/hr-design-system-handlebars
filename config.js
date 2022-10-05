@@ -7,6 +7,7 @@ module.exports = {
             views: 'src/stories/views',
             brand: 'src/assets/brand',
             icons: 'src/assets/icons',
+            js: 'src/assets/js',
         },
         dist: {
             components: 'src/stories/views/components',
