@@ -3,7 +3,7 @@
             <h2 class="flex items-center px-5 py-6 font-bold font-headingSerif text-blue-congress">
                 {{#if this.teaserLogo}}
                     <span>
-                        {{> components/base/image/icon _icon=this.teaserLogo _iconmap="logo" _addClass=(if this.isHessenschauLogo 'fill-[#005293] w-10 md:w-12 h-10 md:h-12' 'fill-[#005293] w-40 lg:w-52 h-8 md:h-12')}}
+                        {{> components/base/image/icon _icon=this.teaserLogo _iconmap="logo" _addClass=(inline-switch this.teaserLogo '["hessenschau_de"]' '["fill-[#005293] w-10 md:w-12 h-10 md:h-12","fill-[#005293] w-40 lg:w-52 h-8 md:h-12"]')}}
                     </span>
                 {{/if}}
                 {{#if this.title}}
