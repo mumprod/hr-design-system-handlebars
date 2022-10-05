@@ -264,7 +264,11 @@ function watchFiles() {
         ],
         createSvgMaps
     )
-    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles)
+    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles),
+        watch(
+            `${options.paths.build.modernizr}/**/*.{js,json}`,
+            series(createModernizr, addCustomModernizrTests)
+        )
 }
 
 async function convertPartialsToJs() {
@@ -275,7 +279,7 @@ async function convertPartialsToJs() {
 
 function createModernizr() {
     return src(`${options.paths.assets.views}/**/*.js`)
-        .pipe(modernizr(modernizrConfig))
+        .pipe(modernizr(require('./build/modernizr/config.json')))
         .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
 }
 
@@ -291,7 +295,8 @@ exports.default = series(
         createSvgMapsForBrands,
         minimizeSvgSrcFiles,
         parseJson,
-        convertPartialsToJs
+        convertPartialsToJs,
+        series(createModernizr, addCustomModernizrTests)
     ),
     watchFiles
 )

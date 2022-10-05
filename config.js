@@ -10,6 +10,9 @@ module.exports = {
             js: 'src/assets/js',
             vendor: 'src/assets/vendor',
         },
+        build: {
+            modernizr: 'build/modernizr',
+        },
         dist: {
             components: 'src/stories/views/components',
             handlebarPartials: 'build/handlebars/partials',
