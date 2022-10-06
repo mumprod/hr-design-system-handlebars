@@ -24,13 +24,7 @@ export default function playaudio(){
             },
             updateCurrentTime(s) {
                 this.currentTime = this.fancyTimeFormat(s);
-                /* this.currentTimeMs = s % 1000; 
-                s = (s - this.currentTimeMs) / 1000; 
-                this.currentTimeS = s % 60;
-                s = (s - this.currentTimeS) / 60;
-                this.currentTimeM = s % 60;
-                this.currentTimeH = (s - this.currentTimeM) / 60;
-                this.currentTime = this.pad(this.currentTimeM) + ':' + this.pad(this.currentTimeS) ; */
+                this.$refs.range.style.background = 'linear-gradient(to right, #006dc1 ' + this.$refs.range.value/10 + '%, white ' + this.$refs.range.value/10 + '% )'
                 this.currentTimePercentage = ((100 * this.$refs.audio.currentTime) / this.audioDuration) * 10 
             },   
             playAndStop() {
