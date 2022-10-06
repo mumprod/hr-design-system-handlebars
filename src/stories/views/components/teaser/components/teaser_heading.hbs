@@ -2,12 +2,8 @@
     <div class="leading-5.5{{#if ../_ordered}} pl-8 {{/if}}">
         {{> components/label/label _type=this.type _text=(loca this.loca)}}
     </div>
-    <span class="c-podcastEpisodePlayer__byline text__byline">
-    {{~#with ../airdateDate}}
-        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-    {{/with}}
-  </span>
-{{/with~}}    
+{{/with~}}
+
 <{{~ _headlineTag ~}}>
     {{#if _topline}}
         {{> components/teaser/components/teaser_topline _text=_topline _readMore=_readMore _teaserType=_teaserType}}

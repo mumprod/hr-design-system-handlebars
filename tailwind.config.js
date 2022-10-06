@@ -106,6 +106,7 @@ module.exports = {
             width: {
                 '18': '4.5rem',
                 '30': '7.5rem',
+                '42': '10.5rem',
                 '46': '11.5rem',
                 '70': '17.5rem',
                 '88': '22rem',
@@ -116,6 +117,7 @@ module.exports = {
                 '22': '5.5rem',
                 '30': '7.5rem',
                 '35': '8.75rem',
+                '42': '10.5rem',
                 '45': '11.25rem',
                 'header-lg-small': '8.8125rem',
                 'header-lg-big': '11.0625rem',
@@ -215,5 +217,6 @@ module.exports = {
             addUtilities(utilities, variants('borderColor'))
         },
         require('tailwindcss-counter')(),
+        require('@tailwindcss/line-clamp'),
     ],
 }

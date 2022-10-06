@@ -501,8 +501,8 @@
             "includePath": "components/teaser/podcast/podcast",
             "includeModel": {
                 "byline": "Byline",
-                "title": "Abgeschobeneee Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
+                "title": "Hier steht ein unheimlich langer Podcast-Titel, der geht über zwei Zeilen und wird in der zweiten Zeile mit 3 Punkten abgekürzt, sollte er zu lang sein",
+                "topline": "Hier steht die Topline",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
@@ -516,7 +516,7 @@
                 },
                 "teaseritem" : {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
+                    "@->contentpath": "poster_1"
                     }
                 ,
                 "teaserInfo": {
@@ -528,6 +528,13 @@
                     "showTeaserInfoDateTime": true,
                     "showTeaserInfoProgramRef": true
                 },
+                "podcastChannel" : {
+                    "title": "Der Tag in Hessen!",
+                    "url": "#ChannelURL",
+                    "podcastItunesUrl": "#ItunesURL",
+                    "podcastRssUrl": "#RSSURL"
+                },
+                "podcastDownloadUrl" : "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
@@ -578,9 +585,10 @@
                 "showAirdate": true,
                 "showProfileInfoAsByline": false,
                 "obsolet_brandOfTeaser": "hessenschau",
-                "headlineTag": "h1",
+                "headlineTag": "h2",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
+                "hideShortText": false,
                 "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
                 "profiles": "Von Alf Haubitz und Alice Merton",
@@ -618,7 +626,7 @@
                     },
                     "content": {
                         "headlineTag": "h1",
-                        "headingFontVariant": "serif",
+                        "headingFontVariant": "sans serif",
                         "imageVariant": "topteaser",
                         "isFileDownload": false,
                         "teaserImage": {
