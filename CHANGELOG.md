@@ -1,3 +1,15 @@
+# v0.59.2 (Thu Oct 06 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: The image of alternative teasers gets [#335](https://github.com/mumprod/hr-design-system-handlebars/pull/335) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.59.1 (Wed Oct 05 2022)
 
 #### 🐛 Bug Fix
