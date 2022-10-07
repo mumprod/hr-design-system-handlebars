@@ -533,7 +533,12 @@
                         "@->contentpath": "eventDate"
                     },
                     "hasSelectedEvents": true,
-                    "hasFutureEventsFromNow": true
+                    "hasFutureEventsFromNow": true,
+                    "isCurrentMonth": true,
+                    "hasDays": true,
+                    "hasInstants": true,
+                    "_excerpt": true,
+                    "isStartOfWeek": true
                 },
                 "displayTeaserBodyAsImageOverlay": true,
                 "hasMediaButtons": false,
