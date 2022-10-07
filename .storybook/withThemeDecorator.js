@@ -2,7 +2,6 @@
 const getActiveValue = ({ globals, parameters }) => {
     const global = globals.customConditionalToolbar || {}
     const param = parameters.customConditionalToolbar
-    console.log(global[param.default])
     return undefined !== global[param.default] ? global[param.default] : 'hessenschau' // get the selected options id
 }
 

@@ -1,12 +1,12 @@
-{{#>components/base/link _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
+{{#decorator 'components/base/link' _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
     {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=../this.dontLazyload _addClassImg="" ~}}
-{{/components/base/link}}  
+{{/decorator}}  
 {{#if this.isEvent}}
     {{#unless this.displayTeaserBodyAsImageOverlay}}
-        {{#>components/teaser/components/teaser_image_overlay _cssClasses="top-0 h-full"}}
+        {{#decorator 'components/teaser/components/teaser_image_overlay' _cssClasses="top-0 h-full"}}
             <div class="flex flex-col items-center justify-center p-4">
                 {{> components/event/instant_dates}}
             </div>
-        {{/components/teaser/components/teaser_image_overlay}}
+        {{/decorator}}
     {{/unless}}
 {{/if}}

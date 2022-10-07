@@ -73,8 +73,11 @@
           <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer seek_slider dark:bg-gray-700" >  
       
           {{!-- AudioElement --}}
-          <audio x-ref="audio" >
-            <source id="audio" src="https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3" type="audio/mp3" />
+          <audio x-ref='audio'>
+            <source
+            id="audio" src='https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3'
+            type='audio/mp3'
+        />
           </audio>
         </div>
       </div>
