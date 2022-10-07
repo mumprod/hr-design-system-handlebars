@@ -23,7 +23,7 @@ export default function playaudio(){
                 this.$refs.audio.currentTime = (this.$refs.range.value/1000) * this.audioDuration            
             },
             updateCurrentTime(s) {
-                this.currentTime = this.fancyTimeFormat(s);
+                this.currentTime = this.fancyTimeFormat(s, true);
                 this.$refs.range.style.background = 'linear-gradient(to right, #006dc1 ' + this.$refs.range.value/10 + '%, white ' + this.$refs.range.value/10 + '% )'
                 this.currentTimePercentage = ((100 * this.$refs.audio.currentTime) / this.audioDuration) * 10 
             },   
@@ -56,7 +56,7 @@ export default function playaudio(){
             returnString() {
                 return "String"
             },
-            fancyTimeFormat(duration)
+            fancyTimeFormat(duration,measure)
             {   
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
@@ -70,6 +70,11 @@ export default function playaudio(){
 
                 ret += "" + mins + ":" + (secs < 10 ? "0" : "");
                 ret += "" + secs;
+                
+                if (!measure){
+                    hrs > 1 ? ret += "std" : ret += "min" 
+                }
+            
                 return ret;
             }
             
