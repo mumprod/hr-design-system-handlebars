@@ -25,23 +25,23 @@
     </div>
 
   {{!-- Second Row  --}}
-    <div class="flex flex-row">
+    <div class="flex flex-row pb-5 pl-5">
       {{!-- Überschrift: --}}
-      <div class="flex w-full pb-5 pl-5">
+      <div class="flex w-full">
         {{#decorator 'components/base/link' _css="font-bold mt-2.5 text-toplineColor line-clamp-2 ..." }}    
           {{> components/teaser/components/teaser_title _text=this.title _fontVariant=this.headingFontVariant _size=this.size _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1 _firstItem=this.firstItem}}
         {{/decorator}}
       </div>  
     </div>
-
+    
   {{!-- Shorttext: --}}
   {{!-- // TODO: Will shorttext be needed? If yes, where and when? --}}
   {{!-- {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.size }} --}}
 
   {{!-- Third Row    --}}
-    <div class="flex flex-row">
+    <div class="flex flex-row pl-5">
       {{!-- Player --}}
-      <div class="flex w-full pl-5">  
+      <div class="flex w-full">  
         <div class="flex items-center grow js-load" 
           x-data="playaudio()"
           ax-load
@@ -50,19 +50,19 @@
 
           <div class="flex items-center w-40">
             {{!-- Start/StopButton       --}}
-            <button x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start mr-4 cursor-pointer group focus:outline-none">       
+            <button x-cloak x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start mr-4 cursor-pointer group focus:outline-none">       
                 <div class="">
                     <div x-show="!currentlyPlaying" class="text-white rounded-full bg-blue-science ring-white ring">
-                        {{> components/base/image/icon _icon="play" _iconmap="icons" _addClass="inline pl-1 w-12 h-12 fill-current"}}
+                        {{> components/base/image/icon _icon="play" _iconmap="icons" _addClass="inline pl-1 py-2 w-12 h-12 fill-current"}}
                     </div>
                     <div x-show="currentlyPlaying" class="bg-white rounded-full ring-blue-science ring text-blue-science">
-                        {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
+                        {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline py-2 w-12 h-12 fill-current"}}
                     </div>
                 </div>
             </button>
 
             {{!-- Meta Time usw. --}}
-            <div class="flex justify-end w-full">
+            <div x-cloak class="flex justify-end w-full">
               <span class="text-sm text-orange-layout" x-text="currentTime">0:00</span>
               <span class="text-sm text-blue-science"> / </span>
               <span class="text-sm text-blue-science" x-text="audioDurationFancy">6:21</span>
@@ -73,12 +73,11 @@
           <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer seek_slider dark:bg-gray-700" >  
       
           {{!-- AudioElement --}}
-          <audio x-init="initTime()" x-ref='audio'>
-            <source
-            id="audio" src='https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3'
-            type='audio/mp3'
-        />
-          </audio>
+          {{~#with this.audioUrl ~}}
+            <audio preload="metadata" x-init="initTime()" class="hidden" x-ref='audio'>
+              <source id="audio" src={{this}} type='audio/mp3'/>
+            </audio>
+          {{/with}}
         </div>
       </div>
     </div>
@@ -89,7 +88,7 @@
         {{!-- Abo-Dropdown --}}
         {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
         <div class="flex">
-          <div x-data="{
+          <div x-cloak x-data="{
               open: false,
               toggle() {
                   if (this.open) {
@@ -130,7 +129,7 @@
               style="display: none;"
               class="absolute left-0 w-40 bg-white shadow-md"
             >
-              {{!-- // TODO: Items should be built via iteration over items-array --}}
+              {{!--// TODO: Items should be built via iteration over items-array --}}
               {{#with this.podcastItunesUrl}}
                 <a class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
                   title="Bei iTunes abonnieren" target="_blank"

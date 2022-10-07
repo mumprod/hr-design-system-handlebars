@@ -36,7 +36,7 @@ export default function playaudio(){
             },
             initTime() {
                 console.log('time initialized')
-                this.$refs.audio.addEventListener("durationchange", () => {this.setTime()});
+                this.$refs.audio.addEventListener("durationchange", () => {console.log('duration is available'); this.setTime()});
             },
             setTime() {
                 console.log('time set')

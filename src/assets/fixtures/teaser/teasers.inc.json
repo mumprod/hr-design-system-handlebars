@@ -534,6 +534,7 @@
                     "podcastItunesUrl": "#ItunesURL",
                     "podcastRssUrl": "#RSSURL"
                 },
+                "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
                 "podcastDownloadUrl" : "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
