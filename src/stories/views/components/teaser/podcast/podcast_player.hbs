@@ -50,7 +50,7 @@
 
           <div class="flex items-center w-40">
             {{!-- Start/StopButton       --}}
-            <button x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start mr-4 cursor-pointer group focus:outline-none">       
+            <button x-cloak x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start mr-4 cursor-pointer group focus:outline-none">       
                 <div class="">
                     <div x-show="!currentlyPlaying" class="text-white rounded-full bg-blue-science ring-white ring">
                         {{> components/base/image/icon _icon="play" _iconmap="icons" _addClass="inline pl-1 w-12 h-12 fill-current"}}
@@ -62,7 +62,7 @@
             </button>
 
             {{!-- Meta Time usw. --}}
-            <div class="flex justify-end w-full">
+            <div x-cloak class="flex justify-end w-full">
               <span class="text-sm text-orange-layout" x-text="currentTime">0:00</span>
               <span class="text-sm text-blue-science"> / </span>
               <span class="text-sm text-blue-science" x-text="audioDurationFancy">6:21</span>
@@ -89,7 +89,7 @@
         {{!-- Abo-Dropdown --}}
         {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
         <div class="flex">
-          <div x-data="{
+          <div x-cloak x-data="{
               open: false,
               toggle() {
                   if (this.open) {
