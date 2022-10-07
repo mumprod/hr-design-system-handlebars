@@ -84,6 +84,7 @@
     "dependencies": {
         "@alpine-collective/toolkit": "^1.0.0",
         "@alpinejs/collapse": "^3.8.1",
+        "@tailwindcss/line-clamp": "^0.4.2",
         "alpinejs": "^3.8.1",
         "gulp-html-to-js": "0.0.7",
         "tailwindcss-counter": "^1.1.3"

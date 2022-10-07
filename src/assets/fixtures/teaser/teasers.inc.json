@@ -494,5 +494,165 @@
                 }
             }
         }
+    },
+    "teaserPodcast": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/podcast/podcast",
+            "includeModel": {
+                "byline": "Byline",
+                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der geht über zwei Zeilen und wird in der zweiten Zeile mit 3 Punkten abgekürzt, sollte er zu lang sein",
+                "topline": "Hier steht die Topline",
+                "headingFontVariant": "serif",
+                "extendedTitle": "",
+                "teaserType": "standard-ds",
+                "teaserSize": "hero",
+                "isMobile1to1": false,
+                "airdateDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
+                    "htmlDate": "20.02.1984",
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
+                },
+                "teaseritem" : {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "poster_1"
+                    }
+                ,
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": true
+                },
+                "podcastChannel" : {
+                    "title": "Der Tag in Hessen!",
+                    "url": "#ChannelURL",
+                    "podcastItunesUrl": "#ItunesURL",
+                    "podcastRssUrl": "#RSSURL"
+                },
+                "podcastDownloadUrl" : "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "standard_1"
+                },
+                "commentsSsi": {
+                    "commentNumber": "666",
+                    "hasOneComment": false,
+                    "hasManyComments": true,
+                    "commentLink": {
+                        "link": {
+                            "url": "/teaser1-comments",
+                            "webviewUrl": "/teaser1-comments#webview",
+                            "isTargetBlank": false,
+                            "readMoreText": {
+                                "readMoreScreenreader": "Zu den Kommentaren des Artikels"
+                            }
+                        }
+                    }
+                },
+                "documentSection": "Gesellschaft",
+                "displayTeaserBodyAsImageOverlay": false,
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "isStandardTeaser": false,
+                "isHeroTeaser": true,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcastEpisode": true,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": true,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "headlineTag": "h2",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "hideShortText": false,
+                "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "Von Alf Haubitz und Alice Merton",
+                "teaserLead": {
+                    "isPodcast": true,
+                    "toModel": {
+                        "audioElement": {
+                        "isPodcast": true,
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-podcast"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-podcast"
+                        }
+                }
+            }
+                },
+                "geotag": [
+                    {
+                        "title": "Wolfhagen"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    },
+                    "content": {
+                        "headlineTag": "h1",
+                        "headingFontVariant": "sans serif",
+                        "imageVariant": "topteaser",
+                        "isFileDownload": false,
+                        "teaserImage": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "standard_1"
+                        },
+                        "teaserSize": "hero",
+                        "isMobile1to1": false,
+                        "teaserType": "standard-ds",
+                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
+                        }
+                    }
+                },
+                "label": {
+                    "type": "podcast",
+                    "loca": "label_podcast",
+                    "byline": {
+                        "bylineSsi": "",
+                        "bylineText": ""
+                    }
+                }
+            }
+        }
     }
 }
