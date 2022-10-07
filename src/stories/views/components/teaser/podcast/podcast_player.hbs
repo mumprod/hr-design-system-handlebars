@@ -56,14 +56,14 @@
       </button>
 
     {{!-- Meta Time usw. --}}
-        <div class="flex justify-end w-20 mr-4 font-bold">
-          <span class="text-md text-orange-layout" x-text="currentTime">0:00</span>
-          <span class="px-1 text-md"> / </span>
-          <span class="text-md text-blue-science" x-text="audioDurationFancy">6:21</span>
+        <div class="flex justify-end w-20 mr-4">
+          <span class="text-sm text-orange-layout" x-text="currentTime">0:00</span>
+          <span class="px-1 text-sm text-blue-science"> / </span>
+          <span class="text-sm text-blue-science" x-text="audioDurationFancy">6:21</span>
         </div> 
         
     {{!-- Range Slider     --}}
-        <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 bg-white rounded-lg appearance-none cursor-pointer dark:bg-gray-700" >
+        <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 bg-white rounded-lg appearance-none cursor-pointer seek_slider dark:bg-gray-700" >
          
     
     {{!-- AudioElement --}}
@@ -177,3 +177,19 @@
       {{/with~}}
   {{/unless}}
 {{/unless}}
+
+<style>
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #F07800;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+</style>
