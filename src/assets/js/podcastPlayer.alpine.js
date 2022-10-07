@@ -2,7 +2,7 @@ export default function playaudio(){
         return {
             init: false,
             currentlyPlaying: false,
-            currentTime: "00:00",
+            currentTime: 0,
             currentTimeMs: 0,
             currentTimeS: 0,
             currentTimeM: 0,

@@ -175,7 +175,8 @@ module.exports = {
                 orange: {
                     terraX: '#bb4827',
                     spicyCarrot: '#d34600',
-                    bridesmaid: '#FCF2ED'
+                    bridesmaid: '#FCF2ED',
+                    layout: '#F07800'
                 },
                 teal: {
                     deeperPool: '#097d8e',

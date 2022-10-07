@@ -1,7 +1,6 @@
-
-  <div id="leftcol" class="w-full col-span-9 pl-5">
-
-    <div id="headerContainer" class="relative flex flex-row">
+<div class="flex col-span-12">
+  <div class="relative flex flex-col">
+    <div class="flex flex-row pl-5 ">
       <div class="flex">
         {{#with label}} 
           <div class="{{#if ../_ordered}} pl-8 {{/if}}">
@@ -10,55 +9,61 @@
         {{/with}}
         
         {{~#with airdateDate}}
-          <div class="pt-1 text-sm text-blue-science">
+          <div class="w-full pt-1 text-sm text-blue-science">
             <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
           </div>
         {{/with}}
       </div>
-      <div id="downloadButton" class="absolute right-0 flex w-auto">
-        <a href="{{this.podcastDownloadUrl}}" class="flex justify-end h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+      
+      <div class="absolute right-0 flex w-auto">
+        <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
           {{> components/base/image/icon _icon='download-button' _addClass="h-6 w-6 text-blue-science fill-current" }}
         </a>
       </div>
-    </div>   
 
-  {{!-- Überschrift: --}}
-    {{#>components/base/link _css="font-bold mt-2.5 block text-toplineColor line-clamp-2 ..." }}    
-      {{> components/teaser/components/teaser_title _text=this.title _fontVariant=this.headingFontVariant _size=this.size _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1 _firstItem=this.firstItem}}
-    {{/components/base/link}} 
-    
-  {{!-- Shorttext: --}}
+    </div>
+
+    <div class="flex flex-row">
+      {{!-- Überschrift: --}}
+      <div class="flex w-full pb-5 pl-5">
+        {{#>components/base/link _css="font-bold mt-2.5 text-toplineColor line-clamp-2 ..." }}    
+          {{> components/teaser/components/teaser_title _text=this.title _fontVariant=this.headingFontVariant _size=this.size _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1 _firstItem=this.firstItem}}
+        {{/components/base/link}}
+      </div>  
+    </div>
+      {{!-- Shorttext: --}}
     {{!-- {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.size }} --}}
-
-  {{!-- Player --}}
-    <div class="flex w-full mt-5">  
-      <div class="flex items-center flex-grow js-load" 
+    
+    <div class="flex flex-row">
+      {{!-- Player --}}
+      <div class="flex w-full pl-5">  
+      <div class="flex items-center grow js-load" 
         x-data="playaudio()"
         ax-load
         x-ignore
         ax-load-src="/js/podcastPlayer.alpine.js">
 
-    {{!-- Start/StopButton       --}}
-        <button x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start cursor-pointer group focus:outline-none">       
-            <div class="">
-                <div x-show="!currentlyPlaying" class="bg-blue-science rounded-full ring-white ring p-0.5 text-white">
-                    {{> components/base/image/icon _icon="play" _iconmap="icons" _addClass="inline pl-1 w-12 h-12 fill-current"}}
-                </div>
-                <div x-show="currentlyPlaying" class="bg-white rounded-full p-0.5 ring-blue-science ring text-blue-science">
-                    {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
-                </div>
-            </div>
-        </button>
+      {{!-- Start/StopButton       --}}
+      <button x-on:keydown.tab="playAndStop" x-on:click="playAndStop" type="button" class="flex justify-start mr-4 cursor-pointer group focus:outline-none">       
+          <div class="">
+              <div x-show="!currentlyPlaying" class="text-white rounded-full bg-blue-science ring-white ring">
+                  {{> components/base/image/icon _icon="play" _iconmap="icons" _addClass="inline pl-1 w-12 h-12 fill-current"}}
+              </div>
+              <div x-show="currentlyPlaying" class="bg-white rounded-full ring-blue-science ring text-blue-science">
+                  {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
+              </div>
+          </div>
+      </button>
 
     {{!-- Meta Time usw. --}}
-        <div class="flex justify-end w-20">
-          <span x-text="currentTime">00:00</span>
-          <span class="">/</span>
-          <span x-init="fancyTimeFormat(0)" x-text="audioDurationFancy">06:21</span>
+        <div class="flex justify-end w-20 mr-4 font-bold">
+          <span class="text-md text-orange-layout" x-text="currentTime">0:00</span>
+          <span class="px-1 text-md"> / </span>
+          <span class="text-md text-blue-science" x-text="audioDurationFancy">6:21</span>
         </div> 
         
     {{!-- Range Slider     --}}
-        <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer dark:bg-gray-700" >
+        <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 bg-white rounded-lg appearance-none cursor-pointer dark:bg-gray-700" >
          
     
     {{!-- AudioElement --}}
@@ -68,108 +73,107 @@
 
     
       </div>
+      </div>
+    </div>
+    <div class="flex flex-row p-5 pr-0">
+      {{#with this.podcastChannel}}
+        {{!-- Abo-Dropdown --}}
+        {{!-- todo: Dropdown-Items need to be flexible via CMS --> needs Array in Json & iteration  --}}
+        <div class="flex">
+          <div x-data="{
+              open: false,
+              toggle() {
+                  if (this.open) {
+                      return this.close()
+                  }
+                  this.$refs.button.focus()
+                  this.open = true
+              },
+              close(focusAfter) {
+                  if (! this.open) return
+                  this.open = false
+                  focusAfter && focusAfter.focus()
+              }}"
+                x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                x-id="['dropdown-button']"
+                class="relative"
+          >
+            <button
+              x-ref="button"
+              x-on:click="toggle()"
+              :aria-expanded="open"
+              :aria-controls="$id('dropdown-button')"
+              type="button"
+              class="flex items-center gap-2 bg-orange-layout w-40 text-white px-4 py-2.5 shadow">Abonnieren
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="flex self-end w-5 h-5 ml-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <div
+              x-ref="panel"
+              x-show="open"
+              x-transition.origin.top.left
+              x-on:click.outside="close($refs.button)"
+              :id="$id('dropdown-button')"
+              style="display: none;"
+              class="absolute left-0 w-40 bg-white shadow-md"
+            >
+              {{!-- todo: Items should be built via iteration over items-array --}}
+              {{#with this.podcastItunesUrl}}
+                <a class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                  title="Bei iTunes abonnieren" target="_blank"
+                  rel="noopener noreferrer"
+                  href="{{this}}"> 
+                    ITunes-Podcast 
+                </a> 
+              {{/with}}
+              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+                  Apple Podcast
+              </a>
+              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+                  ARD Audiothek
+              </a>
+              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+                  Spotify
+              </a>
+              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+                  RSS Feed
+              </a>
+            </div>
+          </div>
+        </div>
+      {{/with}}
+      {{!-- Sendungs-Link --}}
+      <div class="flex justify-end w-full">
+        <div class="flex self-end text-blue-science">
+          <span class="flex pr-2 font-bold">Zur Sendung: </span>
+          <a class="underline" href="#">{{#with this.teaserInfo}} {{~#if this.showTeaserInfoChannel}} <span class="text__byline">{{../this.podcastChannel.title}}</span>{{/if}} {{/with}}</a>
+        </div>
+      </div>
     </div>
   </div>
-
-  {{!-- Podcast-Image --}}
-  <div id="rightcol" class="col-span-3 row-span-2">
+      
+  <div class="flex px-5 w-52">
+    <div class="w-52 h-52">
       {{> components/base/image/responsive_image this.teaseritem 
         _type=this.teaserType
         _variant="default"
-        _addClass="relative flex justify-center overflow-hidden ar--100"
+        _addClass=" overflow-hidden ar--100"
         _noDelay=this.dontLazyload 
         _addClassImg="w-42 h-42 block"
-      }}
-  </div>
+      }}</div>
+  </div>    
+</div>
 
-  <div id="leftcol2" class="flex flex-row col-span-9 ">
-    {{#with this.podcastChannel}}
-      {{!-- Abo-Dropdown --}}
-      {{!-- todo: Dropdown-Items need to be flexible via CMS --> needs Array in Json & iteration  --}}
-      <div class="flex pb-4 mx-4">
-        <div x-data="{
-            open: false,
-            toggle() {
-                if (this.open) {
-                    return this.close()
-                }
-                this.$refs.button.focus()
-                this.open = true
-            },
-            close(focusAfter) {
-                if (! this.open) return
-                this.open = false
-                focusAfter && focusAfter.focus()
-            }}"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative"
-        >
-          <button
-            x-ref="button"
-            x-on:click="toggle()"
-            :aria-expanded="open"
-            :aria-controls="$id('dropdown-button')"
-            type="button"
-            class="flex items-center gap-2 bg-orange-400 w-40 text-white px-4 py-2.5 shadow">Abonnieren
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="flex self-end w-5 h-5 ml-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <div
-            x-ref="panel"
-            x-show="open"
-            x-transition.origin.top.left
-            x-on:click.outside="close($refs.button)"
-            :id="$id('dropdown-button')"
-            style="display: none;"
-            class="absolute left-0 w-40 bg-white shadow-md"
-          >
-            {{!-- todo: Items should be built via iteration over items-array --}}
-            {{#with this.podcastItunesUrl}}
-              <a class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
-                title="Bei iTunes abonnieren" target="_blank"
-                rel="noopener noreferrer"
-                href="{{this}}"> 
-                  ITunes-Podcast 
-              </a> 
-            {{/with}}
-            <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
-                Apple Podcast
-            </a>
-            <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
-                ARD Audiothek
-            </a>
-            <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
-                Spotify
-            </a>
-            <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
-                RSS Feed
-            </a>
+{{#unless _isSinglePage}}
+  {{#unless this.hideShortText}}
+      {{~#with this.shorttext}}
+          <div class="col-span-12 p-8 c-podcastEpisodePlayer__shortText">
+              <span class="c-teaser__shorttext"> {{this}} </span>
           </div>
-        </div>
-      </div>
-    {{/with}}
-    
-    {{!-- Sendungs-Link --}}
-    <div class="flex justify-end w-full">
-      <div class="flex self-end pb-4 text-blue-science">
-        <span class="flex pr-4 font-bold">Zur Sendung: </span>
-        <a class="underline" href="#">{{#with this.teaserInfo}} {{~#if this.showTeaserInfoChannel}} <span class="text__byline">{{../this.podcastChannel.title}}</span>
-  {{/if}} {{/with}}</a>
-      </div>
-    </div>
-  </div>
-
-  {{#unless _isSinglePage}}
-    {{#unless this.hideShortText}}
-        {{~#with this.shorttext}}
-            <div class="col-span-12 p-8 c-podcastEpisodePlayer__shortText">
-                <span class="c-teaser__shorttext"> {{this}} </span>
-            </div>
-        {{/with~}}
-    {{/unless}}
+      {{/with~}}
   {{/unless}}
+{{/unless}}
