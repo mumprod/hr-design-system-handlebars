@@ -1,3 +1,15 @@
+# v0.61.0 (Fri Oct 07 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player cosmetics [#337](https://github.com/mumprod/hr-design-system-handlebars/pull/337) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.60.0 (Fri Oct 07 2022)
 
 #### 🚀 Enhancement
