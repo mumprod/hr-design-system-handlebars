@@ -34,6 +34,19 @@ export default function playaudio(){
                 this.startAudio()   
                 }
             },
+            initTime() {
+                console.log('time initialized')
+                this.$refs.audio.addEventListener("durationchange", () => {this.setTime()});
+            },
+            setTime() {
+                console.log('time set')
+                this.audioDuration = this.$refs.audio.duration;
+                this.audioDurationFancy = this.fancyTimeFormat(this.$refs.audio.duration)  
+                this.removeAudioListener()  
+            },
+            removeAudioListener(){
+                this.$refs.audio.removeEventListener("durationchange", () => {this.setTime()});
+            },
             startAudio() {
                 if(!this.init) {
                 this.init = true;

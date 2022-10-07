@@ -16,7 +16,7 @@
         {{/with}}
       </div>
       {{!-- Download Icon --}}
-      {{!-- todo: new icon needed --}}
+      {{!-- // TODO: new icon needed --}}
       <div class="absolute right-0 flex w-auto">
         <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
           {{> components/base/image/icon _icon='download-button' _addClass="h-6 w-6 text-blue-science fill-current" }}
@@ -28,14 +28,14 @@
     <div class="flex flex-row">
       {{!-- Überschrift: --}}
       <div class="flex w-full pb-5 pl-5">
-        {{#>components/base/link _css="font-bold mt-2.5 text-toplineColor line-clamp-2 ..." }}    
+        {{#decorator 'components/base/link' _css="font-bold mt-2.5 text-toplineColor line-clamp-2 ..." }}    
           {{> components/teaser/components/teaser_title _text=this.title _fontVariant=this.headingFontVariant _size=this.size _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1 _firstItem=this.firstItem}}
-        {{/components/base/link}}
+        {{/decorator}}
       </div>  
     </div>
 
   {{!-- Shorttext: --}}
-  {{!-- todo: Will shorttext be needed? If yes, where and when? --}}
+  {{!-- // TODO: Will shorttext be needed? If yes, where and when? --}}
   {{!-- {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.size }} --}}
 
   {{!-- Third Row    --}}
@@ -73,7 +73,7 @@
           <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer seek_slider dark:bg-gray-700" >  
       
           {{!-- AudioElement --}}
-          <audio x-ref='audio'>
+          <audio x-init="initTime()" x-ref='audio'>
             <source
             id="audio" src='https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3'
             type='audio/mp3'
@@ -87,7 +87,7 @@
     <div class="flex flex-row p-5 pr-0">
       {{#with this.podcastChannel}}
         {{!-- Abo-Dropdown --}}
-        {{!-- todo: Dropdown-Items need to be flexible via CMS --> needs Array in Json & iteration  --}}
+        {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
         <div class="flex">
           <div x-data="{
               open: false,
@@ -130,7 +130,7 @@
               style="display: none;"
               class="absolute left-0 w-40 bg-white shadow-md"
             >
-              {{!-- todo: Items should be built via iteration over items-array --}}
+              {{!-- // TODO: Items should be built via iteration over items-array --}}
               {{#with this.podcastItunesUrl}}
                 <a class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
                   title="Bei iTunes abonnieren" target="_blank"
