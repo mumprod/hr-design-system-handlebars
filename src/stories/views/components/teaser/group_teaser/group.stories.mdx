@@ -2,7 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
 
 
 import groupTeaser from "./group_teaser.hbs";
-
+import groupTeaserAccented from "./group_teaser_accented.hbs"; 
 import teaserGroup100 from '../fixtures/teaser_group_100.json' 
 import teaserGroup100highlight from '../fixtures/teaser_group_100_highlight.json' 
 import teaserGroup100highlight2 from '../fixtures/teaser_group_100_highlight_2.json'
@@ -45,6 +45,11 @@ export const groupTeaserTemplate = ({ text, ...args }) => {
   return groupTeaser({ text, ...args });
 };
 
+export const groupTeaserAccentedTemplate = ({ text, ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return groupTeaserAccented({ text, ...args });
+};
 
 # Button
 
@@ -73,7 +78,7 @@ Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
     name="100% Gruppe mit Content Navigation Aufklapp"
     args={teaserGroup100contentnav.includeModel} 
   >
-    {groupTeaserTemplate.bind({})}
+    {groupTeaserAccentedTemplate.bind({})}
   </Story>
 </Preview>
 

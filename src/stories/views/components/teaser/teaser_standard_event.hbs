@@ -30,7 +30,7 @@
                         {{inline-switch teaserSize '["100"]' '["border-l-2 border-dotted pt-5 pl-4 border-slate-600"]'}}
                         {{inline-switch teaserSize '["50","33"]' '[" hidden"," hidden"]'}}">
                             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-                                {{#>components/base/link css="hover:text-toplineColor" }} 
+                                {{#decorator 'components/base/link' css="hover:text-toplineColor" }} 
                                 {{> components/teaser/components/teaser_heading 
                                 fontVariant=this.headingFontVariant
                                 headlineTag=this.headlineTag 
@@ -41,7 +41,7 @@
                                 topline=this.topline 
                                 teaserType=this.teaserType
                                 _isMobile1to1=this.isMobile1to1}}            
-                                {{/components/base/link}}   
+                                {{/decorator}}   
                             </header>
                             <section class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                                 {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize }}
@@ -85,7 +85,7 @@
                         {{inline-switch teaserSize '["100"]' '["border-l-2 border-dotted pt-5 pl-4 border-slate-600"]'}}
                         {{inline-switch teaserSize '["50","33"]' '[" hidden"," hidden"]'}}">
                             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-                                {{#>components/base/link css="hover:text-toplineColor" }} 
+                                {{#decorator 'components/base/link' _css="hover:text-toplineColor" }} 
                                 {{> components/teaser/components/teaser_heading 
                                 fontVariant=this.headingFontVariant
                                 headlineTag=this.headlineTag 
@@ -96,7 +96,7 @@
                                 topline=this.topline 
                                 teaserType=this.teaserType
                                 _isMobile1to1=this.isMobile1to1}}            
-                                {{/components/base/link}}   
+                                {{/decorator}}   
                             </header>
                             <section class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                                 {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize }}
@@ -113,7 +113,7 @@
     {{/if}} 
         <div class="{{~#if this.isMobile1to1}}basis-3/5 md:flex-full{{/if~}}{{inline-switch teaserSize '["100"]' '[" hidden"]'}}">
             <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-                {{#>components/base/link css="hover:text-toplineColor" }} 
+                {{#decorator 'components/base/link' _css="hover:text-toplineColor" }} 
                 {{> components/teaser/components/teaser_heading 
                 fontVariant=this.headingFontVariant
                 headlineTag=this.headlineTag 
@@ -124,7 +124,7 @@
                 topline=this.topline 
                 teaserType=this.teaserType
                 _isMobile1to1=this.isMobile1to1}}            
-                {{/components/base/link}}   
+                {{/decorator}}   
             </header>
             <section class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
                 {{> components/teaser/components/teaser_text text=this.shorttext size=this.teaserSize }}

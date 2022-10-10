@@ -1,5 +1,5 @@
 import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
-import TrackingCookie from 'components/externalService/trackingCookieDs.subfeature'
+import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 
 const ArdPlayerLoader = function (options, rootElement) {
     'use strict'
@@ -52,15 +52,16 @@ const ArdPlayerLoader = function (options, rootElement) {
     }
 
     const createPlayer = function () {
-        if (
-            trackingCookie.isTrackingAccepted('ati') &&
-            playerConfig.pluginData['trackingAti@all'].isEnabled
-        ) {
+        if (trackingCookie.isTrackingAccepted('ati')) {
             loadScript('js-smarttagProd', smarttagUrl)
         } else {
-            playerConfig.pluginData['trackingAti@all'].isEnabled = false
+            if (undefined != playerConfig.pluginData['trackingAti@all'])
+                playerConfig.pluginData['trackingAti@all'].isEnabled = false
         }
-        if (!trackingCookie.isTrackingAccepted('agf')) {
+        if (
+            !trackingCookie.isTrackingAccepted('agf') &&
+            undefined != playerConfig.pluginData['trackingAgf@all']
+        ) {
             playerConfig.pluginData['trackingAgf@all'].isEnabled = false
         }
         whenAvailable('ardplayer', function () {

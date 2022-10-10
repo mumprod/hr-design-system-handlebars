@@ -1,0 +1,39 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+
+import podcast from './podcast.hbs'
+import json from '../fixtures/teaser_podcast.json'
+
+<Meta   title="Komponenten/Teaser/Podcast"
+        parameters={{
+            chromatic: {
+                viewports: [360, 768, 1024]
+            },
+            layout: 'fullscreen',
+        }}
+        argTypes={{
+        }} 
+        decorators={[
+        (Story) => {
+            return `<div class="grid my-5 grid-page">
+                        
+                            ${Story()}
+                        
+                    </div>`
+        },
+    ]}
+        />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return podcast({ brand, ...args })
+}
+
+
+<Preview withToolbar>
+    <Story  name="100% Episode Player" args={json.logicItem.includeModel}>
+        {Template.bind({})} 
+    </Story> 
+</Preview>

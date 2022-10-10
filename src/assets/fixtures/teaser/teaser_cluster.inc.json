@@ -6,8 +6,7 @@
     "HideTitle"   : false,
     "showGenreImage" : false,
     "showFirstImage" : false,
-    "showImage" : false,
-    "_ordered" : false,
+    "isOrdered" : false,
 
     "teaserSize" : "100",
 
@@ -47,7 +46,7 @@
         }
     ],
 
-    "headlineListItems" :{
+    "headlineListOverview" :{
         "title" : "Neue Beiträge auf einen Blick",
         "link"  : {
             "url": "https://www.hessenschau.de"

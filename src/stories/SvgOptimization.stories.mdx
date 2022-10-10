@@ -24,8 +24,9 @@ Mithilfe eines Skripts können beliebig viele SVG-Maps erzeugt werden. Wie das g
 
 ## Optimierung von Icons und Erzeugung von SVG-Maps
 
-Zur Optimierung der Icons und der Erzeugung von SVG-Maps ist in der Datei `package.json` ein Skript `optimze-svgs` konfiguriert. Es kann durch Aufruf von `npm run optimize-svgs`
-ausgeführt werden. Das Skript, welches mit Hilfe des Taskrunners [Gulp](https://gulpjs.com/) geschrieben wurde, führt automatisiert hintereinander verschiedene Aufgaben aus.
+Die Optimierung der Icons und die Erzeugung von SVG-Maps wird über das NPM-Skript `optimze-assets` angestoßen. Es kann durch Aufruf von `npm run optimize-assets`
+ausgeführt werden und es wird empfohlen es immer beim Start von Storybook mit Auszuführen. Das Skript, welches mit Hilfe des Taskrunners [Gulp](https://gulpjs.com/) geschrieben wurde,
+optimiert nicht nur die SVGs und fast sie in SVG-Maps zusammen, sondern sorgt auch noch für die Erstellung und Optimierung anderer Asset Daten.
 
 ### Global zu verwendende Icons
 
