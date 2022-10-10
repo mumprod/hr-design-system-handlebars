@@ -1,3 +1,39 @@
+# v0.61.0 (Fri Oct 07 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player cosmetics [#337](https://github.com/mumprod/hr-design-system-handlebars/pull/337) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.60.0 (Fri Oct 07 2022)
+
+#### 🚀 Enhancement
+
+- Podcast teaser steve [#336](https://github.com/mumprod/hr-design-system-handlebars/pull/336) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.59.2 (Thu Oct 06 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: The image of alternative teasers gets [#335](https://github.com/mumprod/hr-design-system-handlebars/pull/335) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.59.1 (Wed Oct 05 2022)
 
 #### 🐛 Bug Fix
