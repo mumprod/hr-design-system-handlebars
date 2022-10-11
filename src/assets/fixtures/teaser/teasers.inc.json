@@ -519,6 +519,7 @@
                     "@->contentpath": "poster_1"
                     }
                 ,
+                "podcastDuration" : "07:56",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -649,7 +650,7 @@
                     "type": "podcast",
                     "loca": "label_podcast",
                     "byline": {
-                        "bylineSsi": "",
+                        "bylineSsi": "07:42 min",
                         "bylineText": ""
                     }
                 }

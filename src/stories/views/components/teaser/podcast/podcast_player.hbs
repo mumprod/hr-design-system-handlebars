@@ -19,7 +19,7 @@
       {{!-- // TODO: new icon needed --}}
       <div class="absolute right-0 flex w-auto">
         <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
-          {{> components/base/image/icon _icon='download-button' _addClass="h-6 w-6 text-blue-science fill-current" }}
+          {{> components/base/image/icon _icon='download-neu' _addClass="h-6 w-6 text-blue-science fill-current" }}
         </a>
       </div>
     </div>
@@ -27,20 +27,18 @@
   {{!-- Second Row  --}}
     <div class="flex flex-row pb-5 pl-5">
       {{!-- Überschrift: --}}
+      {{!-- // TODO: eigene Überschrift, keine Komponente bzw PodcastTitle.hbs  --}}
       <div class="flex w-full">
         {{#decorator 'components/base/link' _css="font-bold mt-2.5 text-toplineColor line-clamp-2 ..." }}    
           {{> components/teaser/components/teaser_title _text=this.title _fontVariant=this.headingFontVariant _size=this.size _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1 _firstItem=this.firstItem}}
         {{/decorator}}
       </div>  
     </div>
-    
-  {{!-- Shorttext: --}}
-  {{!-- // TODO: Will shorttext be needed? If yes, where and when? --}}
-  {{!-- {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.size }} --}}
 
   {{!-- Third Row    --}}
     <div class="flex flex-row pl-5">
       {{!-- Player --}}
+      {{!-- // TODO: Auslagern --}}
       <div class="flex w-full">  
         <div class="flex items-center grow js-load" 
           x-data="playaudio()"
@@ -87,6 +85,7 @@
       {{#with this.podcastChannel}}
         {{!-- Abo-Dropdown --}}
         {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
+        
         <div class="flex">
           <div x-cloak x-data="{
               open: false,
@@ -113,7 +112,7 @@
               :aria-expanded="open"
               :aria-controls="$id('dropdown-button')"
               type="button"
-              class="flex items-center gap-2 bg-orange-layout w-40 text-white px-4 py-2.5 shadow">Abonnieren
+              class="flex items-center w-40 gap-2 px-4 py-1 text-white shadow bg-orange-layout">Abonnieren
 
               <svg xmlns="http://www.w3.org/2000/svg" class="flex self-end w-5 h-5 ml-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -127,27 +126,27 @@
               x-on:click.outside="close($refs.button)"
               :id="$id('dropdown-button')"
               style="display: none;"
-              class="absolute left-0 w-40 bg-white shadow-md"
+              class="absolute left-0 w-40 mt-2 bg-white shadow-md"
             >
               {{!--// TODO: Items should be built via iteration over items-array --}}
               {{#with this.podcastItunesUrl}}
-                <a class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500"
+                <a class="flex items-center w-full gap-2 px-4 py-1 text-left hover:bg-gray-50 disabled:text-gray-500"
                   title="Bei iTunes abonnieren" target="_blank"
                   rel="noopener noreferrer"
                   href="{{this}}"> 
                     ITunes-Podcast 
                 </a> 
               {{/with}}
-              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1 text-left hover:bg-gray-50 disabled:text-gray-500">
                   Apple Podcast
               </a>
-              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1 text-left hover:bg-gray-50 disabled:text-gray-500">
                   ARD Audiothek
               </a>
-              <a href="#" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1 text-left hover:bg-gray-50 disabled:text-gray-500">
                   Spotify
               </a>
-              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center gap-2 w-full px-4 py-2.5 text-left hover:bg-gray-50 disabled:text-gray-500">
+              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center w-full gap-2 px-4 py-1 text-left hover:bg-gray-50 disabled:text-gray-500">
                   RSS Feed
               </a>
             </div>
