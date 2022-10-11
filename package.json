@@ -85,6 +85,7 @@
         "@alpine-collective/toolkit": "^1.0.0",
         "@alpinejs/collapse": "^3.8.1",
         "alpinejs": "^3.8.1",
+        "gulp-file-transform-cache": "^1.0.8",
         "gulp-html-to-js": "0.0.7",
         "tailwindcss-counter": "^1.1.3"
     },

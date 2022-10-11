@@ -13,6 +13,7 @@ const log = require('fancy-log')
 const modernizr = require('gulp-modernizr')
 const modernizrConfig = require('./build/modernizr/config.json')
 const concat = require('gulp-concat')
+const gftc = require('gulp-file-transform-cache')
 
 const options = require('./config.js')
 
@@ -142,78 +143,79 @@ function minimizeSvgSrcFiles() {
         glob.sync(`${iconsDirRoot}/*`).map(function (iconsDir) {
             return src(`${iconsDir}/*.src.svg`)
                 .pipe(
-                    svgMin({
-                        full: true,
-                        plugins: [
-                            {
-                                name: 'preset-default',
-                                params: {
-                                    overrides: {
-                                        removeViewBox: false,
-                                        cleanupAttrs: false,
-                                        collapseGroups: false,
-                                        cleanupIDs: false,
-                                        convertPathData: {
-                                            straightCurves: false,
-                                        },
-                                        convertTransform: {
-                                            shortScale: false,
-                                            floatPrecision: 2,
+                    gftc({
+                        path: './build/gulp/cache/.minimizeSvgSrcFilesCache',
+                        transformStreams: [
+                            svgMin({
+                                full: true,
+                                plugins: [
+                                    {
+                                        name: 'preset-default',
+                                        params: {
+                                            overrides: {
+                                                removeViewBox: false,
+                                                cleanupAttrs: false,
+                                                collapseGroups: false,
+                                                cleanupIDs: false,
+                                                convertPathData: {
+                                                    straightCurves: false,
+                                                },
+                                                convertTransform: {
+                                                    shortScale: false,
+                                                    floatPrecision: 2,
+                                                },
+                                            },
                                         },
                                     },
+                                    'convertStyleToAttrs',
+                                ],
+                            }),
+                            cheerio({
+                                run: function ($, file) {
+                                    log(file.basename)
+                                    if (
+                                        file.dirname.includes('unweather') &&
+                                        file.basename === 'regiomap.src.svg'
+                                    ) {
+                                        $('[fill]').map(function () {
+                                            $(this).removeAttr('fill')
+                                        })
+                                        $('[stroke]').map(function () {
+                                            $(this).removeAttr('stroke')
+                                        })
+                                        $('[stroke-width]').map(function () {
+                                            $(this).removeAttr('stroke-width')
+                                        })
+                                        $('[font-family]').map(function () {
+                                            $(this).removeAttr('font-family')
+                                        })
+                                        $('[display]').map(function () {
+                                            $(this).removeAttr('display')
+                                        })
+                                    } else {
+                                        if (file.basename === 'regiomap_regions_cities.src.svg') {
+                                            $('[fill]').map(function () {
+                                                $(this).removeAttr('fill')
+                                            })
+                                            $('[font-family]').map(function () {
+                                                $(this).removeAttr('font-family')
+                                            })
+                                            $('[display]').map(function () {
+                                                $(this).removeAttr('display')
+                                            })
+                                        }
+                                    }
                                 },
-                            },
-                            'convertStyleToAttrs',
-                        ],
-                    })
-                )
-                .pipe(
-                    cheerio({
-                        run: function ($, file) {
-                            log(file.basename)
-                            if (
-                                file.dirname.includes('unweather') &&
-                                file.basename === 'regiomap.src.svg'
-                            ) {
-                                $('[fill]').map(function () {
-                                    $(this).removeAttr('fill')
-                                })
-                                $('[stroke]').map(function () {
-                                    $(this).removeAttr('stroke')
-                                })
-                                $('[stroke-width]').map(function () {
-                                    $(this).removeAttr('stroke-width')
-                                })
-                                $('[font-family]').map(function () {
-                                    $(this).removeAttr('font-family')
-                                })
-                                $('[display]').map(function () {
-                                    $(this).removeAttr('display')
-                                })
-                            } else {
-                                if (file.basename === 'regiomap_regions_cities.src.svg') {
-                                    $('[fill]').map(function () {
-                                        $(this).removeAttr('fill')
-                                    })
-                                    $('[font-family]').map(function () {
-                                        $(this).removeAttr('font-family')
-                                    })
-                                    $('[display]').map(function () {
-                                        $(this).removeAttr('display')
-                                    })
+                                parserOptions: { xmlMode: true },
+                            }),
+                            rename(function (path) {
+                                return {
+                                    dirname: path.dirname,
+                                    basename: path.basename.replace('src', 'min'),
+                                    extname: path.extname,
                                 }
-                            }
-                        },
-                        parserOptions: { xmlMode: true },
-                    })
-                )
-                .pipe(
-                    rename(function (path) {
-                        return {
-                            dirname: path.dirname,
-                            basename: path.basename.replace('src', 'min'),
-                            extname: path.extname,
-                        }
+                            }),
+                        ],
                     })
                 )
                 .pipe(dest(`${iconsDir}`))
@@ -227,18 +229,21 @@ function parseJson() {
         `!${options.paths.assets.fixtures}/**/*.inc.json`,
     ])
         .pipe(
-            jsonTransform(function (data, file) {
-                const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
-                return jsonWithIncludes
-            })
-        )
-        .pipe(
-            rename(function (path) {
-                return {
-                    dirname: `${path.dirname}/fixtures`,
-                    basename: path.basename,
-                    extname: path.extname,
-                }
+            gftc({
+                path: './build/gulp/cache/.fixturesCache',
+                transformStreams: [
+                    jsonTransform(function (data, file) {
+                        const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
+                        return jsonWithIncludes
+                    }),
+                    rename(function (path) {
+                        return {
+                            dirname: `${path.dirname}/fixtures`,
+                            basename: path.basename,
+                            extname: path.extname,
+                        }
+                    }),
+                ],
             })
         )
         .pipe(dest(options.paths.dist.components))
