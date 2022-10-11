@@ -506,7 +506,7 @@
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
-                "teaserSize": "hero",
+                "teaserSize": "100",
                 "isMobile1to1": false,
                 "airdateDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -519,6 +519,7 @@
                     "@->contentpath": "poster_1"
                     }
                 ,
+                "podcastDuration" : "2:07:56",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -649,7 +650,7 @@
                     "type": "podcast",
                     "loca": "label_podcast",
                     "byline": {
-                        "bylineSsi": "",
+                        "bylineSsi": "07:42 min",
                         "bylineText": ""
                     }
                 }
