@@ -1,0 +1,18 @@
+{{#if this.isEventCalendar}}
+    {{#with this.teaserDate}}
+    <div class="flex mt-4 mx-2">
+        <div class="flex align-top">
+        <div class=" block relative min-w-3 min-h-3">
+                    {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
+                </div>
+        <span class='text-l pl-4 font-headingSerif font-bold'>{{this.dateSeparatorTime}}</span>
+</div>
+<div class="flex align-top">
+        <div class="relative ml-4 min-w-3 min-h-3">
+                    {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
+                </div>
+        <span class='text-l pl-4 font-headingSerif font-bold'>Frankfurt am main</span>
+    </div>
+    </div>
+    {{/with}}
+{{/if}}

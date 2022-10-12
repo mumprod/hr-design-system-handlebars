@@ -38,5 +38,17 @@
             "bylineSsi": "01.09.22, 20:00 Uhr",
             "bylineText": "BylineText"
         }
+    },
+    "eventLabelCalendar": {
+        "type": "event",
+        "loca": "label_event",
+        "byline": {
+            "bylineSsi": " ",
+            "bylineText": "BylineText"
+        }
+    },
+    "eventCalendar": {
+        "type": "eventCalendar",
+        "loca": "event_calendar_backlink"
     }
 }

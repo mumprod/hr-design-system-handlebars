@@ -31,6 +31,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
+    /* Eventkalender Title */
+    --color-label-event-calendar-title: theme('colors.teal.deeperPool');
 }
 
 [data-theme='hessenschau'] {

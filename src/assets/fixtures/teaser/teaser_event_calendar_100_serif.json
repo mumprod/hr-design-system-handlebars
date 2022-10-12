@@ -1,0 +1,28 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "eventCalendarTeaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "md_1"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "eventLabelCalendar"
+            }
+        }
+    ]
+}

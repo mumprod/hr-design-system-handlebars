@@ -1,0 +1,73 @@
+{
+    "eventDate" :
+        {
+    "months": [{
+    "year":"21",
+    "monthName":"Aug",
+    "days": [{
+        "weekDay": "FR",
+        "day": "21"
+    },
+    {
+        "weekDay": "SA",
+        "day": "22"
+    },
+    {
+        "weekDay": "SO",
+        "day": "23"
+    }]},
+    {
+        "year":"21",
+        "monthName":"Sep",
+        "days": [{
+            "weekDay": "FR",
+            "day": "13"
+        },
+        {
+            "weekDay": "SA",
+            "day": "14"
+        },
+        {
+            "weekDay": "SO",
+            "day": "15"
+        }]},
+    {
+        "year":"21",
+        "monthName":"Okt",
+        "days": [{
+            "weekDay": "FR",
+            "day": "13"
+        },
+        {
+            "weekDay": "SA",
+            "day": "14"
+        },
+        {
+            "weekDay": "SO",
+            "day": "15"
+        }
+        ]},
+        {
+            "year":"21",
+            "monthName":"Nov",
+            "days": [{
+                "weekDay": "FR",
+                "day": "13"
+            },
+            {
+                "weekDay": "SA",
+                "day": "14"
+            },
+            {
+                "weekDay": "SO",
+                "day": "15"
+            },
+            {
+                "weekDay": "MO",
+                "day": "16"
+            }
+        ]
+        }
+    ]   
+    } 
+}
