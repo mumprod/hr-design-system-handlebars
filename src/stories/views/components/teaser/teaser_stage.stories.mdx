@@ -1,5 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_stage.hbs'
+import stageTeaserData from './fixtures/stage_teaser.json'
+
 
 <Meta
     title="Komponenten/Teaser/Stage"
@@ -9,11 +11,10 @@ import teaser from './teaser_stage.hbs'
             viewports: [360, 768, 1024],
         },
     }}
-    argTypes={
-    }
+    argTypes={{}}
     decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="col-full gap-x-6 gap-y-6">  
                 ${Story()} 
                 </div></div>`
         },
@@ -34,8 +35,8 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 
 <Preview withToolbar>
-    <b>Alternativ Hero Video</b>
-    <Story name="Alternativ Hero Video" args={}>
+    <b>Stage Teaser</b>
+    <Story name="Stage Teaser" args={stageTeaserData}>
         {Template.bind({})}
     </Story>
 </Preview>
