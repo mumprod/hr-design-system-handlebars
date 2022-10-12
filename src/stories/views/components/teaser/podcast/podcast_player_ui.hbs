@@ -6,16 +6,16 @@
     ax-load-src="/js/podcastPlayer.alpine.js"
     x-init="setTime( '{{podcastDuration}}' )" >
 
-    <div class="flex items-center w-40">
+    <div class="flex items-center w-auto">
         {{!-- Start/StopButton       --}}
         {{> components/teaser/podcast/podcast_playbutton _clickFunction="playAndStop" _css="mr-4" _title=this.title _teaserSize=this.teaserSize _addClass="" }}
 
         {{!-- Meta Time usw. --}}
-        {{> components/teaser/podcast/podcast_timedisplay _textSize="text-sm" _duration=podcastDuration _currentTimeClasses="text-orange-layout" _durationClasses="text-blue-science" _containerCss="flex justify-end w-full font-bold"}}
+        {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="min-w-[80px] flex text-xs grow font-copy"}}
     </div>
     
     {{!-- Range Slider     --}}
-    <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer seek_slider" >  
+    <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex h-1 ml-2.5 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
 
     {{!-- AudioElement --}}
     {{~#with this.audioUrl ~}}
