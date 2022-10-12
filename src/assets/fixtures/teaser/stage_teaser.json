@@ -1,0 +1,19 @@
+{
+    "teaser": {
+        "label": "",
+        "eventtags": {},
+        "topline": "hr4 - Unser schönes Hessen",
+        "title": "Wir belohnen grüne Projekte mit 500 Euro", 
+        "showProfileInfoAsByline": false,
+        "location": {}, 
+        "isWide": true, 
+        "link": {}, 
+        "form": {},
+        "teaserImage": {
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "stage_wide"
+        },
+        "stageTextPosition": "left50",
+        "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen."
+    }
+}

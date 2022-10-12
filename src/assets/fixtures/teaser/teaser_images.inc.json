@@ -390,6 +390,34 @@
                 }
             ]
         }
-    }  
+    },
+    
+    "stage_wide": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "", 
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "https://picsum.photos/id/402/480/270",
+            "sources": [
+                {
+                    "media": "all and (min-width: 1024px)",
+                    "sizes": "100vw",
+                    "srcset": "https://picsum.photos/id/402/1920/529 1920w"
+                },
+                {
+                    "media": "all and (min-width: 640px)",
+                    "sizes": "100vw",
+                    "srcset": "https://picsum.photos/id/402/960/540 960w, https://picsum.photos/id/402/1920/1080 1920w"
+                },
+                {
+                    "media": "all and (max-width: 639px)",
+                    "sizes": "100vw",
+                    "srcset": "https://picsum.photos/id/402/320/240 320w, https://picsum.photos/id/402/480/360 480w, https://picsum.photos/id/402/650/488 650w, https://picsum.photos/id/402/1300/975 1300w"
+                }
+            ]
+        }
+
+    }
 
 }
