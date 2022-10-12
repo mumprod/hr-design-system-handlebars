@@ -1,3 +1,52 @@
+# v0.62.0 (Tue Oct 11 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player refactoring [#338](https://github.com/mumprod/hr-design-system-handlebars/pull/338) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.61.1 (Mon Oct 10 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1677 [#334](https://github.com/mumprod/hr-design-system-handlebars/pull/334) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+
+---
+
+# v0.61.0 (Fri Oct 07 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player cosmetics [#337](https://github.com/mumprod/hr-design-system-handlebars/pull/337) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.60.0 (Fri Oct 07 2022)
+
+#### 🚀 Enhancement
+
+- Podcast teaser steve [#336](https://github.com/mumprod/hr-design-system-handlebars/pull/336) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.59.2 (Thu Oct 06 2022)
 
 #### 🐛 Bug Fix
