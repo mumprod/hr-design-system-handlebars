@@ -18,9 +18,6 @@ const mergeJson = require('gulp-merge-json')
 const gftc = require('gulp-file-transform-cache')
 
 const options = require('./config.js')
-const defaultLocaTags = JSON.parse(
-    fs.readFileSync(`${options.paths.assets.brand}/_default/conf/locatags.json`, 'UTF-8')
-)
 
 // css file paths
 const iconsDirRoot = 'src/assets/icons'
@@ -301,6 +298,9 @@ function addCustomModernizrTests() {
 }
 
 function mergeLocatags() {
+    const defaultLocaTags = JSON.parse(
+        fs.readFileSync(`${options.paths.assets.brand}/_default/conf/locatags.json`, 'UTF-8')
+    )
     return mergeStream(
         glob
             .sync(`${options.paths.assets.brand}/*`, {
