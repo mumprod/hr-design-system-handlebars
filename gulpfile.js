@@ -302,11 +302,17 @@ function addCustomModernizrTests() {
 
 function mergeLocatags() {
     return mergeStream(
-        glob.sync(`${options.paths.assets.brand}/*`).map(function (brandDir) {
-            return src(`${brandDir}/conf/locatags.json`)
-                .pipe(mergeJson({ fileName: 'locatags.merged.json', startObj: defaultLocaTags }))
-                .pipe(dest(`${brandDir}/conf`))
-        })
+        glob
+            .sync(`${options.paths.assets.brand}/*`, {
+                ignore: ['**/_default/**'],
+            })
+            .map(function (brandDir) {
+                return src(`${brandDir}/conf/locatags.json`)
+                    .pipe(
+                        mergeJson({ fileName: 'locatags.merged.json', startObj: defaultLocaTags })
+                    )
+                    .pipe(dest(`${brandDir}/conf`))
+            })
     )
 }
 
