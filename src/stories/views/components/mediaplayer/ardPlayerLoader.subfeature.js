@@ -103,7 +103,11 @@ const ArdPlayerLoader = function (options, rootElement) {
         })
 
         listen('player_closed', function (event) {
-            player.stop()
+            console.log(playerId)
+            console.log(event.detail.playerId)
+            if (playerId === event.detail.playerId) {
+                player.stop()
+            }
         })
 
         listen('player_start', function (event) {
