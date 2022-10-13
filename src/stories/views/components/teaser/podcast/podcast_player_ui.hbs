@@ -18,19 +18,14 @@
             </div>
         </div>
         
-    {{!-- Meta Time usw. --}}
+        {{!-- Meta Time usw. --}}
         {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="pl-16 -mt-3 flex text-xs grow font-copy"}}
 
-{{!-- AudioElement --}}
-    {{~#with this.audioUrl ~}}
-        <audio preload="metadata" class="hidden" x-ref='audio'>
-        <source id="audio" src={{this}} type='audio/mp3'/>
-        </audio>
-    {{/with}}
-    
+        {{!-- AudioElement --}}
+        {{~#with this.audioUrl ~}}
+            <audio preload="metadata" class="hidden" x-ref='audio'>
+            <source id="audio" src={{this}} type='audio/mp3'/>
+            </audio>
+        {{/with}}
     </div>
-
-  
-    
-    
 </div>
