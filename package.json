@@ -23,7 +23,8 @@
         "optimize-svgs": "gulp optimizeSvgs",
         "parseJson": "gulp parseJson",
         "partialsToJs": "gulp convertPartialsToJs",
-        "create-modernizr-config": "gulp createModernizrConfig"
+        "create-modernizr-config": "gulp createModernizrConfig",
+        "merge-locatags": "gulp mergeLocatags"
     },
     "browserslist": [
         "last 2 versions",

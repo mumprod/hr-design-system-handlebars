@@ -1,4 +1,5 @@
 const { src, dest, series, parallel, watch } = require('gulp')
+const fs = require('fs')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
 const svgStore = require('gulp-svgstore')
@@ -13,9 +14,13 @@ const log = require('fancy-log')
 const modernizr = require('gulp-modernizr')
 const modernizrConfig = require('./build/modernizr/config.json')
 const concat = require('gulp-concat')
+const mergeJson = require('gulp-merge-json')
 const gftc = require('gulp-file-transform-cache')
 
 const options = require('./config.js')
+const defaultLocaTags = JSON.parse(
+    fs.readFileSync(`${options.paths.assets.brand}/_default/conf/locatags.json`, 'UTF-8')
+)
 
 // css file paths
 const iconsDirRoot = 'src/assets/icons'
@@ -269,11 +274,12 @@ function watchFiles() {
         ],
         createSvgMaps
     )
-    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles),
-        watch(
-            `${options.paths.build.modernizr}/**/*.{js,json}`,
-            series(createModernizr, addCustomModernizrTests)
-        )
+    watch(`${options.paths.assets.icons}/**/*.src.svg`, minimizeSvgSrcFiles)
+    watch(
+        `${options.paths.build.modernizr}/**/*.{js,json}`,
+        series(createModernizr, addCustomModernizrTests)
+    )
+    watch(`${options.paths.assets.brand}/**/locatags.json`, mergeLocatags)
 }
 
 async function convertPartialsToJs() {
@@ -294,6 +300,16 @@ function addCustomModernizrTests() {
         .pipe(dest(`${options.paths.assets.vendor}/modernizr`))
 }
 
+function mergeLocatags() {
+    return mergeStream(
+        glob.sync(`${options.paths.assets.brand}/*`).map(function (brandDir) {
+            return src(`${brandDir}/conf/locatags.json`)
+                .pipe(mergeJson({ fileName: 'locatags.merged.json', startObj: defaultLocaTags }))
+                .pipe(dest(`${brandDir}/conf`))
+        })
+    )
+}
+
 exports.default = series(
     parallel(
         createSvgMaps,
@@ -301,6 +317,7 @@ exports.default = series(
         minimizeSvgSrcFiles,
         parseJson,
         convertPartialsToJs,
+        mergeLocatags,
         series(createModernizr, addCustomModernizrTests)
     ),
     watchFiles
@@ -308,4 +325,5 @@ exports.default = series(
 exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
+exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
