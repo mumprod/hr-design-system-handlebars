@@ -6,10 +6,18 @@ let handlebars
 
 var decoratorStack
 var randomNumber
+const url = window.location.href
+const extractBrandFromUrlRegex = /(?<=brands\:).*?(?=\&)/g
 var generateRandom = function () {
     var min = Math.ceil(0)
     var max = Math.floor(999)
     return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+const extractBrandFromUrl = function () {
+    let brand = url.match(extractBrandFromUrlRegex)
+    brand = null != brand ? brand[0] : 'hessenschau'
+    return brand
 }
 
 var helpers = {
@@ -359,7 +367,8 @@ var helpers = {
         return null
     },
 
-    /*loca: function () {
+    'loca': function () {
+        let brand = extractBrandFromUrl()
         var loca = ''
 
         if (arguments.length >= 1) {
@@ -367,8 +376,8 @@ var helpers = {
 
             if (typeof loca === 'string') {
                 // Check loca-tag
-                if (typeof helpers.helperOptions.locaTags[loca] === 'string') {
-                    loca = helpers.helperOptions.locaTags[loca]
+                if (typeof helpers.helperOptions.locaTags[brand][loca] === 'string') {
+                    loca = helpers.helperOptions.locaTags[brand][loca]
 
                     // Exchange variables in loca-text
                     // - the last argument is the "context" object which can be
@@ -388,7 +397,7 @@ var helpers = {
         }
 
         return new handlebars.SafeString(loca)
-    },*/
+    },
 
     'getRandom': function () {
         return randomNumber
@@ -426,7 +435,13 @@ var helpers = {
 
         return tokenStr
     },
-    'loca': function (text, options) {
+    /*'loca': function (text, options) {
+        let url = window.location.href
+        console.log(url)
+        const regex = /(?<=brands\:).*?(?=\&)/g
+        let brand = url.match(regex)
+        brand = null != brand ? brand[0] : 'hessenschau'
+        console.log(brand)
         var loca
         var locas = {
             anchor_brandNav: 'Übersicht der Marken des HR anspringen',
@@ -458,7 +473,7 @@ var helpers = {
                 return loca
             }
         }
-    },
+    },*/
 
     /*staticSSI: function (filepath) {
         var template = grunt.file.read(helpers.helperOptions.libraryDir + '/' + filepath, {
