@@ -501,7 +501,7 @@
             "includePath": "components/teaser/podcast/podcast",
             "includeModel": {
                 "byline": "Byline",
-                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der geht über zwei Zeilen und wird in der zweiten Zeile mit 3 Punkten abgekürzt, sollte er zu lang sein",
+                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der wird bei Desktop nach zwei Zeilen und mobil nach max. 4 Zeilen mit 3 Punkten abgekürzt, sollte er zu lang sein",
                 "topline": "Hier steht die Topline",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
