@@ -18,6 +18,7 @@
     <div class="flex grow">
         <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex h-1 ml-2.5 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
     </div>
+    
     {{!-- AudioElement --}}
     {{~#with this.audioUrl ~}}
         <audio preload="metadata" class="hidden" x-ref='audio'>
