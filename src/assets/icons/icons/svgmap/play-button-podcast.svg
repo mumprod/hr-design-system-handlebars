@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clippath);}.cls-3{fill:#005293;}.cls-4{fill:#fff;}</style><clipPath id="clippath"><rect class="cls-1" width="48" height="48"/></clipPath></defs><g id="Play_und_Pause_Icon-2"><path id="Pfad_578-2" class="cls-3" d="M23.72,1.21c12.44,0,22.52,10.08,22.52,22.52s-10.08,22.52-22.52,22.52c-3.46-.01-6.87-.81-9.97-2.32C2.6,38.41-1.97,24.9,3.54,13.75,7.33,6.07,15.16,1.21,23.72,1.21Z"/><g class="cls-2"><g id="Gruppe_2640-2"><path id="Pfad_672-2" class="cls-4" d="M24,0C10.75,0,0,10.75,0,24s10.75,24,24,24,24-10.75,24-24S37.25,0,24,0m0,45.6c-11.93,0-21.6-9.67-21.6-21.6S12.07,2.4,24,2.4s21.6,9.67,21.6,21.6h0c0,11.93-9.67,21.6-21.6,21.6"/></g></g><path id="Pfad_783-2" class="cls-4" d="M33.39,22.66l-13.75-7.67c-.51-.28-1.15-.1-1.43,.41-.09,.16-.13,.33-.13,.51l-.04,15.63c0,.58,.47,1.05,1.05,1.06,.19,0,.37-.05,.53-.14l13.79-7.96c.5-.29,.68-.93,.39-1.44-.1-.17-.23-.3-.4-.39"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#1D1D1B;}
+</style>
+<circle class="st0" cx="24" cy="24" r="24"/>
+<path id="Pfad_672-2" class="st1" d="M24,0C10.7,0,0,10.7,0,24s10.7,24,24,24s24-10.7,24-24S37.3,0,24,0 M24,45.6
+	C12.1,45.6,2.4,35.9,2.4,24S12.1,2.4,24,2.4S45.6,12.1,45.6,24v0C45.6,35.9,35.9,45.6,24,45.6"/>
+<path id="Pfad_783-2" class="st1" d="M33.4,22.7L19.6,15c-0.5-0.3-1.2-0.1-1.4,0.4c-0.1,0.2-0.1,0.3-0.1,0.5l0,15.6
+	c0,0.6,0.5,1.1,1.1,1.1c0.2,0,0.4,0,0.5-0.1l13.8-8c0.5-0.3,0.7-0.9,0.4-1.4C33.7,22.9,33.6,22.7,33.4,22.7"/>
+</svg>

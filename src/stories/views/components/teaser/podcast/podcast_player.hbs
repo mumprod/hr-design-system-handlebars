@@ -1,51 +1,65 @@
 <div class="flex col-span-12">
-  <div class="relative flex flex-col">
+  <div class="flex flex-col">
   {{!-- First Row --}}
-    <div class="flex flex-row pl-5 ">
-      <div class="flex">
-        {{#with label}} 
-          <div class="{{#if ../_ordered}} pl-8 {{/if}}">
-            <span class='sb-label mr-4 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
-              {{ loca this.loca }}
-            </span>
-          </div> 
-        {{/with}}
-        
-        {{~#with airdateDate}}
-          <div class="w-full pt-1 text-sm text-blue-science">
-            <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+    <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
+      <div class="flex flex-col">  
+        <div class="flex max-h-6">
+          {{!-- Label / Airdate --}}
+          {{#with label}} 
+            <div class="">
+              <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
+                {{ loca this.loca }}
+              </span>
+            </div> 
+          {{/with}}
+          
+          {{~#with airdateDate}}
+            <div class="flex grow pt-1.5 text-xs font-headingSerif text-blue-science">
+              <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+            </div>
+          {{/with}}
+
+        {{!-- Download Icon --}}
+          <div class="flex pr-2 md:pr-5">
+            <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+              {{> components/base/image/icon _icon='download-neu' _addClass="h-6 w-6 text-blue-science fill-current" }}
+            </a>
           </div>
-        {{/with}}
+        </div>
+
+        {{!-- Überschrift: --}}
+        <div class="flex pb-5 pr-2">          
+          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+        </div>
+
       </div>
-      {{!-- Download Icon --}}
-      <div class="absolute right-0 flex w-auto">
-        <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
-          {{> components/base/image/icon _icon='download-neu' _addClass="h-6 w-6 text-blue-science fill-current" }}
-        </a>
+
+      {{!-- Podcast Image      --}}
+      <div class="flex flex-col ">
+        <div class="w-24 md:w-42">
+          {{> components/base/image/responsive_image this.teaseritem 
+            _type=this.teaserType
+            _variant="default"
+            _addClass=" overflow-hidden ar--100"
+            _noDelay=this.dontLazyload 
+            _addClassImg="w-full h-24 md:h-42 block"
+          }}
+        </div>
       </div>
+
     </div>
 
-  {{!-- Second Row  --}}
-    <div class="flex flex-row pb-5 pl-5">
-      {{!-- Überschrift: --}}
-      <div class="flex w-full">
-        {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
-      </div>  
-    </div>
-
-  {{!-- Third Row    --}}
-    <div class="flex flex-row pl-5">
-      {{!-- Player UI --}}
+    {{!-- Player UI --}}
+    <div class="flex px-5 md:pl-5 md:pr-52 md:-mt-14">
       {{> components/teaser/podcast/podcast_player_ui }}    
     </div>
-
-  {{!-- Fourth Row    --}}
-    <div class="flex flex-row p-5 pr-0">
-      {{#with this.podcastChannel}}
-        {{!-- Abo-Dropdown --}}
-        {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
-        
+  
+    {{!-- Abo-Dropdown    --}}
+    {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
+    <div class="flex flex-row p-5 md:pr-0">
+      {{#with this.podcastChannel}}        
         <div class="flex">
+          {{!-- Container  --}}
           <div x-cloak x-data="{
               open: false,
               toggle() {
@@ -65,19 +79,21 @@
                 x-id="['dropdown-button']"
                 class="relative"
           >
+
+            {{!-- Button --}}
             <button
               x-ref="button"
               x-on:click="toggle()"
               :aria-expanded="open"
               :aria-controls="$id('dropdown-button')"
               type="button"
-              class="flex items-center w-40 gap-2 px-4 py-2 font-bold text-white shadow bg-orange-layout">Abonnieren
-
-              <svg xmlns="http://www.w3.org/2000/svg" class="flex self-end w-5 h-5 ml-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+              class="flex items-center gap-2 px-4 py-2 text-white shadow bg-orange-layout">Abonnieren
+              <svg xmlns="http://www.w3.org/2000/svg" class="flex self-end w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </button>
 
+            {{!-- Flyout --}}
             <div
               x-ref="panel"
               x-show="open"
@@ -85,27 +101,27 @@
               x-on:click.outside="close($refs.button)"
               :id="$id('dropdown-button')"
               style="display: none;"
-              class="absolute left-0 w-40 text-white shadow-md bg-orange-layout"
+              class="absolute left-0 flex flex-col w-full text-sm text-white shadow-md grow bg-orange-layout"
             >
-              {{!--// TODO: Items should be built via iteration over items-array --}}
+              {{!--// TODO: these Items should come via iteration over items-array --}}
               {{#with this.podcastItunesUrl}}
-                <a class="flex items-center w-full gap-2 px-4 py-2 text-left border-t border-b hover:underline disabled:text-gray-500"
+                <a class="flex items-center w-full gap-2 px-4 py-1.5 text-left border-t border-b hover:underline disabled:text-gray-500"
                   title="Bei iTunes abonnieren" target="_blank"
                   rel="noopener noreferrer"
                   href="{{this}}"> 
                     ITunes-Podcast 
                 </a> 
               {{/with}}
-              <a href="#" class="flex items-center w-full gap-2 px-4 py-2 text-left border-b hover:underline disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1.5 text-left border-b hover:underline disabled:text-gray-500">
                   Apple Podcast
               </a>
-              <a href="#" class="flex items-center w-full gap-2 px-4 py-2 text-left border-b hover:underline disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1.5 text-left border-b hover:underline disabled:text-gray-500">
                   ARD Audiothek
               </a>
-              <a href="#" class="flex items-center w-full gap-2 px-4 py-2 text-left border-b hover:underline disabled:text-gray-500">
+              <a href="#" class="flex items-center w-full gap-2 px-4 py-1.5 text-left border-b hover:underline disabled:text-gray-500">
                   Spotify
               </a>
-              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center w-full gap-2 px-4 py-2 text-left hover:underline disabled:text-gray-500">
+              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center w-full gap-2 px-4 py-1.5 text-left hover:underline disabled:text-gray-500">
                   RSS Feed
               </a>
             </div>
@@ -114,27 +130,14 @@
       {{/with}}
 
       {{!-- Sendungs-Link --}}
-      <div class="flex justify-end w-full">
-        <div class="flex self-end text-blue-science">
-          <span class="flex pr-2 font-bold">Zur Sendung: </span>
+      <div class="flex justify-end w-full pl-4 md:pr-52">
+        <div class="flex flex-wrap self-end text-xs text-blue-science">
+          <span class="flex pr-2 font-bold whitespace-nowrap">Zur Sendung: </span>
           <a class="underline" href="#">{{#with this.teaserInfo}} {{~#if this.showTeaserInfoChannel}} <span class="text__byline">{{../this.podcastChannel.title}}</span>{{/if}} {{/with}}</a>
         </div>
       </div>
-      
     </div>
-  </div>
-
-  {{!-- Podcast Image      --}}
-  <div class="flex px-5 w-52">
-    <div class="w-52 h-52">
-      {{> components/base/image/responsive_image this.teaseritem 
-        _type=this.teaserType
-        _variant="default"
-        _addClass=" overflow-hidden ar--100"
-        _noDelay=this.dontLazyload 
-        _addClassImg="w-42 h-42 block"
-      }}</div>
-  </div>    
+  </div>  
 </div>
 
 {{#unless _isSinglePage}}
