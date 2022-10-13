@@ -95,7 +95,7 @@ export default function playaudio(){
                 ret += "" + secs;
                 
                 if (!measure){
-                    hrs > 1 ? ret += " Std." : ret += " Min." 
+                    hrs > 1 ? ret += " h" : ret += " min" 
                 }
             
                 return ret;
