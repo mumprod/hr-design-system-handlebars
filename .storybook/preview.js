@@ -163,7 +163,7 @@ export const parameters = {
                     { id: 'hr2', title: 'hr2.de' },
                     { id: 'hr3', title: 'hr3.de' },
                     { id: 'hr4', title: 'hr4.de' },
-                    { id: 'youfm', title: 'you-fm.de' },
+                    { id: 'you-fm', title: 'you-fm.de' },
                     { id: 'hr-inforadio', title: 'hr-info.de' },
                     { id: 'hr-fernsehen', title: 'hr-fernsehen.de' },
                     { id: 'hr-rundfunkrat', title: 'hr-rundfunkrat.de' },
