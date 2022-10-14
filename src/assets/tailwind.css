@@ -31,6 +31,9 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
+
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-text: theme('colors.white');
 }
 
 [data-theme='hessenschau'] {
@@ -242,7 +245,7 @@
 }
 
 [data-theme='hr1'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.yellow.corn');
     --color-secondary: #007179;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -261,6 +264,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-text: theme('colors.white');
 }
 
 [data-theme='hr2'] {
@@ -354,7 +359,7 @@
 /*! purgecss end ignore */
 
 .sbdocs-content {
-    max-width:1140px !important;
+    max-width: 1140px !important;
 }
 
 .hide-scroll-bar {

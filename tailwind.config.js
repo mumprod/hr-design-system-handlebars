@@ -188,11 +188,19 @@ module.exports = {
                     deeperPool: '#097d8e',
                 },
                 grey: {
+                    armadillo: '#433d37',
                     scorpion: '#606060',
                     alto: '#e0e0e0',
                     light: '#F8F8F8',
                     dark: '#707070',
                 },
+
+                white: '#ffffff',
+                yellow: {
+                    corn: '#e0ae00',
+                },
+                primary: 'var(--color-primary)',
+                secondary: 'var(--color-secondary)',
                 labelMedia: 'var(--color-label-media)',
                 labelEvent: 'var(--color-label-event)',
                 labelBreakingnews: 'var(--color-label-breakingnews)',
@@ -203,6 +211,8 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                stageTextBox: 'var(--color-stage-text-box)',
+                stageText: 'var(--color-stage-text)',
             },
         },
     },
