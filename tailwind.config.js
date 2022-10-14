@@ -213,6 +213,7 @@ module.exports = {
                 toplineColor: 'var(--color-topline)',
                 stageTextBox: 'var(--color-stage-text-box)',
                 stageText: 'var(--color-stage-text)',
+                stagePrimary: 'var(--color-stage-primary)',
             },
         },
     },

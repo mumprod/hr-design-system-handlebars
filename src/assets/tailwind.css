@@ -34,6 +34,7 @@
 
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-text: theme('colors.white');
+    --color-stage-primary: theme('colors.blue.congress');
 }
 
 [data-theme='hessenschau'] {
@@ -266,6 +267,7 @@
     --color-topline: #c20016;
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-text: theme('colors.white');
+    --color-stage-primary: theme('colors.yellow.corn');
 }
 
 [data-theme='hr2'] {
