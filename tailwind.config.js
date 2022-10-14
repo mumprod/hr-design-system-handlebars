@@ -105,6 +105,8 @@ module.exports = {
             },
             spacing: {
                 22: '5.5rem',
+                135: '33.75rem',
+                stage: '33.0625rem',
             },
             width: {
                 '18': '4.5rem',
@@ -134,6 +136,7 @@ module.exports = {
                 '2/3': '66.66666666%',
                 '3/4': '75%',
                 '1/1': '100%',
+                'main-col': '63rem',
             },
             margin: {
                 '13': '3.125rem',
@@ -179,7 +182,7 @@ module.exports = {
                     terraX: '#bb4827',
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
-                    layout: '#F07800'
+                    layout: '#F07800',
                 },
                 teal: {
                     deeperPool: '#097d8e',

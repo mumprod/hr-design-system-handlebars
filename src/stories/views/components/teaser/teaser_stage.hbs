@@ -1,17 +1,20 @@
 {{#with this.teaser}}
     <div class="grid grid-page">
-        <div class="col-main relative">
-            <div class="absolute w-screen left-2/4 top-0 h-full -ml-half-screen">
-                {{#if this.isWide}}
-                    {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="wide" _addClass="w-full"}}
-                {{else}}
-                    {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default"}}
-                {{/if}}
-            </div>
-            <div class="absolute left-2/4 bottom-0 p-3 rounded-2xl bg-blue-jellyBean">
-            {{> components/teaser/components/teaser_heading _title=this.title _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
+        <article class="col-full relative">
+
+            {{#if this.isWide}}
+                {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="wide" _addClass="w-full"}}
+            {{else}}
+                {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default"}}
+            {{/if}}
+
+            <div class="absolute flex max-w-main-col w-full mx-auto left-2/4 right-auto -translate-x-2/4 bottom-0{{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
+            <div class="p-3 rounded-2xl bg-blue-jellyBean{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," w-2/4"]'}} ">
+                {{> components/teaser/components/teaser_heading _title=this.title _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
                 <p>{{this.shorttext}}</p>
             </div>
-        </div>
+
+            </div>
+        </article>
     </div>
 {{/with}}
