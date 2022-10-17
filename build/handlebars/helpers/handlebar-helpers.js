@@ -6,8 +6,6 @@ let handlebars
 
 var decoratorStack
 var randomNumber
-const url = window.location.href
-const extractBrandFromUrlRegex = /(?<=brands\:).*?(?=\&)/g
 var generateRandom = function () {
     var min = Math.ceil(0)
     var max = Math.floor(999)
@@ -15,6 +13,8 @@ var generateRandom = function () {
 }
 
 const extractBrandFromUrl = function () {
+    let url = window.location.href
+    let extractBrandFromUrlRegex = /(?<=brands\:).*?(?=\&)/g
     let brand = url.match(extractBrandFromUrlRegex)
     brand = null != brand ? brand[0] : 'hessenschau'
     return brand

@@ -103,9 +103,9 @@ const ArdPlayerLoader = function (options, rootElement) {
         })
 
         listen('player_closed', function (event) {
-            console.log(playerId)
-            console.log(event.detail.playerId)
-            if (playerId === event.detail.playerId) {
+            let playerIdFromConfig = parseInt(playerId)
+            playerIdFromConfig = isNaN(playerIdFromConfig) ? 0 : playerIdFromConfig
+            if (playerIdFromConfig === event.detail.playerId) {
                 player.stop()
             }
         })
