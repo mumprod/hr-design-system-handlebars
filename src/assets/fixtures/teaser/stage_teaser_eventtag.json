@@ -1,11 +1,11 @@
 {
     "teaser": {
-        "label": "",
+        "label": "Konzert",
         "eventtags":{
             "@->jsoninclude": "teaser/stage_eventtags.inc.json"
         },
-        "topline": "hr4 - Unser schönes Hessen",
-        "title": "Wir belohnen grüne Projekte mit 500 Euro", 
+        "topline": "",
+        "title": "Unser schönes Frankfurt", 
         "showProfileInfoAsByline": false,
         "location": {}, 
         "isWide": true, 
