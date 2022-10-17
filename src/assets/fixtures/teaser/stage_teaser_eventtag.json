@@ -1,6 +1,12 @@
 {
     "teaser": {
-        "label": "Konzert",
+        "label": {
+            "loca": "",
+            "type": "event",
+            "byline": {
+                
+            }
+        },
         "eventtags":{
             "@->jsoninclude": "teaser/stage_eventtags.inc.json"
         },
