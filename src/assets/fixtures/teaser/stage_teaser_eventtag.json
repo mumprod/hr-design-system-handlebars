@@ -1,7 +1,9 @@
 {
     "teaser": {
         "label": "",
-        "eventtags": {},
+        "eventtags":{
+            "@->jsoninclude": "teaser/stage_eventtags.inc.json"
+        },
         "topline": "hr4 - Unser schönes Hessen",
         "title": "Wir belohnen grüne Projekte mit 500 Euro", 
         "showProfileInfoAsByline": false,
@@ -15,6 +17,6 @@
         },
         "stageTextPosition": "left50",
         "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
-        "showShorttext": true
+        "showShorttext": false
     }
 }
