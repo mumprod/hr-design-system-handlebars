@@ -1,0 +1,29 @@
+{
+    "teaserPodcastPlaylist":{
+        "logicItem": {
+            "includePath": "components/teaser/podcast/podcastPlaylist",
+            "includeModel": {
+                "teaserSize": "100",
+                "isSingleChannel": true,
+                "url":"#url",
+                "title": "Channel Title",
+                "shortText":"shortText",
+                "genreImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "poster_1"
+                },
+                "playlistItems": [
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaserPodcast.logicItem.includeModel"
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaserPodcast"
+                    }
+                ]
+
+            }
+        }
+    }
+}
