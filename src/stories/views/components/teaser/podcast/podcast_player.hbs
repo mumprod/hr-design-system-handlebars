@@ -106,27 +106,20 @@
               style="display: none;"
               class="absolute left-0 flex flex-col w-full px-2 text-sm text-white shadow-md font-heading shadow-insetfromtop grow bg-orange-layout"
             >
-              {{!--// TODO: these Items should come via iteration over items-array --}}
-              {{#with this.podcastItunesUrl}}
-                <a class="flex items-center w-full gap-2 py-2 text-left border-b hover:underline disabled:text-gray-500"
-                  title="Bei iTunes abonnieren" target="_blank"
-                  rel="noopener noreferrer"
-                  href="{{this}}"> 
-                    ITunes-Podcast 
-                </a> 
+              {{#with this.podcastHoster}}
+                <ul>
+                  {{#each this}}
+                    <li class="border-b last:border-0"> 
+                      <a class="flex items-center w-full gap-2 py-2 text-left hover:underline disabled:text-gray-500"
+                        title="{{this.podcastHosterName}}" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="{{this.podcastHosterUrl}}">{{this.podcastHosterName}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
               {{/with}}
-              <a href="#" class="flex items-center w-full gap-2 py-2 text-left border-b hover:underline disabled:text-gray-500">
-                  Apple Podcast
-              </a>
-              <a href="#" class="flex items-center w-full gap-2 py-2 text-left border-b hover:underline disabled:text-gray-500">
-                  ARD Audiothek
-              </a>
-              <a href="#" class="flex items-center w-full gap-2 py-2 text-left border-b hover:underline disabled:text-gray-500">
-                  Spotify
-              </a>
-              <a title="RSS Feed abonnieren" target="_blank" rel="noopener noreferrer" href="{{this.podcastRssUrl}}" class="flex items-center w-full gap-2 py-2 text-left hover:underline disabled:text-gray-500">
-                  RSS Feed
-              </a>
+               
             </div>
           </div>
         </div>
