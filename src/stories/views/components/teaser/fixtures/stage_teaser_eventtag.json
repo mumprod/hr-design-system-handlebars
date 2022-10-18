@@ -1,6 +1,9 @@
 {
     "teaser": {
-        "label": { "loca": "label_concert", "type": "event", "byline": {} },
+        "label": { "loca": "label_concert", "type": "event", "byline":{
+            "bylineSsi": "",
+            "bylineText": "14.10.2022, 20:00 Uhr"
+        } },
         "eventtags": {
             "series": { "title": "Der Beat lebt" },
             "project": { "title": "Frankfurter Musiktage" },
