@@ -15,7 +15,8 @@ const modernizr = require('gulp-modernizr')
 const modernizrConfig = require('./build/modernizr/config.json')
 const concat = require('gulp-concat')
 const mergeJson = require('gulp-merge-json')
-const gftc = require('gulp-file-transform-cache')
+const filter = require('gulp-filter')
+const FileCache = require('gulp-file-cache')
 
 const options = require('./config.js')
 
@@ -26,11 +27,14 @@ const brandDirRoot = 'src/assets/brand'
 const iconFoldersToCleanUp = ['icons', 'logo']
 const svgmapFilename = 'svgmap.min.svg'
 
+const svgMapsCache = new FileCache(`${options.paths.build.gulp}/cache/.svgMapsCache`)
 function createSvgMaps() {
     return mergeStream(
         glob.sync(`${iconsDirRoot}/*`).map(function (iconsDir) {
             let icon = path.basename(iconsDir)
             return src(`${iconsDir}/svgmap/*.svg`)
+                .pipe(svgMapsCache.filter())
+                .pipe(svgMapsCache.cache())
                 .pipe(
                     svgMin({
                         multipass: true,
@@ -83,12 +87,17 @@ function createSvgMaps() {
     )
 }
 
+const svgMapsForBrandsCache = new FileCache(
+    `${options.paths.build.gulp}/cache/.svgMapsForBrandsCache`
+)
 function createSvgMapsForBrands() {
     return mergeStream(
         glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
             return glob.sync(`${brandDir}/icons/*`).map(function (iconsDir) {
                 let icon = path.basename(iconsDir)
                 return src(`${iconsDir}/svgmap/*.svg`)
+                    .pipe(svgMapsForBrandsCache.filter())
+                    .pipe(svgMapsForBrandsCache.cache())
                     .pipe(
                         svgMin({
                             full: true,
@@ -140,84 +149,86 @@ function createSvgMapsForBrands() {
     )
 }
 
+const svgSrcFileCache = new FileCache(`${options.paths.build.gulp}/cache/.svgSrcFileCache`)
 function minimizeSvgSrcFiles() {
     return mergeStream(
         glob.sync(`${iconsDirRoot}/*`).map(function (iconsDir) {
             return src(`${iconsDir}/*.src.svg`)
+                .pipe(svgSrcFileCache.filter())
+                .pipe(svgSrcFileCache.cache())
                 .pipe(
-                    gftc({
-                        path: './build/gulp/cache/.minimizeSvgSrcFilesCache',
-                        transformStreams: [
-                            svgMin({
-                                full: true,
-                                plugins: [
-                                    {
-                                        name: 'preset-default',
-                                        params: {
-                                            overrides: {
-                                                removeViewBox: false,
-                                                cleanupAttrs: false,
-                                                collapseGroups: false,
-                                                cleanupIDs: false,
-                                                convertPathData: {
-                                                    straightCurves: false,
-                                                },
-                                                convertTransform: {
-                                                    shortScale: false,
-                                                    floatPrecision: 2,
-                                                },
-                                            },
+                    svgMin({
+                        full: true,
+                        plugins: [
+                            {
+                                name: 'preset-default',
+                                params: {
+                                    overrides: {
+                                        removeViewBox: false,
+                                        cleanupAttrs: false,
+                                        collapseGroups: false,
+                                        cleanupIDs: false,
+                                        convertPathData: {
+                                            straightCurves: false,
+                                        },
+                                        convertTransform: {
+                                            shortScale: false,
+                                            floatPrecision: 2,
                                         },
                                     },
-                                    'convertStyleToAttrs',
-                                ],
-                            }),
-                            cheerio({
-                                run: function ($, file) {
-                                    log(file.basename)
-                                    if (
-                                        file.dirname.includes('unweather') &&
-                                        file.basename === 'regiomap.src.svg'
-                                    ) {
-                                        $('[fill]').map(function () {
-                                            $(this).removeAttr('fill')
-                                        })
-                                        $('[stroke]').map(function () {
-                                            $(this).removeAttr('stroke')
-                                        })
-                                        $('[stroke-width]').map(function () {
-                                            $(this).removeAttr('stroke-width')
-                                        })
-                                        $('[font-family]').map(function () {
-                                            $(this).removeAttr('font-family')
-                                        })
-                                        $('[display]').map(function () {
-                                            $(this).removeAttr('display')
-                                        })
-                                    } else {
-                                        if (file.basename === 'regiomap_regions_cities.src.svg') {
-                                            $('[fill]').map(function () {
-                                                $(this).removeAttr('fill')
-                                            })
-                                            $('[font-family]').map(function () {
-                                                $(this).removeAttr('font-family')
-                                            })
-                                            $('[display]').map(function () {
-                                                $(this).removeAttr('display')
-                                            })
-                                        }
-                                    }
                                 },
-                                parserOptions: { xmlMode: true },
-                            }),
-                            rename(function (path) {
-                                return {
-                                    dirname: path.dirname,
-                                    basename: path.basename.replace('src', 'min'),
-                                    extname: path.extname,
-                                }
-                            }),
+                            },
+                            'convertStyleToAttrs',
                         ],
+                    })
+                )
+                .pipe(
+                    cheerio({
+                        run: function ($, file) {
+                            log(file.basename)
+                            if (
+                                file.dirname.includes('unweather') &&
+                                file.basename === 'regiomap.src.svg'
+                            ) {
+                                $('[fill]').map(function () {
+                                    $(this).removeAttr('fill')
+                                })
+                                $('[stroke]').map(function () {
+                                    $(this).removeAttr('stroke')
+                                })
+                                $('[stroke-width]').map(function () {
+                                    $(this).removeAttr('stroke-width')
+                                })
+                                $('[font-family]').map(function () {
+                                    $(this).removeAttr('font-family')
+                                })
+                                $('[display]').map(function () {
+                                    $(this).removeAttr('display')
+                                })
+                            } else {
+                                if (file.basename === 'regiomap_regions_cities.src.svg') {
+                                    $('[fill]').map(function () {
+                                        $(this).removeAttr('fill')
+                                    })
+                                    $('[font-family]').map(function () {
+                                        $(this).removeAttr('font-family')
+                                    })
+                                    $('[display]').map(function () {
+                                        $(this).removeAttr('display')
+                                    })
+                                }
+                            }
+                        },
+                        parserOptions: { xmlMode: true },
+                    })
+                )
+                .pipe(
+                    rename(function (path) {
+                        return {
+                            dirname: path.dirname,
+                            basename: path.basename.replace('src', 'min'),
+                            extname: path.extname,
+                        }
                     })
                 )
                 .pipe(dest(`${iconsDir}`))
@@ -225,27 +236,50 @@ function minimizeSvgSrcFiles() {
     )
 }
 
+const fixturesFileCache = new FileCache(`${options.paths.build.gulp}/cache/.fixturesCache`)
 function parseJson() {
     return src([
+        `${options.paths.assets.fixtures}/**/*.inc.json`,
         `${options.paths.assets.fixtures}/**/*.json`,
-        `!${options.paths.assets.fixtures}/**/*.inc.json`,
     ])
+        .pipe(fixturesFileCache.filter())
+        .pipe(fixturesFileCache.cache())
         .pipe(
-            gftc({
-                path: './build/gulp/cache/.fixturesCache',
-                transformStreams: [
-                    jsonTransform(function (data, file) {
-                        const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
-                        return jsonWithIncludes
-                    }),
-                    rename(function (path) {
-                        return {
-                            dirname: `${path.dirname}/fixtures`,
-                            basename: path.basename,
-                            extname: path.extname,
-                        }
-                    }),
-                ],
+            filter((file) => {
+                let pathsOfTransformableJsons = glob.sync(
+                    `${options.paths.assets.fixtures}/**/!(*.inc).json`,
+                    { absolute: true }
+                )
+                let regex = new RegExp('.*inc.json')
+                let excludeFile = regex.test(file.path)
+                if (excludeFile) {
+                    let cacheKeys = Object.keys(fixturesFileCache._cache)
+                    if (
+                        pathsOfTransformableJsons.length > 0 &&
+                        cacheKeys.includes(pathsOfTransformableJsons[0].replaceAll('/', '\\'))
+                    ) {
+                        pathsOfTransformableJsons.forEach((path) => {
+                            delete fixturesFileCache._cache[path.replaceAll('/', '\\')]
+                        })
+                    }
+                }
+                return !excludeFile
+            })
+        )
+        .pipe(
+            jsonTransform(function (data, file) {
+                //log(`JSONTRansform for ${file.path}`)
+                const jsonWithIncludes = JSONIncluder.parse(JSON.stringify(data))
+                return jsonWithIncludes
+            })
+        )
+        .pipe(
+            rename(function (path) {
+                return {
+                    dirname: `${path.dirname}/fixtures`,
+                    basename: path.basename,
+                    extname: path.extname,
+                }
             })
         )
         .pipe(dest(options.paths.dist.components))
