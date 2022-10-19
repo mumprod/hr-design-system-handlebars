@@ -518,7 +518,7 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "poster_1"
                 },
-                "podcastDuration": "2:07:56",
+                "podcastDuration": "07:52",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
