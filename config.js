@@ -12,6 +12,7 @@ module.exports = {
         },
         build: {
             modernizr: 'build/modernizr',
+            gulp: 'build/gulp',
         },
         dist: {
             components: 'src/stories/views/components',
