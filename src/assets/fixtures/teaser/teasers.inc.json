@@ -531,8 +531,26 @@
                 "podcastChannel": {
                     "title": "Der Tag in Hessen!",
                     "url": "#ChannelURL",
-                    "podcastItunesUrl": "#ItunesURL",
-                    "podcastRssUrl": "#RSSURL"
+                    
+                    "podcastHoster" : [
+                    { 
+                        "podcastHosterUrl" : "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                        "podcastHosterName" : "ITunes"
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                        "podcastHosterName" : "RSS"                    
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                        "podcastHosterName" : "Google Podcasts"                    
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                        "podcastHosterName" : "ARD Audiothek"                    
+                    }
+                    ]
+                        
                 },
                 "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
                 "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
@@ -540,21 +558,7 @@
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
-                "commentsSsi": {
-                    "commentNumber": "666",
-                    "hasOneComment": false,
-                    "hasManyComments": true,
-                    "commentLink": {
-                        "link": {
-                            "url": "/teaser1-comments",
-                            "webviewUrl": "/teaser1-comments#webview",
-                            "isTargetBlank": false,
-                            "readMoreText": {
-                                "readMoreScreenreader": "Zu den Kommentaren des Artikels"
-                            }
-                        }
-                    }
-                },
+                
                 "documentSection": "Gesellschaft",
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
