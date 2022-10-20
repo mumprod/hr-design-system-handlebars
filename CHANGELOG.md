@@ -1,3 +1,15 @@
+# v0.67.2 (Thu Oct 20 2022)
+
+#### 🐛 Bug Fix
+
+- tabbox full width in mobile-view [#345](https://github.com/mumprod/hr-design-system-handlebars/pull/345) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.67.1 (Thu Oct 20 2022)
 
 #### ⚠️ Pushed to `main`
