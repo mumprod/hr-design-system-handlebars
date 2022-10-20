@@ -1,3 +1,15 @@
+# v0.68.0 (Thu Oct 20 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcastplayer   add podcasthoster via each block [#346](https://github.com/mumprod/hr-design-system-handlebars/pull/346) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.67.2 (Thu Oct 20 2022)
 
 #### 🐛 Bug Fix
