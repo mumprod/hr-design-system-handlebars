@@ -68,7 +68,7 @@ settings.json
             "workbench.action.terminal.focusPreviousPane",
             {
                 "command": "workbench.action.terminal.sendSequence",
-                "args": { "text": "npm run storybook-only\r" }
+                "args": { "text": "npm run storybook\r" }
             },
             "workbench.action.terminal.focusNextPane",
             {
