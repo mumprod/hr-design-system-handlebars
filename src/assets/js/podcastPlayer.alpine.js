@@ -3,10 +3,6 @@ export default function playaudio(){
             init: false,
             currentlyPlaying: false,
             currentTime: 0,
-            currentTimeMs: 0,
-            currentTimeS: 0,
-            currentTimeM: 0,
-            currentTimeH: 0,
             currentTimePercentage: 0,
             audioDuration: 0,
             audioDurationFancy: 0,
@@ -51,11 +47,9 @@ export default function playaudio(){
                 }
                 
                 this.audioDuration = durationSeconds;
+                this.currentTime = "0:00"
                 this.audioDurationFancy = this.fancyTimeFormat(durationSeconds)  
                
-            },
-            removeAudioListener(){
-                this.$refs.audio.removeEventListener("durationchange", () => {this.setTime()});
             },
             startAudio() {
                 if(!this.init) {
@@ -84,24 +78,16 @@ export default function playaudio(){
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
                 var secs = ~~duration % 60;
-
                 var ret = "";
-
                 if (hrs > 0) {
                     ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
                 }
-
                 ret += "" + mins + ":" + (secs < 10 ? "0" : "");
                 ret += "" + secs;
-                
                 if (!measure){
                     hrs > 1 ? ret += " Std." : ret += " Min." 
                 }
-            
                 return ret;
-            }
-            
-                
-            
+            } 
         }
     }

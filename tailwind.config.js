@@ -18,8 +18,8 @@ module.exports = {
             'white': '#ffffff',
             'blue-jellyBean': '#006dc1',
             'orange-spicyCarrot': '#d34600',
-            'congress': '#005293',
-            'science': '#006dc1',
+            'congress': '#006dc1',
+            'science': '#005293',
         },
         screens: {
             print: { raw: 'print' },
@@ -58,6 +58,7 @@ module.exports = {
             boxShadow: {
                 inner: 'inset 0 0px 5px 0 rgba(0, 0, 0, 0.25)',
                 dropdown: '0 13px 27px -2px rgba(100, 100, 111, 0.2)',
+                insetfromtop: 'inset 0px 8px 8px -4px rgba(0, 0, 0, 0.2)',
             },
             dropShadow: {
                 md: '0 5px 3px rgb(0 0 0 / 0.07)',
