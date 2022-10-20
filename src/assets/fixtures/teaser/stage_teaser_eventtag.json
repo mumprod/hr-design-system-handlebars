@@ -1,10 +1,11 @@
 {
     "teaser": {
         "label": {
-            "loca": "",
+            "loca": "label_concert",
             "type": "event",
             "byline": {
-                
+               "bylineText": "14.10.2022 20:00 Uhr",
+               "bylineSsi": ""
             }
         },
         "eventtags":{
@@ -13,7 +14,9 @@
         "topline": "",
         "title": "Unser schönes Frankfurt", 
         "showProfileInfoAsByline": false,
-        "location": {}, 
+        "location": [
+            "Gießen", "Stadttheater Gießen"
+        ],
         "isWide": true, 
         "link": {}, 
         "form": {},
