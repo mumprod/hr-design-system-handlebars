@@ -1,3 +1,51 @@
+# v0.68.0 (Thu Oct 20 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcastplayer   add podcasthoster via each block [#346](https://github.com/mumprod/hr-design-system-handlebars/pull/346) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.67.2 (Thu Oct 20 2022)
+
+#### 🐛 Bug Fix
+
+- tabbox full width in mobile-view [#345](https://github.com/mumprod/hr-design-system-handlebars/pull/345) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.67.1 (Thu Oct 20 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update Readme for macro ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.67.0 (Wed Oct 19 2022)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 1567 [#342](https://github.com/mumprod/hr-design-system-handlebars/pull/342) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.66.0 (Tue Oct 18 2022)
 
 #### 🚀 Enhancement
