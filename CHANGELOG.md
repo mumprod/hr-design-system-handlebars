@@ -1,3 +1,15 @@
+# v0.67.1 (Thu Oct 20 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update Readme for macro ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.67.0 (Wed Oct 19 2022)
 
 #### 🚀 Enhancement
