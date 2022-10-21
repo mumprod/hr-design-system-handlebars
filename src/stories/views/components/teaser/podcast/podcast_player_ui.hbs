@@ -3,7 +3,7 @@
         x-data="playaudio()"
         ax-load
         x-ignore
-        ax-load-src="/js/podcastPlayer.alpine.js"
+        ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js"}}
         x-init="setTime( '{{podcastDuration}}' )" >
 
         <div class="flex items-center w-full flex-nowrap">
