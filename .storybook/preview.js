@@ -8,7 +8,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
-import '../src/assets/js/vendor/header.alpine'
+import '../src/assets/vendor/js/header.alpine'
 
 function loadDelayedImages() {
     setTimeout(function () {

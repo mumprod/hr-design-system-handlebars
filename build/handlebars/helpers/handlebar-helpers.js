@@ -192,7 +192,7 @@ var helpers = {
         }
         // VENDOR Folder
         if (text.includes('assets/js/vendor/')) {
-            resourceUrl = text.replace('assets/js/vendor', './js/vendor')
+            resourceUrl = text.replace('assets/js/vendor', './vendor/js')
         }
         if (text.includes('assets/base/')) {
             if (text.includes('assets/base/icons/logo/') && options.hash['_brand']) {
