@@ -9,7 +9,7 @@ module.exports = {
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js}',
-        './src/assets/js/**/*.js',
+        './src/assets/vendor/**/*.js',
     ],
     theme: {
         fill: {
@@ -180,7 +180,7 @@ module.exports = {
                     terraX: '#bb4827',
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
-                    layout: '#F07800'
+                    layout: '#F07800',
                 },
                 teal: {
                     deeperPool: '#097d8e',
