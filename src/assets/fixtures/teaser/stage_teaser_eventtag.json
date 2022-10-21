@@ -14,9 +14,11 @@
         "topline": "",
         "title": "Unser schönes Frankfurt", 
         "showProfileInfoAsByline": false,
-        "location": [
-            "Gießen", "Stadttheater Gießen"
-        ],
+        "location": {
+            "stageLocationSsi": {
+                "location": ["Gießen", "Stadttheater Gießen"]
+            }
+        },
         "isWide": true, 
         "link": {}, 
         "form": {},

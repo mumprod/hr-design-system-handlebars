@@ -1,7 +1,0 @@
-{{#with this.location}}
-    {{> base/image/icon _icon="ortsmarke" _addClass="c-stage__icon -location"}}
-    {{#each this}}
-        {{#unless @first}}<span class="pipe">|</span>{{/unless}}
-        {{this}}
-    {{/each}}
-{{/with}}

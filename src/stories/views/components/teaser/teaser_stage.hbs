@@ -25,13 +25,7 @@
                     {{/with}}
                 {{/with}}
                 {{#with this.location}}
-                    <p class="flex items-center	mt-4 -mb2 text-stageText font-base">
-                            {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-current -ml-1 -mt-0.5" }}
-                            {{#each this}}
-                                {{#unless @first}}<span class="ml-2 mr-2 text-stageText">|</span>{{/unless}}
-                            {{this}}
-                    {{/each}}
-                    </p>
+                     {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
                 {{/with}}
             </div>
             </div>
