@@ -1,3 +1,5 @@
+
+
 export default function playaudio(){
         return {
             init: false,
@@ -31,10 +33,10 @@ export default function playaudio(){
                 this.startAudio()   
                 }
             },
-            setTime(duration) {
-                console.log('time set' + duration)
-                let parts = duration.split(':')
+            setTime(duration, id) {
+                console.log('time set: ' + duration)
 
+                let parts = duration.split(':')
                 if(parts.length < 3){
                     let minutes = +parts[0]
                     let seconds = +parts[1];
@@ -47,10 +49,13 @@ export default function playaudio(){
                 }
                 
                 this.audioDuration = durationSeconds;
-                this.currentTime = "0:00"
-                this.audioDurationFancy = this.fancyTimeFormat(durationSeconds)  
+
+                let el = document.getElementById(id)
+                el.querySelector('#audioDurationFancy').innerHTML = "0:00"
+                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds) 
                
             },
+            
             startAudio() {
                 if(!this.init) {
                     this.init = true;

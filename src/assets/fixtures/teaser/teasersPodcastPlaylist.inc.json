@@ -1,13 +1,14 @@
 {
     "teaserPodcastPlaylist":{
         "logicItem": {
-            "includePath": "components/teaser/podcast/podcastPlaylist",
+            "includePath": "components/teaser/podcast/podcast-playlist",
             "includeModel": {
                 "teaserSize": "100",
                 "isSingleChannel": true,
                 "url":"#url",
                 "title": "Channel Title",
                 "shortText":"shortText",
+                "dontLazyload": true,
                 "genreImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "poster_1"
@@ -15,14 +16,111 @@
                 "playlistItems": [
                     {
                         "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaserPodcast.logicItem.includeModel"
+                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "7:52"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Ein Podcast-Title"
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaserPodcast"
+                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "9:55"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Ein anderer Podcast-Title"
+                            }
+                        ]
                     }
-                ]
-
+                ],
+                "label": {
+                    "type": "podcast",
+                    "loca": "label_podcast",
+                    "byline": {
+                        "bylineSsi": "07:42 min",
+                        "bylineText": ""
+                    }
+                },
+                "airdateDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
+                    "htmlDate": "20.02.1984",
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
+                },
+                "hideShortText": false,
+                "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "poster_1"
+                },
+                
+                "podcastChannel": {
+                    "title": "Der Tag in Hessen!",
+                    "url": "#ChannelURL",
+                    
+                    "podcastHoster" : [
+                    { 
+                        "podcastHosterUrl" : "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                        "podcastHosterName" : "ITunes"
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                        "podcastHosterName" : "RSS"                    
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                        "podcastHosterName" : "Google Podcasts"                    
+                    },
+                    { 
+                        "podcastHosterUrl" : "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                        "podcastHosterName" : "ARD Audiothek"                    
+                    }
+                    ]
+                        
+                },
+                "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
+                "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    },
+                    "content": {
+                        "headlineTag": "h1",
+                        "headingFontVariant": "sans serif",
+                        "imageVariant": "topteaser",
+                        "isFileDownload": false,
+                        "teaserImage": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "standard_1"
+                        },
+                        "teaserSize": "hero",
+                        "isMobile1to1": false,
+                        "teaserType": "standard-ds",
+                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
+                        }
+                    }
+                }
             }
         }
     }

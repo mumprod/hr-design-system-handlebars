@@ -1,26 +1,65 @@
-<div class="flex flex-wrap w-full">  
+<div class="flex w-full"> 
     <div class="flex flex-wrap w-full js-load" 
-        x-data="playaudio()"
+        {{!-- x-data="playaudio()"
         ax-load
         x-ignore
-        ax-load-src="/js/podcastPlayer.alpine.js"
-        x-init="setTime( '{{podcastDuration}}' )" >
-
-        <div class="flex items-center w-full flex-nowrap">
+        ax-load-src="/js/podcastPlayer.alpine.js" --}}
+        x-init="setTime( '{{_podcastDuration}}', '{{_id}}' )" >
+ 
+        <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
             {{!-- Start/StopButton       --}}
             <div class="flex">
-                {{> components/teaser/podcast/podcast_playbutton _clickFunction="playAndStop" _css="mr-4" _title=this.title _teaserSize=this.teaserSize _addClass="" }}
+                {{> components/teaser/podcast/podcast_playbutton 
+                _css="mr-4" 
+                _x-show="currentlyPlaying"
+                _alpineClick="playAndStop()" }}
             </div>
+            <div class="flex flex-wrap items-start w-full -mt-0.5">
+                {{#if _isPlaylistPlayer}}                   
+                    <div class="flex w-full">
+                        {{!-- Airdate     --}}
+                        {{~#with this.airdateDate}}
+                            <div class="flex text-xs grow font-headingSerif text-blue-science">
+                                <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                            </div>
+                        {{/with}}
 
-            {{!-- Range Slider     --}}
-            <div class="flex w-full">
-                <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
+                        {{!-- Download --}}
+                        <div class="flex self-end">
+                            {{> components/teaser/podcast/podcast_downloadbutton _addClass="ml-2"
+                                _iconClass="h-6 w-6 text-blue-science fill-current"
+                                _url=this.podcastDownloadUrl 
+                            }}
+                        </div>
+                    </div>
+
+                    <div class="flex w-full -mt-2">          
+                        {{> components/teaser/podcast/podcast_item_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+                    </div>   
+                {{/if}}
+
+                {{!-- Range Slider     --}}
+                <div class="flex w-full mt-4">
+                    <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
+                </div>
+
+                {{#if _isPlaylistPlayer}}
+                    {{!-- Meta Time usw. --}}
+                    <div class="flex w-full mt-4"> 
+                        {{> components/teaser/podcast/podcast_timedisplay 
+                        _id=_id
+                        _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" 
+                        _containerCss="flex text-xs grow font-headingSerif" }}
+                    </div>
+                {{/if}}
             </div>
         </div>
         
-        {{!-- Meta Time usw. --}}
-        {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
-
+        {{#unless _isPlaylistPlayer}}
+            {{!-- Meta Time usw. --}}
+            {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+        {{/unless}}
+        
         {{!-- AudioElement --}}
         {{~#with this.audioUrl ~}}
             <audio preload="metadata" class="hidden" x-ref='audio'>
