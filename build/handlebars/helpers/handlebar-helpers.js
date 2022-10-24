@@ -465,7 +465,8 @@ var helpers = {
             label_podcast: 'Podcast',
             label_event: 'Konzert',
             group_tabbed_more: 'weitere Meldungen aus ' + options,
-            label_concert: "Konzert"
+            label_concert: "Konzert",
+            label_program: "Sendung"
         }
 
         for (let key in locas) {

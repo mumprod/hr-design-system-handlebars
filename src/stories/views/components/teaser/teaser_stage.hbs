@@ -11,11 +11,15 @@
             <div class="p-3 rounded-2xl bg-stageTextBox opacity-90{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," w-full sm:w-2/4"]'}} ">
             {{#decorator 'components/base/link'}}
                 {{> components/teaser/components/teaser_heading _css="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
+                {{#if this.showProfileInfoAsByline}}
+                    <p class="text-stageText font-headingSerif block my-3">{{this.profiles}}</p>
+                {{/if}}
                 {{#if this.showShorttext}}
                 <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
                 {{#with this.link.readMoreText}}
-                <span class="text-stageText">[{{this.readMore}}
-                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                <span class="text-stageText flex items-end space-around">[{{this.readMore}}
+                    {{> components/base/image/icon _icon=../this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                </span>
                 {{/with}}
                 {{/if}}
                 {{#with this.eventtags}}
