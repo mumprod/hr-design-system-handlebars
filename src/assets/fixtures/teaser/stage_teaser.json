@@ -2,20 +2,21 @@
     "teaser": {
         "label": "",
         "eventtags": {},
-        "topline": "",
-        "title": "Das hr3 Comedy Festival", 
+        "topline": "hr4 - Unser schönes Hessen",
+        "title": "Wir belohnen grüne Projekte mit 500 Euro", 
         "showProfileInfoAsByline": false,
         "profiles": "",
         "location": {}, 
         "isWide": true, 
-    "link": {
-            "isTargetBlank": true,
-            "readMoreText": {}    ,
-            "hasIcon": true,
-            "iconName": "extern",
+        "link": {
+            "isTargetBlank": false,
+            "readMoreText": {   
+            },
+            "hasIcon": false,
+            "iconName": "",
             "isFileDownload": false,
-            "url": "https://www.ardmediathek.de/hr",
-            "webviewUrl": "",
+            "url": "https://www.hr1.de/sendungen/hr1-greenteam-gemeinsam-stark-fuer-ein-lebenswertes-hessen,aktion-hr1-greenteam-100.html",
+            "webviewUrl": "https://app.hr1.de/sendungen/hr1-greenteam-gemeinsam-stark-fuer-ein-lebenswertes-hessen,aktion-hr1-greenteam-100~default.html",
             "hasNoReferrerFlag": true
         }, 
         "form": {},
@@ -24,7 +25,7 @@
             "@->contentpath": "stage_wide"
         },
         "stageTextPosition": "left50",
-        "shorttext": "Ingo Oschmann, gestandener Comedian und Zauberkünstler, versteht es seit über zwanzig Jahren immer wieder, sein Publikum mitzureißen und zum Lachen und Staunen zu bringen. ",
-        "showShorttext": false
+        "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
+        "showShorttext": true
     }
 }

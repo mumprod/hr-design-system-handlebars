@@ -16,11 +16,11 @@
                 {{/if}}
                 {{#if this.showShorttext}}
                 <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
-                {{#with this.link.readMoreText}}
-                <span class="text-stageText flex items-end space-around">[{{this.readMore}}
-                    {{> components/base/image/icon _icon=../this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                {{#if this.link.hasIcon}}
+                <span class="text-stageText flex items-end space-around">[{{this.link.readMoreText.readMore}}
+                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
                 </span>
-                {{/with}}
+                {{/if}}
                 {{/if}}
                 {{#with this.eventtags}}
                     {{#with this.series}}
