@@ -20,7 +20,20 @@
             }
         },
         "isWide": true, 
-        "link": {}, 
+        "link": {
+            "isTargetBlank": true,
+            "readMoreText": {
+                "readMore": "mehr auf hr-bigband.de",
+                "readMoreLong": "mehr auf hr-bigband.de",
+                "readMoreScreenreader": "mehr"
+            },
+            "hasIcon": true,
+            "iconName": "extern",
+            "isFileDownload": false,
+            "url": "https://www.hr-bigband.de/konzerte/konzerte-2022-23/pedro-martins--sonho-brasileiro-,pedro-martins-104.html",
+            "webviewUrl": "https://app.hr-bigband.de/konzerte/konzerte-2022-23/pedro-martins--sonho-brasileiro-,pedro-martins-104.html",
+            "hasNoReferrerFlag": true
+        }, 
         "form": {},
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",

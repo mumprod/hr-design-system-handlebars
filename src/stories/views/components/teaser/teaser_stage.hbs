@@ -9,9 +9,14 @@
             {{/if}}
             <div class="absolute left-2/4 right-auto bottom-10 flex max-w-main-col w-full px-8 mx-auto -translate-x-2/4 bottom-0{{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
             <div class="p-3 rounded-2xl bg-stageTextBox opacity-90{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," w-full sm:w-2/4"]'}} ">
+            {{#decorator 'components/base/link'}}
                 {{> components/teaser/components/teaser_heading _css="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
                 {{#if this.showShorttext}}
                 <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
+                {{#with this.link.readMoreText}}
+                <span class="text-stageText">[{{this.readMore}}
+                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                {{/with}}
                 {{/if}}
                 {{#with this.eventtags}}
                     {{#with this.series}}
@@ -27,6 +32,12 @@
                 {{#with this.location}}
                      {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
                 {{/with}}
+                {{#if this.link.hasIcon}}
+                    <span class="text-stageText flex items-end space-around mt-2 {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
+                        {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                    </span>
+                {{/if}}
+                {{/decorator}}
             </div>
             </div>
         </article>
