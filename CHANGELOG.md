@@ -1,3 +1,15 @@
+# v0.69.0 (Fri Oct 21 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Uses resourceUrl Helper to access [#347](https://github.com/mumprod/hr-design-system-handlebars/pull/347) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.68.0 (Thu Oct 20 2022)
 
 #### 🚀 Enhancement
