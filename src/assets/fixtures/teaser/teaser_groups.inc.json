@@ -30,7 +30,18 @@
                     "logicItem": {
                         "includePath": "components/teaser/content_nav/teaser_content_nav",
                         "includeModel": {
-                            "@->jsoninclude": "teaser/teaser_content_nav_dropdown_50.json"
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserContentNav",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "contentNav.isAutosuggest",
+                                    "@->value": true
+                                },
+                                {
+                                    "@->contentpath": "contentNav.isDropdown",
+                                    "@->value": true
+                                }
+                            ]
                         }
                     }
                 }
