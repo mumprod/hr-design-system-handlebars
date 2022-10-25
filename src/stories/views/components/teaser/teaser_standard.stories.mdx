@@ -13,6 +13,9 @@ import teaser100Download from './fixtures/teaser_standard_100_serif_download.jso
     title="Komponenten/Teaser/Standard"
     parameters={{
         layout: 'fullscreen',
+         chromatic: {
+            viewports: [360, 768]
+        }
     }}
     argTypes={{
         teaserSize: {
@@ -54,7 +57,7 @@ Der Standard-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (La
 
 <b>Standard Hero:</b> <br/>
     Desktop = Text unter dem Bild <br/>
-    Mobile = Text unter dem Bild mit Teasertext <br/>
+    Mobile = Text unter dem Bild <b>ohne</b> Teasertext <br/>
 
 <b>Standard 100%, 50%, 33%:</b> <br/>
     Desktop = Text unter dem Bild <br/>
