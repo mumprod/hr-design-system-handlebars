@@ -167,6 +167,9 @@ module.exports = {
                     congress: '#005293',
                     deepCerulean: '#006eb7',
                     accented: '#d8e9f6',
+                    blueStone: '#00646f',
+                    astronautBlue: '#00375d',
+                    astronautBlue85alpha: '#00646fD9'
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -174,6 +177,8 @@ module.exports = {
                 red: {
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
+                    burntUmber: '#8d2725',
+                    burntUmber85alpha: '#8d2725D9'
                 },
                 pink: {
                     ripeRaspberries: '#be005a',
@@ -184,21 +189,32 @@ module.exports = {
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
                     layout: '#F07800',
+                    clementine: '#ec6602'
                 },
                 teal: {
-                    deeperPool: '#097d8e',
+                    deeperPool: '#097d8e'
                 },
                 grey: {
                     armadillo: '#433d37',
                     scorpion: '#606060',
                     alto: '#e0e0e0',
                     light: '#F8F8F8',
-                    dark: '#707070',
+                    dark: '#707070'
                 },
+                green: {
+                    genoa: '#168378'
+                },
+                purple: {
+                    pompadour: "#6d0041"
+                },
+                white: {
+                DEFAULT: '#ffffff',
+                  white85alpha: "#ffffffD9",
 
-                white: '#ffffff',
+                },
                 yellow: {
                     corn: '#e0ae00',
+                    goldenSand: '#f2da6c'
                 },
                 primary: 'var(--color-primary)',
                 secondary: 'var(--color-secondary)',

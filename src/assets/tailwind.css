@@ -32,9 +32,9 @@
     /* Dachzeile */
     --color-topline: #006dc1;
 
-    --color-stage-text-box: theme('colors.grey.armadillo');
-    --color-stage-text: theme('colors.white');
-    --color-stage-primary: theme('colors.blue.congress');
+    --color-stage-text-box: theme('colors.blue.deepCerulean');
+    --color-stage-text: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hessenschau'] {
@@ -61,28 +61,9 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
-}
-
-[data-theme='hr-bigband'] {
-    --color-primary: #c20016;
-    --color-secondary: #007179;
-
-    /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
-    /* Kommentar */
-    --color-label-comment: theme('colors.teal.deeperPool');
-    /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
-    /* Sendung */
-    --color-label-program: theme('colors.blue.pacificBlue');
-    /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
-    /* Event */
-    --color-label-event: theme('colors.black.DEFAULT');
-    /* Dachzeile */
-    --color-topline: #c20016;
+    /*Stage */
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.blue.congress');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -105,6 +86,9 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.purple.pompadour');
 }
 
 [data-theme='hr-inforadio'] {
@@ -127,6 +111,9 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.blue.astronautBlue85alpha');
+    --color-stage-primary: theme('colors.blue.astronautBlue');
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -197,6 +184,9 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.red.burntUmber85alpha');
+    --color-stage-primary: theme('colors.red.burntUmber');
 }
 
 [data-theme='hr-bigband'] {
@@ -219,6 +209,10 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.blue.blueStone');
+;
 }
 
 [data-theme='hr'] {
@@ -265,8 +259,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
-    --color-stage-text: theme('colors.white');
     --color-stage-primary: theme('colors.yellow.corn');
 }
 
@@ -290,6 +284,10 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-primary: theme('colors.orange.clementine');
+    --color-stage-text: theme('colors.black.DEFAULT');
 }
 
 [data-theme='hr3'] {
@@ -312,6 +310,10 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-primary: theme('colors.red.monza');
+    --color-stage-text: theme('colors.red.monza');
 }
 
 [data-theme='hr4'] {
@@ -334,6 +336,10 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-primary: theme('colors.green.genoa');
+    --color-stage-text: theme('colors.black.DEFAULT');
 }
 
 [data-theme='you-fm'] {
@@ -356,6 +362,10 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-primary: theme('colors.yellow.goldenSand');
+    --color-stage-text: theme('colors.black.DEFAULT');
 }
 
 /*! purgecss end ignore */
