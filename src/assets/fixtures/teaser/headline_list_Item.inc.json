@@ -33,7 +33,7 @@
         "documentSection": "Panorama",
         "isBroadcastDateHidden": false,
         "showProfileInfoAsByline": true,
-        "profiles": "Von Petra Boberg und Christine Rütten​",
+        "profiles": "Von Petra Boberg und Christine Rütte",
         "link": {
             "url": "/teaser1",
             "webviewUrl": "/teaser1#webview",
@@ -410,7 +410,7 @@
         "documentSection": "Panorama",
         "isBroadcastDateHidden": false,
         "showProfileInfoAsByline": true,
-        "profiles": "Von Petra Boberg und Christine Rütten​",
+        "profiles": "Von Petra Boberg und Christine Rütte" ,
         "link": {
             "url": "/teaser1",
             "webviewUrl": "/teaser1#webview",
