@@ -1,3 +1,15 @@
+# v0.69.2 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1801 - Teasertext  in mobile hero teaser entfernen [#344](https://github.com/mumprod/hr-design-system-handlebars/pull/344) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.69.1 (Tue Oct 25 2022)
 
 #### 🐛 Bug Fix
