@@ -1,3 +1,17 @@
+# v0.69.1 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- remove non-printable unicode characters [#349](https://github.com/mumprod/hr-design-system-handlebars/pull/349) ([@vascoeduardo](https://github.com/vascoeduardo))
+- FEATURE: Fixtures of content-navs use .inc jsons [#348](https://github.com/mumprod/hr-design-system-handlebars/pull/348) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.69.0 (Fri Oct 21 2022)
 
 #### 🚀 Enhancement
