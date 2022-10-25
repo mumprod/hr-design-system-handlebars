@@ -169,7 +169,8 @@ module.exports = {
                     accented: '#d8e9f6',
                     blueStone: '#00646f',
                     astronautBlue: '#00375d',
-                    astronautBlue85alpha: '#00646fD9'
+                    astronautBlue85alpha: '#00646fD9',
+                    lightCerulean: '#007EA1FF'
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -178,7 +179,9 @@ module.exports = {
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
                     burntUmber: '#8d2725',
-                    burntUmber85alpha: '#8d2725D9'
+                    burntUmber85alpha: '#8d2725D9',
+                    wellRead: '#AB2F2DFF',
+                    paprika: '#8C033DFF'
                 },
                 pink: {
                     ripeRaspberries: '#be005a',
@@ -192,6 +195,7 @@ module.exports = {
                     clementine: '#ec6602'
                 },
                 teal: {
+                    DEFAULT: '#007A7CFF',
                     deeperPool: '#097d8e'
                 },
                 grey: {
@@ -202,19 +206,23 @@ module.exports = {
                     dark: '#707070'
                 },
                 green: {
-                    genoa: '#168378'
+                    genoa: '#168378',
+                    eden: '#0F6157FF'
                 },
                 purple: {
-                    pompadour: "#6d0041"
+                    pompadour: "#6d0041",
+                    jazzberry: '#a00d65'
                 },
                 white: {
                 DEFAULT: '#ffffff',
                   white85alpha: "#ffffffD9",
+                  blackhaze85alpha: '#eaededD9'
 
                 },
                 yellow: {
                     corn: '#e0ae00',
-                    goldenSand: '#f2da6c'
+                    goldenSand: '#f2da6c',
+                    olive: '#916B00FF'
                 },
                 primary: 'var(--color-primary)',
                 secondary: 'var(--color-secondary)',
@@ -228,6 +236,8 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                link: 'var(--color-link)',
+                stageLink: 'var(--color-stage-link)',
                 stageTextBox: 'var(--color-stage-text-box)',
                 stageText: 'var(--color-stage-text)',
                 stagePrimary: 'var(--color-stage-primary)',

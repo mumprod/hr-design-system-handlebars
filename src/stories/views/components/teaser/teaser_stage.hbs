@@ -16,11 +16,11 @@
                 {{/if}}
                 {{#if this.showShorttext}}
                 <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
-                {{#if this.link.hasIcon}}
-                <span class="text-stageText flex items-end space-around">[{{this.link.readMoreText.readMore}}
-                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
-                </span>
-                {{/if}}
+                    {{#if this.link.hasIcon}}
+                    <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
+                        {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                    </span>
+                    {{/if}}
                 {{/if}}
                 {{#with this.eventtags}}
                     {{#with this.series}}
@@ -37,7 +37,7 @@
                      {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
                 {{/with}}
                 {{#if this.link.hasIcon}}
-                    <span class="text-stageText flex items-end space-around mt-2 {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
+                    <span class="flex items-end space-around mt-2 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
                         {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
                     </span>
                 {{/if}}
