@@ -39,6 +39,10 @@
                             {
                                 "@->contentpath": "title",
                                 "@->value": "Ein anderer Podcast-Title"
+                            },
+                            {
+                                "@->contentpath": "airdateDate.date",
+                                "@->value": "24.12.20"
                             }
                         ]
                     }
@@ -50,12 +54,6 @@
                         "bylineSsi": "07:42 min",
                         "bylineText": ""
                     }
-                },
-                "airdateDate": {
-                    "htmlDateTime": "2022-04-17T19:30+0200",
-                    "htmlDate": "20.02.1984",
-                    "date": "17.04.22",
-                    "dateSeparatorTime": "17.04.22, 19:30"
                 },
                 "hideShortText": false,
                 "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
@@ -71,11 +69,11 @@
                     "podcastHoster" : [
                     { 
                         "podcastHosterUrl" : "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
-                        "podcastHosterName" : "ITunes"
+                        "podcastHosterName" : "ITunes Podcast"
                     },
                     { 
                         "podcastHosterUrl" : "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
-                        "podcastHosterName" : "RSS"                    
+                        "podcastHosterName" : "RSS-Feed"                    
                     },
                     { 
                         "podcastHosterUrl" : "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",

@@ -1,24 +1,17 @@
-<div class="flex col-span-12" >
+<div class="flex col-span-12 pb-5 border-b border-white" >
   <div class="flex flex-col grow">
   {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
-      <div class="flex flex-col pr-5 grow">  
+
+      <div class="flex flex-col pr-5 grow">
+
         <div class="flex max-h-6">
           {{!-- Label / Airdate --}}
-          {{#with label}} 
-            <div class="">
-              <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
-                {{ loca this.loca }}
-              </span>
-            </div> 
+          {{#with label}}             
+            <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
+              {{ loca this.loca }}
+            </span> 
           {{/with}}
-          
-          {{!-- {{~#with airdateDate}}
-            <div class="flex grow pt-1.5 text-xs font-headingSerif text-blue-science">
-              <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-            </div>
-          {{/with}} --}}
-
         </div>
 
         {{!-- Überschrift: --}}
@@ -26,16 +19,16 @@
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
         </div>
 
+        {{!-- Shorttext --}}
         {{#unless _isSinglePage}}
           {{#unless this.hideShortText}}
               {{~#with this.shorttext}}
-                  <div class="flex text-sm grow md:text-base font-copy">
+                  <div class="flex pb-6 text-sm md:text-base font-copy">
                       <span class="c-teaser__shorttext"> {{this}} </span>
                   </div>
               {{/with~}}
           {{/unless}}
         {{/unless}}
-
 
       </div>
 
@@ -54,8 +47,9 @@
 
     </div>
   
-    {{!-- Abo-Dropdown    --}}
     <div class="flex flex-row px-5 md:pr-0">
+
+      {{!-- Abo-Dropdown    --}}
       {{#with this.podcastChannel}}        
         <div class="flex">
           {{!-- Container  --}}
@@ -124,14 +118,8 @@
         </div>
       {{/with}}
 
-      {{!-- Sendungs-Link --}}
-      <div class="flex justify-end w-full pl-4 md:pr-52">
-        <div class="flex flex-wrap self-end text-xs font-heading text-blue-science">
-          <span class="flex pr-2 font-bold whitespace-nowrap">Zur Sendung: </span>
-          <a class="underline" href="#">{{#with this.teaserInfo}} {{~#if this.showTeaserInfoChannel}} <span class="text__byline">{{../this.podcastChannel.title}}</span>{{/if}} {{/with}}</a>
-        </div>
-      </div>
     </div>
+    
   </div>  
 </div>
 

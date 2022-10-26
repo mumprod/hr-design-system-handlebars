@@ -1,9 +1,9 @@
 <button x-cloak x-on:keydown.tab="{{_alpineClick}}" x-on:click="{{_alpineClick}}" type="button" class="flex justify-start cursor-pointer group focus:outline-none {{_css}}">       
     <div class="">
-        <div x-show="!{{_x-show}}" class="text-white rounded-full bg-blue-science ring-white ring">
+        <div id="play" class="text-white rounded-full bg-blue-science ring-white ring">
             {{> components/base/image/icon _icon="play-wide" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
         </div>
-        <div x-show="{{_x-show}}" class="bg-white rounded-full ring-blue-science ring text-blue-science">
+        <div id="pause" class="hidden bg-white rounded-full ring-blue-science ring text-blue-science">
             {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline py-2 w-12 h-12 fill-current"}}
         </div>
     </div>

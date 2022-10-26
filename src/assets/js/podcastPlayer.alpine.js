@@ -2,6 +2,7 @@
 
 export default function playaudio(){
         return {
+
             init: false,
             currentlyPlaying: false,
             currentTime: 0,
@@ -9,33 +10,47 @@ export default function playaudio(){
             audioDuration: 0,
             audioDurationFancy: 0,
             durationSeconds:0,
+
+            playlist: [],
+            
+            registerPlayer(duration,id){
+        
+                let _player = {}
+                _player.id = id
+                _player.button = document.querySelector('#playbutton'+id)
+                _player.range = document.querySelector('#range'+id)
+                _player.timeDisplay = document.querySelector('#timedisplay'+id)
+                _player.audioElement = this.$el
+                _player.audioSrc = this.$el.querySelector('source').src
+                _player.duration = duration
+                _player.currentlyPlaying = false
+                
+                this.playlist.push(_player)
+
+                console.log(this.playlist)
+            },
+
             pad(n, z) {
                 z = z || 2;
                 return ('00' + n).slice(-z);
             },
-            rangeInput() {
+
+            rangeInput(id) {
                 if(!this.init){
                     //start and stop the audio
-                    this.playAndStop()
-                    this.playAndStop()
-                }           
-                this.$refs.audio.currentTime = (this.$refs.range.value/1000) * this.audioDuration            
-            },
-            updateCurrentTime(s) {
-                this.currentTime = this.fancyTimeFormat(s, true);
-                this.$refs.range.style.background = 'linear-gradient(to right, #006dc1 ' + this.$refs.range.value/10 + '%, white ' + this.$refs.range.value/10 + '% )'
-                this.currentTimePercentage = ((100 * this.$refs.audio.currentTime) / this.audioDuration) * 10 
-            },   
-            playAndStop() {
-                if (this.currentlyPlaying) {
-                this.stopAudio()
-                } else {
-                this.startAudio()   
+                    this.playAndStop(id)
+                    this.playAndStop(id)
                 }
+                for (var i = 0; i < this.playlist.length; i++ ){
+                    if(this.playlist[i].id == id) {           
+                        this.playlist[i].audioElement.currentTime = (this.playlist[i].range.value/1000) * this.audioDuration
+                    }
+                }            
             },
+
             setTime(duration, id) {
                 console.log('time set: ' + duration)
-
+                
                 let parts = duration.split(':')
                 if(parts.length < 3){
                     let minutes = +parts[0]
@@ -50,33 +65,79 @@ export default function playaudio(){
                 
                 this.audioDuration = durationSeconds;
 
-                let el = document.getElementById(id)
-                el.querySelector('#audioDurationFancy').innerHTML = "0:00"
-                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds) 
-               
+                let el = document.getElementById("timedisplay"+id)
+                let range = document.getElementById("range"+id)
+                el.querySelector('#currentTime').innerHTML = "0:00"
+                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds)
+                range.value = 0
+            },
+
+            updateCurrentTime(range,timeDisplay,s) {
+                timeDisplay.querySelector('#currentTime').innerHTML = this.fancyTimeFormat(s, true)
+                range.style.background = 'linear-gradient(to right, #006dc1 ' + range.value/10 + '%, white ' + range.value/10 + '% )'
+                range.value = ((100 * s) / this.audioDuration) * 10 
+            }, 
+
+            playAndStop(id) {
+                for (var i = 0; i < this.playlist.length; i++ ){
+                    if(this.playlist[i].id == id) {
+                        if(this.playlist[i].currentlyPlaying == true){
+                            this.stopAudio(id)
+                            this.$el.querySelector('#play').classList.remove('hidden')
+                            this.$el.querySelector('#pause').classList.add('hidden')
+                        } else {
+                            let duration = this.playlist[i].audioElement.duration
+                            this.startAudio(id, duration)
+                            this.$el.querySelector('#play').classList.add('hidden')
+                            this.$el.querySelector('#pause').classList.remove('hidden')
+                        }
+                    }
+                }
+
             },
             
-            startAudio() {
-                if(!this.init) {
-                    this.init = true;
-                    this.audioDuration = this.$refs.audio.duration;
-                    this.audioDurationFancy = this.fancyTimeFormat(this.$refs.audio.duration)
-                    this.initAudioEventListener()     
+            startAudio(id, duration) {
+                console.log('start audio '+ id + ' duration: '+ duration)
+
+                this.init = true;
+                this.audioDuration = duration;
+                this.audioDurationFancy = this.fancyTimeFormat(duration)
+                this.initAudioEventListener(id)     
+                
+                for (var i = 0; i < this.playlist.length; i++ ){
+                    if(this.playlist[i].id == id){
+                        this.playlist[i].audioElement.play()
+                        this.playlist[i].currentlyPlaying = true;
+                    } else {
+                        this.playlist[i].audioElement.pause()
+                        this.playlist[i].currentlyPlaying = false;
+                    }
+                }         
+            },
+
+            stopAudio(id) {
+                console.log('stop audio '+ id )
+                for (var i = 0; i < this.playlist.length; i++ ){
+                    if(this.playlist[i].id == id){
+                        this.playlist[i].audioElement.pause()
+                        this.playlist[i].currentlyPlaying = false;
+                    }
                 }
-                this.$refs.audio.play();
-                this.currentlyPlaying = true;         
             },
-            stopAudio() {
-                this.$refs.audio.pause();
-                this.currentlyPlaying = false;
-            },
-            initAudioEventListener() {
-                this.$refs.audio.ontimeupdate = (event) => {
-                    this.updateCurrentTime( this.$refs.audio.currentTime)
-                };  
-            },
-            returnString() {
-                return "String"
+
+            initAudioEventListener(id) {
+                for (var i = 0; i < this.playlist.length; i++ ){
+                    if(this.playlist[i].id == id){
+                        let myaudio = this.playlist[i].audioElement
+                        let myrange = this.playlist[i].range
+                        let mytime = this.playlist[i].timeDisplay
+
+                        myaudio.ontimeupdate = (event) => {
+                            this.updateCurrentTime(myrange, mytime, myaudio.currentTime) 
+                        };  
+                    }
+                }
+
             },
             fancyTimeFormat(duration,measure)
             {   
