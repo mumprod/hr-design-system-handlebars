@@ -1,3 +1,21 @@
+# v0.69.5 (Wed Oct 26 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1762 [#354](https://github.com/mumprod/hr-design-system-handlebars/pull/354) ([@hanswurstsalat](https://github.com/hanswurstsalat) [@vascoeduardo](https://github.com/vascoeduardo))
+- Digits in Wanda box too high [#353](https://github.com/mumprod/hr-design-system-handlebars/pull/353) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+- Remove Capital I on filename to prevent linux problems [#352](https://github.com/mumprod/hr-design-system-handlebars/pull/352) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 5
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.69.4 (Tue Oct 25 2022)
 
 #### 🐛 Bug Fix
