@@ -1,0 +1,22 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.title",
+            "@->value": "Dossier zur Landtagswahl"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": "Die Wahl zum 21. Landtag in Hessen findet voraussichtlich im Herbst 2023 statt. Hier finden Sie aktuelle News, Hintergründe und Analysen zur Wahl, alle wichtigen Informationen zum Ablauf und zu den Kandidatinnen und Kandidaten sowie am Wahltag alle Ergebnisse in den Wahlkreisen, Städten und Gemeinden."
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "highlighted"
+        }
+    ]
+}
