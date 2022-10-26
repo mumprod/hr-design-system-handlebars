@@ -43,6 +43,14 @@
                             {
                                 "@->contentpath": "airdateDate.date",
                                 "@->value": "24.12.20"
+                            },
+                            {
+                                "@->contentpath": "audioUrl",
+                                "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20221021_96203008.mp3"
+                            },
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "13:11"
                             }
                         ]
                     }

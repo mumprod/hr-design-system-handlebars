@@ -1,20 +1,12 @@
-
-
 export default function playaudio(){
         return {
-
-            init: false,
-            currentlyPlaying: false,
             currentTime: 0,
             currentTimePercentage: 0,
             audioDuration: 0,
             audioDurationFancy: 0,
-            durationSeconds:0,
-
             playlist: [],
             
             registerPlayer(duration,id){
-        
                 let _player = {}
                 _player.id = id
                 _player.button = document.querySelector('#playbutton'+id)
@@ -26,7 +18,6 @@ export default function playaudio(){
                 _player.currentlyPlaying = false
                 
                 this.playlist.push(_player)
-
                 console.log(this.playlist)
             },
 
@@ -36,11 +27,11 @@ export default function playaudio(){
             },
 
             rangeInput(id) {
-                if(!this.init){
-                    //start and stop the audio
-                    this.playAndStop(id)
-                    this.playAndStop(id)
-                }
+                
+                //start and stop the audio
+               /*  this.playAndStop(id)
+                this.playAndStop(id) */
+                
                 for (var i = 0; i < this.playlist.length; i++ ){
                     if(this.playlist[i].id == id) {           
                         this.playlist[i].audioElement.currentTime = (this.playlist[i].range.value/1000) * this.audioDuration
@@ -83,23 +74,26 @@ export default function playaudio(){
                     if(this.playlist[i].id == id) {
                         if(this.playlist[i].currentlyPlaying == true){
                             this.stopAudio(id)
-                            this.$el.querySelector('#play').classList.remove('hidden')
-                            this.$el.querySelector('#pause').classList.add('hidden')
+                            this.$el.querySelector('.js-playbutton').classList.remove('hidden')
+                            this.$el.querySelector('.js-pausebutton').classList.add('hidden')
                         } else {
                             let duration = this.playlist[i].audioElement.duration
                             this.startAudio(id, duration)
-                            this.$el.querySelector('#play').classList.add('hidden')
-                            this.$el.querySelector('#pause').classList.remove('hidden')
+                            this.$el.querySelector('.js-playbutton').classList.add('hidden')
+                            this.$el.querySelector('.js-pausebutton').classList.remove('hidden')
                         }
+                    } else {
+                        this.stopAudio(this.playlist[i].id)
+                        let buttonContainer = document.querySelector('#playbutton'+this.playlist[i].id)
+                        buttonContainer.querySelector('.js-playbutton').classList.remove('hidden')
+                        buttonContainer.querySelector('.js-pausebutton').classList.add('hidden')
                     }
                 }
 
-            },
+            }, 
             
             startAudio(id, duration) {
                 console.log('start audio '+ id + ' duration: '+ duration)
-
-                this.init = true;
                 this.audioDuration = duration;
                 this.audioDurationFancy = this.fancyTimeFormat(duration)
                 this.initAudioEventListener(id)     
@@ -116,7 +110,6 @@ export default function playaudio(){
             },
 
             stopAudio(id) {
-                console.log('stop audio '+ id )
                 for (var i = 0; i < this.playlist.length; i++ ){
                     if(this.playlist[i].id == id){
                         this.playlist[i].audioElement.pause()
