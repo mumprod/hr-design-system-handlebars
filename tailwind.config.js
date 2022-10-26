@@ -154,6 +154,9 @@ module.exports = {
                 '38': '9.5rem',
                 '42': '10.5rem',
             },
+            opacity: {
+                '85': '.85'
+            },
             fontFamily: {
                 copy: ['DIN', 'sans-serif'],
                 headingSerif: ['RobotoSlab', 'serif'],
@@ -169,7 +172,6 @@ module.exports = {
                     accented: '#d8e9f6',
                     blueStone: '#00646f',
                     astronautBlue: '#00375d',
-                    astronautBlue85alpha: '#00646fD9',
                     lightCerulean: '#007EA1FF'
                 },
                 black: {
@@ -179,7 +181,6 @@ module.exports = {
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
                     burntUmber: '#8d2725',
-                    burntUmber85alpha: '#8d2725D9',
                     wellRead: '#AB2F2DFF',
                     paprika: '#8C033DFF'
                 },
@@ -215,8 +216,7 @@ module.exports = {
                 },
                 white: {
                 DEFAULT: '#ffffff',
-                  white85alpha: "#ffffffD9",
-                  blackhaze85alpha: '#eaededD9'
+                  blackhaze: '#eaeded'
 
                 },
                 yellow: {

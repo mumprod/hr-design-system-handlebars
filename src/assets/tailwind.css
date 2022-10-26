@@ -95,7 +95,7 @@
     /* Link */ 
     --color-link: theme('colors.purple.jazzberry');
     /* Stage */ 
-    --color-stage-text-box: theme('colors.white.blackhaze85alpha');
+    --color-stage-text-box: theme('colors.white.blackhaze');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
     --color-stage-link: var(--color-link);
@@ -124,7 +124,7 @@
     /* Link */ 
     --color-link: theme('colors.blue.jellyBean');
     /* Stage */ 
-    --color-stage-text-box: theme('colors.blue.astronautBlue85alpha');
+    --color-stage-text-box: theme('colors.blue.astronautBlue');
     --color-stage-primary: theme('colors.blue.astronautBlue');
     --color-stage-link: theme('colors.white.DEFAULT');
 }
@@ -204,7 +204,7 @@
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */ 
-    --color-stage-text-box: theme('colors.red.burntUmber85alpha');
+    --color-stage-text-box: theme('colors.red.burntUmber');
     --color-stage-primary: theme('colors.red.burntUmber');
     --color-stage-link: theme('colors.white.DEFAULT');
 }
@@ -317,7 +317,7 @@
     /* Link */ 
     --color-link: theme('colors.red.paprika');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-text-box: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.orange.clementine');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: var(--color-link);
@@ -346,7 +346,7 @@
     /* Link */ 
     --color-link: theme('colors.red.monza');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-text-box: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.red.monza');
     --color-stage-text: theme('colors.red.monza');
     --color-stage-link: var(--color-link);
@@ -375,7 +375,7 @@
     /* Link */ 
     --color-link: theme('colors.green.eden');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-text-box: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.green.genoa');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');
@@ -404,7 +404,7 @@
     /* Link */ 
     --color-link: theme('colors.blue.lightCerulean');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.white85alpha');
+    --color-stage-text-box: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.yellow.goldenSand');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');
