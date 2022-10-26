@@ -1,3 +1,65 @@
+# v0.69.4 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- changed all teaser viewports to 360 and 1024 [#351](https://github.com/mumprod/hr-design-system-handlebars/pull/351) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.3 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- remove non printable unicode character - add generated json files [#350](https://github.com/mumprod/hr-design-system-handlebars/pull/350) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.2 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1801 - Teasertext  in mobile hero teaser entfernen [#344](https://github.com/mumprod/hr-design-system-handlebars/pull/344) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.1 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- remove non-printable unicode characters [#349](https://github.com/mumprod/hr-design-system-handlebars/pull/349) ([@vascoeduardo](https://github.com/vascoeduardo))
+- FEATURE: Fixtures of content-navs use .inc jsons [#348](https://github.com/mumprod/hr-design-system-handlebars/pull/348) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.0 (Fri Oct 21 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Uses resourceUrl Helper to access [#347](https://github.com/mumprod/hr-design-system-handlebars/pull/347) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.68.0 (Thu Oct 20 2022)
 
 #### 🚀 Enhancement
