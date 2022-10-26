@@ -94,6 +94,6 @@
         @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-white/50;
     }
     .-ordered {
-        @apply counter-increment before:counter-result before:absolute before:bg-white before:pt-[2.375px] before:rounded-[3px] before:w-[23px] before:h-[23px] before:text-center before:tracking-wide before:text-black before:text-base before:font-heading;
+        @apply counter-increment before:counter-result before:absolute before:bg-white before:pt-px before:rounded before:w-[23px] before:text-center before:tracking-wide before:text-black before:text-base before:font-heading;
     }
 }
