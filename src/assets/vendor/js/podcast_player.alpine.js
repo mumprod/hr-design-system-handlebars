@@ -3,13 +3,10 @@ export default function playaudio(){
             init: false,
             currentlyPlaying: false,
             currentTime: 0,
-            currentTimeMs: 0,
-            currentTimeS: 0,
-            currentTimeM: 0,
-            currentTimeH: 0,
             currentTimePercentage: 0,
             audioDuration: 0,
             audioDurationFancy: 0,
+            durationSeconds:0,
             pad(n, z) {
                 z = z || 2;
                 return ('00' + n).slice(-z);
@@ -34,25 +31,32 @@ export default function playaudio(){
                 this.startAudio()   
                 }
             },
-            initTime() {
-                console.log('time initialized')
-                this.$refs.audio.addEventListener("durationchange", () => {console.log('duration is available'); this.setTime()});
-            },
-            setTime() {
-                console.log('time set')
-                this.audioDuration = this.$refs.audio.duration;
-                this.audioDurationFancy = this.fancyTimeFormat(this.$refs.audio.duration)  
-                this.removeAudioListener()  
-            },
-            removeAudioListener(){
-                this.$refs.audio.removeEventListener("durationchange", () => {this.setTime()});
+            setTime(duration) {
+                console.log('time set' + duration)
+                let parts = duration.split(':')
+
+                if(parts.length < 3){
+                    let minutes = +parts[0]
+                    let seconds = +parts[1];
+                    var durationSeconds = (minutes * 60 + seconds).toFixed(3);
+                } else {
+                    let hours = +parts[0]
+                    let minutes = +parts[1]
+                    let seconds = +parts[2]
+                    var durationSeconds = (hours * 3600  +minutes * 60 + seconds).toFixed(3);
+                }
+                
+                this.audioDuration = durationSeconds;
+                this.currentTime = "0:00"
+                this.audioDurationFancy = this.fancyTimeFormat(durationSeconds)  
+               
             },
             startAudio() {
                 if(!this.init) {
-                this.init = true;
-                this.audioDuration = this.$refs.audio.duration;
-                this.audioDurationFancy = this.fancyTimeFormat(this.$refs.audio.duration)
-                this.initAudioEventListener()     
+                    this.init = true;
+                    this.audioDuration = this.$refs.audio.duration;
+                    this.audioDurationFancy = this.fancyTimeFormat(this.$refs.audio.duration)
+                    this.initAudioEventListener()     
                 }
                 this.$refs.audio.play();
                 this.currentlyPlaying = true;         
@@ -74,24 +78,16 @@ export default function playaudio(){
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
                 var secs = ~~duration % 60;
-
                 var ret = "";
-
                 if (hrs > 0) {
                     ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
                 }
-
                 ret += "" + mins + ":" + (secs < 10 ? "0" : "");
                 ret += "" + secs;
-                
                 if (!measure){
-                    hrs > 1 ? ret += "std" : ret += "min" 
+                    hrs > 1 ? ret += " Std." : ret += " Min." 
                 }
-            
                 return ret;
-            }
-            
-                
-            
+            } 
         }
     }

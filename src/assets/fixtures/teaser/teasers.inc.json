@@ -643,12 +643,12 @@
             "includePath": "components/teaser/podcast/podcast",
             "includeModel": {
                 "byline": "Byline",
-                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der geht über zwei Zeilen und wird in der zweiten Zeile mit 3 Punkten abgekürzt, sollte er zu lang sein",
+                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der wird bei Desktop nach zwei Zeilen und mobil nach max. 4 Zeilen mit 3 Punkten abgekürzt, sollte er zu lang sein",
                 "topline": "Hier steht die Topline",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
-                "teaserSize": "hero",
+                "teaserSize": "100",
                 "isMobile1to1": false,
                 "airdateDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
@@ -656,11 +656,11 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
-                "teaseritem" : {
+                "teaseritem": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "poster_1"
-                    }
-                ,
+                },
+                "podcastDuration": "07:52",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -670,33 +670,36 @@
                     "showTeaserInfoDateTime": true,
                     "showTeaserInfoProgramRef": true
                 },
-                "podcastChannel" : {
+                "podcastChannel": {
                     "title": "Der Tag in Hessen!",
                     "url": "#ChannelURL",
-                    "podcastItunesUrl": "#ItunesURL",
-                    "podcastRssUrl": "#RSSURL"
+
+                    "podcastHoster": [
+                        {
+                            "podcastHosterUrl": "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                            "podcastHosterName": "ITunes"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                            "podcastHosterName": "RSS"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                            "podcastHosterName": "Google Podcasts"
+                        },
+                        {
+                            "podcastHosterUrl": "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                            "podcastHosterName": "ARD Audiothek"
+                        }
+                    ]
                 },
                 "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
-                "podcastDownloadUrl" : "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
-                "commentsSsi": {
-                    "commentNumber": "666",
-                    "hasOneComment": false,
-                    "hasManyComments": true,
-                    "commentLink": {
-                        "link": {
-                            "url": "/teaser1-comments",
-                            "webviewUrl": "/teaser1-comments#webview",
-                            "isTargetBlank": false,
-                            "readMoreText": {
-                                "readMoreScreenreader": "Zu den Kommentaren des Artikels"
-                            }
-                        }
-                    }
-                },
+
                 "documentSection": "Gesellschaft",
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
@@ -739,17 +742,17 @@
                     "isPodcast": true,
                     "toModel": {
                         "audioElement": {
-                        "isPodcast": true,
-                        "ardPlayerConfig": {
-                            "@->jsoninclude": "audio/audios.inc.json",
-                            "@->contentpath": "audio-podcast"
-                        },
-                        "ardPlayerJsonConfig": {
-                            "@->jsoninclude": "audio/audios.inc.json",
-                            "@->contentpath": "audio-podcast"
+                            "isPodcast": true,
+                            "ardPlayerConfig": {
+                                "@->jsoninclude": "audio/audios.inc.json",
+                                "@->contentpath": "audio-podcast"
+                            },
+                            "ardPlayerJsonConfig": {
+                                "@->jsoninclude": "audio/audios.inc.json",
+                                "@->contentpath": "audio-podcast"
+                            }
                         }
-                }
-            }
+                    }
                 },
                 "geotag": [
                     {
@@ -791,11 +794,198 @@
                     "type": "podcast",
                     "loca": "label_podcast",
                     "byline": {
-                        "bylineSsi": "",
+                        "bylineSsi": "07:42 min",
                         "bylineText": ""
                     }
                 }
             }
+        }
+    },
+    "teaserContentNav": {
+        "realTeasersize": "100",
+        "teasersize": "100",
+
+        "contentNav": {
+            "title": "Geiler Titel",
+            "isListOrFlow": false,
+            "isDropdown": false,
+            "isList": false,
+            "isFlow": false,
+            "isMixed": false,
+            "isAutosuggest": false,
+            "selectedItem": {
+                "title": "Themen Wirtschaft"
+            },
+            "contentNavEntries": [
+                {
+                    "title": "Arbeitsmarkt",
+                    "isGroup": false,
+                    "isSelected": false,
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    },
+                    "navigationGroup": [{}]
+                },
+
+                {
+                    "title": "Banken",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": false,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+
+                {
+                    "title": "Energie",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Flughafen Kassel-Calden",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Gewerkschaften",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Handel",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Handwerk",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Immobilien",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "K + S",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Landwirtschaft",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                }
+            ]
         }
     }
 }
