@@ -93,14 +93,13 @@ export default function playaudio(){
             
             startAudio(id, duration) {
                 console.log('start audio '+ id + ' duration: '+ duration)
-
-                   
-                
                 for (var i = 0; i < this.playlist.length; i++ ){
                     if(this.playlist[i].id == id){
-                        this.audioDuration = duration;
-                        this.initAudioEventListener(id)  
-                        this.playlist[i].init = true;
+                        if(this.playlist[i].init == false){
+                            this.audioDuration = duration;
+                            this.initAudioEventListener(id)  
+                            this.playlist[i].init = true;
+                        }
                         this.playlist[i].audioElement.play()
                         this.playlist[i].currentlyPlaying = true;
                        
@@ -128,7 +127,6 @@ export default function playaudio(){
                         let _audioElement = this.playlist[i].audioElement
                         let _range = this.playlist[i].range
                         let _timeDisplay = this.playlist[i].timeDisplay
-
                         _audioElement.ontimeupdate = (event) => {
                             this.updateCurrentTime(_range, _timeDisplay, _audioElement.currentTime) 
                         };  
