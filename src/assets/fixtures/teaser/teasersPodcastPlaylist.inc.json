@@ -34,7 +34,7 @@
                         "@->overrides": [
                             {
                                 "@->contentpath": "podcastDuration",
-                                "@->value": "9:55"
+                                "@->value": "13:11"
                             },
                             {
                                 "@->contentpath": "title",
@@ -47,11 +47,31 @@
                             {
                                 "@->contentpath": "audioUrl",
                                 "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20221021_96203008.mp3"
-                            },
+                            }
+                            
+                        ]
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->overrides": [
                             {
                                 "@->contentpath": "podcastDuration",
-                                "@->value": "13:11"
+                                "@->value": "70:26"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Verurteilt! (73) - Der Todes-Drift"
+                            },
+                            {
+                                "@->contentpath": "airdateDate.date",
+                                "@->value": "07.09.22"
+                            },
+                            {
+                                "@->contentpath": "audioUrl",
+                                "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/verurteilt/verurteilt_20220907_95686133.mp3"
                             }
+                            
                         ]
                     }
                 ],
