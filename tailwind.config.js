@@ -9,7 +9,7 @@ module.exports = {
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js}',
-        './src/assets/js/**/*.js',
+        './src/assets/vendor/**/*.js',
     ],
     theme: {
         fill: {
@@ -163,7 +163,7 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
-                    accented: '#d8e9f6',
+                    accented: '#dce8f0',
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -180,7 +180,7 @@ module.exports = {
                     terraX: '#bb4827',
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
-                    layout: '#F07800'
+                    layout: '#F07800',
                 },
                 teal: {
                     deeperPool: '#097d8e',

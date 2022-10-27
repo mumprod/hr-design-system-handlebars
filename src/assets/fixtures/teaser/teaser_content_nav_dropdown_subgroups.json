@@ -1,218 +1,215 @@
-{ 
-    "realTeasersize" : "100",
-    "teasersize" : "100",
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserContentNav",
 
-    "contentNav" : {
-        "title"       : "Geiler Titel",
-        
-        "isDropdown" : true,
-        "isList" : false,
-        "isFlow" : false,
-        "isMixed" : false,
-        "isAutosuggest" : false,
-        "selectedItem": {
-            "title" : "Themen Wirtschaft"
-        },
-        "contentNavEntries": [
-            {
-            "title" : "Arbeitsmarkt",            
-            "isGroup" : true,
-            "isSelected" : false,
-            "navigationGroup" : [
+    "@->overrides": [
+        {
+            "@->contentpath": "contentNav.contentNavEntries",
+            "@->value": [
                 {
-                    "title" : "Arbeitsmarkt - Sub-Item 1",            
-                    "isGroup" : false,
-                    "isSelected" : false,
-                    "link" : {
-                        "url": "/teaser1",
-                        "webviewUrl": "/teaser1#webview",
-                        "isTargetBlank": true,
-                        "hasIcon": false,
-                        "iconName": "extern"
-                    }
+                    "title": "Arbeitsmarkt",
+                    "isGroup": true,
+                    "isSelected": false,
+                    "navigationGroup": [
+                        {
+                            "title": "Arbeitsmarkt - Sub-Item 1",
+                            "isGroup": false,
+                            "isSelected": false,
+                            "link": {
+                                "url": "/teaser1",
+                                "webviewUrl": "/teaser1#webview",
+                                "isTargetBlank": true,
+                                "hasIcon": false,
+                                "iconName": "extern"
+                            }
+                        },
+                        {
+                            "title": "Arbeitsmarkt - Sub-Item 2",
+                            "isGroup": false,
+                            "isSelected": false,
+                            "link": {
+                                "url": "/teaser1",
+                                "webviewUrl": "/teaser1#webview",
+                                "isTargetBlank": true,
+                                "hasIcon": false,
+                                "iconName": "extern"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "title" : "Arbeitsmarkt - Sub-Item 2",            
-                    "isGroup" : false,
-                    "isSelected" : false,
-                    "link" : {
+                    "title": "Banken",
+                    "isGroup": true,
+                    "isSelected": false,
+                    "navigationGroup": [
+                        {
+                            "title": "Banken - Sub-Item 1",
+                            "isGroup": false,
+                            "isSelected": false,
+                            "link": {
+                                "url": "/teaser1",
+                                "webviewUrl": "/teaser1#webview",
+                                "isTargetBlank": true,
+                                "hasIcon": false,
+                                "iconName": "extern"
+                            }
+                        },
+                        {
+                            "title": "Banken - Sub-Item 2",
+                            "isGroup": false,
+                            "isSelected": false,
+                            "link": {
+                                "url": "/teaser1",
+                                "webviewUrl": "/teaser1#webview",
+                                "isTargetBlank": true,
+                                "hasIcon": false,
+                                "iconName": "extern"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Energie",
+                    "link": {
                         "url": "/teaser1",
                         "webviewUrl": "/teaser1#webview",
                         "isTargetBlank": true,
                         "hasIcon": false,
-                        "iconName": "extern"
-                    }
-                }
-                ]
-            },
-            {
-                "title" : "Banken",
-                "isGroup" : true,
-                "isSelected" : false,
-                "navigationGroup" : [
-                    {
-                        "title" : "Banken - Sub-Item 1",            
-                        "isGroup" : false,
-                        "isSelected" : false,
-                        "link" : {
-                            "url": "/teaser1",
-                            "webviewUrl": "/teaser1#webview",
-                            "isTargetBlank": true,
-                            "hasIcon": false,
-                            "iconName": "extern"
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
                         }
                     },
-                    {
-                        "title" : "Banken - Sub-Item 2",            
-                        "isGroup" : false,
-                        "isSelected" : false,
-                        "link" : {
-                            "url": "/teaser1",
-                            "webviewUrl": "/teaser1#webview",
-                            "isTargetBlank": true,
-                            "hasIcon": false,
-                            "iconName": "extern"
+                    "isGroup": false,
+                    "isSelected": false
+                },
+                {
+                    "title": "Flughafen Kassel-Calden",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
                         }
-                    }
-                    ]
-            },
-
-            {
-                "title" : "Energie",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Flughafen Kassel-Calden",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                {
+                    "title": "Gewerkschaften",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Gewerkschaften",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                {
+                    "title": "Handel",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Handel",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                {
+                    "title": "Handwerk",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Handwerk",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                {
+                    "title": "Immobilien",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Immobilien",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
+                {
+                    "title": "K + S",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
                 },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "K + S",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
-                },
-                "isGroup" : false,
-                "isSelected" : false
-            },
-            {
-                "title" : "Landwirtschaft",
-                "link" : {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": true,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    }
-                },
-                "isGroup" : false,
-                "isSelected" : false
-            }
-        ]
-    }
+                {
+                    "title": "Landwirtschaft",
+                    "link": {
+                        "url": "/teaser1",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": true,
+                        "hasIcon": false,
+                        "iconName": "iconName",
+                        "readMoreText": {
+                            "readMoreScreenreader": "Zum Artikel",
+                            "readMore": "mehr",
+                            "readMoreLong": "read More Long"
+                        }
+                    },
+                    "isGroup": false,
+                    "isSelected": false
+                }
+            ]
+        },
+        {
+            "@->contentpath": "contentNav.isDropdown",
+            "@->value": true
+        }
+    ]
 }
