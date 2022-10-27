@@ -1,3 +1,16 @@
+# v0.70.0 (Thu Oct 27 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 json for channel player [#355](https://github.com/mumprod/hr-design-system-handlebars/pull/355) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.69.5 (Wed Oct 26 2022)
 
 #### 🐛 Bug Fix
