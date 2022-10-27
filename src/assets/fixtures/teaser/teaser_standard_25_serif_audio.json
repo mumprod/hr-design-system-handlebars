@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_audio",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
@@ -13,24 +13,6 @@
         {
             "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
             "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "audio"
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserImage",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "sm_4"
-            }
         }
     ]
 }

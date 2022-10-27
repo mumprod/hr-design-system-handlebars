@@ -4,7 +4,7 @@
             :class="avStart ? 'flex-col' : 'flex-row'"
     {{/if}} 
     >
-    <figure class="relative {{~inline-switch this.teaserSize '["hero","100","50"]' '[" basis-2/3 ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 md:basis-1/3"," ar-1-1 md-ar-16-9 basis-2/5 md:basis-1/2"]'~}}">
+    <figure class="relative {{~inline-switch this.teaserSize '["hero","100","50"]' '[" basis-2/3 ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 md:basis-1/3"," ar-1-1 md:ar-16-9 basis-2/5 md:basis-1/2"]'~}}">
         {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _aspectRatio=(inline-switch this.teaserSize '["hero"]' '["ar-16-9","ar-1-1 md:ar-16-9"]') }} 
     </figure>
     {{> components/teaser/components/teaser_body _outerCssClasses=(inline-switch this.teaserSize '["hero","100","50"]' '["basis-1/3"," basis-3/5 md:basis-2/3"," basis-3/5 md:basis-1/2"]') }}

@@ -1,4 +1,521 @@
 {
+    "teaser_standard": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_hero": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 650px, (min-width: 768px) calc(100vw * 2/3 - 6rem), (min-width: 640px) calc(100vw - 6rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_50": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "240px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_tabbox_standard_50": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "450px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_tabbox_standard_33": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_tabbox_standard_25": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "220px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_tabbox_alternative_50": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "250px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+
+    "teaser_standard_1": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/rueckkehr-nach-abschiebung-102_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/rueckkehr-nach-abschiebung-102_v-16to9__small.jpg 320w, images/rueckkehr-nach-abschiebung-102_v-16to9__medium.jpg 480w, images/rueckkehr-nach-abschiebung-102_v-16to9__medium__extended.jpg 640w, images/rueckkehr-nach-abschiebung-102_v-16to9.jpg 960w, images/rueckkehr-nach-abschiebung-102_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_2": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/hasebe-kane-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/hasebe-kane-102_v-16to9__small.jpg 320w, images/hasebe-kane-102_v-16to9__medium.jpg 480w, images/hasebe-kane-102_v-16to9__medium__extended.jpg 640w, images/hasebe-kane-102_v-16to9.jpg 960w, images/hasebe-kane-102_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_3": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/jugendfeuerwehr-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/jugendfeuerwehr-102_v-16to9__small.jpg 320w, images/jugendfeuerwehr-102_v-16to9__medium.jpg 480w, images/jugendfeuerwehr-102_v-16to9__medium__extended.jpg 640w, images/jugendfeuerwehr-102_v-16to9.jpg 960w, images/jugendfeuerwehr-102_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_4": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/lehrerin-ukraine-104_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/lehrerin-ukraine-104_v-16to9__small.jpg 320w, images/lehrerin-ukraine-104_v-16to9__medium.jpg 480w, images/lehrerin-ukraine-104_v-16to9__medium__extended.jpg 640w, images/lehrerin-ukraine-104_v-16to9.jpg 960w, images/lehrerin-ukraine-104_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_5": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/connichi-106_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/connichi-106_v-16to9__small.jpg 320w, images/connichi-106_v-16to9__medium.jpg 480w, images/connichi-106_v-16to9__medium__extended.jpg 640w, images/connichi-106_v-16to9.jpg 960w, images/connichi-106_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_6": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/sonniger-herbst-100_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/sonniger-herbst-100_v-16to9__small.jpg 320w, images/sonniger-herbst-100_v-16to9__medium.jpg 480w, images/sonniger-herbst-100_v-16to9__medium__extended.jpg 640w, images/sonniger-herbst-100_v-16to9.jpg 960w, images/sonniger-herbst-100_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_7": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/hrinfo_genre_kulturlust-100_v-16to9_v-16to9__medium.png",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/hrinfo_genre_kulturlust-100_v-16to9__small.png 320w, images/hrinfo_genre_kulturlust-100_v-16to9__medium.png 480w, images/hrinfo_genre_kulturlust-100_v-16to9__medium__extended.png 640w, images/hrinfo_genre_kulturlust-100_v-16to9.png 960w, images/hrinfo_genre_kulturlust-100_v-16to9__retina.png 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_8": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/stream-thumbnail-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/stream-thumbnail-102_v-16to9__small.jpg 320w, images/stream-thumbnail-102_v-16to9__medium.jpg 480w, images/stream-thumbnail-102_v-16to9__medium__extended.jpg 640w, images/stream-thumbnail-102_v-16to9.jpg 960w, images/stream-thumbnail-102_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_9": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/buchmesse-fahnen-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/buchmesse-fahnen-102_v-16to9__small.jpg 320w, images/buchmesse-fahnen-102_v-16to9__medium.jpg 480w, images/buchmesse-fahnen-102_v-16to9__medium__extended.jpg 640w, images/buchmesse-fahnen-102_v-16to9.jpg 960w, images/buchmesse-fahnen-102_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_standard_10": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/mercedes-suv-g-100_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/mercedes-suv-g-100_v-16to9__small.jpg 320w, images/mercedes-suv-g-100_v-16to9__medium.jpg 480w, images/mercedes-suv-g-100_v-16to9__medium__extended.jpg 640w, images/mercedes-suv-g-100_v-16to9.jpg 960w, images/mercedes-suv-g-100_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_1": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/rueckkehr-nach-abschiebung-102_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/rueckkehr-nach-abschiebung-102_v-1to1__small.jpg 320w, images/rueckkehr-nach-abschiebung-102_v-1to1__medium.jpg 480w, images/rueckkehr-nach-abschiebung-102_v-1to1.jpg 640w, images/rueckkehr-nach-abschiebung-102_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/rueckkehr-nach-abschiebung-102_v-16to9__small.jpg 320w, images/rueckkehr-nach-abschiebung-102_v-16to9__medium.jpg 480w, images/rueckkehr-nach-abschiebung-102_v-16to9__medium__extended.jpg 640w, images/rueckkehr-nach-abschiebung-102_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_2": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/hasebe-kane-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/hasebe-kane-102_v-1to1__small.jpg 320w, images/hasebe-kane-102_v-1to1__medium.jpg 480w, images/hasebe-kane-102_v-1to1.jpg 640w, images/hasebe-kane-102_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/hasebe-kane-102_v-16to9__small.jpg 320w, images/hasebe-kane-102_v-16to9__medium.jpg 480w, images/hasebe-kane-102_v-16to9__medium__extended.jpg 640w, images/hasebe-kane-102_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_3": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/jugendfeuerwehr-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/jugendfeuerwehr-102_v-1to1__small.jpg 320w, images/jugendfeuerwehr-102_v-1to1__medium.jpg 480w, images/jugendfeuerwehr-102_v-1to1.jpg 640w, images/jugendfeuerwehr-102_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/jugendfeuerwehr-102_v-16to9__small.jpg 320w, images/jugendfeuerwehr-102_v-16to9__medium.jpg 480w, images/jugendfeuerwehr-102_v-16to9__medium__extended.jpg 640w, images/jugendfeuerwehr-102_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_4": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/lehrerin-ukraine-104_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/lehrerin-ukraine-104_v-1to1__small.jpg 320w, images/lehrerin-ukraine-104_v-1to1__medium.jpg 480w, images/lehrerin-ukraine-104_v-1to1.jpg 640w, images/lehrerin-ukraine-104_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/lehrerin-ukraine-104_v-16to9__small.jpg 320w, images/lehrerin-ukraine-104_v-16to9__medium.jpg 480w, images/lehrerin-ukraine-104_v-16to9__medium__extended.jpg 640w, images/lehrerin-ukraine-104_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_5": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/connichi-106_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/connichi-106_v-1to1__small.jpg 320w, images/connichi-106_v-1to1__medium.jpg 480w, images/connichi-106_v-1to1.jpg 640w, images/connichi-106_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/connichi-106_v-16to9__small.jpg 320w, images/connichi-106_v-16to9__medium.jpg 480w, images/connichi-106_v-16to9__medium__extended.jpg 640w, images/connichi-106_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_6": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/sonniger-herbst-100_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/sonniger-herbst-100_v-1to1__small.jpg 320w, images/sonniger-herbst-100_v-1to1__medium.jpg 480w, images/sonniger-herbst-100_v-1to1.jpg 640w, images/sonniger-herbst-100_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/sonniger-herbst-100_v-16to9__small.jpg 320w, images/sonniger-herbst-100_v-16to9__medium.jpg 480w, images/sonniger-herbst-100_v-16to9__medium__extended.jpg 640w, images/sonniger-herbst-100_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_7": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/hrinfo_genre_kulturlust-100_v-16to9_v-16to9__medium.png",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/hrinfo_genre_kulturlust-100_v-1to1__small.png 320w, images/hrinfo_genre_kulturlust-100_v-1to1__medium.png 480w, images/hrinfo_genre_kulturlust-100_v-1to1.png 640w, images/hrinfo_genre_kulturlust-100_v-1to1__large.png 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/hrinfo_genre_kulturlust-100_v-16to9__small.png 320w, images/hrinfo_genre_kulturlust-100_v-16to9__medium.png 480w, images/hrinfo_genre_kulturlust-100_v-16to9__medium__extended.png 640w, images/hrinfo_genre_kulturlust-100_v-16to9.png 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_8": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/stream-thumbnail-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/stream-thumbnail-102_v-1to1__small.jpg 320w, images/stream-thumbnail-102_v-1to1__medium.jpg 480w, images/stream-thumbnail-102_v-1to1.jpg 640w, images/stream-thumbnail-102_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/stream-thumbnail-102_v-16to9__small.jpg 320w, images/stream-thumbnail-102_v-16to9__medium.jpg 480w, images/stream-thumbnail-102_v-16to9__medium__extended.jpg 640w, images/stream-thumbnail-102_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_9": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/buchmesse-fahnen-102_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/buchmesse-fahnen-102_v-1to1__small.jpg 320w, images/buchmesse-fahnen-102_v-1to1__medium.jpg 480w, images/buchmesse-fahnen-102_v-1to1.jpg 640w, images/buchmesse-fahnen-102_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/buchmesse-fahnen-102_v-16to9__small.jpg 320w, images/buchmesse-fahnen-102_v-16to9__medium.jpg 480w, images/buchmesse-fahnen-102_v-16to9__medium__extended.jpg 640w, images/buchmesse-fahnen-102_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_alternative_100_10": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/mercedes-suv-g-100_v-16to9_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "40vw",
+                    "srcset": "images/mercedes-suv-g-100_v-1to1__small.jpg 320w, images/mercedes-suv-g-100_v-1to1__medium.jpg 480w, images/mercedes-suv-g-100_v-1to1.jpg 640w, images/mercedes-suv-g-100_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "33vw",
+                    "srcset": "images/mercedes-suv-g-100_v-16to9__small.jpg 320w, images/mercedes-suv-g-100_v-16to9__medium.jpg 480w, images/mercedes-suv-g-100_v-16to9__medium__extended.jpg 640w, images/mercedes-suv-g-100_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
     "sm_1": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
@@ -313,7 +830,7 @@
             ]
         }
     },
-    "poster_1":{     
+    "poster_1": {
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
@@ -325,9 +842,9 @@
                     "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w, https://picsum.photos/id/189/1920/1080 1920w"
                 }
             ]
-        }       
-    }, 
-    "poster_2":{     
+        }
+    },
+    "poster_2": {
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
@@ -339,9 +856,9 @@
                     "srcset": "https://picsum.photos/id/164/320/320 320w, https://picsum.photos/id/164/480/480 480w, https://picsum.photos/id/164/640/640 640w, https://picsum.photos/id/164/960/960 960w, https://picsum.photos/id/164/1920/1080 1920w"
                 }
             ]
-        }       
-    } ,
-    "cluster_1":{
+        }
+    },
+    "cluster_1": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
@@ -359,7 +876,6 @@
                 }
             ]
         }
-
     },
     "cluster_2": {
         "alttext": "Lorem ipsum",
@@ -390,6 +906,5 @@
                 }
             ]
         }
-    }  
-
+    }
 }

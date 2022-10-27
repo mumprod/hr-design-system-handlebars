@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_video",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includePath",
@@ -9,17 +9,6 @@
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
             "@->value": "alternative-ds"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "video"
-            }
         }
     ]
 }

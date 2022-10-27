@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_audio",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includePath",
@@ -19,25 +19,16 @@
             "@->value": "true"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
-            "@->value": "true"
-        },
-        {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "md_2_tab"
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "audio"
+                "@->contentpath": "teaser_alternative_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "hasebe-kane-102"
+                    }
+                ]
             }
         }
     ]
