@@ -66,7 +66,7 @@ export default function playaudio(){
                     this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
                     this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
                 } else {
-                    this.$dispatch('stopallotherplayers');
+                    this.$dispatch('stopotherplayers');
                     let duration = this.playlist[id].audioElement.duration
                     this.startAudio(id, duration)
                     this.playlist[id].range.parentNode.classList.remove('hidden')
