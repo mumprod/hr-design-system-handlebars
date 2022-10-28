@@ -79,10 +79,10 @@ export default function playaudio(){
                 console.log('stop all other players, initiated by: '+ id)
                 let players = document.querySelectorAll('audio.hidden')
                 for (let i=0; i<players.length; i++){
-                    if (players[i].classList.contains(id)){}else{
-                        console.log('paused');
+                    if (!players[i].classList.contains(id)){
+                        console.log('paused: '+ players[i].classList);
                         this.playlist[id].init=false;
-                        players[i].pause()
+                        this.playlist[id].audioElement.pause()
                         this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
                         this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
                         this.playlist[id].range.parentNode.classList.add('hidden')
@@ -115,9 +115,8 @@ export default function playaudio(){
                     this.updateCurrentTime(_range, _timeDisplay, _audioElement.currentTime) 
                 };  
             },
-            
-            fancyTimeFormat(duration,measure)
-            {   
+
+            fancyTimeFormat(duration,measure) {   
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
                 var secs = ~~duration % 60;
