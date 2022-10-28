@@ -19,9 +19,12 @@ export default function playaudio(){
                 this.playerCount++
 
                 this.playlist[id] = _player
-                console.log(this.playlist)
+                
             },
-
+            listenToGlobalStop(){
+                console.log('global listener init')
+                window.addEventListener('stopOtherAVs', function(){ console.log("event catched"); this.stopAllOtherPlayers(0) })
+            },
             rangeInput(id) {                     
                 if(this.playlist[id].init == false) {
                     this.playAndStop(id)
@@ -42,31 +45,33 @@ export default function playaudio(){
                     let hours = +parts[0]
                     let minutes = +parts[1]
                     let seconds = +parts[2]
-                    var durationSeconds = (hours * 3600  +minutes * 60 + seconds).toFixed(3);
+                    var durationSeconds = (hours * 3600  + minutes * 60 + seconds).toFixed(3);
                 }
                 
                 this.audioDuration = durationSeconds;
 
                 let el = document.getElementById("timedisplay"+id)
                 let range = document.getElementById("range"+id)
-                el.querySelector('#currentTime').innerHTML = "0:00"
-                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds)
+                el.querySelector('#currentTime').innerHTML = this.fancyTimeFormat('0',false)
+                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds, true)
                 range.value = 0
             },
 
             updateCurrentTime(range,timeDisplay,newTime) {
-                timeDisplay.querySelector('#currentTime').innerHTML = this.fancyTimeFormat(newTime, true)
+                timeDisplay.querySelector('#currentTime').innerHTML = this.fancyTimeFormat(newTime, false)
                 range.style.background = 'linear-gradient(to right, #006dc1 ' + range.value/10 + '%, white ' + range.value/10 + '% )'
                 range.value = ((100 * newTime) / this.audioDuration) * 10 
             }, 
 
             playAndStop(id) {
+                console.log('event: ' + this.$event.currentTarget.id)
+                
                 if(this.playlist[id].init == true){
                     this.stopAudio(id)
                     this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
                     this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
                 } else {
-                    this.$dispatch('stopotherplayers');
+                    if (this.$event.currentTarget.id == "button"+this.playlist[id].id) this.$dispatch('stopotherplayers');
                     let duration = this.playlist[id].audioElement.duration
                     this.startAudio(id, duration)
                     this.playlist[id].range.parentNode.classList.remove('hidden')
@@ -75,9 +80,13 @@ export default function playaudio(){
                 }
             },
 
-            stopAllOtherPlayers(id){               
+            stopAllOtherPlayers(id){  
+                // this.$el.pause()
+
                 console.log('stop all other players, initiated by: '+ id)
+
                 let players = document.querySelectorAll('audio.hidden')
+
                 for (let i=0; i<players.length; i++){
                     if (!players[i].classList.contains(id)){
                         console.log('paused: '+ players[i].classList);
@@ -96,6 +105,7 @@ export default function playaudio(){
                     this.audioDuration = duration;
                     this.initAudioEventListener(id)  
                     this.playlist[id].init = true;
+                    
                 }
                 this.playlist[id].audioElement.play()
                 this.playlist[id].currentlyPlaying = true;         
@@ -120,13 +130,19 @@ export default function playaudio(){
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
                 var secs = ~~duration % 60;
+
+                
+                //mins = mins.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+
                 var ret = "";
                 if (hrs > 0) {
                     ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-                }
+                } 
+                
                 ret += "" + mins + ":" + (secs < 10 ? "0" : "");
                 ret += "" + secs;
-                if (!measure){
+
+                if (measure){
                     hrs > 0 ? ret += " Std." : ret += " Min." 
                 }
                 return ret;

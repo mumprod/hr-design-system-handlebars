@@ -9,6 +9,7 @@
                 {{> components/teaser/podcast/podcast_playbutton 
                 _css="mr-4" 
                 _x-show="currentlyPlaying"
+                _id = _id
                 _alpineClick=(loca "play_button_alpine_click" _id) }}
             </div>
 
@@ -75,10 +76,10 @@
         
         {{!-- AudioElement --}}
         {{~#with this.audioUrl ~}}
-            <audio @stopotherplayers.window="stopAllOtherPlayers({{../_id}})" 
+            <audio   
                 class="{{../_id}} hidden" 
-                x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')">
-
+                x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')"
+                @stopotherplayers.window="stopAllOtherPlayers({{../_id}})">
                 <source src={{this}} type='audio/mp3'/>
                 
             </audio>
