@@ -1,4 +1,4 @@
-<div class="flex col-span-12">
+<div class="flex col-span-12">   
   <div class="flex flex-col grow">
   {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
@@ -53,7 +53,7 @@
       x-data="playaudio()"
       ax-load
       x-ignore
-      ax-load-src="/js/podcastPlayer.alpine.js">
+      ax-load-src="/vendor/js/podcast_player.alpine.js">
       {{> components/teaser/podcast/podcast_player_ui _isPlaylistPlayer=false
         _podcastDuration=this.podcastDuration _id=(nextRandom) }}    
     </div>

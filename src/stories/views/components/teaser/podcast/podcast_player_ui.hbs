@@ -60,7 +60,7 @@
         
         {{!-- AudioElement --}}
         {{~#with this.audioUrl ~}}
-            <audio x-id="['audio']" class="{{../_id}} hidden" x-ref="audio" x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')">
+            <audio x-id="['audio']" @stopallotherplayers.window="stopAllOtherPlayers({{../_id}})" class="{{../_id}} hidden" x-ref="audio" x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')">
                 <source :id="$id('audio')" src={{this}} type='audio/mp3'/>
             </audio>
         {{/with}}

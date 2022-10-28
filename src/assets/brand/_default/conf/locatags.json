@@ -6,7 +6,7 @@
     "anchor_serviceNav": "Servicenavigation anspringen",
     "anchor_subNav": "Subnavigation des Bereichs {0} anspringen",
     "close_button_alpine_click": "avStart = false; $dispatch('player_closed',{playerId: {0}})",
-    "play_button_alpine_click": "playAndStop({0}); $dispatch('player_button_click',{playerId: {0}})",
+    "play_button_alpine_click": "playAndStop({0}); $dispatch('hrmpf',{playerId: {0}})",
     "comment_anchor_1": "zu den ",
     "comment_anchor_2": " Kommentaren des Artikels springen",
     "comment_label_text": "Kommentar",
