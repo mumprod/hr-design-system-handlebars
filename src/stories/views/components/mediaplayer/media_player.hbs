@@ -14,7 +14,7 @@
                 {{#decorator 'components/base/link' _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
                         _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
                         _clickLabelPrefix2="mediaLink" }}                                      
-                    {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="js-mediaplayer__area ar__content mediaPlayerLoader__mediaplayerArea" _noDelay=../_noDelay ~}}                             
+                    {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                             
                 {{/decorator }}
             {{/if}}
         {{/with}}
