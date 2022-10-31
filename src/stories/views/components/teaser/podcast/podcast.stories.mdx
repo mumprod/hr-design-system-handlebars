@@ -1,7 +1,9 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import podcast from './podcast.hbs'
-import json from '../fixtures/teaser_podcast.json'
+import podcastPlaylist from './podcast-playlist.hbs'
+import episodeJson from '../fixtures/teaser_podcast.json'
+import playlistJson from '../fixtures/teaser_podcast_playlist.json'
 
 <Meta   title="Komponenten/Teaser/Podcast"
         parameters={{
@@ -23,7 +25,7 @@ import json from '../fixtures/teaser_podcast.json'
     ]}
         />
 
-export const Template = (args, { globals: { customConditionalToolbar } }) => {
+export const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     let brand =
@@ -31,9 +33,20 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return podcast({ brand, ...args })
 }
 
+export const playlistTemplate = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return podcastPlaylist({ brand, ...args })
+}
 
-<Preview withToolbar>
-    <Story  name="100% Episode Player" args={json.logicItem.includeModel}>
-        {Template.bind({})} 
+
+<Preview withToolbar>    
+    <Story  name="100% Episode Player" args={episodeJson.logicItem.includeModel}>
+        {episodeTemplate.bind({})} 
     </Story> 
+    <Story  name="100% Channel Player" args={playlistJson.logicItem.includeModel}>
+        {playlistTemplate.bind({})} 
+    </Story>
 </Preview>
