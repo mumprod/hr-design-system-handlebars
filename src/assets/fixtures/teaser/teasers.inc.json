@@ -1180,30 +1180,36 @@
             }
         }
     },
-    "teaserPodcast": {
+    "teaser_podcast_episode": {
         "isSsi": true,
         "logicItem": {
             "includePath": "components/teaser/podcast/podcast",
             "includeModel": {
                 "byline": "Byline",
-                "title": "Hier steht ein unheimlich toller langer Podcast-Titel, der wird bei Desktop nach zwei Zeilen und mobil nach max. 4 Zeilen mit 3 Punkten abgekürzt, sollte er zu lang sein",
-                "topline": "Hier steht die Topline",
+                "title": "\"Ich höre bei jedem Geräusch gleich die Tonhöhe\" | Komponist und Theatermacher Heiner Goebbels erneuert das Musiktheater",
+                "topline": "",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
                 "teaserSize": "100",
                 "isMobile1to1": false,
                 "airdateDate": {
-                    "htmlDateTime": "2022-04-17T19:30+0200",
-                    "htmlDate": "20.02.1984",
-                    "date": "17.04.22",
-                    "dateSeparatorTime": "17.04.22, 19:30"
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
                 },
                 "teaseritem": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "poster_1"
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "heiner-goebbels-102"
+                        }
+                    ]
                 },
-                "podcastDuration": "07:52",
+                "podcastDuration": "53:13",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -1214,36 +1220,36 @@
                     "showTeaserInfoProgramRef": true
                 },
                 "podcastChannel": {
-                    "title": "Der Tag in Hessen!",
+                    "title": "hr2 Doppelkopf",
                     "url": "#ChannelURL",
 
                     "podcastHoster": [
                         {
-                            "podcastHosterUrl": "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                            "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
                             "podcastHosterName": "ITunes"
                         },
                         {
-                            "podcastHosterUrl": "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                            "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
                             "podcastHosterName": "RSS"
                         },
                         {
-                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
                             "podcastHosterName": "Google Podcasts"
                         },
                         {
-                            "podcastHosterUrl": "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                            "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
                             "podcastHosterName": "ARD Audiothek"
                         }
                     ]
                 },
-                "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
-                "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                "audioUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+                "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "standard_1"
                 },
 
-                "documentSection": "Gesellschaft",
+                "documentSection": "Kultur",
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
@@ -1260,7 +1266,7 @@
                 "isExtOrBrandLink": false,
                 "isAuthor": false,
                 "copyright": "Copyright Text",
-                "audioAuthor": "Audio Author",
+                "audioAuthor": "Stefan Fricke",
                 "hasStatus": false,
                 "hasTeaserItem": true,
                 "allowAVConsumption": false,
@@ -1297,11 +1303,6 @@
                         }
                     }
                 },
-                "geotag": [
-                    {
-                        "title": "Wolfhagen"
-                    }
-                ],
                 "link": {
                     "url": "/teaser1",
                     "webviewUrl": "/teaser1#webview",
@@ -1312,32 +1313,13 @@
                         "readMoreScreenreader": "Zum Artikel",
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "sans serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
                     }
                 },
                 "label": {
                     "type": "podcast",
                     "loca": "label_podcast",
                     "byline": {
-                        "bylineSsi": "07:42 min",
+                        "bylineSsi": "53:13 min",
                         "bylineText": ""
                     }
                 }

@@ -40,7 +40,7 @@
                 {
                     "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48em) ",
@@ -61,7 +61,7 @@
                 {
                     "media": "all and (max-width: 47.938em)",
                     "sizes": "300px",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48em) ",
@@ -82,7 +82,7 @@
                 {
                     "media": "all and (max-width: 47.938rem)",
                     "sizes": "300px",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48rem) ",
@@ -103,7 +103,7 @@
                 {
                     "media": "all and (max-width: 47.938rem)",
                     "sizes": "300px",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48rem) ",
@@ -124,7 +124,7 @@
                 {
                     "media": "all and (max-width: 47.938rem)",
                     "sizes": "300px",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48rem) ",
@@ -145,7 +145,7 @@
                 {
                     "media": "all and (max-width: 47.938rem)",
                     "sizes": "300px",
-                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 640w, images/{#image}_v-1to1__large.jpg 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48rem) ",
@@ -155,7 +155,112 @@
             ]
         }
     },
-
+    "teaser_cluster_genre_100": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                },
+                {
+                    "media": "all and (min-width: 48em)",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_cluster_100": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_cluster_50": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 460px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_cluster_33": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_poster_50": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 460px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2.5rem)",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_poster_33": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2.5rem)",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_podcast": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
     "teaser_standard_1": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
@@ -858,7 +963,7 @@
             ]
         }
     },
-    "cluster_1": {
+    "cluster_100": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {

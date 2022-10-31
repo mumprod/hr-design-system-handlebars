@@ -4,7 +4,13 @@
         "url": "/teaser1",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "cluster_3"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "connichi-106"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": false,
@@ -77,7 +83,13 @@
         "url": "/teaser2",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "standard_1"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "lehrerin-ukraine-104"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": true,
@@ -157,7 +169,13 @@
         "url": "/teaser3",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "standard_1"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "hasebe-kane-102"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": true,
@@ -229,7 +247,13 @@
         "url": "/teaser4",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "standard_1"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "mercedes-suv-g-100"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": true,
@@ -301,7 +325,13 @@
         "url": "/teaser5",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "standard_1"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "jugendfeuerwehr-1020"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": true,
@@ -381,7 +411,13 @@
         "url": "/teaser1",
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "cluster_3"
+            "@->contentpath": "teaser_cluster_100",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "sonniger-herbst-100"
+                }
+            ]
         },
         "teaserSize": "hero",
         "showLabel": false,
@@ -410,7 +446,7 @@
         "documentSection": "Panorama",
         "isBroadcastDateHidden": false,
         "showProfileInfoAsByline": true,
-        "profiles": "Von Petra Boberg und Christine Rütte" ,
+        "profiles": "Von Petra Boberg und Christine Rütte",
         "link": {
             "url": "/teaser1",
             "webviewUrl": "/teaser1#webview",
@@ -449,5 +485,4 @@
             "dateSeparatorTime": "17.04.22, 19:30"
         }
     }
-
 }

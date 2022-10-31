@@ -9,10 +9,6 @@
         {
             "@->contentpath": "logicItem.includeModel.isMobile1to1",
             "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
-            "@->value": "true"
         }
     ]
 }
