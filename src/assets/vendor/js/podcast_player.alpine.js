@@ -2,6 +2,7 @@ export default function playaudio(){
         return {
             audioDuration: 0,
             playerCount: 0,
+            count: 0,
             playlist: {},
             registerPlayer(duration,id){
                 let _player = {}
@@ -23,7 +24,7 @@ export default function playaudio(){
             },
             listenToGlobalStop(){
                 console.log('global listener init')
-                window.addEventListener('stopOtherAVs', function(){ console.log("event catched"); this.stopAllOtherPlayers(0) })
+                window.addEventListener('hr:global:stopOtherAVs', function(){ console.log("event catched"); this.stopAllOtherPlayers(0) })
             },
             rangeInput(id) {                     
                 if(this.playlist[id].init == false) {
@@ -71,7 +72,7 @@ export default function playaudio(){
                     this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
                     this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
                 } else {
-                    if (this.$event.currentTarget.id == "button"+this.playlist[id].id) this.$dispatch('stopotherplayers');
+                    this.$dispatch('stopotherplayers',{playerId: id});
                     let duration = this.playlist[id].audioElement.duration
                     this.startAudio(id, duration)
                     this.playlist[id].range.parentNode.classList.remove('hidden')
@@ -81,22 +82,17 @@ export default function playaudio(){
             },
 
             stopAllOtherPlayers(id){  
-                // this.$el.pause()
-
-                console.log('stop all other players, initiated by: '+ id)
-
                 let players = document.querySelectorAll('audio.hidden')
-
-                for (let i=0; i<players.length; i++){
-                    if (!players[i].classList.contains(id)){
-                        console.log('paused: '+ players[i].classList);
-                        this.playlist[id].init=false;
-                        this.playlist[id].audioElement.pause()
-                        this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                        this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
-                        this.playlist[id].range.parentNode.classList.add('hidden')
+                    for (let i=0; i<players.length; i++){
+                        if ( !players[i].classList.contains(id) ){
+                            this.playlist[id].init=false;
+                            this.playlist[id].audioElement.pause()
+                            this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
+                            this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')
+                            this.playlist[id].range.parentNode.classList.add('hidden')
+                        }
                     }
-                }
+                
             },
 
             startAudio(id, duration) {
