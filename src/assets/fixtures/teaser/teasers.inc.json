@@ -956,7 +956,7 @@
                     "@->replaceToken": [
                         {
                             "@->token": "image",
-                            "@->value": "jugendfeuerwehr-10"
+                            "@->value": "jugendfeuerwehr-102"
                         }
                     ]
                 },
@@ -1051,7 +1051,7 @@
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_podcast",
+                    "@->contentpath": "teaser_standard",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
