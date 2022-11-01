@@ -9,7 +9,7 @@
             "@->contentpath": "title",
             "@->value": "NEUESTE BEITRÄGE"
         },
-                {
+        {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
         },
@@ -24,13 +24,6 @@
         {
             "@->contentpath": "showFirstImageOrGenreImage",
             "@->value": "true"
-        },
-        {
-            "@->contentpath": "genreImage",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "cluster_1"
-            }
         }
     ]
 }

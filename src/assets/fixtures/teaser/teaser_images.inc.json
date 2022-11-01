@@ -1,400 +1,269 @@
 {
-    "sm_1": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": true,
-            "asImage": false,
-            "fallback": "https://picsum.photos/id/101/480/270",
-            "sources": [
-                {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/101/320/320 320w, https://picsum.photos/id/101/480/480 480w, https://picsum.photos/id/101/640/640 640w, https://picsum.photos/id/101/960/960 960w"
-                },
-                {
-                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
-                    "sizes": "25vw",
-                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w, https://picsum.photos/id/101/960/540 960w"
-                },
-                {
-                    "media": "all and (min-width: 59em)",
-                    "sizes": "218px",
-                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w"
-                }
-            ]
-        }
-    },
-    "sm_2": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": true,
-            "asImage": false,
-            "fallback": "https://picsum.photos/id/189/480/270",
-            "sources": [
-                {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w"
-                },
-                {
-                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
-                    "sizes": "25vw",
-                    "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w, https://picsum.photos/id/189/960/540 960w"
-                },
-                {
-                    "media": "all and (min-width: 59em)",
-                    "sizes": "218px",
-                    "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w"
-                }
-            ]
-        }
-    },
-    "sm_3": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": true,
-            "asImage": false,
-            "fallback": "https://picsum.photos/id/190/480/270",
-            "sources": [
-                {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/190/320/320 320w, https://picsum.photos/id/190/480/480 480w, https://picsum.photos/id/190/640/640 640w, https://picsum.photos/id/190/960/960 960w"
-                },
-                {
-                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
-                    "sizes": "25vw",
-                    "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w, https://picsum.photos/id/190/960/540 960w"
-                },
-                {
-                    "media": "all and (min-width: 59em)",
-                    "sizes": "218px",
-                    "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w"
-                }
-            ]
-        }
-    },
-    "sm_4": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": true,
-            "asImage": false,
-            "fallback": "https://picsum.photos/id/191/480/270",
-            "sources": [
-                {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/191/320/320 320w, https://picsum.photos/id/191/480/480 480w, https://picsum.photos/id/191/640/640 640w, https://picsum.photos/id/191/960/960 960w"
-                },
-                {
-                    "media": "all and (min-width: 48em) and (max-width: 58.938em)",
-                    "sizes": "25vw",
-                    "srcset": "https://picsum.photos/id/191/320/180 320w, https://picsum.photos/id/191/480/270 480w, https://picsum.photos/id/191/640/360 640w, https://picsum.photos/id/191/960/540 960w"
-                },
-                {
-                    "media": "all and (min-width: 59em)",
-                    "sizes": "218px",
-                    "srcset": "https://picsum.photos/id/191/320/180 320w, https://picsum.photos/id/191/480/270 480w, https://picsum.photos/id/191/640/360 640w"
-                }
-            ]
-        }
-    },
-    "md_1": {
+    "teaser_standard": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
             "asImage": true,
-            "fallback": "https://picsum.photos/id/101/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "sizes": "(min-width: 48em) and (max-width: 58.938em) 33vw,(min-width: 59em) calc(1008px * 0.33), 100vw",
-                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w, https://picsum.photos/id/101/960/540 960w, https://picsum.photos/id/101/1920/1080 1920w"
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 }
             ]
         }
     },
-    "md_2": {
+    "teaser_alternative_hero": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
             "asImage": true,
-            "fallback": "https://picsum.photos/id/189/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "sizes": "(min-width: 48em) and (max-width: 58.938em) 33vw,(min-width: 59em) calc(1008px * 0.33), 100vw",
-                    "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w, https://picsum.photos/id/189/960/540 960w, https://picsum.photos/id/189/1920/1080 1920w"
+                    "sizes": "(min-width: 1024px) 650px, (min-width: 768px) calc(100vw * 2/3 - 6rem), (min-width: 640px) calc(100vw - 6rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 }
             ]
         }
     },
-    "md_3": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/190/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 48em) and (max-width: 58.938em) 33vw,(min-width: 59em) calc(1008px * 0.33), 100vw",
-                    "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w, https://picsum.photos/id/190/960/540 960w, https://picsum.photos/id/190/1920/1080 1920w"
-                }
-            ]
-        }
-    },
-    "md_1_tab": {
+    "teaser_alternative_100": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/101/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
                     "media": "all and (max-width: 47.938em)",
                     "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/101/320/320 320w, https://picsum.photos/id/101/480/480 480w, https://picsum.photos/id/101/640/640 640w, https://picsum.photos/id/101/960/960 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48em) ",
                     "sizes": "33vw",
-                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w, https://picsum.photos/id/101/960/540 960w"
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
                 }
             ]
         }
     },
-    "md_2_tab": {
+    "teaser_alternative_50": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/189/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
                     "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w"
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
                     "media": "all and (min-width: 48em) ",
-                    "sizes": "33vw",
-                    "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w, https://picsum.photos/id/189/960/540 960w"
+                    "sizes": "240px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
                 }
             ]
         }
     },
-    "md_3_tab": {
+    "teaser_tabbox_standard_50": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/190/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/190/320/320 320w, https://picsum.photos/id/190/480/480 480w, https://picsum.photos/id/190/640/640 640w, https://picsum.photos/id/190/960/960 960w"
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
-                    "media": "all and (min-width: 48em)",
-                    "sizes": "33vw",
-                    "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w, https://picsum.photos/id/190/960/540 960w"
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "450px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
                 }
             ]
         }
     },
-    "standard_1": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/101/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/101/320/180 320w, https://picsum.photos/id/101/480/270 480w, https://picsum.photos/id/101/640/360 640w, https://picsum.photos/id/101/960/540 960w, https://picsum.photos/id/101/1920/1080 1920w"
-                }
-            ]
-        }
-    },
-    "standard_2": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/189/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/189/320/180 320w, https://picsum.photos/id/189/480/270 480w, https://picsum.photos/id/189/640/360 640w, https://picsum.photos/id/189/960/540 960w, https://picsum.photos/id/189/1920/1080 1920w"
-                }
-            ]
-        }
-    },
-    "standard_3": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/190/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/190/320/180 320w, https://picsum.photos/id/190/480/270 480w, https://picsum.photos/id/190/640/360 640w, https://picsum.photos/id/190/960/540 960w, https://picsum.photos/id/190/1920/1080 1920w"
-                }
-            ]
-        }
-    },
-    "standard_4": {
-        "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/191/480/270",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/191/320/180 320w, https://picsum.photos/id/191/480/270 480w, https://picsum.photos/id/191/640/360 640w, https://picsum.photos/id/191/960/540 960w, https://picsum.photos/id/191/1920/1080 1920w"
-                }
-            ]
-        }
-    },
-    "standard_1_tab": {
+    "teaser_tabbox_standard_33": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/193/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/193/320/320 320w, https://picsum.photos/id/193/480/480 480w, https://picsum.photos/id/193/640/640 640w, https://picsum.photos/id/193/960/960 960w"
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
-                    "media": "all and (min-width: 48em)",
-                    "sizes": "50vw",
-                    "srcset": "https://picsum.photos/id/193/320/180 320w, https://picsum.photos/id/193/480/270 480w, https://picsum.photos/id/193/640/360 640w, https://picsum.photos/id/193/960/540 960w"
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
                 }
             ]
         }
     },
-    "standard_2_tab": {
+    "teaser_tabbox_standard_25": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/197/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "media": "all and (max-width: 47.938em)",
-                    "sizes": "40vw",
-                    "srcset": "https://picsum.photos/id/197/320/320 320w, https://picsum.photos/id/197/480/480 480w, https://picsum.photos/id/197/640/640 640w, https://picsum.photos/id/197/960/960 960w"
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 },
                 {
-                    "media": "all and (min-width: 48em)",
-                    "sizes": "50vw",
-                    "srcset": "https://picsum.photos/id/197/320/180 320w, https://picsum.photos/id/197/480/270 480w, https://picsum.photos/id/197/640/360 640w, https://picsum.photos/id/197/960/540 960w"
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "220px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
                 }
             ]
         }
     },
-    "poster_1":{     
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/189/480/480",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/189/320/320 320w, https://picsum.photos/id/189/480/480 480w, https://picsum.photos/id/189/640/640 640w, https://picsum.photos/id/189/960/960 960w, https://picsum.photos/id/189/1920/1080 1920w"
-                }
-            ]
-        }       
-    }, 
-    "poster_2":{     
-        "copyrightWithLinks": "",
-        "responsiveImage": {
-            "asPicture": false,
-            "asImage": true,
-            "fallback": "https://picsum.photos/id/164/480/480",
-            "sources": [
-                {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/164/320/320 320w, https://picsum.photos/id/164/480/480 480w, https://picsum.photos/id/164/640/640 640w, https://picsum.photos/id/164/960/960 960w, https://picsum.photos/id/164/1920/1080 1920w"
-                }
-            ]
-        }       
-    } ,
-    "cluster_1":{
+    "teaser_tabbox_alternative_50": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
-            "fallback": "https://picsum.photos/id/1062/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938rem)",
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48rem) ",
+                    "sizes": "250px",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_cluster_genre_100": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
                     "media": "all and (max-width: 47.938em)",
-                    "srcset": "https://picsum.photos/id/1062/320/180 320w, https://picsum.photos/id/1062/480/270 480w, https://picsum.photos/id/1062/640/360 640w, https://picsum.photos/id/1062/960/540 960w, https://picsum.photos/id/1062/1920/1080 1920w"
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 },
                 {
                     "media": "all and (min-width: 48em)",
-                    "srcset": "https://picsum.photos/id/1062/320/320 320w, https://picsum.photos/id/1062/480/480 480w, https://picsum.photos/id/1062/640/640 640w, https://picsum.photos/id/1062/960/960 960w"
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
                 }
             ]
         }
-
     },
-    "cluster_2": {
+    "teaser_cluster_100": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
             "asImage": true,
-            "fallback": "https://picsum.photos/id/1062/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/1062/320/180 320w, https://picsum.photos/id/1062/480/270 480w, https://picsum.photos/id/1062/640/360 640w, https://picsum.photos/id/1062/960/540 960w, https://picsum.photos/id/1062/1920/1080 1920w"
+                    "media": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 }
             ]
         }
     },
-    "cluster_3": {
+    "teaser_cluster_50": {
         "alttext": "Lorem ipsum",
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": false,
             "asImage": true,
-            "fallback": "https://picsum.photos/id/188/480/270",
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "sizes": "(min-width: 1010px) 960px, 100vw",
-                    "srcset": "https://picsum.photos/id/188/320/180 320w, https://picsum.photos/id/188/480/270 480w, https://picsum.photos/id/188/640/360 640w, https://picsum.photos/id/188/960/540 960w, https://picsum.photos/id/188/1920/1080 1920w"
+                    "sizes": "(min-width: 768px) 460px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 }
             ]
         }
     },
-    
+    "teaser_cluster_33": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2,5rem)",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_poster_50": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 460px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2.5rem)",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_poster_33": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 768px) 300px, (min-width: 640px) calc(100vw - 8.5rem), calc(100vw - 2.5rem)",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "teaser_podcast": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "300px",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
     "stage_wide": {
         "alttext": "Lorem ipsum",
-        "copyrightWithLinks": "", 
+        "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
             "asImage": false,
@@ -417,7 +286,5 @@
                 }
             ]
         }
-
     }
-
 }

@@ -1,18 +1,24 @@
 {
-    "title"       : "",
-    "teaserLogo"  : "",
-    "isHessenschauLogo" : false,
-    "showFirstImageOrGenreImage" : false,
-    "HideTitle"   : false,
-    "showGenreImage" : false,
-    "showFirstImage" : false,
-    "isOrdered" : false,
+    "title": "",
+    "teaserLogo": "",
+    "isHessenschauLogo": false,
+    "showFirstImageOrGenreImage": false,
+    "HideTitle": false,
+    "showGenreImage": false,
+    "showFirstImage": false,
+    "isOrdered": false,
 
-    "teaserSize" : "100",
+    "teaserSize": "100",
 
     "genreImage": {
         "@->jsoninclude": "teaser/teaser_images.inc.json",
-        "@->contentpath": "standard_1"
+        "@->contentpath": "teaser_cluster_genre_100",
+        "@->replaceToken": [
+            {
+                "@->token": "image",
+                "@->value": "buchmesse-fahnen-102"
+            }
+        ]
     },
 
     "teaserType": "headlinelist",
@@ -46,9 +52,9 @@
         }
     ],
 
-    "headlineListOverview" :{
-        "title" : "Neue Beiträge auf einen Blick",
-        "link"  : {
+    "headlineListOverview": {
+        "title": "Neue Beiträge auf einen Blick",
+        "link": {
             "url": "https://www.hessenschau.de"
         }
     }

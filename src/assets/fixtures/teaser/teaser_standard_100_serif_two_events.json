@@ -11,13 +11,6 @@
             "@->value": true
         },
         {
-            "@->contentpath": "logicItem.includeModel.label",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_labels.inc.json",
-                "@->contentpath": "event"
-            }
-        },
-        {
             "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
             "@->value": "true"
         }

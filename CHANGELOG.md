@@ -1,3 +1,228 @@
+# v0.72.0 (Tue Nov 01 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1821 [#360](https://github.com/mumprod/hr-design-system-handlebars/pull/360) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.71.1 (Tue Nov 01 2022)
+
+#### 🐛 Bug Fix
+
+- add -ds to teaserType in indextext-teaser [#359](https://github.com/mumprod/hr-design-system-handlebars/pull/359) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.71.0 (Mon Oct 31 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1806 [#358](https://github.com/mumprod/hr-design-system-handlebars/pull/358) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.70.0 (Thu Oct 27 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 json for channel player [#355](https://github.com/mumprod/hr-design-system-handlebars/pull/355) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.5 (Wed Oct 26 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1762 [#354](https://github.com/mumprod/hr-design-system-handlebars/pull/354) ([@hanswurstsalat](https://github.com/hanswurstsalat) [@vascoeduardo](https://github.com/vascoeduardo))
+- Digits in Wanda box too high [#353](https://github.com/mumprod/hr-design-system-handlebars/pull/353) (zouhair1 [@selbaciri](https://github.com/selbaciri))
+- Remove Capital I on filename to prevent linux problems [#352](https://github.com/mumprod/hr-design-system-handlebars/pull/352) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 5
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (zouhair1)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.4 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- changed all teaser viewports to 360 and 1024 [#351](https://github.com/mumprod/hr-design-system-handlebars/pull/351) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.3 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- remove non printable unicode character - add generated json files [#350](https://github.com/mumprod/hr-design-system-handlebars/pull/350) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.2 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1801 - Teasertext  in mobile hero teaser entfernen [#344](https://github.com/mumprod/hr-design-system-handlebars/pull/344) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.1 (Tue Oct 25 2022)
+
+#### 🐛 Bug Fix
+
+- remove non-printable unicode characters [#349](https://github.com/mumprod/hr-design-system-handlebars/pull/349) ([@vascoeduardo](https://github.com/vascoeduardo))
+- FEATURE: Fixtures of content-navs use .inc jsons [#348](https://github.com/mumprod/hr-design-system-handlebars/pull/348) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.69.0 (Fri Oct 21 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Uses resourceUrl Helper to access [#347](https://github.com/mumprod/hr-design-system-handlebars/pull/347) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.68.0 (Thu Oct 20 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcastplayer   add podcasthoster via each block [#346](https://github.com/mumprod/hr-design-system-handlebars/pull/346) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.67.2 (Thu Oct 20 2022)
+
+#### 🐛 Bug Fix
+
+- tabbox full width in mobile-view [#345](https://github.com/mumprod/hr-design-system-handlebars/pull/345) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.67.1 (Thu Oct 20 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update Readme for macro ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.67.0 (Wed Oct 19 2022)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 1567 [#342](https://github.com/mumprod/hr-design-system-handlebars/pull/342) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.66.0 (Tue Oct 18 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player refactoring part5 [#343](https://github.com/mumprod/hr-design-system-handlebars/pull/343) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.65.0 (Fri Oct 14 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player refactoring part4 [#341](https://github.com/mumprod/hr-design-system-handlebars/pull/341) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.64.0 (Thu Oct 13 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player refactoring part3 [#340](https://github.com/mumprod/hr-design-system-handlebars/pull/340) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.63.0 (Thu Oct 13 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1696 podcast player refactoring part2 [#339](https://github.com/mumprod/hr-design-system-handlebars/pull/339) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.62.0 (Tue Oct 11 2022)
 
 #### 🚀 Enhancement

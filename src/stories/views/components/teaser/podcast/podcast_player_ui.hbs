@@ -1,27 +1,68 @@
-<div class="flex w-full">  
-    <div class="flex items-center grow js-load" 
-    x-data="playaudio()"
-    ax-load
-    x-ignore
-    ax-load-src="/js/podcastPlayer.alpine.js"
-    x-init="setTime( '{{podcastDuration}}' )" >
+<div class="flex w-full"> 
+    <div class="flex flex-wrap w-full js-load" 
+        x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
+ 
+        <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
 
-    <div class="flex items-center w-40">
-        {{!-- Start/StopButton       --}}
-        {{> components/teaser/podcast/podcast_playbutton _clickFunction="playAndStop" _css="mr-4" _title=this.title _teaserSize=this.teaserSize _addClass="" }}
+            {{!-- Start/StopButton       --}}
+            <div id="playbutton{{_id}}" class="flex">
+                {{> components/teaser/podcast/podcast_playbutton 
+                _css="mr-4" 
+                _x-show="currentlyPlaying"
+                _alpineClick=(loca "play_button_alpine_click" _id) }}
+            </div>
 
-        {{!-- Meta Time usw. --}}
-        {{> components/teaser/podcast/podcast_timedisplay _textSize="text-sm" _duration=podcastDuration _currentTimeClasses="text-orange-layout" _durationClasses="text-blue-science" _containerCss="flex justify-end w-full font-bold"}}
-    </div>
-    
-    {{!-- Range Slider     --}}
-    <input x-ref="range" id="range" x-on:input="rangeInput()" type="range" x-bind:value="currentTimePercentage" min="0" max="1000" class="flex self-center flex-grow h-1 ml-4 bg-white rounded-lg appearance-none cursor-pointer seek_slider" >  
+            <div class="flex flex-wrap items-start w-full -mt-0.5">
+                {{#if _isPlaylistPlayer}}                   
+                    <div class="flex w-full">
+                        {{!-- Airdate     --}}
+                        {{~#with this.airdateDate}}
+                            <div class="flex text-xs grow font-headingSerif text-blue-science">
+                                <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                            </div>
+                        {{/with}}
 
-    {{!-- AudioElement --}}
-    {{~#with this.audioUrl ~}}
-        <audio preload="metadata" class="hidden" x-ref='audio'>
-        <source id="audio" src={{this}} type='audio/mp3'/>
-        </audio>
-    {{/with}}
+                        {{!-- Download --}}
+                        <div class="flex self-end">
+                            {{> components/teaser/podcast/podcast_downloadbutton _addClass="ml-2"
+                                _iconClass="h-6 w-6 text-blue-science fill-current"
+                                _url=this.podcastDownloadUrl 
+                            }}
+                        </div>
+                    </div>
+
+                    <div class="flex -mt-2 w-fit">          
+                        {{> components/teaser/podcast/podcast_item_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+                    </div>   
+                {{/if}}
+
+                {{!-- Range Slider     --}}
+                <div class="flex w-full my-4 ">
+                    <input x-ref="range" id="range{{_id}}" x-on:input="rangeInput({{_id}})" type="range" {{!-- x-bind:value="currentTimePercentage" --}} min="0" max="1000" class="h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
+                </div>
+
+                {{#if _isPlaylistPlayer}}
+                    {{!-- Meta Time usw. --}}
+                    <div class="flex w-full"> 
+                        {{> components/teaser/podcast/podcast_timedisplay 
+                        _id=_id
+                        _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" 
+                        _containerCss="flex text-xs grow font-headingSerif" }}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+        
+        {{#unless _isPlaylistPlayer}}
+            {{!-- Meta Time usw. --}}
+            {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+        {{/unless}}
+        
+        {{!-- AudioElement --}}
+        {{~#with this.audioUrl ~}}
+            <audio x-id="['audio']" class="{{../_id}} hidden" x-ref="audio" x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')">
+                <source :id="$id('audio')" src={{this}} type='audio/mp3'/>
+            </audio>
+        {{/with}}
     </div>
 </div>

@@ -7,10 +7,6 @@
             "@->value": ""
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.topline",
-            "@->value": ""
-        },
-        {
             "@->contentpath": "logicItem.includeModel.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",

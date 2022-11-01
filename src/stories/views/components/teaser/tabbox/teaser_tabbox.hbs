@@ -1,13 +1,13 @@
 </div>
 <div 
   x-data="{ tab: '{{this.tabbedGroup.[0].title}}' }"
-  class="grid grid-cols-12 pt-6 md:pt-7 bg-[#dce8f0] mx-0 md:rounded-tl-3xl md:rounded-br-3xl col-main gap-x-6 gap-y-6"
+  class="grid grid-cols-12 pt-6 mx-0 col-full md:pt-7 bg-blue-accented md:rounded-tl-3xl md:rounded-br-3xl md:col-main gap-x-6 gap-y-6"
 >
   <section class="col-span-full" data-hr-group-tabbed='{"wandaPageId":"{{this.wandaPageId}}"}'>
     <div class="flex flex-wrap justify-center mb-7 mx-1.5" role="tablist">
       {{~#each this.tabbedGroup~}}
         <button  onclick="window.location.href='#tgp{{@index}}';"
-                 :class="tab === '{{this.title}}' ? 'text-white bg-blue-congress border-blue-congress' : 'bg-white text-blue-congress border-white hover:border-blue-congress'" 
+                 :class="tab === '{{this.title}}' ? 'text-white bg-blue-congress border-blue-congress' : 'bg-white text-toplineColor border-white hover:border-toplineColor'" 
                  x-effect="$el.removeAttribute('onclick')"
                  x-on:click.prevent="tab = '{{this.title}}'"  
                  class="border text-base font-heading py-px px-2 m-1.5" 
@@ -21,4 +21,4 @@
     {{~> components/teaser/teaser_logic/teaser_logic ~}}
   </section>
 </div>
-<div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 gap-y-6"> 
+<div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 gap-y-6">

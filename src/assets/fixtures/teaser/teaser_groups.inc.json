@@ -9,7 +9,8 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_hero_serif.json"
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2"
                 }
             ]
         }
@@ -30,7 +31,18 @@
                     "logicItem": {
                         "includePath": "components/teaser/content_nav/teaser_content_nav",
                         "includeModel": {
-                            "@->jsoninclude": "teaser/teaser_content_nav_dropdown_50.json"
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaserContentNav",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "contentNav.isAutosuggest",
+                                    "@->value": true
+                                },
+                                {
+                                    "@->contentpath": "contentNav.isDropdown",
+                                    "@->value": true
+                                }
+                            ]
                         }
                     }
                 }
@@ -47,32 +59,42 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif.json"
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "standard_4"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif_audio.json"
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif_video.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "standard_4"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_video",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
                         }
                     ]
                 }
@@ -89,38 +111,32 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_1"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_2"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_3",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_3"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 }
@@ -137,50 +153,42 @@
             "teaserSize": "100",
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "sm_1"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif_video.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "sm_2"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif_video.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_video",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "sm_3"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif_audio.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "sm_4"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
                         }
                     ]
                 }
@@ -199,38 +207,32 @@
             "isHighlightGroup": true,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_1"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_2"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_3",
                     "@->overrides": [
                         {
-                            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_3"
-                            }
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
                         }
                     ]
                 }
