@@ -51,11 +51,11 @@ export default function playaudio(){
                 
                 this.audioDuration = durationSeconds;
 
-                let el = document.getElementById("timedisplay"+id)
                 let range = document.getElementById("range"+id)
-                el.querySelector('#currentTime').innerHTML = this.fancyTimeFormat('0',false)
-                el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds, true)
                 range.value = 0
+                this.$el.querySelector('#currentTime').innerHTML = this.fancyTimeFormat('0',false)
+                this.$el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds, true)
+                
             },
 
             updateCurrentTime(range,timeDisplay,newTime) {
@@ -65,8 +65,7 @@ export default function playaudio(){
             }, 
 
             playAndStop(id) {
-                console.log('event: ' + this.$event.currentTarget.id)
-                
+                console.log('event target: ' + this.$event.currentTarget.id)
                 if(this.playlist[id].init == true){
                     this.stopAudio(id)
                     this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
@@ -110,7 +109,8 @@ export default function playaudio(){
             stopAudio(id) {
                 console.log('stop audio '+ id)               
                 this.playlist[id].audioElement.pause()
-                this.playlist[id].init = false;             
+                this.playlist[id].init = false; 
+                this.playlist[id].currentlyPlaying = false;            
             },
 
             initAudioEventListener(id) {               
@@ -126,9 +126,6 @@ export default function playaudio(){
                 var hrs = ~~(duration / 3600);
                 var mins = ~~((duration % 3600) / 60);
                 var secs = ~~duration % 60;
-
-                
-                //mins = mins.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
 
                 var ret = "";
                 if (hrs > 0) {

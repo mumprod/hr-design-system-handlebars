@@ -1,6 +1,6 @@
 <div class="flex w-full"> 
     <div class="flex flex-wrap w-full js-load" 
-        x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
+        >
  
         <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
 
@@ -54,7 +54,7 @@
 
                 {{#if _isPlaylistPlayer}}
                     {{!-- Meta Time usw. --}}
-                    <div class="flex w-full"> 
+                    <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " class="flex w-full"> 
                         {{> components/teaser/podcast/podcast_timedisplay 
                         _id=_id
                         _currentTimeClasses="font-bold text-orange-layout" 
