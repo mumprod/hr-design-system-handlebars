@@ -1,3 +1,15 @@
+# v0.71.1 (Tue Nov 01 2022)
+
+#### 🐛 Bug Fix
+
+- add -ds to teaserType in indextext-teaser [#359](https://github.com/mumprod/hr-design-system-handlebars/pull/359) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.71.0 (Mon Oct 31 2022)
 
 #### 🚀 Enhancement
