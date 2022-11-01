@@ -154,6 +154,9 @@ module.exports = {
                 '38': '9.5rem',
                 '42': '10.5rem',
             },
+            opacity: {
+                85: '.85',
+            },
             fontFamily: {
                 copy: ['DIN', 'sans-serif'],
                 headingSerif: ['RobotoSlab', 'serif'],
@@ -166,7 +169,10 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
-                    accented: '#dce8f0',
+                    accented: '#d8e9f6',
+                    blueStone: '#00646f',
+                    astronautBlue: '#00375d',
+                    lightCerulean: '#007EA1FF',
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -174,6 +180,9 @@ module.exports = {
                 red: {
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
+                    burntUmber: '#8d2725',
+                    wellRead: '#AB2F2DFF',
+                    paprika: '#8C033DFF',
                 },
                 pink: {
                     ripeRaspberries: '#be005a',
@@ -184,8 +193,10 @@ module.exports = {
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
                     layout: '#F07800',
+                    clementine: '#ec6602',
                 },
                 teal: {
+                    DEFAULT: '#007A7CFF',
                     deeperPool: '#097d8e',
                 },
                 grey: {
@@ -195,10 +206,22 @@ module.exports = {
                     light: '#F8F8F8',
                     dark: '#707070',
                 },
-
-                white: '#ffffff',
+                green: {
+                    genoa: '#168378',
+                    eden: '#0F6157FF',
+                },
+                purple: {
+                    pompadour: '#6d0041',
+                    jazzberry: '#a00d65',
+                },
+                white: {
+                    DEFAULT: '#ffffff',
+                    blackhaze: '#eaeded',
+                },
                 yellow: {
                     corn: '#e0ae00',
+                    goldenSand: '#f2da6c',
+                    olive: '#916B00FF',
                 },
                 primary: 'var(--color-primary)',
                 secondary: 'var(--color-secondary)',
@@ -212,6 +235,8 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                link: 'var(--color-link)',
+                stageLink: 'var(--color-stage-link)',
                 stageTextBox: 'var(--color-stage-text-box)',
                 stageText: 'var(--color-stage-text)',
                 stagePrimary: 'var(--color-stage-primary)',

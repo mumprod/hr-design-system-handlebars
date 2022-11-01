@@ -1,6 +1,8 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_stage.hbs'
 import stageTeaserData from './fixtures/stage_teaser.json'
+import stageTeaserDataWithEventtag from './fixtures/stage_teaser_eventtag.json'
+import stageTeaserDataForProgram from './fixtures/stage_teaser_program.json'
 
 
 <Meta
@@ -36,7 +38,13 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 <Preview withToolbar>
     <b>Stage Teaser</b>
-    <Story name="Stage Teaser" args={stageTeaserData}>
+    <Story name="Stage Teaser Base" args={stageTeaserData}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Stage Teaser with Event" args={stageTeaserDataWithEventtag}>
+        {Template.bind({})}
+    </Story>
+        <Story name="Stage Teaser Program" args={stageTeaserDataForProgram}>
         {Template.bind({})}
     </Story>
 </Preview>
