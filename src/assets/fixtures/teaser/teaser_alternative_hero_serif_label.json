@@ -20,6 +20,19 @@
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "ticker"
             }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_alternative_hero",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "rueckkehr-nach-abschiebung-102"
+                    }
+                ]
+            }
         }
     ]
 }

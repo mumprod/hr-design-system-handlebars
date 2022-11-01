@@ -1,22 +1,28 @@
 {
-    "teaserPodcastPlaylist":{
+    "teaserPodcastPlaylist": {
         "logicItem": {
             "includePath": "components/teaser/podcast/podcast-playlist",
             "includeModel": {
                 "teaserSize": "100",
                 "isSingleChannel": true,
-                "url":"#url",
-                "title": "Channel Title",
-                "shortText":"shortText",
+                "url": "#url",
+                "title": "Im Haifischbecken - der Social-Media-Podcast",
+                "shortText": "shortText",
                 "dontLazyload": true,
                 "genreImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "poster_1"
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "aufmacher-im-haifischbecken-100"
+                        }
+                    ]
                 },
                 "playlistItems": [
                     {
                         "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
                                 "@->contentpath": "podcastDuration",
@@ -30,7 +36,7 @@
                     },
                     {
                         "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
                                 "@->contentpath": "podcastDuration",
@@ -48,12 +54,11 @@
                                 "@->contentpath": "audioUrl",
                                 "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20221021_96203008.mp3"
                             }
-                            
                         ]
                     },
                     {
                         "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaserPodcast.logicItem.includeModel",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
                                 "@->contentpath": "podcastDuration",
@@ -71,7 +76,6 @@
                                 "@->contentpath": "audioUrl",
                                 "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/verurteilt/verurteilt_20220907_95686133.mp3"
                             }
-                            
                         ]
                     }
                 ],
@@ -84,35 +88,40 @@
                     }
                 },
                 "hideShortText": false,
-                "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
+                "shorttext": "Der Podcast für alle, die sich täglich in sozialen Netzwerken bewegen. Wir geben euch einen Einblick, was hinter den Kulissen einer Social-Media-Redaktion passiert, diskutieren Trends, Shitstorms und warum gewisse Posts funktionieren - und andere nicht.",
                 "teaseritem": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "poster_1"
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "aufmacher-im-haifischbecken-100"
+                        }
+                    ]
                 },
-                
+
                 "podcastChannel": {
                     "title": "Der Tag in Hessen!",
                     "url": "#ChannelURL",
-                    
-                    "podcastHoster" : [
-                    { 
-                        "podcastHosterUrl" : "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
-                        "podcastHosterName" : "ITunes Podcast"
-                    },
-                    { 
-                        "podcastHosterUrl" : "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
-                        "podcastHosterName" : "RSS-Feed"                    
-                    },
-                    { 
-                        "podcastHosterUrl" : "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
-                        "podcastHosterName" : "Google Podcasts"                    
-                    },
-                    { 
-                        "podcastHosterUrl" : "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
-                        "podcastHosterName" : "ARD Audiothek"                    
-                    }
+
+                    "podcastHoster": [
+                        {
+                            "podcastHosterUrl": "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                            "podcastHosterName": "ITunes Podcast"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                            "podcastHosterName": "RSS-Feed"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                            "podcastHosterName": "Google Podcasts"
+                        },
+                        {
+                            "podcastHosterUrl": "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                            "podcastHosterName": "ARD Audiothek"
+                        }
                     ]
-                        
                 },
                 "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
                 "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
@@ -126,25 +135,6 @@
                         "readMoreScreenreader": "Zum Artikel",
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "sans serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
                     }
                 }
             }

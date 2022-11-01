@@ -13,7 +13,8 @@
             "teaserIndex": 0,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
@@ -26,55 +27,34 @@
                         {
                             "@->contentpath": "logicItem.includeModel.profiles",
                             "@->value": ""
-                        }
-                    ]
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
-                    "@->overrides": [
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_2_tab"
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]
                             }
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.title",
-                            "@->value": "Zur Abwechslung mal ein anderer Titel"
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.shorttext",
-                            "@->value": ""
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
-                            "@->value": false
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.profiles",
-                            "@->value": ""
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
                     "@->overrides": [
-                        {
-                            "@->contentpath": "logicItem.includeModel.teaserImage",
-                            "@->value": {
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_3_tab"
-                            }
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.title",
-                            "@->value": "Banane!!!"
-                        },
-                        {
-                            "@->contentpath": "logicItem.includeModel.topline",
-                            "@->value": "Und mal ne längere Topline - damit man sieht, dass das scheiße aussieht"
-                        },
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
                             "@->value": ""
@@ -86,6 +66,66 @@
                         {
                             "@->contentpath": "logicItem.includeModel.profiles",
                             "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "hasebe-kane-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "jugendfeuerwehr-102"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
@@ -106,16 +146,160 @@
             "teaserIndex": 1,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json"
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "jugendfeuerwehr-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json"
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json"
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_video",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "sonniger-herbst-100"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_25_serif.json"
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "hasebe-kane-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
                 }
             ]
         }
@@ -134,7 +318,8 @@
             "teaserIndex": 2,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_alternative_50_serif.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_3",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
@@ -147,19 +332,42 @@
                         {
                             "@->contentpath": "logicItem.includeModel.profiles",
                             "@->value": ""
-                        }
-                    ]
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_alternative_50_serif.json",
-                    "@->overrides": [
+                        },
+                        {
+                            "@->contentpath": "logicItem.includePath",
+                            "@->value": "components/teaser/teaser_alternative"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserType",
+                            "@->value": "alternative-ds"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "standard_4"
+                                "@->contentpath": "teaser_tabbox_alternative_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "mercedes-suv-g-100"
+                                    }
+                                ]
                             }
-                        },
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
+                    "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
                             "@->value": ""
@@ -171,6 +379,35 @@
                         {
                             "@->contentpath": "logicItem.includeModel.profiles",
                             "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includePath",
+                            "@->value": "components/teaser/teaser_alternative"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserType",
+                            "@->value": "alternative-ds"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_alternative_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "jugendfeuerwehr-102"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
@@ -191,42 +428,118 @@
             "teaserIndex": 3,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
-                    "@->overrides": [
-                        {
-                            "@->contentpath": "logicItem.includeModel.shorttext",
-                            "@->value": ""
-                        }
-                    ]
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
                             "@->value": ""
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_2_tab"
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]
                             }
                         }
                     ]
                 },
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_33_serif_tabbox.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_video",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
                             "@->value": ""
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "md_3_tab"
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "sonniger-herbst-100"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_3",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_33",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "mercedes-suv-g-100"
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -248,7 +561,8 @@
             "teaserIndex": 4,
             "logicItems": [
                 {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif_tabbox.json",
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_3",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
@@ -261,29 +575,65 @@
                         {
                             "@->contentpath": "logicItem.includeModel.profiles",
                             "@->value": ""
-                        }
-                    ]
-                },
-                {
-                    "@->jsoninclude": "teaser/teaser_standard_50_serif_tabbox.json",
-                    "@->overrides": [
-                        {
-                            "@->contentpath": "logicItem.includeModel.shorttext",
-                            "@->value": ""
                         },
                         {
-                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
-                            "@->value": false
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
                         },
                         {
-                            "@->contentpath": "logicItem.includeModel.profiles",
-                            "@->value": ""
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserImage",
                             "@->value": {
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "standard_2_tab"
+                                "@->contentpath": "teaser_tabbox_standard_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "mercedes-suv-g-100"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.shorttext",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                            "@->value": false
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.profiles",
+                            "@->value": ""
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "hasebe-kane-102"
+                                    }
+                                ]
                             }
                         }
                     ]
