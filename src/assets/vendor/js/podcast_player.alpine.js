@@ -2,7 +2,6 @@ export default function playaudio(){
         return {
             audioDuration: 0,
             playerCount: 0,
-            count: 0,
             playlist: {},
             registerPlayer(duration,id){
                 let _player = {}
