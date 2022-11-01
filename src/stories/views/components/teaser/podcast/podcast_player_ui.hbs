@@ -1,6 +1,6 @@
 <div class="flex w-full"> 
     <div class="flex flex-wrap w-full js-load" 
-        x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
+        >
  
         <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
 
@@ -9,6 +9,7 @@
                 {{> components/teaser/podcast/podcast_playbutton 
                 _css="mr-4" 
                 _x-show="currentlyPlaying"
+                _id = _id
                 _alpineClick=(loca "play_button_alpine_click" _id) }}
             </div>
 
@@ -24,29 +25,40 @@
 
                         {{!-- Download --}}
                         <div class="flex self-end">
-                            {{> components/teaser/podcast/podcast_downloadbutton _addClass="ml-2"
+                            {{> components/teaser/podcast/podcast_downloadbutton 
+                                _addClass="ml-2"
                                 _iconClass="h-6 w-6 text-blue-science fill-current"
                                 _url=this.podcastDownloadUrl 
                             }}
                         </div>
                     </div>
 
-                    <div class="flex -mt-2 w-fit">          
-                        {{> components/teaser/podcast/podcast_item_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+                    <div class="flex -mt-2 w-fit max-w-3/4 ">          
+                        {{> components/teaser/podcast/podcast_item_title 
+                            _title=this.title 
+                            _teaserSize=this.teaserSize 
+                            _addClass="" }}  
                     </div>   
                 {{/if}}
 
                 {{!-- Range Slider     --}}
                 <div class="flex w-full my-4 ">
-                    <input x-ref="range" id="range{{_id}}" x-on:input="rangeInput({{_id}})" type="range" {{!-- x-bind:value="currentTimePercentage" --}} min="0" max="1000" class="h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
+                    <input x-ref="range" 
+                        id="range{{_id}}" 
+                        x-on:input="rangeInput({{_id}})" 
+                        type="range" {{!-- x-bind:value="currentTimePercentage" --}} 
+                        min="0" 
+                        max="1000" 
+                        class="h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
                 </div>
 
                 {{#if _isPlaylistPlayer}}
                     {{!-- Meta Time usw. --}}
-                    <div class="flex w-full"> 
+                    <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " class="flex w-full"> 
                         {{> components/teaser/podcast/podcast_timedisplay 
                         _id=_id
-                        _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" 
+                        _currentTimeClasses="font-bold text-orange-layout" 
+                        _durationClasses="text-blue-science" 
                         _containerCss="flex text-xs grow font-headingSerif" }}
                     </div>
                 {{/if}}
@@ -55,13 +67,23 @@
         
         {{#unless _isPlaylistPlayer}}
             {{!-- Meta Time usw. --}}
-            {{> components/teaser/podcast/podcast_timedisplay _duration=podcastDuration _currentTimeClasses="font-bold text-orange-layout" _durationClasses="text-blue-science" _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+            <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
+            {{> components/teaser/podcast/podcast_timedisplay 
+                _duration=podcastDuration 
+                _currentTimeClasses="font-bold text-orange-layout" 
+                _durationClasses="text-blue-science" 
+                _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+            </div>
         {{/unless}}
         
         {{!-- AudioElement --}}
         {{~#with this.audioUrl ~}}
-            <audio x-id="['audio']" class="{{../_id}} hidden" x-ref="audio" x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')">
-                <source :id="$id('audio')" src={{this}} type='audio/mp3'/>
+            <audio   
+                class="{{../_id}} hidden" 
+                x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')"
+                @stopotherplayers.window="stopAllOtherPlayers({{../_id}})">
+                <source src={{this}} type='audio/mp3'/>
+                
             </audio>
         {{/with}}
     </div>
