@@ -50,25 +50,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {
@@ -136,25 +117,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {
@@ -214,25 +176,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {
@@ -292,25 +235,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {
@@ -378,25 +302,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {
@@ -457,25 +362,6 @@
                 "readMoreScreenreader": "Zum Artikel",
                 "readMore": "mehr",
                 "readMoreLong": "read More Long"
-            },
-            "content": {
-                "headlineTag": "h1",
-                "headingFontVariant": "serif",
-                "imageVariant": "topteaser",
-                "isFileDownload": false,
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "teaserSize": "hero",
-                "isMobile1to1": false,
-                "teaserType": "standard-ds",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
-                "trackingData": {
-                    "secondLevelId": "2",
-                    "pageName": "hessenschau"
-                }
             }
         },
         "airDate": {

@@ -110,25 +110,6 @@
                         "readMoreScreenreader": "Zum Artikel",
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
                     }
                 }
             }
@@ -259,7 +240,7 @@
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_standard_10",
+                    "@->contentpath": "teaser_standard",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
@@ -971,7 +952,13 @@
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_standard_3"
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "jugendfeuerwehr-10"
+                        }
+                    ]
                 },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
@@ -1029,25 +1016,6 @@
                         "readMoreScreenreader": "Zum Artikel",
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
                     }
                 }
             }
@@ -1083,7 +1051,13 @@
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_standard_1"
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "rueckkehr-nach-abschiebung-102"
+                        }
+                    ]
                 },
                 "commentsSsi": {
                     "commentNumber": "666",
@@ -1156,25 +1130,6 @@
                         "readMoreScreenreader": "Zum Artikel",
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
                     }
                 }
             }
@@ -1246,7 +1201,13 @@
                 "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "heiner-goebbels-102"
+                        }
+                    ]
                 },
 
                 "documentSection": "Kultur",
