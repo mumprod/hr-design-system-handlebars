@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_audio",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includePath",
@@ -11,14 +11,16 @@
             "@->value": "alternative-ds"
         },
         {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
+            "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "audio"
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_alternative_hero",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "hasebe-kane-102"
+                    }
+                ]
             }
         }
     ]

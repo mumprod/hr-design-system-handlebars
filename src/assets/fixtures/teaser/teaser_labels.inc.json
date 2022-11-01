@@ -33,9 +33,9 @@
     },
     "event": {
         "type": "event",
-        "loca": "label_event",
+        "loca": "label_concert",
         "byline": {
-            "bylineSsi": "01.09.22, 20:00 Uhr",
+            "bylineSsi": "14.10.22, 20:00 Uhr",
             "bylineText": "BylineText"
         }
     }

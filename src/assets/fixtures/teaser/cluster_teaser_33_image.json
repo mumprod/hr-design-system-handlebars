@@ -9,7 +9,7 @@
             "@->contentpath": "title",
             "@->value": "NEUESTE BEITRÄGE"
         },
-                {
+        {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
         },
@@ -24,6 +24,25 @@
         {
             "@->contentpath": "showFirstImage",
             "@->value": "true"
+        },
+        {
+            "@->contentpath": "firstEntry",
+            "@->value": {
+                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                "@->contentpath": "item1",
+                "@->overrides": [
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "teaser_cluster_33",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "connichi-106"
+                            }
+                        ]
+                    }
+                ]
+            }
         },
         {
             "@->contentpath": "clusterTeaserItems",

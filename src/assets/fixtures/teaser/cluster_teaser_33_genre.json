@@ -9,7 +9,7 @@
             "@->contentpath": "title",
             "@->value": "NEUESTE BEITRÄGE"
         },
-                {
+        {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
         },
@@ -29,7 +29,13 @@
             "@->contentpath": "genreImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "cluster_2"
+                "@->contentpath": "teaser_cluster_33",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
             }
         }
     ]

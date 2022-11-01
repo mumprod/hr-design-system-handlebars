@@ -19,17 +19,16 @@
             "@->value": "Zum Ticker"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.teaserImage",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "poster_2"
-            }
-        },
-        {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "poster_2"
+                "@->contentpath": "teaser_poster_33",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "sonniger-herbst-100"
+                    }
+                ]
             }
         },
         {
@@ -37,28 +36,7 @@
             "@->value": ""
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.topline",
-            "@->value": ""
-        },
-        {
             "@->contentpath": "logicItem.includeModel.label",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_labels.inc.json",
-                "@->contentpath": "ticker",
-                "@->overrides": [
-                    {
-                        "@->contentpath": "byline.bylineSsi",
-                        "@->value": ""
-                    },
-                    {
-                        "@->contentpath": "byline.bylineText",
-                        "@->value": ""
-                    }
-                ]
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.link.content.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
                 "@->contentpath": "ticker",
