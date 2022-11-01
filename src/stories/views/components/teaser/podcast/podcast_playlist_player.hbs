@@ -23,7 +23,7 @@
         {{#unless _isSinglePage}}
           {{#unless this.hideShortText}}
               {{~#with this.shorttext}}
-                  <div class="flex pb-6 text-sm md:text-base font-copy">
+                  <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
                       <span class="c-teaser__shorttext"> {{this}} </span>
                   </div>
               {{/with~}}
@@ -149,7 +149,6 @@
     
 
 <style>
-/* Modify the appearance of the slider thumb */
 .seek_slider::-webkit-slider-thumb{
   -webkit-appearance: none;
   -moz-appearance: none;
