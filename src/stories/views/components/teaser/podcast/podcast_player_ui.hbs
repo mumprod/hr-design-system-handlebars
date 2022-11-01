@@ -67,11 +67,13 @@
         
         {{#unless _isPlaylistPlayer}}
             {{!-- Meta Time usw. --}}
+            <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
             {{> components/teaser/podcast/podcast_timedisplay 
                 _duration=podcastDuration 
                 _currentTimeClasses="font-bold text-orange-layout" 
                 _durationClasses="text-blue-science" 
                 _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+            </div>
         {{/unless}}
         
         {{!-- AudioElement --}}
