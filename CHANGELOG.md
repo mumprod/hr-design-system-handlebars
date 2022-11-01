@@ -1,3 +1,15 @@
+# v0.73.0 (Tue Nov 01 2022)
+
+#### 🚀 Enhancement
+
+- using json playlist instead of array [#356](https://github.com/mumprod/hr-design-system-handlebars/pull/356) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.72.1 (Tue Nov 01 2022)
 
 #### 🐛 Bug Fix
