@@ -1,3 +1,15 @@
+# v0.72.1 (Tue Nov 01 2022)
+
+#### 🐛 Bug Fix
+
+- put this.shorttext within 3 brackets [#361](https://github.com/mumprod/hr-design-system-handlebars/pull/361) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.72.0 (Tue Nov 01 2022)
 
 #### 🚀 Enhancement
