@@ -1,3 +1,15 @@
+# v0.73.1 (Wed Nov 02 2022)
+
+#### 🐛 Bug Fix
+
+- fixes js for multiple contentnavs [#362](https://github.com/mumprod/hr-design-system-handlebars/pull/362) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.73.0 (Tue Nov 01 2022)
 
 #### 🚀 Enhancement
