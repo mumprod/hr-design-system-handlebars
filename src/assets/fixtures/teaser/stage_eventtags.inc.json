@@ -1,9 +1,9 @@
 {
-        "series": { 
-            "title":"Der Beat lebt"
-        },
-        "project": { 
-            "title": "Frankfurter Musiktage"
-        },
-        "externalProject": ""
+    "series": {
+        "title": "Auftakt"
+    },
+    "project": {
+        "title": "Artist in Residence"
+    },
+    "externalProject": ""
 }

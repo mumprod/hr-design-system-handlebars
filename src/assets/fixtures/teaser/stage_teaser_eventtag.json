@@ -12,19 +12,19 @@
             "@->jsoninclude": "teaser/stage_eventtags.inc.json"
         },
         "topline": "",
-        "title": "Unser schönes Frankfurt",
+        "title": "Pathétique",
         "showProfileInfoAsByline": false,
         "location": {
             "stageLocationSsi": {
-                "location": ["Gießen", "Stadttheater Gießen"]
+                "location": ["Frankfurt am Main", "hr-Sendesaal"]
             }
         },
         "isWide": true,
         "link": {
             "isTargetBlank": true,
             "readMoreText": {
-                "readMore": "mehr auf hr-bigband.de",
-                "readMoreLong": "mehr auf hr-bigband.de",
+                "readMore": "mehr auf hr-sinfonieorchster.de",
+                "readMoreLong": "mehr auf hr-sinfonieorchster.de",
                 "readMoreScreenreader": "mehr"
             },
             "hasIcon": true,
@@ -41,11 +41,11 @@
             "@->replaceToken": [
                 {
                     "@->token": "image",
-                    "@->value": "greenteams-grafik-100"
+                    "@->value": "emmanuel-tjeknavorian-108"
                 }
             ]
         },
-        "stageTextPosition": "left50",
+        "stageTextPosition": "right50",
         "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
         "showShorttext": false
     }

@@ -119,6 +119,7 @@ module.exports = {
                 '88': '22rem',
                 '92': '23rem',
                 'half-screen': '50vw',
+                '15/12': '120%',
             },
             height: {
                 '22': '5.5rem',

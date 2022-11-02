@@ -1,8 +1,12 @@
 {{#with this.teaser}}
     <div class="grid grid-page">
         <article class="col-full relative after:content-[''] after:block after:h-5 after:bg-stagePrimary">
+            <div class="relative overflow-hidden">
             {{#unless this.isWide}}
-            <div class="grid grid-page">
+                <div class="absolute w-15/12">
+                    {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default" _addClassImg="w-full blur-2xl"}}
+                </div>   
+                <div class="grid grid-page relative">
             {{/unless}}
             {{#if this.isWide}}
                 {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="wide" _addClass="w-full"}}
@@ -50,6 +54,7 @@
             {{#unless this.isWide}}
             </div>
             {{/unless}}
+            </div>
         </article>
     </div>
 {{/with}}
