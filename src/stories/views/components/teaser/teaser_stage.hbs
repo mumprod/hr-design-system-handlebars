@@ -1,49 +1,55 @@
 {{#with this.teaser}}
     <div class="grid grid-page">
         <article class="col-full relative after:content-[''] after:block after:h-5 after:bg-stagePrimary">
-
+            {{#unless this.isWide}}
+            <div class="grid grid-page">
+            {{/unless}}
             {{#if this.isWide}}
                 {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="wide" _addClass="w-full"}}
             {{else}}
-                {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default"}}
+                {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default" _addClass="col-full lg:col-main lg:px-8"}}
             {{/if}}
-            <div class="absolute left-2/4 right-auto bottom-10 flex max-w-main-col w-full px-8 mx-auto -translate-x-2/4 bottom-0{{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
-            <div class="p-3 rounded-2xl bg-stageTextBox opacity-85{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," w-full sm:w-2/4"]'}} ">
-            {{#decorator 'components/base/link'}}
-                {{> components/teaser/components/teaser_heading _css="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
-                {{#if this.showProfileInfoAsByline}}
-                    <p class="text-stageText font-headingSerif block my-3">{{this.profiles}}</p>
-                {{/if}}
-                {{#if this.showShorttext}}
-                <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
-                    {{#if this.link.hasIcon}}
-                    <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
-                        {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
-                    </span>
+            <div class="absolute left-2/4 right-auto bottom-10 flex max-w-main-col w-full px-5 sm:px-11.5 lg:px-13 mx-auto -translate-x-2/4 bottom-0{{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
+                <div class="p-3 rounded-2xl bg-stageTextBox opacity-85{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," w-full sm:w-2/4"]'}} ">
+                {{#decorator 'components/base/link'}}
+                    {{> components/teaser/components/teaser_heading _css="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
+                    {{#if this.showProfileInfoAsByline}}
+                        <p class="text-stageText font-headingSerif block my-3">{{this.profiles}}</p>
                     {{/if}}
-                {{/if}}
-                {{#with this.eventtags}}
-                    {{#with this.series}}
-                        <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
+                    {{#if this.showShorttext}}
+                    <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
+                        {{#if this.link.hasIcon}}
+                        <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
+                            {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                        </span>
+                        {{/if}}
+                    {{/if}}
+                    {{#with this.eventtags}}
+                        {{#with this.series}}
+                            <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
+                        {{/with}}
+                        {{#with this.project}}
+                            <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
+                        {{/with}}
+                        {{#with this.externalProject}}
+                            <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
+                        {{/with}}
                     {{/with}}
-                    {{#with this.project}}
-                        <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
+                    {{#with this.location}}
+                        {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
                     {{/with}}
-                    {{#with this.externalProject}}
-                        <span class="block font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1">{{this.title}}</span>
-                    {{/with}}
-                {{/with}}
-                {{#with this.location}}
-                     {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
-                {{/with}}
-                {{#if this.link.hasIcon}}
-                    <span class="flex items-end space-around mt-2 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
-                        {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
-                    </span>
-                {{/if}}
-                {{/decorator}}
+                    {{#if this.link.hasIcon}}
+                        <span class="flex items-end space-around mt-2 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
+                            {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                        </span>
+                    {{/if}}
+                    {{/decorator}}
+                </div>
             </div>
+
+            {{#unless this.isWide}}
             </div>
+            {{/unless}}
         </article>
     </div>
 {{/with}}

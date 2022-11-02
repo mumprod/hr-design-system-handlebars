@@ -4,22 +4,22 @@
             "loca": "label_concert",
             "type": "event",
             "byline": {
-               "bylineText": "14.10.2022 20:00 Uhr",
-               "bylineSsi": ""
+                "bylineText": "14.10.2022 20:00 Uhr",
+                "bylineSsi": ""
             }
         },
-        "eventtags":{
+        "eventtags": {
             "@->jsoninclude": "teaser/stage_eventtags.inc.json"
         },
         "topline": "",
-        "title": "Unser schönes Frankfurt", 
+        "title": "Unser schönes Frankfurt",
         "showProfileInfoAsByline": false,
         "location": {
             "stageLocationSsi": {
                 "location": ["Gießen", "Stadttheater Gießen"]
             }
         },
-        "isWide": true, 
+        "isWide": true,
         "link": {
             "isTargetBlank": true,
             "readMoreText": {
@@ -33,11 +33,17 @@
             "url": "https://www.hr-bigband.de/konzerte/konzerte-2022-23/pedro-martins--sonho-brasileiro-,pedro-martins-104.html",
             "webviewUrl": "https://app.hr-bigband.de/konzerte/konzerte-2022-23/pedro-martins--sonho-brasileiro-,pedro-martins-104.html",
             "hasNoReferrerFlag": true
-        }, 
+        },
         "form": {},
         "teaserImage": {
             "@->jsoninclude": "teaser/teaser_images.inc.json",
-            "@->contentpath": "stage_wide"
+            "@->contentpath": "stage_wide",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "greenteams-grafik-100"
+                }
+            ]
         },
         "stageTextPosition": "left50",
         "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",

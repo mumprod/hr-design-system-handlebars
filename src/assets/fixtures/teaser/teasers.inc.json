@@ -1473,5 +1473,41 @@
                 }
             ]
         }
+    },
+    "teaser_stage": {
+        "teaser": {
+            "label": "",
+            "eventtags": {},
+            "topline": "hr4 - Unser schönes Hessen",
+            "title": "Wir belohnen grüne Projekte mit 500 Euro",
+            "showProfileInfoAsByline": false,
+            "profiles": "",
+            "location": {},
+            "isWide": false,
+            "link": {
+                "isTargetBlank": false,
+                "readMoreText": {},
+                "hasIcon": false,
+                "iconName": "",
+                "isFileDownload": false,
+                "url": "https://www.hr1.de/sendungen/hr1-greenteam-gemeinsam-stark-fuer-ein-lebenswertes-hessen,aktion-hr1-greenteam-100.html",
+                "webviewUrl": "https://app.hr1.de/sendungen/hr1-greenteam-gemeinsam-stark-fuer-ein-lebenswertes-hessen,aktion-hr1-greenteam-100~default.html",
+                "hasNoReferrerFlag": true
+            },
+            "form": {},
+            "teaserImage": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "stage_default",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "greenteams-grafik-100"
+                    }
+                ]
+            },
+            "stageTextPosition": "right50",
+            "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
+            "showShorttext": true
+        }
     }
 }
