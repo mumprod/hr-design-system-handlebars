@@ -6,7 +6,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('burgeropen', false);
     Alpine.store('searchFieldOpen', false);
     Alpine.store('serviceNavIsOpen', false);
-    Alpine.store('contentNavDropdownIsOpen', false); 
+
     Alpine.store('searchID', {
         current: '{{nextRandom}}'
     });
