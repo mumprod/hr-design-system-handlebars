@@ -1,3 +1,27 @@
+# v0.73.3 (Wed Nov 02 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1816 content nav fixes part3 [#364](https://github.com/mumprod/hr-design-system-handlebars/pull/364) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.73.2 (Wed Nov 02 2022)
+
+#### 🐛 Bug Fix
+
+- fixes wrong absolute positioning [#363](https://github.com/mumprod/hr-design-system-handlebars/pull/363) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.73.1 (Wed Nov 02 2022)
 
 #### 🐛 Bug Fix
