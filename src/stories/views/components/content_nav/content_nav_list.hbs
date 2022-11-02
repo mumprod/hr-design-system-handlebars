@@ -1,5 +1,5 @@
-<ul :class="( ({{this.isMixed}} && {{_teasersize}} < 50 ) || ( {{this.isMixed}} && window.innerWidth < 768 ) || {{this.isDropdown}} ) && contentNavDropdownIsOpen == true ? '!shadow-[1px_8px_9px_0px_rgba(50,50,93,0.10)] !px-0 mt-0 ' : ''"
-    class="flex flex-wrap w-full px-2 z-1000 md:!px-0 last:border-b-0"> 
+<ul :class="( ({{this.isMixed}} && {{_teasersize}} < 50 ) || ( {{this.isMixed}} && window.innerWidth < 768 ) || {{this.isDropdown}} ) && contentNavDropdownIsOpen == true ? '!shadow-[1px_8px_9px_0px_rgba(50,50,93,0.10)] !px-0 mt-0 w-auto absolute mr-2 md:mr-0' : ''"
+    class="flex flex-wrap w-full px-2 z-1003 md:!px-0 last:border-b-0 {{#if this.isDropdown }}  {{/if}}"> 
     
     {{~#each this.contentNavEntries~}}
           
