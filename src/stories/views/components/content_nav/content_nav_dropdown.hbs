@@ -13,13 +13,13 @@
     >
         <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full px-3 py-1 border-l border-blue-congress">
-            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen" 
+            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  " 
                 :class="contentNavDropdownIsOpen ? 'hidden' : ''"  
                 class="flex self-center"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}    
             </span>
-            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('resetinput')" 
+            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('resetinput');  " 
                 :class="contentNavDropdownIsOpen ? '' : 'hidden'" 
                 class="flex self-center"
             >
@@ -28,8 +28,9 @@
         </div>
     </div>    
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
-        aria-haspopup="true" 
-        class="p-0 m-0 z-1003 md:relative md:left-0 md:h-auto md:overflow-visible">
+        aria-haspopup="true"
+        :class="contentNavDropdownIsOpen ? 'z-9999' : 'z-1003'" 
+        class="p-0 m-0 md:relative md:left-0 md:h-auto md:overflow-visible">
        {{~decorator_body~}}
     </div>
     
