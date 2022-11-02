@@ -1,6 +1,8 @@
-export default function contentNavigationHandler() {
+export default function contentNavigationHandler(id) {
+
     return {
         open: false,
+        contentNavDropdownIsOpen: false,
 
         shouldDropdownBeShown(teasersize, isDropdown, isMixed) {
             if (isDropdown) {
@@ -20,7 +22,7 @@ export default function contentNavigationHandler() {
 
         shouldContentBeShown(teasersize, isDropdown, isMixed) {
             if (isDropdown) {
-                return this.$store.contentNavDropdownIsOpen
+                return this.contentNavDropdownIsOpen
             }
             if (isMixed) {
                 if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
@@ -28,7 +30,7 @@ export default function contentNavigationHandler() {
                     if (this.$screen('md')) return true
                     if (this.$screen('xs')) return this.$store.contentNavDropdownIsOpen
                 } else if (teasersize === 33 || teasersize === 25) {
-                    return this.$store.contentNavDropdownIsOpen
+                    return this.contentNavDropdownIsOpen
                 }
             }
 
