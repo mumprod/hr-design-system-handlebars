@@ -28,7 +28,7 @@ export default function contentNavigationHandler(id) {
                 if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
                     if (this.$screen('lg')) return true
                     if (this.$screen('md')) return true
-                    if (this.$screen('xs')) return this.$store.contentNavDropdownIsOpen
+                    if (this.$screen('xs')) return this.contentNavDropdownIsOpen
                 } else if (teasersize === 33 || teasersize === 25) {
                     return this.contentNavDropdownIsOpen
                 }
