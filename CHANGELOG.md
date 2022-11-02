@@ -1,3 +1,15 @@
+# v0.73.4 (Wed Nov 02 2022)
+
+#### 🐛 Bug Fix
+
+- fixes some z-index issues in contentNav [#365](https://github.com/mumprod/hr-design-system-handlebars/pull/365) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.73.3 (Wed Nov 02 2022)
 
 #### 🐛 Bug Fix
