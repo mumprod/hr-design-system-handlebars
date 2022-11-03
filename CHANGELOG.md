@@ -1,3 +1,15 @@
+# v0.76.0 (Thu Nov 03 2022)
+
+#### 🚀 Enhancement
+
+- new markup in page.hbs / some minor fixes [#368](https://github.com/mumprod/hr-design-system-handlebars/pull/368) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.75.0 (Thu Nov 03 2022)
 
 #### 🚀 Enhancement
