@@ -7,9 +7,10 @@
         }}'
 >
     {{_text}}
+
 </span>
 {{~#with this.byline~}}
-    <span class='ml-2 text-xs text-grey-scorpion font-headingSerif'>
+    <span class='ml-2 text-xs font-headingSerif {{#if ../_css}}{{../_css}}{{else}}text-grey-scorpion{{/if}}'>
         {{~#if this.bylineSsi~}}
             {{{this.bylineSsi}}}
         {{~else~}}

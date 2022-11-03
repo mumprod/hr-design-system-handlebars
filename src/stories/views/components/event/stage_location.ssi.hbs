@@ -1,0 +1,9 @@
+{{#with this.location}}
+<p class="flex items-center	mt-4 -mb2 text-stageText font-base">
+    {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-current mr-1.5 -ml-1" }}
+    {{#each this}}
+            {{#unless @first}}<span class="mx-3 text-stageText">|</span>{{/unless}}
+        {{this}}
+    {{/each}}
+</p>
+{{/with}}
