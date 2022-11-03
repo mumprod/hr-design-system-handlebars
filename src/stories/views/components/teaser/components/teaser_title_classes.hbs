@@ -66,6 +66,9 @@ the 4 parameters are:
             text-lg
         {{/if}}
     {{~/case~}}
+    {{~#case 'stage'~}}
+        {{~inline-switch _size '["100"]' '[" text-2xl md:text-4xl"," text-2xl"]'}}
+    {{~/case~}}
 {{~/switch~}}
 {{~inline-switch
     _fontVariant
