@@ -16,7 +16,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "boxed"
+            "@->value": "boxed-ds"
         }
     ]
 }

@@ -1,4 +1,4 @@
-<div class="flex col-span-12">
+<div class="flex col-span-12">   
   <div class="flex flex-col grow">
   {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
@@ -51,11 +51,12 @@
     {{!-- Player UI --}}
     <div class="flex px-5 md:pl-5 md:pr-52 md:-mt-14" 
       x-data="playaudio()"
+      x-init="listenToGlobalStop()"
       ax-load
       x-ignore
-      ax-load-src="/js/podcastPlayer.alpine.js">
+      ax-load-src="/vendor/js/podcast_player.alpine.js">
       {{> components/teaser/podcast/podcast_player_ui _isPlaylistPlayer=false
-        _podcastDuration=this.podcastDuration _id=(nextRandom) }}    
+        _podcastDuration=podcastDuration _id=(nextRandom) }}    
     </div>
   
     {{!-- Abo-Dropdown    --}}

@@ -1,21 +1,10 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_audio_livestream",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
             "@->value": "50"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "audioLivestream"
-            }
         }
     ]
 }

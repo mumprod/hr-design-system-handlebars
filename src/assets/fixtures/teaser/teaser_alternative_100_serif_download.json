@@ -19,21 +19,23 @@
             "@->value": "true"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
-            "@->value": "true"
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "download"
+            }
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "md_1_tab"
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.label",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_labels.inc.json",
-                "@->contentpath": "download"
+                "@->contentpath": "teaser_alternative_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "jugendfeuerwehr-102"
+                    }
+                ]
             }
         }
     ]

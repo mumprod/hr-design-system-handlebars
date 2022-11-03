@@ -27,7 +27,29 @@ the 4 parameters are:
             ~}}
         {{~/if~}}
     {{~/case~}}
+    {{~#case 'tabbox-standard-ds'~}}
+        {{~#if _isMobile1to1~}}
+            {{~inline-switch
+                _size
+                '["hero","100","25"]'
+                '["text-lg md:text-4xl","text-lg md:text-4xl","text-lg","text-lg md:text-2xl"]'
+            ~}}
+        {{~else~}}
+            {{~inline-switch
+                _size
+                '["hero","100","25"]'
+                '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
+            ~}}
+        {{~/if~}}
+    {{~/case~}}
     {{~#case 'alternative-ds'~}}
+        {{~inline-switch
+            _size
+            '["hero","100","50"]'
+            '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
+        ~}}
+    {{~/case~}}
+    {{~#case 'tabbox-alternative-ds'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
@@ -41,8 +63,11 @@ the 4 parameters are:
         {{#if _firstItem}}
             {{~inline-switch _size '["100"]' '[" text-lg md:text-2xl"," text-lg"]'}}
         {{else}}
-            text-lg 
+            text-lg
         {{/if}}
+    {{~/case~}}
+    {{~#case 'stage'~}}
+        {{~inline-switch _size '["100"]' '[" text-2xl md:text-4xl"," text-2xl"]'}}
     {{~/case~}}
 {{~/switch~}}
 {{~inline-switch

@@ -48,6 +48,24 @@
         return parent
     }
 
+    const getObjectValueWithTokensReplaced = function (obj, tokens) {
+        for (const [key, value] of Object.entries(obj)) {
+            if (typeof value === 'object' && value != null) {
+                obj[key] = getObjectValueWithTokensReplaced(value, tokens)
+            } else {
+                tokens.forEach((element) => {
+                    if (typeof value == 'string') {
+                        obj[key] = value.replaceAll(
+                            `{#${element['@->token']}}`,
+                            element['@->value']
+                        )
+                    }
+                })
+            }
+        }
+        return obj
+    }
+
     const loadInclude = function (includePath) {
         try {
             return fs.readFileSync(`${options.paths.assets.fixtures}/${includePath}`, 'UTF-8')
@@ -61,6 +79,7 @@
      * JSON.parse reviver function to execute jsoninclude features.
      */
     var executeJSONInclude = function (k, v) {
+        //console.log(v)
         if (v['@->jsoninclude'] !== undefined && v['@->jsoninclude'] !== '') {
             try {
                 //read include
@@ -71,6 +90,12 @@
                 //get specified content
                 if (v['@->contentpath'] !== undefined) {
                     includeJSON = getObjectValue(includeJSON, v['@->contentpath'])
+                }
+                if (v['@->replaceToken'] !== undefined) {
+                    includeJSON = getObjectValueWithTokensReplaced(
+                        includeJSON,
+                        v['@->replaceToken']
+                    )
                 }
                 if (v['@->extends'] !== undefined) {
                     includeJSON = _.extend(includeJSON, v['@->extends'])
