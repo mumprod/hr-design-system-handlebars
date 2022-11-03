@@ -1,3 +1,15 @@
+# v0.77.0 (Thu Nov 03 2022)
+
+#### 🚀 Enhancement
+
+- ... [#369](https://github.com/mumprod/hr-design-system-handlebars/pull/369) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.76.0 (Thu Nov 03 2022)
 
 #### 🚀 Enhancement
