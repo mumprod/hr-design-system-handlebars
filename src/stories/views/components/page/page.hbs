@@ -29,18 +29,26 @@
                 class="flex items-center justify-center"
             >
                 <div class="grid grid-page">
-                    <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                    
+                    <section class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
                         {{> components/teaser/teaser_standard }}
-                    </div>
-                    <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                    </section>
+                    <section class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                        {{> components/teaser/content_nav/teaser_content_nav teasersize="100"}}
+                    </section>
+                    <section class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                        {{> components/teaser/content_nav/teaser_content_nav teasersize="50"}}
+                        {{> components/teaser/content_nav/teaser_content_nav teasersize="50"}}
+                    </section>
+                    <section class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
                         {{> components/teaser/teaser_standard teaserSize="50"}}
                         {{> components/teaser/teaser_standard teaserSize="50"}}
-                    </div>
-                    <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                    </section>
+                    <section class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
                         {{> components/teaser/teaser_standard teaserSize="33"}}
                         {{> components/teaser/teaser_standard teaserSize="33"}}
                         {{> components/teaser/teaser_standard teaserSize="33"}}
-                    </div>
+                    </section>
                     <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
                         {{> components/teaser/teaser_standard teaserSize="50"}}
                         {{> components/teaser/teaser_standard teaserSize="50"}}

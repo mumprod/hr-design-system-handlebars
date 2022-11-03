@@ -1,5 +1,5 @@
 <div class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}}"
-    @click.outside ="$store.contentNavDropdownIsOpen = false;"
+    @click.outside ="contentNavDropdownIsOpen = false;"
     {{#if this.isAutosuggest}}
         data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"", "unmatchedClass":"hidden"}'
     {{/if}}
