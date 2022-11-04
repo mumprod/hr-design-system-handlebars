@@ -6,7 +6,7 @@
     "license": "MIT",
     "main": "dist/index.js",
     "repository": "https://github.com/szuelch/hr-design-system-handlebars",
-    "version": "0.77.1",
+    "version": "0.77.2",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -p 6006 public",
