@@ -29,8 +29,8 @@
     </div>    
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         aria-haspopup="true"
-        :class="contentNavDropdownIsOpen ? 'z-9999 w-auto ' : ' z-1003'" 
-        class="p-0 m-0 md:left-0 md:h-auto md:overflow-visible">
+        :class="contentNavDropdownIsOpen ? 'z-9999 w-auto md:w-min md:absolute' : ' z-1003'" 
+        class="md:h-auto md:overflow-visible">
        {{~decorator_body~}}
     </div>
     
