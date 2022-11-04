@@ -1,3 +1,39 @@
+# v0.77.0 (Thu Nov 03 2022)
+
+#### 🚀 Enhancement
+
+- ... [#369](https://github.com/mumprod/hr-design-system-handlebars/pull/369) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.76.0 (Thu Nov 03 2022)
+
+#### 🚀 Enhancement
+
+- new markup in page.hbs / some minor fixes [#368](https://github.com/mumprod/hr-design-system-handlebars/pull/368) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.75.0 (Thu Nov 03 2022)
+
+#### 🚀 Enhancement
+
+- fixes some more zindex issues [#367](https://github.com/mumprod/hr-design-system-handlebars/pull/367) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.74.1 (Thu Nov 03 2022)
 
 #### 🐛 Bug Fix
