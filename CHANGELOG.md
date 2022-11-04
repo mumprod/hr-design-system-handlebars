@@ -1,3 +1,15 @@
+# v0.77.3 (Fri Nov 04 2022)
+
+#### 🐛 Bug Fix
+
+- adds position:fixed to nav content for md: viewports [#372](https://github.com/mumprod/hr-design-system-handlebars/pull/372) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.77.2 (Fri Nov 04 2022)
 
 #### 🐛 Bug Fix
