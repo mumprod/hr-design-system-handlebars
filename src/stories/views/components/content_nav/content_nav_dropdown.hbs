@@ -1,4 +1,4 @@
-<nav  
+<nav x-cloak
     class="w-full px-2 md:px-0  {{_componentClass}} " 
     id="dropdown--{{nextRandom}}"
     tabindex="0"
@@ -29,7 +29,7 @@
     </div>    
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})" 
         aria-haspopup="true"
-        :class="contentNavDropdownIsOpen ? 'z-9999 w-auto relative md:w-min md:absolute' : ' z-1003'" 
+        :class="contentNavDropdownIsOpen ? 'z-9999 w-auto md:w-full relative md:absolute' : ' z-1003'"
         class="md:h-auto md:overflow-visible">
        {{~decorator_body~}}
     </div>
