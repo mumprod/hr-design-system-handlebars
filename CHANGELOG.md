@@ -1,3 +1,15 @@
+# v0.77.1 (Fri Nov 04 2022)
+
+#### 🐛 Bug Fix
+
+- another try to make it work in delivery [#370](https://github.com/mumprod/hr-design-system-handlebars/pull/370) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.77.0 (Thu Nov 03 2022)
 
 #### 🚀 Enhancement
