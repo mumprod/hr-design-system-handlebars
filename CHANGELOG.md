@@ -1,3 +1,16 @@
+# v0.77.4 (Fri Nov 04 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1802: Abstände bei den Playbuttons bei 1:1 [#373](https://github.com/mumprod/hr-design-system-handlebars/pull/373) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.77.3 (Fri Nov 04 2022)
 
 #### 🐛 Bug Fix
