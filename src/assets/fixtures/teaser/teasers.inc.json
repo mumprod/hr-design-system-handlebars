@@ -1292,7 +1292,6 @@
         "logicItem": {
             "includePath": "components/teaser/teaser_standard",
             "includeModel": {
-                "byline": "",
                 "title": "Mercedes-Luxusautos in Millionenhöhe gestohlen",
                 "topline": "Spektakuläre Diebstähle in Südhessen",
                 "headingFontVariant": "serif",

@@ -2,6 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
 import teaserHeroSerifWithLabel from './fixtures/teaser_standard_hero_serif_label.json'
 import teaserHeroSerifWithComments from './fixtures/teaser_standard_hero_serif_comments.json'
+import teaserHeroLink from './fixtures/teaser_standard_100_serif_link.json'
 import teaserHeroSerif from './fixtures/teaser_standard_hero_serif.json'
 import teaser100Serif from './fixtures/teaser_standard_100_serif.json'
 import teaser50Serif from './fixtures/teaser_standard_50_serif.json'
@@ -98,6 +99,9 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
         name="Standard Hero Mit Kommentaren"
         args={teaserHeroSerifWithComments.logicItem.includeModel}
     >
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard Hero mit externem Link" args={teaserHeroLink.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story name="Standard 100" args={teaser100Serif.logicItem.includeModel}>
