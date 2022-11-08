@@ -1314,7 +1314,7 @@
                 "hasMediaButtons": false,
                 "dontLazyload": true,
                 "isStandardTeaser": true,
-                "isHeroTeaser": true,
+                "isHeroTeaser": false,
                 "isMediaTeaser": false,
                 "isGuide": false,
                 "isProgram": false,
