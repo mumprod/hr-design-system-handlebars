@@ -3,8 +3,8 @@
         <nav x-cloak class="w-full c-content-nav">
             {{> components/content_nav/content_nav_container 
                 _teasersize=../_teasersize 
-                _maindivclass="flex flex-wrap mt-2 md:mt-0" 
-                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-2 md:mx-0 border-blue-congress align-center"
+                _maindivclass="flex flex-wrap mt-2 md:mt-0 " 
+                _inputcontainerclass="flex bg-grey-light w-full h-10 mr-2 md:mx-0 border-blue-congress align-center"
             }}    
         </nav>
     {{else}}  
@@ -16,11 +16,19 @@
                      _buttonText=(defaultIfEmpty this.selectedItem.title ../../title)
                      _hiddenNavigationLabel="Unternavigation"
         }} 
+        {{#if (isStorybook)}}
             {{> components/content_nav/content_nav_container 
                 _teasersize=_teasersize 
-                _maindivclass="flex flex-col w-full mt-0" 
+                _maindivclass="flex flex-col absolute w-full mt-0" 
                 _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
             }}
+        {{else}}
+            {{> components/content_nav/content_nav_container 
+                _teasersize=_teasersize 
+                _maindivclass="md:absolute flex flex-col w-full mt-0" 
+                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
+            }}
+        {{/if}}
         {{/decorator}}
     {{/if}}
 {{/with}} 

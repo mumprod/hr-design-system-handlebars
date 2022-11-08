@@ -44,12 +44,13 @@ export default function contentNavigationHandler(id) {
                 case 100:
                     classes.push('w-full', 'md:w-fit')
                     isList
-                        ? classes.push('border', 'mb-2', 'md:!mr-2', 'hover:no-underline')
+                        ? classes.push('border', 'mb-2', 'mx-2', 'md:!mr-2', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
                               'md:!w-fit',
                               '!mb-0',
+                              'mx-2',
                               'md:!mb-2',
                               'md:mr-2',
                               'border-l-0',
@@ -179,7 +180,7 @@ export default function contentNavigationHandler(id) {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', '!mr-2', 'first:ml-2','border', 'mb-2', 'hover:no-underline')
                         : ''
                     break
                 case 33:
