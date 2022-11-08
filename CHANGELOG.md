@@ -1,3 +1,15 @@
+# v0.77.5 (Tue Nov 08 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1816 content nav fixes part11 [#374](https://github.com/mumprod/hr-design-system-handlebars/pull/374) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.77.4 (Fri Nov 04 2022)
 
 #### 🐛 Bug Fix
