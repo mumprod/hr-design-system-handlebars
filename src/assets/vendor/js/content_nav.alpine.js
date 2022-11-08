@@ -44,7 +44,7 @@ export default function contentNavigationHandler(id) {
                 case 100:
                     classes.push('w-full', 'md:w-fit')
                     isList
-                        ? classes.push('border', 'mb-2', 'mx-2', 'md:!mr-2', 'hover:no-underline')
+                        ? classes.push('border',  'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -89,7 +89,7 @@ export default function contentNavigationHandler(id) {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border', 'hover:no-underline')
                         : ''
                     break
                 case 66:
@@ -134,13 +134,13 @@ export default function contentNavigationHandler(id) {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
                         : ''
                     break
                 case 50:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -180,13 +180,13 @@ export default function contentNavigationHandler(id) {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'first:ml-2','border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
                         : ''
                     break
                 case 33:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -221,7 +221,7 @@ export default function contentNavigationHandler(id) {
                 case 25:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
