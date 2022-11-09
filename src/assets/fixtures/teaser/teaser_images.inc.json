@@ -307,5 +307,26 @@
                 }
             ]
         }
+    },
+    "teaser_25": {
+        "alttext": "Lorem ipsum",
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (max-width: 47.938em)",
+                    "sizes": "40vw",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                },
+                {
+                    "media": "all and (min-width: 48em) ",
+                    "sizes": "33vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w"
+                }
+            ]
+        }
     }
 }
