@@ -27,6 +27,12 @@
             {{/if}}
         {{/with}}
 
+        {{#if this.isFileDownload}}
+            {{#with this.teaserImage}}
+                {{loca "gallery_image_copyright" this.copyrightWithLinks}}
+            {{/with}}
+        {{/if}}
+
         {{!--Profiles--}}
         {{#if this.profiles}}
             <span>{{this.profiles}}</span>            
