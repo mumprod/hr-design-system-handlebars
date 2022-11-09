@@ -1,3 +1,16 @@
+# v0.77.7 (Wed Nov 09 2022)
+
+#### 🐛 Bug Fix
+
+- 25% Standard (Mobile) hat kein 1:1 Bild [#376](https://github.com/mumprod/hr-design-system-handlebars/pull/376) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.77.6 (Tue Nov 08 2022)
 
 #### 🐛 Bug Fix
