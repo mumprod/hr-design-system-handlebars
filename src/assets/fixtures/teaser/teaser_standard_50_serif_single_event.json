@@ -5,13 +5,6 @@
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
             "@->value": "50"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.label",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_labels.inc.json",
-                "@->contentpath": "event"
-            }
         }
     ]
 }

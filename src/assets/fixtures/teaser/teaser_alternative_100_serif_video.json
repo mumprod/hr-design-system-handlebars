@@ -1,6 +1,6 @@
 {
     "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser",
+    "@->contentpath": "teaser_video",
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includePath",
@@ -19,25 +19,16 @@
             "@->value": "true"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.content.isMobile1to1",
-            "@->value": "true"
-        },
-        {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "md_1_tab"
-            }
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.allowAVConsumption",
-            "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserLead",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_lead.inc.json",
-                "@->contentpath": "video"
+                "@->contentpath": "teaser_alternative_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "sonniger-herbst-100"
+                    }
+                ]
             }
         }
     ]

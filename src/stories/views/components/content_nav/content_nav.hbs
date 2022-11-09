@@ -1,6 +1,6 @@
 {{#with this.contentNav}} 
     {{#if this.isListOrFlow}}
-        <nav class="w-full c-content-nav">
+        <nav x-cloak class="w-full c-content-nav">
             {{> components/content_nav/content_nav_container 
                 _teasersize=../_teasersize 
                 _maindivclass="flex flex-wrap mt-2 md:mt-0" 
@@ -9,7 +9,7 @@
         </nav>
     {{else}}  
         {{#decorator 'components/content_nav/content_nav_dropdown'
-                     _componentClass="c-content-nav w-full"
+                     _componentClass="c-content-nav h-10 md:h-auto w-full"
                      _teasersize=../_teasersize
                      _iconOpen="arrow-down"
                      _iconClose="arrow-up"
@@ -18,7 +18,7 @@
         }} 
             {{> components/content_nav/content_nav_container 
                 _teasersize=_teasersize 
-                _maindivclass="flex flex-wrap mt-0" 
+                _maindivclass="flex flex-col w-full mt-0" 
                 _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
             }}
         {{/decorator}}

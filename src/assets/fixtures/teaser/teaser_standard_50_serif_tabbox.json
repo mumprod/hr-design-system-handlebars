@@ -14,7 +14,13 @@
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "standard_1_tab"
+                "@->contentpath": "teaser_tabbox_standard_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "rueckkehr-nach-abschiebung-102"
+                    }
+                ]
             }
         }
     ]

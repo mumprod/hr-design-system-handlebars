@@ -33,6 +33,13 @@
     --color-topline: #006dc1;
     /* Eventkalender Title */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
+    /* Link */ 
+    --color-link: theme('colors.blue.deepCerulean');
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.blue.deepCerulean');
+    --color-stage-text: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.blue.deepCerulean');
+    --color-stage-link: var('--color-link');
 }
 
 [data-theme='hessenschau'] {
@@ -59,28 +66,12 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
-}
-
-[data-theme='hr-bigband'] {
-    --color-primary: #c20016;
-    --color-secondary: #007179;
-
-    /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
-    /* Kommentar */
-    --color-label-comment: theme('colors.teal.deeperPool');
-    /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
-    /* Sendung */
-    --color-label-program: theme('colors.blue.pacificBlue');
-    /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
-    /* Event */
-    --color-label-event: theme('colors.black.DEFAULT');
-    /* Dachzeile */
-    --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.blue.science');
+    /*Stage */
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.blue.congress');
+    --color-stage-link: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -103,6 +94,13 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.purple.jazzberry');
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.white.blackhaze');
+    --color-stage-text: theme('colors.black.DEFAULT');
+    --color-stage-primary: theme('colors.purple.pompadour');
+    --color-stage-link: var(--color-link);
 }
 
 [data-theme='hr-inforadio'] {
@@ -125,6 +123,12 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.blue.jellyBean');
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.blue.astronautBlue');
+    --color-stage-primary: theme('colors.blue.astronautBlue');
+    --color-stage-link: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -149,6 +153,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */
+    --color-link: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hr-werbung'] {
@@ -173,6 +179,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */
+    --color-link: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -195,6 +203,12 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */
+    --color-link: theme('colors.red.wellRead');
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.red.burntUmber');
+    --color-stage-primary: theme('colors.red.burntUmber');
+    --color-stage-link: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-bigband'] {
@@ -217,6 +231,13 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */
+    --color-link: theme('colors.teal.DEFAULT');
+    /* Stage */ 
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.blue.blueStone');
+    --color-stage-link: theme('colors.white.DEFAULT');
+;
 }
 
 [data-theme='hr'] {
@@ -241,10 +262,14 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */
+    --color-link: theme('colors.blue.deepCerulean');
+    /* Stage */ 
+    --color-stage-link: theme('colors.white.DEFAULT'); 
 }
 
 [data-theme='hr1'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.yellow.corn');
     --color-secondary: #007179;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -263,6 +288,12 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.yellow.olive');
+    /* Stage */
+    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-primary: theme('colors.yellow.corn');
+    --color-stage-link: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr2'] {
@@ -285,6 +316,13 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.red.paprika');
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.orange.clementine');
+    --color-stage-text: theme('colors.black.DEFAULT');
+    --color-stage-link: var(--color-link);
 }
 
 [data-theme='hr3'] {
@@ -307,6 +345,13 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.red.monza');
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.red.monza');
+    --color-stage-text: theme('colors.red.monza');
+    --color-stage-link: var(--color-link);
 }
 
 [data-theme='hr4'] {
@@ -329,6 +374,13 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.green.eden');
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.green.genoa');
+    --color-stage-text: theme('colors.black.DEFAULT');
+    --color-stage-link: theme('colors.black.DEFAULT');
 }
 
 [data-theme='you-fm'] {
@@ -351,12 +403,19 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: #c20016;
+    /* Link */ 
+    --color-link: theme('colors.blue.lightCerulean');
+    /* Stage */
+    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-primary: theme('colors.yellow.goldenSand');
+    --color-stage-text: theme('colors.black.DEFAULT');
+    --color-stage-link: theme('colors.black.DEFAULT');
 }
 
 /*! purgecss end ignore */
 
 .sbdocs-content {
-    max-width:1140px !important;
+    max-width: 1140px !important;
 }
 
 .hide-scroll-bar {

@@ -465,7 +465,12 @@ var helpers = {
             label_podcast: 'Podcast',
             label_event: 'Konzert',
             group_tabbed_more: 'weitere Meldungen aus ' + options,
+<<<<<<< HEAD
             event_calendar_backlink: 'Eventkalender'
+=======
+            label_concert: "Konzert",
+            label_program: "Sendung"
+>>>>>>> main
         }
 
         for (let key in locas) {

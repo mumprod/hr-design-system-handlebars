@@ -1,0 +1,143 @@
+{
+    "teaserPodcastPlaylist": {
+        "logicItem": {
+            "includePath": "components/teaser/podcast/podcast-playlist",
+            "includeModel": {
+                "teaserSize": "100",
+                "isSingleChannel": true,
+                "url": "#url",
+                "title": "Im Haifischbecken - der Social-Media-Podcast",
+                "shortText": "shortText",
+                "dontLazyload": true,
+                "genreImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "aufmacher-im-haifischbecken-100"
+                        }
+                    ]
+                },
+                "playlistItems": [
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "53:13"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Ein Podcast-Title"
+                            }
+                        ]
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "13:11"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Ein anderer Podcast-Title"
+                            },
+                            {
+                                "@->contentpath": "airdateDate.date",
+                                "@->value": "24.12.20"
+                            },
+                            {
+                                "@->contentpath": "audioUrl",
+                                "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20221021_96203008.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "podcastDuration",
+                                "@->value": "70:26"
+                            },
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Verurteilt! (73) - Der Todes-Drift"
+                            },
+                            {
+                                "@->contentpath": "airdateDate.date",
+                                "@->value": "07.09.22"
+                            },
+                            {
+                                "@->contentpath": "audioUrl",
+                                "@->value": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/verurteilt/verurteilt_20220907_95686133.mp3"
+                            }
+                        ]
+                    }
+                ],
+                "label": {
+                    "type": "podcast",
+                    "loca": "label_podcast",
+                    "byline": {
+                        "bylineSsi": "07:42 min",
+                        "bylineText": ""
+                    }
+                },
+                "hideShortText": false,
+                "shorttext": "Der Podcast für alle, die sich täglich in sozialen Netzwerken bewegen. Wir geben euch einen Einblick, was hinter den Kulissen einer Social-Media-Redaktion passiert, diskutieren Trends, Shitstorms und warum gewisse Posts funktionieren - und andere nicht.",
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "aufmacher-im-haifischbecken-100"
+                        }
+                    ]
+                },
+
+                "podcastChannel": {
+                    "title": "Der Tag in Hessen!",
+                    "url": "#ChannelURL",
+
+                    "podcastHoster": [
+                        {
+                            "podcastHosterUrl": "https://itunes.apple.com/de/podcast/hr-info-der-tag-in-hessen/id273944140?mt=2",
+                            "podcastHosterName": "ITunes Podcast"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcast.hr.de/der_tag_in_hessen/podcast.xml",
+                            "podcastHosterName": "RSS-Feed"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2Rlcl90YWdfaW5faGVzc2VuL3BvZGNhc3QueG1s?hl=de",
+                            "podcastHosterName": "Google Podcasts"
+                        },
+                        {
+                            "podcastHosterUrl": "https://www.ardaudiothek.de/sendung/der-tag-ein-thema-viele-perspektiven/470522/",
+                            "podcastHosterName": "ARD Audiothek"
+                        }
+                    ]
+                },
+                "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/hr2_audio/hr2_audio_20220914_95730396.mp3",
+                "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
-<div class="flex col-span-12">
-  <div class="flex flex-col">
+<div class="flex col-span-12">   
+  <div class="flex flex-col grow">
   {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
-      <div class="flex flex-col">  
+      <div class="flex flex-col grow">  
         <div class="flex max-h-6">
           {{!-- Label / Airdate --}}
           {{#with label}} 
@@ -19,12 +19,11 @@
             </div>
           {{/with}}
 
-        {{!-- Download Icon --}}
-          <div class="flex pr-2 md:pr-5">
-            <a href="{{this.podcastDownloadUrl}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
-              {{> components/base/image/icon _icon='download-neu' _addClass="h-6 w-6 text-blue-science fill-current" }}
-            </a>
-          </div>
+        {{!-- Download --}}
+          {{> components/teaser/podcast/podcast_downloadbutton 
+            _addClass="ml-2 pr-2 md:pr-5 "
+            _iconClass="h-6 w-6 text-blue-science fill-current"
+            _url=this.podcastDownloadUrl }}
         </div>
 
         {{!-- Überschrift: --}}
@@ -50,12 +49,17 @@
     </div>
 
     {{!-- Player UI --}}
-    <div class="flex px-5 md:pl-5 md:pr-52 md:-mt-14">
-      {{> components/teaser/podcast/podcast_player_ui }}    
+    <div class="flex px-5 md:pl-5 md:pr-52 md:-mt-14" 
+      x-data="playaudio()"
+      x-init="listenToGlobalStop()"
+      ax-load
+      x-ignore
+      ax-load-src="/vendor/js/podcast_player.alpine.js">
+      {{> components/teaser/podcast/podcast_player_ui _isPlaylistPlayer=false
+        _podcastDuration=podcastDuration _id=(nextRandom) }}    
     </div>
   
     {{!-- Abo-Dropdown    --}}
-    {{!-- // TODO: Dropdown-Items need to be flexible via CMS so we need Array in Json and iterate over it --}}
     <div class="flex flex-row p-5 md:pr-0">
       {{#with this.podcastChannel}}        
         <div class="flex">

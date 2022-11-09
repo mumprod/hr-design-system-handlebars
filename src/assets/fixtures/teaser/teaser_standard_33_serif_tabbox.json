@@ -9,13 +9,6 @@
         {
             "@->contentpath": "logicItem.includeModel.isMobile1to1",
             "@->value": "true"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.teaserImage",
-            "@->value": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "md_1_tab"
-            }
         }
     ]
 }
