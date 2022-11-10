@@ -975,6 +975,7 @@
                 "isPodcastEpisode": false,
                 "isExtOrBrandLink": false,
                 "isAuthor": false,
+                "isFileDownload": true,
                 "copyright": "Copyright Text",
                 "audioAuthor": "Audio Author",
                 "hasStatus": false,

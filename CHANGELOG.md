@@ -1,3 +1,56 @@
+# v0.78.0 (Thu Nov 10 2022)
+
+#### 🚀 Enhancement
+
+- Teasertext shows Copyright for fileDownload [#378](https://github.com/mumprod/hr-design-system-handlebars/pull/378) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1837: Downloadteaser [#377](https://github.com/mumprod/hr-design-system-handlebars/pull/377) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.77.7 (Wed Nov 09 2022)
+
+#### 🐛 Bug Fix
+
+- 25% Standard (Mobile) hat kein 1:1 Bild [#376](https://github.com/mumprod/hr-design-system-handlebars/pull/376) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.77.6 (Tue Nov 08 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1816 content nav fixes part12 [#375](https://github.com/mumprod/hr-design-system-handlebars/pull/375) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.77.5 (Tue Nov 08 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1816 content nav fixes part11 [#374](https://github.com/mumprod/hr-design-system-handlebars/pull/374) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.77.4 (Fri Nov 04 2022)
 
 #### 🐛 Bug Fix
