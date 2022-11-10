@@ -1,3 +1,19 @@
+# v0.78.0 (Thu Nov 10 2022)
+
+#### 🚀 Enhancement
+
+- Teasertext shows Copyright for fileDownload [#378](https://github.com/mumprod/hr-design-system-handlebars/pull/378) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1837: Downloadteaser [#377](https://github.com/mumprod/hr-design-system-handlebars/pull/377) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.77.7 (Wed Nov 09 2022)
 
 #### 🐛 Bug Fix
