@@ -1,0 +1,14 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser_link",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative-ds"
+        }
+    ]
+}
