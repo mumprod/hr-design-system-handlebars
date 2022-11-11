@@ -10,5 +10,16 @@
     "sectionNavigationSSILinks":
     {
         "@->jsoninclude": "site_header/sectionNavigation.inc.json"
+    },
+    "contentNav":
+    {
+        "@->jsoninclude": "teaser/teasers.inc.json",
+        "@->contentpath": "teaserContentNav.contentNav",
+        "@->overrides": [
+            {
+                "@->contentpath": "isDropdown",
+                "@->value": true
+            }
+        ]
     }
 }

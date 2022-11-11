@@ -1,0 +1,47 @@
+{
+    "teaser": {
+        "label": {
+            "loca": "label_program",
+            "type": "program",
+            "byline": {
+                "bylineText": "14.10.2022 20:00 Uhr",
+                "bylineSsi": ""
+            }
+        },
+        "eventtags": {},
+        "topline": "",
+        "title": "Das hr3 Comedy Festival",
+        "showProfileInfoAsByline": true,
+        "profiles": "Moderation: Thomas Koschwitz und Simone Reuthal",
+        "location": {},
+        "isWide": true,
+        "link": {
+            "isTargetBlank": true,
+            "readMoreText": {
+                "readMore": "Zur ARD Mediathek",
+                "readMoreLong": "Zur ARD Mediathek",
+                "readMoreScreenreader": "Zur ARD Mediathek"
+            },
+            "hasIcon": true,
+            "iconName": "extern",
+            "isFileDownload": false,
+            "url": "https://www.ardmediathek.de/hr",
+            "webviewUrl": "",
+            "hasNoReferrerFlag": true
+        },
+        "form": {},
+        "teaserImage": {
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "stage_wide",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "greenteams-grafik-100"
+                }
+            ]
+        },
+        "stageTextPosition": "left50",
+        "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
+        "showShorttext": true
+    }
+}

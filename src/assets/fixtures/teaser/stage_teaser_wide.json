@@ -1,0 +1,23 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser_stage",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaser.isWide",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "teaser.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "stage_wide",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "greenteams-grafik-100"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,6 +1,8 @@
-export default function contentNavigationHandler() {
+export default function contentNavigationHandler(id) {
+
     return {
         open: false,
+        contentNavDropdownIsOpen: false,
 
         shouldDropdownBeShown(teasersize, isDropdown, isMixed) {
             if (isDropdown) {
@@ -20,15 +22,15 @@ export default function contentNavigationHandler() {
 
         shouldContentBeShown(teasersize, isDropdown, isMixed) {
             if (isDropdown) {
-                return this.$store.contentNavDropdownIsOpen
+                return this.contentNavDropdownIsOpen
             }
             if (isMixed) {
                 if (teasersize === 100 || teasersize === 66 || teasersize === 50) {
                     if (this.$screen('lg')) return true
                     if (this.$screen('md')) return true
-                    if (this.$screen('xs')) return this.$store.contentNavDropdownIsOpen
+                    if (this.$screen('xs')) return this.contentNavDropdownIsOpen
                 } else if (teasersize === 33 || teasersize === 25) {
-                    return this.$store.contentNavDropdownIsOpen
+                    return this.contentNavDropdownIsOpen
                 }
             }
 
@@ -42,12 +44,13 @@ export default function contentNavigationHandler() {
                 case 100:
                     classes.push('w-full', 'md:w-fit')
                     isList
-                        ? classes.push('border', 'mb-2', 'md:!mr-2', 'hover:no-underline')
+                        ? classes.push('border',  'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
                               'md:!w-fit',
                               '!mb-0',
+                              'mx-2',
                               'md:!mb-2',
                               'md:mr-2',
                               'border-l-0',
@@ -86,7 +89,7 @@ export default function contentNavigationHandler() {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border', 'hover:no-underline')
                         : ''
                     break
                 case 66:
@@ -131,13 +134,13 @@ export default function contentNavigationHandler() {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
                         : ''
                     break
                 case 50:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -177,13 +180,13 @@ export default function contentNavigationHandler() {
                               'hover:!fill-congress'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
                         : ''
                     break
                 case 33:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -218,7 +221,7 @@ export default function contentNavigationHandler() {
                 case 25:
                     classes.push('w-full')
                     isList
-                        ? classes.push('border', 'mb-2', 'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',

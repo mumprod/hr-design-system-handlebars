@@ -87,6 +87,7 @@ module.exports = {
             padding: {
                 1.5: '0.375rem',
                 2.5: '0.625rem',
+                11.5: '2.875rem',
                 13: '3.25rem',
             },
             right: {
@@ -99,6 +100,11 @@ module.exports = {
                 '101': '101',
                 '102': '102',
                 '103': '103',
+                '1000' : '1000',
+                '1001' : '1001',
+                '1002' : '1002',
+                '1003' : '1003',
+                '9999' : '9999',
                 '10000': '10000',
                 '10001': '10001',
                 '10002': '10002',
@@ -106,6 +112,8 @@ module.exports = {
             },
             spacing: {
                 22: '5.5rem',
+                135: '33.75rem',
+                stage: '33.0625rem',
             },
             width: {
                 '18': '4.5rem',
@@ -116,6 +124,7 @@ module.exports = {
                 '88': '22rem',
                 '92': '23rem',
                 'half-screen': '50vw',
+                '15/12': '120%',
             },
             height: {
                 '22': '5.5rem',
@@ -135,6 +144,7 @@ module.exports = {
                 '2/3': '66.66666666%',
                 '3/4': '75%',
                 '1/1': '100%',
+                'main-col': '63rem',
             },
             margin: {
                 '13': '3.125rem',
@@ -151,6 +161,9 @@ module.exports = {
                 '38': '9.5rem',
                 '42': '10.5rem',
             },
+            opacity: {
+                85: '.85',
+            },
             fontFamily: {
                 copy: ['DIN', 'sans-serif'],
                 headingSerif: ['RobotoSlab', 'serif'],
@@ -163,7 +176,10 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
-                    accented: '#dce8f0',
+                    accented: '#d8e9f6',
+                    blueStone: '#00646f',
+                    astronautBlue: '#00375d',
+                    lightCerulean: '#007EA1FF',
                 },
                 black: {
                     DEFAULT: '#000000',
@@ -171,6 +187,9 @@ module.exports = {
                 red: {
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
+                    burntUmber: '#8d2725',
+                    wellRead: '#AB2F2DFF',
+                    paprika: '#8C033DFF',
                 },
                 pink: {
                     ripeRaspberries: '#be005a',
@@ -181,16 +200,38 @@ module.exports = {
                     spicyCarrot: '#d34600',
                     bridesmaid: '#FCF2ED',
                     layout: '#F07800',
+                    clementine: '#ec6602',
                 },
                 teal: {
+                    DEFAULT: '#007A7CFF',
                     deeperPool: '#097d8e',
                 },
                 grey: {
+                    armadillo: '#433d37',
                     scorpion: '#606060',
                     alto: '#e0e0e0',
                     light: '#F8F8F8',
                     dark: '#707070',
                 },
+                green: {
+                    genoa: '#168378',
+                    eden: '#0F6157FF',
+                },
+                purple: {
+                    pompadour: '#6d0041',
+                    jazzberry: '#a00d65',
+                },
+                white: {
+                    DEFAULT: '#ffffff',
+                    blackhaze: '#eaeded',
+                },
+                yellow: {
+                    corn: '#e0ae00',
+                    goldenSand: '#f2da6c',
+                    olive: '#916B00FF',
+                },
+                primary: 'var(--color-primary)',
+                secondary: 'var(--color-secondary)',
                 labelMedia: 'var(--color-label-media)',
                 labelEvent: 'var(--color-label-event)',
                 labelBreakingnews: 'var(--color-label-breakingnews)',
@@ -201,6 +242,11 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                link: 'var(--color-link)',
+                stageLink: 'var(--color-stage-link)',
+                stageTextBox: 'var(--color-stage-text-box)',
+                stageText: 'var(--color-stage-text)',
+                stagePrimary: 'var(--color-stage-primary)',
             },
         },
     },
