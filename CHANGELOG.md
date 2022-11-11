@@ -1,3 +1,15 @@
+# v0.80.0 (Fri Nov 11 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1774: External Link Teaser [#380](https://github.com/mumprod/hr-design-system-handlebars/pull/380) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.79.0 (Thu Nov 10 2022)
 
 #### 🚀 Enhancement
