@@ -1,3 +1,15 @@
+# v0.81.0 (Mon Nov 14 2022)
+
+#### 🚀 Enhancement
+
+- Bugfix: Add cacheEntry logic to teaser_logic.ssi.hbs [#381](https://github.com/mumprod/hr-design-system-handlebars/pull/381) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.80.0 (Fri Nov 11 2022)
 
 #### 🚀 Enhancement
