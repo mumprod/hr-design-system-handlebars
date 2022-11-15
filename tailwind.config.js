@@ -85,10 +85,11 @@ module.exports = {
                 2000: '2000ms',
             },
             padding: {
-                1.5: '0.375rem',
-                2.5: '0.625rem',
-                11.5: '2.875rem',
-                13: '3.25rem',
+                '1.5': '0.375rem',
+                '2.5': '0.625rem',
+                '11.5': '2.875rem',
+                '13': '3.25rem',
+                '3/4': '75%',
             },
             right: {
                 80: '80%',
@@ -111,9 +112,11 @@ module.exports = {
                 '-1000': '-1000',
             },
             spacing: {
-                22: '5.5rem',
-                135: '33.75rem',
-                stage: '33.0625rem',
+                '22': '5.5rem',
+                '135': '33.75rem',
+                'stage': '56%',
+
+                'full-hd': '120rem',
             },
             width: {
                 '18': '4.5rem',
@@ -137,6 +140,9 @@ module.exports = {
                 'header-md': '5.5625rem',
                 'header-sm': '7.5625rem',
             },
+            maxHeight: {
+                stage: '34.3125rem',
+            },
             maxWidth: {
                 '1/4': '25%',
                 '1/3': '33.33333333%',
@@ -150,6 +156,7 @@ module.exports = {
             margin: {
                 '13': '3.125rem',
                 '30': '7.5rem',
+                '240': '60rem',
                 'half-screen': '50vw',
             },
             inset: {
