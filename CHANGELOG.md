@@ -1,3 +1,16 @@
+# v0.82.3 (Tue Nov 15 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1831: Ortsmarke [#385](https://github.com/mumprod/hr-design-system-handlebars/pull/385) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.82.2 (Tue Nov 15 2022)
 
 #### 🐛 Bug Fix
