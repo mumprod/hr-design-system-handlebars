@@ -221,6 +221,7 @@ module.exports = {
                     alto: '#e0e0e0',
                     light: '#F8F8F8',
                     dark: '#707070',
+                    brightGray: '#E5F2F3',
                 },
                 green: {
                     genoa: '#168378',
@@ -256,6 +257,7 @@ module.exports = {
                 stageTextBox: 'var(--color-stage-text-box)',
                 stageText: 'var(--color-stage-text)',
                 stagePrimary: 'var(--color-stage-primary)',
+                geoTag: 'var(--color-geoTag)',
             },
         },
     },

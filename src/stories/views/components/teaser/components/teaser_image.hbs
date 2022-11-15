@@ -1,6 +1,15 @@
+<div class="relative">
+{{#unless this.hideGeotag}}
+    {{#unless _isMobile1to1}}
+        {{~#with this.geotag}}
+            {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize }}
+        {{/with~}}
+    {{/unless}}
+{{/unless}}
 {{#decorator 'components/base/link' _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
     {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=../this.dontLazyload _addClassImg="" ~}}
-{{/decorator}}  
+{{/decorator}}
+</div> 
 {{#if this.isEvent}}
     {{#unless this.displayTeaserBodyAsImageOverlay}}
         {{#decorator 'components/teaser/components/teaser_image_overlay' _cssClasses="top-0 h-full"}}
