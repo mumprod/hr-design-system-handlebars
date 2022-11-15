@@ -1,12 +1,14 @@
 <div x-show="avStart" id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
-    {{#unless _hideGeotag}}
-        {{~#with _geotag}}
-            <span class="js-geotag c-teaser__geotag" aria-hidden="true">{{this.[0].title~}}</span>
-        {{/with~}}
-    {{/unless}}
 </div>
 {{#if _isTeaser}}
-    <div class="relative {{_aspectRatio}}" x-show="!avStart" > 
+    <div class="relative {{_aspectRatio}}" x-show="!avStart" >
+        {{#unless _hideGeotag}}
+            {{#unless _isMobile1to1}}
+                {{~#with _geotag}}
+                    {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize}}
+                {{/with~}}
+            {{/unless}}
+        {{/unless}}
         {{#with _teaser}}
             {{~#if ../_isCopyText~}}
                 {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                

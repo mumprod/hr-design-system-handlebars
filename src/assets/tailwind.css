@@ -38,6 +38,8 @@
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.blue.deepCerulean');
     --color-stage-link: var('--color-link');
+    /* geoTag */
+    --color-geoTag: theme('colors.grey.brightGray');
 }
 
 [data-theme='hessenschau'] {
@@ -70,6 +72,8 @@
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-primary: theme('colors.blue.congress');
     --color-stage-link: theme('colors.white.DEFAULT');
+    /* geoTag */
+    --color-geoTag: theme('colors.grey.brightGray');
 }
 
 [data-theme='hr-fernsehen'] {
