@@ -1,3 +1,15 @@
+# v0.82.1 (Tue Nov 15 2022)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Removes css classes from delivery. [#383](https://github.com/mumprod/hr-design-system-handlebars/pull/383) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.82.0 (Tue Nov 15 2022)
 
 #### 🚀 Enhancement
