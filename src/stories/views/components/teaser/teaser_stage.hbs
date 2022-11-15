@@ -1,14 +1,14 @@
 {{#with this.teaser}}
     <div class="grid grid-page">
-        <article class="col-full grid grid-page relative overflow-hidden  after:content-[''] after:absolute after:bottom-0 after:col-full after:w-full after:block after:h-5 after:bg-stagePrimary lg:after:relative c-stage__wrapper">
+        <article class="col-full grid grid-page relative overflow-hidden  after:content-[''] after:absolute after:bottom-0 after:col-full after:w-full after:block after:h-5 after:bg-stagePrimary lg:after:relative">
             {{#unless this.isWide}}
                 <div class="absolute w-15/12">
                     {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="default" _addClassImg="w-full blur-2xl"}}
                 </div>   
             {{/unless}}
-            <div class="col-full lg:col-main lg:px-8 relative c-stage__imageContainer">
+            <div class="col-full lg:col-main lg:px-8 relative">
                 <div class="relative max-h-stage overflow-visible before:content-[''] before:block before:w-full before:pt-3/4 sm:before:pt-stage">
-                    <div class="{{#if this.isWide}}lg:absolute lg:h-full lg:w-full-hd lg:left-1/2 lg:top-0 lg:-ml-240{{else}}absolute h-full w-full top-0{{/if}} c-stage__imageCentered">
+                    <div class="{{#if this.isWide}}lg:absolute lg:h-full lg:w-full-hd lg:left-1/2 lg:top-0 lg:-ml-240{{else}}absolute h-full w-full top-0{{/if}}">
                         {{#if this.isWide}}
                             {{> components/base/image/responsive_image this.teaserImage _type="stage" _variant="wide" _addClass="w-full block" _addClassImg="w-full absolute inset-0"}}
                         {{else}}
