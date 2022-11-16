@@ -6,9 +6,15 @@
         {{/with~}}
     {{/unless}}
 {{/unless}}
-{{#decorator 'components/base/link' _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
-    {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=../this.dontLazyload _addClassImg="" ~}}
-{{/decorator}}
+{{#if this.trackingForArdMediatheksLink}}
+    {{#decorator 'components/base/link' _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="ARD-Mediatheksvideo Teaserbild geklickt" }}
+        {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=../this.dontLazyload _addClassImg="" ~}}
+    {{/decorator}}
+    {{else}}
+    {{#decorator 'components/base/link' _isAriaHidden=true _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.teaserSize _clickLabelPrefix2="mediaLink" }}
+        {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=../this.dontLazyload _addClassImg="" ~}}
+    {{/decorator}}
+{{/if}}
 </div> 
 {{#if this.isEvent}}
     {{#unless this.displayTeaserBodyAsImageOverlay}}
