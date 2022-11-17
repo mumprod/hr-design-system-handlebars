@@ -1084,7 +1084,7 @@
                 "displayEpgInfos": true,
                 "aspectRatio": "ar--teaserTop",
                 "hideGeotag": false,
-                "hideEditableByline": true,
+                "hideEditableByline": false,
                 "doTracking": true,
                 "trackingForArdMediatheksLink": true,
                 "showMediatheksLink": true,
@@ -1102,10 +1102,6 @@
                     "avDocument": "",
                     "image": ""
                 },
-                "geotag": [
-                    {
-                    }
-                ],
                 "link": {
                     "url": "/teaser1",
                     "webviewUrl": "/teaser1#webview",
