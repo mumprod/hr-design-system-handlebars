@@ -40,7 +40,7 @@
                 {{/if}}
 
                 {{!-- Range Slider     --}}
-                <div class="flex w-full transition-all overflow-hidden {{#if @first}}max-h-9{{else}}max-h-0{{/if}}">
+                <div class="flex w-full transition-all overflow-hidden {{#if _first}}max-h-9{{else}}max-h-0{{/if}}">
                     <input 
                         {{#unless @first}}x-cloak{{/unless}}
                         x-ref="range" 

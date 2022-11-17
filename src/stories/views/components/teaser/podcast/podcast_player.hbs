@@ -55,8 +55,11 @@
       ax-load
       x-ignore
       ax-load-src="/vendor/js/podcast_player.alpine.js">
-      {{> components/teaser/podcast/podcast_player_ui _isPlaylistPlayer=false
-        _podcastDuration=podcastDuration _id=(nextRandom) }}    
+      {{> components/teaser/podcast/podcast_player_ui 
+        _isPlaylistPlayer=false
+        _podcastDuration=podcastDuration _id=(nextRandom) 
+        _first=true
+      }}    
     </div>
   
     {{!-- Abo-Dropdown    --}}
