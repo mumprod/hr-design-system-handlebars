@@ -258,6 +258,7 @@ module.exports = {
                 stageText: 'var(--color-stage-text)',
                 stagePrimary: 'var(--color-stage-primary)',
                 geoTag: 'var(--color-geoTag)',
+                clusterTeaserTitle: 'var(--color-cluster-teaser-title,#000)',
             },
         },
     },
