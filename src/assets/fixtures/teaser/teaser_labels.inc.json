@@ -38,5 +38,13 @@
             "bylineSsi": "14.10.22, 20:00 Uhr",
             "bylineText": "BylineText"
         }
+    },
+    "program": {
+        "type": "event",
+        "loca": "label_program",
+        "byline": {
+            "bylineSsi": "14.10.22, 20:00 Uhr",
+            "bylineText": "BylineText"
+        }
     }
 }

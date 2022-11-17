@@ -1113,6 +1113,10 @@
                         "readMore": "Zur ARD Mediathek",
                         "readMoreLong": "Zur ARD Mediathek"
                     }
+                },
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "program"
                 }
             }
         }
