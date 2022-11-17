@@ -30,7 +30,6 @@
     .btn--xl {
         @apply px-6 py-3 text-lg;
     }
-
     .headline-barrier {
         display: flex;
         width: 100%;
@@ -51,6 +50,7 @@
         margin: 3px 0 0 10px;
         
     }
+
     @media screen(md) {
         .headline-barrier:after {
             margin: 3px 0 0 20px;           
@@ -59,4 +59,28 @@
             margin: 3px 20px 0 0;           
         }
     }
+
+    /* PODCAST SEEK SLIDER*/
+    .seek_slider::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #F07800;
+        border: 2px solid white;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      .seek_slider::-moz-range-thumb{
+         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: #F07800;
+        border: 2px solid white;
+        cursor: pointer;
+        border-radius: 50%;
+      }
 }
