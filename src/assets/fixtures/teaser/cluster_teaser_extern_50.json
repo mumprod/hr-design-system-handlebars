@@ -10,7 +10,7 @@
             "@->value": "sportschau"
         },
         {
-            "@->contentpath": "headlineListOverview.link",
+            "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
     ]
