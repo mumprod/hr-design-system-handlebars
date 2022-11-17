@@ -1,3 +1,15 @@
+# v0.85.0 (Thu Nov 17 2022)
+
+#### 🚀 Enhancement
+
+- Podcast player refactoring [#388](https://github.com/mumprod/hr-design-system-handlebars/pull/388) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.84.0 (Thu Nov 17 2022)
 
 #### 🚀 Enhancement
