@@ -1,3 +1,15 @@
+# v0.85.1 (Thu Nov 17 2022)
+
+#### 🐛 Bug Fix
+
+- change value of color blue-accented [#390](https://github.com/mumprod/hr-design-system-handlebars/pull/390) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.85.0 (Thu Nov 17 2022)
 
 #### 🚀 Enhancement
