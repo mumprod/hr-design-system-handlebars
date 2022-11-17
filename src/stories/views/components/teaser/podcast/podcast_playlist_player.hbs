@@ -68,13 +68,13 @@
     ax-load-src="/vendor/js/podcast_player.alpine.js">
       {{#with this.playlistItems}}
         {{#each this}}
-          <div class="flex pb-5 border-b border-white" >
+          <div class="flex pb-5 border-b {{#unless @last}}border-white{{/unless}}" >
             {{> components/teaser/podcast/podcast_player_ui 
             _isPlaylistPlayer=true
             _podcastDuration=podcastDuration
             _title=title
             _id=(nextRandom)
-            }} 
+            }}
           </div>
         {{/each}}
       {{/with}}   
