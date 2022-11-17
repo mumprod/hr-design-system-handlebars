@@ -1,3 +1,15 @@
+# v0.83.0 (Thu Nov 17 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Renames headlineListOverview property [#386](https://github.com/mumprod/hr-design-system-handlebars/pull/386) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.82.3 (Tue Nov 15 2022)
 
 #### 🐛 Bug Fix
