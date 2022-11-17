@@ -252,6 +252,7 @@ module.exports = {
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
                 toplineColor: 'var(--color-topline)',
+                subline: 'var(--color-subline)',
                 link: 'var(--color-link)',
                 stageLink: 'var(--color-stage-link)',
                 stageTextBox: 'var(--color-stage-text-box)',
