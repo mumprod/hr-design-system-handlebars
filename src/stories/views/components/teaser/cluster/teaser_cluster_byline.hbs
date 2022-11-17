@@ -1,7 +1,7 @@
 
-<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif {{#if _ordered}} pl-8 {{/if}}">
+{{#with this.teaserInfo}}
+<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif">
     {{!--Teaser-Info--}}
-    {{#with this.teaserInfo}}
         {{#if this.showTeaserInfo~}}
            {{~#if this.showTeaserInfoSection}}
               <span class="uppercase">
@@ -23,13 +23,5 @@
                {{/if~}}
            {{/if~}}
         {{/if}}
-    {{/with}}
-
-    {{!--Profiles--}}
-    {{#if this.showProfileInfoAsByline}}
-        {{#if this.profiles}}
-           <span>{{this.profiles}}</span>
-           <span class="mx-px last-of-type:hidden">|</span>
-        {{/if}}
-    {{/if}}
 </p>
+{{/with}}

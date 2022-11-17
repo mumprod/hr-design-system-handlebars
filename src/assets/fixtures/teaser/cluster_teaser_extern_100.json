@@ -10,7 +10,7 @@
             "@->value": "tagesschau_de"
         },
         {
-            "@->contentpath": "headlineListOverview.link",
+            "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
     ]
