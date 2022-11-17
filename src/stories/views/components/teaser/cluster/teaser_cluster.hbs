@@ -7,7 +7,7 @@
                     </span>
                 {{/if}}
                 {{#if this.title}}
-                    <span class="text-lg md:text-2xl border-blue-congress {{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}">{{this.title}}</span>
+                    <span class="text-lg md:text-2xl border-blue-congress uppercase{{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}">{{this.title}}</span>
                 {{/if}}
             </h2>
             {{> components/teaser/cluster/teaser_cluster_list _ordered=this.isOrdered}} 
