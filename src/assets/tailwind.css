@@ -357,6 +357,8 @@
     --color-stage-primary: theme('colors.red.monza');
     --color-stage-text: theme('colors.red.monza');
     --color-stage-link: var(--color-link);
+    /* Cluster-Teaser */
+    --color-cluster-teaser-title: theme('colors.red.monza');
 }
 
 [data-theme='hr4'] {
