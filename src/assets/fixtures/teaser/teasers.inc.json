@@ -975,6 +975,7 @@
                 "isPodcastEpisode": false,
                 "isExtOrBrandLink": false,
                 "isAuthor": false,
+                "isFileDownload": true,
                 "copyright": "Copyright Text",
                 "audioAuthor": "Audio Author",
                 "hasStatus": false,
@@ -1135,149 +1136,6 @@
             }
         }
     },
-    "eventCalendarTeaser": {
-        "isSsi": true,
-        "logicItem": {
-            "includePath": "components/teaser/teaser_standard",
-            "includeModel": {
-                "byline": "Byline",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "",
-                "headingFontVariant": "serif",
-                "extendedTitle": "",
-                "teaserType": "calendar",
-                "teaserSize": "100",
-                "isMobile1to1": false,
-                "teaserDate": {
-                    "htmlDateTime": "2022-04-17T19:30+0200",
-                    "htmlDate": "20.02.1983",
-                    "date": "17.04.22",
-                    "dateSeparatorTime": "17.04.22, 19:30"
-                },
-                "teaserInfo": {
-                    "showTeaserInfo": true,
-                    "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
-                    "showTeaserInfoDate": false,
-                    "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
-                },
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "standard_1"
-                },
-                "eventCalendar": {
-                    "eventCalendarMonth": {
-                        "@->jsoninclude": "event/event_calendar_teaser_months.inc.json",
-                        "@->contentpath": "eventDate"
-                    },
-                    "hasSelectedEvents": true,
-                    "hasFutureEventsFromNow": true,
-                    "isCurrentMonth": true,
-                    "hasDays": true,
-                    "hasInstants": true,
-                    "_excerpt": true,
-                    "isStartOfWeek": true
-                },
-                "displayTeaserBodyAsImageOverlay": true,
-                "hasMediaButtons": false,
-                "dontLazyload": true,
-                "isStandardTeaser": true,
-                "isHeroTeaser": true,
-                "isEventCalendar": true,
-                "isMediaTeaser": false,
-                "isGuide": false,
-                "isProgram": false,
-                "isEvent": true,
-                "isTicker": false,
-                "isAudio": false,
-                "isVideo": false,
-                "isPodcastEpisode": false,
-                "isExtOrBrandLink": false,
-                "isAuthor": false,
-                "copyright": "Copyright Text",
-                "audioAuthor": "Audio Author",
-                "hasStatus": false,
-                "hasTeaserItem": true,
-                "moreThenOneEvent": false,
-                "moreThenTwoEvents": false,
-                "firstInstant": {
-                    "startDate": {
-                        "monthNameShort": "APR",
-                        "weekdayNameShort": "Do",
-                        "day": "9"
-                    }
-                },
-                "lastInstant": {
-                    "startDate": {
-                        "monthNameShort": "APR",
-                        "weekdayNameShort": "Fr",
-                        "day": "10"
-                    }
-                },
-                "allowAVConsumption": false,
-                "displayEpgInfos": false,
-                "aspectRatio": "ar--teaserTop",
-                "hideGeotag": false,
-                "hideEditableByline": true,
-                "doTracking": true,
-                "trackingForArdMediatheksLink": false,
-                "showMediatheksLink": false,
-                "showAirdate": false,
-                "showProfileInfoAsByline": false,
-                "obsolet_brandOfTeaser": "hessenschau",
-                "documentSection": "Gesellschaft",
-                "headlineTag": "h1",
-                "icon": "ortsmarke",
-                "imageVariant": "topteaser",
-                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
-                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
-                "profiles": "Von Alf Haubitz und Alice Merton",
-                "teaserLead": {
-                    "avDocument": "",
-                    "image": ""
-                },
-                "geotag": [
-                    {
-                        "title": "Wolfhagen"
-                    }
-                ],
-                "link": {
-                    "url": "/teaser1",
-                    "webviewUrl": "/teaser1#webview",
-                    "isTargetBlank": false,
-                    "hasIcon": false,
-                    "iconName": "iconName",
-                    "readMoreText": {
-                        "readMoreScreenreader": "Zum Artikel",
-                        "readMore": "mehr",
-                        "readMoreLong": "read More Long"
-                    },
-                    "content": {
-                        "headlineTag": "h1",
-                        "headingFontVariant": "serif",
-                        "imageVariant": "topteaser",
-                        "isFileDownload": false,
-                        "teaserImage": {
-                            "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
-                        },
-                        "teaserSize": "hero",
-                        "isMobile1to1": false,
-                        "teaserType": "standard-ds",
-                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                        "topline": "Überglücklich, aber ohne Mama",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "hessenschau"
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "teaserPodcast": {
     "teaser_podcast_episode": {
         "isSsi": true,
         "logicItem": {
@@ -1425,6 +1283,83 @@
                     "byline": {
                         "bylineSsi": "53:13 min",
                         "bylineText": ""
+                    }
+                }
+            }
+        }
+    },
+    "teaser_link": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "title": "Mercedes-Luxusautos in Millionenhöhe gestohlen",
+                "topline": "Spektakuläre Diebstähle in Südhessen",
+                "headingFontVariant": "serif",
+                "extendedTitle": "",
+                "teaserType": "standard-ds",
+                "teaserSize": "hero",
+                "isMobile1to1": false,
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "mercedes-suv-g-100"
+                        }
+                    ]
+                },
+                "displayTeaserBodyAsImageOverlay": false,
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "isStandardTeaser": true,
+                "isHeroTeaser": false,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcast": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": true,
+                "isAuthor": false,
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "documentSection": "Panorama",
+                "headlineTag": "h1",
+                "icon": "",
+                "imageVariant": "topteaser",
+                "shorttext": "Die besten Themen in der Tagesschau App",
+                "sophoraId": "textlink-256446",
+                "profiles": "",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": true,
+                    "hasIcon": true,
+                    "iconName": "extern",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zur Tagesschau Website",
+                        "readMore": "Zur Tagesschau Website",
+                        "readMoreLong": "Zur Tagesschau Website"
                     }
                 }
             }
@@ -1652,6 +1587,153 @@
             "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
             "showShorttext": true
         }
+    },
+    "eventCalendarTeaser": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "byline": "Byline",
+                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                "topline": "",
+                "headingFontVariant": "serif",
+                "extendedTitle": "",
+                "teaserType": "calendar",
+                "teaserSize": "100",
+                "isMobile1to1": false,
+                "teaserDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
+                    "htmlDate": "20.02.1983",
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
+                },
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": true
+                },
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "mercedes-suv-g-100"
+                        }
+                    ]
+                },
+                "eventCalendar": {
+                    "eventCalendarMonth": {
+                        "@->jsoninclude": "event/event_calendar_teaser_months.inc.json",
+                        "@->contentpath": "eventDate"
+                    },
+                    "hasSelectedEvents": true,
+                    "hasFutureEventsFromNow": true,
+                    "isCurrentMonth": true,
+                    "hasDays": true,
+                    "hasInstants": true,
+                    "_excerpt": true,
+                    "isStartOfWeek": true
+                },
+                "displayTeaserBodyAsImageOverlay": true,
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isEventCalendar": true,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": true,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "moreThenOneEvent": false,
+                "moreThenTwoEvents": false,
+                "firstInstant": {
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Do",
+                        "day": "9"
+                    }
+                },
+                "lastInstant": {
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Fr",
+                        "day": "10"
+                    }
+                },
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "documentSection": "Gesellschaft",
+                "headlineTag": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "Von Alf Haubitz und Alice Merton",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "geotag": [
+                    {
+                        "title": "Wolfhagen"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    },
+                    "content": {
+                        "headlineTag": "h1",
+                        "headingFontVariant": "serif",
+                        "imageVariant": "topteaser",
+                        "isFileDownload": false,
+                        "teaserImage": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "standard_1"
+                        },
+                        "teaserSize": "hero",
+                        "isMobile1to1": false,
+                        "teaserType": "standard-ds",
+                        "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                        "topline": "Überglücklich, aber ohne Mama",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "hessenschau"
+                        }
+                    }
+                }
+            }
+        }
     }
-}
 }
