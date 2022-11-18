@@ -10,6 +10,14 @@
             "@->value": "tagesschau_de"
         },
         {
+            "@->contentpath": "title",
+            "@->value": "tagesschau"
+        },
+        {
+            "@->contentpath": "hideTitle",
+            "@->value": true
+        },
+        {
             "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
