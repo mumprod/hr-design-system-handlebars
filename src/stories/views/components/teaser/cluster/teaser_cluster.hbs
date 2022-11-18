@@ -1,13 +1,13 @@
 <article class="mx-5 md:mx-0  col-span-12 grid bg-[#dce8f0] rounded-tl-3xl rounded-br-3xl {{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}} ">
     <div class="">
-            <h2 class="flex items-center px-5 py-6 font-bold font-headingSerif text-blue-congress">
+            <h2 class="flex items-center px-5 py-6 font-bold font-headingSerif text-clusterTeaserHeadline">
                 {{#if this.teaserLogo}}
                     <span>
                         {{> components/base/image/icon _icon=this.teaserLogo _iconmap="logo" _addClass=(inline-switch this.teaserLogo '["hessenschau_de"]' '["fill-[#005293] w-10 md:w-12 h-10 md:h-12","fill-[#005293] w-40 lg:w-52 h-8 md:h-12"]')}}
                     </span>
                 {{/if}}
                 {{#if this.title}}
-                    <span class="text-lg md:text-2xl border-blue-congress uppercase{{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}{{#if this.hideTitle}} sr-only{{/if}}">{{this.title}}</span>
+                    <span class="text-lg md:text-2xl border-clusterTeaserHeadline uppercase{{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}{{#if this.hideTitle}} sr-only{{/if}}">{{this.title}}</span>
                 {{/if}}
             </h2>
             {{> components/teaser/cluster/teaser_cluster_list _ordered=this.isOrdered}} 
