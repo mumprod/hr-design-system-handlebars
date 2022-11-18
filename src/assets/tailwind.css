@@ -41,7 +41,8 @@
     /* geoTag */
     --color-geoTag: theme('colors.grey.brightGray');
     /* Cluster-Teaser */
-    --color-cluster-teaser-title: theme('colors.blue.congress');
+    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
 }
 
 [data-theme='hessenschau'] {
@@ -77,7 +78,8 @@
     /* geoTag */
     --color-geoTag: theme('colors.grey.brightGray');
     /* Cluster-Teaser */
-    --color-cluster-teaser-title: theme('colors.blue.congress');
+    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
 }
 
 [data-theme='hr-fernsehen'] {

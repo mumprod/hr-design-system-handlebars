@@ -3,7 +3,7 @@
     "teaserLogo": "",
     "isHessenschauLogo": false,
     "showFirstImageOrGenreImage": false,
-    "HideTitle": false,
+    "hideTitle": false,
     "showGenreImage": false,
     "showFirstImage": false,
     "isOrdered": false,

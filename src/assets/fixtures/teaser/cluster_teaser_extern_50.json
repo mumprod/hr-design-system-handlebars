@@ -10,6 +10,14 @@
             "@->value": "sportschau"
         },
         {
+            "@->contentpath": "title",
+            "@->value": "sportschau"
+        },
+        {
+            "@->contentpath": "hideTitle",
+            "@->value": true
+        },
+        {
             "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
