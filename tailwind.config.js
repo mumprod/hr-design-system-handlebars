@@ -185,7 +185,7 @@ module.exports = {
                     science: '#006dc1',
                     congress: '#005293',
                     deepCerulean: '#006eb7',
-                    accented: '#d8e9f6',
+                    accented: '#eaf3fa',
                     blueStone: '#00646f',
                     astronautBlue: '#00375d',
                     lightCerulean: '#007EA1FF',
