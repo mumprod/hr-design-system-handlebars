@@ -21,6 +21,7 @@ jobs:
               with:
                   node-version: 16.x
             - run: npm ci
+            - run: npm run partialsToJs
               #👇 Adds Chromatic as a step in the workflow
             - uses: chromaui/action@v1
               # Options required for Chromatic's GitHub Action
