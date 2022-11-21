@@ -25,18 +25,11 @@
         _addClass='absolute bottom-0 right-0 fill-white hover:text-white js-mediaplayer__button'
         _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-blue-jellyBean hover:fill-blue-jellyBean')
         _buttonSpace=(inline-switch _teaserSize '["25","33"]' '[" my-2 mx-2"," my-5 mx-5 md:my-3 md:mx-3"," my-5 mx-5"]')
-        _showIcon=true 
+        _showIcon=true
         _icon=_mediaButtonIcon 
         _label=_mediaButtonLabel 
         _srOnly="true" 
         _alpineClick="avStart = !avStart; $dispatch('player_start')"
         }}    
-        {{~#if this.isPodcast~}}
-            <a href="{{this.podcastDownloadUrl}}" class="absolute top-0 right-0 m-5 js-load"{{#with
-                    this.trackingData}}
-            data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
-                {{> components/base/image/icon _icon='download-button' _addClass="w-10 h-10"}}
-            </a>
-        {{~/if~}}
     </div>
 {{/if}}
