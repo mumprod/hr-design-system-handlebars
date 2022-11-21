@@ -7,6 +7,7 @@ import heroTeaser from './fixtures/teaser_alternative_hero_serif.json'
 import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.json'
 import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
 import heroTeaserLink from './fixtures/teaser_alternative_hero_serif_link.json'
+import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.json'
 import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
@@ -121,6 +122,9 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
         {Template.bind({})}
     </Story>
     <Story name="Alternativ Hero mit externen Link Dokument" args={heroTeaserLink.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ Hero mit Sendungsdokument" args={heroTeaserProgram.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <b>Alternativ 100%</b>
