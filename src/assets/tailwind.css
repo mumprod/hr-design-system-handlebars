@@ -29,6 +29,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Sendungsdokument */
+    --color-label-program: theme('colors.blue.pacificBlue');
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Subline */

@@ -40,7 +40,7 @@
         }
     },
     "program": {
-        "type": "event",
+        "type": "program",
         "loca": "label_program",
         "byline": {
             "bylineSsi": "14.10.22, 20:00 Uhr",

@@ -20,6 +20,7 @@ module.exports = {
             'orange-spicyCarrot': '#d34600',
             'congress': '#006dc1',
             'science': '#005293',
+            'topline': 'var(--color-topline)'
         },
         screens: {
             print: { raw: 'print' },
@@ -251,6 +252,7 @@ module.exports = {
                 labelDownload: 'var(--color-label-download)',
                 labelPm: 'var(--color-label-pm)',
                 labelLive: 'var(--color-label-live)',
+                labelProgram: 'var(--color-label-program)',
                 toplineColor: 'var(--color-topline)',
                 subline: 'var(--color-subline)',
                 link: 'var(--color-link)',
