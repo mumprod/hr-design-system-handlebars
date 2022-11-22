@@ -101,7 +101,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.purple.jazzberry');
     /* Link */
     --color-link: theme('colors.purple.jazzberry');
     /* Stage */
@@ -130,7 +130,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.jellyBean');
     /* Link */
     --color-link: theme('colors.blue.jellyBean');
     /* Stage */
@@ -160,7 +160,7 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -186,7 +186,7 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -210,7 +210,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.red.wellRead');
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */
@@ -238,7 +238,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.teal.DEFAULT');
     /* Link */
     --color-link: theme('colors.teal.DEFAULT');
     /* Stage */
@@ -268,7 +268,7 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
@@ -294,13 +294,16 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.yellow.olive');
     /* Link */
     --color-link: theme('colors.yellow.olive');
     /* Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-primary: theme('colors.yellow.corn');
     --color-stage-link: theme('colors.white.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
 }
 
 [data-theme='hr2'] {
@@ -322,7 +325,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.red.paprika');
     /* Link */
     --color-link: theme('colors.red.paprika');
     /* Stage */
@@ -351,7 +354,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.red.monza');
     /* Link */
     --color-link: theme('colors.red.monza');
     /* Stage */
@@ -382,7 +385,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.green.eden');
     /* Link */
     --color-link: theme('colors.green.eden');
     /* Stage */
@@ -411,7 +414,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.lightCerulean');
     /* Link */
     --color-link: theme('colors.blue.lightCerulean');
     /* Stage */
