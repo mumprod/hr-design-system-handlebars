@@ -29,9 +29,13 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Sendungsdokument */
+    --color-label-program: theme('colors.blue.pacificBlue');
     /* Dachzeile */
     --color-topline: #006dc1;
-    /* Link */
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
     --color-stage-text-box: theme('colors.blue.deepCerulean');
@@ -69,7 +73,9 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
-    /* Link */
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.blue.science');
     /*Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
@@ -101,8 +107,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.purple.jazzberry');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.purple.jazzberry');
     /* Stage */
     --color-stage-text-box: theme('colors.white.blackhaze');
@@ -130,8 +138,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.blue.jellyBean');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.blue.jellyBean');
     /* Stage */
     --color-stage-text-box: theme('colors.blue.astronautBlue');
@@ -160,7 +170,9 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -186,7 +198,9 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -210,7 +224,9 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.red.wellRead');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */
@@ -238,7 +254,9 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.teal.DEFAULT');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.teal.DEFAULT');
     /* Stage */
@@ -268,7 +286,9 @@
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
-    --color-topline: #c20016;
+    --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
@@ -294,8 +314,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.yellow.olive');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.yellow.olive');
     /* Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
@@ -322,8 +344,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.red.paprika');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.red.paprika');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
@@ -351,8 +375,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.red.monza');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.red.monza');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
@@ -382,8 +408,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.green.eden');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.green.eden');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
@@ -411,8 +439,10 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: #c20016;
-    /* Link */
+    --color-topline: theme('colors.blue.lightCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
+    /* Link */ 
     --color-link: theme('colors.blue.lightCerulean');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');

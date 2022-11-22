@@ -1,0 +1,10 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserProgram",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "100"
+        }
+    ]
+}
