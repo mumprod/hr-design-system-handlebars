@@ -1,3 +1,75 @@
+# v0.86.0 (Fri Nov 18 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1677 [#391](https://github.com/mumprod/hr-design-system-handlebars/pull/391) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.85.1 (Thu Nov 17 2022)
+
+#### 🐛 Bug Fix
+
+- change value of color blue-accented [#390](https://github.com/mumprod/hr-design-system-handlebars/pull/390) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.85.0 (Thu Nov 17 2022)
+
+#### 🚀 Enhancement
+
+- Podcast player refactoring [#388](https://github.com/mumprod/hr-design-system-handlebars/pull/388) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.84.0 (Thu Nov 17 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Title of externalProject is displayed [#389](https://github.com/mumprod/hr-design-system-handlebars/pull/389) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.83.1 (Thu Nov 17 2022)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 1677 [#387](https://github.com/mumprod/hr-design-system-handlebars/pull/387) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.83.0 (Thu Nov 17 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Renames headlineListOverview property [#386](https://github.com/mumprod/hr-design-system-handlebars/pull/386) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.82.3 (Tue Nov 15 2022)
 
 #### 🐛 Bug Fix

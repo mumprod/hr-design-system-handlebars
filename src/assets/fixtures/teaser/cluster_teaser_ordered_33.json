@@ -22,7 +22,7 @@
             "@->value": "true"
         },
         {
-            "@->contentpath": "headlineListOverview.link",
+            "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
     ]

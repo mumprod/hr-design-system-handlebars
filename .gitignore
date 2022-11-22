@@ -2,6 +2,7 @@
 
 # build
 /build/gulp
+/build/handlebars/partials
 # dependencies
 /node_modules
 

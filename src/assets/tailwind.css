@@ -37,13 +37,16 @@
     --color-subline: #006dc1;
     /* Link */ 
     --color-link: theme('colors.blue.deepCerulean');
-    /* Stage */ 
+    /* Stage */
     --color-stage-text-box: theme('colors.blue.deepCerulean');
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.blue.deepCerulean');
     --color-stage-link: var('--color-link');
     /* geoTag */
     --color-geoTag: theme('colors.grey.brightGray');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
 }
 
 [data-theme='hessenschau'] {
@@ -80,6 +83,9 @@
     --color-stage-link: theme('colors.white.DEFAULT');
     /* geoTag */
     --color-geoTag: theme('colors.grey.brightGray');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -106,7 +112,7 @@
     --color-subline: var(--color-topline);
     /* Link */ 
     --color-link: theme('colors.purple.jazzberry');
-    /* Stage */ 
+    /* Stage */
     --color-stage-text-box: theme('colors.white.blackhaze');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
@@ -137,7 +143,7 @@
     --color-subline: var(--color-topline);
     /* Link */ 
     --color-link: theme('colors.blue.jellyBean');
-    /* Stage */ 
+    /* Stage */
     --color-stage-text-box: theme('colors.blue.astronautBlue');
     --color-stage-primary: theme('colors.blue.astronautBlue');
     --color-stage-link: theme('colors.white.DEFAULT');
@@ -223,7 +229,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.wellRead');
-    /* Stage */ 
+    /* Stage */
     --color-stage-text-box: theme('colors.red.burntUmber');
     --color-stage-primary: theme('colors.red.burntUmber');
     --color-stage-link: theme('colors.white.DEFAULT');
@@ -253,11 +259,10 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.teal.DEFAULT');
-    /* Stage */ 
+    /* Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-primary: theme('colors.blue.blueStone');
     --color-stage-link: theme('colors.white.DEFAULT');
-;
 }
 
 [data-theme='hr'] {
@@ -286,8 +291,8 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
-    /* Stage */ 
-    --color-stage-link: theme('colors.white.DEFAULT'); 
+    /* Stage */
+    --color-stage-link: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr1'] {
@@ -380,6 +385,8 @@
     --color-stage-primary: theme('colors.red.monza');
     --color-stage-text: theme('colors.red.monza');
     --color-stage-link: var(--color-link);
+    /* Cluster-Teaser */
+    --color-cluster-teaser-title: theme('colors.red.monza');
 }
 
 [data-theme='hr4'] {

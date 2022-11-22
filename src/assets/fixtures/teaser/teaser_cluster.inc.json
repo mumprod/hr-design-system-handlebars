@@ -3,7 +3,7 @@
     "teaserLogo": "",
     "isHessenschauLogo": false,
     "showFirstImageOrGenreImage": false,
-    "HideTitle": false,
+    "hideTitle": false,
     "showGenreImage": false,
     "showFirstImage": false,
     "isOrdered": false,
@@ -22,7 +22,7 @@
     },
 
     "teaserType": "headlinelist",
-    "aspectRatio": "ar--16x9",
+    "aspectRatio": "ar-16-9",
     "imageVariant": "33",
     "firstEntry": {
         "@->jsoninclude": "teaser/headline_list_item.inc.json",
@@ -52,7 +52,7 @@
         }
     ],
 
-    "headlineListOverview": {
+    "overviewLink": {
         "title": "Neue Beiträge auf einen Blick",
         "link": {
             "url": "https://www.hessenschau.de"
