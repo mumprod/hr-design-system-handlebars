@@ -1,3 +1,20 @@
+# v0.87.0 (Tue Nov 22 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1671: Program-Teaser in Design-System [#394](https://github.com/mumprod/hr-design-system-handlebars/pull/394) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### 🐛 Bug Fix
+
+- FEATURE: Runs partialsToJs script in chromatic [#393](https://github.com/mumprod/hr-design-system-handlebars/pull/393) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.86.0 (Fri Nov 18 2022)
 
 #### 🚀 Enhancement
