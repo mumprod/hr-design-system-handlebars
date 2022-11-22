@@ -1,3 +1,16 @@
+# v0.87.1 (Tue Nov 22 2022)
+
+#### 🐛 Bug Fix
+
+- change Podcast playbutton to Audio playbutton [#392](https://github.com/mumprod/hr-design-system-handlebars/pull/392) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.87.0 (Tue Nov 22 2022)
 
 #### 🚀 Enhancement
