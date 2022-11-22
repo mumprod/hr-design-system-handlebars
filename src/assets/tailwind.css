@@ -34,7 +34,7 @@
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Subline */
-    --color-subline: #006dc1;
+    --color-subline: var(--color-topline);
     /* Link */ 
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
@@ -74,7 +74,7 @@
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Subline */
-    --color-subline: #006dc1;
+    --color-subline: var(--color-topline);
     /* Link */ 
     --color-link: theme('colors.blue.science');
     /*Stage */
