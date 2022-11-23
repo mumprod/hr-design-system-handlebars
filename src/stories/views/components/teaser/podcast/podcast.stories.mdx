@@ -3,7 +3,8 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import podcast from './podcast.hbs'
 import podcastPlaylist from './podcast-playlist.hbs'
 import episodeJson from '../fixtures/teaser_podcast.json'
-import playlistJson from '../fixtures/teaser_podcast_playlist.json'
+import playlistJson100 from '../fixtures/teaser_podcast_playlist.json'
+import playlistJson50 from '../fixtures/teaser_podcast_playlist_50.json'
 
 <Meta   title="Komponenten/Teaser/Podcast"
         parameters={{
@@ -16,13 +17,14 @@ import playlistJson from '../fixtures/teaser_podcast_playlist.json'
         }} 
         decorators={[
         (Story) => {
-            return `<div class="grid my-5 grid-page">
-                        
-                            ${Story()}
-                        
+            return `<div id="1" class="grid grid-page">
+                        <div id="2" class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                            ${Story()} 
+                        </div>
                     </div>`
-        },
-    ]}
+        }
+    
+    ]} 
         />
 
 export const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
@@ -46,7 +48,10 @@ export const playlistTemplate = (args, { globals: { customConditionalToolbar } }
     <Story  name="100% Episode Player" args={episodeJson.logicItem.includeModel}>
         {episodeTemplate.bind({})} 
     </Story> 
-    <Story  name="100% Channel Player" args={playlistJson.logicItem.includeModel}>
+    <Story  name="100% Channel Player" args={playlistJson100.logicItem.includeModel}>
+        {playlistTemplate.bind({})} 
+    </Story>
+        <Story  name="50% Channel Player" args={playlistJson50.logicItem.includeModel}>
         {playlistTemplate.bind({})} 
     </Story>
 </Preview>
