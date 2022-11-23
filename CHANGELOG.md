@@ -1,3 +1,15 @@
+# v0.87.3 (Wed Nov 23 2022)
+
+#### 🐛 Bug Fix
+
+- Podcast layout issues fixed [#396](https://github.com/mumprod/hr-design-system-handlebars/pull/396) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.87.2 (Wed Nov 23 2022)
 
 #### 🐛 Bug Fix
