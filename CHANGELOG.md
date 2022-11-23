@@ -1,3 +1,16 @@
+# v0.87.2 (Wed Nov 23 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1875: fixes wrong playbutton-distances [#395](https://github.com/mumprod/hr-design-system-handlebars/pull/395) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.87.1 (Tue Nov 22 2022)
 
 #### 🐛 Bug Fix
