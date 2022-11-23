@@ -1720,7 +1720,13 @@
                         "isFileDownload": false,
                         "teaserImage": {
                             "@->jsoninclude": "teaser/teaser_images.inc.json",
-                            "@->contentpath": "standard_1"
+                            "@->contentpath": "teaser_standard",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "mercedes-suv-g-100"
+                                }
+                            ]
                         },
                         "teaserSize": "hero",
                         "isMobile1to1": false,
