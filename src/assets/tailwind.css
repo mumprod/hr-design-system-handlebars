@@ -31,8 +31,12 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Sendungsdokument */
+    --color-label-program: theme('colors.blue.pacificBlue');
     /* Dachzeile */
     --color-topline: #006dc1;
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
@@ -73,6 +77,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: #006dc1;
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.science');
     /*Stage */
@@ -112,6 +118,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.purple.jazzberry');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.purple.jazzberry');
     /* Stage */
@@ -146,6 +154,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.blue.jellyBean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.jellyBean');
     /* Stage */
@@ -178,6 +188,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -206,6 +218,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
 }
@@ -232,6 +246,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.red.wellRead');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */
@@ -262,6 +278,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.teal.DEFAULT');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.teal.DEFAULT');
     /* Stage */
@@ -294,6 +312,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
@@ -322,6 +342,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.yellow.olive');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.yellow.olive');
     /* Stage */
@@ -355,6 +377,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.red.paprika');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.paprika');
     /* Stage */
@@ -386,6 +410,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.red.monza');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.monza');
     /* Stage */
@@ -419,6 +445,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.green.eden');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.green.eden');
     /* Stage */
@@ -450,6 +478,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
     --color-topline: theme('colors.blue.lightCerulean');
+    /* Subline */
+    --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.lightCerulean');
     /* Stage */

@@ -1,3 +1,70 @@
+# v0.88.0 (Thu Nov 24 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Bring back title and topline color and use subline color [#398](https://github.com/mumprod/hr-design-system-handlebars/pull/398) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.87.3 (Wed Nov 23 2022)
+
+#### 🐛 Bug Fix
+
+- Podcast layout issues fixed [#396](https://github.com/mumprod/hr-design-system-handlebars/pull/396) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.87.2 (Wed Nov 23 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1875: fixes wrong playbutton-distances [#395](https://github.com/mumprod/hr-design-system-handlebars/pull/395) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.87.1 (Tue Nov 22 2022)
+
+#### 🐛 Bug Fix
+
+- change Podcast playbutton to Audio playbutton [#392](https://github.com/mumprod/hr-design-system-handlebars/pull/392) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.87.0 (Tue Nov 22 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1671: Program-Teaser in Design-System [#394](https://github.com/mumprod/hr-design-system-handlebars/pull/394) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### 🐛 Bug Fix
+
+- FEATURE: Runs partialsToJs script in chromatic [#393](https://github.com/mumprod/hr-design-system-handlebars/pull/393) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.86.0 (Fri Nov 18 2022)
 
 #### 🚀 Enhancement
