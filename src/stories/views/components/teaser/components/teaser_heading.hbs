@@ -6,10 +6,10 @@
 
 <{{~ _headlineTag ~}}>
        {{#if _topline}}
-        {{> components/teaser/components/teaser_topline _css=_css _text=_topline _readMore=_readMore _teaserType=_teaserType}}
+        {{> components/teaser/components/teaser_topline _css=_toplineCss _text=_topline _readMore=_readMore _teaserType=_teaserType}}
     {{/if}}
-    {{> components/teaser/components/teaser_title _css=_css _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _firstItem=_firstItem _ordered=_ordered}}
+    {{> components/teaser/components/teaser_title _css=_titleCss _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _firstItem=_firstItem _ordered=_ordered}}
     {{#if _extendedTitle}}
-        <span class="text-toplineColor font-normal text-xl leading-6">{{_extendedTitle}}</span>
+        <span class="text-subline font-normal text-xl leading-6">{{_extendedTitle}}</span>
     {{/if}}
 </{{~ _headlineTag ~}}>
