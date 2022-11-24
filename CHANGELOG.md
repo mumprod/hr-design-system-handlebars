@@ -1,3 +1,15 @@
+# v0.88.0 (Thu Nov 24 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Bring back title and topline color and use subline color [#398](https://github.com/mumprod/hr-design-system-handlebars/pull/398) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.87.3 (Wed Nov 23 2022)
 
 #### 🐛 Bug Fix
