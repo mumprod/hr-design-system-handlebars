@@ -8,8 +8,10 @@
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
-    --color-primary: #005293;
+    --color-primary: theme('colors.blue.congress');
     --color-secondary: #606060;
+    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -46,8 +48,10 @@
 }
 
 [data-theme='hessenschau'] {
-    --color-primary: #005293;
+    --color-primary: theme('colors.blue.congress');
     --color-secondary: #606060;
+    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -80,11 +84,17 @@
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.blue.science');
 }
 
 [data-theme='hr-fernsehen'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.white.blackhaze');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -109,11 +119,16 @@
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
     --color-stage-link: var(--color-link);
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.purple.jazzberry');
+    --color-cluster-teaser-headline: theme('colors.purple.pompadour');
 }
 
 [data-theme='hr-inforadio'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.blue.aqua');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -142,6 +157,8 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -168,6 +185,8 @@
 [data-theme='hr-werbung'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -194,6 +213,8 @@
 [data-theme='hr-sinfonieorchester'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -222,6 +243,8 @@
 [data-theme='hr-bigband'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.blue.mystic');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -250,6 +273,8 @@
 [data-theme='hr'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -278,6 +303,8 @@
 [data-theme='hr1'] {
     --color-primary: theme('colors.yellow.corn');
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.yellow.givry');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -309,6 +336,8 @@
 [data-theme='hr2'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -338,6 +367,8 @@
 [data-theme='hr3'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -369,6 +400,8 @@
 [data-theme='hr4'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.green.nebula');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -398,6 +431,8 @@
 [data-theme='you-fm'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
+    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.blue.science');

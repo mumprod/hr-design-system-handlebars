@@ -2,11 +2,11 @@
     <span
         class='px-4 py-2.5 border
             {{inline-switch
-                _color
-                '["white","grey","blue"]'
-                '["text-white border-white","text-grey-scorpion border-grey-scorpion","text-white bg-blue-congress","text-toplineColor border-toplineColor"]'
+                _type
+                '["normal","hollow","hollow-white"]'
+                '["text-button-inverted bg-button hover:bg-button-inverted hover:text-button-hollow hover:border-button-hollow","text-button-hollow border-button-hollow hover:bg-button-inverted","text-button-inverted border-button-inverted hover:bg-button-inverted hover:text-button-hollow hover:border-button-hollow","text-button-inverted bg-button hover:bg-button-inverted hover:text-button-hollow hover:border-button-hollow"]'
             }}
-            font-heading hover:bg-white hover:text-toplineColor hover:border-toplineColor'
+            font-heading{{#if _buttonCss}} {{_buttonCss}}{{/if}}'
     >
         {{_linkTitle}}
     </span>
