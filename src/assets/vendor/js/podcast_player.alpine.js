@@ -22,7 +22,7 @@ export default function playaudio(){
             },
             listenToGlobalStop(){
                 console.log('global listener init')
-                window.addEventListener('hr:global:stopOtherAVs', this.stopAllOtherPlayers)
+                window.addEventListener('hr:global:stopOtherAVs', this.stopAllPlayersBecauseOfGlobalStop.bind(this))
             },
             rangeInput(id) {                     
                 if(this.playlist[id].init == false) {
@@ -31,7 +31,6 @@ export default function playaudio(){
                 }      
                 this.playlist[id].audioElement.currentTime = (this.playlist[id].range.value/1000) * this.playlist[id].audioElement.duration               
             },
-
             setTime(duration, id) {
                 console.log('time set: ' + duration)
                 
@@ -75,27 +74,45 @@ export default function playaudio(){
                     this.playlist[id].range.parentNode.classList.add('max-h-9')
                     this.playlist[id].button.querySelector('.js-playbutton').classList.add('hidden')
                     this.playlist[id].button.querySelector('.js-pausebutton').classList.remove('hidden')
-                    //let event = new Event("hr:global:stopOtherAVs");
-                    //window.dispatchEvent(event);
+                    let event = new Event("hr:global:stopOtherAVs");
+                    event.id = id;
+                    window.dispatchEvent(event);
                 }
             },
 
             stopAllOtherPlayers(id){  //id=2
-                let players = document.querySelectorAll('audio.hidden')
-                for (let i=0; i<players.length; i++){
-                    if ( players[i].dataset.id != id){                            
-                        this.stopAudio(players[i].dataset.id)
-                        
-                        // this.playlist[players[i].dataset.id].init=false;
-                        // this.playlist[players[i].dataset.id].audioElement.pause()
-                        // this.playlist[players[i].dataset.id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                        // this.playlist[players[i].dataset.id].button.querySelector('.js-pausebutton').classList.add('hidden')
-                        this.playlist[players[i].dataset.id].range.parentNode.classList.add('max-h-0')
-                        this.playlist[players[i].dataset.id].range.parentNode.classList.remove('max-h-9')
-                    }
-                }              
-            },
+                // let players = document.querySelectorAll('audio.hidden')
 
+
+                // if(this.playerCount > 1){
+                //     for (let i=0; i<players.length; i++){
+                //         if ( players[i].dataset.id != id){                            
+                //             this.stopAudio(players[i].dataset.id)
+                            
+                //             // this.playlist[players[i].dataset.id].init=false;
+                //             // this.playlist[players[i].dataset.id].audioElement.pause()
+                //             // this.playlist[players[i].dataset.id].button.querySelector('.js-playbutton').classList.remove('hidden')
+                //             // this.playlist[players[i].dataset.id].button.querySelector('.js-pausebutton').classList.add('hidden')
+                //             this.playlist[players[i].dataset.id].range.parentNode.classList.add('max-h-0')
+                //             this.playlist[players[i].dataset.id].range.parentNode.classList.remove('max-h-9')
+                //         }
+                //     }
+                // }  
+                
+
+                for (const index in this.playlist) {
+                    if(index != id){
+                        console.log("STOP: ", index)
+                        this.stopAudio(index)
+                        this.playlist[index].range.parentNode.classList.add('max-h-0')
+                        this.playlist[index].range.parentNode.classList.remove('max-h-9')
+                    }
+                }
+
+            },
+            stopAllPlayersBecauseOfGlobalStop(event){
+                this.stopAllOtherPlayers(event.id);
+            },
             startAudio(id) {
                 console.log('start audio '+ id )
                 if(this.playlist[id].init == false){
