@@ -1,3 +1,15 @@
+# v0.88.1 (Fri Nov 25 2022)
+
+#### 🐛 Bug Fix
+
+- teasertext linked; Tabbox-Button blue [#397](https://github.com/mumprod/hr-design-system-handlebars/pull/397) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.88.0 (Thu Nov 24 2022)
 
 #### 🚀 Enhancement
