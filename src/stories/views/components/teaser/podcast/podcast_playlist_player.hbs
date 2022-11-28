@@ -36,7 +36,7 @@
       <div class="flex flex-col ">
         <div class="w-24 md:w-42">
           {{> components/base/image/responsive_image this.teaseritem 
-            _type=this.teaserType
+            _type="podcastEpisodePlayer"
             _variant="default"
             _addClass="overflow-hidden"
             _noDelay=this.dontLazyload 
@@ -65,7 +65,7 @@
     x-init="listenToGlobalStop()"
     ax-load
     x-ignore
-    ax-load-src="/vendor/js/podcast_player.alpine.js">
+    ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
       {{#with this.playlistItems}}
         {{#each this}}
           <div class="flex pb-5 border-b {{#unless @last}}border-white{{/unless}}" >
