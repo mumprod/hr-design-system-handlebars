@@ -6,6 +6,8 @@ export default function playaudio(){
                 let _player = {}
                 _player.id = id
                 _player.button = document.querySelector('#playbutton'+id)
+                _player.playIcon = _player.button.querySelector('.js-playbutton')
+                _player.pauseIcon = _player.button.querySelector('.js-pausebutton')
                 _player.range = document.querySelector('#range'+id)
                 _player.timeDisplay = document.querySelector('#timedisplay'+id)
                 _player.audioElement = this.$el
@@ -66,52 +68,33 @@ export default function playaudio(){
                 if(this.playlist[id].init == true){
                     this.stopAudio(id)
                 } else {
-                   // this.$dispatch('stopotherplayers',{playerId: id});
-                    this.stopAllOtherPlayers(id)
-
+                    this.stopAllOtherPlayers(id, false)
                     this.startAudio(id)
                     this.playlist[id].range.parentNode.classList.remove('max-h-0')
                     this.playlist[id].range.parentNode.classList.add('max-h-9')
-                    this.playlist[id].button.querySelector('.js-playbutton').classList.add('hidden')
-                    this.playlist[id].button.querySelector('.js-pausebutton').classList.remove('hidden')
+                    this.playlist[id].playIcon.classList.add('hidden')
+                    this.playlist[id].pauseIcon.classList.remove('hidden')
                     let event = new Event("hr:global:stopOtherAVs");
                     event.id = id;
                     window.dispatchEvent(event);
                 }
             },
 
-            stopAllOtherPlayers(id){  //id=2
-                // let players = document.querySelectorAll('audio.hidden')
-
-
-                // if(this.playerCount > 1){
-                //     for (let i=0; i<players.length; i++){
-                //         if ( players[i].dataset.id != id){                            
-                //             this.stopAudio(players[i].dataset.id)
-                            
-                //             // this.playlist[players[i].dataset.id].init=false;
-                //             // this.playlist[players[i].dataset.id].audioElement.pause()
-                //             // this.playlist[players[i].dataset.id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                //             // this.playlist[players[i].dataset.id].button.querySelector('.js-pausebutton').classList.add('hidden')
-                //             this.playlist[players[i].dataset.id].range.parentNode.classList.add('max-h-0')
-                //             this.playlist[players[i].dataset.id].range.parentNode.classList.remove('max-h-9')
-                //         }
-                //     }
-                // }  
-                
-
+            stopAllOtherPlayers(id, preventMinimize){  
                 for (const index in this.playlist) {
-                    if(index != id){
+                    if(index != id && this.playlist[index].currentlyPlaying == true){
                         console.log("STOP: ", index)
                         this.stopAudio(index)
-                        this.playlist[index].range.parentNode.classList.add('max-h-0')
-                        this.playlist[index].range.parentNode.classList.remove('max-h-9')
+                        if(!preventMinimize){
+                            this.playlist[index].range.parentNode.classList.add('max-h-0')
+                            this.playlist[index].range.parentNode.classList.remove('max-h-9')
+                        }
                     }
                 }
 
             },
             stopAllPlayersBecauseOfGlobalStop(event){
-                this.stopAllOtherPlayers(event.id);
+                this.stopAllOtherPlayers(event.id, true);
             },
             startAudio(id) {
                 console.log('start audio '+ id )
@@ -128,8 +111,8 @@ export default function playaudio(){
                 this.playlist[id].audioElement.pause()
                 this.playlist[id].init = false; 
                 this.playlist[id].currentlyPlaying = false;  
-                this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')          
+                this.playlist[id].playIcon.classList.remove('hidden')
+                this.playlist[id].pauseIcon.classList.add('hidden')          
             },
 
             initAudioEventListener(id) {               
