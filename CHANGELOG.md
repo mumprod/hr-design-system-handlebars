@@ -1,3 +1,15 @@
+# v0.90.0 (Mon Nov 28 2022)
+
+#### 🚀 Enhancement
+
+- Remove Brackets from external Link [#400](https://github.com/mumprod/hr-design-system-handlebars/pull/400) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.89.0 (Mon Nov 28 2022)
 
 #### 🚀 Enhancement
