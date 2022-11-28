@@ -1073,7 +1073,7 @@
                 "isAudio": false,
                 "isVideo": false,
                 "isPodcastEpisode": false,
-                "isExtOrBrandLink": false,
+                "isExtOrBrandLink": true,
                 "isAuthor": false,
                 "isFileDownload": false,
                 "copyright": "Copyright Text",
