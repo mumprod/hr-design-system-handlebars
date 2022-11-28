@@ -82,7 +82,7 @@ export default function playaudio(){
 
             stopAllOtherPlayers(id, preventMinimize){  
                 for (const index in this.playlist) {
-                    if(index != id && this.playlist[index].currentlyPlaying == true){
+                    if(index != id){
                         console.log("STOP: ", index)
                         this.stopAudio(index)
                         if(!preventMinimize){
