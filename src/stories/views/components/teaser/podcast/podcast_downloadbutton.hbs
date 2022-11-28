@@ -1,5 +1,5 @@
 <button class="flex {{#if _addClass}} {{_addClass}} {{/if}}">
-    <a href="{{_url}}" class="h-6 button js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+    <a href="{{_url}}" class="h-6 js-load" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
         {{> components/base/image/icon _icon='download-neu' _addClass=_iconClass }}
     </a>
 </button>
