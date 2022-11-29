@@ -4,7 +4,7 @@
     </div>
 {{/with~}}
 
-<{{~ _headlineTag ~}}>
+<{{~ _headlineTag ~}}{{#if _headlineCss}} class="{{_headlineCss}}"{{/if}}>
        {{#if _topline}}
         {{> components/teaser/components/teaser_topline _css=_toplineCss _text=_topline _readMore=_readMore _teaserType=_teaserType}}
     {{/if}}

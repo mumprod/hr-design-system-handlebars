@@ -49,6 +49,12 @@
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.blue.science');
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hessenschau'] {
@@ -94,10 +100,12 @@
     --color-button: var(--color-primary);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hr-fernsehen'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.purple.jazzberry');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -130,10 +138,16 @@
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.purple.jazzberry');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.purple.jazzberry');
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hr-inforadio'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.blue.jellyBean');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.blue.aqua');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -162,10 +176,19 @@
     --color-stage-text-box: theme('colors.blue.astronautBlue');
     --color-stage-primary: theme('colors.blue.astronautBlue');
     --color-stage-link: theme('colors.white.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: var(--color-primary);
+    --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.blue.jellyBean');
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hr-rundfunkrat'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.grey.scorpion');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.blue.linkWater');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -192,6 +215,19 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
+    /* Stage */
+    --color-stage-text-box: theme('colors.blue.deepCerulean');
+    --color-stage-primary: theme('colors.blue.deepCerulean');
+    --color-stage-link: theme('colors.white.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.blue.deepCerulean');
+    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    /* Button */
+    --color-button: theme('colors.blue.deepCerulean');
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.blue.deepCerulean');
+    /* States */
+    --color-focus-state: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hr-werbung'] {

@@ -15,7 +15,7 @@
     {{~#with this.overviewLink}}
         {{~#if this.link~}}
             <div class="flex mx-5 py-11 {{~inline-switch ../this.teaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
-                {{~> components/button/button_pseudo _linkTitle=this.title~}}
+                {{~> components/button/button_pseudo _withLink=true _buttonText=this.title~}}
             </div>
         {{~/if~}}
     {{/with~}}

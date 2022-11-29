@@ -48,39 +48,51 @@
 
     .headline-barrier:after {
         margin: 3px 0 0 10px;
-        
     }
 
     @media screen(md) {
         .headline-barrier:after {
-            margin: 3px 0 0 20px;           
+            margin: 3px 0 0 20px;
         }
         .headline-barrier:before {
-            margin: 3px 20px 0 0;           
+            margin: 3px 20px 0 0;
         }
     }
 
     /* PODCAST SEEK SLIDER*/
-    .seek_slider::-webkit-slider-thumb{
+    .seek_slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 16px;
         height: 16px;
-        background: #F07800;
+        background: #f07800;
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
-      .seek_slider::-moz-range-thumb{
-         -webkit-appearance: none;
+    }
+    .seek_slider::-moz-range-thumb {
+        -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 12px;
         height: 12px;
-        background: #F07800;
+        background: #f07800;
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
+    }
+
+    .teaser-headline:focus-within + .cta span,
+    .cta:focus span {
+        @apply shadow-teaser-focus;
+        @apply shadow-focus-state;
+        @apply bg-button-inverted;
+        @apply text-button-hollow;
+        border: none;
+    }
+
+    .teaser-headline > a:focus-visible {
+        outline: none;
+    }
 }
