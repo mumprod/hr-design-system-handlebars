@@ -3,39 +3,37 @@
     "@->overrides": [
         {
             "@->contentpath": "teaserSize",
-            "@->value": "33"
+            "@->value": "100"
         },
         {
             "@->contentpath": "title",
-            "@->value": "NEUESTE BEITRÄGE"
+            "@->value": "DER TAG IN HESSEN"
         },
         {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
         },
         {
+            "@->contentpath": "showGenreImage",
+            "@->value": "true"
+        },
+        {
             "@->contentpath": "showFirstImageOrGenreImage",
             "@->value": "true"
         },
         {
-            "@->contentpath": "showFirstImage",
-            "@->value": "true"
+            "@->contentpath": "overviewLink.link",
+            "@->value": ""
         },
         {
-            "@->contentpath": "firstEntry",
+            "@->contentpath": "genreImage",
             "@->value": {
-                "@->jsoninclude": "teaser/headline_list_item.inc.json",
-                "@->contentpath": "item1",
-                "@->overrides": [
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_cluster_genre_100",
+                "@->replaceToken": [
                     {
-                        "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "teaser_cluster_33",
-                        "@->replaceToken": [
-                            {
-                                "@->token": "image",
-                                "@->value": "connichi-106"
-                            }
-                        ]
+                        "@->token": "image",
+                        "@->value": "sonniger-herbst-100"
                     }
                 ]
             }
@@ -45,19 +43,19 @@
             "@->value": [
                 {
                     "@->jsoninclude": "teaser/headline_list_item.inc.json",
-                    "@->contentpath": "item2"
+                    "@->contentpath": "item7"
                 },
                 {
                     "@->jsoninclude": "teaser/headline_list_item.inc.json",
-                    "@->contentpath": "item3"
+                    "@->contentpath": "item7"
                 },
                 {
                     "@->jsoninclude": "teaser/headline_list_item.inc.json",
-                    "@->contentpath": "item4"
+                    "@->contentpath": "item7"
                 },
                 {
                     "@->jsoninclude": "teaser/headline_list_item.inc.json",
-                    "@->contentpath": "item5"
+                    "@->contentpath": "item7"
                 }
             ]
         }

@@ -9,6 +9,12 @@
               </span>
               <span class="mx-px last-of-type:hidden">|</span>
            {{/if}}
+           {{~#if this.showTeaserInfoChannel}}
+                <span class="uppercase">
+                    {{../this.podcastChannel.title}}
+                </span>
+                <span class="mx-px last-of-type:hidden">|</span>
+            {{/if}}
            {{~#if this.showTeaserInfoDate}}
               {{~#with ../this.teaserDate}}
                  <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
