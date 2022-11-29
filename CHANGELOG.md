@@ -1,3 +1,27 @@
+# v0.92.0 (Mon Nov 28 2022)
+
+#### 🚀 Enhancement
+
+- add margin x and y for teaser media button for program [#403](https://github.com/mumprod/hr-design-system-handlebars/pull/403) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.91.1 (Mon Nov 28 2022)
+
+#### 🐛 Bug Fix
+
+- Podcast delivery integration fixes [#401](https://github.com/mumprod/hr-design-system-handlebars/pull/401) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.91.0 (Mon Nov 28 2022)
 
 #### 🚀 Enhancement
