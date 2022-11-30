@@ -1,3 +1,15 @@
+# v0.94.0 (Wed Nov 30 2022)
+
+#### 🚀 Enhancement
+
+- Delete not needed param and add mt-12 to safeList to be sure the css-… [#407](https://github.com/mumprod/hr-design-system-handlebars/pull/407) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.93.1 (Wed Nov 30 2022)
 
 #### 🐛 Bug Fix
