@@ -274,7 +274,7 @@
 }
 
 [data-theme='hr-sinfonieorchester'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.red.burntUmber');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.grey.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -300,9 +300,18 @@
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */
-    --color-stage-text-box: theme('colors.red.burntUmber');
-    --color-stage-primary: theme('colors.red.burntUmber');
+    --color-stage-text-box: var(--color-primary);
+    --color-stage-primary: var(--color-primary);
     --color-stage-link: theme('colors.white.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.red.wellRead');
+    --color-cluster-teaser-headline: var(--color-primary);
+    /* Button */
+    --color-button: theme('colors.red.wellRead');
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.red.wellRead');
+    /* States */
+    --color-focus-state: theme('colors.red.wellRead');
 }
 
 [data-theme='hr-bigband'] {
