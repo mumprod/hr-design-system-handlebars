@@ -6,6 +6,9 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
+    safelist: [
+        "mt-12"
+    ],
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js}',
