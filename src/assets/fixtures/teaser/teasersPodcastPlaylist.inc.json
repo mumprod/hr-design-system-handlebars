@@ -25,7 +25,7 @@
                         "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
-                                "@->contentpath": "podcastDuration",
+                                "@->contentpath": "duration",
                                 "@->value": "53:13"
                             },
                             {
@@ -39,7 +39,7 @@
                         "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
-                                "@->contentpath": "podcastDuration",
+                                "@->contentpath": "duration",
                                 "@->value": "13:11"
                             },
                             {
@@ -61,7 +61,7 @@
                         "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
                         "@->overrides": [
                             {
-                                "@->contentpath": "podcastDuration",
+                                "@->contentpath": "duration",
                                 "@->value": "70:26"
                             },
                             {
