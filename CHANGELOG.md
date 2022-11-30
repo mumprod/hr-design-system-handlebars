@@ -1,3 +1,16 @@
+# v0.93.1 (Wed Nov 30 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1875: adding PodcastChannelClusterTeaser Story [#405](https://github.com/mumprod/hr-design-system-handlebars/pull/405) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.93.0 (Wed Nov 30 2022)
 
 #### 🚀 Enhancement
