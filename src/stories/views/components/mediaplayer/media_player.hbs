@@ -13,9 +13,7 @@
             {{~#if ../_isCopyText~}}
                 {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                
             {{else}}          
-                {{#decorator 'components/base/link' _cssClasses="c-teaser__mediaLink" _isAriaHidden=true
-                        _doTracking=(if this.doTracking 'true') _clickLabelPrefix1=this.realTeasersize
-                        _clickLabelPrefix2="mediaLink" }}                                      
+                {{#decorator 'components/base/link' _cssClasses="c-teaser__mediaLink" _isAriaHidden=true }}                                      
                     {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                             
                 {{/decorator }}
             {{/if}}

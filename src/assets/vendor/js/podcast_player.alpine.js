@@ -50,9 +50,9 @@ export default function playaudio(){
                 
                 let range = document.getElementById("range"+id)
                 range.value = 0
-                this.$el.querySelector('#currentTime').innerHTML = this.fancyTimeFormat('0',false)
-                this.$el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds, true)
-                
+                this.$el.querySelector('.js-currentTime').innerHTML = this.fancyTimeFormat('0',false)
+                this.$el.querySelector('.js-audioDuration').innerHTML = this.fancyTimeFormat(durationSeconds, true)
+            
             },
 
             updateCurrentTime(range,timeDisplay,newTime, id) {
@@ -82,7 +82,7 @@ export default function playaudio(){
 
             stopAllOtherPlayers(id, preventMinimize){  
                 for (const index in this.playlist) {
-                    if(index != id && this.playlist[index].currentlyPlaying == true){
+                    if(index != id){
                         console.log("STOP: ", index)
                         this.stopAudio(index)
                         if(!preventMinimize){
