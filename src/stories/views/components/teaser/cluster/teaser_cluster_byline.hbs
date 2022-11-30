@@ -1,6 +1,6 @@
 
 {{#with this.teaserInfo}}
-<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif">
+<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif {{#if ../_ordered}} pl-8 {{/if}}">
     {{!--Teaser-Info--}}
         {{#if this.showTeaserInfo~}}
            {{~#if this.showTeaserInfoSection}}
@@ -9,6 +9,12 @@
               </span>
               <span class="mx-px last-of-type:hidden">|</span>
            {{/if}}
+           {{~#if this.showTeaserInfoChannel}}
+                <span class="uppercase">
+                    {{../this.podcastChannel.title}}
+                </span>
+                <span class="mx-px last-of-type:hidden">|</span>
+            {{/if}}
            {{~#if this.showTeaserInfoDate}}
               {{~#with ../this.teaserDate}}
                  <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>

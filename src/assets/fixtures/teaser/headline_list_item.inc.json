@@ -18,11 +18,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -86,11 +86,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -145,11 +145,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -204,11 +204,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -271,11 +271,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -330,11 +330,11 @@
         "teaserInfo": {
             "showTeaserInfo": true,
             "showTeaserInfoSection": true,
-            "showTeaserInfoChannel": true,
+            "showTeaserInfoChannel": false,
             "showTeaserInfoAll": true,
             "showTeaserInfoDate": false,
             "showTeaserInfoDateTime": true,
-            "showTeaserInfoProgramRef": true
+            "showTeaserInfoProgramRef": false
         },
         "teaserDate": {
             "htmlDateTime": "2022-04-17T19:30+0200",
@@ -370,5 +370,142 @@
             "date": "17.04.22",
             "dateSeparatorTime": "17.04.22, 19:30"
         }
+    },
+    "item7": {
+        "title": "Untergrund war Strategie: Punk in der DDR",
+        "url": "/teaser1",
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "heiner-goebbels-102"
+                        }
+                    ]
+                },
+                "podcastDuration": "53:13",
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": false,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": false
+                },
+                "podcastChannel": {
+                    "title": "DER TAG IN HESSEN",
+                    "url": "#ChannelURL",
+
+                    "podcastHoster": [
+                        {
+                            "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
+                            "podcastHosterName": "ITunes"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
+                            "podcastHosterName": "RSS"
+                        },
+                        {
+                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
+                            "podcastHosterName": "Google Podcasts"
+                        },
+                        {
+                            "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
+                            "podcastHosterName": "ARD Audiothek"
+                        }
+                    ]
+                },
+                "audioUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+                "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_podcast",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "heiner-goebbels-102"
+                        }
+                    ]
+                },
+
+        "teaserSize": "hero",
+        "showLabel": false,
+        "showProfileInfo": false,
+        "teaserDate": {
+            "htmlDateTime": "2020-10-02T19:46+0200",
+            "htmlDate": "02.10.2020",
+            "date": "02.10.20",
+            "dateSeparatorTime": "02.10.20, 19:46"
+        },
+        "documentModificationDate": {
+            "htmlDateTime": "2022-04-17T19:30+0200",
+            "htmlDate": "20.02.1983",
+            "date": "17.04.22",
+            "dateSeparatorTime": "17.04.22, 19:30"
+        },
+        "displayTeaserBodyAsImageOverlay": false,
+        "hasMediaButtons": false,
+        "dontLazyload": true,
+        "isStandardTeaser": true,
+        "isHeroTeaser": false,
+        "isMediaTeaser": true,
+        "isGuide": false,
+        "isProgram": false,
+        "isEvent": false,
+        "isTicker": false,
+        "isAudio": false,
+        "isVideo": false,
+        "isPodcast": true,
+        "isPodcastEpisode": true,
+        "isExtOrBrandLink": false,
+        "isAuthor": false,
+        "copyright": "Copyright Text",
+        "audioAuthor": "Audio Author",
+        "hasStatus": false,
+        "hasTeaserItem": true,
+        "allowAVConsumption": true,
+        "aspectRatio": "ar--teaserTop",
+        "hideGeotag": false,
+        "hideEditableByline": true,
+        "doTracking": true,
+        "trackingForArdMediatheksLink": false,
+        "showMediatheksLink": false,
+        "showAirdate": false,
+        "showProfileInfoAsByline": false,
+        "obsolet_brandOfTeaser": "hessenschau",
+        "documentSection": "Kultur",
+        "headlineTag": "h1",
+        "icon": "ortsmarke",
+        "imageVariant": "topteaser",
+        "shorttext": "1977 kam Punk in die Musikwelt. Und in die Radios. Auch in der DDR. Aus der Begeisterung für diese Musik, gemischt mit Wut, Trotz, Mut und Erfindungsreichtum, entstand in den folgenden Jahren eine Subkultur in der Diktatur. Das sozialistische Regime erklärte die Punks zu Staatsfeinden. Geralf Pochop aus Halle an der Saale, Jahrgang 1964, war einer dieser DDR-Punks. Er hat seine Erinnerungen, Erfahrungen und Erlebnisse aufgeschrieben - in seinem Buch \"Untergrund war Strategie - Punk in der DDR zwischen Rebellion und Repression\". Mit uns spricht er über fantasievoll improvisierte Outfits, die drastischen Methoden der Staatssicherheit gegen Punks und seine Sicht auf Mauerfall und Wiedervereinigung.",
+        "sophoraId": "podcast-episode-76432",
+        "profiles": "",
+        "teaserLead": {
+            "@->jsoninclude": "teaser/teaser_lead.inc.json",
+            "@->contentpath": "podcast"
+        },
+        "label": {
+            "type": "podcast",
+            "loca": "label_podcast",
+            "byline": {
+                "bylineSsi": "07:42 min",
+                "bylineText": ""
+            }
+        },
+        "link": {
+            "url": "/teaser1",
+            "webviewUrl": "/teaser1#webview",
+            "isTargetBlank": false,
+            "hasIcon": false,
+            "iconName": "iconName",
+            "readMoreText": {
+                "readMoreScreenreader": "Zur Podcastepisode",
+                "readMore": "mehr",
+                "readMoreLong": "read More Long"
+            }
+        }
     }
 }
+        
