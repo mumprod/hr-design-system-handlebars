@@ -1,3 +1,15 @@
+# v0.92.1 (Tue Nov 29 2022)
+
+#### 🐛 Bug Fix
+
+- Podcast delivery integration fixes v2 [#404](https://github.com/mumprod/hr-design-system-handlebars/pull/404) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.92.0 (Mon Nov 28 2022)
 
 #### 🚀 Enhancement

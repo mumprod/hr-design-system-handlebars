@@ -1264,7 +1264,7 @@
                         }
                     ]
                 },
-                "podcastDuration": "53:13",
+                "duration": "53:13",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
