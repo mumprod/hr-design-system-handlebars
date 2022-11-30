@@ -1,3 +1,15 @@
+# v0.93.0 (Wed Nov 30 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1822: Remove _doTracking, because it is not needed anymore [#406](https://github.com/mumprod/hr-design-system-handlebars/pull/406) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.92.1 (Tue Nov 29 2022)
 
 #### 🐛 Bug Fix
