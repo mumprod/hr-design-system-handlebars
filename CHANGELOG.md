@@ -1,3 +1,15 @@
+# v0.95.2 (Thu Dec 01 2022)
+
+#### 🐛 Bug Fix
+
+- podcast channel link needs self-end to be adjusted to the right [#410](https://github.com/mumprod/hr-design-system-handlebars/pull/410) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.95.1 (Thu Dec 01 2022)
 
 #### 🐛 Bug Fix
