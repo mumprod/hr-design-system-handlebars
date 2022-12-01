@@ -1,83 +1,79 @@
-<div class="flex col-span-12 pb-5 border-b border-white" >
+<div class="flex col-span-12 pb-5 border-b border-white">
   <div class="flex flex-col grow">
-  {{!-- First Row --}}
+    {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
-
       <div class="flex flex-col pr-5 grow">
-
         <div class="flex max-h-6">
           {{!-- Label / Airdate --}}
-          {{#with label}}             
-            <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
+          {{#with label}}
+            <span
+              class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
               {{ loca this.loca }}
-            </span> 
+            </span>
           {{/with}}
         </div>
 
         {{!-- Überschrift: --}}
-        <div class="flex pb-5 pr-2 md:pr-5">          
-          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+        <div class="flex pb-5 pr-2 md:pr-5">
+          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
         {{!-- Shorttext --}}
         {{#unless _isSinglePage}}
           {{#unless this.hideShortText}}
-              {{~#with this.shorttext}}
-                  <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                      <span class="c-teaser__shorttext"> {{this}} </span>
-                  </div>
-              {{/with~}}
+            {{~#with this.shorttext}}
+              <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
+                <span class="c-teaser__shorttext"> {{this}} </span>
+              </div>
+            {{/with~}}
           {{/unless}}
         {{/unless}}
 
       </div>
 
-      {{!-- Podcast Image      --}}
+      {{!-- Podcast Image --}}
       <div class="flex flex-col ">
         <div class="w-24 md:w-42">
-          {{> components/base/image/responsive_image this.teaseritem 
+          {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
             _variant="default"
             _addClass="overflow-hidden"
-            _noDelay=this.dontLazyload 
+            _noDelay=this.dontLazyload
             _addClassImg="w-full h-24 md:h-42 block"
           }}
         </div>
       </div>
 
     </div>
-  
-    <div class="flex flex-row px-5 md:pr-0">
-
-      {{!-- Abo-Dropdown    --}}
-      {{#with this.podcastChannel}}        
+    {{!-- Abo-Dropdown --}}
+     
+    {{#with this.podcastChannel}}
+      <div class="flex flex-row px-5 md:pr-0"> 
         {{> components/teaser/podcast/podcast_subscribe_button}}
-      {{/with}}
-
-    </div>
+      </div>
+    {{/with}}
     
-  </div>  
+  </div>
 </div>
 
-  {{!-- Player UI --}}
-  <div class="flex flex-col col-span-12 gap-5 px-5" 
-    x-data="playaudio()"
-    x-init="listenToGlobalStop()"
-    ax-load
-    x-ignore
-    ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
-      {{#with this.playlistItems}}
-        {{#each this}}
-          <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}" >
-            {{> components/teaser/podcast/podcast_player_ui 
-            _isPlaylistPlayer=true
-            _podcastDuration=duration
-            _title=title
-            _id=(nextRandom)
-            _first=@first
-            }}
-          </div>
-        {{/each}}
-      {{/with}}   
-  </div>
+{{!-- Player UI --}}
+<div  class="flex flex-col col-span-12 gap-5 px-5"
+  x-data="playaudio()" 
+  x-init="listenToGlobalStop()" 
+  ax-load 
+  x-ignore
+  ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
+  {{#with this.playlistItems}}
+    {{#each this}}
+      <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}">
+        {{> components/teaser/podcast/podcast_player_ui
+          _isPlaylistPlayer=true
+          _podcastDuration=duration
+          _title=title
+          _id=(nextRandom)
+          _first=@first
+        }}
+      </div>
+    {{/each}}
+  {{/with}}
 </div>
