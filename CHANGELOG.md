@@ -1,3 +1,15 @@
+# v0.95.0 (Thu Dec 01 2022)
+
+#### 🚀 Enhancement
+
+- Pocast delivery integration fixes v3 [#408](https://github.com/mumprod/hr-design-system-handlebars/pull/408) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.94.0 (Wed Nov 30 2022)
 
 #### 🚀 Enhancement
