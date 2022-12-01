@@ -1,3 +1,15 @@
+# v0.96.1 (Thu Dec 01 2022)
+
+#### 🐛 Bug Fix
+
+- add margin to Button in Tabbox-Teaser [#412](https://github.com/mumprod/hr-design-system-handlebars/pull/412) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.96.0 (Thu Dec 01 2022)
 
 #### 🚀 Enhancement
