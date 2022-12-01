@@ -1,3 +1,15 @@
+# v0.96.0 (Thu Dec 01 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Change ar from 1t01 to 16to9 when start av in mobile view [#411](https://github.com/mumprod/hr-design-system-handlebars/pull/411) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.95.2 (Thu Dec 01 2022)
 
 #### 🐛 Bug Fix
