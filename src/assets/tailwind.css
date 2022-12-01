@@ -430,8 +430,14 @@
     --color-stage-primary: theme('colors.yellow.corn');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.science');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-link: theme('colors.black.DEFAULT');
+    --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
+    /* Button */
+    --color-button: theme('colors.yellow.olive');
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.yellow.olive');
+    /* States */
+    --color-focus-state: theme('colors.yellow.olive');
 }
 
 [data-theme='hr2'] {
