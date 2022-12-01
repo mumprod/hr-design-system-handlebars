@@ -441,7 +441,7 @@
 }
 
 [data-theme='hr2'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.orange.clementine');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.grey.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -468,9 +468,18 @@
     --color-link: theme('colors.red.paprika');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
-    --color-stage-primary: theme('colors.orange.clementine');
+    --color-stage-primary: var(--color-primary);
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: var(--color-link);
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: theme('colors.red.paprika');
+    --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
+    /* Button */
+    --color-button: theme('colors.red.paprika');
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.red.paprika');
+    /* States */
+    --color-focus-state: theme('colors.red.paprika');
 }
 
 [data-theme='hr3'] {
