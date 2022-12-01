@@ -2,8 +2,8 @@
     <figure class="ar-1-1" aria-hidden="true">
         {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
     </figure> 
-    <div class="teaser-headline absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl focus-within:shadow-teaser-focus focus-within:shadow-focus-state" aria-hidden="true">
-        {{#decorator 'components/base/link' _css="flex items-center flex-col before:content-[''] before:absolute before:inset-0 before:z-10 hover:text-toplineColor"}} 
+    <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl" aria-hidden="true">
+        {{#decorator 'components/base/link' _css="teaser-link flex items-center flex-col before:content-[''] before:absolute before:rounded-tl-3xl before:rounded-br-3xl before:inset-0 before:z-10 hover:text-toplineColor"}} 
             {{> components/teaser/components/teaser_heading 
             _headlineTag="h2" 
             _headlineCss="text-shadow text-center text-white mx-8" 
@@ -16,8 +16,6 @@
             _teaserType=this.teaserType 
             _font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
         {{/decorator}}
+        {{~> components/button/button_pseudo _type="hollow-white" _withLink=true _isLinkAriaHidden=true _linkCss="cta absolute flex w-full h-full items-end justify-center" _buttonCss=(inline-switch this.teaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _buttonText=this.link.readMoreText.readMoreLong ~}} 
     </div>
-
-    {{~> components/button/button_pseudo _type="hollow-white" _withLink=true _isLinkAriaHidden=true _linkCss="cta absolute flex w-full h-full items-end justify-center" _buttonCss=(inline-switch this.teaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _buttonText=this.link.readMoreText.readMoreLong ~}} 
-    <span class="sr-only">{{this.link.readMoreText.readMoreLong}}: {{this.title}}</span> 
 </article>

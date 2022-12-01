@@ -83,16 +83,19 @@
         border-radius: 50%;
     }
 
-    .teaser-headline:focus-within + .cta span,
-    .cta:focus span {
+    .teaser-link:focus-visible::before,
+    .teaser-link:focus-visible + .cta span {
         @apply shadow-teaser-focus;
         @apply shadow-focus-state;
+    }
+
+    .teaser-link:focus-visible + .cta span {
         @apply bg-button-inverted;
         @apply text-button-hollow;
         border: none;
     }
 
-    .teaser-headline > a:focus-visible {
+    .teaser-link:focus-visible {
         outline: none;
     }
 }
