@@ -56,8 +56,7 @@ export default function playaudio(){
             },
 
             updateCurrentTime(range,timeDisplay,newTime, id) {
-
-                timeDisplay.querySelector('#currentTime').innerHTML = this.fancyTimeFormat(newTime, false)
+                timeDisplay.querySelector('.js-currentTime').innerHTML = this.fancyTimeFormat(newTime, false)            
                 range.style.background = 'linear-gradient(to right, #006dc1 ' + (range.value/10)  + '%, white ' + (range.value/10) + '% )'
                 range.value = ((100 * newTime) / this.playlist[id].audioElement.duration) * 10
             }, 

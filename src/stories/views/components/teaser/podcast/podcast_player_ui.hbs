@@ -58,9 +58,10 @@
                     <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " class="flex w-full"> 
                         {{> components/teaser/podcast/podcast_timedisplay 
                         _id=_id
+                        _duration=duration
                         _currentTimeClasses="font-bold text-orange-layout" 
                         _durationClasses="text-blue-science" 
-                        _containerCss="flex text-xs grow font-headingSerif" }}
+                        _containerCss="flex text-sm grow font-heading" }}
                     </div>
                 {{/if}}
             </div>
@@ -70,11 +71,11 @@
             {{!-- Meta Time usw. --}}
             <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
             {{> components/teaser/podcast/podcast_timedisplay 
+                _id=_id
                 _duration=duration 
                 _currentTimeClasses="font-bold text-orange-layout" 
                 _durationClasses="text-blue-science" 
-                _id=_id
-                _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}              
+                _containerCss="pl-16 -mt-3 flex text-sm grow font-heading"}}              
             </div>
         {{/unless}}
         

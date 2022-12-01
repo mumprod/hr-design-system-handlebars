@@ -1,7 +1,7 @@
-<div class="flex col-span-12">   
+<div class="flex col-span-12 p-5">   
   <div class="flex flex-col grow">
   {{!-- First Row --}}
-    <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
+    <div class="flex flex-row {{#if ../_ordered}} pl-8 {{/if}} ">
       <div class="flex flex-col grow">  
         <div class="flex max-h-6">
           {{!-- Label / Airdate --}}
@@ -35,13 +35,13 @@
 
       {{!-- Podcast Image      --}}
       <div class="flex flex-col ">
-        <div class="w-24 md:w-42">
+        <div class="w-22 xs:w-24 {{inline-switch _teaserSize '["50"]' '["","md:w-42"]'}}">
           {{> components/base/image/responsive_image this.teaseritem 
             _type="podcastEpisodePlayer"
             _variant="default"
             _addClass="overflow-hidden"
             _noDelay=this.dontLazyload 
-            _addClassImg="w-full h-24 md:h-42 block"
+            _addClassImg="w-full block"
           }}
         </div>
       </div>
@@ -49,7 +49,7 @@
     </div>
 
     {{!-- Player UI --}}
-    <div class="flex px-5 md:pl-5 md:pr-52 md:-mt-14" 
+    <div class="flex {{inline-switch _teaserSize '["50"]' '["","md:pr-52 md:-mt-14"]'}}" 
       x-data="playaudio()"
       x-init="listenToGlobalStop()"
       ax-load
@@ -64,16 +64,16 @@
     </div>
   
     {{!-- Abo-Dropdown    --}}
-    <div class="flex flex-row p-5 md:pr-0">
+    <div class="flex flex-row pt-5">
       {{#with this.podcastChannel}}       
         {{> components/teaser/podcast/podcast_subscribe_button}}
       {{/with}}
 
       {{#with this.podcastChannel}}    
         {{!-- Sendungs-Link --}}
-        <div class="flex justify-end w-full pl-4 md:pr-52">
-          <div class="flex flex-wrap self-end text-xs font-heading text-blue-science">
-            <span class="flex pr-2 font-bold whitespace-nowrap">Zur Sendung: </span>
+        <div class="flex justify-end w-full pl-4">
+          <div class="flex flex-col flex-wrap self-end text-xs font-heading text-blue-science">
+            <span class="self-end font-bold">Zur Sendung</span>
             <a class="underline" href="{{this.url}}">{{this.title}}</a>
           </div>
         </div>
