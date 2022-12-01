@@ -90,6 +90,7 @@
     /*Stage */
     --color-stage-text-box: theme('colors.grey.armadillo');
     --color-stage-primary: theme('colors.blue.congress');
+    --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* geoTag */
     --color-geoTag: theme('colors.grey.brightGray');
@@ -356,7 +357,7 @@
 }
 
 [data-theme='hr'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.blue.deepCerulean');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.blue.linkWater');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -376,15 +377,26 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.deepCerulean');
+    --color-label-pm: var(--color-primary);
     /* Dachzeile */
-    --color-topline: theme('colors.blue.deepCerulean');
+    --color-topline: var(--color-primary);
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.deepCerulean');
+    --color-link: var(--color-primary);
     /* Stage */
+    --color-stage-text-box: var(--color-primary);
+    --color-stage-primary: var(--color-primary);
     --color-stage-link: theme('colors.white.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: var(--color-primary);
+    --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: var(--color-primary);
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hr1'] {
