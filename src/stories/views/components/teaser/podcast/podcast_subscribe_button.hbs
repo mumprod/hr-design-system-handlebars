@@ -1,6 +1,5 @@
-<div class="flex">
-    {{!-- Container  --}}
-    <div x-data="{
+
+<div x-data="{
         open: false,
         toggle() {
             if (this.open) {
@@ -17,7 +16,7 @@
         x-on:keydown.escape.prevent.stop="close($refs.button)"
         x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
         x-id="['dropdown-button']"
-        class="relative"
+        class="relative z-10 h-10"
     >
 
     {{!-- Button --}}
@@ -27,6 +26,7 @@
         :aria-expanded="open"
         :aria-controls="$id('dropdown-button')"
         type="button"
+        :class="open ? 'drop-shadow' : ''" 
         class="flex items-center gap-1.5 px-2 py-2 text-white shadow font-heading bg-orange-layout">Abonnieren
         <div x-cloak x-show="open" class="w-3 h-3">
             {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
@@ -44,22 +44,21 @@
         x-on:click.outside="close($refs.button)"
         :id="$id('dropdown-button')"
         style="display: none;"
-        class="absolute left-0 flex flex-col w-full px-2 text-sm text-white shadow-md font-heading shadow-insetfromtop grow bg-orange-layout"
+        class="left-0 w-full px-2 text-sm text-white font-heading grow bg-orange-layout"
     >
         {{~#with this.podcastHoster~}}
         <ul>
             {{~#each this~}}
-            <li class="border-b last:border-0"> 
-                <a class="flex items-center w-full gap-2 py-2 text-left hover:underline disabled:text-gray-500"
-                title="{{this.podcastHosterName}}" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="{{this.podcastHosterUrl}}">{{this.podcastHosterName}}</a>
-            </li>
+                <li class="{{#unless @last}}border-b{{/unless}}"> 
+                    <a class="flex py-2 text-left hover:underline disabled:text-gray-500"
+                    title="{{this.podcastHosterName}}" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="{{this.podcastHosterUrl}}">{{this.podcastHosterName}}</a>
+                </li>
             {{~/each~}}
         </ul>
         {{~/with~}}
         
-    </div>
     </div>
 </div>
