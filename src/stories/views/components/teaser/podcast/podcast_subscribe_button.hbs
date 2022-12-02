@@ -1,6 +1,6 @@
 
 <div x-data="{
-        open: false,
+        open: {{#if storybookOpen}}true{{else}}false{{/if}},
         toggle() {
             if (this.open) {
                 return this.close()
@@ -50,7 +50,7 @@
         <ul>
             {{~#each this~}}
                 <li class="{{#unless @last}}border-b{{/unless}}"> 
-                    <a class="flex py-2 text-left hover:underline disabled:text-gray-500"
+                    <a class="flex py-2 text-left whitespace-nowrap hover:underline disabled:text-gray-500"
                     title="{{this.podcastHosterName}}" 
                     target="_blank"
                     rel="noopener noreferrer"
