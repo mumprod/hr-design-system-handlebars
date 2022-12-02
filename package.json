@@ -28,7 +28,7 @@
     },
     "browserslist": [
         "last 2 versions",
-        "IE 11",
+        "not dead",
         "Firefox ESR",
         "iOS >= 10",
         "Safari >= 10",
