@@ -7,7 +7,16 @@ import subscribeButton from './podcast_subscribe_button.hbs'
 <Meta
   title="Komponenten/Teaser/Podcast"
   argTypes={{
+    storybookOpen: {
+      control: 'boolean',
+      description: "Offen"
+    }
     
+  }}
+  parameters={{ 
+    controls: { 
+      sort: 'requiredFirst',
+    } 
   }}
   decorators={[
         (Story) => {
@@ -27,8 +36,16 @@ export const Template = ({ label, ...args }) => {
 
 <Preview withToolbar>
   <Story
-    name="Primary"   
+    name="Subscribe Button Close"   
     args={subscribeButtonJson.logicItem.includeModel.podcastChannel}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Subscribe Button Open"   
+    args={
+        { ...subscribeButtonJson.logicItem.includeModel.podcastChannel,  storybookOpen:true}
+      }
   >
     {Template.bind({})}
   </Story>

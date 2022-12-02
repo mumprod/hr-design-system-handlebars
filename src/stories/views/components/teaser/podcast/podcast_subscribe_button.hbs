@@ -1,6 +1,6 @@
 
 <div x-data="{
-        open: false,
+        open: {{#if storybookOpen}}true{{else}}false{{/if}},
         toggle() {
             if (this.open) {
                 return this.close()
