@@ -1,3 +1,15 @@
+# v0.96.3 (Fri Dec 02 2022)
+
+#### 🐛 Bug Fix
+
+- Podcast Teaser Bugfixes DPE-1917 + DPE-1918 [#414](https://github.com/mumprod/hr-design-system-handlebars/pull/414) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.96.2 (Thu Dec 01 2022)
 
 #### 🐛 Bug Fix
