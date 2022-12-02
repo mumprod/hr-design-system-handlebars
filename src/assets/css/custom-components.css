@@ -83,19 +83,30 @@
         border-radius: 50%;
     }
 
-    .teaser-link:focus-visible::before,
-    .teaser-link:focus-visible + .cta span {
+    .teaser-link:focus::before,
+    .teaser-link:focus + .cta span {
         @apply shadow-teaser-focus;
         @apply shadow-focus-state;
     }
 
-    .teaser-link:focus-visible + .cta span {
+    .teaser-link:focus + .cta span {
         @apply bg-button-inverted;
         @apply text-button-hollow;
-        border: none;
+        @apply border-none;
     }
 
-    .teaser-link:focus-visible {
-        outline: none;
+    .teaser-link:focus:not(:focus-visible)::before,
+    .teaser-link:focus:not(:focus-visible) + .cta span {
+        @apply shadow-none;
+    }
+
+    .teaser-link:focus:not(:focus-visible) + .cta span {
+        @apply bg-transparent;
+        @apply text-button-inverted;
+        @apply border-solid;
+    }
+
+    .teaser-link:focus {
+        @apply outline-none;
     }
 }
