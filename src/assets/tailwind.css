@@ -597,6 +597,15 @@
     --color-stage-primary: theme('colors.yellow.goldenSand');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: var(--color-link);
+    --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
+    /* Button */
+    --color-button: var(--color-link);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: var(--color-link);
+    /* States */
+    --color-focus-state: var(--color-link);
 }
 
 /*! purgecss end ignore */
