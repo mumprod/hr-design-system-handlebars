@@ -525,7 +525,7 @@
 }
 
 [data-theme='hr4'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.green.genoa');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.green.nebula');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -555,6 +555,15 @@
     --color-stage-primary: theme('colors.green.genoa');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');
+    /* Cluster-Teaser */
+    --color-cluster-teaser-link: var(--color-link);
+    --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
+    /* Button */
+    --color-button: var(--color-primary);
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: var(--color-primary);
+    /* States */
+    --color-focus-state: var(--color-link);
 }
 
 [data-theme='you-fm'] {
