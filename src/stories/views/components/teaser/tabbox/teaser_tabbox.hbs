@@ -7,7 +7,7 @@
     <div class="flex flex-wrap justify-center mb-7 mx-1.5" role="tablist">
       {{~#each this.tabbedGroup~}}
         <button  onclick="window.location.href='#tgp{{@index}}';"
-                 :class="tab === '{{this.title}}' ? 'text-white bg-blue-congress border-blue-congress' : 'bg-white text-toplineColor border-white hover:border-toplineColor'" 
+                 :class="tab === '{{this.title}}' ? 'text-button-inverted bg-button border-button' : 'bg-button-inverted text-button-hollow border-button-inverted hover:border-button-hollow'" 
                  x-effect="$el.removeAttribute('onclick')"
                  x-on:click.prevent="tab = '{{this.title}}'"  
                  class="border text-base font-heading py-px px-2 m-1.5" 
