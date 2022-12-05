@@ -55,6 +55,8 @@
     --color-button-hollow: theme('colors.blue.science');
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hessenschau'] {
@@ -103,6 +105,8 @@
     --color-button-hollow: theme('colors.blue.science');
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hr-fernsehen'] {
@@ -145,6 +149,8 @@
     --color-button-hollow: theme('colors.purple.jazzberry');
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hr-inforadio'] {
@@ -186,6 +192,8 @@
     --color-button-hollow: theme('colors.blue.jellyBean');
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -229,6 +237,8 @@
     --color-button-hollow: theme('colors.blue.deepCerulean');
     /* States */
     --color-focus-state: theme('colors.blue.deepCerulean');
+    /* Content-Nav */
+    --color-content-nav: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hr-werbung'] {
@@ -272,6 +282,8 @@
     --color-button-hollow: var(--color-primary);
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -313,6 +325,8 @@
     --color-button-hollow: theme('colors.red.wellRead');
     /* States */
     --color-focus-state: theme('colors.red.wellRead');
+    /* Content-Nav */
+    --color-content-nav: theme('colors.red.wellRead');
 }
 
 [data-theme='hr-bigband'] {
@@ -354,6 +368,8 @@
     --color-button-hollow: theme('colors.blue.teal');
     /* States */
     --color-focus-state: theme('colors.blue.teal');
+    /* Content-Nav */
+    --color-content-nav: theme('colors.blue.teal');
 }
 
 [data-theme='hr'] {
@@ -397,6 +413,8 @@
     --color-button-hollow: var(--color-primary);
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='hr1'] {
@@ -438,6 +456,8 @@
     --color-button-hollow: theme('colors.yellow.olive');
     /* States */
     --color-focus-state: theme('colors.yellow.olive');
+    /* Content-Nav */
+    --color-content-nav: theme('colors.yellow.olive');
 }
 
 [data-theme='hr2'] {
@@ -480,6 +500,8 @@
     --color-button-hollow: theme('colors.red.paprika');
     /* States */
     --color-focus-state: theme('colors.red.paprika');
+    /* Content-Nav */
+    --color-content-nav: theme('colors.red.paprika');
 }
 
 [data-theme='hr3'] {
@@ -522,6 +544,8 @@
     --color-button-hollow: theme('colors.red.scarlett');
     /* States */
     --color-focus-state: var(--color-primary);
+    /* Content-Nav */
+    --color-content-nav: theme('colors.red.scarlett');
 }
 
 [data-theme='hr4'] {
@@ -564,6 +588,8 @@
     --color-button-hollow: var(--color-primary);
     /* States */
     --color-focus-state: var(--color-link);
+    /* Content-Nav */
+    --color-content-nav: var(--color-primary);
 }
 
 [data-theme='you-fm'] {
@@ -606,6 +632,8 @@
     --color-button-hollow: var(--color-link);
     /* States */
     --color-focus-state: var(--color-link);
+    /* Content-Nav */
+    --color-content-nav: var(--color-link);
 }
 
 /*! purgecss end ignore */

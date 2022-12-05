@@ -1,5 +1,4 @@
 export default function contentNavigationHandler(id) {
-
     return {
         open: false,
         contentNavDropdownIsOpen: false,
@@ -44,7 +43,7 @@ export default function contentNavigationHandler(id) {
                 case 100:
                     classes.push('w-full', 'md:w-fit')
                     isList
-                        ? classes.push('border',  'hover:no-underline')
+                        ? classes.push('border', 'hover:no-underline')
                         : isMixed
                         ? classes.push(
                               '!w-full',
@@ -59,15 +58,15 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'md:!border',
-                              'md:border-blue-congress',
+                              'md:border-content-nav',
                               'border-gray-400',
                               'hover:underline',
-                              'hover:text-blue-congress',
+                              'hover:text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress',
+                              'hover:!fill-content-nav',
                               'md:hover:no-underline',
                               'md:hover:text-white',
-                              'md:hover:!bg-blue-congress',
+                              'md:hover:!bg-content-nav',
                               'md:hover:!fill-white'
                           )
                         : isDropdown
@@ -84,9 +83,9 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'hover:underline',
-                              'hover:text-blue-congress',
+                              'hover:text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress'
+                              'hover:!fill-content-nav'
                           )
                         : isFlow
                         ? classes.push('!w-fit', 'border', 'hover:no-underline')
@@ -109,10 +108,10 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'md:!border',
-                              'hover:text-blue-congress',
-                              'hover:!fill-congress',
+                              'hover:text-content-nav',
+                              'hover:!fill-content-nav',
                               'hover:!bg-white',
-                              'md:hover:!bg-blue-congress',
+                              'md:hover:!bg-content-nav',
                               'md:hover:!text-white',
                               'md:hover:no-underline',
                               'md:hover:!fill-white'
@@ -129,12 +128,12 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'hover:underline',
-                              'hover:text-blue-congress',
+                              'hover:text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress'
+                              'hover:!fill-content-nav'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
+                        ? classes.push('!w-fit', 'border', 'hover:no-underline')
                         : ''
                     break
                 case 50:
@@ -152,12 +151,12 @@ export default function contentNavigationHandler(id) {
                               'border-r-0',
                               'border-t-0',
                               'md:border',
-                              'md:border-blue-congress',
+                              'md:border-content-nav',
                               'hover:underline',
                               'hover:!bg-white',
-                              'hover:text-blue-congress',
-                              'hover:fill-congress',
-                              'md:hover:!bg-blue-congress',
+                              'hover:text-content-nav',
+                              'hover:fill-content-nav',
+                              'md:hover:!bg-content-nav',
                               'md:hover:!text-white',
                               'md:hover:fill-white',
                               'md:hover:no-underline'
@@ -175,12 +174,12 @@ export default function contentNavigationHandler(id) {
                               'last:border-b-0',
                               'border-gray-400',
                               'hover:underline',
-                              'hover:!text-blue-congress',
+                              'hover:!text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress'
+                              'hover:!fill-content-nav'
                           )
                         : isFlow
-                        ? classes.push('!w-fit', 'border',  'hover:no-underline')
+                        ? classes.push('!w-fit', 'border', 'hover:no-underline')
                         : ''
                     break
                 case 33:
@@ -195,8 +194,8 @@ export default function contentNavigationHandler(id) {
                               'last:border-b-0',
                               'hover:!bg-white',
                               'hover:underline',
-                              'hover:text-blue-congress',
-                              'hover:!fill-congress'
+                              'hover:text-content-nav',
+                              'hover:!fill-content-nav'
                           )
                         : isDropdown
                         ? classes.push(
@@ -210,9 +209,9 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'hover:underline',
-                              'hover:!text-blue-congress',
+                              'hover:!text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress'
+                              'hover:!fill-content-nav'
                           )
                         : isFlow
                         ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')
@@ -230,8 +229,8 @@ export default function contentNavigationHandler(id) {
                               'last:border-b-0',
                               'hover:!bg-white',
                               'hover:underline',
-                              'hover:!text-blue-congress',
-                              'hover:!fill-congress'
+                              'hover:!text-content-nav',
+                              'hover:!fill-content-nav'
                           )
                         : isDropdown
                         ? classes.push(
@@ -245,9 +244,9 @@ export default function contentNavigationHandler(id) {
                               'border-b',
                               'last:border-b-0',
                               'hover:underline',
-                              'hover:text-blue-congress',
+                              'hover:text-content-nav',
                               'hover:!bg-white',
-                              'hover:!fill-congress'
+                              'hover:!fill-content-nav'
                           )
                         : isFlow
                         ? classes.push('!w-fit', '!mr-2', 'border', 'mb-2', 'hover:no-underline')

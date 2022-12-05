@@ -12,16 +12,6 @@ module.exports = {
         './src/assets/vendor/**/*.js',
     ],
     theme: {
-        fill: {
-            'current': 'currentColor',
-            'black': '#000000',
-            'white': '#ffffff',
-            'blue-jellyBean': '#006dc1',
-            'orange-spicyCarrot': '#d34600',
-            'congress': '#006dc1',
-            'science': '#005293',
-            'topline': 'var(--color-topline)',
-        },
         screens: {
             print: { raw: 'print' },
             xs: '360px',
@@ -72,6 +62,7 @@ module.exports = {
                 5.5: '1.375rem',
             },
             fill: {
+                current: 'currentColor',
                 black: '#000000',
             },
             borderWidth: {
@@ -278,6 +269,7 @@ module.exports = {
                 'button-hollow': 'var(--color-button-hollow)',
                 'button-inverted': 'var(--color-button-inverted)',
                 'focus-state': 'var(--color-focus-state)',
+                'content-nav': 'var(--color-content-nav)',
             },
         },
     },
