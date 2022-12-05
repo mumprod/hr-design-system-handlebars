@@ -6,6 +6,8 @@ export default function playaudio(){
                 let _player = {}
                 _player.id = id
                 _player.button = document.querySelector('#playbutton'+id)
+                _player.playIcon = _player.button.querySelector('.js-playbutton')
+                _player.pauseIcon = _player.button.querySelector('.js-pausebutton')
                 _player.range = document.querySelector('#range'+id)
                 _player.timeDisplay = document.querySelector('#timedisplay'+id)
                 _player.audioElement = this.$el
@@ -22,7 +24,7 @@ export default function playaudio(){
             },
             listenToGlobalStop(){
                 console.log('global listener init')
-                window.addEventListener('hr:global:stopOtherAVs', this.stopAllOtherPlayers)
+                window.addEventListener('hr:global:stopOtherAVs', this.stopAllPlayersBecauseOfGlobalStop.bind(this))
             },
             rangeInput(id) {                     
                 if(this.playlist[id].init == false) {
@@ -31,7 +33,6 @@ export default function playaudio(){
                 }      
                 this.playlist[id].audioElement.currentTime = (this.playlist[id].range.value/1000) * this.playlist[id].audioElement.duration               
             },
-
             setTime(duration, id) {
                 console.log('time set: ' + duration)
                 
@@ -49,14 +50,13 @@ export default function playaudio(){
                 
                 let range = document.getElementById("range"+id)
                 range.value = 0
-                this.$el.querySelector('#currentTime').innerHTML = this.fancyTimeFormat('0',false)
-                this.$el.querySelector('#audioDurationFancy').innerHTML = this.fancyTimeFormat(durationSeconds, true)
-                
+                this.$el.querySelector('.js-currentTime').innerHTML = this.fancyTimeFormat('0',false)
+                this.$el.querySelector('.js-audioDuration').innerHTML = this.fancyTimeFormat(durationSeconds, true)
+            
             },
 
             updateCurrentTime(range,timeDisplay,newTime, id) {
-
-                timeDisplay.querySelector('#currentTime').innerHTML = this.fancyTimeFormat(newTime, false)
+                timeDisplay.querySelector('.js-currentTime').innerHTML = this.fancyTimeFormat(newTime, false)            
                 range.style.background = 'linear-gradient(to right, #006dc1 ' + (range.value/10)  + '%, white ' + (range.value/10) + '% )'
                 range.value = ((100 * newTime) / this.playlist[id].audioElement.duration) * 10
             }, 
@@ -67,35 +67,34 @@ export default function playaudio(){
                 if(this.playlist[id].init == true){
                     this.stopAudio(id)
                 } else {
-                   // this.$dispatch('stopotherplayers',{playerId: id});
-                    this.stopAllOtherPlayers(id)
-
+                    this.stopAllOtherPlayers(id, false)
                     this.startAudio(id)
                     this.playlist[id].range.parentNode.classList.remove('max-h-0')
                     this.playlist[id].range.parentNode.classList.add('max-h-9')
-                    this.playlist[id].button.querySelector('.js-playbutton').classList.add('hidden')
-                    this.playlist[id].button.querySelector('.js-pausebutton').classList.remove('hidden')
-                    //let event = new Event("hr:global:stopOtherAVs");
-                    //window.dispatchEvent(event);
+                    this.playlist[id].playIcon.classList.add('hidden')
+                    this.playlist[id].pauseIcon.classList.remove('hidden')
+                    let event = new Event("hr:global:stopOtherAVs");
+                    event.id = id;
+                    window.dispatchEvent(event);
                 }
             },
 
-            stopAllOtherPlayers(id){  //id=2
-                let players = document.querySelectorAll('audio.hidden')
-                for (let i=0; i<players.length; i++){
-                    if ( players[i].dataset.id != id){                            
-                        this.stopAudio(players[i].dataset.id)
-                        
-                        // this.playlist[players[i].dataset.id].init=false;
-                        // this.playlist[players[i].dataset.id].audioElement.pause()
-                        // this.playlist[players[i].dataset.id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                        // this.playlist[players[i].dataset.id].button.querySelector('.js-pausebutton').classList.add('hidden')
-                        this.playlist[players[i].dataset.id].range.parentNode.classList.add('max-h-0')
-                        this.playlist[players[i].dataset.id].range.parentNode.classList.remove('max-h-9')
+            stopAllOtherPlayers(id, preventMinimize){  
+                for (const index in this.playlist) {
+                    if(index != id){
+                        console.log("STOP: ", index)
+                        this.stopAudio(index)
+                        if(!preventMinimize){
+                            this.playlist[index].range.parentNode.classList.add('max-h-0')
+                            this.playlist[index].range.parentNode.classList.remove('max-h-9')
+                        }
                     }
-                }              
-            },
+                }
 
+            },
+            stopAllPlayersBecauseOfGlobalStop(event){
+                this.stopAllOtherPlayers(event.id, true);
+            },
             startAudio(id) {
                 console.log('start audio '+ id )
                 if(this.playlist[id].init == false){
@@ -111,8 +110,8 @@ export default function playaudio(){
                 this.playlist[id].audioElement.pause()
                 this.playlist[id].init = false; 
                 this.playlist[id].currentlyPlaying = false;  
-                this.playlist[id].button.querySelector('.js-playbutton').classList.remove('hidden')
-                this.playlist[id].button.querySelector('.js-pausebutton').classList.add('hidden')          
+                this.playlist[id].playIcon.classList.remove('hidden')
+                this.playlist[id].pauseIcon.classList.add('hidden')          
             },
 
             initAudioEventListener(id) {               

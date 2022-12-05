@@ -1073,7 +1073,7 @@
                 "isAudio": false,
                 "isVideo": false,
                 "isPodcastEpisode": false,
-                "isExtOrBrandLink": false,
+                "isExtOrBrandLink": true,
                 "isAuthor": false,
                 "isFileDownload": false,
                 "copyright": "Copyright Text",
@@ -1264,7 +1264,7 @@
                         }
                     ]
                 },
-                "podcastDuration": "53:13",
+                "duration": "53:13",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
