@@ -1,0 +1,10 @@
+{
+    "@->jsoninclude": "teaser/teaser_groups.inc.json",
+    "@->contentpath": "teaser_2_50",
+    "@->overrides": [
+        {
+            "@->contentpath": "includeModel._headlineTag",
+            "@->value": "h4"
+        }
+    ]
+}

@@ -57,6 +57,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% - 2 x 50% Teaser",
             "teaserSize": "100",
+            "_headlineTag": "h2",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
