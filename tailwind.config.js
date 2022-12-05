@@ -206,6 +206,7 @@ module.exports = {
                     burntUmber: '#8d2725',
                     wellRead: '#AB2F2DFF',
                     paprika: '#8C033DFF',
+                    scarlett: '#9b0112',
                 },
                 'pink': {
                     ripeRaspberries: '#be005a',

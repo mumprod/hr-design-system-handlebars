@@ -483,7 +483,7 @@
 }
 
 [data-theme='hr3'] {
-    --color-primary: #c20016;
+    --color-primary: theme('colors.red.monza');
     --color-secondary: #007179;
     --color-highlight-1: theme('colors.grey.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -503,18 +503,25 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: theme('colors.red.monza');
+    --color-topline: var(--color-primary);
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.red.monza');
+    --color-link: var(--color-primary);
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
-    --color-stage-primary: theme('colors.red.monza');
-    --color-stage-text: theme('colors.red.monza');
+    --color-stage-primary: var(--color-primary);
+    --color-stage-text: var(--color-primary);
     --color-stage-link: var(--color-link);
     /* Cluster-Teaser */
-    --color-cluster-teaser-title: theme('colors.red.monza');
+    --color-cluster-teaser-link: var(--color-primary);
+    --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
+    /* Button */
+    --color-button: theme('colors.red.scarlett');
+    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button-hollow: theme('colors.red.scarlett');
+    /* States */
+    --color-focus-state: var(--color-primary);
 }
 
 [data-theme='hr4'] {
