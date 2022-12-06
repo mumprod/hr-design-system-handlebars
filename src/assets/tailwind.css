@@ -57,6 +57,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.science');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hessenschau'] {
@@ -107,6 +110,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.science');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-fernsehen'] {
@@ -151,6 +157,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.purple.jazzberry');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-inforadio'] {
@@ -194,6 +203,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.jellyBean');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -239,6 +251,9 @@
     --color-focus-state: theme('colors.blue.deepCerulean');
     /* Content-Nav */
     --color-content-nav: theme('colors.blue.deepCerulean');
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.deepCerulean');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-werbung'] {
@@ -284,6 +299,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.deepCerulean');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -327,6 +345,9 @@
     --color-focus-state: theme('colors.red.wellRead');
     /* Content-Nav */
     --color-content-nav: theme('colors.red.wellRead');
+    /* Podcast-Player */
+    --color-podcast: theme('colors.red.wellRead');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr-bigband'] {
@@ -370,6 +391,9 @@
     --color-focus-state: theme('colors.blue.teal');
     /* Content-Nav */
     --color-content-nav: theme('colors.blue.teal');
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.teal');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr'] {
@@ -415,6 +439,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: var(--color-primary);
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr1'] {
@@ -458,6 +485,9 @@
     --color-focus-state: theme('colors.yellow.olive');
     /* Content-Nav */
     --color-content-nav: theme('colors.yellow.olive');
+    /* Podcast-Player */
+    --color-podcast: theme('colors.yellow.olive');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr2'] {
@@ -502,6 +532,9 @@
     --color-focus-state: theme('colors.red.paprika');
     /* Content-Nav */
     --color-content-nav: theme('colors.red.paprika');
+    /* Podcast-Player */
+    --color-podcast: theme('colors.red.paprika');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr3'] {
@@ -546,6 +579,9 @@
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
     --color-content-nav: theme('colors.red.scarlett');
+    /* Podcast-Player */
+    --color-podcast: var(--color-primary);
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='hr4'] {
@@ -590,6 +626,9 @@
     --color-focus-state: var(--color-link);
     /* Content-Nav */
     --color-content-nav: var(--color-primary);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.green.eden');
+    --color-podcast-text: var(--color-link);
 }
 
 [data-theme='you-fm'] {
@@ -634,6 +673,9 @@
     --color-focus-state: var(--color-link);
     /* Content-Nav */
     --color-content-nav: var(--color-link);
+    /* Podcast-Player */
+    --color-podcast: theme('colors.blue.lightCerulean');
+    --color-podcast-text: var(--color-link);
 }
 
 /*! purgecss end ignore */

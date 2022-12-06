@@ -6,9 +6,7 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
-    safelist: [
-        "mt-12"
-    ],
+    safelist: ['mt-12'],
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js}',
@@ -273,6 +271,8 @@ module.exports = {
                 'button-inverted': 'var(--color-button-inverted)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
+                'podcast': 'var(--color-podcast)',
+                'podcast-text': 'var(--color-podcast-text)',
             },
         },
     },

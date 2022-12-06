@@ -14,7 +14,7 @@
           {{/with}}
           
           {{~#with airdateDate}}
-            <div class="flex grow pt-1.5 text-xs font-headingSerif text-blue-science">
+            <div class="flex grow pt-1.5 text-xs font-headingSerif text-podcast-text">
               <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
             </div>
           {{/with}}
@@ -22,7 +22,7 @@
         {{!-- Download --}}
           {{> components/teaser/podcast/podcast_downloadbutton 
             _addClass="ml-2 pr-2 md:pr-5 "
-            _iconClass="h-6 w-6 text-blue-science fill-current"
+            _iconClass="h-6 w-6 text-podcast-text fill-current"
             _url=this.podcastDownloadUrl }}
         </div>
 
@@ -72,7 +72,7 @@
       {{#with this.podcastChannel}}    
         {{!-- Sendungs-Link --}}
         <div class="flex justify-end w-full pl-4">
-          <div class="flex flex-col flex-wrap self-end text-xs font-heading text-blue-science">
+          <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
             <span class="self-end font-bold">Zur Sendung</span>
             <a class="self-end underline" href="{{this.url}}">{{this.title}}</a>
           </div>
