@@ -1,3 +1,15 @@
+# v0.98.0 (Tue Dec 06 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1896: Releated Content Group could be smaller and has h4 [#417](https://github.com/mumprod/hr-design-system-handlebars/pull/417) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.97.1 (Fri Dec 02 2022)
 
 #### 🐛 Bug Fix
