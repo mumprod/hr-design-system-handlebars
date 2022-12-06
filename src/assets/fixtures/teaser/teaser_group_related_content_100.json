@@ -5,6 +5,10 @@
         {
             "@->contentpath": "includeModel._headlineTag",
             "@->value": "h4"
+        },
+        {
+            "@->contentpath": "includeModel._isRelatedContent",
+            "@->value": true
         }
     ]
 }
