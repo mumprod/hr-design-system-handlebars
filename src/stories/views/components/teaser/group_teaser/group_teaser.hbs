@@ -5,6 +5,8 @@
                     {{this.groupTitle}}
                 {{~#if this.hasLink}}</a>{{/if~}}
             </h2>
-        {{/if}}  
-        {{~> components/teaser/teaser_logic/teaser_logic ~}}
+        {{/if}}
+        <div class="grid items-start content-start grid-cols-12 col-span-12 gap-x-6 gap-y-6 md:gap-y-14">
+            {{~> components/teaser/teaser_logic/teaser_logic ~}}
+        </div>
 {{/components/grid/grid_group}}
