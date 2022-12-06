@@ -1,3 +1,15 @@
+# v0.99.0 (Tue Dec 06 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Add properties to model instead of template param because it … [#418](https://github.com/mumprod/hr-design-system-handlebars/pull/418) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.98.0 (Tue Dec 06 2022)
 
 #### 🚀 Enhancement
