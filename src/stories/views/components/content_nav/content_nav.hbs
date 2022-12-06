@@ -4,7 +4,6 @@
             {{> components/content_nav/content_nav_container
                     _teasersize=../_teasersize
                     _maindivclass="flex relative flex-wrap mt-2 mx-2 md:mt-0 "
-                    _autoSuggestContainerCss="mr-2 md:mx-0"
             }}
         </nav>
     {{else}}
@@ -20,13 +19,11 @@
                 {{> components/content_nav/content_nav_container
                         _teasersize=_teasersize
                         _maindivclass="flex flex-col w-full mt-0"
-                        _autoSuggestContainerCss="mx-0"
                 }}
             {{else}}
                 {{> components/content_nav/content_nav_container
                         _teasersize=_teasersize
                         _maindivclass="relative flex flex-col w-full mt-0"
-                        _autoSuggestContainerCss="mx-0"
                 }}
             {{/if}}
         {{/decorator}}
