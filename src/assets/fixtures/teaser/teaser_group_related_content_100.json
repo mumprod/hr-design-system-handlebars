@@ -3,11 +3,11 @@
     "@->contentpath": "teaser_2_50",
     "@->overrides": [
         {
-            "@->contentpath": "includeModel._headlineTag",
+            "@->contentpath": "includeModel.headlineTag",
             "@->value": "h4"
         },
         {
-            "@->contentpath": "includeModel._isRelatedContent",
+            "@->contentpath": "includeModel.isRelatedContent",
             "@->value": true
         }
     ]
