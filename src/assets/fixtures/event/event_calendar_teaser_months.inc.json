@@ -1,7 +1,23 @@
 {
     "eventDate" :
         {
-    "months": [{
+    "months": [
+        {
+            "year":"21",
+            "monthName":"Aug",
+            "days": [{
+                "weekDay": "FR",
+                "day": "21"
+            },
+            {
+                "weekDay": "SA",
+                "day": "22"
+            },
+            {
+                "weekDay": "SO",
+                "day": "23"
+            }]},
+        {
     "year":"21",
     "monthName":"Aug",
     "days": [{
@@ -65,6 +81,26 @@
             {
                 "weekDay": "MO",
                 "day": "16"
+            },
+            {
+                "weekDay": "DI",
+                "day": "17"
+            },
+            {
+                "weekDay": "MI",
+                "day": "18"
+            },
+            {
+                "weekDay": "MO",
+                "day": "16"
+            },
+            {
+                "weekDay": "DI",
+                "day": "17"
+            },
+            {
+                "weekDay": "MI",
+                "day": "18"
             }
         ]
         }
