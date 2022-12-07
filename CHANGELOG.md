@@ -1,3 +1,15 @@
+# v0.99.3 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- h-auto instead of fixed height in group/teaserlogic-container [#421](https://github.com/mumprod/hr-design-system-handlebars/pull/421) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.99.2 (Wed Dec 07 2022)
 
 #### 🐛 Bug Fix
