@@ -1,3 +1,15 @@
+# v0.99.4 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fixes background issue in mixed navi [#422](https://github.com/mumprod/hr-design-system-handlebars/pull/422) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.99.3 (Wed Dec 07 2022)
 
 #### 🐛 Bug Fix
