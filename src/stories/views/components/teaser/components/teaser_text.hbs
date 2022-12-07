@@ -1,4 +1,4 @@
-{{#decorator 'components/base/link'}}
+{{#decorator 'components/base/link' _css=(inline-switch _size '["25"]' '["hidden ","hidden md:block "]') }}
     <span class='flex space-around {{inline-switch _size '["25"]' '["hidden ","hidden md:block "]'~}}
         text-base mt-3 font-copy'>
         {{~_text~}}
