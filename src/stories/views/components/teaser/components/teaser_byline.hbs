@@ -1,40 +1,43 @@
-<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif">
-     
+<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif empty:hidden">
+    {{!--   TODO eine Java Methode die abfragt ob es 
+            teaserInfo || isFileDownload || this.profiles || this.commentsSsi 
+            gibt um empty:hidden zu vermeiden. <p> </p> sollte nicht im Markup sein falls leer --}}
+    {{~#with this.teaserInfo~}}
         {{!--Teaser-Info--}}
-        {{#with this.teaserInfo}}
-            {{#if this.showTeaserInfo~}}
-                {{~#if this.showTeaserInfoDate}}
-                    {{~#with ../this.teaserDate}}
-                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                    {{/with~}}                    
-                    <span class="mx-px last-of-type:hidden">|</span>                    
-                {{else}}
-                    {{~#if this.showTeaserInfoDateTime}}
-                        {{~#with ../this.teaserDate}}
-                            <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
-                        {{/with~}}                        
-                        <span class="mx-px last-of-type:hidden">|</span>                        
-                    {{/if~}}
-                {{/if~}}    
-
-                {{~#if this.showTeaserInfoSection}}
-                    <span class="uppercase">
-                        {{../this.documentSection~}}
-                    </span>                    
-                    <span class="mx-px last-of-type:hidden">|</span>                    
-                {{/if}}
-
-            {{/if}}
-        {{/with}}
-
+        {{~#if this.showTeaserInfo~}}
+            {{~#if this.showTeaserInfoDate~}}
+                {{~#with ../this.teaserDate~}}
+                    <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                {{~/with~}}                    
+                <span class="mx-px last-of-type:hidden">|</span>                    
+            {{~else~}}
+                {{~#if this.showTeaserInfoDateTime~}}
+                    {{~#with ../this.teaserDate~}}
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
+                    {{~/with~}}                        
+                    <span class="mx-px last-of-type:hidden">|</span>                        
+                {{~/if~}}
+            {{~/if~}}    
+            {{~#if this.showTeaserInfoSection~}}
+                <span class="uppercase">
+                    {{~../this.documentSection~}}
+                </span>                    
+                <span class="mx-px last-of-type:hidden">|</span>                    
+            {{~/if~}}
+        {{~/if~}}
+    {{~/with~}}
+        {{~#if this.isFileDownload~}}
+            {{~#with this.teaserImage~}}
+                {{loca "gallery_image_copyright" this.copyrightWithLinks}}
+            {{~/with~}}
+        {{~/if~}}
         {{!--Profiles--}}
-        {{#if this.profiles}}
+        {{~#if this.profiles~}}
             <span>{{this.profiles}}</span>            
             <span class="mx-px last-of-type:hidden">|</span>            
-        {{/if}}    
-
+        {{~/if~}}
     {{!--Comments--}}
-    {{#with this.commentsSsi}}
+    {{~#with this.commentsSsi~}}
         {{> components/base/loadSSI _templatePath='components/teaser/components/teaser_comments' }}    
-    {{/with}}
+    {{~/with~}}
 </p>

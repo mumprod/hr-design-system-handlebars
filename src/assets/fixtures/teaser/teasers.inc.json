@@ -1022,6 +1022,105 @@
             }
         }
     },
+    "teaserProgram": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "byline": "Do. 22.12.2022 22:30 Uhr",
+                "title": "Mittendrin - Frankfurt Flughafen (19)",
+                "topline": "",
+                "headingFontVariant": "serif",
+                "extendedTitle": "Einsatz für die Enteiser am Flughafen",
+                "teaserType": "standard-ds",
+                "teaserSize": "hero",
+                "isMobile1to1": false,
+                "teaserDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
+                    "htmlDate": "20.02.1983",
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
+                },
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": false,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": false,
+                    "showTeaserInfoProgramRef": true
+                },
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "jugendfeuerwehr-102"
+                        }
+                    ]
+                },
+                "displayTeaserBodyAsImageOverlay": false,
+                "hasMediaButtons": true,
+                "dontLazyload": true,
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isMediaTeaser": true,
+                "isGuide": false,
+                "isProgram": true,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": true,
+                "isAuthor": false,
+                "isFileDownload": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": false,
+                "displayEpgInfos": true,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": false,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": true,
+                "showMediatheksLink": true,
+                "showAirdate": true,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "documentSection": "",
+                "headlineTag": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "Flughafen Frankfurt, 5 Uhr morgens: Nebel und Temperaturen um null Grad. Eisschichten haben sich auf den Tragflächen der Flugzeuge gebildet. So dürfen die Maschinen nicht abheben. Ein Fall für die Enteiser an Deutschlands größtem Flughafen. Mit ihren gigantischen Spezialfahrzeugen fahren sie zu den Positionen am Gate",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": true,
+                    "hasIcon": true,
+                    "iconName": "extern",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zur ARD Mediathek",
+                        "readMore": "Zur ARD Mediathek",
+                        "readMoreLong": "Zur ARD Mediathek"
+                    }
+                },
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "program"
+                }
+            }
+        }
+    },
     "teaserWithComments": {
         "isSsi": true,
         "logicItem": {
@@ -1165,7 +1264,7 @@
                         }
                     ]
                 },
-                "podcastDuration": "53:13",
+                "duration": "53:13",
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,

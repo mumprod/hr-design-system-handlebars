@@ -200,16 +200,13 @@ Die Namen von Parametern in Handlebar-Komponenten sind, anders als der Datainame
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true do-tracking=(if
-        this.doTracking 'true') click_label_prefix1=this.realTeasersize
-        ClickLabelPrefix2="mediaLink"&#125;&#125;
+        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true 
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true doTracking=(if
-        this.doTracking 'true') clickLabelPrefix1=this.realTeasersize
+        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true 
         clickLabelPrefix2="mediaLink"&#125;&#125;
     </pre>
 </div>

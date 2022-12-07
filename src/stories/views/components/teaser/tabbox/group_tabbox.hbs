@@ -1,4 +1,5 @@
 <section 
+    x-cloak 
     x-show="tab === '{{this.groupTitle}}'"
     class="pb-10"
 >
@@ -20,7 +21,7 @@
     </div>
     {{~#if this.link~}}
         <div class="flex justify-center pt-8">
-            {{~> components/button/button_pseudo _linkTitle=(loca "group_tabbed_more" this.title) ~}}
+            {{~> components/button/button_pseudo _color="blue" _linkTitle=(loca "group_tabbed_more" this.title) ~}}
         </div>
     {{~/if~}}
 </section>

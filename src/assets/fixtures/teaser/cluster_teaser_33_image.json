@@ -14,10 +14,6 @@
             "@->value": "hessenschau_de"
         },
         {
-            "@->contentpath": "isHessenschauLogo",
-            "@->value": "true"
-        },
-        {
             "@->contentpath": "showFirstImageOrGenreImage",
             "@->value": "true"
         },

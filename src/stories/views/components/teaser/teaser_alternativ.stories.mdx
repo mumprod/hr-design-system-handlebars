@@ -6,8 +6,12 @@ import teaser from './teaser_alternativ.hbs'
 import heroTeaser from './fixtures/teaser_alternative_hero_serif.json'
 import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.json'
 import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
+import heroTeaserLink from './fixtures/teaser_alternative_hero_serif_link.json'
+import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.json'
+import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser50Link from './fixtures/teaser_alternative_50_serif_link.json'
 import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
 
 <Meta
@@ -117,12 +121,26 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Alternativ Hero mit Label" args={heroTeaserWithLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <Story name="Alternativ Hero mit externen Link Dokument" args={heroTeaserLink.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ Hero mit Sendungsdokument" args={heroTeaserProgram.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
     <b>Alternativ 100%</b>
     <Story name="Alternativ 100" args={teaser100.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <b>Alternativ 100% mit externem Link</b>
+    <Story name="Alternativ 100 mit externem Link" args={teaser100Link.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
     <b>Alternativ 50%</b>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+        <b>Alternativ 50% mit externem Link</b>
+    <Story name="Alternativ 50 mit externem Link" args={teaser50Link.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story name="Alternativ 50 mit Download" args={teaser50Download.logicItem.includeModel}>

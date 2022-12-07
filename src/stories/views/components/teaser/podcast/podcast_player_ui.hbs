@@ -1,14 +1,12 @@
 <div class="flex w-full"> 
     <div class="flex flex-wrap w-full js-load" 
         >
- 
         <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
 
             {{!-- Start/StopButton       --}}
             <div id="playbutton{{_id}}" class="flex">
                 {{> components/teaser/podcast/podcast_playbutton 
                 _css="mr-4" 
-                _x-show="currentlyPlaying"
                 _id = _id
                 _alpineClick=(loca "play_button_alpine_click" _id) }}
             </div>
@@ -42,14 +40,17 @@
                 {{/if}}
 
                 {{!-- Range Slider     --}}
-                <div class="flex w-full my-4 ">
-                    <input x-ref="range" 
+                <div class="flex w-full transition-all overflow-hidden {{#if _first}}max-h-9{{else}}max-h-0{{/if}}">
+                    <input 
+                        {{#unless @first}}x-cloak{{/unless}}
+                        x-ref="range" 
                         id="range{{_id}}" 
                         x-on:input="rangeInput({{_id}})" 
                         type="range" {{!-- x-bind:value="currentTimePercentage" --}} 
                         min="0" 
-                        max="1000" 
-                        class="h-1 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
+                        max="1000"
+                        value="0"
+                        class="h-1 my-4 bg-white rounded-lg appearance-none cursor-pointer grow seek_slider" >  
                 </div>
 
                 {{#if _isPlaylistPlayer}}
@@ -57,9 +58,10 @@
                     <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " class="flex w-full"> 
                         {{> components/teaser/podcast/podcast_timedisplay 
                         _id=_id
+                        _duration=duration
                         _currentTimeClasses="font-bold text-orange-layout" 
                         _durationClasses="text-blue-science" 
-                        _containerCss="flex text-xs grow font-headingSerif" }}
+                        _containerCss="flex text-sm grow font-heading" }}
                     </div>
                 {{/if}}
             </div>
@@ -69,10 +71,11 @@
             {{!-- Meta Time usw. --}}
             <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
             {{> components/teaser/podcast/podcast_timedisplay 
-                _duration=podcastDuration 
+                _id=_id
+                _duration=duration 
                 _currentTimeClasses="font-bold text-orange-layout" 
                 _durationClasses="text-blue-science" 
-                _containerCss="pl-16 -mt-3 flex text-xs grow font-headingSerif"}}
+                _containerCss="pl-16 -mt-3 flex text-sm grow font-heading"}}              
             </div>
         {{/unless}}
         
@@ -80,6 +83,7 @@
         {{~#with this.audioUrl ~}}
             <audio   
                 class="{{../_id}} hidden" 
+                data-id="{{../_id}}"
                 x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')"
                 @stopotherplayers.window="stopAllOtherPlayers({{../_id}})">
                 <source src={{this}} type='audio/mp3'/>

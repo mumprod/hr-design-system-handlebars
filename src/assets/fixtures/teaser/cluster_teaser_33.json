@@ -12,10 +12,6 @@
         {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
-        },
-        {
-            "@->contentpath": "isHessenschauLogo",
-            "@->value": "true"
         }
     ]
 }

@@ -1,0 +1,63 @@
+{
+    "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "title",
+            "@->value": "DER TAG IN HESSEN"
+        },
+        {
+            "@->contentpath": "teaserLogo",
+            "@->value": "hessenschau_de"
+        },
+        {
+            "@->contentpath": "showGenreImage",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "showFirstImageOrGenreImage",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "overviewLink.link",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "genreImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_cluster_genre_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "sonniger-herbst-100"
+                    }
+                ]
+            }
+        },
+        {
+            "@->contentpath": "clusterTeaserItems",
+            "@->value": [
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item7"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item7"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item7"
+                },
+                {
+                    "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                    "@->contentpath": "item7"
+                }
+            ]
+        }
+    ]
+}

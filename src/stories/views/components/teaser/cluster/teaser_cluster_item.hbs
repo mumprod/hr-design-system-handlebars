@@ -1,5 +1,5 @@
 
-{{#decorator 'components/base/link' _css="group" _doTracking=(if this.doTracking 'true') _clickLabelPrefix1="clusterTeaserLink" _clickLabelPrefix2="Link" }} 
+{{#decorator 'components/base/link' _css="group" }} 
     {{> components/teaser/components/teaser_heading
         _headlineTag="h1"
         _label=this.label
@@ -7,8 +7,8 @@
         _title=this.title
         _teaserType="cluster"
         _ordered=_ordered
-        _titleBlue='true' 
+        _titleCss='text-clusterTeaserLink'
         _firstItem=_firstItem}}        
                 {{/decorator}}
-{{> components/teaser/cluster/teaser_cluster_byline}}
+{{> components/teaser/cluster/teaser_cluster_byline _ordered=_ordered}}
                 

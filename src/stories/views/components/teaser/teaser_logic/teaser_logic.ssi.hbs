@@ -3,6 +3,9 @@
         {{~#if (isStorybook)~}}
             {{~> components/base/load_dynamic _templatePath=../includePath ~}}
         {{~else~}}
+            {{~#with this.cacheKey~}}
+                {{~addCacheEntry this ~}}
+            {{~/with~}}
             {{~> (lookup ../. 'includePath')~}}
         {{~/if~}}
     {{~/with~}}

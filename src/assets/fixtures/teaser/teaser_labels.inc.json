@@ -50,5 +50,13 @@
     "eventCalendar": {
         "type": "eventCalendar",
         "loca": "event_calendar_backlink"
+    },
+    "program": {
+        "type": "program",
+        "loca": "label_program",
+        "byline": {
+            "bylineSsi": "14.10.22, 20:00 Uhr",
+            "bylineText": "BylineText"
+        }
     }
 }

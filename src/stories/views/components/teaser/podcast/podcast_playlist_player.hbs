@@ -1,174 +1,75 @@
-<div class="flex col-span-12 pb-5 border-b border-white" >
+<div class="flex col-span-12 pb-5 border-b border-white">
   <div class="flex flex-col grow">
-  {{!-- First Row --}}
+    {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
-
       <div class="flex flex-col pr-5 grow">
-
         <div class="flex max-h-6">
           {{!-- Label / Airdate --}}
-          {{#with label}}             
-            <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
+          {{#with label}}
+            <span
+              class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
               {{ loca this.loca }}
-            </span> 
+            </span>
           {{/with}}
         </div>
 
         {{!-- Überschrift: --}}
-        <div class="flex pb-5 pr-2 md:pr-5">          
-          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}  
+        <div class="flex pb-5 pr-2 md:pr-5">
+          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
         {{!-- Shorttext --}}
         {{#unless _isSinglePage}}
           {{#unless this.hideShortText}}
-              {{~#with this.shorttext}}
-                  <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                      <span class="c-teaser__shorttext"> {{this}} </span>
-                  </div>
-              {{/with~}}
+            {{~#with this.shorttext}}
+              <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
+                <span class="c-teaser__shorttext"> {{this}} </span>
+              </div>
+            {{/with~}}
           {{/unless}}
         {{/unless}}
 
       </div>
 
-      {{!-- Podcast Image      --}}
+      {{!-- Podcast Image --}}
       <div class="flex flex-col ">
         <div class="w-24 md:w-42">
-          {{> components/base/image/responsive_image this.teaseritem 
-            _type=this.teaserType
+          {{> components/base/image/responsive_image this.teaseritem
+            _type="podcastEpisodePlayer"
             _variant="default"
             _addClass="overflow-hidden"
-            _noDelay=this.dontLazyload 
+            _noDelay=this.dontLazyload
             _addClassImg="w-full h-24 md:h-42 block"
           }}
         </div>
       </div>
 
     </div>
-  
-    <div class="flex flex-row px-5 md:pr-0">
-
-      {{!-- Abo-Dropdown    --}}
-      {{#with this.podcastChannel}}        
-        <div class="flex">
-          {{!-- Container  --}}
-          <div x-cloak x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-                  this.$refs.button.focus()
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-                  this.open = false
-                  focusAfter && focusAfter.focus()
-              }}"
-                x-on:keydown.escape.prevent.stop="close($refs.button)"
-                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-                x-id="['dropdown-button']"
-                class="relative"
-          >
-
-            {{!-- Button --}}
-            <button
-              x-ref="button"
-              x-on:click="toggle()"
-              :aria-expanded="open"
-              :aria-controls="$id('dropdown-button')"
-              type="button"
-              class="flex items-center gap-1.5 px-2 py-2 text-white shadow font-heading bg-orange-layout">Abonnieren
-              <div x-show="open">
-                {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
-              </div>
-              <div x-show="!open">
-                {{> components/base/image/icon _icon='arrow-down' _addClass="flex self-center mt-0.5 w-3 h-3 fill-white" }}
-              </div>
-            </button>
-
-            {{!-- Flyout --}}
-            <div
-              x-ref="panel"
-              x-show="open"
-              x-transition.origin.top.left
-              x-on:click.outside="close($refs.button)"
-              :id="$id('dropdown-button')"
-              style="display: none;"
-              class="absolute left-0 flex flex-col w-full px-2 text-sm text-white shadow-md font-heading shadow-insetfromtop grow bg-orange-layout"
-            >
-              {{#with this.podcastHoster}}
-                <ul>
-                  {{#each this}}
-                    <li class="border-b last:border-0"> 
-                      <a class="flex items-center w-full gap-2 py-2 text-left hover:underline disabled:text-gray-500"
-                        title="{{this.podcastHosterName}}" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="{{this.podcastHosterUrl}}">{{this.podcastHosterName}}</a>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/with}}
-               
-            </div>
-          </div>
-        </div>
-      {{/with}}
-
-    </div>
-    
-  </div>  
+    {{!-- Abo-Dropdown --}}
+    <div class="flex flex-row px-5 md:pr-0"> 
+      {{> components/teaser/podcast/podcast_subscribe_button}}
+    </div>  
+  </div>
 </div>
 
 {{!-- Player UI --}}
-<div class="flex flex-col col-span-12 gap-5 px-5" 
-  x-data="playaudio()"
-  x-init="listenToGlobalStop()"
-  ax-load
+<div  class="flex flex-col col-span-12 gap-5 px-5"
+  x-data="playaudio()" 
+  x-init="listenToGlobalStop()" 
+  ax-load 
   x-ignore
-  ax-load-src="/vendor/js/podcast_player.alpine.js">
-    {{#with this.playlistItems}}
-      {{#each this}}
-        <div class="flex pb-5 border-b border-white" >
-          {{> components/teaser/podcast/podcast_player_ui 
+  ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
+  {{#with this.playlistItems}}
+    {{#each this}}
+      <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}">
+        {{> components/teaser/podcast/podcast_player_ui
           _isPlaylistPlayer=true
-          _podcastDuration=podcastDuration
+          _podcastDuration=duration
           _title=title
           _id=(nextRandom)
-          }} 
-        </div>
-      {{/each}}
-    {{/with}}   
+          _first=@first
+        }}
+      </div>
+    {{/each}}
+  {{/with}}
 </div>
-
-  
-</div>
-    
-
-<style>
-.seek_slider::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #F07800;
-  border: 2px solid white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.seek_slider::-moz-range-thumb{
-   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  background: #F07800;
-  border: 2px solid white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-</style>

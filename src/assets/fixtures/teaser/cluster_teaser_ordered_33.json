@@ -10,10 +10,6 @@
             "@->value": "MEISTGEKLICKT HEUTE"
         },
         {
-            "@->contentpath": "isHessenschauLogo",
-            "@->value": "true"
-        },
-        {
             "@->contentpath": "teaserLogo",
             "@->value": "hessenschau_de"
         },
@@ -22,7 +18,7 @@
             "@->value": "true"
         },
         {
-            "@->contentpath": "headlineListOverview.link",
+            "@->contentpath": "overviewLink.link",
             "@->value": ""
         }
     ]

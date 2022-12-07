@@ -14,10 +14,6 @@
             "@->value": "hessenschau_de"
         },
         {
-            "@->contentpath": "isHessenschauLogo",
-            "@->value": "true"
-        },
-        {
             "@->contentpath": "firstEntry",
             "@->value": {
                 "@->jsoninclude": "teaser/headline_list_item.inc.json",

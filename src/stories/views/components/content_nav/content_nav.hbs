@@ -1,13 +1,13 @@
-{{#with this.contentNav}} 
+{{#with this.contentNav}}
     {{#if this.isListOrFlow}}
-        <nav x-cloak class="w-full c-content-nav">
-            {{> components/content_nav/content_nav_container 
-                _teasersize=../_teasersize 
-                _maindivclass="flex flex-wrap mt-2 md:mt-0" 
-                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-2 md:mx-0 border-blue-congress align-center"
-            }}    
+        <nav x-cloak class="w-full px-2 c-content-nav">
+            {{> components/content_nav/content_nav_container
+                    _teasersize=../_teasersize
+                    _maindivclass="flex relative flex-wrap mt-2 mx-2 md:mt-0 "
+                    _inputcontainerclass="flex bg-grey-light w-full h-10 mr-2 md:mx-0 border-blue-congress align-center"
+            }}
         </nav>
-    {{else}}  
+    {{else}}
         {{#decorator 'components/content_nav/content_nav_dropdown'
                      _componentClass="c-content-nav h-10 md:h-auto w-full"
                      _teasersize=../_teasersize
@@ -15,12 +15,20 @@
                      _iconClose="arrow-up"
                      _buttonText=(defaultIfEmpty this.selectedItem.title ../../title)
                      _hiddenNavigationLabel="Unternavigation"
-        }} 
-            {{> components/content_nav/content_nav_container 
-                _teasersize=_teasersize 
-                _maindivclass="flex flex-col w-full mt-0" 
-                _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
-            }}
+        }}
+            {{#if (isStorybook)}}
+                {{> components/content_nav/content_nav_container
+                        _teasersize=_teasersize
+                        _maindivclass="flex flex-col w-full mt-0"
+                        _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
+                }}
+            {{else}}
+                {{> components/content_nav/content_nav_container
+                        _teasersize=_teasersize
+                        _maindivclass="relative flex flex-col w-full mt-0"
+                        _inputcontainerclass="flex bg-grey-light w-full h-10 mx-0 border-blue-congress align-center "
+                }}
+            {{/if}}
         {{/decorator}}
     {{/if}}
 {{/with}} 
