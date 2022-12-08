@@ -1,3 +1,16 @@
+# v0.101.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1904 mobile [#424](https://github.com/mumprod/hr-design-system-handlebars/pull/424) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.100.0 (Thu Dec 08 2022)
 
 #### 🚀 Enhancement
