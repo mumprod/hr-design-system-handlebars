@@ -9,7 +9,7 @@
 
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
          :class="contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
-         class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-1002 border-blue-congress whitespace-nowrap text-blue-congress fill-congress"
+         class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-1002 md:border-blue-congress whitespace-nowrap text-blue-congress fill-congress"
     >
         <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full px-3 py-1 border-l border-blue-congress">
@@ -30,7 +30,7 @@
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
          aria-haspopup="true"
          :class="contentNavDropdownIsOpen ? 'z-9999 w-auto relative' : ' z-1003'"
-         class="{{#if this.isDropdown}} mx-2 md:mx-0 {{else}}{{#if this.isMixed}} mx-2 {{/if}} mx-2 {{/if}}  md:h-auto md:overflow-visible">
+         class="{{#if this.isDropdown}} mx-2 md:mx-0 {{else}}{{#if this.isMixed}} mx-2 {{/if}} mx-2 {{/if}} md:h-auto md:overflow-visible">
         {{~decorator_body~}}
     </div>
 
