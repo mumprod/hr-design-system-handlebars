@@ -6,7 +6,7 @@
         {{#decorator 'components/base/link' _css="teaser-link flex items-center flex-col before:content-[''] before:absolute before:rounded-tl-3xl before:rounded-br-3xl before:inset-0 before:z-10 hover:text-toplineColor"}} 
             {{> components/teaser/components/teaser_heading 
             _headlineTag="h2" 
-            _headlineCss="text-shadow text-center text-white mx-8" 
+            _headlineCss="text-shadow text-center text-white mb-4 mx-4 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5" 
             _label=this.label 
             _readMore=this.link.readMoreText.readMoreScreenreader 
             _size=this.teaserSize 
