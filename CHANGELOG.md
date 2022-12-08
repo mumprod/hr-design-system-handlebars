@@ -1,3 +1,15 @@
+# v0.99.5 (Thu Dec 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- BUGFIX: Fix wrong teaser name ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.99.4 (Wed Dec 07 2022)
 
 #### 🐛 Bug Fix
