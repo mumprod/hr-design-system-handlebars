@@ -6,7 +6,7 @@
 {{/decorator}}
     {{#if this.isExtOrBrandLink}}
         {{#decorator 'components/base/link' _css="inline-flex flex-end text-link hover:text-link"}}
-            <span class="inline-flex flex-wrap items-end hover:underline decoration-1">{{this.link.readMoreText.readMore}}{{~#if this.link.hasIcon}}{{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1"}}{{/if~}}</span>
+            <span class="inline-flex flex-wrap items-end hover:underline decoration-1 font-copy">{{this.link.readMoreText.readMore}}{{~#if this.link.hasIcon}}{{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1"}}{{/if~}}</span>
         {{/decorator}} 
     {{/if}}
 
