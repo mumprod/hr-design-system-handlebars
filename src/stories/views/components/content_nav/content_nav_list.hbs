@@ -1,4 +1,4 @@
-<ul class=" flex bg-white flex-wrap {{#if this.isListOrFlow}} w-full gap-x-2 gap-y-2  {{else}} {{/if}} z-1003 md:!px-0 last:border-b-0 {{#if this.isDropdown }} w-full {{/if}}"
+<ul class=" flex bg-white md:bg-transparent flex-wrap {{#if this.isListOrFlow}} w-full gap-x-2 gap-y-2  {{else}} {{/if}} z-1003 md:!px-0 last:border-b-0 {{#if this.isDropdown }} w-full {{/if}}"
     :class="( ({{this.isMixed}} && {{_teasersize}} < 50 ) || ( {{this.isMixed}} && window.innerWidth < 768 ) || {{this.isDropdown}} ) && contentNavDropdownIsOpen == true ? '!shadow-[1px_8px_9px_0px_rgba(50,50,93,0.10)] mt-0 w-full ' : ''"
     > 
     
