@@ -60,6 +60,9 @@
     /* Podcast-Player */
     --color-podcast: theme('colors.blue.science');
     --color-podcast-text: var(--color-link);
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hessenschau'] {
@@ -114,6 +117,9 @@
     --color-podcast: theme('colors.blue.science');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.headingSerif');
+    --font-weight-title: theme('fontWeight.normal');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -162,6 +168,9 @@
     --color-podcast: theme('colors.purple.jazzberry');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.blue.pacificBlue');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr-inforadio'] {
@@ -209,6 +218,9 @@
     --color-podcast: theme('colors.blue.jellyBean');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.pink.rose');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -258,6 +270,9 @@
     --color-podcast: theme('colors.blue.deepCerulean');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr-werbung'] {
@@ -307,6 +322,9 @@
     --color-podcast: theme('colors.blue.deepCerulean');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -354,6 +372,9 @@
     --color-podcast: theme('colors.red.wellRead');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr-bigband'] {
@@ -401,6 +422,9 @@
     --color-podcast: theme('colors.blue.teal');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr'] {
@@ -450,6 +474,9 @@
     --color-podcast: var(--color-primary);
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr1'] {
@@ -497,6 +524,9 @@
     --color-podcast: theme('colors.yellow.olive');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.blue.turquoiseCerulian');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr2'] {
@@ -545,6 +575,9 @@
     --color-podcast: theme('colors.red.paprika');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr3'] {
@@ -593,6 +626,9 @@
     --color-podcast: var(--color-primary);
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.green.pineGreen');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='hr4'] {
@@ -641,6 +677,9 @@
     --color-podcast: theme('colors.green.eden');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.pink.fuchsie');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 [data-theme='you-fm'] {
@@ -689,6 +728,9 @@
     --color-podcast: theme('colors.blue.lightCerulean');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.goldDrop');
+    /* Font */
+    --font-title: theme('fontFamily.heading');
+    --font-weight-title: theme('fontWeight.bold');
 }
 
 /*! purgecss end ignore */
