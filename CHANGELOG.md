@@ -1,3 +1,51 @@
+# v0.99.5 (Thu Dec 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- BUGFIX: Fix wrong teaser name ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.99.4 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fixes background issue in mixed navi [#422](https://github.com/mumprod/hr-design-system-handlebars/pull/422) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.99.3 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- h-auto instead of fixed height in group/teaserlogic-container [#421](https://github.com/mumprod/hr-design-system-handlebars/pull/421) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.99.2 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fix tabbox display-error [#420](https://github.com/mumprod/hr-design-system-handlebars/pull/420) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.99.1 (Tue Dec 06 2022)
 
 #### 🐛 Bug Fix
