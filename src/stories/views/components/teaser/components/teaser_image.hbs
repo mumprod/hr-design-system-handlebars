@@ -1,4 +1,3 @@
-<div class="relative">
 {{#unless this.hideGeotag}}
     {{#unless _isMobile1to1}}
         {{~#with this.geotag}}
@@ -26,7 +25,6 @@
         {{/decorator}}
     {{/if}}
 {{/if}}
-</div> 
 {{#if this.isEvent}}
     {{#unless this.displayTeaserBodyAsImageOverlay}}
         {{#decorator 'components/teaser/components/teaser_image_overlay' _cssClasses="top-0 h-full"}}
