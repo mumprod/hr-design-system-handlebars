@@ -48,39 +48,65 @@
 
     .headline-barrier:after {
         margin: 3px 0 0 10px;
-        
     }
 
     @media screen(md) {
         .headline-barrier:after {
-            margin: 3px 0 0 20px;           
+            margin: 3px 0 0 20px;
         }
         .headline-barrier:before {
-            margin: 3px 20px 0 0;           
+            margin: 3px 20px 0 0;
         }
     }
 
     /* PODCAST SEEK SLIDER*/
-    .seek_slider::-webkit-slider-thumb{
+    .seek_slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 16px;
         height: 16px;
-        background: #F07800;
+        background: var(--color-podcast-highlight);
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
-      .seek_slider::-moz-range-thumb{
-         -webkit-appearance: none;
+    }
+    .seek_slider::-moz-range-thumb {
+        -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 12px;
         height: 12px;
-        background: #F07800;
+        background: var(--color-podcast-highlight);
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
+    }
+
+    .teaser-link:focus::before,
+    .teaser-link:focus + .cta span {
+        @apply shadow-teaser-focus;
+        @apply shadow-focus-state;
+    }
+
+    .teaser-link:focus + .cta span {
+        @apply bg-button-inverted;
+        @apply text-button-hollow;
+        @apply border-none;
+    }
+
+    .teaser-link:focus:not(:focus-visible)::before,
+    .teaser-link:focus:not(:focus-visible) + .cta span {
+        @apply shadow-none;
+    }
+
+    .teaser-link:focus:not(:focus-visible) + .cta span {
+        @apply bg-transparent;
+        @apply text-button-inverted;
+        @apply border-solid;
+    }
+
+    .teaser-link:focus {
+        @apply outline-none;
+    }
 }
