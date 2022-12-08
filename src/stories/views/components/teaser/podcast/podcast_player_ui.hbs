@@ -16,7 +16,7 @@
                     <div class="flex w-full">
                         {{!-- Airdate     --}}
                         {{~#with this.airdateDate}}
-                            <div class="flex text-xs grow font-headingSerif text-blue-science">
+                            <div class="flex text-xs grow font-headingSerif text-podcast-text">
                                 <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
                             </div>
                         {{/with}}
@@ -25,7 +25,7 @@
                         <div class="flex self-end">
                             {{> components/teaser/podcast/podcast_downloadbutton 
                                 _addClass="ml-2"
-                                _iconClass="h-6 w-6 text-blue-science fill-current"
+                                _iconClass="h-6 w-6 text-podcast-text fill-current"
                                 _url=this.podcastDownloadUrl 
                             }}
                         </div>
@@ -59,8 +59,8 @@
                         {{> components/teaser/podcast/podcast_timedisplay 
                         _id=_id
                         _duration=duration
-                        _currentTimeClasses="font-bold text-orange-layout" 
-                        _durationClasses="text-blue-science" 
+                        _currentTimeClasses="font-bold text-podcast-highlight" 
+                        _durationClasses="text-podcast-text" 
                         _containerCss="flex text-sm grow font-heading" }}
                     </div>
                 {{/if}}
@@ -73,8 +73,8 @@
             {{> components/teaser/podcast/podcast_timedisplay 
                 _id=_id
                 _duration=duration 
-                _currentTimeClasses="font-bold text-orange-layout" 
-                _durationClasses="text-blue-science" 
+                _currentTimeClasses="font-bold text-podcast-highlight" 
+                _durationClasses="text-podcast-text" 
                 _containerCss="pl-16 -mt-3 flex text-sm grow font-heading"}}              
             </div>
         {{/unless}}
