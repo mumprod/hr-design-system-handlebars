@@ -1,7 +1,7 @@
 {{#if _withLink}}
     {{#decorator 'components/base/link' _isAriaHidden=_isLinkAriaHidden _css=_linkCss}}
-        {{>components/button/button_pseudo.inc}}
+        {{>components/button/button_pseudo.inc _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden}}
     {{/decorator}}
 {{else}}
-    {{>components/button/button_pseudo.inc}}
+    {{>components/button/button_pseudo.inc _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden}}
 {{/if}}
