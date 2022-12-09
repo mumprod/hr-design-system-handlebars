@@ -1,3 +1,17 @@
+# v0.103.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- handling long ClusterTeaser Title overflow [#426](https://github.com/mumprod/hr-design-system-handlebars/pull/426) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.102.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
