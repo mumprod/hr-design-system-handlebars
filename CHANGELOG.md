@@ -1,3 +1,15 @@
+# v0.104.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Explicitely sets partial properties [#427](https://github.com/mumprod/hr-design-system-handlebars/pull/427) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.103.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
