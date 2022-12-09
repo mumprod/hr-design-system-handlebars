@@ -338,5 +338,6 @@ module.exports = {
         },
         require('tailwindcss-counter')(),
         require('@tailwindcss/line-clamp'),
+        require("tailwindcss-hyphens"),
     ],
 }
