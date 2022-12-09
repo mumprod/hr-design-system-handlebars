@@ -1,3 +1,16 @@
+# v0.102.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- Truncate long geotag with Ellipsis [#425](https://github.com/mumprod/hr-design-system-handlebars/pull/425) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.101.0 (Thu Dec 08 2022)
 
 #### 🚀 Enhancement
