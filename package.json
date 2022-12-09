@@ -83,6 +83,7 @@
         "storybook": "^6.5.9",
         "storybook-conditional-toolbar-selector": "^1.0.3",
         "tailwindcss": "^3.0.23",
+        "tailwindcss-hyphens": "^0.1.0",
         "tailwindcss-important": "^1.0.0",
         "underscore": "^1.13.2"
     },
