@@ -1,3 +1,15 @@
+# v0.106.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1897: Teaser without image [#433](https://github.com/mumprod/hr-design-system-handlebars/pull/433) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.105.3 (Mon Dec 12 2022)
 
 #### 🐛 Bug Fix
