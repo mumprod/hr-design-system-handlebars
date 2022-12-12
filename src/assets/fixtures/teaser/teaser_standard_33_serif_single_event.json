@@ -5,6 +5,10 @@
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",
             "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "event-ds"
         }
     ]
 }
