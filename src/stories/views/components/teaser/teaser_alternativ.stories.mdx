@@ -11,6 +11,7 @@ import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.
 import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser50WithoutTeaserImage from './fixtures/teaser_alternative_without_teaserimage_50_serif.json'
 import teaser50Link from './fixtures/teaser_alternative_50_serif_link.json'
 import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
 
@@ -137,6 +138,9 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     </Story>
     <b>Alternativ 50%</b>
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Alternativ 50 ohne Teaserbild" args={teaser50WithoutTeaserImage.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
         <b>Alternativ 50% mit externem Link</b>
