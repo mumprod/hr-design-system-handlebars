@@ -9,7 +9,7 @@
     >
     <figure class="relative 
     {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
-        {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
+        {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(if this.isMobile1to1 'ar-1-1 md:ar-16-9' (inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]')) }}     
     </figure>
     {{#if this.displayTeaserBodyAsImageOverlay}}
         {{#decorator 'components/teaser/components/teaser_image_overlay' _noOverlayInMobileViewports=true _cssClasses=" relative md:absolute w-full bottom-0"}}
