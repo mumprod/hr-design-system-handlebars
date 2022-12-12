@@ -1195,7 +1195,7 @@
                 "isAuthor": false,
                 "isFileDownload": false,
                 "copyright": "Copyright Text",
-                "audioAuthor": "Audio Author ",
+                "audioAuthor": "Audio Author",
                 "hasStatus": false,
                 "hasTeaserItem": true,
                 "allowAVConsumption": false,
