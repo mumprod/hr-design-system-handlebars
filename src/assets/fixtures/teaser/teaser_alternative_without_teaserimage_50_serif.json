@@ -1,0 +1,22 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserWithoutImage",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includePath",
+            "@->value": "components/teaser/teaser_alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "50"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "alternative-ds"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+            "@->value": "true"
+        }
+    ]
+}
