@@ -1,3 +1,15 @@
+# v0.105.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Add teasertype for events [#428](https://github.com/mumprod/hr-design-system-handlebars/pull/428) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.104.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
