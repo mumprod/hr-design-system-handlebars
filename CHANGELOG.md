@@ -1,3 +1,40 @@
+# v0.105.1 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Meistgeklickt-Box mit langem Titel" [#429](https://github.com/mumprod/hr-design-system-handlebars/pull/429) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Add teasertype for events [#428](https://github.com/mumprod/hr-design-system-handlebars/pull/428) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.104.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Explicitely sets partial properties [#427](https://github.com/mumprod/hr-design-system-handlebars/pull/427) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.103.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
