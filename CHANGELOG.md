@@ -1,3 +1,28 @@
+# v0.105.3 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Standard 33 mit langer Ortsmarke" [#431](https://github.com/mumprod/hr-design-system-handlebars/pull/431) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.2 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1803 [#430](https://github.com/mumprod/hr-design-system-handlebars/pull/430) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.105.1 (Mon Dec 12 2022)
 
 #### 🐛 Bug Fix
