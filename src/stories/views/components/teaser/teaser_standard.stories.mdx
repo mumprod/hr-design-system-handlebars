@@ -14,6 +14,7 @@ import teaser100Program from './fixtures/teaser_standard_100_serif_program.json'
 import teaser50Link from './fixtures/teaser_standard_50_serif_link.json'
 import teaser33Link from './fixtures/teaser_standard_33_serif_link.json'
 import teaser25Link from './fixtures/teaser_standard_25_serif_link.json'
+import teaser33LongGeotag from './fixtures/teaser_standard_33_long_geotag.json'
 
 <Meta
     title="Komponenten/Teaser/Standard"
@@ -137,6 +138,9 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
         {Template.bind({})}
     </Story>
     <Story name="Standard 100 Mit Download" args={teaser100Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 33 mit langer Ortsmarke" args={teaser33LongGeotag.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>
