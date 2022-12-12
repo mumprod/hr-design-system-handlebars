@@ -17,6 +17,7 @@ import clusterTeaserImage100 from '../fixtures/cluster_teaser_100_image.json'
 import clusterTeaserImage50 from '../fixtures/cluster_teaser_50_image.json'
 import clusterTeaserImage33 from '../fixtures/cluster_teaser_33_image.json'
 import PodcastChannelClusterTeaser from '../fixtures/cluster_teaser_Podcast_Channel.json'
+import clusterTeaserOrdered33LongTitle from '../fixtures/cluster_teaser_33_long_title.json'
 
 <Meta   title="Komponenten/Teaser/Cluster"
         parameters={{
@@ -90,6 +91,9 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
         {Template.bind({})}
     </Story>
     <Story name="PodcastEpisoden ClusterTeaser" args={PodcastChannelClusterTeaser}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Meistgeklickt-Box mit langem Titel" args={clusterTeaserOrdered33LongTitle}>
         {Template.bind({})}
     </Story>
 </Preview>

@@ -1,0 +1,25 @@
+{
+    "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "title",
+            "@->value": "Die meistgeklickten Artikel der Woche"
+        },
+        {
+            "@->contentpath": "teaserLogo",
+            "@->value": "hessenschau_de"
+        },
+        {
+            "@->contentpath": "isOrdered",
+            "@->value": "true"
+        },
+        {
+            "@->contentpath": "overviewLink.link",
+            "@->value": ""
+        }
+    ]
+}
