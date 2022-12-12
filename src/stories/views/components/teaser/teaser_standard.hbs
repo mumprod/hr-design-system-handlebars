@@ -9,7 +9,7 @@
     >
     {{#if this.teaserImage}}
         <figure class="relative 
-        {{~#if this.isMobile1to1}} basis-2/5 md:flex-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
+        {{~#if this.isMobile1to1}} basis-2/5 md:basis-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]') }}     
         </figure>
         {{#if this.displayTeaserBodyAsImageOverlay}}
@@ -17,12 +17,12 @@
                 <div class="flex flex-col items-center justify-center p-4 border-r border-gray-400 border-dashed">
                     {{> components/event/instant_dates}}
                 </div>
-                {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'py-4 md:px-4 basis-3/5 md:flex-full' 'py-4 md:px-4')}}
+                {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'py-4 md:px-4 basis-3/5 md:basis-full' 'py-4 md:px-4')}}
             {{/decorator}}
         {{else}}
-            {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'basis-3/5 md:flex-full')}}
+            {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'basis-3/5 md:basis-full')}}
         {{/if}}
     {{else}}
-        {{> components/teaser/components/teaser_body _outerCssClasses="flex-full"}}
+        {{> components/teaser/components/teaser_body _outerCssClasses="basis-full"}}
     {{/if}}
 </article>
