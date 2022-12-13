@@ -83,30 +83,60 @@
         border-radius: 50%;
     }
 
-    .teaser-link:focus::before,
-    .teaser-link:focus + .cta span {
+    .ds-focus {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-focus:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-button {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-button:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-link {
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-link:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-teaser-focus {
+        @apply before:content-[''] before:absolute before:inset-0 before:z-10;
+    }
+
+    .ds-teaser-focus:focus::before,
+    .ds-teaser-focus:focus + .ds-cta span {
         @apply shadow-teaser-focus;
         @apply shadow-focus-state;
     }
 
-    .teaser-link:focus + .cta span {
+    .ds-teaser-focus:focus + .ds-cta span {
         @apply bg-button-inverted;
         @apply text-button-hollow;
         @apply border-none;
     }
 
-    .teaser-link:focus:not(:focus-visible)::before,
-    .teaser-link:focus:not(:focus-visible) + .cta span {
+    .ds-teaser-focus:focus:not(:focus-visible)::before,
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
         @apply shadow-none;
     }
 
-    .teaser-link:focus:not(:focus-visible) + .cta span {
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
         @apply bg-transparent;
         @apply text-button-inverted;
         @apply border-solid;
     }
 
-    .teaser-link:focus {
+    .ds-teaser-focus:focus {
         @apply outline-none;
     }
 }
