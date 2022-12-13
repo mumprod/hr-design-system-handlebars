@@ -8,7 +8,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.isMobile1to1",
-            "@->value": "true"
+            "@->value": false
         }
     ]
 }
