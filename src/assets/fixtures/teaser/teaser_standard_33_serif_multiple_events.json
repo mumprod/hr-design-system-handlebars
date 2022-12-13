@@ -23,6 +23,10 @@
                     "day": "16"
                 }
             }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "event-ds"
         }
     ]
 }
