@@ -9,7 +9,8 @@
     >
     {{#if this.teaserImage}}
         <figure class="relative 
-        {{~#if this.isMobile1to1}} basis-2/5 md:basis-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">    
+        {{~#if this.isMobile1to1}} basis-2/5 md:basis-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}"
+        {{~#if this.isMobile1to1}} :class="avStart ? '!ar-16-9' : ''"{{/if}} >    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(if this.isMobile1to1 'ar-1-1 md:ar-16-9' (inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]')) }}     
         </figure>
         {{#if this.displayTeaserBodyAsImageOverlay}}
