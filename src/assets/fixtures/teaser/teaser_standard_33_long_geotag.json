@@ -1,0 +1,18 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.geotag",
+            "@->value": [
+                {
+                    "title": "Poppenhausen (Wasserkuppe)"
+                }
+            ]
+        }
+    ]
+}
