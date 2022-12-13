@@ -18,6 +18,7 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -36,6 +37,113 @@
                             "@->value": "rueckkehr-nach-abschiebung-102"
                         }
                     ]
+                },
+                "displayTeaserBodyAsImageOverlay": false,
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isMediaTeaser": false,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": false,
+                "isAudio": false,
+                "isVideo": false,
+                "isPodcast": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "moreThenOneEvent": false,
+                "moreThenTwoEvents": false,
+                "firstInstant": {
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Do",
+                        "day": "9"
+                    }
+                },
+                "lastInstant": {
+                    "startDate": {
+                        "monthNameShort": "APR",
+                        "weekdayNameShort": "Fr",
+                        "day": "10"
+                    }
+                },
+                "allowAVConsumption": false,
+                "displayEpgInfos": false,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "documentSection": "Gesellschaft",
+                "headlineTag": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
+                "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+                "profiles": "Von Alf Haubitz und Alice Merton",
+                "teaserLead": {
+                    "avDocument": "",
+                    "image": ""
+                },
+                "geotag": [
+                    {
+                        "title": "Wolfhagen"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    }
+                }
+            }
+        }
+    },
+    "teaserWithoutImage": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "byline": "Byline",
+                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
+                "topline": "Überglücklich, aber ohne Mama",
+                "headingFontVariant": "serif",
+                "extendedTitle": "",
+                "teaserType": "standard-ds",
+                "teaserSize": "hero",
+                "isMobile1to1": false,
+                "teaserDate": {
+                    "htmlDateTime": "2022-04-17T19:30+0200",
+                    "htmlDate": "20.02.1983",
+                    "date": "17.04.22",
+                    "dateSeparatorTime": "17.04.22, 19:30"
+                },
+                "hasByline": true,
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": true,
+                    "showTeaserInfoAll": true,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": true
                 },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
@@ -134,6 +242,7 @@
                     "date": "11.10.22",
                     "dateSeparatorTime": "11.10.22, 06:57"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -229,6 +338,7 @@
                     "date": "25.10.22",
                     "dateSeparatorTime": "25.10.22, 12:35"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -324,6 +434,7 @@
                     "date": "23.10.22",
                     "dateSeparatorTime": "23.10.22, 16:04"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -423,6 +534,7 @@
                     "date": "13.10.22",
                     "dateSeparatorTime": "13.10.22, 16:04"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -523,6 +635,7 @@
                     "date": "11.10.22",
                     "dateSeparatorTime": "11.10.22, 19:46"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -622,6 +735,7 @@
                     "date": "09.08.22",
                     "dateSeparatorTime": "09.08.22, 19:46"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -725,6 +839,7 @@
                     "date": "02.10.20",
                     "dateSeparatorTime": "02.10.20, 19:46"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -827,9 +942,10 @@
                     "date": "14.10.22",
                     "dateSeparatorTime": "14.10.22, 20:00"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
-                    "showTeaserInfoSection": true,
+                    "showTeaserInfoSection": false,
                     "showTeaserInfoChannel": true,
                     "showTeaserInfoAll": true,
                     "showTeaserInfoDate": false,
@@ -941,6 +1057,7 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -1041,6 +1158,7 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": false,
@@ -1140,6 +1258,7 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
@@ -1265,6 +1384,7 @@
                     ]
                 },
                 "duration": "53:13",
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,

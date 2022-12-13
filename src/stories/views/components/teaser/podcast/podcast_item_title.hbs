@@ -1,5 +1,11 @@
-{{#decorator 'components/base/link' _css="w-full font-heading text-base text-toplineColor line-clamp-4 ..." }} 
-    <span class="block group-hover:underline text-blue-science {{~ inline-switch _teaserSize '["100","50"]''[" text-base"," text-base"]' ~}}">
-    {{~_title~}}
+{{#decorator
+    'components/base/link'
+    _css='w-full font-heading text-base text-podcast-text line-clamp-4 ...'
+}}
+    <span
+        class='block group-hover:underline text-podcast-text
+            {{~inline-switch _teaserSize '["100","50"]' '[" text-base"," text-base"]'~}}'
+    >
+        {{~_title~}}
     </span>
 {{/decorator}}

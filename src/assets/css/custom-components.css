@@ -30,57 +30,100 @@
     .btn--xl {
         @apply px-6 py-3 text-lg;
     }
+
     .headline-barrier {
-        display: flex;
-        width: 100%;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
         align-items: center;
         text-align: center;
+        grid-gap: 10px;
+        width: 100%;
     }
-
     .headline-barrier:before,
     .headline-barrier:after {
-        content: '';
+ 
         border-top: 1px solid;
-        margin: 3px 10px 0 0;
-        flex: 1 0 20px;
-    }
-
-    .headline-barrier:after {
-        margin: 3px 0 0 10px;
-        
-    }
-
-    @media screen(md) {
-        .headline-barrier:after {
-            margin: 3px 0 0 20px;           
-        }
-        .headline-barrier:before {
-            margin: 3px 20px 0 0;           
-        }
+        content: '';      
     }
 
     /* PODCAST SEEK SLIDER*/
-    .seek_slider::-webkit-slider-thumb{
+    .seek_slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 16px;
         height: 16px;
-        background: #F07800;
+        background: var(--color-podcast-highlight);
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
-      .seek_slider::-moz-range-thumb{
-         -webkit-appearance: none;
+    }
+    .seek_slider::-moz-range-thumb {
+        -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         width: 12px;
         height: 12px;
-        background: #F07800;
+        background: var(--color-podcast-highlight);
         border: 2px solid white;
         cursor: pointer;
         border-radius: 50%;
-      }
+    }
+
+    .ds-focus {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-focus:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-button {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-button:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-link {
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
+    .ds-link:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
+    .ds-teaser-focus {
+        @apply before:content-[''] before:absolute before:inset-0 before:z-10;
+    }
+
+    .ds-teaser-focus:focus::before,
+    .ds-teaser-focus:focus + .ds-cta span {
+        @apply shadow-teaser-focus;
+        @apply shadow-focus-state;
+    }
+
+    .ds-teaser-focus:focus + .ds-cta span {
+        @apply bg-button-inverted;
+        @apply text-button-hollow;
+        @apply border-none;
+    }
+
+    .ds-teaser-focus:focus:not(:focus-visible)::before,
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
+        @apply shadow-none;
+    }
+
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
+        @apply bg-transparent;
+        @apply text-button-inverted;
+        @apply border-solid;
+    }
+
+    .ds-teaser-focus:focus {
+        @apply outline-none;
+    }
 }

@@ -1,13 +1,7 @@
-{{#decorator 'components/base/link'}}
-    <span
-        class='px-4 py-2.5 border
-            {{inline-switch
-                _color
-                '["white","grey","blue"]'
-                '["text-white border-white","text-grey-scorpion border-grey-scorpion","text-white bg-blue-congress","text-toplineColor border-toplineColor"]'
-            }}
-            font-heading hover:bg-white hover:text-toplineColor hover:border-toplineColor'
-    >
-        {{_linkTitle}}
-    </span>
-{{/decorator}}
+{{#if _withLink}}
+    {{#decorator 'components/base/link' _isAriaHidden=_isLinkAriaHidden _css=_linkCss}}
+        {{>components/button/button_pseudo.inc _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden}}
+    {{/decorator}}
+{{else}}
+    {{>components/button/button_pseudo.inc _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden}}
+{{/if}}

@@ -1,3 +1,177 @@
+# v0.107.0 (Tue Dec 13 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1933 [#436](https://github.com/mumprod/hr-design-system-handlebars/pull/436) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.106.1 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- fix buttom-position-problem [#435](https://github.com/mumprod/hr-design-system-handlebars/pull/435) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.106.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1897: Teaser without image [#433](https://github.com/mumprod/hr-design-system-handlebars/pull/433) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.105.3 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Standard 33 mit langer Ortsmarke" [#431](https://github.com/mumprod/hr-design-system-handlebars/pull/431) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.2 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1803 [#430](https://github.com/mumprod/hr-design-system-handlebars/pull/430) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.105.1 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Meistgeklickt-Box mit langem Titel" [#429](https://github.com/mumprod/hr-design-system-handlebars/pull/429) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Add teasertype for events [#428](https://github.com/mumprod/hr-design-system-handlebars/pull/428) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.104.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Explicitely sets partial properties [#427](https://github.com/mumprod/hr-design-system-handlebars/pull/427) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.103.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- handling long ClusterTeaser Title overflow [#426](https://github.com/mumprod/hr-design-system-handlebars/pull/426) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.102.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- Truncate long geotag with Ellipsis [#425](https://github.com/mumprod/hr-design-system-handlebars/pull/425) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.101.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1904 mobile [#424](https://github.com/mumprod/hr-design-system-handlebars/pull/424) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.100.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1859 [#423](https://github.com/mumprod/hr-design-system-handlebars/pull/423) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.99.5 (Thu Dec 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- BUGFIX: Fix wrong teaser name ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.99.4 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fixes background issue in mixed navi [#422](https://github.com/mumprod/hr-design-system-handlebars/pull/422) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.99.3 (Wed Dec 07 2022)
 
 #### 🐛 Bug Fix

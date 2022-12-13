@@ -7,6 +7,10 @@
             "@->value": "33"
         },
         {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "event-ds"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
             "@->value": "true"
         }

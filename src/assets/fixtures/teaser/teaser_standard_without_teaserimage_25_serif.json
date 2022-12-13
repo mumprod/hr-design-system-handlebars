@@ -1,0 +1,14 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserWithoutImage",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "25"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+            "@->value": false
+        }
+    ]
+}

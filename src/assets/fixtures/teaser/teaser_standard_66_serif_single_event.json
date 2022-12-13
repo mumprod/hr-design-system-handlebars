@@ -7,6 +7,10 @@
             "@->value": "66"
         },
         {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "event-ds"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",

@@ -1,12 +1,12 @@
 {{#>components/grid/grid_group _backgroundColor=this.backgroundColor }} 
         {{~#if this.hasGroupTitle}}
-            <{{if this.headlineTag this.headlineTag "h2"}} class="text-2xl {{#unless this.isRelatedContent}}md:text-4xl{{/unless}} col-span-full py-0 font-headingSerif {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
-                {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-blue-science" href="{{this.link.url}}">{{/if~}}
+            <{{if this.headlineTag this.headlineTag "h2"}} class="text-2xl{{#unless this.isRelatedContent}} md:text-4xl{{/unless}} col-span-full py-0 font-title {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
+                {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-link" href="{{this.link.url}}">{{/if~}}
                     {{this.groupTitle}}
                 {{~#if this.hasLink}}</a>{{/if~}}
             </{{if this.headlineTag this.headlineTag "h2"}}>
         {{/if}}  
-        <div class="grid items-start content-start grid-cols-12 col-span-12 gap-x-6 gap-y-6 md:gap-y-14">
+        <div class="grid items-start content-start grid-cols-12 col-span-12 gap-x-6 gap-y-10 md:gap-y-14">
             {{~> components/teaser/teaser_logic/teaser_logic ~}}
         </div>
 {{/components/grid/grid_group}}
