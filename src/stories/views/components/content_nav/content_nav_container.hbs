@@ -1,5 +1,6 @@
-<div x-cloak class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}} {{#if this.isMixed}} relative {{else}} absolute {{/if}} {{#if isStorybook}} !relative {{else}} absolute {{/if}} "
+<div x-cloak class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}} {{#if this.isMixed}}relative {{else}}absolute{{/if}}"
      @click.outside ="contentNavDropdownIsOpen = false; console.log('clicked outside')"
+
     {{#if this.isAutosuggest}}
      data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"", "unmatchedClass":"hidden"}'
     {{/if}}
