@@ -9,14 +9,6 @@ module.exports = {
         '../src/**/*.stories.mdx',
         '../src/**/*.stories.@(js|jsx|ts|tsx)',
     ],
-    refs: {
-        'chromatic-published-Storybook': {
-            // The title of your Storybook
-            title: 'Remote Design System',
-            // The url provided by Chromatic when it was published
-            url: 'https://main--60bf71339b5fb20042bc58a6.chromatic.com/',
-        },
-    },
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
