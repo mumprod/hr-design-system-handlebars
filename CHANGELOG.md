@@ -1,3 +1,15 @@
+# v0.109.0 (Wed Dec 14 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Removes storybook composition [#439](https://github.com/mumprod/hr-design-system-handlebars/pull/439) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.108.0 (Tue Dec 13 2022)
 
 #### 🚀 Enhancement
