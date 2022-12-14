@@ -1,3 +1,15 @@
+# v0.110.0 (Wed Dec 14 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1715 akzentuiergruppe 3 [#440](https://github.com/mumprod/hr-design-system-handlebars/pull/440) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.109.0 (Wed Dec 14 2022)
 
 #### 🚀 Enhancement
