@@ -1,3 +1,27 @@
+# v0.108.0 (Tue Dec 13 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1943 [#438](https://github.com/mumprod/hr-design-system-handlebars/pull/438) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.107.1 (Tue Dec 13 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1925 - Standard Teaser 1to1 Aspect Ratio problem [#437](https://github.com/mumprod/hr-design-system-handlebars/pull/437) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.107.0 (Tue Dec 13 2022)
 
 #### 🚀 Enhancement
