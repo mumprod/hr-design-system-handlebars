@@ -15,17 +15,12 @@
                      _buttonText=(defaultIfEmpty this.selectedItem.title ../../title)
                      _hiddenNavigationLabel="Unternavigation"
         }}
-            {{#if (isStorybook)}}
-                {{> components/content_nav/content_nav_container
-                        _teasersize=_teasersize
-                        _maindivclass="flex flex-col w-full mt-0"
-                }}
-            {{else}}
-                {{> components/content_nav/content_nav_container
-                        _teasersize=_teasersize
-                        _maindivclass="relative flex flex-col w-full mt-0"
-                }}
-            {{/if}}
+            
+        {{> components/content_nav/content_nav_container
+                _teasersize=_teasersize
+                _maindivclass="flex flex-col w-full mt-0"
+        }}
+            
         {{/decorator}}
     {{/if}}
 {{/with}} 
