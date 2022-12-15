@@ -1,3 +1,15 @@
+# v0.110.1 (Thu Dec 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Changing flag "isMobile1to1" to false ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v0.110.0 (Wed Dec 14 2022)
 
 #### 🚀 Enhancement
