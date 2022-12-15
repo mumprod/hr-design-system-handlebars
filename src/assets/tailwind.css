@@ -482,7 +482,7 @@
 [data-theme='hr1'] {
     --color-primary: theme('colors.yellow.corn');
     --color-secondary: #007179;
-    --color-highlight-1: theme('colors.yellow.givry');
+    --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -634,7 +634,7 @@
 [data-theme='hr4'] {
     --color-primary: theme('colors.green.genoa');
     --color-secondary: #007179;
-    --color-highlight-1: theme('colors.green.nebula');
+    --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -666,9 +666,9 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: var(--color-primary);
+    --color-button: theme('colors.green.casal');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-hollow: var(--color-primary);
+    --color-button-hollow: theme('colors.green.casal');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */
@@ -685,7 +685,7 @@
 [data-theme='you-fm'] {
     --color-primary: #c20016;
     --color-secondary: #007179;
-    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-1: theme('colors.grey.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
@@ -703,11 +703,11 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Dachzeile */
-    --color-topline: theme('colors.blue.lightCerulean');
+    --color-topline: var(--color-link);
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.lightCerulean');
+    --color-link: theme('colors.blue.sea');
     /* Stage */
     --color-stage-text-box: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.yellow.goldenSand');
@@ -763,7 +763,6 @@
     right: 0;
     bottom: 0;
 }
-.overflow-anywhere{
+.overflow-anywhere {
     overflow-wrap: anywhere;
 }
-
