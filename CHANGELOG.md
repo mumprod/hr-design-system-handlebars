@@ -1,3 +1,15 @@
+# v0.112.0 (Thu Dec 15 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Configures contrast colors [#443](https://github.com/mumprod/hr-design-system-handlebars/pull/443) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.111.0 (Thu Dec 15 2022)
 
 #### 🚀 Enhancement
