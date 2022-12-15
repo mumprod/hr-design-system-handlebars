@@ -1,3 +1,15 @@
+# v0.110.2 (Thu Dec 15 2022)
+
+#### 🐛 Bug Fix
+
+- Changing flag isMobile1to1 to false to display geotag [#441](https://github.com/mumprod/hr-design-system-handlebars/pull/441) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v0.110.1 (Thu Dec 15 2022)
 
 #### ⚠️ Pushed to `main`
