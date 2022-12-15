@@ -1,3 +1,27 @@
+# v0.110.1 (Thu Dec 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Changing flag "isMobile1to1" to false ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v0.110.0 (Wed Dec 14 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1715 akzentuiergruppe 3 [#440](https://github.com/mumprod/hr-design-system-handlebars/pull/440) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.109.0 (Wed Dec 14 2022)
 
 #### 🚀 Enhancement
