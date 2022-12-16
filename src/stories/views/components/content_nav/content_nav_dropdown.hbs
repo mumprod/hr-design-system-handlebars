@@ -12,19 +12,19 @@
          class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
     >
         <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
-        <div class="flex self-center w-auto h-full px-3 py-1 border-l border-content-nav">
-            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  "
+        <div class="flex self-center w-auto h-full border-l border-content-nav">
+            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  "
                   :class="contentNavDropdownIsOpen ? 'hidden' : ''"
-                  class="flex self-center"
+                  class="flex self-center px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
-            </span>
-            <span @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('resetinput');  "
+            </button>
+            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('hr:global:resetinputAutoSuggest');  "
                   :class="contentNavDropdownIsOpen ? '' : 'hidden'"
-                  class="flex self-center"
+                  class="flex self-center px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
-            </span>
+            </button>
         </div>
     </div>
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
