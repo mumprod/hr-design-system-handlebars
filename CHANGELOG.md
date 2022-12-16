@@ -1,3 +1,51 @@
+# v0.112.0 (Thu Dec 15 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Configures contrast colors [#443](https://github.com/mumprod/hr-design-system-handlebars/pull/443) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.111.0 (Thu Dec 15 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1922 [#442](https://github.com/mumprod/hr-design-system-handlebars/pull/442) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.110.2 (Thu Dec 15 2022)
+
+#### 🐛 Bug Fix
+
+- Changing flag isMobile1to1 to false to display geotag [#441](https://github.com/mumprod/hr-design-system-handlebars/pull/441) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v0.110.1 (Thu Dec 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Changing flag "isMobile1to1" to false ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v0.110.0 (Wed Dec 14 2022)
 
 #### 🚀 Enhancement

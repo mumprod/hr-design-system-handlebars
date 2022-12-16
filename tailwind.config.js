@@ -222,6 +222,7 @@ module.exports = {
                     mystic: '#d9e8ea',
                     pacificBlue: '#009bc6',
                     science: '#006dc1',
+                    sea: '#006783',
                     teal: '#007A7CFF',
                     turquoiseCerulian: '#007fa0',
                 },
@@ -260,8 +261,10 @@ module.exports = {
                     light: '#F8F8F8',
                     dark: '#707070',
                     brightGray: '#E5F2F3',
+                    platinum: '#E5E8E8',
                 },
                 'green': {
+                    casal: '#29675d',
                     eden: '#0F6157FF',
                     genoa: '#168378',
                     greenHaze: '#019b72',
@@ -274,8 +277,10 @@ module.exports = {
                     purpleHeart: '#832baf',
                 },
                 'white': {
+                    azureish: '#DBEAEA',
                     DEFAULT: '#ffffff',
                     blackhaze: '#eaeded',
+                    floral: '#FBF9EE',
                 },
                 'yellow': {
                     corn: '#e0ae00',
@@ -338,6 +343,6 @@ module.exports = {
         },
         require('tailwindcss-counter')(),
         require('@tailwindcss/line-clamp'),
-        require("tailwindcss-hyphens"),
+        require('tailwindcss-hyphens'),
     ],
 }

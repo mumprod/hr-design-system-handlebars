@@ -18,10 +18,10 @@
                 <div class="flex flex-col items-center justify-center p-4 border-r border-gray-400 border-dashed">
                     {{> components/event/instant_dates}}
                 </div>
-                {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'py-4 md:px-4 basis-3/5 md:basis-full' 'py-4 md:px-4')}}
+                {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'py-4 md:px-4 basis-3/5 w-3/5 md:basis-full md:w-full' 'py-4 md:px-4')}}
             {{/decorator}}
         {{else}}
-            {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'basis-3/5 md:basis-full')}}
+            {{> components/teaser/components/teaser_body _outerCssClasses=(if this.isMobile1to1 'basis-3/5 w-3/5 md:basis-full md:w-full')}}
         {{/if}}
     {{else}}
         {{> components/teaser/components/teaser_body _outerCssClasses="basis-full"}}
