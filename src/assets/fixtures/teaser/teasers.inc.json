@@ -1608,7 +1608,7 @@
                         "url": "/teaser1",
                         "webviewUrl": "/teaser1#webview",
                         "isTargetBlank": true,
-                        "hasIcon": false,
+                        "hasIcon": true,
                         "iconName": "extern"
                     },
                     "navigationGroup": [{}]
