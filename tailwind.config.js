@@ -203,9 +203,11 @@ module.exports = {
                     'sans-serif',
                 ],
                 title: 'var(--font-title)',
+                titleCluster: 'var(--font-titleCluster)',
             },
             fontWeight: {
                 title: 'var(--font-weight-title)',
+                titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
                 'blue': {

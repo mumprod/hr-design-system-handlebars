@@ -63,6 +63,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    --font-titleCluster: theme('fontFamily.headingSerif');
+    --font-weight-titleCluster: theme('fontWeight.bold');
 }
 
 [data-theme='hessenschau'] {
@@ -120,6 +122,8 @@
     /* Font */
     --font-title: theme('fontFamily.headingSerif');
     --font-weight-title: theme('fontWeight.normal');
+    --font-titleCluster: theme('fontFamily.headingSerif');
+    --font-weight-titleCluster: theme('fontWeight.bold');
 }
 
 [data-theme='hr-fernsehen'] {
