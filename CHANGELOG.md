@@ -1,3 +1,16 @@
+# v0.112.2 (Mon Dec 19 2022)
+
+#### 🐛 Bug Fix
+
+- Adjust spaces and font sizes in Cluster-Teaser [#445](https://github.com/mumprod/hr-design-system-handlebars/pull/445) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.112.1 (Fri Dec 16 2022)
 
 #### 🐛 Bug Fix
