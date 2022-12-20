@@ -1,3 +1,15 @@
+# v0.113.0 (Tue Dec 20 2022)
+
+#### 🚀 Enhancement
+
+- Installed async-alpine as npm module v.1.0.0 [#446](https://github.com/mumprod/hr-design-system-handlebars/pull/446) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.112.2 (Mon Dec 19 2022)
 
 #### 🐛 Bug Fix
