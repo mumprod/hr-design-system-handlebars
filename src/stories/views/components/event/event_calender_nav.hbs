@@ -11,12 +11,12 @@
                             this.isCurrentMonth}} -currentMonth{{/if}}{{#if
                             this.hasFutureEventsFromNow}} -selected{{/if}}{{#unless
                             this.hasFutureEventsFromNow}} js-fr-reload-trigger{{/unless}}">
-                        {{#if ../_excerpt}}
+                    {{#if ../_excerpt}}
                     <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
                      {{else}}
                      {{#if this.hasDays}}
-                                <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 js-fr-trigger js-noStateManager{{#if
-                                           this.hasFutureEventsFromNow}} -selected{{/if}}">{{this.monthName}} {{this.year}}</span>
+                                <a href="{{this.contentUrl}}" class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 js-fr-trigger js-noStateManager{{#if
+                                           this.hasFutureEventsFromNow}} -selected{{/if}}" data-prop-crit="{{this.date.yearMonth}}" data-prop-filterer='{"crit":"{{this.date.yearMonth}}", "strat":"hoswid"}'>{{this.monthName}} {{this.year}}</a>
                             {{else}}
                                 <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
                             {{/if}}
@@ -25,11 +25,10 @@
                         {{#each this.days}}
                 <li class="inline-block h-full group cursor-pointer js-ns-item{{#if
                                         this.isStartOfWeek}} -startOfWeek{{/if}}">
-                        <span class="block italic text-center group-hover:bg-black group-hover:text-white">{{this.weekDay}}</span>
-                        <span class="block font-headingSerif font-bold text-labelEventCalendarTitle italic text-2xl px-3 pt-1.6 pb-0 group-hover:bg-black group-hover:text-white">{{this.day}}</span>
+                       {{> components/event/event_calendar_instant}}
                 </li>
                 {{/each}}
                 </ul>
-                    </div>
+                </div>
                     {{/each}}
                     </div>
