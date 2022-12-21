@@ -1,3 +1,16 @@
+# v0.113.2 (Wed Dec 21 2022)
+
+#### 🐛 Bug Fix
+
+- truncate button-text in cluster-teaser [#449](https://github.com/mumprod/hr-design-system-handlebars/pull/449) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.113.1 (Wed Dec 21 2022)
 
 #### 🐛 Bug Fix
