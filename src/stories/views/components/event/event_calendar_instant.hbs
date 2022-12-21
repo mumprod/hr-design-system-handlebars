@@ -1,9 +1,9 @@
 <{{#if this.hasInstants}}a
-class="js-fr-trigger js-noStateManager -active{{#if
+class="js-fr-trigger js-noStateManager block h-full pt-2 pb-2.5 -active{{#if
 this.isFirstAvailable}}{{#if _excerpt}} -selected js-fr-initial{{/if}}{{/if}}"
      data-prop-crit='{{this.date.htmlDate}}'
      data-prop-filterer='{"crit":"{{this.date.htmlDate}}","strat":["hobid"]}'
-     href="{{../contentUrl}}"{{else}}div class=""{{/if}}>
-     <span class="block italic text-center group-hover:bg-black group-hover:text-white">{{this.date.weekdayNameShort}}</span>
+     href="{{../contentUrl}}"{{else}}div class="js-fr-trigger js-noStateManager block h-full pt-2 pb-2.5 -active"{{/if}}>
+     <span class="block font-headingSerif italic text-center font-bold uppercase text-sm group-hover:bg-black group-hover:text-white">{{this.date.weekdayNameShort}}</span>
      <span class="block font-headingSerif font-bold text-labelEventCalendarTitle italic text-2xl px-3 pt-1.6 pb-0 group-hover:bg-black group-hover:text-white">{{this.date.day}}</span>
 </{{#if this.hasInstants}}a{{else}}div{{/if}}>
