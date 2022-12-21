@@ -1,3 +1,15 @@
+# v0.113.1 (Wed Dec 21 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1922 add lang de to html tag so hyphens work properly [#448](https://github.com/mumprod/hr-design-system-handlebars/pull/448) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.113.0 (Tue Dec 20 2022)
 
 #### 🚀 Enhancement
