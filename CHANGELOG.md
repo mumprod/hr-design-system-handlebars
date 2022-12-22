@@ -1,3 +1,15 @@
+# v0.113.3 (Thu Dec 22 2022)
+
+#### 🐛 Bug Fix
+
+- added x-cloak to av Player element so on initial load player div is h… [#450](https://github.com/mumprod/hr-design-system-handlebars/pull/450) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.113.2 (Wed Dec 21 2022)
 
 #### 🐛 Bug Fix
