@@ -1,3 +1,16 @@
+# v0.113.4 (Thu Dec 22 2022)
+
+#### 🐛 Bug Fix
+
+- byline Margin-top:8px [#451](https://github.com/mumprod/hr-design-system-handlebars/pull/451) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.113.3 (Thu Dec 22 2022)
 
 #### 🐛 Bug Fix
