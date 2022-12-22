@@ -7,7 +7,7 @@
     {{~#if this.showFirstImage}}
         {{~#with this.firstEntry~}}
             {{~#if this.teaserImage}}
-                <div class="px-0 pb-3 pb {{~inline-switch ../this.teaserSize '["100"]' '[" md:pl-5 md:basis-1/2 lg:basis-1/3"]'}}">   
+                <div class="px-0 pb-3 {{~inline-switch ../this.teaserSize '["100"]' '[" md:pl-5 md:basis-1/2 lg:basis-1/3"]'}}">   
                     {{~> components/base/image/responsive_image this.teaserImage _type=../this.teaserType _variant=../this.imageVariant _addClass=../this.aspectRatio _addClassImg="w-full" ~}}
                     <div class="mx-5 mt-3 {{~inline-switch ../this.teaserSize '["100"]' '[" md:mx-0"]'}}">
                         {{> components/teaser/cluster/teaser_cluster_item _size=../this.teaserSize _ordered=../this.isOrdered _firstItem=true}}
