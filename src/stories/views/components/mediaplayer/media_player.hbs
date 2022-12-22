@@ -1,4 +1,4 @@
-<div x-show="avStart" id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto{{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto{{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
