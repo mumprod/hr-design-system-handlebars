@@ -1726,8 +1726,8 @@
                     ]
                 },
                 "eventCalendar": {
-                    "eventCalendarMonth": {
-                        "@->jsoninclude": "event/event_calendar_teaser_months.inc.json",
+                    "months": {
+                        "@->jsoninclude": "event/event_calendar_months.inc.json",
                         "@->contentpath": "eventDate"
                     },
                     "hasSelectedEvents": true,
