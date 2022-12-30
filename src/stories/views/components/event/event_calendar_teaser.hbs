@@ -1,0 +1,25 @@
+<div class="flex flex-col items-center justify-center p-4 border-dashed border-r border-labelEventCalendarTitle">
+    {{#with this.startDate}}
+        <span class='text-sm font-headingSerif'>{{this.weekdayNameShort}}</span>
+        <span class='text-2xl font-headingSerif font-bold'>{{this.day}}</span>
+        <span class='text-sm font-headingSerif'>{{this.monthNameShort}}</span>
+    {{/with}}
+</div>
+<div class="pt-4 md:px-0 px-5">
+    {{#decorator 'components/base/link' _css="hover:text-toplineColor"}} 
+        {{> components/teaser/components/teaser_heading 
+            _fontVariant=this.headingFontVariant
+            _headlineTag=this.headlineTag 
+            _label=this.label 
+            _readMore=this.link.readMoreText.readMoreScreenreader 
+            _size=this.teaserSize 
+            _title=this.title 
+            _topline=this.topline 
+            _teaserType=this.teaserType
+            _isMobile1to1=this.isMobile1to1}}            
+    {{/decorator}}   
+    <div>{{> components/event/concert_info}}</div>
+</div>
+<figure class="relative ar-16-9">
+    {{> components/base/image/responsive_image this.image _type="calendar" _variant="wide" _addClass="w-full"}}
+</figure>

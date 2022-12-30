@@ -18,8 +18,22 @@
                "instants": [{
                     "isDateInstant": false,
                     "startDate": {
-                        "htmlDate": "2021-04-21"
+                        "htmlDate": "2021-04-21",
+                        "day": 21, 
+                        "weekdayNameShort": "Fr", 
+                        "monthNameShort": "Apr"
+                    },
+                    "image": {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "teaser_standard",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "pedro-martins-102"
+                            }
+                        ]
                     }
+                    
                }],
                "date": {
                 "weekdayNameShort": "Fr",
@@ -30,12 +44,29 @@
             {
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
-                         "htmlDate": "2021-04-22"
-                     }
+                         "htmlDate": "2021-04-22",
+                         "day": 22, 
+                         "weekdayNameShort": "Sa", 
+                         "monthNameShort": "Apr"
+                     },
+                     "image": {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "teaser_standard",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "pedro-martins-102"
+                            }
+                        ]
+                    },
+                    "label": {
+                        "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                        "@->contentpath": "event"
+                    }
                 }],
                 "date": {
                  "weekdayNameShort": "Sa",
@@ -46,7 +77,7 @@
              {
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -62,7 +93,7 @@
              {
                 "isStartOfWeek": true,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -78,7 +109,7 @@
              {
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -106,7 +137,7 @@
 
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -122,7 +153,7 @@
              {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -138,7 +169,7 @@
               {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -166,7 +197,7 @@
 
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -182,7 +213,7 @@
              {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -198,7 +229,7 @@
               {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -226,7 +257,7 @@
 
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -242,7 +273,7 @@
              {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -258,7 +289,7 @@
               {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -286,7 +317,7 @@
 
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -302,7 +333,7 @@
              {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -318,7 +349,7 @@
               {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -346,7 +377,7 @@
 
                 "isStartOfWeek": false,
                 "hasInstants":true,
-                "isFirstAvailable":true,
+                "isFirstAvailable":false,
                 "instants": [{
                      "isDateInstant": false,
                      "startDate": {
@@ -362,7 +393,7 @@
              {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
@@ -378,7 +409,7 @@
               {
                  "isStartOfWeek": false,
                  "hasInstants":true,
-                 "isFirstAvailable":true,
+                 "isFirstAvailable":false,
                  "instants": [{
                       "isDateInstant": false,
                       "startDate": {
