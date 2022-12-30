@@ -32,6 +32,10 @@
                                 "@->value": "pedro-martins-102"
                             }
                         ]
+                    },
+                    "label": {
+                        "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                        "@->contentpath": "event"
                     }
                     
                }],
