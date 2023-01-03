@@ -1,11 +1,22 @@
-{{#if this.isEventCalendar}}
-    {{#with this.teaserDate}}
-    <div class="flex mt-4 mx-2">
-        <div class="flex align-top">
-        <div class=" block relative min-w-3 min-h-3">
-                    {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
-                </div>
-        <span class='text-l pl-4 font-headingSerif font-bold'>{{this.dateSeparatorTime}}</span>
+        {{#with this.eventtags}}
+                {{#with this.series}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                {{/with}}
+                {{#with this.project}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                {{/with}}
+                {{#with this.externalProject}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this}}</p>
+                {{/with}}
+        {{/with}}
+<div class="flex mt-4 mx-2">
+    <div class="flex align-top">
+        {{#with this.startTime}}
+            <div class=" block relative min-w-3 min-h-3">
+                        {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
+            </div>
+            <span class='text-l pl-4 font-headingSerif font-bold'>{{this.time}}</span>
+        {{/with}}
 </div>
 <div class="flex align-top">
         <div class="relative ml-4 min-w-3 min-h-3">
@@ -13,6 +24,6 @@
                 </div>
         <span class='text-l pl-4 font-headingSerif font-bold'>Frankfurt am main</span>
     </div>
+    <div>
     </div>
-    {{/with}}
-{{/if}}
+</div>

@@ -23,6 +23,9 @@
                         "weekdayNameShort": "Fr", 
                         "monthNameShort": "Apr"
                     },
+                    "startTime": {
+                        "time" : "18:00"
+                    },
                     "image": {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
                         "@->contentpath": "teaser_standard",
@@ -36,6 +39,15 @@
                     "label": {
                         "@->jsoninclude": "teaser/teaser_labels.inc.json",
                         "@->contentpath": "event"
+                    },
+                    "title": "Finale: Landeswettbewerb Jugend jazzt Hessen für Big Bands",
+                    "eventtags": {
+                        "series": {
+                            "title": "Hessen lacht"
+                        },
+                        "project": {
+                            "title" : "HR Bigband sucht den Superjazzer"
+                        }
                     }
                     
                }],
