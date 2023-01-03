@@ -48,6 +48,10 @@
                         "project": {
                             "title" : "HR Bigband sucht den Superjazzer"
                         }
+                    },
+                    "venue": {
+                        "addressCity": "Frankfurt", 
+                        "title": "Festhalle"
                     }
                     
                }],

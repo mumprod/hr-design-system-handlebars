@@ -1,0 +1,11 @@
+        {{#with this}}
+                {{#with this.series}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                {{/with}}
+                {{#with this.project}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                {{/with}}
+                {{#with this.externalProject}}
+                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this}}</p>
+                {{/with}}
+        {{/with}}
