@@ -1,3 +1,16 @@
+# v0.113.5 (Wed Jan 04 2023)
+
+#### 🐛 Bug Fix
+
+- space between the text and the three dots [#452](https://github.com/mumprod/hr-design-system-handlebars/pull/452) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.113.4 (Thu Dec 22 2022)
 
 #### 🐛 Bug Fix
