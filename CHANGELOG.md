@@ -1,3 +1,15 @@
+# v0.113.6 (Wed Jan 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1978 SEO - lazyloading bei ersten Teaser funktioniert bei AV Teasern nicht [#453](https://github.com/mumprod/hr-design-system-handlebars/pull/453) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.113.5 (Wed Jan 04 2023)
 
 #### 🐛 Bug Fix
