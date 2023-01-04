@@ -1,6 +1,5 @@
-<div class="flex w-full"> 
-    <div class="flex flex-wrap w-full js-load" 
-        >
+
+    <div class="flex flex-wrap w-full js-load">
         <div class="flex {{#if _isPlaylistPlayer}}items-start{{else}}items-center{{/if}} w-full flex-nowrap">
 
             {{!-- Start/StopButton       --}}
@@ -22,13 +21,13 @@
                         {{/with}}
 
                         {{!-- Download --}}
-                        <div class="flex self-end">
+                        
                             {{> components/teaser/podcast/podcast_downloadbutton 
-                                _addClass="ml-2"
+                                _addClass="ml-2 mr-2"
                                 _iconClass="h-6 w-6 text-podcast-text fill-current"
                                 _url=this.podcastDownloadUrl 
                             }}
-                        </div>
+                        
                     </div>
 
                     <div class="flex -mt-2 w-fit max-w-3/4 ">          
@@ -91,4 +90,3 @@
             </audio>
         {{/with}}
     </div>
-</div>
