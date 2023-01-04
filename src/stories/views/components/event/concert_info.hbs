@@ -1,22 +1,63 @@
-{{> components/event/event_tags this.eventtags}}
-<div class="flex flex-wrap content-start mt-4">
-    {{#with this.startTime}}
-    <div class="flex grow shrink-1 basis-4/12 align-top">
-            <div class="min-w-3 min-h-3">
-                        {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
-            </div>
-            <div class='text-l pl-4 font-headingSerif font-bold'>{{this.time}}</div>
-</div>
- {{/with}}
- {{#with this.venue}}
-<div class="flex grow flex-shrink-1 basis-8/12 align-top">
-        <div class="ml-4 min-w-3 min-h-3">
-                    {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
-                </div>
-         <div>        
-            <div class='text-l pl-4 font-headingSerif font-bold w-full'>{{this.addressCity}}</div>
-            <div>{{this.title}}</div>
+{{#with this.concertInfoHead}}
+    {{#unless this.isEmpty}}
+        {{#with this.title}}
+            <h4 class="text-lg bold text-center">{{this}}</h4>
+        {{/with}}
+        {{#with this.description}}
+            <p class="text-lg text-center">{{this}}</p>
+        {{/with}}
+    {{/unless}}
+{{/with}}
+{{#with this.artists}}
+    {{#unless this.isEmpty}}
+        <div class="mt-4 text-lg text-center">
+            {{#with this.description}}
+            <p>{{this}}</p>
+            {{/with}}
+            <ul>
+                {{#each this.artistsAndGroups}}
+                    <li>{{#with this.artistGroup}} {{/with}}</li>
+                    {{#with this.artist}}
+                        {{> components/event/artist}}
+                    {{/with}}
+                    {{#with this.artistGroup}}
+                        {{#with this.name}}<h3>{{this}}:</h3>{{/with}}
+                                            {{#with this.artists}}
+                    <ul>
+                        {{#each this}}
+                            <li>
+                                {{> components/event/artist}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                    {{/with}}
+                    {{/with}}
+                {{/each}}
+            </ul>
         </div>
-    </div>
-    {{/with}}
-</div>
+    {{/unless}}
+{{/with}}
+{{#with this.compositions}}
+    {{#unless this.isEmpty}}
+        <div class="text-xl text-center">
+            {{#with this.description}}<p class="text-xl text-center">{{this}}</p>{{/with}} 
+            <ul>
+            {{#each this.compositions}}
+                <li>
+                    {{#if this.composerAndComposition}}
+                        <span class="text-center">{{this.composer}}</span>
+                        {{#with this.name}} | <span class="text-center">{{this}}</span>{{/with}}
+                        {{else}}
+                            {{#if this.composer}}
+                                <span class="text-center">{{this.composer}}</span>
+                            {{/if}}
+                            {{#if this.name}}
+                                <span class="text-center">{{this.name}}</span>
+                            {{/if}}
+                    {{/if}}
+                </li>
+            {{/each}}
+            </ul>
+        </div>
+    {{/unless}}
+{{/with}}

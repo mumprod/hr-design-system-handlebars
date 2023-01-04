@@ -12,7 +12,7 @@
         {{#each this.days}}
             {{#each this.instants}}
                 {{#unless this.isDateInstant}}
-                    <section id="{{this.startDate.htmlDate}}" class="flex col-span-12 border-bottom-8 border-labelEventCalendarTitle border md:flex-row gap-y-3 gap-x-4 md:px-0 {{#unless ../this.isFirstAvailable}}hidden{{/unless}}" x-data="{ avStart: false }">
+                    <section id="{{this.startDate.htmlDate}}" class="flex col-span-12 border-bottom-8 border-labelEventCalendarTitle border md:flex-row gap-y-3 gap-x-4 md:px-0 js-fr-target {{#unless ../this.isFirstAvailable}}hidden{{/unless}}" x-data="{ avStart: false }">
                         {{> components/event/event_calendar_teaser}}
                     </section>
                 {{/unless}}

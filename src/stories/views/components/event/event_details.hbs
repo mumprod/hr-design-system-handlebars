@@ -1,0 +1,25 @@
+{{> components/event/event_tags this.eventtags}}
+<div class="flex flex-wrap content-start mt-4">
+    {{#with this.startTime}}
+    <div class="flex grow shrink-1 basis-4/12 align-top">
+            <div class="min-w-3 min-h-3">
+                        {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
+            </div>
+            <div class='text-l pl-4 font-headingSerif font-bold'>{{this.time}}</div>
+    </div>
+ {{/with}}
+ {{#with this.venue}}
+<div class="flex grow flex-shrink-1 basis-8/12 align-top">
+        <div class="ml-4 min-w-3 min-h-3">
+                    {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-current" }}
+                </div>
+            <div class='text-l pl-4 font-headingSerif font-bold w-full'>{{this.addressCity}}</div>
+            <div>{{this.title}}</div>
+        </div>
+    {{/with}}
+</div>
+{{#with this.concertInfo}}
+    {{#unless this.isEmpty}}
+        {{> components/event/concert_info}}
+    {{/unless}}
+{{/with}}

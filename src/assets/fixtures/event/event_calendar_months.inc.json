@@ -52,6 +52,34 @@
                     "venue": {
                         "addressCity": "Frankfurt", 
                         "title": "Festhalle"
+                    },
+                    "concertInfo": {
+                        "artists": {
+                            "artistsAndGroups": [{
+                                "artist": {
+                                    "name": "Peter Maffay",
+                                    "groupName": "hr bigband",
+                                    "role": "Sänger"
+                                }, 
+                                "artistGroup": "hr bigband"
+                            }],
+                            "isEmpty": false,
+                            "description": "Tolle Künstler"
+                        },
+                        "compositions": {
+                           "isEmpty": false,
+                            "description": "Komposition-Description",
+                            "compositions:" : [{
+                                "composerAndComposition": true,
+                                "composer": "Udo Lindenberg", 
+                                "name": "Horizont"
+                        }]},
+                        "concertInfoHead": {
+                            "title": "Das Fest", 
+                            "description":  "Ein tolles Festival erwartet Sie",
+                            "isEmpty": false
+                        },
+                        "isEmpty": false
                     }
                     
                }],
