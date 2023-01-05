@@ -1,3 +1,15 @@
+# v0.115.0 (Thu Jan 05 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 1976 dom unnötig tief podcast playlist [#454](https://github.com/mumprod/hr-design-system-handlebars/pull/454) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.114.0 (Thu Jan 05 2023)
 
 #### 🚀 Enhancement
