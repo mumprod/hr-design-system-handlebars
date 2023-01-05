@@ -28,6 +28,7 @@
     </div>
     <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
          aria-haspopup="true"
+         @click.outside="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest');"
          :class="contentNavDropdownIsOpen ? 'z-9999 relative' : ' z-1003'"
          class="{{#if this.isDropdown}} mx-2 md:mx-0 bla {{else}}{{#if this.isMixed}} mx-2 {{/if}} mx-2 {{/if}} md:h-auto md:overflow-visible">
         {{~decorator_body~}}
