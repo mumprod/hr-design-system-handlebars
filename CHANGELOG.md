@@ -1,3 +1,15 @@
+# v0.116.0 (Thu Jan 05 2023)
+
+#### 🚀 Enhancement
+
+- adds @click.outside to content-div [#457](https://github.com/mumprod/hr-design-system-handlebars/pull/457) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.115.0 (Thu Jan 05 2023)
 
 #### 🚀 Enhancement
