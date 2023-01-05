@@ -10,17 +10,16 @@
     <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
          :class="contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
          class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
+         @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  $dispatch('hr:global:resetinputAutoSuggest');" 
     >
         <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full border-l border-content-nav">
-            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  "
-                  :class="contentNavDropdownIsOpen ? 'hidden' : ''"
+            <button :class="contentNavDropdownIsOpen ? 'hidden' : ''"
                   class="flex self-center px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
             </button>
-            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('hr:global:resetinputAutoSuggest');  "
-                  :class="contentNavDropdownIsOpen ? '' : 'hidden'"
+            <button :class="contentNavDropdownIsOpen ? '' : 'hidden'"
                   class="flex self-center px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
