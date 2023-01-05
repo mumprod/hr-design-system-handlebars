@@ -1,3 +1,15 @@
+# v0.116.2 (Thu Jan 05 2023)
+
+#### 🐛 Bug Fix
+
+- adds margin-bottom to nav when dropdown [#459](https://github.com/mumprod/hr-design-system-handlebars/pull/459) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.116.1 (Thu Jan 05 2023)
 
 #### 🐛 Bug Fix
