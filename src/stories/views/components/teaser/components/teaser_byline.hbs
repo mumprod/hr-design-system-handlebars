@@ -1,31 +1,30 @@
-<p class="mt-2.5 text-xs text-grey-scorpion font-headingSerif empty:hidden">
-    {{!--   TODO eine Java Methode die abfragt ob es 
-            teaserInfo || isFileDownload || this.profiles || this.commentsSsi 
-            gibt um empty:hidden zu vermeiden. <p> </p> sollte nicht im Markup sein falls leer --}}
-    {{~#with this.teaserInfo~}}
+{{#if this.hasByline}}
+    <p class="mt-2 text-xs text-grey-scorpion font-headingSerif empty:hidden">
         {{!--Teaser-Info--}}
-        {{~#if this.showTeaserInfo~}}
-            {{~#if this.showTeaserInfoDate~}}
-                {{~#with ../this.teaserDate~}}
-                    <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                {{~/with~}}                    
-                <span class="mx-px last-of-type:hidden">|</span>                    
-            {{~else~}}
-                {{~#if this.showTeaserInfoDateTime~}}
+        {{~#with this.teaserInfo~}}
+            {{~#if this.showTeaserInfo~}}
+                {{~#if this.showTeaserInfoDate~}}
                     {{~#with ../this.teaserDate~}}
-                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
-                    {{~/with~}}                        
-                    <span class="mx-px last-of-type:hidden">|</span>                        
+                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                    {{~/with~}}
+                    <span class="mx-1 last-of-type:hidden">|</span>
+                    {{~else~}}
+                    {{~#if this.showTeaserInfoDateTime~}}
+                        {{~#with ../this.teaserDate~}}
+                            <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
+                        {{~/with~}}
+                        <span class="mx-1 last-of-type:hidden">|</span>
+                    {{~/if~}}
                 {{~/if~}}
-            {{~/if~}}    
-            {{~#if this.showTeaserInfoSection~}}
-                <span class="uppercase">
-                    {{~../this.documentSection~}}
-                </span>                    
-                <span class="mx-px last-of-type:hidden">|</span>                    
+                {{~#if this.showTeaserInfoSection~}}
+                    <span class="uppercase">
+                        {{~../this.documentSection~}}
+                    </span>
+                    <span class="mx-1 last-of-type:hidden">|</span>
+                {{~/if~}}
             {{~/if~}}
-        {{~/if~}}
-    {{~/with~}}
+        {{~/with~}}
+        {{!--File download--}}
         {{~#if this.isFileDownload~}}
             {{~#with this.teaserImage~}}
                 {{loca "gallery_image_copyright" this.copyrightWithLinks}}
@@ -33,11 +32,12 @@
         {{~/if~}}
         {{!--Profiles--}}
         {{~#if this.profiles~}}
-            <span>{{this.profiles}}</span>            
-            <span class="mx-px last-of-type:hidden">|</span>            
+            <span>{{this.profiles}}</span>
+            <span class="mx-1 last-of-type:hidden">|</span>
         {{~/if~}}
-    {{!--Comments--}}
-    {{~#with this.commentsSsi~}}
-        {{> components/base/loadSSI _templatePath='components/teaser/components/teaser_comments' }}    
-    {{~/with~}}
-</p>
+        {{!--Comments--}}
+        {{~#with this.commentsSsi~}}
+            {{> components/base/loadSSI _templatePath='components/teaser/components/teaser_comments' }}
+        {{~/with~}}
+    </p>
+{{/if}}

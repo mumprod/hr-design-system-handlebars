@@ -16,12 +16,12 @@
     {{~/if~}}
 
     <a class="w-0" name="tgp{{this.teaserIndex}}"></a>
-    <div class="grid content-start grid-cols-12 px-0 md:px-8 colspan-12 gap-x-6 gap-y-6">
+    <div class="grid items-start content-start grid-cols-12 px-0 md:px-8 colspan-12 gap-x-6 gap-y-6">
         {{~> components/teaser/teaser_logic/teaser_logic ~}}
     </div>
     {{~#if this.link~}}
         <div class="flex justify-center pt-8">
-            {{~> components/button/button_pseudo _color="blue" _linkTitle=(loca "group_tabbed_more" this.title) ~}}
+            {{~> components/button/button_pseudo _type="hollow" _withLink="true" _buttonText=(loca "group_tabbed_more" this.title) ~}}
         </div>
     {{~/if~}}
 </section>

@@ -1,3 +1,409 @@
+# v0.113.6 (Wed Jan 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1978 SEO - lazyloading bei ersten Teaser funktioniert bei AV Teasern nicht [#453](https://github.com/mumprod/hr-design-system-handlebars/pull/453) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.113.5 (Wed Jan 04 2023)
+
+#### 🐛 Bug Fix
+
+- space between the text and the three dots [#452](https://github.com/mumprod/hr-design-system-handlebars/pull/452) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.113.4 (Thu Dec 22 2022)
+
+#### 🐛 Bug Fix
+
+- byline Margin-top:8px [#451](https://github.com/mumprod/hr-design-system-handlebars/pull/451) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.113.3 (Thu Dec 22 2022)
+
+#### 🐛 Bug Fix
+
+- added x-cloak to av Player element so on initial load player div is h… [#450](https://github.com/mumprod/hr-design-system-handlebars/pull/450) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.113.2 (Wed Dec 21 2022)
+
+#### 🐛 Bug Fix
+
+- truncate button-text in cluster-teaser [#449](https://github.com/mumprod/hr-design-system-handlebars/pull/449) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.113.1 (Wed Dec 21 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1922 add lang de to html tag so hyphens work properly [#448](https://github.com/mumprod/hr-design-system-handlebars/pull/448) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.113.0 (Tue Dec 20 2022)
+
+#### 🚀 Enhancement
+
+- Installed async-alpine as npm module v.1.0.0 [#446](https://github.com/mumprod/hr-design-system-handlebars/pull/446) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.112.2 (Mon Dec 19 2022)
+
+#### 🐛 Bug Fix
+
+- Adjust spaces and font sizes in Cluster-Teaser [#445](https://github.com/mumprod/hr-design-system-handlebars/pull/445) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.112.1 (Fri Dec 16 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1715 refac [#444](https://github.com/mumprod/hr-design-system-handlebars/pull/444) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.112.0 (Thu Dec 15 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Configures contrast colors [#443](https://github.com/mumprod/hr-design-system-handlebars/pull/443) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.111.0 (Thu Dec 15 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1922 [#442](https://github.com/mumprod/hr-design-system-handlebars/pull/442) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.110.2 (Thu Dec 15 2022)
+
+#### 🐛 Bug Fix
+
+- Changing flag isMobile1to1 to false to display geotag [#441](https://github.com/mumprod/hr-design-system-handlebars/pull/441) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v0.110.1 (Thu Dec 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Changing flag "isMobile1to1" to false ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v0.110.0 (Wed Dec 14 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1715 akzentuiergruppe 3 [#440](https://github.com/mumprod/hr-design-system-handlebars/pull/440) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.109.0 (Wed Dec 14 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Removes storybook composition [#439](https://github.com/mumprod/hr-design-system-handlebars/pull/439) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.108.0 (Tue Dec 13 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1943 [#438](https://github.com/mumprod/hr-design-system-handlebars/pull/438) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.107.1 (Tue Dec 13 2022)
+
+#### 🐛 Bug Fix
+
+- DPE-1925 - Standard Teaser 1to1 Aspect Ratio problem [#437](https://github.com/mumprod/hr-design-system-handlebars/pull/437) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.107.0 (Tue Dec 13 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1933 [#436](https://github.com/mumprod/hr-design-system-handlebars/pull/436) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.106.1 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- fix buttom-position-problem [#435](https://github.com/mumprod/hr-design-system-handlebars/pull/435) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.106.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1897: Teaser without image [#433](https://github.com/mumprod/hr-design-system-handlebars/pull/433) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.105.3 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Standard 33 mit langer Ortsmarke" [#431](https://github.com/mumprod/hr-design-system-handlebars/pull/431) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.2 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Dpe 1803 [#430](https://github.com/mumprod/hr-design-system-handlebars/pull/430) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.105.1 (Mon Dec 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add Story "Meistgeklickt-Box mit langem Titel" [#429](https://github.com/mumprod/hr-design-system-handlebars/pull/429) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.105.0 (Mon Dec 12 2022)
+
+#### 🚀 Enhancement
+
+- FEATURE: Add teasertype for events [#428](https://github.com/mumprod/hr-design-system-handlebars/pull/428) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.104.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Explicitely sets partial properties [#427](https://github.com/mumprod/hr-design-system-handlebars/pull/427) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.103.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- handling long ClusterTeaser Title overflow [#426](https://github.com/mumprod/hr-design-system-handlebars/pull/426) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.102.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- Truncate long geotag with Ellipsis [#425](https://github.com/mumprod/hr-design-system-handlebars/pull/425) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.101.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Dpe 1904 mobile [#424](https://github.com/mumprod/hr-design-system-handlebars/pull/424) ([@vascoeduardo](https://github.com/vascoeduardo) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.100.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 1859 [#423](https://github.com/mumprod/hr-design-system-handlebars/pull/423) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.99.5 (Thu Dec 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- BUGFIX: Fix wrong teaser name ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.99.4 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fixes background issue in mixed navi [#422](https://github.com/mumprod/hr-design-system-handlebars/pull/422) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.99.3 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- h-auto instead of fixed height in group/teaserlogic-container [#421](https://github.com/mumprod/hr-design-system-handlebars/pull/421) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.99.2 (Wed Dec 07 2022)
+
+#### 🐛 Bug Fix
+
+- fix tabbox display-error [#420](https://github.com/mumprod/hr-design-system-handlebars/pull/420) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.99.1 (Tue Dec 06 2022)
 
 #### 🐛 Bug Fix

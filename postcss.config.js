@@ -1,3 +1,9 @@
 module.exports = {
-    plugins: [require('postcss-import'), require('tailwindcss'), require('postcss-preset-env')],
+    plugins: {
+        'postcss-import': {},
+        'tailwindcss': {},
+        'postcss-preset-env': {
+            features: { 'focus-visible-pseudo-class': false },
+        },
+    },
 }

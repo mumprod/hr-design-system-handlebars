@@ -1,4 +1,4 @@
-<div x-show="avStart" id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-auto{{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
@@ -10,17 +10,11 @@
             {{/unless}}
         {{/unless}}
         {{#with _teaser}}
-            {{~#if ../_isCopyText~}}
-                {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                
-            {{else}}          
-                {{#decorator 'components/base/link' _cssClasses="c-teaser__mediaLink" _isAriaHidden=true }}                                      
-                    {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=../_noDelay ~}}                             
-                {{/decorator }}
-            {{/if}}
+            {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
         {{> components/button/button_round 
         _isButton="true" 
-        _addClass='absolute bottom-0 right-0 fill-white hover:text-white js-mediaplayer__button'
+        _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button'
         _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-blue-jellyBean hover:fill-blue-jellyBean')
         _teaserType=_teaserType
         _teaserSize=_teaserSize

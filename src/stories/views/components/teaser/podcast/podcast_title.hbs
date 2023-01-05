@@ -1,5 +1,5 @@
-{{#decorator 'components/base/link' _css="font-headingSerif font-bold text-base mt-2.5 text-toplineColor line-clamp-4 md:line-clamp-2 ..." }} 
-    <span class="block mt-0.5 group-hover:underline text-blue-science {{#if _ordered}} pl-8 {{/if}} {{~ inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl","text-base md:text-2xl","text-base md:text-lg"]' ~}}">
+{{#decorator 'components/base/link' _css="group font-title text-base mt-2.5 text-podcast-text line-clamp-4 md:line-clamp-2 ..." }} 
+    <span class="block mt-0.5 group-hover:underline {{#if _ordered}} pl-8 {{/if}} {{~ inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl","text-base md:text-2xl","text-base md:text-lg"]' ~}}">
         {{~_title~}}
     </span>
 {{/decorator}}

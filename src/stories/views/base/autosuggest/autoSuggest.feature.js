@@ -47,6 +47,9 @@ const AutoSuggest = function (context) {
         }
     }
 
+    const resetInput = function () {
+        inputEl.value = ''
+    }
     const filterElement = function (elem, value) {
         let textEl = hr$(options.filterTextSelector, elem)[0],
             text = textEl.text || textEl.textContent,
@@ -99,9 +102,10 @@ const AutoSuggest = function (context) {
 
     inputEl.addEventListener('input', handleInput)
 
-    window.addEventListener('resetinput', () => {
+    window.addEventListener('hr:global:resetinputAutoSuggest', () => {
         resetList()
         removeHighlight()
+        resetInput()
     } )
 }
 

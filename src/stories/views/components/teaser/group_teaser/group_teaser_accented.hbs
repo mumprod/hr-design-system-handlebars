@@ -1,20 +1,15 @@
-{{#>components/grid/grid_group size=this.teaserSize _backgroundColor=this.backgroundColor }}
-    
-        <div class="h-auto col-span-12 p-8 mx-4 rounded-tr-none rounded-bl-none bg-blue-accented rounded-3xl">
+{{#>components/grid/grid_group size=this.teasersize _backgroundColor=this.backgroundColor }}
 
+    <div class="h-auto p-8 mx-4 rounded-tr-none rounded-bl-none bg-highlight-1 rounded-3xl col-span-full {{inline-switch size '["100","50"]' '["","md:col-span-6"]'}}">
         {{~#if this.hasGroupTitle}}
-            <h2 class="text-2xl md:text-4xl col-span-full py-0 font-headingSerif {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
+            <h2 class="text-2xl md:text-4xl col-span-full pt-0 pb-4 font-title {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
                 {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-blue-science" href="{{this.link.url}}">{{/if~}}
-                    {{this.groupTitle}}
+                {{this.groupTitle}}
                 {{~#if this.hasLink}}</a>{{/if~}}
             </h2>
         {{/if}}
-
-        </div>
-        <div class="h-24 col-span-12 p-2 mx-4 my-0 -mt-10 rounded-tr-none rounded-bl-none md:p-4 bg-blue-accented rounded-3xl">
-    
         {{~> components/teaser/teaser_logic/teaser_logic ~}}
-    
-        </div>
-    
+    </div>
+
+
 {{/components/grid/grid_group}}

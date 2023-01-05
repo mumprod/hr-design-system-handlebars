@@ -6,14 +6,17 @@ import teaserHeroLink from './fixtures/teaser_standard_hero_serif_link.json'
 import teaserHeroSerif from './fixtures/teaser_standard_hero_serif.json'
 import teaser100Serif from './fixtures/teaser_standard_100_serif.json'
 import teaser50Serif from './fixtures/teaser_standard_50_serif.json'
+import teaser50SerifWithoutTeaserImage from './fixtures/teaser_standard_without_teaserimage_50_serif.json'
 import teaser33Serif from './fixtures/teaser_standard_33_serif.json'
 import teaser25Serif from './fixtures/teaser_standard_25_serif.json'
+import teaser25SerifWithoutTeaserimage from './fixtures/teaser_standard_without_teaserimage_25_serif.json'
 import teaser100Download from './fixtures/teaser_standard_100_serif_download.json'
 import teaser100Link from './fixtures/teaser_standard_100_serif_link.json'
 import teaser100Program from './fixtures/teaser_standard_100_serif_program.json'
 import teaser50Link from './fixtures/teaser_standard_50_serif_link.json'
 import teaser33Link from './fixtures/teaser_standard_33_serif_link.json'
 import teaser25Link from './fixtures/teaser_standard_25_serif_link.json'
+import teaser33LongGeotag from './fixtures/teaser_standard_33_long_geotag.json'
 
 <Meta
     title="Komponenten/Teaser/Standard"
@@ -121,6 +124,9 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Standard 50" args={teaser50Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <Story name="Standard 50 ohne Teaserbild" args={teaser50SerifWithoutTeaserImage.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
         <Story name="Standard 50 mit externem Link" args={teaser50Link.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
@@ -133,10 +139,16 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Standard 25" args={teaser25Serif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
+    <Story name="Standard 25 ohne Teaserbild" args={teaser25SerifWithoutTeaserimage.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
     <Story name="Standard 25 mit externem Link" args={teaser25Link.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story name="Standard 100 Mit Download" args={teaser100Download.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 33 mit langer Ortsmarke" args={teaser33LongGeotag.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
 </Preview>

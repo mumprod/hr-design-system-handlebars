@@ -383,7 +383,7 @@ Mit der Eigenschaft `@->extends` ist es möglich mittels `@->jsoninclude` und `@
 zusätzliche Eigenschaften zu erweitern. Die Eigenschaften können sowohl direkt in Form zusätzlicher JSON-Objekte angegeben oder mittels
 `@->jsoninclude` aus anderen Dateien importiert werden. Das folgende Beispiel zeigt dies genauer.
 
-``` json`rueckkehr-nach-abschiebung-102 ``rueckkehr-nach-abschiebung-102`
+```json
 
 // src/assets/fixtures/component-name/component_name.inc.json
 {
@@ -446,7 +446,7 @@ zusätzliche Eigenschaften zu erweitern. Die Eigenschaften können sowohl direkt
 }
 }
 
-````
+```
 
 In der aus den vorangegangenen Beispielen bekannten Datei `src/assets/fixtures/component-name/component_name.json` wird hier zunächst im
 `article` Objekt wieder mittels `@->jsoninclude` der Inhalt des JSON-Objektes `varianteB` aus der Datei
@@ -508,7 +508,7 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
         {Template.bind({})}
     </Story>
 </Preview>
-````
+```
 
 Für die unterschiedlichen Teaservarianten werden die Testdaten in Variablen importiert und den konkreten Stories über den `args` Parameter
 übergeben.
