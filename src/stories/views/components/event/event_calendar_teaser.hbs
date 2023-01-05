@@ -1,25 +1,36 @@
-<div class="flex flex-col items-center justify-center p-4 border-dashed border-r border-labelEventCalendarTitle">
+<div class="border-none h-full">
+<div class="relative flex content-start flex-wrap">
+<div class="flex grow-0 shrink basis-7/12 order-none px-0.5 py-0.5 align-top box-border">
+<div class="w-full h-full flex flex-wrap">
+<div class="flex flex-col grow-0 shrink basis-1/12 align-top items-center justify-center p-4 border-dashed border-r border-labelEventCalendarTitle">
     {{#with this.startDate}}
         <span class='text-sm font-headingSerif'>{{this.weekdayNameShort}}</span>
         <span class='text-2xl font-headingSerif font-bold'>{{this.day}}</span>
         <span class='text-sm font-headingSerif'>{{this.monthNameShort}}</span>
     {{/with}}
 </div>
-<div class="pt-4 md:px-0 px-5">
+<div class="flex grow-0 shrink basis-10/12 -pt-4 px-2.5 box-border inline-block align-top ">
     {{#decorator 'components/base/link' _css="hover:text-toplineColor"}} 
         {{> components/teaser/components/teaser_heading 
             _fontVariant=this.headingFontVariant
             _headlineTag="h3"
             _label=this.label 
-            _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.teaserSize 
             _title=this.title 
             _topline=this.topline 
             _teaserType="calendar"
-            _isMobile1to1=this.isMobile1to1}}            
-            {{> components/event/event_details this}}
-    {{/decorator}}   
-</div>
-<figure class="relative ar-16-9">
+            _css="static"}}            
+    {{/decorator}} 
+    </div> 
+    </div>
+    <figure class="relative ar-16-9">
     {{> components/base/image/responsive_image this.image _type="event-teaser" _variant="wide" _addClass="w-full"}}
 </figure>
+</div>
+</div>
+<div>
+{{#with this.concertInfo}}
+    {{#unless this.isEmpty}}
+        {{> components/event/concert_info}}
+    {{/unless}}
+{{/with}}
+</div>
