@@ -1,5 +1,5 @@
 <nav x-cloak
-     class="w-full {{#if this.isMixed}} px-2 {{else}} px-0 {{/if}}  {{_componentClass}} "
+     class="w-full {{#if this.isMixed}} px-2 md:px-0 {{else}} px-0 {{/if}}  {{_componentClass}} "
      id="dropdown--{{nextRandom}}"
      tabindex="0"
      role="navigation"
@@ -30,7 +30,7 @@
          aria-haspopup="true"
          @click.outside="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest');"
          :class="contentNavDropdownIsOpen ? 'z-9999 relative' : ' z-1003'"
-         class="{{#if this.isDropdown}} mx-2 md:mx-0 bla {{else}}{{#if this.isMixed}} mx-2 {{/if}} mx-2 {{/if}} md:h-auto md:overflow-visible">
+         class="{{#if this.isDropdown}} mx-2 md:mx-0 {{else}}{{#if this.isMixed}} mx-2 md:mx-0{{/if}} mx-2 {{/if}} md:h-auto md:overflow-visible">
         {{~decorator_body~}}
     </div>
 
