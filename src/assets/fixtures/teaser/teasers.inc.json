@@ -1586,7 +1586,7 @@
     },
     "teaserContentNav": {
         "realTeasersize": "100",
-        "teasersize": "100",
+        "teaserSize": "100",
 
         "contentNav": {
             "title": "Geiler Titel",
