@@ -19,7 +19,7 @@
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
             </button>
-            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('hr:global:resetinputAutoSuggest');  "
+            <button @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen; $dispatch('hr:global:resetinputAutoSuggest');"
                   :class="contentNavDropdownIsOpen ? '' : 'hidden'"
                   class="flex self-center px-3 py-3"
             >
