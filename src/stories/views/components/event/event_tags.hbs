@@ -1,11 +1,13 @@
+        <div class="flex flex-wrap">
         {{#with this}}
                 {{#with this.series}}
-                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                    <span class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</span>
                 {{/with}}
                 {{#with this.project}}
-                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</p>
+                    <span class="mt-2.5 -mb-1 text-2xl text-link">{{this.title}}</apan>
                 {{/with}}
                 {{#with this.externalProject}}
-                    <p class="mt-2.5 -mb-1 text-2xl text-link">{{this}}</p>
+                    <span class="mt-2.5 -mb-1 text-2xl text-link">{{this}}</span>
                 {{/with}}
         {{/with}}
+        </div>
