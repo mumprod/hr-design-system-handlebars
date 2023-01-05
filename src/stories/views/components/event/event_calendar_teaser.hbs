@@ -30,10 +30,10 @@
 </figure>
 </div>
 </div>
-<div>
 {{#with this.concertInfo}}
     {{#unless this.isEmpty}}
+    <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-t border-dotted">
         {{> components/event/concert_info}}
+    </div>
     {{/unless}}
 {{/with}}
-</div>

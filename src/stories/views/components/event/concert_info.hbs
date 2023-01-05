@@ -1,22 +1,24 @@
 {{#with this.concertInfoHead}}
     {{#unless this.isEmpty}}
+    <div class="text-center">
         {{#with this.title}}
-            <h4 class="text-lg bold text-center">{{this}}</h4>
+            <h3 class="font-bold">{{this}}</h3>
         {{/with}}
         {{#with this.description}}
-            <p class="text-lg text-center">{{this}}</p>
+            <p>{{this}}</p>
         {{/with}}
+    </div>
     {{/unless}}
 {{/with}}
 {{#with this.artists}}
     {{#unless this.isEmpty}}
-        <div class="mt-4 text-lg text-center">
+    <div class="mt-4">
             {{#with this.description}}
-            <p>{{this}}</p>
+            <p class="text-center ">{{this}}</p>
             {{/with}}
             <ul>
                 {{#each this.artistsAndGroups}}
-                    <li>{{#with this.artistGroup}} {{/with}}</li>
+                    <li class="text-center{{#with this.artistGroup}} mb-5{{/with}}">
                     {{#with this.artist}}
                         {{> components/event/artist}}
                     {{/with}}
@@ -25,13 +27,14 @@
                                             {{#with this.artists}}
                     <ul>
                         {{#each this}}
-                            <li>
+                            <li class="text-center">
                                 {{> components/event/artist}}
                             </li>
                         {{/each}}
                     </ul>
                     {{/with}}
                     {{/with}}
+                    </li>
                 {{/each}}
             </ul>
         </div>
@@ -39,13 +42,13 @@
 {{/with}}
 {{#with this.compositions}}
     {{#unless this.isEmpty}}
-        <div class="text-xl text-center">
-            {{#with this.description}}<p class="text-xl text-center">{{this}}</p>{{/with}} 
+        <div class="text-center">
+            {{#with this.description}}<p>{{this}}</p>{{/with}} 
             <ul>
             {{#each this.compositions}}
                 <li>
                     {{#if this.composerAndComposition}}
-                        <span class="text-center">{{this.composer}}</span>
+                        <span class="text-center font-bold uppercase">{{this.composer}}</span>
                         {{#with this.name}} | <span class="text-center">{{this}}</span>{{/with}}
                         {{else}}
                             {{#if this.composer}}
