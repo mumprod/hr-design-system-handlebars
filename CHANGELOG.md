@@ -1,3 +1,15 @@
+# v0.116.1 (Thu Jan 05 2023)
+
+#### 🐛 Bug Fix
+
+- removes unnessesary px/mx in several wrappers [#458](https://github.com/mumprod/hr-design-system-handlebars/pull/458) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.116.0 (Thu Jan 05 2023)
 
 #### 🚀 Enhancement
