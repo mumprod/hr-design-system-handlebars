@@ -1,4 +1,4 @@
-<article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+<article class="mx-5 md:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teasersize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
     <figure class="ar-1-1" aria-hidden="true">
         {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
     </figure> 
@@ -9,7 +9,7 @@
             _headlineCss="text-shadow text-center text-white mb-4 mx-4 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5" 
             _label=this.label 
             _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.teaserSize 
+            _size=this.teasersize 
             _title=this.title
             _titleCss="whitespace-pre-wrap"
             _topline=this.topline 
@@ -17,6 +17,6 @@
             _teaserType=this.teaserType 
             _font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
         {{/decorator}}
-        {{~> components/button/button_pseudo _type="hollow-white" _withLink=true _isLinkAriaHidden=true _linkCss="ds-cta absolute flex w-full h-full items-end justify-center" _buttonCss=(inline-switch this.teaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _buttonText=this.link.readMoreText.readMoreLong ~}} 
+        {{~> components/button/button_pseudo _type="hollow-white" _withLink=true _isLinkAriaHidden=true _linkCss="ds-cta absolute flex w-full h-full items-end justify-center" _buttonCss=(inline-switch this.teasersize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _buttonText=this.link.readMoreText.readMoreLong ~}} 
     </div>
 </article>

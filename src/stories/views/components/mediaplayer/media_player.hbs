@@ -5,7 +5,7 @@
         {{#unless _hideGeotag}}
             {{#unless _isMobile1to1}}
                 {{~#with _geotag}}
-                    {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize}}
+                    {{> components/geoTag/geoTag _text=this.[0].title _teasersize=../_teasersize}}
                 {{/with~}}
             {{/unless}}
         {{/unless}}
@@ -17,7 +17,7 @@
         _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button'
         _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-blue-jellyBean hover:fill-blue-jellyBean')
         _teaserType=_teaserType
-        _teaserSize=_teaserSize
+        _teasersize=_teasersize
         _isMobile1to1=_isMobile1to1
         _showIcon=true
         _icon=_mediaButtonIcon 

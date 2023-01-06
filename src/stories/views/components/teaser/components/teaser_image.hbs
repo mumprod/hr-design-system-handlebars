@@ -1,7 +1,7 @@
 <div class="relative{{~#if _isMobile1to1}} ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}">
     {{#unless this.hideGeotag}}
             {{~#with this.geotag}}
-                {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1 }}
+                {{> components/geoTag/geoTag _text=this.[0].title _teasersize=../_teasersize _isMobile1to1=../_isMobile1to1 }}
             {{/with~}}  
     {{/unless}}
     {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg="" ~}}
@@ -12,7 +12,7 @@
             _isButton="true" 
             _addClass='absolute bottom-0 right-0 fill-white hover:text-white js-mediaplayer__button'
             _buttonColor='text-toplineColor hover:fill-toplineColor'
-            _buttonSpace=(inline-switch this.teaserSize '["25","33"]' '[" my-2 mx-2"," my-5 mx-5 md:my-3 md:mx-3"," my-5 mx-5"]')
+            _buttonSpace=(inline-switch this.teasersize '["25","33"]' '[" my-2 mx-2"," my-5 mx-5 md:my-3 md:mx-3"," my-5 mx-5"]')
             _showIcon=true 
             _icon='play_button' 
             _label='Sendung' 

@@ -12,7 +12,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -72,7 +72,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": true,
         "label": {
             "type": "ticker",
@@ -139,7 +139,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": true,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -198,7 +198,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": true,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -257,7 +257,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": true,
         "label": {
             "type": "ticker",
@@ -324,7 +324,7 @@
                 }
             ]
         },
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -430,7 +430,7 @@
                     ]
                 },
 
-        "teaserSize": "hero",
+        "teasersize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserDate": {

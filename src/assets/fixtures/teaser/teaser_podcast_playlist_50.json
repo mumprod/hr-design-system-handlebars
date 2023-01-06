@@ -3,7 +3,7 @@
     "@->contentpath": "teaserPodcastPlaylist",
     "@->overrides": [
         {
-            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->contentpath": "logicItem.includeModel.teasersize",
             "@->value": "50"
         } 
     ]

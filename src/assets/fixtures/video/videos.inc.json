@@ -72,7 +72,7 @@
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
-        "teaserSize": "100"
+        "teasersize": "100"
     },
     "video-livestream-hr-fernsehen": {
         "playerConfig": {
@@ -137,7 +137,7 @@
         "type": "videoLivestream",
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
-        "teaserSize": "00",
+        "teasersize": "00",
         "isAutoplay": true
     }
 }

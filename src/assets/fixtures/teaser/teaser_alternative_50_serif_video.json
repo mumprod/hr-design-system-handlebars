@@ -7,7 +7,7 @@
             "@->value": "components/teaser/teaser_alternative"
         },
         {
-            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->contentpath": "logicItem.includeModel.teasersize",
             "@->value": "50"
         },
         {

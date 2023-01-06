@@ -2,7 +2,7 @@
     "@->jsoninclude": "teaser/teaser_cluster.inc.json",
     "@->overrides": [
         {
-            "@->contentpath": "teaserSize",
+            "@->contentpath": "teasersize",
             "@->value": "100"
         },
         {

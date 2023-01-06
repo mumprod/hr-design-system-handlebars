@@ -7,7 +7,7 @@
     "showFirstImage": false,
     "isOrdered": false,
 
-    "teaserSize": "100",
+    "teasersize": "100",
 
     "genreImage": {
         "@->jsoninclude": "teaser/teaser_images.inc.json",
