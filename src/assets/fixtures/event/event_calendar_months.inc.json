@@ -28,11 +28,11 @@
                     },
                     "image": {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "teaser_standard",
+                        "@->contentpath": "event-teaser_100",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
-                                "@->value": "pedro-martins-102"
+                                "@->value": "emmanuel-tjeknavorian-108"
                             }
                         ]
                     },
@@ -103,7 +103,7 @@
                      },
                      "image": {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "teaser_standard",
+                        "@->contentpath": "event-teaser_100",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
