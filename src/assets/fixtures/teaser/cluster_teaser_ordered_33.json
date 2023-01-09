@@ -6,6 +6,10 @@
             "@->value": "33"
         },
         {
+            "@->contentpath": "realTeasersize",
+            "@->value": "33"
+        },
+        {
             "@->contentpath": "title",
             "@->value": "MEISTGEKLICKT HEUTE"
         },

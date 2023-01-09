@@ -6,6 +6,10 @@
             "@->value": "50"
         },
         {
+            "@->contentpath": "realTeasersize",
+            "@->value": "50"
+        },
+        {
             "@->contentpath": "teaserLogo",
             "@->value": "sportschau"
         },

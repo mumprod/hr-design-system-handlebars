@@ -5,6 +5,10 @@
         {
             "@->contentpath": "logicItem.includeModel.teasersize",
             "@->value": "100"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.realTeasersize",
+            "@->value": "100"
         }
     ]
 }

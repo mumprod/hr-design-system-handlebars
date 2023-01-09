@@ -11,6 +11,10 @@
             "@->value": "33"
         },
         {
+            "@->contentpath": "logicItem.includeModel.realTeasersize",
+            "@->value": "33"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.title",
             "@->value": "Liveticker ausm Urlaub"
         },

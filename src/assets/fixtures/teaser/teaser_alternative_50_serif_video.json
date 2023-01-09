@@ -11,6 +11,10 @@
             "@->value": "50"
         },
         {
+            "@->contentpath": "logicItem.includeModel.realTeasersize",
+            "@->value": "50"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.teaserType",
             "@->value": "alternative-ds"
         },

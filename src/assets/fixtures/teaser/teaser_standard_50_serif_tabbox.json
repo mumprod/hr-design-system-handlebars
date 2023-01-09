@@ -7,6 +7,10 @@
             "@->value": "50"
         },
         {
+            "@->contentpath": "logicItem.includeModel.realTeasersize",
+            "@->value": "50"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.isMobile1to1",
             "@->value": "true"
         },

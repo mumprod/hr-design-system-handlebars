@@ -7,6 +7,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% - 1 x 100% Teaser",
             "teasersize": "100",
+            "realTeasersize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -23,6 +24,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Akzentuier-Gruppe 100%, 1 x 100% ContentNav Aufklapp ",
             "teasersize": "100",
+            "realTeasersize": "100",
             "isHighlightGroup": false,
             "backgroundColor": "",
             "logicItems": [
@@ -57,6 +59,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% - 2 x 50% Teaser",
             "teasersize": "100",
+            "realTeasersize": "100",
             "headlineTag": "h2",
             "isRelatedContent": false,
             "logicItems": [
@@ -66,6 +69,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "50"
                         }
                     ]
@@ -77,6 +84,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "50"
                         }
                     ]
                 },
@@ -87,6 +98,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "50"
                         }
                     ]
                 },
@@ -96,6 +111,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "50"
                         }
                     ]
@@ -111,6 +130,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% - 3 x 33% Teaser",
             "teasersize": "100",
+            "realTeasersize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -118,6 +138,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "33"
                         }
                     ]
@@ -129,6 +153,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "33"
                         }
                     ]
                 },
@@ -138,6 +166,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "33"
                         }
                     ]
@@ -153,6 +185,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% - 4 x 25% Teaser",
             "teasersize": "100",
+            "realTeasersize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -160,6 +193,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "25"
                         }
                     ]
@@ -171,6 +208,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "25"
                         }
                     ]
                 },
@@ -181,6 +222,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "25"
                         }
                     ]
                 },
@@ -190,6 +235,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "25"
                         }
                     ]
@@ -206,6 +255,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Gruppe 100% new - 3 x 33% Teaser",
             "teasersize": "100",
+            "realTeasersize": "100",
             "isHighlightGroup": true,
             "logicItems": [
                 {
@@ -214,6 +264,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "33"
                         }
                     ]
@@ -225,6 +279,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
                             "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
+                            "@->value": "33"
                         }
                     ]
                 },
@@ -234,6 +292,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teasersize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeasersize",
                             "@->value": "33"
                         }
                     ]

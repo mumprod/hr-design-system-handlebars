@@ -6,6 +6,10 @@
             "@->value": "100"
         },
         {
+            "@->contentpath": "realTeasersize",
+            "@->value": "100"
+        },
+        {
             "@->contentpath": "title",
             "@->value": "NEUESTE BEITRÄGE"
         },
