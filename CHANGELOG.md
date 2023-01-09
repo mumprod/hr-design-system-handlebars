@@ -1,3 +1,15 @@
+# v0.116.3 (Mon Jan 09 2023)
+
+#### 🐛 Bug Fix
+
+- - blank added to force change and rebuild in main branch [#461](https://github.com/mumprod/hr-design-system-handlebars/pull/461) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.116.2 (Thu Jan 05 2023)
 
 #### 🐛 Bug Fix
