@@ -11,21 +11,12 @@
                 this.isCurrentMonth}} -currentMonth{{/if}}{{#if
                 this.hasFutureEventsFromNow}} -selected{{/if}}{{#unless
                 this.hasFutureEventsFromNow}} js-fr-reload-trigger{{/unless}}">
-                {{#if ../_excerpt}}
-                    <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
-                {{else}}
-                {{#if this.hasDays}}
-                    <a href="{{this.contentUrl}}" class="block text-link hover:underline font-heading font-bold w-24 sticky left-0 px-2 py-3 js-fr-trigger js-noStateManager{{#if
-                        this.hasFutureEventsFromNow}} -selected{{/if}}" data-prop-crit="{{this.date.yearMonth}}" data-prop-filterer='{"crit":"{{this.date.yearMonth}}", "strat":"hoswid"}'>{{this.monthName}} {{this.year}}</a>
-                {{else}}
-                    <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
-                {{/if}}
-                {{/if}}
+                <span class="block font-headingSerif font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
                 <ul class="flex">
                     {{#each this.days}}
                         <li class="inline-block h-full group cursor-pointer js-ns-item{{#if
                             this.isStartOfWeek}} -startOfWeek{{/if}}">
-                            {{> components/event/event_calendar_instant}}
+                            {{> components/event/event_calendar_instant _contentUrl=../this.contentUrl}}
                         </li>
                     {{/each}}
                 </ul>
