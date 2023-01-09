@@ -35,8 +35,9 @@
     --color-label-program: theme('colors.blue.pacificBlue');
     /* Dachzeile */
     --color-topline: #006dc1;
-    /* Eventkalender Title */
+    /* Eventkalender */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
+    --color-eventcalender-nav-week-separator: theme('colors.grey.boulder');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
@@ -67,6 +68,8 @@
     --font-weight-title: theme('fontWeight.bold');
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
+
+
 }
 
 [data-theme='hessenschau'] {

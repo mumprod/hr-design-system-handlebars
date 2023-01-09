@@ -15,7 +15,7 @@
                 <ul class="flex">
                     {{#each this.days}}
                         <li class="inline-block h-full group cursor-pointer js-ns-item{{#if
-                            this.isStartOfWeek}} -startOfWeek{{/if}}">
+                            this.isStartOfWeek}} border-l border-event-calendar-nav-week-separator-color{{/if}}">
                             {{> components/event/event_calendar_instant _contentUrl=../this.contentUrl}}
                         </li>
                     {{/each}}
