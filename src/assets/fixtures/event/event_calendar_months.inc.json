@@ -69,7 +69,7 @@
                         "compositions": {
                            "isEmpty": false,
                             "description": "Komposition-Description",
-                            "compositions:" : [{
+                            "compositions" : [{
                                 "composerAndComposition": true,
                                 "composer": "Udo Lindenberg", 
                                 "name": "Horizont"
