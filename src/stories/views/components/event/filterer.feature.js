@@ -146,7 +146,7 @@ const Filterer = (context) => {
             }
         }
 
-        if (countXTClick) {
+       /* if (countXTClick) {
             pi(
                 xtpage +
                     '&pchap=' +
@@ -157,17 +157,17 @@ const Filterer = (context) => {
                     xt_pageDate +
                     xt_multc
             )
-        }
+        }*/
 
         removeErrors()
     }
     const removeErrors = function () {
         if (errorTargetDomNodes.length > 0) {
-            errorTargetDomNodes[0].classList.add('h-displayNone')
+            errorTargetDomNodes[0].classList.add('hidden')
         }
 
         if (errorDomNodes.length > 0) {
-            errorDomNodes[0].classList.add('h-displayNone')
+            errorDomNodes[0].classList.add('hidden')
         }
     }
     const loadContent = function (currentTarget) {
@@ -242,16 +242,16 @@ const Filterer = (context) => {
 
         if (reset) {
             for (i = 0; i < targetDomNodes.length; i++) {
-                targetDomNodes[i].classList.remove('h-displayNone')
+                targetDomNodes[i].classList.remove('hidden')
             }
             return
         }
 
         for (i = 0; i < targetDomNodes.length; i++) {
             if (targetDomNodes[i].getAttribute('id') !== crit) {
-                targetDomNodes[i].classList.add('h-displayNone')
+                targetDomNodes[i].classList.add('hidden')
             } else {
-                targetDomNodes[i].classList.remove('h-displayNone')
+                targetDomNodes[i].classList.remove('hidden')
 
                 found = true
             }
@@ -267,16 +267,16 @@ const Filterer = (context) => {
 
         if (reset) {
             for (i = 0; i < targetDomNodes.length; i++) {
-                targetDomNodes[i].classList.remove('h-displayNone')
+                targetDomNodes[i].classList.remove('hidden')
             }
             return
         }
 
         for (i = 0; i < targetDomNodes.length; i++) {
             if (targetDomNodes[i].getAttribute('id').indexOf(crit) !== 0) {
-                targetDomNodes[i].classList.add('h-displayNone')
+                targetDomNodes[i].classList.add('hidden')
             } else {
-                targetDomNodes[i].classList.remove('h-displayNone')
+                targetDomNodes[i].classList.remove('hidden')
 
                 found = true
             }
@@ -289,7 +289,7 @@ const Filterer = (context) => {
     const displayErrorTarget = function () {
         if (targetDomNodes.length >= 1) {
             if (errorTargetDomNodes.length > 0) {
-                errorTargetDomNodes[0].classList.remove('h-displayNone')
+                errorTargetDomNodes[0].classList.remove('hidden')
             }
         }
     }
