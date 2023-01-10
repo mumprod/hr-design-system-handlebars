@@ -1,3 +1,15 @@
+# v0.117.1 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize for DPE-1982 [#465](https://github.com/mumprod/hr-design-system-handlebars/pull/465) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.117.0 (Tue Jan 10 2023)
 
 #### 🚀 Enhancement
