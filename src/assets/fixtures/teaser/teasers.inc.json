@@ -831,7 +831,7 @@
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
-                "teaserSize": "hero",
+                "teasersize": "hero",
                 "isMobile1to1": false,
                 "teaserDate": {
                     "htmlDateTime": "2020-10-02T19:46+0200",
@@ -1365,7 +1365,7 @@
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard-ds",
-                "teaserSize": "100",
+                "teasersize": "100",
                 "isMobile1to1": false,
                 "airdateDate": {
                     "htmlDateTime": "2022-10-31T19:30+0200",
