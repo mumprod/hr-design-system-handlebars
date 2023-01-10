@@ -4,6 +4,7 @@
             "includePath": "components/teaser/podcast/podcast-playlist",
             "includeModel": {
                 "teaserSize": "100",
+                "realTeaserSize": "100",
                 "isSingleChannel": true,
                 "url": "#url",
                 "title": "Im Haifischbecken - der Social-Media-Podcast",

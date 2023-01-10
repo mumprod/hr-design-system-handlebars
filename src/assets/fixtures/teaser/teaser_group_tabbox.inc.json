@@ -9,6 +9,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Nordhessen",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isFirstTeaser": true,
             "teaserIndex": 0,
             "logicItems": [
@@ -30,6 +31,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         },
                         {
@@ -72,6 +77,10 @@
                             "@->value": "33"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -111,6 +120,10 @@
                             "@->value": "33"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -142,6 +155,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Mittelhessen",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isFirstTeaser": false,
             "teaserIndex": 1,
             "logicItems": [
@@ -163,6 +177,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "25"
                         },
                         {
@@ -202,6 +220,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "25"
                         },
                         {
@@ -244,6 +266,10 @@
                             "@->value": "25"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -283,6 +309,10 @@
                             "@->value": "25"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -314,6 +344,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Osthessen",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isFirstTeaser": false,
             "teaserIndex": 2,
             "logicItems": [
@@ -339,6 +370,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         },
                         {
@@ -386,6 +421,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         },
                         {
@@ -424,6 +463,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Rhein-Main",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isFirstTeaser": false,
             "teaserIndex": 3,
             "logicItems": [
@@ -445,6 +485,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         },
                         {
@@ -487,6 +531,10 @@
                             "@->value": "33"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -526,6 +574,10 @@
                             "@->value": "33"
                         },
                         {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
+                        },
+                        {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
                             "@->value": "true"
                         },
@@ -557,6 +609,7 @@
             "hasGroupTitle": true,
             "groupTitle": "Südhessen",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isFirstTeaser": false,
             "teaserIndex": 4,
             "logicItems": [
@@ -578,6 +631,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         },
                         {
@@ -617,6 +674,10 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         },
                         {

@@ -7,6 +7,10 @@
             "@->value": "33"
         },
         {
+            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+            "@->value": "33"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.geotag",
             "@->value": [
                 {
