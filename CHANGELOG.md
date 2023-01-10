@@ -1,3 +1,29 @@
+# v0.116.5 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1994 [#464](https://github.com/mumprod/hr-design-system-handlebars/pull/464) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.116.4 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- Words in byline get wrapped when the word is too long for the line. [#463](https://github.com/mumprod/hr-design-system-handlebars/pull/463) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.116.3 (Mon Jan 09 2023)
 
 #### 🐛 Bug Fix
