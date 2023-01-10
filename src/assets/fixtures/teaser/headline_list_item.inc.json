@@ -12,8 +12,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -73,8 +73,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": true,
         "label": {
             "type": "ticker",
@@ -141,8 +141,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": true,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -201,8 +201,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": true,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -261,8 +261,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": true,
         "label": {
             "type": "ticker",
@@ -329,8 +329,8 @@
                 }
             ]
         },
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserInfo": {
@@ -436,8 +436,8 @@
                     ]
                 },
 
-        "teasersize": "hero",
-        "realTeasersize": "hero",
+        "teaserSize": "hero",
+        "realTeaserSize": "hero",
         "showLabel": false,
         "showProfileInfo": false,
         "teaserDate": {

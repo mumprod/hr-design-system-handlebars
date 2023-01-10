@@ -7,8 +7,8 @@
     "showFirstImage": false,
     "isOrdered": false,
 
-    "teasersize": "100",
-    "realTeasersize": "100",
+    "teaserSize": "100",
+    "realTeaserSize": "100",
     "genreImage": {
         "@->jsoninclude": "teaser/teaser_images.inc.json",
         "@->contentpath": "teaser_cluster_genre_100",

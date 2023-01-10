@@ -7,7 +7,7 @@
             _headlineCss="overflow-anywhere hyphens-auto"
             _label=this.label 
             _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.teasersize 
+            _size=this.teaserSize 
             _title=this.title 
             _topline=this.topline 
             _teaserType=this.teaserType
@@ -16,7 +16,7 @@
         {{/decorator}}   
     </header>
     <div class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-        {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teasersize}}
+        {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
         {{> components/teaser/components/teaser_byline}} 
     </div>
 </div>

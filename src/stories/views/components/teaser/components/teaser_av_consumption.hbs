@@ -1,7 +1,7 @@
 {{#with this.teaserLead.avDocument}}
      {{~#if this.isVideo ~}}
           {{#with this.toModel.videoElement}}
-               {{~> components/mediaplayer/media_player _cypressHook="js-video-ondemand" _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _isTeaser=true _teaser=../../this _aspectRatio=../../_aspectRatio _teasersize=../../_teasersize _isMobile1to1=../../_isMobile1to1 _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}
+               {{~> components/mediaplayer/media_player _cypressHook="js-video-ondemand" _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _isTeaser=true _teaser=../../this _aspectRatio=../../_aspectRatio _teaserSize=../../_teaserSize _isMobile1to1=../../_isMobile1to1 _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -9,7 +9,7 @@
      {{~/if~}}
      {{~#if this.isAudio ~}}
           {{#with this.toModel.audioElement}}
-               {{~> components/mediaplayer/media_player _cypressHook="js-audio-ondemand" _mediaButtonIcon="audio_button" _mediaButtonLabel="Audio" _isTeaser=true _teaser=../../this _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teasersize=../../_teasersize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}                  
+               {{~> components/mediaplayer/media_player _cypressHook="js-audio-ondemand" _mediaButtonIcon="audio_button" _mediaButtonLabel="Audio" _isTeaser=true _teaser=../../this _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teaserSize=../../_teaserSize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}                  
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -17,7 +17,7 @@
      {{~/if~}}
      {{~#if this.isPodcast ~}}
           {{#with this.toModel.audioElement}}
-               {{~> components/mediaplayer/media_player _cypressHook="js-audio-ondemand" _mediaButtonIcon="audio_button" _mediaButtonLabel="Podcast" _isTeaser=true _teaser=../../this _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teasersize=../../_teasersize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
+               {{~> components/mediaplayer/media_player _cypressHook="js-audio-ondemand" _mediaButtonIcon="audio_button" _mediaButtonLabel="Podcast" _isTeaser=true _teaser=../../this _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teaserSize=../../_teaserSize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -25,7 +25,7 @@
      {{~/if~}}
      {{~#if this.isAudioEventLivestream ~}}
           {{#with this.toModel.audioLivestreamElement}}
-               {{~> components/mediaplayer/media_player _cypressHook="js-video-livestream" _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream="true" _isTeaser=true _teaser=../../this  _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teasersize=../../_teasersize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
+               {{~> components/mediaplayer/media_player _cypressHook="js-video-livestream" _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream="true" _isTeaser=true _teaser=../../this  _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teaserSize=../../_teaserSize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -33,7 +33,7 @@
      {{~/if~}}
      {{~#if this.isLivestream ~}}
           {{#with this.toModel.videoLivestreamElement}}
-               {{~> components/mediaplayer/media_player _cypressHook="js-video-livestream" _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream="true" _isTeaser=true _teaser=../../this  _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teasersize=../../_teasersize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
+               {{~> components/mediaplayer/media_player _cypressHook="js-video-livestream" _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream="true" _isTeaser=true _teaser=../../this  _audioUrl=../this.audioUrl _variant=../this.imageVariant _noDelay=../../_noDelay _aspectRatio=../../_aspectRatio _isMobile1to1=../../_isMobile1to1 _teaserSize=../../_teaserSize _geotag=../../this.geotag _hideGeotag=../../this.hideGeotag _teaserType=../../_teaserType~}}             
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}

@@ -1,5 +1,5 @@
 <article class="relative col-span-12 flex {{if this.displayTeaserBodyAsImageOverlay '' 'gap-y-3'}} gap-x-4 
-{{~inline-switch this.teasersize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}
+{{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}
 {{~#if this.isMobile1to1}} js-is1to1 px-5 md:px-0 md:flex-col{{else}} flex-col{{/if~}} 
  "
     x-data="{ avStart: false }"
@@ -11,7 +11,7 @@
         <figure class="relative 
         {{~#if this.isMobile1to1}} basis-2/5 md:basis-full ar-1-1 md:ar-16-9{{else}} ar-16-9{{/if~}}"
         {{~#if this.isMobile1to1}} :class="avStart ? '!ar-16-9' : ''"{{/if}} >    
-            {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teasersize=this.teasersize _teaserType=this.teaserType _aspectRatio=(if this.isMobile1to1 'ar-1-1 md:ar-16-9' (inline-switch this.teasersize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]')) }}     
+            {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(if this.isMobile1to1 'ar-1-1 md:ar-16-9' (inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]')) }}     
         </figure>
         {{#if this.displayTeaserBodyAsImageOverlay}}
             {{#decorator 'components/teaser/components/teaser_image_overlay' _noOverlayInMobileViewports=true _cssClasses=" relative md:absolute w-full bottom-0"}}

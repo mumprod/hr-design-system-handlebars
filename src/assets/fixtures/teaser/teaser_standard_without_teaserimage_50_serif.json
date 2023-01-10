@@ -3,11 +3,11 @@
     "@->contentpath": "teaserWithoutImage",
     "@->overrides": [
         {
-            "@->contentpath": "logicItem.includeModel.teasersize",
+            "@->contentpath": "logicItem.includeModel.teaserSize",
             "@->value": "50"
         },
         {
-            "@->contentpath": "logicItem.includeModel.realTeasersize",
+            "@->contentpath": "logicItem.includeModel.realTeaserSize",
             "@->value": "50"
         }
     ]

@@ -59,8 +59,8 @@
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
-        "teasersize": "100",
-        "realTeasersize": "100"
+        "teaserSize": "100",
+        "realTeaserSize": "100"
     },
     "audio-podcast": {
         "playerConfig": {
@@ -142,8 +142,8 @@
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
-        "teasersize": "50",
-        "realTeasersize": "50"
+        "teaserSize": "50",
+        "realTeaserSize": "50"
     },
     "audio-event-livestream": {
         "playerConfig": {
@@ -206,7 +206,7 @@
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
         "isAutoplay": true,
-        "teasersize": "50",
-        "realTeasersize": "50"
+        "teaserSize": "50",
+        "realTeaserSize": "50"
     }
 }

@@ -2,11 +2,11 @@
     "@->jsoninclude": "teaser/teaser_cluster.inc.json",
     "@->overrides": [
         {
-            "@->contentpath": "teasersize",
+            "@->contentpath": "teaserSize",
             "@->value": "33"
         },
         {
-            "@->contentpath": "realTeasersize",
+            "@->contentpath": "realTeaserSize",
             "@->value": "33"
         },
         {
