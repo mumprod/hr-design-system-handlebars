@@ -469,7 +469,7 @@
 
                "isStartOfWeek": false,
                "hasInstants":true,
-               "isFirstAvailable":true,
+               "isFirstAvailable":false,
                "instants": [{
                     "isDateInstant": false,
                     "startDate": {
@@ -638,7 +638,7 @@
 
                "isStartOfWeek": false,
                "hasInstants":true,
-               "isFirstAvailable":true,
+               "isFirstAvailable":false,
                "instants": [{
                     "isDateInstant": false,
                     "startDate": {

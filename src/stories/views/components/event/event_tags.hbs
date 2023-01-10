@@ -1,13 +1,13 @@
         <div class="flex flex-wrap">
         {{#with this}}
                 {{#with this.series}}
-                    <span class="block text-subline font-normal font-heading text-base sm:text-xl mt-1 sm:mt-0.5 leading-6">{{this.title}}</span>
+                    {{> components/event/event_tag _title=this.title}}
                 {{/with}}
                 {{#with this.project}}
-                    <span class="block text-subline font-normal font-heading text-base sm:text-xl mt-1 sm:mt-0.5 leading-6">{{this.title}}</apan>
+                    {{> components/event/event_tag _title=this.title}}
                 {{/with}}
                 {{#with this.externalProject}}
-                    <span class="block text-subline font-normal font-heading text-base sm:text-xl mt-1 sm:mt-0.5 leading-6">{{this}}</span>
+                    {{> components/event/event_tag _title=this}}
                 {{/with}}
         {{/with}}
         </div>
