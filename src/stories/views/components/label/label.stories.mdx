@@ -38,6 +38,7 @@ import label from './label.hbs'
                     'buliticker': 'Bundesliga-Ticker',
                     'social-tv': 'Social-TV',
                     'blog': 'Blog',
+                    'kurzmeldung': 'Kurzmeldung',
                 },
                 options: [
                     '',
@@ -62,6 +63,7 @@ import label from './label.hbs'
                     'program',
                     'social-tv',
                     'ticker',
+                    'kurzmeldung',
                 ],
             },
             description: 'Art des Labels',
@@ -167,6 +169,15 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
         args={{
             _type: 'program',
             _text: 'Sendung',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+    <Story
+        name="Kurzmeldung"
+        args={{
+            _type: 'kurzmeldung',
+            _text: 'Kurzmeldung',
         }}
     >
         {Template.bind({})}
