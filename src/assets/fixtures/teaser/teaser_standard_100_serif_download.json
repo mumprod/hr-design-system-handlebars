@@ -7,6 +7,10 @@
             "@->value": "100"
         },
         {
+            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+            "@->value": "100"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",

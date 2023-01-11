@@ -1,5 +1,5 @@
 <ul class="flex bg-white md:bg-transparent flex-wrap {{#if this.isListOrFlow}} w-full gap-x-2 gap-y-2  {{else}} {{/if}} z-1003 md:!px-0 last:border-b-0 {{#if this.isDropdown }} w-full {{/if}}"
-    :class="( ({{this.isMixed}} && {{_teasersize}} < 50 ) || ( {{this.isMixed}} && window.innerWidth < 768 ) || {{this.isDropdown}} ) && contentNavDropdownIsOpen == true ? '!shadow-[1px_8px_9px_0px_rgba(50,50,93,0.10)] mt-0 w-full ' : ''"
+    :class="( ({{this.isMixed}} && {{_teaserSize}} < 50 ) || ( {{this.isMixed}} && window.innerWidth < 768 ) || {{this.isDropdown}} ) && contentNavDropdownIsOpen == true ? '!shadow-[1px_8px_9px_0px_rgba(50,50,93,0.10)] mt-0 w-full ' : ''"
     > 
     
     {{~#each this.contentNavEntries~}}
@@ -12,7 +12,7 @@
                     <ul class="c-content-nav__group-list !px-0 mt-0">
                         {{~#each this.navigationGroup~}}
                             {{> components/content_nav/content_nav_item 
-                                _teasersize=../../_teasersize 
+                                _teaserSize=../../_teaserSize 
                                 _isdropdown=../../isDropdown 
                                 _ismixed=../../isMixed 
                                 _islist=../../isList 
@@ -23,7 +23,7 @@
             {{/if}}
         {{else}}           
             {{> components/content_nav/content_nav_item  
-                _teasersize=../_teasersize 
+                _teaserSize=../_teaserSize 
                 _isdropdown=../isDropdown 
                 _ismixed=../isMixed 
                 _islist=../isList 

@@ -227,6 +227,7 @@ module.exports = {
                     sea: '#006783',
                     teal: '#007A7CFF',
                     turquoiseCerulian: '#007fa0',
+                    tarawera: '#0a3355',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -305,6 +306,7 @@ module.exports = {
                 'labelPm': 'var(--color-label-pm)',
                 'labelLive': 'var(--color-label-live)',
                 'labelProgram': 'var(--color-label-program)',
+                'labelKurzmeldung': 'var(--color-label-kurzmeldung)',
                 'toplineColor': 'var(--color-topline)',
                 'subline': 'var(--color-subline)',
                 'link': 'var(--color-link)',
