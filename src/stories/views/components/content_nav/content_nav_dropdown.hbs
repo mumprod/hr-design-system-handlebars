@@ -7,7 +7,7 @@
 
     <span id="dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
 
-    <div x-show="shouldDropdownBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
+    <div x-show="shouldDropdownBeShown({{_teaserSize}},{{this.isDropdown}},{{this.isMixed}})"
          :class="contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
          class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
          @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  $dispatch('hr:global:resetinputAutoSuggest');" 
@@ -26,7 +26,7 @@
             </button>
         </div>
     </div>
-    <div x-show="shouldContentBeShown({{_teasersize}},{{this.isDropdown}},{{this.isMixed}})"
+    <div x-show="shouldContentBeShown({{_teaserSize}},{{this.isDropdown}},{{this.isMixed}})"
          aria-haspopup="true"
          @click.outside="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest');"
          :class="contentNavDropdownIsOpen ? 'z-9999 relative' : ' z-1003'"

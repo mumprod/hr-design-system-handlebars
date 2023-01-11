@@ -7,7 +7,7 @@ function removeLabel(json, topline) {
   json.link.content.topline = topline;
 }
 function changeTeaserSize(json, size) {
-  json.teasersize = size
+  json.teaserSize = size
 }
 export { addLabel, removeLabel, changeTeaserSize};
 //export default addLabel;

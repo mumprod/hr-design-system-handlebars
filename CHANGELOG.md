@@ -1,3 +1,78 @@
+# v0.117.3 (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1888 Teaser: Ghostbutton für Schlagzeilen und Tab-Box [#467](https://github.com/mumprod/hr-design-system-handlebars/pull/467) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v0.117.2 (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- add Label for Kurzmeldung [#466](https://github.com/mumprod/hr-design-system-handlebars/pull/466) ([@hanswurstsalat](https://github.com/hanswurstsalat) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.117.1 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize for DPE-1982 [#465](https://github.com/mumprod/hr-design-system-handlebars/pull/465) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.117.0 (Tue Jan 10 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 1982 [#460](https://github.com/mumprod/hr-design-system-handlebars/pull/460) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.116.5 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1994 [#464](https://github.com/mumprod/hr-design-system-handlebars/pull/464) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.116.4 (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- Words in byline get wrapped when the word is too long for the line. [#463](https://github.com/mumprod/hr-design-system-handlebars/pull/463) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.116.3 (Mon Jan 09 2023)
 
 #### 🐛 Bug Fix
