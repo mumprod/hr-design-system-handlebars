@@ -1,3 +1,16 @@
+# v0.117.2 (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- add Label for Kurzmeldung [#466](https://github.com/mumprod/hr-design-system-handlebars/pull/466) ([@hanswurstsalat](https://github.com/hanswurstsalat) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.117.1 (Tue Jan 10 2023)
 
 #### 🐛 Bug Fix
