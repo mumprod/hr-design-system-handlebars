@@ -1,3 +1,15 @@
+# v0.117.3 (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1888 Teaser: Ghostbutton für Schlagzeilen und Tab-Box [#467](https://github.com/mumprod/hr-design-system-handlebars/pull/467) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.117.2 (Wed Jan 11 2023)
 
 #### 🐛 Bug Fix
