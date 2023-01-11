@@ -3,7 +3,7 @@
         "logicItem": {
             "includePath": "components/teaser/podcast/podcast-playlist",
             "includeModel": {
-                "teasersize": "100",
+                "teaserSize": "100",
                 "isSingleChannel": true,
                 "url": "#url",
                 "title": "Im Haifischbecken - der Social-Media-Podcast",
