@@ -1,3 +1,15 @@
+# v0.117.4 (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2002 - Fehler bei Akzentuiergruppen [#468](https://github.com/mumprod/hr-design-system-handlebars/pull/468) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.117.3 (Wed Jan 11 2023)
 
 #### 🐛 Bug Fix
