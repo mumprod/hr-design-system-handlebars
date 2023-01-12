@@ -350,7 +350,7 @@
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
-                    "@->contentpath": "teaser_3",
+                    "@->contentpath": "teaser_audio",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
@@ -366,7 +366,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includePath",
-                            "@->value": "components/teaser/teaser_alternative"
+                            "@->value": "components/teaser/teaser_alternativ"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
@@ -378,7 +378,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserType",
-                            "@->value": "alternative-ds"
+                            "@->value": "tabbox-alternative-ds"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
@@ -401,7 +401,7 @@
                 },
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
-                    "@->contentpath": "teaser_2",
+                    "@->contentpath": "teaser_audio",
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.shorttext",
@@ -417,7 +417,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includePath",
-                            "@->value": "components/teaser/teaser_alternative"
+                            "@->value": "components/teaser/teaser_alternativ"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
@@ -429,7 +429,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserType",
-                            "@->value": "alternative-ds"
+                            "@->value": "tabbox-alternative-ds"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
