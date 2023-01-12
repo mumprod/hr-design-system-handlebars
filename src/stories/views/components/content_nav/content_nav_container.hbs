@@ -1,4 +1,4 @@
-<div x-cloak class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}} {{#if this.isMixed}}relative {{else}}absolute{{/if}}"
+<div class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}} {{#if this.isMixed}}relative {{else}}absolute{{/if}}"
      @click.outside ="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest');"
 
     {{#if this.isAutosuggest}}
@@ -6,7 +6,7 @@
     {{/if}}
 >
     {{#if this.isAutosuggest}}
-        <div class="flex bg-grey-light mx-0 w-full h-10 border-blue-congress align-center{{#if _autoSuggestContainerCss}} {{_autoSuggestContainerCss}}{{/if}}">
+        <div class="flex mx-0 w-full h-10 pt-4 border-blue-congress align-center{{#if _autoSuggestContainerCss}} {{_autoSuggestContainerCss}}{{/if}}">
             <input x-ref="autosuggestInput"
                    class="w-full h-8 pl-2 bg-gray-200 text-grey-dark placeholder:text-grey-dark focus:outline-none js-autosuggest-input"
                    type="text"
