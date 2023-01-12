@@ -33,13 +33,13 @@
 
       {{!-- Podcast Image --}}
       <div class="flex flex-col ">
-        <div class="w-24 md:w-42">
+        <div class="w-24 md:w-32 lg:w-42">
           {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
             _variant="default"
             _addClass="overflow-hidden"
             _noDelay=this.dontLazyload
-            _addClassImg="w-full h-24 md:h-42 block"
+            _addClassImg="w-full block"
           }}
         </div>
       </div>
