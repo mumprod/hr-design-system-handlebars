@@ -1,3 +1,52 @@
+# v0.117.9 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- removes unneeded margin bottom [#474](https://github.com/mumprod/hr-design-system-handlebars/pull/474) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.117.8 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Responsive image configs for teasers in Tabbox [#473](https://github.com/mumprod/hr-design-system-handlebars/pull/473) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.117.7 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 1981 ff [#472](https://github.com/mumprod/hr-design-system-handlebars/pull/472) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.117.6 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 1947 podcast channel player 50% layout 768px [#471](https://github.com/mumprod/hr-design-system-handlebars/pull/471) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.117.5 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
