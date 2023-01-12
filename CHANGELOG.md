@@ -1,3 +1,15 @@
+# v0.117.6 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 1947 podcast channel player 50% layout 768px [#471](https://github.com/mumprod/hr-design-system-handlebars/pull/471) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.117.5 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
