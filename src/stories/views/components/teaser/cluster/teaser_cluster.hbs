@@ -15,7 +15,7 @@
     {{~#with this.overviewLink}}
         {{~#if this.link~}}
             <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.teaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
-                {{~> components/button/button_pseudo _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink=true _buttonText=this.title _buttonCss="truncate" _linkCss="flex min-w-0"~}}
+                {{~> components/button/button_pseudo _type="hollow" _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink=true _buttonText=this.title _buttonCss="truncate" _linkCss="flex min-w-0"~}}
             </div>
         {{~/if~}}
     {{/with~}}
