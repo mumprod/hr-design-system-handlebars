@@ -1,3 +1,15 @@
+# v0.117.5 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Set ghostbutton property to schlagzeilen [#469](https://github.com/mumprod/hr-design-system-handlebars/pull/469) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.117.4 (Wed Jan 11 2023)
 
 #### 🐛 Bug Fix
