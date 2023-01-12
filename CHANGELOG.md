@@ -1,3 +1,15 @@
+# v0.117.9 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- removes unneeded margin bottom [#474](https://github.com/mumprod/hr-design-system-handlebars/pull/474) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.117.8 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
