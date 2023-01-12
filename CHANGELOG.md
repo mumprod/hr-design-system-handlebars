@@ -1,3 +1,16 @@
+# v0.117.8 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Responsive image configs for teasers in Tabbox [#473](https://github.com/mumprod/hr-design-system-handlebars/pull/473) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.117.7 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
