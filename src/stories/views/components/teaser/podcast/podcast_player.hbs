@@ -35,7 +35,7 @@
 
       {{!-- Podcast Image      --}}
       <div class="flex flex-col ">
-        <div class="w-22 {{inline-switch this.teaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32"]'}}">
+        <div class="w-22 {{inline-switch this.teaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}">
           {{> components/base/image/responsive_image this.teaseritem 
             _type="podcastEpisodePlayer"
             _variant="default"
@@ -49,7 +49,7 @@
     </div>
 
     {{!-- Player UI --}}
-    <div class="flex {{inline-switch this.teaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14",""]'}}" 
+    <div class="flex {{inline-switch this.teaserSize '["100"]' '["lg:pr-48 lg:-mt-14",""]'}}" 
       x-data="playaudio()"
       x-init="listenToGlobalStop()"
       ax-load
