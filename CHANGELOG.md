@@ -1,3 +1,15 @@
+# v0.117.12 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2003 Abstand von erster Gruppe funktioniert nicht bei 2x50% [#470](https://github.com/mumprod/hr-design-system-handlebars/pull/470) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.117.11 (Fri Jan 13 2023)
 
 #### 🐛 Bug Fix
