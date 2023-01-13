@@ -1,3 +1,15 @@
+# v0.117.11 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- edit inline-switch to match delivery [#476](https://github.com/mumprod/hr-design-system-handlebars/pull/476) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.117.10 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
