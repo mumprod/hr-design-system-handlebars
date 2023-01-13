@@ -1,7 +1,7 @@
 <div class="border-none h-full">
-    <div class="relative flex content-start flex-wrap">
-        <div class="flex grow-0 shrink basis-full order-none align-top box-border">
-            <div class="basis-7/12 w-7/12 p-1 h-full flex flex-wrap">
+    <div class="relative">
+        <div class="flex flex-col sm:flex-row grow-0 shrink basis-full order-none align-top box-border">
+            <div class="basis-full w-full order-2 sm:basis-7/12 sm:w-7/12 sm:order-1 p-1 h-full flex flex-wrap">
                 <div class="flex flex-col grow-0 shrink basis-1/12 align-top items-center justify-center p-4 border-dotted border-r border-event-calendar-secondary">
                     {{#with this.startDate}}
                         <span class='text-sm font-serif'>{{this.weekdayNameShort}}</span>
@@ -25,7 +25,7 @@
                     </div>
                 </div> 
             </div>
-            <figure class="basis-5/12 w-5/12 relative ar-16-9">
+            <figure class="basis-full w-full order-1 sm:basis-5/12 sm:w-5/12 sm:order-2 relative ar-16-9">
                 {{> components/base/image/responsive_image this.image _type="event-teaser" _variant="100" _addClass="w-full"}}
             </figure>
         </div>
