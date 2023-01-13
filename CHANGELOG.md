@@ -1,3 +1,16 @@
+# v0.117.13 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- truncate button-text in ClusterTeaser & Tabbox [#477](https://github.com/mumprod/hr-design-system-handlebars/pull/477) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.117.12 (Fri Jan 13 2023)
 
 #### 🐛 Bug Fix
