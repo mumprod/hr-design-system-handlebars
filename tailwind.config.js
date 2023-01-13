@@ -181,6 +181,7 @@ module.exports = {
                     '"Noto Sans"',
                     'sans-serif',
                 ],
+                serif: ['RobotoSlab', ...defaultTheme.fontFamily.serif],
                 headingSerif: [
                     'RobotoSlab',
                     'ui-serif',
