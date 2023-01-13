@@ -264,7 +264,7 @@ module.exports = {
                     dark: '#707070',
                     brightGray: '#E5F2F3',
                     platinum: '#E5E8E8',
-                    boulder: '#797979'
+                    boulder: '#797979',
                 },
                 'green': {
                     casal: '#29675d',
@@ -324,7 +324,8 @@ module.exports = {
                 'podcast': 'var(--color-podcast)',
                 'podcast-text': 'var(--color-podcast-text)',
                 'podcast-highlight': 'var(--color-podcast-highlight)',
-                'event-calendar-nav-week-separator-color': 'var(--color-eventcalender-nav-week-separator)' 
+                'event-calendar-primary': 'var(--color-eventcalendar-primary)',
+                'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
             },
         },
     },

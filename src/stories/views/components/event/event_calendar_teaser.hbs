@@ -2,7 +2,7 @@
     <div class="relative flex content-start flex-wrap">
         <div class="flex grow-0 shrink basis-full order-none px-0.5 py-0.5 align-top box-border">
             <div class="w-full h-full flex flex-wrap">
-                <div class="flex flex-col grow-0 shrink basis-1/12 align-top items-center justify-center p-4 border-dashed border-r border-black">
+                <div class="flex flex-col grow-0 shrink basis-1/12 align-top items-center justify-center p-4 border-dotted border-r border-event-calendar-secondary">
                     {{#with this.startDate}}
                         <span class='text-sm font-headingSerif'>{{this.weekdayNameShort}}</span>
                         <span class='text-2xl font-headingSerif font-bold'>{{this.day}}</span>
@@ -32,7 +32,7 @@
     </div>
     {{#with this.concertInfo}}
         {{#unless this.isEmpty}}
-        <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-t border-dotted">
+        <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
             {{> components/event/concert_info}}
         </div>
         {{/unless}}
