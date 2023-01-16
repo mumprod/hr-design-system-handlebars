@@ -1,3 +1,15 @@
+# v0.117.14 (Mon Jan 16 2023)
+
+#### 🐛 Bug Fix
+
+- SEO - Content Nav Verursacht CLS. JS Styling ausbauen [#478](https://github.com/mumprod/hr-design-system-handlebars/pull/478) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.117.13 (Fri Jan 13 2023)
 
 #### 🐛 Bug Fix
