@@ -1,36 +1,38 @@
-<nav 
-     class="w-full {{#if this.isMixed}} px-2 md:px-0 {{else}} px-0 {{/if}}  {{_componentClass}} "
+<nav class="w-full px-2 md:px-0 {{inline-switch _teaserSize '["100","66","50","33","25"]' '[" teaser-size-100"," teaser-size-66"," teaser-size-50"," teaser-size-33"," teaser-size-25", ""]'}}"
+     :class="contentNavDropdownIsOpen ? 'h-10' : ''"
      id="dropdown--{{nextRandom}}"
      tabindex="0"
      role="navigation"
      aria-labelledby="dropdown__label--{{getRandom}}">
 
     <span id="dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
-
-    <div x-show="shouldDropdownBeShown({{_teaserSize}},{{this.isDropdown}},{{this.isMixed}})"
-         :class="contentNavDropdownIsOpen ? 'shadow-[1px_4px_5px_0px_rgba(50,50,93,0.10)]' : ''"
-         class="relative flex w-auto h-10 mx-2 mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
+    <button 
+         class="content-nav-dropdown_dropdown{{#if this.isDropdown}} -isDropdown{{/if}}{{#if this.isMixed}} -isMixed{{/if}} relative flex w-full h-10  mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
          @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  $dispatch('hr:global:resetinputAutoSuggest');" 
+         @click.outside ="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest')"
+         {{#if this.isMixed}}
+            @resize.window="if(window.innerWidth > 767){contentNavDropdownIsOpen = false}; $dispatch('hr:global:resetinputAutoSuggest')"
+         {{/if}}
     >
-        <span class="self-center w-full p-2 text-base">{{_buttonText}}</span>
+        <span class="self-center w-full p-2 text-base text-left">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full border-l border-content-nav">
-            <button :class="contentNavDropdownIsOpen ? 'hidden' : ''"
+            <span :class="{'hidden' : contentNavDropdownIsOpen}"
                   class="flex self-center px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconOpen "arrow-down") _addClass="h-4 w-4" _iconmap="icons"~}}
-            </button>
-            <button :class="contentNavDropdownIsOpen ? '' : 'hidden'"
-                  class="flex self-center px-3 py-3"
+            </span>
+            <span :class="{'hidden' : !contentNavDropdownIsOpen}"
+                  class="flex self-center hidden px-3 py-3"
             >
                 {{~> components/base/image/icon _icon=(defaultIfEmpty _iconClose "arrow-up") _addClass="h-4 w-4" _iconmap="icons"~}}
-            </button>
+            </span>
         </div>
-    </div>
-    <div x-show="shouldContentBeShown({{_teaserSize}},{{this.isDropdown}},{{this.isMixed}})"
-         aria-haspopup="true"
-         @click.outside="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest');"
-         :class="contentNavDropdownIsOpen ? 'z-9999 relative' : ' z-1003'"
-         class="{{#if this.isDropdown}} mx-2 md:mx-0 {{else}}{{#if this.isMixed}} mx-2 md:mx-0{{/if}} mx-2 {{/if}} md:h-auto md:overflow-visible">
+    </button>
+    <div :class="{'-isClosed' : !contentNavDropdownIsOpen,
+                '-isOpen'   :  contentNavDropdownIsOpen}"
+         aria-haspopup="true"       
+         class="content-nav-dropdown_content{{#if this.isDropdown}} -isDropdown {{/if}}{{#if this.isMixed}} -isMixed{{/if}} md:h-auto md:overflow-visible relative -isClosed"
+         >
         {{~decorator_body~}}
     </div>
 

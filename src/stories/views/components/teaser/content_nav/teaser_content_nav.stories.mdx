@@ -26,8 +26,15 @@ import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdow
     }}
     argTypes={{
         realTeaserSize: {
+            control: {
+                type: 'select',
+                options: ['100', '66', '50', '33', '25'],
+            },
+            description: 'Teaser Größe',
             table: {
-                disable: true
+                defaultValue: {
+                    summary: '100',
+                },
             },
         },
         contentNav: {
