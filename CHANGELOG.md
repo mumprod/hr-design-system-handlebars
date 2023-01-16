@@ -1,3 +1,52 @@
+# v0.117.13 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- truncate button-text in ClusterTeaser & Tabbox [#477](https://github.com/mumprod/hr-design-system-handlebars/pull/477) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.117.12 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2003 Abstand von erster Gruppe funktioniert nicht bei 2x50% [#470](https://github.com/mumprod/hr-design-system-handlebars/pull/470) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.117.11 (Fri Jan 13 2023)
+
+#### 🐛 Bug Fix
+
+- edit inline-switch to match delivery [#476](https://github.com/mumprod/hr-design-system-handlebars/pull/476) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.117.10 (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 1981 ffff [#475](https://github.com/mumprod/hr-design-system-handlebars/pull/475) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.117.9 (Thu Jan 12 2023)
 
 #### 🐛 Bug Fix
