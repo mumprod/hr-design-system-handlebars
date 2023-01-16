@@ -216,7 +216,7 @@
 /* ---------------- NAV DROPDOWN - CONTENT ------------------ */
     .content-nav-dropdown_content.-isOpen {
         @apply z-9999;
-        @apply shadow-xl;
+        @apply shadow-lg;
     }
 
     .content-nav-dropdown_content.-isDropdown.-isClosed {
