@@ -5,5 +5,5 @@
     x-data="contentNavigationHandler()"
     class="js-contentNavWrapper col-span-full flex gap-y-3 gap-x-4 js-load {{inline-switch this.teaserSize '["100","66","50","33","25"]' '["flex-col","md:col-span-9 md:flex-row ","md:col-span-6 md:flex-row "," md:col-span-4 md:flex-row "," md:col-span-3 md:flex-row "]'}}"
 >
-    {{> components/content_nav/content_nav _teaserSize=this.teaserSize }}           
+    {{> components/content_nav/content_nav _teaserSize=this.realTeaserSize }}           
 </div>
