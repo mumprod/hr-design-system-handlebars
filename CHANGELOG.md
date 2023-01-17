@@ -1,3 +1,15 @@
+# v0.118.0 (Tue Jan 17 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Only render p tag if at least showTeaserInfo is true DPE-2014 [#479](https://github.com/mumprod/hr-design-system-handlebars/pull/479) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.117.14 (Mon Jan 16 2023)
 
 #### 🐛 Bug Fix
