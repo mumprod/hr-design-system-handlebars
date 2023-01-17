@@ -88,6 +88,17 @@
         @apply shadow-none;
     }
 
+    .ds-button-round {
+        @apply z-20;
+        
+        @apply focus:shadow-teaser-focus-big focus:shadow-focus-state focus:outline-none;
+        @apply rounded-full;
+    }
+
+    .ds-button-round:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
     .ds-link {
         @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }

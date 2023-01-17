@@ -53,6 +53,7 @@ module.exports = {
                 'insetfromtop': 'inset 0px 8px 8px -4px rgba(0, 0, 0, 0.2)',
                 'stage': '0 .3125rem 1.0625rem rgba(0,0,0,0.3)',
                 'teaser-focus': '0 0 0 0.25rem',
+                'teaser-focus-big': '0 0 0 0.365rem',
             },
             dropShadow: {
                 md: '0 5px 3px rgb(0 0 0 / 0.07)',
