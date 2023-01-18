@@ -187,7 +187,6 @@
     .content-nav-item.content-nav-item-mixed {
         @apply w-full;
         @apply mb-0;
-
         @apply border-l-0;
         @apply border-r-0;
         @apply border-t-0;
