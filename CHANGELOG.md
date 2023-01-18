@@ -1,3 +1,15 @@
+# v0.119.2 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- Seitenabstände in "Tablet"-Ansicht anpassen [#483](https://github.com/mumprod/hr-design-system-handlebars/pull/483) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.119.1 (Wed Jan 18 2023)
 
 #### 🐛 Bug Fix
