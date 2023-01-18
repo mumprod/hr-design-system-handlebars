@@ -325,6 +325,8 @@ module.exports = {
                 'podcast': 'var(--color-podcast)',
                 'podcast-text': 'var(--color-podcast-text)',
                 'podcast-highlight': 'var(--color-podcast-highlight)',
+                'rounded-top-left': 'var(--border-radius-top-left)',
+                'rounded-bottom-right': 'var(--border-radius-bottom-right)',
             },
         },
     },
