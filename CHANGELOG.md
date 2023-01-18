@@ -1,3 +1,15 @@
+# v0.120.0 (Wed Jan 18 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Do not display group if no items available DPE-2017 [#484](https://github.com/mumprod/hr-design-system-handlebars/pull/484) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.119.2 (Wed Jan 18 2023)
 
 #### 🐛 Bug Fix
