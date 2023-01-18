@@ -3,11 +3,9 @@
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
         {{#unless _hideGeotag}}
-            {{#unless _isMobile1to1}}
-                {{~#with _geotag}}
-                    {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize}}
-                {{/with~}}
-            {{/unless}}
+            {{~#with _geotag}}
+                {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1}}
+            {{/with~}}
         {{/unless}}
         {{#with _teaser}}
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
