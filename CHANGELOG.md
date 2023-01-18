@@ -1,3 +1,15 @@
+# v0.119.0 (Wed Jan 18 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Removes unneccessary div in teaser_image and fixes css problems [#481](https://github.com/mumprod/hr-design-system-handlebars/pull/481) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.118.1 (Tue Jan 17 2023)
 
 #### 🐛 Bug Fix
