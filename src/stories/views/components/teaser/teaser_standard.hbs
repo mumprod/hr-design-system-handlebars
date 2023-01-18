@@ -1,6 +1,6 @@
 <article class="items-start relative col-span-12 flex {{if this.displayTeaserBodyAsImageOverlay '' 'gap-y-3'}} gap-x-4 
 {{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}
-{{~#if this.isMobile1to1}} js-is1to1 px-5 md:px-0 md:flex-col{{else}} flex-col{{/if~}} 
+{{~#if this.isMobile1to1}} js-is1to1 px-5 sm:px-0 md:flex-col{{else}} flex-col{{/if~}} 
  "
     x-data="{ avStart: false }"
     {{#if this.isMobile1to1}}
