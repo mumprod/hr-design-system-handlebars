@@ -37,11 +37,13 @@
             </figure>
         </div>
     </div>
-    {{#with this.concertInfo}}
-        {{#unless this.isEmpty}}
-        <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
-            {{> components/event/concert_info}}
-        </div>
-        {{/unless}}
-    {{/with}}
+    {{#unless _isExcerpt}}
+        {{#with this.concertInfo}}
+            {{#unless this.isEmpty}}
+            <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
+                {{> components/event/concert_info}}
+            </div>
+            {{/unless}}
+        {{/with}}
+    {{/unless}}
 </div>

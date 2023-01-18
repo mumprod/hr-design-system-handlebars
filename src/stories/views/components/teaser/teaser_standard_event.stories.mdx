@@ -64,7 +64,6 @@ export const TemplateEventCalendarTeaser = (args, { globals: { customConditional
     return teaserEventCalendar({ brand, ...args })
 }
 
-
 # Standard-Teaser
 
 ## Beschreibung
@@ -149,6 +148,12 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     </Story>
     <Story
         name="Event Calendar Teaser"
+        argTypes={{
+            _isExcerpt: {
+                control: 'boolean',
+                defaultValue: true,
+            },
+        }}
         args={teaserEventCalendar100Serif.logicItem.includeModel.eventCalendar}
     >
         {teaserEventCalendar.bind({})}

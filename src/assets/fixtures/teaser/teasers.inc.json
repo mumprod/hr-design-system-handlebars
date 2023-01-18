@@ -1855,7 +1855,6 @@
                     "isCurrentMonth": true,
                     "hasDays": true,
                     "hasInstants": true,
-                    "_excerpt": true,
                     "isStartOfWeek": true
                 },
                 "displayTeaserBodyAsImageOverlay": true,
