@@ -98,7 +98,7 @@
     }
 
     .ds-link {
-        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+        @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
 
     .ds-link:focus:not(:focus-visible) {
