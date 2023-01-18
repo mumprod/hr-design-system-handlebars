@@ -1,14 +1,14 @@
-<div class="flex flex-wrap content-start w-full">
+<div class="flex flex-wrap content-start w-full p-2">
     {{#with this.startTime}}
-    <div class="flex grow shrink-1 basis-6/12 align-top mt-4">
+    <div class="flex grow shrink-1 basis-6/12 align-top p-2">
         <div class="min-w-3 min-h-3">
-                    {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-event-calendar-secondary" }}
+            {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-event-calendar-secondary" }}
         </div>
-        <div class='text-l pl-4 font-sans font-bold'>{{this.time}}</div>
+        <time class='text-l pl-4 font-sans font-bold'>{{loca "date_simple_at" this.time}}</time>
     </div>
     {{/with}}
     {{#with this.venue}}
-    <div class="flex grow flex-shrink-1 basis-6/12 align-top mt-4">
+    <div class="flex grow flex-shrink-1 basis-6/12 align-top p-2">
         <div class="min-w-3 min-h-3">
             {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-event-calendar-secondary" }}
         </div>
