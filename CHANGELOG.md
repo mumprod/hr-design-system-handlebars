@@ -1,3 +1,16 @@
+# v0.119.1 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix geoTag [#482](https://github.com/mumprod/hr-design-system-handlebars/pull/482) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.119.0 (Wed Jan 18 2023)
 
 #### 🚀 Enhancement
