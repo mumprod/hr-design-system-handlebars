@@ -90,9 +90,7 @@
 
     .ds-button-round {
         @apply z-20;
-        
-        @apply focus:shadow-teaser-focus-big focus:shadow-focus-state focus:outline-none;
-        @apply rounded-full;
+        @apply focus:shadow-teaser-focus-big focus:shadow-focus-state focus:outline-none focus:rounded-full;
     }
 
     .ds-button-round:focus:not(:focus-visible) {
