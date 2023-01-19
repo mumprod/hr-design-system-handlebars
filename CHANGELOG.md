@@ -1,3 +1,16 @@
+# v0.120.5 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- display the arrow in Ghostbutton (in DEV) [#489](https://github.com/mumprod/hr-design-system-handlebars/pull/489) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.120.4 (Thu Jan 19 2023)
 
 #### 🐛 Bug Fix
