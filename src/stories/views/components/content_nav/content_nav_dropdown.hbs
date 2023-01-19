@@ -1,13 +1,13 @@
 <nav class="w-full px-2 md:px-0 {{inline-switch _teaserSize '["100","66","50","33","25"]' '[" teaser-size-100"," teaser-size-66"," teaser-size-50"," teaser-size-33"," teaser-size-25", ""]'}}"
      :class="contentNavDropdownIsOpen ? 'h-10' : ''"
      id="dropdown--{{nextRandom}}"
-     tabindex="0"
+    
      role="navigation"
      aria-labelledby="dropdown__label--{{getRandom}}">
 
     <span id="dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
     <button 
-         class="content-nav-dropdown_dropdown{{#if this.isDropdown}} -isDropdown{{/if}}{{#if this.isMixed}} -isMixed{{/if}} relative flex w-full h-10  mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
+         class="content-nav-dropdown_dropdown{{#if this.isDropdown}} -isDropdown{{/if}}{{#if this.isMixed}} -isMixed{{/if}} ds-link-inset relative flex w-full h-10  mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
          @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  $dispatch('hr:global:resetinputAutoSuggest');" 
          @click.outside ="contentNavDropdownIsOpen = false; $dispatch('hr:global:resetinputAutoSuggest')"
          {{#if this.isMixed}}

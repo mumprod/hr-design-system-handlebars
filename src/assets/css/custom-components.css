@@ -105,6 +105,14 @@
         @apply shadow-none;
     }
 
+    .ds-link-inset  {
+        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-current ;    
+    }
+
+    .ds-link-inset:focus:not(:focus-visible) {
+        @apply shadow-none;     
+    }
+
     .ds-teaser-focus {
         @apply before:content-[''] before:absolute before:inset-0 before:z-10;
     }
@@ -138,8 +146,7 @@
 /* ----------------Content NAV------------------ */
 /* ---------------- NAV ITEMS ------------------ */
     .content-nav-item {
-        @apply h-10;
-        @apply overflow-hidden;
+        @apply h-10;    
         @apply text-base;
         @apply font-copy;
         @apply list-none;
@@ -208,6 +215,7 @@
         @apply hover:text-content-nav;
         @apply hover:!bg-white;
         @apply hover:!fill-content-nav;
+                
     }
 /* ---------------- NAV DROPDOWN - DROPDOWN ------------------ */
     .content-nav-dropdown_dropdown.-isDropdown  {
