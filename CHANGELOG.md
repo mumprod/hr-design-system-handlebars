@@ -1,3 +1,15 @@
+# v0.120.2 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- improve accessibility [#486](https://github.com/mumprod/hr-design-system-handlebars/pull/486) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.120.1 (Thu Jan 19 2023)
 
 #### 🐛 Bug Fix
