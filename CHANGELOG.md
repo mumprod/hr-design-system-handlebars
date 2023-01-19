@@ -1,3 +1,15 @@
+# v0.120.4 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2007 fokuszustände definieren [#487](https://github.com/mumprod/hr-design-system-handlebars/pull/487) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.120.3 (Thu Jan 19 2023)
 
 #### 🐛 Bug Fix
