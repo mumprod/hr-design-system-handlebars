@@ -106,7 +106,7 @@
     }
 
     .ds-link-inset  {
-        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-current ;    
+        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-focus-state ;    
     }
 
     .ds-link-inset:focus:not(:focus-visible) {
