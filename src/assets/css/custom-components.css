@@ -88,12 +88,29 @@
         @apply shadow-none;
     }
 
+    .ds-button-round {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus-big focus:shadow-focus-state focus:outline-none focus:rounded-full;
+    }
+
+    .ds-button-round:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
     .ds-link {
-        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+        @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
 
     .ds-link:focus:not(:focus-visible) {
         @apply shadow-none;
+    }
+
+    .ds-link-inset  {
+        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-current ;    
+    }
+
+    .ds-link-inset:focus:not(:focus-visible) {
+        @apply shadow-none;     
     }
 
     .ds-teaser-focus {
@@ -129,8 +146,7 @@
 /* ----------------Content NAV------------------ */
 /* ---------------- NAV ITEMS ------------------ */
     .content-nav-item {
-        @apply h-10;
-        @apply overflow-hidden;
+        @apply h-10;    
         @apply text-base;
         @apply font-copy;
         @apply list-none;
@@ -178,7 +194,6 @@
     .content-nav-item.content-nav-item-mixed {
         @apply w-full;
         @apply mb-0;
-
         @apply border-l-0;
         @apply border-r-0;
         @apply border-t-0;
@@ -200,6 +215,7 @@
         @apply hover:text-content-nav;
         @apply hover:!bg-white;
         @apply hover:!fill-content-nav;
+                
     }
 /* ---------------- NAV DROPDOWN - DROPDOWN ------------------ */
     .content-nav-dropdown_dropdown.-isDropdown  {

@@ -13,17 +13,19 @@
             </div> 
           {{/with}}
           
-          {{~#with airdateDate}}
-            <div class="flex grow pt-1.5 text-xs font-headingSerif text-podcast-text">
-              <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-            </div>
-          {{/with}}
+          
+            <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text">
+              {{~#with airdateDate}}
+                <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+              {{/with}}
 
-        {{!-- Download --}}
-          {{> components/teaser/podcast/podcast_downloadbutton 
-            _addClass="ml-2 pr-2 md:pr-5 "
-            _iconClass="h-6 w-6 text-podcast-text fill-current"
-            _url=this.podcastDownloadUrl }}
+              {{!-- Download --}}
+              {{> components/teaser/podcast/podcast_downloadbutton 
+                _addClass=""
+                _iconClass="h-6 w-6 text-podcast-text fill-current"
+                _url=this.podcastDownloadUrl }}
+
+            </div>
         </div>
 
         {{!-- Überschrift: --}}
@@ -74,7 +76,7 @@
         <div class="flex justify-end w-full pl-4">
           <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
             <span class="self-end font-bold">Zur Sendung</span>
-            <a class="self-end underline" href="{{this.url}}">{{this.title}}</a>
+            <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
           </div>
         </div>
       {{/with}}          
