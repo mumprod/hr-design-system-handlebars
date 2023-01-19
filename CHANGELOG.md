@@ -1,3 +1,15 @@
+# v0.120.1 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize [#485](https://github.com/mumprod/hr-design-system-handlebars/pull/485) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.120.0 (Wed Jan 18 2023)
 
 #### 🚀 Enhancement
