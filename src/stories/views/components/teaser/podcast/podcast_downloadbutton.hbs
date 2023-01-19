@@ -1,3 +1,3 @@
-<a href="{{_url}}" class="h-6 js-load ds-link rounded-lg {{#if _addClass}}{{_addClass}}{{/if}}" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}}>
+<a href="{{_url}}" class="h-6 js-load ds-link rounded-lg {{#if _addClass}}{{_addClass}}{{/if}}" {{#with this.trackingData}} data-hr-click-tracking='{"settings": [{"type": "download", "clickLabel": "{{this.pageName}}", "secondLevelId": "{{this.secondLevelId}}"}, {"type": "uxAction", "clickLabel": "medienDownload::podcast::{{../_type}}", "secondLevelId": "{{this.secondLevelId}}" }]}'{{/with}} aria-label="Podcast herunterladen">
     {{> components/base/image/icon _icon='download-neu' _addClass=_iconClass }}
 </a>

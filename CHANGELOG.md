@@ -1,3 +1,88 @@
+# v0.120.2 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- improve accessibility [#486](https://github.com/mumprod/hr-design-system-handlebars/pull/486) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.120.1 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize [#485](https://github.com/mumprod/hr-design-system-handlebars/pull/485) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.120.0 (Wed Jan 18 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Do not display group if no items available DPE-2017 [#484](https://github.com/mumprod/hr-design-system-handlebars/pull/484) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.119.2 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- Seitenabstände in "Tablet"-Ansicht anpassen [#483](https://github.com/mumprod/hr-design-system-handlebars/pull/483) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.119.1 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix geoTag [#482](https://github.com/mumprod/hr-design-system-handlebars/pull/482) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.119.0 (Wed Jan 18 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Removes unneccessary div in teaser_image and fixes css problems [#481](https://github.com/mumprod/hr-design-system-handlebars/pull/481) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.118.1 (Tue Jan 17 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2013 podcast start not via tab but via leertaste [#480](https://github.com/mumprod/hr-design-system-handlebars/pull/480) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.118.0 (Tue Jan 17 2023)
 
 #### 🚀 Enhancement
