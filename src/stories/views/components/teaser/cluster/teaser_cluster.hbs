@@ -1,4 +1,4 @@
-<article class="mx-5 sm:mx-0 col-span-12 grid bg-highlight-1 rounded-tl-3xl rounded-br-3xl {{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}} ">
+<article class="mx-5 md:mx-0  col-span-12 grid bg-highlight-1 rounded-tl-hr rounded-br-hr {{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}} ">
     <div class="">
             <h2 class="flex items-center px-5 py-5 text-clusterTeaserHeadline">
                 {{#if this.teaserLogo}}
@@ -14,7 +14,7 @@
     </div>
     {{~#with this.overviewLink}}
         {{~#if this.link~}}
-            <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.teaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
+            <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.realTeaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
                 {{~> components/button/button_pseudo _type="hollow" _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink=true _buttonText=this.title _buttonCss="truncate" _linkCss="flex min-w-0"~}}
             </div>
         {{~/if~}}

@@ -1,3 +1,57 @@
+# v0.121.2 (Fri Jan 20 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1936 Ecken der Boxen anpasssen [#494](https://github.com/mumprod/hr-design-system-handlebars/pull/494) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v0.121.1 (Fri Jan 20 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize in ClusterTeaser [#493](https://github.com/mumprod/hr-design-system-handlebars/pull/493) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.121.0 (Fri Jan 20 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Updates the ardplayer [#492](https://github.com/mumprod/hr-design-system-handlebars/pull/492) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Run turbosnap only on push [#491](https://github.com/mumprod/hr-design-system-handlebars/pull/491) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.120.5 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- display the arrow in Ghostbutton (in DEV) [#489](https://github.com/mumprod/hr-design-system-handlebars/pull/489) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.120.4 (Thu Jan 19 2023)
 
 #### 🐛 Bug Fix
