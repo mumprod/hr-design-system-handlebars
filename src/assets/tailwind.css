@@ -68,8 +68,8 @@
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-3xl';
-    --border-radius-bottom-right: 'rounded-br-3xl';
+    --border-radius-top-left: '@apply rounded-tl-3xl';
+    --border-radius-bottom-right: '@apply rounded-br-3xl';
 }
 
 [data-theme='hessenschau'] {
@@ -131,9 +131,8 @@
     --font-weight-title: theme('fontWeight.normal');
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
-     /* Border Radius */
-     --border-radius-top-left: 'rounded-tl-none';
-     --border-radius-bottom-right: 'rounded-br-none';
+     /* Border */
+    --border-radius-hr: theme('borderRadius.3xl'); 
 }
 
 [data-theme='hr-fernsehen'] {
@@ -187,9 +186,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr-inforadio'] {
@@ -242,9 +238,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -299,9 +292,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr-werbung'] {
@@ -356,9 +346,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr-sinfonieorchester'] {
@@ -411,9 +398,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr-bigband'] {
@@ -466,9 +450,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr'] {
@@ -523,9 +504,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr1'] {
@@ -578,9 +556,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr2'] {
@@ -634,9 +609,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr3'] {
@@ -690,9 +662,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 [data-theme='hr4'] {
@@ -746,6 +715,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Border */
+    --border-radius-hr: theme('borderRadius.3xl'); 
 }
 
 [data-theme='you-fm'] {
@@ -799,9 +770,6 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
-    /* Border Radius */
-    --border-radius-top-left: 'rounded-tl-none';
-    --border-radius-bottom-right: 'rounded-br-none';
 }
 
 /*! purgecss end ignore */

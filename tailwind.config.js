@@ -38,6 +38,9 @@ module.exports = {
         },
 
         extend: {
+            borderRadius: {
+                hr: 'var(--border-radius-hr)',
+            },
             fontSize: {
                 'xs': ['0.75rem', '1.063rem'],
                 'sm': ['0.875rem', '1.188rem'],
@@ -325,8 +328,6 @@ module.exports = {
                 'podcast': 'var(--color-podcast)',
                 'podcast-text': 'var(--color-podcast-text)',
                 'podcast-highlight': 'var(--color-podcast-highlight)',
-                'rounded-top-left': 'var(--border-radius-top-left)',
-                'rounded-bottom-right': 'var(--border-radius-bottom-right)',
             },
         },
     },
