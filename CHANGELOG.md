@@ -1,3 +1,19 @@
+# v0.121.0 (Fri Jan 20 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Updates the ardplayer [#492](https://github.com/mumprod/hr-design-system-handlebars/pull/492) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Run turbosnap only on push [#491](https://github.com/mumprod/hr-design-system-handlebars/pull/491) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.120.5 (Thu Jan 19 2023)
 
 #### 🐛 Bug Fix
