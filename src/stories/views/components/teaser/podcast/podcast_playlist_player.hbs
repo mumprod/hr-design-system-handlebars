@@ -18,18 +18,11 @@
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
-        {{#ifCond this.teaserSize ">" 50}}
-          {{!-- Shorttext --}}
-          {{#unless _isSinglePage}}
-            {{#unless this.hideShortText}}
-              {{~#with this.shorttext}}
-                <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                  <span class="c-teaser__shorttext"> {{this}} </span>
-                </div>
-              {{/with~}}
-            {{/unless}}
-          {{/unless}}
-        {{/ifCond}}
+        {{#switch this.teaserSize }}
+          {{#case 100}}
+            {{> components/teaser/podcast/podcast_playlist_shorttext}}
+          {{/case}}
+        {{/switch}}
       </div>
 
       {{!-- Podcast Image --}}
@@ -46,20 +39,13 @@
       </div>
     </div>
 
-    {{#ifCond this.teaserSize "<=" 50}}
-      <div class="flex flex-row w-full px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
-        {{!-- Shorttext --}}
-          {{#unless _isSinglePage}}
-            {{#unless this.hideShortText}}
-              {{~#with this.shorttext}}
-                <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                  <span class="c-teaser__shorttext"> {{this}} </span>
-                </div>
-              {{/with~}}
-            {{/unless}}
-          {{/unless}}
-      </div>
-    {{/ifCond}}
+    {{#switch this.teaserSize }}
+      {{#case 50}}
+        <div class="flex flex-row w-full px-5 md:pl-5">
+          {{> components/teaser/podcast/podcast_playlist_shorttext}}
+        </div>
+      {{/case}}
+    {{/switch}}
     
     {{!-- Abo-Dropdown --}}
     <div class="flex flex-row px-5 md:pr-0"> 
