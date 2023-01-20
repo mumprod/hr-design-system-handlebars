@@ -1,4 +1,4 @@
-<button id="button{{_id}}" x-on:keydown.space.prevent.stop="{{_alpineClick}}" x-on:click.stop="{{_alpineClick}}" type="button" class="flex justify-start cursor-pointer group focus:outline-none {{_css}}">           
+<button id="button{{_id}}" x-on:keydown.space.prevent.stop="{{_alpineClick}}" x-on:click.stop="{{_alpineClick}}" type="button" class="flex justify-start cursor-pointer group ds-button-round  {{_css}}" aria-label="Podcast starten">           
     <div class="text-white rounded-full js-playbutton bg-podcast ring-white ring">
         {{> components/base/image/icon _icon="play-wide" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
     </div>

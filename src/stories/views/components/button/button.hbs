@@ -7,6 +7,7 @@
     {{~#if _value}} value="{{_value}}"{{/if}} 
     {{~#if _alpineClick}} @click="{{_alpineClick}}"{{/if}} 
     {{~#if _x-show}} x-show="{{_x-show}}"{{/if}} 
+    {{~#if _noFocus}} tabindex="-1"{{/if}}
 >
     {{~#if _showIcon~}}
         {{> components/base/image/icon _icon=_icon _iconmap=_iconmap _addClass=_addIconClass _webview=_webview}}

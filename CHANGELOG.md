@@ -1,3 +1,117 @@
+# v0.121.0 (Fri Jan 20 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Updates the ardplayer [#492](https://github.com/mumprod/hr-design-system-handlebars/pull/492) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Run turbosnap only on push [#491](https://github.com/mumprod/hr-design-system-handlebars/pull/491) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v0.120.5 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- display the arrow in Ghostbutton (in DEV) [#489](https://github.com/mumprod/hr-design-system-handlebars/pull/489) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.120.4 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2007 fokuszustände definieren [#487](https://github.com/mumprod/hr-design-system-handlebars/pull/487) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.120.3 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 2019 b [#488](https://github.com/mumprod/hr-design-system-handlebars/pull/488) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.120.2 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- improve accessibility [#486](https://github.com/mumprod/hr-design-system-handlebars/pull/486) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.120.1 (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize [#485](https://github.com/mumprod/hr-design-system-handlebars/pull/485) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.120.0 (Wed Jan 18 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Do not display group if no items available DPE-2017 [#484](https://github.com/mumprod/hr-design-system-handlebars/pull/484) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v0.119.2 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- Seitenabstände in "Tablet"-Ansicht anpassen [#483](https://github.com/mumprod/hr-design-system-handlebars/pull/483) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.119.1 (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix geoTag [#482](https://github.com/mumprod/hr-design-system-handlebars/pull/482) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.119.0 (Wed Jan 18 2023)
 
 #### 🚀 Enhancement
