@@ -14,21 +14,22 @@
         </div>
 
         {{!-- Überschrift: --}}
-        <div class="flex pb-5 pr-2 md:pr-5">
+        <div class="flex pr-2 md:pr-5">
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
-        {{!-- Shorttext --}}
-        {{#unless _isSinglePage}}
-          {{#unless this.hideShortText}}
-            {{~#with this.shorttext}}
-              <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                <span class="c-teaser__shorttext"> {{this}} </span>
-              </div>
-            {{/with~}}
+        {{#ifCond this.teaserSize ">" 50}}
+          {{!-- Shorttext --}}
+          {{#unless _isSinglePage}}
+            {{#unless this.hideShortText}}
+              {{~#with this.shorttext}}
+                <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
+                  <span class="c-teaser__shorttext"> {{this}} </span>
+                </div>
+              {{/with~}}
+            {{/unless}}
           {{/unless}}
-        {{/unless}}
-
+        {{/ifCond}}
       </div>
 
       {{!-- Podcast Image --}}
@@ -43,8 +44,23 @@
           }}
         </div>
       </div>
-
     </div>
+
+    {{#ifCond this.teaserSize "<=" 50}}
+      <div class="flex flex-row w-full pt-5 px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
+        {{!-- Shorttext --}}
+          {{#unless _isSinglePage}}
+            {{#unless this.hideShortText}}
+              {{~#with this.shorttext}}
+                <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
+                  <span class="c-teaser__shorttext"> {{this}} </span>
+                </div>
+              {{/with~}}
+            {{/unless}}
+          {{/unless}}
+      </div>
+    {{/ifCond}}
+    
     {{!-- Abo-Dropdown --}}
     <div class="flex flex-row px-5 md:pr-0"> 
       {{> components/teaser/podcast/podcast_subscribe_button}}
