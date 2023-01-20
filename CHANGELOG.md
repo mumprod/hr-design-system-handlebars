@@ -1,3 +1,16 @@
+# v0.121.1 (Fri Jan 20 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize in ClusterTeaser [#493](https://github.com/mumprod/hr-design-system-handlebars/pull/493) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v0.121.0 (Fri Jan 20 2023)
 
 #### 🚀 Enhancement
