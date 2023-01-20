@@ -1,3 +1,15 @@
+# v0.121.2 (Fri Jan 20 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-1936 Ecken der Boxen anpasssen [#494](https://github.com/mumprod/hr-design-system-handlebars/pull/494) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.121.1 (Fri Jan 20 2023)
 
 #### 🐛 Bug Fix
