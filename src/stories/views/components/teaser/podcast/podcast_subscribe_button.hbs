@@ -16,7 +16,7 @@
         x-on:keydown.escape.prevent.stop="close($refs.button)"
         x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
         x-id="['dropdown-button']"
-        class="relative z-10 h-10"
+        class="relative h-10 z-9999"
     >
 
     {{!-- Button --}}
@@ -44,13 +44,13 @@
         x-on:click.outside="close($refs.button)"
         :id="$id('dropdown-button')"
         style="display: none;"
-        class="left-0 w-full px-2 text-sm text-white font-heading grow bg-podcast-highlight"
+        class="left-0 w-full text-sm text-white font-heading grow bg-podcast-highlight"
     >
         {{~#with this.podcastHoster~}}
         <ul>
             {{~#each this~}}
                 <li class="{{#unless @last}}border-b{{/unless}}"> 
-                    <a class="flex py-2 text-left ds-link whitespace-nowrap hover:underline disabled:text-gray-500"
+                    <a class="flex px-2 py-2 text-left ds-link whitespace-nowrap hover:underline disabled:text-gray-500"
                     title="{{this.podcastHosterName}}" 
                     target="_blank"
                     rel="noopener noreferrer"
