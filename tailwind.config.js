@@ -38,6 +38,9 @@ module.exports = {
         },
 
         extend: {
+            borderRadius: {
+                hr: 'var(--border-radius-hr)',
+            },
             fontSize: {
                 'xs': ['0.75rem', '1.063rem'],
                 'sm': ['0.875rem', '1.188rem'],
