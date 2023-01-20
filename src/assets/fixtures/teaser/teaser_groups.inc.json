@@ -5,8 +5,10 @@
             "hasLink": true,
             "link": "#gruppe1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Gruppe 100% - 1 x 100% Teaser",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -21,8 +23,10 @@
             "hasLink": false,
             "link": "#gruppe1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Akzentuier-Gruppe 100%, 1 x 100% ContentNav Aufklapp ",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isHighlightGroup": false,
             "backgroundColor": "",
             "logicItems": [
@@ -55,8 +59,10 @@
             "hasLink": true,
             "link": "#gruppe1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Gruppe 100% - 2 x 50% Teaser",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "headlineTag": "h2",
             "isRelatedContent": false,
             "logicItems": [
@@ -66,6 +72,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         }
                     ]
@@ -77,6 +87,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "50"
                         }
                     ]
                 },
@@ -87,6 +101,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "50"
                         }
                     ]
                 },
@@ -96,6 +114,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "50"
                         }
                     ]
@@ -109,8 +131,10 @@
             "hasLink": true,
             "link": "#gruppe1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Gruppe 100% - 3 x 33% Teaser",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -118,6 +142,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         }
                     ]
@@ -129,6 +157,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
@@ -138,6 +170,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         }
                     ]
@@ -151,8 +187,10 @@
             "hasLink": true,
             "link": "#gruppe1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Gruppe 100% - 4 x 25% Teaser",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "logicItems": [
                 {
                     "@->jsoninclude": "teaser/teasers.inc.json",
@@ -160,6 +198,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "25"
                         }
                     ]
@@ -171,6 +213,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
                         }
                     ]
                 },
@@ -181,6 +227,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
                         }
                     ]
                 },
@@ -190,6 +240,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "25"
                         }
                     ]
@@ -204,8 +258,10 @@
             "link": "#gruppe1",
             "backgroundColor": "1",
             "hasGroupTitle": true,
+            "hasGroupItems": true,
             "groupTitle": "Gruppe 100% new - 3 x 33% Teaser",
             "teaserSize": "100",
+            "realTeaserSize": "100",
             "isHighlightGroup": true,
             "logicItems": [
                 {
@@ -214,6 +270,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         }
                     ]
@@ -225,6 +285,10 @@
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
                             "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "33"
                         }
                     ]
                 },
@@ -234,6 +298,10 @@
                     "@->overrides": [
                         {
                             "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "33"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
                             "@->value": "33"
                         }
                     ]

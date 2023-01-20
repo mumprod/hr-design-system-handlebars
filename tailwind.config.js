@@ -53,6 +53,7 @@ module.exports = {
                 'insetfromtop': 'inset 0px 8px 8px -4px rgba(0, 0, 0, 0.2)',
                 'stage': '0 .3125rem 1.0625rem rgba(0,0,0,0.3)',
                 'teaser-focus': '0 0 0 0.25rem',
+                'teaser-focus-big': '0 0 0 0.365rem',
             },
             dropShadow: {
                 md: '0 5px 3px rgb(0 0 0 / 0.07)',
@@ -228,6 +229,7 @@ module.exports = {
                     sea: '#006783',
                     teal: '#007A7CFF',
                     turquoiseCerulian: '#007fa0',
+                    tarawera: '#0a3355',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -307,6 +309,7 @@ module.exports = {
                 'labelPm': 'var(--color-label-pm)',
                 'labelLive': 'var(--color-label-live)',
                 'labelProgram': 'var(--color-label-program)',
+                'labelKurzmeldung': 'var(--color-label-kurzmeldung)',
                 'toplineColor': 'var(--color-topline)',
                 'subline': 'var(--color-subline)',
                 'link': 'var(--color-link)',

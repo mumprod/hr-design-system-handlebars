@@ -8,7 +8,8 @@ const ArdPlayerLoader = function (options, rootElement) {
         ardplayerUrl = options.jsUrl,
         smarttagUrl = options.atiSmarttagUrl,
         playerId = options.playerId,
-        trackingCookie = new TrackingCookie()
+        trackingCookie = new TrackingCookie(),
+        isPlayerDebug = options.isPlayerDebug || false
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
         player
@@ -66,6 +67,9 @@ const ArdPlayerLoader = function (options, rootElement) {
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
+            if (isPlayerDebug) {
+                ardplayer.debug(true, true, true, true)
+            }
             bindPlayerEvents()
         })
     }

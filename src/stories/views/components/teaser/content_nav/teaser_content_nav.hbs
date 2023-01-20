@@ -1,9 +1,6 @@
 <div id="{{nextRandom}}"
-    x-ignore
-    ax-load
-    ax-load-src={{resourceUrl "assets/js/vendor/content_nav.alpine.js"}}
-    x-data="contentNavigationHandler()"
-    class="js-contentNavWrapper col-span-full flex gap-y-3 gap-x-4 js-load {{inline-switch this.teasersize '["100","66","50","33","25"]' '["flex-col","md:col-span-9 md:flex-row ","md:col-span-6 md:flex-row "," md:col-span-4 md:flex-row "," md:col-span-3 md:flex-row "]'}}"
+    x-data="{ contentNavDropdownIsOpen: false}"
+    class="js-contentNavWrapper col-span-full flex gap-y-3 gap-x-4 js-load {{inline-switch this.teaserSize '["100","66","50","33","25"]' '["flex-col","md:col-span-9 md:flex-row ","md:col-span-6 md:flex-row "," md:col-span-4 md:flex-row "," md:col-span-3 md:flex-row "]'}}"
 >
-    {{> components/content_nav/content_nav _teasersize=this.teasersize }}           
+    {{> components/content_nav/content_nav _teaserSize=this.realTeaserSize }}           
 </div>

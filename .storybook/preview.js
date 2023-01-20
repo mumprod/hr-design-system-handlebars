@@ -94,7 +94,7 @@ const customViewports = {
     hrMd: {
         name: 'hr: MD - 768px',
         styles: {
-            width: '768px',
+            width: '769px',
             height: '1000px',
         },
     },

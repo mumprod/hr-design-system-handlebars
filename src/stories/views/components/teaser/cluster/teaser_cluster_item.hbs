@@ -1,7 +1,8 @@
 
-{{#decorator 'components/base/link' _css="group" }} 
+{{#decorator 'components/base/link' _css="group ds-link" }} 
     {{> components/teaser/components/teaser_heading
         _headlineTag="h1"
+        _headlineCss=""
         _label=this.label
         _size=_size
         _title=this.title
@@ -9,6 +10,6 @@
         _ordered=_ordered
         _titleCss='text-clusterTeaserLink'
         _firstItem=_firstItem}}        
-                {{/decorator}}
+{{/decorator}}
 {{> components/teaser/cluster/teaser_cluster_byline _ordered=_ordered}}
                 

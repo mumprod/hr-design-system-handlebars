@@ -13,17 +13,19 @@
             </div> 
           {{/with}}
           
-          {{~#with airdateDate}}
-            <div class="flex grow pt-1.5 text-xs font-headingSerif text-podcast-text">
-              <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-            </div>
-          {{/with}}
+          
+            <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text">
+              {{~#with airdateDate}}
+                <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+              {{/with}}
 
-        {{!-- Download --}}
-          {{> components/teaser/podcast/podcast_downloadbutton 
-            _addClass="ml-2 pr-2 md:pr-5 "
-            _iconClass="h-6 w-6 text-podcast-text fill-current"
-            _url=this.podcastDownloadUrl }}
+              {{!-- Download --}}
+              {{> components/teaser/podcast/podcast_downloadbutton 
+                _addClass=""
+                _iconClass="h-6 w-6 text-podcast-text fill-current"
+                _url=this.podcastDownloadUrl }}
+
+            </div>
         </div>
 
         {{!-- Überschrift: --}}
@@ -35,7 +37,7 @@
 
       {{!-- Podcast Image      --}}
       <div class="flex flex-col ">
-        <div class="w-22 xs:w-24 {{inline-switch _teaserSize '["50"]' '["","md:w-42"]'}}">
+        <div class="w-22 {{inline-switch this.teaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}">
           {{> components/base/image/responsive_image this.teaseritem 
             _type="podcastEpisodePlayer"
             _variant="default"
@@ -49,7 +51,7 @@
     </div>
 
     {{!-- Player UI --}}
-    <div class="flex {{inline-switch _teaserSize '["50"]' '["","md:pr-52 md:-mt-14"]'}}" 
+    <div class="flex {{inline-switch this.teaserSize '["100"]' '["lg:pr-48 lg:-mt-14",""]'}}" 
       x-data="playaudio()"
       x-init="listenToGlobalStop()"
       ax-load
@@ -61,7 +63,7 @@
         _id=(nextRandom) 
         _first=true
       }}    
-    </div>
+    </div>    
   
     {{!-- Abo-Dropdown    --}}
     <div class="flex flex-row pt-5">
@@ -74,7 +76,7 @@
         <div class="flex justify-end w-full pl-4">
           <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
             <span class="self-end font-bold">Zur Sendung</span>
-            <a class="self-end underline" href="{{this.url}}">{{this.title}}</a>
+            <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
           </div>
         </div>
       {{/with}}          

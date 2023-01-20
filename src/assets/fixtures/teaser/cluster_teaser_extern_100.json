@@ -6,6 +6,10 @@
             "@->value": "100"
         },
         {
+            "@->contentpath": "realTeaserSize",
+            "@->value": "100"
+        },
+        {
             "@->contentpath": "teaserLogo",
             "@->value": "tagesschau_de"
         },

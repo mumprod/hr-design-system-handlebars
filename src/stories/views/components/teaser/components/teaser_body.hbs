@@ -1,5 +1,6 @@
-<div class="{{~#if this.isMobile1to1}}basis-3/5{{/if~}}{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}">
-    <header class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+<div class="{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}" 
+{{~#if this.isMobile1to1}}:class="{'basis-full w-full pr-10':avStart,'basis-3/5 w-3/5':!avStart}"{{/if}}>
+    <header class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
         {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
             {{> components/teaser/components/teaser_heading 
             _fontVariant=this.headingFontVariant
@@ -7,7 +8,7 @@
             _headlineCss="overflow-anywhere hyphens-auto"
             _label=this.label 
             _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.teaserSize 
+            _size=this.realTeaserSize 
             _title=this.title 
             _topline=this.topline 
             _teaserType=this.teaserType
@@ -15,7 +16,7 @@
             _extendedTitle=this.extendedTitle}}            
         {{/decorator}}   
     </header>
-    <div class="md:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+    <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
         {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
         {{> components/teaser/components/teaser_byline}} 
     </div>

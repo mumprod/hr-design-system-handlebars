@@ -88,12 +88,29 @@
         @apply shadow-none;
     }
 
+    .ds-button-round {
+        @apply z-20;
+        @apply focus:shadow-teaser-focus-big focus:shadow-focus-state focus:outline-none focus:rounded-full;
+    }
+
+    .ds-button-round:focus:not(:focus-visible) {
+        @apply shadow-none;
+    }
+
     .ds-link {
-        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+        @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
 
     .ds-link:focus:not(:focus-visible) {
         @apply shadow-none;
+    }
+
+    .ds-link-inset  {
+        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-current ;    
+    }
+
+    .ds-link-inset:focus:not(:focus-visible) {
+        @apply shadow-none;     
     }
 
     .ds-teaser-focus {
@@ -125,5 +142,122 @@
 
     .ds-teaser-focus:focus {
         @apply outline-none;
+    }
+/* ----------------Content NAV------------------ */
+/* ---------------- NAV ITEMS ------------------ */
+    .content-nav-item {
+        @apply h-10;    
+        @apply text-base;
+        @apply font-copy;
+        @apply list-none;
+        @apply border-button;
+        @apply fill-content-nav;
+        @apply text-content-nav;
+        @apply bg-white;
+        @apply hover:bg-content-nav;
+        @apply hover:fill-white;
+        @apply hover:text-white;
+        @apply hover:underline;
+    }
+/* ----------------LIST - NAV ITEMS ------------------ */
+    .content-nav-item.content-nav-item-list {
+        @apply w-full;
+        @apply border;
+        @apply hover:no-underline;
+    }
+    .teaser-size-100 .content-nav-item.content-nav-item-list,
+    .teaser-size-66 .content-nav-item.content-nav-item-list {
+        @apply w-full;
+        @apply md:w-fit;
+    }
+/* ----------------FLOW - NAV ITEMS ------------------ */
+    .content-nav-item.content-nav-item-flow {
+        @apply w-fit;
+        @apply border;
+        @apply hover:no-underline;
+    }
+/* ----------------MIXED - NAV ITEMS ------------------ */
+    .teaser-size-100 .content-nav-item.content-nav-item-mixed,
+    .teaser-size-66 .content-nav-item.content-nav-item-mixed {
+        @apply md:w-fit;
+        @apply md:mb-2;
+        @apply md:mx-0;
+        @apply md:mr-2;
+        @apply md:!border;
+        @apply md:border-content-nav;
+        @apply md:hover:no-underline;
+        @apply md:hover:text-white;
+        @apply md:hover:!bg-content-nav;
+        @apply md:hover:!fill-white;
+
+    }
+    .content-nav-item.content-nav-item-mixed {
+        @apply w-full;
+        @apply mb-0;
+        @apply border-l-0;
+        @apply border-r-0;
+        @apply border-t-0;
+        @apply border-b;
+        @apply last:border-b-0;
+        @apply border-gray-400;
+        @apply hover:underline;
+        @apply hover:text-content-nav;
+        @apply hover:!bg-white;
+        @apply hover:!fill-content-nav;
+    }
+/* ----------------DROPDOWN - NAV ITEMS ------------------ */    
+    .content-nav-item.content-nav-item-dropdown {
+        @apply w-full;
+        @apply border-gray-400;
+        @apply border-b;
+        @apply last:border-b-0;
+        @apply hover:underline;
+        @apply hover:text-content-nav;
+        @apply hover:!bg-white;
+        @apply hover:!fill-content-nav;
+                
+    }
+/* ---------------- NAV DROPDOWN - DROPDOWN ------------------ */
+    .content-nav-dropdown_dropdown.-isDropdown  {
+        @apply flex;
+    }
+    .content-nav-dropdown_dropdown.-isMixed  {
+        @apply flex;
+    }
+    .teaser-size-100 .content-nav-dropdown_dropdown.-isMixed,
+    .teaser-size-66 .content-nav-dropdown_dropdown.-isMixed  {
+        @apply flex;
+        @apply md:hidden;
+    }
+/* ---------------- NAV DROPDOWN - CONTENT ------------------ */
+    .content-nav-dropdown_content.-isOpen {
+        @apply z-9999;
+        @apply shadow-lg;
+    }
+
+    .content-nav-dropdown_content.-isDropdown.-isClosed {
+        @apply z-1003;
+        @apply hidden;
+    }
+/* ---------------- NAV DROPDOWN - CONTENT - MIXED------------------ */    
+    .content-nav-dropdown_content.-isMixed {        
+        @apply hidden;
+    }
+    .teaser-size-100 .content-nav-dropdown_content.-isMixed,
+    .teaser-size-66 .content-nav-dropdown_content.-isMixed  {        
+        @apply md:block;
+    }
+    .content-nav-dropdown_content.-isMixed.-isOpen {
+        @apply block;
+    }
+    .teaser-size-100 .content-nav-dropdown_content.-isMixed.-isOpen,
+    .teaser-size-66 .content-nav-dropdown_content.-isMixed.-isOpen {
+        @apply md:shadow-none;
+    }
+    .teaser-size-100 .content-nav-dropdown_content.-isMixed.-isClosed,
+    .teaser-size-66 .content-nav-dropdown_content.-isMixed.-isClosed {
+        @apply z-1003;
+        @apply hidden;
+        @apply md:block;
     }
 }

@@ -33,6 +33,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Sendungsdokument */
     --color-label-program: theme('colors.blue.pacificBlue');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Eventkalender */
@@ -95,6 +97,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
@@ -152,6 +156,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.purple.jazzberry');
     /* Subline */
@@ -203,6 +209,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.blue.jellyBean');
     /* Subline */
@@ -255,6 +263,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
     /* Subline */
@@ -307,6 +317,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
     /* Subline */
@@ -357,6 +369,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.red.wellRead');
     /* Subline */
@@ -407,6 +421,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.blue.teal');
     /* Subline */
@@ -459,6 +475,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
     --color-label-pm: var(--color-primary);
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: var(--color-primary);
     /* Subline */
@@ -509,6 +527,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.yellow.olive');
     /* Subline */
@@ -559,6 +579,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.red.paprika');
     /* Subline */
@@ -610,6 +632,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: var(--color-primary);
     /* Subline */
@@ -661,6 +685,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: theme('colors.green.eden');
     /* Subline */
@@ -712,6 +738,8 @@
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
+    /* Kurzmeldung */
+    --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: var(--color-link);
     /* Subline */
