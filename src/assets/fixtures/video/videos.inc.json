@@ -69,9 +69,10 @@
         },
         "playerId": "8423",
         "type": "videoOndemand",
-        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
-        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.11.79310671.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.11.c442fe17.js",
         "isAutoplay": true,
+        "isPlayerDebug": true,
         "teaserSize": "100",
         "realTeaserSize": "100"
     },
@@ -136,8 +137,8 @@
         },
         "playerId": "6819",
         "type": "videoLivestream",
-        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.4fc164e9.css",
-        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.4.8ea4ea3d.js",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.3.11.79310671.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.3.11.c442fe17.js",
         "teaserSize": "100",
         "realTeaserSize": "100",
         "isAutoplay": true
