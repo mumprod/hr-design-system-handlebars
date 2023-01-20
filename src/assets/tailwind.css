@@ -68,8 +68,7 @@
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border Radius */
-    --border-radius-top-left: '@apply rounded-tl-3xl';
-    --border-radius-bottom-right: '@apply rounded-br-3xl';
+    --border-radius-hr: theme('borderRadius.none'); ;
 }
 
 [data-theme='hessenschau'] {
