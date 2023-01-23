@@ -1,3 +1,15 @@
+# v0.121.4 (Mon Jan 23 2023)
+
+#### 🐛 Bug Fix
+
+- :art: Correct rounded corner for group teaser [#496](https://github.com/mumprod/hr-design-system-handlebars/pull/496) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.121.3 (Fri Jan 20 2023)
 
 #### 🐛 Bug Fix
