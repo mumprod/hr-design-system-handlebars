@@ -35,7 +35,7 @@
             </figure>
         </div>
     </div>
-    {{#unless _isExcerpt}}
+    {{#if _withConcertInfo}}
         {{#with this.concertInfo}}
             {{#unless this.isEmpty}}
             <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
@@ -43,5 +43,5 @@
             </div>
             {{/unless}}
         {{/with}}
-    {{/unless}}
+    {{/if}}
 </div>

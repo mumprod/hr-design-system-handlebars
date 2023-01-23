@@ -149,13 +149,13 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story
         name="Event Calendar Teaser"
         argTypes={{
-            _isExcerpt: {
+            _withConcertInfo: {
                 control: 'boolean',
-                defaultValue: true,
+                defaultValue: false,
             },
         }}
         args={teaserEventCalendar100Serif.logicItem.includeModel.eventCalendar}
     >
-        {teaserEventCalendar.bind({})}
+        {TemplateEventCalendarTeaser.bind({})}
     </Story>
 </Preview>
