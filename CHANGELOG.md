@@ -1,3 +1,15 @@
+# v0.121.5 (Mon Jan 23 2023)
+
+#### 🐛 Bug Fix
+
+- fixed margins and paddings for indextext and accented group [#497](https://github.com/mumprod/hr-design-system-handlebars/pull/497) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.121.4 (Mon Jan 23 2023)
 
 #### 🐛 Bug Fix
