@@ -110,7 +110,7 @@
     }
 
     .ds-link-inset:focus:not(:focus-visible) {
-        @apply shadow-none;     
+        @apply ring-0;     
     }
 
     .ds-teaser-focus {
