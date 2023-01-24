@@ -291,7 +291,7 @@ module.exports = {
                 'yellow': {
                     corn: '#e0ae00',
                     goldenSand: '#f2da6c',
-                    olive: '#916B00FF',
+                    olive: '#916B00',
                     givry: '#f7ebbf',
                     sunshine: '#ffb114',
                 },

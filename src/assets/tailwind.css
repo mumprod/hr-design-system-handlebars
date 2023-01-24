@@ -158,6 +158,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: theme('colors.purple.jazzberry');
     /* Subline */
@@ -211,6 +213,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: theme('colors.blue.jellyBean');
     /* Subline */
@@ -265,6 +269,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
     /* Subline */
@@ -319,6 +325,8 @@
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: theme('colors.blue.deepCerulean');
     /* Dachzeile */
     --color-topline: theme('colors.blue.deepCerulean');
     /* Subline */
@@ -371,6 +379,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: theme('colors.red.wellRead');
     /* Subline */
@@ -423,6 +433,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: theme('colors.blue.teal');
     /* Subline */
@@ -477,6 +489,8 @@
     --color-label-pm: var(--color-primary);
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: var(--color-primary);
     /* Subline */
@@ -529,10 +543,12 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: theme('colors.blue.turquoiseCerulian');
     /* Dachzeile */
     --color-topline: theme('colors.yellow.olive');
     /* Subline */
-    --color-subline: var(--color-topline);
+    --color-subline: theme('colors.yellow.olive');
     /* Link */
     --color-link: theme('colors.yellow.olive');
     /* Stage */
@@ -581,6 +597,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: theme('colors.red.paprika');
     /* Dachzeile */
     --color-topline: theme('colors.red.paprika');
     /* Subline */
@@ -634,6 +652,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: var(--color-primary);
     /* Subline */
@@ -687,6 +707,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
     --color-topline: theme('colors.green.eden');
     /* Subline */
@@ -740,6 +762,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Eventkalender */
+    --color-eventcalendar-primary: var(--color-link);
     /* Dachzeile */
     --color-topline: var(--color-link);
     /* Subline */
