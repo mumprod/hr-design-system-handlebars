@@ -1,3 +1,15 @@
+# v0.121.7 (Tue Jan 24 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2031 Anzahl Kommentare wird nicht angezeigt [#500](https://github.com/mumprod/hr-design-system-handlebars/pull/500) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v0.121.6 (Tue Jan 24 2023)
 
 #### 🐛 Bug Fix
