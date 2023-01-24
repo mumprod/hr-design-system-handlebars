@@ -1,3 +1,15 @@
+# v0.121.6 (Tue Jan 24 2023)
+
+#### 🐛 Bug Fix
+
+- add ring-0 to ds-link-inset @ :not(:focus-visible) [#498](https://github.com/mumprod/hr-design-system-handlebars/pull/498) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.121.5 (Mon Jan 23 2023)
 
 #### 🐛 Bug Fix
