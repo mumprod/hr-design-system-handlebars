@@ -1,30 +1,32 @@
 <div class="border-none h-full">
     <div class="relative">
-        <div class="flex flex-col sm:flex-row basis-full order-none align-top box-border">
-            <div class="basis-full w-full order-2 py-1 sm:basis-7/12 sm:w-7/12 sm:order-1 h-full flex">
-                <div class="flex flex-col  basis-2/12 align-top items-center justify-center px-4 py-3  border-dotted border-r border-event-calendar-secondary">
+        <div class="flex flex-col items-stretch sm:flex-row">
+            <div class="flex basis-full w-full order-2 py-1 sm:basis-7/12 sm:w-7/12 sm:order-1">
+                <div class="flex flex-col  basis-2/12 w-2/12 align-top items-center justify-center px-4 py-3  border-dotted border-r border-event-calendar-secondary">
                     {{#with this.startDate}}
-                        <span class='text-sm font-serif'>{{this.weekdayNameShort}}</span>
-                        <span class='text-2xl font-serif font-bold'>{{this.day}}</span>
-                        <span class='text-sm font-serif'>{{this.monthNameShort}}</span>
+                        <span class='text-base font-serif'>{{this.weekdayNameShort}}</span>
+                        <span class='text-3xl font-serif font-bold'>{{this.day}}</span>
+                        <span class='text-base font-serif'>{{this.monthNameShort}}</span>
                     {{/with}}
                 </div>
                 <div class="flex flex-col items-center basis-10/12 w-10/12">
                     <div class="absolute top-0 left-0 w-full sm:static">
                         <div class="ar-4-3 sm:ar-auto">
-                            <div class="absolute bottom-0 left-0 p-4 sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent">
-                                {{> components/teaser/components/teaser_heading 
-                                    _fontVariant=this.headingFontVariant
-                                    _headlineTag="h3"
-                                    _label=this.label 
-                                    _title=this.title 
-                                    _topline=this.topline 
-                                    _teaserType="calendar"
-                                    _toplineCss="mt-4"}}      
-                                {{~#partial "headlineEnd"~}}
-                                    {{> components/event/event_tags this.eventtags}}    
-                                {{/partial}}  
-                            </div>
+                            <header class="absolute bottom-0 left-0 p-4 sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent">
+                                {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
+                                    {{> components/teaser/components/teaser_heading 
+                                        _fontVariant=this.headingFontVariant
+                                        _headlineTag="h3"
+                                        _label=this.label 
+                                        _title=this.title 
+                                        _topline=this.topline 
+                                        _teaserType="calendar"
+                                        _toplineCss="mt-4"}}      
+                                    {{~#partial "headlineEnd"~}}
+                                        {{> components/event/event_tags this.eventtags}}    
+                                    {{/partial}} 
+                                {{/decorator}}
+                            </header>
                         </div>
                     </div>
                     {{> components/event/event_details this}}

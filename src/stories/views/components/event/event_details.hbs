@@ -4,7 +4,7 @@
         <div class="min-w-3 min-h-3">
             {{> components/base/image/icon _icon="clock" _iconmap="icons" _addClass="w-5 h-5 fill-event-calendar-secondary" }}
         </div>
-        <time class='text-l pl-4 font-sans font-bold'>{{loca "date_simple_at" this.time}}</time>
+        <time class='text-base pl-4 font-sans font-bold'>{{loca "date_simple_at" this.time}}</time>
     </div>
     {{/with}}
     {{#with this.venue}}
@@ -12,8 +12,8 @@
         <div class="min-w-3 min-h-3">
             {{> components/base/image/icon _icon="ortsmarke" _iconmap="icons" _addClass="w-5 h-5 fill-event-calendar-secondary" }}
         </div>
-        <div class='flex flex-col text-md pl-4 font-sans font-bold w-full'>{{this.addressCity}}
-            <div class="font-normal">{{this.title}}</div>
+        <div class='flex flex-col text-base pl-4 font-sans font-bold w-full'>{{this.addressCity}}
+            <span class="font-normal">{{this.title}}</span>
         </div>
     </div>
     {{/with}}
