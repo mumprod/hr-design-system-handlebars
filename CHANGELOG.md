@@ -1,3 +1,15 @@
+# v0.121.10 (Tue Jan 24 2023)
+
+#### 🐛 Bug Fix
+
+- moves click.outside to nav element [#502](https://github.com/mumprod/hr-design-system-handlebars/pull/502) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.121.9 (Tue Jan 24 2023)
 
 #### 🐛 Bug Fix
