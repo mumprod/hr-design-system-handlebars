@@ -1,3 +1,18 @@
+# v0.121.8 (Tue Jan 24 2023)
+
+#### 🐛 Bug Fix
+
+- Change clusterTeaser-Headline fontsize to 14px [#499](https://github.com/mumprod/hr-design-system-handlebars/pull/499) (saad.elbaciri@hr.de [@szuelch](https://github.com/szuelch) [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 4
+
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.121.7 (Tue Jan 24 2023)
 
 #### 🐛 Bug Fix
