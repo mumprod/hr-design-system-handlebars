@@ -1,3 +1,15 @@
+# v0.121.13 (Wed Jan 25 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2035 Teaser-Logik für Hero-Teaser [#503](https://github.com/mumprod/hr-design-system-handlebars/pull/503) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.121.12 (Wed Jan 25 2023)
 
 #### 🐛 Bug Fix
