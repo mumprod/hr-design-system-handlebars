@@ -10,7 +10,7 @@
                 :class="{'ar-16-9 basis-full w-full' : avStart, 'ar-1-1 basis-2/5 w-2/5': !avStart}"
             {{/if}}
         >
-            {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _realTeaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio=(inline-switch this.realTeaserSize '["hero"]' '["ar-16-9","ar-1-1 md:ar-16-9"]') }} 
+            {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio=(inline-switch this.realTeaserSize '["hero"]' '["ar-16-9","ar-1-1 md:ar-16-9"]') }} 
         </figure>
         {{> components/teaser/components/teaser_body _outerCssClasses=(inline-switch this.realTeaserSize '["hero","100","50"]' '["basis-full w-full md:basis-1/3 md:w-1/3"," basis-3/5 w-3/5 md:basis-2/3 md:w-2/3"," basis-3/5 w-3/5 md:basis-1/2 md:w-1/2"]') }}
     {{else}}
