@@ -1,3 +1,27 @@
+# v0.121.12 (Wed Jan 25 2023)
+
+#### 🐛 Bug Fix
+
+- new icon for "extern" [#505](https://github.com/mumprod/hr-design-system-handlebars/pull/505) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.121.11 (Wed Jan 25 2023)
+
+#### 🐛 Bug Fix
+
+- improve accessibility part 2 [#504](https://github.com/mumprod/hr-design-system-handlebars/pull/504) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.121.10 (Tue Jan 24 2023)
 
 #### 🐛 Bug Fix

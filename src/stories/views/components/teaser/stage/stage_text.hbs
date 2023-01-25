@@ -3,13 +3,13 @@
     {{#decorator 'components/base/link' _css="ds-teaser-focus before:rounded-2xl"}}
         {{> components/teaser/components/teaser_heading _titleCss="text-stageText" _toplineCss="!text-stageText" _labelCss="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
         {{#if this.showProfileInfoAsByline}}
-            <p class="text-stageText font-headingSerif block my-3">{{this.profiles}}</p>
+            <p class="block my-3 text-stageText font-headingSerif">{{this.profiles}}</p>
         {{/if}}
         {{#if this.showShorttext}}
         <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
             {{#if this.link.hasIcon}}
             <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
-                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 fill-current ml-1" }}]
+                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 self-baseline fill-current ml-1" }}]
             </span>
             {{/if}}
         {{/if}}
@@ -29,7 +29,7 @@
         {{/with}}
         {{#if this.link.hasIcon}}
             <span class="block mt-4 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
-                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline w-5 h-5 fill-current ml-1" }}]
+                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline w-5 h-5 self-baseline fill-current ml-1" }}]
             </span>
         {{/if}}
         {{/decorator}}
