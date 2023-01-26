@@ -1,0 +1,11 @@
+<div class="js-fr-content">
+    {{#each this.months}}
+        {{#each this.days}}
+            {{#each this.instants}}
+                {{#unless this.isDateInstant}}
+                    {{> components/event/calendar/event_calendar_event_item _showItem=../this.isFirstAvailable _withConcertInfo=../../../_withConcertInfo}}
+                {{/unless}}
+            {{/each}}
+        {{/each}}
+    {{/each}}
+</div>
