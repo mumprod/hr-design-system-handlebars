@@ -1,3 +1,15 @@
+# v0.121.14 (Thu Jan 26 2023)
+
+#### 🐛 Bug Fix
+
+- refactoring teaser text [#506](https://github.com/mumprod/hr-design-system-handlebars/pull/506) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.121.13 (Wed Jan 25 2023)
 
 #### 🐛 Bug Fix
