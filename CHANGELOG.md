@@ -1,3 +1,15 @@
+# v0.121.15 (Thu Jan 26 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2039 Tracking for Teasers [#507](https://github.com/mumprod/hr-design-system-handlebars/pull/507) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.121.14 (Thu Jan 26 2023)
 
 #### 🐛 Bug Fix
