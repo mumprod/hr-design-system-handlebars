@@ -3,7 +3,7 @@
         {{#each this.days}}
             {{#each this.instants}}
                 {{#unless this.isDateInstant}}
-                    {{> components/event/calendar/event_calendar_event_item _showItem=../this.isFirstAvailable _withConcertInfo=../../../_withConcertInfo}}
+                    {{> components/event/calendar/event_calendar_event_teaser _showTeaser=../this.isFirstAvailable _withConcertInfo=../../../_withConcertInfo}}
                 {{/unless}}
             {{/each}}
         {{/each}}

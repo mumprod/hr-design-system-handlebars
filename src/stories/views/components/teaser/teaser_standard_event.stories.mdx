@@ -149,9 +149,17 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story
         name="Event Calendar Teaser"
         argTypes={{
-            _withConcertInfo: {
-                control: 'boolean',
-                defaultValue: false,
+            teaserSize: {
+                control: {
+                    type: 'select',
+                    options: ['50', '100'],
+                },
+                description: 'Teaser Größe',
+                table: {
+                    defaultValue: {
+                        summary: '100',
+                    },
+                },
             },
         }}
         args={teaserEventCalendar100Serif.logicItem.includeModel}

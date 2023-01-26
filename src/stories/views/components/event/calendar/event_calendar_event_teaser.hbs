@@ -1,49 +1,51 @@
-<div class="border-none h-full">
-    <div class="relative">
-        <div class="flex flex-col items-stretch sm:flex-row">
-            <div class="flex basis-full w-full order-2 py-1 sm:basis-7/12 sm:w-7/12 sm:order-1">
-                <div class="flex flex-col  basis-2/12 w-2/12 align-top items-center justify-center px-4 py-3  border-dotted border-r border-event-calendar-secondary">
-                    {{#with this.startDate}}
-                        <span class='text-base font-serif'>{{this.weekdayNameShort}}</span>
-                        <span class='text-3xl font-serif font-bold'>{{this.day}}</span>
-                        <span class='text-base font-serif'>{{this.monthNameShort}}</span>
-                    {{/with}}
-                </div>
-                <div class="flex flex-col items-center basis-10/12 w-10/12">
-                    <div class="absolute top-0 left-0 w-full sm:static">
-                        <div class="ar-4-3 sm:ar-auto">
-                            <header class="absolute bottom-0 left-0 p-4 sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent">
-                                {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
-                                    {{> components/teaser/components/teaser_heading 
-                                        _fontVariant=this.headingFontVariant
-                                        _headlineTag="h3"
-                                        _label=this.label 
-                                        _title=this.title 
-                                        _topline=this.topline 
-                                        _teaserType="calendar"
-                                        _toplineCss="mt-4"}}      
-                                    {{~#partial "headlineEnd"~}}
-                                        {{> components/event/event_tags this.eventtags}}    
-                                    {{/partial}} 
-                                {{/decorator}}
-                            </header>
-                        </div>
+<article id="{{this.startDate.htmlDate}}" class="flex col-span-12 md:flex-row gap-y-3 gap-x-4 md:px-0 js-fr-target{{#unless @first}} border-t border-event-calendar-secondary{{/unless}}{{#unless _showTeaser}} hidden{{/unless}}" x-data="{ avStart: false }">
+    <div class="border-none h-full">
+        <div class="relative">
+            <div class="flex flex-col items-stretch sm:flex-row">
+                <div class="flex basis-full w-full order-2 py-1 sm:basis-7/12 sm:w-7/12 sm:order-1">
+                    <div class="flex flex-col  basis-2/12 w-2/12 align-top items-center justify-center px-4 py-3  border-dotted border-r border-event-calendar-secondary">
+                        {{#with this.startDate}}
+                            <span class='text-base font-serif'>{{this.weekdayNameShort}}</span>
+                            <span class='text-3xl font-serif font-bold'>{{this.day}}</span>
+                            <span class='text-base font-serif'>{{this.monthNameShort}}</span>
+                        {{/with}}
                     </div>
-                    {{> components/event/event_details this}}
-                </div> 
+                    <div class="flex flex-col items-center basis-10/12 w-10/12">
+                        <div class="absolute top-0 left-0 w-full sm:static">
+                            <div class="ar-4-3 sm:ar-auto">
+                                <header class="absolute bottom-0 left-0 p-4 sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent">
+                                    {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
+                                        {{> components/teaser/components/teaser_heading 
+                                            _fontVariant=this.headingFontVariant
+                                            _headlineTag="h3"
+                                            _label=this.label 
+                                            _title=this.title 
+                                            _topline=this.topline 
+                                            _teaserType="calendar"
+                                            _toplineCss="mt-4"}}      
+                                        {{~#partial "headlineEnd"~}}
+                                            {{> components/event/event_tags this.eventtags}}    
+                                        {{/partial}} 
+                                    {{/decorator}}
+                                </header>
+                            </div>
+                        </div>
+                        {{> components/event/event_details this}}
+                    </div> 
+                </div>
+                <figure class="basis-full w-full order-1 sm:basis-5/12 sm:w-5/12 sm:order-2 ar-4-3 sm:ar-16-9">
+                    {{> components/base/image/responsive_image this.image _type="event-teaser" _variant="100" _addClass="w-full"}}
+                </figure>
             </div>
-            <figure class="basis-full w-full order-1 sm:basis-5/12 sm:w-5/12 sm:order-2 ar-4-3 sm:ar-16-9">
-                {{> components/base/image/responsive_image this.image _type="event-teaser" _variant="100" _addClass="w-full"}}
-            </figure>
         </div>
+        {{#if _withConcertInfo}}
+            {{#with this.concertInfo}}
+                {{#unless this.isEmpty}}
+                <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
+                    {{> components/event/concert_info}}
+                </div>
+                {{/unless}}
+            {{/with}}
+        {{/if}}
     </div>
-    {{#if _withConcertInfo}}
-        {{#with this.concertInfo}}
-            {{#unless this.isEmpty}}
-            <div class="flex flex-col grow-0 shrink basis-full py-7 w-full border-event-calendar-secondary border-t border-dotted">
-                {{> components/event/concert_info}}
-            </div>
-            {{/unless}}
-        {{/with}}
-    {{/if}}
-</div>
+</article>
