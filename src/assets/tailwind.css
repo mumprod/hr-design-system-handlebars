@@ -71,6 +71,8 @@
     --font-weight-title: theme('fontWeight.bold');
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
+    /* Border Radius */
+    --border-radius-hr: theme('borderRadius.none'); ;
 }
 
 [data-theme='hessenschau'] {
@@ -134,6 +136,8 @@
     --font-weight-title: theme('fontWeight.normal');
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
+     /* Border */
+    --border-radius-hr: theme('borderRadius.3xl'); 
 }
 
 [data-theme='hr-fernsehen'] {
@@ -738,6 +742,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Border */
+    --border-radius-hr: theme('borderRadius.3xl'); 
 }
 
 [data-theme='you-fm'] {

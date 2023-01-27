@@ -1,9 +1,9 @@
-<article class="mx-5 sm:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.realTeaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+<article class="mx-5 sm:mx-0 relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
     <figure class="ar-1-1" aria-hidden="true">
-        {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-3xl rounded-br-3xl" ~}}
+        {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
     </figure> 
-    <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-3xl rounded-br-3xl" aria-hidden="true">
-        {{#decorator 'components/base/link' _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-3xl before:rounded-br-3xl hover:text-toplineColor"}} 
+    <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
+        {{#decorator 'components/base/link' _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
             {{> components/teaser/components/teaser_heading 
             _headlineTag="h2" 
             _headlineCss="text-shadow text-center text-white mb-4 mx-4 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5" 

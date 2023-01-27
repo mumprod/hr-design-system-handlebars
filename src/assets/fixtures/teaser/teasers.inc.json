@@ -1292,10 +1292,10 @@
                     ]
                 },
                 "commentsSsi": {
-                    "commentNumber": "666",
-                    "hasOneComment": false,
-                    "hasManyComments": true,
                     "commentLink": {
+                        "commentNumber": "1",
+                        "hasOneComment": true,
+                        "hasManyComments": false,
                         "link": {
                             "url": "/teaser1-comments",
                             "webviewUrl": "/teaser1-comments#webview",

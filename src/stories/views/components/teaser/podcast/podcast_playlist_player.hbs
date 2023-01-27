@@ -18,21 +18,15 @@
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
-        {{!-- Shorttext --}}
-        {{#unless _isSinglePage}}
-          {{#unless this.hideShortText}}
-            {{~#with this.shorttext}}
-              <div class="hidden pb-6 text-sm md:flex md:text-base font-copy">
-                <span class="c-teaser__shorttext"> {{this}} </span>
-              </div>
-            {{/with~}}
-          {{/unless}}
-        {{/unless}}
-
+        {{#switch this.teaserSize }}
+          {{#case 100}}
+            {{> components/teaser/podcast/podcast_playlist_shorttext}}
+          {{/case}}
+        {{/switch}}
       </div>
 
       {{!-- Podcast Image --}}
-      <div class="flex flex-col ">
+      <div class="flex flex-col pb-5">
         <div class="w-24 md:w-32 lg:w-42">
           {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
@@ -43,8 +37,16 @@
           }}
         </div>
       </div>
-
     </div>
+
+    {{#switch this.teaserSize }}
+      {{#case 50}}
+        <div class="flex flex-row w-full px-5 md:pl-5">
+          {{> components/teaser/podcast/podcast_playlist_shorttext}}
+        </div>
+      {{/case}}
+    {{/switch}}
+    
     {{!-- Abo-Dropdown --}}
     <div class="flex flex-row px-5 md:pr-0"> 
       {{> components/teaser/podcast/podcast_subscribe_button}}
