@@ -5,10 +5,6 @@
             "@->contentpath": "eventDate"
         },
         "hasSelectedEvents": true,
-        "hasFutureEventsFromNow": true,
-        "isCurrentMonth": true,
-        "hasDays": true,
-        "hasInstants": true,
-        "isStartOfWeek": true
+        "hasFutureEventsFromNow": true
     }
 }
