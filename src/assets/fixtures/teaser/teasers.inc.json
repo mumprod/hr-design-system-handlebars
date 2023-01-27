@@ -1831,7 +1831,7 @@
                 "title": "Konzertkalender",
                 "eventCalendar": {
                     "months": {
-                        "@->jsoninclude": "event/event_calendar_months.inc.json",
+                        "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
                         "@->contentpath": "eventDate"
                     },
                     "hasSelectedEvents": true,
