@@ -1,6 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaserEventCalendar from '../../components/teaser/teaser_event_calendar.hbs'
 import teaserEventCalendar100Serif from './fixtures/teaser_event_calendar_100_serif.json'
+import teaserEventCalendarWithNoFutureEventsData from './fixtures/teaser_event_calendar_100_no_future_events.json'
 
 <Meta
     title="Komponenten/Teaser/Eventkalender"
@@ -104,6 +105,26 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
             },
         }}
         args={teaserEventCalendar100Serif.logicItem.includeModel}
+    >
+        {TemplateEventCalendarTeaser.bind({})}
+    </Story>
+    <Story
+        name="Teaser 100 Keine Events in der Zukunft"
+        argTypes={{
+            teaserSize: {
+                control: {
+                    type: 'select',
+                    options: ['50', '100'],
+                },
+                description: 'Teaser Größe',
+                table: {
+                    defaultValue: {
+                        summary: '100',
+                    },
+                },
+            },
+        }}
+        args={teaserEventCalendarWithNoFutureEventsData.logicItem.includeModel}
     >
         {TemplateEventCalendarTeaser.bind({})}
     </Story>

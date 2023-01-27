@@ -1,0 +1,24 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "eventCalendarTeaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.eventCalendar.hasFutureEventsFromNow",
+            "@->value": false
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.eventCalendar.months",
+            "@->value": {
+                "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
+                "@->contentpath": "onlyMonthsInPast"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "eventLabelCalendar"
+            }
+        }
+    ]
+}

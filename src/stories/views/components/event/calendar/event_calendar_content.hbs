@@ -8,4 +8,11 @@
             {{/each}}
         {{/each}}
     {{/each}}
+    {{#unless this.hasFutureEventsFromNow}}
+        <article class="p-4 js-fr-error-target">
+            <p class="">
+                {{loca "event_calendar_no_events_available"}}
+            </p>
+        </article>
+    {{/unless}}
 </div>
