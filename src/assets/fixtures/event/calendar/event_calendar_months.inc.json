@@ -316,8 +316,10 @@
             ]
         },
         {
-            "now": "2023-01-09",
-            "urlProvider": "",
+            "date": {
+                "monthNameShort": "Jan",
+                "yearShort": "23"
+            },
             "year": "23",
             "monthName": "Jan",
             "hasDays": true,
