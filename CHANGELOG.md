@@ -1,3 +1,15 @@
+# v0.122.0 (Fri Jan 27 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: cluster-teaser uses svgs from [#509](https://github.com/mumprod/hr-design-system-handlebars/pull/509) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.121.15 (Thu Jan 26 2023)
 
 #### 🐛 Bug Fix
