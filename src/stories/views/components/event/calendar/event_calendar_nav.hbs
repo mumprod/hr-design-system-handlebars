@@ -12,7 +12,7 @@
                     this.isCurrentMonth}} -currentMonth{{/if}}{{#if
                     this.hasFutureEventsFromNow}} -selected{{/if}}{{#unless
                     this.hasFutureEventsFromNow}} js-fr-reload-trigger{{/unless}}">
-                    <span class="block font-heading font-bold w-24 sticky left-0 px-2 py-3 ">{{this.monthName}} {{this.year}}</span>
+                    <span class="block font-heading font-bold w-24 sticky left-0 px-2 py-3 ">{{this.date.monthNameShort}} {{this.date.yearShort}}</span>
                     <ul class="flex">
                         {{#each this.days}}
                             <li class="inline-block h-full group cursor-pointer js-ns-item{{#if

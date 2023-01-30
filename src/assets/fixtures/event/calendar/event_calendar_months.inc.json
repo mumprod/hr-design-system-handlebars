@@ -1,10 +1,10 @@
 {
     "eventDate": [
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "21",
-            "monthName": "Mai",
+            "date": {
+                "monthNameShort": "Mai",
+                "yearShort": "21"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -64,10 +64,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "21",
-            "monthName": "Jun",
+            "date": {
+                "monthNameShort": "Jun",
+                "yearShort": "21"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -127,10 +127,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "21",
-            "monthName": "Jul",
+            "date": {
+                "monthNameShort": "Jul",
+                "yearShort": "21"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -190,10 +190,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "21",
-            "monthName": "Aug",
+            "date": {
+                "monthNameShort": "Aug",
+                "yearShort": "21"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -253,10 +253,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "21",
-            "monthName": "Sep",
+            "date": {
+                "monthNameShort": "Sep",
+                "yearShort": "21"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -320,8 +320,6 @@
                 "monthNameShort": "Jan",
                 "yearShort": "23"
             },
-            "year": "23",
-            "monthName": "Jan",
             "hasDays": true,
             "isCurrentMonth": true,
             "hasFutureEventsFromNow": true,
@@ -599,10 +597,10 @@
             ]
         },
         {
-            "now": "2023-02-09",
-            "urlProvider": "",
-            "year": "23",
-            "monthName": "Feb",
+            "date": {
+                "monthNameShort": "Feb",
+                "yearShort": "23"
+            },
             "hasDays": true,
             "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
             "days": [
@@ -782,10 +780,10 @@
             ]
         },
         {
-            "now": "2023-03-09",
-            "urlProvider": "",
-            "year": "23",
-            "monthName": "Mar",
+            "date": {
+                "monthNameShort": "Mär",
+                "yearShort": "23"
+            },
             "hasDays": true,
             "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
             "days": [
@@ -967,10 +965,10 @@
     ],
     "onlyMonthsInPast": [
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "22",
-            "monthName": "Mai",
+            "date": {
+                "monthNameShort": "Mai",
+                "yearShort": "22"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -1030,10 +1028,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "22",
-            "monthName": "Jun",
+            "date": {
+                "monthNameShort": "Jun",
+                "yearShort": "22"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -1093,10 +1091,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "22",
-            "monthName": "Jul",
+            "date": {
+                "monthNameShort": "Jul",
+                "yearShort": "22"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -1156,10 +1154,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "22",
-            "monthName": "Aug",
+            "date": {
+                "monthNameShort": "Aug",
+                "yearShort": "22"
+            },
             "hasDays": true,
             "days": [
                 {
@@ -1219,10 +1217,10 @@
             ]
         },
         {
-            "now": "2022-08-29",
-            "urlProvider": "",
-            "year": "22",
-            "monthName": "Dez",
+            "date": {
+                "monthNameShort": "Dez",
+                "yearShort": "22"
+            },
             "hasDays": true,
             "days": [
                 {
