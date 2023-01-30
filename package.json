@@ -24,7 +24,8 @@
         "parseJson": "gulp parseJson",
         "partialsToJs": "gulp convertPartialsToJs",
         "create-modernizr-config": "gulp createModernizrConfig",
-        "merge-locatags": "gulp mergeLocatags"
+        "merge-locatags": "gulp mergeLocatags",
+        "merge-loca": "gulp mergeLoca"
     },
     "browserslist": [
         "last 2 versions",
@@ -59,6 +60,7 @@
         "gulp-cheerio": "^1.0.0",
         "gulp-cli": "^2.3.0",
         "gulp-concat": "^2.6.1",
+        "gulp-debug": "^4.0.0",
         "gulp-file-cache": "^0.0.1",
         "gulp-filter": "^7.0.0",
         "gulp-html-to-js": "^0.0.7",
