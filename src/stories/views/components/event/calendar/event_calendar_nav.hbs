@@ -10,8 +10,7 @@
             {{#each this}}
                 <div class="inline-block items-center justify-center border-event-calendar-secondary border-l js-ns-month {{#if
                     this.isCurrentMonth}} -currentMonth{{/if}}{{#if
-                    this.hasFutureEventsFromNow}} -selected{{/if}}{{#unless
-                    this.hasFutureEventsFromNow}} js-fr-reload-trigger{{/unless}}">
+                    this.hasFutureEventsFromNow}} -selected{{else}} js-fr-reload-trigger{{/if}}">
                     <span class="block font-heading font-bold w-24 sticky left-0 px-2 py-3 ">{{this.date.monthNameShort}} {{this.date.yearShort}}</span>
                     <ul class="flex">
                         {{#each this.days}}
