@@ -1,4 +1,5 @@
 const { src, dest, series, parallel, watch } = require('gulp')
+const debug = require('gulp-debug')
 const fs = require('fs')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
@@ -343,7 +344,10 @@ function mergeLocatags() {
             .map(function (brandDir) {
                 return src(`${brandDir}/conf/locatags.json`)
                     .pipe(
-                        mergeJson({ fileName: 'locatags.merged.json', startObj: defaultLocaTags })
+                        mergeJson({
+                            fileName: `locatags.merged.json`,
+                            startObj: defaultLocaTags,
+                        })
                     )
                     .pipe(dest(`${brandDir}/conf`))
             })
