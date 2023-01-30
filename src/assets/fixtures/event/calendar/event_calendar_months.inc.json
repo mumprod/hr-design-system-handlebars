@@ -326,7 +326,7 @@
             "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
             "days": [
                 {
-                    "isStartOfWeek": false,
+                    "isStartOfWeek": true,
                     "hasInstants": true,
                     "isFirstAvailable": true,
                     "instants": [
@@ -335,7 +335,7 @@
                             "startDate": {
                                 "htmlDate": "2023-01-09",
                                 "day": 9,
-                                "weekdayNameShort": "Fr",
+                                "weekdayNameShort": "Mo",
                                 "monthNameShort": "Jan"
                             },
                             "startTime": {
