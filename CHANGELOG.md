@@ -1,3 +1,15 @@
+# v0.122.2 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2048 - Flexbox percentage problem fix [#511](https://github.com/mumprod/hr-design-system-handlebars/pull/511) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.122.1 (Mon Jan 30 2023)
 
 #### 🐛 Bug Fix
