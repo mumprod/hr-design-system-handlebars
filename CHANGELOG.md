@@ -1,3 +1,15 @@
+# v0.122.3 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize & String for Switch statement [#512](https://github.com/mumprod/hr-design-system-handlebars/pull/512) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.122.2 (Tue Jan 31 2023)
 
 #### 🐛 Bug Fix
