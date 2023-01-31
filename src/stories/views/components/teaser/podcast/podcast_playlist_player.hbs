@@ -18,8 +18,8 @@
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
-        {{#switch this.teaserSize }}
-          {{#case 100}}
+        {{#switch this.realTeaserSize }}
+          {{#case "100"}}
             {{> components/teaser/podcast/podcast_playlist_shorttext}}
           {{/case}}
         {{/switch}}
@@ -39,8 +39,8 @@
       </div>
     </div>
 
-    {{#switch this.teaserSize }}
-      {{#case 50}}
+    {{#switch this.realTeaserSize }}
+      {{#case "50"}}
         <div class="flex flex-row w-full px-5 md:pl-5">
           {{> components/teaser/podcast/podcast_playlist_shorttext}}
         </div>
