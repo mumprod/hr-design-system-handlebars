@@ -1,3 +1,15 @@
+# v0.122.5 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- improve contrast-ratio [#514](https://github.com/mumprod/hr-design-system-handlebars/pull/514) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.122.4 (Tue Jan 31 2023)
 
 #### 🐛 Bug Fix
