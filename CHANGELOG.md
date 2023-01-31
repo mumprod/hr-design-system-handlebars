@@ -1,3 +1,15 @@
+# v0.122.4 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2050 - Fehlende Ränder in Schlagzeilenbox [#513](https://github.com/mumprod/hr-design-system-handlebars/pull/513) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.122.3 (Tue Jan 31 2023)
 
 #### 🐛 Bug Fix
