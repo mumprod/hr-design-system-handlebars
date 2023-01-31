@@ -18,12 +18,12 @@
     {{/if~}}
     {{~#with this.clusterTeaserItems}}
         {{~#if ../this.isOrdered}}
-            <ol class="mx-5 list-none divide-y divide-white divide-solid counter-reset border-t border-white{{~#if ../this.showFirstImageOrGenreImage}}{{~inline-switch ../this.teaserSize '["100"]' '[" md:-pt-5 md:mx-0 md:pr-5 md:border-none md:basis-1/2-gap-6 lg:basis-2/3-gap-6"]'}}{{/if~}}">
+            <ol class="mx-5 list-none divide-y divide-white divide-solid counter-reset border-t border-white{{~#if ../this.showFirstImageOrGenreImage}}{{~inline-switch ../this.realTeaserSize '["100"]' '[" md:-pt-5 md:mx-0 md:pr-5 md:border-none md:basis-1/2-gap-6 lg:basis-2/3-gap-6"]'}}{{/if~}}">
         {{else}}
-            <ul class="mx-5 divide-y divide-white divide-solid border-t border-white {{~#if ../this.showFirstImageOrGenreImage}}{{~inline-switch ../this.teaserSize '["100"]' '[" md:-pt-5 md:mx-0 md:pr-5 md:border-none md:basis-1/2-gap-6 lg:basis-2/3-gap-6"]'}}{{/if~}}">
+            <ul class="mx-5 divide-y divide-white divide-solid border-t border-white {{~#if ../this.showFirstImageOrGenreImage}}{{~inline-switch ../this.realTeaserSize '["100"]' '[" md:-pt-5 md:mx-0 md:pr-5 md:border-none md:basis-1/2-gap-6 lg:basis-2/3-gap-6"]'}}{{/if~}}">
         {{/if}}
             {{~#each this~}}
-                <li class="{{~#if ../../this.isOrdered}}-ordered{{/if}} py-3{{#unless ../../this.overviewLink.link}} last-of-type:pb-3{{/unless~}}{{~#if ../../this.showFirstImageOrGenreImage}}{{~inline-switch ../../this.teaserSize '["100"]' '[" md:first-of-type:pt-0"]'}}{{/if~}}">
+                <li class="{{~#if ../../this.isOrdered}}-ordered{{/if}} py-3{{#unless ../../this.overviewLink.link}} last-of-type:pb-3{{/unless~}}{{~#if ../../this.showFirstImageOrGenreImage}}{{~inline-switch ../../this.realTeaserSize '["100"]' '[" md:first-of-type:pt-0"]'}}{{/if~}}">
                     {{> components/teaser/cluster/teaser_cluster_item _size=../this.realTeaserSize _ordered=../../this.isOrdered }} 
                 </li>
             {{~/each}}
