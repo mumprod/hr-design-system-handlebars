@@ -105,4 +105,64 @@
         --color-text-shadow: theme('colors.black.DEFAULT');
         text-shadow: 1px 1px 2px var(--color-text-shadow, theme('colors.black.DEFAULT'));
     }
+
+    /*! *********************************************************/
+    /*! Prozentuale Breite bei Flexbox bei gleichzeitigem       */ 
+    /*! nutzen von column-gap funktioniert nicht richtig.       */
+    /*! Deshalb hier eine übergangslösung dafür.                */
+    /*! Langfristig sollten die Teaser auf Grid umgebaut werden */
+    /*! *********************************************************/
+ 
+    .basis-1\/3-gap-4 {
+        --gap: 1rem; 
+        width:calc((100% - (2 * var(--gap))) / 3 ); 
+        flex-basis:calc((100% - (2 * var(--gap))) / 3 )
+    }
+    .basis-2\/3-gap-4 {
+        --gap: 1rem; 
+        width:calc((((100% - (2 * var(--gap))) / 3 ) * 2) + var(--gap));
+        flex-basis:calc((((100% - (2 * var(--gap))) / 3 ) * 2) + var(--gap))
+    }
+    .basis-1\/2-gap-4 {
+        --gap: 1rem; 
+        width:calc((100% - var(--gap)) / 2 ) ;
+        flex-basis:calc((100% - var(--gap)) / 2 ) 
+    }
+    .basis-1\/4-gap-4 {
+        --gap: 1rem; 
+        width:calc((100% - (4 * var(--gap))) / 4 ) ;
+        flex-basis:calc((100% - (4 * var(--gap))) / 4 ) 
+    }
+
+    .basis-3\/4-gap-4 {
+        --gap: 1rem; 
+        width:calc((((100% - (4 * var(--gap))) / 4 ) * 3) + var(--gap));
+        flex-basis:calc((((100% - (4 * var(--gap))) / 4 ) * 3) + var(--gap))
+    }
+    .basis-1\/3-gap-6 {
+        --gap: 1.5rem; 
+        width:calc((100% - (2 * var(--gap))) / 3 ) ;
+        flex-basis:calc((100% - (2 * var(--gap))) / 3 )
+    }
+    .basis-2\/3-gap-6 {
+        --gap: 1.5rem; 
+        width:calc((((100% - (2 * var(--gap))) / 3 ) * 2) + var(--gap));
+        flex-basis:calc((((100% - (2 * var(--gap))) / 3 ) * 2) + var(--gap))
+    }
+    .basis-1\/2-gap-6 {
+        --gap: 1.5rem; 
+        width:calc((100% - var(--gap)) / 2 ); 
+        flex-basis:calc((100% - var(--gap)) / 2 ) 
+    }
+    .basis-1\/4-gap-6 {
+        --gap: 1.5rem; 
+        width:calc((100% - (4 * var(--gap))) / 4 );
+        flex-basis:calc((100% - (4 * var(--gap))) / 4 ) 
+    }
+    .basis-3\/4-gap-6 {
+        --gap: 1.5rem; 
+        width:calc((((100% - (4 * var(--gap))) / 4 ) * 3) + var(--gap));
+        flex-basis:calc((((100% - (4 * var(--gap))) / 4 ) * 3) + var(--gap))
+    }
+
 }
