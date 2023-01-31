@@ -1,3 +1,27 @@
+# v0.122.1 (Mon Jan 30 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2044 [#510](https://github.com/mumprod/hr-design-system-handlebars/pull/510) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.122.0 (Fri Jan 27 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: cluster-teaser uses svgs from [#509](https://github.com/mumprod/hr-design-system-handlebars/pull/509) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.121.15 (Thu Jan 26 2023)
 
 #### 🐛 Bug Fix
