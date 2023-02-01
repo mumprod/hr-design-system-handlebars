@@ -238,6 +238,7 @@ module.exports = {
                     DEFAULT: '#000000',
                 },
                 'red': {
+                    alizarinCrimson: '#e81f18',
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
                     burntUmber: '#8d2725',
@@ -281,6 +282,7 @@ module.exports = {
                     pineGreen: '#007179',
                 },
                 'purple': {
+                    disco: '#88114b',
                     pompadour: '#6d0041',
                     jazzberry: '#a00d65',
                     purpleHeart: '#832baf',
@@ -331,6 +333,7 @@ module.exports = {
                 'podcast': 'var(--color-podcast)',
                 'podcast-text': 'var(--color-podcast-text)',
                 'podcast-highlight': 'var(--color-podcast-highlight)',
+                'event-status': 'var(--color-event-status)',
                 'event-calendar-primary': 'var(--color-eventcalendar-primary)',
                 'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
             },

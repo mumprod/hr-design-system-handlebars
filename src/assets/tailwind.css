@@ -37,6 +37,8 @@
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Dachzeile */
     --color-topline: #006dc1;
+    /* Event */
+    --color-event-status: theme('colors.red.thunderbird');
     /* Eventkalender */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
     --color-eventcalendar-primary: var(--color-primary);
@@ -72,7 +74,7 @@
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border Radius */
-    --border-radius-hr: theme('borderRadius.none'); ;
+    --border-radius-hr: theme('borderRadius.none');
 }
 
 [data-theme='hessenschau'] {
@@ -136,8 +138,8 @@
     --font-weight-title: theme('fontWeight.normal');
     --font-titleCluster: theme('fontFamily.headingSerif');
     --font-weight-titleCluster: theme('fontWeight.bold');
-     /* Border */
-    --border-radius-hr: theme('borderRadius.3xl'); 
+    /* Border */
+    --border-radius-hr: theme('borderRadius.3xl');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -547,6 +549,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Event */
+    --color-event-status: theme('colors.purple.disco');
     /* Eventkalender */
     --color-eventcalendar-primary: theme('colors.blue.turquoiseCerulian');
     /* Dachzeile */
@@ -656,6 +660,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Event */
+    --color-event-status: theme('colors.green.pineGreen');
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
@@ -711,6 +717,8 @@
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
+    /* Event */
+    --color-event-status: theme('colors.red.alizarinCrimson');
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary);
     /* Dachzeile */
@@ -743,7 +751,7 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
     /* Border */
-    --border-radius-hr: theme('borderRadius.3xl'); 
+    --border-radius-hr: theme('borderRadius.3xl');
 }
 
 [data-theme='you-fm'] {

@@ -380,6 +380,9 @@
                                 "addressCity": "Frankfurt",
                                 "title": "Festhalle"
                             },
+                            "isSoldOut": false,
+                            "hasStatus": true,
+                            "statusDescriptionForLabelShort": "event_status_cancelled",
                             "concertInfo": {
                                 "artists": {
                                     "artistsAndGroups": [
