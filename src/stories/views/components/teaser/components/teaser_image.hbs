@@ -3,7 +3,7 @@
             {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1 }}
         {{/with~}}  
 {{/unless}}
-{{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg="mt-0.5" ~}}
+{{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg="" ~}}
 {{#if this.isProgram}}
     {{#if this.showMediatheksLink}}
         {{#decorator 'components/base/link' _isAriaHidden=true}}
