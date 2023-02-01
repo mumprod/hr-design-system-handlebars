@@ -3,7 +3,7 @@
             <h2 class="flex items-center px-5 py-5 text-clusterTeaserHeadline">
                 {{#if this.teaserLogo}}
                     <span>
-                        {{> components/base/image/icon _icon=this.teaserLogo _iconmap="cluster-teaser" _addClass=(inline-switch this.teaserLogo '["hessenschau_de"]' '["fill-[#005293] w-10 md:w-12 h-10 md:h-12","fill-[#005293] w-40 lg:w-52 h-8 md:h-12"]')}}
+                        {{> components/base/image/icon _icon=this.teaserLogo _iconmap="cluster-teaser" _addClass=(inline-switch this.teaserLogo '["hessenschau_de","tagesschau_de","sportschau"]' '["fill-blue-congress w-10 md:w-12 h-10 md:h-12","fill-blue-midnight w-40 lg:w-52 h-8 md:h-12","fill-blue-deepSeaDream w-40 lg:w-52 h-8 md:h-12"]')}}
                     </span>
                 {{/if}}
                 {{#if this.title}}

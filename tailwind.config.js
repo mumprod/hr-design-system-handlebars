@@ -235,6 +235,9 @@ module.exports = {
                     tarawera: '#0a3355',
                     teal: '#007A7CFF',
                     turquoiseCerulian: '#007fa0',
+                    midnight : '#023770',
+                    deepSeaDream : '#002c6b',
+
                 },
                 'black': {
                     DEFAULT: '#000000',
