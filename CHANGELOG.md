@@ -1,3 +1,21 @@
+# v0.122.7 (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- Byline-Label in Schlagzeilenboxen bricht um [#517](https://github.com/mumprod/hr-design-system-handlebars/pull/517) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### 🧪 Tests
+
+- adds threshold for chromatic screenshots [#515](https://github.com/mumprod/hr-design-system-handlebars/pull/515) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.122.6 (Wed Feb 01 2023)
 
 #### 🐛 Bug Fix
