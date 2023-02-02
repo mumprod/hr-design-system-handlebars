@@ -1,3 +1,15 @@
+# v0.122.8 (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- change colors in podcast-teaser [#518](https://github.com/mumprod/hr-design-system-handlebars/pull/518) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v0.122.7 (Thu Feb 02 2023)
 
 #### 🐛 Bug Fix
