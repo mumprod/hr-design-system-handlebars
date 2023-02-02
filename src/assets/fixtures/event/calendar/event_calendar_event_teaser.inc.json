@@ -4,7 +4,7 @@
         "startDate": {
             "htmlDate": "2023-01-09",
             "day": 9,
-            "weekdayNameShort": "Fr",
+            "weekdayNameShort": "Mon",
             "monthNameShort": "Jan"
         },
         "startTime": {
@@ -49,6 +49,9 @@
             "addressCity": "Frankfurt",
             "title": "Festhalle"
         },
+        "isSoldOut": false,
+        "hasStatus": true,
+        "statusDescriptionForLabelShort": "event_status_cancelled",
         "concertInfo": {
             "artists": {
                 "artistsAndGroups": [

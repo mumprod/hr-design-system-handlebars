@@ -126,6 +126,31 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     </Story>
     <Story
         name="Inhalt"
+        argTypes={{
+            statusDescriptionForLabelShort: {
+                control: {
+                    type: 'select',
+                    labels: {
+                        event_status_cancelled: 'Abgesagt!',
+                        event_status_rescheduled: 'Verschoben!',
+                        event_status_moved_online_short: 'Als Livestream',
+                        event_status_gets_update: 'Wird aktualisiert!',
+                    },
+                    options: [
+                        'event_status_cancelled',
+                        'event_status_rescheduled',
+                        'event_status_moved_online_short',
+                        'event_status_gets_update',
+                    ],
+                },
+                description: 'Status des Events',
+                table: {
+                    defaultValue: {
+                        summary: 'event_status_cancelled',
+                    },
+                },
+            },
+        }}
         args={{ ...eventCalendarEventTeaserData, _withConcertInfo: false, _showTeaser: true }}
     >
         {TemplateEventCalendarContent.bind({})}
