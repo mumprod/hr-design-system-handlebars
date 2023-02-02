@@ -10,7 +10,7 @@
                             <span class='text-base font-serif'>{{this.monthNameShort}}</span>
                         {{/with}}
                     </div>
-                    <div class="flex flex-col items-center basis-10/12 w-10/12">
+                    <div class="flex flex-col items-start basis-10/12 w-10/12">
                         <div class="absolute top-0 left-0 w-full sm:static">
                             <div class="ar-4-3 sm:ar-auto">
                                 <header class="absolute bottom-0 left-0 p-4 sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent">
@@ -37,6 +37,7 @@
                             </div>
                         </div>
                         {{> components/event/event_details this}}
+                        {{> components/event/event_ticket_button}}
                     </div> 
                 </div>
                 <figure class="basis-full w-full order-1 sm:basis-5/12 sm:w-5/12 sm:order-2 ar-4-3 sm:ar-16-9">

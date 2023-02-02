@@ -381,8 +381,17 @@
                                 "title": "Festhalle"
                             },
                             "isSoldOut": false,
+                            "isEventFinished": false,
                             "hasStatus": true,
                             "statusDescriptionForLabelShort": "event_status_cancelled",
+                            "ticketLink": {
+                                "link": {
+                                    "url": "",
+                                    "isTargetBlank": true,
+                                    "webviewUrl": "",
+                                    "readMoreText": ""
+                                }
+                            },
                             "concertInfo": {
                                 "artists": {
                                     "artistsAndGroups": [

@@ -215,6 +215,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
+                'inherit': 'inherit',
                 'blue': {
                     accented: '#eaf3fa',
                     aqua: '#e5edf1',
