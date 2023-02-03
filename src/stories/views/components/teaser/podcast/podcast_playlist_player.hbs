@@ -18,11 +18,13 @@
           {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.teaserSize _addClass="" }}
         </div>
 
-        {{#switch this.realTeaserSize }}
+        {{!-- {{#switch this.realTeaserSize }}
           {{#case "100"}}
             {{> components/teaser/podcast/podcast_playlist_shorttext}}
           {{/case}}
-        {{/switch}}
+        {{/switch}} --}}
+
+        {{> components/teaser/podcast/podcast_playlist_shorttext}}
       </div>
 
       {{!-- Podcast Image --}}
@@ -39,13 +41,13 @@
       </div>
     </div>
 
-    {{#switch this.realTeaserSize }}
+    {{!-- {{#switch this.realTeaserSize }}
       {{#case "50"}}
         <div class="flex flex-row w-full px-5 md:pl-5">
           {{> components/teaser/podcast/podcast_playlist_shorttext}}
         </div>
       {{/case}}
-    {{/switch}}
+    {{/switch}} --}}
     
     {{!-- Abo-Dropdown --}}
     {{#if this.isSingleChannel}}
