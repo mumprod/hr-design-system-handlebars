@@ -5,21 +5,34 @@ const Modal = (context) => {
         { element: rootElement } = context,
         modalTriggerId = options.modalTriggerId ? '#' + options.modalTriggerId : '',
         modalTrigger = hr$(modalTriggerId)[0],
+        modalCloseTriggers = hr$('.js-modal-close', rootElement),
         modal = hr$('.js-modal', rootElement)[0]
 
-    const showModal = () => {
-        modal.showModal()
-        listen('click', closeModal, modal)
+    const configureEventListeners = () => {
+        listen('click', show, modalTrigger)
+
+        modalCloseTriggers.forEach((modalCloseTrigger) => {
+            listen('click', close, modalCloseTrigger)
+        })
     }
 
-    const closeModal = (event) => {
+    const show = () => {
+        modal.showModal()
+        listen('click', closeFromOutside, modal)
+    }
+
+    const closeFromOutside = (event) => {
         if (event.target === modal) {
-            unlisten('click', closeModal, modal)
-            modal.close()
+            unlisten('click', closeFromOutside, modal)
+            close()
         }
     }
 
-    listen('click', showModal, modalTrigger)
+    const close = () => {
+        modal.close()
+    }
+
+    configureEventListeners()
 }
 
 export default Modal
