@@ -1,3 +1,3 @@
-<{{~ _headlineTag ~}}{{#if _css}} class="{{_css}}"{{/if}}>
+<{{~ defaultIfEmpty _headlineTag "h2"~}}{{#if _css}} class="{{_css}}"{{/if}}>
     {{> @partial-block }}
-</{{~ _headlineTag ~}}>
+</{{~ defaultIfEmpty _headlineTag "h2" ~}}>

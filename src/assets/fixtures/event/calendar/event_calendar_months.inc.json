@@ -386,7 +386,7 @@
                             "statusDescriptionForLabelShort": "event_status_cancelled",
                             "ticketLink": {
                                 "link": {
-                                    "url": "",
+                                    "url": "https://hr.de",
                                     "isTargetBlank": true,
                                     "webviewUrl": "",
                                     "readMoreText": ""

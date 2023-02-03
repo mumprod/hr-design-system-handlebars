@@ -37,7 +37,9 @@
                             </div>
                         </div>
                         {{> components/event/event_details this}}
-                        {{> components/event/event_ticket_button}}
+                        {{#with this.ticketLink}}
+                            {{> components/event/event_ticket_button}}
+                        {{/with}}
                     </div> 
                 </div>
                 <figure class="basis-full w-full order-1 sm:basis-5/12 sm:w-5/12 sm:order-2 ar-4-3 sm:ar-16-9">
