@@ -1,3 +1,15 @@
+# v0.123.0 (Fri Feb 03 2023)
+
+#### 🚀 Enhancement
+
+- reverts diff layouts for shorttext [#520](https://github.com/mumprod/hr-design-system-handlebars/pull/520) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.122.9 (Fri Feb 03 2023)
 
 #### 🐛 Bug Fix
