@@ -100,15 +100,15 @@
     .ds-link {
         @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
-
-    .ds-link-clusterTeaser {
-        @apply  text-grey-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
-    }
-
+    
     .ds-link:focus:not(:focus-visible) {
         @apply shadow-none;
     }
-    
+
+    .ds-link-clusterTeaser {
+        @apply block text-grey-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+    }
+
     .ds-link-clusterTeaser:focus:not(:focus-visible) {
         @apply shadow-none;
     }
