@@ -1,3 +1,15 @@
+# v0.123.5 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- fixes lineheight in dropdown button and items [#525](https://github.com/mumprod/hr-design-system-handlebars/pull/525) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.123.4 (Wed Feb 08 2023)
 
 #### 🐛 Bug Fix
