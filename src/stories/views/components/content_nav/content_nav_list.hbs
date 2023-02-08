@@ -6,9 +6,9 @@
         {{~#if this.isGroup~}}
         
             {{#if ../isDropdown}}               
-                <li class="w-full h-auto overflow-hidden text-base list-none border-b border-gray-400 bg-highlight-1 text-content-nav md:mx-0 font-copy fill-content-nav c-content-nav__group">
-                    <div class="flex items-center h-10 p-2 c-content-nav__group-title">{{this.title}}</div>
-                    <ul class="c-content-nav__group-list !px-0 mt-0">
+                <li class="w-full h-auto overflow-hidden text-base list-none border-b border-gray-400 bg-highlight-1 text-content-nav md:mx-0 font-copy fill-content-nav content-nav-group">
+                    <div class="flex items-center h-10 p-2 content-nav-group-title">{{this.title}}</div>
+                    <ul class="c-content-nav-group-list !px-0 mt-0">
                         {{~#each this.navigationGroup~}}
                             {{> components/content_nav/content_nav_item 
                                 _teaserSize=../../_teaserSize 
