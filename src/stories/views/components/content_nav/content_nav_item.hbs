@@ -10,12 +10,12 @@
         _doNavigationTracking="true" 
         _clickLabelType="Contentnavigation" 
         _clickLabelPrefix1=this.title 
-        _css="flex ds-link-inset items-center py-2 px-2 whitespace-nowrap overflow-hidden" 
+        _css="flex ds-link-inset items-center pt-2.5 px-2 whitespace-nowrap overflow-hidden" 
         _isSelected=this.isSelected
         _selectedCssClass="is-selected"
     }}
         
-        <span class="block text-base leading-4 pt-0.5 grow font-copy js-title truncate ... ">
+        <span class="block text-base leading-4 grow font-copy js-title truncate ... ">
             {{~this.title~}}
             {{~#if this.link.hasIcon~}}
                 {{> components/base/image/icon _icon=this.link.iconName _addClass="ml-2 -mt-0.5 h-4 w-4 inline" _iconmap="icons"}}
