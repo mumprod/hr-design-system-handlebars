@@ -1,3 +1,15 @@
+# v0.123.3 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- fixes filter in content nav [#523](https://github.com/mumprod/hr-design-system-handlebars/pull/523) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.123.2 (Tue Feb 07 2023)
 
 #### 🐛 Bug Fix
