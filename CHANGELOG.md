@@ -1,3 +1,15 @@
+# v0.123.4 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- better positioning of menuitem title and icons [#524](https://github.com/mumprod/hr-design-system-handlebars/pull/524) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.123.3 (Wed Feb 08 2023)
 
 #### 🐛 Bug Fix
