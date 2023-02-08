@@ -14,7 +14,7 @@
             @resize.window="if(window.innerWidth > 767){contentNavDropdownIsOpen = false}; $dispatch('hr:global:resetinputAutoSuggest')"
          {{/if}}
     >
-        <span class="self-center w-full p-2 text-base leading-4 text-left">{{_buttonText}}</span>
+        <span class="self-center w-full px-2 pt-1 text-base leading-4 text-left">{{_buttonText}}</span>
         <div class="flex self-center w-auto h-full border-l border-content-nav">
             <span :class="{'hidden' : contentNavDropdownIsOpen}"
                   class="flex self-center px-3 py-3"
