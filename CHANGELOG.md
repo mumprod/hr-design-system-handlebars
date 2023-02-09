@@ -1,3 +1,15 @@
+# v1.0.1 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX:  Adds white background color to grid_group_wrapper_classes [#534](https://github.com/mumprod/hr-design-system-handlebars/pull/534) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.0.0 (Thu Feb 09 2023)
 
 #### 💥 Breaking Change
