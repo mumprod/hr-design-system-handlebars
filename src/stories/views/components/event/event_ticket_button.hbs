@@ -13,6 +13,18 @@
             {{> components/button/button_pseudo _linkCss="mr-4 mt-4 ds-button js-modal-close" _buttonText="Zum Ticketshop" _withLink="true"}}
             <button class="mt-4 ds-button" value="cancel">Abbrechen</button>
         </div>
-
     {{/components/modal/modal}}
+    <noscript>
+        <style>
+            #{{getRandom}} {
+                display:none;
+            }
+        </style>
+        {{#> components/button/components/button_pseudo_link}}
+            {{#> components/button/button_pseudo_v2 _type="inverted"}}
+                {{> components/button/components/button_icon _icon="ticket" _iconmap="icons" _css="mr-2"}}
+                {{>components/button/components/button_label _label="Tickets"}}
+            {{/components/button/button_pseudo_v2}}
+        {{/components/button/components/button_pseudo_link}}
+    </noscript>
 </div>
