@@ -1,12 +1,12 @@
 <div class="{{_maindivclass}} {{#if this.isAutosuggest}} autoSuggest js-load{{/if}} relative"
     {{#if this.isAutosuggest}}
-     data-hr-auto-suggest='{"filterGroupsSelector":".c-content-nav__group", "filterElementSelector":".c-content-nav__item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"block", "unmatchedClass":"hidden"}'
+     data-hr-auto-suggest='{"filterGroupsSelector":".content-nav-group", "filterElementSelector":".content-nav-item", "filterTextSelector":".js-title", "inputElementSelector":".js-autosuggest-input", "matchedClass":"block", "unmatchedClass":"hidden"}'
     {{/if}}
 >
     {{#if this.isAutosuggest}}
         <div class="flex mx-0 w-full h-10 border-blue-congress align-center{{#if _autoSuggestContainerCss}} {{_autoSuggestContainerCss}}{{/if}}">
             <input x-ref="autosuggestInput"
-                   class="w-full h-10 pl-2 bg-gray-200 border-b-8 border-white text-grey-dark placeholder:text-grey-dark focus:outline-none js-autosuggest-input"
+                   class="w-full h-10 pl-2 border-b-8 border-white bg-grey-alabaster text-grey-dark placeholder:text-grey-dark focus:outline-none js-autosuggest-input"
                    type="text"
                    placeholder="Eintrag filtern"/>
         </div>

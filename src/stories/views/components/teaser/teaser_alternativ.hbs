@@ -1,18 +1,18 @@
-<article class="items-start relative col-span-12 flex md:flex-row gap-y-3 gap-x-4 sm:px-0{{#unless this.isEvent}}{{~inline-switch this.teaserSize '["hero","100","50"]' '[" flex-col"," px-5 md:flex-row"," md:col-span-6 px-5 md:flex-row"]'~}}{{else}} items-start flex-col{{/unless}}"
+<article class="items-start relative col-span-12 flex md:flex-row gap-y-3 gap-x-4 md:gap-x-6 sm:px-0{{#unless this.isEvent}}{{~inline-switch this.teaserSize '["hero","100","50"]' '[" flex-col"," px-5 md:flex-row"," md:col-span-6 px-5 md:flex-row"]'~}}{{else}} items-start flex-col{{/unless}}"
     x-data="{ avStart: false }"
     {{#if this.isMobile1to1}}
             :class="avStart ? 'flex-col' : 'flex-row'"
     {{/if}} 
     >
     {{#if this.teaserImage}}
-        <figure class="relative {{~inline-switch this.realTeaserSize '["hero","100","50"]' '[" basis-full w-full md:basis-2/3 md:w-2/3 ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5  md:basis-1/3 md:w-1/3"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/2 md:w-1/2"]'~}}"
+        <figure class="relative {{~inline-switch this.realTeaserSize '["hero","100","50"]' '[" basis-full w-full md:basis-2/3-gap-6  ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/3-gap-6"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/2-gap-6"]'~}}"
             {{#if this.isMobile1to1}}
                 :class="{'ar-16-9 basis-full w-full' : avStart, 'ar-1-1 basis-2/5 w-2/5': !avStart}"
             {{/if}}
         >
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio=(inline-switch this.realTeaserSize '["hero"]' '["ar-16-9","ar-1-1 md:ar-16-9"]') }} 
         </figure>
-        {{> components/teaser/components/teaser_body _outerCssClasses=(inline-switch this.realTeaserSize '["hero","100","50"]' '["basis-full w-full md:basis-1/3 md:w-1/3"," basis-3/5 w-3/5 md:basis-2/3 md:w-2/3"," basis-3/5 w-3/5 md:basis-1/2 md:w-1/2"]') }}
+        {{> components/teaser/components/teaser_body _outerCssClasses=(inline-switch this.realTeaserSize '["hero","100","50"]' '["basis-full w-full md:basis-1/3-gap-6"," basis-3/5 w-3/5 md:basis-2/3-gap-6"," basis-3/5 w-3/5 md:basis-1/2-gap-6"]') }}
     {{else}}
         {{> components/teaser/components/teaser_body _outerCssClasses="basis-full" }}
     {{/if}}

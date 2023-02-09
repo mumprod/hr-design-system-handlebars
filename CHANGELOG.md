@@ -1,3 +1,203 @@
+# v0.123.7 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- oh mann ey [#527](https://github.com/mumprod/hr-design-system-handlebars/pull/527) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.123.6 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- cosmetics [#526](https://github.com/mumprod/hr-design-system-handlebars/pull/526) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.123.5 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- fixes lineheight in dropdown button and items [#525](https://github.com/mumprod/hr-design-system-handlebars/pull/525) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.123.4 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- better positioning of menuitem title and icons [#524](https://github.com/mumprod/hr-design-system-handlebars/pull/524) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.123.3 (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- fixes filter in content nav [#523](https://github.com/mumprod/hr-design-system-handlebars/pull/523) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.123.2 (Tue Feb 07 2023)
+
+#### 🐛 Bug Fix
+
+- Bild in Cluster-Teaser nicht verlinkt [#522](https://github.com/mumprod/hr-design-system-handlebars/pull/522) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.123.1 (Tue Feb 07 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix Label bylineText [#521](https://github.com/mumprod/hr-design-system-handlebars/pull/521) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.123.0 (Fri Feb 03 2023)
+
+#### 🚀 Enhancement
+
+- reverts diff layouts for shorttext [#520](https://github.com/mumprod/hr-design-system-handlebars/pull/520) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.122.9 (Fri Feb 03 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2058 [#519](https://github.com/mumprod/hr-design-system-handlebars/pull/519) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.122.8 (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- change colors in podcast-teaser [#518](https://github.com/mumprod/hr-design-system-handlebars/pull/518) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.122.7 (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- Byline-Label in Schlagzeilenboxen bricht um [#517](https://github.com/mumprod/hr-design-system-handlebars/pull/517) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### 🧪 Tests
+
+- adds threshold for chromatic screenshots [#515](https://github.com/mumprod/hr-design-system-handlebars/pull/515) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.122.6 (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- add Tagesschau&Sportschau icon color [#516](https://github.com/mumprod/hr-design-system-handlebars/pull/516) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v0.122.5 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- improve contrast-ratio [#514](https://github.com/mumprod/hr-design-system-handlebars/pull/514) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v0.122.4 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2050 - Fehlende Ränder in Schlagzeilenbox [#513](https://github.com/mumprod/hr-design-system-handlebars/pull/513) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v0.122.3 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize & String for Switch statement [#512](https://github.com/mumprod/hr-design-system-handlebars/pull/512) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v0.122.2 (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2048 - Flexbox percentage problem fix [#511](https://github.com/mumprod/hr-design-system-handlebars/pull/511) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v0.122.1 (Mon Jan 30 2023)
 
 #### 🐛 Bug Fix

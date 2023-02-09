@@ -1,7 +1,6 @@
-
-{{#decorator 'components/base/link' _css="group ds-link" }} 
+{{#decorator 'components/base/link' _css=(if _firstItem "group ds-teaser-focus" "group ds-link-clusterTeaser") }} 
     {{> components/teaser/components/teaser_heading
-        _headlineTag="h1"
+        _headlineTag="h3"
         _headlineCss=""
         _label=this.label
         _size=_size
@@ -12,4 +11,3 @@
         _firstItem=_firstItem}}        
 {{/decorator}}
 {{> components/teaser/cluster/teaser_cluster_byline _ordered=_ordered}}
-                
