@@ -72,11 +72,12 @@
 
     /* CONTENT NAV ACCENTED GROUP MIXED*/
 
-    .group-accented .autoSuggest input {
+    .group-accented .autoSuggest .mixed-input {
         border-color: transparent!important;
         height: 32px;
         border-bottom: none;
     }
+
 
     .ds-focus {
         @apply z-20;
