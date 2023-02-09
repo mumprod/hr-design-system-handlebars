@@ -1,3 +1,17 @@
+# v0.124.0 (Thu Feb 09 2023)
+
+#### 🚀 Enhancement
+
+- DPE-1672: Event-Calendar [#528](https://github.com/mumprod/hr-design-system-handlebars/pull/528) ([@Sunny1112358](https://github.com/Sunny1112358) [@szuelch](https://github.com/szuelch) [@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 3
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.123.7 (Wed Feb 08 2023)
 
 #### 🐛 Bug Fix
