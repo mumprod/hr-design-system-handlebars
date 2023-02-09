@@ -1,3 +1,15 @@
+# v1.0.2 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- add label-colors for topic and location [#535](https://github.com/mumprod/hr-design-system-handlebars/pull/535) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.0.1 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
