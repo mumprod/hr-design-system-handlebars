@@ -1,0 +1,1295 @@
+{
+    "eventDate": [
+        {
+            "date": {
+                "monthNameShort": "Mai",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-05-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2022-05-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-05-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2022-05-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-05-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2022-04-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Jun",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-06-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2022-06-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-06-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2022-06-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-06-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2022-06-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Jul",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-07-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2022-07-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-07-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2022-07-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-07-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2022-07-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Aug",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-08-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2022-08-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-08-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2022-08-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-08-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2022-08-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Sep",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-09-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Di",
+                        "day": "21",
+                        "htmlDate": "2022-09-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-09-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Mi",
+                        "day": "22",
+                        "htmlDate": "2022-09-22"
+                    }
+                },
+                {
+                    "date": {
+                        "weekdayNameShort": "Do",
+                        "day": "23",
+                        "htmlDate": "2022-09-23"
+                    },
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2022-09-23"
+                            }
+                        }
+                    ],
+                    "isStartOfWeek": false
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Jan",
+                "yearShort": "23"
+            },
+            "hasDays": true,
+            "isCurrentMonth": true,
+            "hasFutureEventsFromNow": true,
+            "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
+            "days": [
+                {
+                    "isStartOfWeek": true,
+                    "hasInstants": true,
+                    "isFirstAvailable": true,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-09",
+                                "day": 9,
+                                "weekdayNameShort": "Mo",
+                                "monthNameShort": "Jan"
+                            },
+                            "startTime": {
+                                "time": "18:00"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "emmanuel-tjeknavorian-108"
+                                    }
+                                ]
+                            },
+                            "link": {
+                                "url": "/event_100",
+                                "webviewUrl": "/event_100#webview",
+                                "isTargetBlank": false,
+                                "hasIcon": false,
+                                "iconName": "iconName",
+                                "readMoreText": {
+                                    "readMoreScreenreader": "Zum Event",
+                                    "readMore": "mehr",
+                                    "readMoreLong": "read More Long"
+                                }
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            },
+                            "title": "Finale: Landeswettbewerb Jugend jazzt Hessen für Big Bands",
+                            "eventtags": {
+                                "series": {
+                                    "title": "Hessen lacht"
+                                },
+                                "project": {
+                                    "title": "HR Bigband sucht den Superjazzer"
+                                }
+                            },
+                            "venue": {
+                                "addressCity": "Frankfurt",
+                                "title": "Festhalle"
+                            },
+                            "isSoldOut": false,
+                            "isEventFinished": false,
+                            "hasStatus": true,
+                            "statusDescriptionForLabelShort": "event_status_cancelled",
+                            "ticketLink": {
+                                "link": {
+                                    "url": "https://hr.de",
+                                    "isTargetBlank": true,
+                                    "webviewUrl": "",
+                                    "readMoreText": ""
+                                }
+                            },
+                            "concertInfo": {
+                                "artists": {
+                                    "artistsAndGroups": [
+                                        {
+                                            "artist": {
+                                                "name": "Peter Maffay",
+                                                "groupName": "hr bigband",
+                                                "role": "Sänger"
+                                            },
+                                            "artistGroup": "hr bigband"
+                                        }
+                                    ],
+                                    "isEmpty": false,
+                                    "description": "Tolle Künstler"
+                                },
+                                "compositions": {
+                                    "isEmpty": false,
+                                    "description": "Komposition-Description",
+                                    "compositions": [
+                                        {
+                                            "composerAndComposition": true,
+                                            "composer": "Udo Lindenberg",
+                                            "name": "Horizont"
+                                        }
+                                    ]
+                                },
+                                "concertInfoHead": {
+                                    "title": "Das Fest",
+                                    "description": "Ein tolles Festival erwartet Sie",
+                                    "isEmpty": false
+                                },
+                                "isEmpty": false
+                            }
+                        },
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-09",
+                                "day": 9,
+                                "weekdayNameShort": "Fr",
+                                "monthNameShort": "Jan"
+                            },
+                            "startTime": {
+                                "time": "18:00"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "emmanuel-tjeknavorian-108"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            },
+                            "title": "Finale: Landeswettbewerb Jugend jazzt Hessen für Big Bands",
+                            "eventtags": {
+                                "series": {
+                                    "title": "Hessen lacht"
+                                },
+                                "project": {
+                                    "title": "HR Bigband sucht den Superjazzer"
+                                }
+                            },
+                            "link": {
+                                "url": "/event_100",
+                                "webviewUrl": "/event_100#webview",
+                                "isTargetBlank": false,
+                                "hasIcon": false,
+                                "iconName": "iconName",
+                                "readMoreText": {
+                                    "readMoreScreenreader": "Zum Event",
+                                    "readMore": "mehr",
+                                    "readMoreLong": "read More Long"
+                                }
+                            },
+                            "venue": {
+                                "addressCity": "Frankfurt",
+                                "title": "Festhalle"
+                            },
+                            "concertInfo": {
+                                "artists": {
+                                    "artistsAndGroups": [
+                                        {
+                                            "artist": {
+                                                "name": "Peter Maffay",
+                                                "groupName": "hr bigband",
+                                                "role": "Sänger"
+                                            },
+                                            "artistGroup": "hr bigband"
+                                        }
+                                    ],
+                                    "isEmpty": false,
+                                    "description": "Tolle Künstler"
+                                },
+                                "compositions": {
+                                    "isEmpty": false,
+                                    "description": "Komposition-Description",
+                                    "compositions": [
+                                        {
+                                            "composerAndComposition": true,
+                                            "composer": "Udo Lindenberg",
+                                            "name": "Horizont"
+                                        }
+                                    ]
+                                },
+                                "concertInfoHead": {
+                                    "title": "Das Fest",
+                                    "description": "Ein tolles Festival erwartet Sie",
+                                    "isEmpty": false
+                                },
+                                "isEmpty": false
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "9",
+                        "htmlDate": "2023-01-09"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-10",
+                                "day": 10,
+                                "weekdayNameShort": "Sa",
+                                "monthNameShort": "Jan"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "pedro-martins-102"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "10",
+                        "htmlDate": "2023-01-10"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-11"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "11",
+                        "htmlDate": "2023-01-11"
+                    }
+                },
+                {
+                    "isStartOfWeek": true,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-12"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Mo",
+                        "day": "12",
+                        "htmlDate": "2023-01-12"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-01-13"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Di",
+                        "day": "13",
+                        "htmlDate": "2023-01-13"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Feb",
+                "yearShort": "23"
+            },
+            "hasDays": true,
+            "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-02-09",
+                                "day": 9,
+                                "weekdayNameShort": "Fr",
+                                "monthNameShort": "Jan"
+                            },
+                            "startTime": {
+                                "time": "18:00"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "emmanuel-tjeknavorian-108"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            },
+                            "title": "Finale: Landeswettbewerb Jugend jazzt Hessen für Big Bands",
+                            "eventtags": {
+                                "series": {
+                                    "title": "Hessen lacht"
+                                },
+                                "project": {
+                                    "title": "HR Bigband sucht den Superjazzer"
+                                }
+                            },
+                            "venue": {
+                                "addressCity": "Frankfurt",
+                                "title": "Festhalle"
+                            },
+                            "concertInfo": {
+                                "artists": {
+                                    "artistsAndGroups": [
+                                        {
+                                            "artist": {
+                                                "name": "Peter Maffay",
+                                                "groupName": "hr bigband",
+                                                "role": "Sänger"
+                                            },
+                                            "artistGroup": "hr bigband"
+                                        }
+                                    ],
+                                    "isEmpty": false,
+                                    "description": "Tolle Künstler"
+                                },
+                                "compositions": {
+                                    "isEmpty": false,
+                                    "description": "Komposition-Description",
+                                    "compositions": [
+                                        {
+                                            "composerAndComposition": true,
+                                            "composer": "Udo Lindenberg",
+                                            "name": "Horizont"
+                                        }
+                                    ]
+                                },
+                                "concertInfoHead": {
+                                    "title": "Das Fest",
+                                    "description": "Ein tolles Festival erwartet Sie",
+                                    "isEmpty": false
+                                },
+                                "isEmpty": false
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "9",
+                        "htmlDate": "2023-02-09"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-02-10",
+                                "day": 10,
+                                "weekdayNameShort": "Sa",
+                                "monthNameShort": "Jan"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "pedro-martins-102"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "10",
+                        "htmlDate": "2023-02-10"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-02-11"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "11",
+                        "htmlDate": "2023-02-11"
+                    }
+                },
+                {
+                    "isStartOfWeek": true,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-02-12"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Mo",
+                        "day": "12",
+                        "htmlDate": "2023-02-12"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-02-13"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Di",
+                        "day": "13",
+                        "htmlDate": "2023-02-13"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Mär",
+                "yearShort": "23"
+            },
+            "hasDays": true,
+            "contentUrl": "https://localhost:6006:/hr-bigband/konzerte/veranstaltungen-112~_month-2023-01.html",
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-03-09",
+                                "day": 9,
+                                "weekdayNameShort": "Fr",
+                                "monthNameShort": "Jan"
+                            },
+                            "startTime": {
+                                "time": "18:00"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "emmanuel-tjeknavorian-108"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            },
+                            "title": "Finale: Landeswettbewerb Jugend jazzt Hessen für Big Bands",
+                            "eventtags": {
+                                "series": {
+                                    "title": "Hessen lacht"
+                                },
+                                "project": {
+                                    "title": "HR Bigband sucht den Superjazzer"
+                                }
+                            },
+                            "venue": {
+                                "addressCity": "Frankfurt",
+                                "title": "Festhalle"
+                            },
+                            "concertInfo": {
+                                "artists": {
+                                    "artistsAndGroups": [
+                                        {
+                                            "artist": {
+                                                "name": "Peter Maffay",
+                                                "groupName": "hr bigband",
+                                                "role": "Sänger"
+                                            },
+                                            "artistGroup": "hr bigband"
+                                        }
+                                    ],
+                                    "isEmpty": false,
+                                    "description": "Tolle Künstler"
+                                },
+                                "compositions": {
+                                    "isEmpty": false,
+                                    "description": "Komposition-Description",
+                                    "compositions": [
+                                        {
+                                            "composerAndComposition": true,
+                                            "composer": "Udo Lindenberg",
+                                            "name": "Horizont"
+                                        }
+                                    ]
+                                },
+                                "concertInfoHead": {
+                                    "title": "Das Fest",
+                                    "description": "Ein tolles Festival erwartet Sie",
+                                    "isEmpty": false
+                                },
+                                "isEmpty": false
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "9",
+                        "htmlDate": "2023-03-09"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-03-10",
+                                "day": 10,
+                                "weekdayNameShort": "Sa",
+                                "monthNameShort": "Jan"
+                            },
+                            "image": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "event-teaser_100",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "pedro-martins-102"
+                                    }
+                                ]
+                            },
+                            "label": {
+                                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                                "@->contentpath": "event"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "10",
+                        "htmlDate": "2023-03-10"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-03-11"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "11",
+                        "htmlDate": "2023-03-11"
+                    }
+                },
+                {
+                    "isStartOfWeek": true,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-03-12"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Mo",
+                        "day": "12",
+                        "htmlDate": "2023-03-12"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2023-03-13"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Di",
+                        "day": "13",
+                        "htmlDate": "2023-03-13"
+                    }
+                }
+            ]
+        }
+    ],
+    "onlyMonthsInPast": [
+        {
+            "date": {
+                "monthNameShort": "Mai",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-05-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2021-05-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-05-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2021-05-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-05-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2021-04-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Jun",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-06-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2021-06-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-06-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2021-06-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-06-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2021-06-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Jul",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-07-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2021-07-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-07-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2021-07-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-07-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2021-07-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Aug",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-08-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Fr",
+                        "day": "21",
+                        "htmlDate": "2021-08-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-08-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Sa",
+                        "day": "22",
+                        "htmlDate": "2021-08-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-08-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "So",
+                        "day": "23",
+                        "htmlDate": "2021-08-23"
+                    }
+                }
+            ]
+        },
+        {
+            "date": {
+                "monthNameShort": "Dez",
+                "yearShort": "22"
+            },
+            "hasDays": true,
+            "days": [
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-09-21"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Di",
+                        "day": "21",
+                        "htmlDate": "2021-09-21"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-09-22"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Mi",
+                        "day": "22",
+                        "htmlDate": "2021-09-22"
+                    }
+                },
+                {
+                    "isStartOfWeek": false,
+                    "hasInstants": true,
+                    "isFirstAvailable": false,
+                    "instants": [
+                        {
+                            "isDateInstant": false,
+                            "startDate": {
+                                "htmlDate": "2021-09-23"
+                            }
+                        }
+                    ],
+                    "date": {
+                        "weekdayNameShort": "Do",
+                        "day": "23",
+                        "htmlDate": "2021-09-23"
+                    }
+                }
+            ]
+        }
+    ]
+}

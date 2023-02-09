@@ -1,0 +1,8 @@
+<article class="col-span-12{{~inline-switch this.teaserSize '["50"]' '[" md:col-span-6"]'}}">
+    {{#> components/event/calendar/event_calendar}}
+        {{> components/event/calendar/event_calendar_heading _headlineTag="h3"}}
+        {{> components/event/calendar/event_calendar_nav this.eventCalendar.months}}
+        {{> components/event/calendar/event_calendar_content this.eventCalendar}}
+        {{> components/event/calendar/event_calendar_footer}}
+    {{/components/event/calendar/event_calendar}}
+</article>

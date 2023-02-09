@@ -1,0 +1,7 @@
+<a class="js-fr-trigger js-noStateManager block h-full pt-2 pb-2.5 focus:bg-black focus:text-white focus-visible:outline-none hover:bg-black hover:text-white -active{{#if this.isFirstAvailable}} -selected js-fr-initial{{/if}}"
+     data-prop-crit='{{this.date.htmlDate}}'
+     data-prop-filterer='{"crit":"{{this.date.htmlDate}}","strat":["hobid"]}'
+     href="{{_contentUrl}}">
+     <span class="block font-serif italic text-center font-bold uppercase pb-2 px-3 text-sm">{{this.date.weekdayNameShort}}</span>
+     <span class="block font-serif text-link font-bold text-labelEventCalendarTitle italic text-2xl px-3 pt-1.6 pb-0 group-hover:text-white group-focus:text-white group-focus-within:text-white">{{this.date.day}}</span>
+</a>

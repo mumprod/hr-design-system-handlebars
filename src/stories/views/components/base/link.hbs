@@ -1,15 +1,3 @@
-{{#with this.link}}
-    <a {{#with this.webviewUrl}}data-webviewurl="{{this}}"{{/with}} href="{{this.url}}" {{#with this.webviewUrl}}{{/with}} 
-        class="sb-link{{#if ../_css}} {{../_css}}{{/if}} {{#if ../this.content.isFileDownload}} js-load{{/if}}{{#if ../_isSelected}} {{defaultIfEmpty ../_selectedCssClass "-current"}}{{/if}}"
-        {{#if ../_doNavigationTracking}}
-        data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "1","clickLabel":"{{../_clickLabelType}}{{#if ../_clickLabelPrefix1}}::{{../_clickLabelPrefix1}}{{/if}}::{{../_clickLabelPrefix2}}-Link geklickt"}]}'
-        {{/if}}
-        {{#if ../this.content.isFileDownload}}
-            {{#with this.content.trackingData}}data-hr-click-tracking='{"settings": [{"type":"download","secondLevelId": "{{this.secondLevelId}}","clickLabel": "{{this.pageName}}"}]}'{{/with}}
-        {{/if}}
-        {{#if this.isTargetBlank}} target="_blank"  rel="noopener{{#if this.hasNoReferrerFlag}} noreferrer{{/if}}"{{/if}}
-        {{#if ../_isAriaHidden}} aria-hidden="true" tabindex="-1"{{/if}}
-    >
-{{/with}}  
-        {{~ decorator_body ~}}   
-    </a>
+{{> components/base/link_open _clickLabelPrefix1=_clickLabelPrefix1 _clickLabelPrefix2=_clickLabelPrefix2 _clickLabelType=_clickLabelType _css=_css _doNavigationTracking=_doNavigationTracking _isAriaHidden=_isAriaHidden _isSelected=_isSelected _selectedCssClass=_selectedCssClass}}
+    {{~ decorator_body ~}}   
+</a>

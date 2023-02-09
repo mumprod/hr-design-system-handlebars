@@ -185,6 +185,7 @@ module.exports = {
                     '"Noto Sans"',
                     'sans-serif',
                 ],
+                serif: ['RobotoSlab', ...defaultTheme.fontFamily.serif],
                 headingSerif: [
                     'RobotoSlab',
                     'ui-serif',
@@ -214,6 +215,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
+                'inherit': 'inherit',
                 'blue': {
                     accented: '#eaf3fa',
                     allports: '#007899',
@@ -235,14 +237,14 @@ module.exports = {
                     tarawera: '#0a3355',
                     teal: '#007A7CFF',
                     turquoiseCerulian: '#007fa0',
-                    midnight : '#023770',
-                    deepSeaDream : '#002c6b',
-
+                    midnight: '#023770',
+                    deepSeaDream: '#002c6b',
                 },
                 'black': {
                     DEFAULT: '#000000',
                 },
                 'red': {
+                    alizarinCrimson: '#e81f18',
                     thunderbird: '#cc1a14',
                     monza: '#c20016',
                     burntUmber: '#8d2725',
@@ -281,6 +283,7 @@ module.exports = {
                     brightGray: '#E5F2F3',
                     platinum: '#E5E8E8',
                     mercury: '#E6E6E6',
+                    boulder: '#797979',
                 },
                 'green': {
                     casal: '#29675d',
@@ -292,6 +295,7 @@ module.exports = {
                     teal: '#00727A',
                 },
                 'purple': {
+                    disco: '#88114b',
                     pompadour: '#6d0041',
                     jazzberry: '#a00d65',
                     purpleHeart: '#832baf',
@@ -305,7 +309,7 @@ module.exports = {
                 'yellow': {
                     corn: '#e0ae00',
                     goldenSand: '#f2da6c',
-                    olive: '#916B00FF',
+                    olive: '#916B00',
                     givry: '#f7ebbf',
                     sunshine: '#ffb114',
                 },
@@ -342,6 +346,9 @@ module.exports = {
                 'podcast': 'var(--color-podcast)',
                 'podcast-text': 'var(--color-podcast-text)',
                 'podcast-highlight': 'var(--color-podcast-highlight)',
+                'event-status': 'var(--color-event-status)',
+                'event-calendar-primary': 'var(--color-eventcalendar-primary)',
+                'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
             },
         },
     },

@@ -39,6 +39,18 @@
             "bylineText": "BylineText"
         }
     },
+    "eventLabelCalendar": {
+        "type": "event",
+        "loca": "label_event",
+        "byline": {
+            "bylineSsi": " ",
+            "bylineText": "BylineText"
+        }
+    },
+    "eventCalendar": {
+        "type": "eventCalendar",
+        "loca": "event_calendar_backlink"
+    },
     "program": {
         "type": "program",
         "loca": "label_program",
