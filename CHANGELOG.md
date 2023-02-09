@@ -1,3 +1,15 @@
+# v1.0.0 (Thu Feb 09 2023)
+
+#### 💥 Breaking Change
+
+- FEATURE: After full migration of new Design-System in delivery - change the teasertypes and remove postfix -ds [#533](https://github.com/mumprod/hr-design-system-handlebars/pull/533) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v0.124.4 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
