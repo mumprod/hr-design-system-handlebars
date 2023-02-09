@@ -18,6 +18,7 @@
             {{> components/content_nav/content_nav_container
                     _teaserSize=_teaserSize
                     _maindivclass="flex flex-col w-full mt-0"
+                    _inputclass=(if this.isMixed 'mixed-input' 'dropdown-input')
             }}
             
         {{/decorator}}
