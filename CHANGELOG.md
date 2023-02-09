@@ -1,3 +1,15 @@
+# v0.124.3 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- dedicated class for mixed input [#531](https://github.com/mumprod/hr-design-system-handlebars/pull/531) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.124.2 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
