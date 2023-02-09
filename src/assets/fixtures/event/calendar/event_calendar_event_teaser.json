@@ -1,0 +1,4 @@
+{
+    "@->jsoninclude": "event/calendar/event_calendar_event_teaser.inc.json",
+    "@->contentpath": "2023-01-09"
+}

@@ -1,0 +1,10 @@
+{
+    "eventCalendar": {
+        "months": {
+            "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
+            "@->contentpath": "eventDate"
+        },
+        "hasSelectedEvents": true,
+        "hasFutureEventsFromNow": true
+    }
+}

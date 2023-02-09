@@ -1820,5 +1820,36 @@
             "shorttext": "Gemeinsam mit Ihnen machen wir uns stark für die Natur und die Umwelt. Wir suchen Menschen, die sich dafür engagieren. Jetzt anmelden und unser Hessen noch schöner machen.",
             "showShorttext": true
         }
+    },
+    "eventCalendarTeaser": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "teaserSize": "100",
+                "realTeaserSize": "100",
+                "title": "Konzertkalender",
+                "eventCalendar": {
+                    "months": {
+                        "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
+                        "@->contentpath": "eventDate"
+                    },
+                    "hasSelectedEvents": true,
+                    "hasFutureEventsFromNow": true
+                },
+                "link": {
+                    "url": "/monatsuebersicht-100",
+                    "webviewUrl": "/monatsuebersicht-100#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    }
+                }
+            }
+        }
     }
 }

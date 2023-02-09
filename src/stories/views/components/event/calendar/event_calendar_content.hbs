@@ -1,0 +1,18 @@
+<div class="js-fr-content">
+    {{#each this.months}}
+        {{#each this.days}}
+            {{#each this.instants}}
+                {{#unless this.isDateInstant}}
+                    {{> components/event/calendar/event_calendar_event_teaser _showTeaser=../this.isFirstAvailable _withConcertInfo=../../../_withConcertInfo}}
+                {{/unless}}
+            {{/each}}
+        {{/each}}
+    {{/each}}
+    {{#unless this.hasFutureEventsFromNow}}
+        <article class="p-4 js-fr-error-target">
+            <p class="">
+                {{loca "event_calendar_no_events_available"}}
+            </p>
+        </article>
+    {{/unless}}
+</div>
