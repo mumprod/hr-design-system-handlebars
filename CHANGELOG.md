@@ -1,3 +1,15 @@
+# v0.124.1 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- better css for search input with accented grp [#529](https://github.com/mumprod/hr-design-system-handlebars/pull/529) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.124.0 (Thu Feb 09 2023)
 
 #### 🚀 Enhancement
