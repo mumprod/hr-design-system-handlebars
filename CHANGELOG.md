@@ -1,3 +1,15 @@
+# v0.124.4 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: appendToDefault helper puts empty string between defaultValue and context. [#532](https://github.com/mumprod/hr-design-system-handlebars/pull/532) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v0.124.3 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
