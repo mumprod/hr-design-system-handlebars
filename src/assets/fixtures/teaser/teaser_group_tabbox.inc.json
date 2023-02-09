@@ -378,7 +378,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserType",
-                            "@->value": "tabbox-alternative-ds"
+                            "@->value": "tabbox-alternative"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",
@@ -429,7 +429,7 @@
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.teaserType",
-                            "@->value": "tabbox-alternative-ds"
+                            "@->value": "tabbox-alternative"
                         },
                         {
                             "@->contentpath": "logicItem.includeModel.isMobile1to1",

@@ -4,7 +4,7 @@
     "@->overrides": [
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "poster-ds"
+            "@->value": "poster"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserSize",

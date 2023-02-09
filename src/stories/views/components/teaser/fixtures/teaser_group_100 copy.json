@@ -17,7 +17,7 @@
                         "topline": "Überglücklich, aber ohne Mama",
                         "headingFontVariant": "serif",
                         "extendedTitle": "",
-                        "teaserType": "standard-ds",
+                        "teaserType": "standard",
                         "teaserSize": "50",
                         "isMobile1to1": false,
                         "teaserDate": {
@@ -131,7 +131,7 @@
                         "topline": "Engagement von Fußballtrainer bis Feuerwehrfrau",
                         "headingFontVariant": "serif",
                         "extendedTitle": "",
-                        "teaserType": "standard-ds",
+                        "teaserType": "standard",
                         "teaserSize": "50",
                         "isMobile1to1": false,
                         "teaserDate": {
@@ -228,7 +228,7 @@
                         "topline": "Eintracht trifft auf Tottenham",
                         "headingFontVariant": "serif",
                         "extendedTitle": "",
-                        "teaserType": "standard-ds",
+                        "teaserType": "standard",
                         "teaserSize": "50",
                         "isMobile1to1": false,
                         "teaserDate": {
@@ -467,7 +467,7 @@
                         "topline": "T-Shirt statt Winterjacke",
                         "headingFontVariant": "serif",
                         "extendedTitle": "",
-                        "teaserType": "standard-ds",
+                        "teaserType": "standard",
                         "teaserSize": "50",
                         "isMobile1to1": false,
                         "teaserDate": {

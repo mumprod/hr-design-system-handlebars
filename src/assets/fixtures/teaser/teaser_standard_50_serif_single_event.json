@@ -11,7 +11,7 @@
             "@->value": "50"
         },        {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "event-ds"
+            "@->value": "event"
         }
     ]
 }
