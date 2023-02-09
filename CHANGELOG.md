@@ -1,3 +1,15 @@
+# v0.124.2 (Thu Feb 09 2023)
+
+#### 🐛 Bug Fix
+
+- adds class to grp-ts-accented [#530](https://github.com/mumprod/hr-design-system-handlebars/pull/530) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v0.124.1 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
