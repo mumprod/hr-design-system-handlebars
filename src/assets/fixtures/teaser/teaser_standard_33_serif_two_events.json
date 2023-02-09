@@ -12,7 +12,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "event-ds"
+            "@->value": "event"
         },
         {
             "@->contentpath": "logicItem.includeModel.moreThenOneEvent",

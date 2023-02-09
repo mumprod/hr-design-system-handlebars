@@ -1,5 +1,5 @@
 {{~#switch _teaserType~}}
-    {{~#case 'standard-ds'~}}
+    {{~#case 'standard'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _teaserSize '["25","33"]' '[" my-2 mx-2"," my-2 mx-2 md:my-3 md:mx-3"," my-2 mx-2 md:my-5 md:mx-5 "]'
@@ -10,7 +10,7 @@
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'alternative-ds'~}}
+    {{~#case 'alternative'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _teaserSize '["hero","100","50"]' '[" my-2 mx-2 md:my-5 md:mx-5"," my-2 mx-2 md:my-3 md:mx-3"," my-2 mx-2"]'
@@ -21,7 +21,7 @@
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'tabbox-standard-ds'~}}
+    {{~#case 'tabbox-standard'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _teaserSize '["25","33"]' '[" my-2 mx-2"," my-2 mx-2 md:my-3 md:mx-3"," my-2 mx-2 md:my-5 md:mx-5 "]'
@@ -32,7 +32,7 @@
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'tabbox-alternative-ds'~}}
+    {{~#case 'tabbox-alternative'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _teaserSize '["hero","100","50"]' '[" my-2 mx-2 md:my-5 md:mx-5"," my-2 mx-2 md:my-3 md:mx-3"," my-2 mx-2"]'

@@ -12,7 +12,7 @@ the 4 parameters are:
 }}
 
 {{~#switch _teaserType~}}
-    {{~#case 'standard-ds'~}}
+    {{~#case 'standard'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _size
@@ -27,7 +27,7 @@ the 4 parameters are:
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'event-ds'~}}
+    {{~#case 'event'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _size
@@ -42,7 +42,7 @@ the 4 parameters are:
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'tabbox-standard-ds'~}}
+    {{~#case 'tabbox-standard'~}}
         {{~#if _isMobile1to1~}}
             {{~inline-switch
                 _size
@@ -57,28 +57,28 @@ the 4 parameters are:
             ~}}
         {{~/if~}}
     {{~/case~}}
-    {{~#case 'alternative-ds'~}}
+    {{~#case 'alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
             '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
-    {{~#case 'event-alternative-ds'~}}
+    {{~#case 'event-alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
             '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
-    {{~#case 'tabbox-alternative-ds'~}}
+    {{~#case 'tabbox-alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
             '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
-    {{~#case 'poster-ds'~}}
+    {{~#case 'poster'~}}
         {{~inline-switch _size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
     {{~/case~}}
     {{~#case 'cluster'~}}

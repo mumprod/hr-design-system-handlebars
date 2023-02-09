@@ -20,7 +20,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "boxed-ds"
+            "@->value": "boxed"
         }
     ]
 }

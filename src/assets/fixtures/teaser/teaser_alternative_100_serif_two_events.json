@@ -16,7 +16,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "event-alternative-ds"
+            "@->value": "event-alternative"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserImage",

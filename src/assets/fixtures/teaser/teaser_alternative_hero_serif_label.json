@@ -8,7 +8,7 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserType",
-            "@->value": "alternative-ds"
+            "@->value": "alternative"
         },
         {
             "@->contentpath": "logicItem.includeModel.topline",
