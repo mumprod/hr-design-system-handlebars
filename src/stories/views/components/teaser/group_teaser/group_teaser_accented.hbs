@@ -1,6 +1,6 @@
 {{#if this.hasGroupItems}}
     {{#>components/grid/grid_group size=this.teaserSize }}
-        <div class="grid items-start content-start h-auto grid-cols-12 col-span-12 py-5 mx-5 sm:p-5 sm:mx-0 rounded-tl-hr rounded-br-hr bg-highlight-1 gap-x-6 gap-y-5">
+        <div class="grid items-start content-start h-auto grid-cols-12 col-span-12 py-5 mx-5 group-accented sm:p-5 sm:mx-0 rounded-tl-hr rounded-br-hr bg-highlight-1 gap-x-6 gap-y-5">
             {{~#if this.hasGroupTitle}}
                 <h2 class="text-2xl px-5 sm:px-0 md:text-4xl col-span-full pt-0 pb-4 font-title {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
                     {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-blue-science" href="{{this.link.url}}">{{/if~}}
