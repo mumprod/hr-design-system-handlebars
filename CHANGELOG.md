@@ -1,3 +1,15 @@
+# v1.1.3 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize for podcast Image [#540](https://github.com/mumprod/hr-design-system-handlebars/pull/540) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.1.2 (Fri Feb 10 2023)
 
 #### 🐛 Bug Fix
