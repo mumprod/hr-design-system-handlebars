@@ -9,7 +9,7 @@ import teserPosterMdLabel from './fixtures/teaser_poster_md_label.json'
     parameters={{
         layout: 'fullscreen',
         chromatic: {
-            diffThreshold: 0.5
+            diffThreshold: 0.5,
         },
     }}
     argTypes={{
@@ -28,7 +28,7 @@ import teserPosterMdLabel from './fixtures/teaser_poster_md_label.json'
     }}
     decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
                 ${Story()} 
                 </div></div>`
         },
@@ -43,7 +43,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Poster-Teaser 
+# Poster-Teaser
 
 ## Beschreibung
 
@@ -60,40 +60,59 @@ Inhalt dieses spans: Zusatztext + ": " + Titel
 
 Der Poster-Teaser soll nur als 50%- bzw. 33%-Teaser verwendet werden. Diese Restriktion muss cms-seitig implementiert werden.
 
-
 ## Sub-Komponenten
 
 Die Poster-Teaser-Komponente inkludiert folgende Komponenten:
 
 <ul>
-    <li>components/base/image/<b>responsive_image</b></li>
-    <li>components/base/<b>link</b></li>
-    <li>components/teaser/components/<b>teaser_heading</b></li>
+    <li>
+        components/base/image/<b>responsive_image</b>
+    </li>
+    <li>
+        components/base/<b>link</b>
+    </li>
+    <li>
+        components/teaser/components/<b>teaser_heading</b>
+    </li>
 </ul>
-
 
 ## Props
 
 Die Poster-Teaser-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
 
 <ul>
-    <li><b>topline</b></li>
-    <li><b>title</b></li>
-    <li><b>teaserSize</b></li>
-    <li><b>teaserType</b></li>
-    <li><b>teaserImage</b></li>
-    <li><b>content.imageVariant</b></li>
-    <li><b>isSerifHeading</b></li>
-    <li><b>link.readMoreText.readMoreLong</b></li>
+    <li>
+        <b>topline</b>
+    </li>
+    <li>
+        <b>title</b>
+    </li>
+    <li>
+        <b>teaserSize</b>
+    </li>
+    <li>
+        <b>teaserType</b>
+    </li>
+    <li>
+        <b>teaserImage</b>
+    </li>
+    <li>
+        <b>content.imageVariant</b>
+    </li>
+    <li>
+        <b>isSerifHeading</b>
+    </li>
+    <li>
+        <b>link.readMoreText.readMoreLong</b>
+    </li>
 </ul>
-
 
 ## Verwendung
 
 Die Poster-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/teaser/teaser_poster}}    
+{{> components/teaser/teaser_poster}}
 ```
 
 <Preview withToolbar>

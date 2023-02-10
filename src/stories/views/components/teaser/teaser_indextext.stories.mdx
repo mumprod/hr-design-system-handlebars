@@ -38,7 +38,7 @@ import dataTeserIndextext50Accented from './fixtures/teaser_indextext_50_accente
     }}
     decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
                 ${Story()} 
                 </div></div>`
         },
@@ -53,45 +53,57 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return teaser({ brand, ...args })
 }
 
-# Indextext-Teaser 
+# Indextext-Teaser
 
 ## Beschreibung
-
 
 ## Props
 
 Die Indextext-Teaser-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
 
 <ul>
-    <li><b>title</b></li>
-    <li><b>shorttext</b></li>
-    <li><b>teaserSize</b></li>
-    <li><b>teaserType</b></li>
+    <li>
+        <b>title</b>
+    </li>
+    <li>
+        <b>shorttext</b>
+    </li>
+    <li>
+        <b>teaserSize</b>
+    </li>
+    <li>
+        <b>teaserType</b>
+    </li>
 </ul>
-
 
 ## Verwendung
 
 Die Indextext-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/teaser/teaser_indextext}}    
+{{> components/teaser/teaser_indextext}}
 ```
 
-
 <Preview withToolbar>
-    <Story name="Text mit Hintergrund 100" args={dataTeserIndextext100Accented.logicItem.includeModel}>
+    <Story
+        name="Text mit Hintergrund 100"
+        args={dataTeserIndextext100Accented.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
     <Story name="Text mit Box 100" args={dataTeserIndextext100Boxed.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story
-        name="Hintergrund orange 100" args={dataTeserIndextext100Highlighted.logicItem.includeModel}
+        name="Hintergrund orange 100"
+        args={dataTeserIndextext100Highlighted.logicItem.includeModel}
     >
         {Template.bind({})}
     </Story>
-    <Story name="Text mit Hintergrund 50" args={dataTeserIndextext50Accented.logicItem.includeModel}>
+    <Story
+        name="Text mit Hintergrund 50"
+        args={dataTeserIndextext50Accented.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
 </Preview>

@@ -42,7 +42,7 @@ import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdow
                 expanded: false,
                 disable: false,
             },
-        },        
+        },
         teaserSize: {
             control: {
                 type: 'select',
@@ -58,7 +58,7 @@ import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdow
     }}
     decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
                 ${Story()} 
                 </div></div>`
         },
@@ -77,8 +77,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 ## Beschreibung
 
-
-<Preview withToolbar>    
+<Preview withToolbar>
     <b>Liste</b>
     <Story name="Liste" args={contentNavList}>
         {Template.bind({})}
