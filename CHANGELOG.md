@@ -1,3 +1,15 @@
+# v1.1.1 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- fixes line-clamp in podcast title [#538](https://github.com/mumprod/hr-design-system-handlebars/pull/538) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.1.0 (Fri Feb 10 2023)
 
 #### 🚀 Enhancement
