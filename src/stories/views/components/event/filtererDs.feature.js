@@ -146,7 +146,7 @@ const Filterer = (context) => {
             }
         }
 
-       /* if (countXTClick) {
+        /* if (countXTClick) {
             pi(
                 xtpage +
                     '&pchap=' +
@@ -184,7 +184,7 @@ const Filterer = (context) => {
             cache: true,
             beforeSend: function () {
                 console.log('before load')
-                $(contentTargetClass, rootElement).addClass('-isLoading')
+                $(contentTargetClass, rootElement).addClass('is-loading')
             },
         })
             .done(function (data, status, xhr) {
@@ -198,7 +198,7 @@ const Filterer = (context) => {
                         $(contentTargetClass, rootElement).append(data)
 
                         targetDomNodes = hr$('.' + targetClass, rootElement)
-                        $(contentTargetClass, rootElement).removeClass('-isLoading')
+                        $(contentTargetClass, rootElement).removeClass('is-loading')
                         $(currentTarget, rootElement)
                             .closest('.' + reloadTriggerClass)
                             .removeClass(reloadTriggerClass)
@@ -210,7 +210,7 @@ const Filterer = (context) => {
             })
             .fail(function (data, status, xhr) {
                 console.log('load error')
-                $(contentTargetClass, rootElement).addClass('-isLoading')
+                $(contentTargetClass, rootElement).addClass('is-loading')
             })
     }
     const createInlineUrl = function (element) {

@@ -200,4 +200,18 @@
         width: calc((((100% - (4 * var(--gap))) / 4) * 3) + var(--gap));
         flex-basis: calc((((100% - (4 * var(--gap))) / 4) * 3) + var(--gap));
     }
+
+    /*! ****************************/
+    /*! Event-Calendar             */
+    /*! ****************************/
+    .is-loading {
+        @apply relative;
+
+        @apply before:content-[''] before:absolute before:block before:inset-0 before:bg-white/70 before:z-10;
+        @apply after:absolute after:block after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:z-20;
+    }
+
+    .is-loading::after {
+        content: attr(data-prop-loading);
+    }
 }
