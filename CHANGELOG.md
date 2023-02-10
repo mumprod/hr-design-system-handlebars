@@ -1,3 +1,55 @@
+# v1.1.3 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- realTeaserSize for podcast Image [#540](https://github.com/mumprod/hr-design-system-handlebars/pull/540) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.1.2 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- uses realTeaserSize for podcast Title now [#539](https://github.com/mumprod/hr-design-system-handlebars/pull/539) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.1.1 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- fixes line-clamp in podcast title [#538](https://github.com/mumprod/hr-design-system-handlebars/pull/538) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.1.0 (Fri Feb 10 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Event filtering is possible [#537](https://github.com/mumprod/hr-design-system-handlebars/pull/537) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- REFAC: Updates chromatic build script to run [#536](https://github.com/mumprod/hr-design-system-handlebars/pull/536) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.0.2 (Thu Feb 09 2023)
 
 #### 🐛 Bug Fix
