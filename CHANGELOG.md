@@ -1,3 +1,15 @@
+# v1.1.4 (Fri Feb 10 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2086 - Abstände Ortslabel einheitlich [#542](https://github.com/mumprod/hr-design-system-handlebars/pull/542) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.1.3 (Fri Feb 10 2023)
 
 #### 🐛 Bug Fix
