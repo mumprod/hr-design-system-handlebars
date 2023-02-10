@@ -6,19 +6,23 @@ require('zepto-modules/callbacks')
 require('zepto-modules/deferred')
 
 const Filterer = (context) => {
-    const { options } = context
-    const { element: rootElement } = context
-    const contentTargetClass = '.js-fr-content'
-    const errorTargetClass = 'js-fr-error-target'
-    const errorClass = 'js-fr-error'
-    const reloadTriggerClass = 'js-fr-reload-trigger'
-    const targetClass = 'js-fr-target'
-    const triggerClass = 'js-fr-trigger'
-    const triggerDomNodes = hr$(`.${triggerClass}`, rootElement)
+    const { options } = context,
+        { element: rootElement } = context,
+        pushToBrowserHistory = options.pushToBrowserHistory || false,
+        loadingCssTrigger = options.loadingCssTrigger || 'is-loading',
+        hiddenElementCssTrigger = options.hiddenElementCssTrigger || 'hidden',
+        navItemSelectedCssTrigger = options.navItemSelectedCssTrigger || 'selected',
+        contentTargetClass = '.js-fr-content',
+        errorTargetClass = 'js-fr-error-target',
+        errorClass = 'js-fr-error',
+        reloadTriggerClass = 'js-fr-reload-trigger',
+        targetClass = 'js-fr-target',
+        triggerClass = 'js-fr-trigger',
+        triggerDomNodes = hr$(`.${triggerClass}`, rootElement),
+        errorTargetDomNodes = hr$(`.${errorTargetClass}`, rootElement),
+        errorDomNodes = hr$(`.${errorClass}`),
+        contentTargetDomNode = hr$(contentTargetClass, rootElement)[0]
     let targetDomNodes = hr$(`.${targetClass}`, rootElement)
-    const errorTargetDomNodes = hr$(`.${errorTargetClass}`, rootElement)
-    const errorDomNodes = hr$(`.${errorClass}`)
-    const contentTargetDomNode = hr$(contentTargetClass, rootElement)[0]
 
     const init = function () {
         for (let i = 0; i < triggerDomNodes.length; i++) {
@@ -40,13 +44,13 @@ const Filterer = (context) => {
             }
         }
 
-        if (
-            !rootElement.classList.contains('-excerpt') &&
-            !!(window.history && window.history.pushState)
-        ) {
+        if (pushToBrowserHistory && !!(window.history && window.history.pushState)) {
             listen('popstate', handlePopstate, window)
             //initial state ersetzen so dass es ein rückkehrpunkt gibt
-            const selectedTrigger = hr$('.' + triggerClass + '.-selected', rootElement)
+            const selectedTrigger = hr$(
+                `.${triggerClass}.${navItemSelectedCssTrigger}`,
+                rootElement
+            )
             history.replaceState(
                 {
                     sel: triggerClass,
@@ -66,7 +70,7 @@ const Filterer = (context) => {
         clearSelected()
 
         if (!forceReset) {
-            e.currentTarget.classList.add('-selected')
+            e.currentTarget.classList.add(navItemSelectedCssTrigger)
         }
 
         //hacky weil e beim start auch kein Event sein kann
@@ -76,10 +80,10 @@ const Filterer = (context) => {
     }
 
     const clearSelected = function () {
-        let triggerDomNodes = hr$(`.${triggerClass}.-selected`, rootElement)
+        let triggerDomNodes = hr$(`.${triggerClass}.${navItemSelectedCssTrigger}`, rootElement)
 
         triggerDomNodes.forEach(function (triggerDomNode) {
-            triggerDomNode.classList.remove('-selected')
+            triggerDomNode.classList.remove(navItemSelectedCssTrigger)
         })
     }
 
@@ -108,10 +112,10 @@ const Filterer = (context) => {
                     loadContent(currentTarget)
                 } else {
                     stratHideOthersById(targetDomNodes, data.crit, reset)
-                    if (push && !rootElement.classList.contains('-excerpt')) {
+                    if (push && pushToBrowserHistory) {
                         history.pushState(
                             {
-                                sel: '.' + currentTarget + '.-selected',
+                                sel: `.${currentTarget}.${navItemSelectedCssTrigger}`,
                                 crit: data.crit,
                             },
                             null,
@@ -127,10 +131,10 @@ const Filterer = (context) => {
                     loadContent(currentTarget)
                 } else {
                     stratHideOthersStartsWithId(targetDomNodes, data.crit, reset)
-                    if (push && !rootElement.classList.contains('-excerpt')) {
+                    if (push && pushToBrowserHistory) {
                         history.pushState(
                             {
-                                sel: '.' + currentTarget + '.-selected',
+                                sel: `.${currentTarget}.${navItemSelectedCssTrigger}`,
                                 crit: data.crit,
                             },
                             null,
@@ -146,7 +150,7 @@ const Filterer = (context) => {
             }
         }
 
-       /* if (countXTClick) {
+        /* if (countXTClick) {
             pi(
                 xtpage +
                     '&pchap=' +
@@ -163,11 +167,11 @@ const Filterer = (context) => {
     }
     const removeErrors = function () {
         if (errorTargetDomNodes.length > 0) {
-            errorTargetDomNodes[0].classList.add('hidden')
+            errorTargetDomNodes[0].classList.add(hiddenElementCssTrigger)
         }
 
         if (errorDomNodes.length > 0) {
-            errorDomNodes[0].classList.add('hidden')
+            errorDomNodes[0].classList.add(hiddenElementCssTrigger)
         }
     }
     const loadContent = function (currentTarget) {
@@ -184,7 +188,7 @@ const Filterer = (context) => {
             cache: true,
             beforeSend: function () {
                 console.log('before load')
-                $(contentTargetClass, rootElement).addClass('-isLoading')
+                $(contentTargetClass, rootElement).addClass(loadingCssTrigger)
             },
         })
             .done(function (data, status, xhr) {
@@ -198,7 +202,7 @@ const Filterer = (context) => {
                         $(contentTargetClass, rootElement).append(data)
 
                         targetDomNodes = hr$('.' + targetClass, rootElement)
-                        $(contentTargetClass, rootElement).removeClass('-isLoading')
+                        $(contentTargetClass, rootElement).removeClass(loadingCssTrigger)
                         $(currentTarget, rootElement)
                             .closest('.' + reloadTriggerClass)
                             .removeClass(reloadTriggerClass)
@@ -210,7 +214,7 @@ const Filterer = (context) => {
             })
             .fail(function (data, status, xhr) {
                 console.log('load error')
-                $(contentTargetClass, rootElement).addClass('-isLoading')
+                $(contentTargetClass, rootElement).addClass(loadingCssTrigger)
             })
     }
     const createInlineUrl = function (element) {
@@ -229,7 +233,7 @@ const Filterer = (context) => {
             )[0]
             doFilter(target, false, false)
             clearSelected()
-            target.classList.add('-selected')
+            target.classList.add(navItemSelectedCssTrigger)
         }
     }
     const initial = function () {
@@ -242,16 +246,16 @@ const Filterer = (context) => {
 
         if (reset) {
             for (i = 0; i < targetDomNodes.length; i++) {
-                targetDomNodes[i].classList.remove('hidden')
+                targetDomNodes[i].classList.remove(hiddenElementCssTrigger)
             }
             return
         }
 
         for (i = 0; i < targetDomNodes.length; i++) {
             if (targetDomNodes[i].getAttribute('id') !== crit) {
-                targetDomNodes[i].classList.add('hidden')
+                targetDomNodes[i].classList.add(hiddenElementCssTrigger)
             } else {
-                targetDomNodes[i].classList.remove('hidden')
+                targetDomNodes[i].classList.remove(hiddenElementCssTrigger)
 
                 found = true
             }
@@ -267,16 +271,16 @@ const Filterer = (context) => {
 
         if (reset) {
             for (i = 0; i < targetDomNodes.length; i++) {
-                targetDomNodes[i].classList.remove('hidden')
+                targetDomNodes[i].classList.remove(hiddenElementCssTrigger)
             }
             return
         }
 
         for (i = 0; i < targetDomNodes.length; i++) {
             if (targetDomNodes[i].getAttribute('id').indexOf(crit) !== 0) {
-                targetDomNodes[i].classList.add('hidden')
+                targetDomNodes[i].classList.add(hiddenElementCssTrigger)
             } else {
-                targetDomNodes[i].classList.remove('hidden')
+                targetDomNodes[i].classList.remove(hiddenElementCssTrigger)
 
                 found = true
             }
@@ -289,7 +293,7 @@ const Filterer = (context) => {
     const displayErrorTarget = function () {
         if (targetDomNodes.length >= 1) {
             if (errorTargetDomNodes.length > 0) {
-                errorTargetDomNodes[0].classList.remove('hidden')
+                errorTargetDomNodes[0].classList.remove(hiddenElementCssTrigger)
             }
         }
     }

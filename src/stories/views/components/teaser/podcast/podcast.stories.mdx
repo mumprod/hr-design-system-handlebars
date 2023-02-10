@@ -7,27 +7,26 @@ import episodeJson50 from '../fixtures/teaser_podcast_50.json'
 import playlistJson100 from '../fixtures/teaser_podcast_playlist.json'
 import playlistJson50 from '../fixtures/teaser_podcast_playlist_50.json'
 
-<Meta   title="Komponenten/Teaser/Podcast"
-        parameters={{
-            chromatic: {
-                viewports: [360, 768, 1024],
-                diffThreshold: 0.5
-            },
-            layout: 'fullscreen',
-        }}
-        argTypes={{
-        }} 
-        decorators={[
+<Meta
+    title="Komponenten/Teaser/Podcast"
+    parameters={{
+        chromatic: {
+            viewports: [360, 768, 1024],
+            diffThreshold: 0.5,
+        },
+        layout: 'fullscreen',
+    }}
+    argTypes={{}}
+    decorators={[
         (Story) => {
             return `<div class="grid grid-page">
-                        <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">
+                        <div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">
                             ${Story()} 
                         </div>
                     </div>`
-        }
-    
-    ]} 
-        />
+        },
+    ]}
+/>
 
 export const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -45,18 +44,17 @@ export const playlistTemplate = (args, { globals: { customConditionalToolbar } }
     return podcastPlaylist({ brand, ...args })
 }
 
-
-<Preview withToolbar>    
-    <Story  name="100% Episode Player" args={episodeJson.logicItem.includeModel}>
-        {episodeTemplate.bind({})} 
+<Preview withToolbar>
+    <Story name="100% Episode Player" args={episodeJson.logicItem.includeModel}>
+        {episodeTemplate.bind({})}
     </Story>
-    <Story  name="50% Episode Player" args={episodeJson50.logicItem.includeModel}>
-        {episodeTemplate.bind({})} 
-    </Story>  
-    <Story  name="100% Channel Player" args={playlistJson100.logicItem.includeModel}>
-        {playlistTemplate.bind({})} 
+    <Story name="50% Episode Player" args={episodeJson50.logicItem.includeModel}>
+        {episodeTemplate.bind({})}
     </Story>
-        <Story  name="50% Channel Player" args={playlistJson50.logicItem.includeModel}>
-        {playlistTemplate.bind({})} 
+    <Story name="100% Channel Player" args={playlistJson100.logicItem.includeModel}>
+        {playlistTemplate.bind({})}
+    </Story>
+    <Story name="50% Channel Player" args={playlistJson50.logicItem.includeModel}>
+        {playlistTemplate.bind({})}
     </Story>
 </Preview>

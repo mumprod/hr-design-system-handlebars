@@ -1,19 +1,18 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-
-import groupTeaser from "./group_teaser.hbs";
-import groupTeaserAccented from "./group_teaser_accented.hbs"; 
-import teaserGroup100 from '../fixtures/teaser_group_100.json' 
+import groupTeaser from './group_teaser.hbs'
+import groupTeaserAccented from './group_teaser_accented.hbs'
+import teaserGroup100 from '../fixtures/teaser_group_100.json'
 import teaserGroupRelatedContent100 from '../fixtures/teaser_group_related_content_100.json'
-import teaserGroup100highlight from '../fixtures/teaser_group_100_highlight.json' 
+import teaserGroup100highlight from '../fixtures/teaser_group_100_highlight.json'
 import teaserGroup100highlight2 from '../fixtures/teaser_group_100_highlight_2.json'
- 
-import teaserGroup100contentnav from '../fixtures/teaser_group_100_contentnav.json' 
+
+import teaserGroup100contentnav from '../fixtures/teaser_group_100_contentnav.json'
 
 <Meta
-  title="Komponenten/Teaser/Gruppen"
-  argTypes={{
-    teaserSize: {
+    title="Komponenten/Teaser/Gruppen"
+    argTypes={{
+        teaserSize: {
             control: {
                 type: 'select',
                 options: ['100', '66', '50', '33', '25'],
@@ -25,69 +24,62 @@ import teaserGroup100contentnav from '../fixtures/teaser_group_100_contentnav.js
                 },
             },
         },
-  }}
-  parameters={{
+    }}
+    parameters={{
         layout: 'fullscreen',
-  }}
-  decorators={[
-    (Story) => {
-        return `<div class="grid my-5 grid-page">
-                  <div class="grid grid-cols-12 py-6 bg-white sm:px-8 col-full sm:col-main gap-x-6 md:gap-y-14 gap-y-6">
+    }}
+    decorators={[
+        (Story) => {
+            return `<div class="grid my-5 grid-page">
+                  <div class="grid grid-cols-12 py-6 bg-white sm:px-9.5 col-full sm:col-main gap-x-6 md:gap-y-14 gap-y-6">
                     ${Story()}
                   </div>
                 </div>`
-    },
-  ]}
+        },
+    ]}
 />
 
 export const groupTeaserTemplate = ({ text, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return groupTeaser({ text, ...args });
-};
-
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return groupTeaser({ text, ...args })
+}
 
 export const groupTeaserAccentedTemplate = ({ text, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return groupTeaserAccented({ text, ...args });
-};
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return groupTeaserAccented({ text, ...args })
+}
 
 # Button
 
 Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
 
 <Preview withToolbar>
-  <Story
-    name="100% Gruppe mit Überschrift"
-    args={teaserGroup100.includeModel} 
-  >
-    {groupTeaserTemplate.bind({})}
-  </Story>
-  <Story
-    name="100% Gruppe mit Überschrift Highlight 1"
-    args={teaserGroup100highlight.includeModel} 
-  >
-    {groupTeaserTemplate.bind({})}
-  </Story>
-  <Story
-    name="100% Gruppe mit Überschrift Highlight 2"
-    args={teaserGroup100highlight2.includeModel} 
-  >
-    {groupTeaserTemplate.bind({})}
-  </Story>
-  <Story
-    name="100% Gruppe mit Content Navigation Aufklapp"
-    args={teaserGroup100contentnav.includeModel} 
-  >
-    {groupTeaserAccentedTemplate.bind({})}
-  </Story>
-  <Story
-    name="100% Gruppe mit Related Content"
-    args={teaserGroupRelatedContent100.includeModel}   
-  >
-    {groupTeaserTemplate.bind({})}
-  </Story>
+    <Story name="100% Gruppe mit Überschrift" args={teaserGroup100.includeModel}>
+        {groupTeaserTemplate.bind({})}
+    </Story>
+    <Story
+        name="100% Gruppe mit Überschrift Highlight 1"
+        args={teaserGroup100highlight.includeModel}
+    >
+        {groupTeaserTemplate.bind({})}
+    </Story>
+    <Story
+        name="100% Gruppe mit Überschrift Highlight 2"
+        args={teaserGroup100highlight2.includeModel}
+    >
+        {groupTeaserTemplate.bind({})}
+    </Story>
+    <Story
+        name="100% Gruppe mit Content Navigation Aufklapp"
+        args={teaserGroup100contentnav.includeModel}
+    >
+        {groupTeaserAccentedTemplate.bind({})}
+    </Story>
+    <Story name="100% Gruppe mit Related Content" args={teaserGroupRelatedContent100.includeModel}>
+        {groupTeaserTemplate.bind({})}
+    </Story>
 </Preview>
 
 <ArgsTable story="main" />

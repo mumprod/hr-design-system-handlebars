@@ -19,21 +19,20 @@ import clusterTeaserImage33 from '../fixtures/cluster_teaser_33_image.json'
 import PodcastChannelClusterTeaser from '../fixtures/cluster_teaser_Podcast_Channel.json'
 import clusterTeaserOrdered33LongTitle from '../fixtures/cluster_teaser_33_long_title.json'
 
-<Meta   title="Komponenten/Teaser/Cluster"
-        parameters={{
-            layout: '',
-        }}
-        argTypes={{
-        }}
-            decorators={[
+<Meta
+    title="Komponenten/Teaser/Cluster"
+    parameters={{
+        layout: '',
+    }}
+    argTypes={{}}
+    decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
                 ${Story()} 
                 </div></div>`
         },
     ]}
-        
-        />
+/>
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -42,7 +41,6 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     return cluster({ brand, ...args })
 }
-
 
 <Preview withToolbar>
     <Story name="Kurzmeldungen 100" args={clusterTeaser100}>

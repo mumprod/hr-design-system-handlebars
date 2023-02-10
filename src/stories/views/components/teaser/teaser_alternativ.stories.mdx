@@ -21,7 +21,7 @@ import teaser50Download from './fixtures/teaser_alternative_50_serif_download.js
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 1024],
-            diffThreshold: 0.5
+            diffThreshold: 0.5,
         },
     }}
     argTypes={{
@@ -40,7 +40,7 @@ import teaser50Download from './fixtures/teaser_alternative_50_serif_download.js
     }}
     decorators={[
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-8 sm:col-main">  
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
                 ${Story()} 
                 </div></div>`
         },
@@ -123,10 +123,16 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Alternativ Hero mit Label" args={heroTeaserWithLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Alternativ Hero mit externen Link Dokument" args={heroTeaserLink.logicItem.includeModel}>
+    <Story
+        name="Alternativ Hero mit externen Link Dokument"
+        args={heroTeaserLink.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
-    <Story name="Alternativ Hero mit Sendungsdokument" args={heroTeaserProgram.logicItem.includeModel}>
+    <Story
+        name="Alternativ Hero mit Sendungsdokument"
+        args={heroTeaserProgram.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
     <b>Alternativ 100%</b>
@@ -141,10 +147,13 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Alternativ 50" args={teaser50.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Alternativ 50 ohne Teaserbild" args={teaser50WithoutTeaserImage.logicItem.includeModel}>
+    <Story
+        name="Alternativ 50 ohne Teaserbild"
+        args={teaser50WithoutTeaserImage.logicItem.includeModel}
+    >
         {Template.bind({})}
     </Story>
-        <b>Alternativ 50% mit externem Link</b>
+    <b>Alternativ 50% mit externem Link</b>
     <Story name="Alternativ 50 mit externem Link" args={teaser50Link.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
