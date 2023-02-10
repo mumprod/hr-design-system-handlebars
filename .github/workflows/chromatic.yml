@@ -1,26 +1,39 @@
-# Name of our action
-name: 'Chromatic'
-# The event that will trigger the action
-on: push
+name: Chromatic Main and Active PRs only
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        types: [assigned, ready_for_review, review_requested]
 
-# What the action will do
 jobs:
-    test:
-        # The operating system it will run on
+    chromatic:
         runs-on: ubuntu-latest
-        # The list of steps that the action will go through
         steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - name: Use Node.js 16.x
               uses: actions/setup-node@v1
               with:
                   node-version: 16.x
-            - run: npm ci
-            - run: npm run partialsToJs
-              #👇 Adds Chromatic as a step in the workflow
+            - name: install
+              run: npm ci
+            - name: create partials
+              run: npm run partialsToJs
             - uses: chromaui/action@v1
-              # Options required for Chromatic's GitHub Action
               with:
-                  #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/design-systems-for-developers/react/en/review/ to obtain it
+                  # 👇 Chromatic projectToken, refer to the manage page to obtain it.
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  exitOnceUploaded: true
+                  onlyChanged: true
+                  traceChanged: true
+                  diagnostics: true
+                  skip: ${{ github.event.pull_request.draft == true }}
+            - uses: actions/upload-artifact@v2
+              if: always()
+              with:
+                  name: chromatic-build-artifacts-${{ github.run_id }}
+                  path: |
+                      chromatic-diagnostics.json
+                      **/build-storybook.log
