@@ -51,7 +51,7 @@
     </div>
 
     {{!-- Player UI --}}
-    <div class="flex {{inline-switch this.teaserSize '["100"]' '["lg:pr-48 lg:-mt-14",""]'}}" 
+    <div class="flex {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}}" 
       x-data="playaudio()"
       x-init="listenToGlobalStop()"
       ax-load
