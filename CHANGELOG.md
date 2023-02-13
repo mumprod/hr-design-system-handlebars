@@ -1,3 +1,15 @@
+# v1.1.6 (Mon Feb 13 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Fixes the layout of standard 100% [#543](https://github.com/mumprod/hr-design-system-handlebars/pull/543) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.1.5 (Fri Feb 10 2023)
 
 #### 🐛 Bug Fix
