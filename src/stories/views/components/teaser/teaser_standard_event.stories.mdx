@@ -2,6 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import teaser from './teaser_standard.hbs'
 import teaserAlternative from './teaser_alternativ.hbs'
 import teaser33SingleEventSerif from './fixtures/teaser_standard_33_serif_single_event.json'
+import teaser33SingleEventStatus from './fixtures/teaser_standard_33_serif_single_event_status.json'
 import teaser33TwoEventsSerif from './fixtures/teaser_standard_33_serif_two_events.json'
 import teaser33MultipleEventsSerif from './fixtures/teaser_standard_33_serif_multiple_events.json'
 import teaser50SingleEventSerif from './fixtures/teaser_standard_50_serif_single_event.json'
@@ -106,35 +107,41 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 ```
 
 <Preview withToolbar>
-    <Story name="Standard 33 single event" args={teaser33SingleEventSerif.logicItem.includeModel}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Standard 33 two events" args={teaser33TwoEventsSerif.logicItem.includeModel}>
+    <Story name="Standard 33 Einzel-Event" args={teaser33SingleEventSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story
-        name="Standard 33 multiple events"
+        name="Standard 33 Einzel-Event abgesagt"
+        args={teaser33SingleEventStatus.logicItem.includeModel}
+    >
+        {Template.bind({})}
+    </Story>
+    <Story name="Standard 33 zwei Events" args={teaser33TwoEventsSerif.logicItem.includeModel}>
+        {Template.bind({})}
+    </Story>
+    <Story
+        name="Standard 33 mehrere Events"
         args={teaser33MultipleEventsSerif.logicItem.includeModel}
     >
         {Template.bind({})}
     </Story>
-    <Story name="Standard 50 single event" args={teaser50SingleEventSerif.logicItem.includeModel}>
+    <Story name="Standard 50 Einzel-Event" args={teaser50SingleEventSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard 100 single event" args={teaser100SingleEventSerif.logicItem.includeModel}>
+    <Story name="Standard 100 Einzel-Event" args={teaser100SingleEventSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-    <Story name="Standard 100 two events" args={teaser100TwoEventsSerif.logicItem.includeModel}>
+    <Story name="Standard 100 zwei Events" args={teaser100TwoEventsSerif.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
     <Story
-        name="Alternative 100 single event"
+        name="Alternativ 100 Einzel-Event"
         args={teaserAlternative100SingleEventSerif.logicItem.includeModel}
     >
         {TemplateAlternative.bind({})}
     </Story>
     <Story
-        name="Alternative 100 two events"
+        name="Alternativ 100 zwei Events"
         args={teaserAlternative100TwoEventsSerif.logicItem.includeModel}
     >
         {TemplateAlternative.bind({})}

@@ -952,7 +952,7 @@
                     "date": "14.10.22",
                     "dateSeparatorTime": "14.10.22, 20:00"
                 },
-                "hasByline": true,
+                "hasByline": false,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": false,
