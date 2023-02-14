@@ -1,0 +1,9 @@
+{{#with this.broadcast}}
+    {{#with this.startDate}}
+        {{#> components/text/byline _css="ml-2"}}
+            <time datetime='{{this.htmlDateTime}}'>
+                {{loca 'date_simple_at' this.dateWithTimeAndWeekday}}
+            </time>
+        {{/components/text/byline}}
+    {{/with}}
+{{/with}}
