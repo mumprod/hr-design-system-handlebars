@@ -35,7 +35,19 @@
         "type": "event",
         "loca": "label_concert",
         "byline": {
-            "bylineSsi": "14.10.22, 20:00 Uhr",
+            "bylineSsi": "components/event/label_byline.ssi",
+            "context": {
+                "firstInstant": {
+                    "hasStatus": false,
+                    "statusDescriptionForLabelShort": "event_status_cancelled",
+                    "startDateTime": {
+                        "date": "14.10.22",
+                        "time": "20:00"
+                    }
+                },
+                "moreThenOneEvent": false,
+                "countEvents": 1
+            },
             "bylineText": "BylineText"
         }
     },
