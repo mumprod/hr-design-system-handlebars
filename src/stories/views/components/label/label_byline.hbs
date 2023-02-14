@@ -1,7 +1,10 @@
-<span class='ml-2 text-xs font-headingSerif{{#if _css}} {{../_css}}{{/if}}'>
+{{#with this.byline}}
     {{~#if this.bylineSsi~}}
-        {{{this.bylineSsi}}}
+        {{> components/base/loadSSI _context=this.context _templatePath=this.bylineSsi}}
     {{~else~}}
-        {{this.bylineText}}
+        {{#> components/text/byline _css=_css}}
+            {{this.bylineText}}
+        {{/components/text/byline}}
     {{~/if~}}
-</span>
+{{/with}}
+ 

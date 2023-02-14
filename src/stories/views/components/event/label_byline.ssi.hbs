@@ -1,0 +1,9 @@
+{{#with this.firstInstant}}
+    {{#if this.hasStatus}}
+        {{> components/event/event_status _status=(loca this.statusDescriptionForLabelShort)}} 
+    {{else}}
+        {{#> components/text/byline}}
+            {{this.startDateTime.date}}, {{this.startDateTime.time}} Uhr
+        {{/components/text/byline}}
+    {{/if}}
+{{/with}}

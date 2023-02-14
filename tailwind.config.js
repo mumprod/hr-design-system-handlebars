@@ -350,6 +350,7 @@ module.exports = {
                 'event-status': 'var(--color-event-status)',
                 'event-calendar-primary': 'var(--color-eventcalendar-primary)',
                 'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
+                'byline': 'var(--color-byline)',
             },
         },
     },

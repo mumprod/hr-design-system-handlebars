@@ -68,6 +68,8 @@
     /* Podcast-Player */
     --color-podcast: theme('colors.blue.science');
     --color-podcast-text: var(--color-link);
+    /* Byline */
+    --color-byline: theme('colors.grey.scorpion');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
