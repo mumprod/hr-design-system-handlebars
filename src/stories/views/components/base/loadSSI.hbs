@@ -1,5 +1,5 @@
 {{#if (isStorybook)}}  
-    {{> components/base/load_dynamic _templatePath=_templatePath}} 
+    {{> components/base/load_dynamic _context=_context _templatePath=_templatePath}} 
 {{else}}
     {{{this}}}
 {{/if}}        
