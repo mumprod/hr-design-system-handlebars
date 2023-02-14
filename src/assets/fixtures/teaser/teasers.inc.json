@@ -560,6 +560,10 @@
                         }
                     ]
                 },
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream"
+                },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
@@ -806,12 +810,8 @@
                     "@->contentpath": "audioLivestream"
                 },
                 "label": {
-                    "type": "podcast",
-                    "loca": "label_audio_event_livestream",
-                    "byline": {
-                        "bylineSsi": "Beendet",
-                        "bylineText": ""
-                    }
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "audio_livestream"
                 },
                 "link": {
                     "url": "/teaser1",

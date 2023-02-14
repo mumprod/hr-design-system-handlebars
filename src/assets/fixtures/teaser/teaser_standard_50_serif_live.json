@@ -9,6 +9,14 @@
         {
             "@->contentpath": "logicItem.includeModel.realTeaserSize",
             "@->value": "50"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label.byline.context.labelInfo.isPlaysNow",
+            "@->value": false
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label.byline.context.labelInfo.isWillPlay",
+            "@->value": true
         }
     ]
 }

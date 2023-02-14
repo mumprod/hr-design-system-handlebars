@@ -23,6 +23,48 @@
             "bylineText": "BylineText"
         }
     },
+    "video_livestream": {
+        "type": "media",
+        "loca": "label_video_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": true,
+                    "isHasPlayed": false,
+                    "isWillPlay": false
+                },
+                "airdateDate": {
+                    "htmlDateTime": "",
+                    "date": "14.02.22",
+                    "time": "18:00"
+                },
+                "airdateWithoutTime": false
+            },
+            "bylineText": "BylineText"
+        }
+    },
+    "audio_livestream": {
+        "type": "media",
+        "loca": "label_audio_event_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": true,
+                    "isHasPlayed": false,
+                    "isWillPlay": false
+                },
+                "airdateDate": {
+                    "htmlDateTime": "",
+                    "date": "14.02.22",
+                    "time": "18:00"
+                },
+                "airdateWithoutTime": false
+            },
+            "bylineText": "BylineText"
+        }
+    },
     "download": {
         "type": "download",
         "loca": "label_download",
