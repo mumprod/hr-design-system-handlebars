@@ -6,8 +6,8 @@
         {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
             {{#with this.label}}
                 {{#> components/label/label_group}}
-                    {{> components/label/label_test _type=this.type _text=(loca this.loca) _css="mr-2"}}
-                    {{> components/label/label_byline}}
+                    {{> components/label/label_test _type=this.type _text=(loca this.loca)}}
+                    {{> components/label/label_byline _css="ml-2"}}
                 {{/components/label/label_group}}
             {{/with~}}
             {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
