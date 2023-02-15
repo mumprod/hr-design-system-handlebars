@@ -4,18 +4,23 @@
     </figure> 
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
         {{#decorator 'components/base/link' _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
-            {{> components/teaser/components/teaser_heading 
-            _headlineTag="h2" 
-            _headlineCss="text-shadow text-center text-white mb-4 mx-4 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5" 
-            _label=this.label 
-            _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.realTeaserSize 
-            _title=this.title
-            _titleCss="whitespace-pre-wrap"
-            _topline=this.topline 
-            _toplineCss="!text-white"
-            _teaserType=this.teaserType 
-            _font=(inline-switch isSerifHeading '[true, false]' '["font-headingSerif","font-heading font-bold"]') }}   
+            {{#> components/teaser/components/teaser_header}}
+                {{#with this.label}}
+                    {{#> components/label/label_group}}
+                        {{> components/label/label_test _type=this.type _text=(loca this.loca)}}
+                        {{> components/label/label_byline _css="ml-2"}}
+                    {{/components/label/label_group}}
+                {{/with~}}
+                 {{#> components/teaser/components/teaser_headline _headlineTag="h2" _css="text-shadow text-center text-white mb-4 mx-4 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5"}}
+                    {{#if this.topline}}
+                        {{> components/teaser/components/teaser_topline _css="!text-white" _text=this.topline}}
+                    {{/if}}
+                    {{> components/teaser/components/teaser_title_test _css="whitespace-pre-wrap" _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType}}
+                    {{#if this.extendedTitle}}
+                        {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
+                    {{/if}}
+                {{/components/teaser/components/teaser_headline}}
+            {{/components/teaser/components/teaser_header}}
         {{/decorator}}
         {{~> components/button/button_pseudo _type="hollow-white" _withLink=true _isLinkAriaHidden=true _linkCss="ds-cta absolute flex w-full h-full items-end justify-center" _buttonCss=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _buttonText=this.link.readMoreText.readMoreLong ~}} 
     </div>
