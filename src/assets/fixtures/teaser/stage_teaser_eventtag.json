@@ -1,12 +1,8 @@
 {
     "teaser": {
         "label": {
-            "loca": "label_concert",
-            "type": "event",
-            "byline": {
-                "bylineText": "14.10.2022 20:00 Uhr",
-                "bylineSsi": ""
-            }
+            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+            "@->contentpath": "event"
         },
         "eventtags": {
             "@->jsoninclude": "teaser/stage_eventtags.inc.json"
