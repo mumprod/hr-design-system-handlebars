@@ -1,3 +1,15 @@
+# v1.1.8 (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2104 - Event Teaser alternativ ist mobil kaputt [#546](https://github.com/mumprod/hr-design-system-handlebars/pull/546) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.1.7 (Wed Feb 15 2023)
 
 #### 🐛 Bug Fix
