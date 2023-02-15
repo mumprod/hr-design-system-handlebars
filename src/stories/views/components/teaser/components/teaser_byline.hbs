@@ -3,25 +3,33 @@
         {{!--Teaser-Info--}}
         {{~#with this.teaserInfo~}}
             {{~#if this.showTeaserInfo~}}
-                {{~#if this.showTeaserInfoDate~}}
-                    {{~#with ../this.teaserDate~}}
-                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                    {{~/with~}}
-                    <span class="mx-1 last-of-type:hidden">|</span>
-                    {{~else~}}
-                    {{~#if this.showTeaserInfoDateTime~}}
-                        {{~#with ../this.teaserDate~}}
-                            <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
-                        {{~/with~}}
-                        <span class="mx-1 last-of-type:hidden">|</span>
-                    {{~/if~}}
-                {{~/if~}}
                 {{~#if this.showTeaserInfoSection~}}
                     <span class="uppercase">
-                        {{~../this.documentSection~}}
+                        {{~../documentSection~}}
                     </span>
                     <span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
+                {{~#if this.showTeaserInfoChannel}}
+                    {{../this.podcastChannel.title}}
+                    <span class="mx-1 last-of-type:hidden">|</span>
+                {{/if}}
+                {{~#if this.showTeaserInfoDate~}}
+                    {{~#with ../teaserDate~}}
+                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                        <span class="mx-1 last-of-type:hidden">|</span>
+                    {{~/with~}}
+                {{/if}}
+                {{~#if this.showTeaserInfoDateTime~}}
+                    {{~#with ../teaserDate~}}
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at"
+                                                                      this.dateSeparatorTime}}</time>
+                                                                      <span class="mx-1 last-of-type:hidden">|</span>
+                    {{~/with~}}
+                {{~/if~}}
+                {{#if this.showTeaserInfoProgramRef}}
+                  {{> components/teaser/components/teaser_byline_airdate}}
+                  <span class="mx-1 last-of-type:hidden">|</span>
+                {{/if}}
             {{~/if~}}
         {{~/with~}}
         {{!--File download--}}

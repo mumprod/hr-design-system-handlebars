@@ -1,0 +1,27 @@
+{{#with ../this}}
+    {{~#if this.isAudio}}
+        {{~#with this.audioAuthor}}
+            {{this}}{{#if ../this.airdateDate }}
+            <span class="mx-1">|</span>{{/if}}
+        {{/with}}
+        {{~#with this.airdateDate ~}}
+            <time datetime="{{this.htmlDate}}">{{this.date}}</time>
+        {{~/with~}}
+    {{/if}}
+
+    {{~#if this.isVideo}}
+        {{~#with this.copyright}}
+            {{this}}{{#if ../this.airdateDate }}
+            <span class="mx-1">|</span>{{/if}}
+        {{/with}}
+
+        {{~#with this.airdateDate ~}}
+            {{~#if ../this.airdateWithoutTime ~}}
+                <time datetime="{{this.htmlDate}}">{{this.date}}</time>
+            {{else}}
+                <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at"
+                                                                this.dateSeparatorTime }}</time>
+            {{~/if~}}
+        {{~/with~}}
+    {{/if}}
+{{/with}}
