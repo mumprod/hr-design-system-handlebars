@@ -16,8 +16,35 @@
             _extendedTitle=this.extendedTitle}}            
         {{/decorator}}   
     </header>
+
     <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-        {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
-        {{> components/teaser/components/teaser_byline}} 
+        {{#switch this.teaserSize }}
+            {{#case "25"}}
+                {{#if this.isExtOrBrandLink}}
+                    {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{/if}}
+                {{> components/teaser/components/teaser_byline}} 
+            {{/case}}
+
+            {{#case "33"}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{> components/teaser/components/teaser_byline}} 
+            {{/case}}
+
+            {{#case "50"}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{> components/teaser/components/teaser_byline}} 
+            {{/case}}
+
+            {{#case "66"}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{> components/teaser/components/teaser_byline}} 
+            {{/case}}
+            
+            {{#case "100"}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{> components/teaser/components/teaser_byline}}
+            {{/case}}
+        {{/switch}}   
     </div>
 </div>
