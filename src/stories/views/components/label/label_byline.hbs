@@ -2,7 +2,7 @@
     {{~#if this.bylineSsi~}}
         {{> components/base/loadSSI _context=this.context _templatePath=this.bylineSsi}}
     {{~else~}}
-        {{#> components/text/byline _css=_css}}
+        {{#> components/text/byline _css=../_css}}
             {{this.bylineText}}
         {{/components/text/byline}}
     {{~/if~}}
