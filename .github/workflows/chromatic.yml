@@ -27,7 +27,7 @@ jobs:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   exitOnceUploaded: true
                   onlyChanged: true
-                  traceChanged: true
+                  traceChanged: expanded
                   diagnostics: true
                   skip: ${{ github.event.pull_request.draft == true }}
             - uses: actions/upload-artifact@v2
