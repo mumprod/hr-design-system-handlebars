@@ -26,8 +26,8 @@ jobs:
                   # 👇 Chromatic projectToken, refer to the manage page to obtain it.
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   exitOnceUploaded: true
-                  onlyChanged: true
-                  traceChanged: true
+                  onlyChanged: false
+                  traceChanged: false
                   diagnostics: true
                   skip: ${{ github.event.pull_request.draft == true }}
             - uses: actions/upload-artifact@v2
