@@ -61,6 +61,8 @@
     --color-button: var(--color-primary);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.jellyBean');
     /* States */
     --color-focus-state: var(--color-primary);
     /* Content-Nav */
@@ -125,6 +127,8 @@
     --color-button: var(--color-primary);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.jellyBean');
     /* States */
     --color-focus-state: var(--color-primary);
     /* Content-Nav */

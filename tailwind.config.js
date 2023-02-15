@@ -342,6 +342,7 @@ module.exports = {
                 'button': 'var(--color-button)',
                 'button-hollow': 'var(--color-button-hollow)',
                 'button-inverted': 'var(--color-button-inverted)',
+                'media-button': 'var(--color-media-button)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
                 'podcast': 'var(--color-podcast)',
