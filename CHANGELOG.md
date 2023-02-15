@@ -1,3 +1,15 @@
+# v1.1.7 (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2095: padding for tabteaser needs tobe 9.5 so sm:px-9.5 is used [#544](https://github.com/mumprod/hr-design-system-handlebars/pull/544) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.1.6 (Mon Feb 13 2023)
 
 #### 🐛 Bug Fix
