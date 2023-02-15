@@ -48,7 +48,7 @@
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
-    --color-stage-text-box: theme('colors.blue.deepCerulean');
+    --color-stage-text-box: 0 110 183;
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-primary: theme('colors.blue.deepCerulean');
     --color-stage-link: var('--color-link');
@@ -114,7 +114,7 @@
     /* Link */
     --color-link: theme('colors.blue.science');
     /*Stage */
-    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.congress');
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-link: theme('colors.white.DEFAULT');
@@ -175,7 +175,7 @@
     /* Link */
     --color-link: theme('colors.purple.jazzberry');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.blackhaze');
+    --color-stage-text-box: 234 237 237;
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
     --color-stage-link: var(--color-link);
@@ -230,7 +230,7 @@
     /* Link */
     --color-link: theme('colors.blue.jellyBean');
     /* Stage */
-    --color-stage-text-box: theme('colors.blue.astronautBlue');
+    --color-stage-text-box: 0 55 93;
     --color-stage-primary: theme('colors.blue.astronautBlue');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -286,7 +286,7 @@
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
     /* Stage */
-    --color-stage-text-box: theme('colors.blue.deepCerulean');
+    --color-stage-text-box: 0 110 183;
     --color-stage-primary: theme('colors.blue.deepCerulean');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -342,7 +342,7 @@
     /* Link */
     --color-link: var(--color-primary-ds);
     /* Stage */
-    --color-stage-text-box: var(--color-primary-ds);
+    --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -396,7 +396,7 @@
     /* Link */
     --color-link: theme('colors.red.wellRead');
     /* Stage */
-    --color-stage-text-box: var(--color-primary-ds);
+    --color-stage-text-box: 141 39 37;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -450,7 +450,7 @@
     /* Link */
     --color-link: theme('colors.blue.teal');
     /* Stage */
-    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.blueStone');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -506,7 +506,7 @@
     /* Link */
     --color-link: var(--color-primary-ds);
     /* Stage */
-    --color-stage-text-box: var(--color-primary-ds);
+    --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -562,7 +562,7 @@
     /* Link */
     --color-link: theme('colors.yellow.olive');
     /* Stage */
-    --color-stage-text-box: theme('colors.grey.armadillo');
+    --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.yellow.corn');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
@@ -616,7 +616,7 @@
     /* Link */
     --color-link: theme('colors.red.paprika');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: var(--color-link);
@@ -673,7 +673,7 @@
     /* Link */
     --color-link: var(--color-primary-ds);
     /* Stage */
-    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-text: var(--color-primary-ds);
     --color-stage-link: var(--color-link);
@@ -730,7 +730,7 @@
     /* Link */
     --color-link: theme('colors.green.eden');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.green.genoa');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');
@@ -787,7 +787,7 @@
     /* Link */
     --color-link: theme('colors.blue.sea');
     /* Stage */
-    --color-stage-text-box: theme('colors.white.DEFAULT');
+    --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.yellow.goldenSand');
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: theme('colors.black.DEFAULT');

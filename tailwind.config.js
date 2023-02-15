@@ -333,7 +333,7 @@ module.exports = {
                 'subline': 'var(--color-subline)',
                 'link': 'var(--color-link)',
                 'stageLink': 'var(--color-stage-link)',
-                'stageTextBox': 'var(--color-stage-text-box)',
+                'stageTextBox': 'rgb(var(--color-stage-text-box) / <alpha-value>)',
                 'stageText': 'var(--color-stage-text)',
                 'stagePrimary': 'var(--color-stage-primary)',
                 'geoTag': 'var(--color-geoTag)',
