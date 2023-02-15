@@ -1,37 +1,42 @@
 <div class="absolute left-2/4 right-auto bottom-15 lg:bottom-10 flex w-full px-5 sm:px-11.5 -translate-x-2/4 {{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
-    <div class="relative p-4 rounded-2xl bg-stageTextBox opacity-85{{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," max-w-xs sm:w-fit md:max-w-2/4"]'}} ">
-    {{#decorator 'components/base/link' _css="ds-teaser-focus before:rounded-2xl"}}
-        {{> components/teaser/components/teaser_heading _titleCss="text-stageText" _toplineCss="!text-stageText" _labelCss="text-stageText" _title=this.title _label=this.label _topline=this.topline _headlineTag="h2" _size="100" _teaserType="stage" _fontVariant="sans-serif"}}
-        {{#if this.showProfileInfoAsByline}}
-            <p class="block my-3 text-stageText font-headingSerif">{{this.profiles}}</p>
-        {{/if}}
-        {{#if this.showShorttext}}
-        <p class="hidden sm:block text-stageText">{{this.shorttext}}</p>
-            {{#if this.link.hasIcon}}
-            <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
-                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 self-baseline fill-current ml-1" }}]
-            </span>
+    <div class="relative p-4 rounded-2xl bg-stageTextBox/85 {{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," max-w-xs sm:w-fit md:max-w-2/4"]'}} ">
+        {{#decorator 'components/base/link' _css="ds-teaser-focus before:rounded-2xl"}}
+            {{#> components/teaser/components/teaser_header}}
+                {{#with this.label}}
+                    {{#> components/label/label_group _css="!text-stageText"}}
+                        {{> components/label/label _css="text-stageText" _type=this.type _text=(loca this.loca)}}
+                        {{> components/label/label_byline _css="ml-2 text-inherit"}}
+                    {{/components/label/label_group}}
+                {{/with~}}
+                {{#> components/teaser/components/teaser_headline _css="text-stageText" _headlineTag="h2"}}
+                    {{#if this.topline}}
+                        {{> components/teaser/components/teaser_topline _css="!text-stageText" _text=this.topline}}
+                    {{/if}}
+                    {{> components/teaser/components/teaser_title _css="text-stageText" _text=this.title _size="100" _teaserType="stage"}}
+                    {{#with this.eventtags}}
+                        {{> components/event/event_tags this _css="hidden sm:block text-inherit"}} 
+                    {{/with}}
+                {{/components/teaser/components/teaser_headline}}
+                {{#if this.showProfileInfoAsByline}}
+                    <p class="block mt-3 text-stageText font-headingSerif">{{this.profiles}}</p>
+                {{/if}}
+            {{/components/teaser/components/teaser_header}}
+            {{#if this.showShorttext}}
+                <p class="pt-4 hidden sm:block text-stageText">{{this.shorttext}}</p>
+                {{#if this.link.hasIcon}}
+                <span class="flex items-end space-around hover:underline decoration-1 text-stageLink">[{{this.link.readMoreText.readMore}}
+                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="w-5 h-5 self-baseline fill-current ml-1" }}]
+                </span>
+                {{/if}}
             {{/if}}
-        {{/if}}
-        {{#with this.eventtags}}
-            {{#with this.series}}
-                <span class="hidden font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1 sm:block">{{this.title}}</span>
+            {{#with this.location}}
+                {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
             {{/with}}
-            {{#with this.project}}
-                <span class="hidden font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1 sm:block">{{this.title}}</span>
-            {{/with}}
-            {{#with this.externalProject}}
-                <span class="hidden font-heading text-stageText text-2xl font-normal leading-6 tracking-wide mt-2.5 -mb-1 sm:block">{{this}}</span>
-            {{/with}}
-        {{/with}}
-        {{#with this.location}}
-            {{> components/base/loadSSI this.stageLocationSsi _templatePath='components/event/stage_location.ssi' }} 
-        {{/with}}
-        {{#if this.link.hasIcon}}
-            <span class="block mt-4 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
-                {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline w-5 h-5 self-baseline fill-current ml-1" }}]
-            </span>
-        {{/if}}
+            {{#if this.link.hasIcon}}
+                <span class="block mt-4 hover:underline text-stageLink {{if this.showShorttext 'hidden'}}">[{{this.link.readMoreText.readMore}}
+                    {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline w-5 h-5 self-baseline fill-current ml-1" }}]
+                </span>
+            {{/if}}
         {{/decorator}}
     </div>
 </div>

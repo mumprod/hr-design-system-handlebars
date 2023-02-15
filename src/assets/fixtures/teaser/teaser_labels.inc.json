@@ -23,19 +23,72 @@
             "bylineText": "BylineText"
         }
     },
+    "video_livestream": {
+        "type": "media",
+        "loca": "label_video_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": true,
+                    "isHasPlayed": false,
+                    "isWillPlay": false
+                },
+                "airdateDate": {
+                    "htmlDateTime": "",
+                    "date": "14.02.22",
+                    "time": "18:00"
+                },
+                "airdateWithoutTime": false
+            },
+            "bylineText": "BylineText"
+        }
+    },
+    "audio_livestream": {
+        "type": "media",
+        "loca": "label_audio_event_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": true,
+                    "isHasPlayed": false,
+                    "isWillPlay": false
+                },
+                "airdateDate": {
+                    "htmlDateTime": "",
+                    "date": "14.02.22",
+                    "time": "18:00"
+                },
+                "airdateWithoutTime": false
+            },
+            "bylineText": "BylineText"
+        }
+    },
     "download": {
         "type": "download",
         "loca": "label_download",
         "byline": {
-            "bylineSsi": "ZIP - 3mb",
-            "bylineText": "BylineText"
+            "bylineText": "ZIP - 3mb"
         }
     },
     "event": {
         "type": "event",
         "loca": "label_concert",
         "byline": {
-            "bylineSsi": "14.10.22, 20:00 Uhr",
+            "bylineSsi": "components/event/label_byline.ssi",
+            "context": {
+                "firstInstant": {
+                    "hasStatus": false,
+                    "statusDescriptionForLabelShort": "event_status_cancelled",
+                    "startDateTime": {
+                        "date": "14.10.22",
+                        "time": "20:00"
+                    }
+                },
+                "moreThenOneEvent": false,
+                "countEvents": 1
+            },
             "bylineText": "BylineText"
         }
     },
@@ -55,7 +108,15 @@
         "type": "program",
         "loca": "label_program",
         "byline": {
-            "bylineSsi": "14.10.22, 20:00 Uhr",
+            "bylineSsi": "components/program/label_byline.ssi",
+            "context": {
+                "broadcast": {
+                    "startDate": {
+                        "htmlDateTime": "2023-02-12T19:00+0100",
+                        "dateWithTimeAndWeekday": "So. 12.02.23, 19:00"
+                    }
+                }
+            },
             "bylineText": "BylineText"
         }
     }

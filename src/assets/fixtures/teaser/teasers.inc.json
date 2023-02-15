@@ -560,6 +560,10 @@
                         }
                     ]
                 },
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream"
+                },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,
@@ -806,12 +810,8 @@
                     "@->contentpath": "audioLivestream"
                 },
                 "label": {
-                    "type": "podcast",
-                    "loca": "label_audio_event_livestream",
-                    "byline": {
-                        "bylineSsi": "Beendet",
-                        "bylineText": ""
-                    }
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "audio_livestream"
                 },
                 "link": {
                     "url": "/teaser1",
@@ -913,8 +913,7 @@
                     "type": "podcast",
                     "loca": "label_podcast",
                     "byline": {
-                        "bylineSsi": "07:42 min",
-                        "bylineText": ""
+                        "bylineText": "07:42 min"
                     }
                 },
                 "link": {
@@ -952,7 +951,7 @@
                     "date": "14.10.22",
                     "dateSeparatorTime": "14.10.22, 20:00"
                 },
-                "hasByline": true,
+                "hasByline": false,
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": false,
