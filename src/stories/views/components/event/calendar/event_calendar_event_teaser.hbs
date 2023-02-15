@@ -17,7 +17,7 @@
                                     {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
                                             {{#with this.label}}
                                                 {{#> components/label/label_group}}
-                                                    {{> components/label/label_test _type=this.type _text=(loca this.loca) _css="mr-2"}}
+                                                    {{> components/label/label _type=this.type _text=(loca this.loca) _css="mr-2"}}
                                                     {{#if ../this.hasStatus}}
                                                         {{> components/event/event_status _status=(loca ../this.statusDescriptionForLabelShort)}} 
                                                     {{/if}}
@@ -27,7 +27,7 @@
                                                 {{#if this.topline}}
                                                     {{> components/teaser/components/teaser_topline _text=this.topline}}
                                                 {{/if}}
-                                                {{> components/teaser/components/teaser_title_test _text=this.title _css="text-2xl"}}
+                                                {{> components/teaser/components/teaser_title _text=this.title _css="text-2xl"}}
                                                 {{> components/event/event_tags this.eventtags}} 
                                             {{/components/teaser/components/teaser_headline}}
                                     {{/decorator}}

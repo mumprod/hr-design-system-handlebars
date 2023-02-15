@@ -6,7 +6,7 @@
         {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
             {{#with this.label}}
                 {{#> components/label/label_group}}
-                    {{> components/label/label_test _type=this.type _text=(loca this.loca)}}
+                    {{> components/label/label _type=this.type _text=(loca this.loca)}}
                     {{> components/label/label_byline _css="ml-2"}}
                 {{/components/label/label_group}}
             {{/with~}}
@@ -14,7 +14,7 @@
                 {{#if this.topline}}
                     {{> components/teaser/components/teaser_topline _text=this.topline}}
                 {{/if}}
-                {{> components/teaser/components/teaser_title_test _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}
+                {{> components/teaser/components/teaser_title _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}
                 {{#if this.extendedTitle}}
                     {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
                 {{/if}}
