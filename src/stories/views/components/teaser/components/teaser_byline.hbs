@@ -22,7 +22,9 @@
                     {{../this.podcastChannel.title}}<span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
                 {{~#if this.showTeaserInfoProgramRef~}}
-                    {{> components/teaser/components/teaser_byline_airdate}}<span class="mx-1 last-of-type:hidden">|</span>
+                    {{~#with ../this~}}
+                        {{> components/teaser/components/teaser_byline_airdate}}
+                    {{~/with~}}<span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
             {{~/if~}}
         {{~/with~}}
