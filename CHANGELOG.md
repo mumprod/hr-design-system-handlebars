@@ -1,3 +1,15 @@
+# v1.1.11 (Thu Feb 16 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2093: Byline shows Values also for audio and video [#547](https://github.com/mumprod/hr-design-system-handlebars/pull/547) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.1.10 (Thu Feb 16 2023)
 
 #### 🐛 Bug Fix
