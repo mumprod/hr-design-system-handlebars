@@ -1220,7 +1220,7 @@
                 "showAirdate": true,
                 "showProfileInfoAsByline": false,
                 "obsolet_brandOfTeaser": "hessenschau",
-                "documentSection": "",
+                "documentSection": "Sendungen",
                 "headlineTag": "h1",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
