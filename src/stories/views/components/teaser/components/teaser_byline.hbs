@@ -1,34 +1,28 @@
 {{#if this.hasByline}}
-    <p class="mt-2 text-xs text-grey-scorpion font-headingSerif empty:hidden overflow-anywhere flex hyphens-auto">
+    <p class="mt-2 text-xs text-grey-scorpion font-headingSerif empty:hidden overflow-anywhere hyphens-auto">
         {{!--Teaser-Info--}}
         {{~#with this.teaserInfo~}}
             {{~#if this.showTeaserInfo~}}
                 {{~#if this.showTeaserInfoDate~}}
                     {{~#with ../teaserDate~}}
-                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                        <span class="mx-1 last-of-type:hidden">|</span>
+                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time><span class="mx-1 last-of-type:hidden">|</span>
                     {{~/with~}}
                 {{~/if~}}
                 {{~#if this.showTeaserInfoDateTime~}}
                     {{~#with ../teaserDate~}}
-                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at"
-                                                                        this.dateSeparatorTime}}</time>
-                                                                        <span class="mx-1 last-of-type:hidden">|</span>
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time><span class="mx-1 last-of-type:hidden">|</span>
                     {{~/with~}}
                 {{~/if~}}
                 {{~#if this.showTeaserInfoSection~}}
                     <span class="uppercase">
                         {{~../documentSection~}}
-                    </span>
-                    <span class="mx-1 last-of-type:hidden">|</span>
+                    </span><span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
                 {{~#if this.showTeaserInfoChannel~}}
-                    {{../this.podcastChannel.title}}
-                    <span class="mx-1 last-of-type:hidden">|</span>
+                    {{../this.podcastChannel.title}}<span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
                 {{~#if this.showTeaserInfoProgramRef~}}
-                    {{> components/teaser/components/teaser_byline_airdate}}
-                    <span class="mx-1 last-of-type:hidden">|</span>
+                    {{> components/teaser/components/teaser_byline_airdate}}<span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
             {{~/if~}}
         {{~/with~}}
