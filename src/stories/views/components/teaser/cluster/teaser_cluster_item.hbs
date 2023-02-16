@@ -6,7 +6,7 @@
         {{/components/label/label_group}}
     {{/with~}}
     {{#> components/teaser/components/teaser_headline _headlineTag="h3"}}
-        {{> components/teaser/components/teaser_title _css=(appendToDefault (if _ordered "pl-8") "text-clusterTeaserLink") _text=this.title _size=_size _teaserType="cluster" _firstItem=_firstItem}}
+        {{> components/teaser/components/teaser_title _css=(if _ordered "text-clusterTeaserLink pl-8" "text-clusterTeaserLink") _text=this.title _size=_size _teaserType="cluster" _firstItem=_firstItem}}
     {{/components/teaser/components/teaser_headline}}    
 {{/decorator}}
 {{> components/teaser/cluster/teaser_cluster_byline _ordered=_ordered}}
