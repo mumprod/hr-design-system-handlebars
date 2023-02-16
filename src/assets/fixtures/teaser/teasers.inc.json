@@ -141,11 +141,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
