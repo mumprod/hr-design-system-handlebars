@@ -1,0 +1,22 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaserEvent",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "event"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label.byline.context.firstInstant.hasStatus",
+            "@->value": true
+        }
+    ]
+}

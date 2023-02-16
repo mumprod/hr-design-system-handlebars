@@ -1,13 +1,12 @@
 {{#decorator 'components/base/link' _css=(if _firstItem "group ds-teaser-focus" "group ds-link-clusterTeaser") }} 
-    {{> components/teaser/components/teaser_heading
-        _headlineTag="h3"
-        _headlineCss=""
-        _label=this.label
-        _size=_size
-        _title=this.title
-        _teaserType="cluster"
-        _ordered=_ordered
-        _titleCss='text-clusterTeaserLink'
-        _firstItem=_firstItem}}        
+    {{#with this.label}}
+        {{#> components/label/label_group _css=(if ../_ordered "pl-8")}}
+            {{> components/label/label _type=this.type _text=(loca this.loca) _css=""}}
+            {{> components/label/label_byline _css="ml-2"}}
+        {{/components/label/label_group}}
+    {{/with~}}
+    {{#> components/teaser/components/teaser_headline _headlineTag="h3"}}
+        {{> components/teaser/components/teaser_title _css=(appendToDefault (if _ordered "pl-8") "text-clusterTeaserLink") _text=this.title _size=_size _teaserType="cluster" _firstItem=_firstItem}}
+    {{/components/teaser/components/teaser_headline}}    
 {{/decorator}}
 {{> components/teaser/cluster/teaser_cluster_byline _ordered=_ordered}}

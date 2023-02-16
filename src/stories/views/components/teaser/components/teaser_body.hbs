@@ -1,21 +1,27 @@
 <div class="{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}" 
 {{~#if this.isMobile1to1}}:class="{'basis-full w-full pr-10':avStart,'basis-3/5 w-3/5':!avStart}"{{/if}}>
-    <header class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+
+    
+    {{#> components/teaser/components/teaser_header _css=(if this.isMobile1to1 "" "px-5 sm:px-0")}}
         {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
-            {{> components/teaser/components/teaser_heading 
-            _fontVariant=this.headingFontVariant
-            _headlineTag=this.headlineTag 
-            _headlineCss="overflow-anywhere hyphens-auto"
-            _label=this.label 
-            _readMore=this.link.readMoreText.readMoreScreenreader 
-            _size=this.realTeaserSize 
-            _title=this.title 
-            _topline=this.topline 
-            _teaserType=this.teaserType
-            _isMobile1to1=this.isMobile1to1
-            _extendedTitle=this.extendedTitle}}            
-        {{/decorator}}   
-    </header>
+            {{#with this.label}}
+                {{#> components/label/label_group}}
+                    {{> components/label/label _type=this.type _text=(loca this.loca)}}
+                    {{> components/label/label_byline _css="ml-2"}}
+                {{/components/label/label_group}}
+            {{/with~}}
+            {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
+                {{#if this.topline}}
+                    {{> components/teaser/components/teaser_topline _text=this.topline}}
+                {{/if}}
+                {{> components/teaser/components/teaser_title _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}
+                {{#if this.extendedTitle}}
+                    {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
+                {{/if}}
+            {{/components/teaser/components/teaser_headline}}
+        {{/decorator}} 
+    {{/components/teaser/components/teaser_header}}
+
     <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
         {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
         {{> components/teaser/components/teaser_byline}} 
