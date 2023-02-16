@@ -1,3 +1,15 @@
+# v1.1.12 (Thu Feb 16 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: set context for airdate [#550](https://github.com/mumprod/hr-design-system-handlebars/pull/550) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.1.11 (Thu Feb 16 2023)
 
 #### 🐛 Bug Fix
