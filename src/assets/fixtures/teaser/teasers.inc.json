@@ -23,11 +23,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -249,11 +249,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -346,11 +346,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -443,11 +443,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -544,11 +544,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -646,11 +646,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -747,11 +747,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -852,11 +852,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -955,12 +955,12 @@
                 "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
-                    "showTeaserInfoSection": false,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -1072,11 +1072,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
-                    "showTeaserInfoDateTime": false,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -1173,12 +1173,12 @@
                 "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": true,
-                    "showTeaserInfoSection": false,
+                    "showTeaserInfoSection": true,
                     "showTeaserInfoChannel": false,
                     "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
-                    "showTeaserInfoDateTime": false,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -1275,11 +1275,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -1402,11 +1402,11 @@
                 "teaserInfo": {
                     "showTeaserInfo": true,
                     "showTeaserInfoSection": true,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
                     "showTeaserInfoDate": false,
                     "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": true
+                    "showTeaserInfoProgramRef": false
                 },
                 "podcastChannel": {
                     "title": "hr2 Doppelkopf",
