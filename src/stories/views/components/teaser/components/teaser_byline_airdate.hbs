@@ -1,8 +1,7 @@
 {{#with ../this}}
     {{~#if this.isAudio}}
         {{~#with this.audioAuthor}}
-            {{this}}{{#if ../this.airdateDate }}
-            <span class="mx-1">|</span>{{/if}}
+            {{this}}{{#if ../this.airdateDate }}<span class="mx-1">|</span>{{/if}}
         {{/with}}
         {{~#with this.airdateDate ~}}
             <time datetime="{{this.htmlDate}}">{{this.date}}</time>
@@ -11,8 +10,7 @@
 
     {{~#if this.isVideo}}
         {{~#with this.copyright}}
-            {{this}}{{#if ../this.airdateDate }}
-            <span class="mx-1">|</span>{{/if}}
+            {{this}}{{#if ../this.airdateDate }} <span class="mx-1">|</span>{{/if}}
         {{/with}}
 
         {{~#with this.airdateDate ~}}
