@@ -1171,7 +1171,7 @@
                 },
                 "hasByline": true,
                 "teaserInfo": {
-                    "showTeaserInfo": true,
+                    "showTeaserInfo": false,
                     "showTeaserInfoSection": true,
                     "showTeaserInfoChannel": false,
                     "showTeaserInfoAll": false,
