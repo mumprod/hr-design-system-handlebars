@@ -329,17 +329,17 @@ var helpers = {
         }
     },
 
+    'default': function (value, options) {
+        if (this.switch_break == false) {
+            return options.fn(this)
+        }
+    },
+
     'defaultIfEmpty': function (context, defaultValue) {
         if (context) {
             return context
         } else {
             return defaultValue
-        }
-    },
-
-    'default': function (value, options) {
-        if (this.switch_break == false) {
-            return value
         }
     },
 

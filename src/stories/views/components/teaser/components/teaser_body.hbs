@@ -26,25 +26,10 @@
                 {{> components/teaser/components/teaser_byline}} 
             {{/case}}
 
-            {{#case "33"}}
+            {{#default "default"}}
                 {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
                 {{> components/teaser/components/teaser_byline}} 
-            {{/case}}
-
-            {{#case "50"}}
-                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
-                {{> components/teaser/components/teaser_byline}} 
-            {{/case}}
-
-            {{#case "66"}}
-                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
-                {{> components/teaser/components/teaser_byline}} 
-            {{/case}}
-            
-            {{#case "100"}}
-                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
-                {{> components/teaser/components/teaser_byline}}
-            {{/case}}
+            {{/default}}
         {{/switch}}   
     </div>
 </div>
