@@ -7,7 +7,7 @@
                     <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
                     <span class="mx-1 last-of-type:hidden">|</span>
                 {{~/with~}}
-            {{/if}}
+            {{~/if~}}
             {{~#if this.showTeaserInfoDateTime~}}
                 {{~#with ../teaserDate~}}
                     <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at"
@@ -22,14 +22,14 @@
                     </span>
                     <span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
-                {{~#if this.showTeaserInfoChannel}}
+                {{~#if this.showTeaserInfoChannel~}}
                     {{../this.podcastChannel.title}}
                     <span class="mx-1 last-of-type:hidden">|</span>
-                {{/if}}
-                {{#if this.showTeaserInfoProgramRef}}
+                {{~/if~}}
+                {{~#if this.showTeaserInfoProgramRef~}}
                   {{> components/teaser/components/teaser_byline_airdate}}
                   <span class="mx-1 last-of-type:hidden">|</span>
-                {{/if}}
+                {{~/if~}}
             {{~/if~}}
         {{~/with~}}
         {{!--File download--}}
