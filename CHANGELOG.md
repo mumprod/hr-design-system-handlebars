@@ -1,3 +1,15 @@
+# v1.3.0 (Fri Feb 17 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Shorttext is not shown on 25 teasers only if its an external … [#557](https://github.com/mumprod/hr-design-system-handlebars/pull/557) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.2.0 (Fri Feb 17 2023)
 
 #### 🚀 Enhancement
