@@ -13,20 +13,24 @@
             <div class="flex flex-wrap items-start w-full -mt-0.5">
                 {{#if _isPlaylistPlayer}}                   
                     <div class="flex w-full">
-                        {{!-- Airdate     --}}
-                        {{~#with this.airdateDate}}
-                            <div class="flex text-xs grow font-headingSerif text-podcast-text">
-                                <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                            </div>
-                        {{/with}}
 
-                        {{!-- Download --}}
-                        
-                            {{> components/teaser/podcast/podcast_downloadbutton 
-                                _addClass="ml-2"
-                                _iconClass="h-6 w-6 text-podcast-text fill-current"
-                                _url=this.podcastDownloadUrl 
-                            }}
+
+
+                        {{!-- Airdate     --}}
+                        <div class="flex text-xs grow font-headingSerif text-podcast-text">
+                            {{#unless ../../../../this.isSingleChannel ~}}
+                                <span>{{this.podcastChannel.title}}</span>
+                                <span class="mx-1">|</span>
+                            {{/unless~}}
+                            <time datetime="{{this.airdateDate.htmlDateTime}}">{{this.airdateDate.date}}</time>
+                        </div>
+
+                        {{!-- Download --}}                        
+                        {{> components/teaser/podcast/podcast_downloadbutton 
+                            _addClass="ml-2"
+                            _iconClass="h-6 w-6 text-podcast-text fill-current"
+                            _url=this.podcastDownloadUrl 
+                        }}
                         
                     </div>
 

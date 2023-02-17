@@ -1,3 +1,15 @@
+# v1.1.14 (Fri Feb 17 2023)
+
+#### 🐛 Bug Fix
+
+- added Podcast channel Titel to !isSingleChannel [#551](https://github.com/mumprod/hr-design-system-handlebars/pull/551) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.1.13 (Fri Feb 17 2023)
 
 #### 🐛 Bug Fix
