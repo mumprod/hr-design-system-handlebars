@@ -15,6 +15,10 @@
             "@->value": "true"
         },
         {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": ""
+        },
+        {
             "@->contentpath": "logicItem.includeModel.teaserImage",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_images.inc.json",
