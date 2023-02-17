@@ -4,23 +4,27 @@
         {{~#with this.teaserInfo~}}
             {{~#if this.showTeaserInfo~}}
                 {{~#if this.showTeaserInfoDate~}}
-                    {{~#with ../this.teaserDate~}}
-                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                    {{~#with ../teaserDate~}}
+                        <time datetime="{{this.htmlDateTime}}">{{this.date}}</time><span class="mx-1 last-of-type:hidden">|</span>
                     {{~/with~}}
-                    <span class="mx-1 last-of-type:hidden">|</span>
-                    {{~else~}}
-                    {{~#if this.showTeaserInfoDateTime~}}
-                        {{~#with ../this.teaserDate~}}
-                            <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time>
-                        {{~/with~}}
-                        <span class="mx-1 last-of-type:hidden">|</span>
-                    {{~/if~}}
+                {{~/if~}}
+                {{~#if this.showTeaserInfoDateTime~}}
+                    {{~#with ../teaserDate~}}
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time><span class="mx-1 last-of-type:hidden">|</span>
+                    {{~/with~}}
                 {{~/if~}}
                 {{~#if this.showTeaserInfoSection~}}
                     <span class="uppercase">
-                        {{~../this.documentSection~}}
-                    </span>
-                    <span class="mx-1 last-of-type:hidden">|</span>
+                        {{~../documentSection~}}
+                    </span> <span class="mx-1 last-of-type:hidden">|</span>
+                {{~/if~}}
+                {{~#if this.showTeaserInfoChannel~}}
+                    {{../this.podcastChannel.title}}<span class="mx-1 last-of-type:hidden">|</span>
+                {{~/if~}}
+                {{~#if this.showTeaserInfoProgramRef~}}
+                    {{~#with ../this~}}
+                        {{> components/teaser/components/teaser_byline_airdate}}
+                    {{~/with~}}<span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
             {{~/if~}}
         {{~/with~}}
@@ -32,8 +36,7 @@
         {{~/if~}}
         {{!--Profiles--}}
         {{~#if this.profiles~}}
-            <span>{{this.profiles}}</span>
-            <span class="mx-1 last-of-type:hidden">|</span>
+            <span>{{this.profiles}}</span> <span class="mx-1 last-of-type:hidden">|</span>
         {{~/if~}}
         {{!--Comments--}}
         {{~#with this.commentsSsi~}}

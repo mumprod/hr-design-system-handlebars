@@ -1,6 +1,6 @@
 {{#with _label}}
     <div class="leading-5.5{{#if ../_ordered}} pl-8 {{/if}}">
-        {{> components/label/label _type=this.type _text=(loca this.loca) _bylineCss=../_labelCss}}
+        {{> components/label/label_old _type=this.type _text=(loca this.loca) _bylineCss=../_labelCss}}
     </div>
 {{/with~}}
 
@@ -9,7 +9,7 @@
     {{#if _topline}}
         {{> components/teaser/components/teaser_topline _css=(if _toplineCss _toplineCss "") _text=_topline _readMore=_readMore _teaserType=_teaserType}}
     {{/if}}
-    {{> components/teaser/components/teaser_title _css=(if _titleCss _titleCss "") _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _firstItem=_firstItem _ordered=_ordered}}
+    {{> components/teaser/components/teaser_title_old _css=(if _titleCss _titleCss "") _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _firstItem=_firstItem _ordered=_ordered}}
     {{#if _extendedTitle}}
         <span class="block text-subline font-normal font-heading text-base sm:text-lg mt-1 sm:mt-1.5 leading-6">{{_extendedTitle}}</span>
     {{/if}}

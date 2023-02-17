@@ -1,3 +1,75 @@
+# v1.1.12 (Thu Feb 16 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: set context for airdate [#550](https://github.com/mumprod/hr-design-system-handlebars/pull/550) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.1.11 (Thu Feb 16 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2093: Byline shows Values also for audio and video [#547](https://github.com/mumprod/hr-design-system-handlebars/pull/547) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.1.10 (Thu Feb 16 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2073 [#548](https://github.com/mumprod/hr-design-system-handlebars/pull/548) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.1.9 (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 2073 [#545](https://github.com/mumprod/hr-design-system-handlebars/pull/545) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.1.8 (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2104 - Event Teaser alternativ ist mobil kaputt [#546](https://github.com/mumprod/hr-design-system-handlebars/pull/546) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.1.7 (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2095: padding for tabteaser needs tobe 9.5 so sm:px-9.5 is used [#544](https://github.com/mumprod/hr-design-system-handlebars/pull/544) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.1.6 (Mon Feb 13 2023)
 
 #### 🐛 Bug Fix

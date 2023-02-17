@@ -4,8 +4,16 @@
             "loca": "label_program",
             "type": "program",
             "byline": {
-                "bylineText": "14.10.2022 20:00 Uhr",
-                "bylineSsi": ""
+                "bylineText": "",
+                "bylineSsi": "components/program/label_byline.ssi",
+                "context": {
+                    "broadcast": {
+                        "startDate": {
+                            "htmlDateTime": "2023-02-12T19:00+0100",
+                            "dateWithTimeAndWeekday": "So. 12.02.23, 19:00"
+                        }
+                    }
+                }
             }
         },
         "eventtags": {},
