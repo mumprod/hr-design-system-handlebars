@@ -1,3 +1,15 @@
+# v1.1.17 (Fri Feb 17 2023)
+
+#### 🐛 Bug Fix
+
+- removes uppercase in bylines and in json titles [#555](https://github.com/mumprod/hr-design-system-handlebars/pull/555) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.1.16 (Fri Feb 17 2023)
 
 #### 🐛 Bug Fix
