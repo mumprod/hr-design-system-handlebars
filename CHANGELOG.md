@@ -1,3 +1,15 @@
+# v1.2.0 (Fri Feb 17 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2097: Add brand colors for media_button and labels [#556](https://github.com/mumprod/hr-design-system-handlebars/pull/556) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.1.17 (Fri Feb 17 2023)
 
 #### 🐛 Bug Fix
