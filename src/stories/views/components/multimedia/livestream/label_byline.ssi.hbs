@@ -1,0 +1,19 @@
+{{#with this.labelInfo}}
+    {{#> components/text/byline _css="ml-2"}}
+        {{~#if this.isPlaysNow ~}} {{loca "livestream_plays"}} {{/if~}}
+        {{~#if this.isHasPlayed ~}} {{loca "livestream_has_played"}} {{/if~}}
+        {{~#if this.isWillPlay ~}}
+            {{~#with ../../airdateDate ~}}
+                {{~#if ../../airdateWithoutTime ~}}
+                    <time datetime="{{this.htmlDateTime}}">
+                        {{loca "livestream_will_play" this.date}}
+                    </time>
+                {{else}}
+                    <time datetime="{{this.htmlDate}}">
+                        {{loca "livestream_will_play_with_time" this.date this.time}}
+                    </time>
+                {{~/if~}}
+            {{~/with~}}
+        {{/if~}}
+    {{/components/text/byline}}
+{{/with}}

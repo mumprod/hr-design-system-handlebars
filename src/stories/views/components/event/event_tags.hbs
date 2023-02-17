@@ -1,11 +1,11 @@
-{{#with this}}
-    {{#with this.series}}
-        {{> components/event/event_tag _title=this.title}}
-    {{/with}}
-    {{#with this.project}}
-        {{> components/event/event_tag _title=this.title}}
-    {{/with}}
-    {{#with this.externalProject}}
-        {{> components/event/event_tag _title=this}}
-    {{/with}}
+
+{{#with this.series}}
+    {{> components/event/event_tag _css=../_css _title=this.title}}
 {{/with}}
+{{#with this.project}}
+    {{> components/event/event_tag _css=../_css _title=this.title}}
+{{/with}}
+{{#with this.externalProject}}
+    {{> components/event/event_tag _css=../_css _title=this}}
+{{/with}}
+
