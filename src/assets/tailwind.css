@@ -190,6 +190,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.purple.jazzberry');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -244,6 +246,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.jellyBean');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -300,6 +304,8 @@
     --color-button: theme('colors.blue.deepCerulean');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.deepCerulean');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: theme('colors.blue.deepCerulean');
     /* Content-Nav */
@@ -356,6 +362,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -410,7 +418,9 @@
     --color-button: theme('colors.red.wellRead');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.wellRead');
-    /* States */
+    /* Media-Button */
+    --color-media-button: theme('colors.red.wellRead');
+/* States */
     --color-focus-state: theme('colors.red.wellRead');
     /* Content-Nav */
     --color-content-nav: theme('colors.red.wellRead');
@@ -464,6 +474,8 @@
     --color-button: theme('colors.blue.teal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.teal');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.teal');
     /* States */
     --color-focus-state: theme('colors.blue.teal');
     /* Content-Nav */
@@ -520,6 +532,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -576,6 +590,8 @@
     --color-button: theme('colors.yellow.olive');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.yellow.olive');
+    /* Media-Button */
+    --color-media-button: theme('colors.yellow.olive');
     /* States */
     --color-focus-state: theme('colors.yellow.olive');
     /* Content-Nav */
@@ -631,6 +647,8 @@
     --color-button: theme('colors.red.paprika');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.paprika');
+    /* Media-Button */
+    --color-media-button: theme('colors.orange.burntOrange');
     /* States */
     --color-focus-state: theme('colors.red.paprika');
     /* Content-Nav */
@@ -688,6 +706,8 @@
     --color-button: theme('colors.red.scarlett');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.scarlett');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -745,6 +765,8 @@
     --color-button: theme('colors.green.casal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.green.casal');
+    /* Media-Button */
+    --color-media-button: theme('colors.green.eden');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */
@@ -802,6 +824,8 @@
     --color-button: var(--color-link);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-link);
+    /* Media-Button */
+    --color-media-button: theme('colors.black.DEFAULT');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */

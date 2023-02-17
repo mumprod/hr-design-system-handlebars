@@ -268,6 +268,7 @@ module.exports = {
                     clementine: '#ec6602',
                     chelseaGem: '#AD5500',
                     oregon: '#A14702',
+                    burntOrange: '#c95702'
                 },
                 'teal': {
                     DEFAULT: '#007A7CFF',
