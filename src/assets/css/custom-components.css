@@ -34,7 +34,7 @@
     .headline-barrier {
         display: grid;
         grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
-        align-items: center;
+        align-items: self-start;
         text-align: center;
         grid-gap: 10px;
         width: 100%;
@@ -42,8 +42,9 @@
     .headline-barrier:before,
     .headline-barrier:after {
  
-        border-top: 1px solid;
-        content: '';      
+        border-bottom: 1px solid;
+        content: '';    
+        @apply pt-3.5 md:pt-5  
     }
 
     /* PODCAST SEEK SLIDER*/
