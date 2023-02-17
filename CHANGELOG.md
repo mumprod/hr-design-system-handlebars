@@ -1,3 +1,15 @@
+# v1.1.16 (Fri Feb 17 2023)
+
+#### 🐛 Bug Fix
+
+- changes md: to sm: in artice class [#554](https://github.com/mumprod/hr-design-system-handlebars/pull/554) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.1.15 (Fri Feb 17 2023)
 
 #### 🐛 Bug Fix
