@@ -7,8 +7,9 @@
 {{#if this.isProgram}}
     {{#if this.showMediatheksLink}}
         {{#> components/button/button_wrapper}}
-            {{#*inline "css"}}
-                {{> components/button/components/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1}}
+            {{#*inline "css"~}}
+                absolute bottom-0 right-0 
+                {{~> components/button/components/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1}}
             {{/inline}}
             {{#> components/button/button_pseudo_v2 _type="transparent" _shape="circle"}}
                 {{> components/base/image/icon _icon="play_button" _addClass="w-10 h-10 inline"}}
