@@ -1,3 +1,39 @@
+# v1.3.0 (Fri Feb 17 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Shorttext is not shown on 25 teasers only if its an external … [#557](https://github.com/mumprod/hr-design-system-handlebars/pull/557) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.2.0 (Fri Feb 17 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2097: Add brand colors for media_button and labels [#556](https://github.com/mumprod/hr-design-system-handlebars/pull/556) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.1.17 (Fri Feb 17 2023)
+
+#### 🐛 Bug Fix
+
+- removes uppercase in bylines and in json titles [#555](https://github.com/mumprod/hr-design-system-handlebars/pull/555) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.1.16 (Fri Feb 17 2023)
 
 #### 🐛 Bug Fix
