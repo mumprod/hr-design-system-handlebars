@@ -1,3 +1,15 @@
+# v1.4.0 (Mon Feb 20 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Cluster-Teaser-Items gets text-decoration underline [#560](https://github.com/mumprod/hr-design-system-handlebars/pull/560) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.3.0 (Fri Feb 17 2023)
 
 #### 🚀 Enhancement
