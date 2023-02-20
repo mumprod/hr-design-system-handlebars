@@ -22,8 +22,12 @@
         {{/decorator}} 
     {{/components/teaser/components/teaser_header}}
 
-    <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
-        {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
-        {{> components/teaser/components/teaser_byline}} 
-    </div>
+    {{#unless this.hideBylineAndShorttext}}
+        <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
+            {{#if this.shorttext}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+            {{/if}}
+            {{> components/teaser/components/teaser_byline}} 
+        </div>
+    {{/unless}}
 </div>

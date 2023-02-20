@@ -240,6 +240,7 @@ module.exports = {
                     turquoiseCerulian: '#007fa0',
                     midnight: '#023770',
                     deepSeaDream: '#002c6b',
+                    dodgerBlue: '#407596',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -253,6 +254,7 @@ module.exports = {
                     paprika: '#8C033DFF',
                     scarlett: '#9b0112',
                     lipstick: '#CC006E',
+                    mexican: '#a12644'
                 },
                 'pink': {
                     fuchsie: '#bf0071',
@@ -268,6 +270,8 @@ module.exports = {
                     clementine: '#ec6602',
                     chelseaGem: '#AD5500',
                     oregon: '#A14702',
+                    burntOrange: '#c95702',
+                    goldDrop: '#f07800'
                 },
                 'teal': {
                     DEFAULT: '#007A7CFF',
@@ -294,6 +298,10 @@ module.exports = {
                     nebula: '#d1deda',
                     pineGreen: '#007179',
                     teal: '#00727A',
+                    tropicalRainForest: '#017e5c',
+                    goBen: '#6e6748',
+                    flint: '#6e675e',
+                    pacifica: '#6d761d',
                 },
                 'purple': {
                     disco: '#88114b',
@@ -313,6 +321,7 @@ module.exports = {
                     olive: '#916B00',
                     givry: '#f7ebbf',
                     sunshine: '#ffb114',
+                    hokeyPokey: '#c1bc2b',
                 },
                 'primary': 'var(--color-primary-ds)',
                 'secondary': 'var(--color-secondary-ds)',
@@ -342,6 +351,7 @@ module.exports = {
                 'button': 'var(--color-button)',
                 'button-hollow': 'var(--color-button-hollow)',
                 'button-inverted': 'var(--color-button-inverted)',
+                'media-button': 'var(--color-media-button)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
                 'podcast': 'var(--color-podcast)',

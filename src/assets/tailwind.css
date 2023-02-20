@@ -61,6 +61,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.jellyBean');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -127,6 +129,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.jellyBean');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -151,15 +155,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.red.mexican');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -186,6 +190,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.purple.jazzberry');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -206,15 +212,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.jellyBean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.pink.rose');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -240,6 +246,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.jellyBean');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -260,15 +268,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.red.mexican');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -296,6 +304,8 @@
     --color-button: theme('colors.blue.deepCerulean');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.deepCerulean');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: theme('colors.blue.deepCerulean');
     /* Content-Nav */
@@ -316,15 +326,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.red.mexican');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -352,6 +362,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -372,15 +384,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.green.goBen');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -406,6 +418,8 @@
     --color-button: theme('colors.red.wellRead');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.wellRead');
+    /* Media-Button */
+    --color-media-button: theme('colors.red.wellRead');
     /* States */
     --color-focus-state: theme('colors.red.wellRead');
     /* Content-Nav */
@@ -426,15 +440,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.yellow.hokeyPokey');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.blue.blueStone');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -460,6 +474,8 @@
     --color-button: theme('colors.blue.teal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.teal');
+    /* Media-Button */
+    --color-media-button: theme('colors.blue.teal');
     /* States */
     --color-focus-state: theme('colors.blue.teal');
     /* Content-Nav */
@@ -480,15 +496,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.red.mexican');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -516,6 +532,8 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -536,17 +554,17 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.pink.rose');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.purple.disco');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.blue.turquoiseCerulian');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.green.flint');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -572,6 +590,8 @@
     --color-button: theme('colors.yellow.olive');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.yellow.olive');
+    /* Media-Button */
+    --color-media-button: theme('colors.yellow.olive');
     /* States */
     --color-focus-state: theme('colors.yellow.olive');
     /* Content-Nav */
@@ -592,15 +612,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
     --color-label-live: theme('colors.pink.rose');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.red.paprika');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -627,6 +647,8 @@
     --color-button: theme('colors.red.paprika');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.paprika');
+    /* Media-Button */
+    --color-media-button: theme('colors.orange.burntOrange');
     /* States */
     --color-focus-state: theme('colors.red.paprika');
     /* Content-Nav */
@@ -647,15 +669,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.pacifica');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.green.pineGreen');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.green.pineGreen');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -684,6 +706,8 @@
     --color-button: theme('colors.red.scarlett');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.scarlett');
+    /* Media-Button */
+    --color-media-button: var(--color-primary-ds);
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -704,15 +728,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.green.genoa');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.blue.dodgerBlue');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.pink.fuchsie');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -741,6 +765,8 @@
     --color-button: theme('colors.green.casal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.green.casal');
+    /* Media-Button */
+    --color-media-button: theme('colors.green.eden');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */
@@ -763,15 +789,15 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.black.DEFAULT');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.goldDrop');
     /* Kommentar */
-    --color-label-comment: theme('colors.blue.deeperPool');
+    --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.blue.matisse');
+    --color-label-program: theme('colors.blue.lightCerulean');
     /* Download */
     --color-label-download: theme('colors.grey.scorpion');
     /* Event */
@@ -798,6 +824,8 @@
     --color-button: var(--color-link);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-link);
+    /* Media-Button */
+    --color-media-button: theme('colors.black.DEFAULT');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */
