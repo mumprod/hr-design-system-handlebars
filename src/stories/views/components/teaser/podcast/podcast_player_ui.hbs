@@ -27,7 +27,7 @@
 
                         {{!-- Download --}}                        
                         {{> components/teaser/podcast/podcast_downloadbutton 
-                            _addClass="ml-2"
+                            _addClass="-mb-2 ml-2"
                             _iconClass="h-6 w-6 text-podcast-text fill-current"
                             _url=this.podcastDownloadUrl 
                         }}
@@ -38,7 +38,7 @@
                         {{> components/teaser/podcast/podcast_item_title 
                             _title=this.title 
                             _teaserSize=this.teaserSize 
-                            _addClass="-mb-2" }}  
+                            _addClass="" }}  
                     </div>   
                 {{/if}}
 
