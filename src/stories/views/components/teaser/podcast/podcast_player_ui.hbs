@@ -17,7 +17,7 @@
 
 
                         {{!-- Airdate     --}}
-                        <div class="flex text-xs grow font-headingSerif text-podcast-text">
+                        <div class="text-xs grow font-headingSerif text-podcast-text">
                             {{#unless ../../../../this.isSingleChannel ~}}
                                 <span>{{this.podcastChannel.title}}</span>
                                 <span class="mx-1">|</span>
@@ -27,14 +27,14 @@
 
                         {{!-- Download --}}                        
                         {{> components/teaser/podcast/podcast_downloadbutton 
-                            _addClass="ml-2"
+                            _addClass="-mb-2 ml-2"
                             _iconClass="h-6 w-6 text-podcast-text fill-current"
                             _url=this.podcastDownloadUrl 
                         }}
                         
                     </div>
 
-                    <div class="flex -mt-2 w-fit max-w-3/4 ">          
+                    <div class="flex w-fit max-w-3/4 ">          
                         {{> components/teaser/podcast/podcast_item_title 
                             _title=this.title 
                             _teaserSize=this.teaserSize 
