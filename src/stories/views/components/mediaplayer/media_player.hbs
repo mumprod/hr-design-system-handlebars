@@ -10,6 +10,16 @@
         {{#with _teaser}}
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
+
+
+        {{#> components/button/button_v2 _type="transparent" _shape="circle"}}
+            {{#*inline "css"~}}
+                absolute bottom-0 right-0
+                {{~> components/button/components/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
+            {{/inline}}
+            {{> components/base/image/icon _icon=_mediaButtonIcon  _addClass="w-10 h-10 inline"}}
+        {{/components/button/button_v2}}
+
         {{> components/button/button_round 
         _isButton="true" 
         _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button'

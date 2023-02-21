@@ -1,3 +1,3 @@
-<button{{#if _id}} id="{{_id}}"{{/if}} class="ds-button{{#if _openModal}} js-modalButton{{/if}}"{{#if _openModal}} aria-haspopup="true"{{/if}}>
+<button{{#if _id}} id="{{_id}}"{{/if}} class="ds-button {{> css}}{{#if _openModal}} js-modalButton{{/if}}"{{#if _openModal}} aria-haspopup="true"{{/if}}>
     {{> components/button/button_content _css=_css _type=_type}}
 </button>
