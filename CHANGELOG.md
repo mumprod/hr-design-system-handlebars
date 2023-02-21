@@ -1,3 +1,113 @@
+# v1.5.6 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- text-4xl for mobile group titles [#567](https://github.com/mumprod/hr-design-system-handlebars/pull/567) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.5 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Channel in Podcast Playlist Player do flu into Title [#565](https://github.com/mumprod/hr-design-system-handlebars/pull/565) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.5.4 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- adds my-6 to highlight container [#566](https://github.com/mumprod/hr-design-system-handlebars/pull/566) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.3 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- hide geotag for 25% Teaser [#564](https://github.com/mumprod/hr-design-system-handlebars/pull/564) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.5.2 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- adds pos relative / z-100 to comments link span [#562](https://github.com/mumprod/hr-design-system-handlebars/pull/562) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.1 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix: Externer-Link-Icon bricht in neue Zeile um [#549](https://github.com/mumprod/hr-design-system-handlebars/pull/549) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.5.0 (Tue Feb 21 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Prefixess all partial properties [#561](https://github.com/mumprod/hr-design-system-handlebars/pull/561) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.4.1 (Mon Feb 20 2023)
+
+#### 🐛 Bug Fix
+
+- use realTeaserSize [#559](https://github.com/mumprod/hr-design-system-handlebars/pull/559) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.4.0 (Mon Feb 20 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Cluster-Teaser-Items gets text-decoration underline [#560](https://github.com/mumprod/hr-design-system-handlebars/pull/560) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.3.0 (Fri Feb 17 2023)
 
 #### 🚀 Enhancement
