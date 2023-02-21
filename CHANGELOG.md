@@ -1,3 +1,16 @@
+# v1.5.7 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2128 Überschriften Hover bei Podcast Channel Player [#563](https://github.com/mumprod/hr-design-system-handlebars/pull/563) ([@Sunny1112358](https://github.com/Sunny1112358) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.5.6 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
