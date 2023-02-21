@@ -1,3 +1,15 @@
+# v1.5.8 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- blue.science for --color-media-button [#568](https://github.com/mumprod/hr-design-system-handlebars/pull/568) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.5.7 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
