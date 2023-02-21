@@ -1,3 +1,15 @@
+# v1.5.6 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- text-4xl for mobile group titles [#567](https://github.com/mumprod/hr-design-system-handlebars/pull/567) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.5.5 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
