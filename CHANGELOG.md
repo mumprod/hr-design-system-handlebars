@@ -1,3 +1,15 @@
+# v1.5.5 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Channel in Podcast Playlist Player do flu into Title [#565](https://github.com/mumprod/hr-design-system-handlebars/pull/565) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.5.4 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
