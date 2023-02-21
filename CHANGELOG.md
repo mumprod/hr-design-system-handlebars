@@ -1,3 +1,15 @@
+# v1.5.4 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- adds my-6 to highlight container [#566](https://github.com/mumprod/hr-design-system-handlebars/pull/566) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.5.3 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
