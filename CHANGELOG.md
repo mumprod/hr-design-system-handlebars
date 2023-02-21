@@ -1,3 +1,15 @@
+# v1.5.2 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- adds pos relative / z-100 to comments link span [#562](https://github.com/mumprod/hr-design-system-handlebars/pull/562) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.5.1 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
