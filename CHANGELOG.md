@@ -1,3 +1,16 @@
+# v1.5.3 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- hide geotag for 25% Teaser [#564](https://github.com/mumprod/hr-design-system-handlebars/pull/564) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.5.2 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
