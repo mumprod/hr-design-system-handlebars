@@ -1,3 +1,15 @@
+# v1.5.0 (Tue Feb 21 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Prefixess all partial properties [#561](https://github.com/mumprod/hr-design-system-handlebars/pull/561) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.4.1 (Mon Feb 20 2023)
 
 #### 🐛 Bug Fix
