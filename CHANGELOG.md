@@ -1,3 +1,52 @@
+# v1.5.6 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- text-4xl for mobile group titles [#567](https://github.com/mumprod/hr-design-system-handlebars/pull/567) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.5 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Channel in Podcast Playlist Player do flu into Title [#565](https://github.com/mumprod/hr-design-system-handlebars/pull/565) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.5.4 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- adds my-6 to highlight container [#566](https://github.com/mumprod/hr-design-system-handlebars/pull/566) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.3 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- hide geotag for 25% Teaser [#564](https://github.com/mumprod/hr-design-system-handlebars/pull/564) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.5.2 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
