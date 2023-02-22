@@ -1,3 +1,15 @@
+# v1.5.9 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- re-add types for topic and location [#569](https://github.com/mumprod/hr-design-system-handlebars/pull/569) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.5.8 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
