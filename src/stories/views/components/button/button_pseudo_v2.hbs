@@ -1,2 +1,4 @@
-{{> components/button/button_content _css=_css _type=_type _form=_form}}
+<span class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant}} {{> components/button/utilities/button_dimension_classes _shape=_shape _size=_size}} {{#> css}}{{/css}}">
+    {{> @partial-block }}
+</span>
 
