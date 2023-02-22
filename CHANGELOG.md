@@ -1,3 +1,15 @@
+# v1.5.10 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix/DPE-2136 reverts text-4xl for mobile grp title [#570](https://github.com/mumprod/hr-design-system-handlebars/pull/570) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.5.9 (Wed Feb 22 2023)
 
 #### 🐛 Bug Fix
