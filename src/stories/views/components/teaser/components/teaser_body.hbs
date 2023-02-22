@@ -1,5 +1,5 @@
 <div class="{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}" 
-{{~#if this.isMobile1to1}}:class="{'basis-full w-full pr-10':avStart,'basis-3/5 w-3/5':!avStart}"{{/if}}>
+{{~#if this.isMobile1to1}}:class="{'basis-full w-full md:pr-0 pr-10':avStart,'basis-3/5 w-3/5':!avStart}"{{/if}}>
 
     
     {{#> components/teaser/components/teaser_header _css=(if this.isMobile1to1 "" "px-5 sm:px-0")}}
