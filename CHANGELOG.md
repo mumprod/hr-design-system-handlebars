@@ -1,3 +1,15 @@
+# v1.5.11 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- Titel bricht um, wenn man Video startet bei 25% Teasern [#571](https://github.com/mumprod/hr-design-system-handlebars/pull/571) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.5.10 (Wed Feb 22 2023)
 
 #### 🐛 Bug Fix
