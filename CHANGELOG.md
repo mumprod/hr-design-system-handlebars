@@ -1,3 +1,15 @@
+# v1.5.12 (Thu Feb 23 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2141 Teaser: Link-Icon hängt in neuer Zeile [#572](https://github.com/mumprod/hr-design-system-handlebars/pull/572) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.5.11 (Wed Feb 22 2023)
 
 #### 🐛 Bug Fix
