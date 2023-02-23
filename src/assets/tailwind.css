@@ -130,7 +130,7 @@
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
     /* Media-Button */
-    --color-media-button: theme('colors.blue.jellyBean');
+    --color-media-button: theme('colors.blue.science');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */

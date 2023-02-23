@@ -1,7 +1,7 @@
 {{#if this.hasGroupItems}}
     {{#>components/grid/grid_group _backgroundColor=this.backgroundColor }} 
             {{~#if this.hasGroupTitle}}
-                <{{if this.headlineTag this.headlineTag "h2"}} class="{{#if this.isRelatedContent}} text-2xl {{else}} text-4xl {{/if}} col-span-full py-0 font-title {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
+                <{{if this.headlineTag this.headlineTag "h2"}} class="text-2xl {{#unless this.isRelatedContent}} md:text-4xl{{/unless}} col-span-full py-0 font-title {{#if this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
                     {{~#if this.hasLink}}<a class="no-underline hover:underline decoration-1 md:decoration-2 text-link" href="{{this.link.url}}">{{/if~}}
                         {{this.groupTitle}}
                     {{~#if this.hasLink}}</a>{{/if~}}

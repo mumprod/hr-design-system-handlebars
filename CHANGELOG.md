@@ -1,3 +1,76 @@
+# v1.5.12 (Thu Feb 23 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2141 Teaser: Link-Icon hängt in neuer Zeile [#572](https://github.com/mumprod/hr-design-system-handlebars/pull/572) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.5.11 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- Titel bricht um, wenn man Video startet bei 25% Teasern [#571](https://github.com/mumprod/hr-design-system-handlebars/pull/571) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.5.10 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix/DPE-2136 reverts text-4xl for mobile grp title [#570](https://github.com/mumprod/hr-design-system-handlebars/pull/570) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.9 (Wed Feb 22 2023)
+
+#### 🐛 Bug Fix
+
+- re-add types for topic and location [#569](https://github.com/mumprod/hr-design-system-handlebars/pull/569) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.5.8 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- blue.science for --color-media-button [#568](https://github.com/mumprod/hr-design-system-handlebars/pull/568) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.5.7 (Tue Feb 21 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2128 Überschriften Hover bei Podcast Channel Player [#563](https://github.com/mumprod/hr-design-system-handlebars/pull/563) ([@Sunny1112358](https://github.com/Sunny1112358) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.5.6 (Tue Feb 21 2023)
 
 #### 🐛 Bug Fix
