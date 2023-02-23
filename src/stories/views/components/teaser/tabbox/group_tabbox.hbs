@@ -7,7 +7,10 @@
     </div>
     {{~#if this.link~}}
         <div class="flex justify-center min-w-0 pt-8 mx-5">
-            {{~> components/button/button_pseudo _type="hollow" _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink="true" _buttonText=(loca "group_tabbed_more" this.title) _buttonCss="truncate" _linkCss="flex min-w-0 ds-link" ~}}
+            {{~#> components/button/button_link _variant="hollow" _size="lg" _css="overflow-hidden"}}
+                {{>components/button/components/button_label _label=(loca "group_tabbed_more" this.title) _css="flex-1 truncate mr-2"}}
+                {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css=""}}
+            {{/components/button/button_link}}
         </div>
     {{~/if~}}
 </section>

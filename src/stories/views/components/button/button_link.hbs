@@ -1,4 +1,2 @@
-{{> components/base/link_v2}}
-{{#*inline "css"}}
-    {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant}} {{> components/button/utilities/button_dimension_classes _shape=_shape _size=_size}}  
-{{/inline}}
+{{> components/base/link_v2 _css=_css}}
+{{#*inline "css"}}{{#if _css}}{{_css}}{{/if}} {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant}} {{> components/button/utilities/button_dimension_classes _shape=_shape _size=_size}}{{/inline}}
