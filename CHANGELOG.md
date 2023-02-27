@@ -1,3 +1,15 @@
+# v1.5.13 (Mon Feb 27 2023)
+
+#### 🐛 Bug Fix
+
+- headline-barrier: line always centered to first line of headline [#573](https://github.com/mumprod/hr-design-system-handlebars/pull/573) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.5.12 (Thu Feb 23 2023)
 
 #### 🐛 Bug Fix
