@@ -44,7 +44,6 @@ const ArdPlayerLoader = function (options, rootElement) {
                     resolve()
                 }
                 link.href = url
-
                 const headScript = document.querySelector('script')
                 headScript.parentNode.insertBefore(link, headScript)
                 resolve('Style wurde neu geladen')
@@ -90,7 +89,6 @@ const ArdPlayerLoader = function (options, rootElement) {
             if (typeof geotag != 'undefined') {
                 geotag.classList.add('hide')
             }
-
             fireEvent('hr:global:stopOtherAVs', 'ardplayer', true)
         })
 
@@ -104,7 +102,8 @@ const ArdPlayerLoader = function (options, rootElement) {
             if (event.detail != 'ardplayer') {
                 player.pause()
             }
-        })
+        }, window)
+
 
         listen('player_closed', function (event) {
             let playerIdFromConfig = parseInt(playerId)
