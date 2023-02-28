@@ -1,3 +1,15 @@
+# v1.6.0 (Tue Feb 28 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2091: Ticket-Button in Modal gets tracked [#576](https://github.com/mumprod/hr-design-system-handlebars/pull/576) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.5.14 (Mon Feb 27 2023)
 
 #### ⚠️ Pushed to `main`
