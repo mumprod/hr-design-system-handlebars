@@ -1,3 +1,15 @@
+# v1.7.0 (Wed Mar 01 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Podcasts Episodes Teaser Standard and alternative gets autho… [#577](https://github.com/mumprod/hr-design-system-handlebars/pull/577) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.6.1 (Tue Feb 28 2023)
 
 #### 🐛 Bug Fix
