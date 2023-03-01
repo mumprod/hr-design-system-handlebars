@@ -1,3 +1,52 @@
+# v1.6.1 (Tue Feb 28 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2141 Teaser: Link-Icon hängt in neuer Zeile [#575](https://github.com/mumprod/hr-design-system-handlebars/pull/575) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.6.0 (Tue Feb 28 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2091: Ticket-Button in Modal gets tracked [#576](https://github.com/mumprod/hr-design-system-handlebars/pull/576) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.5.14 (Mon Feb 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/mumprod/hr-design-system-handlebars into main ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+- DPE-2134 + creating player test-site storybook ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.5.13 (Mon Feb 27 2023)
+
+#### 🐛 Bug Fix
+
+- headline-barrier: line always centered to first line of headline [#573](https://github.com/mumprod/hr-design-system-handlebars/pull/573) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.5.12 (Thu Feb 23 2023)
 
 #### 🐛 Bug Fix
