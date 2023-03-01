@@ -8,6 +8,15 @@
         {{~/with~}}
     {{/if}}
 
+    {{~#if this.isPodcastEpisode}}
+        {{~#with this.audioAuthor}}
+            {{this}}{{#if ../this.airdateDate }}<span class="mx-1">|</span>{{/if}}
+        {{/with}}
+        {{~#with this.airdateDate ~}}
+            <time datetime="{{this.htmlDate}}">{{this.date}}</time>
+        {{~/with~}}
+    {{/if}}
+
     {{~#if this.isVideo}}
         {{~#with this.copyright}}
             {{this}}{{#if ../this.airdateDate }} <span class="mx-1">|</span>{{/if}}

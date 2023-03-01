@@ -4,18 +4,18 @@
         {{~#with this.teaserInfo~}}
             {{~#if this.showTeaserInfo~}}
                 {{~#if this.showTeaserInfoDate~}}
-                    {{~#with ../teaserDate~}}
+                    {{~#with ../this.teaserDate~}}
                         <time datetime="{{this.htmlDateTime}}">{{this.date}}</time><span class="mx-1 last-of-type:hidden">|</span>
                     {{~/with~}}
                 {{~/if~}}
                 {{~#if this.showTeaserInfoDateTime~}}
-                    {{~#with ../teaserDate~}}
+                    {{~#with ../this.teaserDate~}}
                         <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime}}</time><span class="mx-1 last-of-type:hidden">|</span>
                     {{~/with~}}
                 {{~/if~}}
                 {{~#if this.showTeaserInfoSection~}}
                     <span>
-                        {{~../documentSection~}}
+                        {{~../this.documentSection~}}
                     </span> <span class="mx-1 last-of-type:hidden">|</span>
                 {{~/if~}}
                 {{~#if this.showTeaserInfoChannel~}}
