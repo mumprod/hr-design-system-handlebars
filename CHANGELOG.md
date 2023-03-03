@@ -1,3 +1,16 @@
+# v1.7.1 (Fri Mar 03 2023)
+
+#### 🐛 Bug Fix
+
+- no white spaces in accent group [#578](https://github.com/mumprod/hr-design-system-handlebars/pull/578) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.7.0 (Wed Mar 01 2023)
 
 #### 🚀 Enhancement
