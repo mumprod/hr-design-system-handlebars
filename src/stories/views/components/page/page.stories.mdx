@@ -7,6 +7,7 @@ import NavigationData3 from '../site_header/fixtures/site_header_mit_submenu.jso
 //import NavigationData4 from '../site_header/fixtures/site_header_mit_submenu_service_selected.json'
 
 import hero_teaser from '../teaser/fixtures/teaser_standard_hero_serif.json'
+import audio_player_teaser from '../teaser/fixtures/teaser_standard_50_serif_audio.json'
 const NavigationDataWithTeaser = structuredClone(
     Object.assign({}, NavigationData, hero_teaser.logicItem.includeModel)
 )
@@ -15,6 +16,9 @@ const NavigationDataWithTeaser2 = structuredClone(
 )
 const NavigationDataWithTeaser3 = structuredClone(
     Object.assign({}, NavigationData3, hero_teaser.logicItem.includeModel)
+)
+const NavigationDataWithPlayer = structuredClone(
+    Object.assign({}, NavigationData, audio_player_teaser.logicItem.includeModel, hero_teaser.logicItem.includeModel)
 )
 
 <Meta
@@ -53,6 +57,12 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 <Canvas>
     <Story name="Mit Subnavigation" args={NavigationDataWithTeaser3}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Player-Interaktion" args={NavigationDataWithPlayer}>
         {Template.bind({})}
     </Story>
 </Canvas>

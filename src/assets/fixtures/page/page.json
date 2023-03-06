@@ -1,0 +1,8 @@
+{
+    "teaser_standard_50_audio":{
+        "@->jsoninclude": "teaser/teaser_standard_50_serif_audio.json"
+    },
+    "teaser_podcast_50":{
+        "@->jsoninclude": "teaser/teaser_podcast_50.json"
+    }
+}

@@ -132,7 +132,7 @@
     --color-button-hollow: theme('colors.blue.science');
     --color-button-ghost: theme('colors.blue.science');
     /* Media-Button */
-    --color-media-button: theme('colors.blue.jellyBean');
+    --color-media-button: theme('colors.blue.science');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
