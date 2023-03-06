@@ -264,7 +264,7 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.grey.scorpion');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -322,7 +322,7 @@
 [data-theme='hr-werbung'] {
     --color-primary-ds: theme('colors.blue.deepCerulean');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -492,7 +492,7 @@
 [data-theme='hr'] {
     --color-primary-ds: theme('colors.blue.deepCerulean');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
