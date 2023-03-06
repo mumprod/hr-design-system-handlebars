@@ -1,3 +1,15 @@
+# v1.7.2 (Mon Mar 06 2023)
+
+#### 🐛 Bug Fix
+
+- remove unused colors [#579](https://github.com/mumprod/hr-design-system-handlebars/pull/579) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.7.1 (Fri Mar 03 2023)
 
 #### 🐛 Bug Fix
