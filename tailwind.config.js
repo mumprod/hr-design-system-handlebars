@@ -254,7 +254,7 @@ module.exports = {
                     paprika: '#8C033DFF',
                     scarlett: '#9b0112',
                     lipstick: '#CC006E',
-                    mexican: '#a12644'
+                    mexican: '#a12644',
                 },
                 'pink': {
                     fuchsie: '#bf0071',
@@ -271,7 +271,7 @@ module.exports = {
                     chelseaGem: '#AD5500',
                     oregon: '#A14702',
                     burntOrange: '#c95702',
-                    goldDrop: '#f07800'
+                    goldDrop: '#f07800',
                 },
                 'teal': {
                     DEFAULT: '#007A7CFF',
@@ -350,6 +350,7 @@ module.exports = {
                 'clusterTeaserHeadline': 'var(--color-cluster-teaser-headline,#000)',
                 'button': 'var(--color-button)',
                 'button-hollow': 'var(--color-button-hollow)',
+                'button-ghost': 'var(--color-button-ghost)',
                 'button-inverted': 'var(--color-button-inverted)',
                 'media-button': 'var(--color-media-button)',
                 'focus-state': 'var(--color-focus-state)',

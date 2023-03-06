@@ -61,6 +61,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    --color-button-ghost: theme('colors.blue.science');
     /* Media-Button */
     --color-media-button: theme('colors.blue.jellyBean');
     /* States */
@@ -129,6 +130,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
+    --color-button-ghost: theme('colors.blue.science');
     /* Media-Button */
     --color-media-button: theme('colors.blue.jellyBean');
     /* States */
@@ -190,6 +192,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.purple.jazzberry');
+    --color-button-ghost: theme('colors.purple.jazzberry');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -246,6 +249,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.jellyBean');
+    --color-button-ghost: theme('colors.blue.jellyBean');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -304,6 +308,7 @@
     --color-button: theme('colors.blue.deepCerulean');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.deepCerulean');
+    --color-button-ghost: theme('colors.blue.deepCerulean');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -362,6 +367,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    --color-button-ghost: var(--color-primary-ds);
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -418,6 +424,7 @@
     --color-button: theme('colors.red.wellRead');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.wellRead');
+    --color-button-ghost: theme('colors.red.wellRead');
     /* Media-Button */
     --color-media-button: theme('colors.red.wellRead');
     /* States */
@@ -474,6 +481,7 @@
     --color-button: theme('colors.blue.teal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.teal');
+    --color-button-ghost: theme('colors.blue.teal');
     /* Media-Button */
     --color-media-button: theme('colors.blue.teal');
     /* States */
@@ -532,6 +540,7 @@
     --color-button: var(--color-primary-ds);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-primary-ds);
+    --color-button-ghost: var(--color-primary-ds);
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -590,6 +599,7 @@
     --color-button: theme('colors.yellow.olive');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.yellow.olive');
+    --color-button-ghost: theme('colors.yellow.olive');
     /* Media-Button */
     --color-media-button: theme('colors.yellow.olive');
     /* States */
@@ -647,6 +657,7 @@
     --color-button: theme('colors.red.paprika');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.paprika');
+    --color-button-ghost: theme('colors.red.paprika');
     /* Media-Button */
     --color-media-button: theme('colors.orange.burntOrange');
     /* States */
@@ -706,6 +717,7 @@
     --color-button: theme('colors.red.scarlett');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.red.scarlett');
+    --color-button-ghost: theme('colors.red.scarlett');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -765,6 +777,7 @@
     --color-button: theme('colors.green.casal');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.green.casal');
+    --color-button-ghost: theme('colors.green.casal');
     /* Media-Button */
     --color-media-button: theme('colors.green.eden');
     /* States */
@@ -824,6 +837,7 @@
     --color-button: var(--color-link);
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: var(--color-link);
+    --color-button-ghost: var(--color-link);
     /* Media-Button */
     --color-media-button: theme('colors.black.DEFAULT');
     /* States */
