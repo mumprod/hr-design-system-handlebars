@@ -1,3 +1,15 @@
+# v1.8.0 (Thu Mar 09 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2182 [#580](https://github.com/mumprod/hr-design-system-handlebars/pull/580) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.7.2 (Mon Mar 06 2023)
 
 #### 🐛 Bug Fix
