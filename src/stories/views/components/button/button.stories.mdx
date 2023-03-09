@@ -1,0 +1,121 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import handlebars from 'handlebars'
+
+<Meta
+    title="Komponenten/Button"
+    argTypes={{
+        _id: {
+            control: 'text',
+            description: 'Eindeutige ID',
+        },
+        _size: {
+            control: { type: 'select', options: ['sm', 'md', 'lg'] },
+            description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
+            table: {
+                defaultValue: {
+                    summary: 'md',
+                },
+            },
+        },
+        _variant: {
+            description:
+                'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `ghost`, `ghost-white`, `inverted`, `transparent`',
+            control: {
+                type: 'select',
+                options: ['ghost', 'ghost-white', 'inverted', 'transparent'],
+            },
+        },
+        _label: {
+            description: 'Label',
+            control: 'text',
+        },
+        _ariaLabel: {
+            description: 'Label',
+            control: 'text',
+        },
+    }}
+/>
+
+export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    {{#> components/button/button_v2}}
+        {{>components/button/components/button_label }}
+    {{/components/button/button_v2}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
+
+# Name der Komponente
+
+## Beschreibung/Abstract
+
+Kurzer Beschreibungstext der die Komponente erklärt -> Penis
+
+<Preview withToolbar>
+    <Story
+        name="Spielplatz"
+        args={{
+            _label: 'Button',
+            _size: 'sm',
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - SM"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _label: 'Button',
+            _size: 'sm',
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - MD"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _label: 'Button',
+            _size: 'md',
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - LG"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _label: 'Button',
+            _size: 'lg',
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+</Preview>
+
+## Props
+
+Beschreibung der wichtigsten parameter, die für die Komponente benötigt werden
