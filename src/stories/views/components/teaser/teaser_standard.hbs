@@ -8,7 +8,7 @@
     {{/if}}   
     >
     {{#if this.teaserImage}}
-        <figure class="relative
+        <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}}relative
         {{~#if this.isMobile1to1}} basis-2/5 w-2/5 ar-1-1 md:basis-full md:w-full md:ar-16-9{{else}} ar-16-9 w-full{{/if~}}"
         {{~#if this.isMobile1to1}} :class="{'ar-16-9 w-full basis-full': avStart,'ar-1-1 basis-2/5 w-2/5':!avStart}"{{/if}} >    
             {{> components/teaser/components/teaser_lead _isMobile1to1=this.isMobile1to1 _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio=(if this.isMobile1to1 'ar-1-1 md:ar-16-9' (inline-switch this.teaserSize '["25"]' '["ar-1-1 md:ar-16-9", "ar-16-9"]')) }}     
