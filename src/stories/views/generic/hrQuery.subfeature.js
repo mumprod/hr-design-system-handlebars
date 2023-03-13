@@ -358,6 +358,28 @@ const loadScript = function (id, scriptUrl, async, callback) {
     firstScriptTagInPage.parentNode.insertBefore(scriptTag, firstScriptTagInPage)
 }
 
+const addLink = function (id, url, config) {
+    if (document.getElementById(id)) return
+
+    let linkTag = document.createElement('link')
+    linkTag.id = id
+    linkTag.href = url
+    if (config.type) {
+        linkTag.type = config.type
+    }
+    if (config.rel) {
+        linkTag.rel = config.rel
+    }
+    if (config.title) {
+        linkTag.title = config.title
+    }
+    if (config.as) {
+        linkTag.as = config.as
+    }
+
+    document.getElementsByTagName('head')[0].appendChild(linkTag)
+}
+
 /*
  * Fügt ein "style" bereich zum dokument hinzu
  * und gibt eine referenz darauf zurück
@@ -445,6 +467,7 @@ const clearRequestInterval = (handle) =>
         : window.clearInterval(handle)
 
 export {
+    addLink,
     addStyle,
     hr$,
     stripTags,
