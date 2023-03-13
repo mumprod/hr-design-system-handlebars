@@ -185,7 +185,7 @@ var helpers = {
 
     // Register Helpers
     'resourceUrl': function (text, options) {
-        var resourceUrl
+        let resourceUrl = text
         // ARD PLAYER Folder
         if (text.includes('assets/vendor/ardplayer/')) {
             resourceUrl = text.replace('assets/', './')
@@ -431,7 +431,7 @@ var helpers = {
         } else {
             configProperty = 'No config-property defined.'
         }
-        return new handlebars.SafeString(configProperty)
+        return configProperty
     },
 
     'addCacheEntry': function () {
