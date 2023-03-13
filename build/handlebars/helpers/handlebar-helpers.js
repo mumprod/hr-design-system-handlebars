@@ -420,7 +420,18 @@ var helpers = {
     },
 
     'configProperty': function () {
-        return null
+        let configProperty = ''
+
+        if (arguments.length >= 1) {
+            configProperty = arguments[0]
+            switch (configProperty) {
+                case 'dialogPolyfill.baseUrl':
+                    configProperty = 'vendor/dialog-polyfill'
+            }
+        } else {
+            configProperty = 'No config-property defined.'
+        }
+        return new handlebars.SafeString(configProperty)
     },
 
     'addCacheEntry': function () {
