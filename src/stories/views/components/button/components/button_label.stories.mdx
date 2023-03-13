@@ -1,0 +1,44 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import handlebars from 'handlebars'
+
+<Meta
+    title="Komponenten/Button/Komponenten/Label"
+    argTypes={{
+        _label: {
+            control: 'text',
+            description: 'Text des Labels',
+        },
+        _css: {
+            control: 'text',
+            description: 'Hierüber können dem Label zusätzliche CSS Klassen zugewiesen werden.',
+        },
+    }}
+/>
+
+export const buttonLabelTemplate = (args) => {
+    let hbsTemplate = handlebars.compile(`
+        {{>components/button/components/button_label }}
+  `)
+    return hbsTemplate({ ...args })
+}
+
+# Name der Komponente
+
+## Beschreibung/Abstract
+
+Kurzer Beschreibungstext der die Komponente erklärt -> Penis
+
+<Preview withToolbar>
+    <Story
+        name="label"
+        args={{
+            _label: 'Button',
+        }}
+    >
+        {buttonLabelTemplate.bind({})}
+    </Story>
+</Preview>
+
+## Props
+
+Beschreibung der wichtigsten parameter, die für die Komponente benötigt werden
