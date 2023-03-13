@@ -7,14 +7,32 @@ import handlebars from 'handlebars'
         _id: {
             control: 'text',
             description: 'Eindeutige ID',
+            table: {
+                category: 'Button',
+            },
         },
         _size: {
             control: { type: 'select', options: ['sm', 'md', 'lg'] },
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
             table: {
+                category: 'Button',
                 defaultValue: {
                     summary: 'md',
                 },
+            },
+        },
+        _label: {
+            description: 'Label des Buttons',
+            control: 'text',
+            table: {
+                category: 'Label',
+            },
+        },
+        _css: {
+            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für das Label',
+            control: 'text',
+            table: {
+                category: 'Label',
             },
         },
         _variant: {
@@ -24,14 +42,16 @@ import handlebars from 'handlebars'
                 type: 'select',
                 options: ['ghost', 'ghost-white', 'inverted', 'transparent'],
             },
-        },
-        _label: {
-            description: 'Label',
-            control: 'text',
+            table: {
+                category: 'Button',
+            },
         },
         _ariaLabel: {
             description: 'Label',
             control: 'text',
+            table: {
+                category: 'Button',
+            },
         },
     }}
 />
@@ -41,7 +61,7 @@ export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) 
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/button_v2}}
-        {{>components/button/components/button_label }}
+        {{>components/button/components/button_label}}
     {{/components/button/button_v2}}
   `)
     return hbsTemplate({ brand, ...args })
@@ -57,14 +77,14 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
     <Story
         name="Spielplatz"
         args={{
-            _label: 'Button',
             _size: 'sm',
+            _label: 'Button',
         }}
     >
         {buttonTemplate.bind({})}
     </Story>
     <Story
-        name="Button - SM"
+        name="Button - sm"
         argTypes={{
             _size: {
                 control: false,
@@ -74,14 +94,14 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
             },
         }}
         args={{
-            _label: 'Button',
             _size: 'sm',
+            _label: 'Button',
         }}
     >
         {buttonTemplate.bind({})}
     </Story>
     <Story
-        name="Button - MD"
+        name="Button - md"
         argTypes={{
             _size: {
                 control: false,
@@ -91,14 +111,14 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
             },
         }}
         args={{
-            _label: 'Button',
             _size: 'md',
+            _label: 'Button',
         }}
     >
         {buttonTemplate.bind({})}
     </Story>
     <Story
-        name="Button - LG"
+        name="Button - lg"
         argTypes={{
             _size: {
                 control: false,
@@ -108,13 +128,15 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
             },
         }}
         args={{
-            _label: 'Button',
             _size: 'lg',
+            _label: 'Button',
         }}
     >
         {buttonTemplate.bind({})}
     </Story>
 </Preview>
+
+<ArgsTable story="Spielplatz" />
 
 ## Props
 
