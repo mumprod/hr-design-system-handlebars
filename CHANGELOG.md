@@ -1,3 +1,63 @@
+# v1.9.2 (Tue Mar 14 2023)
+
+#### 🐛 Bug Fix
+
+- adds isValid as a boolean for clusterTeaser [#584](https://github.com/mumprod/hr-design-system-handlebars/pull/584) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.9.1 (Mon Mar 13 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2186 [#583](https://github.com/mumprod/hr-design-system-handlebars/pull/583) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.9.0 (Mon Mar 13 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2186 [#582](https://github.com/mumprod/hr-design-system-handlebars/pull/582) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.8.1 (Fri Mar 10 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2182 [#581](https://github.com/mumprod/hr-design-system-handlebars/pull/581) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.8.0 (Thu Mar 09 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2182 [#580](https://github.com/mumprod/hr-design-system-handlebars/pull/580) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.7.2 (Mon Mar 06 2023)
 
 #### 🐛 Bug Fix

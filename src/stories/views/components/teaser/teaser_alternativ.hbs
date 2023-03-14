@@ -5,7 +5,7 @@
     {{/if}} 
     >
     {{#if this.teaserImage}}
-        <figure class="relative {{~inline-switch this.realTeaserSize '["hero","100","50"]' '[" basis-full w-full md:basis-2/3-gap-6  ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/3-gap-6"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/2-gap-6"]'~}}"
+        <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}}relative {{~inline-switch this.realTeaserSize '["hero","100","50"]' '[" basis-full w-full md:basis-2/3-gap-6  ar-16-9"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/3-gap-6"," ar-1-1 md:ar-16-9 basis-2/5 w-2/5 md:basis-1/2-gap-6"]'~}}"
             {{#if this.isMobile1to1}}
                 :class="{'ar-16-9 basis-full w-full' : avStart, 'ar-1-1 basis-2/5 w-2/5': !avStart}"
             {{/if}}
