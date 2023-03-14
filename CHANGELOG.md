@@ -1,3 +1,15 @@
+# v1.9.3 (Tue Mar 14 2023)
+
+#### 🐛 Bug Fix
+
+- add Brand-Color-Story [#585](https://github.com/mumprod/hr-design-system-handlebars/pull/585) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.9.2 (Tue Mar 14 2023)
 
 #### 🐛 Bug Fix
