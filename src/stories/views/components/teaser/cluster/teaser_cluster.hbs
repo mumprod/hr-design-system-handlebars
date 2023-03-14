@@ -1,23 +1,24 @@
-<article class="cy-teaser-cluster{{if this.isOrdered '--ordered'}} mx-5 sm:mx-0 col-span-12 grid bg-highlight-1 rounded-tl-hr rounded-br-hr{{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}} ">
-    <div class="">
-            <h2 class="flex items-center px-5 py-5 text-clusterTeaserHeadline">
-                {{#if this.teaserLogo}}
-                    <span>
-                        {{> components/base/image/icon _icon=this.teaserLogo _iconmap="cluster-teaser" _addClass=(inline-switch this.teaserLogo '["hessenschau_de","tagesschau_de","sportschau"]' '["fill-blue-congress w-10 md:w-12 h-10 md:h-12","fill-blue-midnight w-40 lg:w-52 h-8 md:h-12","fill-blue-deepSeaDream w-40 lg:w-52 h-8 md:h-12"]')}}
-                    </span>
-                {{/if}}
-                {{#if this.title}}
-                    <span class="overflow-anywhere hyphens-auto text-2xl border-clusterTeaserHeadline font-titleCluster {{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}{{#if this.hideTitle}} sr-only{{/if}}">{{this.title}}</span>
-                {{/if}}
-            </h2>
-            {{> components/teaser/cluster/teaser_cluster_list _ordered=this.isOrdered}} 
-    </div>
-    {{~#with this.overviewLink}}
-        {{~#if this.link~}}
-            <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.realTeaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
-                {{~> components/button/button_pseudo _type="hollow" _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink=true _buttonText=this.title _buttonCss="truncate" _linkCss="flex min-w-0"~}}
-            </div>
-        {{~/if~}}
-    {{/with~}}
-</article>
-
+{{#if this.isValid}}
+    <article class="mx-5 sm:mx-0 col-span-12 grid bg-highlight-1 rounded-tl-hr rounded-br-hr{{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}} ">
+        <div class="">
+                <h2 class="flex items-center px-5 py-5 text-clusterTeaserHeadline">
+                    {{#if this.teaserLogo}}
+                        <span>
+                            {{> components/base/image/icon _icon=this.teaserLogo _iconmap="cluster-teaser" _addClass=(inline-switch this.teaserLogo '["hessenschau_de","tagesschau_de","sportschau"]' '["fill-blue-congress w-10 md:w-12 h-10 md:h-12","fill-blue-midnight w-40 lg:w-52 h-8 md:h-12","fill-blue-deepSeaDream w-40 lg:w-52 h-8 md:h-12"]')}}
+                        </span>
+                    {{/if}}
+                    {{#if this.title}}
+                        <span class="overflow-anywhere hyphens-auto text-2xl border-clusterTeaserHeadline font-titleCluster {{#if this.teaserLogo}} pl-3 ml-3 border-l-2 border-solid {{/if}}{{#if this.hideTitle}} sr-only{{/if}}">{{this.title}}</span>
+                    {{/if}}
+                </h2>
+                {{> components/teaser/cluster/teaser_cluster_list _ordered=this.isOrdered}} 
+        </div>
+        {{~#with this.overviewLink}}
+            {{~#if this.link~}}
+                <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.realTeaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
+                    {{~> components/button/button_pseudo _type="hollow" _addClass="h-4 w-4 ml-2 fill-current" _showIcon="true" _icon="arrow-right" _withLink=true _buttonText=this.title _buttonCss="truncate" _linkCss="flex min-w-0"~}}
+                </div>
+            {{~/if~}}
+        {{/with~}}
+    </article>
+{{/if}}
