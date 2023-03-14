@@ -230,14 +230,14 @@ module.exports = {
                     deepSeaDream: '#002c6b',
                     dodgerBlue: '#407596',
                     jellyBean: '#276b9e',
-                    lightCerulean: '#007EA1FF',
+                    lightCerulean: '#007EA1',
                     matisse: '#1B7C96',
                     midnight: '#023770',
                     pacificBlue: '#009bc6',
                     science: '#006dc1',
                     sea: '#006783',
                     tarawera: '#0a3355',
-                    teal: '#007A7CFF',
+                    teal: '#007A7C',
                     turquoiseCerulian: '#007fa0',
                 },
                 'black': {
@@ -249,10 +249,10 @@ module.exports = {
                     lipstick: '#CC006E',
                     mexican: '#a12644',
                     monza: '#c20016',
-                    paprika: '#8C033DFF',
+                    paprika: '#8C033D',
                     scarlett: '#9b0112',
                     thunderbird: '#cc1a14',
-                    wellRead: '#AB2F2DFF',
+                    wellRead: '#AB2F2D',
                 },
                 'pink': {
                     fuchsie: '#bf0071',
@@ -269,7 +269,7 @@ module.exports = {
                     spicyCarrot: '#d34600',
                 },
                 'teal': {
-                    DEFAULT: '#007A7CFF',
+                    DEFAULT: '#007A7C',
                     deeperPool: '#097d8e',
                 },
                 'grey': {
@@ -285,7 +285,7 @@ module.exports = {
                 },
                 'green': {
                     casal: '#29675d',
-                    eden: '#0F6157FF',
+                    eden: '#0F6157',
                     flint: '#6e675e',
                     genoa: '#168378',
                     goBen: '#6e6748',
