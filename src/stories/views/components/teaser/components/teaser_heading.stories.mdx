@@ -58,9 +58,64 @@ export const Template = ({ _topline, ...args }) => {
 
 # Teaser-Heading
 
-Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
+Die `Dachzeile` (topline) und der `Titel` (title) werden im folgenden als Teaser-Heading bezeichnet, also der einleitende "Kopf" eines Teasers.
 
-## Teaser-Heading serif large
+Zubuchbar sind ein `Label` (an der Position der Dachzeile) und ein `erweiterter Titel` (extendedTitle) der den normalen Titel ersetzt.
+
+# Teil-Komponenten (siehe dazu Label, Topline, Titel)
+
+## Label (optional wenn vorhanden)
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/label/label_old _type=this.type _text=(loca this.loca) _bylineCss=../_labelCss}}
+```
+
+Durchgereichte Parameter:
+
+| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :--------- | :------- | :--------------------- | :----------------------------------------------- |
+| **\_type** | `String`|"media","event"...| Typ des Labels
+| **\__text**|`String`|...| Inhalt des Labels 
+| **\__bylineCss**|`String`|...|spezifische Style-Selektoren
+   
+
+## Dachzeile (topline)
+## Einbindung
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/teaser/components/teaser_topline _css=(if _toplineCss _toplineCss "") _text=_topline _readMore=_readMore _teaserType=_teaserType}}
+```
+Durchgereichte Parameter:
+
+| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :--------- | :------- | :--------------------- | :----------------------------------------------- |
+| **\_css** | `String`|...| spezifische Style-Selektoren
+| **\__text**|`String`|...| Inhalt der Dachzeile
+| **\__readMore**|`String`|...|  
+| **\__teaserType**|`String`|"standard, alternativ"| Der Teaser-Typ gibt die Anordnung des Bildes und der Elemente vor      
+
+## Titel (title)
+## Einbindung
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/teaser/components/teaser_title_old _css=(if _titleCss _titleCss "") _text=_title _fontVariant=_fontVariant _size=_size _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _firstItem=_firstItem _ordered=_ordered}}
+```
+Durchgereichte Parameter:
+
+| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :--------- | :------- | :--------------------- | :----------------------------------------------- |
+| **\_css** | `String`|...| spezifische Style-Selektoren
+| **\__text**|`String`|...| Inhalt des Titels 
+| **\__fontVariant**|`String`|serif, sans-serif| Bei Hessenschau wird für den Titel eine andere Schriftfamilie gewählt.
+| **\__size**|`String`|hero, 100, 50, 33, 25| Die Größe des Teasers 
+| **\__teaserType**|`String`|"standard, alternativ"| Der Teaser-Typ gibt die Anordnung des Bildes und der Elemente vor     
+
+
+
+## Teaser-Heading Serif Hero
 
 <Canvas>
     <Story
@@ -68,15 +123,14 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
         parameters={{
             docs: {
                 source: {
-                    code: `
-<Button class="storybook-button storybook-button--secondary">Button</button>
-        `,
+                    code: ``,
                 },
             },
         }}
         args={{
             _topline: 'Das ist eine wirklich sehr lange Topline',
             _title: 'Das ist eine wirklich sehr lange Headline',
+            _extendedTitle: 'Das ist ein erweiterter Titel',
             _headlineTag: 'h1',
             _fontVariant: 'serif',
             _size: 'hero',
@@ -87,19 +141,42 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
     </Story>
 </Canvas>
 
-<ArgsTable story="Serif large" />
+<ArgsTable story="Serif Hero" />
 
-## Teaser-Heading Serif small
+## Teaser-Heading Serif 50%
 
 <Canvas>
     <Story
-        name="Serif medium"
+        name="Serif 50"
         parameters={{
             docs: {
                 source: {
-                    code: `
-<Button class="storybook-button storybook-button--secondary">Button</button>
-        `,
+                    code: ``,
+                },
+            },
+        }}
+        args={{
+            _topline: 'Das ist eine wirklich sehr lange Topline',
+            _title: 'Das ist eine wirklich sehr lange Headline',
+            _headlineTag: 'h1',
+            _fontVariant: 'serif',
+            _size: '50',
+            _teaserType: 'standard',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## Teaser-Heading Serif 33%
+
+<Canvas>
+    <Story
+        name="Serif 33"
+        parameters={{
+            docs: {
+                source: {
+                    code: ``,
                 },
             },
         }}
@@ -116,17 +193,15 @@ Ein toller Einleitungstext für unsere `Teaser-Heading` Komponente:
     </Story>
 </Canvas>
 
-## Teaser-Heading Serif large
+## Teaser-Heading Serif 25%
 
 <Canvas>
     <Story
-        name="Serif small"
+        name="Serif 25"
         parameters={{
             docs: {
                 source: {
-                    code: `
-<Button class="storybook-button storybook-button--secondary">Button</button>
-        `,
+                    code: ``,
                 },
             },
         }}
