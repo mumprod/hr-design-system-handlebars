@@ -185,7 +185,7 @@ var helpers = {
 
     // Register Helpers
     'resourceUrl': function (text, options) {
-        var resourceUrl
+        let resourceUrl = text
         // ARD PLAYER Folder
         if (text.includes('assets/vendor/ardplayer/')) {
             resourceUrl = text.replace('assets/', './')
@@ -420,7 +420,18 @@ var helpers = {
     },
 
     'configProperty': function () {
-        return null
+        let configProperty = ''
+
+        if (arguments.length >= 1) {
+            configProperty = arguments[0]
+            switch (configProperty) {
+                case 'dialogPolyfill.baseUrl':
+                    configProperty = 'vendor/dialog-polyfill'
+            }
+        } else {
+            configProperty = 'No config-property defined.'
+        }
+        return configProperty
     },
 
     'addCacheEntry': function () {

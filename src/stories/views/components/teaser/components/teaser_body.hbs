@@ -3,7 +3,7 @@
 
     
     {{#> components/teaser/components/teaser_header _css=(if this.isMobile1to1 "" "px-5 sm:px-0")}}
-        {{#decorator 'components/base/link' _css="ds-teaser-focus hover:text-toplineColor" }} 
+        {{#decorator 'components/base/link' _css="cy-teaser-link ds-teaser-focus hover:text-toplineColor" }} 
             {{#with this.label}}
                 {{#> components/label/label_group}}
                     {{> components/label/label _type=this.type _text=(loca this.loca)}}
