@@ -1,3 +1,15 @@
+# v1.9.6 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- Documentation Grid [#588](https://github.com/mumprod/hr-design-system-handlebars/pull/588) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.9.5 (Mon Mar 20 2023)
 
 #### 🐛 Bug Fix
