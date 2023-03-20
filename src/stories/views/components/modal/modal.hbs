@@ -1,4 +1,4 @@
-<div class="js-load" data-hr-modal='{"modalTriggerId":"{{defaultIfEmpty _trigger ""}}", "trackingInformations": "{{this.link.cmsDocument.title}} Ticketlink-Overlay ok geklickt - Dokumenten-Id: {{this.link.cmsDocument.sophoraId}}","dialogPolyfillBaseUrl":"{{resourceUrl (configProperty 'dialogPolyfill.baseUrl')}}"}'>
+<div class="js-load" data-hr-modal='{"modalTriggerId":"{{defaultIfEmpty _trigger ""}}", "trackingInformations": "\" {{this.link.cmsDocument.title}} \" Ticketlink-Overlay ok geklickt - Dokumenten-Id: {{this.link.cmsDocument.sophoraId}}","dialogPolyfillBaseUrl":"{{resourceUrl (configProperty 'dialogPolyfill.baseUrl')}}"}'>
     <dialog class='js-modal p-0 backdrop:bg-grey-scorpion/90 shadow-md {{defaultIfEmpty _css "sm:max-w-xl"}}'>
         <form method="dialog" class="js-dialog-content p-4">
             {{> @partial-block }}
