@@ -1,3 +1,16 @@
+# v1.10.0 (Mon Mar 20 2023)
+
+#### 🚀 Enhancement
+
+- Documentation for Teaser-Heading [#589](https://github.com/mumprod/hr-design-system-handlebars/pull/589) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 2
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.9.6 (Mon Mar 20 2023)
 
 #### 🐛 Bug Fix
