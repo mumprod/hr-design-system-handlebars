@@ -1,3 +1,39 @@
+# v1.9.6 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- Documentation Grid [#588](https://github.com/mumprod/hr-design-system-handlebars/pull/588) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.9.5 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- change color of Ticker-Label [#587](https://github.com/mumprod/hr-design-system-handlebars/pull/587) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.9.4 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Mask string for trackingInfos [#586](https://github.com/mumprod/hr-design-system-handlebars/pull/586) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.9.3 (Tue Mar 14 2023)
 
 #### 🐛 Bug Fix

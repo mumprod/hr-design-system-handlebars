@@ -1,9 +1,11 @@
 {{~#if _backgroundColor}}
     {{#>components/grid/grid_group_highlight _backgroundColor=this.backgroundColor }}  
         {{> @partial-block }}
+          
     {{/components/grid/grid_group_highlight }}
 {{else}}
     {{#>components/grid/grid_group_standard _groupSize=this.teaserSize }}  
         {{> @partial-block }}
+      
     {{/components/grid/grid_group_standard }}
 {{/if}}
