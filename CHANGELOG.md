@@ -1,3 +1,15 @@
+# v1.9.5 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- change color of Ticker-Label [#587](https://github.com/mumprod/hr-design-system-handlebars/pull/587) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.9.4 (Mon Mar 20 2023)
 
 #### 🐛 Bug Fix
