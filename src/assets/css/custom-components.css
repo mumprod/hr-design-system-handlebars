@@ -257,7 +257,7 @@
     }
 
     .content-nav-dropdown_content.-isDropdown.-isClosed {
-        @apply z-1003;
+        @apply z-10;
         @apply hidden;
     }
 /* ---------------- NAV DROPDOWN - CONTENT - MIXED------------------ */    
@@ -277,7 +277,7 @@
     }
     .teaser-size-100 .content-nav-dropdown_content.-isMixed.-isClosed,
     .teaser-size-66 .content-nav-dropdown_content.-isMixed.-isClosed {
-        @apply z-1003;
+        @apply z-10;
         @apply hidden;
         @apply md:block;
     }
