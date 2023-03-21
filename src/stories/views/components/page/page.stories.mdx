@@ -17,9 +17,6 @@ const NavigationDataWithTeaser2 = structuredClone(
 const NavigationDataWithTeaser3 = structuredClone(
     Object.assign({}, NavigationData3, hero_teaser.logicItem.includeModel)
 )
-const NavigationDataWithPlayer = structuredClone(
-    Object.assign({}, NavigationData, audio_player_teaser.logicItem.includeModel, hero_teaser.logicItem.includeModel)
-)
 
 <Meta
     title="Komponenten/Page/Page"
@@ -41,7 +38,90 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return page({ brand, ...args })
 }
 
-# Page
+# Page (allgemein)
+
+Das Grundgerüst für das HTML-Markup einer Seite (in diesem Fall eine Index-Seite bzw. Übersichtsseite).
+Stand 2023: Inhaltsseiten werden derzeit noch nicht berücksichtigt.
+Für gemischte Inhalte siehe ```Player-Interaktion```
+
+# Grundaufbau
+Um eine Seite zu erzeugen ist ein initiales HTML-Markup notwendig. Der Kopf ```<head>``` ist dabei statisch,
+Inhalte werden im ```<body>```-Tag abgelegt. Der Kopf entspricht einem klassischen HTML-Kopf mit Titel und Metadaten-Angaben.
+
+## Markup im Kopf
+```html
+<!DOCTYPE html>
+<html 
+class="no-js no-js-burgerMenu preload noMicroInteraction"
+data-theme="hessenschau" 
+lang="de"
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>hessenschau.de | Nachrichten aus Hessen</title>
+<meta name="application-name" content="hessenschau.de" />
+<meta name="copyright" content="Hessischer Rundfunk, Frankfurt, Germany" />
+<meta name="author" content="hessenschau.de, Frankfurt, Germany" />
+<meta name="publisher" content="hessenschau.de" />
+<meta name="language" content="Deutsch" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<div class="js-pageSwap">
+
+MARKUP FÜR INHALTE ...              
+
+<div>    
+</body>
+</html>
+```
+## Markup für Inhalte
+
+Initial wird die Seitennavigation - das Menü - der Seite eingefügt. Wahlweise Abwandlungen der Seitennavigation 
+(mit Subnavigation oder Unwetterwarnung), die über unterschiedlichen Daten-JSONS ausgeformt werden. Die Daten-JSONS hierfür liegen 
+unter ```components/site_header/fixtures``` und die Komponente selber:
+
+```html
+{{> components/site_header/header }}   
+```
+Dann folgen die Inhalte in diesem Fall Teaser, die über das Grid-Layout angeordnet werden. Die Komponenten für die Teaser
+liegen unter ```components/teaser/``` und lauten auf ```teaser_``` und dessen Ausprägung:
+<ul>
+    <li>standard (Standard => Bild oben, Text darunter)</li>
+    <li>alternativ (Alternativ => Bild links, Text rechts)</li>
+    <li>event_calendar (Event-Kalender)</li>
+    <li>poster (Poster => Text auf Bild)</li>
+    <li>indextext (Nur Text)</li>
+    <li>stage (Stage => Sonderform über die ganze Seite)</li>
+</ul>
+
+Auch hier bestimmen die Daten-JSONS, das Bild und den Text. Die Daten-JSONS hierfür liegen 
+unter ```components/teaser/fixtures``` der Aufruf der Komponente selber:
+
+```html
+ {{> components/teaser/teaser_standard }} 
+```
+Gekapselt wird die Teaser-Komponente in einer ```<section>```. Es können beliebig viele Sections mit entsprechenden Teaser-Komponenten
+in das folgende Markup angelegt werden:
+
+ ```html           
+<main onclick="void(0)" role="main" id="content" class="flex items-center justify-center">
+    <div class="grid grid-page">
+        <div class="{{> components/grid/grid_group_wrapper_classes }}">
+            
+            <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                {{> components/teaser/teaser_standard }}
+            </section>
+             WEITERE TEASER...
+        </div>
+    </div>
+</main>
+
+</div>
+```
+Die Ausformung der Teaser basiert immer auf dem selben Daten-JSON, d.h. Bild und Texte sind immer identisch, lediglich die Größe und der
+Teaser-Typ variieren.
 
 <Canvas withToolbar>
     <Story name="Default" args={NavigationDataWithTeaser}>
@@ -57,12 +137,6 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 <Canvas>
     <Story name="Mit Subnavigation" args={NavigationDataWithTeaser3}>
-        {Template.bind({})}
-    </Story>
-</Canvas>
-
-<Canvas>
-    <Story name="Player-Interaktion" args={NavigationDataWithPlayer}>
         {Template.bind({})}
     </Story>
 </Canvas>

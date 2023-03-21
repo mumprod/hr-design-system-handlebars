@@ -1,6 +1,6 @@
-import { ArgsTable, Meta, Story, Preview } from '@storybook/addon-docs'
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
-import teaserTextComponent from './teaser_text.hbs'
+import teaserText from './teaser_text.hbs'
 
 <Meta
     title="Komponenten/Teaser/Komponenten/Teasertext"
@@ -22,36 +22,73 @@ import teaserTextComponent from './teaser_text.hbs'
 />
 
 export const Template = ({ _text, ...args }) => {
-    return teaserTextComponent({ _text, ...args })
+    return teaserText({ _text, ...args })
 }
 
-# teaserText
+# Teaser-Text
 
-Beispiele für die teaserText-Komponente:
+Im Teaser folgt nach dem Heading der Text. Diesem beigefügt ein "Mehr"-Link oder ein Link auf eine externe Seite.
 
-<Preview withToolbar>
+# Teil-Komponenten
+N/A
+
+## Teaser-Text Hero
+<Canvas>
     <Story
-        name="Teasertext"
+        name="Teasertext Hero"
         args={{
-            _text: 'Dies ist der Teasertext eines normalen Teasers',
-            _size: '50',
-        }}
-    >
-        {Template.bind({})}
-    </Story>
-    <Story
-        name="Teasertext Hero-Teaser"
-        args={{
-            _text: 'Dies ist der Teasertext eines Hero-Teasers',
+            _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
             _size: 'hero',
             _font: 'md:text-base md:leading-4 lg:leading-5',
         }}
-        parameters={{
-            controls: {
-                exclude: ['size'],
-            },
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## Teaser-Text 50%
+
+<Canvas>
+    <Story
+        name="Teasertext 50"
+        args={{
+            _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
+            _size: '50',
+            _font: 'md:text-base md:leading-4 lg:leading-5',
         }}
     >
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
+
+## Teaser-Text 33%
+
+<Canvas>
+    <Story
+        name="Teasertext 33"
+        args={{
+            _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
+            _size: '33',
+            _font: 'md:text-base md:leading-4 lg:leading-5',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+## Teaser-Text 25%
+
+<Canvas>
+    <Story
+        name="Teasertext 25"
+        args={{
+            _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
+            _size: '25',
+            _font: 'md:text-base md:leading-4 lg:leading-5',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+
