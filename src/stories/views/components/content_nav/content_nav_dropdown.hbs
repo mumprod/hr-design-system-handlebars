@@ -7,7 +7,7 @@
 
     <span id="dropdown__label--{{getRandom}}" class="hidden">{{defaultIfEmpty _hiddenNavigationLabel "Unternavigation"}}</span>
     <button 
-         class="content-nav-dropdown_dropdown{{#if this.isDropdown}} -isDropdown{{/if}}{{#if this.isMixed}} -isMixed{{/if}} ds-link-inset relative flex w-full h-10  mb-0 overflow-hidden bg-white border md:mx-0 z-100 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
+         class="content-nav-dropdown_dropdown{{#if this.isDropdown}} -isDropdown{{/if}}{{#if this.isMixed}} -isMixed{{/if}} ds-link-inset relative flex w-full h-10  mb-0 overflow-hidden bg-white border md:mx-0 z-11 border-content-nav whitespace-nowrap text-content-nav fill-content-nav"
          @click="contentNavDropdownIsOpen = !contentNavDropdownIsOpen;  $dispatch('hr:global:resetinputAutoSuggest');" 
         
          {{#if this.isMixed}}
