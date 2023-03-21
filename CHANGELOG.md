@@ -1,3 +1,15 @@
+# v1.11.2 (Tue Mar 21 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2198 z indexes sometimes clash with old navi [#592](https://github.com/mumprod/hr-design-system-handlebars/pull/592) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.11.1 (Mon Mar 20 2023)
 
 #### 🐛 Bug Fix
