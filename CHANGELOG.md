@@ -1,3 +1,15 @@
+# v1.11.3 (Tue Mar 21 2023)
+
+#### 🐛 Bug Fix
+
+- forgot to edit custom-components.css [#593](https://github.com/mumprod/hr-design-system-handlebars/pull/593) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.11.2 (Tue Mar 21 2023)
 
 #### 🐛 Bug Fix
