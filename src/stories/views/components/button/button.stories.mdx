@@ -4,14 +4,77 @@ import handlebars from 'handlebars'
 <Meta
     title="Komponenten/Button"
     argTypes={{
-        _id: {
+        '_alpineClick': {
+            description:
+                'Erlaubt es Javascript bei einem Klick auf den Button auszuführen. Mehr Details unter [https://alpinejs.dev/directives/on](https://alpinejs.dev/directives/on)',
+            control: 'text',
+            table: {
+                category: 'Button',
+            },
+        },
+        '_ariaLabel': {
+            description: 'Label',
+            control: 'text',
+            table: {
+                category: 'Button',
+            },
+        },
+        '_id': {
             control: 'text',
             description: 'Eindeutige ID',
             table: {
                 category: 'Button',
             },
         },
-        _size: {
+        '_css': {
+            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für das Label',
+            control: 'text',
+            table: {
+                category: 'Label',
+            },
+        },
+        '_label': {
+            description: 'Label des Buttons',
+            control: 'text',
+            table: {
+                category: 'Label',
+            },
+        },
+        '_name': {
+            description:
+                'Legt den Namen des Buttons fest. Wird benötigt, wenn der Button als Submit Button innerhalb eines Formulars genutzt wird.',
+            control: 'text',
+            table: {
+                category: 'Button',
+            },
+        },
+        '_title': {
+            description: 'Optionaler erläuternder Text, der als Tooltip angezeigt wird.',
+            control: 'text',
+            table: {
+                category: 'Button',
+            },
+        },
+        '_value': {
+            description:
+                'Dieser Wert wird zusammen mit dem Namen bei einem Submit innerhalb eines Formulars an den Server übertragen.',
+            control: 'text',
+            table: {
+                category: 'Button',
+            },
+        },
+        '_noFocus': {
+            description:
+                'Legt fest, ob der Button mit einem `Tab` angesprungen werden kann oder nicht. ',
+            control: 'boolean',
+            table: {
+                category: 'Button',
+                defaultValue: {
+                    summary: false,
+                },
+            },
+        },
+        '_size': {
             control: { type: 'select', options: ['sm', 'md', 'lg'] },
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
             table: {
@@ -21,21 +84,18 @@ import handlebars from 'handlebars'
                 },
             },
         },
-        _label: {
-            description: 'Label des Buttons',
-            control: 'text',
+        '_type': {
+            control: { type: 'select', options: ['button', 'submit', 'reset'] },
+            description:
+                'Setzt das Attribut type des HTML Button Elements. Erlaubte Werte sind `button`, `submit` oder `reset`',
             table: {
-                category: 'Label',
+                category: 'Button',
+                defaultValue: {
+                    summary: 'submit',
+                },
             },
         },
-        _css: {
-            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für das Label',
-            control: 'text',
-            table: {
-                category: 'Label',
-            },
-        },
-        _variant: {
+        '_variant': {
             description:
                 'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `ghost`, `ghost-white`, `inverted`, `transparent`',
             control: {
@@ -46,45 +106,104 @@ import handlebars from 'handlebars'
                 category: 'Button',
             },
         },
-        _ariaLabel: {
-            description: 'Label',
+        '_x-show': {
+            description:
+                'Setzt die Alpine.js Direktive `x-show` und erlaubt so den Button auf Basis des Wertes einer boolschen Variable ein- oder auszublenden. Mehr dazu unter [https://alpinejs.dev/directives/show](https://alpinejs.dev/directives/show)',
             control: 'text',
             table: {
                 category: 'Button',
             },
         },
     }}
+    parameters={{
+        controls: {
+            sort: 'alpha',
+        },
+    }}
 />
 
-export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
+export const buttonWithLabelTemplate = (args, { globals: { customConditionalToolbar } }) => {
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/button_v2}}
-        {{>components/button/components/button_label}}
+        {{> components/button/components/button_label}}
     {{/components/button/button_v2}}
   `)
     return hbsTemplate({ brand, ...args })
 }
 
-# Name der Komponente
+export const buttonWithLabelAndIconRightTemplate = (
+    args,
+    { globals: { customConditionalToolbar } }
+) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    {{#> components/button/button_v2}}
+        {{> components/button/components/button_label}}
+        {{> components/button/components/button_icon }}
+    {{/components/button/button_v2}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
 
-## Beschreibung/Abstract
+export const buttonWithLabelAndIconLeftTemplate = (
+    args,
+    { globals: { customConditionalToolbar } }
+) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    {{#> components/button/button_v2~}}
+        {{> components/button/components/button_icon }}
+        {{> components/button/components/button_label}}
+    {{~/components/button/button_v2}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
 
-Kurzer Beschreibungstext der die Komponente erklärt -> Penis
+# Button
 
-<Preview withToolbar>
+## Übersicht
+
+Buttons erlauben es eine Aktion oder ein Ereignis mit einem Klick auszulösen. Sie werden z.B. in der Navigation einer Tab-Box verwendet, um zwischen
+den unterschiedlichen Tabs umzuschalten oder werden genutzt, um ein ein Modal zu öffnen.
+Soll die Schaltfläche optisch wie ein Button aussehen, bei einem Klick aber eine neue Seite öffnen, darf nicht die Button-Komponente genutzt werden.
+Für diesen Anwendungsfall gibt es mit dem Button-Link eine eigene Komponente. Sie erzeugt technisch ein HTML Link Element,
+das optisch genauso wie ein Button aussieht. Beispiele hierfür sind die Schaltfläche am unteren Rand einer Tab-Box, die es
+ermöglicht auf eine Seite mit weiteren Inhalten zu kommen, die Schaltfläche innerhalb eines Cluster-Teasers, die auf eine Seite mit weiteren Beiträgen verlinkt
+oder die Schaltfläche innerhalb eines Poster-Teasers, die auf den konkreten Inhalt verlinkt.
+
+Die Button-Komponente als solches ist sehr einfach gehalten. Sie stellt nur ein Grundgerüst (ein gestyltes HTML-Button Element) zur Verfügung. Alle Inhalte des Buttons,
+wie das Label oder ein mögliches Icon, können flexibel durch Subkomponenten hinzugefügt werden.
+
+<Canvas>
     <Story
         name="Spielplatz"
         args={{
-            _size: 'sm',
+            _size: 'md',
             _label: 'Button',
         }}
     >
-        {buttonTemplate.bind({})}
+        {buttonWithLabelTemplate.bind({})}
     </Story>
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Spielplatz" />
+
+## Varianten
+
+Auf einer Inhaltsseite kann mehr als ein Button platziert werden. Um wichtige von weniger wichtigen Aktionen
+unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen von Buttons zu verwenden.
+
+### Größen
+
+<Preview withToolbar>
     <Story
-        name="Button - sm"
+        name="Button - lg"
         argTypes={{
             _size: {
                 control: false,
@@ -94,11 +213,11 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
             },
         }}
         args={{
-            _size: 'sm',
-            _label: 'Button',
+            _size: 'lg',
+            _label: 'Large',
         }}
     >
-        {buttonTemplate.bind({})}
+        {buttonWithLabelTemplate.bind({})}
     </Story>
     <Story
         name="Button - md"
@@ -112,13 +231,35 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
         }}
         args={{
             _size: 'md',
-            _label: 'Button',
+            _label: 'Medium',
         }}
     >
-        {buttonTemplate.bind({})}
+        {buttonWithLabelTemplate.bind({})}
     </Story>
     <Story
-        name="Button - lg"
+        name="Button - sm"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'sm',
+            _label: 'Small',
+        }}
+    >
+        {buttonWithLabelTemplate.bind({})}
+    </Story>
+</Preview>
+
+### Button-Arten
+
+<Preview withToolbar>
+    <Story
+        name="Button - Normal"
         argTypes={{
             _size: {
                 control: false,
@@ -129,15 +270,131 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
         }}
         args={{
             _size: 'lg',
-            _label: 'Button',
+            _label: 'Normal',
         }}
     >
-        {buttonTemplate.bind({})}
+        {buttonWithLabelTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - Ghost"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Ghost',
+            _variant: 'ghost',
+        }}
+    >
+        {buttonWithLabelTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - Invertiert"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Invertiert',
+            _variant: 'inverted',
+        }}
+    >
+        {buttonWithLabelTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - Transparent"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Transparent',
+            _variant: 'transparent',
+        }}
+    >
+        {buttonWithLabelTemplate.bind({})}
     </Story>
 </Preview>
 
-<ArgsTable story="Spielplatz" />
+### Button mit Icon <a id="button-icon"/>
 
-## Props
+<Preview withToolbar>
+    <Story
+        name="Button - Icon rechts"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Icon rechts',
+            _icon: 'arrow-right',
+        }}
+    >
+        {buttonWithLabelAndIconRightTemplate.bind({})}
+    </Story>
+    <Story
+        name="Button - Icon links"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Icon links',
+            _icon: 'arrow-left',
+        }}
+    >
+        {buttonWithLabelAndIconLeftTemplate.bind({})}
+    </Story>
+</Preview>
 
-Beschreibung der wichtigsten parameter, die für die Komponente benötigt werden
+## Benutzung
+
+Ein Button wird mit der Handlebar Komponente `button` eingebunden. Wie einleitend schon beschrieben, stellt diese
+Komponente lediglich das Grundgerüst eines Buttons dar. Die Beschriftung und/oder ein Icon müssen mit Subkomponenten hinzugefügt
+werden.
+
+### Button mit Text
+
+Ein einfacher Button mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/button_v2}}
+```
+
+### Button mit Text und Icon
+
+Ein [Go to specific documentation page](#button-icon) einfacher Button mit Beschriftung und einem rechts daneben stehenden Icon wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
+{{/components/button/button_v2}}
+```
