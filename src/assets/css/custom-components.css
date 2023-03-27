@@ -42,12 +42,12 @@
     .headline-barrier:before,
     .headline-barrier:after {
         border-bottom: 1px solid;
-        content: ''; 
-        @apply pt-3.5 md:pt-5     
+        content: '';
+        @apply pt-3.5 md:pt-5;
     }
     .justifyLine.headline-barrier:before,
     .justifyLine.headline-barrier:after {
-        @apply pt-3.5      
+        @apply pt-3.5;
     }
 
     /* PODCAST SEEK SLIDER*/
@@ -77,11 +77,10 @@
     /* CONTENT NAV ACCENTED GROUP MIXED*/
 
     .group-accented .autoSuggest .mixed-input {
-        border-color: transparent!important;
+        border-color: transparent !important;
         height: 32px;
         border-bottom: none;
     }
-
 
     .ds-focus {
         @apply z-20;
@@ -113,7 +112,7 @@
     .ds-link {
         @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
-    
+
     .ds-link:focus:not(:focus-visible) {
         @apply shadow-none;
     }
@@ -126,12 +125,12 @@
         @apply shadow-none;
     }
 
-    .ds-link-inset  {
-        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-focus-state ;    
+    .ds-link-inset {
+        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-focus-state;
     }
 
     .ds-link-inset:focus:not(:focus-visible) {
-        @apply ring-0;     
+        @apply ring-0;
     }
 
     .ds-teaser-focus {
@@ -164,10 +163,10 @@
     .ds-teaser-focus:focus {
         @apply outline-none;
     }
-/* ----------------Content NAV------------------ */
-/* ---------------- NAV ITEMS ------------------ */
+    /* ----------------Content NAV------------------ */
+    /* ---------------- NAV ITEMS ------------------ */
     .content-nav-item {
-        @apply h-10;    
+        @apply h-10;
         @apply text-base;
         @apply font-copy;
         @apply list-none;
@@ -180,7 +179,7 @@
         @apply hover:text-white;
         @apply hover:underline;
     }
-/* ----------------LIST - NAV ITEMS ------------------ */
+    /* ----------------LIST - NAV ITEMS ------------------ */
     .content-nav-item.content-nav-item-list {
         @apply w-full;
         @apply border;
@@ -191,13 +190,13 @@
         @apply w-full;
         @apply md:w-fit;
     }
-/* ----------------FLOW - NAV ITEMS ------------------ */
+    /* ----------------FLOW - NAV ITEMS ------------------ */
     .content-nav-item.content-nav-item-flow {
         @apply w-fit;
         @apply border;
         @apply hover:no-underline;
     }
-/* ----------------MIXED - NAV ITEMS ------------------ */
+    /* ----------------MIXED - NAV ITEMS ------------------ */
     .teaser-size-100 .content-nav-item.content-nav-item-mixed,
     .teaser-size-66 .content-nav-item.content-nav-item-mixed {
         @apply md:w-fit;
@@ -210,7 +209,6 @@
         @apply md:hover:text-white;
         @apply md:hover:!bg-content-nav;
         @apply md:hover:!fill-white;
-
     }
     .content-nav-item.content-nav-item-mixed {
         @apply w-full;
@@ -226,7 +224,7 @@
         @apply hover:!bg-white;
         @apply hover:!fill-content-nav;
     }
-/* ----------------DROPDOWN - NAV ITEMS ------------------ */    
+    /* ----------------DROPDOWN - NAV ITEMS ------------------ */
     .content-nav-item.content-nav-item-dropdown {
         @apply w-full;
         @apply border-gray-400;
@@ -236,21 +234,20 @@
         @apply hover:text-content-nav;
         @apply hover:!bg-white;
         @apply hover:!fill-content-nav;
-                
     }
-/* ---------------- NAV DROPDOWN - DROPDOWN ------------------ */
-    .content-nav-dropdown_dropdown.-isDropdown  {
+    /* ---------------- NAV DROPDOWN - DROPDOWN ------------------ */
+    .content-nav-dropdown_dropdown.-isDropdown {
         @apply flex;
     }
-    .content-nav-dropdown_dropdown.-isMixed  {
+    .content-nav-dropdown_dropdown.-isMixed {
         @apply flex;
     }
     .teaser-size-100 .content-nav-dropdown_dropdown.-isMixed,
-    .teaser-size-66 .content-nav-dropdown_dropdown.-isMixed  {
+    .teaser-size-66 .content-nav-dropdown_dropdown.-isMixed {
         @apply flex;
         @apply md:hidden;
     }
-/* ---------------- NAV DROPDOWN - CONTENT ------------------ */
+    /* ---------------- NAV DROPDOWN - CONTENT ------------------ */
     .content-nav-dropdown_content.-isOpen {
         @apply z-9999;
         @apply shadow-lg;
@@ -260,12 +257,12 @@
         @apply z-1003;
         @apply hidden;
     }
-/* ---------------- NAV DROPDOWN - CONTENT - MIXED------------------ */    
-    .content-nav-dropdown_content.-isMixed {        
+    /* ---------------- NAV DROPDOWN - CONTENT - MIXED------------------ */
+    .content-nav-dropdown_content.-isMixed {
         @apply hidden;
     }
     .teaser-size-100 .content-nav-dropdown_content.-isMixed,
-    .teaser-size-66 .content-nav-dropdown_content.-isMixed  {        
+    .teaser-size-66 .content-nav-dropdown_content.-isMixed {
         @apply md:block;
     }
     .content-nav-dropdown_content.-isMixed.-isOpen {
@@ -281,4 +278,10 @@
         @apply hidden;
         @apply md:block;
     }
+}
+
+/* ---------------------------- BUTTON ------------------------------ */
+.ds-button-label + .ds-button-icon,
+.ds-button-icon + .ds-button-label {
+    @apply ml-2;
 }
