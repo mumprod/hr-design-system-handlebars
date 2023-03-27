@@ -4,6 +4,7 @@
             {
                 "name": "hessenschau",
                 "text": "Start",
+                "hiddenText": "hessenschau",
                 "url": "index.html",
                 "labelText": "Startseite der hessenschau",
                 "subNavigationFromIndex": true,
