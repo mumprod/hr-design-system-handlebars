@@ -1,3 +1,15 @@
+# v1.11.4 (Mon Mar 27 2023)
+
+#### 🐛 Bug Fix
+
+- - added hidden Text to section Nav Items for screenreaders/SEO [#594](https://github.com/mumprod/hr-design-system-handlebars/pull/594) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.3 (Tue Mar 21 2023)
 
 #### 🐛 Bug Fix
