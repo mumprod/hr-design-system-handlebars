@@ -1,3 +1,185 @@
+# v1.11.4 (Mon Mar 27 2023)
+
+#### 🐛 Bug Fix
+
+- - added hidden Text to section Nav Items for screenreaders/SEO [#594](https://github.com/mumprod/hr-design-system-handlebars/pull/594) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.11.3 (Tue Mar 21 2023)
+
+#### 🐛 Bug Fix
+
+- forgot to edit custom-components.css [#593](https://github.com/mumprod/hr-design-system-handlebars/pull/593) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.11.2 (Tue Mar 21 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2198 z indexes sometimes clash with old navi [#592](https://github.com/mumprod/hr-design-system-handlebars/pull/592) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.11.1 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- Documentation Page [#591](https://github.com/mumprod/hr-design-system-handlebars/pull/591) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.10.0 (Mon Mar 20 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 1605 [#590](https://github.com/mumprod/hr-design-system-handlebars/pull/590) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@mariokinzel](https://github.com/mariokinzel))
+- Documentation for Teaser-Heading [#589](https://github.com/mumprod/hr-design-system-handlebars/pull/589) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 2
+
+- [@mariokinzel](https://github.com/mariokinzel)
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.9.6 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- Documentation Grid [#588](https://github.com/mumprod/hr-design-system-handlebars/pull/588) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.9.5 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- change color of Ticker-Label [#587](https://github.com/mumprod/hr-design-system-handlebars/pull/587) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.9.4 (Mon Mar 20 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Mask string for trackingInfos [#586](https://github.com/mumprod/hr-design-system-handlebars/pull/586) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.9.3 (Tue Mar 14 2023)
+
+#### 🐛 Bug Fix
+
+- add Brand-Color-Story [#585](https://github.com/mumprod/hr-design-system-handlebars/pull/585) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.9.2 (Tue Mar 14 2023)
+
+#### 🐛 Bug Fix
+
+- adds isValid as a boolean for clusterTeaser [#584](https://github.com/mumprod/hr-design-system-handlebars/pull/584) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.9.1 (Mon Mar 13 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2186 [#583](https://github.com/mumprod/hr-design-system-handlebars/pull/583) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.9.0 (Mon Mar 13 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2186 [#582](https://github.com/mumprod/hr-design-system-handlebars/pull/582) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.8.1 (Fri Mar 10 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 2182 [#581](https://github.com/mumprod/hr-design-system-handlebars/pull/581) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.8.0 (Thu Mar 09 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2182 [#580](https://github.com/mumprod/hr-design-system-handlebars/pull/580) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.7.2 (Mon Mar 06 2023)
+
+#### 🐛 Bug Fix
+
+- remove unused colors [#579](https://github.com/mumprod/hr-design-system-handlebars/pull/579) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.7.1 (Fri Mar 03 2023)
 
 #### 🐛 Bug Fix

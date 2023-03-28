@@ -1,9 +1,11 @@
-import { hr$, listen, unlisten } from 'hrQuery'
+import { hr$, listen, unlisten, addLink } from 'hrQuery'
 import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import dialogPolyfill from 'dialog-polyfill'
 
 const Modal = (context) => {
     const { options } = context,
         { element: rootElement } = context,
+        dialogPolyfillBaseUrl = options.dialogPolyfillBaseUrl || 'vendor/dialog-polyfill',
         modalTriggerId = options.modalTriggerId ? '#' + options.modalTriggerId : '',
         modalTrigger = hr$(modalTriggerId)[0],
         modalCloseTriggers = hr$('.js-modal-close', rootElement),
@@ -20,8 +22,18 @@ const Modal = (context) => {
         })
     }
 
+    const configurePolyfillIfNeeded = () => {
+        if (undefined == modal.showModal) {
+            addLink('dialog-polyfill-css', `${dialogPolyfillBaseUrl}/dialog-polyfill.css`, {
+                type: 'text/css',
+                rel: 'stylesheet',
+            })
+        }
+        dialogPolyfill.registerDialog(modal)
+    }
+
     const clickTracking = () => {
-        console.log("tracking")
+        console.log('tracking')
         uxAction(trackingInformations)
     }
 
@@ -41,6 +53,7 @@ const Modal = (context) => {
         modal.close()
     }
 
+    configurePolyfillIfNeeded()
     configureEventListeners()
 }
 

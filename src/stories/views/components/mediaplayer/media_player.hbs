@@ -1,4 +1,4 @@
-<div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full{{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full{{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream cy-mediaplayer" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
@@ -16,5 +16,18 @@
             {{> components/base/image/icon _icon=_mediaButtonIcon  _addClass=(appendToDefault (if _isLivestream "text-orange-spicyCarrot group-hover:fill-orange-spicyCarrot" "text-media-button group-hover:fill-media-button") "w-10 h-10  fill-white group-hover:text-white inline")}}
             {{>components/button/components/button_label _css="sr-only" _label=_mediaButtonLabel}}
         {{/components/button/button_v2}}   
+        {{> components/button/button_round 
+        _isButton="true" 
+        _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button cy-mediaplayer-trigger'
+        _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-media-button hover:fill-media-button')
+        _teaserType=_teaserType
+        _teaserSize=_teaserSize
+        _isMobile1to1=_isMobile1to1
+        _showIcon=true
+        _icon=_mediaButtonIcon 
+        _label=_mediaButtonLabel 
+        _srOnly="true" 
+        _alpineClick="avStart = !avStart; $dispatch('player_start')"
+        }}    
     </div>
 {{/if}}

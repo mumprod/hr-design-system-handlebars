@@ -6,6 +6,7 @@
     "showGenreImage": false,
     "showFirstImage": false,
     "isOrdered": false,
+    "isValid": true,
 
     "teaserSize": "100",
     "realTeaserSize": "100",

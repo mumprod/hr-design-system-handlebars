@@ -159,7 +159,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -217,7 +217,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -268,13 +268,13 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.grey.scorpion');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -327,13 +327,13 @@
 [data-theme='hr-werbung'] {
     --color-primary-ds: theme('colors.blue.deepCerulean');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -392,7 +392,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -449,7 +449,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.yellow.hokeyPokey');
     /* Eilmeldung */
@@ -500,13 +500,13 @@
 [data-theme='hr'] {
     --color-primary-ds: theme('colors.blue.deepCerulean');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.linkWater');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Eilmeldung */
@@ -565,7 +565,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.pink.rose');
     /* Eilmeldung */
@@ -682,7 +682,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.pacifica');
     /* Eilmeldung */
@@ -742,7 +742,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.dodgerBlue');
     /* Eilmeldung */
@@ -804,7 +804,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.goldDrop');
+    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */

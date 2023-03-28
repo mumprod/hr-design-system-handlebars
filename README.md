@@ -28,20 +28,20 @@ klonen. Danach in das Installationsverzeichnis wechseln und alle notwendigen
 npm Pakete mit dem Befehl
 
 ```
-npm ci
+yarn
 ```
 
 installieren.
 Mit dem Befehl
 
 ```
-npm run storybook
+yarn storybook
 ```
 
 kann das Designsystem lokal gestartet werden. Damit dieses immer mit den aktuellsten Daten arbeitet, muss in einem weiteren Terminalfenster zudem das Skript `optimize-assets` mit dem Befehl
 
 ```
-npm run optimize-assets
+yarn optimize-assets
 ```
 
 gestartet werden. Dieses Skript erzeugt für die einzelnen Features JSON-Testdaten, optimiert im SVG-Format vorliegende Icons, erzeugt eine angepasste Version von Modernizr.js und stellt alle Handelbars-Templates als JS-Exporte zur Verfügung. Es läuft im Watch-Modus,
@@ -68,12 +68,12 @@ settings.json
             "workbench.action.terminal.focusPreviousPane",
             {
                 "command": "workbench.action.terminal.sendSequence",
-                "args": { "text": "npm run storybook\r" }
+                "args": { "text": "yarn storybook\r" }
             },
             "workbench.action.terminal.focusNextPane",
             {
                 "command": "workbench.action.terminal.sendSequence",
-                "args": { "text": "npm run optimize-assets\r" }
+                "args": { "text": "yarn optimize-assets\r" }
             }
         ]
     }
@@ -102,8 +102,8 @@ Makro hintereinander aus:
 2. Öffnen eines neuen Terminal Fensters
 3. Teilen des Terminal Fensters
 4. Setze den Fokus auf das linke Terminal Fenster
-5. Setze den Befehl `npm run storybook` ab und führe ihn aus
+5. Setze den Befehl `yarn storybook` ab und führe ihn aus
 6. Setze den Fokus auf das rechte Terminal Fenster
-7. Setze den Befehl `npm run optimize-assets` ab und führe ihn aus
+7. Setze den Befehl `yarn optimize-assets` ab und führe ihn aus
 
 Weitere Details und Grundlagen zum Gebrauch des Designsystems können direkt in dessen Dokumentation eingesehen werden.
