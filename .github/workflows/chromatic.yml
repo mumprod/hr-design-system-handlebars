@@ -18,9 +18,9 @@ jobs:
               with:
                   node-version: 16.x
             - name: install
-              run: npm ci
+              run: yarn
             - name: create partials
-              run: npm run partialsToJs
+              run: yarn partialsToJs
             - uses: chromaui/action@v1
               with:
                   # 👇 Chromatic projectToken, refer to the manage page to obtain it.
