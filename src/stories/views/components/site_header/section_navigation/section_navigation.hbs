@@ -14,6 +14,9 @@
                         {{else}}
                             {{{this}}}
                         {{/if}}
+                        {{#if @first}}
+                            {{> components/site_header/section_navigation/section_navigation_top_topics }}   
+                        {{/if}}
                     {{/each}} 
                 </ul>
             {{/with}}
