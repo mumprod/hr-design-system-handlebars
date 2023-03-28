@@ -189,7 +189,12 @@ export const parameters = {
             order: [
                 'Einführung',
                 'Grundlegendes',
-                ['Konventionen und Datenstrukturen', 'Testdatenbereitstellung', '*'],
+                [
+                    'Installation und Update',
+                    'Konventionen und Datenstrukturen',
+                    'Testdatenbereitstellung',
+                    '*',
+                ],
                 'Komponenten',
                 ['Page', 'Header', 'Teaser', 'grid', 'Label'],
                 '*',
