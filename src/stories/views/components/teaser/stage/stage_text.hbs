@@ -14,7 +14,7 @@
                     {{/if}}
                     {{> components/teaser/components/teaser_title _css="text-stageText" _text=this.title _size="100" _teaserType="stage"}}
                     {{#with this.eventtags}}
-                        {{> components/event/event_tags this _css="hidden sm:block text-inherit"}} 
+                        {{> components/event/event_tags this _css="hidden sm:block !text-inherit"}} 
                     {{/with}}
                 {{/components/teaser/components/teaser_headline}}
                 {{#if this.showProfileInfoAsByline}}
