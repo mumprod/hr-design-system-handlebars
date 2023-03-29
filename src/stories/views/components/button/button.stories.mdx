@@ -27,10 +27,10 @@ import handlebars from 'handlebars'
             },
         },
         '_css': {
-            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für das Label',
+            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für den Button',
             control: 'text',
             table: {
-                category: 'Label',
+                category: 'Button',
             },
         },
         '_label': {
@@ -112,6 +112,23 @@ import handlebars from 'handlebars'
             control: 'text',
             table: {
                 category: 'Button',
+            },
+        },
+        '_icon': {
+            description: 'Der Name des Icons in der Iconmap',
+            control: 'text',
+            table: {
+                category: 'Icon',
+            },
+        },
+        '_iconMap': {
+            control: 'text',
+            description: 'Der Name der zu verwendenden Iconmap',
+            table: {
+                defaultValue: {
+                    summary: 'icons',
+                },
+                category: 'Icon',
             },
         },
     }}
@@ -401,7 +418,7 @@ Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie 
 ```handlebars
 {{#> components/button/button _size="lg"}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_v2}}
+{{/components/button/button}}
 ```
 
 ### Button mit Text und Icon
@@ -412,7 +429,7 @@ Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben st
 {{#> components/button/button _size="lg"}}
     {{> components/button/components/button_label _label="Button"}}
     {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
-{{/components/button/button_v2}}
+{{/components/button/button}}
 ```
 
 Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
@@ -421,7 +438,7 @@ Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach
 {{#> components/button/button _size="lg"}}
     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_v2}}
+{{/components/button/button}}
 ```
 
 Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
@@ -448,7 +465,7 @@ Attribute gesetzt werden (z.B. zum Setzen von alpine.js Direktiven), muss dies w
         data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
     {{/inline}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_v2}}
+{{/components/button/button}}
 ```
 
 Dem hier gerenderten HTML-Button werden mit Hilfe des Inline-Partials `html_properties` die Attribute `x-ref`, `x-on`, `:aria-expanded`, `:aria-controls`, `:class`
@@ -468,7 +485,7 @@ Inline-Partials eingesetzt.
         {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
     {{/inline}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_v2}}
+{{/components/button/button}}
 ```
 
 Über das Inline-Partial `css` können auf diese Weise theoretisch beliebig viele in Subkomponenten ausgelagerte CSS Klassen übergeben werden.
