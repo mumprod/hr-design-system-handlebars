@@ -14,6 +14,11 @@
                         {{else}}
                             {{{this}}}
                         {{/if}}
+                        {{#if @first}}
+                            {{#with ../../this.topTopicsNavigationSSILinks }}                               
+                                {{> components/site_header/section_navigation/section_navigation_top_topics }}                             
+                            {{/with}}
+                        {{/if}}
                     {{/each}} 
                 </ul>
             {{/with}}

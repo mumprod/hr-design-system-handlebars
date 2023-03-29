@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "title": "Corona",
+            "text": "Corona",
+            "link": {
+                "url": "http://www.Corona.de",
+                "hasIcon": false,
+                "iconName": "extern"
+            }
+        },
+        {
+            "title": "Unwetter",
+            "text": "Unwetter",
+            "link": {
+                "url": "http://www.Unwetter.de",
+                "hasIcon": false,
+                "iconName": "extern"
+            }
+        }
+    ]
+}

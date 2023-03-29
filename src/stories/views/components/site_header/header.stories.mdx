@@ -5,6 +5,7 @@ import brandnav from './brand_navigation/brand_navigation.hbs'
 import JsonData from './fixtures/site_header_default.json'
 import JsonData2 from './fixtures/site_header_mit_warnung.json'
 import JsonData3 from './fixtures/site_header_mit_submenu.json' 
+import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json' 
 
 <Meta title="Komponenten/Header/Header" 
     argTypes={{}} 
@@ -115,6 +116,20 @@ Navigation mit zusätzlicher Subnavigation:
 
 <Canvas>
     <Story name="Mit Subnavigation" args={JsonData3}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+***
+
+<br />
+<br />
+<br />
+<br />
+Navigation mit Top Topics: 
+
+<Canvas>
+    <Story name="Mit Top Topics" args={JsonDataTopTopics}>
         {Template.bind({})}
     </Story>
 </Canvas>
