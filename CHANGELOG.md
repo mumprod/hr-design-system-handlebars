@@ -1,3 +1,24 @@
+# v1.11.5 (Wed Mar 29 2023)
+
+#### 🐛 Bug Fix
+
+- Topthemen: Mockup in Storybook DPE-1912 [#599](https://github.com/mumprod/hr-design-system-handlebars/pull/599) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 🏠 Internal
+
+- UPDATE: Updates storybook and all its dependencies [#596](https://github.com/mumprod/hr-design-system-handlebars/pull/596) ([@szuelch](https://github.com/szuelch))
+
+#### 📝 Documentation
+
+- DOC: Adds documentation for the installation and [#597](https://github.com/mumprod/hr-design-system-handlebars/pull/597) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.4 (Mon Mar 27 2023)
 
 #### 🐛 Bug Fix
