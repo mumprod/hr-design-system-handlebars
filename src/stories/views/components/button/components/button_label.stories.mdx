@@ -2,7 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import handlebars from 'handlebars'
 
 <Meta
-    title="Komponenten/Button/Komponenten/Label"
+    title="Komponenten/Buttons/Komponenten/Label"
     argTypes={{
         _label: {
             control: 'text',
@@ -22,15 +22,26 @@ export const buttonLabelTemplate = (args) => {
     return hbsTemplate({ ...args })
 }
 
-# Name der Komponente
+# Button-Label
 
-## Beschreibung/Abstract
+Die Komponente erzeugt den Text für die [Button-Komponente](?path=/docs/komponenten-button--spielplatz). Sie darf in einem Template
+ausschließlich als Subkomponente der Button-Komponente eingebunden werden.
 
-Kurzer Beschreibungstext der die Komponente erklärt -> Penis
+## Eigenschaften
+
+<ArgsTable story="Label" />
+
+## Verwendung
+
+Die Komponente wird wie in folgendem Codebeispiel gezeigt in einem Handlebar Template eingebunden.
+
+```handlebars
+{{> components/button/components/button_label _label="Button"}}
+```
 
 <Preview withToolbar>
     <Story
-        name="label"
+        name="Label"
         args={{
             _label: 'Button',
         }}
@@ -38,7 +49,3 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
         {buttonLabelTemplate.bind({})}
     </Story>
 </Preview>
-
-## Props
-
-Beschreibung der wichtigsten parameter, die für die Komponente benötigt werden

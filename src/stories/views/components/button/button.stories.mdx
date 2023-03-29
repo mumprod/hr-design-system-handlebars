@@ -2,7 +2,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 import handlebars from 'handlebars'
 
 <Meta
-    title="Komponenten/Button"
+    title="Komponenten/Buttons/Button"
     argTypes={{
         '_alpineClick': {
             description:
@@ -165,6 +165,11 @@ export const buttonWithLabelAndIconLeftTemplate = (
 
 # Button
 
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
+
 ## Übersicht
 
 Buttons erlauben es eine Aktion oder ein Ereignis mit einem Klick auszulösen. Sie werden z.B. in der Navigation einer Tab-Box verwendet, um zwischen
@@ -175,8 +180,9 @@ das optisch genauso wie ein Button aussieht. Beispiele hierfür sind die Schaltf
 ermöglicht auf eine Seite mit weiteren Inhalten zu kommen, die Schaltfläche innerhalb eines Cluster-Teasers, die auf eine Seite mit weiteren Beiträgen verlinkt
 oder die Schaltfläche innerhalb eines Poster-Teasers, die auf den konkreten Inhalt verlinkt.
 
-Die Button-Komponente als solches ist sehr einfach gehalten. Sie stellt nur ein Grundgerüst (ein gestyltes HTML-Button Element) zur Verfügung. Alle Inhalte des Buttons,
-wie das Label oder ein mögliches Icon, können flexibel durch Subkomponenten hinzugefügt werden.
+Die Button-Komponente als solches ist sehr einfach gehalten. Sie stellt nur ein Grundgerüst (ein gestyltes HTML-Button Element) zur Verfügung.
+Alle Inhalte des Buttons, wie das [Label](?path=/docs/komponenten-button-komponenten-label--label) oder ein mögliches
+[Icon](?path=/docs/komponenten-button-komponenten-icon--icon), können flexibel durch Subkomponenten hinzugefügt werden.
 
 <Canvas>
     <Story
@@ -372,15 +378,25 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
     </Story>
 </Preview>
 
-## Benutzung
+## Verwendung
 
 Ein Button wird mit der Handlebar Komponente `button` eingebunden. Wie einleitend schon beschrieben, stellt diese
 Komponente lediglich das Grundgerüst eines Buttons dar. Die Beschriftung und/oder ein Icon müssen mit Subkomponenten hinzugefügt
 werden.
 
+<div class="bg-blue-200 !mt-4 p-4">
+    <h4 class="!text-stone-950 font-bold">Hinweis</h4>
+    <p>
+        Sowohl die Button-Komponente als auch die Subkomponenten Button-Label und Button-Icon sind
+        standardmäßig bereits gestyled. Das setzen von zusätzlichen Style Klassen über den Parameter{' '}
+        <pre class="inline">_css</pre> ist zwar bei jeder Komponente möglich, sollte aber nur dann
+        gemacht werden, wenn es gar nicht anders geht.
+    </p>
+</div>
+
 ### Button mit Text
 
-Ein einfacher Button mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
@@ -390,7 +406,7 @@ Ein einfacher Button mit Beschriftung wird, wie in folgendem Codebeispiel gezeig
 
 ### Button mit Text und Icon
 
-Ein [Go to specific documentation page](#button-icon) einfacher Button mit Beschriftung und einem rechts daneben stehenden Icon wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben stehenden Icon](#button-mit-icon-a-idbutton-icon) wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
@@ -398,3 +414,61 @@ Ein [Go to specific documentation page](#button-icon) einfacher Button mit Besch
     {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
 {{/components/button/button_v2}}
 ```
+
+Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/button_v2}}
+```
+
+Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
+
+### Besonderheiten
+
+Die Button-Komponente macht gebrauch von Handlebar [Inline Partials](https://handlebarsjs.com/guide/partials.html#inline-partials).
+Auf diese Weise ist es möglich dem von der Komponente gerenderten HTML Button-Element
+zusätzliche Attribute zu übergeben sowie CSS-Klassen zu setzen, die in eine Handlebar-Subkomponente ausgelagert wurden.
+
+#### Setzen zusätzlicher HTML Attribute
+
+In manchen Fällen reichen die standardmäßig von der Button-Komponente gesetzten HTML-Attribute nicht aus. Sollen weitere
+Attribute gesetzt werden (z.B. zum Setzen von alpine.js Direktiven), muss dies wie in folgendem Beispiel gezeigt umgesetzt werden.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{#*inline "html_properties"}}
+        x-ref="button"
+        x-on:click="toggle()"
+        :aria-expanded="open"
+        :aria-controls="$id('dropdown-button')"
+        :class="open ? 'drop-shadow' : ''"
+        data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
+    {{/inline}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/button_v2}}
+```
+
+Dem hier gerenderten HTML-Button werden mit Hilfe des Inline-Partials `html_properties` die Attribute `x-ref`, `x-on`, `:aria-expanded`, `:aria-controls`, `:class`
+sowie `data-hr-click-tracking` hinzugefügt.
+
+#### Setzen von in Subkomponenten ausgelagerte CSS Klassen
+
+Müssen CSS Klassen abhängig von bestimmten Eigenschaften (z.B. Teaser-Größe, Teaser-Art, etc.) gesetzt werden, hat sich mit der Zeit
+als Best-Practice eine Auslagerung der ganzen Logik in Subkomponenten herausgestellt. Um den Inhalt dieser Subkomponenten einer
+anderen Komponente dynamisch zu übergeben, können die bislang genutzten Standard Handlebar Properties (im Kontext der Button Komponente
+`_css`) nicht genutzt werden. Einer solchen Property können ausschließlich Strings übergeben werden. Stattdessen werden auch hierfür
+Inline-Partials eingesetzt.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{#*inline "css"}}
+        {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
+    {{/inline}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/button_v2}}
+```
+
+Über das Inline-Partial `css` können auf diese Weise theoretisch beliebig viele in Subkomponenten ausgelagerte CSS Klassen übergeben werden.

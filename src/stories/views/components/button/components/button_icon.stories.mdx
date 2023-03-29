@@ -1,0 +1,60 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import handlebars from 'handlebars'
+
+<Meta
+    title="Komponenten/Buttons/Komponenten/Icon"
+    argTypes={{
+        _css: {
+            control: 'text',
+            description: 'Hierüber können dem Icon zusätzliche CSS Klassen zugewiesen werden.',
+        },
+        _icon: {
+            control: 'text',
+            description: 'Der Name des Icons in der Iconmap',
+        },
+        _iconMap: {
+            control: 'text',
+            description: 'Der Name der zu verwendenden Iconmap',
+            table: {
+                defaultValue: {
+                    summary: 'icons',
+                },
+            },
+        },
+    }}
+/>
+
+export const buttonIconTemplate = (args) => {
+    let hbsTemplate = handlebars.compile(`
+        {{>components/button/components/button_icon }}
+  `)
+    return hbsTemplate({ ...args })
+}
+
+# Button-Icon
+
+Die Komponente erzeugt das Icon für die [Button-Komponente](?path=/docs/komponenten-button--spielplatz). Sie darf in einem Template
+ausschließlich als Subkomponente der Button-Komponente eingebunden werden.
+
+## Eigenschaften
+
+<ArgsTable story="Icon" />
+
+## Verwendung
+
+Die Komponente wird wie in folgendem Codebeispiel gezeigt in einem Handlebar Template eingebunden.
+
+```handlebars
+{{> components/button/components/button_icon _icon="calendar"}}
+```
+
+<Preview withToolbar>
+    <Story
+        name="Icon"
+        args={{
+            _icon: 'calendar',
+        }}
+    >
+        {buttonIconTemplate.bind({})}
+    </Story>
+</Preview>
