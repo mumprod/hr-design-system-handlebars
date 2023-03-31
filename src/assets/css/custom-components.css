@@ -117,6 +117,10 @@
         @apply shadow-none;
     }
 
+    .ds-link.ds-teaser-focus {
+        @apply focus:shadow-none;
+    }
+
     .ds-link-clusterTeaser {
         @apply block text-grey-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
