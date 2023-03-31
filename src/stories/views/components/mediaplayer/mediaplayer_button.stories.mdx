@@ -1,0 +1,210 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import handlebars from 'handlebars'
+
+<Meta
+    title="Komponenten/Buttons/Mediaplayer-Button"
+    argTypes={{
+        _label: {
+            description: 'Label des Buttons (wird ausschließlich Screenreader Nutzern vorgelesen)',
+            control: 'text',
+        },
+        _icon: {
+            control: { type: 'select', options: ['play_button', 'audio_button', 'podcast-button'] },
+            description: 'Das Icon des Buttons',
+        },
+        _isLivestream: {
+            description:
+                'Legt die Farbe des Buttons fest. Ist es ein Livestream, hat er eine andere Farbe.',
+            control: 'boolean',
+        },
+    }}
+    parameters={{
+        controls: {
+            sort: 'alpha',
+        },
+    }}
+/>
+
+export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    {{> components/mediaplayer/mediaplayer_button}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
+
+# Mediaplayer-Button
+
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
+
+## Übersicht
+
+Der Mediaplayer-Button wird verwendet, um anzuzeigen, dass in einem Teaser ein Medienelement abspielbar ist.
+Möglich sind Videos, Audios und Podcasts. Der Button steht auf dem Teaserbild und ermöglicht bei Klick auf den
+Button den Start des jeweiligen Mediums in einem Mediaplayer. Grundlage des Mediaplayer-Buttons ist die
+[Button-Komponente](?path=/docs/komponenten-buttons-button--spielplatz). Zur Vereinfachung wird diese bereits voreingestellt. Die Subkomponenten Button-Label und Button-Icon
+müssen und können nicht separat gesetzt werden.
+
+<Canvas>
+    <Story
+        name="Spielplatz"
+        args={{
+            _icon: 'play_button',
+            _label: 'Video',
+            _isLivestream: false,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Spielplatz" />
+
+## Varianten
+
+Den Mediaplayer-Button gibt es in drei Varianten (Video, Audio und Podcast).
+
+<Canvas>
+    <Story
+        name="Video"
+        argTypes={{
+            _icon: {
+                control: false,
+            },
+            _label: {
+                control: false,
+            },
+            _isLivestream: {
+                control: false,
+            },
+        }}
+        args={{
+            _icon: 'play_button',
+            _label: 'Video',
+            _isLivestream: false,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Audio"
+        argTypes={{
+            _icon: {
+                control: false,
+            },
+            _label: {
+                control: false,
+            },
+            _isLivestream: {
+                control: false,
+            },
+        }}
+        args={{
+            _icon: 'audio_button',
+            _label: 'Audio',
+            _isLivestream: false,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Podcast"
+        argTypes={{
+            _icon: {
+                control: false,
+            },
+            _label: {
+                control: false,
+            },
+            _isLivestream: {
+                control: false,
+            },
+        }}
+        args={{
+            _icon: 'podcast-button',
+            _label: 'Podcast',
+            _isLivestream: false,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+</Canvas>
+
+Er kann zudem mit dem Parameter `isLivestream` so konfiguriert werden, dass er eine separate
+Farbe bekommt, wenn er zum Starten von Livestreams genommen werden soll.
+
+<Canvas>
+    <Story
+        name="Video - Livestream"
+        argTypes={{
+            _icon: {
+                control: false,
+            },
+            _label: {
+                control: false,
+            },
+            _isLivestream: {
+                control: false,
+            },
+        }}
+        args={{
+            _icon: 'play_button',
+            _label: 'Video - Livestream',
+            _isLivestream: true,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+    <Story
+        name="Audio - Livestream"
+        argTypes={{
+            _icon: {
+                control: false,
+            },
+            _label: {
+                control: false,
+            },
+            _isLivestream: {
+                control: false,
+            },
+        }}
+        args={{
+            _icon: 'audio_button',
+            _label: 'Audio - Livestream',
+            _isLivestream: true,
+        }}
+    >
+        {buttonTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Verwendung
+
+Der Mediaplayer-Button wird mit der Handlebar Komponente `mediaplayer_button` eingebunden.
+
+### On-Demand Media
+
+Die Einbindung eines Mediaplayer-Buttons für ein On-Demand Medium erfolgt wie in folgendem Codebeispiel gezeigt.
+
+```handlebars
+    {{> components/mediaplayer/mediaplayer_button _isLivestream=false _icon="play_button" _label="Video"}}
+    {{#*inline "css"}}{{> components/button/utilities/button_on_image_classes _teaserSize="50" _teaserType="standard" _isMobile1to1=false}}{{/inline}}
+```
+
+Zu beachten ist hier, dass die Möglichkeit besteht mit dem Inline-Partial `css` dem Button noch zusätzliche in Subkomponenten ausgelagerte CSS-Klassen
+zu übergeben. In diesem Fall werden zusätzliche Klassen gesetzt, die den Button absolut positioniert auf ein Teaser-Bild setzen.
+
+### Livestream Media
+
+Die Einbindung eines Mediaplayer-Button für einen Livestream erfolgt wie in folgendem Codebeispiel gezeigt.
+
+```handlebars
+    {{> components/mediaplayer/mediaplayer_button _isLivestream=true _icon="play_button" _label="Video"}}
+    {{#*inline "css"}}{{> components/button/utilities/button_on_image_classes _teaserSize="50" _teaserType="standard" _isMobile1to1=false}}{{/inline}}
+```

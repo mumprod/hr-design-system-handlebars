@@ -11,6 +11,7 @@
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
 
-        {{> components/mediaplayer/mediaplayer_button _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel}}   
+        {{> components/mediaplayer/mediaplayer_button _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel}}   
+        {{#*inline "css"}}{{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}{{/inline}}
     </div>
 {{/if}}
