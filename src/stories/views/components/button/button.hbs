@@ -10,7 +10,17 @@
     {{~#if _noFocus}} tabindex="-1"{{/if}}
 >
     {{~#if _showIcon~}}
-        {{> components/base/image/icon _icon=_icon _iconmap=_iconmap _addClass=_addIconClass _webview=_webview}}
+        {{> components/base/image/icon
+                _icon=_icon
+                _iconmap=_iconmap
+                _addClass=_addIconClass
+                _webview=_webview
+                _ariaHidden=false
+                _iconTitle=false
+                _iconDesc=false
+                _iconText=false
+                _overlayIcon=false
+        }}
     {{/if~}}
     {{~#if _label~}}
         <span {{#if _srOnly}}class="sr-only"{{/if}}>

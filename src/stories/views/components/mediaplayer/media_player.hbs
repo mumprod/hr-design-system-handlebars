@@ -11,17 +11,26 @@
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
         {{> components/button/button_round 
-        _isButton="true" 
-        _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button cy-mediaplayer-trigger'
-        _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-media-button hover:fill-media-button')
-        _teaserType=_teaserType
-        _teaserSize=_teaserSize
-        _isMobile1to1=_isMobile1to1
-        _showIcon=true
-        _icon=_mediaButtonIcon 
-        _label=_mediaButtonLabel 
-        _srOnly="true" 
-        _alpineClick="avStart = !avStart; $dispatch('player_start')"
+            _isButton="true" 
+            _addClass='absolute bottom-0 right-0 fill-white hover:text-white ds-focus rounded-full js-mediaplayer__button cy-mediaplayer-trigger'
+            _buttonColor=(if _isLivestream ' text-orange-spicyCarrot hover:fill-orange-spicyCarrot' ' text-media-button hover:fill-media-button')
+            _teaserType=_teaserType
+            _teaserSize=_teaserSize
+            _isMobile1to1=_isMobile1to1
+            _showIcon=true
+            _icon=_mediaButtonIcon 
+            _label=_mediaButtonLabel 
+            _srOnly="true" 
+            _alpineClick="avStart = !avStart; $dispatch('player_start')"
+            _aria=""
+            _title=""
+            _name=""
+            _value=""
+            _iconmap="icons"
+            _addIconClass=""
+            _webview=""
+            _x-show=""
+            _noFocus=""
         }}    
     </div>
 {{/if}}
