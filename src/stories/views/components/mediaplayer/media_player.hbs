@@ -11,9 +11,6 @@
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
 
-        {{#> components/mediaplayer/mediaplayer_button _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _isLivestream=_isLivestream}}
-            {{> components/base/image/icon _icon=_mediaButtonIcon  _addClass=(appendToDefault (if _isLivestream "text-orange-spicyCarrot group-hover:fill-orange-spicyCarrot" "text-media-button group-hover:fill-media-button") "w-10 h-10  fill-white group-hover:text-white inline")}}
-            {{>components/button/components/button_label _css="sr-only" _label=_mediaButtonLabel}}
-        {{/components/mediaplayer/mediaplayer_button}}    
+        {{> components/mediaplayer/mediaplayer_button _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1 _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel}}   
     </div>
 {{/if}}
