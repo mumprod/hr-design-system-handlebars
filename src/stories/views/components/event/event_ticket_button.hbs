@@ -10,8 +10,12 @@
         <p class="text-base font-copy mt-2">{{loca "ticket_modal_text"}}</p>
 
         <div class="flex flex-wrap mt-4">
-            {{> components/button/button_pseudo _linkCss="js-ticket-ok-button mr-4 mt-4 ds-button js-modal-close" _buttonText="Zum Ticketshop" _withLink="true"}}
-            <button class="mt-4 ds-button" value="cancel">Abbrechen</button>
+            {{#> components/button/link_button _size="lg" _css="js-ticket-ok-button js-modal-close mr-4 mt-4"}}
+                {{>components/button/components/button_label _label="Zum Ticketshop" _css=""}}
+            {{/components/button/link_button}}
+            {{#> components/button/button_v2 _size="lg" _variant="tertiary" _value="cancel" _css="mt-4"}}
+                {{>components/button/components/button_label _label="Abbrechen" _css=""}}
+            {{/components/button/button_v2}}
         </div>
     {{/components/modal/modal}}
     <noscript>
@@ -21,7 +25,7 @@
             }
         </style>
             {{#> components/button/link_button _size="lg"}}
-                {{> components/button/components/button_icon _icon="ticket" _iconmap="icons" _css="mr-2"}}
+                {{> components/button/components/button_icon _icon="ticket" _iconmap="icons"}}
                 {{>components/button/components/button_label _label="Tickets"}}
             {{/components/button/link_button}}
     </noscript>
