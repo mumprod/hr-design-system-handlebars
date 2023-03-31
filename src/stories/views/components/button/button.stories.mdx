@@ -97,10 +97,10 @@ import handlebars from 'handlebars'
         },
         '_variant': {
             description:
-                'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `ghost`, `ghost-white`, `inverted`, `transparent`',
+                'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `primary`, `secondary`, `tertiary`',
             control: {
                 type: 'select',
-                options: ['ghost', 'ghost-white', 'inverted', 'transparent'],
+                options: ['primary', 'secondary', 'tertiary'],
             },
             table: {
                 category: 'Button',
@@ -198,8 +198,8 @@ ermöglicht auf eine Seite mit weiteren Inhalten zu kommen, die Schaltfläche in
 oder die Schaltfläche innerhalb eines Poster-Teasers, die auf den konkreten Inhalt verlinkt.
 
 Die Button-Komponente als solches ist sehr einfach gehalten. Sie stellt nur ein Grundgerüst (ein gestyltes HTML-Button Element) zur Verfügung.
-Alle Inhalte des Buttons, wie das [Label](?path=/docs/komponenten-button-komponenten-label--label) oder ein mögliches
-[Icon](?path=/docs/komponenten-button-komponenten-icon--icon), können flexibel durch Subkomponenten hinzugefügt werden.
+Alle Inhalte des Buttons, wie das [Label](?path=/docs/komponenten-buttons-komponenten-label--label) oder ein mögliches
+[Icon](?path=/docs/komponenten-buttons-komponenten-icon--icon), können flexibel durch Subkomponenten hinzugefügt werden.
 
 <Canvas>
     <Story
@@ -282,7 +282,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 <Preview withToolbar>
     <Story
-        name="Button - Normal"
+        name="Button - Primary"
         argTypes={{
             _size: {
                 control: false,
@@ -293,13 +293,13 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
         }}
         args={{
             _size: 'lg',
-            _label: 'Normal',
+            _label: 'Primary',
         }}
     >
         {buttonWithLabelTemplate.bind({})}
     </Story>
     <Story
-        name="Button - Ghost"
+        name="Button - Secondary"
         argTypes={{
             _size: {
                 control: false,
@@ -310,14 +310,14 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
         }}
         args={{
             _size: 'lg',
-            _label: 'Ghost',
-            _variant: 'ghost',
+            _label: 'Secondary',
+            _variant: 'secondary',
         }}
     >
         {buttonWithLabelTemplate.bind({})}
     </Story>
     <Story
-        name="Button - Invertiert"
+        name="Button - Tertiary"
         argTypes={{
             _size: {
                 control: false,
@@ -328,26 +328,8 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
         }}
         args={{
             _size: 'lg',
-            _label: 'Invertiert',
-            _variant: 'inverted',
-        }}
-    >
-        {buttonWithLabelTemplate.bind({})}
-    </Story>
-    <Story
-        name="Button - Transparent"
-        argTypes={{
-            _size: {
-                control: false,
-            },
-            _variant: {
-                control: false,
-            },
-        }}
-        args={{
-            _size: 'lg',
-            _label: 'Transparent',
-            _variant: 'transparent',
+            _label: 'Tertiary',
+            _variant: 'tertiary',
         }}
     >
         {buttonWithLabelTemplate.bind({})}
