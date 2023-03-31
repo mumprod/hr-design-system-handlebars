@@ -11,7 +11,7 @@
             {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg="ar__content" _noDelay=this.dontLazyload ~}}                             
         {{/with}}
 
-        {{#> components/button/button_v2 _variant="transparent" _shape="circle" _type="button" _alpineClick="avStart = !avStart; $dispatch('player_start')"}}
+        {{#> components/button/button_v2 _variant="tertiary" _shape="circle" _type="button" _alpineClick="avStart = !avStart; $dispatch('player_start')"}}
             {{#*inline "css"}}js-mediaplayer__button {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}{{/inline}}
             {{> components/base/image/icon _icon=_mediaButtonIcon  _addClass=(appendToDefault (if _isLivestream "text-orange-spicyCarrot group-hover:fill-orange-spicyCarrot" "text-media-button group-hover:fill-media-button") "w-10 h-10  fill-white group-hover:text-white inline")}}
             {{>components/button/components/button_label _css="sr-only" _label=_mediaButtonLabel}}
