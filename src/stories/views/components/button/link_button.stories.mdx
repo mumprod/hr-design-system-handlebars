@@ -68,9 +68,9 @@ export const buttonWithLabelTemplate = (args, { globals: { customConditionalTool
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_link}}
+    {{#> components/button/link_button}}
         {{> components/button/components/button_label}}
-    {{/components/button/button_link}}
+    {{/components/button/link_button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -82,10 +82,10 @@ export const buttonWithLabelAndIconRightTemplate = (
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_link}}
+    {{#> components/button/link_button}}
         {{> components/button/components/button_label}}
         {{> components/button/components/button_icon }}
-    {{/components/button/button_link}}
+    {{/components/button/link_button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -97,10 +97,10 @@ export const buttonWithLabelAndIconLeftTemplate = (
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_link~}}
+    {{#> components/button/link_button~}}
         {{> components/button/components/button_icon }}
         {{> components/button/components/button_label}}
-    {{~/components/button/button_link}}
+    {{~/components/button/link_button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -320,7 +320,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ## Verwendung
 
-Ein Link-Button wird mit der Handlebar Komponente `button_link` eingebunden. Wie einleitend schon beschrieben, stellt diese
+Ein Link-Button wird mit der Handlebar Komponente `link_button` eingebunden. Wie einleitend schon beschrieben, stellt diese
 Komponente lediglich das Grundgerüst eines Buttons dar. Die Beschriftung und/oder ein Icon müssen mit Subkomponenten hinzugefügt
 werden.
 
@@ -339,9 +339,9 @@ werden.
 Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
-{{#> components/button/button_link _size="lg"}}
+{{#> components/button/link_button _size="lg"}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_link}}
+{{/components/button/link_button}}
 ```
 
 ### Button mit Text und Icon
@@ -349,19 +349,19 @@ Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie 
 Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben stehenden Icon](#button-mit-icon-a-idbutton-icon) wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
-{{#> components/button/button_link _size="lg"}}
+{{#> components/button/link_button _size="lg"}}
     {{> components/button/components/button_label _label="Button"}}
     {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
-{{/components/button/button_link}}
+{{/components/button/link_button}}
 ```
 
 Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
 
 ```handlebars
-{{#> components/button/button_link _size="lg"}}
+{{#> components/button/link_button _size="lg"}}
     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
     {{> components/button/components/button_label _label="Button"}}
-{{/components/button/button_link}}
+{{/components/button/link_button}}
 ```
 
 Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
