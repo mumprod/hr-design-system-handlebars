@@ -389,7 +389,11 @@
                                     "url": "https://hr.de",
                                     "isTargetBlank": true,
                                     "webviewUrl": "",
-                                    "readMoreText": ""
+                                    "readMoreText": "",
+                                    "cmsDocument": {
+                                        "title": "Tickets Finale Landeswettbewerb Jugend jazzt",
+                                        "sophoraId": "finale_landeswettbewerb_jugend_jazzt_100"
+                                    }
                                 }
                             },
                             "concertInfo": {
