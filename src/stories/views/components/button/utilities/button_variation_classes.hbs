@@ -1,8 +1,19 @@
-{{inline-switch
-    _variant
-    '["primary","secondary","tertiary"]'
-    '["border text-button-inverted bg-button border-button hover:bg-button-hover hover:text-button-ghost hover:border-button-ghost",
-    "border text-button-secondary border-button-secondary hover:bg-button-inverted",
-    "bg-transparent",
-    "border text-button-inverted bg-button border-button hover:bg-button-inverted hover:text-button-ghost hover:border-button-ghost"]'
-}}
+{{#if _onBackground}}
+    {{inline-switch
+        _variant
+        '["primary","secondary","tertiary"]'
+        '["border text-button-secondary bg-button-inverted border-button-inverted hover:bg-button-hover hover:text-button-ghost hover:border-button-ghost",
+        "border text-button-inverted border-button-inverted hover:bg-button-inverted hover:text-button-secondary",
+        "bg-transparent text-button-inverted",
+        "border text-button-secondary bg-button-inverted border-button-inverted hover:bg-button-hover hover:text-button-ghost hover:border-button-ghost"]'
+    }}
+{{else}}
+    {{inline-switch
+        _variant
+        '["primary","secondary","tertiary"]'
+        '["border text-button-inverted bg-button-primary border-button-primary hover:bg-button-primary--dark  hover:border-button-primary--dark active:scale-95 active:bg-button-primary--dark",
+        "border text-button-secondary border-button-secondary hover:bg-button-inverted",
+        "bg-transparent",
+        "border text-button-inverted bg-button-primary border-button-primary hover:bg-button-primary--dark  hover:border-button-primary--dark active:scale-95 active:bg-button-primary--dark"]'
+    }}
+{{/if}}

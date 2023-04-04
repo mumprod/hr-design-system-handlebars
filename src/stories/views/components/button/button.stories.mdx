@@ -74,6 +74,17 @@ import handlebars from 'handlebars'
                 },
             },
         },
+        '_onBackground': {
+            description:
+                'Wird dieser Wert gesetzt, wird der Button in einem auf einen farbigen Hintergrund abgestimmtes Farbschema angezeigt. ',
+            control: 'boolean',
+            table: {
+                category: 'Button',
+                defaultValue: {
+                    summary: false,
+                },
+            },
+        },
         '_size': {
             control: { type: 'select', options: ['sm', 'md', 'lg'] },
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
@@ -146,6 +157,22 @@ export const buttonWithLabelTemplate = (args, { globals: { customConditionalTool
     {{#> components/button/button_v2}}
         {{> components/button/components/button_label}}
     {{/components/button/button_v2}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
+
+export const buttonWithLabelTemplateOnBackground = (
+    args,
+    { globals: { customConditionalToolbar } }
+) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    <div class="bg-primary p-4">
+        {{#> components/button/button_v2}}
+            {{> components/button/components/button_label}}
+        {{/components/button/button_v2}}
+    </div>
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -424,6 +451,76 @@ Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach
 ```
 
 Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
+
+### Button auf farbigem Hintergund
+
+<Preview withToolbar>
+    <Story
+        name="Button - Primary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Primary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+    <Story
+        name="Button - Secondary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Secondary',
+            _variant: 'secondary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+    <Story
+        name="Button - Tertiary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Tertiary',
+            _variant: 'tertiary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+</Preview>
 
 ### Besonderheiten
 
