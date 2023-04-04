@@ -132,7 +132,7 @@
     --color-button-primary: theme('colors.blue.science');
     --color-button-primary-dark: theme('colors.blue.congress');
     --color-button-primary-inverted: theme('colors.white.DEFAULT');
-    --color-button-primary-inverted-dark: theme('colors.gray.platinum');
+    --color-button-primary-inverted-dark: theme('colors.blue.accented');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
     --color-button-secondary: theme('colors.blue.science');
