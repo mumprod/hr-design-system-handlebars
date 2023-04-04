@@ -340,6 +340,8 @@ module.exports = {
                 'button': 'var(--color-button)',
                 'button-primary': 'var(--color-button-primary)',
                 'button-primary--dark': 'var(--color-button-primary-dark)',
+                'button-primary--inverted': 'var(--color-button-primary-inverted)',
+                'button-primary--inverted-dark': 'var(--color-button-primary-inverted-dark)',
                 'button-hollow': 'var(--color-button-hollow)',
                 'button-secondary': 'var(--color-button-secondary)',
                 'button-ghost': 'var(--color-button-ghost)',
