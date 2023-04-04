@@ -122,7 +122,7 @@
     }
 
     .ds-link-clusterTeaser {
-        @apply block text-grey-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+        @apply block text-gray-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
 
     .ds-link-clusterTeaser:focus:not(:focus-visible) {

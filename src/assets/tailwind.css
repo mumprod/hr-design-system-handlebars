@@ -28,7 +28,7 @@
     /* Sendung */
     --color-label-program: theme('colors.blue.matisse');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Sendungsdokument */
@@ -42,7 +42,7 @@
     /* Eventkalender */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
     --color-eventcalendar-primary: var(--color-primary-ds);
-    --color-eventcalendar-secondary: theme('colors.grey.boulder');
+    --color-eventcalendar-secondary: theme('colors.gray.boulder');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
@@ -53,7 +53,7 @@
     --color-stage-primary: theme('colors.blue.deepCerulean');
     --color-stage-link: var('--color-link');
     /* geoTag */
-    --color-geoTag: theme('colors.grey.brightGray');
+    --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
@@ -73,7 +73,7 @@
     --color-podcast: theme('colors.blue.science');
     --color-podcast-text: var(--color-link);
     /* Byline */
-    --color-byline: theme('colors.grey.scorpion');
+    --color-byline: theme('colors.gray.scorpion');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
@@ -104,7 +104,7 @@
     /* Sendung */
     --color-label-program: theme('colors.blue.matisse');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Pressemitteilungen */
     --color-label-pm: theme('colors.blue.deepCerulean');
     /* Kurzmeldung */
@@ -123,7 +123,7 @@
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* geoTag */
-    --color-geoTag: theme('colors.grey.brightGray');
+    --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
@@ -169,7 +169,7 @@
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -228,7 +228,7 @@
     /* Sendung */
     --color-label-program: theme('colors.pink.rose');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -270,7 +270,7 @@
 }
 
 [data-theme='hr-rundfunkrat'] {
-    --color-primary-ds: theme('colors.grey.scorpion');
+    --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -286,7 +286,7 @@
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
@@ -346,7 +346,7 @@
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
@@ -392,7 +392,7 @@
 [data-theme='hr-sinfonieorchester'] {
     --color-primary-ds: theme('colors.red.burntUmber');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -406,7 +406,7 @@
     /* Sendung */
     --color-label-program: theme('colors.green.goBen');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -464,7 +464,7 @@
     /* Sendung */
     --color-label-program: theme('colors.blue.blueStone');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -522,7 +522,7 @@
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
@@ -628,7 +628,7 @@
 [data-theme='hr2'] {
     --color-primary-ds: theme('colors.orange.clementine');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.grey.alto');
+    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -642,7 +642,7 @@
     /* Sendung */
     --color-label-program: theme('colors.red.paprika');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -687,7 +687,7 @@
 [data-theme='hr3'] {
     --color-primary-ds: theme('colors.red.monza');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.grey.mercury');
+    --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -701,7 +701,7 @@
     /* Sendung */
     --color-label-program: theme('colors.green.pineGreen');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -762,7 +762,7 @@
     /* Sendung */
     --color-label-program: theme('colors.pink.fuchsie');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */
@@ -811,7 +811,7 @@
 [data-theme='you-fm'] {
     --color-primary-ds: #c20016;
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.grey.platinum');
+    --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
@@ -825,7 +825,7 @@
     /* Sendung */
     --color-label-program: theme('colors.blue.lightCerulean');
     /* Download */
-    --color-label-download: theme('colors.grey.scorpion');
+    --color-label-download: theme('colors.gray.scorpion');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Kurzmeldung */

@@ -272,13 +272,14 @@ module.exports = {
                     DEFAULT: '#007A7C',
                     deeperPool: '#097d8e',
                 },
-                'grey': {
+                'gray': {
                     alabaster: '#f7f7f7',
                     alto: '#e0e0e0',
                     boulder: '#797979',
                     brightGray: '#E5F2F3',
                     concrete: '#f3f3f3',
                     dark: '#707070',
+                    lightGray: '#d4d4d4',
                     mercury: '#E6E6E6',
                     platinum: '#E5E8E8',
                     scorpion: '#606060',
