@@ -129,6 +129,8 @@
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
     --color-button: var(--color-primary-ds);
+    --color-button-primary: theme('colors.blue.science');
+    --color-button-primary-dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science');
     --color-button-secondary: theme('colors.blue.science');

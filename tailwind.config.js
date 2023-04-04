@@ -338,6 +338,8 @@ module.exports = {
                 'clusterTeaserLink': 'var(--color-cluster-teaser-link,#000)',
                 'clusterTeaserHeadline': 'var(--color-cluster-teaser-headline,#000)',
                 'button': 'var(--color-button)',
+                'button-primary': 'var(--color-button-primary)',
+                'button-primary--dark': 'var(--color-button-primary-dark)',
                 'button-hollow': 'var(--color-button-hollow)',
                 'button-secondary': 'var(--color-button-secondary)',
                 'button-ghost': 'var(--color-button-ghost)',
