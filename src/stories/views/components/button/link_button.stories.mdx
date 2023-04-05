@@ -67,6 +67,17 @@ import handlebars from 'handlebars'
                 },
             },
         },
+        _isAriaHidden: {
+            description:
+                'Ermöglicht es den Button von der Nutzung mit assistiven Geräten auszuschließen. Setzt die Eigenschaft aria-hidden auf true und den tabindex auf -1.',
+            control: 'boolean',
+            table: {
+                category: 'Button',
+                defaultValue: {
+                    summary: false,
+                },
+            },
+        },
     }}
     parameters={{
         controls: {
