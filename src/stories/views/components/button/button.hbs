@@ -1,20 +1,15 @@
-<button 
-    {{~#if _aria}} aria-label="{{_aria}}"{{/if}} 
-    {{~#if _isButton}} type="button"{{else}} type="submit"{{/if~}} 
+<button
+    {{#if _id}} id="{{_id}}"{{/if}} 
+    class="ds-button {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant _onBackground=_onBackground}} {{> components/button/utilities/button_dimension_classes _shape=_shape _size=_size}}{{#if _css}} {{_css}}{{/if}} {{#> css}}{{/css}}{{#if _openModal}} js-modalButton{{/if}}"
+    {{#if _openModal}} aria-haspopup="true"{{/if}}
+    {{~#if _ariaLabel}} aria-label="{{_ariaLabel}}"{{/if}}
+    type="{{defaultIfEmpty _type "submit"}}"
     {{~#if _name}} name="{{_name}}"{{/if}} 
-    {{~#if _title}} title="{{_title}}"{{/if}} 
-    class="{{_addClass}}{{#if _addClass2}} {{_addClass2}}{{/if}}{{#if _buttonColor}} {{_buttonColor}}{{/if}}{{#if _buttonSpace}} {{> components/button/button_round_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}{{/if}}{{#if _webview}} -webview{{/if}}"
+    {{~#if _title}} title="{{_title}}"{{/if}}
     {{~#if _value}} value="{{_value}}"{{/if}} 
     {{~#if _alpineClick}} @click="{{_alpineClick}}"{{/if}} 
     {{~#if _x-show}} x-show="{{_x-show}}"{{/if}} 
     {{~#if _noFocus}} tabindex="-1"{{/if}}
->
-    {{~#if _showIcon~}}
-        {{> components/base/image/icon _icon=_icon _iconmap=_iconmap _addClass=_addIconClass _webview=_webview}}
-    {{/if~}}
-    {{~#if _label~}}
-        <span {{#if _srOnly}}class="sr-only"{{/if}}>
-            {{~_label~}}
-        </span>
-    {{/if~}}
+    {{#> html_properties}}{{/html_properties}}>
+    {{> @partial-block }}
 </button>

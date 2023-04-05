@@ -1,8 +1,8 @@
 <div class="static pl-4 pt-1 pb-3 sm:absolute sm:pl-0 sm:pt-0 sm:pb-0 sm:right-4 sm:bottom-4">
-    {{#> components/button/button_v2 _id=(nextRandom) _size="lg"}}
+    {{#> components/button/button _id=(nextRandom) _size="lg"}}
         {{> components/button/components/button_icon _icon="ticket" _iconmap="icons" _css="mr-2"}}
         {{>components/button/components/button_label _label="Tickets"}}
-    {{/components/button/button_v2}}
+    {{/components/button/button}}
     {{#> components/modal/modal _trigger=(getRandom)}}
         {{#> components/teaser/components/teaser_headline}}
             {{> components/teaser/components/teaser_title _text=(loca 'ticket_modal_headline') _css="text-2xl"}}
@@ -13,9 +13,9 @@
             {{#> components/button/link_button _size="lg" _css="js-ticket-ok-button js-modal-close mr-4 mt-4"}}
                 {{>components/button/components/button_label _label="Zum Ticketshop" _css=""}}
             {{/components/button/link_button}}
-            {{#> components/button/button_v2 _size="lg" _variant="tertiary" _value="cancel" _css="mt-4"}}
+            {{#> components/button/button _size="lg" _variant="tertiary" _value="cancel" _css="mt-4"}}
                 {{>components/button/components/button_label _label="Abbrechen" _css=""}}
-            {{/components/button/button_v2}}
+            {{/components/button/button}}
         </div>
     {{/components/modal/modal}}
     <noscript>

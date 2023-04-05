@@ -154,9 +154,9 @@ export const buttonWithLabelTemplate = (args, { globals: { customConditionalTool
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_v2}}
+    {{#> components/button/button}}
         {{> components/button/components/button_label}}
-    {{/components/button/button_v2}}
+    {{/components/button/button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -169,9 +169,9 @@ export const buttonWithLabelTemplateOnBackground = (
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
     <div class="bg-primary p-4">
-        {{#> components/button/button_v2}}
+        {{#> components/button/button}}
             {{> components/button/components/button_label}}
-        {{/components/button/button_v2}}
+        {{/components/button/button}}
     </div>
   `)
     return hbsTemplate({ brand, ...args })
@@ -184,10 +184,10 @@ export const buttonWithLabelAndIconRightTemplate = (
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_v2}}
+    {{#> components/button/button}}
         {{> components/button/components/button_label}}
         {{> components/button/components/button_icon }}
-    {{/components/button/button_v2}}
+    {{/components/button/button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -199,10 +199,10 @@ export const buttonWithLabelAndIconLeftTemplate = (
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button_v2~}}
+    {{#> components/button/button~}}
         {{> components/button/components/button_icon }}
         {{> components/button/components/button_label}}
-    {{~/components/button/button_v2}}
+    {{~/components/button/button}}
   `)
     return hbsTemplate({ brand, ...args })
 }
