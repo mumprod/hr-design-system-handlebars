@@ -142,23 +142,23 @@
     }
 
     .ds-teaser-focus:focus::before,
-    .ds-teaser-focus:focus + .ds-cta span {
+    .ds-teaser-focus:focus + .ds-cta > * {
         @apply shadow-teaser-focus;
         @apply shadow-focus-state;
     }
 
-    .ds-teaser-focus:focus + .ds-cta span {
+    .ds-teaser-focus:focus + .ds-cta > * {
         @apply bg-button-inverted;
         @apply text-button-hollow;
         @apply border-none;
     }
 
     .ds-teaser-focus:focus:not(:focus-visible)::before,
-    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta > * {
         @apply shadow-none;
     }
 
-    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta span {
+    .ds-teaser-focus:focus:not(:focus-visible) + .ds-cta > * {
         @apply bg-transparent;
         @apply text-button-inverted;
         @apply border-solid;
