@@ -454,6 +454,9 @@ Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
 
 ### Button auf farbigem Hintergund
 
+Soll ein Button auf einem farbigen Hintergrund (bietet sich vor allem bei dunklen Hintergründen an) genutzt werden, kann durch setzen des Parameters
+`_onBackground` eine auf dunkle Hintergründe abgestimmte kontrastreichere optische Variante der Button aktiviert werden.
+
 <Preview withToolbar>
     <Story
         name="Button - Primary auf farbigem Hintergrund"
@@ -521,6 +524,12 @@ Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
         {buttonWithLabelTemplateOnBackground.bind({})}
     </Story>
 </Preview>
+
+```handlebars
+{{#> components/button/link_button _size="lg" _onBackground}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/link_button}}
+```
 
 ### Besonderheiten
 

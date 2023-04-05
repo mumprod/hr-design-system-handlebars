@@ -56,6 +56,17 @@ import handlebars from 'handlebars'
                 category: 'Button',
             },
         },
+        _onBackground: {
+            description:
+                'Wird dieser Wert gesetzt, wird der Button in einem auf einen farbigen Hintergrund abgestimmtes Farbschema angezeigt. ',
+            control: 'boolean',
+            table: {
+                category: 'Button',
+                defaultValue: {
+                    summary: false,
+                },
+            },
+        },
     }}
     parameters={{
         controls: {
@@ -71,6 +82,22 @@ export const buttonWithLabelTemplate = (args, { globals: { customConditionalTool
     {{#> components/button/link_button}}
         {{> components/button/components/button_label}}
     {{/components/button/link_button}}
+  `)
+    return hbsTemplate({ brand, ...args })
+}
+
+export const buttonWithLabelTemplateOnBackground = (
+    args,
+    { globals: { customConditionalToolbar } }
+) => {
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let hbsTemplate = handlebars.compile(`
+    <div class="bg-primary p-4">
+        {{#> components/button/link_button}}
+            {{> components/button/components/button_label}}
+        {{/components/button/link_button}}
+    </div>
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -347,3 +374,82 @@ Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach
 ```
 
 Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
+
+### Button auf farbigem Hintergund
+
+Soll ein Link-Button auf einem farbigen Hintergrund (bietet sich vor allem bei dunklen Hintergründen an) genutzt werden, kann durch setzen des Parameters
+`_onBackground` eine auf dunkle Hintergründe abgestimmte kontrastreichere optische Variante der Button aktiviert werden.
+
+<Preview withToolbar>
+    <Story
+        name="Button - Primary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Primary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+    <Story
+        name="Button - Secondary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Secondary',
+            _variant: 'secondary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+    <Story
+        name="Button - Tertiary auf farbigem Hintergrund"
+        argTypes={{
+            _size: {
+                control: false,
+            },
+            _variant: {
+                control: false,
+            },
+            _onBackground_: {
+                control: false,
+            },
+        }}
+        args={{
+            _size: 'lg',
+            _label: 'Tertiary',
+            _variant: 'tertiary',
+            _onBackground: true,
+        }}
+    >
+        {buttonWithLabelTemplateOnBackground.bind({})}
+    </Story>
+</Preview>
+
+```handlebars
+{{#> components/button/link_button _size="lg" _onBackground}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/link_button}}
+```
