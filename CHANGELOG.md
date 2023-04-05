@@ -1,3 +1,15 @@
+# v1.11.6 (Mon Apr 03 2023)
+
+#### 🐛 Bug Fix
+
+- -set meta robots to no index [#601](https://github.com/mumprod/hr-design-system-handlebars/pull/601) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.5 (Wed Mar 29 2023)
 
 #### 🐛 Bug Fix
