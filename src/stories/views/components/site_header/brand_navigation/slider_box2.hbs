@@ -1,0 +1,52 @@
+<div x-data="slider()"
+    x-init="checkIfScrollable($refs.container)"
+    @resize.window="checkIfScrollable($refs.container)"
+    class="relative w-full sb-brand-navigation lg:container">
+         <template x-if="isScrollable">
+            <div>
+                <button class="absolute left-0 flex items-center justify-start w-8 h-full pt-1 arrow-left-background-blue disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
+                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current"}}
+                </button>
+                <button class="absolute right-0 flex items-center justify-end w-8 h-full pt-1 group arrow-right-background-blue disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
+                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current "}}
+                </button>
+            </div>
+        </template>
+
+        {{> @partial-block }}  
+</div>
+<script type="text/javascript">
+
+    function slider() {
+
+    return {
+        
+        isScrollable:false,
+        arrowLeftDisplay:false,
+        arrowRightDisplay:true,
+
+        arrowsDisplay(e) {
+            e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
+            e.scrollLeft + e.offsetWidth == e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
+        },
+
+        prev(e) {
+        e.scrollLeft -= 200;
+        },
+
+        next(e) {
+        e.scrollLeft += 200;
+        },
+
+        updateIndex(e) {
+            this.arrowsDisplay(e);
+        },
+        
+        checkIfScrollable(e){
+            e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
+            this.arrowsDisplay(e);
+        }
+    };
+    }
+
+</script>

@@ -12,6 +12,7 @@
         {
             "title": "Unwetter",
             "text": "Unwetter",
+            "selected": true,
             "link": {
                 "url": "http://www.Unwetter.de",
                 "hasIcon": false,
