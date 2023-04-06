@@ -20,8 +20,7 @@
     >
 
     {{!-- Button --}}
-    {{#> components/button/button _size="md"}}
-        {{#*inline "css"}}bg-podcast border-podcast hover:bg-podcast hover:text-white{{/inline}}
+    {{#> components/button/button _size="md" _disableButtonPress=true}}
         {{#*inline "html_properties"}}
         x-ref="button" 
         x-on:click="toggle()" 
