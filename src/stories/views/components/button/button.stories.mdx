@@ -85,6 +85,17 @@ import handlebars from 'handlebars'
                 },
             },
         },
+        '_disableButtonPress': {
+            description:
+                'Durch setzen dieses Wertes, kann deaktiviert werden, dass der Druck auf den Button optisch angezeigt wird.',
+            control: 'boolean',
+            table: {
+                category: 'Button',
+                defaultValue: {
+                    summary: false,
+                },
+            },
+        },
         '_size': {
             control: { type: 'select', options: ['sm', 'md', 'lg'] },
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
