@@ -7,13 +7,13 @@
     <div class="flex flex-wrap justify-center mb-7 mx-1.5" role="tablist">
       {{~#each this.tabbedGroup~}}
         {{#> components/button/button _size="sm" _css="mx-1.5" _variant="secondary" _type="button" }}
-          {{#*inline "html_properties"~}} 
-            :class='{"{{> components/button/utilities/button_variation_classes _variant='primary' _onBackground=false}} bg-button-primary--dark":tab ==="{{this.title}}",
-            "{{~> components/button/utilities/button_variation_classes _variant='secondary' _onBackground=false~}}":tab !="{{this.title}}"}' 
-            x-on:click.prevent="tab = '{{this.title}}'; " role="tab" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "{{this.title}}:TabboxClick"}]}'   
-          {{~/inline}}
           {{> components/button/components/button_label _label=this.title}}
         {{/components/button/button }}
+        {{#*inline "html_properties"~}} 
+          :class='{"{{> components/button/utilities/button_variation_classes _variant='primary' _onBackground=false}} bg-button-primary--dark":tab ==="{{this.title}}",
+          "{{~> components/button/utilities/button_variation_classes _variant='secondary' _onBackground=false~}}":tab !="{{this.title}}"}' 
+          x-on:click.prevent="tab = '{{this.title}}'; " role="tab" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "{{this.title}}:TabboxClick"}]}'   
+        {{~/inline}}
       {{~/each~}}
     </div>
     {{~> components/teaser/teaser_logic/teaser_logic ~}}

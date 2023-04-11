@@ -29,7 +29,7 @@ export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) 
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     let hbsTemplate = handlebars.compile(`
-    {{> components/mediaplayer/mediaplayer_button}}
+    {{> components/mediaplayer/mediaplayer_button _css="!static"}}
   `)
     return hbsTemplate({ brand, ...args })
 }

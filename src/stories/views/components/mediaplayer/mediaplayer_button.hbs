@@ -1,7 +1,9 @@
-{{#> components/button/button _variant="tertiary" _type="button" _alpineClick="avStart = !avStart; $dispatch('player_start')"}}
-    {{#*inline "css"}}js-mediaplayer__button cy-mediaplayer-trigger group rounded-full {{#> css}}{{/css}}{{/inline}}
-    {{#> components/base/image/icon _icon=_icon}}
-        {{#*inline "css"}}{{appendToDefault (if _isLivestream "text-orange-spicyCarrot group-hover:fill-orange-spicyCarrot" "text-media-button group-hover:fill-media-button") "w-10 h-10  fill-white group-hover:text-white inline"}}{{/inline}}
-    {{/components/base/image/icon}}
-    {{>components/button/components/button_label _css="sr-only" _label=_label}}
-{{/components/button/button}}
+{{#with this}}
+    {{#> components/button/button _variant="tertiary" _type="button" _css=_css _alpineClick="avStart = !avStart; $dispatch('player_start')"}}
+        {{#> components/base/image/icon _addClass=(appendToDefault (if _isLivestream "text-orange-spicyCarrot group-hover:fill-orange-spicyCarrot" "text-media-button group-hover:fill-media-button") "w-10 h-10  fill-white group-hover:text-white inline") _icon=_icon}}
+            {{#*inline "css"}}{{/inline}}
+        {{/components/base/image/icon}}
+        {{>components/button/components/button_label _css="sr-only" _label=_label}}
+    {{/components/button/button}}
+    {{#*inline "css"}}js-mediaplayer__button cy-mediaplayer-trigger group rounded-full {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}{{/inline}}
+{{/with}}
