@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html 
+    class="no-js no-js-burgerMenu preload noMicroInteraction"
+    data-theme="hessenschau" 
+    lang="de"
+>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <title>hessenschau.de | Nachrichten aus Hessen</title>
+        <meta name="application-name" content="hessenschau.de" />
+        <meta name="copyright" content="Hessischer Rundfunk, Frankfurt, Germany" />
+        <meta name="author" content="hessenschau.de, Frankfurt, Germany" />
+        <meta name="publisher" content="hessenschau.de" />
+        <meta name="language" content="Deutsch" />
+
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div class="js-pageSwap">
+                      
+            {{> components/site_header/header }}          
+            
+            <main 
+                onclick="void(0)" 
+                role="main" 
+                id="content"
+                class="flex items-center justify-center"
+            >
+                <div class="grid grid-page">
+                    <div class="{{> components/grid/grid_group_wrapper_classes }}">
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif.logicItem.includeModel}}
+                        </section>
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif_audio.logicItem.includeModel}}
+                        </section>
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif_download.logicItem.includeModel}}
+                        </section>
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif_link.logicItem.includeModel}}
+                        </section>
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif_live.logicItem.includeModel}}
+                        </section>
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            {{> components/teaser/teaser_alternativ this.pageEntries.[0].teaser_alternativ_100_serif_video.logicItem.includeModel}}
+                        </section>
+                    </div>
+                </div>
+               
+            </main>
+            
+            <div class="flex flex-wrap justify-center w-full max-w-full">
+                {{> components/pagination/pagination }} 
+            </div>
+        </div>
+    </body>
+</html>
