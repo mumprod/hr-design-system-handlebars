@@ -1,3 +1,27 @@
+# v1.11.8 (Wed Apr 05 2023)
+
+#### 🐛 Bug Fix
+
+- changed :class statement so text-white class is removed properly [#602](https://github.com/mumprod/hr-design-system-handlebars/pull/602) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.11.7 (Wed Apr 05 2023)
+
+#### 🐛 Bug Fix
+
+- - added empty parameters to Button components so parentScopeResolutio… [#600](https://github.com/mumprod/hr-design-system-handlebars/pull/600) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.6 (Mon Apr 03 2023)
 
 #### 🐛 Bug Fix
