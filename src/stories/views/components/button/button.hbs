@@ -1,6 +1,6 @@
 <button
     {{#if _id}} id="{{_id}}"{{/if}} 
-    class="ds-button {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant _onBackground=_onBackground _disableButtonPress=_disableButtonPress}} {{> components/button/utilities/button_dimension_classes _shape=_shape _size=_size}}{{#if _css}} {{_css}}{{/if}} {{#> css}}{{/css}}{{#if _openModal}} js-modalButton{{/if}}"
+    class="ds-button {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant=_variant _onBackground=_onBackground _disableButtonPress=_disableButtonPress}} {{> components/button/utilities/button_dimension_classes _size=_size}}{{#if _css}} {{_css}}{{/if}} {{#> css}}{{/css}}{{#if _openModal}} js-modalButton{{/if}}"
     {{#if _openModal}} aria-haspopup="true"{{/if}}
     {{~#if _ariaLabel}} aria-label="{{_ariaLabel}}"{{/if}}
     type="{{defaultIfEmpty _type "submit"}}"
