@@ -322,6 +322,12 @@ async function convertPartialsToJs() {
         .pipe(dest(options.paths.dist.handlebarPartials))
 }
 
+async function preparePartialsForDelivery() {
+    src(`${options.paths.assets.components}/**/*.hbs`)
+        .pipe(replace(/(_[a-zA-Z_]+)-(partial_block|inline_partial)/g, '../../$1'))
+        .pipe(dest(options.paths.dist.dist_components))
+}
+
 function createModernizr() {
     return src(`${options.paths.assets.views}/**/*.js`)
         .pipe(modernizr(require('./build/modernizr/config.json')))
@@ -373,3 +379,4 @@ exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
+exports.preparePartialsForDelivery = preparePartialsForDelivery

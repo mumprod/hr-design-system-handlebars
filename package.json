@@ -15,7 +15,7 @@
         "build-storybook-docs": "build-storybook --docs",
         "build-storybook-docs-with-tailwind": "npm run build:tailwind && npm run build-storybook-docs",
         "build:tailwind": "postcss src/assets/tailwind.css -o dist/assets/index.css",
-        "build": "npm run clean && npm run build:tailwind && node ./build/scripts/build.js",
+        "build": "yarn clean && yarn build:tailwind && node ./build/scripts/build.js && yarn preparePartialsForDelivery",
         "chromatic": "npx chromatic --project-token 84f1628f224a",
         "clean": "rimraf  dist",
         "release": "npx auto shipit --base-branch=main",
@@ -23,6 +23,7 @@
         "optimize-svgs": "gulp optimizeSvgs",
         "parseJson": "gulp parseJson",
         "partialsToJs": "gulp convertPartialsToJs",
+        "preparePartialsForDelivery": "gulp preparePartialsForDelivery",
         "create-modernizr-config": "gulp createModernizrConfig",
         "merge-locatags": "gulp mergeLocatags"
     },
