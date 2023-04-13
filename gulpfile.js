@@ -1,5 +1,6 @@
 const { src, dest, series, parallel, watch } = require('gulp')
 const debug = require('gulp-debug')
+const replace = require('gulp-replace')
 const fs = require('fs')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
@@ -316,6 +317,7 @@ function watchFiles() {
 
 async function convertPartialsToJs() {
     src(`${options.paths.assets.views}/**/*.hbs`)
+        .pipe(replace(/(_[a-zA-Z_]+)-(partial_block|inline_partial)/g, '$1'))
         .pipe(htmlToJs({ concat: 'handlebar-partials.js' }))
         .pipe(dest(options.paths.dist.handlebarPartials))
 }

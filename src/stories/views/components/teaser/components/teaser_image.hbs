@@ -7,10 +7,10 @@
 {{#if this.isProgram}}
     {{#if this.showMediatheksLink}}
         {{#with this}}
-        {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
-        {{#*inline "css"~}}
-            {{~> components/button/utilities/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1}}
-        {{/inline}}
+            {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+            {{#*inline "css"~}}
+                {{~> components/button/utilities/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1-inline_partial}}
+            {{/inline}}
         {{/with}}
     {{/if}}
 {{/if}}
