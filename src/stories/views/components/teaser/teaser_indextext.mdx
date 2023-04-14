@@ -1,0 +1,63 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import teaser from './teaser_indextext.hbs'
+import dataTeserIndextext100Accented from './fixtures/teaser_indextext_100_accented.json'
+import dataTeserIndextext100Boxed from './fixtures/teaser_indextext_100_boxed.json'
+import dataTeserIndextext100Highlighted from './fixtures/teaser_indextext_100_highlighted.json'
+import dataTeserIndextext50Accented from './fixtures/teaser_indextext_50_accented.json'
+import * as TeaserIndextextStories from './teaser_indextext.stories';
+
+<Meta of={TeaserIndextextStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Indextext-Teaser
+
+## Beschreibung
+
+## Props
+
+Die Indextext-Teaser-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
+
+<ul>
+  <li>
+    <b>title</b>
+  </li>
+
+  <li>
+    <b>shorttext</b>
+  </li>
+
+  <li>
+    <b>teaserSize</b>
+  </li>
+
+  <li>
+    <b>teaserType</b>
+  </li>
+</ul>
+
+## Verwendung
+
+Die Indextext-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_indextext}}
+```
+
+<Canvas withToolbar>
+  <Story of={TeaserIndextextStories.TextMitHintergrund100} />
+
+  <Story of={TeaserIndextextStories.TextMitBox100} />
+
+  <Story of={TeaserIndextextStories.HintergrundOrange100} />
+
+  <Story of={TeaserIndextextStories.TextMitHintergrund50} />
+</Canvas>
+
+<ArgsTable story="Text mit Hintergrund 100" />

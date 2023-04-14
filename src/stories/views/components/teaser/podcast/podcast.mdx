@@ -1,0 +1,41 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as PodcastStories from './podcast.stories'
+
+import podcast from './podcast.hbs'
+import podcastPlaylist from './podcast-playlist.hbs'
+import episodeJson from '../fixtures/teaser_podcast.json'
+import episodeJson50 from '../fixtures/teaser_podcast_50.json'
+import playlistJson100 from '../fixtures/teaser_podcast_playlist.json'
+import playlistJson50 from '../fixtures/teaser_podcast_playlist_50.json'
+
+<Meta of={PodcastStories} />
+
+export const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return podcast({ brand, ...args })
+}
+
+export const playlistTemplate = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return podcastPlaylist({ brand, ...args })
+}
+
+<Canvas withToolbar>
+  <Story of={PodcastStories.$100EpisodePlayer} />
+
+{' '}
+
+<Story of={PodcastStories.$50EpisodePlayer} />
+
+{' '}
+
+<Story of={PodcastStories.$100ChannelPlayer} />
+
+  <Story of={PodcastStories.$50ChannelPlayer} />
+</Canvas>

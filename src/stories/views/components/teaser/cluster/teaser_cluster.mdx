@@ -1,0 +1,67 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserClusterStories from './teaser_cluster.stories';
+
+import cluster from './teaser_cluster.hbs'
+import clusterTeaser100 from '../fixtures/cluster_teaser_100.json'
+import clusterTeaser50 from '../fixtures/cluster_teaser_50.json'
+import clusterTeaser33 from '../fixtures/cluster_teaser_33.json'
+import clusterTeaserOrdered100 from '../fixtures/cluster_teaser_ordered_100.json'
+import clusterTeaserOrdered50 from '../fixtures/cluster_teaser_ordered_50.json'
+import clusterTeaserOrdered33 from '../fixtures/cluster_teaser_ordered_33.json'
+import clusterTeaserExtern100 from '../fixtures/cluster_teaser_extern_100.json'
+import clusterTeaserExtern50 from '../fixtures/cluster_teaser_extern_50.json'
+import clusterTeaserExtern33 from '../fixtures/cluster_teaser_extern_33.json'
+import clusterTeaserGenre100 from '../fixtures/cluster_teaser_100_genre.json'
+import clusterTeaserGenre50 from '../fixtures/cluster_teaser_50_genre.json'
+import clusterTeaserGenre33 from '../fixtures/cluster_teaser_33_genre.json'
+import clusterTeaserImage100 from '../fixtures/cluster_teaser_100_image.json'
+import clusterTeaserImage50 from '../fixtures/cluster_teaser_50_image.json'
+import clusterTeaserImage33 from '../fixtures/cluster_teaser_33_image.json'
+import PodcastChannelClusterTeaser from '../fixtures/cluster_teaser_Podcast_Channel.json'
+import clusterTeaserOrdered33LongTitle from '../fixtures/cluster_teaser_33_long_title.json'
+
+<Meta of={TeaserClusterStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return cluster({ brand, ...args })
+}
+
+<Canvas withToolbar>
+  <Story of={TeaserClusterStories.Kurzmeldungen100} />
+
+  <Story of={TeaserClusterStories.Kurzmeldungen50} />
+
+  <Story of={TeaserClusterStories.Kurzmeldungen33} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitGenrebild100} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitGenrebild50} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitGenrebild33} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitTeaserbild100} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitTeaserbild50} />
+
+  <Story of={TeaserClusterStories.SchlagzeilenMitTeaserbild33} />
+
+  <Story of={TeaserClusterStories.MeistgeklicktWanda100} />
+
+  <Story of={TeaserClusterStories.MeistgeklicktWanda50} />
+
+  <Story of={TeaserClusterStories.MeistgeklicktWanda33} />
+
+  <Story of={TeaserClusterStories.TagesschauSportschau100} />
+
+  <Story of={TeaserClusterStories.TagesschauSportschau50} />
+
+  <Story of={TeaserClusterStories.TagesschauSportschau33} />
+
+  <Story of={TeaserClusterStories.PodcastEpisodenClusterTeaser} />
+
+  <Story of={TeaserClusterStories.MeistgeklicktBoxMitLangemTitel} />
+</Canvas>

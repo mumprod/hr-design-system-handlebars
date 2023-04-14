@@ -1,0 +1,118 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import teaser from './teaser_standard.hbs'
+import teaserHeroSerifWithLabel from './fixtures/teaser_standard_hero_serif_label.json'
+import teaserHeroSerifWithComments from './fixtures/teaser_standard_hero_serif_comments.json'
+import teaserHeroLink from './fixtures/teaser_standard_hero_serif_link.json'
+import teaserHeroSerif from './fixtures/teaser_standard_hero_serif.json'
+import teaser100Serif from './fixtures/teaser_standard_100_serif.json'
+import teaser50Serif from './fixtures/teaser_standard_50_serif.json'
+import teaser50SerifWithoutTeaserImage from './fixtures/teaser_standard_without_teaserimage_50_serif.json'
+import teaser33Serif from './fixtures/teaser_standard_33_serif.json'
+import teaser25Serif from './fixtures/teaser_standard_25_serif.json'
+import teaser25SerifWithoutTeaserimage from './fixtures/teaser_standard_without_teaserimage_25_serif.json'
+import teaser100Download from './fixtures/teaser_standard_100_serif_download.json'
+import teaser100Link from './fixtures/teaser_standard_100_serif_link.json'
+import teaser100Program from './fixtures/teaser_standard_100_serif_program.json'
+import teaser50Link from './fixtures/teaser_standard_50_serif_link.json'
+import teaser33Link from './fixtures/teaser_standard_33_serif_link.json'
+import teaser25Link from './fixtures/teaser_standard_25_serif_link.json'
+import teaser33LongGeotag from './fixtures/teaser_standard_33_long_geotag.json'
+import * as TeaserStandardStories from './teaser_standard.stories';
+
+<Meta of={TeaserStandardStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Standard-Teaser
+
+## Beschreibung
+
+Der Standard-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
+
+<b>Standard Hero:</b> <br />
+Desktop = Text unter dem Bild <br />
+Mobile = Text unter dem Bild <b>ohne</b> Teasertext <br />
+
+<b>Standard 100%, 50%, 33%:</b> <br />
+Desktop = Text unter dem Bild <br />
+Mobile = Text unter dem Bild ohne Teasertext <br />
+
+<b>Standard 25%:</b> <br />
+Desktop = Text unter dem Bild ohne Teasertext <br />
+Mobile = Bild(1x1) neben Text ohne Teasertext <br />
+
+## Sub-Komponenten
+
+Die Standard-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+  <li>
+    components/teaser/components/<b>teaser\_lead</b>
+  </li>
+
+  <li>
+    components/base/<b>link</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_heading</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_text</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_byline</b>
+  </li>
+</ul>
+
+## Verwendung
+
+Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_standard}}
+```
+
+<Canvas withToolbar>
+  <Story of={TeaserStandardStories.StandardHero} />
+
+  <Story of={TeaserStandardStories.StandardHeroMitLabel} />
+
+  <Story of={TeaserStandardStories.StandardHeroMitKommentaren} />
+
+  <Story of={TeaserStandardStories.StandardHeroMitExternemLink} />
+
+  <Story of={TeaserStandardStories.Standard100} />
+
+  <Story of={TeaserStandardStories.Standard100MitExternemLink} />
+
+  <Story of={TeaserStandardStories.Standard100MitSendungsdokument} />
+
+  <Story of={TeaserStandardStories.Standard50} />
+
+  <Story of={TeaserStandardStories.Standard50OhneTeaserbild} />
+
+  <Story of={TeaserStandardStories.Standard50MitExternemLink} />
+
+  <Story of={TeaserStandardStories.Standard33} />
+
+  <Story of={TeaserStandardStories.Standard33MitExternemLink} />
+
+  <Story of={TeaserStandardStories.Standard25} />
+
+  <Story of={TeaserStandardStories.Standard25OhneTeaserbild} />
+
+  <Story of={TeaserStandardStories.Standard25MitExternemLink} />
+
+  <Story of={TeaserStandardStories.Standard100MitDownload} />
+
+  <Story of={TeaserStandardStories.Standard33MitLangerOrtsmarke} />
+</Canvas>

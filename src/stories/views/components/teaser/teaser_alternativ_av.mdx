@@ -1,0 +1,116 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
+import { addCommentLink } from './jsonHelper'
+import teaser from './teaser_alternativ.hbs'
+import heroTeaser_video from './fixtures/teaser_alternative_hero_serif_video.json'
+import heroTeaser_audio from './fixtures/teaser_alternative_hero_serif_audio.json'
+import heroTeaser_live from './fixtures/teaser_alternative_hero_serif_live.json'
+import teaser100_video from './fixtures/teaser_alternative_100_serif_video.json'
+import teaser100_audio from './fixtures/teaser_alternative_100_serif_audio.json'
+import teaser100_live from './fixtures/teaser_alternative_100_serif_live.json'
+import teaser50_video from './fixtures/teaser_alternative_50_serif_video.json'
+import teaser50_audio from './fixtures/teaser_alternative_50_serif_audio.json'
+import teaser50_live from './fixtures/teaser_alternative_50_serif_live.json'
+import * as TeaserAlternativAvStories from './teaser_alternativ_av.stories';
+
+<Meta of={TeaserAlternativAvStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Alternativ-Teaser
+
+## Beschreibung
+
+Der Alternativ-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
+
+<b>Alternativ Hero:</b> <br />
+Desktop = Bild(66%) neben Text(33%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 100%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 50%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
+
+## Sub-Komponenten
+
+Die Alternativ-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+  <li>
+    components/base/image/<b>responsive\_image</b>
+  </li>
+
+  <li>
+    components/base/<b>link</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_heading</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_text</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_byline</b>
+  </li>
+</ul>
+
+## Verwendung
+
+Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_alternativ}}
+```
+
+<Canvas withToolbar>
+  <b>Alternativ Hero Video</b>
+
+  <Story of={TeaserAlternativAvStories.AlternativHeroVideo} />
+
+  <b>Alternativ Hero Audio</b>
+
+  <Story of={TeaserAlternativAvStories.AlternativHeroAudio} />
+
+  <b>Alternativ Hero Live</b>
+
+  <Story of={TeaserAlternativAvStories.AlternativHeroLive} />
+
+  <b>Alternativ 100% Video</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ100Video} />
+
+  <b>Alternativ 100% Audio</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ100Audio} />
+
+  <b>Alternativ 100% Live</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ100Live} />
+
+  <b>Alternativ 50% Video</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ50Video} />
+
+  <b>Alternativ 50% Audio</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ50Audio} />
+
+  <b>Alternativ 50% Live</b>
+
+  <Story of={TeaserAlternativAvStories.Alternativ50Live} />
+</Canvas>

@@ -1,0 +1,33 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import teaser from './teaser_stage.hbs'
+import stageTeaserData from './fixtures/stage_teaser.json'
+import stageTeaserWideData from './fixtures/stage_teaser_wide.json'
+import stageTeaserDataWithEventtag from './fixtures/stage_teaser_eventtag.json'
+import stageTeaserDataForProgram from './fixtures/stage_teaser_program.json'
+import * as TeaserStageStories from './teaser_stage.stories';
+
+<Meta of={TeaserStageStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Stage-Teaser
+
+## Beschreibung
+
+<Canvas withToolbar>
+  <b>Stage Teaser</b>
+
+  <Story of={TeaserStageStories.StageTeaser} />
+
+  <Story of={TeaserStageStories.StageTeaserWide} />
+
+  <Story of={TeaserStageStories.StageTeaserWithEvent} />
+
+  <Story of={TeaserStageStories.StageTeaserProgram} />
+</Canvas>

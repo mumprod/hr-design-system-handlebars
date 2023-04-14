@@ -1,0 +1,50 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import teaser from './teaser_standard.hbs'
+import * as TeaserStandardAvStories from './teaser_standard_av.stories';
+
+import teaser50video from './fixtures/teaser_standard_50_serif_video.json'
+import teaser25video from './fixtures/teaser_standard_25_serif_video.json'
+import teaser50audio from './fixtures/teaser_standard_50_serif_audio.json'
+import teaser50podcast from './fixtures/teaser_standard_50_serif_podcast.json'
+import teaser25podcast from './fixtures/teaser_standard_25_serif_podcast.json'
+import teaser50audioLivestream from './fixtures/teaser_standard_50_serif_audio_livestream.json'
+import teaser25audio from './fixtures/teaser_standard_25_serif_audio.json'
+import teaser25audioLivestream from './fixtures/teaser_standard_25_serif_audio_livestream.json'
+import teaser50live from './fixtures/teaser_standard_50_serif_live.json'
+import teaser25live from './fixtures/teaser_standard_25_serif_live.json'
+
+<Meta of={TeaserStandardAvStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Header
+
+Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Canvas withToolbar>
+  <Story of={TeaserStandardAvStories.Standard50Video} />
+
+  <Story of={TeaserStandardAvStories.Standard25Video} />
+
+  <Story of={TeaserStandardAvStories.Standard50VideoLivestream} />
+
+  <Story of={TeaserStandardAvStories.Standard25VideoLivestream} />
+
+  <Story of={TeaserStandardAvStories.Standard50Audio} />
+
+  <Story of={TeaserStandardAvStories.Standard25Audio} />
+
+  <Story of={TeaserStandardAvStories.Standard50Podcast} />
+
+  <Story of={TeaserStandardAvStories.Standard25Podcast} />
+
+  <Story of={TeaserStandardAvStories.Standard50AudioLivestream} />
+
+  <Story of={TeaserStandardAvStories.Standard25AudioLivestream} />
+</Canvas>

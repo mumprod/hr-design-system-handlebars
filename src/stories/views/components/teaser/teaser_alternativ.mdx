@@ -1,0 +1,118 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
+import { addCommentLink } from './jsonHelper'
+import teaser from './teaser_alternativ.hbs'
+import heroTeaser from './fixtures/teaser_alternative_hero_serif.json'
+import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.json'
+import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
+import heroTeaserLink from './fixtures/teaser_alternative_hero_serif_link.json'
+import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.json'
+import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
+import teaser100 from './fixtures/teaser_alternative_100_serif.json'
+import teaser50 from './fixtures/teaser_alternative_50_serif.json'
+import teaser50WithoutTeaserImage from './fixtures/teaser_alternative_without_teaserimage_50_serif.json'
+import teaser50Link from './fixtures/teaser_alternative_50_serif_link.json'
+import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
+import * as TeaserAlternativStories from './teaser_alternativ.stories';
+
+<Meta of={TeaserAlternativStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Alternativ-Teaser
+
+## Beschreibung
+
+Der Alternativ-Teaser besteht aus 2 Hauptelemente: <b>Bild</b> und <b>Text</b> (Label, Dachzeile, Titel, Teasertext, Zusatzinformationen)
+
+<b>Alternativ Hero:</b> <br />
+Desktop = Bild(66%) neben Text(33%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 100%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 50%:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />
+
+<b>Alternativ 50% mit Download:</b> <br />
+Desktop = Bild(33%) neben Text(66%) <br />
+Mobile = Verhalten wie bei 100% Standard-Teaser <br />{' '}
+
+Der Alternativ-Teaser soll nur als 100%- bzw. 50%-Teaser verwendet werden.
+
+## Sub-Komponenten
+
+Die Alternativ-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+  <li>
+    components/base/image/<b>responsive\_image</b>
+  </li>
+
+  <li>
+    components/base/<b>link</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_heading</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_text</b>
+  </li>
+
+  <li>
+    components/teaser/components/<b>teaser\_byline</b>
+  </li>
+</ul>
+
+## Verwendung
+
+Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_alternativ}}
+```
+
+<Canvas withToolbar>
+  <b>Alternativ Hero</b>
+
+  <Story of={TeaserAlternativStories.AlternativHero} />
+
+  <Story of={TeaserAlternativStories.AlternativHeroMitKommentaren} />
+
+  <Story of={TeaserAlternativStories.AlternativHeroMitLabel} />
+
+  <Story of={TeaserAlternativStories.AlternativHeroMitExternenLinkDokument} />
+
+  <Story of={TeaserAlternativStories.AlternativHeroMitSendungsdokument} />
+
+  <b>Alternativ 100%</b>
+
+  <Story of={TeaserAlternativStories.Alternativ100} />
+
+  <b>Alternativ 100% mit externem Link</b>
+
+  <Story of={TeaserAlternativStories.Alternativ100MitExternemLink} />
+
+  <b>Alternativ 50%</b>
+
+  <Story of={TeaserAlternativStories.Alternativ50} />
+
+  <Story of={TeaserAlternativStories.Alternativ50OhneTeaserbild} />
+
+  <b>Alternativ 50% mit externem Link</b>
+
+  <Story of={TeaserAlternativStories.Alternativ50MitExternemLink} />
+
+  <Story of={TeaserAlternativStories.Alternativ50MitDownload} />
+</Canvas>
