@@ -2,7 +2,7 @@ import tailwindConfig from 'tailwindConfig'
 const colorVariables = Object.entries(tailwindConfig.theme.extend.colors).filter(
     ([key, value]) => typeof value === 'string' && value.match(/^var/)
 )
-let brands = [
+const brands = [
     'hr',
     'hessenschau',
     'hr1',
@@ -17,7 +17,7 @@ let brands = [
     'hr-bigband',
     'hr-sinfonieorchester',
 ]
-let shortcuts = [
+const shortcuts = [
     'hr',
     'hs',
     'hr1',
@@ -39,4 +39,4 @@ colorVariables.forEach(([key, value]) => {
     colorsMap[key] = colors
 })
 
-export default colorsMap
+export { brands, shortcuts, colorsMap }
