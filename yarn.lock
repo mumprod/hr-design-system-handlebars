@@ -1956,15 +1956,6 @@
     prop-types "^15.7.2"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-mdx-gfm@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-mdx-gfm/-/addon-mdx-gfm-7.0.4.tgz#6faafc586895deeba1442d2fa3f446ebb686034b"
-  integrity sha512-VHbOd/nuWCoWw6j75V2flPlG5QD5UbMPdJIECmp1Sr+2oltbke/8TuiWBSaacGc9nRLYDrksU1ddGvGzrHWf2g==
-  dependencies:
-    "@storybook/node-logger" "7.0.4"
-    remark-gfm "^3.0.1"
-    ts-dedent "^2.0.0"
-
 "@storybook/addon-measure@7.0.4":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-7.0.4.tgz#49b220e4b1be5e5b7e34ac82fd1d5fdf58bb02d9"

@@ -1,3 +1,4 @@
+import remarkGfm from 'remark-gfm'
 const path = require('path')
 const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
@@ -19,8 +20,17 @@ const config = {
                 },
             },
         },
+        {
+            name: '@storybook/addon-docs',
+            options: {
+                mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        remarkPlugins: [remarkGfm],
+                    },
+                },
+            },
+        },
         '@storybook/addon-a11y',
-        '@storybook/addon-mdx-gfm',
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
