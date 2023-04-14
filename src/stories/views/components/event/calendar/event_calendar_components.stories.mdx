@@ -1,4 +1,4 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs'
 import eventCalendarHeading from './event_calendar_heading.hbs'
 import eventCalendarNav from './event_calendar_nav.hbs'
 import eventCalendarContent from './event_calendar_event_teaser.hbs'
@@ -101,7 +101,7 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 {{> components/teaser/teaser_standard_event}}
 ```
 
-<Preview withToolbar>
+<Canvas>
     <Story
         name="Heading"
         argTypes={{
@@ -158,4 +158,4 @@ Die Standard-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Footer" args={eventCalendarFooterData}>
         {TemplateEventCalendarFooter.bind({})}
     </Story>
-</Preview>
+</Canvas>

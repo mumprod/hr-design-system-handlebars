@@ -55,7 +55,7 @@ export const groupTeaserAccentedTemplate = ({ text, ...args }) => {
 
 Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story name="100% Gruppe mit Überschrift" args={teaserGroup100.includeModel}>
         {groupTeaserTemplate.bind({})}
     </Story>
@@ -80,6 +80,6 @@ Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
     <Story name="100% Gruppe mit Related Content" args={teaserGroupRelatedContent100.includeModel}>
         {groupTeaserTemplate.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 <ArgsTable story="main" />

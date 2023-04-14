@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 })
 
-if (process.env.NODE_ENV !== 'production') {
+/*if (process.env.NODE_ENV !== 'production') {
     console.log(Initializer)
     console.log('Looks like we are in development mode!')
-}
+}*/
 
 const customViewports = {
     hrMin: {
@@ -203,4 +203,4 @@ export const parameters = {
     },
 }
 
-export const decorators = [withThemeDecorator]
+//export const decorators = [withThemeDecorator]

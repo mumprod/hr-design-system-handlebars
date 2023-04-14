@@ -1,6 +1,4 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import { resetComponents } from '@storybook/components'
-import icon from './views/components/base/image/icon.hbs'
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs'
 
 import example from './example.hbs'
 
@@ -47,7 +45,7 @@ export const Template = ({ label, ...args }) => {
 
 Kurzer Beschreibungstext der die Komponente erklärt -> Penis
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story
         name="Primary"
         args={{
@@ -56,7 +54,7 @@ Kurzer Beschreibungstext der die Komponente erklärt -> Penis
     >
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 ## Props
 

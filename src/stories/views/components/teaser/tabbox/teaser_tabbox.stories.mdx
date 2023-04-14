@@ -1,18 +1,18 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import tabbox from './teaser_tabbox.hbs'
-import tabboxData from '../fixtures/teaser_tabbox.json' 
+import tabboxData from '../fixtures/teaser_tabbox.json'
 
-<Meta   title="Komponenten/Teaser/Tabbox"
-        parameters={{
-            chromatic: {
-                viewports: [360, 768, 1024]
-            },
-            layout: 'fullscreen',
-        }}
-        argTypes={{
-        }} 
-        decorators={[
+<Meta
+    title="Komponenten/Teaser/Tabbox"
+    parameters={{
+        chromatic: {
+            viewports: [360, 768, 1024],
+        },
+        layout: 'fullscreen',
+    }}
+    argTypes={{}}
+    decorators={[
         (Story) => {
             return `<div class="grid my-5 grid-page">
                         <div>
@@ -21,7 +21,7 @@ import tabboxData from '../fixtures/teaser_tabbox.json'
                     </div>`
         },
     ]}
-        />
+/>
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -31,9 +31,8 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return tabbox({ brand, ...args })
 }
 
-
-<Preview withToolbar>
-    <Story  name="Beispiel 1" args={tabboxData.includeModel}>
-        {Template.bind({})} 
-    </Story> 
-</Preview>
+<Canvas withToolbar>
+    <Story name="Beispiel 1" args={tabboxData.includeModel}>
+        {Template.bind({})}
+    </Story>
+</Canvas>

@@ -1,12 +1,4 @@
-import {
-    ArgsTable,
-    Meta,
-    Story,
-    Canvas,
-    Preview,
-    ColorPalette,
-    ColorItem,
-} from '@storybook/addon-docs'
+import { ArgsTable, Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/addon-docs'
 
 import label from './label.hbs'
 
@@ -91,7 +83,7 @@ export const Template = ({ _type, ...args }) => {
 Teaser auf Übersichtsseiten können mit Hilfe von Labels optisch hervorgehoben werden (z.B. als Kommentar, Liveticker, Eilmeldung, etc.).
 Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story
         name="Download"
         args={{
@@ -182,7 +174,7 @@ Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
     >
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 ## Einbindung
 

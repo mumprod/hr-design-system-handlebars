@@ -1,5 +1,4 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
-const tailwindConfig = require('../../tailwind.config')
+import tailwindConfig from 'tailwindConfig'
 const colorGroups = Object.entries(tailwindConfig.theme.extend.colors).filter(
     ([key, value]) => typeof value === 'object'
 )
@@ -19,19 +18,4 @@ colorGroups.forEach(([key, value]) => {
     colorsMap[key] = colors
 })
 
-<Meta title="Grundlegendes/Farben/Gesamtpalette" />
-
-# Colors
-
-<ColorPalette>
-    {Object.entries(colorsMap).map((token, key) => {
-        return (
-            <ColorItem
-                title={token[0]}
-                colors={token[1].map((value) => {
-                    return value
-                })}
-            />
-        )
-    })}
-</ColorPalette>
+export default colorsMap

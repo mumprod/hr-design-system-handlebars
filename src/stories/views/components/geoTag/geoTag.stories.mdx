@@ -1,12 +1,4 @@
-import {
-    ArgsTable,
-    Meta,
-    Story,
-    Canvas,
-    Preview,
-    ColorPalette,
-    ColorItem,
-} from '@storybook/addon-docs'
+import { ArgsTable, Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/addon-docs'
 
 import geoTag from './geoTag.hbs'
 
@@ -18,7 +10,7 @@ import geoTag from './geoTag.hbs'
             description: 'Beschriftung der Ortsmarke',
         },
     }}
-                decorators={[
+    decorators={[
         (Story) => {
             return `<div class="relative py-8">  
                 ${Story()} 
@@ -27,24 +19,24 @@ import geoTag from './geoTag.hbs'
     ]}
 />
 
-export const Template = ({...args }) => {
+export const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${geoTag}</div>`;
-    return geoTag({...args })
+    return geoTag({ ...args })
 }
 
 # geoTag
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story
         name="Frankfurt"
         args={{
-            _text: 'Frankfurt'
+            _text: 'Frankfurt',
         }}
     >
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 ## Einbindung
 
@@ -56,6 +48,6 @@ Die Komponente wird in Form eines Handlebar Partials eingebunden.
 
 Mit folgenden Parametern kann die Komponente konfiguriert werden.
 
-| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
-| :--------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------- |
-| **\_text** | `String` | Beliebiger Text                                                                                                                                                                                                                                                    | Die Beschriftung der Ortsmarke                   |
+| Parameter  | Typ      | Mögliche Werte  | Erläuterung                    |
+| :--------- | :------- | :-------------- | :----------------------------- |
+| **\_text** | `String` | Beliebiger Text | Die Beschriftung der Ortsmarke |

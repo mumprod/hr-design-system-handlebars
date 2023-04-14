@@ -42,7 +42,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return cluster({ brand, ...args })
 }
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story name="Kurzmeldungen 100" args={clusterTeaser100}>
         {Template.bind({})}
     </Story>
@@ -94,4 +94,4 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <Story name="Meistgeklickt-Box mit langem Titel" args={clusterTeaserOrdered33LongTitle}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>

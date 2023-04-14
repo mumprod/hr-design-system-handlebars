@@ -1,5 +1,4 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import 'core-js/actual/structured-clone'
 import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
 import { addCommentLink } from './jsonHelper'
 import teaser from './teaser_alternativ.hbs'
@@ -109,7 +108,7 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 {{> components/teaser/teaser_alternativ}}
 ```
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <b>Alternativ Hero</b>
     <Story name="Alternativ Hero" args={heroTeaser.logicItem.includeModel}>
         {Template.bind({})}
@@ -160,4 +159,4 @@ Die Alternativ-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Alternativ 50 mit Download" args={teaser50Download.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>

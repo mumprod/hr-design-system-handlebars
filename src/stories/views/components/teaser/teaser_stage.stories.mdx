@@ -11,7 +11,7 @@ import stageTeaserDataForProgram from './fixtures/stage_teaser_program.json'
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 768, 1024],
-            diffThreshold: 0.5
+            diffThreshold: 0.5,
         },
     }}
     argTypes={{}}
@@ -36,7 +36,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 ## Beschreibung
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <b>Stage Teaser</b>
     <Story name="Stage Teaser" args={stageTeaserData}>
         {Template.bind({})}
@@ -50,4 +50,4 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     <Story name="Stage Teaser Program" args={stageTeaserDataForProgram}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>

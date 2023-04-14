@@ -1,0 +1,19 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+import colorsMap from './Colors.data.js'
+
+<Meta title="Grundlegendes/Farben/Gesamtpalette" />
+
+# Colors
+
+<ColorPalette>
+    {Object.entries(colorsMap).map((token, key) => {
+        return (
+            <ColorItem
+                title={token[0]}
+                colors={token[1].map((value) => {
+                    return value
+                })}
+            />
+        )
+    })}
+</ColorPalette>

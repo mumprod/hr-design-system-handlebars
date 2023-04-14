@@ -1,6 +1,4 @@
-import { Meta, Preview } from '@storybook/addon-docs'
-import { resetComponents } from '@storybook/components'
-import icon from './views/components/base/image/icon.hbs'
+import { Meta, Markdown } from '@storybook/addon-docs'
 
 <Meta title="Grundlegendes/Konventionen und Datenstrukturen" />
 
@@ -10,7 +8,7 @@ Dieses Kapitel richtet sich vor allem an die Entwickler des Designsystems. Es er
 
 ## Aufbau der Datenstruktur des Designsystems
 
-<Preview>
+<Markdown>
     <pre>
         {`
 .github/
@@ -41,7 +39,7 @@ README.md
 tailwind.config.js
 `}
     </pre>
-</Preview>
+</Markdown>
 
 Im folgenden werden kurz die Ordner, deren Inhalte und andere für das Designsystem wichtige Dateien beschrieben
 
@@ -72,7 +70,7 @@ In den Ordner `dist` werden bei einem Release verschiedene Dateien (u.a. die Tem
 
 ### src
 
-<Preview>
+<Markdown>
     <pre>
         {`
 src/
@@ -90,7 +88,7 @@ src/
 |    |    |——— pages/     
 `}
     </pre>
-</Preview>
+</Markdown>
 
 Der `src` Ordner enthält die Unterordner `assets` sowie `stories`. Im Ordner `assets` finden sich die Folgenden Ordner und Dateien
 
@@ -200,13 +198,13 @@ Die Namen von Parametern in Handlebar-Komponenten sind, anders als der Datainame
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
     <pre class="!bg-white !leading-8 !p-4">
-        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true 
+        &#123;&#123;#>components/base/link CssClasses="" IsAriaHidden=true
     </pre>
 </div>
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true 
+        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true
         clickLabelPrefix2="mediaLink"&#125;&#125;
     </pre>
 </div>

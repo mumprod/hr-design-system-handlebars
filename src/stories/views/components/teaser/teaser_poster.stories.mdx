@@ -115,7 +115,7 @@ Die Poster-Teaser-Komponente wird in handlebars wie folgt eingebaut:
 {{> components/teaser/teaser_poster}}
 ```
 
-<Preview withToolbar>
+<Canvas withToolbar>
     <Story name="Poster 50" args={teserPosterLg.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
@@ -125,6 +125,6 @@ Die Poster-Teaser-Komponente wird in handlebars wie folgt eingebaut:
     <Story name="Poster 33 mit Label" args={teserPosterMdLabel.logicItem.includeModel}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 
 <ArgsTable story="Poster 50" />

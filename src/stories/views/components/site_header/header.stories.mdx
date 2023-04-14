@@ -4,22 +4,22 @@ import navigation from './header.hbs'
 import brandnav from './brand_navigation/brand_navigation.hbs'
 import JsonData from './fixtures/site_header_default.json'
 import JsonData2 from './fixtures/site_header_mit_warnung.json'
-import JsonData3 from './fixtures/site_header_mit_submenu.json' 
-import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json' 
+import JsonData3 from './fixtures/site_header_mit_submenu.json'
+import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json'
 
-<Meta title="Komponenten/Header/Header" 
-    argTypes={{}} 
+<Meta
+    title="Komponenten/Header/Header"
+    argTypes={{}}
     parameters={{
         chromatic: {
             viewports: [360, 768, 1024],
         },
         layout: 'fullscreen',
-        docs: { inlineStories : false, iframeHeight: 240 },
+        docs: { inlineStories: false, iframeHeight: 240 },
         viewport: {
-      viewports: INITIAL_VIEWPORTS
-    },
-    }}    
-    
+            viewports: INITIAL_VIEWPORTS,
+        },
+    }}
 />
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
@@ -30,35 +30,39 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
     return navigation({ brand, ...args })
 }
 
-
-
 # Header
 
 [Frameworks](#frameworks) - [Varianten](#varianten) - [Scrollverhalten](#scrollverhalten) - [Templates & Codes](#templates) - [Sub-Komponenten](#subkomponenten)
 
 <Canvas>
-    <Story name="Default"
-        args={JsonData}
-        parameters={{}}>
+    <Story name="Default" args={JsonData} parameters={{}}>
         {Template.bind({})}
     </Story>
 </Canvas>
 
 ## Beschreibung
 
-Die <b>Header</b>-Komponente ist die Haupt-Navigation der Hessenschau. Sie ist in der Komponente 'Page' eingebunden und besteht grundsätzlich aus 4 Subkomponenten: 
+Die <b>Header</b>-Komponente ist die Haupt-Navigation der Hessenschau. Sie ist in der Komponente 'Page' eingebunden und besteht grundsätzlich aus 4 Subkomponenten:
 
 <ul>
-    <li>components/site_header/<b>anchor_navigation</b></li>
-    <li>components/site_header/<b>brand_navigation</b></li>
-    <li>components/site_header/<b>service_navigation</b></li>
-    <li>components/site_header/<b>section_navigation</b></li>
+    <li>
+        components/site_header/<b>anchor_navigation</b>
+    </li>
+    <li>
+        components/site_header/<b>brand_navigation</b>
+    </li>
+    <li>
+        components/site_header/<b>service_navigation</b>
+    </li>
+    <li>
+        components/site_header/<b>section_navigation</b>
+    </li>
 </ul>
 <br />
 Die Header-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
-{{> components/site_header/header}}    
+{{> components/site_header/header}}
 ```
 
 <a name="frameworks" />
@@ -66,53 +70,55 @@ Die Header-Komponente wird in handlebars wie folgt eingebaut:
 ### Frameworks
 
 Die wesentlichen Funktionen und Features der Navigation sind mit dem Javascript-Framework [**Alpine.js**](https://alpinejs.dev/) realisiert. Alpine regelt u.a. die Sichtbarkeit der einzelnen Elemente und ist für die Interaktivität der Navigation zuständig. Alle Codes, die in der Header-Komponente Alpine.js direkt betreffen, sind in der Datei **"header_alpine.js** ausgelagert. Hier finden sich global verwendete dynamische Variablen (via Alpine.store) und zu verwendende Kontexte (via Alpine.data).
-  
-Für das CSS wird das Framework [**TailwindCSS**](https://www.tailwindcss.com) verwendet.
 
+Für das CSS wird das Framework [**TailwindCSS**](https://www.tailwindcss.com) verwendet.
 
 <a name="varianten" />
 
 ### Varianten
 
-Die Navigation ist sticky und responsiv mit drei Breakpoints für Smartphone, Tablet und Desktop. Für diese drei Viewportgrößen gibt es jeweils unterschiedliche Darstellungen der Subkomponenten innerhalb der Navigation. Grundsätzlich kann die Navigation z.B. in der Anzahl der ServiceNavigation-Items und der Sichtbarkeit von Flyouts und/oder Submenus variieren. 
+Die Navigation ist sticky und responsiv mit drei Breakpoints für Smartphone, Tablet und Desktop. Für diese drei Viewportgrößen gibt es jeweils unterschiedliche Darstellungen der Subkomponenten innerhalb der Navigation. Grundsätzlich kann die Navigation z.B. in der Anzahl der ServiceNavigation-Items und der Sichtbarkeit von Flyouts und/oder Submenus variieren.
 
 Desktop:
+
 <img src="/images/navi_default.png" />
 <br />
 
-***
+---
 
 Tablet:
+
 <img src="/images/navi_tablet.PNG" />
 <br />
 
-***
+---
 
 Mobil:
+
 <img src="/images/navi_mobil_default.png" />
 <br />
 
-***
+---
 
 <br />
 <br />
 <br />
 <br />
-Navigation mit zusätzlichem Service-Item: 
+Navigation mit zusätzlichem Service-Item:{' '}
 
 <Canvas>
-    <Story name="Mit Warnung" args={JsonData2}>bla
+    <Story name="Mit Warnung" args={JsonData2}>
         {Template.bind({})}
     </Story>
 </Canvas>
 
-***
+---
 
 <br />
 <br />
 <br />
 <br />
-Navigation mit zusätzlicher Subnavigation: 
+Navigation mit zusätzlicher Subnavigation:{' '}
 
 <Canvas>
     <Story name="Mit Subnavigation" args={JsonData3}>
@@ -120,13 +126,13 @@ Navigation mit zusätzlicher Subnavigation:
     </Story>
 </Canvas>
 
-***
+---
 
 <br />
 <br />
 <br />
 <br />
-Navigation mit Top Topics: 
+Navigation mit Top Topics:{' '}
 
 <Canvas>
     <Story name="Mit Top Topics" args={JsonDataTopTopics}>
@@ -140,48 +146,54 @@ Navigation mit Top Topics:
 
 ### Scrollverhalten
 
-Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Viewports wird hierbei als Referenz bzw. 100% angenommen. (Programmatisch wird die Scrollposition in der Variable **"percent"** abgebildet und zur Verarbeitung genutzt) Scrollt man bei ausgeblendeter Navigation die Seite wieder um 1px zurück, wird im Desktop-Viewport die Section-Navigation wieder eingeblendet, im Tablet und Mobil-Viewport kommt je nach Scrollposition die Navigation wieder in den sichtbaren Bereich bzw. die Service-List mit den Service-Icons wird wieder eingeblendet. Die Brand-Navigation wird erst wieder angezeigt, wenn ganz nach oben gescrollt wird. 
+Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Viewports wird hierbei als Referenz bzw. 100% angenommen. (Programmatisch wird die Scrollposition in der Variable **"percent"** abgebildet und zur Verarbeitung genutzt) Scrollt man bei ausgeblendeter Navigation die Seite wieder um 1px zurück, wird im Desktop-Viewport die Section-Navigation wieder eingeblendet, im Tablet und Mobil-Viewport kommt je nach Scrollposition die Navigation wieder in den sichtbaren Bereich bzw. die Service-List mit den Service-Icons wird wieder eingeblendet. Die Brand-Navigation wird erst wieder angezeigt, wenn ganz nach oben gescrollt wird.
 
-| Scrollposition | Viewport | Beschreibung |
-|:---------------|:---------|:-------------|
-|`>0%`| alle Viewports | Brand-Navigation wird ausgeblendet |
-|`>50%`| Desktop | Section-Navigation wird ausgeblendet & Logo verkleinert |
-|| Tablet | Logo wird verkleinert |
-|| Mobil | Logo wird verkleinert & ServiceList wird ausgeblendet  |
-|`>90%`| Desktop | keine weitere Änderung |
-|| Tablet | Navigation verschwindet ganz |
-|| Mobil | Navigation verschwindet ganz |
+| Scrollposition | Viewport       | Beschreibung                                            |
+| :------------- | :------------- | :------------------------------------------------------ |
+| `>0%`          | alle Viewports | Brand-Navigation wird ausgeblendet                      |
+| `>50%`         | Desktop        | Section-Navigation wird ausgeblendet & Logo verkleinert |
+|                | Tablet         | Logo wird verkleinert                                   |
+|                | Mobil          | Logo wird verkleinert & ServiceList wird ausgeblendet   |
+| `>90%`         | Desktop        | keine weitere Änderung                                  |
+|                | Tablet         | Navigation verschwindet ganz                            |
+|                | Mobil          | Navigation verschwindet ganz                            |
 
 <br />
 
 **Desktop >0%:**
+
 <img src="/images/navi_scroll_50percent.png" />
 
 **Desktop >50%:**
+
 <img src="/images/navi_scroll_90percent.png" />
 <br />
 
-***
+---
 
 **Tablet > 0% / < 50%:**
+
 <img src="/images/navi_tablet_scroll_1percent.PNG" />
 <br />
 
 **Tablet > 50% / < 90%:**
+
 <img src="/images/navi_tablet_scroll_50percent.PNG" />
 <br />
 
-***
+---
 
 **Mobil >0% / < 50%:**
+
 <img src="/images/navi_mobil_scroll_1percent.png" />
 <br />
 
 **Mobil >50% / < 90%:**
+
 <img src="/images/navi_mobil_scroll_50percent.PNG" />
 <br />
 
-***
+---
 
 <br />
 <a href="#top">Back to top</a>
@@ -189,10 +201,10 @@ Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Vi
 
 ### Template & Codes
 
-Im Haupt-Template **header.hbs** wird für den umschließenden Hauptcontainer mittels der Alpine-Direktive **"x-data"** der Kontext auf das Data-Objekt **"mainNavigationHandler()"** gesetzt und beim erstmaligen Initialisieren die Unter-Funktion **"init()"** aufgerufen. Durch den angegebenen Kontext stehen innerhalb der Navigation nun alle Unterfunktionen von mainNavigationHandler() bereit. Hier finden sich neben der "init()"-Funktion z.B. auch alle Hilfsfunktionen, die zur Ermittlung der Scrollposition bzw. der  Sichtbarkeit der jeweiligen Elemente benötig werden. 
+Im Haupt-Template **header.hbs** wird für den umschließenden Hauptcontainer mittels der Alpine-Direktive **"x-data"** der Kontext auf das Data-Objekt **"mainNavigationHandler()"** gesetzt und beim erstmaligen Initialisieren die Unter-Funktion **"init()"** aufgerufen. Durch den angegebenen Kontext stehen innerhalb der Navigation nun alle Unterfunktionen von mainNavigationHandler() bereit. Hier finden sich neben der "init()"-Funktion z.B. auch alle Hilfsfunktionen, die zur Ermittlung der Scrollposition bzw. der Sichtbarkeit der jeweiligen Elemente benötig werden.
 
 ```html
-<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()">
+<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()"></div>
 ```
 
 Innerhalb von "init()" werden die Listener und deren Handler für das Scrollen via Scrollrad oder Mouse- bzw. Touch-Aktionen definiert:
@@ -209,8 +221,8 @@ init(){
         window.userScroll = true;
     }
     const clickedOnScrollbar = mouseX => {
-        return document.documentElement.offsetWidth <= mouseX ? true : false; 
-    }   
+        return document.documentElement.offsetWidth <= mouseX ? true : false;
+    }
     const mouseDownHandler = e => {
         clickedOnScrollbar(e.clientX) ? mouseEvent() : null
     };
@@ -229,18 +241,19 @@ init(){
 }
 ```
 
-*Beispielhaft wird hier eine der weiteren Hilfsfunktionen aus dem mainNavigationHandler() erklärt:*
+_Beispielhaft wird hier eine der weiteren Hilfsfunktionen aus dem mainNavigationHandler() erklärt:_
 
-Innerhalb des serviceNavWrappers wird mit Alpine die Function "shouldServiceNavBeHidden()" zum Setzen der korrekten CSS-Klassen via Ternary Expression verwendet: Wenn shouldServiceNavBeHidden() den Wert '_true_' zurückgibt, wird die CSS-Klasse "-mt-40" gesetzt, welche den Wrapper mit einem negativen Margin von -10rem aus dem Viewport schiebt: 
+Innerhalb des serviceNavWrappers wird mit Alpine die Function "shouldServiceNavBeHidden()" zum Setzen der korrekten CSS-Klassen via Ternary Expression verwendet: Wenn shouldServiceNavBeHidden() den Wert '_true_' zurückgibt, wird die CSS-Klasse "-mt-40" gesetzt, welche den Wrapper mit einem negativen Margin von -10rem aus dem Viewport schiebt:
 
 **header.hbs:**
 
 ```html
-<div id="serviceNavWrapper" 
-    :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"   
+<div id="serviceNavWrapper"
+    :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
 ```
-WENN _percent > 90_ ist, der _Viewport NICHT Desktop_ ist, die _Scrollrichtung nach unten_ ist und es _kein offenes Burger-Menu_ gibt, sendet die Funktion *true* als Rückgabewert zurück. Wenn die Seite _via JS_ (z.B. durch einen Ankerlink) gescrollt wird, verstecke die ServiceNavigation unter den gleichen Bedingungen, aber _unabhängig von der Scrollrichtung_:
- 
+
+WENN _percent > 90_ ist, der _Viewport NICHT Desktop_ ist, die _Scrollrichtung nach unten_ ist und es _kein offenes Burger-Menu_ gibt, sendet die Funktion _true_ als Rückgabewert zurück. Wenn die Seite _via JS_ (z.B. durch einen Ankerlink) gescrollt wird, verstecke die ServiceNavigation unter den gleichen Bedingungen, aber _unabhängig von der Scrollrichtung_:
+
 **header_alpine.js:**
 
 ```js
@@ -251,56 +264,58 @@ shouldServiceNavBeHidden() {
         return (this.percent > 90 && !this.$screen('lg') && this.$store.burgeropen == false)
     }
 }
-``` 
+```
 
+---
 
-***
-
-Weiterhin sind in der Datei **header_alpine.js** weitere Alpine.data-Kontexte für das Overlay, die Dropdown-Menus und die Flyouts hinterlegt. 
-Für die Erklärung können die Kommentare direkt in der Datei herangezogen werden. 
+Weiterhin sind in der Datei **header_alpine.js** weitere Alpine.data-Kontexte für das Overlay, die Dropdown-Menus und die Flyouts hinterlegt.
+Für die Erklärung können die Kommentare direkt in der Datei herangezogen werden.
 
 <a href="#top">Back to top</a>
 <br />
 <a name="subkomponenten" />
 
 ### Sub-Komponenten
+
 <br />
 
-<b>Anchor Navigation</b> 
+<b>Anchor Navigation</b>
 <br />
 
 **anchor_navigation.hbs** Inkludiert folgende Subkomponenten:
 
-* featurebox_anchor.hbs
+-   featurebox_anchor.hbs
 
 In dieser (nicht sichtbaren) Sub-Komponente werden Anchorlinks zu den Teilbereichen der Navigation bereitgestellt, um sie für Screen-Reader direkt erreichbar zu machen.
 
 **header.hbs:**
+
 ```html
-<div id="anchorNavWrapper" class="hidden">
-    {{> components/site_header/anchor_navigation}}
-</div>
-``` 
+<div id="anchorNavWrapper" class="hidden">{{> components/site_header/anchor_navigation}}</div>
+```
 
-***
+---
 
-<br/>
+<br />
 <b>Brand Navigation</b>
 <br />
 
 **brand_navigation.hbs** inkludiert folgende Subkomponenten:
 
-* brand_navigation_item
+-   brand_navigation_item
 
-Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den einzelnen Angeboten des HR zur Verfügung. 
+Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den einzelnen Angeboten des HR zur Verfügung.
 
-```html    
-<div id="brandNavWrapper" class="relative flex items-center justify-center order-1 w-full bg-white z-10000 print:hidden">
-{{> components/site_header/brand_navigation/brand_navigation }} 
+```html
+<div
+    id="brandNavWrapper"
+    class="relative flex items-center justify-center order-1 w-full bg-white z-10000 print:hidden"
+>
+    {{> components/site_header/brand_navigation/brand_navigation }}
 </div>
 ```
 
-***
+---
 
 <br />
 <b>Service Navigation</b>
@@ -308,90 +323,114 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 
 **service_navigation.hbs** inkludiert folgende Subkomponenten:
 
-* service_logo.hbs
-* service_list.hbs
-* service_navigation_item.hbs
-* navigation_flyout.hbs
-* navigation_search.hbs
-* burger.hbs
-<br />
+-   service_logo.hbs
+-   service_list.hbs
+-   service_navigation_item.hbs
+-   navigation_flyout.hbs
+-   navigation_search.hbs
+-   burger.hbs
+    <br />
 
-Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-List **(service_list.hbs)** und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br /> 
-Die gesamte ServiceNavigation liegt innerhalb des **"serviceNavWrapper"**. Bei mobilem Viewport wird dieser Wrapper beim Scrollen der Seite mit Hilfe der Funktion **"shouldServiceNavBeHidden()"** ein- bzw. ausgeblendet. 
+Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-List **(service_list.hbs)** und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br />
+Die gesamte ServiceNavigation liegt innerhalb des **"serviceNavWrapper"**. Bei mobilem Viewport wird dieser Wrapper beim Scrollen der Seite mit Hilfe der Funktion **"shouldServiceNavBeHidden()"** ein- bzw. ausgeblendet.
 
-Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service_list.hbs)** , die Komponente für die Suchfunktion **(navigation_search.hbs)** sowie für mobil/Tablet das Burger-Menu **(burger.hbs)**. 
+Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service_list.hbs)** , die Komponente für die Suchfunktion **(navigation_search.hbs)** sowie für mobil/Tablet das Burger-Menu **(burger.hbs)**.
 
 **header.hbs:**
 
-```html   
-<div id="serviceNavWrapper" :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
-    class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-10002">   
-        <div id="serviceNavMainContainer" class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-10001">
-            <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
-            <div id="serviceLogoWrapper" class="flex items-center order-1 w-full pl-4 pr-2 tablet:pl-5 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
-                {{> components/site_header/service_logo }}
+```html
+<div
+    id="serviceNavWrapper"
+    :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
+    class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in-out md:border-white lg:border-b bg-blue-congress z-10002"
+>
+    <div
+        id="serviceNavMainContainer"
+        class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-10001"
+    >
+        <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
+        <div
+            id="serviceLogoWrapper"
+            class="flex items-center order-1 w-full pl-4 pr-2 tablet:pl-5 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4"
+        >
+            {{> components/site_header/service_logo }}
+        </div>
+        <div
+            id="serviceItemsWrapper"
+            class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden "
+        >
+            {{> components/site_header/service_navigation/service_list }} {{>
+            components/site_header/navigation_search/quick_search_button }}
+
+            <div class="hidden lg:flex">
+                {{> components/site_header/navigation_search/quick_search_form }}
             </div>
-            <div id="serviceItemsWrapper" class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-blue-congress md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0 print:hidden ">
-
-                {{> components/site_header/service_navigation/service_list }}
-                {{> components/site_header/navigation_search/quick_search_button }}
-
-                <div class="hidden lg:flex">
-                    {{> components/site_header/navigation_search/quick_search_form }}
-                </div>
-                <div id="burgerWrapper" class="flex justify-end flex-none order-2 lg:order-4 md:order-4 lg:hidden "> 
-                    {{> components/site_header/burger }}    
-                </div>
+            <div
+                id="burgerWrapper"
+                class="flex justify-end flex-none order-2 lg:order-4 md:order-4 lg:hidden "
+            >
+                {{> components/site_header/burger }}
             </div>
         </div>
-</div> 
+    </div>
+</div>
 ```
 
-Innerhalb der Service-List Komponente **(service_list.hbs)** befinden sich die Service-Navigation-Items. Ein Click auf ein Item öffnet entweder direkt eine Zielseite oder ein Flyout mit Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen. Standard-Items sind "Video/Podcast", "Verkehr" und "Wetter". Bei Unwetterwarnungen wird zusätzlich ein "Warnung"-Item angezeigt. 
-Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeHidden()"** je nach Scrollposition die Service-Icons ausgeblendet werden.  
+Innerhalb der Service-List Komponente **(service_list.hbs)** befinden sich die Service-Navigation-Items. Ein Click auf ein Item öffnet entweder direkt eine Zielseite oder ein Flyout mit Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen. Standard-Items sind "Video/Podcast", "Verkehr" und "Wetter". Bei Unwetterwarnungen wird zusätzlich ein "Warnung"-Item angezeigt.
+Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeHidden()"** je nach Scrollposition die Service-Icons ausgeblendet werden.
+
 <br />
 Service-Navigation Flyout Desktop:
-<br /><br />
+<br />
+<br />
 <img src="/images/navi_flyout_service.png" />
 <br />
 
-***
+---
 
 <br />
 <br />
 Service-Navigation Flyout Tablet/Mobil:
-<br /><br />
+<br />
+<br />
 <img src="/images/navi_tablet_flyout_service.png" />
 <br />
 <br />
 <a href="#top">Back to top</a>
 <br />
 
-***
+---
+
 <br />
 <b>Section Navigation</b>
 
 **section_navigation.hbs** inkludiert folgende Subkomponenten:
 
-* section_navigation_item.hbs
-* navigation_flyout.hbs
+-   section_navigation_item.hbs
+-   navigation_flyout.hbs
 
 <br />
-Die Section-Navigation stellt die Links zu den einzelnen Themenbereichen der Hessenschau bereit. Die Navigation-Items der Section Navigation können je nach Einstellung vom CMS direkt zur Themen-Indexseite verlinken oder ihrerseits ein Flyout öffnen, über dessen Einträge dann Themenbereiche angesteuert werden können: 
+Die Section-Navigation stellt die Links zu den einzelnen Themenbereichen der Hessenschau bereit. Die
+Navigation-Items der Section Navigation können je nach Einstellung vom CMS direkt zur Themen-Indexseite
+verlinken oder ihrerseits ein Flyout öffnen, über dessen Einträge dann Themenbereiche angesteuert werden
+können:
 <br />
 <br />
 Section-Navigation Flyout Desktop:
 <br />
 <br />
 <img src="/images/navi_flyout_section.png" />
-<br /><br /> 
-Bei den Viewports "mobil" und "tablet" wird die Section-Navigation in Form eines Burger-Menus dargstellt:
+<br />
+<br />
+Bei den Viewports "mobil" und "tablet" wird die Section-Navigation in Form eines Burger-Menus
+dargstellt:
 <br />
 <br />
 <img src="/images/navi_mobil_burger_open.png" />
-<br /><br /> 
+<br />
+<br />{' '}
 
-***
+---
 
 <br />
 <a href="#top">Back to top</a>

@@ -1,6 +1,4 @@
-import { Meta } from '@storybook/addon-docs'
-import { resetComponents } from '@storybook/components'
-import icon from './views/components/base/image/icon.hbs'
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
 
 <Meta title="Grundlegendes/Testdatenbereitstellung" />
 
@@ -485,7 +483,7 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 Ein toller Einleitungstext für unsere `Teaser` Komponente:
 
-<Preview withToolbar>
+<Canvas>
     <Story name="Standard Hero" args={xxlTeaserSerif}>
         {Template.bind({})}
     </Story>
@@ -507,7 +505,7 @@ Ein toller Einleitungstext für unsere `Teaser` Komponente:
     <Story name="Standard SM" args={smTeaserSerif}>
         {Template.bind({})}
     </Story>
-</Preview>
+</Canvas>
 ```
 
 Für die unterschiedlichen Teaservarianten werden die Testdaten in Variablen importiert und den konkreten Stories über den `args` Parameter

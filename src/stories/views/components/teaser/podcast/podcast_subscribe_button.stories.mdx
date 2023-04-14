@@ -5,48 +5,44 @@ import subscribeButtonJson from '../fixtures/teaser_podcast.json'
 import subscribeButton from './podcast_subscribe_button.hbs'
 
 <Meta
-  title="Komponenten/Teaser/Podcast"
-  argTypes={{
-    storybookOpen: {
-      control: 'boolean',
-      description: "Offen"
-    }
-    
-  }}
-  parameters={{ 
-    controls: { 
-      sort: 'requiredFirst',
-    } 
-  }}
-  decorators={[
+    title="Komponenten/Teaser/Podcast"
+    argTypes={{
+        storybookOpen: {
+            control: 'boolean',
+            description: 'Offen',
+        },
+    }}
+    parameters={{
+        controls: {
+            sort: 'requiredFirst',
+        },
+    }}
+    decorators={[
         (Story) => {
             return `<div class="flex flex-row pt-5">
                             ${Story()} 
                         </div>`
-        }
-    
-    ]} 
+        },
+    ]}
 />
 
 export const Template = ({ label, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return subscribeButton({ label, ...args });
-};
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return subscribeButton({ label, ...args })
+}
 
-<Preview withToolbar>
-  <Story
-    name="Subscribe Button Close"   
-    args={subscribeButtonJson.logicItem.includeModel.podcastChannel}
-  >
-    {Template.bind({})}
-  </Story>
-  <Story
-    name="Subscribe Button Open"   
-    args={
-        { ...subscribeButtonJson.logicItem.includeModel.podcastChannel,  storybookOpen:true}
-      }
-  >
-    {Template.bind({})}
-  </Story>
-</Preview>
+<Canvas withToolbar>
+    <Story
+        name="Subscribe Button Close"
+        args={subscribeButtonJson.logicItem.includeModel.podcastChannel}
+    >
+        {Template.bind({})}
+    </Story>
+    <Story
+        name="Subscribe Button Open"
+        args={{ ...subscribeButtonJson.logicItem.includeModel.podcastChannel, storybookOpen: true }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
