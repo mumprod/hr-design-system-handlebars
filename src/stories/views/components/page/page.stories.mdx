@@ -1,32 +1,20 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import 'core-js/actual/structured-clone'
 import page from './page.hbs'
-import NavigationData from '../site_header/fixtures/site_header_default.json'
-import NavigationData2 from '../site_header/fixtures/site_header_mit_warnung.json'
-import NavigationData3 from '../site_header/fixtures/site_header_mit_submenu.json'
-//import NavigationData4 from '../site_header/fixtures/site_header_mit_submenu_service_selected.json'
-
-import hero_teaser from '../teaser/fixtures/teaser_standard_hero_serif.json'
-import audio_player_teaser from '../teaser/fixtures/teaser_standard_50_serif_audio.json'
-const NavigationDataWithTeaser = structuredClone(
-    Object.assign({}, NavigationData, hero_teaser.logicItem.includeModel)
-)
-const NavigationDataWithTeaser2 = structuredClone(
-    Object.assign({}, NavigationData2, hero_teaser.logicItem.includeModel)
-)
-const NavigationDataWithTeaser3 = structuredClone(
-    Object.assign({}, NavigationData3, hero_teaser.logicItem.includeModel)
-)
+import {
+    NavigationDataWithTeaser,
+    NavigationDataWithTeaser2,
+    NavigationDataWithTeaser3,
+} from './page.data.js'
 
 <Meta
     title="Komponenten/Page/Page"
     argTypes={{}}
     parameters={{
         chromatic: {
-            viewports: [360, 768, 1024]
+            viewports: [360, 768, 1024],
         },
         layout: 'fullscreen',
-        docs: { inlineStories : false, iframeHeight: 400 }
+        docs: { inlineStories: false, iframeHeight: 400 },
     }}
 />
 
@@ -42,18 +30,20 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 
 Das Grundgerüst für das HTML-Markup einer Seite (in diesem Fall eine Index-Seite bzw. Übersichtsseite).
 Stand 2023: Inhaltsseiten werden derzeit noch nicht berücksichtigt.
-Für gemischte Inhalte siehe ```Player-Interaktion```
+Für gemischte Inhalte siehe `Player-Interaktion`
 
 # Grundaufbau
-Um eine Seite zu erzeugen ist ein initiales HTML-Markup notwendig. Der Kopf ```<head>``` ist dabei statisch,
-Inhalte werden im ```<body>```-Tag abgelegt. Der Kopf entspricht einem klassischen HTML-Kopf mit Titel und Metadaten-Angaben.
+
+Um eine Seite zu erzeugen ist ein initiales HTML-Markup notwendig. Der Kopf `<head>` ist dabei statisch,
+Inhalte werden im `<body>`-Tag abgelegt. Der Kopf entspricht einem klassischen HTML-Kopf mit Titel und Metadaten-Angaben.
 
 ## Markup im Kopf
+
 ```html
 <!DOCTYPE html>
-<html 
+<html
 class="no-js no-js-burgerMenu preload noMicroInteraction"
-data-theme="hessenschau" 
+data-theme="hessenschau"
 lang="de"
 >
 <head>
@@ -70,23 +60,26 @@ lang="de"
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="js-pageSwap">
 
-MARKUP FÜR INHALTE ...              
+MARKUP FÜR INHALTE ...
 
-<div>    
+<div>
 </body>
 </html>
 ```
+
 ## Markup für Inhalte
 
-Initial wird die Seitennavigation - das Menü - der Seite eingefügt. Wahlweise Abwandlungen der Seitennavigation 
-(mit Subnavigation oder Unwetterwarnung), die über unterschiedlichen Daten-JSONS ausgeformt werden. Die Daten-JSONS hierfür liegen 
-unter ```components/site_header/fixtures``` und die Komponente selber:
+Initial wird die Seitennavigation - das Menü - der Seite eingefügt. Wahlweise Abwandlungen der Seitennavigation
+(mit Subnavigation oder Unwetterwarnung), die über unterschiedlichen Daten-JSONS ausgeformt werden. Die Daten-JSONS hierfür liegen
+unter `components/site_header/fixtures` und die Komponente selber:
 
 ```html
-{{> components/site_header/header }}   
+{{> components/site_header/header }}
 ```
+
 Dann folgen die Inhalte in diesem Fall Teaser, die über das Grid-Layout angeordnet werden. Die Komponenten für die Teaser
-liegen unter ```components/teaser/``` und lauten auf ```teaser_``` und dessen Ausprägung:
+liegen unter `components/teaser/` und lauten auf `teaser_` und dessen Ausprägung:
+
 <ul>
     <li>standard (Standard => Bild oben, Text darunter)</li>
     <li>alternativ (Alternativ => Bild links, Text rechts)</li>
@@ -96,30 +89,32 @@ liegen unter ```components/teaser/``` und lauten auf ```teaser_``` und dessen Au
     <li>stage (Stage => Sonderform über die ganze Seite)</li>
 </ul>
 
-Auch hier bestimmen die Daten-JSONS, das Bild und den Text. Die Daten-JSONS hierfür liegen 
-unter ```components/teaser/fixtures``` der Aufruf der Komponente selber:
+Auch hier bestimmen die Daten-JSONS, das Bild und den Text. Die Daten-JSONS hierfür liegen
+unter `components/teaser/fixtures` der Aufruf der Komponente selber:
 
 ```html
- {{> components/teaser/teaser_standard }} 
+{{> components/teaser/teaser_standard }}
 ```
-Gekapselt wird die Teaser-Komponente in einer ```<section>```. Es können beliebig viele Sections mit entsprechenden Teaser-Komponenten
+
+Gekapselt wird die Teaser-Komponente in einer `<section>`. Es können beliebig viele Sections mit entsprechenden Teaser-Komponenten
 in das folgende Markup angelegt werden:
 
- ```html           
+```html
 <main onclick="void(0)" role="main" id="content" class="flex items-center justify-center">
-    <div class="grid grid-page">
-        <div class="{{> components/grid/grid_group_wrapper_classes }}">
-            
-            <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
-                {{> components/teaser/teaser_standard }}
-            </section>
-             WEITERE TEASER...
-        </div>
-    </div>
+   <div class="grid grid-page">
+       <div class="{{> components/grid/grid_group_wrapper_classes }}">
+
+           <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+               {{> components/teaser/teaser_standard }}
+           </section>
+            WEITERE TEASER...
+       </div>
+   </div>
 </main>
 
 </div>
 ```
+
 Die Ausformung der Teaser basiert immer auf dem selben Daten-JSON, d.h. Bild und Texte sind immer identisch, lediglich die Größe und der
 Teaser-Typ variieren.
 

@@ -1,31 +1,25 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
-import 'core-js/actual/structured-clone'
+import { NavigationDataWithMixedContent } from './page_pagination.data.js'
 import page from './page_pagination.hbs'
-import navigationData from '../site_header/fixtures/site_header_default.json'
-import mixedContent from '../page/fixtures/page_pagination.json'
-const NavigationDataWithMixedContent = structuredClone(
-    Object.assign({}, navigationData, mixedContent)
-)
 
 <Meta
     title="Komponenten/Page/Page"
     argTypes={{}}
     parameters={{
         chromatic: {
-            viewports: [360, 768, 1024]
+            viewports: [360, 768, 1024],
         },
         layout: 'fullscreen',
-        docs: { inlineStories : false, iframeHeight: 400 }
+        docs: { inlineStories: false, iframeHeight: 400 },
     }}
 />
-
-
 
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({brand,...args})
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return page({ brand, ...args })
 }
 
 <Canvas withToolbar>
@@ -33,4 +27,3 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
         {Template.bind({})}
     </Story>
 </Canvas>
-
