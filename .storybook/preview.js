@@ -1,5 +1,6 @@
 import '!style-loader!css-loader!postcss-loader!tailwind'
 import 'tailwind'
+import { withThemeByDataAttribute } from '@storybook/addon-styling'
 
 import hrDesignsystemDark from './HRDesignsystemDark'
 import hrDesignsystemLight from './HRDesignsystemLight'
@@ -202,5 +203,27 @@ export const parameters = {
         },
     },
 }
+
+export const decorators = [
+    withThemeByDataAttribute({
+        themes: {
+            'hessenschau': 'hessenschau',
+            'hr': 'hr',
+            'hr1': 'hr1',
+            'hr2': 'hr2',
+            'hr3': 'hr3',
+            'hr4': 'hr4',
+            'you-fm': 'you-fm',
+            'hr-inforadio': 'hr-inforadio',
+            'hr-fernsehen': 'hr-fernsehen',
+            'hr-bigband': 'hr-bigband',
+            'hr-sinfonieorchester': 'hr-sinfonieorchester',
+            'hr-werbung': 'hr-werbung',
+            'hr-rundfunkrat': 'hr-rundfunkrat',
+        },
+        defaultTheme: 'hessenschau',
+        attributeName: 'data-theme',
+    }),
+]
 
 //export const decorators = [withThemeDecorator]
