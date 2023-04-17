@@ -1,0 +1,38 @@
+{{~#if _firstPage~}}   
+    {{> components/pagination/pagination_button_left }}   
+    <div class="px-20 py-10">   
+        <span class="font-title">1</span>   
+        <span class="px-5 py-10 font-title">&hellip;</span>   
+        <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
+    </div>   
+    {{> components/pagination/pagination_button_right_linked }}   
+{{else}}   
+    {{~#if _secondPage~}}   
+        {{> components/pagination/pagination_button_left_linked }}    
+        <div class="px-20 py-10">   
+            <a href="{{this.firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>   
+            <span class="font-title">2</span>   
+            <span class="px-5 py-10 font-title">&hellip;</span>   
+            <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
+        </div>   
+        {{> components/pagination/pagination_button_right_linked }} 
+    {{else}}
+        {{> components/pagination/pagination_button_left_linked }}   
+        <div class="px-20 py-10">   
+            <a href="{{this.firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>   
+            <span class="py-10 pl-5 font-title">&hellip;</span>   
+            <span class="px-5 py-10 font-bold font-title">{{_currentPage}}</span>   
+            {{~#if _notLastPage~}}   
+                {{~#if notLastButOnePage~}}   
+                    <span class="font-title">&hellip;</span>   
+                {{~/if~}}   
+                <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
+            {{~/if~}}   
+        </div>   
+            {{~#if _notLastPage~}}   
+                {{> components/pagination/pagination_button_right_linked }}  
+            {{else}}   
+                {{> components/pagination/pagination_button_right }}  
+            {{~/if~}}   
+    {{~/if~}}   
+{{~/if~}}  

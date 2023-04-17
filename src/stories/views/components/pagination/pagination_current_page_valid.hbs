@@ -1,0 +1,25 @@
+{{~#if _moreThanOnePage~}}
+    <nav class="flex content-center py-10" role="navigation" aria-label="Paginierung">
+        {{~#if _onlyTwoPages~}}
+             {{> components/pagination/pagination_only_two_pages
+             _firstPage=_firstPage 
+             _totalPages=_totalPages 
+             _currentPage=_currentPage}}
+        {{else}}
+            {{~#if _onlyThreePages~}}
+                {{> components/pagination/pagination_only_three_pages 
+                 _firstPage=_firstPage
+                 _secondPage=_secondPage    
+                 _totalPages=_totalPages 
+                 _currentPage=_currentPage}}
+            {{else}}
+                {{> components/pagination/pagination_more_than_three_pages 
+                 _firstPage=_firstPage
+                 _secondPage=_secondPage   
+                 _notLastPage=_notLastPage 
+                 _totalPages=_totalPages 
+                 _currentPage=_currentPage}}
+            {{~/if~}}   
+        {{~/if~}}   
+    </nav>
+{{~/if~}}

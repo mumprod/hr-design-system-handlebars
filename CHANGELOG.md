@@ -1,3 +1,15 @@
+# v1.11.9 (Wed Apr 12 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2079 Adding pagination [#604](https://github.com/mumprod/hr-design-system-handlebars/pull/604) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.11.8 (Wed Apr 05 2023)
 
 #### 🐛 Bug Fix

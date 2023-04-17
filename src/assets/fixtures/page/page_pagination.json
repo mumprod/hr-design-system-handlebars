@@ -1,0 +1,100 @@
+{
+    "isMoreThanOnePage": true,
+    "isOnlyThreePages": false,
+    "isOnlyTwoPages": false,
+    "isFirstPage": true,
+    "isSecondPage": false,
+    "isNotLastPage": false,
+    "firstPageItemUrl":"page1",
+    "nextItemUrl":"page2",
+    "previousItemUrl":"empty",
+    "lastPageItemUrl":"page4",
+    "lastButOnePageItemUrl":"page1",
+    "totalPages": 4, 
+    "currentPage":"page1",
+    "currentPageIndex": 0,
+    "isCurrentPageValid": true,
+    "pageEntries":[
+        {   
+                "teaser_alternativ_100_serif":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif.json"
+                }, 
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                },
+                "teaser_alternativ_100_serif_link":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_link.json"
+                },
+                "teaser_alternativ_100_serif_live":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_live.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                }
+             },
+        {   
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                }, 
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                },
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                },
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                },
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                },
+                "teaser_alternativ_100_serif_download":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                }
+             }, 
+        {   
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                },
+                "teaser_alternativ_100_serif_audio":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                }
+             },
+        {   
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                },
+                "teaser_alternativ_100_serif_video":{
+                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                }
+             }  
+
+             ] 
+}
