@@ -145,7 +145,7 @@ export const parameters = {
     // Storybook a11y addon configuration
     a11y: {
         // the target DOM element
-        element: '#root',
+        element: '#storybook-root',
         // sets the execution mode for the addon
         manual: false,
     },
