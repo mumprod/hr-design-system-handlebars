@@ -1,17 +1,13 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/addon-docs'
 
 import ticker from './teaser_ticker.hbs'
-import tickerTeaser100 from '../fixtures/ticker_teaser_standard_100.json'
-
+import tickerTeaser100Standard from '../fixtures/ticker_teaser_standard_100.json'
 
 <Meta
     title="Komponenten/Teaser/Ticker"
-        parameters={{
-            chromatic: {
-                viewports: [360, 768, 1024]
-            },
-            layout: 'fullscreen',
-        }}
+    parameters={{
+        layout: '',
+    }}
     argTypes={{}}
     decorators={[
         (Story) => {
@@ -25,13 +21,13 @@ import tickerTeaser100 from '../fixtures/ticker_teaser_standard_100.json'
 export const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand =
+    let brand = 
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     return ticker({ brand, ...args })
 }
 
 <Preview withToolbar>
-    <Story name="Ticker Teaser 100" args={tickerTeaser100.logicItem}>
-        {Template.bind({})}
+    <Story name="Ticker Teaser 100" args={tickerTeaser100Standard.logicItem.includeModel} >
+        {Template.bind({})}    
     </Story>
 </Preview>

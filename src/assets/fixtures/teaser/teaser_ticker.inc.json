@@ -5,8 +5,8 @@
             "includePath": "components/teaser/ticker/teaser_ticker",
             "includeModel": {
                 "byline": "Byline",
-                "title": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen",
-                "topline": "Überglücklich, aber ohne Mama",
+                "title": "Eintracht: +++ Eintracht-Halbfinale terminiert +++ Frankfurter Gala in Barcelona jährt sich +++ Berichte: Aouar in Gesprächen mit AS Rom +++",
+                "topline": "",
                 "headingFontVariant": "serif",
                 "extendedTitle": "",
                 "teaserType": "standard",
@@ -19,9 +19,9 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
-                "hasByline": true,
+                "hasByline": false,
                 "teaserInfo": {
-                    "showTeaserInfo": true,
+                    "showTeaserInfo": false,
                     "showTeaserInfoSection": true,
                     "showTeaserInfoChannel": false,
                     "showTeaserInfoAll": false,
@@ -35,7 +35,7 @@
                     "@->replaceToken": [
                         {
                             "@->token": "image",
-                            "@->value": "rueckkehr-nach-abschiebung-102"
+                            "@->value": "sportschau-image-5708"
                         }
                     ]
                 },
@@ -90,17 +90,17 @@
                 "headlineTag": "h1",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
-                "shorttext": "Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre Mutter fehlt.",
+                "shorttext": "Hier bekommen Sie immer die neuesten Nachrichten über Eintracht Frankfurt.",
                 "hideBylineAndShorttext": false,
                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
-                "profiles": "Von Alf Haubitz und Alice Merton",
+                "profiles": "",
                 "teaserLead": {
                     "avDocument": "",
                     "image": ""
                 },
                 "geotag": [
                     {
-                        "title": "Wolfhagen"
+                        "title": "Frankfurt"
                     }
                 ],
                 "link": {
