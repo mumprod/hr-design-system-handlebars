@@ -4,7 +4,6 @@ import { withThemeByDataAttribute } from '@storybook/addon-styling'
 
 import hrDesignsystemDark from './HRDesignsystemDark'
 import hrDesignsystemLight from './HRDesignsystemLight'
-import { withThemeDecorator } from './withThemeDecorator'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
@@ -225,5 +224,3 @@ export const decorators = [
         attributeName: 'data-theme',
     }),
 ]
-
-//export const decorators = [withThemeDecorator]
