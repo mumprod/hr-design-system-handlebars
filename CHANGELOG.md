@@ -1,3 +1,16 @@
+# v1.11.10 (Mon Apr 17 2023)
+
+#### 🐛 Bug Fix
+
+- DPE 2227: JSON modellieren für Storybook [#605](https://github.com/mumprod/hr-design-system-handlebars/pull/605) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.11.9 (Wed Apr 12 2023)
 
 #### 🐛 Bug Fix
