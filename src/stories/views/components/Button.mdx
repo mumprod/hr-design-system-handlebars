@@ -1,0 +1,30 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as ButtonStories from './Button_.stories';
+
+import button from './Button.hbs'
+
+<Meta of={ButtonStories} />
+
+export const Template = ({ label, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return button({ label, ...args })
+}
+
+# Button
+
+Let's define a story for our `Button` component:
+
+<Canvas>
+  <Story of={ButtonStories.Primary} />
+</Canvas>
+
+<ArgsTable story="Primary" />
+
+## Button Secondary
+
+<Canvas>
+  <Story of={ButtonStories.Secondary} />
+</Canvas>
+
+## Test

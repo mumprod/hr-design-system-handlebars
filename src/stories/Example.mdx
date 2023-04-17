@@ -1,0 +1,56 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as ExampleStories from './Example.stories';
+
+import example from './example.hbs'
+
+<Meta of={ExampleStories} />
+
+export const Template = ({ label, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return example({ label, ...args })
+}
+
+# Name der Komponente
+
+## Beschreibung/Abstract
+
+Kurzer Beschreibungstext der die Komponente erklärt -> Penis
+
+<Canvas withToolbar>
+  <Story of={ExampleStories.Primary} />
+</Canvas>
+
+## Props
+
+Beschreibung der wichtigsten parameter, die für die Komponente benötigt werden
+
+<ArgsTable story="Primary" />
+
+## Usage/Verwendung
+
+ggf. Beschreibung wann und wie die Komponente eingesetzt wird in handlebars
+
+```html
+{{> components/teaser/components/teaser_heading fontVariant=this.headingFontVariant
+headlineTag=this.headlineTag label=this.label readMore=this.link.readMoreText.readMoreScreenreader
+size=this.teaserSize title=this.title topline=this.topline }}
+```
+
+## Dos/Doents
+
+<ComponentRules
+  rules={[
+       {
+           positive: {
+               component: <div>Get started</div>,
+               description:
+                   'Use 1 or 2 words, no longer than 4 words, with fewer than 20 characters including spaces.',
+           },
+           negative: {
+               component: <div>Get started and enjoy discount!</div>,
+               description: 'Don’t use punctuation marks such as periods or exclamation points.',
+           },
+       },
+   ]}
+/>

@@ -1,29 +1,42 @@
+import remarkGfm from 'remark-gfm'
 const path = require('path')
 const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
-
-module.exports = {
+const config = {
     staticDirs: ['../src/assets', '../src/assets/js'],
     stories: [
-        '../src/stories/Introduction.stories.mdx',
-        '../src/**/*.stories.mdx',
+        '../src/stories/Introduction.mdx',
+        '../src/**/*.mdx',
         '../src/**/*.stories.@(js|jsx|ts|tsx)',
     ],
     addons: [
         '@storybook/addon-links',
-        '@storybook/addon-essentials',
         {
-            name: '@storybook/addon-postcss',
+            name: '@storybook/addon-essentials',
             options: {
-                postcssLoaderOptions: {
+                docs: false,
+            },
+        },
+        '@storybook/addon-a11y',
+        {
+            name: '@storybook/addon-styling',
+            options: {
+                postCss: {
                     implementation: require('postcss'),
                 },
             },
         },
-        '@storybook/addon-a11y',
-        'storybook-conditional-toolbar-selector',
+        {
+            name: '@storybook/addon-docs',
+            options: {
+                mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        remarkPlugins: [remarkGfm],
+                    },
+                },
+            },
+        },
     ],
-
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
         // You can change the configuration based on that.
@@ -32,9 +45,11 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             scripts: path.resolve(__dirname, '../scripts'),
+            handlebars$: path.resolve(__dirname, '../node_modules/handlebars/dist/handlebars.js'),
             components: path.resolve(__dirname, '../src/stories/views/components'),
             base: path.resolve(__dirname, '../src/stories/views/base'),
             tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),
+            tailwindConfig$: path.resolve(__dirname, '../tailwind.config.js'),
             hrQuery$: path.resolve(__dirname, '../src/stories/views/generic/hrQuery.subfeature.js'),
             initializer$: path.resolve(
                 __dirname,
@@ -45,7 +60,6 @@ module.exports = {
                 '../build/webpack/feature-loader/initializer/loader.js'
             ),
         }
-
         config.module.rules.push(
             {
                 test: /\.hbs$/,
@@ -92,52 +106,12 @@ module.exports = {
                 ],
             }
         )
-
         config.plugins.push(
             new FlatContextPlugin(
                 '/feature',
                 path.resolve(__dirname, '../src/stories/views/'),
                 /\.feature\.js$/
-            ),
-            {
-                apply: (compiler) => {
-                    compiler.hooks.afterCompile.tap('UpdateTailwindPlugin', (compilation) => {
-                        if (
-                            undefined != compilation.compiler.watchFileSystem &&
-                            Object.keys(compilation.compiler.watchFileSystem.watcher.mtimes)
-                                .length > 0
-                        ) {
-                            if (
-                                !Object.keys(
-                                    compilation.compiler.watchFileSystem.watcher.mtimes
-                                ).some((value) => value.includes('tailwind.css'))
-                            ) {
-                                fs.readFile(
-                                    path.resolve(__dirname, '../src/assets/tailwind.css'),
-                                    'utf8',
-                                    (err, data) => {
-                                        if (err) {
-                                            console.error(err)
-                                            return
-                                        }
-                                        fs.writeFile(
-                                            path.resolve(__dirname, '../src/assets/tailwind.css'),
-                                            data,
-                                            (err) => {
-                                                if (err) {
-                                                    console.error(err)
-                                                    return
-                                                }
-                                                //file written successfully
-                                            }
-                                        )
-                                    }
-                                )
-                            }
-                        }
-                    })
-                },
-            }
+            )
         )
 
         config.stats = 'verbose'
@@ -145,4 +119,12 @@ module.exports = {
         // Return the altered config
         return config
     },
+    framework: {
+        name: '@storybook/html-webpack5',
+        options: {},
+    },
+    docs: {
+        autodocs: true,
+    },
 }
+export default config

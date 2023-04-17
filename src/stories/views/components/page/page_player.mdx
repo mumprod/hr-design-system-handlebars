@@ -1,0 +1,21 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as PagePlayerStories from './page_player.stories'
+
+<Meta of={PagePlayerStories} />
+
+# Page (gemischte Inhalte)
+
+Hier werden nur gemischte Inhalte betrachtet. Hierfür werden Daten-JSONS unterschiedlicher
+Ausprägung (Audio, Podcast) gemischt und herangezogen. Um einer Komponente diese spezifische Inhalte zu übergeben
+wird sie wie folgt aufgerufen:
+
+```html
+{{> components/teaser/teaser_standard this.teaser_standard_50_audio.logicItem.includeModel}} {{>
+components/teaser/podcast/podcast this.teaser_podcast_50.logicItem.includeModel}}
+```
+
+<Canvas>
+    <Story of={PagePlayerStories.PlayerInteraktion} />
+</Canvas>
+
+<ArgsTable story="Default" />
