@@ -1,43 +1,18 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
-import * as GroupStories from './group.stories';
-
-import groupTeaser from './group_teaser.hbs'
-import groupTeaserAccented from './group_teaser_accented.hbs'
-import teaserGroup100 from '../fixtures/teaser_group_100.json'
-import teaserGroupRelatedContent100 from '../fixtures/teaser_group_related_content_100.json'
-import teaserGroup100highlight from '../fixtures/teaser_group_100_highlight.json'
-import teaserGroup100highlight2 from '../fixtures/teaser_group_100_highlight_2.json'
-
-import teaserGroup100contentnav from '../fixtures/teaser_group_100_contentnav.json'
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as GroupStories from './group.stories'
 
 <Meta of={GroupStories} />
-
-export const groupTeaserTemplate = ({ text, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return groupTeaser({ text, ...args })
-}
-
-export const groupTeaserAccentedTemplate = ({ text, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return groupTeaserAccented({ text, ...args })
-}
 
 # Button
 
 Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
 
 <Canvas withToolbar>
-  <Story of={GroupStories.$100GruppeMitUberschrift} />
-
-  <Story of={GroupStories.$100GruppeMitUberschriftHighlight1} />
-
-  <Story of={GroupStories.$100GruppeMitUberschriftHighlight2} />
-
-  <Story of={GroupStories.$100GruppeMitContentNavigationAufklapp} />
-
-  <Story of={GroupStories.$100GruppeMitRelatedContent} />
+    <Story of={GroupStories.$100GruppeMitUberschrift} />
+    <Story of={GroupStories.$100GruppeMitUberschriftHighlight1} />
+    <Story of={GroupStories.$100GruppeMitUberschriftHighlight2} />
+    <Story of={GroupStories.$100GruppeMitContentNavigationAufklapp} />
+    <Story of={GroupStories.$100GruppeMitRelatedContent} />
 </Canvas>
 
 <ArgsTable story="main" />

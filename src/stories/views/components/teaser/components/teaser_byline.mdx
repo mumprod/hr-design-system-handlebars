@@ -1,15 +1,7 @@
-import { ArgsTable, Meta, Story, Preview } from '@storybook/blocks'
-import byline from './teaser_byline.hbs'
-import teaserWithoutComments from '../fixtures/teaser_standard_hero_serif.json'
-import teaserWithComments from '../fixtures/teaser_standard_hero_serif_comments.json'
-import teaserWithoutTeaserinfo from '../fixtures/teaser_comments_without_teaserinfo.json'
-import * as TeaserBylineStories from './teaser_byline.stories';
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserBylineStories from './teaser_byline.stories'
 
 <Meta of={TeaserBylineStories} />
-
-export const Template = ({ ...args }) => {
-    return byline({ ...args })
-}
 
 # Byline
 
@@ -18,24 +10,21 @@ export const Template = ({ ...args }) => {
 In der Byline-Komponente werden folgende Teaser-Zusatzinformationen angezeigt:
 
 <ul>
-  <li>
-    <b>Datum</b> (mit oder ohne Uhrzeit)
-  </li>
-
-  <li>
-    <b>Strukturknoten</b> (Rubrik)
-  </li>
-
-  <li>
-    <b>Autor(en)</b>
-  </li>
-
-  <li>
-    <b>Link zu den Kommentaren des Artikels</b> (mit aktueller Kommentar-Anzahl)
-  </li>
+    <li>
+        <b>Datum</b> (mit oder ohne Uhrzeit)
+    </li>
+    <li>
+        <b>Strukturknoten</b> (Rubrik)
+    </li>
+    <li>
+        <b>Autor(en)</b>
+    </li>
+    <li>
+        <b>Link zu den Kommentaren des Artikels</b> (mit aktueller Kommentar-Anzahl)
+    </li>
 </ul>
 
-Alle Informationen sind optional. Der Kommentar-Link wird per SSI eingebunden und ist in components/teaser/components/teaser\_comments.hbs implementiert.
+Alle Informationen sind optional. Der Kommentar-Link wird per SSI eingebunden und ist in components/teaser/components/teaser_comments.hbs implementiert.
 
 ## Sub-Komponenten
 
@@ -56,49 +45,39 @@ Die Byline-Komponente inkludiert folgende Komponenten:
 Die Byline-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
 
 <ul>
-  <li>
-    <b>teaserInfo</b>
-  </li>
-
-  <li>
-    <b>teaserInfo.showTeaserInfo</b>
-  </li>
-
-  <li>
-    <b>teaserInfo.showTeaserInfoDate</b>
-  </li>
-
-  <li>
-    <b>teaserInfo.showTeaserInfoDateTime</b>
-  </li>
-
-  <li>
-    <b>teaserInfo.showTeaserInfoSection</b>
-  </li>
-
-  <li>
-    <b>teaserDate</b>
-  </li>
-
-  <li>
-    <b>teaserDate.htmlDateTime</b>
-  </li>
-
-  <li>
-    <b>teaserDate.date</b>
-  </li>
-
-  <li>
-    <b>teaserDate.dateSeparatorTime</b>
-  </li>
-
-  <li>
-    <b>documentSection</b>
-  </li>
-
-  <li>
-    <b>profiles</b>
-  </li>
+    <li>
+        <b>teaserInfo</b>
+    </li>
+    <li>
+        <b>teaserInfo.showTeaserInfo</b>
+    </li>
+    <li>
+        <b>teaserInfo.showTeaserInfoDate</b>
+    </li>
+    <li>
+        <b>teaserInfo.showTeaserInfoDateTime</b>
+    </li>
+    <li>
+        <b>teaserInfo.showTeaserInfoSection</b>
+    </li>
+    <li>
+        <b>teaserDate</b>
+    </li>
+    <li>
+        <b>teaserDate.htmlDateTime</b>
+    </li>
+    <li>
+        <b>teaserDate.date</b>
+    </li>
+    <li>
+        <b>teaserDate.dateSeparatorTime</b>
+    </li>
+    <li>
+        <b>documentSection</b>
+    </li>
+    <li>
+        <b>profiles</b>
+    </li>
 </ul>
 
 ## Verwendung
@@ -110,11 +89,9 @@ Die Byline-Komponente wird in handlebars wie folgt eingebaut:
 ```
 
 <Canvas withToolbar>
-  <Story of={TeaserBylineStories.Default} />
-
-  <Story of={TeaserBylineStories.WithComments} />
-
-  <Story of={TeaserBylineStories.CommentsOnly} />
+    <Story of={TeaserBylineStories.Default} />
+    <Story of={TeaserBylineStories.WithComments} />
+    <Story of={TeaserBylineStories.CommentsOnly} />
 </Canvas>
 
 <ArgsTable story="default" />

@@ -1,20 +1,10 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
 import { resetComponents } from '@storybook/components'
-import subscribeButtonJson from '../fixtures/teaser_podcast.json'
 import * as PodcastSubscribeButtonStories from './podcast_subscribe_button.stories'
-
-import subscribeButton from './podcast_subscribe_button.hbs'
 
 <Meta of={PodcastSubscribeButtonStories} />
 
-export const Template = ({ label, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return subscribeButton({ label, ...args })
-}
-
 <Canvas withToolbar>
-  <Story of={PodcastSubscribeButtonStories.SubscribeButtonClose} />
-
-  <Story of={PodcastSubscribeButtonStories.SubscribeButtonOpen} />
+    <Story of={PodcastSubscribeButtonStories.SubscribeButtonClose} />
+    <Story of={PodcastSubscribeButtonStories.SubscribeButtonOpen} />
 </Canvas>

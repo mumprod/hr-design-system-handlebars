@@ -1,15 +1,7 @@
-import { ArgsTable, Meta, Story, Preview } from '@storybook/blocks'
-import * as TeaserToplineStories from './teaser_topline.stories';
-
-import topline from './teaser_topline.hbs'
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserToplineStories from './teaser_topline.stories'
 
 <Meta of={TeaserToplineStories} />
-
-export const Template = ({ _text, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<span>${topline}</span>`;
-    return topline({ _text, ...args })
-}
 
 # Topline
 
@@ -21,19 +13,7 @@ In der Topline-Komponente wird die Dachzeile des Artikels dargestellt.
 
 Die Topline-Komponente benötigt folgende Parameter:
 
-<ul>
-  <li>
-    <b>teaserType</b>
-  </li>
-
-  <li>
-    <b>readMore</b>
-  </li>
-
-  <li>
-    <b>text</b>
-  </li>
-</ul>
+<ArgsTable story="default" />
 
 ## Verwendung
 
@@ -45,7 +25,5 @@ teaserType=teaserType}}
 ```
 
 <Canvas withToolbar>
-  <Story of={TeaserToplineStories.Default} />
+    <Story of={TeaserToplineStories.Default} />
 </Canvas>
-
-<ArgsTable story="default" />

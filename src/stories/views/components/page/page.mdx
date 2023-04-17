@@ -1,21 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
-import page from './page.hbs'
-import {
-    NavigationDataWithTeaser,
-    NavigationDataWithTeaser2,
-    NavigationDataWithTeaser3,
-} from './page.data.js'
-import * as PageStories from './page.stories';
+import * as PageStories from './page.stories'
 
 <Meta of={PageStories} />
-
-export const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
 
 # Page (allgemein)
 
@@ -72,12 +58,12 @@ Dann folgen die Inhalte in diesem Fall Teaser, die über das Grid-Layout angeord
 liegen unter `components/teaser/` und lauten auf `teaser_` und dessen Ausprägung:
 
 <ul>
-  <li>standard (Standard => Bild oben, Text darunter)</li>
-  <li>alternativ (Alternativ => Bild links, Text rechts)</li>
-  <li>event\_calendar (Event-Kalender)</li>
-  <li>poster (Poster => Text auf Bild)</li>
-  <li>indextext (Nur Text)</li>
-  <li>stage (Stage => Sonderform über die ganze Seite)</li>
+    <li>standard (Standard => Bild oben, Text darunter)</li>
+    <li>alternativ (Alternativ => Bild links, Text rechts)</li>
+    <li>event\_calendar (Event-Kalender)</li>
+    <li>poster (Poster => Text auf Bild)</li>
+    <li>indextext (Nur Text)</li>
+    <li>stage (Stage => Sonderform über die ganze Seite)</li>
 </ul>
 
 Auch hier bestimmen die Daten-JSONS, das Bild und den Text. Die Daten-JSONS hierfür liegen
@@ -110,15 +96,15 @@ Die Ausformung der Teaser basiert immer auf dem selben Daten-JSON, d.h. Bild und
 Teaser-Typ variieren.
 
 <Canvas withToolbar>
-  <Story of={PageStories.Default} />
+    <Story of={PageStories.Default} />
 </Canvas>
 
 <Canvas>
-  <Story of={PageStories.MitWarnung} />
+    <Story of={PageStories.MitWarnung} />
 </Canvas>
 
 <Canvas>
-  <Story of={PageStories.MitSubnavigation} />
+    <Story of={PageStories.MitSubnavigation} />
 </Canvas>
 
 <ArgsTable story="Default" />

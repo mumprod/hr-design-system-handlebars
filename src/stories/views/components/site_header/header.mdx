@@ -1,29 +1,14 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import navigation from './header.hbs'
-import brandnav from './brand_navigation/brand_navigation.hbs'
-import JsonData from './fixtures/site_header_default.json'
-import JsonData2 from './fixtures/site_header_mit_warnung.json'
-import JsonData3 from './fixtures/site_header_mit_submenu.json'
-import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json'
-import * as HeaderStories from './header.stories';
+import * as HeaderStories from './header.stories'
 
 <Meta of={HeaderStories} />
-
-export const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return navigation({ brand, ...args })
-}
 
 # Header
 
 [Frameworks](#frameworks) - [Varianten](#varianten) - [Scrollverhalten](#scrollverhalten) - [Templates & Codes](#templates) - [Sub-Komponenten](#subkomponenten)
 
 <Canvas>
-  <Story of={HeaderStories.Default} />
+    <Story of={HeaderStories.Default} />
 </Canvas>
 
 ## Beschreibung
@@ -31,21 +16,18 @@ export const Template = (args, { globals: { customConditionalToolbar } }) => {
 Die <b>Header</b>-Komponente ist die Haupt-Navigation der Hessenschau. Sie ist in der Komponente 'Page' eingebunden und besteht grundsätzlich aus 4 Subkomponenten:
 
 <ul>
-  <li>
-    components/site\_header/<b>anchor\_navigation</b>
-  </li>
-
-  <li>
-    components/site\_header/<b>brand\_navigation</b>
-  </li>
-
-  <li>
-    components/site\_header/<b>service\_navigation</b>
-  </li>
-
-  <li>
-    components/site\_header/<b>section\_navigation</b>
-  </li>
+    <li>
+        components/site\_header/<b>anchor\_navigation</b>
+    </li>
+    <li>
+        components/site\_header/<b>brand\_navigation</b>
+    </li>
+    <li>
+        components/site\_header/<b>service\_navigation</b>
+    </li>
+    <li>
+        components/site\_header/<b>section\_navigation</b>
+    </li>
 </ul>
 
 <br />
@@ -60,7 +42,7 @@ Die Header-Komponente wird in handlebars wie folgt eingebaut:
 
 ### Frameworks
 
-Die wesentlichen Funktionen und Features der Navigation sind mit dem Javascript-Framework [**Alpine.js**](https://alpinejs.dev/) realisiert. Alpine regelt u.a. die Sichtbarkeit der einzelnen Elemente und ist für die Interaktivität der Navigation zuständig. Alle Codes, die in der Header-Komponente Alpine.js direkt betreffen, sind in der Datei **"header\_alpine.js** ausgelagert. Hier finden sich global verwendete dynamische Variablen (via Alpine.store) und zu verwendende Kontexte (via Alpine.data).
+Die wesentlichen Funktionen und Features der Navigation sind mit dem Javascript-Framework [**Alpine.js**](https://alpinejs.dev/) realisiert. Alpine regelt u.a. die Sichtbarkeit der einzelnen Elemente und ist für die Interaktivität der Navigation zuständig. Alle Codes, die in der Header-Komponente Alpine.js direkt betreffen, sind in der Datei **"header_alpine.js** ausgelagert. Hier finden sich global verwendete dynamische Variablen (via Alpine.store) und zu verwendende Kontexte (via Alpine.data).
 
 Für das CSS wird das Framework [**TailwindCSS**](https://www.tailwindcss.com) verwendet.
 
@@ -76,7 +58,7 @@ Desktop:
 
 <br />
 
-***
+---
 
 Tablet:
 
@@ -84,7 +66,7 @@ Tablet:
 
 <br />
 
-***
+---
 
 Mobil:
 
@@ -92,7 +74,7 @@ Mobil:
 
 <br />
 
-***
+---
 
 <br />
 
@@ -105,10 +87,10 @@ Mobil:
 Navigation mit zusätzlichem Service-Item:{' '}
 
 <Canvas>
-  <Story of={HeaderStories.MitWarnung} />
+    <Story of={HeaderStories.MitWarnung} />
 </Canvas>
 
-***
+---
 
 <br />
 
@@ -121,10 +103,10 @@ Navigation mit zusätzlichem Service-Item:{' '}
 Navigation mit zusätzlicher Subnavigation:{' '}
 
 <Canvas>
-  <Story of={HeaderStories.MitSubnavigation} />
+    <Story of={HeaderStories.MitSubnavigation} />
 </Canvas>
 
-***
+---
 
 <br />
 
@@ -137,7 +119,7 @@ Navigation mit zusätzlicher Subnavigation:{' '}
 Navigation mit Top Topics:{' '}
 
 <Canvas>
-  <Story of={HeaderStories.MitTopTopics} />
+    <Story of={HeaderStories.MitTopTopics} />
 </Canvas>
 
 <br />
@@ -170,7 +152,7 @@ Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Vi
 
 <br />
 
-***
+---
 
 **Tablet > 0% / \< 50%:**
 
@@ -184,7 +166,7 @@ Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Vi
 
 <br />
 
-***
+---
 
 **Mobil >0% / \< 50%:**
 
@@ -198,7 +180,7 @@ Es gibt 3 Scrollpositionen, die relevant sind: 0%, 50% und 90%. Die Höhe des Vi
 
 <br />
 
-***
+---
 
 <br />
 
@@ -248,9 +230,9 @@ init(){
 }
 ```
 
-*Beispielhaft wird hier eine der weiteren Hilfsfunktionen aus dem mainNavigationHandler() erklärt:*
+_Beispielhaft wird hier eine der weiteren Hilfsfunktionen aus dem mainNavigationHandler() erklärt:_
 
-Innerhalb des serviceNavWrappers wird mit Alpine die Function "shouldServiceNavBeHidden()" zum Setzen der korrekten CSS-Klassen via Ternary Expression verwendet: Wenn shouldServiceNavBeHidden() den Wert '*true*' zurückgibt, wird die CSS-Klasse "-mt-40" gesetzt, welche den Wrapper mit einem negativen Margin von -10rem aus dem Viewport schiebt:
+Innerhalb des serviceNavWrappers wird mit Alpine die Function "shouldServiceNavBeHidden()" zum Setzen der korrekten CSS-Klassen via Ternary Expression verwendet: Wenn shouldServiceNavBeHidden() den Wert '_true_' zurückgibt, wird die CSS-Klasse "-mt-40" gesetzt, welche den Wrapper mit einem negativen Margin von -10rem aus dem Viewport schiebt:
 
 **header.hbs:**
 
@@ -259,9 +241,9 @@ Innerhalb des serviceNavWrappers wird mit Alpine die Function "shouldServiceNavB
     :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
 ```
 
-WENN *percent > 90* ist, der *Viewport NICHT Desktop* ist, die *Scrollrichtung nach unten* ist und es *kein offenes Burger-Menu* gibt, sendet die Funktion *true* als Rückgabewert zurück. Wenn die Seite *via JS* (z.B. durch einen Ankerlink) gescrollt wird, verstecke die ServiceNavigation unter den gleichen Bedingungen, aber *unabhängig von der Scrollrichtung*:
+WENN _percent > 90_ ist, der _Viewport NICHT Desktop_ ist, die _Scrollrichtung nach unten_ ist und es _kein offenes Burger-Menu_ gibt, sendet die Funktion _true_ als Rückgabewert zurück. Wenn die Seite _via JS_ (z.B. durch einen Ankerlink) gescrollt wird, verstecke die ServiceNavigation unter den gleichen Bedingungen, aber _unabhängig von der Scrollrichtung_:
 
-**header\_alpine.js:**
+**header_alpine.js:**
 
 ```js
 shouldServiceNavBeHidden() {
@@ -273,9 +255,9 @@ shouldServiceNavBeHidden() {
 }
 ```
 
-***
+---
 
-Weiterhin sind in der Datei **header\_alpine.js** weitere Alpine.data-Kontexte für das Overlay, die Dropdown-Menus und die Flyouts hinterlegt.
+Weiterhin sind in der Datei **header_alpine.js** weitere Alpine.data-Kontexte für das Overlay, die Dropdown-Menus und die Flyouts hinterlegt.
 Für die Erklärung können die Kommentare direkt in der Datei herangezogen werden.
 
 <a href="#top">Back to top</a>
@@ -292,9 +274,9 @@ Für die Erklärung können die Kommentare direkt in der Datei herangezogen werd
 
 <br />
 
-**anchor\_navigation.hbs** Inkludiert folgende Subkomponenten:
+**anchor_navigation.hbs** Inkludiert folgende Subkomponenten:
 
-*   featurebox\_anchor.hbs
+-   featurebox_anchor.hbs
 
 In dieser (nicht sichtbaren) Sub-Komponente werden Anchorlinks zu den Teilbereichen der Navigation bereitgestellt, um sie für Screen-Reader direkt erreichbar zu machen.
 
@@ -304,7 +286,7 @@ In dieser (nicht sichtbaren) Sub-Komponente werden Anchorlinks zu den Teilbereic
 <div id="anchorNavWrapper" class="hidden">{{> components/site_header/anchor_navigation}}</div>
 ```
 
-***
+---
 
 <br />
 
@@ -312,9 +294,9 @@ In dieser (nicht sichtbaren) Sub-Komponente werden Anchorlinks zu den Teilbereic
 
 <br />
 
-**brand\_navigation.hbs** inkludiert folgende Subkomponenten:
+**brand_navigation.hbs** inkludiert folgende Subkomponenten:
 
-*   brand\_navigation\_item
+-   brand_navigation_item
 
 Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den einzelnen Angeboten des HR zur Verfügung.
 
@@ -327,7 +309,7 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 </div>
 ```
 
-***
+---
 
 <br />
 
@@ -335,20 +317,20 @@ Die Brand-Navigation stellt im obersten Bereich des Headers direkte Links zu den
 
 <br />
 
-**service\_navigation.hbs** inkludiert folgende Subkomponenten:
+**service_navigation.hbs** inkludiert folgende Subkomponenten:
 
-*   service\_logo.hbs
-*   service\_list.hbs
-*   service\_navigation\_item.hbs
-*   navigation\_flyout.hbs
-*   navigation\_search.hbs
-*   burger.hbs
+-   service_logo.hbs
+-   service_list.hbs
+-   service_navigation_item.hbs
+-   navigation_flyout.hbs
+-   navigation_search.hbs
+-   burger.hbs
     <br />
 
-Die Service-Navigation beinhaltet das Logo **(service\_logo.hbs)**, die Service-List **(service\_list.hbs)** und die Suchfunktion **(navigation\_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br />
+Die Service-Navigation beinhaltet das Logo **(service_logo.hbs)**, die Service-List **(service_list.hbs)** und die Suchfunktion **(navigation_search.hbs)**, sowie bei mobilen Viewports das Burger-Menu **(burger.hbs)**, welches die mobile Variante der **SectionNavigation** darstellt.<br />
 Die gesamte ServiceNavigation liegt innerhalb des **"serviceNavWrapper"**. Bei mobilem Viewport wird dieser Wrapper beim Scrollen der Seite mit Hilfe der Funktion **"shouldServiceNavBeHidden()"** ein- bzw. ausgeblendet.
 
-Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service\_list.hbs)** , die Komponente für die Suchfunktion **(navigation\_search.hbs)** sowie für mobil/Tablet das Burger-Menu **(burger.hbs)**.
+Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die serviceNavHeadline, einen Wrapper für das Logo sowie den **"serviceItemsWrapper"** beinhaltet. In diesem wiederum liegt die Service-List **(service_list.hbs)** , die Komponente für die Suchfunktion **(navigation_search.hbs)** sowie für mobil/Tablet das Burger-Menu **(burger.hbs)**.
 
 **header.hbs:**
 
@@ -390,7 +372,7 @@ Innerhalb des Hauptwrappers liegt der **"serviceNavMainContainer"** welcher die 
 </div>
 ```
 
-Innerhalb der Service-List Komponente **(service\_list.hbs)** befinden sich die Service-Navigation-Items. Ein Click auf ein Item öffnet entweder direkt eine Zielseite oder ein Flyout mit Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen. Standard-Items sind "Video/Podcast", "Verkehr" und "Wetter". Bei Unwetterwarnungen wird zusätzlich ein "Warnung"-Item angezeigt.
+Innerhalb der Service-List Komponente **(service_list.hbs)** befinden sich die Service-Navigation-Items. Ein Click auf ein Item öffnet entweder direkt eine Zielseite oder ein Flyout mit Links zu den Unterseiten des jeweiligen Strukturknotens/Bereichs oder externen Zielen. Standard-Items sind "Video/Podcast", "Verkehr" und "Wetter". Bei Unwetterwarnungen wird zusätzlich ein "Warnung"-Item angezeigt.
 Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeHidden()"** je nach Scrollposition die Service-Icons ausgeblendet werden.
 
 <br />
@@ -405,7 +387,7 @@ Service-Navigation Flyout Desktop:
 
 <br />
 
-***
+---
 
 <br />
 
@@ -427,16 +409,16 @@ Service-Navigation Flyout Tablet/Mobil:
 
 <br />
 
-***
+---
 
 <br />
 
 <b>Section Navigation</b>
 
-**section\_navigation.hbs** inkludiert folgende Subkomponenten:
+**section_navigation.hbs** inkludiert folgende Subkomponenten:
 
-*   section\_navigation\_item.hbs
-*   navigation\_flyout.hbs
+-   section_navigation_item.hbs
+-   navigation_flyout.hbs
 
 <br />
 
@@ -474,7 +456,7 @@ dargstellt:
 
 <br />{' '}
 
-***
+---
 
 <br />
 

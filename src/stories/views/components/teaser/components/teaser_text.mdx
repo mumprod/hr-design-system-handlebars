@@ -1,13 +1,7 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
-import * as TeaserTextStories from './teaser_text.stories';
-
-import teaserText from './teaser_text.hbs'
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserTextStories from './teaser_text.stories'
 
 <Meta of={TeaserTextStories} />
-
-export const Template = ({ _text, ...args }) => {
-    return teaserText({ _text, ...args })
-}
 
 # Teaser-Text
 
@@ -20,23 +14,23 @@ N/A
 ## Teaser-Text Hero
 
 <Canvas>
-  <Story of={TeaserTextStories.TeasertextHero} />
+    <Story of={TeaserTextStories.TeasertextHero} />
 </Canvas>
 
 ## Teaser-Text 50%
 
 <Canvas>
-  <Story of={TeaserTextStories.Teasertext50} />
+    <Story of={TeaserTextStories.Teasertext50} />
 </Canvas>
 
 ## Teaser-Text 33%
 
 <Canvas>
-  <Story of={TeaserTextStories.Teasertext33} />
+    <Story of={TeaserTextStories.Teasertext33} />
 </Canvas>
 
 ## Teaser-Text 25%
 
 <Canvas>
-  <Story of={TeaserTextStories.Teasertext25} />
+    <Story of={TeaserTextStories.Teasertext25} />
 </Canvas>
