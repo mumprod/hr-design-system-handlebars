@@ -1,0 +1,25 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as ButtonLabelStories from './button_label.stories'
+
+<Meta of={ButtonLabelStories} />
+
+# Button-Label
+
+Die Komponente erzeugt den Text für die [Button-Komponente](?path=/docs/komponenten-buttons-button--spielplatz). Sie darf in einem Template
+ausschließlich als Subkomponente der Button-Komponente eingebunden werden.
+
+## Eigenschaften
+
+<ArgsTable story="Label" />
+
+## Verwendung
+
+Die Komponente wird wie in folgendem Codebeispiel gezeigt in einem Handlebar Template eingebunden.
+
+```handlebars
+{{> components/button/components/button_label _label="Button"}}
+```
+
+<Canvas withToolbar>
+    <Story of={ButtonLabelStories.Label} />
+</Canvas>

@@ -1,3 +1,85 @@
+# v1.11.10 (Mon Apr 17 2023)
+
+#### 🐛 Bug Fix
+
+- DPE 2227: JSON modellieren für Storybook [#605](https://github.com/mumprod/hr-design-system-handlebars/pull/605) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.11.9 (Wed Apr 12 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2079 Adding pagination [#604](https://github.com/mumprod/hr-design-system-handlebars/pull/604) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.11.8 (Wed Apr 05 2023)
+
+#### 🐛 Bug Fix
+
+- changed :class statement so text-white class is removed properly [#602](https://github.com/mumprod/hr-design-system-handlebars/pull/602) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.11.7 (Wed Apr 05 2023)
+
+#### 🐛 Bug Fix
+
+- - added empty parameters to Button components so parentScopeResolutio… [#600](https://github.com/mumprod/hr-design-system-handlebars/pull/600) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.11.6 (Mon Apr 03 2023)
+
+#### 🐛 Bug Fix
+
+- -set meta robots to no index [#601](https://github.com/mumprod/hr-design-system-handlebars/pull/601) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.11.5 (Wed Mar 29 2023)
+
+#### 🐛 Bug Fix
+
+- Topthemen: Mockup in Storybook DPE-1912 [#599](https://github.com/mumprod/hr-design-system-handlebars/pull/599) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 🏠 Internal
+
+- UPDATE: Updates storybook and all its dependencies [#596](https://github.com/mumprod/hr-design-system-handlebars/pull/596) ([@szuelch](https://github.com/szuelch))
+
+#### 📝 Documentation
+
+- DOC: Adds documentation for the installation and [#597](https://github.com/mumprod/hr-design-system-handlebars/pull/597) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.4 (Mon Mar 27 2023)
 
 #### 🐛 Bug Fix

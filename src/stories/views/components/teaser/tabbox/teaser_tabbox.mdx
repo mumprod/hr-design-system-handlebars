@@ -1,0 +1,10 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserTabboxStories from './teaser_tabbox.stories'
+
+import tabbox from './teaser_tabbox.hbs'
+
+<Meta of={TeaserTabboxStories} />
+
+<Canvas withToolbar>
+    <Story of={TeaserTabboxStories.Beispiel1} />
+</Canvas>

@@ -1,0 +1,17 @@
+<nav class="flex content-center py-10" role="navigation" aria-label="Paginierung">
+        {{> components/pagination/pagination_button_left }} 
+        <div class="px-20 py-10">
+            <a href="{{firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>
+            {{~#if _moreThanOnePage ~}}
+                {{~#unless _onlyTwoPages ~}}
+                    {{~#if _onlyThreePages ~}}
+                        <a href="{{lastButOnePageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>2</a>
+                    {{else}}
+                        <span class="px-5 py-10 font-title">&hellip;</span>
+                    {{~/if~}}
+                {{~/unless~}}
+                <a href="{{lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>
+            {{~/if~}}
+        </div>
+       {{> components/pagination/pagination_button_right }} 
+</nav>

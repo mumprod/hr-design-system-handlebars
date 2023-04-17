@@ -1,0 +1,35 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserIndextextStories from './teaser_indextext.stories'
+
+<Meta of={TeaserIndextextStories} />
+
+# Indextext-Teaser
+
+## Beschreibung
+
+## Props
+
+Die Indextext-Teaser-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
+
+-   title
+-   shorttext
+-   shorttext
+-   teaserSize
+-   teaserType
+
+## Verwendung
+
+Die Indextext-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_indextext}}
+```
+
+<Canvas withToolbar>
+    <Story of={TeaserIndextextStories.TextMitHintergrund100} />
+    <Story of={TeaserIndextextStories.TextMitBox100} />
+    <Story of={TeaserIndextextStories.HintergrundOrange100} />
+    <Story of={TeaserIndextextStories.TextMitHintergrund50} />
+</Canvas>
+
+<ArgsTable story="Text mit Hintergrund 100" />

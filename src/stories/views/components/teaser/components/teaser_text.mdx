@@ -1,0 +1,36 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserTextStories from './teaser_text.stories'
+
+<Meta of={TeaserTextStories} />
+
+# Teaser-Text
+
+Im Teaser folgt nach dem Heading der Text. Diesem beigefügt ein "Mehr"-Link oder ein Link auf eine externe Seite.
+
+# Teil-Komponenten
+
+N/A
+
+## Teaser-Text Hero
+
+<Canvas>
+    <Story of={TeaserTextStories.TeasertextHero} />
+</Canvas>
+
+## Teaser-Text 50%
+
+<Canvas>
+    <Story of={TeaserTextStories.Teasertext50} />
+</Canvas>
+
+## Teaser-Text 33%
+
+<Canvas>
+    <Story of={TeaserTextStories.Teasertext33} />
+</Canvas>
+
+## Teaser-Text 25%
+
+<Canvas>
+    <Story of={TeaserTextStories.Teasertext25} />
+</Canvas>

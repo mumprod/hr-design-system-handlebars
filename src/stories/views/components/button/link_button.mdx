@@ -1,0 +1,125 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as LinkButtonStories from './link_button.stories'
+
+<Meta of={LinkButtonStories} />
+
+# Link-Button
+
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
+
+## Übersicht
+
+Der Link-Button erlaubt es einen HTML-Link optisch wie einen Button aussehen zu lassen. Die Komponente sollte immer
+dann eingesetzt werden, wenn beim Klick auf die Schaltfläche eine neue Seite geöffnet werden soll.
+Beispiele hierfür sind die Schaltfläche am unteren Rand einer Tab-Box, die es
+ermöglicht auf eine Seite mit weiteren Inhalten zu kommen, die Schaltfläche innerhalb eines Cluster-Teasers, die auf eine Seite mit weiteren Beiträgen verlinkt
+oder die Schaltfläche innerhalb eines Poster-Teasers, die auf den konkreten Inhalt verlinkt.
+
+Die Link-Button-Komponente als solches ist sehr einfach gehalten. Sie stellt nur ein Grundgerüst (ein gestyltes HTML-Link Element) zur Verfügung.
+Alle Inhalte des Buttons, wie das [Label](?path=/docs/komponenten-buttons-komponenten-label--label) oder ein mögliches
+[Icon](?path=/docs/komponenten-buttons-komponenten-icon--icon), können flexibel durch Subkomponenten hinzugefügt werden.
+
+<Canvas>
+    <Story of={LinkButtonStories.Spielplatz} />
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Spielplatz" />
+
+## Varianten
+
+Auf einer Inhaltsseite kann mehr als ein Button platziert werden. Um wichtige von weniger wichtigen Aktionen
+unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen von Buttons zu verwenden.
+
+### Größen
+
+<Canvas withToolbar>
+    <Story of={LinkButtonStories.ButtonLg} />
+    <Story of={LinkButtonStories.ButtonMd} />
+    <Story of={LinkButtonStories.ButtonSm} />
+</Canvas>
+
+### Button-Arten
+
+<Canvas withToolbar>
+    <Story of={LinkButtonStories.ButtonPrimary} />
+    <Story of={LinkButtonStories.ButtonSecondary} />
+    <Story of={LinkButtonStories.ButtonTertiary} />
+</Canvas>
+
+### Button mit Icon <a id="button-icon" />
+
+<Canvas withToolbar>
+    <Story of={LinkButtonStories.ButtonIconRechts} />
+    <Story of={LinkButtonStories.ButtonIconLinks} />
+</Canvas>
+
+## Verwendung
+
+Ein Link-Button wird mit der Handlebar Komponente `link_button` eingebunden. Wie einleitend schon beschrieben, stellt diese
+Komponente lediglich das Grundgerüst eines Buttons dar. Die Beschriftung und/oder ein Icon müssen mit Subkomponenten hinzugefügt
+werden.
+
+<div class="bg-blue-200 !mt-4 p-4">
+  <h4 class="!text-stone-950 font-bold">Hinweis</h4>
+
+  <p>
+    Sowohl die Link-Button-Komponente als auch die Subkomponenten Button-Label und Button-Icon
+    sind standardmäßig bereits gestyled. Das setzen von zusätzlichen Style Klassen über den
+    Parameter <pre class="inline">\_css</pre> ist zwar bei jeder Komponente möglich, sollte aber
+    nur dann gemacht werden, wenn es gar nicht anders geht.
+  </p>
+</div>
+
+### Button mit Text
+
+Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+```handlebars
+{{#> components/button/link_button _size="lg"}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/link_button}}
+```
+
+### Button mit Text und Icon
+
+Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben stehenden Icon](#button-mit-icon-a-idbutton-icon) wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+```handlebars
+{{#> components/button/link_button _size="lg"}}
+    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
+{{/components/button/link_button}}
+```
+
+Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
+
+```handlebars
+{{#> components/button/link_button _size="lg"}}
+    {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/link_button}}
+```
+
+Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
+
+### Button auf farbigem Hintergund
+
+Soll ein Link-Button auf einem farbigen Hintergrund (bietet sich vor allem bei dunklen Hintergründen an) genutzt werden, kann durch setzen des Parameters
+`_onBackground` eine auf dunkle Hintergründe abgestimmte kontrastreichere optische Variante der Button aktiviert werden.
+
+<Canvas withToolbar>
+    <Story of={LinkButtonStories.ButtonPrimaryAufFarbigemHintergrund} />
+    <Story of={LinkButtonStories.ButtonSecondaryAufFarbigemHintergrund} />
+    <Story of={LinkButtonStories.ButtonTertiaryAufFarbigemHintergrund} />
+</Canvas>
+
+```handlebars
+{{#> components/button/link_button _size="lg" _onBackground}}
+    {{> components/button/components/button_label _label="Button"}}
+{{/components/button/link_button}}
+```

@@ -1,0 +1,18 @@
+{{~#if this.isCurrentPageValid ~}}
+    {{> components/pagination/pagination_current_page_valid 
+    _moreThanOnePage=this.isMoreThanOnePage
+    _firstPage=this.isFirstPage
+    _secondPage=this.isSecondPage 
+    _notLastPage=this.isNotLastPage   
+    _onlyTwoPages=this.isOnlyTwoPages 
+    _onlyThreePages=this.isOnlyThreePages 
+    _totalPages=this.totalPages 
+    _currentPage=this.currentPage}}
+{{else}}
+    {{> components/pagination/pagination_current_page_invalid 
+    _moreThanOnePage=this.isMoreThanOnePage 
+    _onlyTwoPages=this.isOnlyTwoPages 
+    _onlyThreePages=this.isOnlyThreePages 
+    _totalPages=this.totalPages 
+    _currentPage=this.currentPages}}
+{{~/if~}}
