@@ -11,7 +11,13 @@ const config = {
     ],
     addons: [
         '@storybook/addon-links',
-        '@storybook/addon-essentials',
+        {
+            name: '@storybook/addon-essentials',
+            options: {
+                docs: false,
+            },
+        },
+        '@storybook/addon-a11y',
         {
             name: '@storybook/addon-styling',
             options: {
@@ -30,7 +36,6 @@ const config = {
                 },
             },
         },
-        '@storybook/addon-a11y',
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
