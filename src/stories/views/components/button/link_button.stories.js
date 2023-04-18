@@ -1,19 +1,15 @@
 import handlebars from 'handlebars'
 
-const buttonWithLabelTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+const buttonWithLabelTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/link_button}}
         {{> components/button/components/button_label}}
     {{/components/button/link_button}}
   `)
-    return hbsTemplate({ brand, ...args })
+    return hbsTemplate({ ...args })
 }
 
-const buttonWithLabelTemplateOnBackground = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+const buttonWithLabelTemplateOnBackground = (args) => {
     let hbsTemplate = handlebars.compile(`
     <div class="bg-primary p-4">
         {{#> components/button/link_button}}
@@ -21,31 +17,27 @@ const buttonWithLabelTemplateOnBackground = (args, { globals: { customConditiona
         {{/components/button/link_button}}
     </div>
   `)
-    return hbsTemplate({ brand, ...args })
+    return hbsTemplate({ ...args })
 }
 
-const buttonWithLabelAndIconRightTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+const buttonWithLabelAndIconRightTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/link_button}}
         {{> components/button/components/button_label}}
         {{> components/button/components/button_icon }}
     {{/components/button/link_button}}
   `)
-    return hbsTemplate({ brand, ...args })
+    return hbsTemplate({ ...args })
 }
 
-const buttonWithLabelAndIconLeftTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+const buttonWithLabelAndIconLeftTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/link_button~}}
         {{> components/button/components/button_icon }}
         {{> components/button/components/button_label}}
     {{~/components/button/link_button}}
   `)
-    return hbsTemplate({ brand, ...args })
+    return hbsTemplate({ ...args })
 }
 
 export default {
