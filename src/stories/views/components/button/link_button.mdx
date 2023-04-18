@@ -37,7 +37,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Größen
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={LinkButtonStories.ButtonLg} />
     <Story of={LinkButtonStories.ButtonMd} />
     <Story of={LinkButtonStories.ButtonSm} />
@@ -45,7 +45,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Button-Arten
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={LinkButtonStories.ButtonPrimary} />
     <Story of={LinkButtonStories.ButtonSecondary} />
     <Story of={LinkButtonStories.ButtonTertiary} />
@@ -53,7 +53,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Button mit Icon <a id="button-icon" />
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={LinkButtonStories.ButtonIconRechts} />
     <Story of={LinkButtonStories.ButtonIconLinks} />
 </Canvas>
@@ -77,31 +77,43 @@ werden.
 
 ### Button mit Text
 
-Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+Ein Button der Ausprägung `primary` mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+<Canvas>
+    <Story of={LinkButtonStories.ButtonPrimary} />
+</Canvas>
 
 ```handlebars
 {{#> components/button/link_button _size="lg"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Primary"}}
 {{/components/button/link_button}}
 ```
 
 ### Button mit Text und Icon
 
-Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben stehenden Icon](#button-mit-icon-a-idbutton-icon) wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+Ein Button der Ausprägung `primary` mit einem Label und einem rechts daneben stehenden Icon wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
+<Canvas>
+    <Story of={LinkButtonStories.ButtonIconRechts} />
+</Canvas>
 
 ```handlebars
 {{#> components/button/link_button _size="lg"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Icon rechts"}}
     {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
 {{/components/button/link_button}}
 ```
 
 Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
 
+<Canvas>
+    <Story of={LinkButtonStories.ButtonIconLinks} />
+</Canvas>
+
 ```handlebars
 {{#> components/button/link_button _size="lg"}}
     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Icon links"}}
 {{/components/button/link_button}}
 ```
 
@@ -112,7 +124,7 @@ Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
 Soll ein Link-Button auf einem farbigen Hintergrund (bietet sich vor allem bei dunklen Hintergründen an) genutzt werden, kann durch setzen des Parameters
 `_onBackground` eine auf dunkle Hintergründe abgestimmte kontrastreichere optische Variante der Button aktiviert werden.
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={LinkButtonStories.ButtonPrimaryAufFarbigemHintergrund} />
     <Story of={LinkButtonStories.ButtonSecondaryAufFarbigemHintergrund} />
     <Story of={LinkButtonStories.ButtonTertiaryAufFarbigemHintergrund} />
@@ -120,6 +132,6 @@ Soll ein Link-Button auf einem farbigen Hintergrund (bietet sich vor allem bei d
 
 ```handlebars
 {{#> components/button/link_button _size="lg" _onBackground}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Primary"}}
 {{/components/button/link_button}}
 ```
