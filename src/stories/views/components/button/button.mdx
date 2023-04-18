@@ -79,11 +79,11 @@ werden.
 
 ### Button mit Text
 
+Ein Button der Ausprägung `primary` mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+
 <Canvas>
     <Story of={ButtonStories.ButtonPrimary} />
 </Canvas>
-
-Ein Button der Ausprägung `primary` mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
@@ -93,12 +93,12 @@ Ein Button der Ausprägung `primary` mit Beschriftung wird, wie in folgendem Cod
 
 ### Button mit Text und Icon
 
+Ein Button der Ausprägung `primary` mit einem Label und einem rechts daneben stehenden Icon wird, wie
+in folgendem Codebeispiel gezeigt, gebaut.
+
 <Canvas>
     <Story of={ButtonStories.ButtonIconRechts} />
 </Canvas>
-
-Ein Button der Ausprägung `primary` mit einem Label und einem rechts daneben stehenden Icon wird, wie
-in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
@@ -107,11 +107,11 @@ in folgendem Codebeispiel gezeigt, gebaut.
 {{/components/button/button}}
 ```
 
+Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
+
 <Canvas>
     <Story of={ButtonStories.ButtonIconLinks} />{' '}
 </Canvas>
-
-Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
