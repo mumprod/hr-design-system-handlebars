@@ -85,9 +85,9 @@ export default {
         },
 
         _size: {
+            options: ['sm', 'md', 'lg'],
             control: {
                 type: 'select',
-                options: ['sm', 'md', 'lg'],
             },
 
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
@@ -103,15 +103,18 @@ export default {
 
         _variant: {
             description:
-                'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `ghost`, `ghost-white`, `inverted`, `transparent`',
+                'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `primary`, `secondary`, `tertiary`',
 
+            options: ['primary', 'secondary', 'tertiary'],
             control: {
                 type: 'select',
-                options: ['ghost', 'ghost-white', 'inverted', 'transparent'],
             },
 
             table: {
                 category: 'Button',
+                defaultValue: {
+                    summary: 'primary',
+                },
             },
         },
 

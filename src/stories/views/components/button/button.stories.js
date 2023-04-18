@@ -162,9 +162,9 @@ export default {
         },
 
         '_size': {
+            options: ['sm', 'md', 'lg'],
             control: {
                 type: 'select',
-                options: ['sm', 'md', 'lg'],
             },
 
             description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
@@ -179,9 +179,9 @@ export default {
         },
 
         '_type': {
+            options: ['button', 'submit', 'reset'],
             control: {
                 type: 'select',
-                options: ['button', 'submit', 'reset'],
             },
 
             description:
@@ -200,13 +200,16 @@ export default {
             description:
                 'In welcher Variante soll der Button dargestellt werden. Erlaubte Varianten sind `primary`, `secondary`, `tertiary`',
 
+            options: ['primary', 'secondary', 'tertiary'],
             control: {
                 type: 'select',
-                options: ['primary', 'secondary', 'tertiary'],
             },
 
             table: {
                 category: 'Button',
+                defaultValue: {
+                    summary: 'primary',
+                },
             },
         },
 
