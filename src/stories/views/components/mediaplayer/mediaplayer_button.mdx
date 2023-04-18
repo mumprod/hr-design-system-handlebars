@@ -1,24 +1,22 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
 import handlebars from 'handlebars'
-import * as MediaplayerButtonStories from './mediaplayer_button.stories';
+import * as MediaplayerButtonStories from './mediaplayer_button.stories'
 
 <Meta of={MediaplayerButtonStories} />
 
-export const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+export const buttonTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{> components/mediaplayer/mediaplayer_button _css="!static"}}
   `)
-    return hbsTemplate({ brand, ...args })
+    return hbsTemplate({ ...args })
 }
 
 # Mediaplayer-Button
 
-*   [Übersicht](#übersicht)
-*   [Eigenschaften](#eigenschaften)
-*   [Varianten](#varianten)
-*   [Verwendung](#verwendung)
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
 
 ## Übersicht
 
@@ -29,7 +27,7 @@ Button den Start des jeweiligen Mediums in einem Mediaplayer. Grundlage des Medi
 müssen und können nicht separat gesetzt werden.
 
 <Canvas>
-  <Story of={MediaplayerButtonStories.Spielplatz} />
+    <Story of={MediaplayerButtonStories.Spielplatz} />
 </Canvas>
 
 ## Eigenschaften
@@ -43,7 +41,8 @@ Den Mediaplayer-Button gibt es in drei Varianten (Video, Audio und Podcast).
 <Canvas>
   <Story of={MediaplayerButtonStories.Video} />
 
-  <Story of={MediaplayerButtonStories.Audio} />
+{' '}
+<Story of={MediaplayerButtonStories.Audio} />
 
   <Story of={MediaplayerButtonStories.Podcast} />
 </Canvas>
