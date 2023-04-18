@@ -39,7 +39,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Größen
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={ButtonStories.ButtonLg} />
     <Story of={ButtonStories.ButtonMd} />
     <Story of={ButtonStories.ButtonSm} />
@@ -47,7 +47,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Button-Arten
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={ButtonStories.ButtonPrimary} />
     <Story of={ButtonStories.ButtonSecondary} />
     <Story of={ButtonStories.ButtonTertiary} />
@@ -55,7 +55,7 @@ unterscheidbar zu machen, sind unterschiedliche optische Varianten und Größen 
 
 ### Button mit Icon <a id="button-icon" />
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={ButtonStories.ButtonIconRechts} />
     <Story of={ButtonStories.ButtonIconLinks} />
 </Canvas>
@@ -79,31 +79,44 @@ werden.
 
 ### Button mit Text
 
-Ein [Button der Ausprägung `normal`](#button-arten) mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+<Canvas>
+    <Story of={ButtonStories.ButtonPrimary} />
+</Canvas>
+
+Ein Button der Ausprägung `primary` mit Beschriftung wird, wie in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Primary"}}
 {{/components/button/button}}
 ```
 
 ### Button mit Text und Icon
 
-Ein [Button der Ausprägung `normal` mit einem Label und einem rechts daneben stehenden Icon](#button-mit-icon-a-idbutton-icon) wird, wie in folgendem Codebeispiel gezeigt, gebaut.
+<Canvas>
+    <Story of={ButtonStories.ButtonIconRechts} />
+</Canvas>
+
+Ein Button der Ausprägung `primary` mit einem Label und einem rechts daneben stehenden Icon wird, wie
+in folgendem Codebeispiel gezeigt, gebaut.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Icon rechts"}}
     {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
 {{/components/button/button}}
 ```
+
+<Canvas>
+    <Story of={ButtonStories.ButtonIconLinks} />{' '}
+</Canvas>
 
 Soll das Icon links vom Label stehen, muss der Aufruf der Subkomponenten einfach vertauscht werden.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
-    {{> components/button/components/button_label _label="Button"}}
+    {{> components/button/components/button_label _label="Icon links"}}
 {{/components/button/button}}
 ```
 
@@ -114,15 +127,15 @@ Der passende Abstand zwischen Icon und Label wird automatisch per CSS gesetzt.
 Soll ein Button auf einem farbigen Hintergrund (bietet sich vor allem bei dunklen Hintergründen an) genutzt werden, kann durch setzen des Parameters
 `_onBackground` eine auf dunkle Hintergründe abgestimmte kontrastreichere optische Variante der Button aktiviert werden.
 
-<Canvas withToolbar>
+<Canvas>
     <Story of={ButtonStories.ButtonPrimaryAufFarbigemHintergrund} />
     <Story of={ButtonStories.ButtonSecondaryAufFarbigemHintergrund} />
     <Story of={ButtonStories.ButtonTertiaryAufFarbigemHintergrund} />
 </Canvas>
 
 ```handlebars
-{{#> components/button/link_button _size="lg" _onBackground}}
-    {{> components/button/components/button_label _label="Button"}}
+{{#> components/button/link_button _size="lg" _onBackground=true}}
+    {{> components/button/components/button_label _label="Primary"}}
 {{/components/button/link_button}}
 ```
 
@@ -139,16 +152,16 @@ Attribute gesetzt werden (z.B. zum Setzen von alpine.js Direktiven), muss dies w
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
-    {{#*inline "html_properties"}}
-        x-ref="button"
-        x-on:click="toggle()"
-        :aria-expanded="open"
-        :aria-controls="$id('dropdown-button')"
-        :class="open ? 'drop-shadow' : ''"
-        data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
-    {{/inline}}
     {{> components/button/components/button_label _label="Button"}}
 {{/components/button/button}}
+{{#*inline "html_properties"}}
+    x-ref="button"
+    x-on:click="toggle()"
+    :aria-expanded="open"
+    :aria-controls="$id('dropdown-button')"
+    :class="open ? 'drop-shadow' : ''"
+    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
+{{/inline}}
 ```
 
 Dem hier gerenderten HTML-Button werden mit Hilfe des Inline-Partials `html_properties` die Attribute `x-ref`, `x-on`, `:aria-expanded`, `:aria-controls`, `:class`
@@ -164,11 +177,11 @@ Inline-Partials eingesetzt.
 
 ```handlebars
 {{#> components/button/button _size="lg"}}
-    {{#*inline "css"}}
-        {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
-    {{/inline}}
     {{> components/button/components/button_label _label="Button"}}
 {{/components/button/button}}
+{{#*inline "css"}}
+    {{> components/button/utilities/button_on_image_classes _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}
+{{/inline}}
 ```
 
 Über das Inline-Partial `css` können auf diese Weise theoretisch beliebig viele in Subkomponenten ausgelagerte CSS Klassen übergeben werden.
