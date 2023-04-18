@@ -1,3 +1,40 @@
+# v1.11.10 (Mon Apr 17 2023)
+
+#### 🐛 Bug Fix
+
+- DPE 2227: JSON modellieren für Storybook [#605](https://github.com/mumprod/hr-design-system-handlebars/pull/605) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.11.9 (Wed Apr 12 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2079 Adding pagination [#604](https://github.com/mumprod/hr-design-system-handlebars/pull/604) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.11.8 (Wed Apr 05 2023)
+
+#### 🐛 Bug Fix
+
+- changed :class statement so text-white class is removed properly [#602](https://github.com/mumprod/hr-design-system-handlebars/pull/602) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.7 (Wed Apr 05 2023)
 
 #### 🐛 Bug Fix

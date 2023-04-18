@@ -1,0 +1,54 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserContentNavStories from './teaser_content_nav.stories'
+
+<Meta of={TeaserContentNavStories} />
+
+export const Template = (args, { globals: { customConditionalToolbar } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand =
+        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    return teaser({ brand, ...args })
+}
+
+# Content-Navi-Teaser
+
+## Beschreibung
+
+### Liste
+
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.Liste} />
+</Canvas>
+### Liste mit Filter
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.ListeMitFilter} />
+</Canvas>
+### Fluß
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.Fluss} />
+</Canvas>
+### Fluss mit Filter
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.FlussMitFilter} />
+</Canvas>
+### Gemischt
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.Gemischt} />
+</Canvas>
+### Gemischt mit Filter
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.GemischtMitFilter} />
+</Canvas>
+### Dropdown
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.Dropdown} />
+</Canvas>
+### Dropdown mit Filter
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.DropdownMitFilter} />
+</Canvas>
+### Dropdown mit Subgruppen
+<Canvas withToolbar>
+    <Story of={TeaserContentNavStories.DropdownMitSubgruppen} />
+</Canvas>

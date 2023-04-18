@@ -1,0 +1,95 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserPosterStories from './teaser_poster.stories'
+
+<Meta of={TeaserPosterStories} />
+
+# Poster-Teaser
+
+## Beschreibung
+
+Der Poster-Teaser besteht aus 3 übereinanderliegenden Ebenen.
+
+Unterste-Ebene: <b>Bild (1:1)</b><br />
+Mittlere Ebene: <b>Dachzeile und Titel</b> + <b>Farbverlauf</b> von schwarz nach transparent<br />
+Oberste Ebene (verlinkt): <b>Zusatztext</b> ("zum Artikel" o.ä.)<br />
+
+Alle Ebenen erstrecken sich über die komplette Größe des 1:1-Bilds.
+
+Alle enthaltenen Inhalte sind aria-hidden. Für screenreader wurde ein extra span eingebaut mit class="sr-only".<br />
+Inhalt dieses spans: Zusatztext + ": " + Titel
+
+Der Poster-Teaser soll nur als 50%- bzw. 33%-Teaser verwendet werden. Diese Restriktion muss cms-seitig implementiert werden.
+
+## Sub-Komponenten
+
+Die Poster-Teaser-Komponente inkludiert folgende Komponenten:
+
+<ul>
+  <li>
+    components/base/image/<b>responsive\_image</b>
+  </li>
+
+{' '}
+
+<li>
+    components/base/<b>link</b>
+</li>
+
+  <li>
+    components/teaser/components/<b>teaser\_heading</b>
+  </li>
+</ul>
+
+## Props
+
+Die Poster-Teaser-Komponente benötigt die folgenden json-Daten (enthalten im Teaser-Json im Objekt <b>logicItem.includeModel</b>):
+
+<ul>
+  <li>
+    <b>topline</b>
+  </li>
+
+<li>
+    <b>title</b>
+</li>
+
+<li>
+    <b>teaserSize</b>
+</li>
+
+<li>
+    <b>teaserType</b>
+</li>
+<li>
+    <b>teaserImage</b>
+</li>
+<li>
+    <b>content.imageVariant</b>
+</li>
+<li>
+    <b>isSerifHeading</b>
+</li>
+  <li>
+    <b>link.readMoreText.readMoreLong</b>
+  </li>
+</ul>
+
+## Verwendung
+
+Die Poster-Teaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/teaser_poster}}
+```
+
+<Canvas withToolbar>
+  <Story of={TeaserPosterStories.Poster50} />
+
+{' '}
+
+<Story of={TeaserPosterStories.Poster33} />
+
+  <Story of={TeaserPosterStories.Poster33MitLabel} />
+</Canvas>
+
+<ArgsTable story="Poster 50" />

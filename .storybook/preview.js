@@ -1,9 +1,9 @@
 import '!style-loader!css-loader!postcss-loader!tailwind'
 import 'tailwind'
+import { withThemeByDataAttribute } from '@storybook/addon-styling'
 
 import hrDesignsystemDark from './HRDesignsystemDark'
 import hrDesignsystemLight from './HRDesignsystemLight'
-import { withThemeDecorator } from './withThemeDecorator'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 })
 
-if (process.env.NODE_ENV !== 'production') {
+/*if (process.env.NODE_ENV !== 'production') {
     console.log(Initializer)
     console.log('Looks like we are in development mode!')
-}
+}*/
 
 const customViewports = {
     hrMin: {
@@ -145,42 +145,12 @@ export const parameters = {
     // Storybook a11y addon configuration
     a11y: {
         // the target DOM element
-        element: '#root',
+        element: '#storybook-root',
         // sets the execution mode for the addon
         manual: false,
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: { expanded: true },
-    customConditionalToolbar: {
-        /** Defines the possible sets that can be shown */
-        sets: [
-            {
-                id: 'brands',
-                options: [
-                    { id: 'hr', title: 'hr.de' },
-                    { id: 'hessenschau', title: 'hessenschau.de' },
-                    { id: 'hr1', title: 'hr1.de' },
-                    { id: 'hr2', title: 'hr2.de' },
-                    { id: 'hr3', title: 'hr3.de' },
-                    { id: 'hr4', title: 'hr4.de' },
-                    { id: 'you-fm', title: 'you-fm.de' },
-                    { id: 'hr-inforadio', title: 'hr-info.de' },
-                    { id: 'hr-fernsehen', title: 'hr-fernsehen.de' },
-                    { id: 'hr-rundfunkrat', title: 'hr-rundfunkrat.de' },
-                    { id: 'hr-werbung', title: 'hr-werbung.de' },
-                    { id: 'hr-bigband', title: 'hr-bigband.de' },
-                    { id: 'hr-sinfonieorchester', title: 'hr-sinfonieorchester.de' },
-                ],
-            },
-        ],
-        default: 'brands',
-        /** Icon to use in toolbar, defaults to `switchalt`. All possible icons here: https://storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels */
-        icon: 'globe',
-        /** title when hovering over the icon */
-        title: 'Themes',
-        /** Setting disable to true makes the addon disabled by default */
-        // disable: true,
-    },
     docs: {
         theme: hrDesignsystemLight,
     },
@@ -203,4 +173,24 @@ export const parameters = {
     },
 }
 
-export const decorators = [withThemeDecorator]
+export const decorators = [
+    withThemeByDataAttribute({
+        themes: {
+            'hessenschau': 'hessenschau',
+            'hr': 'hr',
+            'hr1': 'hr1',
+            'hr2': 'hr2',
+            'hr3': 'hr3',
+            'hr4': 'hr4',
+            'you-fm': 'you-fm',
+            'hr-inforadio': 'hr-inforadio',
+            'hr-fernsehen': 'hr-fernsehen',
+            'hr-bigband': 'hr-bigband',
+            'hr-sinfonieorchester': 'hr-sinfonieorchester',
+            'hr-werbung': 'hr-werbung',
+            'hr-rundfunkrat': 'hr-rundfunkrat',
+        },
+        defaultTheme: 'hessenschau',
+        attributeName: 'data-theme',
+    }),
+]

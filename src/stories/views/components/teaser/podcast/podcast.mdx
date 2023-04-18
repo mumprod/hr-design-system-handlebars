@@ -1,0 +1,11 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as PodcastStories from './podcast.stories'
+
+<Meta of={PodcastStories} />
+
+<Canvas withToolbar>
+    <Story of={PodcastStories.$100EpisodePlayer} />
+    <Story of={PodcastStories.$50EpisodePlayer} />
+    <Story of={PodcastStories.$100ChannelPlayer} />
+    <Story of={PodcastStories.$50ChannelPlayer} />
+</Canvas>

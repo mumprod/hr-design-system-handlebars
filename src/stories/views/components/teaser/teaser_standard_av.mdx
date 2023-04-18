@@ -1,0 +1,38 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserStandardAvStories from './teaser_standard_av.stories'
+
+<Meta of={TeaserStandardAvStories} />
+
+# Header
+
+Ein toller Einleitungstext für unsere `Teaser` Komponente:
+
+<Canvas withToolbar>
+  <Story of={TeaserStandardAvStories.Standard50Video} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard25Video} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard50VideoLivestream} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard25VideoLivestream} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard50Audio} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard25Audio} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard50Podcast} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard25Podcast} />
+
+{' '}
+<Story of={TeaserStandardAvStories.Standard50AudioLivestream} />
+
+  <Story of={TeaserStandardAvStories.Standard25AudioLivestream} />
+</Canvas>

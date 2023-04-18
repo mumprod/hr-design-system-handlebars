@@ -1,0 +1,54 @@
+import { ArgsTable, Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks'
+import * as LabelStories from './label.stories';
+
+import label from './label.hbs'
+
+<Meta of={LabelStories} />
+
+export const Template = ({ _type, ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return label({ _type, ...args })
+}
+
+# Label
+
+Teaser auf Übersichtsseiten können mit Hilfe von Labels optisch hervorgehoben werden (z.B. als Kommentar, Liveticker, Eilmeldung, etc.).
+Folgende Ausprägungen von Labels stehen hierfür zur Verfügung:
+
+<Canvas withToolbar>
+  <Story of={LabelStories.Download} />
+
+  <Story of={LabelStories.Eilmeldung} />
+
+  <Story of={LabelStories.Event} />
+
+  <Story of={LabelStories.Infografik} />
+
+  <Story of={LabelStories.Kommentar} />
+
+  <Story of={LabelStories.Liveticker} />
+
+  <Story of={LabelStories.Media} />
+
+  <Story of={LabelStories.Pressemitteilung} />
+
+  <Story of={LabelStories.Sendung} />
+
+  <Story of={LabelStories.Kurzmeldung} />
+</Canvas>
+
+## Einbindung
+
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/label/label.hbs type="liveticker" text="Liveticker"}}
+```
+
+Mit folgenden Parametern kann die Komponente konfiguriert werden.
+
+| Parameter  | Typ      | Mögliche Werte                                                                                                                                                                                                                                                     | Erläuterung                                      |
+| :--------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------- |
+| **\_text** | `String` | Beliebiger Text                                                                                                                                                                                                                                                    | Die Beschriftung des Labels.                     |
+| **\_type** | `String` | `analysis`, `blog`, `bulitiker`, `der-tag-in-hessen`, `download`, `brealingnews`, `event`, `fragen-und-antworten`, `glosse`,`infografik`, `interaktiv`, `comment`, `live`, `livechat`, `livestream`, `liveticker`, `media`, `pm`, `program`, `social-tv`, `ticker` | Hiermit wird das Aussehen des Labels festgelegt. |

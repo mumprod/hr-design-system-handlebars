@@ -1,0 +1,25 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+import { colorsMap, brands, shortcuts } from './BrandColors.data.js'
+
+<Meta title="Grundlegendes/Farben/Markenfarben" />
+
+<h1>Markenfarben</h1>
+<br />
+<ColorPalette>
+    {Object.entries(colorsMap).map((token, index) => {
+        let colorsMapBrands = {}
+        for (let i = 0; i < brands.length; i++) {
+            let ele = document.querySelector(':root')
+            ele.setAttribute('data-theme', brands[i])
+            let cs = getComputedStyle(ele)
+            let cv = token[1].toString()
+            let p = cv.substring(4, cv.length - 1)
+            if (p.indexOf(',') > -1) {
+                p = p.substring(0, p.indexOf(','))
+            }
+            let hexColor = cs.getPropertyValue(p)
+            colorsMapBrands[shortcuts[i]] = hexColor
+        }
+        return <ColorItem title={token[0]} colors={colorsMapBrands} />
+    })}
+</ColorPalette>

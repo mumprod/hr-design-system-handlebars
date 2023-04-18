@@ -1,0 +1,18 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as GroupStories from './group.stories'
+
+<Meta of={GroupStories} />
+
+# Button
+
+Ein toller Einleitungstext für unsere `Teaser Gruppen` Komponente:
+
+<Canvas withToolbar>
+    <Story of={GroupStories.$100GruppeMitUberschrift} />
+    <Story of={GroupStories.$100GruppeMitUberschriftHighlight1} />
+    <Story of={GroupStories.$100GruppeMitUberschriftHighlight2} />
+    <Story of={GroupStories.$100GruppeMitContentNavigationAufklapp} />
+    <Story of={GroupStories.$100GruppeMitRelatedContent} />
+</Canvas>
+
+<ArgsTable story="main" />

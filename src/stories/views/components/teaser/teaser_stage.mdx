@@ -1,0 +1,15 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as TeaserStageStories from './teaser_stage.stories'
+
+<Meta of={TeaserStageStories} />
+
+# Stage-Teaser
+
+## Beschreibung
+
+<Canvas withToolbar>
+    <Story of={TeaserStageStories.StageTeaser} />
+    <Story of={TeaserStageStories.StageTeaserWide} />
+    <Story of={TeaserStageStories.StageTeaserWithEvent} />
+    <Story of={TeaserStageStories.StageTeaserProgram} />
+</Canvas>
