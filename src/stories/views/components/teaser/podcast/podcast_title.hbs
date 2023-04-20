@@ -1,12 +1,12 @@
 {{#if this.isSingleChannel}}
     {{#decorator 'components/base/link' _css="group ds-link font-title text-base mt-2.5 text-podcast-text"}}
-        <span class="block mt-0.5 group-hover:underline {{#if _ordered}} pl-8 {{/if}}line-clamp-4 ...  {{inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl lg:line-clamp-2","text-base md:text-2xl lg:line-clamp-2","text-base md:text-lg"]' ~}}">
+        <span class="mt-0.5 group-hover:underline {{#if _ordered}} pl-8 {{/if}}line-clamp-4 {{inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl lg:line-clamp-2","text-base md:text-2xl lg:line-clamp-2","text-base md:text-lg"]' ~}}">
             {{~_title~}}
         </span>
     {{/decorator}}
 {{else}}
     <div class="font-title text-base mt-2.5 text-podcast-text">
-        <span class="block mt-0.5 {{#if _ordered}} pl-8 {{/if}}line-clamp-4 ... {{inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl lg:line-clamp-2","text-base md:text-2xl lg:line-clamp-2","text-base md:text-lg"]' ~}}">
+        <span class="mt-0.5 {{#if _ordered}} pl-8 {{/if}}line-clamp-4 {{inline-switch _teaserSize '["hero","100","50"]''["text-base md:text-2xl lg:line-clamp-2","text-base md:text-2xl lg:line-clamp-2","text-base md:text-lg"]' ~}}">
             {{~_title~}}
         </span>
     </div>

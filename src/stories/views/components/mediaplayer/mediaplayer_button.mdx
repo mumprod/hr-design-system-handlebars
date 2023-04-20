@@ -1,0 +1,82 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as MediaplayerButtonStories from './mediaplayer_button.stories'
+
+<Meta of={MediaplayerButtonStories} />
+
+export const buttonTemplate = (args) => {
+    let hbsTemplate = handlebars.compile(`
+    {{> components/mediaplayer/mediaplayer_button _css="!static"}}
+  `)
+    return hbsTemplate({ ...args })
+}
+
+# Mediaplayer-Button
+
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
+
+## Übersicht
+
+Der Mediaplayer-Button wird verwendet, um anzuzeigen, dass in einem Teaser ein Medienelement abspielbar ist.
+Möglich sind Videos, Audios und Podcasts. Der Button steht auf dem Teaserbild und ermöglicht bei Klick auf den
+Button den Start des jeweiligen Mediums in einem Mediaplayer. Grundlage des Mediaplayer-Buttons ist die
+[Button-Komponente](?path=/docs/komponenten-buttons-button--spielplatz). Zur Vereinfachung wird diese bereits voreingestellt. Die Subkomponenten Button-Label und Button-Icon
+müssen und können nicht separat gesetzt werden.
+
+<Canvas>
+    <Story of={MediaplayerButtonStories.Spielplatz} />
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Spielplatz" />
+
+## Varianten
+
+Den Mediaplayer-Button gibt es in drei Varianten (Video, Audio und Podcast).
+
+<Canvas>
+  <Story of={MediaplayerButtonStories.Video} />
+
+{' '}
+
+<Story of={MediaplayerButtonStories.Audio} />
+
+  <Story of={MediaplayerButtonStories.Podcast} />
+</Canvas>
+
+Er kann zudem mit dem Parameter `isLivestream` so konfiguriert werden, dass er eine separate
+Farbe bekommt, wenn er zum Starten von Livestreams genommen werden soll.
+
+<Canvas>
+  <Story of={MediaplayerButtonStories.VideoLivestream} />
+
+  <Story of={MediaplayerButtonStories.AudioLivestream} />
+</Canvas>
+
+## Verwendung
+
+Der Mediaplayer-Button wird mit der Handlebar Komponente `mediaplayer_button` eingebunden.
+
+### On-Demand Media
+
+Die Einbindung eines Mediaplayer-Buttons für ein On-Demand Medium erfolgt wie in folgendem Codebeispiel gezeigt.
+
+```handlebars
+    {{> components/mediaplayer/mediaplayer_button _isLivestream=false _icon="play_button" _label="Video"}}
+    {{#*inline "css"}}{{> components/button/utilities/button_on_image_classes _teaserSize="50" _teaserType="standard" _isMobile1to1=false}}{{/inline}}
+```
+
+Zu beachten ist hier, dass die Möglichkeit besteht mit dem Inline-Partial `css` dem Button noch zusätzliche in Subkomponenten ausgelagerte CSS-Klassen
+zu übergeben. In diesem Fall werden zusätzliche Klassen gesetzt, die den Button absolut positioniert auf ein Teaser-Bild setzen.
+
+### Livestream Media
+
+Die Einbindung eines Mediaplayer-Button für einen Livestream erfolgt wie in folgendem Codebeispiel gezeigt.
+
+```handlebars
+    {{> components/mediaplayer/mediaplayer_button _isLivestream=true _icon="play_button" _label="Video"}}
+    {{#*inline "css"}}{{> components/button/utilities/button_on_image_classes _teaserSize="50" _teaserType="standard" _isMobile1to1=false}}{{/inline}}
+```

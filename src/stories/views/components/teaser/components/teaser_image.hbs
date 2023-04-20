@@ -6,20 +6,12 @@
 {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg="" ~}}
 {{#if this.isProgram}}
     {{#if this.showMediatheksLink}}
-        {{#decorator 'components/base/link' _isAriaHidden=true}}
-            {{> components/button/button_round 
-        _isButton="true" 
-        _addClass='absolute bottom-0 right-0 fill-white hover:text-white js-mediaplayer__button'
-        _buttonColor='text-media-button hover:fill-media-button'
-        _buttonSpace=(inline-switch this.teaserSize '["25","33"]' '[" my-2 mx-2"," my-5 mx-5 md:my-3 md:mx-3"," my-5 mx-5"]')
-        _showIcon=true 
-        _icon='play_button' 
-        _label='Sendung' 
-        _srOnly="true" 
-        _alpineClick=""
-         _noFocus="true"
-        }}    
-        {{/decorator}}
+        {{#with this}}
+            {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+            {{#*inline "css"~}}
+                {{~> components/button/utilities/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1-adjust_context}}
+            {{/inline}}
+        {{/with}}
     {{/if}}
 {{/if}}
 

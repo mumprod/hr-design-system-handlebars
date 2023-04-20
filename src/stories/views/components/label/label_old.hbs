@@ -10,7 +10,7 @@
 
 </span>
 {{~#with this.byline~}}
-    <span class='ml-2 text-xs font-headingSerif {{#if ../_bylineCss}}{{../_bylineCss}}{{else}}text-grey-scorpion{{/if}}'>
+    <span class='ml-2 text-xs font-headingSerif {{#if ../_bylineCss}}{{../_bylineCss}}{{else}}text-gray-scorpion{{/if}}'>
         {{~#if this.bylineSsi~}}
             {{> components/base/loadSSI _context=this.context _templatePath=this.bylineSsi}}
         {{~else~}}

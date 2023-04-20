@@ -17,6 +17,7 @@ module.exports = {
         dist: {
             components: 'src/stories/views/components',
             handlebarPartials: 'build/handlebars/partials',
+            dist_components: 'dist/views/components',
         },
     },
 }

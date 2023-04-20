@@ -46,6 +46,15 @@ const config = {
             ...config.resolve.alias,
             scripts: path.resolve(__dirname, '../scripts'),
             handlebars$: path.resolve(__dirname, '../node_modules/handlebars/dist/handlebars.js'),
+            hrHandlebars$: path.resolve(__dirname, '../build/handlebars/handlebars.js'),
+            handlebarPartials$: path.resolve(
+                __dirname,
+                '../build/handlebars/partials/handlebar-partials.js'
+            ),
+            handlebarHelpers$: path.resolve(
+                __dirname,
+                '../build/handlebars/helpers/handlebar-helpers.js'
+            ),
             components: path.resolve(__dirname, '../src/stories/views/components'),
             base: path.resolve(__dirname, '../src/stories/views/base'),
             tailwind$: path.resolve(__dirname, '../src/assets/tailwind.css'),

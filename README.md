@@ -18,13 +18,24 @@ Node.js installiert man am besten mit dem Node Version Manager NVM. Dies ist zwa
 
 ---
 
-Zur Installation des Designsystems bitte zunächst das Projekt in ein beliebiges Verzeichnis auf der Festplatte mit
+Zur Verwaltung der Node Packages des Design Systems verwenden wir statt npm den Paketmanager [yarn](https://classic.yarnpkg.com/en/).
+Dieser verwendet einen anderen Algorithmus zur Auflösung der Abhängigkeiten der einzelnen Node Packages und hat
+sich insbesondere beim Update von Storybook als die verlässlichere Alternative erwiesen. Um yarn nutzen zu können, muss es zunächst mit dem
+Befehl
+
+```
+npm install --global yarn
+```
+
+installiert werden.
+
+Zur Installation des Designsystems bitte anschließend das Projekt in ein beliebiges Verzeichnis auf der Festplatte mit
 
 ```
 git clone https://github.com/mumprod/hr-design-system-handlebars.git
 ```
 
-klonen. Danach in das Installationsverzeichnis wechseln und alle notwendigen
+klonen. Im Anschluss daran in das Installationsverzeichnis wechseln und alle notwendigen
 npm Pakete mit dem Befehl
 
 ```

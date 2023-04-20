@@ -1,0 +1,25 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as ButtonIconStories from './button_icon.stories'
+
+<Meta of={ButtonIconStories} />
+
+# Button-Icon
+
+Die Komponente erzeugt das Icon für die [Button-Komponente](?path=/docs/komponenten-buttons-button--spielplatz). Sie darf in einem Template
+ausschließlich als Subkomponente der Button-Komponente eingebunden werden.
+
+## Eigenschaften
+
+<ArgsTable story="Icon" />
+
+## Verwendung
+
+Die Komponente wird wie in folgendem Codebeispiel gezeigt in einem Handlebar Template eingebunden.
+
+```handlebars
+{{> components/button/components/button_icon _icon="calendar"}}
+```
+
+<Canvas withToolbar>
+    <Story of={ButtonIconStories.Icon} />
+</Canvas>

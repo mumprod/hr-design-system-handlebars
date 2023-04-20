@@ -1,5 +1,6 @@
 const { src, dest, series, parallel, watch } = require('gulp')
 const debug = require('gulp-debug')
+const replace = require('gulp-replace')
 const fs = require('fs')
 const mergeStream = require('merge-stream')
 const glob = require('glob')
@@ -316,8 +317,15 @@ function watchFiles() {
 
 async function convertPartialsToJs() {
     src(`${options.paths.assets.views}/**/*.hbs`)
+        .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '$1'))
         .pipe(htmlToJs({ concat: 'handlebar-partials.js' }))
         .pipe(dest(options.paths.dist.handlebarPartials))
+}
+
+async function preparePartialsForDelivery() {
+    src(`${options.paths.assets.components}/**/*.hbs`)
+        .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '../../$1'))
+        .pipe(dest(options.paths.dist.dist_components))
 }
 
 function createModernizr() {
@@ -371,3 +379,4 @@ exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
+exports.preparePartialsForDelivery = preparePartialsForDelivery
