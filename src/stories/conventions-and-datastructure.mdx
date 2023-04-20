@@ -4,6 +4,18 @@ import { Meta, Canvas } from '@storybook/addon-docs'
 
 # Konventionen und Datenstrukturen
 
+-   [Übersicht](#übersicht)
+-   [Aufbau der Datenstruktur des Designsystems](#aufbau-der-datenstruktur-des-designsystems)
+-   [Namenskonventionen](#namenskonventionen)
+    -   [Stories](#stories)
+    -   [Handlebar-Komponenten](#handlebar-komponenten)
+    -   [JSON](#json)
+-   [Konventionen beim Bau von Komponenten](#konventionen-beim-bau-von-komponentenn)
+    -   [Styling von Komponenten](#styling-von-komponenten)
+    -   [Wiederverwendbarkeit und Erweiterbarkeit von Komponenten](#wiederverwendbarkeit-und-erweiterbarkeit-von-komponenten)
+
+## Übersicht
+
 Dieses Kapitel richtet sich vor allem an die Entwickler des Designsystems. Es erläutert den grundlegenden Aufbau der Datenstruktur und legt Konventionen für die Benennung von Dateien fest.
 
 ## Aufbau der Datenstruktur des Designsystems
@@ -159,7 +171,11 @@ svg_optimization.stories.mdx`}
     </pre>
 </div>
 
-### Handlebar Komponenten
+### Handlebar-Komponenten
+
+Bei der Erstellung von Handlebar-Komponenten müssen verschiedenen Namenskonvention eingehalten werden.
+
+#### Namen von Komponenten
 
 Für die Namen von Handlebar-Komponenten gelten die gleichen Regeln wie für Stories.
 
@@ -192,8 +208,11 @@ Namen und deren einzelnen Bestandteile sind immer auszuschreiben. Abkürzungen s
     <pre class="!bg-white !p-4 !leading-8">{`brand_navigation_item.hbs`}</pre>
 </div>
 
+#### Namen von Komponenten-Parametern
+
 Die Namen von Parametern in Handlebar-Komponenten sind, anders als der Datainame, in
-[Camel-Case](https://en.wikipedia.org/wiki/Camel_case) Notation zu schreiben.
+[Camel-Case](https://en.wikipedia.org/wiki/Camel_case) Notation zu schreiben und mit einem Unterstrich
+zu prefixen.
 
 <div class="bg-red-200 !mt-4 p-4">
     <h4 class="!text-red-900 font-bold">Falsch</h4>
@@ -204,10 +223,57 @@ Die Namen von Parametern in Handlebar-Komponenten sind, anders als der Datainame
 <div class="bg-green-200 !mt-4 p-4">
     <h4 class="!text-green-900 font-bold">Korrekt</h4>
     <pre class="!bg-white !p-4 !leading-8">
-        &#123;&#123;#>components/base/link cssClasses="" isAriaHidden=true
-        clickLabelPrefix2="mediaLink"&#125;&#125;
+        &#123;&#123;#>components/base/link _cssClasses="" _isAriaHidden=true
+        _clickLabelPrefix2="mediaLink"&#125;&#125;
     </pre>
 </div>
+
+#### Namen übergebener Komponenten-Parameter in Partial-Blocks und Inline-Partials
+
+Sollen an Subkomponenten, die in Partial-Blocks und/oder Inline-Partials aufgerufen werden Komponenten-Parameter der Parent-Komponente
+übergeben werden, muss an die Namen der zu übergebenden Parameter das Postfix `-adjust_context` angefügt werden.
+Dies ist leider notwendig, da [Handlebars.js](https://handlebarsjs.com) und [Handlebars.java](https://github.com/jknack/handlebars.java)
+innerhalb von Partial-Blocks und Inline-Partials die Datenkontexte anders auflösen. Der Wert des Parameters `_css` kann in
+Handlebars.js direkt, in Handlebars.java aber nur ausgelesen werden, wenn mittels `../../_css` zwei Ebenen nach oben gegangen wird.
+Durch setzen des Postfixes `-adjust_context` können mittels eines Gulp-Skriptes diese Vatriablen in Komponenten herausgefiltert werden
+und je nachdem wofür gerade gebaut wird der Kontext automatisiert angepasst werden oder nicht. Hierzu ein kurzes Beispiel.
+
+```handlebars
+{{#with this}}
+    {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+    {{#*inline "css"~}}
+        {{~> components/button/utilities/button_on_image_classes _isMobile1to1=_isMobile1to1-adjust_context}}
+    {{/inline}}
+{{/with}}
+```
+
+Dem Play-Button Icon werden hier in einem Inline-Partial mit der [Style-Komponente](#setzen-kontextabhängiger-css-klassen-mit-style-komponenten)
+`button_on_image_classes` zusätzliche CSS Klassen übergeben. Je nach Wert des Parameters `_isMobile1to1` werden darin unterschiedliche CSS Klassen gesetzt.
+Der Wert dieses Parameters kommt in diesem Beispiel aus einem Parameter gleichen Namens aus dem Parent-Kontext. Damit dieser korrekt von
+den unterschiedlichen Handlebars Implementierungen aufgelöst werden kann, hat er den Postfix `-adjust_context` erhalten. Das oben angesprochene
+Gulp-Skript filtert diesen Parameter jetzt heraus und macht daraus, wenn Storybook mit `yarn storybook` lokal ausgeführt wird wieder den Parameter `_isMobile1to1`.
+
+```handlebars
+{{#with this}}
+    {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+    {{#*inline "css"~}}
+        {{~> components/button/utilities/button_on_image_classes _isMobile1to1=_isMobile1to1}}
+    {{/inline}}
+{{/with}}
+```
+
+Anders verhält es sich, wenn mit `yarn build` das Designsystem für die Verwendung im Delivery gebaut wird (dieses Skript wird beim bauen eines Releases
+in Github aufgerufen). Der Parameter `_isMobile1to1-adjust_context` wird jetzt durch `../../_isMobile1to1` ersetzt, sodass auch im Kontext von Handlebars.java
+der Wert des Parameters korrekt ausgelesen werden kann.
+
+```handlebars
+{{#with this}}
+    {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+    {{#*inline "css"~}}
+        {{~> components/button/utilities/button_on_image_classes _isMobile1to1=../../_isMobile1to1}}
+    {{/inline}}
+{{/with}}
+```
 
 ### JSON
 
@@ -237,4 +303,151 @@ sofern sie aus mehreren Worten zusammengesetzt werden, mit Minus voneinander get
 |— anchor-navigation 
 |— navigation-flyout`}
     </pre>
+</div>
+
+## Konventionen beim Bau von Komponenten
+
+Bei der Entwicklung neuer Komponenten müssen einige Konventionen beachtet werden.
+
+### Styling von Komponenten
+
+Zum Styling von Komponenten verwenden wir das CSS Framework [Tailwind CSS](https://tailwindcss.com/). Tailwind CSS
+ist ein auf dem Utility-First Ansatz basierendes Framework. Für nahezu jede CSS Eigenschaft gibt es eine eigene
+Utility Klasse, mit deren Hilfe die Styles einer Komponente im HTML Markup zusammengesetzt werden. Anstatt
+wie üblich Klassen mit beliebig vielen CSS Eigenschaften zu erstellen, setzen Tailwind CSS Klassen in der Regel
+immer nur jeweils eine einzelne Style Eigenschaft. Auf diese Weise wird ein sehr hohes Maß an Wiederverwendung
+erreicht und die Dateigröße der ausglieferten CSS Dateien ist in der Regel deutlich kleiner als beim klassischen
+Ansatz mit mehreren CSS Eigenschaften pro Klasse.
+Nachteil ist jedoch, dass alle CSS Logik auf diese Weise in die Templates verlagert wird und diese auf den ersten
+Blick recht unübersichtlich wirken können.
+
+#### Definition eigener CSS Klassen
+
+Tailwind CSS gestattet es auch sehr einfach eigene CSS Klassen zu schreiben. Sollte es für eine bestimmte CSS Eigenschaft
+noch keine eigene Utility Klasse geben, kann diese problemlos in der Datei `custom-utilities.css` definiert werden.
+Auch ist es möglich in der Datei `custom-components.css` eigene, vom Utility-First Ansatz abweichende, Klassen zu schreiben.
+
+Von dieser Möglichkeit sollte aber nur in Ausnahmefällen gebrauch gemacht werden, da ansonsten der Vorteil der kleinen Dateigrößen
+sehr schnell zunichte gemacht werden kann.
+
+#### Setzen Kontextabhängiger CSS Klassen mit Style-Komponenten
+
+An vielen Stellen im Design System müssen CSS Klassen abhängig vom Kontext, in dem die zu stylende Komponente genutzt wird, gesetzt
+werden. Ein Beispiel dafür sind Teaser auf Übersichtsseiten. Wie diese auf der Webseite angezeigt werden sollen, können Redakteure
+auf der Webseite durch setzen entsprechender Parameter dynamisch festlegen.
+Mit der Verwendung von Tailwind CSS und dem Einsatz von Utility Klassen, verlagert sich die ganze Logik aus den CSS Dateien in die
+Komponenten. Als Best-Practice haben sich hierfür separate, ausschließlich CSS Klassen setzende, Handlebar-Komponenten (Style-Komponenten) herausgestellt.
+Diesen Komponenten werden die von den Redakteuren im CMS vorgenommenen Einstellungen als Parameter übergeben. Abhängig von deren Wert
+werden die entsprechenden CSS Utility Klassen gesetzt. Style-Komponenten können beliebig oft und an beliebigen Stellen wiederverwendet werden.
+
+### Wiederverwendbarkeit und Erweiterbarkeit von Komponenten
+
+Damit nicht bei jeder neuen Anforderung das Rad neu erfunden werden muss, ist es wichtig, dass
+beim Bau von Komponenten auf ein hohes Maß an Wiederverwendbarkeit sowie eine
+gute und einfache Erweiterbarkeit geachtet wird.  
+Komponenten sollten demgemäß möglichst einfach gehalten und nicht mit einer vielzahl an Features überladen werden.
+
+Ein gutes Beispiel, wie man es nicht machen sollte ist die Button-Komponente. Bei ihr wurde versucht alle Anforderungen,
+die an einen Button gestellt wurden in einer einzigen Komponente abzubilden. Dies ging bei den initialen Anforderungen
+noch halbwegs, aber je mehr zusätzliche Anforderungen und Features im Laufe der Zeit hinzukamen, desto unübersichtlicher
+und schlechter wartbar wurde die Komponente. Am Ende hatte die Komponente fast zwanzig Parameter, mit denen ihr Verhalten
+gesteuert werden konnte und sie war zu einem richtigen "Monster" angewachsen.
+Aus diesem Grund wurde sie umgebaut und vereinfacht. Gemäß dem Prinzip der "[Component Selfishness](https://www.smashingmagazine.com/2023/01/key-good-component-design-selfishness/)"
+rendert die Komponente nur noch den Rahmen eines Buttons. Alle Inhalte, wie das Label oder ein mögliches Icon,
+werden dem Button mit Hilfe von Subkomponenten hinzugefügt.
+
+#### Erweitern von Basis-Komponenten mit Subkomponenten
+
+Um einer Basis-Komponente weitere Inhalte mittels Subkomponenten hinzuzufügen, sieht Handlebars das Konzept der
+sogenannten "[Partial-Blocks}(https://handlebarsjs.com/guide/partials.html#partial-blocks)" vor. Mit `@partial-block`
+stellt Handlebars hierfür ein spezielles Partial bereit. Es erlaubt in einer Basis-Komponente, wie z.B. der Button-Komponente,
+an einer bestimmten Stelle im Markup einen Platzhalter für mögliche Subkomponenten anzugeben.
+Schauen wir uns das ganze anhand der Button-Komponente an.
+
+```handlebars
+<button>
+    {{> @partial-block }}
+</button>
+```
+
+Die Komponente rendert lediglich das Markup des Button-Elements (alle HTML-Properties des Button wurden der besseren Übersichtlichkeit halber an
+dieser Stelle weggelassen) und ruft das `@partial-block` Partial auf. Der Button Komponente können jetzt, wie nachfolgend gezeigt, Subkomponenten hinzugefügt
+werden.
+
+```handlebars
+{{#> components/button/button _size="lg"}}
+    {{> components/button/components/button_label _label="Icon rechts"}}
+    {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons"}}
+{{/components/button/button}}
+```
+
+Auf diese Weise ist es möglich neue Funktionen sehr einfach über Subkomponenten hinzuzufügen.
+
+#### Komponenten mit Inline-Partials um zusätzliche Eigenschaften Erweitern
+
+Wie im vorigen Abschnitt erläutert, können Basis-Komponenten mit Hilfe des `@partial-block` Partials
+sehr gut mit Hilfe von Subkomponenten erweitert werden. Sollen jedoch einem von einer Komponente gerenderten HTML-Element
+dynamisch weitere Eigenschaften (z.B. über Style-Komponenten bereitgestellte CSS-Klassen) übergeben werden,
+ist dies auf diesem Wege nicht möglich. Hierfür lassen sich in Handlebars sogenannte [`Inline-Partials`](https://handlebarsjs.com/guide/partials.html#inline-partials)
+nutzen. Deren Gebrauch lässt sich am besten mit einem Beispiel erläutern.
+
+Für den Abonieren-Button in der Podcast-Player-Komponente wird die Button-Komponente verwendet.
+Diese setzt standardmäßig verschiedenen HTML-Properties im HTML-Button-Element. Der Abonieren-Button
+benötigt darüber hinaus weitere HTML-Properties. Diese sind aber so speziell, dass sie nicht der
+Button-Komponente als weitere Standard-HTML-Properties hinzugefügt wurden. Stattdessen wurde mit einem
+`Inline-Partial` die Möglichkeit geschaffen der Button-Komponente dynamisch beliebige weitere HTML-Properties
+zu übergeben.
+
+```handlebars
+<button class="ds-button" {{#> html_properties}}{{/html_properties}}>
+    {{> @partial-block }}
+</button>
+```
+
+Das Beispiel zeigt eine vereinfachte (aus Gründen der Übersichtlichkeit wurden alle anderen HTML-Properties weggelassen)
+Ansicht der Button-Komponente. Innerhalb des HTML-Button-Elements wird hier das Inline-Partial `html_properties`
+aufgerufen. Der Inhalt dieses Partials kann, wie im folgenden Codebeispiel zu sehen, gesetzt werden.
+
+```handlebars
+{{#with this}}
+    {{#> components/button/button _size="md" _disableButtonPress=true}}
+        {{>components/button/components/button_label _label="Abonnieren" _css="flex-1 truncate mr-2" _type="button"}}
+        <span x-cloak x-show="open" class="w-3 h-3">
+            {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
+        </span>
+        <span x-show="!open" class="w-3 h-3">
+            {{> components/base/image/icon _icon='arrow-down' _addClass="flex self-center w-3 h-3 fill-white" }}
+        </span>
+    {{/components/button/button}}
+    {{#*inline "html_properties"}}
+    x-ref="button"
+    x-on:click="toggle()"
+    :aria-expanded="open"
+    :aria-controls="$id('dropdown-button')"
+    :class="open ? 'drop-shadow' : ''"
+    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
+    {{/inline}}
+{{/with}}
+```
+
+Unterhalb des Aufrufs der Button-Komponente wird hier das Inline-Partial `html_properties` implementiert. Ein Inline-Partial
+muss immer in der Form `{{#*inline NAME_DES_PARTIALS}}` aufgerufen werden. Alle Inhalte die zwischen öffnendem und schließenden
+`inline` stehen, werden in der Komponente in der dieses Inline-Partial aufgerufen wird gerendert.
+
+Zu Beachten ist, dass, wie hier im Codebeispiel zu sehen, der Aufruf der Komponente und die Definition des Inline-Partials Von
+einem `with` Block umschlossen werden sollten. Auf diese Weise wird sichergestellt, dass ausschließlich die hier aufgerufene
+Button-Komponente die zusätzlichen Eigenschaften erhält. Würde der `with` Block weggelassen und irgendwo im weitere
+Verlauf der Seite ein weiteres Mal die Button-Komponente aufgerufen, würde auch das HTML-Button-Element in dieser Komponente
+diese zuätzlichen HTML-Properties rendern.
+
+<div class="bg-blue-200 !mt-4 p-4">
+    <h4 class="!text-stone-950 font-bold">Wichtig</h4>
+    <p>
+        Sollen beim Aufruf von Subkomponenten in einem Partial-Block oder einem Inline-Partial
+        Hash-Parameter (`_NAME_DES_PARAMETERS`) der umliegenden Komponente übergeben werden, muss
+        die [hier](#namen-übergebener-komponenten-parameter-in-partial-blocks-und-inline-partials)
+        beschriebene Namenskonvention zwingend eingehalten werden. Aufgrund von Unterschieden beim
+        Auflösen der Kontexte zwischen Handlebars.js und Handlebars.java können andernfalls die
+        Werte der Parameter nicht ausgelesen werden.
+    </p>
 </div>
