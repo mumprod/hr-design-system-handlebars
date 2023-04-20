@@ -1,18 +1,19 @@
-{{~#if this.isCurrentPageValid ~}}
+{{~#if currentPageValid ~}}
     {{> components/pagination/pagination_current_page_valid 
-    _moreThanOnePage=this.isMoreThanOnePage
-    _firstPage=this.isFirstPage
-    _secondPage=this.isSecondPage 
-    _notLastPage=this.isNotLastPage   
-    _onlyTwoPages=this.isOnlyTwoPages 
-    _onlyThreePages=this.isOnlyThreePages 
-    _totalPages=this.totalPages 
-    _currentPage=this.currentPage}}
+    _moreThanOnePage=moreThanOnePage
+    _firstPage=firstPage
+    _secondPage=secondPage 
+    _notLastPage=notLastPage 
+    _notLastButOnePage=notLastButOnePage  
+    _onlyTwoPages=onlyTwoPages 
+    _onlyThreePages=onlyThreePages 
+    _totalPages=totalPages 
+    _currentPage=currentPage}}
 {{else}}
     {{> components/pagination/pagination_current_page_invalid 
-    _moreThanOnePage=this.isMoreThanOnePage 
-    _onlyTwoPages=this.isOnlyTwoPages 
-    _onlyThreePages=this.isOnlyThreePages 
-    _totalPages=this.totalPages 
-    _currentPage=this.currentPages}}
+    _moreThanOnePage=moreThanOnePage 
+    _onlyTwoPages=onlyTwoPages 
+    _onlyThreePages=onlyThreePages 
+    _totalPages=totalPages 
+    _currentPage=currentPages}}
 {{~/if~}}
