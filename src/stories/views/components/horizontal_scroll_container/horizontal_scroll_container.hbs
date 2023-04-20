@@ -1,13 +1,13 @@
 <div x-data="slider()"
-    x-init="checkIfScrollable($refs.scrollContainerSectionNav)"
-    @resize.window="checkIfScrollable($refs.scrollContainerSectionNav)"
+    x-init="checkIfScrollable($refs.{{_container}})"
+    @resize.window="checkIfScrollable($refs.{{_container}})"
     class="w-full lg:container">
          <template x-if="isScrollable">
             <div class="relative">
-                <button class="absolute left-0 flex items-center justify-start w-8 h-10 pt-1 arrow-left-background-blue disabled:hidden" @click="prev($refs.scrollContainerSectionNav)" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
+                <button class="absolute left-0 flex items-center justify-start w-8 h-10 pt-1 arrow-left-background-blue disabled:hidden" @click="prev($refs.{{_container}})" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
                     {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current"}}
                 </button>
-                <button class="absolute right-0 flex items-center justify-end w-8 h-10 pt-1 group arrow-right-background-blue disabled:hidden" @click="next($refs.scrollContainerSectionNav)" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
+                <button class="absolute right-0 flex items-center justify-end w-8 h-10 pt-1 group arrow-right-background-blue disabled:hidden" @click="next($refs.{{_container}})" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
                     {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current "}}
                 </button>
             </div>
@@ -45,6 +45,7 @@
         },
         
         checkIfScrollable(e){
+            
             e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
             this.arrowsDisplay(e);
         }
