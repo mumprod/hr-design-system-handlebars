@@ -18,6 +18,16 @@
                 "hasIcon": false,
                 "iconName": "extern"
             }
+        },
+        {
+            "title": "Lottozahlen",
+            "text": "Lottozahlen",
+            "selected": false,
+            "link": {
+                "url": "http://www.Lotto.de",
+                "hasIcon": false,
+                "iconName": "extern"
+            }
         }
     ]
 }
