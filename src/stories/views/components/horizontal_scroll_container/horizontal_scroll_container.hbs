@@ -29,20 +29,20 @@
 
         arrowsDisplay(e) {
             e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
-            e.scrollLeft + e.offsetWidth == e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
+            e.scrollLeft + e.offsetWidth >= e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
         },
 
         prev(e) {
-        e.scrollLeft -= 200;
+        e.scrollLeft -= 50;
         let f = e.querySelector('.sb-navigation-flyout').parentNode.getBoundingClientRect()
-        e.querySelector('.sb-navigation-flyout').style.left = f.left +100+"px";
+        e.querySelector('.sb-navigation-flyout').style.left = f.left +50+"px";
 
         },
 
         next(e) {
-        e.scrollLeft += 200;
+        e.scrollLeft += 50;
         let f = e.querySelector('.sb-navigation-flyout').parentNode.getBoundingClientRect()
-        e.querySelector('.sb-navigation-flyout').style.left = f.left -100 + "px";
+        e.querySelector('.sb-navigation-flyout').style.left = f.left -50 + "px";
         
         },
 
