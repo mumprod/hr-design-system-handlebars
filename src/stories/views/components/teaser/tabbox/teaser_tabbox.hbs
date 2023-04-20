@@ -4,7 +4,7 @@
   class="grid grid-cols-12 pt-6 mx-0 mb-8 mt-14 col-full md:pt-7 bg-highlight-1 md:rounded-tl-hr md:rounded-br-hr md:col-main gap-x-6 gap-y-6"
 >
   <section class="px-0 col-span-full sm:px-8 md:px-0">
-    <div class="flex flex-wrap justify-center mb-7 mx-1.5" role="tablist">
+    <div class="flex flex-wrap gap-y-3 justify-center mb-7 mx-1.5" role="tablist">
       {{~#each this.tabbedGroup~}}
         {{#> components/button/button _size="sm" _css="mx-1.5" _variant="secondary" _type="button" }}
           {{> components/button/components/button_label _label=this.title}}
