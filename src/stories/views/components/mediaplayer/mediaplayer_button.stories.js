@@ -1,4 +1,4 @@
-import handlebars from 'handlebars'
+const handlebars = require('hrHandlebars')
 
 const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
     let brand =

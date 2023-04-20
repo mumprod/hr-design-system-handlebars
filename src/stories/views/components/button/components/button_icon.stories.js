@@ -1,4 +1,4 @@
-import handlebars from 'handlebars'
+const handlebars = require('hrHandlebars')
 
 const buttonIconTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
