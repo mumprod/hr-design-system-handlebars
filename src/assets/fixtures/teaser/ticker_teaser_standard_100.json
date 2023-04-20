@@ -10,7 +10,11 @@
             "@->contentpath": "logicItem.includeModel.realTeaserSize",
             "@->value": "100"
         },
-                {
+        {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": ""
+        },
+        {
             "@->contentpath": "logicItem.includeModel.topline",
             "@->value": ""
         },

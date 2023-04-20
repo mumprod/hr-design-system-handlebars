@@ -29,6 +29,6 @@ export default {
 
 export const TickerTeaser100 = {
     render: Template.bind({}),
-    name: 'Ticker Teaser 100',
+    name: 'Standard 100',
     args: tickerTeaser100Standard.logicItem.includeModel,
 }
