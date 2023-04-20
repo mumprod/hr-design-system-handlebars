@@ -1,5 +1,5 @@
 {{~#if _moreThanOnePage~}}
-    <nav class="flex content-center py-10" role="navigation" aria-label="Paginierung">
+    <nav class="flex content-center justify-center py-10" role="navigation" aria-label="Paginierung">
         {{~#if _onlyTwoPages~}}
              {{> components/pagination/pagination_only_two_pages
              _firstPage=_firstPage 
@@ -17,6 +17,7 @@
                  _firstPage=_firstPage
                  _secondPage=_secondPage   
                  _notLastPage=_notLastPage 
+                 _notLastButOnePage=_notLastButOnePage 
                  _totalPages=_totalPages 
                  _currentPage=_currentPage}}
             {{~/if~}}   
