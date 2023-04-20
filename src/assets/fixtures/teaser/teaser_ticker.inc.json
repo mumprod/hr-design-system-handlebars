@@ -19,7 +19,7 @@
                     "date": "17.04.22",
                     "dateSeparatorTime": "17.04.22, 19:30"
                 },
-                "hasByline": false,
+                "hasByline": true,
                 "teaserInfo": {
                     "showTeaserInfo": false,
                     "showTeaserInfoSection": true,
@@ -84,7 +84,7 @@
                 "trackingForArdMediatheksLink": false,
                 "showMediatheksLink": false,
                 "showAirdate": false,
-                "showProfileInfoAsByline": false,
+                "showProfileInfoAsByline": true,
                 "obsolet_brandOfTeaser": "hessenschau",
                 "documentSection": "Gesellschaft",
                 "headlineTag": "h1",
@@ -93,7 +93,7 @@
                 "shorttext": "Hier bekommen Sie immer die neuesten Nachrichten über Eintracht Frankfurt.",
                 "hideBylineAndShorttext": false,
                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
-                "profiles": "",
+                "profiles": "Von Karsten Hufer",
                 "teaserLead": {
                     "avDocument": "",
                     "image": ""
