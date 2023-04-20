@@ -1,7 +1,7 @@
 {{~#if _firstPage~}}
     {{> components/pagination/pagination_button_left }}
     <div class="px-20 py-10"> 
-    <span class="font-title">1</span> 
+    <span class="py-10 pr-5 font-title">1</span> 
     <a href="{{lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>2</a> 
     </div> 
     {{> components/pagination/pagination_button_right_linked }}
@@ -9,7 +9,7 @@
      {{> components/pagination/pagination_button_left_linked }} 
     <div class="px-20 py-10">   
         <a href="{{firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>   
-        <span class="font-title">2</span>   
+        <span class="py-10 pl-5 font-title">2</span>   
     </div>   
     {{> components/pagination/pagination_button_right }}     
 {{~/if~}}
