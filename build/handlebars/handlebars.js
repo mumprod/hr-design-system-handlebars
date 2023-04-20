@@ -21,7 +21,7 @@ const handlebars = require('handlebars'),
         extname: '.hbs',
         partialsDir: './src/stories/views',
         partialsBaseDir: './src/stories/views',
-        precompile: false,
+        precompile: true,
         writeJson: true,
         locaTags: {
             'hessenschau': locatagsHessenschau,

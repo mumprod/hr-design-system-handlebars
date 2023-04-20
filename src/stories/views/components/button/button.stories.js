@@ -1,4 +1,4 @@
-import handlebars from 'handlebars'
+const handlebars = require('hrHandlebars')
 
 const buttonWithLabelTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
@@ -13,7 +13,7 @@ const buttonWithLabelTemplateOnBackground = (args) => {
     let hbsTemplate = handlebars.compile(`
     <div class="bg-primary p-4">
         {{#> components/button/button}}
-            {{> components/button/components/button_label}}
+            {{> components/button/components/button_label }}
         {{/components/button/button}}
     </div>
   `)
@@ -23,7 +23,7 @@ const buttonWithLabelTemplateOnBackground = (args) => {
 const buttonWithLabelAndIconRightTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/button}}
-        {{> components/button/components/button_label}}
+        {{> components/button/components/button_label }}
         {{> components/button/components/button_icon }}
     {{/components/button/button}}
   `)
@@ -34,7 +34,7 @@ const buttonWithLabelAndIconLeftTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/button~}}
         {{> components/button/components/button_icon }}
-        {{> components/button/components/button_label}}
+        {{> components/button/components/button_label }}
     {{~/components/button/button}}
   `)
     return hbsTemplate({ ...args })
@@ -468,7 +468,7 @@ export const ButtonSecondaryAufFarbigemHintergrund = {
             control: false,
         },
 
-        _onBackground_: {
+        _onBackground: {
             control: false,
         },
     },
@@ -494,7 +494,7 @@ export const ButtonTertiaryAufFarbigemHintergrund = {
             control: false,
         },
 
-        _onBackground_: {
+        _onBackground: {
             control: false,
         },
     },
