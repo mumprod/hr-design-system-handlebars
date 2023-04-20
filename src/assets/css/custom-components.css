@@ -110,7 +110,7 @@
     }
 
     .ds-link {
-        @apply block focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
+        @apply focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
     }
 
     .ds-link:focus:not(:focus-visible) {
@@ -121,16 +121,8 @@
         @apply focus:shadow-none;
     }
 
-    .ds-link-clusterTeaser {
-        @apply block text-gray-scorpion focus:shadow-teaser-focus focus:shadow-focus-state focus:outline-none;
-    }
-
-    .ds-link-clusterTeaser:focus:not(:focus-visible) {
-        @apply shadow-none;
-    }
-
     .ds-link-inset {
-        @apply block focus:ring-inset focus:ring-4 focus:outline-none focus:ring-focus-state;
+        @apply focus:ring-inset focus:ring-4 focus:outline-none focus:ring-focus-state;
     }
 
     .ds-link-inset:focus:not(:focus-visible) {
