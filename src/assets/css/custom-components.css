@@ -141,7 +141,7 @@
 
     .ds-teaser-focus:focus + .ds-cta > * {
         @apply bg-button-inverted;
-        @apply text-button-hollow;
+        @apply text-button;
         @apply border-none;
     }
 
@@ -166,7 +166,7 @@
         @apply text-base;
         @apply font-copy;
         @apply list-none;
-        @apply border-button;
+        @apply border-button--dark;
         @apply fill-content-nav;
         @apply text-content-nav;
         @apply bg-white;
