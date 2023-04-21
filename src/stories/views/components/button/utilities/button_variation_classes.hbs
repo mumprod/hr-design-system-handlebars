@@ -2,13 +2,13 @@
     {{inline-switch
         _variant
         '["primary","secondary","tertiary"]'
-        '[" border text-button-primary bg-button-primary--inverted border-button-primary--inverted hover:bg-button-primary--inverted-dark active:bg-button-primary--inverted-dark"," border text-button-primary--inverted border-button-primary--inverted hover:bg-button-primary--inverted-dark hover:text-button-primary active:text-button-primary active:bg-button-primary--inverted-dark"," bg-transparent border-transparent text-button-inverted hover:bg-button-primary--inverted-dark hover:text-button-primary hover:border-button-primary--inverted-dark active:text-button-primary active:bg-button-primary--inverted-dark"," border text-button-primary bg-button-primary--inverted border-button-primary--inverted hover:bg-button-primary--inverted-dark active:bg-button-primary--inverted-dark"]'
+        '[" border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark  active:bg-button-inverted--dark "," border text-button-inverted border-button-inverted hover:bg-button-inverted--dark  hover:text-button active:text-button active:bg-button-inverted--dark "," bg-transparent border-transparent text-button-inverted hover:bg-button-inverted--dark  hover:text-button hover:border-button-inverted--dark  active:text-button active:bg-button-inverted--dark "," border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark  active:bg-button-inverted--dark "]'
     ~}}
 {{else}}
     {{~inline-switch
         _variant
         '["primary","secondary","tertiary"]'
-        '[" border text-button-primary--inverted bg-button-primary border-button-primary hover:bg-button-primary--dark hover:border-button-primary--dark active:bg-button-primary--dark"," border text-button-primary border-button-primary hover:bg-button-primary--inverted active:bg-button-primary--inverted"," border bg-transparent border-transparent text-button-primary hover:bg-button-primary--inverted hover:border-button-primary active:bg-button-primary--inverted"," border text-button-primary--inverted bg-button-primary border-button-primary hover:bg-button-primary--dark  hover:border-button-primary--dark active:bg-button-primary--dark"]'
+        '[" border text-button-inverted bg-button border-button hover:bg-button--dark  hover:border-button--dark  active:bg-button--dark "," border text-button border-button hover:bg-button-inverted active:bg-button-primary--inverted"," border bg-transparent border-transparent text-button hover:bg-button-inverted hover:border-button active:bg-button-primary--inverted"," border text-button-inverted bg-button border-button hover:bg-button--dark   hover:border-button--dark  active:bg-button--dark "]'
     ~}}
 {{/if}}
 {{~#unless _disableButtonPress}} active:scale-95{{/unless}}
