@@ -155,6 +155,7 @@ module.exports = {
             },
             margin: {
                 '13': '3.125rem',
+                '13-2': '3.375rem',
                 '30': '7.5rem',
                 '240': '60rem',
                 'half-screen': '50vw',
