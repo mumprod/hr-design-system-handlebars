@@ -3,7 +3,7 @@
         x-data="flyoutHandler" 
         x-ref="{{getRandom}}"
         id="flyout-{{getRandom}}" 
-        @resize.window.debounce="setFlyoutAnimationStyle();"
+        @resize.window.debounce=" dropped = false; setFlyoutAnimationStyle();"
         {{#if this.showAsFlyout}} x-show="dropped"  {{else}} {{#if ../this.selected}} x-show="$screen('lg') ? true : dropped" {{else}} x-show="dropped" {{/if}} {{/if}}
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()"  :class ="shouldFlyoutBeHidden() ? 'hidden' : ''" {{/if}}  
         
