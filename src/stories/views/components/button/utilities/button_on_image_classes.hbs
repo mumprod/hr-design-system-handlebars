@@ -1,0 +1,39 @@
+absolute bottom-0 right-0
+{{~#switch _teaserType~}}
+    {{~#case 'standard'~}}
+        {{~#if _isMobile1to1~}}
+            {{~inline-switch _teaserSize '["25","33"]' '[" m-2"," m-2 md:m-3"," m-2 md:m-4"]'~}}
+        {{~else~}}
+            {{~inline-switch _teaserSize '["25","33"]' '[" m-2"," m-4 md:m-3"," m-4"]'~}}
+        {{~/if~}}
+    {{~/case~}}
+    {{~#case 'alternative'~}}
+        {{~#if _isMobile1to1~}}
+            {{~inline-switch
+                _teaserSize
+                '["hero","100","50"]'
+                '[" m-2 md:m-4"," m-2 md:m-3"," m-2"]'
+            ~}}
+        {{~else~}}
+            {{~inline-switch _teaserSize '["hero","100","50"]' '[" m-4"," m-2 md:m-3"," m-2"]'~}}
+        {{~/if~}}
+    {{~/case~}}
+    {{~#case 'tabbox-standard'~}}
+        {{~#if _isMobile1to1~}}
+            {{~inline-switch _teaserSize '["25","33"]' '[" m-2"," m-2 md:m-3"," m-2 md:m-4 "]'~}}
+        {{~else~}}
+            {{~inline-switch _teaserSize '["25","33"]' '[" m-2"," m-4 md:m-3"," m-4"]'~}}
+        {{~/if~}}
+    {{~/case~}}
+    {{~#case 'tabbox-alternative'~}}
+        {{~#if _isMobile1to1~}}
+            {{~inline-switch
+                _teaserSize
+                '["hero","100","50"]'
+                '[" m-2 md:m-4"," m-2 md:m-3"," m-2"]'
+            ~}}
+        {{~else~}}
+            {{~inline-switch _teaserSize '["hero","100","50"]' '[" m-4"," m-2 md:m-3"," m-2"]'~}}
+        {{~/if~}}
+    {{~/case~}}
+{{~/switch~}}

@@ -1,8 +1,0 @@
-{{#if _withLink}}
-    {{#decorator 'components/base/link' _isAriaHidden=_isLinkAriaHidden _css=_linkCss}}
-        {{>components/button/button_pseudo.inc _addClass=_addClass _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden _showIcon=_showIcon _icon=_icon}}
-    {{/decorator}}
-{{else}}
-    {{>components/button/button_pseudo.inc _addClass=_addClass _buttonCss=_buttonCss _buttonText=_buttonText _type=_type _isLinkAriaHidden=_isLinkAriaHidden _showIcon=_showIcon _icon=_icon}}
-{{/if}}
-

@@ -20,22 +20,25 @@
     >
 
     {{!-- Button --}}
-    <button
-        x-ref="button"
-        x-on:click="toggle()"
-        :aria-expanded="open"
-        :aria-controls="$id('dropdown-button')"
-        type="button"
+    {{#with this}}
+        {{#> components/button/button _size="md" _disableButtonPress=true}}
+            {{>components/button/components/button_label _label="Abonnieren" _css="flex-1 truncate mr-2" _type="button"}}  
+            <span x-cloak x-show="open" class="w-3 h-3">
+                {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
+            </span>
+            <span x-show="!open" class="w-3 h-3">
+                {{> components/base/image/icon _icon='arrow-down' _addClass="flex self-center w-3 h-3 fill-white" }}
+            </span>
+        {{/components/button/button}}
+        {{#*inline "html_properties"}}
+        x-ref="button" 
+        x-on:click="toggle()" 
+        :aria-expanded="open" 
+        :aria-controls="$id('dropdown-button')" 
         :class="open ? 'drop-shadow' : ''" 
-        class="flex ds-button items-center gap-1.5 px-2 py-2 text-white shadow font-heading bg-podcast-text js-load"
-        data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'>Abonnieren
-        <div x-cloak x-show="open" class="w-3 h-3">
-            {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
-        </div>
-        <div x-show="!open" class="w-3 h-3">
-            {{> components/base/image/icon _icon='arrow-down' _addClass="flex self-center w-3 h-3 fill-white" }}
-        </div>
-    </button>
+        data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastAbonnieren:ButtonClick"}]}'
+        {{/inline}}
+    {{/with}}
 
     {{!-- Flyout --}}
     <div

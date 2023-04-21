@@ -118,10 +118,10 @@
     }
 
     .link-focus-inset {
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-grey-scorpion/50;
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-gray-scorpion/50;
     }
     .link-focus {
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-grey-scorpion/50;
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-scorpion/50;
     }
     .link-focus-inset-white {
         @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-white/50;

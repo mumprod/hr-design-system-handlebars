@@ -1,3 +1,57 @@
+# v1.12.1 (Thu Apr 20 2023)
+
+#### 🐛 Bug Fix
+
+- standard ticker teaser (100%) without timeline [#610](https://github.com/mumprod/hr-design-system-handlebars/pull/610) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.12.0 (Thu Apr 20 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2153 [#609](https://github.com/mumprod/hr-design-system-handlebars/pull/609) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.11.12 (Thu Apr 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fixing data-model, and css [#608](https://github.com/mumprod/hr-design-system-handlebars/pull/608) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.11.11 (Tue Apr 18 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2270 - pfeil fehlt in der navigation bei aktiven menüpunkt [#607](https://github.com/mumprod/hr-design-system-handlebars/pull/607) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 🏠 Internal
+
+- Chore/dpe 2265 [#606](https://github.com/mumprod/hr-design-system-handlebars/pull/606) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.11.10 (Mon Apr 17 2023)
 
 #### 🐛 Bug Fix
