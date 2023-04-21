@@ -1,6 +1,6 @@
 <div 
     id="sectionNav"
-    class="w-full px-0 mt-10 sb-section-navigation md:mt-0 lg:px-10 lg:container " 
+    class="w-full px-0 sb-section-navigation md:mt-0 lg:px-10 lg:container " 
     x-effect="$el.setAttribute('aria-expanded',  $store.burgeropen || $screen('lg')); $el.setAttribute('aria-hidden', ! ($store.burgeropen || $screen('lg')))"
 >
 {{#> components/horizontal_scroll_container/horizontal_scroll_container _container="scrollContainerSectionNav"}}
