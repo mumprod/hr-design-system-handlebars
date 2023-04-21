@@ -2,7 +2,7 @@
     x-init="checkIfScrollable($refs.{{_container}})"
     @resize.window="checkIfScrollable($refs.{{_container}})"
     class="w-full lg:container">
-         <template x-if="isScrollable">
+         <template x-if="isScrollable && $screen('lg')">
             <div class="relative">
                 <button class="absolute left-0 flex items-center justify-start w-8 h-10 pt-1 arrow-left-background-blue disabled:hidden" @click="prev($refs.{{_container}})" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
                     {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current"}}
@@ -20,12 +20,10 @@
 
     function slider() {
 
-    return {
-        
+    return {     
         isScrollable:false,
         arrowLeftDisplay:false,
         arrowRightDisplay:true,
-        
 
         arrowsDisplay(e) {
             e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
@@ -34,16 +32,10 @@
 
         prev(e) {
         e.scrollLeft -= 50;
-        let f = e.querySelector('.sb-navigation-flyout').parentNode.getBoundingClientRect()
-        e.querySelector('.sb-navigation-flyout').style.left = f.left +50+"px";
-
         },
 
         next(e) {
         e.scrollLeft += 50;
-        let f = e.querySelector('.sb-navigation-flyout').parentNode.getBoundingClientRect()
-        e.querySelector('.sb-navigation-flyout').style.left = f.left -50 + "px";
-        
         },
 
         updateIndex(e) {
@@ -51,7 +43,6 @@
         },
         
         checkIfScrollable(e){
-           
             e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
             this.arrowsDisplay(e);
         }

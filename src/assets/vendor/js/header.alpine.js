@@ -281,7 +281,10 @@ document.addEventListener('alpine:init', () => {
         toggle() {
             this.dropped = !this.dropped
         },
-
+        correctFlyoutPos(){
+            let f = this.$el.getBoundingClientRect()
+            this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = f.left +"px";
+        },
         // toggles visibility of service nav and sets global variables in stores
         toggleServiceNav() {
             this.dropped = !this.dropped

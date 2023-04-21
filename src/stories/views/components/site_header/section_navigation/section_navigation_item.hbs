@@ -7,7 +7,7 @@
         {{#if this.isCluster ~}}
 {{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
-                @click.debounce.100ms="toggle()" 
+                @click.debounce.100ms="toggle(); correctFlyoutPos()" 
                 :class="dropped ? 'first:font-bold lg:first:font-normal lg:underline' : 'first:font-normal'"
                 class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-2 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold{{/if}}" 
                 x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
