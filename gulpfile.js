@@ -318,7 +318,7 @@ function watchFiles() {
 async function convertPartialsToJs() {
     src(`${options.paths.assets.views}/**/*.hbs`)
         .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '$1'))
-        .pipe(replace(/(\\")/g, '\\$1'))
+        .pipe(replace(/(\\")/g, '\\$1')) // replace occurences of \" by \\" to make sure that " are correctly rendered in json strings
         .pipe(htmlToJs({ concat: 'handlebar-partials.js' }))
         .pipe(dest(options.paths.dist.handlebarPartials))
 }
