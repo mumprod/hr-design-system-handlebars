@@ -285,6 +285,8 @@ document.addEventListener('alpine:init', () => {
             if(this.$screen('lg')){
                 let f = this.$el.getBoundingClientRect()
                 this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = f.left +"px";
+            } else {
+                this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = "0px";
             }
         },
         // toggles visibility of service nav and sets global variables in stores
