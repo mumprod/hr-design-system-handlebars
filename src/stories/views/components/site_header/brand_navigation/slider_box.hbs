@@ -1,7 +1,7 @@
 <div x-data="slider()"
     x-init="checkIfScrollable($refs.container)"
     @resize.window="checkIfScrollable($refs.container)"
-    class="sb-brand-navigation lg:container w-full md:px-5 lg:px-10 px-3.5 h-10 md:h-8">
+    class="sb-brand-navigation lg:container w-full md:px-1 lg:px-6 px-3.5 h-10 md:h-8">
          <template x-if="isScrollable">
             <div>
                 <button class="absolute left-0 w-12 h-full pt-1 arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">

@@ -10,7 +10,7 @@
                 @click.debounce.100ms="toggle(); correctFlyoutPos()" 
                 @resize.window="dropped=false; correctFlyoutPos()"
                 :class="dropped ? 'first:font-bold lg:first:font-normal lg:underline' : 'first:font-normal'"
-                class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-2 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold{{/if}}" 
+                class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-4 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4 {{#if this.selected}} font-bold{{/if}}" 
                 x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}" 
@@ -24,7 +24,7 @@
                     id="flyout-{{nextRandom}}-1"
                     
                     :class="dropped ? 'font-bold' : ''"
-                    class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-2 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
+                    class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     aria-haspopup="true" 
                     x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'));$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
@@ -34,7 +34,7 @@
             {{~else ~}} 
 {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a href="{{resourceUrl this.url}}" 
-                    class="{{#if this.selected}}-currentSection lg:justify-center {{/if}} link-focus-inset-white js-load flex justify-start pt-0.5 pl-4 pr-2 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
+                    class="{{#if this.selected}}-currentSection lg:justify-center {{/if}} link-focus-inset-white js-load flex justify-start pt-0.5 pl-4 pr-4 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'
                     x-effect="$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
