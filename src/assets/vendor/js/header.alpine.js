@@ -283,8 +283,9 @@ document.addEventListener('alpine:init', () => {
         },
         correctFlyoutPos(){
             if(this.$screen('lg')){
-                let f = this.$el.getBoundingClientRect()
-                this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = f.left +"px";
+                let elementBoundingClientRec = this.$el.getBoundingClientRect()
+                let parentElementBoundingClientRec = this.$el.closest(".relative").getBoundingClientRect()
+                this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = (elementBoundingClientRec.left - Math.abs(parentElementBoundingClientRec.left))+"px";
             } else {
                 this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = "0px";
             }

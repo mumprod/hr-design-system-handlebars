@@ -1,4 +1,4 @@
-export default function slider(container) {
+export default function slider() {
 
     return {     
         isScrollable:false,
@@ -6,7 +6,6 @@ export default function slider(container) {
         arrowRightDisplay:true,
 
         arrowsDisplay(e) { 
-            console.log("arrow display: " + container);
             e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
             e.scrollLeft + e.offsetWidth >= e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
         },
@@ -23,10 +22,8 @@ export default function slider(container) {
             this.arrowsDisplay(e);
         },
         
-        checkIfScrollable(e){
-            console.log("e.scrollWidth : "+e.scrollWidth+" e.clientWidth:"+e.clientWidth);
-            e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
-            console.log("checkIfScrollable : "+container+":"+this.isScrollable);
+        checkIfScrollable(e){     
+            e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;  
             this.arrowsDisplay(e);
         }
     };
