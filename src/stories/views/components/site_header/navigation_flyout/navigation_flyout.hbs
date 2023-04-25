@@ -7,7 +7,7 @@
         {{#if this.showAsFlyout}} x-show="dropped"  {{else}} {{#if ../this.selected}} x-show="$screen('lg') ? true : dropped" {{else}} x-show="dropped" {{/if}} {{/if}}
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()"  :class ="shouldFlyoutBeHidden() ? 'hidden' : ''" {{/if}}  
         
-        class="sb-navigation-flyout bg-white md:filter md:drop-shadow-md lg:absolute  
+        class="sb-navigation-flyout bg-white md:filter md:drop-shadow-md lg:fixed
                 {{#if ../_isSectionNav}} relative md:top-auto md:left-auto lg:mt-10 w-full transition-all duration-500 ease-in-out
                     {{#unless this.showAsFlyout}}
                         {{#if ../this.selected}}
