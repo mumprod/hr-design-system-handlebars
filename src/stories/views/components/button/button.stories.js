@@ -1,5 +1,6 @@
 const handlebars = require('hrHandlebars')
 
+//Kommentar zum Test von Turbosnap
 const buttonWithLabelTemplate = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#> components/button/button}}

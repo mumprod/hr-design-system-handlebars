@@ -7,7 +7,7 @@ const buttonLabelTemplate = (args) => {
     return hbsTemplate({ ...args })
 }
 
-//Kommentar zum Test von Turbosnap2
+//Kommentar zum Test von Turbosnap3
 export default {
     title: 'Komponenten/Buttons/Komponenten/Label',
 
