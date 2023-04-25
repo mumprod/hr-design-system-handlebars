@@ -1,4 +1,4 @@
-<div x-data="slider('scrollContainer_{{nextRandom}}')"
+<div x-data="slider()"
     x-init="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
     @resize.window="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
     class="relative w-full"
@@ -16,7 +16,7 @@
             </button>
         </div>
     </template>
-    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-default hide-scroll-bar lg:max-h-10 align-center">
+    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-default hide-scroll-bar align-center">
         {{> @partial-block }} 
     </div> 
 </div>
