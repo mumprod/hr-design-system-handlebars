@@ -3,11 +3,11 @@
         x-data="flyoutHandler" 
         x-ref="{{getRandom}}"
         id="flyout-{{getRandom}}" 
-        @resize.window.debounce="setFlyoutAnimationStyle();"
+        @resize.window.debounce=" dropped = false; setFlyoutAnimationStyle();"
         {{#if this.showAsFlyout}} x-show="dropped"  {{else}} {{#if ../this.selected}} x-show="$screen('lg') ? true : dropped" {{else}} x-show="dropped" {{/if}} {{/if}}
         {{#if ../_isSectionNav}} x-init="sectionNavFlyoutWatcher()"  :class ="shouldFlyoutBeHidden() ? 'hidden' : ''" {{/if}}  
         
-        class="sb-navigation-flyout bg-white md:filter md:drop-shadow-md lg:absolute  
+        class="sb-navigation-flyout bg-white md:filter md:drop-shadow-md 
                 {{#if ../_isSectionNav}} relative md:top-auto md:left-auto lg:mt-10 w-full transition-all duration-500 ease-in-out
                     {{#unless this.showAsFlyout}}
                         {{#if ../this.selected}}
@@ -15,7 +15,7 @@
                         {{else}} z-10002 lg:left-auto lg:w-auto {{/if}}
                     {{else}} z-10002 lg:left-auto lg:w-auto {{/unless}}
                 {{else}} z-10002 lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 lg:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 lg:pl-6 divide-y divide-gray-200 tablet:w-half-screen tablet:ml-half-screen tablet:right-0 tablet:left-auto {{/if}}
-                {{#if this.showAsFlyout}} lg:rounded-b lg:pl-4{{/if}}" 
+                {{#if this.showAsFlyout}} lg:rounded-b lg:pl-4 lg:absolute{{else}} lg:fixed{{/if}}" 
 
         aria-labelledby="flyout-{{getRandom}}-1" 
         {{#if this.showAsFlyout}}
@@ -39,7 +39,6 @@
                 </div>
             {{/unless}}
         {{/unless}}
-        
         <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} w-full lg:px-10 lg:container {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}

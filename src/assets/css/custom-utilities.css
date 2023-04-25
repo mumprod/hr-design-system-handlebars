@@ -104,13 +104,13 @@
     }
 
     .-currentBrand {
-        @apply before:content-[''] lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-white lg:before:border-b-8 lg:before:border-blue-congress lg:before:mt-6;
+        @apply before:content-[''] md:before:relative md:before:-right-1/2 md:before:w-0 md:before:h-0 md:before:border-t-0 md:before:border-r-8 md:before:border-r-transparent md:before:border-l-8 md:before:border-l-white md:before:border-b-8 md:before:border-blue-congress md:before:mt-6;
     }
     .-currentService {
         @apply before:content-[''] before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12;
     }
     .-currentSection {
-        @apply before:content-[''] before:w-0 before:h-0 before:mr-2 before:-ml-4 before:border-r-0 before:border-t-7 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-7 before:border-b-transparent before:mb-0.5 lg:before:absolute lg:before:mb-0  lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:ml-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-8;
+        @apply lg:!pr-0 after:content-[''] after:w-0 after:h-0 after:mr-2 after:-ml-13-2 after:border-r-0 after:border-t-7 after:border-t-transparent after:border-l-8 after:border-l-white after:border-b-7 after:border-b-transparent after:mb-0.5 lg:after:relative lg:after:right-1/2 lg:after:mb-0  lg:after:w-0 lg:after:h-0 lg:after:mr-0 lg:after:ml-0 lg:after:border-t-0 lg:after:border-r-8 lg:after:border-r-transparent lg:after:border-l-8 lg:after:border-l-transparent lg:after:border-b-8 lg:after:border-b-white lg:after:mt-8;
     }
     .-warnung {
         @apply text-red-600 !important;

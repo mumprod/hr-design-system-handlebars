@@ -281,7 +281,15 @@ document.addEventListener('alpine:init', () => {
         toggle() {
             this.dropped = !this.dropped
         },
-
+        correctFlyoutPos(){
+            if(this.$screen('lg')){
+                let elementBoundingClientRec = this.$el.getBoundingClientRect()
+                let parentElementBoundingClientRec = this.$el.closest(".relative").getBoundingClientRect()
+                this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = (elementBoundingClientRec.left - Math.abs(parentElementBoundingClientRec.left))+"px";
+            } else {
+                this.$el.parentNode.querySelector('.sb-navigation-flyout').style.left = "0px";
+            }
+        },
         // toggles visibility of service nav and sets global variables in stores
         toggleServiceNav() {
             this.dropped = !this.dropped

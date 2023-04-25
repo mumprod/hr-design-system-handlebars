@@ -7,7 +7,7 @@
     {
         "@->jsoninclude": "site_header/serviceNavigation.inc.json"  
     },   
-    "topTopicsNavigationSSILinks":
+    "topTopicsNavigation":
     {     
         "@->jsoninclude": "site_header/topTopicsNavigation.inc.json"
     },

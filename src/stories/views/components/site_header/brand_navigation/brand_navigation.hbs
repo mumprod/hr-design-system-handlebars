@@ -1,22 +1,6 @@
-<div x-data="slider()"
-        x-init="checkIfScrollable($refs.container)"
-        @resize.window="checkIfScrollable($refs.container)"
-        class="sb-brand-navigation lg:container w-full md:px-5 lg:px-10 px-3.5 h-10 lg:h-8">
-
-    <div class="flex justify-center text-xs list-none text-gray-scorpion ">
-
-        <template x-if="isScrollable">
-            <div>
-                <button class="absolute left-0 w-12 h-full pt-1 arrow-left-background disabled:hidden" @click="prev($refs.container)" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
-                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 mr-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current"}}
-                </button>
-                <button class="absolute right-0 w-12 h-full pt-1 group arrow-right-background disabled:hidden" @click="next($refs.container)" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
-                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 ml-4 inline-block w-3.5 h-3.5 text-blue-congress fill-current "}}
-                </button>
-            </div>
-        </template>
-
-        <nav x-ref="container" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-pointer hide-scroll-bar max-h-10 align-center">
+<div class="sb-brand-navigation lg:container w-full md:px-1 lg:px-6 px-3.5 h-10 md:h-8">
+{{#> components/horizontal_scroll_container/horizontal_scroll_container _viewport="xs" }}
+    <nav class="flex w-full text-xs list-none text-grey-scorpion">
             <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
             {{#with this.brandNavigationItems}}
                 <ul class="flex pl-0.5 pr-3 md:px-0 flex-nowrap lg:mr-0">
@@ -24,45 +8,7 @@
                         {{> components/site_header/brand_navigation/brand_navigation_item }}
                     {{/each}} 
                 </ul>
-            {{/with}}
-        </nav>
-
-    </div>
-    
+            {{/with}}      
+    </nav>
+{{/components/horizontal_scroll_container/horizontal_scroll_container}}
 </div>
-
-<script type="text/javascript">
-
-function slider() {
-
-  return {
-      
-    isScrollable:false,
-    arrowLeftDisplay:false,
-    arrowRightDisplay:true,
-
-    arrowsDisplay(e) {
-        e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
-        e.scrollLeft + e.offsetWidth == e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
-    },
-
-    prev(e) {
-      e.scrollLeft -= 200;
-    },
-
-    next(e) {
-     e.scrollLeft += 200;
-    },
-
-    updateIndex(e) {
-        this.arrowsDisplay(e);
-    },
-    
-    checkIfScrollable(e){
-        e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
-        this.arrowsDisplay(e);
-    }
-  };
-}
-
-</script>
