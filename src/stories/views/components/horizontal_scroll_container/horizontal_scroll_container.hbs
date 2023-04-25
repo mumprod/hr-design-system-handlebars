@@ -1,52 +1,22 @@
-<div x-data="slider()"
-    x-init="checkIfScrollable($refs.{{_container}})"
-    @resize.window="checkIfScrollable($refs.{{_container}})"
-    class="w-full lg:container">
-         <template x-if="isScrollable && $screen('lg')">
-            <div class="relative">
-                <button class="absolute left-0 flex items-center justify-start w-8 h-10 pt-1 arrow-left-background-blue disabled:hidden" @click="prev($refs.{{_container}})" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
-                    {{> components/base/image/icon _icon="arrow-left" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current"}}
-                </button>
-                <button class="absolute right-0 flex items-center justify-end w-8 h-10 pt-1 group arrow-right-background-blue disabled:hidden" @click="next($refs.{{_container}})" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
-                    {{> components/base/image/icon _icon="arrow-right" _iconmap="icons"  _addClass="pb-1 w-3.5 h-3.5 text-white fill-current "}}
-                </button>
-            </div>
-        </template>
-
-        {{> @partial-block }}  
+<div x-data="slider('scrollContainer_{{nextRandom}}')"
+    x-init="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
+    @resize.window="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
+    class="relative w-full"
+    ax-load 
+    x-ignore
+    ax-load-src={{resourceUrl "assets/js/vendor/horizontal_scroll_container.alpine.js" }}
+    >
+    <template x-if="isScrollable && $screen('{{_viewport}}')">
+        <div>
+            <button class="{{#if _onDarkBackground}}arrow-left-background-blue{{else}}arrow-left-background{{/if}} absolute left-0 flex items-center justify-start w-8 h-full disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
+                {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-blue-congress') }}
+            </button> 
+            <button class="{{#if _onDarkBackground}}arrow-right-background-blue{{else}}arrow-right-background{{/if}} absolute right-0 flex items-center justify-end w-8 h-full group disabled:hidden" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
+                {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-blue-congress') }}
+            </button>
+        </div>
+    </template>
+    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll leading-10 transition-all duration-300 ease-in-out cursor-default hide-scroll-bar lg:max-h-10 align-center">
+        {{> @partial-block }} 
+    </div> 
 </div>
-
-<script type="text/javascript">
-
-    function slider() {
-
-    return {     
-        isScrollable:false,
-        arrowLeftDisplay:false,
-        arrowRightDisplay:true,
-
-        arrowsDisplay(e) {
-            e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
-            e.scrollLeft + e.offsetWidth >= e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
-        },
-
-        prev(e) {
-        e.scrollLeft -= 200;
-        },
-
-        next(e) {
-        e.scrollLeft += 200;
-        },
-
-        updateIndex(e) {
-            this.arrowsDisplay(e);
-        },
-        
-        checkIfScrollable(e){
-            e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;
-            this.arrowsDisplay(e);
-        }
-    };
-    }
-
-</script>
