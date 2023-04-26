@@ -162,12 +162,12 @@ export default {
         },
 
         '_size': {
-            options: ['sm', 'md', 'lg'],
+            options: ['xs','sm', 'md', 'lg'],
             control: {
                 type: 'select',
             },
 
-            description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `sm`, `md` und `lg`',
+            description: 'Bestimmt die Größe des Buttons. Erlaubte Werte sind `xs`,`sm`, `md` und `lg`',
 
             table: {
                 category: 'Button',
@@ -325,7 +325,25 @@ export const ButtonSm = {
         _label: 'Small',
     },
 }
+export const ButtonXs = {
+    render: buttonWithLabelTemplate.bind({}),
+    name: 'Button - xs',
 
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'xs',
+        _label: 'x-Small',
+    },
+}
 export const ButtonPrimary = {
     render: buttonWithLabelTemplate.bind({}),
     name: 'Button - Primary',
