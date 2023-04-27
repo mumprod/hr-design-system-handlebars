@@ -8,7 +8,7 @@ import * as HeaderStories from './header.stories'
 [Frameworks](#frameworks) - [Varianten](#varianten) - [Scrollverhalten](#scrollverhalten) - [Templates & Codes](#templates) - [Sub-Komponenten](#subkomponenten)
 
 <Canvas>
-    <Story of={HeaderStories.Default} />
+     <Story of={HeaderStories.Default} />
 </Canvas>
 
 ## Beschreibung
@@ -419,13 +419,14 @@ Service-Navigation Flyout Tablet/Mobil:
 
 -   section_navigation_item.hbs
 -   navigation_flyout.hbs
+-   horizontal_scroll_container.hbs
 
 <br />
 
 Die Section-Navigation stellt die Links zu den einzelnen Themenbereichen der Hessenschau bereit. Die
 Navigation-Items der Section Navigation können je nach Einstellung vom CMS direkt zur Themen-Indexseite
 verlinken oder ihrerseits ein Flyout öffnen, über dessen Einträge dann Themenbereiche angesteuert werden
-können:
+können. Wird die Gesamtbreite der Section-Navigation breiter als der Container des Headers, werden am Rand Pfeile zum Verschieben der Navigation angezeigt. 
 
 <br />
 
