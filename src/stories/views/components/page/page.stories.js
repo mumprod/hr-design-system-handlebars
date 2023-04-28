@@ -4,6 +4,8 @@ import {
     NavigationDataWithTeaser,
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
+    NavigationDataWithTeaser4
+
 } from './page.data.js'
 
 import { NavigationDataWithMixedContent } from './page_pagination.data.js'
@@ -64,4 +66,9 @@ export const MitPagination = {
     render: Template2.bind({}),
     name: 'Mit Pagination',
     args: NavigationDataWithMixedContent,
+}
+export const MitTopTopics = {
+    render: Template.bind({}),
+    name: 'Mit Top-Topics',
+    args: NavigationDataWithTeaser4,
 }

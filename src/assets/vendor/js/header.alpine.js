@@ -31,7 +31,7 @@ document.addEventListener('alpine:init', () => {
                 }, wait)
             }
         },
-        init() {
+        start() {
             let lastScrollTop = 0
             let height = window.innerHeight
 
