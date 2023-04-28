@@ -1,8 +1,6 @@
 import horizontal_scroll_container from './horizontal_scroll_container_example.hbs'
 import * as Data from '../site_header/fixtures/site_header_default.json' 
 
-const NavigationDataWithTeaser = {}
-
 const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
@@ -12,7 +10,7 @@ const Template = (args, { globals: { customConditionalToolbar } }) => {
 }
 
 export default {
-    title: 'Komponenten/Horizontal Scroll Container/Horizontal Scroll Container',
+    title: 'Komponenten/Utilities/Horizontal Scroll Container',
     argTypes: {},
 
     parameters: {
@@ -29,8 +27,8 @@ export default {
     },
 }
 
-export const Default = {
+export const Example = {
     render: Template.bind({}),
-    name: 'Default',
+    name: 'Example',
     args: Data,
 }
