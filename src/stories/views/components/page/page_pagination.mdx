@@ -3,6 +3,55 @@ import * as PagePaginationStories from './page_pagination.stories'
 
 <Meta of={PagePaginationStories} />
 
-<Canvas withToolbar>
-    <Story of={PagePaginationStories.MitPagination} />
-</Canvas>
+
+# Pagination (allgemein)
+
+Um eine große Anzahl von Seiteninhalten (wie z.B. bei einem Suchergebnis mit vielen Treffern) auf mehrer Seiten aufzuteilen, wird die Anzahl der Inhalte
+pro Seite begrenzt und eine sog. Pagination, also eine Unterseitennavigation am Ende der Seite angezeigt. Die Inhalte werden equivalent auf alle Unterseiten
+aufgeteilt.
+
+# Grundaufbau
+
+Die Pagination besteht zum einen aus zwei "Pfeil-Buttons" die es ermöglichen in den erzeugten Unterseiten vor und zurück zu navigieren, 
+einer Darstellung auf welcher Unterseite ich mich gerade befinde, sowie eine Sprungmöglichkeiten, um Unterseiten direkt über die Seitenzahl zu erreichen.
+Die Darstellung startet initial mit Unterseite 1 sowie der Gesamtzahl aller zur Verfügung stehenden Unterseiten. Als Platzhalter wird "..." eingefügt.
+
+
+# Darstellung bei mehr als 3 Unterseiten 
+Im folgenden Beispiel gibt es 999 Unterseiten. Je nachdem welche Unterseite ausgewählt ist, verändert sich die Darstellung. So sind die Unterseite nach 
+Unterseite 1 sowie die vorletzte Seite nicht durch Platzhalter "..." abgetrennt. Liegt die Seite irgendwo zwischen der erste und der letzten Unterseite,
+wird in beiden Richtungen mit Platzhalter "..." abgetrennt.
+
+
+<Story of={PagePaginationStories.MitPagination} />
+
+
+### Zweite Seite gewählt 
+
+<Story of={PagePaginationStories.MitPagination2} />
+
+### Seite mittendrin gewählt 
+
+<Story of={PagePaginationStories.MitPagination4} />
+
+### Vorletzte Seite gewählt 
+
+<Story of={PagePaginationStories.MitPagination3} />
+
+### Letzte Seite gewählt 
+
+<Story of={PagePaginationStories.MitPagination5} />
+
+
+# Sonderformen 
+Die Logik erzeugt bei nur einer, bei zweien oder drei Unterseiten eine etwas andere Darstellung. Der Platzhalter "..." kann bei einer so geringen Anzahl von
+Unterseiten entfallen.
+
+### Mit nur zwei Unterseiten 
+
+<Story of={PagePaginationStories.MitPagination6} />
+
+
+### Mit nur drei Unterseiten
+
+<Story of={PagePaginationStories.MitPagination7} />

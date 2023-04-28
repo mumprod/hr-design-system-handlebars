@@ -1,5 +1,3 @@
-<div class="w-10 py-10">   
-    <a rel="prev" href="{{previousItemUrl}}" class="font-bold sb-link js-load hover:text-toplineColor text-toplineColor font-title" aria-label="Zur vorherigen Seite">   
-        <span>{{>components/base/image/icon _icon="arrow-left" _addClass="fill-current pb-0.5 h-8 w-8 ml-2 inline" }}</span>   
-    </a>   
-</div> 
+{{#> components/button/link_button _size="lg" _variant="secondary" _link=this.previousItemLink  _css="mr-1"}}
+{{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons"}}
+{{/components/button/link_button}} 
