@@ -22,8 +22,8 @@
                 {{/components/teaser/components/teaser_headline}}
             {{/components/teaser/components/teaser_header}}
         {{/decorator}}
-        <span class="absolute flex w-full h-full items-end justify-center ds-cta">
-            {{#> components/button/link_button _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+        <span class="absolute flex items-end justify-center w-full h-full ds-cta">
+            {{#> components/button/link_button _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true _link=this.link}}
                 {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
             {{/components/button/link_button}}
         </span>
