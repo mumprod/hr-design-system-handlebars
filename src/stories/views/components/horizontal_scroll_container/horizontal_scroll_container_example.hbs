@@ -1,13 +1,10 @@
-<div class="w-1/4 md:px-1 lg:px-6 px-3.5 h-10 md:h-8">
+<div class="w-1/2 h-auto mx-auto mt-10">
 {{#> components/horizontal_scroll_container/horizontal_scroll_container _viewport="xs" }}
-    <nav class="flex w-full text-xs list-none text-grey-scorpion">    
-            {{#with this.brandNavigationItems}}
-                <ul class="flex pl-0.5 pr-3 md:px-0 flex-nowrap lg:mr-0">
-                    {{#each this}}
-                        {{> components/site_header/brand_navigation/brand_navigation_item }}
-                    {{/each}} 
-                </ul>
-            {{/with}}      
-    </nav>
+    
+
+    <div class="flex w-screen h-auto p-4 text-lg leading-6 text-white bg-blue-science">
+        <p class="w-1/2"> Dieser Absatz befindet sich in einem Div, welches mittels click auf die Pfeiltasten verschoben werden kann. Die Pfeile werden dynamisch angezeigt/ausgeblendet.  </p>
+    </div> 
+
 {{/components/horizontal_scroll_container/horizontal_scroll_container}}
 </div>

@@ -1,2 +1,8 @@
-import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import { Meta, Story, Canvas, Preview } from '@storybook/blocks'
 import * as ScrollContainerStories from './horizontal_scroll_container.stories'
+
+<Meta of={ScrollContainerStories} />
+
+<Canvas>
+     <Story of={ScrollContainerStories.Default} />
+</Canvas>
