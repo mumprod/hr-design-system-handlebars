@@ -388,6 +388,71 @@ export const ButtonTertiary = {
     },
 }
 
+export const ButtonPrimaryDisabled = {
+    render: buttonWithLabelTemplate.bind({}),
+    name: 'Button - Primary',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'lg',
+        _label: 'Primary',
+        _disabled : true
+    },
+}
+
+export const ButtonSecondaryDisabled = {
+    render: buttonWithLabelTemplate.bind({}),
+    name: 'Button - Secondary',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'lg',
+        _label: 'Secondary',
+        _variant: 'secondary',
+        _disabled : true
+    },
+}
+
+export const ButtonTertiaryDisabled = {
+    render: buttonWithLabelTemplate.bind({}),
+    name: 'Button - Tertiary',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'lg',
+        _label: 'Tertiary',
+        _variant: 'tertiary',
+        _disabled : true
+    },
+}
+
 export const ButtonIconRechts = {
     render: buttonWithLabelAndIconRightTemplate.bind({}),
     name: 'Button - Icon rechts',
@@ -406,6 +471,28 @@ export const ButtonIconRechts = {
         _size: 'lg',
         _label: 'Icon rechts',
         _icon: 'arrow-right',
+    },
+}
+
+export const ButtonIconRechtsDisabled = {
+    render: buttonWithLabelAndIconRightTemplate.bind({}),
+    name: 'Button - Icon rechts',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'lg',
+        _label: 'Icon rechts',
+        _icon: 'arrow-right',
+        _disabled: true
     },
 }
 
