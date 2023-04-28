@@ -1,5 +1,4 @@
 import horizontal_scroll_container from './horizontal_scroll_container_example.hbs'
-import * as Data from '../site_header/fixtures/site_header_default.json' 
 
 const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -30,5 +29,5 @@ export default {
 export const Example = {
     render: Template.bind({}),
     name: 'Example',
-    args: Data,
+    args: null,
 }
