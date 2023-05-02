@@ -14,7 +14,7 @@
                         <div class="absolute top-0 left-0 w-full sm:static">
                             <div class="ar-4-3 sm:ar-auto">
                                 {{#> components/teaser/components/teaser_header _link=this.link _css="absolute bottom-0 left-0 p-4 w-full sm:pt-3 sm:pb-2 bg-white opacity-80 sm:static sm:bg-transparent"}}
-                                    {{#> components/base/link_v2 _css="ds-teaser-focus hover:text-toplineColor" }} 
+                                    {{#> components/base/link _css="ds-teaser-focus hover:text-toplineColor" }} 
                                             {{#with this.label}}
                                                 {{#> components/label/label_group}}
                                                     {{> components/label/label _type=this.type _text=(loca this.loca) _css="mr-2"}}
@@ -30,7 +30,7 @@
                                                 {{> components/teaser/components/teaser_title _text=this.title _css="text-2xl"}}
                                                 {{> components/event/event_tags this.eventtags}} 
                                             {{/components/teaser/components/teaser_headline}}
-                                    {{/components/base/link_v2  }}
+                                    {{/components/base/link  }}
                                 {{/components/teaser/components/teaser_header}} 
                             </div>
                         </div>

@@ -7,7 +7,7 @@
         {{~#if this.isSelected}} font-bold -current{{/if~}}
     ">
     {{#with this}}
-        {{#> components/base/link_v2 _link=this.link _isSelected=this.isSelected _css="flex items-center pt-2.5 px-2 whitespace-nowrap overflow-hidden" _selectedCssClass="is-selected"}}
+        {{#> components/base/link _link=this.link _isSelected=this.isSelected _css="flex items-center pt-2.5 px-2 whitespace-nowrap overflow-hidden" _selectedCssClass="is-selected"}}
             <span class="block text-base leading-4 grow font-copy js-title truncate">
                 {{~this.title~}}
                 {{~#if this.link.hasIcon~}}
@@ -18,7 +18,7 @@
             <span>
                 {{>components/base/image/icon _icon="arrow-right" _addClass="fill-current pb-0.5 h-4 w-4 ml-2 inline" }} 
             </span>
-        {{/components/base/link_v2}}
+        {{/components/base/link}}
         {{#*inline "htmlProperties"}}
             {{> components/tracking/navigation_tracking _clickLabelType="Contentnavigation" _clickLabelPrefix1=this.title}}
         {{/inline}}

@@ -2,9 +2,9 @@
     <ul class="flex flex-row items-center w-full p-4 text-left list-none bg-white lg:pb-1 lg:p-0 lg:bg-transparent lg:h-10">
         {{#each this.items}}
             <li class="{{#unless @last}}mr-3 {{/unless}}{{#if this.selected}}bg-blue-200 hover:bg-blue-300 text-blue-astronautBlue{{else}}bg-white hover:bg-grey-alto text-blue-congress{{/if}} rounded px-2 pt-px inline-block w-auto tracking-wide text-base leading-5.5 font-heading">
-                {{#> components/base/link_v2 _link=this.link}}
+                {{#> components/base/link _link=this.link}}
                     {{this.text}}       
-                {{/components/base/link_v2}} 
+                {{/components/base/link}} 
             </li>
         {{/each}} 
     </ul>

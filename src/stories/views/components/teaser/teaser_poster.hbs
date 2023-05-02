@@ -3,7 +3,7 @@
         {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
     </figure> 
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
-        {{#>components/base/link_v2 _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
+        {{#>components/base/link _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
             {{#> components/teaser/components/teaser_header}}
                 {{#with this.label}}
                     {{#> components/label/label_group}}
@@ -21,7 +21,7 @@
                     {{/if}}
                 {{/components/teaser/components/teaser_headline}}
             {{/components/teaser/components/teaser_header}}
-        {{/components/base/link_v2}}
+        {{/components/base/link}}
         <span class="absolute flex w-full h-full items-end justify-center ds-cta">
             {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                 {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
