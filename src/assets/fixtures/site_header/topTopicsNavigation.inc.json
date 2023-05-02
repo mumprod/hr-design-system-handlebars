@@ -3,6 +3,7 @@
         {
             "title": "Corona",
             "text": "Corona",
+            "hiddenText": "Topthema",
             "link": {
                 "url": "http://www.Corona.de",
                 "hasIcon": false,
@@ -12,6 +13,7 @@
         {
             "title": "Unwetter",
             "text": "Unwetter",
+            "hiddenText": "Topthema",
             "selected": true,
             "link": {
                 "url": "http://www.Unwetter.de",
@@ -22,6 +24,7 @@
         {
             "title": "Lottozahlen",
             "text": "Lottozahlen",
+            "hiddenText": "Topthema",
             "selected": false,
             "link": {
                 "url": "http://www.Lotto.de",
