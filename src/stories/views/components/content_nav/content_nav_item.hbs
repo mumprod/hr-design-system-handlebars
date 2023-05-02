@@ -6,25 +6,21 @@
         {{~#if _isflow}} content-nav-item-flow{{/if~}}
         {{~#if this.isSelected}} font-bold -current{{/if~}}
     ">
-     {{#decorator 'components/base/link' 
-        _doNavigationTracking="true" 
-        _clickLabelType="Contentnavigation" 
-        _clickLabelPrefix1=this.title 
-        _css="flex items-center pt-2.5 px-2 whitespace-nowrap overflow-hidden" 
-        _isSelected=this.isSelected
-        _selectedCssClass="is-selected"
-    }}
-        
-        <span class="block text-base leading-4 grow font-copy js-title truncate ... ">
-            {{~this.title~}}
-            {{~#if this.link.hasIcon~}}
-                {{> components/base/image/icon _icon=this.link.iconName _addClass="ml-2 -mt-0.5 h-4 w-4 inline" _iconmap="icons"}}
-            {{~/if~}}
-        </span>
-        
-        <span>
-            {{>components/base/image/icon _icon="arrow-right" _addClass="fill-current pb-0.5 h-4 w-4 ml-2 inline" }} 
-        </span>
-
-    {{/decorator}} 
+    {{#with this}}
+        {{#> components/base/link_v2 _link=this.link _isSelected=this.isSelected _css="flex items-center pt-2.5 px-2 whitespace-nowrap overflow-hidden" _selectedCssClass="is-selected"}}
+            <span class="block text-base leading-4 grow font-copy js-title truncate">
+                {{~this.title~}}
+                {{~#if this.link.hasIcon~}}
+                    {{> components/base/image/icon _icon=this.link.iconName _addClass="ml-2 -mt-0.5 h-4 w-4 inline" _iconmap="icons"}}
+                {{~/if~}}
+            </span>
+            
+            <span>
+                {{>components/base/image/icon _icon="arrow-right" _addClass="fill-current pb-0.5 h-4 w-4 ml-2 inline" }} 
+            </span>
+        {{/components/base/link_v2}}
+        {{#*inline "htmlProperties"}}
+            {{> components/tracking/navigation_tracking _clickLabelType="Contentnavigation" _clickLabelPrefix1=this.title}}
+        {{/inline}}
+    {{/with}}
 </li>
