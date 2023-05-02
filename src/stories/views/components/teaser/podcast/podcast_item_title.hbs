@@ -1,11 +1,10 @@
-{{#decorator
-    'components/base/link'
-    _css='w-full ds-link font-heading text-base text-podcast-text line-clamp-4 ...'
+{{#>components/base/link_v2 _link=this.link
+    _css='w-full ds-link font-heading text-base text-podcast-text line-clamp-4'
 }}
     <span
         class='block hover:underline text-podcast-text
-            {{~inline-switch _teaserSize '["100","50"]' '[" text-base"," text-base"]'~}}'
+            {{~inline-switch _teaserSize-adjust_context '["100","50"]' '[" text-base"," text-base"]'~}}'
     >
-        {{~_title~}}
+        {{~_title-adjust_context~}}
     </span>
-{{/decorator}}
+{{/components/base/link_v2}}
