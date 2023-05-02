@@ -1,0 +1,56 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as LinkStories from './link.stories'
+
+<Meta of={LinkStories} />
+
+# Link
+
+Die Komponente ist überall da einzusetzen, wo ein Link benötigt wird. Sie erzeugt lediglich ein öffnendes und schließendes
+`<a>`-Tag. Der Inhalt des Links muss durch Subkomponenten hinzugefügt werden. Da es nicht den "einen" Link gibt und die Komponente
+in den unterschiedlichsten Szenarien genutzt wird, bringt sie, zumindest derzeit, kein eigenes Styling mit.
+Es werden lediglich die Klassen `js-load` als Vorbereitung für die Nutzung mit unserem Featureloader
+und `ds-link` für die Bereitstellung der Focus-Zustände gesetzt. Bei der Einbindung können dem Link über den
+Parameter `_css` CSS-Klassen übergeben werden oder, wenn [Style-Komponenten](?path=/docs/grundlegendes-konventionen-und-datenstrukturen--docs#setzen-kontextabhängiger-css-klassen-mit-style-komponenten)
+genutzt werden sollen, diese innerhalb des Inline-Partials `css` aufgerufen werden.
+Soll der Klick auf den Link getracked werden, kann das Link-Tracking innerhalb des Inline-Partials
+`htmlProperties` gesetzt werden. Zum Tracking eines Downloads in einem Standard- oder Alternativ-Teaser
+oder zum Klick-Tracking innerhalb der Navigation gibt es schon entsprechende Komponenten (`navigation_tracking.hbs` und `download_tracking.hbs`),
+die genutzt werden können.
+
+Sobald es einen standardisierten Text-Link oder etwas ähnliches gibt kann und sollte dieser hier als eigene Story ergänzt werden.
+
+## Eigenschaften
+
+<ArgsTable story="Spielplatz" />
+
+## Verwendung
+
+Die Komponente wird wie in folgendem Codebeispiel gezeigt in einem Handlebar Template eingebunden.
+
+```handlebars
+{{#> components/base/link _link=this.link _css='CSS Klassen'}}
+    Hier kommt der Inhalt des Links hin.
+{{/components/base/link}}
+```
+
+Sollen statt einfachen CSS-Klassen Style-Komponenten an den Link übergeben werden, muss er wie in folgendem Beispiel genutzt werden:
+
+```handlebars
+{{#> components/base/link _link=this.link}}
+    Hier kommt der Inhalt des Links hin.
+{{/components/base/link}}
+{{#*inline "css"}}
+    Hier kann eine oder mehrere Style-Komponente/n eingebunden werden
+{{/inline}}
+```
+
+Schließlich kann dem Link auch eine Konfiguration für das Link-Tracking übergeben werden:
+
+```handlebars
+{{#> components/base/link _link=this.link}}
+    Hier kommt der Inhalt des Links hin.
+{{/components/base/link}}
+{{#*inline "htmlProperties"}}
+    {{> components/tracking/navigation_tracking _clickLabelType=_fromNav-adjust_context _clickLabelPrefix1=_parent-adjust_context clickLabelPrefix2=this.link.content.text}}
+{{/inline}}
+```
