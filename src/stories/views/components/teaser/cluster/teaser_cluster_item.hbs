@@ -5,7 +5,7 @@
             {{> components/label/label_byline _css="ml-2"}}
         {{/components/label/label_group}}
     {{/if~}}
-    {{#> components/teaser/components/teaser_headline _headlineTag="h3"}}
+    {{#> components/teaser/components/teaser_headline _css="" _headlineTag="h3"}}
         {{> components/teaser/components/teaser_title _css=(appendToDefault (if _ordered-adjust_context " pl-8") "group-hover:underline text-clusterTeaserLink") _text=this.title _size=_size-adjust_context _teaserType="cluster" _firstItem=_firstItem-adjust_context}}
     {{/components/teaser/components/teaser_headline}}    
 {{/components/base/link}}

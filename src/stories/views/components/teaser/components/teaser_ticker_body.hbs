@@ -12,7 +12,7 @@
             {{/with~}}
             {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
                 {{#if this.topline}}
-                    {{> components/teaser/components/teaser_topline _text=this.topline}}
+                    {{> components/teaser/components/teaser_topline _css="" _text=this.topline}}
                 {{/if}}
                 {{> components/teaser/components/teaser_title _css="!text-white" _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}
                 {{#if this.extendedTitle}}
