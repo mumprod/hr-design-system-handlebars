@@ -1,3 +1,15 @@
+# v1.15.0 (Tue May 02 2023)
+
+#### 🚀 Enhancement
+
+- adds sr-only to hbs and hiddenText to json [#619](https://github.com/mumprod/hr-design-system-handlebars/pull/619) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.14.0 (Fri Apr 28 2023)
 
 #### 🚀 Enhancement

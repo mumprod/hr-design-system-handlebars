@@ -1,8 +1,7 @@
 <footer class='bg-event-calendar-primary text-center'>
-    {{#decorator
-        'components/base/link'
+    {{#> components/base/link _link=this.link
         _css='block p-2 text-white text-sm font-serif hover:underline underline-offset-3'
     }}
         {{loca 'event_calendar_monthly_overview_link'}}
-    {{/decorator}}
+    {{/components/base/link}}
 </footer>
