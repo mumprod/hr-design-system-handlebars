@@ -1,3 +1,15 @@
+# v1.17.0 (Wed May 03 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2214 navi non sticky [#622](https://github.com/mumprod/hr-design-system-handlebars/pull/622) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.16.1 (Wed May 03 2023)
 
 #### 🐛 Bug Fix
