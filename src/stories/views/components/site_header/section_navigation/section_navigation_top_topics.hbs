@@ -2,10 +2,10 @@
     <ul class="flex flex-row items-center w-full p-4 text-left list-none bg-gray-concrete lg:p-0 lg:bg-transparent lg:h-10">
         {{#each this.items}}
             <li class="{{#unless @last}}mr-3 {{/unless}}">
-                {{#> components/button/chip}}
+                {{#> components/button/top_topics_button}}
                     <div class="sr-only">{{loca "label_top_thema"}}</div>  
                     {{> components/button/components/button_label _label=this.text }}
-                {{/components/button/chip}}
+                {{/components/button/top_topics_button}}
             </li>
         {{/each}} 
     </ul>
