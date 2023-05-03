@@ -13,7 +13,7 @@
             {{#> components/button/button _size="lg" _variant="tertiary" _value="cancel" _css="mr-4 mt-4"}}
                 {{>components/button/components/button_label _label="Abbrechen" _css=""}}
             {{/components/button/button}}
-            {{#> components/button/link_button _size="lg" _css="js-ticket-ok-button js-modal-close mt-4" _link=this.link}}
+            {{#> components/button/link_button _link=this.link _size="lg" _css="js-ticket-ok-button js-modal-close mt-4"}}
                 {{>components/button/components/button_label _label="Zum Ticketshop" _css=""}}
             {{/components/button/link_button}}
         </div>
@@ -24,7 +24,7 @@
                 display:none;
             }
         </style>
-            {{#> components/button/link_button _size="lg" _link=this.link}}
+            {{#> components/button/link_button _link=this.link _size="lg"}}
                 {{> components/button/components/button_icon _icon="ticket" _iconmap="icons"}}
                 {{>components/button/components/button_label _label="Tickets"}}
             {{/components/button/link_button}}

@@ -1,10 +1,11 @@
-<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="{{#unless (isStorybook) }} start() {{/unless}} ">
+<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="{{#if _useSticky}}start(){{/if}}">
     <header class="print:hidden relative z-10001 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
             :class="shouldBrandNavBeHidden() ? '-mt-10 lg:-mt-8' : ''  "
-            class="{{#unless (isStorybook) }} fixed top-0 left-0{{/unless}} flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+            class="{{#if _useSticky }}fixed top-0 left-0{{/if}} flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+
             
             <div id="anchorNavWrapper" 
                 class="hidden">
@@ -25,7 +26,7 @@
 
                     <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
 
-                    <div id="serviceLogoWrapper" 
+                    <div id="serviceLogoWrapper"  
                         class="flex items-center order-1 w-full pl-4 pr-2 tablet:pl-5 lg:items-end lg:pb-3 bg-blue-congress md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
                         {{> components/site_header/service_logo }}
                     </div>

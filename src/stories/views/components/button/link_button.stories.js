@@ -62,6 +62,16 @@ export default {
             },
         },
 
+        _link: {
+            description:
+                'Link des Buttons. Dies muss ein Objekt in der Form {"url":"","isTargetBlank"=true|false, "webviewUrl"=""}',
+            control: 'object',
+
+            table: {
+                category: 'Button',
+            },
+        },
+
         _icon: {
             description: 'Der Name des Icons in der Iconmap',
             control: 'text',
