@@ -3,6 +3,8 @@ import {
     NavigationDataWithTeaser,
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
+    NavigationDataWithTeaser4
+
 } from './page.data.js'
 
 const Template = (args, { globals: { customConditionalToolbar } }) => {
@@ -47,4 +49,10 @@ export const MitSubnavigation = {
     render: Template.bind({}),
     name: 'Mit Subnavigation',
     args: NavigationDataWithTeaser3,
+}
+
+export const MitTopTopics = {
+    render: Template.bind({}),
+    name: 'Mit Top-Topics',
+    args: NavigationDataWithTeaser4,
 }

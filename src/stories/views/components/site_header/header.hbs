@@ -1,10 +1,10 @@
-<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="init()">
+<div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="{{#unless (isStorybook) }} start() {{/unless}} ">
     <header class="print:hidden relative z-10001 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 
             :class="shouldBrandNavBeHidden() ? '-mt-10 lg:-mt-8' : ''  "
-            class="fixed top-0 left-0 flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
+            class="{{#unless (isStorybook) }} fixed top-0 left-0{{/unless}} flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">
             
             <div id="anchorNavWrapper" 
                 class="hidden">

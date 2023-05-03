@@ -1,6 +1,6 @@
 <div class="absolute left-2/4 right-auto bottom-15 lg:bottom-10 flex w-full px-5 sm:px-11.5 -translate-x-2/4 {{inline-switch this.stageTextPosition '["right50"]' '[" justify-end"," justify-start"]'}}">
     <div class="relative p-4 rounded-2xl bg-stageTextBox/85 {{inline-switch this.stageTextPosition '["left100"]' '[" w-full"," max-w-xs sm:w-fit md:max-w-2/4"]'}} ">
-        {{#decorator 'components/base/link' _css="ds-teaser-focus before:rounded-2xl"}}
+        {{#>components/base/link _link=this.link _css="ds-teaser-focus before:rounded-2xl"}}
             {{#> components/teaser/components/teaser_header}}
                 {{#with this.label}}
                     {{#> components/label/label_group _css="!text-stageText"}}
@@ -37,6 +37,6 @@
                     {{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline w-5 h-5 self-baseline fill-current ml-1" }}]
                 </span>
             {{/if}}
-        {{/decorator}}
+        {{/components/base/link}}
     </div>
 </div>

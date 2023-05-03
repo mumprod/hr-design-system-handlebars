@@ -16,7 +16,7 @@
         {{~#with this.overviewLink}}
             {{~#if this.link~}}
                 <div class="flex mx-5 pb-9 pt-6 min-w-0 {{~inline-switch ../this.realTeaserSize '["100"]' '[" justify-center md:justify-end"," justify-center"]'}}">
-                    {{~#> components/button/link_button _variant="secondary" _size="lg" _css="overflow-hidden"}}
+                    {{~#> components/button/link_button _link=this.link _variant="secondary" _size="lg" _css="overflow-hidden"}}
                         {{>components/button/components/button_label _label=this.title _css="flex-1 truncate"}}
                         {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css=""}}
                     {{/components/button/link_button}}
