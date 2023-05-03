@@ -129,6 +129,8 @@
     --color-button--dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
+    --color-button-disabled: theme('colors.gray.lightGray');
+    --color-button-disabled--dark: theme('colors.gray.boulder');
     /* Media-Button */
     --color-media-button: theme('colors.blue.science');
     /* States */
