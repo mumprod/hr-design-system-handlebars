@@ -95,7 +95,7 @@ export default {
         },
 
         _size: {
-            options: ['xs', 'sm', 'md', 'lg'],
+            options: ['sm', 'md', 'lg'],
             control: {
                 type: 'select',
             },
@@ -245,26 +245,6 @@ export const ButtonSm = {
     args: {
         _size: 'sm',
         _label: 'Small',
-    },
-}
-
-export const ButtonXs = {
-    render: buttonWithLabelTemplate.bind({}),
-    name: 'Button - xs',
-
-    argTypes: {
-        _size: {
-            control: false,
-        },
-
-        _variant: {
-            control: false,
-        },
-    },
-
-    args: {
-        _size: 'xs',
-        _label: 'x-Small',
     },
 }
 
