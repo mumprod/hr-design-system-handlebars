@@ -1,3 +1,28 @@
+# v1.16.1 (Wed May 03 2023)
+
+#### 🐛 Bug Fix
+
+- removes addClassImg statement [#621](https://github.com/mumprod/hr-design-system-handlebars/pull/621) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.16.0 (Wed May 03 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2284 [#620](https://github.com/mumprod/hr-design-system-handlebars/pull/620) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.15.0 (Tue May 02 2023)
 
 #### 🚀 Enhancement

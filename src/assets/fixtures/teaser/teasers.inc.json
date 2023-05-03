@@ -1123,6 +1123,10 @@
                 "hideGeotag": false,
                 "hideEditableByline": true,
                 "doTracking": true,
+                "trackingData": {
+                    "secondLevelId": "2",
+                    "pageName": "download"
+                },
                 "trackingForArdMediatheksLink": false,
                 "showMediatheksLink": false,
                 "showAirdate": false,
