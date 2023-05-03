@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as ScrollContainerStories from './horizontal_scroll_container.stories'
+
+<Meta of={ScrollContainerStories} />
+
+# Horizontal Scroll Container
+
+<Canvas>
+     <Story of={ScrollContainerStories.Example} />
+</Canvas>
+
+
+## Beschreibung
+
+Diese Komponente stellt einen Inhalts-Slider dar, dessen Inhalt via Pfeiltasten horizontal scrollbar wird, sobald er die Breite des Containers übersteigt. 
+Die Komponente wird als Decorator benutzt, d.h. der zu scrollende Inhalt wird innerhalb des Templates via <b>@partial-block</b> ausgegeben. <br /><br />
+Der Übergabeparameter "<b>_viewport</b>" ist ein String und legt die Viewportgröße fest, ab der die Komponente aktiv wird ('xs','sm','md','lg'). <br />
+Der Übergabeparameter "<b>_onDarkBackground</b>" ist ein boolscher Wert mit dem die Farben der Pfeiltasten gesteuert werden können.<br /> 
+
+<br />
+
+Die Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{#> components/horizontal_scroll_container/horizontal_scroll_container _viewport="xs" _onDarkBackground="true"}}
+     Zu scrollender Inhalt / Komponente / etc
+{{/components/horizontal_scroll_container/horizontal_scroll_container}}
+```
+
+Derzeit wird diese Komponente auf hessenschau.de in der Brand-Navigation und der Section-Navigation eingesetzt. 
