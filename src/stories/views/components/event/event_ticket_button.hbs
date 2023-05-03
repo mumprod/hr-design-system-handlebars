@@ -1,4 +1,4 @@
-<div class="static pl-4 pt-1 pb-3 sm:absolute sm:pl-0 sm:pt-0 sm:pb-0 sm:right-4 sm:bottom-4">
+<div class="static pt-1 pb-3 pl-4 sm:absolute sm:pl-0 sm:pt-0 sm:pb-0 sm:right-4 sm:bottom-4">
     {{#> components/button/button _id=(nextRandom) _size="lg"}}
         {{> components/button/components/button_icon _icon="ticket" _iconmap="icons" _css="mr-2"}}
         {{>components/button/components/button_label _label="Tickets"}}
@@ -7,7 +7,7 @@
         {{#> components/teaser/components/teaser_headline}}
             {{> components/teaser/components/teaser_title _text=(loca 'ticket_modal_headline') _css="text-2xl"}}
         {{/components/teaser/components/teaser_headline}}
-        <p class="text-base font-copy mt-2">{{loca "ticket_modal_text"}}</p>
+        <p class="mt-2 text-base font-copy">{{loca "ticket_modal_text"}}</p>
 
         <div class="flex flex-wrap mt-4">
             {{#> components/button/button _size="lg" _variant="tertiary" _value="cancel" _css="mr-4 mt-4"}}

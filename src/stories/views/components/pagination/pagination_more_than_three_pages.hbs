@@ -1,38 +1,54 @@
 {{~#if _firstPage~}}   
-    {{> components/pagination/pagination_button_left }}   
-    <div class="px-20 py-10">   
-        <span class="font-title">1</span>   
-        <span class="px-5 py-10 font-title">&hellip;</span>   
-        <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
-    </div>   
-    {{> components/pagination/pagination_button_right_linked }}   
-{{else}}   
-    {{~#if _secondPage~}}   
-        {{> components/pagination/pagination_button_left_linked }}    
-        <div class="px-20 py-10">   
-            <a href="{{this.firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>   
-            <span class="pl-5 font-title">2</span>   
-            <span class="px-5 py-10 font-title">&hellip;</span>   
-            <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
-        </div>   
+    <div class="flex h-10"> 
+        {{> components/pagination/pagination_button_left }}   
+        {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
+        {{> components/button/components/button_label _label="1"}}
+        {{/components/button/link_button}}   
+        <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>  
+        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
+        {{> components/button/components/button_label _label=_totalPages}}
+        {{/components/button/link_button}}
         {{> components/pagination/pagination_button_right_linked }} 
+    </div>     
+{{else}}   
+    {{~#if _secondPage~}}  
+    <div class="flex h-10">  
+        {{> components/pagination/pagination_button_left_linked }}    
+        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
+        {{> components/button/components/button_label _label="1"}}
+        {{/components/button/link_button}}  
+        {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
+        {{> components/button/components/button_label _label="2"}}
+        {{/components/button/link_button}}   
+        <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
+        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
+        {{> components/button/components/button_label _label=_totalPages}}
+        {{/components/button/link_button}}
+        {{> components/pagination/pagination_button_right_linked }} 
+    </div>   
     {{else}}
-        {{> components/pagination/pagination_button_left_linked }}   
-        <div class="px-20 py-10">   
-            <a href="{{this.firstPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>1</a>   
-            <span class="py-10 pl-5 font-title">&hellip;</span>   
-            <span class="px-5 py-10 font-bold font-title">{{_currentPage}}</span>   
+        <div class="flex h-10"> 
+            {{> components/pagination/pagination_button_left_linked }}   
+            {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
+            {{> components/button/components/button_label _label="1"}}
+            {{/components/button/link_button}}  
+            <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
+            {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
+            {{> components/button/components/button_label _label=_currentPage}}
+            {{/components/button/link_button}}     
             {{~#if _notLastPage~}}   
                 {{~#if _notLastButOnePage~}}   
-                    <span class="py-10 pr-5 font-title">&hellip;</span>   
+                    <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
                 {{~/if~}}   
-                <a href="{{this.lastPageItemUrl}}" class="font-bold sb-link js-load hover:underline text-toplineColor font-title"><span class="hidden">Zur Seite </span>{{_totalPages}}</a>   
-            {{~/if~}}   
-        </div>   
+            {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
+            {{> components/button/components/button_label _label=_totalPages}}
+            {{/components/button/link_button}}
+            {{~/if~}}      
             {{~#if _notLastPage~}}   
                 {{> components/pagination/pagination_button_right_linked }}  
             {{else}}   
                 {{> components/pagination/pagination_button_right }}  
-            {{~/if~}}   
+            {{~/if~}} 
+         </div>  
     {{~/if~}}   
 {{~/if~}}  

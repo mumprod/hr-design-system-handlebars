@@ -6,11 +6,21 @@
     "secondPage": false,
     "notLastButOnePage": false,
     "notLastPage": false,
-    "firstPageItemUrl":"page1",
-    "nextItemUrl":"page2",
-    "previousItemUrl":"empty",
-    "lastPageItemUrl":"page4",
-    "lastButOnePageItemUrl":"page1",
+    "firstPageItemLink" : {
+        "url": "firstPage"
+    },
+    "nextItemLink" : {
+        "url": "nextItem"
+    },
+    "previousItemLink" : {
+        "url": "previousItem"
+    },
+    "lastPageItemLink" : {
+        "url": "lastPage"
+    },
+    "lastButOnePageItemLink" : {
+        "url": "LastButOnePage"
+    },
     "totalPages": 4, 
     "currentPage": 2,
     "currentPageIndex": 0,

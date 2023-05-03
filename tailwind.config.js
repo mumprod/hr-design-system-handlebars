@@ -341,6 +341,8 @@ module.exports = {
                 'button--dark': 'var(--color-button--dark)',
                 'button-inverted': 'var(--color-button-inverted)',
                 'button-inverted--dark': 'var(--color-button-inverted--dark)',
+                'button-disabled': 'var(--color-button-disabled)',
+                'button-disabled--dark': 'var(--color-button-disabled--dark)',
                 'media-button': 'var(--color-media-button)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
