@@ -2,13 +2,13 @@
     {{inline-switch
         _variant
         '["primary","secondary","tertiary"]'
-        '[" border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark  active:bg-button-inverted--dark "," border text-button-inverted border-button-inverted hover:bg-button-inverted--dark  hover:text-button active:text-button active:bg-button-inverted--dark "," bg-transparent border-transparent text-button-inverted hover:bg-button-inverted--dark  hover:text-button hover:border-button-inverted--dark  active:text-button active:bg-button-inverted--dark "," border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark  active:bg-button-inverted--dark "]'
+        '[" border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark hover:border-button-inverted--dark active:bg-button-inverted--dark "," border text-button-inverted border-button-inverted hover:bg-button-inverted--dark  hover:text-button active:text-button active:bg-button-inverted--dark "," bg-transparent border-transparent text-button-inverted hover:bg-button-inverted--dark  hover:text-button hover:border-button-inverted--dark  active:text-button active:bg-button-inverted--dark "," border text-button bg-button-inverted border-button-inverted hover:bg-button-inverted--dark  active:bg-button-inverted--dark "]'
     ~}}
 {{else}}
     {{~inline-switch
         _variant
         '["primary","secondary","tertiary"]'
-        '[" border text-button-inverted bg-button border-button hover:bg-button--dark  hover:border-button--dark  active:bg-button--dark "," border text-button border-button hover:bg-button-inverted active:bg-button-primary--inverted"," border bg-transparent border-transparent text-button hover:bg-button-inverted hover:border-button active:bg-button-primary--inverted"," border text-button-inverted bg-button border-button hover:bg-button--dark   hover:border-button--dark  active:bg-button--dark "]'
+        '[" border text-button-inverted bg-button border-button hover:bg-button--dark hover:border-button--dark active:bg-button--dark "," border text-button border-button hover:bg-button-inverted active:bg-button-primary--inverted"," border bg-transparent border-transparent text-button hover:bg-button-inverted hover:border-button active:bg-button-primary--inverted"," border text-button-inverted bg-button border-button hover:bg-button--dark   hover:border-button--dark  active:bg-button--dark "]'
     ~}}
 {{/if}}
 {{~#unless _disableButtonPress}} active:scale-95{{/unless}}
