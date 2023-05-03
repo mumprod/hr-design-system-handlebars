@@ -3,8 +3,8 @@
         {{~_text~}}
     </span>
     {{#if this.isExtOrBrandLink}}
-        {{#decorator 'components/base/link' _css="relative inline text-link z-20 ds-focus"}}
+        {{#>components/base/link _link=this.link _css="relative inline text-link z-20 ds-focus"}}
             <span class="hover:underline decoration-1 font-copy">{{this.link.readMoreText.readMore}}{{~#if this.link.hasIcon}}{{> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline -mt-0.5 w-5 h-5 fill-current ml-1"}}{{/if~}}</span>
-        {{/decorator}} 
+        {{/components/base/link}} 
     {{/if}}
 </div>
