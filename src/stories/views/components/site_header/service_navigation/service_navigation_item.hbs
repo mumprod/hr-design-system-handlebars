@@ -12,7 +12,7 @@
                 
                 class="js-load flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
 
-                :class="dropped ? 'bg-white fill-current text-blue-congress lg:border-0 lg:underline' : ''" 
+                :class="dropped ? 'bg-white fill-current text-primary lg:border-0 lg:underline' : ''" 
 
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}"
@@ -35,7 +35,7 @@
                 <span class="sr-only lg:hidden">{{this.text}}</span>
             </div>
 
-            <div :class="{'text-blue-congress fill-current': dropped,'text-white fill-white': !dropped}" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-10002">
+            <div :class="{'text-primary fill-current': dropped,'text-white fill-white': !dropped}" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-10002">
                 <div class="flex" >
                     <span class="flex text-xs leading-4 whitespace-nowrap">
                         {{text}} 
