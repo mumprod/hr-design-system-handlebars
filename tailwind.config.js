@@ -317,6 +317,7 @@ module.exports = {
                 'secondary': 'var(--color-secondary-ds)',
                 'highlight-1': 'var(--color-highlight-1)',
                 'highlight-2': 'var(--color-highlight-2)',
+                'top-topic-background':  'var(--color-top-topic-background)',
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',
