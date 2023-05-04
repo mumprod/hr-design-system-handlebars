@@ -1,3 +1,15 @@
+# v1.18.4 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2289 "Regionen" im Burger verrutscht [#627](https://github.com/mumprod/hr-design-system-handlebars/pull/627) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.18.3 (Thu May 04 2023)
 
 #### 🐛 Bug Fix
