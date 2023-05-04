@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 border rounded-l rounded-r-none shadow-inner appearance-none lg:border-0 lg:border-none border-blue-congress lg:h-10 placeholder-text-xs placeholder-blue-congress text-blue-congress focus:outline-none"
+            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 border rounded-l rounded-r-none shadow-inner appearance-none lg:border-0 lg:border-none border-primary lg:h-10 placeholder-text-xs placeholder-primary text-primary focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -52,7 +52,7 @@
                         <a  
                             x-bind:active="false"
                             x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
-                            x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full rounded hover:bg-blue-congress hover:text-white': true, 'bg-blue-congress text-white':index==cursorIndex }"
+                            x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full rounded hover:bg-primary hover:text-white': true, 'bg-primary text-white':index==cursorIndex }"
                         >
                             <span x-text="suggestion"></span>
                         </a>
@@ -65,9 +65,9 @@
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
         type="submit" 
-        class="pl-3 pr-2 rounded-r cursor-pointer link-focus-inset bg-blue-congress lg:bg-white text-blue-congress z-10002"
+        class="pl-3 pr-2 rounded-r cursor-pointer link-focus-inset bg-primary lg:bg-white text-primary z-10002"
     >
-        <svg class="w-6 h-6 text-white fill-current bg-blue-congress lg:fill-current lg:text-blue-congress lg:bg-white" 
+        <svg class="w-6 h-6 text-white fill-current bg-primary lg:fill-current lg:text-primary lg:bg-white" 
              xmlns="http://www.w3.org/2000/svg" 
              viewBox="0 0 20 20"
              aria-hidden="true"
