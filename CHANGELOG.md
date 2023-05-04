@@ -1,3 +1,15 @@
+# v1.18.1 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- Top topics refactoring [#625](https://github.com/mumprod/hr-design-system-handlebars/pull/625) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.18.0 (Thu May 04 2023)
 
 #### 🚀 Enhancement
