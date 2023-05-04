@@ -20,11 +20,11 @@
             }
         },
         {
-            "title": "Lottozahlen",
-            "text": "Lottozahlen",
+            "title": "Regionen",
+            "text": "Regionen",
             "selected": false,
             "link": {
-                "url": "http://www.Lotto.de",
+                "url": "http://www.Regionen.de",
                 "hasIcon": false,
                 "iconName": "extern"
             }
