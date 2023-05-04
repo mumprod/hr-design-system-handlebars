@@ -1,3 +1,15 @@
+# v1.18.2 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- fixes wrong file suffixes in mdx [#624](https://github.com/mumprod/hr-design-system-handlebars/pull/624) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.18.1 (Thu May 04 2023)
 
 #### 🐛 Bug Fix
