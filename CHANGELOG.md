@@ -1,3 +1,15 @@
+# v1.17.2 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- 1913 - Top Topics für Desktop einbauen [#615](https://github.com/mumprod/hr-design-system-handlebars/pull/615) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.17.1 (Wed May 03 2023)
 
 #### 🐛 Bug Fix
