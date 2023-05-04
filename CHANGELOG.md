@@ -1,3 +1,15 @@
+# v1.18.3 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2294 Topthemen: Tracking [#626](https://github.com/mumprod/hr-design-system-handlebars/pull/626) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.18.2 (Thu May 04 2023)
 
 #### 🐛 Bug Fix
