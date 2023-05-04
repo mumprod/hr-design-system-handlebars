@@ -1,3 +1,15 @@
+# v1.18.0 (Thu May 04 2023)
+
+#### 🚀 Enhancement
+
+- uses -primary instead of hardcoded color [#623](https://github.com/mumprod/hr-design-system-handlebars/pull/623) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.17.2 (Thu May 04 2023)
 
 #### 🐛 Bug Fix
