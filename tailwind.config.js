@@ -239,6 +239,7 @@ module.exports = {
                     sea: '#006783',
                     tarawera: '#0a3355',
                     turquoiseCerulian: '#007fa0',
+                    linkWater: '#d3e2f4',
                 },
                 'black': {
                     DEFAULT: '#000000',
