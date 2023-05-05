@@ -1,0 +1,9 @@
+{
+    "2-level": {
+        "breadcrumb": {
+            "showBreadcrumb": true,
+            "showBreadcrumbTitleAlways": true,
+            "breadcrumbSsi": {}
+        }
+    }
+}

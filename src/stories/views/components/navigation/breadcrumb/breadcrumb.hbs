@@ -1,0 +1,10 @@
+<nav id="breadcrumbNav" class="breadcrumbNav 
+    {{~#unless this.showBreadcrumbTitleAlways}} -hideTitleMobile{{/unless~}}"
+        role="navigation"
+        aria-label="{{loca "breadcrumb_headline"}}"
+>
+    {{{this.breadcrumbSsi}}}
+    <h1 class="breadcrumbNav__item breadcrumbNav__title" >
+        <a href="{{_currentPageUrl}}" class="link">{{~_currentPageTitle~}}</a>
+    </h1>
+</nav>
