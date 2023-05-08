@@ -1,3 +1,15 @@
+# v1.19.0 (Mon May 08 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Teasers use the correct links [#628](https://github.com/mumprod/hr-design-system-handlebars/pull/628) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.18.4 (Thu May 04 2023)
 
 #### 🐛 Bug Fix
