@@ -111,9 +111,9 @@
                     "qualifiedRelatedContentOn404": true,
                     "isCluster": false,
                     "subNavigation": {
-                        "showAsFlyout": true,
+                        "showAsFlyout": false,
                         "columnCount": "1",
-                        "columns": [
+                        "columns": 
                             [
                             {
                                 "title": "Bundestagswahl 2021",
@@ -161,7 +161,7 @@
                                 }
                             }
                         ]
-                    ]
+                    
                     }
                 }
             ]
