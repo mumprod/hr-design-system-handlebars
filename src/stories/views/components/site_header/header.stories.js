@@ -49,16 +49,16 @@ export const MitWarnung = {
     args: JsonData2,
 }
 
-export const MitSubnavigation = {
-    render: Template.bind({}),
-    name: 'Mit Subnavigation',
-    args: JsonData3,
-}
-
 export const MitTopTopics = {
     render: Template.bind({}),
     name: 'Mit Top Topics',
     args: JsonDataTopTopics,
+}
+
+export const MitSubnavigation = {
+    render: Template.bind({}),
+    name: 'Mit Subnavigation',
+    args: JsonData3,
 }
 
 export const MitSubnavigationAlsFlyout = {
