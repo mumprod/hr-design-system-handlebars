@@ -1,3 +1,15 @@
+# v1.21.1 (Tue May 09 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Make trackingInformations ATI conform [#631](https://github.com/mumprod/hr-design-system-handlebars/pull/631) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.21.0 (Tue May 09 2023)
 
 #### 🚀 Enhancement
