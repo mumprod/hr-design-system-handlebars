@@ -111,7 +111,7 @@
                     "qualifiedRelatedContentOn404": true,
                     "isCluster": false,
                     "subNavigation": {
-                        "showAsFlyout": false,
+                        "showAsFlyout": true,
                         "columnCount": "1",
                         "items": [
                             {
