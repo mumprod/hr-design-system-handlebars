@@ -1,3 +1,15 @@
+# v1.20.0 (Tue May 09 2023)
+
+#### 🚀 Enhancement
+
+- Topthemen: Accessibility DPE-1915 [#629](https://github.com/mumprod/hr-design-system-handlebars/pull/629) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.19.0 (Mon May 08 2023)
 
 #### 🚀 Enhancement
