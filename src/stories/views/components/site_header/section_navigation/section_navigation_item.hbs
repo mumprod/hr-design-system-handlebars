@@ -122,8 +122,10 @@
             {{/if}}
 
         {{/if}}
-        
-        {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
-
+        {{#if this.isCluster}}
+            {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
+        {{else}}
+            {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="SubNavInRubrikNav" _parent=this.text }}
+        {{/if}}
     </li>
 {{/each}}
