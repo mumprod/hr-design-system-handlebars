@@ -117,6 +117,9 @@
         @apply text-red-600 !important;
         @apply fill-black;
     }
+    .-warnung svg {
+        @apply fill-black !important;
+    }
 
     .link-focus-inset {
         @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-gray-scorpion/50;
