@@ -6,7 +6,7 @@
     },
     "serviceNavigationSSILinks":
     {
-        "@->jsoninclude": "site_header/serviceNavigation.inc.json"       
+        "@->jsoninclude": "site_header/serviceNavigation_hr3.inc.json"       
     },
     
     "sectionNavigationSSILinks":

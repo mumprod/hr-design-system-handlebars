@@ -38,6 +38,7 @@
                 "name": "shows",
                 "text": "Shows",
                 "url": "shows/index.html",
+                "flyoutStartLinkText": "Übersicht Shows",
                 "isCluster": "false",
                 "subNavigation": {
                     "showAsFlyout": true,
