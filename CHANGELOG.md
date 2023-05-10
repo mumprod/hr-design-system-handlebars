@@ -1,3 +1,111 @@
+# v1.21.1 (Tue May 09 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: Make trackingInformations ATI conform [#631](https://github.com/mumprod/hr-design-system-handlebars/pull/631) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.21.0 (Tue May 09 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2295 [#630](https://github.com/mumprod/hr-design-system-handlebars/pull/630) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.20.0 (Tue May 09 2023)
+
+#### 🚀 Enhancement
+
+- Topthemen: Accessibility DPE-1915 [#629](https://github.com/mumprod/hr-design-system-handlebars/pull/629) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.19.0 (Mon May 08 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Teasers use the correct links [#628](https://github.com/mumprod/hr-design-system-handlebars/pull/628) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.18.4 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2289 "Regionen" im Burger verrutscht [#627](https://github.com/mumprod/hr-design-system-handlebars/pull/627) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.18.3 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2294 Topthemen: Tracking [#626](https://github.com/mumprod/hr-design-system-handlebars/pull/626) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.18.2 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- fixes wrong file suffixes in mdx [#624](https://github.com/mumprod/hr-design-system-handlebars/pull/624) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.18.1 (Thu May 04 2023)
+
+#### 🐛 Bug Fix
+
+- Top topics refactoring [#625](https://github.com/mumprod/hr-design-system-handlebars/pull/625) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.18.0 (Thu May 04 2023)
+
+#### 🚀 Enhancement
+
+- uses -primary instead of hardcoded color [#623](https://github.com/mumprod/hr-design-system-handlebars/pull/623) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.17.2 (Thu May 04 2023)
 
 #### 🐛 Bug Fix

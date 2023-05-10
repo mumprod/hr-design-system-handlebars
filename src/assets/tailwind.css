@@ -13,6 +13,8 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
+    /*Hauptmenü*/
+    --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
     /* Ticker, Live, Livestream */
@@ -877,11 +879,11 @@
     transition: transform 150ms ease-in-out 0s;
 }
 .arrow-left-background-blue {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0),theme('colors.blue.congress') 50%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0),theme('colors.primary') 50%);
     transition: transform 150ms ease-in-out 0s;
 }
 .arrow-right-background-blue {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), theme('colors.blue.congress') 50%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), theme('colors.primary') 50%);
     transition: transform 150ms ease-in-out 0s;
 }
 .c-videoplayer .ardplayer {

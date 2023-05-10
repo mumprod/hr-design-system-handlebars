@@ -8,11 +8,11 @@
     >
     <template x-if="isScrollable && $screen('{{_viewport}}')">
         <div>
-            <button class="{{#if _onDarkBackground}}arrow-left-background-blue{{else}}arrow-left-background{{/if}} absolute z-10 left-0 flex items-center justify-start w-8 h-full disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" aria-label="nach links scrollen">
-                {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-blue-congress') }}
+            <button class="{{#if _onDarkBackground}}arrow-left-background-blue{{else}}arrow-left-background{{/if}} absolute z-10 left-0 flex items-center justify-start w-8 h-full disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
+                {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-primary') }}
             </button> 
-            <button class="{{#if _onDarkBackground}}arrow-right-background-blue{{else}}arrow-right-background{{/if}} absolute z-10 right-0 flex items-center justify-end w-8 h-full group disabled:hidden" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" aria-label="nach rechts scrollen">
-                {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-blue-congress') }}
+            <button class="{{#if _onDarkBackground}}arrow-right-background-blue{{else}}arrow-right-background{{/if}} absolute z-10 right-0 flex items-center justify-end w-8 h-full group disabled:hidden" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
+                {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-primary') }}
             </button>
         </div>
     </template>
