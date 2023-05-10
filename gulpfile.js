@@ -325,7 +325,7 @@ async function convertPartialsToJs() {
 
 async function preparePartialsForDelivery() {
     src(`${options.paths.assets.components}/**/*.hbs`)
-        .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '../../$1'))
+        .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '../../$1-adjust_context'))
         .pipe(dest(options.paths.dist.dist_components))
 }
 

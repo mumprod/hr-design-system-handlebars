@@ -391,8 +391,9 @@
                                     "webviewUrl": "",
                                     "readMoreText": "",
                                     "cmsDocument": {
-                                        "title": "Tickets Finale Landeswettbewerb Jugend jazzt",
-                                        "sophoraId": "finale_landeswettbewerb_jugend_jazzt_100"
+                                        "trackingInformations": {
+                                            "ticketLink": "finale-_landeswettbewerb_jugend_jazzt_hessen_fuer_big_bands_ticketoverlay_ok_geklickt_dokumentent_id_sophora_id_des_dokumentes_100"
+                                        }
                                     }
                                 }
                             },
