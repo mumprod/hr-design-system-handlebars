@@ -1,9 +1,16 @@
 {
-    "2-level": {
+    "breadcrumb": {
         "breadcrumb": {
             "showBreadcrumb": true,
-            "showBreadcrumbTitleAlways": true,
-            "breadcrumbSsi": {}
+            "showBreadcrumbTitleAlways": false,
+            "breadcrumbSsi": {
+                "breadcrumb": [
+                    {
+                        "url": "item-1",
+                        "title": "Level 1"
+                    }
+                ]
+            }
         }
     }
 }
