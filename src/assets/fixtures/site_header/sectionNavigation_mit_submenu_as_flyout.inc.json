@@ -1,0 +1,119 @@
+[
+    {
+        "navigationItems": [
+            {
+                "name": "hr3",
+                "text": "Start",
+                "hiddenText": "hr3",
+                "url": "index.html",
+                "labelText": "Startseite von hr3",
+                "subNavigationFromIndex": true,
+                "selected": true
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "name": "aktionen",
+                "text": "Aktionen",
+                "url": "aktionen/index.html",
+                "qualifiedRelatedContentOn404": true
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "name": "events",
+                "text": "Events",
+                "url": "events/index.html",
+                "qualifiedRelatedContentOn404": true
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "name": "shows",
+                "text": "Shows",
+                "url": "shows/index.html",
+                "flyoutStartLinkText": "Übersicht Shows",
+                "isCluster": false,
+                "subNavigation": {
+                    "showAsFlyout": true,
+                    "columnCount": "1",
+                    "columns": [
+                        [
+                            {
+                                "title": "Die HR3 Morningshow",
+                                "text": "Die HR3 Morningshow",
+                                "link": {
+                                    "url": "http://www.test.de",
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                }
+                            },
+                            {
+                                "title": "Der HR3 Nachmittag",
+                                "text": "Der HR3 Nachmittag",
+                                "link": {
+                                    "url": "http://www.test.de",
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                }
+                            },
+                            {
+                                "title": "Der HR3 Sonntagstalk",
+                                "text": "Der HR3 Sonntagstalk",
+                                "link": {
+                                    "url": "http://www.test.de",
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                }
+                            },
+                            {
+                                "title": "Moderator*innen",
+                                "text": "Moderator*innen",
+                                "link": {
+                                    "url": "http://www.test.de",
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                }
+                            },
+                            {
+                                "title": "Programm",
+                                "text": "Programm",
+                                "link": {
+                                    "url": "http://www.test.de",
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                }
+                            }
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "name": "playlist",
+                "text": "Playlist",
+                "url": "playlist/index.html",
+                "qualifiedRelatedContentOn404": true
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "name": "kontakt",
+                "text": "Kontakt",
+                "url": "kontakt/index.html",
+                "qualifiedRelatedContentOn404": true
+            }
+        ]
+    }
+]

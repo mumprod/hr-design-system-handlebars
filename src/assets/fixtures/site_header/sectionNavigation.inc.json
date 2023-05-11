@@ -113,7 +113,8 @@
                     "subNavigation": {
                         "showAsFlyout": false,
                         "columnCount": "1",
-                        "items": [
+                        "columns": 
+                            [
                             {
                                 "title": "Bundestagswahl 2021",
                                 "text": "Bundestagswahl 2021",
@@ -160,6 +161,7 @@
                                 }
                             }
                         ]
+                    
                     }
                 }
             ]

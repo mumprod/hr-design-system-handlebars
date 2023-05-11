@@ -83,6 +83,7 @@
     /*! ********************************/
 
     .-video-podcast,
+    .-news,
     .-weather,
     .-traffic {
         @apply fill-white;
@@ -115,6 +116,9 @@
     .-warnung {
         @apply text-red-600 !important;
         @apply fill-black;
+    }
+    .-warnung svg {
+        @apply fill-black !important;
     }
 
     .link-focus-inset {

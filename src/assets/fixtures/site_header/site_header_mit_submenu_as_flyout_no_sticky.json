@@ -1,0 +1,9 @@
+{   
+    "@->jsoninclude": "site_header/site_header_mit_submenu_as_flyout.json",
+    "@->overrides" : [
+        { 
+            "@->contentpath": "_useSticky",
+            "@->value": false
+        }
+    ]
+}
