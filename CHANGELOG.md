@@ -1,3 +1,15 @@
+# v1.23.0 (Thu May 11 2023)
+
+#### 🚀 Enhancement
+
+- Feature/DPE-2305+DPE-2309 [#632](https://github.com/mumprod/hr-design-system-handlebars/pull/632) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.22.0 (Thu May 11 2023)
 
 #### 🚀 Enhancement
