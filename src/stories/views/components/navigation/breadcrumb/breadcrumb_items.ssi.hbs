@@ -1,6 +1,6 @@
 {{~#each this.breadcrumb}}
     <li>
-        <a href="{{this.url}}" class="ds-link flex items-center text-link font-copy text-xs h-10 pr-2 hover:underline">
+        <a href="{{this.url}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}} pr-2">
             <span class="pr-2">{{this.title}}</span>
             {{~> components/base/image/icon _icon="arrow-right" _addClass="w-2 h-2 text-inherit fill-link" _iconmap="icons"~}}
         </a>
