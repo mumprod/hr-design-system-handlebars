@@ -80,3 +80,21 @@ export const breadcrumb5Level = {
         ...breadcrumb5LevelData.breadcrumb,
     },
 }
+
+export const breadcrumbOnBanner = {
+    render: Template.bind({}),
+    name: 'Breadcrumb auf Banner',
+    decorators: [
+        (Story) => {
+            return `<div class="breadcrumb-container grid grid-page"><div class="grid-cols-12 py-6 col-full sm:px-9.5 sm:col-main"><div class="h-60 bg-link"></div></div></div><div class="breadcrumb-container grid grid-page"><div class="grid-cols-12 py-6 col-full sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div></div>`
+        },
+    ],
+    args: {
+        _currentPageUrl: '#currentPage',
+        _currentPageTitle:
+            'Verein bestätigt: Eintracht Frankfurt trennt sich im Sommer von Oliver Glasner',
+        ...breadcrumb5LevelData.breadcrumb,
+    },
+}
