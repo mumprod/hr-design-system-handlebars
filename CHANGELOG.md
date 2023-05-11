@@ -1,3 +1,15 @@
+# v1.22.0 (Thu May 11 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Link in eventcalendar teaser works again [#633](https://github.com/mumprod/hr-design-system-handlebars/pull/633) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.21.1 (Tue May 09 2023)
 
 #### 🐛 Bug Fix
