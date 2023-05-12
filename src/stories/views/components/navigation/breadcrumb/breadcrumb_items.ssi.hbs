@@ -1,8 +1,8 @@
 {{~#each this.breadcrumb}}
-    <li>
-        <a href="{{this.url}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}} pr-2">
-            <span class="pr-2">{{this.title}}</span>
-            {{~> components/base/image/icon _icon="arrow-right" _addClass="w-2 h-2 text-inherit fill-link" _iconmap="icons"~}}
+    <li class="inline-flex items-center">
+        <a href="{{this.url}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}}">
+            <span>{{this.title}}</span>
         </a>
+        <span class="leading-none mx-2">{{~> components/base/image/icon _icon="arrow-right" _addClass="w-2 h-2 text-inherit fill-link" _iconmap="icons"~}}</span>
     </li>
 {{/each~}}
