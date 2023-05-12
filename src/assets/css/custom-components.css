@@ -281,3 +281,8 @@
 .ds-button-icon + .ds-button-label {
     @apply ml-2;
 }
+
+/* -------------------------BREADCRUMB ------------------------------ */
+#breadcrumb-nav.hide-last-item-below-sm li:nth-last-child(2) > .ds-icon-container {
+    @apply sr-only sm:not-sr-only;
+}
