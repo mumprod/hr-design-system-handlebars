@@ -6,7 +6,7 @@
             {{> components/base/loadSSI _templatePath="components/navigation/breadcrumb/breadcrumb_items.ssi"}}
         {{/with}}
         <li class="inline-flex items-center">
-            <h1 class="{{#unless this.showBreadcrumbTitleAlways}} sr-only sm:not-sr-only{{/unless}}">
+            <h1{{#unless this.showBreadcrumbTitleAlways}}class="sr-only sm:not-sr-only"{{/unless}}>
                 <a href="{{_currentPageUrl}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}}">{{~_currentPageTitle~}}</a>
             </h1>
         </li>
