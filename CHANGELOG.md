@@ -1,3 +1,15 @@
+# v1.23.3 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- add _text-parameter to label-byline [#637](https://github.com/mumprod/hr-design-system-handlebars/pull/637) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.23.2 (Mon May 15 2023)
 
 #### 🐛 Bug Fix
