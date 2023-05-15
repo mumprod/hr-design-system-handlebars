@@ -1,3 +1,15 @@
+# v1.23.2 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2316 [#635](https://github.com/mumprod/hr-design-system-handlebars/pull/635) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.23.1 (Mon May 15 2023)
 
 #### 🐛 Bug Fix
