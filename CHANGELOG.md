@@ -1,3 +1,20 @@
+# v1.24.2 (Tue May 16 2023)
+
+#### 🐛 Bug Fix
+
+- fixed Flyout problemns for all kind of Flyouts [#636](https://github.com/mumprod/hr-design-system-handlebars/pull/636) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 🏠 Internal
+
+- Chore/dpe 2320 [#640](https://github.com/mumprod/hr-design-system-handlebars/pull/640) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.24.1 (Tue May 16 2023)
 
 #### 🐛 Bug Fix
