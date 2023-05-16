@@ -1,0 +1,14 @@
+<nav id="breadcrumb-nav" class="print:hidden{{~#unless this.showBreadcrumbTitleAlways}} hide-last-item-below-sm{{/unless~}}"
+        role="navigation"
+        aria-label="{{loca "breadcrumb_headline"}}"
+>   <ul>
+        {{#with this.breadcrumbSsi}}
+            {{> components/base/loadSSI _templatePath="components/navigation/breadcrumb/breadcrumb_items.ssi"}}
+        {{/with}}
+        <li class="inline">
+            <h1 class="inline{{#unless this.showBreadcrumbTitleAlways}} sr-only sm:not-sr-only{{/unless}}">
+                <a href="{{_currentPageUrl}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}}">{{~_currentPageTitle~}}</a>
+            </h1>
+        </li>
+    </ul>
+</nav>

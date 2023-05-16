@@ -1,10 +1,17 @@
-{{#with this.byline}}
-    {{~#if this.bylineSsi~}}
-        {{> components/base/loadSSI this.bylineSsi _context=this.context _templatePath=this.bylineSsi}}
-    {{~else~}}
-        {{#> components/text/byline _css=../_css}}
-            {{this.bylineText}}
-        {{/components/text/byline}}
-    {{~/if~}}
-{{/with}}
- 
+{{~#if _text~}}
+
+    <span class='font-bold font-heading{{#if _css}} {{_css}}{{/if}}'>{{~_text}}</span>
+
+{{~else~}}
+
+    {{#with this.byline}}
+        {{~#if this.bylineSsi~}}
+            {{> components/base/loadSSI this.bylineSsi _context=this.context _templatePath=this.bylineSsi}}
+        {{~else~}}
+            {{#> components/text/byline _css=../_css}}
+                {{this.bylineText}}
+            {{/components/text/byline}}
+        {{~/if~}}
+    {{/with}}
+
+{{~/if~}}
