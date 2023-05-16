@@ -1,3 +1,15 @@
+# v1.24.3 (Tue May 16 2023)
+
+#### 🐛 Bug Fix
+
+- checked if is Cluster [#641](https://github.com/mumprod/hr-design-system-handlebars/pull/641) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.24.2 (Tue May 16 2023)
 
 #### 🐛 Bug Fix
