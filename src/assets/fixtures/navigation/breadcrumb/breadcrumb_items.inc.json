@@ -1,0 +1,18 @@
+{
+    "level-1": {
+        "url": "item-1",
+        "title": "Start"
+    },
+    "level-2": {
+        "url": "item-2",
+        "title": "Level 2"
+    },
+    "level-3": {
+        "url": "item-3",
+        "title": "Level 3"
+    },
+    "level-4": {
+        "url": "item-4",
+        "title": "Level 4"
+    }
+}
