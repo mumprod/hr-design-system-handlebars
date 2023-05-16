@@ -20,14 +20,14 @@
         {{~else ~}}
 
             {{#if this.subNavigation}}
-
                 {{#if this.subNavigation.showAsFlyout}}
                     {{!-- Gilt z.B. für "SHOWS" bei HR3 --}} 
-                    <button id="button-{{getRandom}}-1" 
-                        @click.debounce.100ms="toggle(); correctFlyoutPos()"
+                    <a href="{{resourceUrl this.url}}"
+                        id="button-{{getRandom}}-1" 
+                        @click="preventDefault(isDesktopView(),$event); toggle(); correctFlyoutPos()"
                         @resize.window="dropped=false; correctFlyoutPos()" 
                         :class="dropped ? 'lg:underline font-bold lg:font-normal' : 'font-normal'"
-                        class="{{#if this.selected}}-currentSection lg:justify-center !font-bold {{/if}}link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-4 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4" 
+                        class="{{#if this.selected}}-currentSection lg:justify-center !font-bold {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pr-4 flex flex-auto justify-between lg:flex-initial h-10 lg:w-full items-center leading-4" 
                         aria-haspopup="true"  
                         x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
                         aria-owns="flyout-{{getRandom}}" 
@@ -71,7 +71,7 @@
             {{~this.text~}}
             
             {{#if this.subNavigation.showAsFlyout ~}}
-                    <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:border-0 lg:pl-1">
+                    <div class="items-center justify-center hidden w-10 h-10 leading-4 lg:w-auto lg:border-0 lg:pl-1 lg:flex">
                         <div class="flex items-center justify-center" :class="dropped ? 'transform rotate-180':''">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
                         </div>
@@ -91,16 +91,12 @@
 
             </button>
 
-        {{else if this.subNavigation.showAsFlyout}}
-
-            </button>
-
         {{else}}
 
             </a>
 
             {{#if this.subNavigation}}
-                {{#unless this.subNavigation.showAsFlyout}}
+                
                     <button 
                         @click.debounce.100ms="toggle()" 
                         id="button-{{getRandom}}-1" 
@@ -118,7 +114,7 @@
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
                         </div>
                     </button>
-                {{/unless}}
+                
             {{/if}}
 
         {{/if}}

@@ -28,18 +28,17 @@
             {{/if}} 
         {{/if}}    
     >
-        {{#unless ../this.isCluster ~}}
+        {{#if this.showAsFlyout ~}}
             {{#if ../this.flyoutStartLinkText}}
                 <div class="w-full">
-                    <div class="flex pt-4 pb-2 pl-4 text-base font-bold bg-white lg:pl-0 md:pt-4 lg:pt-1 lg:pb-0 justify-left text-primary ">              
+                    <div class="{{~#if ../_isSectionNav}}hidden lg:flex{{else}}flex{{/if}} pt-4 pb-2 pl-4 text-base font-bold bg-white lg:pl-0 md:pt-4 lg:pt-1 lg:pb-0 justify-left text-primary ">              
                         <a href="{{resourceUrl ../this.url}}" class="-isHeaderLink lg:leading-10 link-focus-inset js-load" data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "{{../_navigationType}}::{{../_parent}}::{{../this.flyoutStartLinkText}}-Link geklickt"}]}' >
                             {{../this.flyoutStartLinkText}}
                         </a>      
                     </div>          
                 </div>
-            {{/if}}
-            
-        {{/unless}}
+            {{/if}}          
+        {{/if}}
         
         <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} w-full lg:px-10 lg:container {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
