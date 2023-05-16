@@ -1,3 +1,63 @@
+# v1.23.3 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- add _text-parameter to label-byline [#637](https://github.com/mumprod/hr-design-system-handlebars/pull/637) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.23.2 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2316 [#635](https://github.com/mumprod/hr-design-system-handlebars/pull/635) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.23.1 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- - changed Merriweather to RobotoSlab  in Typography Documentation [#634](https://github.com/mumprod/hr-design-system-handlebars/pull/634) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.23.0 (Thu May 11 2023)
+
+#### 🚀 Enhancement
+
+- Feature/DPE-2305+DPE-2309 [#632](https://github.com/mumprod/hr-design-system-handlebars/pull/632) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.22.0 (Thu May 11 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Link in eventcalendar teaser works again [#633](https://github.com/mumprod/hr-design-system-handlebars/pull/633) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.21.1 (Tue May 09 2023)
 
 #### 🐛 Bug Fix

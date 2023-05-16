@@ -5,13 +5,13 @@ import JsonData from './fixtures/site_header_default_no_sticky.json'
 import JsonData2 from './fixtures/site_header_mit_warnung_no_sticky.json'
 import JsonData3 from './fixtures/site_header_mit_submenu_no_sticky.json'
 import JsonDataTopTopics from './fixtures/site_header_mit_top_topics_no_sticky.json'
+import JsonDataHR3 from './fixtures/site_header_mit_submenu_as_flyout_no_sticky.json'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
+const Template = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return navigation({ brand, ...args })
+   
+    return navigation({ ...args })
 }
 
 export default {
@@ -49,14 +49,20 @@ export const MitWarnung = {
     args: JsonData2,
 }
 
+export const MitTopTopics = {
+    render: Template.bind({}),
+    name: 'Mit Top Topics',
+    args: JsonDataTopTopics,
+}
+
 export const MitSubnavigation = {
     render: Template.bind({}),
     name: 'Mit Subnavigation',
     args: JsonData3,
 }
 
-export const MitTopTopics = {
+export const MitSubnavigationAlsFlyout = {
     render: Template.bind({}),
-    name: 'Mit Top Topics',
-    args: JsonDataTopTopics,
+    name: 'Mit Subnavigation als Flyout',
+    args: JsonDataHR3,
 }

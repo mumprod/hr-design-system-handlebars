@@ -3,9 +3,10 @@
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
         :class="dropped ? 'border-b-0 lg:bg-white lg:text-primary h-auto' : 'h-10 lg:hover:underline'" 
-        class="flex flex-wrap justify-start order-2 w-full text-white list-none border-b border-white sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:last:pr-8 lg:first:pl-0 first:border-t lg:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-primary lg:rounded-t">   
+        class="flex flex-wrap justify-start order-2 w-full text-white list-none border-b border-white sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:last:pr-8 lg:first:pl-0 first:border-t lg:first:border-t-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-primary lg:rounded-t">  
+        
         {{#if this.isCluster ~}}
-{{!-- Gilt z.B. für REGIONEN:  --}}        
+            {{!-- Gilt z.B. für REGIONEN:  --}}        
             <button id="button-{{nextRandom}}-1" 
                 @click.debounce.100ms="toggle(); correctFlyoutPos()" 
                 @resize.window="dropped=false; correctFlyoutPos()"
@@ -19,36 +20,57 @@
         {{~else ~}}
 
             {{#if this.subNavigation}}
-{{!-- Gilt z.B. für POLITIK:  --}}
-                <a href="{{resourceUrl this.url}}" 
-                    id="flyout-{{nextRandom}}-1"
-                    
-                    :class="dropped ? 'font-bold' : ''"
-                    class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
-                    {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
-                    aria-haspopup="true" 
-                    x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'));$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
-                    aria-owns="flyout-{{getRandom}}"
-                    aria-controls="flyout-{{getRandom}}"
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'>           
-            {{~else ~}} 
-{{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
+
+                {{#if this.subNavigation.showAsFlyout}}
+                    {{!-- Gilt z.B. für "SHOWS" bei HR3 --}} 
+                    <button id="button-{{getRandom}}-1" 
+                        @click.debounce.100ms="toggle(); correctFlyoutPos()"
+                        @resize.window="dropped=false; correctFlyoutPos()" 
+                        :class="dropped ? 'lg:underline font-bold lg:font-normal' : 'font-normal'"
+                        class="{{#if this.selected}}-currentSection lg:justify-center !font-bold {{/if}}link-focus-inset-white js-load pl-4 lg:pl-4 lg:pr-4 flex flex-auto w-full justify-between lg:flex-initial h-10 lg:w-full items-center leading-4" 
+                        aria-haspopup="true"  
+                        x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
+                        aria-owns="flyout-{{getRandom}}" 
+                        aria-controls="flyout-{{getRandom}}" 
+                        aria-labelledby="flyout-{{getRandom}}-1" 
+                        data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'
+                    >                
+                {{else}}
+                    {{!-- Gilt z.B. für POLITIK:  --}}
+                    <a href="{{resourceUrl this.url}}" 
+                        id="flyout-{{nextRandom}}-1" 
+                        
+                        :class="dropped ? 'font-bold' : ''"
+                        class="{{#if this.selected}}-currentSection lg:justify-center {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pl-4 lg:pr-4 flex flex-auto h-10 items-center leading-4 lg:w-full lg:justify-center{{#if this.selected}} font-bold{{/if}}"
+                        {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
+                        aria-haspopup="true" 
+                        x-effect="$el.setAttribute('aria-expanded', dropped || $screen('lg'));$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
+                        aria-owns="flyout-{{getRandom}}"
+                        aria-controls="flyout-{{getRandom}}"
+                        data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'
+                    >            
+                {{/if}}   
+
+            {{~else ~}}
+
+                {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
                 <a href="{{resourceUrl this.url}}" 
                     class="{{#if this.selected}}-currentSection lg:justify-center {{/if}} link-focus-inset-white js-load flex justify-start pl-4 pr-4 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'
                     x-effect="$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
                 >
+
             {{~/if}}
 
         {{~/if }}
+
 
         {{#if this.subNavigation}}
 
             {{~this.text~}}
             
             {{#if this.subNavigation.showAsFlyout ~}}
-                
                     <div class="flex items-center justify-center w-10 h-10 leading-4 lg:w-auto lg:border-0 lg:pl-1">
                         <div class="flex items-center justify-center" :class="dropped ? 'transform rotate-180':''">
                             {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
@@ -64,7 +86,12 @@
             {{~/if~}} 
         {{~/if}}
 
+
         {{#if this.isCluster}}
+
+            </button>
+
+        {{else if this.subNavigation.showAsFlyout}}
 
             </button>
 
@@ -73,30 +100,32 @@
             </a>
 
             {{#if this.subNavigation}}
+                {{#unless this.subNavigation.showAsFlyout}}
+                    <button 
+                        @click.debounce.100ms="toggle()" 
+                        id="button-{{getRandom}}-1" 
+                        class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white js-load lg:hidden" 
+                        aria-haspopup="true"  
+                        x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
+                        aria-owns="flyout-{{getRandom}}" 
+                        aria-controls="flyout-{{getRandom}}" 
+                        aria-labelledby="flyout-{{getRandom}}-1" 
+                        data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
 
-                <button 
-                    @click.debounce.100ms="toggle()" 
-                    id="button-{{getRandom}}-1" 
-                    class="flex items-center justify-center w-10 h-10 leading-4 border-l border-white js-load lg:hidden" 
-                    aria-haspopup="true"  
-                    x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
-                    aria-owns="flyout-{{getRandom}}" 
-                    aria-controls="flyout-{{getRandom}}" 
-                    aria-labelledby="flyout-{{getRandom}}-1" 
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Toggle-Link geklickt"}]}'>
-
-                    <span class="hidden">{{~this.text~}}</span>
-                    
-                    <div class="flex items-center justify-center lg:ml-2 lg:relative lg:right-0" :class="dropped ? 'transform rotate-180 ':''">
-                        {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
-                    </div>
-                </button>
-
+                        <span class="hidden">{{~this.text~}}</span>
+                        
+                        <div class="flex items-center justify-center lg:ml-2 lg:relative lg:right-0" :class="dropped ? 'transform rotate-180 ':''">
+                            {{> components/base/image/icon _icon="arrow-down" _iconmap="icons" _addClass="w-4 h-2 fill-current"}}
+                        </div>
+                    </button>
+                {{/unless}}
             {{/if}}
 
         {{/if}}
-        
-        {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
-
+        {{#if this.isCluster}}
+            {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="RubrikNavigation" _parent=this.text }}
+        {{else}}
+            {{> components/site_header/navigation_flyout/navigation_flyout _isSectionNav=true _navigationType="SubNavInRubrikNav" _parent=this.text }}
+        {{/if}}
     </li>
 {{/each}}
