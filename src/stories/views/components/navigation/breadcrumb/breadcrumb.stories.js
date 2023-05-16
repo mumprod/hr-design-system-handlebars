@@ -23,6 +23,21 @@ export default {
             control: 'text',
             description: 'Titel der aktuellen Seite',
         },
+        breadcrumbSsi: {
+            control: 'object',
+            description: 'SSI Include String aus dem Delivery',
+            table: {
+                category: 'Delivery',
+            },
+        },
+        showBreadcrumbTitleAlways: {
+            control: 'boolean',
+            description:
+                'Hierüber wird festgelegt, ob der letzte Eintrag in der Breacrumb über alle Viewports hinweg angezeigt wird oder ob dieser mobil nicht erscheinen soll.',
+            table: {
+                category: 'Delivery',
+            },
+        },
     },
 
     parameters: {
