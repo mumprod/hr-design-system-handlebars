@@ -1,3 +1,15 @@
+# v1.24.4 (Wed May 17 2023)
+
+#### 🐛 Bug Fix
+
+- Paging auf Indexseiten in Storybook bauen - FIX PROBLEMS - DPE-2079 [#642](https://github.com/mumprod/hr-design-system-handlebars/pull/642) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.24.3 (Tue May 16 2023)
 
 #### 🐛 Bug Fix
