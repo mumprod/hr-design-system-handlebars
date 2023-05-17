@@ -1,47 +1,47 @@
 {{~#if _firstPage~}}   
-    <div class="flex h-10"> 
+    <div class="flex"> 
         {{> components/pagination/pagination_button_left }}   
-        {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label="1"}}
+        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1"}}
+            {{> components/button/components/button_label _label="1" _css=""}}
         {{/components/button/link_button}}   
         <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>  
-        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label=_totalPages-adjust_context}}
+        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+            {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
         {{/components/button/link_button}}
         {{> components/pagination/pagination_button_right_linked }} 
     </div>     
 {{else}}   
     {{~#if _secondPage~}}  
-    <div class="flex h-10">  
+    <div class="flex">  
         {{> components/pagination/pagination_button_left_linked }}    
-        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label="1"}}
+        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1"}}
+            {{> components/button/components/button_label _label="1" _css=""}}
         {{/components/button/link_button}}  
-        {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label="2"}}
+        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1"}}
+            {{> components/button/components/button_label _label="2" _css=""}}
         {{/components/button/link_button}}   
         <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
-        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label=_totalPages-adjust_context}}
+        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+            {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
         {{/components/button/link_button}}
         {{> components/pagination/pagination_button_right_linked }} 
     </div>   
     {{else}}
-        <div class="flex h-10"> 
+        <div class="flex"> 
             {{> components/pagination/pagination_button_left_linked }}   
-            {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-                {{> components/button/components/button_label _label="1"}}
+            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1"}}
+                {{> components/button/components/button_label _label="1" _css=""}}
             {{/components/button/link_button}}  
             <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
-            {{#> components/button/link_button _size="lg" _variant="primary" _css="mr-1 ml-1 pr-2 pl-2"}}
-                {{> components/button/components/button_label _label=_currentPage-adjust_context}}
+            {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1"}}
+                {{> components/button/components/button_label _label=_currentPage-adjust_context _css=""}}
             {{/components/button/link_button}}     
             {{~#if _notLastPage~}}   
                 {{~#if _notLastButOnePage~}}   
                     <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>   
                 {{~/if~}}   
-            {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-                {{> components/button/components/button_label _label=_totalPages-adjust_context}}
+            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
             {{/components/button/link_button}}
             {{~/if~}}      
             {{~#if _notLastPage~}}   

@@ -1,21 +1,21 @@
 <nav class="flex flex-row content-center justify-center py-10" role="navigation" aria-label="Paginierung">
-        <div class="flex h-10"></div>
+        <div class="flex"></div>
         {{> components/pagination/pagination_button_left }} 
-            {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-            {{> components/button/components/button_label _label="1"}}
+            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1"}}
+                {{> components/button/components/button_label _label="1" _css=""}}
             {{/components/button/link_button}} 
             {{~#if _moreThanOnePage ~}}
                 {{~#unless _onlyTwoPages ~}}
                     {{~#if _onlyThreePages ~}}
-                        {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastButOnePageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-                        {{> components/button/components/button_label _label="2"}}
+                        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastButOnePageItemLink _css="mr-1 ml-1"}}
+                            {{> components/button/components/button_label _label="2" _css=""}}
                         {{/components/button/link_button}}
                     {{else}}
                         <span class="pt-1 ml-2 mr-2 font-title">&hellip;</span>
                     {{~/if~}}
                 {{~/unless~}}
-                {{#> components/button/link_button _size="lg" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1 pr-2 pl-2"}}
-                {{> components/button/components/button_label _label=_totalPages}}
+                {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                    {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
                 {{/components/button/link_button}}
             {{~/if~}}
         
