@@ -1,4 +1,4 @@
-<a class="relative flex items-center w-full h-full text-white fill-current sb-service-logo link-focus-white print:hidden" 
+<a class="relative flex items-center w-full h-full text-white fill-current lg:items-end lg:pb-3 sb-service-logo link-focus-white print:hidden" 
     href={{resourceUrl "index.html"}} 
     title="{{loca "header_homepage_link_title"}}">
 
@@ -8,8 +8,8 @@
             {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}}
         </span>
         
-        <span class="hidden transition-opacity duration-500 ease-in-out md:flex" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
-            {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk fill-white h-7 md:h-7 lg:h-8 md:w-40 lg:w-52"}}
+        <span class="hidden w-40 transition-opacity duration-500 ease-in-out md:flex h-7 lg:w-52 lg:h-8" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
+            {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="sb-icon logo-desk fill-white h-full w-full"}}
         </span> 
 
     {{else}}
@@ -18,7 +18,7 @@
             {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}}
         </span>
         
-        <div class="hidden items-center transition-opacity duration-500 h-7 w-40 lg:w-52 lg:h-10 ease-in-out md:flex lg:mt-2.5">
+        <div class="hidden items-center transition-opacity duration-500 h-7 w-40 lg:w-52 lg:h-8 ease-in-out md:flex lg:mt-2.5">
             {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="sb-icon logo-desk fill-white h-full w-full   "}}
         </div> 
 
