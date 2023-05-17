@@ -1,0 +1,60 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as BreadcrumbStories from './breadcrumb.stories'
+
+<Meta of={BreadcrumbStories} />
+
+# Breadcrumb
+
+## Übersicht
+
+Die Breadcrumb Navigation wird auf jeder Seite (nur nicht auf der Homepage) unterhalb der Hauptnavigation eingebunden.
+Sie zeigt den Nutzer:innen zu jeder Zeit an wo sie sich in der Struktur gerade befinden.
+Die einzelnen Einträge der Breadcrumb sind verlinkt.
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb5Level} />
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Breadcrumb 2 Level" />
+
+## Varianten
+
+Je nach Verschachtelungstiefe kann eine Breadcrumb von zwei bis zu einer nahezu beliebigen Anzahl an Einträgen haben
+
+### Zwei Navigations-Ebenen
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb2Level} />
+</Canvas>
+
+## Drei Navigations-Ebenen
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb3Level} />
+</Canvas>
+
+## Vier Navigations-Ebenen
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb4Level} />
+</Canvas>
+
+## Fünf Navigations-Ebenen
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb5Level} />
+</Canvas>
+
+## Verwendung
+
+Eine Breadcrumb wird mit der Handlebar Komponente `breadcrumb` eingebunden.
+
+<Canvas>
+    <Story of={BreadcrumbStories.breadcrumb5Level} />
+</Canvas>
+
+```handlebars
+{{> components/navigation/breadcrumb/breadcrumb _currentPageUrl="URL" _currentPageTitle="Titel der aktuellen Seite"}}
+```

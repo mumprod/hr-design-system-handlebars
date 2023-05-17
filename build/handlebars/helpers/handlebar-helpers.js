@@ -237,14 +237,6 @@ var helpers = {
         return JSON.stringify(object)
     },
 
-    'defaultIfEmpty': function (context, defaultValue) {
-        if (context) {
-            return context
-        } else {
-            return defaultValue
-        }
-    },
-
     'appendToDefault': function (context, defaultValue) {
         if (context) {
             return defaultValue + ' ' + context

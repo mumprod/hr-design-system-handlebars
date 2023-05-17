@@ -276,7 +276,14 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('dropdown', () => ({
         // state of the dropdown
         dropped: false,
-
+        preventDefault(prevDefault, e){
+            if(prevDefault){
+                e.preventDefault();
+            }
+        },
+        isDesktopView(){
+            return this.$screen('lg')
+        },
         // toggle() interpolates state
         toggle() {
             this.dropped = !this.dropped

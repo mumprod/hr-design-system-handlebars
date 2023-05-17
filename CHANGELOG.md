@@ -1,3 +1,92 @@
+# v1.24.3 (Tue May 16 2023)
+
+#### 🐛 Bug Fix
+
+- checked if is Cluster [#641](https://github.com/mumprod/hr-design-system-handlebars/pull/641) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.24.2 (Tue May 16 2023)
+
+#### 🐛 Bug Fix
+
+- fixed Flyout problemns for all kind of Flyouts [#636](https://github.com/mumprod/hr-design-system-handlebars/pull/636) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### 🏠 Internal
+
+- Chore/dpe 2320 [#640](https://github.com/mumprod/hr-design-system-handlebars/pull/640) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.24.1 (Tue May 16 2023)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 2211 [#639](https://github.com/mumprod/hr-design-system-handlebars/pull/639) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.24.0 (Tue May 16 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2211 [#638](https://github.com/mumprod/hr-design-system-handlebars/pull/638) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.23.3 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- add _text-parameter to label-byline [#637](https://github.com/mumprod/hr-design-system-handlebars/pull/637) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.23.2 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2316 [#635](https://github.com/mumprod/hr-design-system-handlebars/pull/635) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.23.1 (Mon May 15 2023)
+
+#### 🐛 Bug Fix
+
+- - changed Merriweather to RobotoSlab  in Typography Documentation [#634](https://github.com/mumprod/hr-design-system-handlebars/pull/634) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.23.0 (Thu May 11 2023)
 
 #### 🚀 Enhancement

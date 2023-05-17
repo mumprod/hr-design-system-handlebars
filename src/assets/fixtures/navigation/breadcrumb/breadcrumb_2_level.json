@@ -1,0 +1,15 @@
+{
+    "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+    "@->contentpath": "breadcrumb",
+    "@->overrides": [
+        {
+            "@->contentpath": "breadcrumb.breadcrumbSsi.breadcrumb",
+            "@->value": [
+                {
+                    "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                    "@->contentpath": "level-1"
+                }
+            ]
+        }
+    ]
+}
