@@ -2,19 +2,6 @@
     {
         "navigationItems": [
             {
-                "id": "warnung",
-                "text": "Warnung!",
-                "icon": "unwetterwarnungen",
-                "isCluster": false,
-                "url": "https://www.unwetterwarnungen.de",
-                "subNavigation": false,
-                "extern": false
-            }
-        ]
-    },
-    {
-        "navigationItems": [
-            {
                 "id": "video-podcast",
                 "text": "Video & Podcast",
                 "icon": "videopodcast-ds",
@@ -217,6 +204,19 @@
                         ]
                     ]
                 }
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "weather_warning",
+                "text": "Warnung!",
+                "icon": "unwetterwarnungen",
+                "isCluster": false,
+                "url": "https://www.unwetterwarnungen.de",
+                "subNavigation": false,
+                "extern": false
             }
         ]
     },
