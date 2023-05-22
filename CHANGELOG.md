@@ -1,3 +1,15 @@
+# v1.24.5 (Mon May 22 2023)
+
+#### 🐛 Bug Fix
+
+- weather icon bug fixed [#643](https://github.com/mumprod/hr-design-system-handlebars/pull/643) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.24.4 (Wed May 17 2023)
 
 #### 🐛 Bug Fix
