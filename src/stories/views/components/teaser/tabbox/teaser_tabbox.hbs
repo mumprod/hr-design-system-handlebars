@@ -9,7 +9,7 @@
         {{#> components/button/button _size="sm" _css="mx-1.5" _variant="secondary" _type="button" }}
           {{> components/button/components/button_label _label=this.title}}
         {{/components/button/button }}
-        {{#*inline "html_properties"~}} 
+        {{#*inline "htmlProperties"~}} 
           :class='{"{{> components/button/utilities/button_variation_classes _variant='primary' _onBackground=false}} bg-button--dark ":tab ==="{{this.title}}",
           "{{~> components/button/utilities/button_variation_classes _variant='secondary' _onBackground=false~}}":tab !="{{this.title}}"}' 
           x-on:click.prevent="tab = '{{this.title}}'; " role="tab" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "{{this.title}}:TabboxClick"}]}'   
