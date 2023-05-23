@@ -162,7 +162,7 @@ Attribute gesetzt werden (z.B. zum Setzen von alpine.js Direktiven), muss dies w
 {{#> components/button/button _size="lg"}}
     {{> components/button/components/button_label _label="Button"}}
 {{/components/button/button}}
-{{#*inline "html_properties"}}
+{{#*inline "htmlProperties"}}
     x-ref="button"
     x-on:click="toggle()"
     :aria-expanded="open"
@@ -172,7 +172,7 @@ Attribute gesetzt werden (z.B. zum Setzen von alpine.js Direktiven), muss dies w
 {{/inline}}
 ```
 
-Dem hier gerenderten HTML-Button werden mit Hilfe des Inline-Partials `html_properties` die Attribute `x-ref`, `x-on`, `:aria-expanded`, `:aria-controls`, `:class`
+Dem hier gerenderten HTML-Button werden mit Hilfe des Inline-Partials `htmlProperties` die Attribute `x-ref`, `x-on`, `:aria-expanded`, `:aria-controls`, `:class`
 sowie `data-hr-click-tracking` hinzugefügt.
 
 #### Setzen von in Subkomponenten ausgelagerte CSS Klassen

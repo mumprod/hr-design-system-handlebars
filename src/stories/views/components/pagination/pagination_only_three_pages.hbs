@@ -1,13 +1,21 @@
 {{~#if _firstPage~}} 
     <div class="flex">     
         {{> components/pagination/pagination_button_left }}  
-        {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
-            {{> components/button/components/button_label _label="1" _css=""}}
-        {{/components/button/link_button}}   
-        {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.nextItemLink _css="mr-1 ml-1"}}
-        {{> components/button/components/button_label _label="2" _css=""}}
+        {{#with this}}
+            {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
+                <span class="sr-only">Aktuelle Seite: </span>
+                {{> components/button/components/button_label _label="1" _css=""}}
             {{/components/button/link_button}}
+            {{#*inline "htmlProperties"}}
+                aria-current="true"
+            {{/inline}}  
+        {{/with}}
+        {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.nextItemLink _css="mr-1 ml-1"}}
+            <span class="sr-only">Zur Seite: </span>
+            {{> components/button/components/button_label _label="2" _css=""}}
+        {{/components/button/link_button}}
         {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+            <span class="sr-only">Zur Seite: </span>
             {{> components/button/components/button_label _label="3" _css=""}}
         {{/components/button/link_button}}  
         {{> components/pagination/pagination_button_right_linked }} 
@@ -17,12 +25,20 @@
         <div class="flex"> 
             {{> components/pagination/pagination_button_left_linked }}    
             {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1"}}
+                <span class="sr-only">Zur Seite: </span>
                 {{> components/button/components/button_label _label="1" _css=""}}
             {{/components/button/link_button}}
-            {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
-                {{> components/button/components/button_label _label="2" _css=""}}
-            {{/components/button/link_button}}    
+            {{#with this}}
+                {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
+                    <span class="sr-only">Aktuelle Seite: </span>
+                    {{> components/button/components/button_label _label="2" _css=""}}
+                {{/components/button/link_button}}
+                {{#*inline "htmlProperties"}}
+                    aria-current="true"
+                {{/inline}}  
+            {{/with}}   
             {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                <span class="sr-only">Zur Seite: </span>
                 {{> components/button/components/button_label _label="3" _css=""}}
             {{/components/button/link_button}}
             {{> components/pagination/pagination_button_right_linked }} 
@@ -31,14 +47,22 @@
         <div class="flex"> 
         {{> components/pagination/pagination_button_left_linked }}         
         {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.firstPageItemLink _css="mr-1 ml-1"}}
-        {{> components/button/components/button_label _label="1" _css=""}}
+            <span class="sr-only">Zur Seite: </span>
+            {{> components/button/components/button_label _label="1" _css=""}}
         {{/components/button/link_button}}
         {{#> components/button/link_button _size="md"  _variant="secondary" _link=this.lastButOneItemLink _css="mr-1 ml-1"}}
-        {{> components/button/components/button_label _label="2" _css=""}}
+            <span class="sr-only">Zur Seite: </span>
+            {{> components/button/components/button_label _label="2" _css=""}}
         {{/components/button/link_button}}
-        {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
-        {{> components/button/components/button_label _label="3" _css=""}}
-        {{/components/button/link_button}}        
+        {{#with this}}
+            {{#> components/button/link_button _size="md"  _variant="primary" _css="mr-1 ml-1"}}
+                <span class="sr-only">Aktuelle Seite: </span>
+                {{> components/button/components/button_label _label="3" _css=""}}
+            {{/components/button/link_button}}  
+            {{#*inline "htmlProperties"}}
+                aria-current="true"
+            {{/inline}}  
+        {{/with}}        
         {{> components/pagination/pagination_button_right }}
         </div> 
     {{~/if~}}     
