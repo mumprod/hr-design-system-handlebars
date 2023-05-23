@@ -1,3 +1,15 @@
+# v1.25.1 (Tue May 23 2023)
+
+#### 🐛 Bug Fix
+
+- DPE 2327 - Paging bei 2 Unterseiten funktioniert nicht [#644](https://github.com/mumprod/hr-design-system-handlebars/pull/644) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.25.0 (Tue May 23 2023)
 
 #### 🚀 Enhancement
