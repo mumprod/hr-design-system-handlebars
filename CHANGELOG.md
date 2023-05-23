@@ -1,3 +1,15 @@
+# v1.25.0 (Tue May 23 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: fixes a the data model so that it [#645](https://github.com/mumprod/hr-design-system-handlebars/pull/645) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.24.5 (Mon May 22 2023)
 
 #### 🐛 Bug Fix

@@ -1307,11 +1307,11 @@
                     ]
                 },
                 "commentsSsi": {
+                    "commentNumber": "1",
+                    "hasOneComment": true,
+                    "hasComments": true,
+                    "hasManyComments": false,
                     "commentLink": {
-                        "commentNumber": "1",
-                        "hasOneComment": true,
-                        "hasComments": true,
-                        "hasManyComments": false,
                         "link": {
                             "url": "/teaser1-comments",
                             "webviewUrl": "/teaser1-comments#webview",
