@@ -154,9 +154,9 @@ module.exports = {
                 'main-col': '63rem',
             },
             minWidth: {
-                '7.5'   :'1.875rem',
-                '10.5'    :'2.625rem',
-                '11.5'  :'2.875rem', 
+                7: '1.75rem',
+                10: '2.5rem',
+                11: '2.75rem',
             },
             margin: {
                 '13': '3.125rem',
