@@ -4,7 +4,7 @@
             <li class="{{#unless @last}}mr-3 {{/unless}}">
                 {{#> components/button/top_topics_button}}
                     <div class="sr-only">{{loca "label_top_thema"}}</div>  
-                    {{> components/button/components/button_label _label=this.text _css=""}}
+                    {{> components/button/components/button_label _label=this.text _css="!leading-none"}}
                 {{/components/button/top_topics_button}}
             </li>
         {{/each}} 
