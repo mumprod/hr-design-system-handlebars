@@ -4,26 +4,30 @@ import {
     NavigationDataWithTeaser,
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
-    NavigationDataWithTeaser4
-
+    NavigationDataWithTeaser4,
 } from './page.data.js'
 
 import { NavigationDataWithMixedContent } from './page_pagination.data.js'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
+const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+    let brand = undefined !== theme ? theme : 'hessenschau' 
     return page({ brand, ...args })
 }
 
-const Template2 = (args, { globals: { customConditionalToolbar } }) => {
+const Template1b = (args, { globals: { theme } }) => { 
+    // You can either use a function to create DOM elements or use a plain html string! 
+    // return `<div>${label}</div>`; 
+    let brand = undefined !== theme ? theme : 'hessenschau' 
+    return page({ brand, ...args }) 
+}
+
+const Template2 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page_pagination({ brand, ...args })
+    let brand = undefined !== theme ? theme : 'hessenschau' 
+    return page({ brand, ...args })
 }
 
 export default {
@@ -67,6 +71,7 @@ export const MitPagination = {
     name: 'Mit Pagination',
     args: NavigationDataWithMixedContent,
 }
+
 export const MitTopTopics = {
     render: Template.bind({}),
     name: 'Mit Top-Topics',

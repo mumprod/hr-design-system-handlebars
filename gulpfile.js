@@ -97,7 +97,9 @@ function createSvgMapsForBrands() {
         glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
             return glob.sync(`${brandDir}/icons/*`).map(function (iconsDir) {
                 let icon = path.basename(iconsDir)
+                
                 return src(`${iconsDir}/svgmap/*.svg`)
+                    .pipe(dest("`${iconsDir}/`"))
                     .pipe(svgMapsForBrandsCache.filter())
                     .pipe(svgMapsForBrandsCache.cache())
                     .pipe(
@@ -121,7 +123,7 @@ function createSvgMapsForBrands() {
                     .pipe(
                         cheerio({
                             run: function ($, file) {
-                                $('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
+                                // $('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
                                 $('[fill]').map(function () {
                                     if (
                                         $(this).attr('fill') !== 'currentColor' &&
@@ -381,3 +383,4 @@ exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
 exports.preparePartialsForDelivery = preparePartialsForDelivery
+exports.createSvgMapsForBrands = createSvgMapsForBrands
