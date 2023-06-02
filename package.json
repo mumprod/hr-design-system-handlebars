@@ -23,7 +23,7 @@
         "optimize-svgs": "gulp optimizeSvgs",
         "parseJson": "gulp parseJson",
         "partialsToJs": "gulp convertPartialsToJs",
-        "createSvgMapsForBrands": "gulp createSvgMapsForBrands",
+        "copyLogosForBrands": "gulp copyLogosForBrands",
         "preparePartialsForDelivery": "gulp preparePartialsForDelivery",
         "create-modernizr-config": "gulp createModernizrConfig",
         "merge-locatags": "gulp mergeLocatags"

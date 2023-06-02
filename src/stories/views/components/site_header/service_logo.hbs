@@ -4,13 +4,13 @@
 
     {{#if _useSticky}}
 
-        <span x-cloak class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem]" :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" >
+        <span x-cloak class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem]" :class="`${percent}` < 50 ? 'invisible' : 'delay-200 visible'" >
              <img src="{{resourceUrl "assets/base/icons/logo/brandlogo--mobile.svg" _brand=(if this.brand this.brand)}}" class="w-full h-full logo-compact aspect-square fill-white">
             {{!-- {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}} --}}
         </span>
         
-        <span class="absolute h-12 lg:h-[3.875rem] transition-opacity duration-500 ease-in-out w-40 lg:w-52" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
-             <img src="{{resourceUrl "assets/base/icons/logo/brandlogo--desk.svg" _brand=(if this.brand this.brand)}}" class="w-full h-full logo-desk aspect-square fill-white">
+        <span class="absolute h-12 lg:h-[3.875rem] transition-opacity duration-500 ease-in-out w-40 lg:w-52" :class="`${percent}` < 50 ? 'visible' : 'invisible'">
+             <img src="{{resourceUrl "assets/base/icons/logo/brandlogo--desk.svg" _brand=(if this.brand this.brand)}}" class="w-full h-full logo-desk fill-white">
              {{!-- {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _asImage=true _addClass="logo-desk aspect-square fill-white h-full w-full"}} --}}
         </span> 
 
