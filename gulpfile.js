@@ -151,14 +151,15 @@ function createSvgMapsForBrands() {
     )
 }
 
-const svgLogoFilesCache = new FileCache(`${options.paths.build.gulp}/cache/.svgLogoFilesCache`)
+/* const svgLogoFilesCache = new FileCache(`${options.paths.build.gulp}/cache/.svgLogoFilesCache`) */
 function saveLogoFilesToFolder() {
     return mergeStream(
-        glob.sync(`${iconsDirRoot}/*`).map(function (iconsDir) {
-            return src(`${iconsDir}/*.src.svg`)
-                .pipe(svgLogoFilesCache.filter())
-                .pipe(svgLogoFilesCache.cache())
-                .pipe(dest(`${iconsDir}`))    
+        glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
+            return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
+                    console.log(brandDir)
+                    return src(`${iconsDir}/svgmap/*.svg`)
+                    .pipe(dest(iconsDir))
+            })    
         })    
     )
 }
@@ -377,7 +378,6 @@ function mergeLocatags() {
 
 exports.default = series(
     parallel(
-        saveLogoFilesToFolder,
         createSvgMaps,
         createSvgMapsForBrands,
         minimizeSvgSrcFiles,
@@ -385,7 +385,7 @@ exports.default = series(
         convertPartialsToJs,
         mergeLocatags,
         series(createModernizr, addCustomModernizrTests)
-    ),
+    ),saveLogoFilesToFolder,
     watchFiles
 )
 exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
