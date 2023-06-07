@@ -72,6 +72,7 @@ module.exports = {
             },
             borderWidth: {
                 7: '7px',
+                'navigation-border-width': 'var(--border-navigation-border-width)',
             },
             transitionProperty: {
                 'max-height': 'max-height',
@@ -318,6 +319,12 @@ module.exports = {
                 'highlight-1': 'var(--color-highlight-1)',
                 'highlight-2': 'var(--color-highlight-2)',
                 'top-topic-background': 'var(--color-top-topic-background)',
+
+                'navigation-bg': 'var(--color-navigation-bg)',
+                'navigation-icons': 'var(--color-navigation-icons)',
+                'brandnavigation-border': 'var(--color-brandnavigation-border)',
+                'navigation-border': 'var(--color-navigation-border)',
+                
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',

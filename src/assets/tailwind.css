@@ -12,7 +12,9 @@
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: theme('colors.blue.congress');
+    --color-navigation-icons:  #fff;
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -88,6 +90,14 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: theme('colors.blue.congress'); 
+    --color-navigation-icons: #fff;
+    --color-navigation-text: #fff;
+    --color-brandnavigation-border: theme('colors.blue.congress'); 
+    --color-navigation-border: #fff;
+    --border-navigation-border-width: 0px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
     /* Ticker, Live, Livestream */
@@ -157,7 +167,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -215,7 +227,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.aqua');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
     /* Ticker, Live, Livestream */
@@ -272,7 +286,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -331,7 +347,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -390,7 +408,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
@@ -447,7 +467,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
@@ -504,7 +526,9 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -563,6 +587,10 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+    
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
@@ -623,6 +651,10 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons:  theme('colors.gray.scorpion');
+    
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
@@ -680,6 +712,14 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
+    /* Navigation Hintergrund und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons: theme('colors.gray.scorpion');
+    --color-navigation-text: theme('colors.gray.scorpion');
+    --color-brandnavigation-border: theme('colors.red.monza'); 
+    --color-navigation-border: theme('colors.red.monza');
+    --border-navigation-border-width: 8px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
