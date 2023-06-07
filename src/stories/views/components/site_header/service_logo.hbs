@@ -4,24 +4,31 @@
 
     {{#if _useSticky}}
 
-        <span x-cloak class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem]" :class="`${percent}` < 50 ? 'invisible' : 'delay-200 visible'" >
-             <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" class="w-full h-full logo-compact aspect-square fill-white">
-            {{!-- {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}} --}}
-        </span>
+        <div x-cloak 
+            class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem] logo-compact-container" 
+            :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'">
+            <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-compact aspect-square fill-white">
+        </div>
         
-        <span class="absolute h-12 lg:h-[3.875rem] transition-opacity duration-500 ease-in-out w-40 lg:w-52" :class="`${percent}` < 50 ? 'visible' : 'invisible'">
-             <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" class="w-auto h-full logo-desk fill-white">
-             {{!-- {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _asImage=true _addClass="logo-desk aspect-square fill-white h-full w-full"}} --}}
-        </span> 
+        <div class="w-auto py-2 transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem]" 
+            :class="`${percent}` < 50 ? 'delay-1000 opacity-100' : 'delay-200 opacity-0 hidden'">
+            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-desk fill-white">     
+        </div> 
 
     {{else}}
     
-        <span x-cloak class="absolute hidden" >
-            {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}}
+        <span x-cloak class="absolute flex w-16 h-16 lg:hidden" >
+            <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-full h-full logo-compact aspect-square fill-white">
+            {{!-- {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-compact lg:h-10 lg:w-10 md:h-8 md:w-8 w-7 h-7"}} --}}
         </span>
         
-        <div class="absolute flex justify-start h-5 w-40 md:h-7 lg:w-52  lg:h-10 lg:mt-2.5">
-            {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk fill-white h-full w-fit"}}
+        <div class="lg:flex hidden justify-start w-auto py-2 h-12 lg:h-[3.875rem]">
+            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-desk fill-white">
+            {{!-- {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk fill-white h-full w-fit"}} --}} 
         </div> 
 
     {{/if}}
