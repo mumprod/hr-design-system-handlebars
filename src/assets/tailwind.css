@@ -96,7 +96,7 @@
     --color-navigation-text: #fff;
     --color-brandnavigation-border: theme('colors.blue.congress'); 
     --color-navigation-border: #fff;
-    --border-navigation-border-width: 0px;
+    --border-navigation-border-width: 1px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');

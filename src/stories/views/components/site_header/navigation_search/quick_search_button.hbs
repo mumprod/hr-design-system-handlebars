@@ -1,16 +1,16 @@
 <div 
-    x-cloak class="flex items-center h-8 sb-quick-search-button md:h-full md:border-r md:border-l md:border-white lg:border-none" 
-    :class="$store.searchFieldOpen == true ? 'bg-white mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-primary'"
+    x-cloak class="flex items-center h-8 sb-quick-search-button md:h-full md:border-r md:border-l md:border-navigation-border lg:border-none" 
+    :class="$store.searchFieldOpen == true ? 'bg-navigation-bg mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-navigation-bg'"
 >
     <button  
         @click="$store.searchFieldOpen = ! $store.searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; toggleScrolling(!$store.searchFieldOpen)"
         @click.debounce.100ms="$dispatch('burger-close'); $dispatch('search-mobile-click'); $dispatch('close-servicemenu');"
-        class="h-full text-white cursor-pointer md:px-4 lg:hidden"
+        class="h-full cursor-pointer text-navigation-text md:px-4 lg:hidden"
         x-effect="$el.setAttribute('id', 'flyout-' + $store.searchID.current + '-1');$el.setAttribute('aria-owns', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-controls', 'flyout-' + $store.searchID.current + '-2');$el.setAttribute('aria-expanded', $store.searchFieldOpen == true);$el.setAttribute('aria-label', $store.searchFieldOpen == true ? 'Suche schließen' : 'Suche öffnen')"
     >
         <svg 
             x-show="$store.searchFieldOpen == false"
-            class="h-5 text-white fill-current w-9" 
+            class="h-5 fill-current text-navigation-text w-9" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
             role="presentation" 
@@ -20,7 +20,7 @@
         </svg>
         <svg 
             x-show="$store.searchFieldOpen == true"
-            class="h-6 fill-current w-9 text-primary" 
+            class="h-6 fill-current w-9 text-navigation-text" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
             x-effect="$el.setAttribute('aria-hidden', $store.searchFieldOpen == false)"

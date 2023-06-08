@@ -322,6 +322,7 @@ module.exports = {
 
                 'navigation-bg': 'var(--color-navigation-bg)',
                 'navigation-icons': 'var(--color-navigation-icons)',
+                'navigation-text': 'var(--color-navigation-text)',
                 'brandnavigation-border': 'var(--color-brandnavigation-border)',
                 'navigation-border': 'var(--color-navigation-border)',
                 
