@@ -1,6 +1,6 @@
 <div 
-    x-cloak class="flex items-center h-8 sb-quick-search-button md:h-full md:border-r md:border-l md:border-navigation-border lg:border-none" 
-    :class="$store.searchFieldOpen == true ? 'bg-navigation-bg mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-navigation-bg'"
+    x-cloak class="flex items-center h-8 sb-quick-search-button md:h-full md:border-r md:border-l border-navigation-border lg:border-none" 
+    :class="$store.searchFieldOpen == true ? 'bg-white mt-2 rounded-t md:mt-0 md:rounded-none' : 'bg-navigation-bg'"
 >
     <button  
         @click="$store.searchFieldOpen = ! $store.searchFieldOpen; dropped = false; $store.serviceNavIsOpen = false; toggleScrolling(!$store.searchFieldOpen)"
@@ -20,7 +20,7 @@
         </svg>
         <svg 
             x-show="$store.searchFieldOpen == true"
-            class="h-6 fill-current w-9 text-navigation-text" 
+            class="h-6 fill-current w-9 text-primary" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 20 20"
             x-effect="$el.setAttribute('aria-hidden', $store.searchFieldOpen == false)"

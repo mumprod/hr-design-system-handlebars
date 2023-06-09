@@ -1,5 +1,5 @@
 <li :class="dropped ? 'h-auto' : 'h-10'"  
-    class="lg:border-0 sb-navigation-flyout-item pl-4 {{#if _flyout}}lg:px-0 {{else}}lg:px-2 lg:first-of-type:pl-0 {{/if}}{{#if _parentselected}}lg:whitespace-nowrap{{/if}} flex h-auto text-base leading-6 border-b border-gray-200 lg:last:border-0 text-primary justify-start hover:underline">
+    class="lg:border-0 sb-navigation-flyout-item pl-4 {{#if _flyout}}lg:px-0 {{else}}lg:px-2 lg:first-of-type:pl-0 {{/if}}{{#if _parentselected}}lg:whitespace-nowrap{{/if}} flex h-auto text-base leading-6 border-b border-gray-200 first:border-t last:border-b last:border-navigation-border lg:last:border-0 text-primary justify-start hover:underline">
     {{#with this}}
         {{#> components/base/link _link=this.link _css=(inline-switch _fromNav '["RubrikNavigation","ServiceNavigation","SubNavInRubrikNav"]' '["link-focus-inset py-2 w-full","link-focus py-2 md:pl-0 lg:pl-0 lg:pr-0 break-words w-full","link-focus py-2 md:pl-0 lg:pl-0 lg:pr-0 break-words w-full"]') }}
             {{this.text}}      
