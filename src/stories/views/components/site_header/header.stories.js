@@ -7,11 +7,11 @@ import JsonData3 from './fixtures/site_header_mit_submenu_no_sticky.json'
 import JsonDataTopTopics from './fixtures/site_header_mit_top_topics_no_sticky.json'
 import JsonDataHR3 from './fixtures/site_header_mit_submenu_as_flyout_no_sticky.json'
 
-const Template = (args) => {
+const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-   
-    return navigation({ ...args })
+    let brand = undefined !== theme ? theme : 'hessenschau' 
+    return navigation({ brand, ...args })
 }
 
 export default {

@@ -94,7 +94,9 @@
     --color-navigation-bg: theme('colors.blue.congress'); 
     --color-navigation-icons: #fff;
     --color-navigation-text: #fff;
+
     --color-brandnavigation-border: theme('colors.blue.congress'); 
+    --color-brandnav-pseudo: theme('colors.blue.congress');
     --color-navigation-border: #fff;
     --border-navigation-border-width: 1px;
 
@@ -717,7 +719,8 @@
     --color-navigation-bg: #fff;
     --color-navigation-icons: theme('colors.gray.scorpion');
     --color-navigation-text: theme('colors.gray.scorpion');
-    --color-brandnavigation-border: theme('colors.red.monza'); 
+    --color-brandnavigation-border: theme('colors.red.monza');
+    --color-brandnav-pseudo: theme('colors.red.monza'); 
     --color-navigation-border: theme('colors.red.monza');
     --border-navigation-border-width: 8px;
 
@@ -838,7 +841,7 @@
 }
 
 [data-theme='you-fm'] {
-    --color-primary-ds: #c20016;
+    --color-primary-ds: #007179 /* #c20016 */;
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -847,7 +850,8 @@
     --color-navigation-bg: #fff;
     --color-navigation-icons: #000;
     --color-navigation-text: #000;
-    --color-brandnavigation-border: #000; 
+    --color-brandnavigation-border: #000;
+    --color-brandnav-pseudo: #007179; 
     --color-navigation-border:#000;
 
     --border-navigation-border-width: 11px;
