@@ -19,12 +19,12 @@
 
     {{else}}
     
-        <span x-cloak class="absolute flex w-8 h-8 md:w-10 md:h-10 lg:hidden" >
+        <span x-cloak class="absolute flex w-8 h-8 md:w-10 md:h-10 md:hidden" >
             <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
                 class="w-full h-full logo-compact aspect-square fill-white">
         </span>
         
-        <div class="lg:flex hidden justify-start w-auto py-2 h-12 lg:h-[3.875rem]">
+        <div class="md:flex hidden justify-start w-auto py-2 h-12  lg:h-[3.875rem]">
             <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
                 class="w-auto h-full logo-desk fill-white">
         </div> 
