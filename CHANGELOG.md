@@ -1,3 +1,75 @@
+# v1.26.1 (Mon Jun 05 2023)
+
+#### 🐛 Bug Fix
+
+- add adjust_context to title [#647](https://github.com/mumprod/hr-design-system-handlebars/pull/647) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.26.0 (Wed May 24 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2330 [#646](https://github.com/mumprod/hr-design-system-handlebars/pull/646) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.25.1 (Tue May 23 2023)
+
+#### 🐛 Bug Fix
+
+- DPE 2327 - Paging bei 2 Unterseiten funktioniert nicht [#644](https://github.com/mumprod/hr-design-system-handlebars/pull/644) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.25.0 (Tue May 23 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: fixes a the data model so that it [#645](https://github.com/mumprod/hr-design-system-handlebars/pull/645) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.24.5 (Mon May 22 2023)
+
+#### 🐛 Bug Fix
+
+- weather icon bug fixed [#643](https://github.com/mumprod/hr-design-system-handlebars/pull/643) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.24.4 (Wed May 17 2023)
+
+#### 🐛 Bug Fix
+
+- Paging auf Indexseiten in Storybook bauen - FIX PROBLEMS - DPE-2079 [#642](https://github.com/mumprod/hr-design-system-handlebars/pull/642) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.24.3 (Tue May 16 2023)
 
 #### 🐛 Bug Fix

@@ -6,7 +6,7 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
-    safelist: ['mt-12', 'bg-gray-100'],
+    safelist: ['mt-12', 'bg-gray-100', '-weather_warning'],
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js}',
@@ -156,6 +156,11 @@ module.exports = {
                 '3/4': '75%',
                 '1/1': '100%',
                 'main-col': '63rem',
+            },
+            minWidth: {
+                7: '1.75rem',
+                10: '2.5rem',
+                11: '2.75rem',
             },
             margin: {
                 '13': '3.125rem',

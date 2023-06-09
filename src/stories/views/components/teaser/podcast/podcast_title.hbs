@@ -1,7 +1,7 @@
 {{#if this.isSingleChannel}}
     {{#>components/base/link _link=this.link _css="group ds-link font-title text-base mt-2.5 text-podcast-text"}}
         <span class="mt-0.5 group-hover:underline {{#if _ordered-adjust_context}} pl-8 {{/if}}line-clamp-4 {{inline-switch _teaserSize-adjust_context '["hero","100","50"]''["text-base md:text-2xl lg:line-clamp-2","text-base md:text-2xl lg:line-clamp-2","text-base md:text-lg"]' ~}}">
-            {{~_title~}}
+            {{~_title-adjust_context~}}
         </span>
     {{/components/base/link}}
 {{else}}
