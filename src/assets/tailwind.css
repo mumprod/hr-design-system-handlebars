@@ -90,7 +90,7 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund und Icons */
+    /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: theme('colors.blue.congress'); 
     --color-navigation-icons: #fff;
     --color-navigation-text: #fff;
@@ -713,7 +713,7 @@
     --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund und Icons */
+    /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: #fff;
     --color-navigation-icons: theme('colors.gray.scorpion');
     --color-navigation-text: theme('colors.gray.scorpion');
@@ -843,6 +843,16 @@
     --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
+    /* Navigation Hintergrund, Borders und Icons */
+    --color-navigation-bg: #fff;
+    --color-navigation-icons: #000;
+    --color-navigation-text: #000;
+    --color-brandnavigation-border: #000; 
+    --color-navigation-border:#000;
+
+    --border-navigation-border-width: 11px;
+    --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
+   
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
     /* Ticker, Live, Livestream */

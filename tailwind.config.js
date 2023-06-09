@@ -38,6 +38,9 @@ module.exports = {
         },
 
         extend: {
+            borderImage: {
+                'border-navigation-border-image': 'var(--border-navigation-border-image)',
+            },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
             },
@@ -218,7 +221,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
-                'inherit': 'inherit',
+                'inherit': 'inherit', 
                 'blue': {
                     accented: '#eaf3fa',
                     allports: '#007899',
@@ -314,6 +317,7 @@ module.exports = {
                     hokeyPokey: '#c1bc2b',
                     olive: '#916B00',
                 },
+
                 'primary': 'var(--color-primary-ds)',
                 'secondary': 'var(--color-secondary-ds)',
                 'highlight-1': 'var(--color-highlight-1)',
@@ -326,6 +330,7 @@ module.exports = {
                 'brandnavigation-border': 'var(--color-brandnavigation-border)',
                 'navigation-border': 'var(--color-navigation-border)',
                 
+
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',
