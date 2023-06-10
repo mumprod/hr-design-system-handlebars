@@ -528,9 +528,17 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons:  theme('colors.gray.scorpion');
+
+    /* Navigation Hintergrund, Borders und Icons */
+    --color-navigation-bg: theme('colors.blue.deepCerulean'); 
+    --color-navigation-icons: #fff;
+    --color-navigation-text: #fff;
+
+    --color-brandnavigation-border: theme('colors.blue.deepCerulean'); 
+    --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
+    --color-navigation-border: #fff;
+    --border-navigation-border-width: 1px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -590,9 +598,13 @@
     --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     
-    /* Navigation Hintergrund und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons:  theme('colors.gray.scorpion');
+    /* Navigation Hintergrund, Borders und Icons */
+    --color-navigation-bg: theme('colors.yellow.corn');
+    --color-navigation-icons: #433d37;
+    --color-navigation-text: #433d37;
+    --color-brandnavigation-border: theme('colors.yellow.corn');
+    --color-brandnav-pseudo: theme('colors.yellow.corn');
+    --color-navigation-border:#fff;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
@@ -653,9 +665,15 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund und Icons */
+    /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: #fff;
-    --color-navigation-icons:  theme('colors.gray.scorpion');
+    --color-navigation-icons: #433d37;
+    --color-navigation-text: #433d37;
+    --color-brandnavigation-border: theme('colors.orange.clementine');
+    --color-brandnav-pseudo: theme('colors.orange.clementine');
+    --color-navigation-border:theme('colors.orange.clementine');
+
+    --border-navigation-border-width: 8px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
@@ -783,6 +801,14 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
+    /* Navigation Hintergrund, Borders und Icons */
+    --color-navigation-bg: theme('colors.green.genoa');
+    --color-navigation-icons: #fff;
+    --color-navigation-text: #fff;
+    --color-brandnavigation-border: theme('colors.green.genoa');
+    --color-brandnav-pseudo: theme('colors.green.genoa');
+    --color-navigation-border: #fff;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');

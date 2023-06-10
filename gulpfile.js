@@ -151,13 +151,33 @@ function createSvgMapsForBrands() {
     )
 }
 
-/* const svgLogoFilesCache = new FileCache(`${options.paths.build.gulp}/cache/.svgLogoFilesCache`) */
+const svgLogoFilesCache = new FileCache(`${options.paths.build.gulp}/cache/.svgLogoFilesCache`)
 function saveLogoFilesToFolder() {
     return mergeStream(
         glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
             return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
                     console.log(brandDir)
                     return src(`${iconsDir}/svgmap/*.svg`)
+                    /* .pipe(svgLogoFilesCache.filter())
+                    .pipe(svgLogoFilesCache.cache())
+                    .pipe(
+                        svgMin({
+                            full: true,
+                            plugins: [
+                                {
+                                    name: 'preset-default',
+                                    params: {
+                                        overrides: {
+                                            removeViewBox: false,
+                                            removeUnknownsAndDefaults: false,
+                                        },
+                                    },
+                                },
+                                'convertStyleToAttrs',
+                            ],
+                        })
+                    )
+                    .pipe(svgStore({ inlineSvg: false })) */
                     .pipe(dest(iconsDir))
             })    
         })    
@@ -310,7 +330,7 @@ function watchFiles() {
     watch(`${options.paths.assets.views}/**/*.hbs`, convertPartialsToJs)
     watch(
         [`${options.paths.assets.brand}/**/*.svg`, `!${options.paths.assets.brand}/**/*.min.svg`],
-        createSvgMapsForBrands
+        //createSvgMapsForBrands
     )
     watch(
         [
@@ -379,7 +399,6 @@ function mergeLocatags() {
 exports.default = series(
     parallel(
         createSvgMaps,
-        createSvgMapsForBrands,
         minimizeSvgSrcFiles,
         parseJson,
         convertPartialsToJs,
@@ -388,7 +407,7 @@ exports.default = series(
     ),saveLogoFilesToFolder,
     watchFiles
 )
-exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
+exports.optimizeSvgs = parallel(createSvgMaps, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
