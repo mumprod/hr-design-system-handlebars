@@ -2,32 +2,28 @@
     href={{resourceUrl "index.html"}} 
     title="{{loca "header_homepage_link_title"}}">
 
-    {{#if _useSticky}}
-
         <div x-cloak 
-            class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem] logo-compact-container" 
-            :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'">
-            <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
-                class="w-auto h-full logo-compact aspect-square fill-white">
+            {{#if _useSticky}}
+                class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem] logo-compact-container" 
+                :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'"
+            {{else}}
+                class="relative flex h-8 md:hidden"
+            {{/if}}     
+        >             
+        <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+            class="w-auto h-full logo-compact">
+        </div>      
+        
+        <div 
+            {{#if _useSticky}}
+                class="w-auto py-2 transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem]"
+                :class="`${percent}` < 50 ? 'delay-1000 opacity-100' : 'delay-200 opacity-0 hidden'"
+            {{else}}    
+                class="md:flex hidden justify-start w-auto py-2 h-12  lg:h-[3.875rem]"
+            {{/if}}
+        >
+        <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+            class="w-auto h-full logo-desk">     
         </div>
-        
-        <div class="w-auto py-2 transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem]" 
-            :class="`${percent}` < 50 ? 'delay-1000 opacity-100' : 'delay-200 opacity-0 hidden'">
-            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
-                class="w-auto h-full logo-desk fill-white">     
-        </div> 
-
-    {{else}}
-    
-        <span x-cloak class="absolute flex w-8 h-8 md:w-10 md:h-10 md:hidden" >
-            <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
-                class="w-full h-full logo-compact aspect-square fill-white">
-        </span>
-        
-        <div class="md:flex hidden justify-start w-auto py-2 h-12  lg:h-[3.875rem]">
-            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
-                class="w-auto h-full logo-desk fill-white">
-        </div> 
-
-    {{/if}}
+          
 </a>
