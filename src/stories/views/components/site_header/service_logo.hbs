@@ -4,7 +4,7 @@
 
         <div x-cloak 
             {{#if _useSticky}}
-                class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem] logo-compact-container" 
+                class="absolute py-2 flex transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem] w-12 lg:w-[3.875rem]" 
                 :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'"
             {{else}}
                 class="relative flex h-8 md:hidden"
