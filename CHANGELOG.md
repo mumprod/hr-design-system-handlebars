@@ -1,3 +1,15 @@
+# v1.26.2 (Mon Jun 12 2023)
+
+#### 🐛 Bug Fix
+
+- add ticker-timeline [#648](https://github.com/mumprod/hr-design-system-handlebars/pull/648) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.26.1 (Mon Jun 05 2023)
 
 #### 🐛 Bug Fix
