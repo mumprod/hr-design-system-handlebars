@@ -1,0 +1,30 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TimelineStories from './teaser_ticker_timeline.stories'
+
+<Meta of={TimelineStories} />
+
+# Ticker-Zeitstrahl
+
+Im Ticker-Zeitstrahl werden die neuesten Topnews chronologisch absteigend angezeigt.
+Dargestellt werden Veröffentlichungszeit und Titel. Der Titel ist verlinkt auf den entsprechenden Ticker-Eintrag.
+
+
+## Varianten
+
+Aktuell sind 2 Varianten vorgesehen. Eine zur Darstellung im Teaser (weiße Schrift auf blauem Hintergrund) und eine weitere
+für die Darstellung im Ticker selbst (schwarz/Linkfarbe auf weiß)
+
+<Canvas>
+    <Story of={TimelineStories.TimelineWhite} />
+    <Story of={TimelineStories.TimelineBlack} />
+</Canvas>
+
+
+## Verwendung
+
+Die Komponente wird wie folgt eingebunden:
+
+```handlebars
+{{> components/teaser/ticker/teaser_ticker_timeline _color="white"}}
+```
+Der _color-Parameter ist optional. Ohne _color-Parameter wird der Zeitstrahl in schwarz/Linkfarbe dargestellt.
