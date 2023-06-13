@@ -93,6 +93,8 @@ module.exports = {
                 '11.5': '2.875rem',
                 '13': '3.25rem',
                 '3/4': '75%',
+                'logo-padding-top': 'var(--padding-logo-padding-top)',
+                'logo-padding-bottom': 'var(--padding-logo-padding-bottom)',
             },
             right: {
                 80: '80%',
@@ -336,7 +338,6 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'navigation-border': 'var(--color-navigation-border)',
                 
-
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',

@@ -22,6 +22,10 @@
     --color-brandnav-pseudo: theme('colors.blue.congress');
     --color-navigation-border: #fff;
     --border-navigation-border-width: 1px;
+
+    --padding-logo-padding-top: 10px;
+    --padding-logo-padding-bottom: 10px;
+
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -105,7 +109,12 @@
     --color-brandnavigation-border: theme('colors.blue.congress'); 
     --color-brandnav-pseudo: theme('colors.blue.congress');
     --color-navigation-border: #fff;
+
     --border-navigation-border-width: 1px;
+
+    --padding-logo-padding-top: 12px;
+    --padding-logo-padding-bottom: 4px;
+
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -309,6 +318,7 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
     /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: theme('colors.gray.scorpion');
     --color-navigation-icons: #fff;
@@ -317,7 +327,12 @@
     --color-brandnavigation-border: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
     --color-navigation-border: #fff;
+    
     --border-navigation-border-width: 1px;
+
+    --padding-logo-padding-top:12px;
+    --padding-logo-padding-bottom: 12px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -452,7 +467,12 @@
     --color-brandnavigation-border: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
     --color-navigation-border: #fff;
+
     --border-navigation-border-width: 1px;
+    
+    --padding-logo-padding-top:2px;
+    --padding-logo-padding-bottom: 2px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
@@ -509,6 +529,7 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
     /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: theme('colors.blue.blueStone');
     --color-navigation-icons: #fff;
@@ -517,7 +538,10 @@
     --color-brandnavigation-border:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
     --color-navigation-border: #fff;
+
     --border-navigation-border-width: 1px;
+    --padding-logo-padding-top:2px;
+    --padding-logo-padding-bottom: 2px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
