@@ -29,7 +29,7 @@
     /* Logo-Container Padding */
     --padding-logo-padding-top: 10px;
     --padding-logo-padding-bottom: 10px;
-
+     
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -106,8 +106,8 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Logo-Container Padding */
-    --padding-logo-padding-top: 12px;
-    --padding-logo-padding-bottom: 4px;
+    --padding-logo-padding-top: 8px;
+    --padding-logo-padding-bottom: 8px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -995,22 +995,6 @@
     display: none;
 }
 
-.arrow-left-background {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
-    transition: transform 150ms ease-in-out 0s;
-}
-.arrow-right-background {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
-    transition: transform 150ms ease-in-out 0s;
-}
-.arrow-left-background-blue {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0),theme('colors.primary') 50%);
-    transition: transform 150ms ease-in-out 0s;
-}
-.arrow-right-background-blue {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), theme('colors.primary') 50%);
-    transition: transform 150ms ease-in-out 0s;
-}
 .c-videoplayer .ardplayer {
     position: absolute;
     top: 0;

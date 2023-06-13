@@ -38,9 +38,6 @@ module.exports = {
         },
 
         extend: {
-            borderImage: {
-                'border-navigation-border-image': 'var(--border-navigation-border-image)',
-            },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
             },
@@ -337,7 +334,7 @@ module.exports = {
                 'brandnavigation-border-color': 'var(--color-brandnavigation-border-color)',
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
-                
+
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',

@@ -8,11 +8,11 @@
     >
     <template x-if="isScrollable && $screen('{{_viewport}}')">
         <div>
-            <button class="{{#if _onDarkBackground}}arrow-left-background-blue{{else}}arrow-left-background{{/if}} absolute z-10 left-0 flex items-center justify-start w-8 h-full disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
-                {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-primary') }}
+            <button class="absolute left-0 z-10 flex items-center justify-start w-10 h-full bg-gradient-to-r from-[theme(colors.navigation-bg)] from-50% to-transparent transition-transform ease-in-out disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
+                {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current text-navigation-text" }}
             </button> 
-            <button class="{{#if _onDarkBackground}}arrow-right-background-blue{{else}}arrow-right-background{{/if}} absolute z-10 right-0 flex items-center justify-end w-8 h-full group disabled:hidden" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
-                {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass=(if _onDarkBackground 'w-3.5 h-3.5 fill-current text-white' 'w-3.5 h-3.5 fill-current text-primary') }}
+            <button class="absolute right-0 z-10 flex items-center justify-end w-10 h-full bg-gradient-to-l from-[theme(colors.navigation-bg)] from-50% to-transparent  group transition-transform ease-in-out disabled:hidden" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
+                {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current text-navigation-text" }}
             </button>
         </div>
     </template>
