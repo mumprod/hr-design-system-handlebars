@@ -13,16 +13,20 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.congress'); 
+    /* Navigation Icons */
     --color-navigation-icons: #fff;
+    /* Navigation Text */
     --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.blue.congress'); 
+    /* Brandnavigation Border and :before Color */
+    --color-brandnavigation-border-color: theme('colors.blue.congress'); 
     --color-brandnav-pseudo: theme('colors.blue.congress');
-    --color-navigation-border: #fff;
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: #fff;
+    /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
-
+    /* Logo-Container Padding */
     --padding-logo-padding-top: 10px;
     --padding-logo-padding-bottom: 10px;
 
@@ -101,20 +105,9 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: theme('colors.blue.congress'); 
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.blue.congress'); 
-    --color-brandnav-pseudo: theme('colors.blue.congress');
-    --color-navigation-border: #fff;
-
-    --border-navigation-border-width: 1px;
-
+    /* Logo-Container Padding */
     --padding-logo-padding-top: 12px;
     --padding-logo-padding-bottom: 4px;
-
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -185,15 +178,12 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.purple.jazzberry');
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.purple.jazzberry');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.purple.jazzberry');
     --color-brandnav-pseudo: theme('colors.purple.jazzberry');
-    --color-navigation-border: #fff;
-    --border-navigation-border-width: 1px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -252,15 +242,11 @@
     --color-highlight-1: theme('colors.blue.aqua');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
- /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.jellyBean'); 
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.blue.jellyBean'); 
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.blue.jellyBean'); 
     --color-brandnav-pseudo: theme('colors.blue.jellyBean');
-    --color-navigation-border: #fff;
-    --border-navigation-border-width: 1px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
@@ -319,17 +305,12 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.gray.scorpion');
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.gray.scorpion');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
-    --color-navigation-border: #fff;
-    
-    --border-navigation-border-width: 1px;
-
+    /* Logo Top/Bottom-Padding */
     --padding-logo-padding-top:12px;
     --padding-logo-padding-bottom: 12px;
 
@@ -391,15 +372,11 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.deepCerulean'); 
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.blue.deepCerulean'); 
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
-    --color-navigation-border: #fff;
-    --border-navigation-border-width: 1px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -459,17 +436,12 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.red.burntUmber');
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.red.burntUmber');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
-    --color-navigation-border: #fff;
-
-    --border-navigation-border-width: 1px;
-    
+    /* Logo padding */
     --padding-logo-padding-top:2px;
     --padding-logo-padding-bottom: 2px;
 
@@ -532,17 +504,12 @@
 
     /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: theme('colors.blue.blueStone');
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border:  theme('colors.blue.blueStone');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
-    --color-navigation-border: #fff;
-
-    --border-navigation-border-width: 1px;
+    /* Logo padding */
     --padding-logo-padding-top:2px;
-    --padding-logo-padding-bottom: 2px;
-    
+    --padding-logo-padding-bottom: 2px;    
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
@@ -600,15 +567,11 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.deepCerulean'); 
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-
-    --color-brandnavigation-border: theme('colors.blue.deepCerulean'); 
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
-    --color-navigation-border: #fff;
-    --border-navigation-border-width: 1px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -671,13 +634,12 @@
     
     /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: theme('colors.yellow.corn');
+    /* Navigation Icons und Text Colors*/
     --color-navigation-icons: #433d37;
     --color-navigation-text: #433d37;
-    --color-brandnavigation-border: theme('colors.yellow.corn');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
-    --color-navigation-border:#fff;
-    --border-navigation-border-width: 1px;
-
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
@@ -737,16 +699,19 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund, Text und Icons */
     --color-navigation-bg: #fff;
     --color-navigation-icons: #433d37;
     --color-navigation-text: #433d37;
-    --color-brandnavigation-border: theme('colors.orange.clementine');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
-    --color-navigation-border:theme('colors.orange.clementine');
-
+    --color-navigation-border-color:theme('colors.orange.clementine');
+    /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
-    
+    /* Logo paddings */
+    --padding-logo-padding-top:8px;
+    --padding-logo-padding-bottom: 8px; 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
@@ -805,15 +770,20 @@
     --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund, Text und Icons */
     --color-navigation-bg: #fff;
     --color-navigation-icons: theme('colors.gray.scorpion');
     --color-navigation-text: theme('colors.gray.scorpion');
-    --color-brandnavigation-border: theme('colors.red.monza');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.red.monza');
     --color-brandnav-pseudo: theme('colors.red.monza'); 
-    --color-navigation-border: theme('colors.red.monza');
+    /* Service/Sectionnavigation Border Color */
+    --color-navigation-border-color: theme('colors.red.monza');
+    /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
-
+    /* Logo padding */
+    --padding-logo-padding-top:8px;
+    --padding-logo-padding-bottom: 8px;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
@@ -874,15 +844,14 @@
     --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.green.genoa');
-    --color-navigation-icons: #fff;
-    --color-navigation-text: #fff;
-    --color-brandnavigation-border: theme('colors.green.genoa');
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
-    --color-navigation-border: #fff;
-    --border-navigation-border-width: 1px;
-
+    /* Logo padding */
+    --padding-logo-padding-top:4px;
+    --padding-logo-padding-bottom: 4px;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
     /* Ticker, Live, Livestream */
@@ -945,15 +914,18 @@
     --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
+    /* Navigation Hintergrund, Text und Icons */
     --color-navigation-bg: #fff;
     --color-navigation-icons: #000;
     --color-navigation-text: #000;
-    --color-brandnavigation-border: #000;
+    /* Brandnavigation Border and :before Colors*/
+    --color-brandnavigation-border-color: #000;
     --color-brandnav-pseudo: #007179; 
-    --color-navigation-border:#000;
-
+    /* Service/Sectionnavigation Border Color*/
+    --color-navigation-border-color:#000;
+    /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
+    /* The Fancy special border on youfm */
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Medieninhalte, Video, Audio, Bildergalerien */

@@ -334,9 +334,9 @@ module.exports = {
                 'navigation-bg': 'var(--color-navigation-bg)',
                 'navigation-icons': 'var(--color-navigation-icons)',
                 'navigation-text': 'var(--color-navigation-text)',
-                'brandnavigation-border': 'var(--color-brandnavigation-border)',
+                'brandnavigation-border-color': 'var(--color-brandnavigation-border-color)',
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
-                'navigation-border': 'var(--color-navigation-border)',
+                'navigation-border-color': 'var(--color-navigation-border-color)',
                 
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
