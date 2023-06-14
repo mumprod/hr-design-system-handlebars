@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="163px"
-	 height="37px" viewBox="0 0 163 37" enable-background="new 0 0 163 37" xml:space="preserve">
-<g id="Ebene_1" display="none">
-	
-		<image display="inline" overflow="visible" width="1915" height="1919" xlink:href="../#farben/farben alle wellen/indexseite-rundfunkrat.jpg"  transform="matrix(1 0 0 1 -483.5814 -48.7857)">
-	</image>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 163 37" style="enable-background:new 0 0 163 37" xml:space="preserve">
+
 <g id="Ebene_2">
 	<g>
 		<path fill="#FFFFFF" d="M12.367,21.392L7.508,11.91H2.381v9.48h-2.28V0h8.19c1.88,0,3.404,0.537,4.575,1.609
@@ -163,7 +158,5 @@
 			c0.64,0.055,1.131,0.221,1.475,0.499c0.343,0.278,0.514,0.718,0.514,1.319c0,0.647-0.247,1.151-0.74,1.511
 			C161.438,36.5,160.771,36.681,159.93,36.681z"/>
 	</g>
-</g>
-<g id="Ebene_3">
 </g>
 </svg>

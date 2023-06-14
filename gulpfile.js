@@ -158,26 +158,7 @@ function saveLogoFilesToFolder() {
             return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
                     console.log(brandDir)
                     return src(`${iconsDir}/svgmap/*.svg`)
-                    /* .pipe(svgLogoFilesCache.filter())
-                    .pipe(svgLogoFilesCache.cache())
-                    .pipe(
-                        svgMin({
-                            full: true,
-                            plugins: [
-                                {
-                                    name: 'preset-default',
-                                    params: {
-                                        overrides: {
-                                            removeViewBox: false,
-                                            removeUnknownsAndDefaults: false,
-                                        },
-                                    },
-                                },
-                                'convertStyleToAttrs',
-                            ],
-                        })
-                    )
-                    .pipe(svgStore({ inlineSvg: false })) */
+                                        
                     .pipe(dest(iconsDir))
             })    
         })    
