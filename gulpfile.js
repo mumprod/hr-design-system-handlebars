@@ -151,14 +151,71 @@ function createSvgMapsForBrands() {
     )
 }
 
-const svgLogoFilesCache = new FileCache(`${options.paths.build.gulp}/cache/.svgLogoFilesCache`)
 function saveLogoFilesToFolder() {
     return mergeStream(
         glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
             return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
-                    console.log(brandDir)
+                    let icon = path.basename(iconsDir)
                     return src(`${iconsDir}/svgmap/*.svg`)
-                                        
+                    .pipe(
+                        svgMin({
+                        full: true,
+                        plugins: [
+                            {
+                                name: 'preset-default',
+                                params: {
+                                    overrides: {
+                                        removeViewBox: false,
+                                        cleanupAttrs: false,
+                                        collapseGroups: false,
+                                        cleanupIDs: false,
+                                        convertPathData: {
+                                            straightCurves: false,
+                                        },
+                                        convertTransform: {
+                                            shortScale: false,
+                                            floatPrecision: 2,
+                                        },
+                                    },
+                                },
+                            },
+                        ],
+                    })) 
+                    .pipe(
+                        cheerio({
+                            run: function ($, file) {
+                                $('svg').attr('preserveAspectRatio', 'xMinYMid meet')
+                                $('[fill]').map(function () {
+                                    if (
+                                        $(this).attr('fill') !== 'currentColor' &&
+                                        iconFoldersToCleanUp.includes(icon)
+                                    ) {
+                                        $(this).removeAttr('fill')
+                                    }
+                                })
+                                $('[preserve--fill]').map(function () {
+                                    let value = $(this).attr('preserve--fill')
+                                    $(this).removeAttr('preserve--fill')
+                                    $(this).attr('fill', value)
+                                })
+                                $('[preserve--style]').map(function () {
+                                    let value = $(this).attr('preserve--style')
+                                    $(this).removeAttr('preserve--style')
+                                    $(this).attr('style', value)
+                                })
+                            },
+                            parserOptions: { xmlMode: true },
+                        })
+                    )
+                    .pipe(
+                        rename( function (path) {
+                            return {
+                                dirname: path.dirname,
+                                basename: path.basename + '.min',
+                                extname: path.extname,
+                            }
+                            })
+                    )                  
                     .pipe(dest(iconsDir))
             })    
         })    

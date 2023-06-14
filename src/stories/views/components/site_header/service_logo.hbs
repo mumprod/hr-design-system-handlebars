@@ -10,7 +10,7 @@
                 class="relative flex h-8 md:hidden"
             {{/if}}     
         >             
-        <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+        <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.min.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
             class="w-auto h-full logo-compact">
         </div>      
         
@@ -22,7 +22,7 @@
                 class="md:flex hidden justify-start w-auto pt-logo-padding-top pb-logo-padding-bottom h-14 lg:h-[3.875rem]"
             {{/if}}
         >
-        <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+        <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
             class="w-auto h-full logo-desk">     
         </div>
           
