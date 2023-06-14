@@ -1,0 +1,31 @@
+{
+    "tickerItemResults": [
+        {
+            "isTopnews": true,
+            "tickerItemDateTime": {
+                "broadcastDate": "12. Juni, 10:15",
+                "time": "10:15"
+            },
+            "tickerItemUrl": "Topnews1",
+            "relevantTitle": "Kritik an Privatisierung von Wasser"
+        },
+        {
+            "isTopnews": true,
+            "tickerItemDateTime": {
+                "broadcastDate": "12. Juni, 9:55",
+                "time": "9:55"
+            },
+            "tickerItemUrl": "Topnews2",
+            "relevantTitle": "Suche nach neuem Vorsitz für Hanau-Ausschuss Hanau-Ausschuss Hanau-Ausschuss Hanau-Ausschuss"
+        },
+        {
+            "isTopnews": true,
+            "tickerItemDateTime": {
+                "broadcastDate": "12. Juni, 9:25",
+                "time": "9:25"
+            },
+            "tickerItemUrl": "Topnews3",
+            "relevantTitle": "Pedelec-Fahrer auf B276 lebensgefährlich verletzt"
+        }                
+    ]
+}

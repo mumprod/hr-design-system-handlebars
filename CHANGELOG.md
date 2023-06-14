@@ -1,3 +1,27 @@
+# v1.26.3 (Wed Jun 14 2023)
+
+#### 🐛 Bug Fix
+
+- updates tailwind [#650](https://github.com/mumprod/hr-design-system-handlebars/pull/650) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.26.2 (Mon Jun 12 2023)
+
+#### 🐛 Bug Fix
+
+- add ticker-timeline [#648](https://github.com/mumprod/hr-design-system-handlebars/pull/648) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.26.1 (Mon Jun 05 2023)
 
 #### 🐛 Bug Fix
