@@ -334,6 +334,7 @@ module.exports = {
                 'navigation-text': 'var(--color-navigation-text)',
                 'brandnavigation-border-color': 'var(--color-brandnavigation-border-color)',
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
+                'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
 
                 'labelMedia': 'var(--color-label-media)',
