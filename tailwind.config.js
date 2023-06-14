@@ -38,6 +38,7 @@ module.exports = {
         },
 
         extend: {
+            backgroundImage: {},
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
             },

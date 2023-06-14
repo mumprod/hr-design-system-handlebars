@@ -8,10 +8,10 @@
     >
     <template x-if="isScrollable && $screen('{{_viewport}}')">
         <div>
-            <button class="bg-gradient-to-r from-[{{_bgcolor}}] from-50% absolute left-0 z-10 flex items-center justify-start w-10 h-full text-[{{_iconcolor}}] disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
+            <button style="background-image: linear-gradient(90deg, {{_bgcolor}}, transparent);" class="absolute left-0 z-10 flex items-center justify-start w-10 h-full text-{{_iconcolor}} disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
                 {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current" }}
             </button> 
-            <button class="bg-gradient-to-l from-[{{_bgcolor}}] from-50% absolute right-0 z-10 flex items-center justify-end w-10 h-full text-[{{_iconcolor}}] disabled:hidden group" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
+            <button style="background-image: linear-gradient(270deg, {{_bgcolor}}, transparent);" class="bg-gradient-to-l from-[{{_bgcolor}}] absolute right-0 z-10 flex items-center justify-end w-10 h-full text-{{_iconcolor}} disabled:hidden group" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
                 {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current" }}
             </button>
         </div>

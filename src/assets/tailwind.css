@@ -14,7 +14,8 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.congress'); 
+    --color-navigation-bg: theme('colors.blue.congress');
+    --color-brandnavigation-bg: #fff; 
     /* Navigation Icons */
     --color-navigation-icons: #fff;
     /* Navigation Text */
