@@ -185,14 +185,14 @@ function saveLogoFilesToFolder() {
                         cheerio({
                             run: function ($, file) {
                                 $('svg').attr('preserveAspectRatio', 'xMinYMid meet')
-                                $('[fill]').map(function () {
+                                /* $('[fill]').map(function () {
                                     if (
                                         $(this).attr('fill') !== 'currentColor' &&
                                         iconFoldersToCleanUp.includes(icon)
                                     ) {
                                         $(this).removeAttr('fill')
                                     }
-                                })
+                                }) */
                                 $('[preserve--fill]').map(function () {
                                     let value = $(this).attr('preserve--fill')
                                     $(this).removeAttr('preserve--fill')
