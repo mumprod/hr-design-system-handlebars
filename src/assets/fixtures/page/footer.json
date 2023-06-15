@@ -213,56 +213,78 @@
             {
                 "items": [
                     {
-                        "text": "twitter",
-                        "url": "https://twitter.com/hessenschau",
                         "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Twitter"
+                        "title": "hessenschau Twitter",
+                        "link": {
+                            "text": "twitter",
+                            "url": "https://twitter.com/hessenschau",
+                            "isTargetBlank": true
+                        }
                     },
                     {
-                        "text": "instagram",
-                        "url": "https://www.instagram.com/hessenschau/",
                         "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Instagram"
+                        "title": "hessenschau Instagram",
+                        "link": {
+                            "text": "instagram",
+                            "url": "https://www.instagram.com/hessenschau/",
+                            "isTargetBlank": true
+                         }
+    
                     },
                     {
-                        "text": "facebook",
-                        "url": "https://www.facebook.com/hessenschau",
                         "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Facebook"
+                        "title": "hessenschau Facebook",
+                        "link": {
+                            "text": "facebook",
+                            "url": "https://www.facebook.com/hessenschau",
+                            "isTargetBlank": true
+                        }
                     },
                     {
-                        "text": "youtube",
-                        "url": "https://www.youtube.com/c/hessenschau",
                         "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau YouTube"
+                        "title": "hessenschau YouTube",
+                        "link": {
+                            "text": "youtube",
+                            "url": "https://www.youtube.com/c/hessenschau",
+                            "isTargetBlank": true
+                        }
+                    
                     }
                 ]
             },
             {
                 "items": [
                     {
-                        "text": "mail",
-                        "url": "kontakt/index.html",
-                        "title": "Zum Kontaktformular"
+                        "title": "Zum Kontaktformular",
+                        "link": {
+                            "text": "mail",
+                            "url": "kontakt/index.html"
+                        }
+                        
                     },
                     {
-                        "text": "voice",
-                        "url": "voice/index.html",
-                        "title": "hessenschau in 100 Sekunden"
+                        "title": "hessenschau in 100 Sekunden",
+                        "link": {
+                            "text": "voice",
+                            "url": "voice/index.html"
+                        }
+                       
                     },
                     {
-                        "text": "push",
-                        "url": "push/index.html",
-                        "title": "Push-Benachrichtigung in der App"
+                        "title": "Push-Benachrichtigung in der App",
+                        "link": {
+                            "text": "push",
+                            "url": "push/index.html"
+                        }
+                        
                     },
                     {
-                        "text": "rss",
-                        "url": "rss/index.html",
-                        "title": "hessenschau.de RSS-Feed"
+                        "title": "hessenschau.de RSS-Feed",
+                        "link": {
+                            "text": "rss",
+                            "url": "rss/index.html"
+                        }
+                        
                     }
                 ]
             }

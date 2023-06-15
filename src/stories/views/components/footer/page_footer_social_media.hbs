@@ -1,20 +1,26 @@
-<nav class="" aria-labelledby="c-page-footer-social-media__title" >
-    <span id="c-page-footer-social-media__title" class="">{{{_title}}}</span>
-   
+<nav class="" aria-labelledby="c-footer_social_media_title" >
+    <span id="c-footer_social_media_title" class="">{{{_title}}}</span>
     {{#each _columns}}
-        <ul class="" style="border: 1px solid #000; height: 200px">
+        <ul class="">
             {{#each this.items}}
                 {{#if this.extern}}
-                <li class="" style="border: 1px solid #000; height: 20px;">
-                    <a class="link" href="{{this.url}}" {{#if this.targetBlank}}target="_blank"  rel="noopener noreferrer"{{/if}} title="{{this.title}}">
-                    {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
-                    </a>
+                <li class="">
+                    {{#> components/base/link _link=this.link _css=_css _isTargetBlank=this.link.isTargetBlank}}
+                        {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                    {{/components/base/link}}
+                    {{#*inline "htmlProperties"}}
+                        title="{{this.title}}"
+                    {{/inline}}
+        
                 </li>
                 {{else}}
                 <li class="">
-                    <a class="link" href="{{resourceUrl this.url}}" {{#if this.targetBlank}}target="_blank"  rel="noopener noreferrer"{{/if}} title="{{this.title}}">
-                    {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
-                    </a>
+                    {{#> components/base/link _link=this.link _css=_css _isTargetBlank=this.link.isTargetBlank}}
+                        {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                    {{/components/base/link}}
+                    {{#*inline "htmlProperties"}}
+                        title="{{this.title}}"
+                    {{/inline}}
                 </li>
                  {{/if}}
             {{/each}}
