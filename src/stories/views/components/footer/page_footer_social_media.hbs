@@ -1,0 +1,23 @@
+<nav class="" aria-labelledby="c-page-footer-social-media__title" >
+    <span id="c-page-footer-social-media__title" class="">{{{_title}}}</span>
+   
+    {{#each _columns}}
+        <ul class="" style="border: 1px solid #000; height: 200px">
+            {{#each this.items}}
+                {{#if this.extern}}
+                <li class="" style="border: 1px solid #000; height: 20px;">
+                    <a class="link" href="{{this.url}}" {{#if this.targetBlank}}target="_blank"  rel="noopener noreferrer"{{/if}} title="{{this.title}}">
+                    {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
+                    </a>
+                </li>
+                {{else}}
+                <li class="">
+                    <a class="link" href="{{resourceUrl this.url}}" {{#if this.targetBlank}}target="_blank"  rel="noopener noreferrer"{{/if}} title="{{this.title}}">
+                    {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-3 h-2 fill-current"}}
+                    </a>
+                </li>
+                 {{/if}}
+            {{/each}}
+        </ul>
+    {{/each}}
+</nav>

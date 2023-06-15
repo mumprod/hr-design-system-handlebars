@@ -1,0 +1,43 @@
+<div class="c-page-footer-metadata">
+    <div class="c-page-footer-metadata__copyright">
+        {{#with _hrDeLink}}
+            <a class="link c-page-footer-metadata__link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+                this.targetBlank}}target="_blank" rel="noopener noreferrer"{{/if}}
+               title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} {{#if
+                this.targetBlank}}
+                <!--BASE IMAGE ICON EXTERN -->
+                {{/if}}
+            </a>
+        {{/with}}
+        <span class="c-page-footer-metadata__pipe">|</span>
+        {{#with _ardDeLink}}
+            <a class="c-page-footer-metadata__link" href="{{this.url}}"{{#if this.targetBlank}}
+               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
+                this.targetBlank}}
+                <!--BASE IMAGE ICON EXTERN -->
+                {{/if}}
+            </a>
+        {{/with}}
+        <span class="c-page-footer-metadata__pipe">|</span>
+    </div>
+    <div class="c-page-footer-metadata__info">
+        {{#with _dataProtectionLink}}
+            <a class="link c-page-footer-metadata__link" href="{{this.url}}"{{#if this.targetBlank}}
+               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}}{{#if
+                this.targetBlank}}
+                 <!--BASE IMAGE ICON EXTERN -->
+                 {{/if}}
+            </a>
+        {{/with}}
+        <span class="c-page-footer-metadata__pipe">|</span>
+        {{#with _imprintLink}}
+            <a class="link c-page-footer-metadata__link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+                this.targetBlank}}
+               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
+                this.targetBlank}}
+                 <!--BASE IMAGE ICON EXTERN -->
+                 {{/if}}
+            </a>
+        {{/with}}
+    </div>
+</div>

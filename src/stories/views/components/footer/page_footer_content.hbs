@@ -1,0 +1,23 @@
+<div class="c-page-footer__column -first">
+{{~> components/footer/page_footer_nav _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize~}} 
+</div>
+<div class="c-page-footer__column -second">
+{{~> components/footer/page_footer_nav _columns=this.groups.[1].columns _hasCookieSettings=true ~}} 
+</div>     
+<div class="c-page-footer__column -third">
+{{> components/footer/page_footer_search }}
+{{> components/footer/page_footer_social_media _columns=this.socialMedia.columns _title=this.socialMedia.title}}
+<!--TODO DATA POLICY SETTINGS-->       
+</div>
+</div>
+<div class="c-page-footer__bottom">
+{{> components/footer/page_footer_logo}}
+{{> components/footer/page_footer_metadata 
+_hrDeLink=this.footerMetadata.hrDeLink
+_ardDeLink=this.footerMetadata.ardDeLink
+_dataProtectionLink=this.footerMetadata.dataProtectionLink
+_imprintLink=this.footerMetadata.imprintLink
+}}
+</div>
+
+ 
