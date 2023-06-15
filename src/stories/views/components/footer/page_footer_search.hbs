@@ -1,4 +1,9 @@
-<div class="c-page-footer-search">
-    {{> components/site_header/navigation_search/quick_search_form }}
-    {{> components/site_header/navigation_search/quick_search_button }}
+<div class="relative mx-auto ">
+    <div class="flex: lg:hidden">
+        {{> components/site_header/navigation_search/quick_search_button }}
+    </div>
+    <div class="hidden lg:flex">
+        {{> components/site_header/navigation_search/quick_search_form }}
+    </div>
+    
 </div>
