@@ -1,24 +1,24 @@
-<div class="o-layout">
-    {{#each _columns}}
-     <ul class="c-page-footer-nav__column -size{{{../_columnSize}}}">
-        {{#each this.items}}
-             {{#if this.extern}}
-              <li>
-                {{> components/footer/page_footer_nav_link _link=this.link _iconName="extern"}}
-             </li>
-             {{else}}
-             {{#if this.paragraphed}}
-              <li>
-                {{> components/footer/page_footer_nav_link _link=this.link _site=this.site _css="--paragraphed" _iconName="extern"}}
-             </li>
-             {{else}}
-              <li>
-                {{> components/footer/page_footer_nav_link _link=this.link _site=this.site _iconName="extern"}}
-             </li>
-             {{/if}}
-             {{/if}}
-        {{/each}}
-     </ul>
-    {{/each}}
+<div class="flex flex-col w-full flex-nowrap">
+   {{#each _columns}}
+   <ul class="flex flex-col w-1/3 -size{{{../_columnSize}}}">
+      {{#each this.items}}
+            {{#if this.extern}}
+               <li>
+                  {{> components/footer/page_footer_nav_link _link=this.link  _iconName="extern" }}
+               </li>
+            {{else}}
+               {{#if this.paragraphed}}
+                  <li>
+                     {{> components/footer/page_footer_nav_link _link=this.link _site=this.site _css="--paragraphed" }}
+                  </li>
+                  {{else}}
+                  <li>
+                     {{> components/footer/page_footer_nav_link _link=this.link _site=this.site }}
+                  </li>
+               {{/if}}
+            {{/if}}
+      {{/each}}
+   </ul>
+   {{/each}}
 </div>
 <!-- TODO MOBILE MENU FROM LIST -->
