@@ -137,6 +137,7 @@
         },
         {
             "title": "Service",
+            "columnSize": 1,
             "columns": [
                 {
                     "items": [
@@ -209,6 +210,7 @@
     ],
     "socialMedia": {
         "title": "Social Media",
+        "columnSize": 1,
         "columns": [
             {
                 "items": [

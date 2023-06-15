@@ -1,16 +1,19 @@
-<div class="flex w-1/2 px-2 w-max-1/2 grow-0 shrink-1 basis-1/2 --first">
-    {{~> components/footer/page_footer_nav _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize~}} 
+<div class="flex w-1/2 w-max-1/2 --first">
+    {{~> components/footer/page_footer_nav _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize _title=this.groups.[0].title ~}} 
 </div>
-<div class="flex w-1/4 px-2 w-max-1/4 grow-0 shrink-1 basis-1/4 -second">
-    {{~> components/footer/page_footer_nav _columns=this.groups.[1].columns _hasCookieSettings=true ~}} 
+
+<div class="flex w-1/4 w-max-1/4 -second">
+    {{~> components/footer/page_footer_nav _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
 </div>     
-<div class="flex flex-col w-1/4 px-2 w-max-1/4 grow-0 shrink-1 basis-1/4 -third">
-    {{> components/footer/page_footer_search }}
+<div class="flex flex-col w-1/4 w-max-1/4 -third">
+    <div class="pb-4 pt-[38px] mt-[38px] border-t border-white">
+        {{> components/footer/page_footer_search }}
+    </div>
     {{> components/footer/page_footer_social_media _columns=this.socialMedia.columns _title=this.socialMedia.title}}
 <!--TODO DATA POLICY SETTINGS-->       
 </div>
 
-<div class="block pt-16 -mx-2 text-left">
+<div class="block w-full pt-16 -mx-2 text-left">
 {{> components/footer/page_footer_logo}}
 {{> components/footer/page_footer_metadata 
 _hrDeLink=this.footerMetadata.hrDeLink
