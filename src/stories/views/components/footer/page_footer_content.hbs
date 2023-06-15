@@ -13,12 +13,13 @@
 <!--TODO DATA POLICY SETTINGS-->       
 </div>
 
-<div class="block w-full pt-16 -mx-2 text-left">
-{{> components/footer/page_footer_logo}}
-{{> components/footer/page_footer_metadata 
-_hrDeLink=this.footerMetadata.hrDeLink
-_ardDeLink=this.footerMetadata.ardDeLink
-_dataProtectionLink=this.footerMetadata.dataProtectionLink
-_imprintLink=this.footerMetadata.imprintLink
-}}
+<div class="flex flex-row w-full pt-16 text-left">
+    {{> components/footer/page_footer_metadata 
+        _hrDeLink=this.footerMetadata.hrDeLink
+        _ardDeLink=this.footerMetadata.ardDeLink
+        _dataProtectionLink=this.footerMetadata.dataProtectionLink
+        _imprintLink=this.footerMetadata.imprintLink
+    }}
+    
+    {{> components/footer/page_footer_logo}}
 </div>

@@ -1,41 +1,41 @@
-<div class="c-page-footer-metadata">
-    <div class="c-page-footer-metadata__copyright">
+<div class="flex inline-flex w-2/3 w-max-2/3">
+    <div class="inline-flex text-xs font-base">
         {{#with _hrDeLink}}
-            <a class="link c-page-footer-metadata__link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+            <a class="inline-flex link" href="{{resourceUrl this.url _site=this.site}}"{{#if
                 this.targetBlank}}target="_blank" rel="noopener noreferrer"{{/if}}
                title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} {{#if
                 this.targetBlank}}
-                <!--BASE IMAGE ICON EXTERN -->
+                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
                 {{/if}}
             </a>
         {{/with}}
-        <span class="c-page-footer-metadata__pipe">|</span>
+        <span class="inline-flex px-2">|</span>
         {{#with _ardDeLink}}
-            <a class="c-page-footer-metadata__link" href="{{this.url}}"{{#if this.targetBlank}}
+            <a class="inline-flex" href="{{this.url}}"{{#if this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
                 this.targetBlank}}
-                <!--BASE IMAGE ICON EXTERN -->
+                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
                 {{/if}}
             </a>
         {{/with}}
-        <span class="c-page-footer-metadata__pipe">|</span>
+        <span class="inline-flex px-2">|</span>
     </div>
-    <div class="c-page-footer-metadata__info">
+    <div class="inline-flex text-xs font-base">
         {{#with _dataProtectionLink}}
-            <a class="link c-page-footer-metadata__link" href="{{this.url}}"{{#if this.targetBlank}}
+            <a class="inline-flex link" href="{{this.url}}"{{#if this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}}{{#if
                 this.targetBlank}}
-                 <!--BASE IMAGE ICON EXTERN -->
+                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
                  {{/if}}
             </a>
         {{/with}}
-        <span class="c-page-footer-metadata__pipe">|</span>
+        <span class="inline-flex px-2">|</span>
         {{#with _imprintLink}}
-            <a class="link c-page-footer-metadata__link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+            <a class="inline-flex link" href="{{resourceUrl this.url _site=this.site}}"{{#if
                 this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
                 this.targetBlank}}
-                 <!--BASE IMAGE ICON EXTERN -->
+                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}   
                  {{/if}}
             </a>
         {{/with}}
