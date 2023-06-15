@@ -1,3 +1,15 @@
+# v1.27.0 (Thu Jun 15 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Use new piano sdk to track clicks [#651](https://github.com/mumprod/hr-design-system-handlebars/pull/651) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.26.3 (Wed Jun 14 2023)
 
 #### 🐛 Bug Fix
