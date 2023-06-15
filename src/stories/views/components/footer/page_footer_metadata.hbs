@@ -1,7 +1,7 @@
 <div class="flex inline-flex w-2/3 w-max-2/3">
     <div class="inline-flex text-xs font-base">
         {{#with _hrDeLink}}
-            <a class="inline-flex link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+            <a class="inline-flex hover:underline link" href="{{resourceUrl this.url _site=this.site}}"{{#if
                 this.targetBlank}}target="_blank" rel="noopener noreferrer"{{/if}}
                title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} {{#if
                 this.targetBlank}}
@@ -11,7 +11,7 @@
         {{/with}}
         <span class="inline-flex px-2">|</span>
         {{#with _ardDeLink}}
-            <a class="inline-flex" href="{{this.url}}"{{#if this.targetBlank}}
+            <a class="inline-flex hover:underline " href="{{this.url}}"{{#if this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
                 this.targetBlank}}
                 {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
@@ -22,7 +22,7 @@
     </div>
     <div class="inline-flex text-xs font-base">
         {{#with _dataProtectionLink}}
-            <a class="inline-flex link" href="{{this.url}}"{{#if this.targetBlank}}
+            <a class="inline-flex hover:underline link" href="{{this.url}}"{{#if this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}}{{#if
                 this.targetBlank}}
                 {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
@@ -31,7 +31,7 @@
         {{/with}}
         <span class="inline-flex px-2">|</span>
         {{#with _imprintLink}}
-            <a class="inline-flex link" href="{{resourceUrl this.url _site=this.site}}"{{#if
+            <a class="inline-flex hover:underline link" href="{{resourceUrl this.url _site=this.site}}"{{#if
                 this.targetBlank}}
                target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
                 this.targetBlank}}
