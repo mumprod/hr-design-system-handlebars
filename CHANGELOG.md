@@ -1,3 +1,15 @@
+# v1.27.1 (Thu Jun 15 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: click action for links navigating to other pages is changed to uxNavigation [#652](https://github.com/mumprod/hr-design-system-handlebars/pull/652) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.27.0 (Thu Jun 15 2023)
 
 #### 🚀 Enhancement
