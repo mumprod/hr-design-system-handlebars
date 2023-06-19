@@ -1,3 +1,16 @@
+# v1.27.2 (Mon Jun 19 2023)
+
+#### 🐛 Bug Fix
+
+- Ticker Teaser [#653](https://github.com/mumprod/hr-design-system-handlebars/pull/653) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.27.1 (Thu Jun 15 2023)
 
 #### 🐛 Bug Fix
