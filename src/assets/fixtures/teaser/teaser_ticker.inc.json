@@ -5,6 +5,7 @@
             "includePath": "components/teaser/ticker/teaser_ticker",
             "includeModel": {
                 "byline": "Byline",
+                "tickerTopic": "Eintracht",
                 "title": "Eintracht: +++ Eintracht-Halbfinale terminiert +++ Frankfurter Gala in Barcelona jährt sich +++ Berichte: Aouar in Gesprächen mit AS Rom +++",
                 "topline": "",
                 "headingFontVariant": "serif",
@@ -93,7 +94,7 @@
                 "shorttext": "Hier bekommen Sie immer die neuesten Nachrichten über Eintracht Frankfurt.",
                 "hideBylineAndShorttext": false,
                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
-                "profiles": "Von Karsten Hufer",
+                "profiles": "Von Gundula Gause (Expertin), Anne Chebu, Anja Engelke und Alice Merton",
                 "teaserLead": {
                     "avDocument": "",
                     "image": ""
@@ -114,6 +115,117 @@
                         "readMore": "mehr",
                         "readMoreLong": "read More Long"
                     }
+                },
+                "tickerItemResults": {
+                    "@->jsoninclude": "teaser_ticker_timeline.json",
+                    "@->contentpath": "tickerItemResults"
+                }
+            }
+        }
+    },
+    "tickerTeaser_audio": {
+        "isSsi": true,
+        "logicItem": {
+            "includePath": "components/teaser/teaser_standard",
+            "includeModel": {
+                "byline": "Byline",
+                "tickerTopic": "Eintracht",
+                "title": "Der Hasebe-Kane-Nahkampf geht in die zweite Runde",
+                "topline": "Eintracht trifft auf Tottenham",
+                "headingFontVariant": "serif",
+                "extendedTitle": "",
+                "teaserType": "standard",
+                "teaserSize": "hero",
+                "realTeaserSize": "hero",
+                "isMobile1to1": false,
+                "teaserDate": {
+                    "htmlDateTime": "2022-10-11T19:46+0200",
+                    "htmlDate": "11.10.2022",
+                    "date": "11.10.22",
+                    "dateSeparatorTime": "11.10.22, 19:46"
+                },
+                "hasByline": true,
+                "teaserInfo": {
+                    "showTeaserInfo": true,
+                    "showTeaserInfoSection": true,
+                    "showTeaserInfoChannel": false,
+                    "showTeaserInfoAll": false,
+                    "showTeaserInfoDate": false,
+                    "showTeaserInfoDateTime": true,
+                    "showTeaserInfoProgramRef": false
+                },
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "hasebe-kane-102"
+                        }
+                    ]
+                },
+                "displayTeaserBodyAsImageOverlay": false,
+                "hasMediaButtons": false,
+                "dontLazyload": true,
+                "isStandardTeaser": true,
+                "isHeroTeaser": true,
+                "isMediaTeaser": true,
+                "isGuide": false,
+                "isProgram": false,
+                "isEvent": false,
+                "isTicker": true,
+                "isAudio": true,
+                "isVideo": false,
+                "isPodcast": false,
+                "isPodcastEpisode": false,
+                "isExtOrBrandLink": false,
+                "isAuthor": false,
+                "copyright": "Copyright Text",
+                "audioAuthor": "Audio Author",
+                "hasStatus": false,
+                "hasTeaserItem": true,
+                "allowAVConsumption": true,
+                "aspectRatio": "ar--teaserTop",
+                "hideGeotag": false,
+                "hideEditableByline": true,
+                "doTracking": true,
+                "trackingForArdMediatheksLink": false,
+                "showMediatheksLink": false,
+                "showAirdate": false,
+                "showProfileInfoAsByline": false,
+                "obsolet_brandOfTeaser": "hessenschau",
+                "documentSection": "Sport",
+                "headlineTag": "h1",
+                "icon": "ortsmarke",
+                "imageVariant": "topteaser",
+                "shorttext": "Beim Hinspiel brachte Altmeister Makoto Hasebe Sturm-Star Harry Kane bis an den Rande der Verzweiflung. Der bittet im Rückspiel nun zur Revanche. Vorher gibt es aber lobende Worte.",
+                "hideBylineAndShorttext": false,
+                "sophoraId": "hasebe-kane-100",
+                "profiles": "Von Gundula Gause (Expertin), Anne Chebu, Anja Engelke und Alice Merton",
+                "teaserLead": {
+                    "@->jsoninclude": "teaser/teaser_lead.inc.json",
+                    "@->contentpath": "audio"
+                },
+                "geotag": [
+                    {
+                        "title": "Frankfurt"
+                    }
+                ],
+                "link": {
+                    "url": "/teaser1",
+                    "webviewUrl": "/teaser1#webview",
+                    "isTargetBlank": false,
+                    "hasIcon": false,
+                    "iconName": "iconName",
+                    "readMoreText": {
+                        "readMoreScreenreader": "Zum Artikel",
+                        "readMore": "mehr",
+                        "readMoreLong": "read More Long"
+                    }
+                },
+                "tickerItemResults": {
+                    "@->jsoninclude": "teaser_ticker_timeline.json",
+                    "@->contentpath": "tickerItemResults"
                 }
             }
         }

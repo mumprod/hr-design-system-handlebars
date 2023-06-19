@@ -1,0 +1,42 @@
+{
+    "@->jsoninclude": "teaser/teaser_ticker.inc.json",
+    "@->contentpath": "tickerTeaser_audio",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "ticker-alternative"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker"
+            }
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isStandardTeaser",
+            "@->value": false
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_ticker_hero",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "sportschau-image-5708"
+                    }
+                ]
+            }
+        }
+    ]
+}

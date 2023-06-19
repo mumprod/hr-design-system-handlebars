@@ -3,20 +3,8 @@
     "@->contentpath": "tickerTeaser",
     "@->overrides": [
         {
-            "@->contentpath": "logicItem.includeModel.teaserSize",
-            "@->value": "100"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.realTeaserSize",
-            "@->value": "100"
-        },
-        {
             "@->contentpath": "logicItem.includeModel.teaserType",
             "@->value": "ticker-standard"
-        },
-        {
-            "@->contentpath": "logicItem.includeModel.isHeroTeaser",
-            "@->value": false
         },
         {
             "@->contentpath": "logicItem.includeModel.shorttext",
