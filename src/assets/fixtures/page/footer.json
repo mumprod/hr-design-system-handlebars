@@ -197,6 +197,7 @@
                         },
                         {
                             "site": "hr-werbung",
+                            "extern": true,
                             "link": {
                                 "text": "hr werbung",
                                 "url": "index.html",
