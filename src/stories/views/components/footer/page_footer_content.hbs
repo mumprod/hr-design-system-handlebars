@@ -13,7 +13,10 @@
     </div>
      
     {{> components/footer/page_footer_social_media _columns=this.socialMedia.columns _title=this.socialMedia.title}}
-<!--TODO DATA POLICY SETTINGS-->       
+    {{#> components/button/button _size="md" _css="text-grey-scorpion" _variant="secondary" _onBackground="true"}}
+        {{> components/button/components/button_icon _icon="settings" _iconmap="icons"}}
+        {{> components/button/components/button_label _label="Einstellungen"}}
+    {{/components/button/button}}
 </div>
 
 <div class="flex flex-row w-full pt-16 text-left">

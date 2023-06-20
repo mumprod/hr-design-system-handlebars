@@ -1,0 +1,167 @@
+{
+    "groups": [
+        {
+            "title": "hr2.de",
+            "columnSize": 3,
+            "columns": [
+                {
+                    "items": [
+                        {
+                           
+                            "hiddenText": "hr2",
+                            "labelText": "Startseite hr2",
+                            "link": {
+                            "text": "Start",
+                            "url": "index.html"
+                            }
+                        },
+                        {   
+                            "link": {
+                            "text": "Programm",
+                            "url": "programm/index.html"
+                            }
+                        },
+                        {   
+                            "link": {
+                            "text": "Podcasts",
+                            "url": "podcasts/index.html"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {   
+                            "link": {
+                            "text": "Veranstaltungen",
+                            "url": "veranstaltungen/index.html"
+                            }
+                        },
+                        {   
+                            "link": {
+                            "text": "Moderation",
+                            "url": "moderatoren/index.html"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Service",
+            "columns": [
+                {
+                    "items": [
+                        {
+                            "link": {
+                            "text": "Kontakt",
+                            "url": "kontakt/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Hilfe",
+                            "url": "hilfe/index.html"
+                            }
+                        },
+                        {   
+                            "link": {
+                            "text": "Newsletter",
+                            "url": "newsletter/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Frequenzen",
+                            "url": "frequenzen/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "hr2-App",
+                            "url": "hr2-kultur-app/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Livestream",
+                            "url": "livestream/index.html"
+                            }
+                        },
+                        {
+                            "site": "hr",
+                            "extern": true,
+                            "link": {
+                            "text": "Presse hr2-kultur",
+                            "url": "presse/radio/hr2/index.html",
+                            "isTargetBlank": true
+                            }
+                        },
+                        {
+                            "site": "hr",
+                            "extern": true,
+                            "link": {
+                            "text": "Korrekturen",
+                            "url": "unternehmen/korrekturen/index.html",
+                            "isTargetBlank": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "socialMedia": {
+        "title": "Social Media",
+        "columns": [
+            {
+                "items": [
+                    {
+                        "title": "hr2.de RSS-Feed",
+                        "link": {
+                        "text": "rss",
+                        "url": "rss/index.html"
+                        }
+                    },
+                    {
+                        "title": "Zum Kontaktformular",
+                        "link": {
+                        "text": "mail",
+                        "url": "kontakt/index.html"
+                        }
+                       
+                    }
+                ]
+            }
+        ]
+    },
+    "footerMetadata": {
+        "hrDeLink": {
+            "text": "Hessischer Rundfunk",
+            "url": "index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Hessischer Rundfunk"
+        },
+        "ardDeLink": {
+            "text": "ARD.de",
+            "url": "https://www.ard.de/",
+            "targetBlank": true,
+            "title": "ard.de"
+        },
+        "dataProtectionLink": {
+            "text": "Datenschutz",
+            "url": "https://www.hr.de/datenschutz/index.html",
+            "extern": true,
+            "targetBlank": true,
+            "title": "Datenschutz"
+        },
+        "imprintLink": {
+            "text": "Impressum",
+            "url": "impressum/index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Impressum"
+        }
+    }
+}
