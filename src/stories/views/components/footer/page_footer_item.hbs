@@ -1,0 +1,15 @@
+{{#if this.extern}}
+    <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-primary md:border-0 text-primary md:text-white md:h-6">
+        {{> components/footer/page_footer_nav_link  _css="hover:underline" _iconName="extern" }}
+    </li>
+{{else}}
+    {{#if this.paragraphed}}
+        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap md:bg-transparent lg:pl-0 border-b-primary md:mt-6 md:border-0 text-primary md:text-white md:h-6">
+            {{> components/footer/page_footer_nav_link _site=this.site _css="hover:underline" }}
+        </li>
+    {{else}}
+        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-primary md:border-0 text-primary md:text-white md:h-6 ">
+            {{> components/footer/page_footer_nav_link _link=this.url _site=this.site _css="hover:underline" }}
+        </li>
+    {{/if}}
+{{/if}}

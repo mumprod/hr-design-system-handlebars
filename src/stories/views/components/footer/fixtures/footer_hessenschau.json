@@ -1,1 +1,193 @@
-{"groups":[{"title":"hessenschau","columnSize":3,"columns":[{"links":[{"text":"Start","hiddenText":"hessenschau","labelText":"Startseite der hessenschau","url":"index.html"},{"text":"Nordhessen","url":"nordhessen/index.html"},{"text":"Osthessen","url":"osthessen/index.html"},{"text":"Mittelhessen","url":"mittelhessen/index.html"},{"text":"Rhein-Main","url":"rheinmain/index.html"},{"text":"Südhessen","url":"suedhessen/index.html"}]},{"links":[{"text":"Politik","url":"politik/index.html"},{"text":"Gesellschaft","url":"gesellschaft/index.html"},{"text":"Wirtschaft","url":"wirtschaft/index.html"},{"text":"Kultur","url":"kultur/index.html"},{"text":"Sport","url":"sport/index.html"},{"text":"Panorama","url":"panorama/index.html"},{"text":"Freizeit","url":"freizeit/index.html"}]},{"links":[{"text":"Video & Podcast","url":"video-podcast/index.html"},{"text":"Wetter","url":"wetter/index.html"},{"text":"Verkehr","url":"verkehr/index.html"},{"text":"TV-Sendung","url":"tv-sendung/index.html"},{"text":"Themen","url":"themen/index.html","paragraphed":true},{"text":"Archiv","url":"archiv/index.html"}]}]},{"title":"Service","columnSize":1,"columns":[{"links":[{"text":"Kontakt","url":"kontakt/index.html"},{"text":"Redaktion","url":"redaktion/das-informationsportal-fuer-hessen,redaktion-info-100.html"},{"text":"Hilfe","url":"hilfe/index.html"},{"text":"hessenschau-App","url":"hr-apps/index.html"},{"text":"Newsletter","url":"newsletter/index.html"},{"text":"Korrekturen","url":"unternehmen/korrekturen/index.html","site":"hr","targetBlank":true},{"text":"hr-text","url":"https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp","extern":true,"targetBlank":true},{"text":"hr-ticketcenter","url":"https://www.hr-ticketcenter.de/","extern":true,"targetBlank":true},{"text":"hr werbung","url":"index.html","site":"hr-werbung","targetBlank":true}]}]}],"socialMedia":{"title":"Social Media","columnSize":1,"columns":[{"links":[{"text":"twitter","url":"https://twitter.com/hessenschau","extern":true,"targetBlank":true,"title":"hessenschau Twitter"},{"text":"instagram","url":"https://www.instagram.com/hessenschau/","extern":true,"targetBlank":true,"title":"hessenschau Instagram"},{"text":"facebook","url":"https://www.facebook.com/hessenschau","extern":true,"targetBlank":true,"title":"hessenschau Facebook"},{"text":"youtube","url":"https://www.youtube.com/c/hessenschau","extern":true,"targetBlank":true,"title":"hessenschau YouTube"}]},{"links":[{"text":"mail","url":"kontakt/index.html","title":"Zum Kontaktformular"},{"text":"voice","url":"voice/index.html","title":"hessenschau in 100 Sekunden"},{"text":"push","url":"push/index.html","title":"Push-Benachrichtigung in der App"},{"text":"rss","url":"rss/index.html","title":"hessenschau.de RSS-Feed"}]}]},"footerMetadata":{"hrDeLink":{"text":"Hessischer Rundfunk","url":"index.html","site":"hr","targetBlank":true,"title":"Hessischer Rundfunk"},"ardDeLink":{"text":"ARD.de","url":"https://www.ard.de/","extern":true,"targetBlank":true,"title":"ard.de"},"dataProtectionLink":{"text":"Datenschutz","url":"https://www.hr.de/datenschutz/index.html","extern":true,"targetBlank":true,"title":"Datenschutz"},"imprintLink":{"text":"Impressum","url":"impressum/index.html","site":"hr","targetBlank":true,"title":"Impressum"}}}
+{
+    "groups": [{
+        "title": "hessenschau",
+        "columnSize": 3,
+        "columns": [{
+            "links": [{
+                "text": "Start",
+                "hiddenText": "hessenschau",
+                "labelText": "Startseite der hessenschau",
+                "url": "index.html"
+            }, {
+                "text": "Nordhessen",
+                "url": "nordhessen/index.html"
+            }, {
+                "text": "Osthessen",
+                "url": "osthessen/index.html"
+            }, {
+                "text": "Mittelhessen",
+                "url": "mittelhessen/index.html"
+            }, {
+                "text": "Rhein-Main",
+                "url": "rheinmain/index.html"
+            }, {
+                "text": "Südhessen",
+                "url": "suedhessen/index.html"
+            }]
+        }, {
+            "links": [{
+                "text": "Politik",
+                "url": "politik/index.html"
+            }, {
+                "text": "Gesellschaft",
+                "url": "gesellschaft/index.html"
+            }, {
+                "text": "Wirtschaft",
+                "url": "wirtschaft/index.html"
+            }, {
+                "text": "Kultur",
+                "url": "kultur/index.html"
+            }, {
+                "text": "Sport",
+                "url": "sport/index.html"
+            }, {
+                "text": "Panorama",
+                "url": "panorama/index.html"
+            }, {
+                "text": "Freizeit",
+                "url": "freizeit/index.html"
+            }]
+        }, {
+            "links": [{
+                "text": "Video & Podcast",
+                "url": "video-podcast/index.html"
+            }, {
+                "text": "Wetter",
+                "url": "wetter/index.html"
+            }, {
+                "text": "Verkehr",
+                "url": "verkehr/index.html"
+            }, {
+                "text": "TV-Sendung",
+                "url": "tv-sendung/index.html"
+            }, {
+                "text": "Themen",
+                "url": "themen/index.html",
+                "paragraphed": true
+            }, {
+                "text": "Archiv",
+                "url": "archiv/index.html"
+            }]
+        }]
+    }, {
+        "title": "Service",
+        "columnSize": 1,
+        "columns": [{
+            "links": [{
+                "text": "Kontakt",
+                "url": "kontakt/index.html"
+            }, {
+                "text": "Redaktion",
+                "url": "redaktion/das-informationsportal-fuer-hessen,redaktion-info-100.html"
+            }, {
+                "text": "Hilfe",
+                "url": "hilfe/index.html"
+            }, {
+                "text": "hessenschau-App",
+                "url": "hr-apps/index.html"
+            }, {
+                "text": "Newsletter",
+                "url": "newsletter/index.html"
+            }, {
+                "text": "Korrekturen",
+                "url": "unternehmen/korrekturen/index.html",
+                "site": "hr",
+                "targetBlank": true
+            }, {
+                "text": "hr-text",
+                "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
+                "extern": true,
+                "targetBlank": true
+            }, {
+                "text": "hr-ticketcenter",
+                "url": "https://www.hr-ticketcenter.de/",
+                "extern": true,
+                "targetBlank": true
+            }, {
+                "text": "hr werbung",
+                "url": "index.html",
+                "site": "hr-werbung",
+                "targetBlank": true
+            }]
+        }]
+    }],
+    "socialMedia": {
+        "title": "Social Media",
+        "columnSize": 1,
+        "columns": [{
+            "links": [{
+                "text": "twitter",
+                "url": "https://twitter.com/hessenschau",
+                "extern": true,
+                "targetBlank": true,
+                "title": "hessenschau Twitter"
+            }, {
+                "text": "instagram",
+                "url": "https://www.instagram.com/hessenschau/",
+                "extern": true,
+                "targetBlank": true,
+                "title": "hessenschau Instagram"
+            }, {
+                "text": "facebook",
+                "url": "https://www.facebook.com/hessenschau",
+                "extern": true,
+                "targetBlank": true,
+                "title": "hessenschau Facebook"
+            }, {
+                "text": "youtube",
+                "url": "https://www.youtube.com/c/hessenschau",
+                "extern": true,
+                "targetBlank": true,
+                "title": "hessenschau YouTube"
+            }]
+        }, {
+            "links": [{
+                "text": "mail",
+                "url": "kontakt/index.html",
+                "title": "Zum Kontaktformular"
+            }, {
+                "text": "voice",
+                "url": "voice/index.html",
+                "title": "hessenschau in 100 Sekunden"
+            }, {
+                "text": "push",
+                "url": "push/index.html",
+                "title": "Push-Benachrichtigung in der App"
+            }, {
+                "text": "rss",
+                "url": "rss/index.html",
+                "title": "hessenschau.de RSS-Feed"
+            }]
+        }]
+    },
+    "footerMetadata": {
+        "hrDeLink": {
+            "text": "Hessischer Rundfunk",
+            "url": "index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Hessischer Rundfunk"
+        },
+        "ardDeLink": {
+            "text": "ARD.de",
+            "url": "https://www.ard.de/",
+            "extern": true,
+            "targetBlank": true,
+            "title": "ard.de"
+        },
+        "dataProtectionLink": {
+            "text": "Datenschutz",
+            "url": "https://www.hr.de/datenschutz/index.html",
+            "extern": true,
+            "targetBlank": true,
+            "title": "Datenschutz"
+        },
+        "imprintLink": {
+            "text": "Impressum",
+            "url": "impressum/index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Impressum"
+        }
+    }
+}
