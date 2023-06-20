@@ -17,20 +17,20 @@
       {{#each this.links}}
             {{#if this.extern}}
                <li class="">
-                  {{> components/footer/page_footer_nav_link _link=this.link  _css="hover:underline" _iconName="extern" }}
+                  {{> components/footer/page_footer_nav_link  _css="hover:underline" _iconName="extern" }}
                </li>
             {{else}}
                {{#if this.paragraphed}}
                   <li class="">
-                     {{> components/footer/page_footer_nav_link _link=this.link _site=this.site _css="flex mt-6 hover:underline" }}
+                     {{> components/footer/page_footer_nav_link _site=this.site _css="flex mt-6 hover:underline" }}
                   </li>
-                  {{else}}
+                {{else}}
                   <li x-data="dropdown"
                         @click.outside="dropped = false" 
                         @close-servicemenu.window="dropped = false" 
                         :class="dropped ? 'border-b-0 h-auto' : 'lg:hover:underline'" 
                         class="">
-                     {{> components/footer/page_footer_nav_link _link=this.link _site=this.site _css="hover:underline" }}
+                     {{> components/footer/page_footer_nav_link _link=this.url _site=this.site _css="hover:underline" }}
                   </li>
                {{/if}}
             {{/if}}
@@ -39,4 +39,4 @@
    {{/each}}
 </div>
 </nav>
-<!-- TODO MOBILE MENU FROM LIST -->
+<!-- TODO Nav needs to be set up for mobile, according to navi in header- -->

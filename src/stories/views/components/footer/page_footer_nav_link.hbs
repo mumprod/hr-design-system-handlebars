@@ -1,11 +1,11 @@
-{{#> components/base/link _link=_link _css=_css}}
-    {{{_link.text}}}
+{{#> components/base/link _link=this.url _css=_css}}
+    {{{this.text}}}
         {{~#if this.hiddenText~}}
             <span class="sr-only">
                 {{~this.hiddenText~}}
             </span>
         {{~/if~}}
-        {{~#if _link.isTargetBlank}}
+        {{~#if this.targetBlank}}
         <span class="inline-flex">
             {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="w-4 h-3 fill-current"}}
         </span>

@@ -5,131 +5,93 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
+                            "text": "Start",
                             "hiddenText": "hessenschau",
                             "labelText": "Startseite der hessenschau",
-                            "link": {
-                                "text": "Start",
-                                "url": "index.html"
-                            }
+                            "url": "index.html"
                         },
                         {
-                            "link": {
-                                "text": "Nordhessen",
-                                "url": "nordhessen/index.html"
-                            }
+                            "text": "Nordhessen",
+                            "url": "nordhessen/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Osthessen",
-                                "url": "osthessen/index.html"
-                            }
+                            "text": "Osthessen",
+                            "url": "osthessen/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Mittelhessen",
-                                "url": "mittelhessen/index.html"
-                            }
+                            "text": "Mittelhessen",
+                            "url": "mittelhessen/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Rhein-Main",
-                                "url": "rheinmain/index.html"
-                            }
+                            "text": "Rhein-Main",
+                            "url": "rheinmain/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Südhessen",
-                                "url": "suedhessen/index.html"
-                            }
+                            "text": "Südhessen",
+                            "url": "suedhessen/index.html"
                         }
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
-                            "link": {
-                                "text": "Politik",
-                                "url": "politik/index.html"
-                            }
+                            "text": "Politik",
+                            "url": "politik/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Gesellschaft",
-                                "url": "gesellschaft/index.html"
-                            }
+                            "text": "Gesellschaft",
+                            "url": "gesellschaft/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Wirtschaft",
-                                "url": "wirtschaft/index.html"
-                            }
-                        },
-                        {    
-                            "link": {
-                                "text": "Kultur",
-                                "url": "kultur/index.html"
-                            }
-                        },
-                        {   
-                            "link": {
-                                "text": "Sport",
-                                "url": "sport/index.html"
-                            }
+                            "text": "Wirtschaft",
+                            "url": "wirtschaft/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Panorama",
-                                "url": "panorama/index.html"
-                            }
+                            "text": "Kultur",
+                            "url": "kultur/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Freizeit",
-                                "url": "freizeit/index.html"
-                            }
+                            "text": "Sport",
+                            "url": "sport/index.html"
+                        },
+                        {
+                            "text": "Panorama",
+                            "url": "panorama/index.html"
+                        },
+                        {
+                            "text": "Freizeit",
+                            "url": "freizeit/index.html"
                         }
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
-                            "link": {
-                                "text": "Video & Podcast",
-                                "url": "video-podcast/index.html"
-                            }
+                            "text": "Video & Podcast",
+                            "url": "video-podcast/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Wetter",
-                                "url": "wetter/index.html"
-                            }
+                            "text": "Wetter",
+                            "url": "wetter/index.html"
                         },
                         {
-                            "link": {
-                                "text": "Verkehr",
-                                "url": "verkehr/index.html"
-                            }
+                            "text": "Verkehr",
+                            "url": "verkehr/index.html"
                         },
                         {
-                            "link": {
-                                "text": "TV-Sendung",
-                                "url": "tv-sendung/index.html"
-                            }
+                            "text": "TV-Sendung",
+                            "url": "tv-sendung/index.html"
                         },
                         {
-                            "paragraphed": true,
-                            "link": {
-                                "text": "Themen",
-                                "url": "themen/index.html"
-                            }
+                            "text": "Themen",
+                            "url": "themen/index.html",
+                            "paragraphed": true
                         },
                         {
-                            "link": {
-                                "text": "Archiv",
-                                "url": "archiv/index.html"
-                            }
+                            "text": "Archiv",
+                            "url": "archiv/index.html"
                         }
                     ]
                 }
@@ -140,68 +102,52 @@
             "columnSize": 1,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
-                            "link": {
                             "text": "Kontakt",
                             "url": "kontakt/index.html"
-                            }
                         },
                         {
-                            "link": {
                             "text": "Redaktion",
                             "url": "redaktion/das-informationsportal-fuer-hessen,redaktion-info-100.html"
-                            }
                         },
                         {
-                            "link": {
                             "text": "Hilfe",
                             "url": "hilfe/index.html"
-                            }
                         },
                         {
-                            "link": {
                             "text": "hessenschau-App",
                             "url": "hr-apps/index.html"
-                            }
                         },
                         {
-                            "link": {
                             "text": "Newsletter",
                             "url": "newsletter/index.html"
-                            }
                         },
                         {
+                            "text": "Korrekturen",
+                            "url": "unternehmen/korrekturen/index.html",
                             "site": "hr",
-                            "link": {
-                                "text": "Korrekturen",
-                                "url": "unternehmen/korrekturen/index.html",
-                                "isTargetBlank": true
-                            }
-                        },
-                        {
                             "extern": true,
-                            "link": {
-                                "text": "hr-text",
-                                "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
-                                "isTargetBlank": true
-                            }
+                            "targetBlank": true
                         },
                         {
+                            "text": "hr-text",
+                            "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
                             "extern": true,
-                            "link": {
-                                "text": "hr-ticketcenter",
-                                "url": "https://www.hr-ticketcenter.de/",
-                                "isTargetBlank": true
-                            }
+                            "targetBlank": true
                         },
                         {
+                            "text": "hr-ticketcenter",
+                            "url": "https://www.hr-ticketcenter.de/",
+                            "extern": true,
+                            "targetBlank": true
+                        },
+                        {
+                            "text": "hr werbung",
+                            "url": "index.html",
                             "site": "hr-werbung",
-                            "link": {
-                                "text": "hr werbung",
-                                "url": "index.html",
-                                "isTargetBlank": true
-                            }
+                            "targetBlank": true,
+                            "extern": true
                         }
                     ]
                 }
@@ -292,6 +238,7 @@
             }
         ]
     },
+    "serviceList": {},
     "footerMetadata": {
         "hrDeLink": {
             "text": "Hessischer Rundfunk",

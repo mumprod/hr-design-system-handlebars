@@ -1,14 +1,17 @@
 <div class="flex w-1/2 w-max-1/2 --first">
-    {{~> components/footer/page_footer_nav _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize _title=this.groups.[0].title ~}} 
+    {{~> components/footer/page_footer_column _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize _title=this.groups.[0].title ~}} 
 </div>
 
 <div class="flex w-1/4 w-max-1/4 -second">
-    {{~> components/footer/page_footer_nav _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
-</div>     
+    {{~> components/footer/page_footer_column _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
+</div> 
+
 <div class="flex flex-col w-1/4 w-max-1/4 -third">
+
     <div class="pb-4 pt-[38px] mt-[38px] border-t border-white">
         {{> components/footer/page_footer_search }}
     </div>
+     
     {{> components/footer/page_footer_social_media _columns=this.socialMedia.columns _title=this.socialMedia.title}}
 <!--TODO DATA POLICY SETTINGS-->       
 </div>
