@@ -91,8 +91,8 @@ module.exports = {
                 '11.5': '2.875rem',
                 '13': '3.25rem',
                 '3/4': '75%',
-                'logo-padding-top': 'var(--padding-logo-padding-top)',
-                'logo-padding-bottom': 'var(--padding-logo-padding-bottom)',
+                'logo-padding-top': 'var(--logo-padding-top)',
+                'logo-padding-bottom': 'var(--logo-padding-bottom)',
             },
             right: {
                 80: '80%',

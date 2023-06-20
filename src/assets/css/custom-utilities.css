@@ -218,4 +218,20 @@
     .is-loading::after {
         content: attr(data-prop-loading);
     }
+
+  
+    @responsive {
+        .brand-logo-size-lg {
+            padding-top: var(--logo-padding-top-lg);
+            padding-bottom: var(--logo-padding-bottom-lg);
+        }
+        .brand-logo-size-md {
+            padding-top: var(--logo-padding-top-md);
+            padding-bottom: var(--logo-padding-bottom-md);
+        }
+        .brand-logo-size {
+            padding-top: var(--logo-padding-top);
+            padding-bottom: var(--logo-padding-bottom);
+        }
+    }
 }

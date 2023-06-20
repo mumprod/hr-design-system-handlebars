@@ -28,9 +28,12 @@
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Logo-Container Padding */
-    --padding-logo-padding-top: 10px;
-    --padding-logo-padding-bottom: 10px;
-     
+    --logo-padding-top: 10px;
+    --logo-padding-bottom: 10px;
+    --logo-padding-top-md: 10px;
+    --logo-padding-bottom-md: 10px;    
+    --logo-padding-top-lg: 10px;
+    --logo-padding-bottom-lg: 10px;
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -107,8 +110,12 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Logo-Container Padding */
-    --padding-logo-padding-top: 8px;
-    --padding-logo-padding-bottom: 8px;
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
+    --logo-padding-top-md: 6px;
+    --logo-padding-bottom-md: 6px;    
+    --logo-padding-top-lg: 8px;
+    --logo-padding-bottom-lg: 8px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -312,8 +319,8 @@
     --color-brandnavigation-border-color: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
     /* Logo Top/Bottom-Padding */
-    --padding-logo-padding-top:12px;
-    --padding-logo-padding-bottom: 12px;
+    --logo-padding-top:12px;
+    --logo-padding-bottom: 12px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -443,8 +450,8 @@
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
     /* Logo padding */
-    --padding-logo-padding-top:2px;
-    --padding-logo-padding-bottom: 2px;
+    --logo-padding-top:2px;
+    --logo-padding-bottom: 2px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
@@ -509,8 +516,8 @@
     --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
     /* Logo padding */
-    --padding-logo-padding-top:2px;
-    --padding-logo-padding-bottom: 2px;    
+    --logo-padding-top:2px;
+    --logo-padding-bottom: 2px;    
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
@@ -711,8 +718,8 @@
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
     /* Logo paddings */
-    --padding-logo-padding-top:8px;
-    --padding-logo-padding-bottom: 8px; 
+    --logo-padding-top:8px;
+    --logo-padding-bottom: 8px; 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
@@ -783,8 +790,8 @@
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
     /* Logo padding */
-    --padding-logo-padding-top:8px;
-    --padding-logo-padding-bottom: 8px;
+    --logo-padding-top:8px;
+    --logo-padding-bottom: 8px;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
@@ -851,8 +858,8 @@
     --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
     /* Logo padding */
-    --padding-logo-padding-top:4px;
-    --padding-logo-padding-bottom: 4px;
+    --logo-padding-top:4px;
+    --logo-padding-bottom: 4px;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
     /* Ticker, Live, Livestream */
