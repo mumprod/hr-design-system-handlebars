@@ -2,11 +2,11 @@
     <span id="c-footer_social_media_title" class="hidden">{{_title}}</span>
     {{#each _columns}}
         <ul class="inline-block pb-2">
-            {{#each this.items}}
+            {{#each this.links}}
                 {{#if this.extern}}
                 <li class="inline-block align-top">
-                    {{#> components/base/link _link=this.link _css="text-white" _isTargetBlank=this.link.isTargetBlank}}
-                        {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                    {{#> components/base/link _link=this.url _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                        {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                     {{/components/base/link}}
                     {{#*inline "htmlProperties"}}
                         title="{{this.title}}"
@@ -15,8 +15,8 @@
                 </li>
                 {{else}}
                 <li class="inline-block align-top">
-                    {{#> components/base/link _link=this.link _css="text-white" _isTargetBlank=this.link.isTargetBlank}}
-                        {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                    {{#> components/base/link _link=this.url _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                        {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                     {{/components/base/link}}
                     {{#*inline "htmlProperties"}}
                         title="{{this.title}}"
