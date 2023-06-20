@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             
                             "hiddenText": "hr4",
@@ -30,7 +30,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Musik",
@@ -52,7 +52,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Titelliste",
@@ -81,7 +81,7 @@
             "title": "Service",
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Kontakt",
@@ -154,7 +154,7 @@
         "title": "Social Media",
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         "title": "hr4.de RSS-Feed",
                         "link": {

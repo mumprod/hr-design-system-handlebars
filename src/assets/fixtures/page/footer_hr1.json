@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             
                             "hiddenText": "hr1",
@@ -42,7 +42,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link":{
                             "text": "Nachrichten",
@@ -64,7 +64,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link":{
                             "text": "Dolce Vita",
@@ -103,7 +103,7 @@
             "title": "Service",
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link":{
                             "text": "Kontakt",
@@ -181,7 +181,7 @@
         "title": "Social Media",
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         "extern": true,
                         "title": "hr1.de Facebook",

@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             
                             "hiddenText": "hr-inforadio",
@@ -48,10 +48,10 @@
                     ]
                 },
                 {
-                    "items": []
+                    "links": []
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Wetter",
@@ -109,7 +109,7 @@
             "title": "Service",
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "hr-iNFO-App",
@@ -165,7 +165,7 @@
         "title": "Social Media",
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         "title": "hr-iNFORadio.de RSS-Feed",
                         "link": {

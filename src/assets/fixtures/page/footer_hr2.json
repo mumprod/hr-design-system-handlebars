@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                            
                             "hiddenText": "hr2",
@@ -30,7 +30,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {   
                             "link": {
                             "text": "Veranstaltungen",
@@ -51,7 +51,7 @@
             "title": "Service",
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Kontakt",
@@ -115,7 +115,7 @@
         "title": "Social Media",
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         "title": "hr2.de RSS-Feed",
                         "link": {

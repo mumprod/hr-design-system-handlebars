@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "hiddenText": "hessenschau",
                             "labelText": "Startseite der hessenschau",
@@ -47,7 +47,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                                 "text": "Politik",
@@ -93,7 +93,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                                 "text": "Video & Podcast",
@@ -140,7 +140,7 @@
             "columnSize": 1,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Kontakt",
@@ -214,7 +214,7 @@
         "columnSize": 1,
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         "extern": true,
                         "title": "hessenschau Twitter",
@@ -256,7 +256,7 @@
                 ]
             },
             {
-                "items": [
+                "links": [
                     {
                         "title": "Zum Kontaktformular",
                         "link": {

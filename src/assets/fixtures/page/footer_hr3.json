@@ -5,7 +5,7 @@
             "columnSize": 3,
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             
                             "hiddenText": "hr3",
@@ -30,7 +30,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Shows",
@@ -52,7 +52,7 @@
                     ]
                 },
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Nachrichten",
@@ -91,7 +91,7 @@
             "title": "Service",
             "columns": [
                 {
-                    "items": [
+                    "links": [
                         {
                             "link": {
                             "text": "Service-Übersicht",
@@ -161,7 +161,7 @@
         "title": "Social Media",
         "columns": [
             {
-                "items": [
+                "links": [
                     {
                         
                         "extern": true,
@@ -198,7 +198,7 @@
                 ]
             },
             {
-                "items": [
+                "links": [
                     {
                         "title": "hr3 Whatsapp",
                         "link": {
