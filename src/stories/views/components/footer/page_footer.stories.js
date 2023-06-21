@@ -10,11 +10,11 @@ import {
 } from './page_footer.data.js'
 import pageFooter from './page_footer.hbs'
 
-const TemplatePageFooter = (args, { globals: { customConditionalToolbar } }) => {
+const TemplatePageFooter = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
      let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+        undefined !== theme ? theme : 'hessenschau'
     return pageFooter({ brand, ...args })
 }
 
@@ -24,7 +24,6 @@ export default {
 
     parameters: {
         layout: 'fullscreen',
-
         docs: {
             inlineStories: false,
             iframeHeight: 400,
@@ -35,13 +34,13 @@ export default {
 export const SeitenfooterHessenschau = {
     render: TemplatePageFooter.bind({}),
     name: 'Seitenfooter hessenschau',
-    args: FooterContentHessenschau,
+    args: FooterContentHessenschau
 }
 
 export const SeitenfooterHR1 = {
     render: TemplatePageFooter.bind({}),
     name: 'Seitenfooter hr1',
-    args: FooterContentHR1,
+    args: FooterContentHR1
 }
 export const SeitenfooterHR2 = {
     render: TemplatePageFooter.bind({}),

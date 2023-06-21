@@ -18,11 +18,11 @@ const Template = (args, { globals: { customConditionalToolbar } }) => {
     return page({ brand, ...args })
 }
 
-const Template2 = (args, { globals: { customConditionalToolbar } }) => {
+const Template2 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
+        undefined !== theme ? theme : 'hessenschau'
     return page_pagination({ brand, ...args })
 }
 
