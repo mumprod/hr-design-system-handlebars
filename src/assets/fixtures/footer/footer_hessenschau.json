@@ -236,6 +236,9 @@
     },
     "footerMetadata": {
         "hrDeLink": {
+            "currentTime": {
+                "year": "2023"
+            },
             "text": "Hessischer Rundfunk",
             "url": "index.html",
             "site": "hr",
