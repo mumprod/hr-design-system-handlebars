@@ -1,42 +1,54 @@
-<div class="flex w-2/3 w-max-2/3">
-    <div class="inline text-base">
+<div class="flex flex-col self-center md:items-end w-fit md:flex-row">
+    <div class="flex justify-center w-auto md:justify-start">
         {{#with _hrDeLink}}
-            <a class="hover:underline link" href="{{resourceUrl this.url _site=this.site}}"{{#if
-                this.targetBlank}}target="_blank" rel="noopener noreferrer"{{/if}}
-               title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} {{#if
-                this.targetBlank}}
-                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
+            <a class="flex whitespace-nowrap hover:underline" 
+                href="{{resourceUrl this.url _site=this.site}}" {{#if this.targetBlank}} target="_blank" rel="noopener noreferrer" {{/if}}
+                title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} 
+                {{#if this.targetBlank}}
+                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
                 {{/if}}
             </a>
         {{/with}}
-        <span class="inline px-2">|</span>
-        {{#with _ardDeLink}}
-            <a class="hover:underline " href="{{this.url}}"{{#if this.targetBlank}}
-               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
-                this.targetBlank}}
-                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
-                {{/if}}
-            </a>
-        {{/with}}
-        <span class="inline px-2">|</span>
     </div>
-    <div class="inline-flex text-base">
-        {{#with _dataProtectionLink}}
-            <a class="hover:underline link" href="{{this.url}}"{{#if this.targetBlank}}
-               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}}{{#if
-                this.targetBlank}}
-                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}
-                 {{/if}}
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
+        {{#with _ardDeLink}}
+            <a class="flex whitespace-nowrap hover:underline " 
+                href="{{this.url}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
+                title="{{this.title}}">{{this.text}} 
+                {{#if this.targetBlank}}
+                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                {{/if}}
             </a>
         {{/with}}
-        <span class="inline px-2">|</span>
+    </div>
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
+        {{#with _dataProtectionLink}}
+            <a class="flex whitespace-nowrap hover:underline link" 
+                href="{{this.url}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
+                title="{{this.title}}">{{this.text}}
+                {{#if this.targetBlank}}
+                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                {{/if}}
+            </a>
+        {{/with}}
+    </div>
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
         {{#with _imprintLink}}
-            <a class="hover:underline link" href="{{resourceUrl this.url _site=this.site}}"{{#if
-                this.targetBlank}}
-               target="_blank" rel="noopener noreferrer"{{/if}} title="{{this.title}}">{{this.text}} {{#if
-                this.targetBlank}}
-                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="flex items-center w-4 h-3 fill-white"}}   
-                 {{/if}}
+            <a class="flex hover:underline link" 
+                href="{{resourceUrl this.url _site=this.site}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
+                title="{{this.title}}">{{this.text}} 
+                {{#if this.targetBlank}}
+                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}   
+                {{/if}}
             </a>
         {{/with}}
     </div>
