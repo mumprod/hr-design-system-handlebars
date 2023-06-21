@@ -16,18 +16,11 @@ const Template = (args, { globals: { theme } }) => {
     return page({ brand, ...args })
 }
 
-const Template1b = (args, { globals: { theme } }) => { 
-    // You can either use a function to create DOM elements or use a plain html string! 
-    // return `<div>${label}</div>`; 
-    let brand = undefined !== theme ? theme : 'hessenschau' 
-    return page({ brand, ...args }) 
-}
-
 const Template2 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     let brand = undefined !== theme ? theme : 'hessenschau' 
-    return page({ brand, ...args })
+    return page_pagination({ brand, ...args })
 }
 
 export default {
