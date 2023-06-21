@@ -9,7 +9,7 @@
         
     </div>
 
-    <div x-show="!$screen('lg') && !$screen('md') ? dropped : true" class="flex flex-col md:flex-row flex-nowrap">
+    <div x-show="!$screen('lg') && !$screen('md') ? dropped : true" x-transition.opacity class="flex flex-col md:flex-row flex-nowrap">
         {{#each _columns}} 
             <ul class="flex flex-col text-white md:pt-8 w-full md:w-1/{{../_columnSize}}">
                 {{#each this.links}}
