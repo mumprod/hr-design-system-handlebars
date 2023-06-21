@@ -1,218 +1,238 @@
-{ 
-    "groups":[
-        {
-            "title": "hessenschau",
-            "columnSize": 3,
-            "columns": [
-                {
-                    "links": [
-                        {
-                            "text": "Start",
-                            "hiddenText": "hessenschau",
-                            "labelText": "Startseite der hessenschau",
-                            "url": "index.html"
-                        },
-                        {
-                            "text": "Nordhessen",
-                            "url": "nordhessen/index.html"
-                        },
-                        {
-                            "text": "Osthessen",
-                            "url": "osthessen/index.html"
-                        },
-                        {
-                            "text": "Mittelhessen",
-                            "url": "mittelhessen/index.html"
-                        },
-                        {
-                            "text": "Rhein-Main",
-                            "url": "rheinmain/index.html"
-                        },
-                        {
-                            "text": "Südhessen",
-                            "url": "suedhessen/index.html"
-                        }
-                    ]
-                },
-                {
-                    "links": [
-                        {
-                            "text": "Politik",
-                            "url": "politik/index.html"
-                        },
-                        {
-                            "text": "Gesellschaft",
-                            "url": "gesellschaft/index.html"
-                        },
-                        {
-                            "text": "Wirtschaft",
-                            "url": "wirtschaft/index.html"
-                        },
-                        {
-                            "text": "Kultur",
-                            "url": "kultur/index.html"
-                        },
-                        {
-                            "text": "Sport",
-                            "url": "sport/index.html"
-                        },
-                        {
-                            "text": "Panorama",
-                            "url": "panorama/index.html"
-                        },
-                        {
-                            "text": "Freizeit",
-                            "url": "freizeit/index.html"
-                        }
-                    ]
-                },
-                {
-                    "links": [
-                        {
-                            "text": "Video & Podcast",
-                            "url": "video-podcast/index.html"
-                        },
-                        {
-                            "text": "Wetter",
-                            "url": "wetter/index.html"
-                        },
-                        {
-                            "text": "Verkehr",
-                            "url": "verkehr/index.html"
-                        },
-                        {
-                            "text": "TV-Sendung",
-                            "url": "tv-sendung/index.html"
-                        },
-                        {
-                            "text": "Themen",
-                            "url": "themen/index.html",
-                            "paragraphed": true
-                        },
-                        {
-                            "text": "Archiv",
-                            "url": "archiv/index.html"
-                        }
-                    ]
+{
+    "groups": [{
+        "title": "hessenschau",
+        "columnSize": 3,
+        "columns": [{
+            "links": [{
+                "link": {
+                    "hiddenText": "hessenschau",
+                    "labelText": "Startseite der hessenschau",
+
+                    "text": "Start",
+                    "url": "index.html"
                 }
-            ]
-        },
-        {
-            "title": "Service",
-            "columnSize": 1,
-            "columns": [
-                {
-                    "links": [
-                        {
-                            "text": "Kontakt",
-                            "url": "kontakt/index.html"
-                        },
-                        {
-                            "text": "Redaktion",
-                            "url": "redaktion/das-informationsportal-fuer-hessen,redaktion-info-100.html"
-                        },
-                        {
-                            "text": "Hilfe",
-                            "url": "hilfe/index.html"
-                        },
-                        {
-                            "text": "hessenschau-App",
-                            "url": "hr-apps/index.html"
-                        },
-                        {
-                            "text": "Newsletter",
-                            "url": "newsletter/index.html"
-                        },
-                        {
-                            "text": "Korrekturen",
-                            "url": "unternehmen/korrekturen/index.html",
-                            "site": "hr",
-                            "targetBlank": true
-                        },
-                        {
-                            "text": "hr-text",
-                            "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
-                            "extern": true,
-                            "targetBlank": true
-                        },
-                        {
-                            "text": "hr-ticketcenter",
-                            "url": "https://www.hr-ticketcenter.de/",
-                            "extern": true,
-                            "targetBlank": true
-                        },
-                        {
-                            "text": "hr werbung",
-                            "url": "index.html",
-                            "site": "hr-werbung",
-                            "targetBlank": true
-                        }
-                    ]
+
+            }, {
+                "link": {
+                    "text": "Nordhessen",
+                    "url": "nordhessen/index.html"
                 }
-            ]
-        }
-    ],
+            }, {
+                "link": {
+                    "text": "Osthessen",
+                    "url": "osthessen/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Mittelhessen",
+                    "url": "mittelhessen/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Rhein-Main",
+                    "url": "rheinmain/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Südhessen",
+                    "url": "suedhessen/index.html"
+                }
+            }]
+        }, {
+            "links": [{
+                "link": {
+                    "text": "Politik",
+                    "url": "politik/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Gesellschaft",
+                    "url": "gesellschaft/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Wirtschaft",
+                    "url": "wirtschaft/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Kultur",
+                    "url": "kultur/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Sport",
+                    "url": "sport/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Panorama",
+                    "url": "panorama/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Freizeit",
+                    "url": "freizeit/index.html"
+                }
+            }]
+        }, {
+            "links": [{
+                "link": {
+                    "text": "Video & Podcast",
+                    "url": "video-podcast/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Wetter",
+                    "url": "wetter/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Verkehr",
+                    "url": "verkehr/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "TV-Sendung",
+                    "url": "tv-sendung/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Themen",
+                    "url": "themen/index.html",
+                    "paragraphed": true
+                }
+            }, {
+                "link": {
+                    "text": "Archiv",
+                    "url": "archiv/index.html"
+                }
+            }]
+        }]
+    }, {
+        "title": "Service",
+        "columnSize": 1,
+        "columns": [{
+            "links": [{
+                "link": {
+                    "text": "Kontakt",
+                    "url": "kontakt/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Redaktion",
+                    "url": "redaktion/das-informationsportal-fuer-hessen,redaktion-info-100.html"
+                }
+            }, {
+                "link": {
+                    "text": "Hilfe",
+                    "url": "hilfe/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "hessenschau-App",
+                    "url": "hr-apps/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Newsletter",
+                    "url": "newsletter/index.html"
+                }
+            }, {
+                "link": {
+                    "text": "Korrekturen",
+                    "url": "unternehmen/korrekturen/index.html",
+                    "site": "hr",
+                    "targetBlank": true
+                }
+            }, {
+                "link": {
+                    "text": "hr-text",
+                    "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
+                    "extern": true,
+                    "targetBlank": true
+                }
+            }, {
+                "link": {
+                    "text": "hr-ticketcenter",
+                    "url": "https://www.hr-ticketcenter.de/",
+                    "extern": true,
+                    "targetBlank": true
+                }
+            }, {
+                "link": {
+                    "text": "hr werbung",
+                    "url": "index.html",
+                    "site": "hr-werbung",
+                    "targetBlank": true
+                }
+            }]
+        }]
+    }],
     "socialMedia": {
         "title": "Social Media",
         "columnSize": 1,
-        "columns": [
-            {
-                "links": [
-                    {
-                        "text": "twitter",
-                        "url": "https://twitter.com/hessenschau",
-                        "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Twitter"
-                    },
-                    {
-                        "text": "instagram",
-                        "url": "https://www.instagram.com/hessenschau/",
-                        "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Instagram"
-                    },
-                    {
-                        "text": "facebook",
-                        "url": "https://www.facebook.com/hessenschau",
-                        "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau Facebook"
-                    },
-                    {
-                        "text": "youtube",
-                        "url": "https://www.youtube.com/c/hessenschau",
-                        "extern": true,
-                        "targetBlank": true,
-                        "title": "hessenschau YouTube"
-                    }
-                ]
-            },
-            {
-                "links": [
-                    {
-                        "text": "mail",
-                        "url": "kontakt/index.html",
-                        "title": "Zum Kontaktformular"
-                    },
-                    {
-                        "text": "voice",
-                        "url": "voice/index.html",
-                        "title": "hessenschau in 100 Sekunden"
-                    },
-                    {
-                        "text": "push",
-                        "url": "push/index.html",
-                        "title": "Push-Benachrichtigung in der App"
-                    },
-                    {
-                        "text": "rss",
-                        "url": "rss/index.html",
-                        "title": "hessenschau.de RSS-Feed"
-                    }
-                ]
-            }
-        ]
+        "columns": [{
+            "links": [{
+                "link": {
+                    "text": "twitter",
+                    "url": "https://twitter.com/hessenschau",
+                    "extern": true,
+                    "targetBlank": true,
+                    "title": "hessenschau Twitter"
+                }
+            }, {
+                "link": {
+                    "text": "instagram",
+                    "url": "https://www.instagram.com/hessenschau/",
+                    "extern": true,
+                    "targetBlank": true,
+                    "title": "hessenschau Instagram"
+                }
+            }, {
+                "link": {
+                    "text": "facebook",
+                    "url": "https://www.facebook.com/hessenschau",
+                    "extern": true,
+                    "targetBlank": true,
+                    "title": "hessenschau Facebook"
+                }
+            }, {
+                "link": {
+                    "text": "youtube",
+                    "url": "https://www.youtube.com/c/hessenschau",
+                    "extern": true,
+                    "targetBlank": true,
+                    "title": "hessenschau YouTube"
+                }
+            }]
+        }, {
+            "links": [{
+                "link": {
+                    "text": "mail",
+                    "url": "kontakt/index.html",
+                    "title": "Zum Kontaktformular"
+                }
+            }, {
+                "link": {
+                    "text": "voice",
+                    "url": "voice/index.html",
+                    "title": "hessenschau in 100 Sekunden"
+                }
+            }, {
+                "link": {
+                    "text": "push",
+                    "url": "push/index.html",
+                    "title": "Push-Benachrichtigung in der App"
+                }
+            }, {
+                "link": {
+                    "text": "rss",
+                    "url": "rss/index.html",
+                    "title": "hessenschau.de RSS-Feed"
+                }
+            }]
+        }]
     },
     "footerMetadata": {
         "hrDeLink": {

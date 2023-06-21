@@ -1,16 +1,16 @@
-{{#> components/base/link _link=this.url _css=_css}}
-    {{this.text}}
-        {{~#if this.hiddenText~}}
+{{#> components/base/link _link=_link _css=_css}}
+    {{_link.text}}
+        {{~#if _link.hiddenText~}}
             <span class="sr-only">
                 {{~this.hiddenText~}}
             </span>
         {{~/if~}}
-        {{~#if this.targetBlank}}
+        {{~#if _link.targetBlank}}
             <span class="inline-flex">
                 {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="w-4 h-3 fill-current"}}
             </span>
         {{/if~}}
 {{/components/base/link}}
 {{#*inline "htmlProperties"}}
-    {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}}
+    {{#if _link.labelText}} aria-label="{{_link.labelText}}"{{/if}}
 {{/inline}}

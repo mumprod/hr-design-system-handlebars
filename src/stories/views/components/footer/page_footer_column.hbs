@@ -13,7 +13,9 @@
         {{#each _columns}} 
             <ul class="flex flex-col text-white md:pt-8 w-full md:w-1/{{../_columnSize}}">
                 {{#each this.links}}
-                    {{> components/footer/page_footer_item  _css="hover:underline" _iconName="extern" }}   
+                    
+                        {{> components/footer/page_footer_item  _css="hover:underline" _iconName="extern" }}
+                          
                 {{/each}}
             </ul>
         {{/each}}
