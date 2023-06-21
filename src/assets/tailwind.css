@@ -12,6 +12,7 @@
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-3: theme('colors.blue.congress');
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.congress');
@@ -101,6 +102,12 @@
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border Radius */
     --border-radius-hr: theme('borderRadius.none');
+    /* ticker-Teaser*/
+    --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
+
 }
 
 [data-theme='hessenschau'] {
@@ -108,6 +115,7 @@
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-3: theme('colors.blue.congress');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -179,6 +187,11 @@
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border */
     --border-radius-hr: theme('borderRadius.3xl');
+    /* ticker-Teaser*/
+    --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -770,6 +783,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* ticker-Teaser*/
+    --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
 }
 
 [data-theme='hr3'] {

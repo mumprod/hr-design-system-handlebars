@@ -36,4 +36,10 @@ absolute bottom-0 right-0
             {{~inline-switch _teaserSize '["hero","100","50"]' '[" m-4"," m-2 md:m-3"," m-2"]'~}}
         {{~/if~}}
     {{~/case~}}
+    {{~#case 'ticker-standard'~}}
+            {{~inline-switch _teaserSize '["25","33"]' '[" m-2"," m-4 md:m-3"," m-4"]'~}}   
+    {{~/case~}}
+    {{~#case 'ticker-alternative'~}}
+            {{~inline-switch _teaserSize '["hero","100","50"]' '[" m-4"," m-2 md:m-3"," m-2"]'~}}
+    {{~/case~}}
 {{~/switch~}}

@@ -327,6 +327,7 @@ module.exports = {
                 'secondary': 'var(--color-secondary-ds)',
                 'highlight-1': 'var(--color-highlight-1)',
                 'highlight-2': 'var(--color-highlight-2)',
+                'highlight-3': 'var(--color-highlight-3)',
                 'top-topic-background': 'var(--color-top-topic-background)',
 
                 'navigation-bg': 'var(--color-navigation-bg)',
@@ -372,6 +373,10 @@ module.exports = {
                 'event-calendar-primary': 'var(--color-eventcalendar-primary)',
                 'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
                 'byline': 'var(--color-byline)',
+                'tickerTeaserHeadline': 'var(--color-ticker-teaser-headline,#000)',
+                'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
+                'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
+                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)'
             },
         },
     },
