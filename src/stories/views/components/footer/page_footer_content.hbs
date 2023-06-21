@@ -6,7 +6,7 @@
     {{~> components/footer/page_footer_column _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
 </div> 
 
-<div class="flex flex-col w-full pt-4s md:w-1/4 md:w-max-1/4 md:pt-0 -third">
+<div class="flex flex-col w-full pt-4 md:w-1/4 md:w-max-1/4 md:pt-0 md:pr-4 -third">
 
     <div class="pb-4 md:pt-[38px] md:mt-[38px] p-0 m-0 md:border-t border-white">
         {{> components/footer/page_footer_search }}
@@ -14,7 +14,7 @@
      
     {{> components/footer/page_footer_social_media _columns=this.socialMedia.columns _title=this.socialMedia.title}}
     
-    <div class="flex items-center justify-center w-full pt-4 md:w-1/2 md:pt-0 md:justify-end">
+    <div class="flex items-center justify-center pt-4 md:pt-0 md:justify-end">
         {{#> components/button/button _size="md" _css="text-grey-scorpion  " _variant="secondary" _onBackground="true"}}
             {{> components/button/components/button_icon _icon="settings" _iconmap="icons"}}
             {{> components/button/components/button_label _label="Einstellungen"}}
