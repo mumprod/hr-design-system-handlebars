@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li class="sb-service-navigation-item -{{this.id}} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-white" >
+    <li class="sb-service-navigation-item -{{this.id}} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-navigation-icons border-navigation-border-color" >
         {{#if this.subNavigation}} 
             <button 
                 id="{{nextRandom}}" 
@@ -10,7 +10,7 @@
                 x-data="dropdown"
                 id="{{getRandom}}"
                 
-                class="js-load flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
+                class="js-load flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 text-navigation-icons link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
 
                 :class="dropped ? 'bg-white fill-current text-primary lg:border-0 lg:underline' : ''" 
 
@@ -35,7 +35,7 @@
                 <span class="sr-only lg:hidden">{{this.text}}</span>
             </div>
 
-            <div :class="{'text-primary fill-current': dropped,'text-white fill-white': !dropped}" class="relative flex-row items-center justify-center hidden pt-px text-white lg:flex z-10002">
+            <div :class="{'text-primary fill-current': dropped,'text-navigation-icons fill-white': !dropped}" class="relative flex-row items-center justify-center hidden pt-px text-navigation-icons lg:flex z-10002">
                 <div class="flex" >
                     <span class="flex text-xs leading-4 whitespace-nowrap">
                         {{text}} 

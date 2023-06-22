@@ -41,7 +41,7 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
 --}}
 {{#if _icon}}
 <svg class="sb-icon {{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}} {{#>css}}{{/css}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
-{{# if brand}} data-brand="{{brand}}"{{/if}}
+{{#if brand}} data-brand="{{brand}}"{{/if}}
         {{~#if _iconTitle }} {{changeRandom~}}
             aria-labelledby="iconTitle--{{getRandom}}"
             {{~#if _iconDesc }} aria-describedby="iconDesc--{{getRandom}}"{{~/if~}}

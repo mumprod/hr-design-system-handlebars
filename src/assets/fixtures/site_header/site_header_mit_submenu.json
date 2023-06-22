@@ -1,6 +1,6 @@
 {   
     "hasOpenSubNavigation": true,
-    "_useSticky": true,
+    "useSticky": true,
     "brandNavigationItems": {
         "@->jsoninclude": "site_header/brandNavigation.inc.json"
     },

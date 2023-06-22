@@ -1,10 +1,29 @@
-<a class="relative flex items-center text-white fill-current sb-service-logo lg:items-end link-focus-white print:hidden" 
-    href="https://www.hessenschau.de/index.html" 
-    title="Startseite hessenschau . d e">
-    <span x-cloak class="absolute transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-0' : 'delay-200 opacity-100'" >
-        {{> components/base/image/icon _icon="brandlogo--compact-40x40px" _iconmap="logo" _addClass="logo-compact w-7 h-7 lg:w-10 lg:h-10 items-center "}}
-    </span>
-    <span class="transition-opacity duration-500 ease-in-out" :class="`${percent}` < 50 ? 'opacity-100' : 'opacity-0'">
-        {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk flex items-center fill-white w-40 h-5 md:h-7 md:w-40 lg:h-8 lg:w-52"}}
-    </span> 
+<a class="relative flex items-center w-auto h-full text-white fill-current sb-service-logo link-focus-white print:hidden" 
+    href={{resourceUrl "index.html"}} 
+    title="{{loca "header_homepage_link_title"}}">
+
+        <div x-cloak 
+            {{#if _useSticky}}
+                class="absolute brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg flex transition-opacity duration-500 ease-in-out h-10 lg:h-[3.875rem] w-12 lg:w-[3.875rem]" 
+                :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'"
+            {{else}}
+                class="relative flex h-10 brand-logo-size md:hidden"
+            {{/if}}     
+        >             
+            <img src="{{resourceUrl (replaceTokens "./brand/{0}/icons/logo/brandlogo--mobile.min.svg" (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-compact">
+        </div>      
+        
+        <div 
+            {{#if _useSticky}}
+                class="w-auto brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem]"
+                :class="`${percent}` < 50 ? 'delay-1000 opacity-100' : 'delay-200 opacity-0 hidden'"
+            {{else}}    
+                class="md:flex hidden justify-start w-auto brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg h-12 lg:h-[3.875rem]"
+            {{/if}}
+        >
+            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-desk">     
+        </div>
+          
 </a>
