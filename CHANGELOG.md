@@ -1,3 +1,15 @@
+# v1.28.1 (Thu Jun 22 2023)
+
+#### 🐛 Bug Fix
+
+- added path to @->jsoninclude [#654](https://github.com/mumprod/hr-design-system-handlebars/pull/654) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.28.0 (Thu Jun 22 2023)
 
 #### 🚀 Enhancement
