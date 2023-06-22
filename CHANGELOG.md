@@ -1,3 +1,16 @@
+# v1.28.0 (Thu Jun 22 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2303 logo component [#649](https://github.com/mumprod/hr-design-system-handlebars/pull/649) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.27.2 (Mon Jun 19 2023)
 
 #### 🐛 Bug Fix
