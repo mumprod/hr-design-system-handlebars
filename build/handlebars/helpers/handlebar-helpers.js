@@ -419,10 +419,13 @@ var helpers = {
             switch (configProperty) {
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
+                case 'iconConfig.brandlogo.footer':
+                    configProperty = 'brandlogo--desk'
             }
         } else {
             configProperty = 'No config-property defined.'
         }
+        console.log(configProperty)
         return configProperty
     },
 

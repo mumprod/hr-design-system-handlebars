@@ -1,9 +1,11 @@
 <div class="inline-flex justify-center pt-8 md:pt-0 md:justify-end">
     <a href="{{resourceUrl "index.html"}}" title="{{loca "header_homepage_link_title"}}">
         {{#if (configProperty "iconConfig.brandlogo.footer")}}
-            {{> components/base/image/icon _icon="brandlogo--mobile" _iconmap="logo" _addClass="logo-desk flex items-end lg:-mr-6 lg:-mt-4 fill-white w-40 h-5 md:h-7 md:w-40 lg:h-8 lg:w-52"}}
+            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/{1}.min.svg' (defaultIfEmpty this.brand "hessenschau") (configProperty "iconConfig.brandlogo.footer") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full logo-mobile">  
         {{else}}
-           {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="logo-desk flex items-end lg:-mr-6 lg:-mt-4 fill-white w-40 h-5 md:h-7 md:w-40 lg:h-8 lg:w-52"}}
+            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+                class="w-auto h-full invert logo-desk">  
         {{/if}}
     </a>
 </div>

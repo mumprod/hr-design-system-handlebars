@@ -6,7 +6,7 @@
     {{~> components/footer/page_footer_column _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
 </div> 
 
-<div class="flex flex-col w-full pt-4 md:w-1/4 md:w-max-1/4 md:pt-0 md:pr-4 -third">
+<div class="flex flex-col w-full pt-4 md:w-1/4 md:w-max-1/4 md:pt-0 md:pr-4 lg:pr-0 -third">
 
     <div class="pb-4 md:pt-[38px] md:mt-[38px] p-0 m-0 md:border-t border-white">
         {{> components/footer/page_footer_search }}
@@ -22,13 +22,14 @@
     </div>
 </div>
 
-<div class="flex flex-col w-full pt-8 text-left md:justify-between md:pt-16 md:pl-4 md:flex-row lg:pl-0">
+<div class="flex flex-col w-full pt-8 text-left md:items-end md:justify-between md:pt-16 md:pl-4 md:flex-row lg:pl-0">
     {{> components/footer/page_footer_metadata 
         _hrDeLink=this.footerMetadata.hrDeLink
         _ardDeLink=this.footerMetadata.ardDeLink
         _dataProtectionLink=this.footerMetadata.dataProtectionLink
         _imprintLink=this.footerMetadata.imprintLink
     }}
-    
-    {{> components/footer/page_footer_logo}}
+    <div class="flex self-start justify-center w-auto px-4 lg:pr-0 md:h-12">
+        {{> components/footer/page_footer_logo }}
+    </div>
 </div>
