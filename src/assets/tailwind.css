@@ -35,6 +35,10 @@
     --logo-padding-bottom-md: 10px;    
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
+
+    /* Footer Logo Invert */
+    --invert-logo-footer: 0;
+
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -951,6 +955,9 @@
     /* The Fancy special border on youfm */
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
+    /* Footer Logo Invert */
+    --invert-logo-footer: 1;
+
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
     /* Ticker, Live, Livestream */

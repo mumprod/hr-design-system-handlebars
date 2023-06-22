@@ -2,7 +2,7 @@
     <a href="{{resourceUrl "index.html"}}" title="{{loca "header_homepage_link_title"}}">
         {{#if (configProperty "iconConfig.brandlogo.footer")}}
             <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/{1}.min.svg' (defaultIfEmpty this.brand "hessenschau") (configProperty "iconConfig.brandlogo.footer") ) _brand=(if this.brand this.brand)}}" 
-                class="w-auto h-full logo-mobile">  
+                class="w-auto h-full invert-logo-footer logo-mobile">  
         {{else}}
             <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
                 class="w-auto h-full invert logo-desk">  

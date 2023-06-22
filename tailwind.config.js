@@ -39,6 +39,9 @@ module.exports = {
 
         extend: {
             backgroundImage: {},
+            invert: {
+                'logo-footer' : 'var(--invert-logo-footer)',
+            },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
             },
