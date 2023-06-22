@@ -117,7 +117,7 @@
                     }
                 },
                 "tickerItemResults": {
-                    "@->jsoninclude": "teaser_ticker_timeline.json",
+                    "@->jsoninclude": "teaser/teaser_ticker_timeline.json",
                     "@->contentpath": "tickerItemResults"
                 }
             }
@@ -224,7 +224,7 @@
                     }
                 },
                 "tickerItemResults": {
-                    "@->jsoninclude": "teaser_ticker_timeline.json",
+                    "@->jsoninclude": "teaser/teaser_ticker_timeline.json",
                     "@->contentpath": "tickerItemResults"
                 }
             }
