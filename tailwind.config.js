@@ -38,6 +38,7 @@ module.exports = {
         },
 
         extend: {
+            backgroundImage: {},
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
             },
@@ -72,6 +73,7 @@ module.exports = {
             },
             borderWidth: {
                 7: '7px',
+                'navigation-border-width': 'var(--border-navigation-border-width)',
             },
             transitionProperty: {
                 'max-height': 'max-height',
@@ -89,6 +91,8 @@ module.exports = {
                 '11.5': '2.875rem',
                 '13': '3.25rem',
                 '3/4': '75%',
+                'logo-padding-top': 'var(--logo-padding-top)',
+                'logo-padding-bottom': 'var(--logo-padding-bottom)',
             },
             right: {
                 80: '80%',
@@ -222,7 +226,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
-                'inherit': 'inherit',
+                'inherit': 'inherit', 
                 'blue': {
                     accented: '#eaf3fa',
                     allports: '#007899',
@@ -318,11 +322,22 @@ module.exports = {
                     hokeyPokey: '#c1bc2b',
                     olive: '#916B00',
                 },
+
                 'primary': 'var(--color-primary-ds)',
                 'secondary': 'var(--color-secondary-ds)',
                 'highlight-1': 'var(--color-highlight-1)',
                 'highlight-2': 'var(--color-highlight-2)',
+                'highlight-3': 'var(--color-highlight-3)',
                 'top-topic-background': 'var(--color-top-topic-background)',
+
+                'navigation-bg': 'var(--color-navigation-bg)',
+                'navigation-icons': 'var(--color-navigation-icons)',
+                'navigation-text': 'var(--color-navigation-text)',
+                'brandnavigation-border-color': 'var(--color-brandnavigation-border-color)',
+                'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
+                'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
+                'navigation-border-color': 'var(--color-navigation-border-color)',
+
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',
@@ -358,6 +373,10 @@ module.exports = {
                 'event-calendar-primary': 'var(--color-eventcalendar-primary)',
                 'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
                 'byline': 'var(--color-byline)',
+                'tickerTeaserHeadline': 'var(--color-ticker-teaser-headline,#000)',
+                'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
+                'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
+                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)'
             },
         },
     },

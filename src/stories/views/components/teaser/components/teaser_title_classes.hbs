@@ -94,4 +94,18 @@ the 4 parameters are:
     {{~#case 'calendar'~}}
        text-2xl
     {{~/case~}}
+    {{~#case 'ticker-standard'~}}
+        {{~inline-switch
+            _size
+            '["hero","100","25"]'
+            '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-2xl md:text-lg","text-2xl"]'
+        ~}}
+    {{~/case~}}
+    {{~#case 'ticker-alternative'~}}
+        {{~inline-switch
+            _size
+            '["hero","100","50"]'
+            '["text-2xl md:text-4xl","text-2xl md:text-2xl","text-lg md:text-2xl"]'
+        ~}}
+    {{~/case~}}
 {{~/switch~}}

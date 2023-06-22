@@ -1,10 +1,10 @@
 {{~#with this.tickerItemResults ~}}
-    <ul class="px-10">
+    <ul class="{{#if ../_css}} {{../_css}}{{/if}} {{if ../this.isStandardTeaser ' pl-10 pr-5' ' pl-10 md:pl-5 pr-5 md:pr-0'}}">
         {{~#each this~}}
             {{#if this.isTopnews}}
-                <li class="relative h-auto pb-5">
+                <li class="relative h-auto [&:not(:last-child)]:pb-5">
                     <div class="absolute h-full">
-                        <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-orange-spicyCarrot -left-5"></div>
+                        <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-tickerTeaserTimelineScore -left-5"></div>
                         {{#unless @last}}
                             <div class="relative flex flex-col w-0 h-full -left-4">
                                 <div class="h-full my-2 border-l{{#if ../../_color}} border-{{../../_color}}{{else}} border-gray-400{{/if}}"></div>

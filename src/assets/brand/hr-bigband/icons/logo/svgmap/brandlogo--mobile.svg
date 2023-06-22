@@ -3,7 +3,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="big_band" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="148px" height="49px" viewBox="0 0 148 49" enable-background="new 0 0 148 49" xml:space="preserve">
-<g>
+	 <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+<g class="cls-1">
 	<path d="M24.3,36.9c-8.2,0.199-18-1.4-24.3-4V30.3c6.8,2.8,15.9,4.4,23.8,4.2c8.6-0.2,18-1.6,24.3-4.2v2.3
 		C40.8,35.2,32.9,36.6,24.3,36.9"/>
 	<path d="M4.2,0v9.1c0,0,2.8-0.7,5.4-0.5c4.2,0,6.3,2.3,6.5,5.1c0,0.7,0,1.2,0,1.9v11.9h-4.4V15.4c0-1.4,0-3.3-3.3-3.3

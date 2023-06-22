@@ -1,3 +1,53 @@
+# v1.28.0 (Thu Jun 22 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2303 logo component [#649](https://github.com/mumprod/hr-design-system-handlebars/pull/649) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.27.2 (Mon Jun 19 2023)
+
+#### 🐛 Bug Fix
+
+- Ticker Teaser [#653](https://github.com/mumprod/hr-design-system-handlebars/pull/653) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.27.1 (Thu Jun 15 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: click action for links navigating to other pages is changed to uxNavigation [#652](https://github.com/mumprod/hr-design-system-handlebars/pull/652) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.27.0 (Thu Jun 15 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Use new piano sdk to track clicks [#651](https://github.com/mumprod/hr-design-system-handlebars/pull/651) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.26.3 (Wed Jun 14 2023)
 
 #### 🐛 Bug Fix
