@@ -14,9 +14,10 @@ var generateRandom = function () {
 
 const extractBrandFromUrl = function () {
     let url = window.location.href
-    let extractBrandFromUrlRegex = /(?<=brands\:).*?(?=\&)/g
+    let extractBrandFromUrlRegex =  /(?<=theme\:).*?(?=\&)/g
     let brand = url.match(extractBrandFromUrlRegex)
     brand = null != brand ? brand[0] : 'hessenschau'
+    console.log(brand)
     return brand
 }
 
@@ -413,19 +414,19 @@ var helpers = {
 
     'configProperty': function () {
         let configProperty = ''
-
+        let brand = extractBrandFromUrl()
+console.log(brand)
         if (arguments.length >= 1) {
             configProperty = arguments[0]
             switch (configProperty) {
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
                 case 'iconConfig.brandlogo.footer':
-                    configProperty = 'brandlogo--desk'
+                    configProperty = (brand == 'you-fm') ? 'brandlogo--mobile' : 'brandlogo--desk'
             }
         } else {
             configProperty = 'No config-property defined.'
         }
-        console.log(configProperty)
         return configProperty
     },
 
