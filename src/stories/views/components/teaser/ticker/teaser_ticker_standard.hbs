@@ -9,8 +9,8 @@
                     {{> components/teaser/components/teaser_lead _addClassImg=(inline-switch this.teaserSize '["hero"]' '[" md:rounded-tl-hr", "rounded-tl-hr"]') _teaserSize=this.teaserSize _teaserType=this.teaserType _aspectRatio="ar-16-9" }}     
                 {{/components/base/link}}
             </figure>
-        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" gap-y-3", "gap-y-5"]')}}
+        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" pt-3 gap-y-3", "gap-y-5"]')}}
     {{else}}
-        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" gap-y-3", " pt-5 gap-y-5"]')}}
+        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" pt-3 gap-y-3", " pt-5 gap-y-5"]')}}
     {{/if}}
 </article>
