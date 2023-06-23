@@ -1,26 +1,28 @@
-{{#unless this.hideGeotag}}
-        {{~#with this.geotag}}
-            {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1 }}
-        {{/with~}}  
-{{/unless}}
-{{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg=_addClassImg ~}}
-{{#if this.isProgram}}
-    {{#if this.showMediatheksLink}}
-        {{#with this}}
-            {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
-            {{#*inline "css"~}}
-                {{~> components/button/utilities/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1-adjust_context}}
-            {{/inline}}
-        {{/with}}
-    {{/if}}
-{{/if}}
-
-{{#if this.isEvent}}
-    {{#unless this.displayTeaserBodyAsImageOverlay}}
-        {{#decorator 'components/teaser/components/teaser_image_overlay' _cssClasses="top-0 h-full"}}
-            <div class="flex flex-col items-center justify-center p-4">
-                {{> components/event/instant_dates}}
-            </div>
-        {{/decorator}}
+<div class="relative {{_aspectRatio}}">
+    {{#unless this.hideGeotag}}
+            {{~#with this.geotag}}
+                {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1 }}
+            {{/with~}}  
     {{/unless}}
-{{/if}}
+    {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.imageVariant _noDelay=this.dontLazyload _addClassImg=_addClassImg ~}}
+    {{#if this.isProgram}}
+        {{#if this.showMediatheksLink}}
+            {{#with this}}
+                {{> components/base/image/icon _icon="play_button" _addClass="text-media-button fill-white hover:fill-media-button w-10 h-10 inline"}}
+                {{#*inline "css"~}}
+                    {{~> components/button/utilities/button_on_image_classes _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=_isMobile1to1-adjust_context}}
+                {{/inline}}
+            {{/with}}
+        {{/if}}
+    {{/if}}
+
+    {{#if this.isEvent}}
+        {{#unless this.displayTeaserBodyAsImageOverlay}}
+            {{#decorator 'components/teaser/components/teaser_image_overlay' _cssClasses="top-0 h-full"}}
+                <div class="flex flex-col items-center justify-center p-4">
+                    {{> components/event/instant_dates}}
+                </div>
+            {{/decorator}}
+        {{/unless}}
+    {{/if}}
+</div>
