@@ -5,7 +5,7 @@
             {{#with this.label}}
                 {{#> components/label/label_group}}
                     {{> components/label/label _type=this.type _text=(loca this.loca) }}
-                    {{> components/label/label_byline _css="ml-2 text-tickerTeaserlabelByline" _text=../this.tickerTopic }}
+                    {{> components/label/label_byline _css="ml-2 text-tickerTeaserlabelByline" _text=../../../this.tickerTopic }}
                 {{/components/label/label_group}}
             {{/with~}}
             {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
@@ -17,7 +17,7 @@
         {{/components/base/link}} 
     {{/components/teaser/components/teaser_header}}
     
-    {{> components/teaser/ticker/teaser_ticker_timeline _css=(inline-switch _teaserSize '["25","33"]' '[" hidden"," md:hidden"]') _color="white" _css=(if this.isStandardTeaser "px-10" "px-5 md:px-0 md:pb-5")}}
+    {{> components/teaser/ticker/teaser_ticker_timeline _css=(inline-switch _teaserSize '["25","33"]' '[" hidden"," md:hidden"]') _color="white" }}
     {{> components/teaser/ticker/teaser_ticker_footer _teaserSize=_teaserSize}}
 
 
