@@ -7,7 +7,6 @@
                 "link": {
                     "hiddenText": "hessenschau",
                     "labelText": "Startseite der hessenschau",
-
                     "text": "Start",
                     "url": "index.html"
                 }
@@ -143,28 +142,28 @@
                     "text": "Korrekturen",
                     "url": "unternehmen/korrekturen/index.html",
                     "site": "hr",
-                    "targetBlank": true
+                    "isTargetBlank": true
                 }
             }, {
                 "link": {
                     "text": "hr-text",
                     "url": "https://www.hr-text.hr-fernsehen.de/ttxHtmlGenerator/index.jsp",
                     "extern": true,
-                    "targetBlank": true
+                    "isTargetBlank": true
                 }
             }, {
                 "link": {
                     "text": "hr-ticketcenter",
                     "url": "https://www.hr-ticketcenter.de/",
                     "extern": true,
-                    "targetBlank": true
+                    "isTargetBlank": true
                 }
             }, {
                 "link": {
                     "text": "hr werbung",
                     "url": "index.html",
                     "site": "hr-werbung",
-                    "targetBlank": true
+                    "isTargetBlank": true
                 }
             }]
         }]
@@ -178,7 +177,7 @@
                     "text": "twitter",
                     "url": "https://twitter.com/hessenschau",
                     "extern": true,
-                    "targetBlank": true,
+                    "isTargetBlank": true,
                     "title": "hessenschau Twitter"
                 }
             }, {
@@ -186,7 +185,7 @@
                     "text": "instagram",
                     "url": "https://www.instagram.com/hessenschau/",
                     "extern": true,
-                    "targetBlank": true,
+                    "isTargetBlank": true,
                     "title": "hessenschau Instagram"
                 }
             }, {
@@ -194,7 +193,7 @@
                     "text": "facebook",
                     "url": "https://www.facebook.com/hessenschau",
                     "extern": true,
-                    "targetBlank": true,
+                    "isTargetBlank": true,
                     "title": "hessenschau Facebook"
                 }
             }, {
@@ -202,7 +201,7 @@
                     "text": "youtube",
                     "url": "https://www.youtube.com/c/hessenschau",
                     "extern": true,
-                    "targetBlank": true,
+                    "isTargetBlank": true,
                     "title": "hessenschau YouTube"
                 }
             }]
@@ -239,32 +238,40 @@
             "currentTime": {
                 "year": "2023"
             },
+        
             "text": "Hessischer Rundfunk",
             "url": "index.html",
             "site": "hr",
-            "targetBlank": true,
+            "isTargetBlank": true,
             "title": "Hessischer Rundfunk"
+            
         },
         "ardDeLink": {
+            
             "text": "ARD.de",
             "url": "https://www.ard.de/",
             "extern": true,
-            "targetBlank": true,
+            "isTargetBlank": true,
             "title": "ard.de"
+            
         },
         "dataProtectionLink": {
+           
             "text": "Datenschutz",
             "url": "https://www.hr.de/datenschutz/index.html",
             "extern": true,
-            "targetBlank": true,
+            "isTargetBlank": true,
             "title": "Datenschutz"
+            
         },
         "imprintLink": {
+            
             "text": "Impressum",
             "url": "impressum/index.html",
             "site": "hr",
-            "targetBlank": true,
+            "isTargetBlank": true,
             "title": "Impressum"
+           
         }
     }
 }

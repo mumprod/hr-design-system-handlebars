@@ -1,55 +1,87 @@
-<div class="flex flex-col self-center md:self-end md:items-end w-fit md:flex-row">
+<div class="flex flex-col self-center md:items-end w-fit md:flex-row">
     <div class="flex justify-center w-auto md:justify-start">
-        {{#with _hrDeLink}}
-            <a class="flex whitespace-nowrap hover:underline" 
-                href="{{resourceUrl this.url _site=this.site}}" {{#if this.targetBlank}} target="_blank" rel="noopener noreferrer" {{/if}}
-                title="{{this.title}}">&copy; {{this.text}} {{currentTime.year}} 
-                {{#if this.targetBlank}}
-                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
-                {{/if}}
-            </a>
-        {{/with}}
+        {{#> components/base/link _link=_hrDeLink _css="flex whitespace-nowrap hover:underline"}}
+            &copy; {{{_hrDeLink.text}}} {{{_hrDeLink.currentTime.year}}}
+                {{~#if _hrDeLink.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_hrDeLink.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _hrDeLink.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _hrDeLink.labelText}} aria-label="{{_hrDeLink.labelText}}"{{/if}}
+            {{#if _hrDeLink.title}} title="{{_hrDeLink.title}}"{{/if}}
+        {{/inline}}
     </div>
 
     <span class="hidden px-2 md:flex ">|</span>
 
     <div class="flex justify-center w-auto md:justify-start">
-        {{#with _ardDeLink}}
-            <a class="flex whitespace-nowrap hover:underline " 
-                href="{{this.url}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
-                title="{{this.title}}">{{this.text}} 
-                {{#if this.targetBlank}}
-                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
-                {{/if}}
-            </a>
-        {{/with}}
+        {{#> components/base/link _link=_ardDeLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_ardDeLink.text}}}
+                {{~#if _ardDeLink.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_ardDeLink.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _ardDeLink.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _ardDeLink.labelText}} aria-label="{{_ardDeLink.labelText}}"{{/if}}
+            {{#if _ardDeLink.title}} title="{{_ardDeLink.title}}"{{/if}}
+        {{/inline}}
     </div>
 
     <span class="hidden px-2 md:flex ">|</span>
 
     <div class="flex justify-center w-auto md:justify-start">
-        {{#with _dataProtectionLink}}
-            <a class="flex whitespace-nowrap hover:underline link" 
-                href="{{this.url}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
-                title="{{this.title}}">{{this.text}}
-                {{#if this.targetBlank}}
-                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
-                {{/if}}
-            </a>
-        {{/with}}
+         {{#> components/base/link _link=_dataProtectionLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_dataProtectionLink.text}}}
+                {{~#if _dataProtectionLink.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_dataProtectionLink.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _dataProtectionLink.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _dataProtectionLink.labelText}} aria-label="{{_dataProtectionLink.labelText}}"{{/if}}
+            {{#if _dataProtectionLink.title}} title="{{_dataProtectionLink.title}}"{{/if}}
+        {{/inline}}
     </div>
 
     <span class="hidden px-2 md:flex ">|</span>
 
     <div class="flex justify-center w-auto md:justify-start">
-        {{#with _imprintLink}}
-            <a class="flex hover:underline link" 
-                href="{{resourceUrl this.url _site=this.site}}"{{#if this.targetBlank}} target="_blank" rel="noopener noreferrer"{{/if}} 
-                title="{{this.title}}">{{this.text}} 
-                {{#if this.targetBlank}}
-                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}   
-                {{/if}}
-            </a>
-        {{/with}}
+         {{#> components/base/link _link=_imprintLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_imprintLink.text}}}
+                {{~#if _imprintLink.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_imprintLink.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _imprintLink.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _imprintLink.labelText}} aria-label="{{_imprintLink.labelText}}"{{/if}}
+            {{#if _imprintLink.title}} title="{{_imprintLink.title}}"{{/if}}
+        {{/inline}}
     </div>
 </div>

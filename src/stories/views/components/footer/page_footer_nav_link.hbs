@@ -2,10 +2,10 @@
     {{_link.text}}
         {{~#if _link.hiddenText~}}
             <span class="sr-only">
-                {{~this.hiddenText~}}
+                {{~_link.hiddenText~}}
             </span>
         {{~/if~}}
-        {{~#if _link.targetBlank}}
+        {{~#if _link.isTargetBlank}}
             <span class="inline-flex">
                 {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="w-4 h-3 fill-current"}}
             </span>
