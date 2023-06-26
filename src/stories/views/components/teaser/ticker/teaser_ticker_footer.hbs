@@ -1,6 +1,6 @@
 <div class="flex flex-wrap text-base justify-between items-end {{~inline-switch _teaserSize '["25"]' '[" mb-3","  mb-5"]'}} {{if this.isStandardTeaser ' px-5' ' px-5 md:px-0 mt-0 md:mt-auto md:mb-0'}}">
     {{#if this.hasByline}}
-        <p class="self-center basis-3/5 text-xs text-tickerTeaserFooter font-headingSerif empty:hidden overflow-anywhere hyphens-auto {{inline-switch this.teaserSize '["25"]' '[" hidden"]'~}}">
+        <p class="self-center basis-3/5 text-xs text-tickerTeaserFooter font-headingSerif empty:hidden overflow-anywhere hyphens-auto {{inline-switch this.realTeaserSize '["25"]' '[" hidden"]'~}}">
             {{~#if this.profiles~}}
                 <span>{{this.profiles}}</span>
             {{~/if~}}
