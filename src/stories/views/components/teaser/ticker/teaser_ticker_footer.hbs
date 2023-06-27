@@ -8,5 +8,8 @@
     {{/if}}
     {{#>components/base/link _link=this.link _css="ml-auto text-tickerTeaserFooter underline ds-link decoration-1" }}
         {{loca "ticker_more"}}
+        {{#*inline "htmlProperties"}}
+            data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{this.sophoraId}}-MehrLink geklickt"}]}'
+        {{/inline}} 
     {{/components/base/link}}
 </div>
