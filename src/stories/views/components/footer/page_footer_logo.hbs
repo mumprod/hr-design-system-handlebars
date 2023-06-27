@@ -1,12 +1,12 @@
-<div class="flex justify-center h-10 md:inline-flex md:h-12 lg:h-16 md:justify-end">
+<div class="flex justify-center w-full pt-4 md:pt-0 md:inline-flex md:h-12 lg:h-16 md:justify-end">
     <a href="{{resourceUrl "index.html"}}" title="{{loca "header_homepage_link_title"}}">
         {{#if (configProperty "iconConfig.brandlogo.footer")}}
             <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/{1}.min.svg' (defaultIfEmpty this.brand "hessenschau") (configProperty "iconConfig.brandlogo.footer") ) _brand=(if this.brand this.brand)}}" 
                 class="w-auto h-full invert-logo-footer">  
         {{else}}
-            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--mobile.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
-                class="flex w-auto h-12 md:hidden invert-logo-footer">
-            <img src="{{resourceUrl (replaceTokens './brand/{0}/icons/logo/brandlogo--desk.min.svg' (defaultIfEmpty this.brand "hessenschau") ) _brand=(if this.brand this.brand)}}" 
+            <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--mobile.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}"
+                class="flex w-auto h-12 mx-auto md:hidden invert-logo-footer">
+            <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--desk.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
                 class="hidden w-auto h-12 md:mt-2 lg:mt-1 md:flex invert-logo-footer">  
         {{/if}}
     </a>
