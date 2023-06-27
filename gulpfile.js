@@ -441,8 +441,10 @@ exports.default = series(
         parseJson,
         convertPartialsToJs,
         mergeLocatags,
-        series(createModernizr, addCustomModernizrTests)
-    ),saveLogoFilesToFolder,
+        series(createModernizr, addCustomModernizrTests),
+        saveLogoFilesToFolder,
+        createSvgMapsForBrands
+    ),
     watchFiles
 )
 exports.optimizeSvgs = parallel(createSvgMaps, minimizeSvgSrcFiles)
