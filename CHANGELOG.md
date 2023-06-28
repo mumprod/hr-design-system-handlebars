@@ -1,3 +1,15 @@
+# v1.29.0 (Wed Jun 28 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Revert changes to tracking [#662](https://github.com/mumprod/hr-design-system-handlebars/pull/662) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.28.8 (Tue Jun 27 2023)
 
 #### 🐛 Bug Fix
