@@ -5,9 +5,7 @@
 >
     {{#if this.teaserImage}}
             <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}}relative ar-16-9 w-full {{inline-switch this.realTeaserSize '["25"]' '[" hidden"]'~}}">    
-                {{#>components/base/link _link=this.link }}
-                    {{> components/teaser/components/teaser_lead _addClassImg=(inline-switch this.realTeaserSize '["100"]' '[" md:rounded-tl-hr", "rounded-tl-hr"]') _teaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio="ar-16-9" }}     
-                {{/components/base/link}}
+                {{> components/teaser/components/teaser_lead _addClassImg=(inline-switch this.realTeaserSize '["100"]' '[" md:rounded-tl-hr", "rounded-tl-hr"]') _teaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio="ar-16-9" }}       
             </figure>
         {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.realTeaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" mt-3 gap-y-3", "gap-y-5"]')}}
     {{else}}
