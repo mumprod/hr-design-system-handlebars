@@ -6,38 +6,30 @@ const isTrackingAllowed = () => {
 }
 
 const uxAction = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
-    if (pa && isTrackingAllowed()) {
-        pa.sendEvent('click.action', {
-            click: label,
-            site_level2: secondLevelId,
-        })
+    secondLevelId = secondLevelId || window.xtn2
+    if (window.xt_click && isTrackingAllowed()) {
+        window.xt_click('this', 'C', secondLevelId, label, 'A')
     }
 }
 
 const uxNavigation = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
-    if (pa && isTrackingAllowed()) {
-        pa.sendEvent('click.navigation', {
-            click: label,
-            site_level2: secondLevelId,
-        })
+    secondLevelId = secondLevelId || window.xtn2
+    if (window.xt_click && isTrackingAllowed()) {
+        window.xt_click('this', 'C', secondLevelId, label, 'N')
     }
 }
 
 const pi = (label, secondLevelId) => {
-    if (pa && isTrackingAllowed()) {
-        pa.sendEvent('page.display', pageDisplayConfig)
+    secondLevelId = secondLevelId || window.xtn2
+    if (window.xt_click && isTrackingAllowed()) {
+        window.xt_click('this', 'F', secondLevelId, label)
     }
 }
 
 const download = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
-    if (pa && isTrackingAllowed()) {
-        pa.sendEvent('click.download', {
-            click: label,
-            site_level2: secondLevelId,
-        })
+    secondLevelId = secondLevelId || window.xtn2
+    if (window.xt_click && isTrackingAllowed()) {
+        window.xt_click('this', 'C', secondLevelId, label, 'T')
     }
 }
 
