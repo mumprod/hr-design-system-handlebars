@@ -1,3 +1,15 @@
+# v1.29.1 (Thu Jun 29 2023)
+
+#### 🐛 Bug Fix
+
+- add link to image in Ticker-Teaser [#663](https://github.com/mumprod/hr-design-system-handlebars/pull/663) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.29.0 (Wed Jun 28 2023)
 
 #### 🚀 Enhancement
