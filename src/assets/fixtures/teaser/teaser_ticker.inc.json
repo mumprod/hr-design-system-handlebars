@@ -14,6 +14,7 @@
                 "teaserSize": "hero",
                 "realTeaserSize": "hero",
                 "isMobile1to1": false,
+                "isTickerTeaser": true,
                 "teaserDate": {
                     "htmlDateTime": "2022-04-17T19:30+0200",
                     "htmlDate": "20.02.1983",
@@ -138,6 +139,7 @@
                 "teaserSize": "hero",
                 "realTeaserSize": "hero",
                 "isMobile1to1": false,
+                "isTickerTeaser": true,
                 "teaserDate": {
                     "htmlDateTime": "2022-10-11T19:46+0200",
                     "htmlDate": "11.10.2022",
