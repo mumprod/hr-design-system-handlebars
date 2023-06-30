@@ -1,3 +1,15 @@
+# v1.29.3 (Fri Jun 30 2023)
+
+#### 🐛 Bug Fix
+
+- add ticler-topic [#666](https://github.com/mumprod/hr-design-system-handlebars/pull/666) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.29.2 (Fri Jun 30 2023)
 
 #### 🐛 Bug Fix
