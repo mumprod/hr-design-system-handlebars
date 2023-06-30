@@ -1,3 +1,16 @@
+# v1.29.2 (Fri Jun 30 2023)
+
+#### 🐛 Bug Fix
+
+- Tracking Ticker-Teaser Bugfix [#665](https://github.com/mumprod/hr-design-system-handlebars/pull/665) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.29.1 (Thu Jun 29 2023)
 
 #### 🐛 Bug Fix
