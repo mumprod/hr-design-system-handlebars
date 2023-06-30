@@ -8,7 +8,7 @@
                     {{#with this.label}}
                         {{#> components/label/label_group}}
                             {{> components/label/label _type=this.type _css="" _text=(loca this.loca)}}
-                            {{> components/label/label_byline _css="ml-2"}}
+                            {{> components/label/label_byline _css="ml-2" _text=../../../this.tickerTopic}}
                         {{/components/label/label_group}}
                     {{/with~}}
                     {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
