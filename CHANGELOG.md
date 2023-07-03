@@ -1,3 +1,16 @@
+# v1.29.4 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix + add default bg-color [#668](https://github.com/mumprod/hr-design-system-handlebars/pull/668) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.29.3 (Fri Jun 30 2023)
 
 #### 🐛 Bug Fix
