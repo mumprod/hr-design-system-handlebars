@@ -1,7 +1,7 @@
 <div class="h-full flex-col flex w-full{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}">
 
     {{#> components/teaser/components/teaser_header _css=(if this.isStandardTeaser "px-5" "px-5 md:px-0")}}
-        {{#>components/base/link _link=this.link _css="cy-teaser-link hover:text-toplineColor" }} 
+        {{#>components/base/link _link=this.link _css="block link-focus-white cy-teaser-link hover:text-toplineColor" }} 
             {{#with this.label}}
                 {{#> components/label/label_group}}
                     {{> components/label/label _type=this.type _text=(loca this.loca) }}
