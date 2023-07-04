@@ -12,7 +12,7 @@
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    --color-highlight-3: theme('colors.blue.congress');
+    --color-highlight-3: theme('colors.gray.dark');
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.congress');
