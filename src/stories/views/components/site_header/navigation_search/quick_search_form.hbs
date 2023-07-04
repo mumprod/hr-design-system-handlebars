@@ -31,7 +31,7 @@
             aria-controls="suggestionlist--{{getRandom}}"
         > 
         <div 
-            class="absolute left-0 w-full top-8 lg:top-10" 
+            class="absolute left-0 w-auto min-w-full top-8 lg:top-10" 
             x-show="query.length > 1 && active && suggestions.length"
             x-cloak
             x-transition:leave="transition ease-in duration-100"
