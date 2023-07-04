@@ -1,3 +1,27 @@
+# v1.29.6 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- add link-focus-white to links in Ticker-Teaser [#670](https://github.com/mumprod/hr-design-system-handlebars/pull/670) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.5 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- - added alt tag to startlink logo [#669](https://github.com/mumprod/hr-design-system-handlebars/pull/669) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.29.4 (Mon Jul 03 2023)
 
 #### 🐛 Bug Fix
