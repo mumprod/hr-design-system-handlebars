@@ -2,9 +2,9 @@
     {
         "navigationItems": [
             {
-                "id": "news",
-                "text": "Nachrichten",
-                "icon": "nachrichten-ds",
+                "id": "video",
+                "text": "Video und Podcast ",
+                "icon": "video-ds",
                 "selected": false,
                 "isCluster": false,
                 "url": "https://www.hr3.de"
@@ -15,103 +15,53 @@
     {
         "navigationItems": [
             {
-                "id": "weather",
-                "text": "Wetter",
-                "icon": "wetter-ds",
-                "flyoutStartLinkText": "Übersicht Wetter",
-                "url": "https://www.weather.de",
-                "subNavigation": {
-                    "showAsFlyout": true,
-                    "columnCount": "2",
-                    "items": false,
-                    "columns": [
-                        [
-                            {
-                                "title": "Unwetterwarnungen",
-                                "text": "Unwetterwarnungen",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Regenradar",
-                                "text": "Regenradar",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Wolkenfilm",
-                                "text": "Wolkenfilm",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Messwerte",
-                                "text": "Messwerte",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Wetterkameras",
-                                "text": "Wetterkameras",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Wetterbilder-Galerie",
-                                "text": "Wetterbilder-Galerie",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "mehr Wetter",
-                                "text": "mehr Wetter",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            }
-                        ],
-                        [
-                            {
-                                "title": "Thema des Tages",
-                                "text": "Thema des Tages",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": true,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Foto einsenden",
-                                "text": "Foto einsenden",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": true,
-                                    "iconName": "extern"
-                                }
-                            }
-                        ]
-                    ]
-                }
+                "id": "facebook",
+                "text": "facebook",
+                "icon": "facebook-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "highlights",
+                "text": "highlights",
+                "icon": "highlights-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "instagram",
+                "text": "instagram",
+                "icon": "instagram-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+
+    {
+        "navigationItems": [
+            {
+                "id": "kontakt",
+                "text": "kontakt",
+                "icon": "kontakt-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
             }
         ]
     },

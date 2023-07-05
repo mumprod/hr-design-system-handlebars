@@ -421,7 +421,10 @@ var helpers = {
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
                 case 'iconConfig.brandlogo.footer':
-                    configProperty = (brand == 'you-fm') ? undefined :  (brand == 'hessenschau') ? undefined : 'brandlogo--desk'
+                    configProperty = (brand == 'you-fm') ? 'brandlogo--tiny' :  
+                    (brand == 'hr-bigband') ? 'brandlogo--mobile' : 
+                    (brand == 'hr-sinfonieorchester') ? 'brandlogo--mobile' :
+                    (brand == 'hessenschau') ? undefined : 'brandlogo--mobile'
             }
         } else {
             configProperty = 'No config-property defined.'

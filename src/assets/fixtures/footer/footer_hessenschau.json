@@ -182,7 +182,7 @@
                 }
             }, {
                 "link": {
-                    "text": "instagram",
+                    "text": "instagram-ds",
                     "url": "https://www.instagram.com/hessenschau/",
                     "extern": true,
                     "isTargetBlank": true,
@@ -190,7 +190,7 @@
                 }
             }, {
                 "link": {
-                    "text": "facebook",
+                    "text": "facebook-ds",
                     "url": "https://www.facebook.com/hessenschau",
                     "extern": true,
                     "isTargetBlank": true,
@@ -208,7 +208,7 @@
         }, {
             "links": [{
                 "link": {
-                    "text": "mail",
+                    "text": "mail-ds",
                     "url": "kontakt/index.html",
                     "title": "Zum Kontaktformular"
                 }
