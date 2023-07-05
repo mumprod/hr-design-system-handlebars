@@ -107,7 +107,8 @@
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
-
+    --search-border-color-desktop: theme('colors.transparent');
+    --search-border-color-mobile: var(--color-primary-ds);
 }
 
 [data-theme='hessenschau'] {
@@ -785,6 +786,8 @@
     --font-weight-title: theme('fontWeight.bold');
     /* ticker-Teaser*/
     --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
+
+    --search-border-color-desktop:  var(--color-navigation-icons);
 }
 
 [data-theme='hr3'] {
@@ -859,6 +862,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    --search-border-color-desktop:  var(--color-primary-ds);
 }
 
 [data-theme='hr4'] {
