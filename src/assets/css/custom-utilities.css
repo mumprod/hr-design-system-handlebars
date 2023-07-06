@@ -234,4 +234,16 @@
             padding-bottom: var(--logo-padding-bottom);
         }
     }
+    
+    /*! ****************************/
+    /*! Search-Box-border          */
+    /*! ****************************/
+    @responsive {
+        .search-border-mobile {
+            border-color: var(--search-border-color-mobile);
+        }
+        .search-border-desktop {
+            border-color: var(--search-border-color-desktop);
+        }
+    }
 }

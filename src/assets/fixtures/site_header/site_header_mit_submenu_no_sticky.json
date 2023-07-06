@@ -2,7 +2,7 @@
     "@->jsoninclude": "site_header/site_header_mit_submenu.json",
     "@->overrides" : [
         { 
-            "@->contentpath": "useSticky",
+            "@->contentpath": "_useSticky",
             "@->value": false
         }
     ]

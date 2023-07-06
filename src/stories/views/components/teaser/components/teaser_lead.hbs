@@ -1,5 +1,7 @@
 {{~#if this.allowAVConsumption ~}}
     {{> components/teaser/components/teaser_av_consumption _aspectRatio=_aspectRatio _isMobile1to1=_isMobile1to1 _teaserSize=_teaserSize _teaserType=_teaserType _addClassImg=_addClassImg}}
 {{else}}
-    {{> components/teaser/components/teaser_image _isMobile1to1=_isMobile1to1 _teaserSize=_teaserSize _addClassImg=_addClassImg}}
+    {{#if this.isTickerTeaser}}<a href="{{this.link.url}}" aria-label="Zum Ticker" tabindex="-1">{{/if}}
+        {{> components/teaser/components/teaser_image _isMobile1to1=_isMobile1to1 _teaserSize=_teaserSize _addClassImg=_addClassImg _aspectRatio=_aspectRatio}}
+    {{#if this.isTickerTeaser}}</a>{{/if}}
 {{/if}}

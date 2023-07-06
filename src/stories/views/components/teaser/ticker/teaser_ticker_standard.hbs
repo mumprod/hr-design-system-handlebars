@@ -1,16 +1,14 @@
-<article class="bg-highlight-3 items-start relative col-span-12 flex flex-col gap-y-3 gap-x-4 
-{{if this.isHeroTeaser 'mx-0 md:rounded-tl-hr md:rounded-br-hr' 'mx-5 sm:mx-0 rounded-tl-hr rounded-br-hr'}}   
+<article class="bg-highlight-3 items-start relative col-span-12 flex flex-col gap-y-3 gap-x-4
+{{~inline-switch this.realTeaserSize '["100"]' '[" mx-0 md:rounded-tl-hr md:rounded-br-hr"," mx-5 sm:mx-0 rounded-tl-hr rounded-br-hr"]'}}  
 {{~inline-switch this.teaserSize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}"
  x-data="{ avStart: false }"
 >
     {{#if this.teaserImage}}
-        {{#>components/base/link _link=this.link }}
-            <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}}relative ar-16-9 w-full {{inline-switch this.teaserSize '["25"]' '[" hidden"]'~}}">    
-                {{> components/teaser/components/teaser_lead _addClassImg=(if this.isHeroTeaser 'md:rounded-tl-hr' 'rounded-tl-hr') _teaserSize=this.teaserSize _teaserType=this.teaserType }}     
+            <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}}relative ar-16-9 w-full {{inline-switch this.realTeaserSize '["25"]' '[" hidden"]'~}}">    
+                {{> components/teaser/components/teaser_lead _addClassImg=(inline-switch this.realTeaserSize '["100"]' '[" md:rounded-tl-hr", "rounded-tl-hr"]') _teaserSize=this.realTeaserSize _teaserType=this.teaserType _aspectRatio="ar-16-9" }}       
             </figure>
-        {{/components/base/link}}
-        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" gap-y-3", "gap-y-5"]')}}
+        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.realTeaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" mt-3 gap-y-3", "gap-y-5"]')}}
     {{else}}
-        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.teaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" gap-y-3", " pt-5 gap-y-5"]')}}
+        {{> components/teaser/ticker/teaser_ticker_body _teaserSize=this.realTeaserSize _outerCssClasses=(inline-switch this.realTeaserSize '["25"]' '[" mt-3 gap-y-3", " pt-5 gap-y-5"]')}}
     {{/if}}
 </article>
