@@ -18,4 +18,5 @@ const NavigationDataWithTeaser3 = structuredClone(
 const NavigationDataWithTeaser4 = structuredClone(
     Object.assign({}, NavigationData4, hero_teaser.logicItem.includeModel)
 )
+
 export { NavigationDataWithTeaser, NavigationDataWithTeaser2, NavigationDataWithTeaser3, NavigationDataWithTeaser4 }

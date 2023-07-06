@@ -1,3 +1,261 @@
+# v1.29.8 (Thu Jul 06 2023)
+
+#### 🐛 Bug Fix
+
+- aspect ratio 1:1 for figure in ticker-alternative-teaser [#671](https://github.com/mumprod/hr-design-system-handlebars/pull/671) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.7 (Wed Jul 05 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2390 [#667](https://github.com/mumprod/hr-design-system-handlebars/pull/667) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.29.6 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- add link-focus-white to links in Ticker-Teaser [#670](https://github.com/mumprod/hr-design-system-handlebars/pull/670) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.5 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- - added alt tag to startlink logo [#669](https://github.com/mumprod/hr-design-system-handlebars/pull/669) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.29.4 (Mon Jul 03 2023)
+
+#### 🐛 Bug Fix
+
+- bugfix + add default bg-color [#668](https://github.com/mumprod/hr-design-system-handlebars/pull/668) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.29.3 (Fri Jun 30 2023)
+
+#### 🐛 Bug Fix
+
+- add ticler-topic [#666](https://github.com/mumprod/hr-design-system-handlebars/pull/666) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.2 (Fri Jun 30 2023)
+
+#### 🐛 Bug Fix
+
+- Tracking Ticker-Teaser Bugfix [#665](https://github.com/mumprod/hr-design-system-handlebars/pull/665) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.29.1 (Thu Jun 29 2023)
+
+#### 🐛 Bug Fix
+
+- add link to image in Ticker-Teaser [#663](https://github.com/mumprod/hr-design-system-handlebars/pull/663) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.0 (Wed Jun 28 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Revert changes to tracking [#662](https://github.com/mumprod/hr-design-system-handlebars/pull/662) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.28.8 (Tue Jun 27 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2314 d [#661](https://github.com/mumprod/hr-design-system-handlebars/pull/661) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.28.7 (Tue Jun 27 2023)
+
+#### 🐛 Bug Fix
+
+- Tracking Ticker-Teaser [#660](https://github.com/mumprod/hr-design-system-handlebars/pull/660) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.28.6 (Tue Jun 27 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2314 c [#659](https://github.com/mumprod/hr-design-system-handlebars/pull/659) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.28.5 (Mon Jun 26 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2314 b [#658](https://github.com/mumprod/hr-design-system-handlebars/pull/658) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.28.4 (Mon Jun 26 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes 3 [#657](https://github.com/mumprod/hr-design-system-handlebars/pull/657) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.28.3 (Fri Jun 23 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes 2 [#656](https://github.com/mumprod/hr-design-system-handlebars/pull/656) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.28.2 (Fri Jun 23 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes [#655](https://github.com/mumprod/hr-design-system-handlebars/pull/655) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.28.1 (Thu Jun 22 2023)
+
+#### 🐛 Bug Fix
+
+- added path to @->jsoninclude [#654](https://github.com/mumprod/hr-design-system-handlebars/pull/654) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.28.0 (Thu Jun 22 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2303 logo component [#649](https://github.com/mumprod/hr-design-system-handlebars/pull/649) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.27.2 (Mon Jun 19 2023)
+
+#### 🐛 Bug Fix
+
+- Ticker Teaser [#653](https://github.com/mumprod/hr-design-system-handlebars/pull/653) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.27.1 (Thu Jun 15 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: click action for links navigating to other pages is changed to uxNavigation [#652](https://github.com/mumprod/hr-design-system-handlebars/pull/652) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.27.0 (Thu Jun 15 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: Use new piano sdk to track clicks [#651](https://github.com/mumprod/hr-design-system-handlebars/pull/651) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.26.3 (Wed Jun 14 2023)
 
 #### 🐛 Bug Fix

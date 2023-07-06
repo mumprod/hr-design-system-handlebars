@@ -1,0 +1,37 @@
+{
+    "@->jsoninclude": "teaser/teaser_ticker.inc.json",
+    "@->contentpath": "tickerTeaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+            "@->value": "33"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "ticker-standard"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.isHeroTeaser",
+            "@->value": false
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker"
+            }
+        }
+    ]
+}

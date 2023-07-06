@@ -1,0 +1,25 @@
+{
+    "@->jsoninclude": "teaser/teaser_ticker.inc.json",
+    "@->contentpath": "tickerTeaser",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.teaserType",
+            "@->value": "ticker-standard"
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.shorttext",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.topline",
+            "@->value": ""
+        },
+        {
+            "@->contentpath": "logicItem.includeModel.label",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                "@->contentpath": "ticker"
+            }
+        }
+    ]
+}

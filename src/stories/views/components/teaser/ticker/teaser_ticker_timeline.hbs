@@ -1,29 +1,27 @@
 {{~#with this.tickerItemResults ~}}
-    <ul class="px-10">
+    <ul class="{{#if ../_css}} {{../_css}}{{/if}} {{if ../this.isStandardTeaser ' pl-10 pr-5' ' pl-10 md:pl-5 pr-5 md:pr-0'}}">
         {{~#each this~}}
-            {{#if this.isTopnews}}
-                <li class="relative h-auto pb-5">
-                    <div class="absolute h-full">
-                        <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-orange-spicyCarrot -left-5"></div>
-                        {{#unless @last}}
-                            <div class="relative flex flex-col w-0 h-full -left-4">
-                                <div class="h-full my-2 border-l{{#if ../../_color}} border-{{../../_color}}{{else}} border-gray-400{{/if}}"></div>
-                                <div class="h-2"></div>
-                            </div> 
-                        {{/unless}}           
+            <li class="relative h-auto [&:not(:last-child)]:pb-5">
+                <div class="absolute h-full">
+                    <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-tickerTeaserTimelineScore -left-5"></div>
+                    {{#unless @last}}
+                        <div class="relative flex flex-col w-0 h-full -left-4">
+                            <div class="h-full my-2 border-l{{#if ../../_color}} border-{{../../_color}}{{else}} border-gray-400{{/if}}"></div>
+                            <div class="h-2"></div>
+                        </div> 
+                    {{/unless}}           
+                </div>
+                {{#with this.tickerItemDateTime~}}
+                    <div class="text-xs{{#if ../../../_color}} text-{{../../../_color}}{{/if}}">
+                        {{#if ../../../this.isMultiDay}}
+                            {{this.broadcastDate }}
+                        {{else}}
+                            {{this.time }}
+                        {{/if}}
                     </div>
-                    {{#with this.tickerItemDateTime~}}
-                        <div class="text-xs{{#if ../../../_color}} text-{{../../../_color}}{{/if}}">
-                            {{#if ../../../this.isMultiDay}}
-                                {{this.broadcastDate }}
-                            {{else}}
-                                {{this.time }}
-                            {{/if}}
-                        </div>
-                    {{~/with}}                    
-                    <a class="text-base{{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}">{{this.relevantTitle}}</a>
-                </li>
-            {{/if}}
+                {{~/with}}                    
+                <a class="link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+            </li>
         {{~/each~}}
     </ul>
 {{~/with~}}

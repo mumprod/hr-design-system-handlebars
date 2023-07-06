@@ -121,7 +121,7 @@ function createSvgMapsForBrands() {
                     .pipe(
                         cheerio({
                             run: function ($, file) {
-                                $('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
+                                //$('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
                                 $('[fill]').map(function () {
                                     if (
                                         $(this).attr('fill') !== 'currentColor' &&
@@ -148,6 +148,77 @@ function createSvgMapsForBrands() {
                     .pipe(dest(iconsDir))
             })
         })
+    )
+}
+
+function saveLogoFilesToFolder() {
+    return mergeStream(
+        glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
+            return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
+                    let icon = path.basename(iconsDir)
+                    return src(`${iconsDir}/svgmap/*.svg`)
+                    .pipe(
+                        svgMin({
+                        full: true,
+                        plugins: [
+                            {
+                                name: 'preset-default',
+                                params: {
+                                    overrides: {
+                                        removeViewBox: false,
+                                        cleanupAttrs: false,
+                                        collapseGroups: false,
+                                        cleanupIDs: false,
+                                        convertPathData: {
+                                            straightCurves: false,
+                                        },
+                                        convertTransform: {
+                                            shortScale: false,
+                                            floatPrecision: 2,
+                                        },
+                                    },
+                                },
+                            },
+                        ],
+                    })) 
+                    .pipe(
+                        cheerio({
+                            run: function ($, file) {
+                                $('svg').attr('preserveAspectRatio', 'xMinYMid meet')
+                                /* $('[fill]').map(function () {
+                                    if (
+                                        $(this).attr('fill') !== 'currentColor' &&
+                                        iconFoldersToCleanUp.includes(icon)
+                                    ) {
+                                        $(this).removeAttr('fill')
+                                    }
+                                }) */
+                                $('[preserve--fill]').map(function () {
+                                    let value = $(this).attr('preserve--fill')
+                                    $(this).removeAttr('preserve--fill')
+                                    $(this).attr('fill', value)
+                                })
+                                $('[preserve--style]').map(function () {
+                                    let value = $(this).attr('preserve--style')
+                                    $(this).removeAttr('preserve--style')
+                                    $(this).attr('style', value)
+                                })
+                            },
+                            parserOptions: { xmlMode: true },
+                        })
+                    )
+                    .pipe(
+                        rename( function (path) {
+                            return {
+                                dirname: path.dirname,
+                                basename: path.basename + '.min',
+                                extname: path.extname,
+                            }
+                            })
+                    )                  
+                    .pipe(dest(iconsDir))
+            })    
+        })    
     )
 }
 
@@ -297,7 +368,7 @@ function watchFiles() {
     watch(`${options.paths.assets.views}/**/*.hbs`, convertPartialsToJs)
     watch(
         [`${options.paths.assets.brand}/**/*.svg`, `!${options.paths.assets.brand}/**/*.min.svg`],
-        createSvgMapsForBrands
+        //createSvgMapsForBrands
     )
     watch(
         [
@@ -366,18 +437,20 @@ function mergeLocatags() {
 exports.default = series(
     parallel(
         createSvgMaps,
-        createSvgMapsForBrands,
         minimizeSvgSrcFiles,
         parseJson,
         convertPartialsToJs,
         mergeLocatags,
-        series(createModernizr, addCustomModernizrTests)
+        series(createModernizr, addCustomModernizrTests),
+        saveLogoFilesToFolder,
+        createSvgMapsForBrands
     ),
     watchFiles
 )
-exports.optimizeSvgs = parallel(createSvgMaps, createSvgMapsForBrands, minimizeSvgSrcFiles)
+exports.optimizeSvgs = parallel(createSvgMaps, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
 exports.preparePartialsForDelivery = preparePartialsForDelivery
+exports.saveLogoFilesToFolder = saveLogoFilesToFolder

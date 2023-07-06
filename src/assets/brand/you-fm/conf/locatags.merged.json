@@ -95,5 +95,7 @@
 	"search_input_placeholder": "Ort oder Thema suchen",
 	"ticket_modal_headline": "Weiterleitung zu einem Ticketservice",
 	"ticket_modal_text": "Der Link öffnet eine Internetseite außerhalb unseres Angebots. Wir sind für den Inhalt externer Internetseiten nicht verantwortlich.",
-	"header_homepage_link_title": "Startseite you-fm . d e"
+	"ticker_more": "Zum Ticker",
+	"header_homepage_link_title": "Startseite you-fm . d e",
+	"meta_application_name": "you-fm.de"
 }
