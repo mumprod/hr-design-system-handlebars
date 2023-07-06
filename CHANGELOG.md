@@ -1,3 +1,15 @@
+# v1.30.0 (Thu Jul 06 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2306 new service icons [#672](https://github.com/mumprod/hr-design-system-handlebars/pull/672) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.29.8 (Thu Jul 06 2023)
 
 #### 🐛 Bug Fix
