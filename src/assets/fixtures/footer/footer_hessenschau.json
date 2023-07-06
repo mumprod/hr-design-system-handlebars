@@ -174,7 +174,7 @@
         "columns": [{
             "links": [{
                 "link": {
-                    "text": "twitter",
+                    "text": "twitter-ds",
                     "url": "https://twitter.com/hessenschau",
                     "extern": true,
                     "isTargetBlank": true,
@@ -198,7 +198,7 @@
                 }
             }, {
                 "link": {
-                    "text": "youtube",
+                    "text": "youtube-ds",
                     "url": "https://www.youtube.com/c/hessenschau",
                     "extern": true,
                     "isTargetBlank": true,
@@ -208,7 +208,7 @@
         }, {
             "links": [{
                 "link": {
-                    "text": "mail-ds",
+                    "text": "mail",
                     "url": "kontakt/index.html",
                     "title": "Zum Kontaktformular"
                 }
