@@ -2,9 +2,22 @@
     {
         "navigationItems": [
             {
-                "id": "news",
-                "text": "Nachrichten",
-                "icon": "nachrichten-ds",
+                "id": "highlights",
+                "text": "Highlights",
+                "icon": "highlights-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "kontakt",
+                "text": "Kontakt",
+                "icon": "kontakt-ds",
                 "selected": false,
                 "isCluster": false,
                 "url": "https://www.hr3.de"
