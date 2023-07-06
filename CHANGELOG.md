@@ -1,3 +1,15 @@
+# v1.29.8 (Thu Jul 06 2023)
+
+#### 🐛 Bug Fix
+
+- aspect ratio 1:1 for figure in ticker-alternative-teaser [#671](https://github.com/mumprod/hr-design-system-handlebars/pull/671) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.29.7 (Wed Jul 05 2023)
 
 #### 🐛 Bug Fix
