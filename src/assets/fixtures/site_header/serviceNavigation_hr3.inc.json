@@ -2,34 +2,8 @@
     {
         "navigationItems": [
             {
-                "id": "video",
-                "text": "Video und Podcast ",
-                "icon": "video-ds",
-                "selected": false,
-                "isCluster": false,
-                "url": "https://www.hr3.de"
-                
-            }
-        ]
-    },
-    {
-        "navigationItems": [
-            {
-                "id": "facebook",
-                "text": "facebook",
-                "icon": "facebook-ds",
-                "selected": false,
-                "isCluster": false,
-                "url": "https://www.hr3.de"
-                
-            }
-        ]
-    },
-    {
-        "navigationItems": [
-            {
                 "id": "highlights",
-                "text": "highlights",
+                "text": "Highlights",
                 "icon": "highlights-ds",
                 "selected": false,
                 "isCluster": false,
@@ -41,22 +15,8 @@
     {
         "navigationItems": [
             {
-                "id": "instagram",
-                "text": "instagram",
-                "icon": "instagram-ds",
-                "selected": false,
-                "isCluster": false,
-                "url": "https://www.hr3.de"
-                
-            }
-        ]
-    },
-
-    {
-        "navigationItems": [
-            {
                 "id": "kontakt",
-                "text": "kontakt",
+                "text": "Kontakt",
                 "icon": "kontakt-ds",
                 "selected": false,
                 "isCluster": false,
@@ -68,65 +28,65 @@
     {
         "navigationItems": [
             {
-                "id": "traffic",
-                "text": "Verkehr",
-                "icon": "verkehr-ds",
-                "flyoutStartLinkText": "Übersicht Verkehr",
-                "url": "https://www.traffic.de",
-                "subNavigation": {
-                    "showAsFlyout": true,
-                    "columnCount": "1",
-                    "items": false,
-                    "columns": [
-                        [
-                            {
-                                "title": "Verkehrskameras",
-                                "text": "Verkehrskameras",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Blitzer",
-                                "text": "Blitzer",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Schulausfälle",
-                                "text": "Schulausfälle",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Flugpläne Frankfurt / Parkhausbelegung",
-                                "text": "Flugpläne Frankfurt / Parkhausbelegung",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            },
-                            {
-                                "title": "Werden Sie hr-Staureporter!",
-                                "text": "Werden Sie hr-Staureporter!",
-                                "link": {
-                                    "url": "http://www.test.de",
-                                    "hasIcon": false,
-                                    "iconName": "extern"
-                                }
-                            }
-                        ]
-                    ]
-                }
+                "id": "facebook",
+                "text": "Facebook",
+                "icon": "facebook-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "instagram-ds",
+                "text": "Instagram",
+                "icon": "instagram-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "playlist",
+                "text": "Playlist",
+                "icon": "playlist-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "whatsapp-ds",
+                "text": "Whatsapp",
+                "icon": "whatsapp-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
+            }
+        ]
+    },
+    {
+        "navigationItems": [
+            {
+                "id": "podcast-ds",
+                "text": "Podcast",
+                "icon": "podcast-ds",
+                "selected": false,
+                "isCluster": false,
+                "url": "https://www.hr3.de"
+                
             }
         ]
     }
