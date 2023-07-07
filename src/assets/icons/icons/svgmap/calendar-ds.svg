@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="79" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="79" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="124.5" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="124.5" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="170" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="170" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="216" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="216" y="209" width="26" height="26" rx="8" ry="8"/>
+  <path class="cls-1" d="m83,76c6.08,0,11-4.92,11-11v-22c0-6.08-4.92-11-11-11s-11,4.92-11,11v22c0,6.08,4.92,11,11,11Z"/>
+  <path class="cls-1" d="m237,76c6.08,0,11-4.92,11-11v-22c0-6.08-4.92-11-11-11s-11,4.92-11,11v22c0,6.08,4.92,11,11,11Z"/>
+  <path class="cls-1" d="m270,54h-11v11c0,12.13-9.87,22-22,22s-22-9.87-22-22v-11h-110v11c0,12.13-9.87,22-22,22s-22-9.87-22-22v-11h-11c-12.13,0-22,9.87-22,22v198c0,12.13,9.87,22,22,22h220c12.13,0,22-9.87,22-22V76c0-12.13-9.87-22-22-22Zm2,66v150c0,3.31-2.69,6-6,6H54c-3.31,0-6-2.69-6-6V120h224Z"/>
+</svg>
