@@ -1,4 +1,4 @@
-<div class="flex w-full md:w-1/2 md:w-max-1/2 md:pr-4 --first">
+<div class="flex w-full md:w-1/2 md:w-max-1/2 md:first:pr-4 --first ">
     {{~> components/footer/page_footer_column _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize _title=this.groups.[0].title ~}} 
 </div>
 
@@ -22,15 +22,3 @@
     </div>
 </div>
 
-<div class="flex flex-col w-full pt-8 text-left md:items-end md:justify-between md:pt-16 md:pl-4 md:flex-row lg:pl-0">
-    {{> components/footer/page_footer_metadata 
-        _hrDeLink=this.footerMetadata.hrDeLink
-        _ardDeLink=this.footerMetadata.ardDeLink
-        _dataProtectionLink=this.footerMetadata.dataProtectionLink
-        _imprintLink=this.footerMetadata.imprintLink
-        _iconName="extern"
-    }}
-    <div class="flex justify-center w-auto px-4 lg:pr-0 md:h-12">
-        {{> components/footer/page_footer_logo }}
-    </div>
-</div>

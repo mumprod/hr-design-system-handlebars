@@ -1,4 +1,4 @@
-<div class="flex flex-col self-center md:self-end w-fit md:flex-row">
+<div class="flex flex-col self-center text-sm md:self-end w-fit md:flex-row">
     <div class="flex justify-center w-auto md:justify-start">
         {{#> components/base/link _link=_hrDeLink _css="flex whitespace-nowrap hover:underline"}}
             &copy; {{{_hrDeLink.text}}} {{{_hrDeLink.currentTime.year}}}
@@ -9,7 +9,7 @@
                 {{~/if~}}
                 {{~#if _hrDeLink.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-white"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
@@ -31,7 +31,7 @@
                 {{~/if~}}
                 {{~#if _ardDeLink.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-white"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
@@ -53,7 +53,7 @@
                 {{~/if~}}
                 {{~#if _dataProtectionLink.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-white"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
@@ -75,7 +75,7 @@
                 {{~/if~}}
                 {{~#if _imprintLink.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-5 fill-white"}}
+                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-white"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
