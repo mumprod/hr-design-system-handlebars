@@ -3,10 +3,10 @@
     {{#each _columns}}
         <ul class="flex flex-row justify-end pb-2 pr-2 md:pr-0 md:last:pb-4">
             {{#each this.links}}
-                {{#if this.link.extern}}
+                {{#if this.extern}}
                     <li class="pr-2 last:pr-0">
-                        {{#> components/base/link _link=this.link _css="text-white" _isTargetBlank=this.isTargetBlank}}
-                            {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                        {{#> components/base/link _link=this _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                            {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                         {{/components/base/link}}
                         {{#*inline "htmlProperties"}}
                             title="{{this.title}}"
@@ -15,8 +15,8 @@
                     </li>
                 {{else}}
                     <li class="pr-2 last:pr-0">
-                        {{#> components/base/link _link=this.link _css="text-white" _isTargetBlank=this.isTargetBlank}}
-                            {{> components/base/image/icon _icon=this.link.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
+                        {{#> components/base/link _link=this _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                            {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                         {{/components/base/link}}
                         {{#*inline "htmlProperties"}}
                             title="{{this.title}}"

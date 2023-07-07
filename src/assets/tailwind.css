@@ -39,6 +39,8 @@
     /* Footer Logo Invert */
     --invert-logo-footer: 0;
 
+    --color-footer-bg: theme('colors.blue.congress');
+
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -129,6 +131,9 @@
     --logo-padding-bottom-md: 6px;    
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
+
+    --color-footer-bg: #606060;
+
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
