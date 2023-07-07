@@ -208,7 +208,7 @@
         }, {
             "links": [{
                 "link": {
-                    "text": "mail",
+                    "text": "kontakt-ds",
                     "url": "kontakt/index.html",
                     "title": "Zum Kontaktformular"
                 }
@@ -220,13 +220,13 @@
                 }
             }, {
                 "link": {
-                    "text": "push",
+                    "text": "push-ds",
                     "url": "push/index.html",
                     "title": "Push-Benachrichtigung in der App"
                 }
             }, {
                 "link": {
-                    "text": "rss",
+                    "text": "rss-ds",
                     "url": "rss/index.html",
                     "title": "hessenschau.de RSS-Feed"
                 }
