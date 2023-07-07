@@ -142,7 +142,8 @@
                     "text": "Korrekturen",
                     "url": "unternehmen/korrekturen/index.html",
                     "site": "hr",
-                    "isTargetBlank": true
+                    "isTargetBlank": true,
+                    "extern": true
                 }
             }, {
                 "link": {
