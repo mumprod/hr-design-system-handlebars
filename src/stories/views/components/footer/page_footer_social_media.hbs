@@ -5,7 +5,7 @@
             {{#each this.links}}
                 {{#if this.extern}}
                     <li class="pr-2 last:pr-0">
-                        {{#> components/base/link _link=this _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                        {{#> components/base/link _link=this _css="text-footer-text" _isTargetBlank=this.isTargetBlank}}
                             {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                         {{/components/base/link}}
                         {{#*inline "htmlProperties"}}
@@ -15,7 +15,7 @@
                     </li>
                 {{else}}
                     <li class="pr-2 last:pr-0">
-                        {{#> components/base/link _link=this _css="text-white" _isTargetBlank=this.isTargetBlank}}
+                        {{#> components/base/link _link=this _css="text-footer-text" _isTargetBlank=this.isTargetBlank}}
                             {{> components/base/image/icon _icon=this.text _iconmap="icons" _addClass="w-8 h-8 fill-current"}}
                         {{/components/base/link}}
                         {{#*inline "htmlProperties"}}

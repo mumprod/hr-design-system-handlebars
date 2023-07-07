@@ -1,14 +1,14 @@
 {{#if this.extern}}
-    <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-secondary md:border-0 text-primary md:text-white md:h-6">
+    <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-secondary md:border-0 md:h-6">
         {{> components/footer/page_footer_nav_link  _css="flex hover:underline" _link=this _iconName="extern" }}
     </li>
 {{else}}
     {{#if this.paragraphed}}
-        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap md:bg-transparent lg:pl-0 border-b-secondary md:mt-6 md:border-0 text-primary md:text-white md:h-6">
+        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap md:bg-transparent lg:pl-0 border-b-secondary md:mt-6 md:border-0 md:h-6">
             {{> components/footer/page_footer_nav_link _site=this.site _css="hover:underline" _link=this}}
         </li>
     {{else}}
-        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-secondary md:border-0 text-primary md:text-white md:h-6 ">
+        <li class="flex items-center w-full h-8 pl-4 bg-white border-b whitespace-nowrap lg:pl-0 md:bg-transparent border-b-secondary md:border-0 md:h-6 ">
             {{> components/footer/page_footer_nav_link _link=this _site=this.site _css="flex hover:underline" }}
         </li>
     {{/if}}

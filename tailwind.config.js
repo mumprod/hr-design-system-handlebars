@@ -340,7 +340,11 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
+
                 'footer-bg': 'var(--color-footer-bg)',
+                'footer-text': 'var(--color-footer-text)',
+                'footer-heading': 'var(--color-footer-heading)',
+                'footer-border': 'var(--color-footer-border)',
 
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',

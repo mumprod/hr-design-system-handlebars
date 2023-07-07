@@ -4,12 +4,12 @@
             <img src="{{resourceUrl (replaceTokens 'assets/base/icons/logo/{0}.min.svg' (configProperty "iconConfig.brandlogo.footer") ) _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
                 class="flex w-auto h-12 md:hidden invert-logo-footer">  
             <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--desk.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
-                class="hidden w-auto h-12 md:mt-2 lg:mt-1 md:flex invert-logo-footer">    
+                class="hidden w-auto h-12 fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text">    
         {{else}}
             <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--mobile.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}"
                 class="flex w-auto h-12 mx-auto md:hidden invert-logo-footer">
             <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--desk.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
-                class="hidden w-auto h-12 md:mt-2 lg:mt-1 md:flex invert-logo-footer">  
+                class="hidden w-auto h-12 fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text">  
         {{/if}}
     </a>
 </div>
