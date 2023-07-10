@@ -1,21 +1,21 @@
 <div class="flex flex-col self-center text-sm md:self-end w-fit md:flex-row">
     <div class="flex justify-center w-auto md:justify-start">
         {{#> components/base/link _link=_hrDeLink _css="flex whitespace-nowrap hover:underline"}}
-            &copy; {{{_hrDeLink.text}}} {{{_hrDeLink.currentTime.year}}}
-                {{~#if _hrDeLink.hiddenText~}}
+            &copy; {{{_hrDeLink-adjust_context.text}}} {{{_hrDeLink-adjust_context.currentTime.year}}}
+                {{~#if _hrDeLink-adjust_context.hiddenText~}}
                     <span class="sr-only">
-                        {{~_hrDeLink.hiddenText~}}
+                        {{~_hrDeLink-adjust_context.hiddenText~}}
                     </span>
                 {{~/if~}}
-                {{~#if _hrDeLink.isTargetBlank}}
+                {{~#if _hrDeLink-adjust_context.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
         {{#*inline "htmlProperties"}}
-            {{#if _hrDeLink.labelText}} aria-label="{{_hrDeLink.labelText}}"{{/if}}
-            {{#if _hrDeLink.title}} title="{{_hrDeLink.title}}"{{/if}}
+            {{#if _hrDeLink-adjust_context.labelText}} aria-label="{{_hrDeLink-adjust_context.labelText}}"{{/if}}
+            {{#if _hrDeLink-adjust_contexttitle}} title="{{_hrDeLink-adjust_context.title}}"{{/if}}
         {{/inline}}
     </div>
 
@@ -23,21 +23,21 @@
 
     <div class="flex justify-center w-auto md:justify-start">
         {{#> components/base/link _link=_ardDeLink _css="flex whitespace-nowrap hover:underline"}}
-            {{{_ardDeLink.text}}}
-                {{~#if _ardDeLink.hiddenText~}}
+            {{{_ardDeLink-adjust_context.text}}}
+                {{~#if _ardDeLink-adjust_context.hiddenText~}}
                     <span class="sr-only">
-                        {{~_ardDeLink.hiddenText~}}
+                        {{~_ardDeLink-adjust_context.hiddenText~}}
                     </span>
                 {{~/if~}}
-                {{~#if _ardDeLink.isTargetBlank}}
+                {{~#if _ardDeLink-adjust_context.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
         {{#*inline "htmlProperties"}}
-            {{#if _ardDeLink.labelText}} aria-label="{{_ardDeLink.labelText}}"{{/if}}
-            {{#if _ardDeLink.title}} title="{{_ardDeLink.title}}"{{/if}}
+            {{#if _ardDeLink-adjust_context.labelText}} aria-label="{{_ardDeLink-adjust_context.labelText}}"{{/if}}
+            {{#if _ardDeLink-adjust_context.title}} title="{{_ardDeLink-adjust_context.title}}"{{/if}}
         {{/inline}}
     </div>
 
@@ -45,21 +45,21 @@
 
     <div class="flex justify-center w-auto md:justify-start">
          {{#> components/base/link _link=_dataProtectionLink _css="flex whitespace-nowrap hover:underline"}}
-            {{{_dataProtectionLink.text}}}
-                {{~#if _dataProtectionLink.hiddenText~}}
+            {{{_dataProtectionLink-adjust_context.text}}}
+                {{~#if _dataProtectionLink-adjust_context.hiddenText~}}
                     <span class="sr-only">
-                        {{~_dataProtectionLink.hiddenText~}}
+                        {{~_dataProtectionLink-adjust_context.hiddenText~}}
                     </span>
                 {{~/if~}}
-                {{~#if _dataProtectionLink.isTargetBlank}}
+                {{~#if _dataProtectionLink-adjust_context.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
         {{#*inline "htmlProperties"}}
-            {{#if _dataProtectionLink.labelText}} aria-label="{{_dataProtectionLink.labelText}}"{{/if}}
-            {{#if _dataProtectionLink.title}} title="{{_dataProtectionLink.title}}"{{/if}}
+            {{#if _dataProtectionLink-adjust_context.labelText}} aria-label="{{_dataProtectionLink-adjust_context.labelText}}"{{/if}}
+            {{#if _dataProtectionLink-adjust_context.title}} title="{{_dataProtectionLink-adjust_context.title}}"{{/if}}
         {{/inline}}
     </div>
 
@@ -67,21 +67,21 @@
 
     <div class="flex justify-center w-auto md:justify-start">
          {{#> components/base/link _link=_imprintLink _css="flex whitespace-nowrap hover:underline"}}
-            {{{_imprintLink.text}}}
-                {{~#if _imprintLink.hiddenText~}}
+            {{{_imprintLink-adjust_context.text}}}
+                {{~#if _imprintLink-adjust_context.hiddenText~}}
                     <span class="sr-only">
-                        {{~_imprintLink.hiddenText~}}
+                        {{~_imprintLink-adjust_context.hiddenText~}}
                     </span>
                 {{~/if~}}
-                {{~#if _imprintLink.isTargetBlank}}
+                {{~#if _imprintLink-adjust_context.isTargetBlank}}
                     <span class="inline-flex">
-                        {{> components/base/image/icon _icon=_iconName _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
                     </span>
                 {{/if~}}
         {{/components/base/link}}
         {{#*inline "htmlProperties"}}
-            {{#if _imprintLink.labelText}} aria-label="{{_imprintLink.labelText}}"{{/if}}
-            {{#if _imprintLink.title}} title="{{_imprintLink.title}}"{{/if}}
+            {{#if _imprintLink-adjust_context.labelText}} aria-label="{{_imprintLink-adjust_context.labelText}}"{{/if}}
+            {{#if _imprintLink-adjust_context.title}} title="{{_imprintLink-adjust_context.title}}"{{/if}}
         {{/inline}}
     </div>
 </div>
