@@ -23,7 +23,7 @@
         {{else}}
 
             {{#if this.extern}}
-                <a href="{{this.url}}" target="_blank" x-init="dropped = false" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:rounded-t link-focus-inset-white js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{this.url}}" target="_blank" x-init="dropped = false" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset-white js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{else}}
                 <a href="{{resourceUrl this.url}}" x-init="dropped = false" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset-white js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": "1", "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{/if}}

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="320px" height="320px" viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Kalender@1x</title>
-    <g id="Kalender" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(79, 163)" fill="#000000">
-            <rect id="Rectangle-Copy-8" x="0" y="0" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-12" x="0" y="46" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-9" x="45.5" y="0" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-13" x="45.5" y="46" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-10" x="91" y="0" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-14" x="91" y="46" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-11" x="137" y="0" width="26" height="26" rx="8"></rect>
-            <rect id="Rectangle-Copy-15" x="137" y="46" width="26" height="26" rx="8"></rect>
-        </g>
-        <g id="kalender" transform="translate(36, 32)" fill="#000000">
-            <rect id="Rectangle" x="36" y="0" width="22" height="44" rx="11"></rect>
-            <rect id="Rectangle-Copy" x="190" y="0" width="22" height="44" rx="11"></rect>
-            <path d="M171,30 L171,33 C171,49.5685425 184.431458,63 201,63 C217.568542,63 231,49.5685425 231,33 L231,30 L234,30 C241.731986,30 248,36.2680135 248,44 L248,242 C248,249.731986 241.731986,256 234,256 L14,256 C6.2680135,256 9.46895252e-16,249.731986 0,242 L0,44 C-9.46895252e-16,36.2680135 6.2680135,30 14,30 L17,30 L17,33 C17,49.5685425 30.4314575,63 47,63 C63.5685425,63 77,49.5685425 77,33 L77,30 L171,30 Z M4,80 L244,80 L244,238 C244,245.731986 237.731986,252 230,252 L18,252 C10.2680135,252 4,245.731986 4,238 L4,80 L4,80 Z" id="Combined-Shape" stroke="#000000" stroke-width="16"></path>
-        </g>
-    </g>
+<svg id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="79" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="79" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="124.5" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="124.5" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="170" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="170" y="209" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="216" y="163" width="26" height="26" rx="8" ry="8"/>
+  <rect class="cls-1" x="216" y="209" width="26" height="26" rx="8" ry="8"/>
+  <path class="cls-1" d="m83,76c6.08,0,11-4.92,11-11v-22c0-6.08-4.92-11-11-11s-11,4.92-11,11v22c0,6.08,4.92,11,11,11Z"/>
+  <path class="cls-1" d="m237,76c6.08,0,11-4.92,11-11v-22c0-6.08-4.92-11-11-11s-11,4.92-11,11v22c0,6.08,4.92,11,11,11Z"/>
+  <path class="cls-1" d="m270,54h-11v11c0,12.13-9.87,22-22,22s-22-9.87-22-22v-11h-110v11c0,12.13-9.87,22-22,22s-22-9.87-22-22v-11h-11c-12.13,0-22,9.87-22,22v198c0,12.13,9.87,22,22,22h220c12.13,0,22-9.87,22-22V76c0-12.13-9.87-22-22-22Zm2,66v150c0,3.31-2.69,6-6,6H54c-3.31,0-6-2.69-6-6V120h224Z"/>
 </svg>
