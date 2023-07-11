@@ -2,7 +2,7 @@
     <li x-data="dropdown"
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
-        :class="dropped ? 'border-b-0 lg:bg-white lg:text-navigation-text h-auto' : 'h-10 lg:hover:underline'" 
+        :class="dropped ? 'border-b-0 lg:bg-white lg:text-primary h-auto' : 'h-10 lg:hover:underline'" 
         class="flex flex-wrap justify-start order-2 w-full list-none border-b border-navigation-border-color text-navigation-text sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:last:pr-8 lg:first:pl-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-navigation-bg lg:rounded-t">  
         
         {{#if this.isCluster ~}}
