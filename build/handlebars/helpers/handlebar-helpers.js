@@ -431,6 +431,10 @@ var helpers = {
                             ? 'brandlogo--mobile'
                             : brand == 'hessenschau'
                             ? undefined
+                            : brand == 'hr2'
+                            ? 'brandlogo--footer'
+                            : brand == 'hr-inforadio'
+                            ? 'brandlogo--footer'
                             : 'brandlogo--mobile'
                     break
             }
