@@ -1,3 +1,15 @@
+# v1.30.3 (Wed Jul 12 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes on logo padding [#676](https://github.com/mumprod/hr-design-system-handlebars/pull/676) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.30.2 (Tue Jul 11 2023)
 
 #### 🐛 Bug Fix
