@@ -124,8 +124,8 @@
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
     --logo-padding-bottom-md: 6px;    
-    --logo-padding-top-lg: 12px;
-    --logo-padding-bottom-lg: 4px;
+    --logo-padding-top-lg: 8px;
+    --logo-padding-bottom-lg: 8px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
