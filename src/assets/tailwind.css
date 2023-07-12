@@ -353,13 +353,15 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
-    /* Logo Top/Bottom-Padding */
-    --logo-padding-top:12px;
-    --logo-padding-bottom: 12px;
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 8px;
+    --logo-padding-bottom: 8px;
+    --logo-padding-top-md: 8px;
+    --logo-padding-bottom-md: 8px;    
+    --logo-padding-top-lg: 12px;
+    --logo-padding-bottom-lg: 12px;
     --color-footer-bg: #606060; 
     --color-footer-border: ##276b9e;
-
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -490,9 +492,13 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
-    /* Logo padding */
-    --logo-padding-top:2px;
-    --logo-padding-bottom: 2px;
+    /* Logo-Container Padding */
+    --logo-padding-top: 4px;
+    --logo-padding-bottom: 6px;
+    --logo-padding-top-md: 4px;
+    --logo-padding-bottom-md: 4px;    
+    --logo-padding-top-lg: 6px;
+    --logo-padding-bottom-lg: 6px;
 
     --color-footer-bg: #575756; 
     --color-footer-border: #8d2725; 
@@ -559,12 +565,19 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
-    /* Logo padding */
-    --logo-padding-top:2px;
-    --logo-padding-bottom: 2px;    
+    
+    /* Logo-Container Padding */
+    --logo-padding-top: 8px;
+    --logo-padding-bottom: 8px;
+    --logo-padding-top-md: 4px;
+    --logo-padding-bottom-md: 4px;    
 
     --color-footer-bg: #575756; 
     --color-footer-border: #c1bc2b;
+    --logo-padding-top-lg: 4px;
+    --logo-padding-bottom-lg: 4px;
+
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
     /* Ticker, Live, Livestream */
@@ -924,9 +937,14 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
-    /* Logo padding */
-    --logo-padding-top:4px;
+    /* Logo-Container Padding */
+    --logo-padding-top: 4px;
     --logo-padding-bottom: 4px;
+    --logo-padding-top-md: 6px;
+    --logo-padding-bottom-md: 6px;    
+    --logo-padding-top-lg: 8px;
+    --logo-padding-bottom-lg: 8px;
+
 
     --color-footer-bg: #407596; 
     --color-footer-border: #168378;
