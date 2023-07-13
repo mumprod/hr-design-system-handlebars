@@ -230,13 +230,6 @@ export default function playaudio() {
             _audioElement.ontimeupdate = (event) => {
                 this.updateCurrentTime(_range, _timeDisplay, _audioElement.currentTime, id)
             }
-
-            _audioElement.onplay = (event) => {
-                console.log(`Play at ${_audioElement.currentTime * 1000}`)
-            }
-            _audioElement.onwaiting = (event) => {
-                console.log(`Waiting at ${_audioElement.currentTime * 1000}`)
-            }
         },
 
         fancyTimeFormat(duration, measure) {
