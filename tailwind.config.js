@@ -38,12 +38,15 @@ module.exports = {
         },
 
         extend: {
-            backgroundImage: {},
+            backgroundImage: {
+                'logo-footer' : 'var(--bg-logo-footer)'
+            },
             invert: {
                 'logo-footer' : 'var(--invert-logo-footer)',
             },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
+                'logo-footer' : 'var(--rounded-logo-footer)',
             },
             fontSize: {
                 'xs': ['0.75rem', '1.063rem'],
@@ -135,6 +138,9 @@ module.exports = {
                 '92': '23rem',
                 'half-screen': '50vw',
                 '15/12': '120%',
+                'footer-logo': 'var(--width-footer-logo)',
+                'footer-logo-md': 'var(--width-footer-logo-md)',
+                'footer-logo-lg': 'var(--width-footer-logo-lg)',
             },
             height: {
                 '22': '5.5rem',
@@ -146,6 +152,9 @@ module.exports = {
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.5625rem',
                 'header-sm': '7.5625rem',
+                'footer-logo':'var(--height-footer-logo)',
+                'footer-logo-md': 'var(--height-footer-logo-md)',
+                'footer-logo-lg': 'var(--height-footer-logo-lg)',
             },
             maxHeight: {
                 stage: '34.3125rem',

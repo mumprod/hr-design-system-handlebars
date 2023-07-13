@@ -113,7 +113,7 @@ function createSvgMapsForBrands() {
                                         },
                                     },
                                 },
-                                'convertStyleToAttrs',
+                                 'convertStyleToAttrs',  
                             ],
                         })
                     )
@@ -121,15 +121,15 @@ function createSvgMapsForBrands() {
                     .pipe(
                         cheerio({
                             run: function ($, file) {
-                                //$('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
-                                $('[fill]').map(function () {
+                                $('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
+                                /* $('[fill]').map(function () {
                                     if (
                                         $(this).attr('fill') !== 'currentColor' &&
                                         iconFoldersToCleanUp.includes(icon)
                                     ) {
                                         $(this).removeAttr('fill')
                                     }
-                                })
+                                }) */
                                 $('[preserve--fill]').map(function () {
                                     let value = $(this).attr('preserve--fill')
                                     $(this).removeAttr('preserve--fill')

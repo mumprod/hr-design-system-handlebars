@@ -424,18 +424,19 @@ var helpers = {
                 case 'iconConfig.brandlogo.footer':
                     configProperty =
                         brand == 'you-fm'
-                            ? 'brandlogo--tiny'
-                            : brand == 'hr-bigband'
+                            ? 'brandlogo--footer'
+                            /* : brand == 'hr-bigband'
                             ? 'brandlogo--mobile'
                             : brand == 'hr-sinfonieorchester'
                             ? 'brandlogo--mobile'
                             : brand == 'hessenschau'
                             ? undefined
+                            
+                            : brand == 'hr-inforadio'
+                            ? 'brandlogo--footer' */
                             : brand == 'hr2'
                             ? 'brandlogo--footer'
-                            : brand == 'hr-inforadio'
-                            ? 'brandlogo--footer'
-                            : 'brandlogo--mobile'
+                            : undefined
                     break
             }
         } else {

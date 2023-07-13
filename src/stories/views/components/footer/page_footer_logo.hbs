@@ -1,15 +1,9 @@
-<div class="flex justify-center w-full pt-4 md:w-40 md:pt-0 md:h-12 md:justify-end">
+<div class="self-end inline-block float-right mt-8 w-fit md:mt-0">
     <a href="{{resourceUrl "index.html"}}" title="{{loca "header_homepage_link_title"}}">
         {{#if (configProperty "iconConfig.brandlogo.footer")}}
-            <img src="{{resourceUrl (replaceTokens 'assets/base/icons/logo/{0}.min.svg' (configProperty "iconConfig.brandlogo.footer") ) _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
-                class="flex w-auto h-12 md:hidden invert-logo-footer">  
-            <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--desk.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
-                class="hidden w-auto h-12 fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text">    
+            {{> components/base/image/icon _icon=(configProperty "iconConfig.brandlogo.footer") _iconmap="logo" _addClass="inline-block w-footer-logo md:w-footer-logo-md lg:w-footer-logo-lg h-footer-logo md:h-footer-logo-md lg:h-footer-logo-lg flex self-end invert-logo-footer"}}
         {{else}}
-            <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--mobile.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}"
-                class="flex w-auto h-12 mx-auto md:hidden invert-logo-footer">
-            <img src="{{resourceUrl 'assets/base/icons/logo/brandlogo--desk.min.svg' _brand=(defaultIfEmpty this.brand "hessenschau") }}" 
-                class="hidden w-auto h-12 fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text">  
+            {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="inline-block bg-logo-footer rounded-logo-footer w-footer-logo md:w-footer-logo-md lg:w-footer-logo-lg h-footer-logo md:h-footer-logo-md lg:h-footer-logo-lg fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text"}}
         {{/if}}
     </a>
 </div>

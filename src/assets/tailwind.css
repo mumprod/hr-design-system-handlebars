@@ -43,6 +43,16 @@
     --color-footer-border: red;
     --color-footer-bg: theme('colors.blue.congress');
 
+    --width-footer-logo: 135px;
+    --height-footer-logo: 75px;
+
+    --width-footer-logo-md: 6.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 6.4375rem;
+    --height-footer-logo-lg: 2.6875rem; 
+    
+
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -136,8 +146,16 @@
     --logo-padding-bottom-lg: 8px;
 
     --color-footer-bg: #606060;
-    
     --color-footer-border: #accfe9;
+
+    --width-footer-logo: 135px;
+    --height-footer-logo: 75px;
+
+    --width-footer-logo-md: 6.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 9.375rem;
+    --height-footer-logo-lg: 2rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -503,6 +521,15 @@
     --color-footer-bg: #575756; 
     --color-footer-border: #8d2725; 
 
+    --width-footer-logo: 7.4375rem;
+    --height-footer-logo: 2.5rem;
+
+    --width-footer-logo-md: 7.4375rem;
+    --height-footer-logo-md: 2.5rem; 
+
+    --width-footer-logo-lg: 7.4375rem;
+    --height-footer-logo-lg: 2.5rem; 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
@@ -571,12 +598,18 @@
     --logo-padding-bottom: 8px;
     --logo-padding-top-md: 4px;
     --logo-padding-bottom-md: 4px;    
-
-    --color-footer-bg: #575756; 
-    --color-footer-border: #c1bc2b;
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
+    --color-footer-bg: #575756; 
+    --color-footer-border: #c1bc2b;
+
+    --width-footer-logo: 7.4375rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 5.4375rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 5.4375rem;
+    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -643,6 +676,15 @@
 
     --color-footer-bg: theme('colors.blue.deepCerulean');
     --color-footer-border: #a2bc09;
+
+    --width-footer-logo: 3.4375rem;
+    --height-footer-logo: 2.6875rem; 
+
+    --width-footer-logo-md: 3.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 3.4375rem;
+    --height-footer-logo-lg: 2.6875rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -714,6 +756,15 @@
 
     --color-footer-bg: #433d37 ; 
     --color-footer-border: theme('colors.yellow.corn');
+
+    --width-footer-logo: 3.4375rem;
+    --height-footer-logo: 2.6875rem; 
+
+    --width-footer-logo-md: 3.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 3.4375rem;
+    --height-footer-logo-lg: 2.6875rem;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
@@ -790,6 +841,13 @@
 
     --color-footer-bg: #74747f; 
     --color-footer-border: theme('colors.orange.clementine');
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
@@ -870,6 +928,16 @@
 
     --color-footer-bg: #9b0112 ;
     --color-footer-border: #007179;
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
@@ -945,9 +1013,18 @@
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
+    --bg-logo-footer: linear-gradient(to right top, #9b0058, #d6007f);;
+    --rounded-logo-footer: 7px 0px 7px 0px; 
 
     --color-footer-bg: #407596; 
     --color-footer-border: #168378;
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
@@ -1026,7 +1103,7 @@
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Footer Logo Invert */
-    --invert-logo-footer: 1;
+    --invert-logo-footer: 0;
 
     --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
