@@ -1,3 +1,15 @@
+# v1.31.1 (Thu Jul 13 2023)
+
+#### 🐛 Bug Fix
+
+- use new pianoHelper [#678](https://github.com/mumprod/hr-design-system-handlebars/pull/678) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.31.0 (Thu Jul 13 2023)
 
 #### 🚀 Enhancement
