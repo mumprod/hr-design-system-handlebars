@@ -1,3 +1,15 @@
+# v1.31.2 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 2396 [#679](https://github.com/mumprod/hr-design-system-handlebars/pull/679) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.31.1 (Thu Jul 13 2023)
 
 #### 🐛 Bug Fix
