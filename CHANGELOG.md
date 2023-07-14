@@ -1,3 +1,15 @@
+# v1.31.5 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- - restored old logos for footer (hr1, hr3, hr4 you-fm) [#682](https://github.com/mumprod/hr-design-system-handlebars/pull/682) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.31.4 (Fri Jul 14 2023)
 
 #### 🐛 Bug Fix
