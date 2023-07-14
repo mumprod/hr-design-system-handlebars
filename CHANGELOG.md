@@ -1,3 +1,15 @@
+# v1.31.3 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- - navigation height is auto in desktop if navigation is Sticky [#680](https://github.com/mumprod/hr-design-system-handlebars/pull/680) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.31.2 (Fri Jul 14 2023)
 
 #### 🐛 Bug Fix
