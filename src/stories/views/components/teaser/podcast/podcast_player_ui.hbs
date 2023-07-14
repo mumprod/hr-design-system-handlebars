@@ -83,14 +83,15 @@
         {{/unless}}
         
         {{!-- AudioElement --}}
-        {{~#with this.audioUrl ~}}
+        {{~#if this.audioUrl ~}}
             <audio   
-                class="{{../_id}} hidden" 
-                data-id="{{../_id}}"
-                x-init="registerPlayer('{{../_podcastDuration}}','{{../_id}}')"
-                @stopotherplayers.window="stopAllOtherPlayers({{../_id}})">
-                <source src={{this}} type='audio/mp3'/>
+                class="{{_id}} hidden" 
+                data-id="{{_id}}"
+                x-init="registerPlayer('{{_podcastDuration}}','{{_id}}')"
+                @stopotherplayers.window="stopAllOtherPlayers({{_id}})" 
+                data-prop-media-metadata='{{json this.mediaMetadata}}'>
+                <source src={{this.audioUrl}} type='audio/mp3'/>
                 
             </audio>
-        {{/with}}
+        {{/if}}
     </div>

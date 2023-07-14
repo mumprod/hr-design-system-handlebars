@@ -1,5 +1,5 @@
 <div class="sb-main-navigation" x-data="mainNavigationHandler()" x-init="{{#if _useSticky}}start(){{/if}}">
-    <header class="print:hidden relative z-10001 {{#if this.hasOpenSubNavigation}}lg:h-header-lg-big{{else}}lg:h-header-lg-small{{/if}} md:h-header-md h-header-sm">   
+    <header class="print:hidden relative z-10001 {{#if _useSticky}}{{#if this.hasOpenSubNavigation}}lg:h-header-lg-big {{else}}lg:h-header-lg-small {{/if}}{{else}}lg:h-auto {{/if}}md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
             @resize.window="resetNav()" 

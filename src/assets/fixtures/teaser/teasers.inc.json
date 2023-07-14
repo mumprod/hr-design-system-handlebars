@@ -1460,6 +1460,52 @@
                         }
                     ]
                 },
+                "mediaMetadata": {
+                    "agf": {
+                        "title": "hr-fernsehen_Hessischer Rundfunk_Ein aufgewecktes Kerlchen_06.10.2022 04:40",
+                        "livestream": "no",
+                        "type": "content",
+                        "airdate": "06.10.2022 04:40",
+                        "program": "hr-fernsehen",
+                        "nol_c18": "p18,N",
+                        "uurl": "/mp3/podcast/hr4_polizeireport/hr4_polizeireport_20221006_95936793.mp3",
+                        "nol_c7": "p7,/mp3/podcast/hr4_polizeireport/hr4_polizeireport_20221006_95936793.mp3",
+                        "nol_c8": "p8,131",
+                        "nol_c9": "p9,Hessischer Rundfunk_Ein aufgewecktes Kerlchen_06.10.2022 04:40",
+                        "nol_c10": "p10,hr-fernsehen",
+                        "nol_c12": "p12,Content",
+                        "assetid": "hr4_polizeireport_95936793",
+                        "nol_c2": "p2,N",
+                        "nol_c5": "p5,hr4",
+                        "length": "131",
+                        "nol_c20": "p20,GFKLinkID"
+                    },
+                    "ati": {
+                        "pageName": "Ein aufgewecktes Kerlchen",
+                        "secondLevelId": "2",
+                        "documentName": "podcast-episode-108850",
+                        "documentType": "hr-nt:podcastEpisode",
+                        "documentDate": "2022-10-06T06:46:25+02:00",
+                        "chapter": "podcast::polizeireport",
+                        "mediaLabel": "Ein aufgewecktes Kerlchen",
+                        "mediaTheme1": "hr4",
+                        "mediaTheme2": "podcast::polizeireport",
+                        "atiSiteId": "578129",
+                        "atiTrackingHost": "https://logs1407"
+                    },
+                    "piano": {
+                        "av_content_id": "podcast-episode-108850",
+                        "av_content": "Ein aufgewecktes Kerlchen",
+                        "av_content_type": "Audio",
+                        "av_content_duration": 131000,
+                        "av_broadcasting_type": "OnDemand",
+                        "av_content_level1": "hr4",
+                        "av_content_level2": "podcast",
+                        "av_content_level3": "polizeireport",
+                        "hr_document_type": "hr-nt:podcastEpisode",
+                        "site_level2_id": "2"
+                    }
+                },
 
                 "documentSection": "Kultur",
                 "displayTeaserBodyAsImageOverlay": false,
