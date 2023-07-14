@@ -1,3 +1,15 @@
+# v1.31.4 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: When content is located in an iframe [#681](https://github.com/mumprod/hr-design-system-handlebars/pull/681) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.31.3 (Fri Jul 14 2023)
 
 #### 🐛 Bug Fix
