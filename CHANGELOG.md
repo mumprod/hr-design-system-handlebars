@@ -1,3 +1,159 @@
+# v1.32.0 (Mon Jul 17 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2396 [#683](https://github.com/mumprod/hr-design-system-handlebars/pull/683) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.31.5 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- - restored old logos for footer (hr1, hr3, hr4 you-fm) [#682](https://github.com/mumprod/hr-design-system-handlebars/pull/682) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.31.4 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: When content is located in an iframe [#681](https://github.com/mumprod/hr-design-system-handlebars/pull/681) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.31.3 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- - navigation height is auto in desktop if navigation is Sticky [#680](https://github.com/mumprod/hr-design-system-handlebars/pull/680) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.31.2 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 2396 [#679](https://github.com/mumprod/hr-design-system-handlebars/pull/679) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.31.1 (Thu Jul 13 2023)
+
+#### 🐛 Bug Fix
+
+- use new pianoHelper [#678](https://github.com/mumprod/hr-design-system-handlebars/pull/678) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.31.0 (Thu Jul 13 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2396 [#677](https://github.com/mumprod/hr-design-system-handlebars/pull/677) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.30.3 (Wed Jul 12 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes on logo padding [#676](https://github.com/mumprod/hr-design-system-handlebars/pull/676) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.30.2 (Tue Jul 11 2023)
+
+#### 🐛 Bug Fix
+
+- lg:text-primary for topic in opened subnavi [#675](https://github.com/mumprod/hr-design-system-handlebars/pull/675) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.30.1 (Fri Jul 07 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2306 b [#673](https://github.com/mumprod/hr-design-system-handlebars/pull/673) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.30.0 (Thu Jul 06 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2306 new service icons [#672](https://github.com/mumprod/hr-design-system-handlebars/pull/672) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.29.8 (Thu Jul 06 2023)
+
+#### 🐛 Bug Fix
+
+- aspect ratio 1:1 for figure in ticker-alternative-teaser [#671](https://github.com/mumprod/hr-design-system-handlebars/pull/671) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.29.7 (Wed Jul 05 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2390 [#667](https://github.com/mumprod/hr-design-system-handlebars/pull/667) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.29.6 (Mon Jul 03 2023)
 
 #### 🐛 Bug Fix

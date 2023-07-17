@@ -3,10 +3,10 @@
     role="search" 
     action="{{resourceUrl "suche/index.nocache"}}" 
     method="get" 
-    class="flex w-full sb-quick-search-form md:justify-end lg:h-10"
+    class="relative flex w-full border rounded lg:search-border-desktop search-border-mobile sb-quick-search-form md:justify-end"
 >
     <div 
-        class="relative w-full lg:rounded-l" 
+        class="flex w-full lg:h-10" 
         id="search-content"
         @click.away="active=false; cursorIndex=-1"
         @keydown.arrow-down="moveDownList()"
@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 border rounded-l rounded-r-none shadow-inner appearance-none lg:border-0 lg:border-none border-primary lg:h-10 placeholder-text-xs placeholder-primary text-primary focus:outline-none"
+            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-primary text-primary focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -31,7 +31,7 @@
             aria-controls="suggestionlist--{{getRandom}}"
         > 
         <div 
-            class="relative" 
+            class="absolute left-0 w-auto min-w-full top-8 lg:top-10" 
             x-show="query.length > 1 && active && suggestions.length"
             x-cloak
             x-transition:leave="transition ease-in duration-100"
@@ -43,7 +43,7 @@
                 id="suggestionlist--{{getRandom}}" 
                 aria-label="Suche öffnen"
                 x-effect="$el.setAttribute('aria-expanded', query.length > 1 && active && suggestions.length > 0);$el.setAttribute('aria-hidden', !(query.length > 1 && active && suggestions.length > 0))"
-                class="absolute w-full mt-0.5 bg-white border rounded divide-y shadow-xl top-100"
+                class=" w-full mt-1 lg:mt-0.5 bg-white border rounded divide-y shadow-xl top-100"
                 x-ref="list"
             >
                 
@@ -65,7 +65,7 @@
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
         type="submit" 
-        class="pl-3 pr-2 rounded-r cursor-pointer link-focus-inset bg-primary lg:bg-white text-primary z-120"
+        class="pl-3 pr-2 border-l cursor-pointer lg:search-border-desktop lg:rounded-r link-focus-inset bg-primary lg:bg-white text-primary z-120"
     >
         <svg class="w-6 h-6 text-white fill-current bg-primary lg:fill-current lg:text-primary lg:bg-white" 
              xmlns="http://www.w3.org/2000/svg" 

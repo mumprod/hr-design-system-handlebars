@@ -1,5 +1,44 @@
 export default function playaudio() {
     return {
+        dispatchCustomEvent(
+            eventName,
+            { data = undefined, element = document, handleIframe = false, id = undefined } = {}
+        ) {
+            let event
+
+            if (undefined != data) {
+                data = { detail: data }
+                event = new CustomEvent(eventName, data)
+            } else {
+                if (typeof Event === 'function') {
+                    event = new Event(eventName)
+                } else {
+                    event = document.createEvent('Event')
+                    event.initEvent(eventName, true, true)
+                }
+            }
+            if (undefined !== id) {
+                event.id = id
+            }
+
+            if (handleIframe) {
+                if (document.getElementById('js-iFrame')) {
+                    document.getElementById('js-iFrame').contentWindow.document.dispatchEvent(event)
+                }
+                if (this.inIframe()) {
+                    parent.document.dispatchEvent(event)
+                }
+            }
+
+            element.dispatchEvent(event)
+        },
+        inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        },
         playerCount: 0,
         playlist: {},
         registerPlayer(duration, id) {
@@ -15,15 +54,108 @@ export default function playaudio() {
             _player.duration = duration
             _player.currentlyPlaying = false
             _player.init = false
+            _player.firstPlay = true
+
+            _player.audioElement.addEventListener('play', handlePlay.bind(this))
+            _player.audioElement.addEventListener('playing', handlePlaying.bind(this))
+            _player.audioElement.addEventListener('pause', handlePause.bind(this))
+            _player.audioElement.addEventListener('waiting', handleWaiting.bind(this))
+            _player.audioElement.addEventListener('ended', handleStopped.bind(this))
 
             // this.playerCount == 0 ? _player.range.parentNode.classList.remove('hidden') : _player.range.parentNode.classList.add('hidden')
             this.playerCount++
 
             this.playlist[id] = _player
+
+            const settings = JSON.parse(this.playlist[id].audioElement.dataset.propMediaMetadata)
+            const avContent = {
+                av_content_id: settings.piano.av_content_id,
+                av_content: settings.piano.av_content,
+                av_content_type: settings.piano.av_content_type,
+                av_content_duration: settings.piano.av_content_duration,
+                av_broadcasting_type: settings.piano.av_broadcasting_type,
+                av_content_level1: settings.piano.av_content_level1,
+                hr_document_type: settings.piano.hr_document_type,
+                site_level2_id: settings.piano.site_level2_id,
+            }
+
+            if (settings.piano.av_content_level2) {
+                avContent.av_content_level2 = settings.piano.av_content_level2
+            }
+            if (settings.piano.av_content_level3) {
+                avContent.av_content_level3 = settings.piano.av_content_level3
+            }
+
+            function handlePlay(event) {
+                this.dispatchCustomEvent('hr-avInsights:play', {
+                    data: {
+                        playerId: getPlayerIdForAvInsights(),
+                        cursorPosition: _player.audioElement.currentTime * 1000,
+                        avContent: avContent,
+                    },
+                })
+            }
+
+            function handlePlaying(event) {
+                if (_player.firstPlay) {
+                    this.dispatchCustomEvent('hr-avInsights:playback-start', {
+                        data: {
+                            playerId: getPlayerIdForAvInsights(),
+                            cursorPosition: _player.audioElement.currentTime * 1000,
+                            avContent: avContent,
+                        },
+                    })
+                    _player.firstPlay = false
+                } else {
+                    this.dispatchCustomEvent('hr-avInsights:playback-resumed', {
+                        data: {
+                            playerId: getPlayerIdForAvInsights(),
+                            cursorPosition: _player.audioElement.currentTime * 1000,
+                            avContent: avContent,
+                        },
+                    })
+                }
+            }
+
+            function handleWaiting(event) {
+                this.dispatchCustomEvent('hr-avInsights:buffer-start', {
+                    data: {
+                        playerId: getPlayerIdForAvInsights(),
+                        cursorPosition: _player.audioElement.currentTime * 1000,
+                        avContent: avContent,
+                    },
+                })
+            }
+
+            function handlePause(event) {
+                this.dispatchCustomEvent('hr-avInsights:playback-paused', {
+                    data: {
+                        playerId: getPlayerIdForAvInsights(),
+                        cursorPosition: _player.audioElement.currentTime * 1000,
+                        avContent: avContent,
+                    },
+                })
+            }
+
+            function handleStopped(event) {
+                this.dispatchCustomEvent('hr-avInsights:playback-stopped', {
+                    data: {
+                        playerId: getPlayerIdForAvInsights(),
+                        cursorPosition: _player.audioElement.currentTime * 1000,
+                        avContent: avContent,
+                    },
+                })
+                _player.firstPlay = true
+            }
+
+            function getPlayerIdForAvInsights() {
+                return _player.id + '-' + avContent.av_content_id
+            }
         },
+
         listenToGlobalStop() {
             console.log('global listener init')
-            window.addEventListener(
+            document.addEventListener(
                 'hr:global:stopOtherAVs',
                 this.stopAllPlayersBecauseOfGlobalStop.bind(this)
             )
@@ -86,9 +218,7 @@ export default function playaudio() {
                 this.playlist[id].range.parentNode.classList.add('max-h-9')
                 this.playlist[id].playIcon.classList.add('hidden')
                 this.playlist[id].pauseIcon.classList.remove('hidden')
-                let event = new Event('hr:global:stopOtherAVs')
-                event.id = id
-                window.dispatchEvent(event)
+                this.dispatchCustomEvent('hr:global:stopOtherAVs', { handleIframe: true, id: id })
             }
         },
 
