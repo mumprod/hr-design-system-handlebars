@@ -1,3 +1,15 @@
+# v1.33.1 (Wed Jul 19 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix release 2023 07 19 [#685](https://github.com/mumprod/hr-design-system-handlebars/pull/685) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.33.0 (Wed Jul 19 2023)
 
 #### 🚀 Enhancement
