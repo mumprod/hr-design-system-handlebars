@@ -74,16 +74,16 @@ export default function playaudio() {
                 av_content_type: settings.piano.av_content_type,
                 av_content_duration: settings.piano.av_content_duration,
                 av_broadcasting_type: settings.piano.av_broadcasting_type,
-                av_content_level1: settings.piano.av_content_level1,
+                av_content_theme1: settings.piano.av_content_theme1,
                 hr_document_type: settings.piano.hr_document_type,
                 site_level2_id: settings.piano.site_level2_id,
             }
 
-            if (settings.piano.av_content_level2) {
-                avContent.av_content_level2 = settings.piano.av_content_level2
+            if (settings.piano.av_content_theme2) {
+                avContent.av_content_theme2 = settings.piano.av_content_theme2
             }
-            if (settings.piano.av_content_level3) {
-                avContent.av_content_level3 = settings.piano.av_content_level3
+            if (settings.piano.av_content_theme3) {
+                avContent.av_content_theme3 = settings.piano.av_content_theme3
             }
 
             function handlePlay(event) {
