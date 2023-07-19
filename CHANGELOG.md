@@ -1,3 +1,15 @@
+# v1.33.0 (Wed Jul 19 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Changes property names so that data [#684](https://github.com/mumprod/hr-design-system-handlebars/pull/684) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.32.0 (Mon Jul 17 2023)
 
 #### 🚀 Enhancement
