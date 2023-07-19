@@ -266,10 +266,10 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.jellyBean'); 
+    --color-navigation-bg: theme('colors.blue.astronautBlue'); 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.jellyBean'); 
-    --color-brandnav-pseudo: theme('colors.blue.jellyBean');
+    --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
+    --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
