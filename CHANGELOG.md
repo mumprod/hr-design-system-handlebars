@@ -1,3 +1,15 @@
+# v1.33.2 (Thu Jul 20 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2419  - JS-Fehler in der Konsole [#686](https://github.com/mumprod/hr-design-system-handlebars/pull/686) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.33.1 (Wed Jul 19 2023)
 
 #### 🐛 Bug Fix
