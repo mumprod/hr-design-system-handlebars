@@ -50,6 +50,10 @@
         @apply pt-3.5;
     }
 
+    .max-h-0 {
+        max-height: 0;
+    }
+
     /* PODCAST SEEK SLIDER*/
     .seek_slider::-webkit-slider-thumb {
         -webkit-appearance: none;
