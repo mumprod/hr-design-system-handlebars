@@ -110,6 +110,7 @@
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
+    --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
 }
 
 [data-theme='hessenschau'] {
@@ -194,6 +195,7 @@
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-headline : theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-fernsehen'] {
