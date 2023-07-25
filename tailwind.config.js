@@ -376,7 +376,8 @@ module.exports = {
                 'tickerTeaserHeadline': 'var(--color-ticker-teaser-headline,#000)',
                 'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
                 'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
-                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)'
+                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
+                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)'
             },
         },
     },
