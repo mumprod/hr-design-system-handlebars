@@ -89,15 +89,11 @@ const ArdPlayerLoader = function (options, rootElement) {
             }
         })
 
-        listen(
-            'hr:global:stopOtherAVs',
-            function (event) {
-                if (event.detail != 'ardplayer') {
-                    player.pause()
-                }
-            },
-            window
-        )
+        listen('hr:global:stopOtherAVs', function (event) {
+            if (event.detail != 'ardplayer') {
+                player.pause()
+            }
+        })
 
         listen('player_closed', function (event) {
             let playerIdFromConfig = parseInt(playerId)

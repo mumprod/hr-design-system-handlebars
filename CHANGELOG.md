@@ -1,3 +1,75 @@
+# v1.33.2 (Thu Jul 20 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2419  - JS-Fehler in der Konsole [#686](https://github.com/mumprod/hr-design-system-handlebars/pull/686) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.33.1 (Wed Jul 19 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix release 2023 07 19 [#685](https://github.com/mumprod/hr-design-system-handlebars/pull/685) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.33.0 (Wed Jul 19 2023)
+
+#### 🚀 Enhancement
+
+- BUGFIX: Changes property names so that data [#684](https://github.com/mumprod/hr-design-system-handlebars/pull/684) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.32.0 (Mon Jul 17 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2396 [#683](https://github.com/mumprod/hr-design-system-handlebars/pull/683) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.31.5 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- - restored old logos for footer (hr1, hr3, hr4 you-fm) [#682](https://github.com/mumprod/hr-design-system-handlebars/pull/682) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.31.4 (Fri Jul 14 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: When content is located in an iframe [#681](https://github.com/mumprod/hr-design-system-handlebars/pull/681) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.31.3 (Fri Jul 14 2023)
 
 #### 🐛 Bug Fix
