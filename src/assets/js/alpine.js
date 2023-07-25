@@ -5,6 +5,9 @@ import Alpine from 'alpinejs'
 
 AsyncAlpine.init(Alpine)
     .data('podcastPlayer', () => import('components/teaser/podcast/podcast_player.alpine.js'))
+    .data('slider', () =>
+        import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
+    )
     .start()
 
 window.Alpine = Alpine
