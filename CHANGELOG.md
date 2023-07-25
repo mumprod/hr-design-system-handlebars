@@ -1,3 +1,16 @@
+# v1.33.3 (Tue Jul 25 2023)
+
+#### 🐛 Bug Fix
+
+- Add hover effect to Ticker-Teaser headline [#687](https://github.com/mumprod/hr-design-system-handlebars/pull/687) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.33.2 (Thu Jul 20 2023)
 
 #### 🐛 Bug Fix
