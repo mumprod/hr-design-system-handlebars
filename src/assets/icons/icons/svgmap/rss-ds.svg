@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m63,124.4v32.4c55.25,0,100.2,44.95,100.2,100.2h32.4c0-73.12-59.48-132.6-132.6-132.6Z"/>
+  <path class="cls-2" d="m63,46.8v32.4c98.04,0,177.8,79.76,177.8,177.8h32.4c0-115.9-94.3-210.2-210.2-210.2Z"/>
+  <circle class="cls-1" cx="92.1" cy="227.9" r="29.1" transform="translate(-49.9 27.26) rotate(-13.28)"/>
+</svg>

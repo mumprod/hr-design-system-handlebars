@@ -1,0 +1,87 @@
+<div class="flex flex-col self-center text-sm md:self-end w-fit md:flex-row">
+    <div class="flex justify-center w-auto md:justify-start">
+        {{#> components/base/link _link=_hrDeLink _css="flex whitespace-nowrap hover:underline"}}
+            &copy; {{{_hrDeLink-adjust_context.text}}} {{{_hrDeLink-adjust_context.currentTime.year}}}
+                {{~#if _hrDeLink-adjust_context.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_hrDeLink-adjust_context.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _hrDeLink-adjust_context.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _hrDeLink-adjust_context.labelText}} aria-label="{{_hrDeLink-adjust_context.labelText}}"{{/if}}
+            {{#if _hrDeLink-adjust_contexttitle}} title="{{_hrDeLink-adjust_context.title}}"{{/if}}
+        {{/inline}}
+    </div>
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
+        {{#> components/base/link _link=_ardDeLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_ardDeLink-adjust_context.text}}}
+                {{~#if _ardDeLink-adjust_context.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_ardDeLink-adjust_context.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _ardDeLink-adjust_context.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _ardDeLink-adjust_context.labelText}} aria-label="{{_ardDeLink-adjust_context.labelText}}"{{/if}}
+            {{#if _ardDeLink-adjust_context.title}} title="{{_ardDeLink-adjust_context.title}}"{{/if}}
+        {{/inline}}
+    </div>
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
+         {{#> components/base/link _link=_dataProtectionLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_dataProtectionLink-adjust_context.text}}}
+                {{~#if _dataProtectionLink-adjust_context.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_dataProtectionLink-adjust_context.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _dataProtectionLink-adjust_context.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _dataProtectionLink-adjust_context.labelText}} aria-label="{{_dataProtectionLink-adjust_context.labelText}}"{{/if}}
+            {{#if _dataProtectionLink-adjust_context.title}} title="{{_dataProtectionLink-adjust_context.title}}"{{/if}}
+        {{/inline}}
+    </div>
+
+    <span class="hidden px-2 md:flex ">|</span>
+
+    <div class="flex justify-center w-auto md:justify-start">
+         {{#> components/base/link _link=_imprintLink _css="flex whitespace-nowrap hover:underline"}}
+            {{{_imprintLink-adjust_context.text}}}
+                {{~#if _imprintLink-adjust_context.hiddenText~}}
+                    <span class="sr-only">
+                        {{~_imprintLink-adjust_context.hiddenText~}}
+                    </span>
+                {{~/if~}}
+                {{~#if _imprintLink-adjust_context.isTargetBlank}}
+                    <span class="inline-flex">
+                        {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                    </span>
+                {{/if~}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}
+            {{#if _imprintLink-adjust_context.labelText}} aria-label="{{_imprintLink-adjust_context.labelText}}"{{/if}}
+            {{#if _imprintLink-adjust_context.title}} title="{{_imprintLink-adjust_context.title}}"{{/if}}
+        {{/inline}}
+    </div>
+</div>

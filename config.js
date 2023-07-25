@@ -18,6 +18,7 @@ module.exports = {
             components: 'src/stories/views/components',
             handlebarPartials: 'build/handlebars/partials',
             dist_components: 'dist/views/components',
+            dist_static_components: 'dist/views_static/components',
         },
     },
 }
