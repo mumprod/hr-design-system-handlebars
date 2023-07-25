@@ -192,19 +192,19 @@
             {
                 "links": [
                     {
-                        "text": "kontakt-ds",
-                        "url": "kontakt/index.html",
-                        "title": "Zum Kontaktformular"
+                        "text": "push-ds",
+                        "url": "push/index.html",
+                        "title": "Push-Benachrichtigung in der App"
                     },
                     {
-                        "text": "voice",
+                        "text": "voice-ds",
                         "url": "voice/index.html",
                         "title": "hessenschau in 100 Sekunden"
                     },
                     {
-                        "text": "push-ds",
-                        "url": "push/index.html",
-                        "title": "Push-Benachrichtigung in der App"
+                        "text": "kontakt-ds",
+                        "url": "kontakt/index.html",
+                        "title": "Zum Kontaktformular"
                     },
                     {
                         "text": "rss-ds",
