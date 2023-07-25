@@ -1,14 +1,14 @@
 <div class="h-full flex-col flex w-full{{#if _outerCssClasses}} {{_outerCssClasses}}{{/if}}">
 
     {{#> components/teaser/components/teaser_header _css=(if this.isStandardTeaser "px-5" "px-5 md:px-0")}}
-        {{#>components/base/link _link=this.link _css="block link-focus-white cy-teaser-link hover:text-toplineColor" }} 
+        {{#>components/base/link _link=this.link _css="block link-focus-white cy-teaser-link" }} 
             {{#with this.label}}
                 {{#> components/label/label_group}}
                     {{> components/label/label _type=this.type _text=(loca this.loca) }}
                     {{> components/label/label_byline _css="ml-2 text-tickerTeaserlabelByline" _text=../../../this.tickerTopic }}
                 {{/components/label/label_group}}
             {{/with~}}
-            {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto"}}
+            {{#> components/teaser/components/teaser_headline _headlineTag=this.headlineTag _css="overflow-anywhere hyphens-auto hover:underline decoration-2 decoration-tickerTeaserHeadlineUnderline"}}
                 {{> components/teaser/components/teaser_title _css="text-tickerTeaserHeadline" _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}
                 {{#if this.extendedTitle}}
                     {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
