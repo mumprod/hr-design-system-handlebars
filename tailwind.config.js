@@ -332,7 +332,8 @@ module.exports = {
                 'highlight-2': 'var(--color-highlight-2)',
                 'highlight-3': 'var(--color-highlight-3)',
                 'top-topic-background': 'var(--color-top-topic-background)',
-
+                'text': 'var(--color-standard-text)',
+                'text-dark': 'var(--color-standard-text-dark)',
                 'navigation-bg': 'var(--color-navigation-bg)',
                 'navigation-icons': 'var(--color-navigation-icons)',
                 'navigation-text': 'var(--color-navigation-text)',
@@ -359,6 +360,7 @@ module.exports = {
                 'toplineColor': 'var(--color-topline)',
                 'subline': 'var(--color-subline)',
                 'link': 'var(--color-link)',
+                'link-dark': 'var(--color-link-dark)',
                 'stageLink': 'var(--color-stage-link)',
                 'stageTextBox': 'rgb(var(--color-stage-text-box) / <alpha-value>)',
                 'stageText': 'var(--color-stage-text)',

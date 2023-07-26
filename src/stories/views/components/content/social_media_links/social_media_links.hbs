@@ -1,10 +1,10 @@
 {{#with this.socialMediaLinks }}
     <div class="flex">
-        <span class="mr-2 font-bold whitespace-nowrap">{{~loca "social_media_links_text"~}}</span>
+        <span class="mr-2 font-bold whitespace-nowrap text-text dark:text-text-dark">{{~loca "social_media_links_text"~}}</span>
         <ul class="inline">
             {{~#each this~}}
                 <li class="inline mr-1">
-                    {{~#> components/base/link _link=this.link _css="underline text-link" ~}}
+                    {{~#> components/base/link _link=this.link _css="underline text-link dark:text-link-dark" ~}}
                         {{~this.linkText~}}
                         {{~#if this.link.hasIcon~}}
                             {{~> components/base/image/icon _icon=this.link.iconName _iconmap="icons" _addClass="inline -mt-0.5 w-5 h-5 fill-current"~}}

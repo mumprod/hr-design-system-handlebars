@@ -14,6 +14,9 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     --color-highlight-3: theme('colors.gray.dark');
 
+    /* Text */
+    --color-standard-text: #000;
+    --color-standard-text-dark: #F0F0F0;
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.congress');
     --color-brandnavigation-bg: #fff; 
@@ -89,6 +92,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
+    --color-link-dark: theme('colors.blue.deepCerulean');
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-text: theme('colors.white.DEFAULT');
@@ -138,6 +142,10 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     --color-highlight-3: theme('colors.blue.congress');
 
+    /* Text */
+    --color-standard-text: #000;
+    --color-standard-text-dark: #d8e9f6;
+
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
@@ -179,11 +187,12 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: #006dc1;
+    --color-topline: theme('colors.blue.science');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.science');
+    --color-link-dark: #199bff;
     /*Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.congress');
@@ -262,6 +271,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.purple.jazzberry');
+    --color-link-dark: theme('colors.purple.jazzberry');
     /* Stage */
     --color-stage-text-box: 234 237 237;
     --color-stage-text: theme('colors.black.DEFAULT');
@@ -333,6 +343,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.jellyBean');
+    --color-link-dark: theme('colors.blue.jellyBean');
     /* Stage */
     --color-stage-text-box: 0 55 93;
     --color-stage-primary: theme('colors.blue.astronautBlue');
@@ -406,6 +417,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
+    --color-link-dark: theme('colors.blue.deepCerulean');
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: theme('colors.blue.deepCerulean');
@@ -473,6 +485,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
@@ -554,6 +567,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.wellRead');
+    --color-link-dark: theme('colors.red.wellRead');
     /* Stage */
     --color-stage-text-box: 141 39 37;
     --color-stage-primary: var(--color-primary-ds);
@@ -635,6 +649,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.green.teal');
+    --color-link-dark: theme('colors.green.teal');
     /* Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.blueStone');
@@ -712,6 +727,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
@@ -792,6 +808,7 @@
     --color-subline: theme('colors.yellow.olive');
     /* Link */
     --color-link: theme('colors.yellow.olive');
+    --color-link-dark: theme('colors.yellow.olive');
     /* Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.yellow.corn');
@@ -873,6 +890,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.paprika');
+    --color-link-dark: theme('colors.red.paprika');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
@@ -964,6 +982,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
@@ -1052,6 +1071,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.green.eden');
+    --color-link-dark: theme('colors.green.eden');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.green.genoa');
@@ -1132,6 +1152,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.sea');
+    --color-link-dark: theme('colors.blue.sea');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.yellow.goldenSand');
