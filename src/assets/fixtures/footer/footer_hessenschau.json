@@ -248,5 +248,59 @@
             "isTargetBlank": true,
             "title": "Impressum"
         }
-    }
+    },
+    "serviceList" :[
+        {   "key" : "ard_mediathek",
+            "value" : "ARD Mediathek (Video)",
+            "isInitiallyHidden" : true
+        },
+        {   "key" : "arte_concert",
+            "value" : "Arte Concert",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "arte_concert_new",
+            "value" : "Arte Concert 2.0",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "datawrapper_cdn",
+            "value" : "Datawrapper (Datengrafik)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "esri",
+            "value" : "Esri (Notfallkarte)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "facebook_post",
+            "value" : "Facebook",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "flourish",
+            "value" : "Flourish (Datengrafik)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "giphy",
+            "value" : "Giphy (animiertes GIF)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "instagram",
+            "value" : "Instagram",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "twitter_post",
+            "value" : "Twitter",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "vimeo",
+            "value" : "Vimeo (Video)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "youtube",
+            "value" : "YouTube (Video)",
+            "isInitiallyHidden" : false
+        },
+        {   "key" : "youtube360",
+            "value" : "YouTube 360 (360° Video)",
+            "isInitiallyHidden" : false
+        }
+    ]
 }
