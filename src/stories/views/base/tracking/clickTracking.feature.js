@@ -1,4 +1,4 @@
-import { download, pi, uxAction, uxNavigation } from 'base/tracking/pianoHelper.subfeature'
+import { download, pi, uxAction, uxNavigation } from 'base/tracking/atiHelper.subfeature'
 
 const ClickTracking = function (context) {
     const { options } = context,
