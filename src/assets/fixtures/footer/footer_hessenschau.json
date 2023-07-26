@@ -251,56 +251,43 @@
     },
     "serviceList" :[
         {   "key" : "ard_mediathek",
-            "value" : "ARD Mediathek (Video)",
-            "isInitiallyHidden" : true
+            "value" : "ARD Mediathek (Video)"
         },
         {   "key" : "arte_concert",
-            "value" : "Arte Concert",
-            "isInitiallyHidden" : false
+            "value" : "Arte Concert"
         },
         {   "key" : "arte_concert_new",
-            "value" : "Arte Concert 2.0",
-            "isInitiallyHidden" : false
+            "value" : "Arte Concert 2.0"
         },
         {   "key" : "datawrapper_cdn",
-            "value" : "Datawrapper (Datengrafik)",
-            "isInitiallyHidden" : false
+            "value" : "Datawrapper (Datengrafik)"
         },
         {   "key" : "esri",
-            "value" : "Esri (Notfallkarte)",
-            "isInitiallyHidden" : false
+            "value" : "Esri (Notfallkarte)"
         },
         {   "key" : "facebook_post",
-            "value" : "Facebook",
-            "isInitiallyHidden" : false
+            "value" : "Facebook"
         },
         {   "key" : "flourish",
-            "value" : "Flourish (Datengrafik)",
-            "isInitiallyHidden" : false
+            "value" : "Flourish (Datengrafik)"
         },
         {   "key" : "giphy",
-            "value" : "Giphy (animiertes GIF)",
-            "isInitiallyHidden" : false
+            "value" : "Giphy (animiertes GIF)"
         },
         {   "key" : "instagram",
-            "value" : "Instagram",
-            "isInitiallyHidden" : false
+            "value" : "Instagram"
         },
         {   "key" : "twitter_post",
-            "value" : "Twitter",
-            "isInitiallyHidden" : false
+            "value" : "Twitter"
         },
         {   "key" : "vimeo",
-            "value" : "Vimeo (Video)",
-            "isInitiallyHidden" : false
+            "value" : "Vimeo (Video)"
         },
         {   "key" : "youtube",
-            "value" : "YouTube (Video)",
-            "isInitiallyHidden" : false
+            "value" : "YouTube (Video)"
         },
         {   "key" : "youtube360",
-            "value" : "YouTube 360 (360° Video)",
-            "isInitiallyHidden" : false
+            "value" : "YouTube 360 (360° Video)"
         }
     ]
 }
