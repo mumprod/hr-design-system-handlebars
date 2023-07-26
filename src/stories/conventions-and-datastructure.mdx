@@ -12,6 +12,7 @@ import { Meta, Canvas } from '@storybook/addon-docs'
     -   [JSON](#json)
 -   [Konventionen beim Bau von Komponenten](#konventionen-beim-bau-von-komponentenn)
     -   [Styling von Komponenten](#styling-von-komponenten)
+    -   [Ausrichtung mit z-index](#ausrichtung-mit-z-index)
     -   [Wiederverwendbarkeit und Erweiterbarkeit von Komponenten](#wiederverwendbarkeit-und-erweiterbarkeit-von-komponenten)
 
 ## Übersicht
@@ -321,7 +322,23 @@ Ansatz mit mehreren CSS Eigenschaften pro Klasse.
 Nachteil ist jedoch, dass alle CSS Logik auf diese Weise in die Templates verlagert wird und diese auf den ersten
 Blick recht unübersichtlich wirken können.
 
-#### Definition eigener CSS Klassen
+### Ausrichtung mit z-index
+
+Die Eigenschaft z-index gibt an, in welcher Reihenfolge Elemente auf dem Ausgabemedium von hinten nach vorne angeordnet werden. Das ist von Bedeutung, wenn die Elemente sich überlappen. 
+Elemente mit einem größeren z-index liegen dabei näher am Betrachter und können Elemente mit kleinerem z-index überlagern. 
+
+Das z-index-Attribut kann folgende Werte besitzen:
+
+| Range / Value        | Elements                                                                                                                                                                                                                                                                                          |
+| :------------------- | :----------------------------------------- |
+| 99                   | Toplink                                    |
+| 1 - 99               | Content                                    |
+| 100 - 199            | Navi                                       |
+| 200 - 299            | Radioplayer                                |
+| 300                  | Modal                                      |
+
+
+### Definition eigener CSS Klassen
 
 Tailwind CSS gestattet es auch sehr einfach eigene CSS Klassen zu schreiben. Sollte es für eine bestimmte CSS Eigenschaft
 noch keine eigene Utility Klasse geben, kann diese problemlos in der Datei `custom-utilities.css` definiert werden.
