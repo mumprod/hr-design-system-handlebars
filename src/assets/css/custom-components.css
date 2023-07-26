@@ -50,6 +50,10 @@
         @apply pt-3.5;
     }
 
+    .max-h-0 {
+        max-height: 0;
+    }
+
     /* PODCAST SEEK SLIDER*/
     .seek_slider::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -245,7 +249,7 @@
     }
     /* ---------------- NAV DROPDOWN - CONTENT ------------------ */
     .content-nav-dropdown_content.-isOpen {
-        @apply z-9999;
+        @apply z-100;
         @apply shadow-lg;
     }
 
