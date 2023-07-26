@@ -249,7 +249,7 @@
     }
     /* ---------------- NAV DROPDOWN - CONTENT ------------------ */
     .content-nav-dropdown_content.-isOpen {
-        @apply z-9999;
+        @apply z-100;
         @apply shadow-lg;
     }
 
