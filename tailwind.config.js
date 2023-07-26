@@ -138,6 +138,7 @@ module.exports = {
                 '35': '8.75rem',
                 '42': '10.5rem',
                 '45': '11.25rem',
+                '88': '22rem',
                 'header-lg-small': '8.8125rem',
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.5625rem',
