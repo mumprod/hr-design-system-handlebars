@@ -1,3 +1,15 @@
+# v1.34.5 (Mon Jul 31 2023)
+
+#### 🐛 Bug Fix
+
+- removed some whitespaces in icon and socialMediaLinks component [#692](https://github.com/mumprod/hr-design-system-handlebars/pull/692) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.34.4 (Wed Jul 26 2023)
 
 #### 🐛 Bug Fix
