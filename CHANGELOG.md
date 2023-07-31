@@ -1,3 +1,15 @@
+# v1.34.6 (Mon Jul 31 2023)
+
+#### 🐛 Bug Fix
+
+- - removed whitespace from link component [#693](https://github.com/mumprod/hr-design-system-handlebars/pull/693) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.34.5 (Mon Jul 31 2023)
 
 #### 🐛 Bug Fix
