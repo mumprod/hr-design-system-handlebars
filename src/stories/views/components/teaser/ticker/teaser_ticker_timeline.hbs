@@ -20,7 +20,7 @@
                         {{/if}}
                     </div>
                 {{~/with}}                    
-                <a class="link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+                <a class="link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}" rel="nofollow" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
             </li>
         {{~/each~}}
     </ul>
