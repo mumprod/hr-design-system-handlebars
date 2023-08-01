@@ -145,7 +145,7 @@
     }
 
     .toggleSwitch-checkbox:checked+.toggleSwitch-label {
-        background: #2c7e13;
+        @apply bg-toggle-confirmation;
     }
     
     .toggleSwitch-label {

@@ -133,6 +133,8 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
+    --color-toggle-confirmation: #2c7e13; 
+    --color-toggle-default: #797979;
 }
 
 [data-theme='hessenschau'] {
