@@ -1,6 +1,6 @@
-<div class="flex items-center justify-center pt-4 md:justify-end js-load dataPolicySettings__buttonWrapper" data-hr-data-policy-settings-ds='{}'>
-        {{#> components/button/button _size="md" _id="globalSettingsButton" _css="text-footer-text border-footer-text js-data-policy-settings-button" _variant="secondary" _onBackground="true" }}
-            {{> components/button/components/button_icon _icon="settings" _iconmap="icons"}}
+<div class="flex items-center justify-center pt-1 md:justify-end js-load dataPolicySettings__buttonWrapper" data-hr-data-policy-settings-ds='{}'>
+        {{#> components/button/button _size="md" _id="globalSettingsButton" _css="hover:text-secondary border-footer-text js-data-policy-settings-button" _variant="secondary" _onBackground="true" }}
+            {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
             {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
         {{/components/button/button}}
     
@@ -9,10 +9,10 @@
             <div class="relative top-0 w-auto px-6 bg-primary z-100 dataPolicySettings__header">
                 <span class="relative block py-4 text-black text__headline dataPolicySettings__headline">
                     <span
-                        class="inline pr-6 -ml-2 fill-white icon dataPolicySettings__setting-icon"> {{> components/base/image/icon _icon="settings" _addClass="h-7 w-7 -mt-0.5 inline" }}</span>
+                        class="inline pr-4 -ml-2 fill-white icon dataPolicySettings__setting-icon"> {{> components/base/image/icon _icon="settings" _addClass="h-7 w-7 -mt-0.5 inline" }}</span>
                     <span class="text-base text-white dataPolicySettings__title">Einstellungen</span>
-                    <button class="absolute -right-[11px] top-[12px] bg-transparent text-white fill-current button dataPolicySettings__closeButton js-data-policy-settings-close-button">
-                        {{> components/base/image/icon _icon="close" _addClass="h-7 w-7 inline"}}
+                    <button class="absolute right-0 text-white bg-transparent fill-current button dataPolicySettings__closeButton js-data-policy-settings-close-button">
+                        {{> components/base/image/icon _icon="close" _addClass="h-6 w-6 inline"}}
                     </button>
                 </span>
             </div>
