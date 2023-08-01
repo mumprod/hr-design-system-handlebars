@@ -1,10 +1,10 @@
-<div class="flex items-center justify-center pt-1 md:justify-end js-load dataPolicySettings__buttonWrapper" data-hr-data-policy-settings-ds='{}'>
+<div class="flex items-center justify-center md:justify-end js-load dataPolicySettings__buttonWrapper" data-hr-data-policy-settings-ds='{}'>
         {{#> components/button/button _size="md" _id="globalSettingsButton" _css="hover:text-secondary border-footer-text js-data-policy-settings-button" _variant="secondary" _onBackground="true" }}
             {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
             {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
         {{/components/button/button}}
     
-        <div class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-10010 pb-6 dataPolicySettings__overlay js-data-policy-settings-overlay{{#if _webview}} -webview{{/if}}">
+        <div class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-300 pb-6 bg-black/[0.5] dataPolicySettings__overlay js-data-policy-settings-overlay{{#if _webview}} -webview{{/if}}">
         <div class="m-auto pt-0 max-w-[480px] bg-white dataPolicySettings__content">
             <div class="relative top-0 w-auto px-6 bg-primary z-100 dataPolicySettings__header">
                 <span class="relative block py-4 text-black text__headline dataPolicySettings__headline">
