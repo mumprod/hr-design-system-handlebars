@@ -38,20 +38,20 @@
             </div>
 
             <ul class="{{#if _webview}} hidden{{/if}}">
-                <li class="px-6 py-3 bg-white border-t border-[#e3e3e3] tracking_1">
-                    <span class="inline-block text-base text-black">AGF <a
+                <li class="px-6 py-3 flex justify-between bg-white border-t border-[#e3e3e3] tracking_1">
+                    <span class="text-base text-black">AGF <a
                         class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
                         href="https://www.agf.de/" title="AGF">(https://www.agf.de/)</a></span>
-                    <div class="flex float-right toggleSwitch">
+                    <div class="flex w-fit toggleSwitch">
                         {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
                     </div>
                 </li>
-                <li class="px-6 py-3 bg-white border-t border-[#e3e3e3] tracking_2">
-                    <span class="inline-block text-base text-black">AT Internet <a
+                <li class="px-6 py-3 flex justify-between bg-white border-t border-[#e3e3e3] tracking_2">
+                    <span class="text-base text-black">AT Internet <a
                         class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
                         href="https://www.atinternet.com/de/"
                         title="AT Internet">(https://www.atinternet.com/de/)</a></span>
-                    <div class="flex float-right toggleSwitch">
+                    <div class="flex w-fit toggleSwitch">
                         {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
                     </div>
                 </li>
