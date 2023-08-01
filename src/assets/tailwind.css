@@ -14,6 +14,9 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     --color-highlight-3: theme('colors.gray.dark');
 
+    /* Text */
+    --color-standard-text: #000;
+    --color-standard-text-dark: #F0F0F0;
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.blue.congress');
     --color-brandnavigation-bg: #fff; 
@@ -35,6 +38,23 @@
     --logo-padding-bottom-md: 10px;    
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
+
+    /* Footer Logo Invert */
+    --invert-logo-footer: 0;
+    --color-footer-text: white; 
+    --color-footer-heading: white; 
+    --color-footer-border: red;
+    --color-footer-bg: theme('colors.blue.congress');
+
+    --width-footer-logo: 135px;
+    --height-footer-logo: 75px;
+
+    --width-footer-logo-md: 6.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 6.4375rem;
+    --height-footer-logo-lg: 2.6875rem; 
+    
 
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
@@ -72,6 +92,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
+    --color-link-dark: theme('colors.blue.deepCerulean');
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-text: theme('colors.white.DEFAULT');
@@ -108,8 +129,10 @@
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
+
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
+    --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
 }
 
 [data-theme='hessenschau'] {
@@ -119,6 +142,10 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     --color-highlight-3: theme('colors.blue.congress');
 
+    /* Text */
+    --color-standard-text: #000;
+    --color-standard-text-dark: #d8e9f6;
+
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
@@ -126,6 +153,16 @@
     --logo-padding-bottom-md: 6px;    
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
+
+    --color-footer-bg: #606060;
+    --color-footer-border: #accfe9;
+
+    --width-footer-logo: 135px;
+    --height-footer-logo: 75px;
+    --width-footer-logo-md: 6.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+    --width-footer-logo-lg: 9.375rem;
+    --height-footer-logo-lg: 2rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -150,11 +187,12 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: #006dc1;
+    --color-topline: theme('colors.blue.science');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.science');
+    --color-link-dark: #199bff;
     /*Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.congress');
@@ -194,6 +232,7 @@
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
+    --color-ticker-teaser-headline : theme('colors.white.DEFAULT');
 }
 
 [data-theme='hr-fernsehen'] {
@@ -206,7 +245,8 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.purple.jazzberry');
     --color-brandnav-pseudo: theme('colors.purple.jazzberry');
-
+    --color-footer-bg: #4b6464;
+    --color-footer-border:  #6d0041;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -231,6 +271,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.purple.jazzberry');
+    --color-link-dark: theme('colors.purple.jazzberry');
     /* Stage */
     --color-stage-text-box: 234 237 237;
     --color-stage-text: theme('colors.black.DEFAULT');
@@ -270,7 +311,14 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
+    
+    --color-footer-bg: #e5edf1; 
+    --color-footer-border: #e5007d; 
+    --color-footer-text: #276b9e;
+    --color-footer-heading:theme('colors.black.DEFAULT'); 
 
+    --search-border-color-desktop: #276b9e; 
+    
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
     /* Ticker, Live, Livestream */
@@ -295,6 +343,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.jellyBean');
+    --color-link-dark: theme('colors.blue.jellyBean');
     /* Stage */
     --color-stage-text-box: 0 55 93;
     --color-stage-primary: theme('colors.blue.astronautBlue');
@@ -340,7 +389,8 @@
     --logo-padding-bottom-md: 8px;    
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
-
+    --color-footer-bg: #606060; 
+    --color-footer-border: ##276b9e;
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -367,6 +417,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.deepCerulean');
+    --color-link-dark: theme('colors.blue.deepCerulean');
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: theme('colors.blue.deepCerulean');
@@ -405,6 +456,9 @@
     --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
 
+    --color-footer-bg: #006eb7; 
+    --color-footer-border: #a2bc09;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -431,6 +485,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
@@ -476,6 +531,18 @@
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
+    --color-footer-bg: #575756; 
+    --color-footer-border: #8d2725; 
+
+    --width-footer-logo: 7.4375rem;
+    --height-footer-logo: 2.5rem;
+
+    --width-footer-logo-md: 7.4375rem;
+    --height-footer-logo-md: 2.5rem; 
+
+    --width-footer-logo-lg: 7.4375rem;
+    --height-footer-logo-lg: 2.5rem; 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
     /* Ticker, Live, Livestream */
@@ -500,6 +567,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.wellRead');
+    --color-link-dark: theme('colors.red.wellRead');
     /* Stage */
     --color-stage-text-box: 141 39 37;
     --color-stage-primary: var(--color-primary-ds);
@@ -547,6 +615,15 @@
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
+    --color-footer-bg: #575756; 
+    --color-footer-border: #c1bc2b;
+
+    --width-footer-logo: 7.4375rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 5.4375rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 5.4375rem;
+    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -572,6 +649,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.green.teal');
+    --color-link-dark: theme('colors.green.teal');
     /* Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.blue.blueStone');
@@ -611,6 +689,18 @@
     --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
 
+    --color-footer-bg: theme('colors.blue.deepCerulean');
+    --color-footer-border: #a2bc09;
+
+    --width-footer-logo: 3.4375rem;
+    --height-footer-logo: 2.6875rem; 
+
+    --width-footer-logo-md: 3.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 3.4375rem;
+    --height-footer-logo-lg: 2.6875rem; 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -637,6 +727,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-primary: var(--color-primary-ds);
@@ -678,6 +769,19 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
+
+    --color-footer-bg: #433d37 ; 
+    --color-footer-border: theme('colors.yellow.corn');
+
+    --width-footer-logo: 3.4375rem;
+    --height-footer-logo: 2.6875rem; 
+
+    --width-footer-logo-md: 3.4375rem;
+    --height-footer-logo-md: 2.6875rem; 
+
+    --width-footer-logo-lg: 3.4375rem;
+    --height-footer-logo-lg: 2.6875rem;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
@@ -704,6 +808,7 @@
     --color-subline: theme('colors.yellow.olive');
     /* Link */
     --color-link: theme('colors.yellow.olive');
+    --color-link-dark: theme('colors.yellow.olive');
     /* Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.yellow.corn');
@@ -750,6 +855,17 @@
     /* Logo paddings */
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px; 
+
+    --color-footer-bg: #74747f; 
+    --color-footer-border: theme('colors.orange.clementine');
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem; 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
@@ -774,6 +890,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.red.paprika');
+    --color-link-dark: theme('colors.red.paprika');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
@@ -826,6 +943,19 @@
     /* Logo padding */
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px;
+
+    --color-footer-bg: #9b0112 ;
+    --color-footer-border: #007179;
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
     /* Ticker, Live, Livestream */
@@ -852,6 +982,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: var(--color-primary-ds);
+    --color-link-dark: var(--color-primary-ds);
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
@@ -901,6 +1032,19 @@
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
+    --bg-logo-footer: linear-gradient(to right top, #9b0058, #d6007f);;
+    --rounded-logo-footer: 7px 0px 7px 0px; 
+
+    --color-footer-bg: #407596; 
+    --color-footer-border: #168378;
+
+    --width-footer-logo: 2.5rem;
+    --height-footer-logo: 2.5rem;
+    --width-footer-logo-md: 2.5rem;
+    --height-footer-logo-md: 2.5rem; 
+    --width-footer-logo-lg: 2.5rem;
+    --height-footer-logo-lg: 2.5rem;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
     /* Ticker, Live, Livestream */
@@ -927,6 +1071,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.green.eden');
+    --color-link-dark: theme('colors.green.eden');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.green.genoa');
@@ -977,6 +1122,12 @@
     /* The Fancy special border on youfm */
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
+    /* Footer Logo Invert */
+    --invert-logo-footer: 0;
+
+    --color-footer-bg: #606060; 
+    --color-footer-border: #007ea1;
+
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
     /* Ticker, Live, Livestream */
@@ -1001,6 +1152,7 @@
     --color-subline: var(--color-topline);
     /* Link */
     --color-link: theme('colors.blue.sea');
+    --color-link-dark: theme('colors.blue.sea');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.yellow.goldenSand');

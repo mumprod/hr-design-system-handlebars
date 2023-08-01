@@ -1,0 +1,26 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as AccordionStories from './accordion.stories'
+
+<Meta of={AccordionStories} />
+
+# Akkordeon
+
+## Beschreibung
+
+
+## Parameter
+
+
+<ArgsTable story="default" />
+
+## Verwendung
+
+Die Akkordeon-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/article/components/accordion/accordion }}
+```
+
+<Canvas withToolbar>
+    <Story of={AccordionStories.Default} />
+</Canvas>

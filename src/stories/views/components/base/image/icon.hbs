@@ -39,7 +39,7 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
 - http://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/
 
 --}}
-{{#if _icon}}
+{{~#if _icon~}}
 <svg class="sb-icon {{~#if _addClass }} {{_addClass}}{{/if}} {{#if _webview}} -webview{{/if}} {{#>css}}{{/css}}" role="presentation" aria-hidden="{{defaultIfEmpty _ariaHidden true}}"
 {{#if brand}} data-brand="{{brand}}"{{/if}}
         {{~#if _iconTitle }} {{changeRandom~}}
@@ -69,4 +69,4 @@ Erklärung / Hinweise / Best Practices für "Accessible SVG":
         <text dy="0.35em" y="50%" x="50%">{{_iconText}}</text>
     {{~/if~}}
 </svg>
-{{~/if}}
+{{~/if~}}

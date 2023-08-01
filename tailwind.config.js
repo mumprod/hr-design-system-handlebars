@@ -38,9 +38,15 @@ module.exports = {
         },
 
         extend: {
-            backgroundImage: {},
+            backgroundImage: {
+                'logo-footer' : 'var(--bg-logo-footer)'
+            },
+            invert: {
+                'logo-footer' : 'var(--invert-logo-footer)',
+            },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
+                'logo-footer' : 'var(--rounded-logo-footer)',
             },
             fontSize: {
                 'xs': ['0.75rem', '1.063rem'],
@@ -101,18 +107,8 @@ module.exports = {
                 '0': '0',
                 '50': '50',
                 '100': '100',
-                '101': '101',
-                '102': '102',
-                '103': '103',
-                '1000': '1000',
-                '1001': '1001',
-                '1002': '1002',
-                '1003': '1003',
-                '9999': '9999',
-                '10000': '10000',
-                '10001': '10001',
-                '10002': '10002',
-                '-1000': '-1000',
+                '110': '110',
+                '120': '120'
             },
             spacing: {
                 '9.5': '2.375rem',
@@ -132,6 +128,9 @@ module.exports = {
                 '92': '23rem',
                 'half-screen': '50vw',
                 '15/12': '120%',
+                'footer-logo': 'var(--width-footer-logo)',
+                'footer-logo-md': 'var(--width-footer-logo-md)',
+                'footer-logo-lg': 'var(--width-footer-logo-lg)',
             },
             height: {
                 '22': '5.5rem',
@@ -139,10 +138,14 @@ module.exports = {
                 '35': '8.75rem',
                 '42': '10.5rem',
                 '45': '11.25rem',
+                '88': '22rem',
                 'header-lg-small': '8.8125rem',
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.5625rem',
                 'header-sm': '7.5625rem',
+                'footer-logo':'var(--height-footer-logo)',
+                'footer-logo-md': 'var(--height-footer-logo-md)',
+                'footer-logo-lg': 'var(--height-footer-logo-lg)',
             },
             maxHeight: {
                 stage: '34.3125rem',
@@ -329,7 +332,8 @@ module.exports = {
                 'highlight-2': 'var(--color-highlight-2)',
                 'highlight-3': 'var(--color-highlight-3)',
                 'top-topic-background': 'var(--color-top-topic-background)',
-
+                'text': 'var(--color-standard-text)',
+                'text-dark': 'var(--color-standard-text-dark)',
                 'navigation-bg': 'var(--color-navigation-bg)',
                 'navigation-icons': 'var(--color-navigation-icons)',
                 'navigation-text': 'var(--color-navigation-text)',
@@ -337,6 +341,11 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
+
+                'footer-bg': 'var(--color-footer-bg)',
+                'footer-text': 'var(--color-footer-text)',
+                'footer-heading': 'var(--color-footer-heading)',
+                'footer-border': 'var(--color-footer-border)',
 
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
@@ -351,6 +360,7 @@ module.exports = {
                 'toplineColor': 'var(--color-topline)',
                 'subline': 'var(--color-subline)',
                 'link': 'var(--color-link)',
+                'link-dark': 'var(--color-link-dark)',
                 'stageLink': 'var(--color-stage-link)',
                 'stageTextBox': 'rgb(var(--color-stage-text-box) / <alpha-value>)',
                 'stageText': 'var(--color-stage-text)',
@@ -376,7 +386,8 @@ module.exports = {
                 'tickerTeaserHeadline': 'var(--color-ticker-teaser-headline,#000)',
                 'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
                 'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
-                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)'
+                'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
+                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)'
             },
         },
     },

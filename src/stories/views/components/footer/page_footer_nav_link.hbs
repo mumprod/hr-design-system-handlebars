@@ -1,0 +1,18 @@
+{{#> components/base/link _link=_link _css=_css}}
+    {{ _link-adjust_context.text}}
+    {{~#if  _link-adjust_context.hiddenText~}}
+        <span class="sr-only">
+            {{~ _link-adjust_context.hiddenText~}}
+        </span>
+    {{~/if~}}
+    {{~#if  _link-adjust_context.isTargetBlank}}
+        <span class="inline-flex md:mt-0.5 md:ml-1">
+            {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="w-4 h-4 fill-current"}}
+        </span>
+    {{/if~}}
+{{/components/base/link}}
+{{#*inline "htmlProperties"}}
+    {{#with _link-adjust_context}}
+        {{#if _link.labelText}} aria-label="{{_link.labelText}}"{{/if}}
+    {{/with}}
+{{/inline}}

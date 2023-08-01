@@ -1,0 +1,219 @@
+{
+    "groups": [
+        {
+            "title": "hr-inforadio.de",
+            "columnSize": 3,
+            "columns": [
+                {
+                    "links": [
+                        {
+                            
+                            "hiddenText": "hr-inforadio",
+                            "labelText": "Startseite hr-inforadio",
+                            "link": {
+                            "text": "Start",
+                            "url": "index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Programm",
+                            "url": "programm/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Veranstaltungen",
+                            "url": "veranstaltungen/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Sendezeiten",
+                            "url": "sendezeiten/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Frequenzen",
+                            "url": "frequenzen/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Kontakt",
+                            "url": "kontakt/index.html"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "links": []
+                },
+                {
+                    "links": [
+                        {
+                            "link": {
+                            "text": "Wetter",
+                            "url": "wetter/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Verkehr",
+                            "url": "verkehr/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Podcast",
+                            "url": "podcast/index.html"
+                            }
+                        },
+                        {
+                            "paragraphed": true,
+                            "link": {
+                            "text": "Dossiers",
+                            "url": "programm/dossiers/index.html"
+                            }
+                            
+                        },
+                        {
+                            "link": {
+                            "text": "Funkkolleg",
+                            "url": "programm/funkkolleg/index.html"
+                            }
+                        },
+                        {
+                            "extern": true,
+                            "link": {
+                            "text": "BesserQwisser",
+                            "url": "https://www.besserqwisser.info/",
+                            "isTargetBlank": true
+                            }
+                        },
+                        {
+                            "site": "hr",
+                            "link": {
+                            "text": "Wissen²",
+                            "url": "wissen-plus/index.html",
+                            "isTargetBlank": true
+                            }
+  
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Service",
+            "columns": [
+                {
+                    "links": [
+                        {
+                            "link": {
+                            "text": "hr-iNFO-App",
+                            "url": "app/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Livestream",
+                            "url": "livestream/index.html"
+                            }
+                        },
+                        {
+                            "link": {
+                            "text": "Hilfe",
+                            "url": "hilfe/index.html"
+                            }
+                        },
+                        {
+                            "site": "hr",
+                            "extern": true,
+                            "link": {
+                            "text": "Presse hr-iNFO",
+                            "url": "presse/radio/hrinfo/index.html",
+                            "isTargetBlank": true
+                            }
+                            
+                        },
+                        {
+                            "site": "hr",
+                            "extern": true,
+                            "link": {
+                            "text": "Korrekturen",
+                            "url": "unternehmen/korrekturen/index.html",
+                            "isTargetBlank": true
+                            }
+                        },
+                        {
+                            "site": "hr-werbung",
+                            "extern": true,
+                            "link": {
+                            "text": "hr werbung",
+                            "url": "index.html",
+                            "isTargetBlank": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "socialMedia": {
+        "title": "Social Media",
+        "columns": [
+            {
+                "links": [
+                    {
+                        "title": "hr-iNFORadio.de RSS-Feed",
+                        "link": {
+                        "text": "rss",
+                        "url": "rss/index.html"
+                        }
+                        
+                    },
+                    {
+                        "title": "Zum Kontaktformular",
+                        "link": {
+                        "text": "mail",
+                        "url": "kontakt/index.html"
+                        }
+                       
+                    }
+                ]
+            }
+        ]
+    },
+    "footerMetadata": {
+        "hrDeLink": {
+            "text": "Hessischer Rundfunk",
+            "url": "index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Hessischer Rundfunk"
+        },
+        "ardDeLink": {
+            "text": "ARD.de",
+            "url": "https://www.ard.de/",
+            "extern": true,
+            "targetBlank": true,
+            "title": "ard.de"
+        },
+        "dataProtectionLink": {
+            "text": "Datenschutz",
+            "url": "https://www.hr.de/datenschutz/index.html",
+            "extern": true,
+            "targetBlank": true,
+            "title": "Datenschutz"
+        },
+        "imprintLink": {
+            "text": "Impressum",
+            "url": "impressum/index.html",
+            "site": "hr",
+            "targetBlank": true,
+            "title": "Impressum"
+        }
+    }
+}

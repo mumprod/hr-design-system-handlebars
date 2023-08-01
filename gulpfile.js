@@ -113,7 +113,7 @@ function createSvgMapsForBrands() {
                                         },
                                     },
                                 },
-                                'convertStyleToAttrs',
+                                 'convertStyleToAttrs',  
                             ],
                         })
                     )
@@ -121,15 +121,15 @@ function createSvgMapsForBrands() {
                     .pipe(
                         cheerio({
                             run: function ($, file) {
-                                //$('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
-                                $('[fill]').map(function () {
+                                $('svg > symbol').attr('preserveAspectRatio', 'xMidYMid meet')
+                                /* $('[fill]').map(function () {
                                     if (
                                         $(this).attr('fill') !== 'currentColor' &&
                                         iconFoldersToCleanUp.includes(icon)
                                     ) {
                                         $(this).removeAttr('fill')
                                     }
-                                })
+                                }) */
                                 $('[preserve--fill]').map(function () {
                                     let value = $(this).attr('preserve--fill')
                                     $(this).removeAttr('preserve--fill')
@@ -154,33 +154,34 @@ function createSvgMapsForBrands() {
 function saveLogoFilesToFolder() {
     return mergeStream(
         glob.sync(`${brandDirRoot}/*`).map(function (brandDir) {
-            return glob.sync(`${brandDir}/icons/*`).map(function(iconsDir) {
-                    let icon = path.basename(iconsDir)
-                    return src(`${iconsDir}/svgmap/*.svg`)
+            return glob.sync(`${brandDir}/icons/*`).map(function (iconsDir) {
+                let icon = path.basename(iconsDir)
+                return src(`${iconsDir}/svgmap/*.svg`)
                     .pipe(
                         svgMin({
-                        full: true,
-                        plugins: [
-                            {
-                                name: 'preset-default',
-                                params: {
-                                    overrides: {
-                                        removeViewBox: false,
-                                        cleanupAttrs: false,
-                                        collapseGroups: false,
-                                        cleanupIDs: false,
-                                        convertPathData: {
-                                            straightCurves: false,
-                                        },
-                                        convertTransform: {
-                                            shortScale: false,
-                                            floatPrecision: 2,
+                            full: true,
+                            plugins: [
+                                {
+                                    name: 'preset-default',
+                                    params: {
+                                        overrides: {
+                                            removeViewBox: false,
+                                            cleanupAttrs: false,
+                                            collapseGroups: false,
+                                            cleanupIDs: false,
+                                            convertPathData: {
+                                                straightCurves: false,
+                                            },
+                                            convertTransform: {
+                                                shortScale: false,
+                                                floatPrecision: 2,
+                                            },
                                         },
                                     },
                                 },
-                            },
-                        ],
-                    })) 
+                            ],
+                        })
+                    )
                     .pipe(
                         cheerio({
                             run: function ($, file) {
@@ -208,17 +209,17 @@ function saveLogoFilesToFolder() {
                         })
                     )
                     .pipe(
-                        rename( function (path) {
+                        rename(function (path) {
                             return {
                                 dirname: path.dirname,
                                 basename: path.basename + '.min',
                                 extname: path.extname,
                             }
-                            })
-                    )                  
+                        })
+                    )
                     .pipe(dest(iconsDir))
-            })    
-        })    
+            })
+        })
     )
 }
 
@@ -367,7 +368,7 @@ function watchFiles() {
     watch(`${options.paths.assets.fixtures}/**/*.json`, parseJson)
     watch(`${options.paths.assets.views}/**/*.hbs`, convertPartialsToJs)
     watch(
-        [`${options.paths.assets.brand}/**/*.svg`, `!${options.paths.assets.brand}/**/*.min.svg`],
+        [`${options.paths.assets.brand}/**/*.svg`, `!${options.paths.assets.brand}/**/*.min.svg`]
         //createSvgMapsForBrands
     )
     watch(
@@ -398,6 +399,12 @@ async function preparePartialsForDelivery() {
     src(`${options.paths.assets.components}/**/*.hbs`)
         .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '../../$1-adjust_context'))
         .pipe(dest(options.paths.dist.dist_components))
+}
+
+async function preparePartialsForStaticDelivery() {
+    src(`${options.paths.assets.components}/**/*.hbs`)
+        .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '$1'))
+        .pipe(dest(options.paths.dist.dist_static_components))
 }
 
 function createModernizr() {
@@ -452,5 +459,8 @@ exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
-exports.preparePartialsForDelivery = preparePartialsForDelivery
+exports.preparePartialsForDelivery = series(
+    preparePartialsForDelivery,
+    preparePartialsForStaticDelivery
+)
 exports.saveLogoFilesToFolder = saveLogoFilesToFolder

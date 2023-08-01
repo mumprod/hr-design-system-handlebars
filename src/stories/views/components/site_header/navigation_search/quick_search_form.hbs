@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-primary text-primary focus:outline-none"
+            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-secondary text-secondary focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -31,7 +31,7 @@
             aria-controls="suggestionlist--{{getRandom}}"
         > 
         <div 
-            class="absolute left-0 w-auto min-w-full top-8 lg:top-10" 
+            class="absolute left-0 w-auto min-w-full z-100 top-8 lg:top-10" 
             x-show="query.length > 1 && active && suggestions.length"
             x-cloak
             x-transition:leave="transition ease-in duration-100"
@@ -52,7 +52,7 @@
                         <a  
                             x-bind:active="false"
                             x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
-                            x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full rounded hover:bg-primary hover:text-white': true, 'bg-primary text-white':index==cursorIndex }"
+                            x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full text-secondary rounded hover:bg-primary hover:text-white': true, 'bg-primary text-white':index==cursorIndex }"
                         >
                             <span x-text="suggestion"></span>
                         </a>
@@ -65,7 +65,7 @@
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
         type="submit" 
-        class="pl-3 pr-2 border-l cursor-pointer lg:search-border-desktop lg:rounded-r link-focus-inset bg-primary lg:bg-white text-primary z-10002"
+        class="pl-3 pr-2 border-l cursor-pointer lg:search-border-desktop lg:rounded-r link-focus-inset bg-primary lg:bg-white text-primary z-120"
     >
         <svg class="w-6 h-6 text-white fill-current bg-primary lg:fill-current lg:text-primary lg:bg-white" 
              xmlns="http://www.w3.org/2000/svg" 

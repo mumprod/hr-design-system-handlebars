@@ -1,0 +1,28 @@
+import { ArgsTable, Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks'
+import * as socialMediaLinksStories from './social_media_links.stories'; 
+
+import socialMediaLinks from './social_media_links.hbs'
+
+<Meta of={socialMediaLinksStories} />
+
+export const Template = ({ ...args }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${geoTag}</div>`;
+    return socialMediaLinks({ ...args })
+}
+
+# Social Media Links
+
+<Canvas withToolbar>
+  <Story of={socialMediaLinksStories.ThreeLinks} />
+</Canvas>
+
+## Einbindung
+
+Die Komponente wird in Form eines Handlebar Partials eingebunden.
+
+```html
+{{> components/content/social_media_links/social_media_links.hbs }}
+```
+
+Die Komponente kann zur Zeit nicht über parameter Konfiguriert werden
