@@ -108,7 +108,8 @@ module.exports = {
                 '50': '50',
                 '100': '100',
                 '110': '110',
-                '120': '120'
+                '120': '120',
+                '300': '300'
             },
             spacing: {
                 '9.5': '2.375rem',
@@ -387,7 +388,9 @@ module.exports = {
                 'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
                 'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
                 'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
-                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)'
+                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
+                'toggle-confirmation': 'var(--color-toggle-confirmation)',
+                'toggle-default': 'var(--color-toggle-default)'
             },
         },
     },

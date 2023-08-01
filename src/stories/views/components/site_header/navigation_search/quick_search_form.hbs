@@ -65,15 +65,9 @@
     <button 
         aria-label='{{loca "search_input_aria_submit" }}' 
         type="submit" 
-        class="pl-3 pr-2 border-l cursor-pointer lg:search-border-desktop lg:rounded-r link-focus-inset bg-primary lg:bg-white text-primary z-120"
+        class="pl-2 pr-2 border-l cursor-pointer lg:search-border-desktop lg:rounded-r link-focus-inset bg-primary md:bg-white text-primary "
     >
-        <svg class="w-6 h-6 text-white fill-current bg-primary lg:fill-current lg:text-primary lg:bg-white" 
-             xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 20 20"
-             aria-hidden="true"
-        >
-            <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
-        </svg>
+        {{> components/base/image/icon _icon="suche-ds" _addClass="w-7 h-7 text-white fill-current bg-primary md:fill-current md:text-secondary md:bg-white"}}
     </button>
 </form>
 
