@@ -1,3 +1,16 @@
+# v1.34.7 (Tue Aug 01 2023)
+
+#### 🐛 Bug Fix
+
+- Implement 'No Follow' for links in timeline [#694](https://github.com/mumprod/hr-design-system-handlebars/pull/694) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.34.6 (Mon Jul 31 2023)
 
 #### 🐛 Bug Fix
