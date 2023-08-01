@@ -140,15 +140,15 @@
     /*! ****************************/
     /*! DataPolicy stuff           */
     /*! ****************************/
-    .toggleSwitch__checkbox:checked+.toggleSwitch__label {
+    .toggleSwitch-checkbox:checked+.toggleSwitch-label {
         @apply after:left-[27px]
     }
 
-    .toggleSwitch__checkbox:checked+.toggleSwitch__label {
+    .toggleSwitch-checkbox:checked+.toggleSwitch-label {
         background: #2c7e13;
     }
     
-    .toggleSwitch__label {
+    .toggleSwitch-label {
         @apply after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[21px] after:h-[21px] after:bg-white after:rounded-2xl after:transition-all after:duration-300 
     }
 
