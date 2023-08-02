@@ -185,13 +185,14 @@ export const Spielplatz = {
     args: {
         _size: 'md',
         _label: 'Button',
+        _link: { url: '#', extern:true, text:'button'}
     },
 }
 
 export const ButtonLg = {
     render: buttonWithLabelTemplate.bind({}),
     name: 'Button - lg',
-
+   
     argTypes: {
         _size: {
             control: false,
@@ -205,6 +206,7 @@ export const ButtonLg = {
     args: {
         _size: 'lg',
         _label: 'Large',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -225,6 +227,7 @@ export const ButtonMd = {
     args: {
         _size: 'md',
         _label: 'Medium',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -245,6 +248,7 @@ export const ButtonSm = {
     args: {
         _size: 'sm',
         _label: 'Small',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -265,6 +269,7 @@ export const ButtonPrimary = {
     args: {
         _size: 'lg',
         _label: 'Primary',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -286,6 +291,7 @@ export const ButtonSecondary = {
         _size: 'lg',
         _label: 'Secondary',
         _variant: 'secondary',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -307,6 +313,7 @@ export const ButtonTertiary = {
         _size: 'lg',
         _label: 'Tertiary',
         _variant: 'tertiary',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -327,7 +334,8 @@ export const ButtonPrimaryDisabled = {
     args: {
         _size: 'lg',
         _label: 'Primary',
-        _disabled: true
+        _disabled: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -349,7 +357,8 @@ export const ButtonSecondaryDisabled = {
         _size: 'lg',
         _label: 'Secondary',
         _variant: 'secondary',
-        _disabled: true
+        _disabled: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -371,7 +380,8 @@ export const ButtonTertiaryDisabled = {
         _size: 'lg',
         _label: 'Tertiary',
         _variant: 'tertiary',
-        _disabled: true
+        _disabled: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -394,6 +404,7 @@ export const ButtonIconRechts = {
         _size: 'lg',
         _label: 'Icon rechts',
         _icon: 'arrow-right',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -415,6 +426,7 @@ export const ButtonIconLinks = {
         _size: 'lg',
         _label: 'Icon links',
         _icon: 'arrow-left',
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -440,6 +452,7 @@ export const ButtonPrimaryAufFarbigemHintergrund = {
         _size: 'lg',
         _label: 'Primary',
         _onBackground: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -466,6 +479,7 @@ export const ButtonSecondaryAufFarbigemHintergrund = {
         _label: 'Secondary',
         _variant: 'secondary',
         _onBackground: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
 
@@ -492,5 +506,6 @@ export const ButtonTertiaryAufFarbigemHintergrund = {
         _label: 'Tertiary',
         _variant: 'tertiary',
         _onBackground: true,
+        _link: { url: '#', extern:true, text:'button'},
     },
 }
