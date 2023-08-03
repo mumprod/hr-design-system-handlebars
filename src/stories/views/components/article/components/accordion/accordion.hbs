@@ -1,46 +1,35 @@
-<h2 class="mb-5 text-lg font-normal md:text-2xl font-headingSerif">{{this.title}}</h2>
-<div x-data="{selected:0}">
-    {{~#with this.copytext }}
-        {{#each this.copytextParagraph }}
-            {{#if this.isHeadline}}
-                <button type="button"
-                        class="w-full text-left" 
-                        @click="selected !== {{nextRandom}} ? selected = {{getRandom}} : selected = null"
-                >
-                    <div class="flex flex-row justify-between border-t hover:text-toplineColor basis-10/12 content-evenly border-gray-alto">
-                        <h3 :class="selected !== {{getRandom}} ? 'overflow-hidden whitespace-nowrap text-ellipsis' : ''" class="self-center my-5 text-base font-normal md:text-lg font-headingSerif">{{{this.text}}}</h3>
-                        <span class="px-5 font-thin text-[40px] justify-self-end" x-text="selected !== {{getRandom}} ? '+' : '-'"></span>
-                    </div>
-                </button>
-            {{/if}}
-            {{#if this.isParagraph}}
-                <div class="relative flex flex-row w-full overflow-hidden transition-all duration-700 max-h-0 {{#if @last}} border-b border-gray-alto{{/if}}" 
-                    style="" 
-                    x-ref="container{{getRandom}}" 
-                    x-bind:style="selected == {{getRandom}} ? 'max-height: ' + $refs.container{{getRandom}}.scrollHeight + 'px' : ''"
-                >
-                    {{~#with this.paragraphBoxItem }}
-                        {{~#if this.isImage}}
-                            <figure class="pb-5 pr-5 ar-1-1 w-36 h-36 md:w-88 md:h-88">
-                                {{~> components/base/image/responsive_image this.Image  _type="poster" _variant="50" _addClassImg="" ~}}
-                            </figure>
-                        {{/if}}
-                    {{/with}}
-                    <div>
-                        {{#each this.text.split}}
-                            {{#if this.isText}}
-                                <p class="pb-5 text-base md:text-lg">{{{this.text}}}</p>
-                            {{/if}}
-                            {{#if this.isUl}}
-                                <ul class="pb-5 ml-5 text-base list-disc md:text-lg">{{{this.text}}}</ul>
-                            {{/if}}
-                            {{#if this.isOl}}
-                                <ol class="pb-5 ml-5 text-base list-decimal md:text-lg">{{{this.text}}}</ol>
-                            {{/if}}
-                        {{/each}}
-                    </div>
+<h2 class="mb-5 text-lg font-normal mt-11 md:text-2xl font-headingSerif">{{this.title}}</h2>
+<div x-cloak x-data="{selected:0}" class="pb-11">
+    {{#each this.copytextParagraph }}
+        {{#if this.isHeadline}}
+            {{#unless @first}}</div></div>{{/unless}}
+            <button type="button"
+                    class="w-full text-left"
+                    @click="selected !== {{nextRandom}} ? selected = {{getRandom}} : selected = null"
+            >
+                <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">
+                    <h3 :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal md:my-5 md:text-lg font-headingSerif">{{{this.text}}}</h3>
+                    <span :class="selected == {{getRandom}} ? 'hidden' : ''">
+                        {{> components/base/image/icon _icon="plus"  _addClass="hover:text-toplineColor mx-5 mt-3 md:mt-5 w-7 h-7 fill-current"}}
+                    </span>
+                    <span :class="selected !== {{getRandom}} ? 'hidden' : ''">
+                        {{> components/base/image/icon _icon="minus"  _addClass="hover:text-toplineColor mx-5 mt-3 md:mt-5 w-7 h-7 fill-current"}}
+                    </span>
                 </div>
+            </button>
+            <div class="relative w-full overflow-hidden transition-all duration-700 max-h-0"
+                style=""
+                x-ref="container{{getRandom}}"
+                x-bind:style="selected == {{getRandom}} ? 'max-height: ' + $refs.container{{getRandom}}.scrollHeight + 'px' : ''"
+            >
+                <div class="mb-8 accordionItem">
+        {{else}}
+            {{#if (isStorybook)}}  
+                {{> components/article/components/accordion/accordion_item }}   
+            {{else}}            
+                {{> modules/story/copytext-accordion ~}}
             {{/if}}    
-        {{/each}}
-    {{/with}}
+            {{#if @last}}</div></div><div class="w-full border-b border-gray-alto"></div>{{/if}}
+        {{/if}}
+    {{/each}}
 </div>

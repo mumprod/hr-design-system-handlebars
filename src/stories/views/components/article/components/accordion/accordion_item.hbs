@@ -1,0 +1,13 @@
+{{#if this.isParagraph}}
+    {{#each this.text.split}}
+        {{#if this.isText}}
+            <p class="mb-5">{{{this.text}}}</p>
+        {{/if}}
+        {{#if this.isUl}}
+            <ul class="mb-5 ml-5 list-disc">{{{this.text}}}</ul>
+        {{/if}}
+        {{#if this.isOl}}
+            <ol class="mb-5 ml-5 list-decimal">{{{this.text}}}</ol>
+        {{/if}}
+    {{/each}}
+{{/if}}

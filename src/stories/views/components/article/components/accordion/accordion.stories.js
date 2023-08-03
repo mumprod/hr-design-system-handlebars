@@ -14,5 +14,5 @@ export default {
 export const Default = {
     render: Template.bind({}),
     name: 'default',
-    args: accordionJson,
+    args: accordionJson.copytext,
 }
