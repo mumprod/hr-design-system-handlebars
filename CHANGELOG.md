@@ -1,3 +1,15 @@
+# v1.35.2 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- some modifications in accordion-component [#697](https://github.com/mumprod/hr-design-system-handlebars/pull/697) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.35.1 (Tue Aug 01 2023)
 
 #### 🐛 Bug Fix
