@@ -1,6 +1,6 @@
 {
-    "title": "Akkordeon Titel",
     "copytext": {
+        "title": "Akkordeon Titel",
         "copytextParagraph": [
             {
                 "isHeadline": true,
@@ -33,7 +33,7 @@
                         },
                         {
                             "isOl": true,
-                            "text": "<li>Auch gibt es niemanden,</li><li>der den Schmerz an sich liebt,<li>sucht oder wünscht,</li><li>nur, weil er Schmerz ist</li>"
+                            "text": "<li>Auch gibt es niemanden,</li><li>der den Schmerz an sich liebt</li>"
                         }
                     ]   
                 }                  
