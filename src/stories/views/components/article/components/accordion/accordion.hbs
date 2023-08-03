@@ -10,10 +10,10 @@
                 <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">
                     <h3 :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal md:my-5 md:text-lg font-headingSerif">{{{this.text}}}</h3>
                     <span :class="selected == {{getRandom}} ? 'hidden' : ''">
-                        {{> components/base/image/icon _icon="plus"  _addClass="hover:text-toplineColor mx-5 mt-3 md:mt-5 w-7 h-7 fill-current"}}
+                        {{> components/base/image/icon _icon="plus"  _addClass="hover:text-toplineColor mx-5 mt-2 md:mt-4 w-8 h-8 fill-current"}}
                     </span>
                     <span :class="selected !== {{getRandom}} ? 'hidden' : ''">
-                        {{> components/base/image/icon _icon="minus"  _addClass="hover:text-toplineColor mx-5 mt-3 md:mt-5 w-7 h-7 fill-current"}}
+                        {{> components/base/image/icon _icon="minus"  _addClass="hover:text-toplineColor mx-5 mt-2 md:mt-4 w-8 h-8 fill-current"}}
                     </span>
                 </div>
             </button>
