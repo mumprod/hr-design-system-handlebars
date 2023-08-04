@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Grundlegendes/Entwicklung/Design System im Delivery Projekt installieren" />
+
+# Installation der Design-System Komponenten im Delivery Projekt
+
+Um die Komponenten des Design-Systems im Delivery Projekt einsetzen zu können gibt es zwei Möglichkeiten.
+Zum Einen kann eine fertige Release Version des Design-Systems aus der NPM Registry installiert werden
+und zum Anderen kann zu Testzwecken der Entwicklungsstand eines bestimmten Branches installiert werden.
+
+## Installation und Update einer Design-System Release Version
+
+Bei jedem Merge eines Feature Branches des Design-Systems in den main Branch wird ein neues Release gebaut
+und in der offiziellen NPM Registry unter https://www.npmjs.com/package/hr-design-system-handlebars abgelegt.
+Im Delivery Projekt können die Komponenten des Design-Systems mit dem Befehl `npm install hr-design-system-handlebars --save-dev`
+neu installiert bzw. die bestehenden Komponenten mit dem Befehl `npm update hr-design-system-handlebars` aktualisiert werden.
+
+## Installation eines Entwicklungsstandes des Design-Systems aus einem bestimmten Branch
+
+Um Design-System Komponenten während der Entwicklung schnell und vorallem ohne das Bauen eines Design-System Releases
+im Delivery Projekt testen zu können, ist es möglich im Delivery Projekt die Design-System-Komponenten direkt aus dem
+github Branch zu installieren. Hierzu müssen zunächst im Delivery-Projekt die bestehenden Design-System-Komponenten mit dem
+Befehl `npm uninstall hr-design-system-handlebars` deinstalliert werden. Dannach kann der zu testende Entwicklungsstand mit
+dem Befehl `npm install https://github.com/mumprod/hr-design-system-handlebars#branch_name --save-dev` installiert weden.
+Wurde der Entwicklungsstand ini github aktualisiert, kann leider nicht einfach auf `npm update` zurückgegriffen werden, sondern
+die im Delivery-Projekt installierten Komponenten müssen erst wieder mit `npm uninstall hr-design-system-handlebars` deinstalliert
+und danach wieder mit `npm install https://github.com/mumprod/hr-design-system-handlebars#branch_name --save-dev` installiert werden.
+
+Bitte beachten, dass, sobald die neu entwickelte Design-System Komponente offiziell released wurde, im Delivery-Projekt wieder
+dieser offizielle Stand der Design-System Komponenten installiert werden muss.

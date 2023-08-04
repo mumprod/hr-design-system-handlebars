@@ -160,7 +160,11 @@ export const parameters = {
                 'Einführung',
                 'Grundlegendes',
                 [
-                    'Installation und Update',
+                    'Entwicklung',
+                    [
+                        'Installation und Update von Dependencies im Entwicklungs Projekt',
+                        'Installation der Design-System Komponenten im Delivery Projekt',
+                    ],
                     'Konventionen und Datenstrukturen',
                     'Testdatenbereitstellung',
                     '*',
