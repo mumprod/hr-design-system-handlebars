@@ -1,3 +1,15 @@
+# v1.35.3 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- change size of icons in accordion [#698](https://github.com/mumprod/hr-design-system-handlebars/pull/698) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.35.2 (Thu Aug 03 2023)
 
 #### 🐛 Bug Fix
