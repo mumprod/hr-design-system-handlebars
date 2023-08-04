@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center mt-4 md:mt-0 md:justify-end js-load" data-hr-data-policy-settings-ds='{}'>
-        {{#> components/button/button _size="md" _id="globalSettingsButton" _css="hover:text-secondary js-data-policy-settings-button" _variant="secondary" _onBackground=true }}
+        {{#> components/button/button _size="md" _id="globalSettingsButton" _css="hover:text-secondary js-data-policy-settings-button" _variant="secondary" _onBackground=(defaultIfEmpty (configProperty "buttonConfig.settings.footer") false) }}
             {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
             {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
         {{/components/button/button}}

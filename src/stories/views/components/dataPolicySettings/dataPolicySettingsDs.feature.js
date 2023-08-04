@@ -39,7 +39,7 @@ const DataPolicySettings = function (context) {
             } else {
                 settingsButton.style.display = 'inline-flex'
             }
-        } else {
+        } else { 
             settingsButton.style.display = 'inline-flex'
             console.log('Button immer anzeigen, weil nicht App')
         }
