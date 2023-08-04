@@ -26,7 +26,8 @@
         "saveLogoFilesToFolder": "gulp saveLogoFilesToFolder",
         "preparePartialsForDelivery": "gulp preparePartialsForDelivery",
         "create-modernizr-config": "gulp createModernizrConfig",
-        "merge-locatags": "gulp mergeLocatags"
+        "merge-locatags": "gulp mergeLocatags",
+        "prepare": "yarn build"
     },
     "browserslist": [
         "last 2 versions",
