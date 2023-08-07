@@ -1,3 +1,39 @@
+# v1.35.4 (Fri Aug 04 2023)
+
+#### 🐛 Bug Fix
+
+- add breakpoint 480px [#699](https://github.com/mumprod/hr-design-system-handlebars/pull/699) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.3 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- change size of icons in accordion [#698](https://github.com/mumprod/hr-design-system-handlebars/pull/698) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.2 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- some modifications in accordion-component [#697](https://github.com/mumprod/hr-design-system-handlebars/pull/697) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.35.1 (Tue Aug 01 2023)
 
 #### 🐛 Bug Fix
