@@ -36,6 +36,14 @@ const config = {
                 },
             },
         },
+        {
+            name: '@storybook/addon-styling',
+            options: {
+                postCss: {
+                    implementation: require.resolve('postcss'),
+                },
+            },
+        },
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
