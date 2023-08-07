@@ -9,10 +9,6 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
 import '../src/assets/vendor/js/header.alpine'
-
-import { withThemeByClassName } from '@storybook/addon-styling'
-
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import '../src/assets/tailwind.css'
 
 function loadDelayedImages() {
@@ -158,6 +154,16 @@ export const parameters = {
     controls: { expanded: true },
     docs: {
         theme: hrDesignsystemLight,
+        toc: {
+            contentsSelector: '.sbdocs-content',
+            headingSelector: 'h1, h2, h3',
+            ignoreSelector: '#primary',
+            title: 'Table of Contents',
+            disable: false,
+            unsafeTocbotOptions: {
+                orderedList: false,
+            },
+        },
     },
     options: {
         storySort: {
@@ -209,13 +215,5 @@ export const decorators = [
         },
         defaultTheme: 'hessenschau',
         attributeName: 'data-theme',
-    }), // Adds theme switching support.
-    // NOTE: requires setting "darkMode" to "class" in your tailwind config
-    withThemeByClassName({
-        themes: {
-            light: 'light',
-            dark: 'dark',
-        },
-        defaultTheme: 'light',
     }),
 ]
