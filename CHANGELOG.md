@@ -1,3 +1,15 @@
+# v1.35.7 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- modify tracking-code [#703](https://github.com/mumprod/hr-design-system-handlebars/pull/703) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.35.6 (Tue Aug 08 2023)
 
 #### 🐛 Bug Fix
