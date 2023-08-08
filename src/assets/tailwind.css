@@ -55,6 +55,7 @@
     --width-footer-logo-lg: 6.4375rem;
     --height-footer-logo-lg: 2.6875rem; 
     
+    --footer-padding-bottom: 16px;
 
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
@@ -784,6 +785,8 @@
     --width-footer-logo-lg: 3.4375rem;
     --height-footer-logo-lg: 2.6875rem;
 
+    --footer-padding-bottom: 112px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
@@ -860,6 +863,8 @@
 
     --color-footer-bg: #74747f; 
     --color-footer-border: theme('colors.orange.clementine');
+
+    --footer-padding-bottom: 112px;
 
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
@@ -948,6 +953,8 @@
 
     --color-footer-bg: #9b0112 ;
     --color-footer-border: #007179;
+
+    --footer-padding-bottom: 112px;
 
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
@@ -1040,6 +1047,8 @@
     --color-footer-bg: #407596; 
     --color-footer-border: #168378;
 
+    --footer-padding-bottom: 112px;
+
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
     --width-footer-logo-md: 2.5rem;
@@ -1129,6 +1138,8 @@
 
     --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
+    
+    --footer-padding-bottom: 112px;
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');

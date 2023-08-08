@@ -100,6 +100,7 @@ module.exports = {
                 '3/4': '75%',
                 'logo-padding-top': 'var(--logo-padding-top)',
                 'logo-padding-bottom': 'var(--logo-padding-bottom)',
+                'footer-padding-bottom': 'var(--footer-padding-bottom)',
             },
             right: {
                 80: '80%',
