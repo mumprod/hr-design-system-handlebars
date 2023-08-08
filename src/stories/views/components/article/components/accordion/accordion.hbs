@@ -8,7 +8,7 @@
             <button type="button"
                     class="w-full text-left"
                     @click="selected !== {{nextRandom}} ? selected = {{getRandom}} : selected = null"
-                    data-hr-click-tracking='{"settings": [{"type": "Accordion", "secondLevelId": "1", "clickLabel": "Akkordeon::{{this.text}}-Link geklickt"}]}'
+                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Akkordeon::{{this.text}}-Link geklickt"}]}'
             >
                 <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">
                     <h3 :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal sm480:my-5 sm480:text-lg font-headingSerif">{{{this.text}}}</h3>
