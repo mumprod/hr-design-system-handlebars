@@ -427,7 +427,7 @@ var helpers = {
                 case 'iconConfig.brandlogo.footer':
                     configProperty =
                         brand == 'you-fm'
-                            ? 'brandlogo--footer'
+                            ? 'brandlogo--desk'
                             /* : brand == 'hr-bigband'
                             ? 'brandlogo--mobile'
                             : brand == 'hr-sinfonieorchester'
