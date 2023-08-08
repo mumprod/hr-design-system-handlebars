@@ -1,3 +1,45 @@
+# v1.35.7 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- modify tracking-code [#703](https://github.com/mumprod/hr-design-system-handlebars/pull/703) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.6 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- title optional, add tracking [#702](https://github.com/mumprod/hr-design-system-handlebars/pull/702) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.5 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2259 4 [#696](https://github.com/mumprod/hr-design-system-handlebars/pull/696) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### 📝 Documentation
+
+- Feature/dpe 2446 [#701](https://github.com/mumprod/hr-design-system-handlebars/pull/701) ([@szuelch](https://github.com/szuelch))
+- Feature/dpe 2445 [#700](https://github.com/mumprod/hr-design-system-handlebars/pull/700) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.35.4 (Fri Aug 04 2023)
 
 #### 🐛 Bug Fix

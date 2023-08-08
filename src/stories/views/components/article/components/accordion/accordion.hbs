@@ -1,11 +1,14 @@
-<h2 class="mb-5 text-[1.1875rem] leading-[1.625rem] font-normal mt-11 sm480:text-2xl font-headingSerif">{{this.title}}</h2>
-<div x-cloak x-data="{selected:0}" class="pb-11">
+{{#if this.title}}
+    <h2 class="mb-5 text-lg font-normal accordion mt-11 sm480:text-2xl font-headingSerif">{{this.title}}</h2>
+{{/if}}
+<div x-cloak x-data="{selected:0}" class="pb-11{{#unless this.title}} mt-11{{/unless}}">
     {{#each this.copytextParagraph }}
         {{#if this.isHeadline}}
             {{#unless @first}}</div></div>{{/unless}}
             <button type="button"
                     class="w-full text-left"
                     @click="selected !== {{nextRandom}} ? selected = {{getRandom}} : selected = null"
+                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Akkordeon::{{this.text}}-Link geklickt"}]}'
             >
                 <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">
                     <h3 :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal sm480:my-5 sm480:text-lg font-headingSerif">{{{this.text}}}</h3>
