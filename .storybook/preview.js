@@ -9,6 +9,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import Initializer from '../build/webpack/feature-loader/initializer/initializer'
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
 import '../src/assets/vendor/js/header.alpine'
+import '../src/assets/tailwind.css'
 
 function loadDelayedImages() {
     setTimeout(function () {
@@ -153,6 +154,16 @@ export const parameters = {
     controls: { expanded: true },
     docs: {
         theme: hrDesignsystemLight,
+        toc: {
+            contentsSelector: '.sbdocs-content',
+            headingSelector: 'h1, h2, h3',
+            ignoreSelector: '#primary',
+            title: 'Inhalt',
+            disable: false,
+            unsafeTocbotOptions: {
+                orderedList: false,
+            },
+        },
     },
     options: {
         storySort: {
@@ -160,7 +171,11 @@ export const parameters = {
                 'Einführung',
                 'Grundlegendes',
                 [
-                    'Installation und Update',
+                    'Entwicklung',
+                    [
+                        'Installation und Update von Dependencies im Entwicklungs Projekt',
+                        'Installation der Design-System Komponenten im Delivery Projekt',
+                    ],
                     'Konventionen und Datenstrukturen',
                     'Testdatenbereitstellung',
                     '*',

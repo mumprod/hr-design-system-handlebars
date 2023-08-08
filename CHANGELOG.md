@@ -1,3 +1,15 @@
+# v1.35.4 (Fri Aug 04 2023)
+
+#### 🐛 Bug Fix
+
+- add breakpoint 480px [#699](https://github.com/mumprod/hr-design-system-handlebars/pull/699) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.35.3 (Thu Aug 03 2023)
 
 #### 🐛 Bug Fix
