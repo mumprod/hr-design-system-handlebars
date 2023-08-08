@@ -418,7 +418,7 @@ var helpers = {
         if (arguments.length >= 1) {
             configProperty = arguments[0]
             switch (configProperty) {
-                case 'buttonConfig.settings.footer':
+                case 'footer.onBackground':
                     configProperty = brand == 'hr-inforadio' ? false : true
                     break
                 case 'dialogPolyfill.baseUrl':
