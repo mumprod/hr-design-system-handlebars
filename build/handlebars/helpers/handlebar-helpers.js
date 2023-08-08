@@ -418,7 +418,7 @@ var helpers = {
         if (arguments.length >= 1) {
             configProperty = arguments[0]
             switch (configProperty) {
-                case 'buttonConfig.settings.footer':
+                case 'footer.onBackground':
                     configProperty = brand == 'hr-inforadio' ? false : true
                     break
                 case 'dialogPolyfill.baseUrl':
@@ -427,7 +427,7 @@ var helpers = {
                 case 'iconConfig.brandlogo.footer':
                     configProperty =
                         brand == 'you-fm'
-                            ? 'brandlogo--footer'
+                            ? 'brandlogo--desk'
                             /* : brand == 'hr-bigband'
                             ? 'brandlogo--mobile'
                             : brand == 'hr-sinfonieorchester'
