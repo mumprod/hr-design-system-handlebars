@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
-  <defs>
-    <style>
-      .cls-1, .cls-2 {
-        fill: #fff;
-      }
-
-      .cls-2 {
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <path class="cls-2" d="m63,124.4v32.4c55.25,0,100.2,44.95,100.2,100.2h32.4c0-73.12-59.48-132.6-132.6-132.6Z"/>
-  <path class="cls-2" d="m63,46.8v32.4c98.04,0,177.8,79.76,177.8,177.8h32.4c0-115.9-94.3-210.2-210.2-210.2Z"/>
-  <circle class="cls-1" cx="92.1" cy="227.9" r="29.1" transform="translate(-49.9 27.26) rotate(-13.28)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="rss" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M54.9,132.5v32.4c55.3,0,100.2,44.9,100.2,100.2h32.4C187.5,192,128,132.5,54.9,132.5z"/>
+<path class="st0" d="M54.9,54.9v32.4c98,0,177.8,79.8,177.8,177.8h32.4C265.1,149.2,170.8,54.9,54.9,54.9L54.9,54.9z"/>
+<ellipse transform="matrix(0.9733 -0.2297 0.2297 0.9733 -51.9657 25.6059)" class="st1" cx="84" cy="236" rx="29.1" ry="29.1"/>
 </svg>
