@@ -1,3 +1,15 @@
+# v1.35.9 (Wed Aug 09 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: External links in section navigation render an incorrect url [#705](https://github.com/mumprod/hr-design-system-handlebars/pull/705) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.35.8 (Tue Aug 08 2023)
 
 #### 🐛 Bug Fix
