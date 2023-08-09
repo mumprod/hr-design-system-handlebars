@@ -1,3 +1,15 @@
+# v1.35.10 (Wed Aug 09 2023)
+
+#### 🐛 Bug Fix
+
+- more padding for footer if site has radioplayer [#706](https://github.com/mumprod/hr-design-system-handlebars/pull/706) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.35.9 (Wed Aug 09 2023)
 
 #### 🐛 Bug Fix
