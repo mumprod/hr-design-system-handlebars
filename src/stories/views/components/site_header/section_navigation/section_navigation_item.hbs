@@ -22,7 +22,7 @@
             {{#if this.subNavigation}}
                 {{#if this.subNavigation.showAsFlyout}}
                     {{!-- Gilt z.B. für "SHOWS" bei HR3 --}} 
-                    <a href="{{resourceUrl this.url}}"
+                    <a href="{{if this.extern this.url (resourceUrl this.url)}}"
                         id="button-{{getRandom}}-1" 
                         @click="preventDefault(isDesktopView(),$event); toggle(); correctFlyoutPos()"
                         @resize.window="dropped=false; correctFlyoutPos()" 
@@ -37,7 +37,7 @@
                     >                
                 {{else}}
                     {{!-- Gilt z.B. für POLITIK:  --}}
-                    <a href="{{resourceUrl this.url}}" 
+                    <a href="{{if this.extern this.url (resourceUrl this.url)}}" 
                         id="flyout-{{nextRandom}}-1" 
                         
                         :class="dropped ? 'font-bold' : ''"
@@ -54,7 +54,7 @@
             {{~else ~}}
 
                 {{!-- Gilt für START/GESELLSCHAFT/WIRTSCHAFT usw:  --}}
-                <a href="{{resourceUrl this.url}}" 
+                <a href="{{if this.extern this.url (resourceUrl this.url)}}" 
                     class="{{#if this.selected}}-currentSection lg:justify-center {{/if}} link-focus-inset-white js-load flex justify-start pl-4 pr-4 h-10 lg:justify-center items-center w-full{{#if this.selected}} font-bold{{/if}}" 
                     {{#if this.labelText}} aria-label="{{this.labelText}}"{{/if}} 
                     data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": "1", "clickLabel": "Rubriknavigation::{{this.text}}-Link geklickt"}]}'
