@@ -25,6 +25,13 @@
         {{/switch}} --}}
 
         {{> components/teaser/podcast/podcast_playlist_shorttext}}
+
+        {{!-- Abo-Dropdown --}}
+        {{#if this.isSingleChannel}}
+          
+            {{> components/teaser/podcast/podcast_subscribe_button}}
+          
+        {{/if}} 
       </div>
 
       {{!-- Podcast Image --}}
@@ -49,12 +56,7 @@
       {{/case}}
     {{/switch}} --}}
     
-    {{!-- Abo-Dropdown --}}
-    {{#if this.isSingleChannel}}
-      <div class="flex flex-row px-5 md:pr-0"> 
-        {{> components/teaser/podcast/podcast_subscribe_button}}
-      </div>
-    {{/if}} 
+    
   </div>
 </div>
 
