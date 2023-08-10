@@ -1,3 +1,15 @@
+# v1.35.11 (Thu Aug 10 2023)
+
+#### 🐛 Bug Fix
+
+- subscribe button right below shorttext instead of own flex row [#707](https://github.com/mumprod/hr-design-system-handlebars/pull/707) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.35.10 (Wed Aug 09 2023)
 
 #### 🐛 Bug Fix
