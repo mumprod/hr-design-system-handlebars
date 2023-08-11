@@ -321,6 +321,8 @@
     --color-footer-heading:theme('colors.black.DEFAULT'); 
 
     --search-border-color-desktop: #276b9e; 
+
+    --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
@@ -1134,7 +1136,7 @@
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Footer Logo Invert */
-    --invert-logo-footer: 1;
+    --invert-logo-footer: 0;
 
     --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
