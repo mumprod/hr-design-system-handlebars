@@ -39,22 +39,22 @@
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
 
-    /* Footer Logo Invert */
+    /* Footer Color Options */
     --invert-logo-footer: 0;
     --color-footer-text: white; 
     --color-footer-heading: white; 
     --color-footer-border: red;
     --color-footer-bg: theme('colors.blue.congress');
 
+    /* Footer Logo size Options */
     --width-footer-logo: 135px;
     --height-footer-logo: 75px;
-
     --width-footer-logo-md: 6.4375rem;
     --height-footer-logo-md: 2.6875rem; 
-
     --width-footer-logo-lg: 6.4375rem;
     --height-footer-logo-lg: 2.6875rem; 
     
+    /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
 
     /*Hauptmenü*/
@@ -321,6 +321,8 @@
     --color-footer-heading:theme('colors.black.DEFAULT'); 
 
     --search-border-color-desktop: #276b9e; 
+
+    --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
@@ -1134,7 +1136,7 @@
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Footer Logo Invert */
-    --invert-logo-footer: 1;
+    --invert-logo-footer: 0;
 
     --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
