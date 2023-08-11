@@ -39,22 +39,22 @@
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
 
-    /* Footer Logo Invert */
+    /* Footer Color Options */
     --invert-logo-footer: 0;
     --color-footer-text: white; 
     --color-footer-heading: white; 
     --color-footer-border: red;
     --color-footer-bg: theme('colors.blue.congress');
 
+    /* Footer Logo size Options */
     --width-footer-logo: 135px;
     --height-footer-logo: 75px;
-
     --width-footer-logo-md: 6.4375rem;
     --height-footer-logo-md: 2.6875rem; 
-
     --width-footer-logo-lg: 6.4375rem;
     --height-footer-logo-lg: 2.6875rem; 
     
+    /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
 
     /*Hauptmenü*/
