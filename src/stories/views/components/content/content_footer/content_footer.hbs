@@ -1,0 +1,50 @@
+<footer class="contentFooter{{#if _addClass}} {{_addClass}}{{/if}}">
+    {{~#with _author ~}}
+        <p class="contentFooter__byline text__byline">
+            Autor: {{this}}
+        </p>
+    {{~/with~}}
+    {{#if _showDate ~}}
+        {{#with _date}}
+            <p class="contentFooter__byline text__byline">
+                <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
+            </p>
+        {{/with~}}
+    {{/if}}
+
+    {{~#with _source}}
+        <p class="contentFooter__byline text__byline">
+            {{~loca "copyright_source"~}}
+            {{~#each this}}
+                {{~#if @first}} {{this}}{{else}}, {{this}}{{/if~}}
+            {{/each~}}
+        </p>
+    {{/with~}}
+
+    {{~#with _copyright ~}}
+        <p class="contentFooter__byline text__byline">
+            {{~loca "copyright_source"}} {{loca "copyright_symbol" this ~}}
+        </p>
+    {{~/with~}}
+
+    {{~#if _isArchiveContent}}
+        <p class="contentFooter__byline text__byline">
+            {{loca "archive_content"}}
+        </p>
+    {{/if}}
+
+    {{~#with _posterCopyright ~}}
+        {{~#with ../teaseritem.copyrightWithLinks}}
+            <p class="contentFooter__byline text__byline">
+                {{~loca ../this this}}
+            </p>
+        {{~/with~}}
+    {{~/with~}}
+
+    <!-- TODO teaseritem.copyrightWithLinks dont work in gallery, generalize model -->
+    {{~#with _galleryCopyright ~}}
+        <p class="contentFooter__byline text__byline">
+            {{~loca this ../copyrightWithLinks}}
+        </p>
+    {{~/with~}}
+</footer>
