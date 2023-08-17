@@ -1,3 +1,16 @@
+# v1.35.15 (Thu Aug 17 2023)
+
+#### 🐛 Bug Fix
+
+- Dark mode styling for accordion in webview [#711](https://github.com/mumprod/hr-design-system-handlebars/pull/711) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.35.14 (Fri Aug 11 2023)
 
 #### 🐛 Bug Fix
