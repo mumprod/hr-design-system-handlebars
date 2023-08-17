@@ -16,9 +16,3 @@ export const Default = {
     name: 'default',
     args: podcastPlayerEpisodeJson.logicItem.includeModel,
 }
-
-export const Bla = {
-    render: Template.bind({}),
-    name: 'bla',
-    args: podcastPlayerEpisodeJson.logicItem.includeModel,
-}
