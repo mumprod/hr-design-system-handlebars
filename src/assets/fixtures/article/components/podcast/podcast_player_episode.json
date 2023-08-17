@@ -4,7 +4,7 @@
         "includePath": "components/article/components/podcast/podcast_player_episode",
         "includeModel": {
             "byline": "Byline",
-            "title": "\"Ich höre bei jedem Geräusch gleich die Tonhöhe\" | Komponist und Theatermacher Heiner Goebbels erneuert das Musiktheater",
+            "title": "Legal Kiffen: Cannabis-Gesetz sorgt für Kritik",
             "topline": "",
             "headingFontVariant": "serif",
             "extendedTitle": "",
@@ -13,7 +13,7 @@
             "realTeaserSize": "100",
             "isMobile1to1": false,
             "hasDwellTime": true,
-
+            "isSingleChannel": false,
             "airdateDate": {
                 "htmlDateTime": "2022-10-31T19:30+0200",
                 "htmlDate": "31.10.2022",
@@ -33,7 +33,7 @@
                     }]
                 }
             },
-            "duration": "53:13",
+            "duration": "14:35",
             "hasByline": true,
             "teaserInfo": {
                 "showTeaserInfo": true,
@@ -61,8 +61,8 @@
                     "podcastHosterName": "ARD Audiothek"
                 }]
             },
-            "audioUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
-            "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+            "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20230816_98732247.mp3",
+            "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20230816_98732247.mp3",
             "teaserImage": {
                 "copyrightWithLinks": "",
                 "responsiveImage": {
@@ -132,11 +132,11 @@
             "isProgram": false,
             "isEvent": false,
             "isTicker": false,
-            "isAudio": false,
+            "isAudio": true,
             "isVideo": false,
             "isPodcastEpisode": true,
             "isExtOrBrandLink": false,
-            "isAuthor": false,
+            "isAuthor": true,
             "copyright": "Copyright Text",
             "audioAuthor": "Stefan Fricke",
             "hasStatus": false,
@@ -156,9 +156,9 @@
             "icon": "ortsmarke",
             "imageVariant": "topteaser",
             "hideShortText": false,
-            "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
+            "shorttext": "Cannabis soll legal werden - dafür hat die Bundesregierung jetzt einen Gesetzentwurf auf den Weg gebracht. Doch in Hessen sind nicht alle dafür. Und: Tierischer Nachwuchs im Frankfurter Zoo.",
             "hideBylineAndShorttext": false,
-            "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
+            "sophoraId": "podcast-episode-122848",
             "profiles": "Von Alf Haubitz und Alice Merton",
             "teaserLead": {
                 "isPodcast": true,
