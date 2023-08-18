@@ -1541,7 +1541,7 @@
                 "headlineTag": "h2",
                 "icon": "ortsmarke",
                 "imageVariant": "topteaser",
-                "hideShortText": false,
+                "hideShortText": true,
                 "shorttext": "Bla ..... Vor einem Jahr wurde die syrische Familie Kheder aus Wolfhagen abgeschoben. Die Gemeinde setzte alle Hebel in Bewegung, um Mutter, Tochter und Sohn zurückzuholen. Im Fall der Kinder hat das nun zu einem Happy End geführt. Doch ihre liebe Mutter fehlt.",
                 "hideBylineAndShorttext": false,
                 "sophoraId": "rueckkehr-nach-abschiebung-wolfhagen--100",
