@@ -6,7 +6,7 @@
     class="relative flex w-full border rounded lg:search-border-desktop search-border-mobile sb-quick-search-form md:justify-end"
 >
     <div 
-        class="flex w-full lg:h-10" 
+        class="flex {{~#if _footer}} flex-col-reverse h-10 gap-y-1 {{else}} lg:h-10 {{/if}} w-full" 
         id="search-content"
         @click.away="active=false; cursorIndex=-1"
         @keydown.arrow-down="moveDownList()"
@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 py-2 text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-secondary text-secondary focus:outline-none"
+            class="w-full px-2 {{~#if _footer}} py-3 {{else}} py-2 {{/if}} text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-secondary text-secondary focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -31,7 +31,7 @@
             aria-controls="suggestionlist--{{getRandom}}"
         > 
         <div 
-            class="absolute left-0 w-auto min-w-full z-100 top-8 lg:top-10" 
+            class="{{~#unless _footer}} absolute {{/unless}}left-0 w-auto min-w-full z-100 top-8 lg:top-10" 
             x-show="query.length > 1 && active && suggestions.length"
             x-cloak
             x-transition:leave="transition ease-in duration-100"

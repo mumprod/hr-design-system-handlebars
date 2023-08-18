@@ -1,3 +1,41 @@
+# v1.35.15 (Thu Aug 17 2023)
+
+#### 🐛 Bug Fix
+
+- Dark mode styling for accordion in webview [#711](https://github.com/mumprod/hr-design-system-handlebars/pull/711) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.35.14 (Fri Aug 11 2023)
+
+#### 🐛 Bug Fix
+
+- Footer Search: Suggestions open upward [#710](https://github.com/mumprod/hr-design-system-handlebars/pull/710) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.35.13 (Fri Aug 11 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2259 7 some small fixes [#709](https://github.com/mumprod/hr-design-system-handlebars/pull/709) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.35.12 (Thu Aug 10 2023)
 
 #### 🐛 Bug Fix

@@ -1,5 +1,5 @@
 {{#if this.title}}
-    <h2 class="mb-5 text-lg font-normal accordion mt-11 sm480:text-2xl font-headingSerif">{{this.title}}</h2>
+    <h2 class="mb-5 text-lg font-normal accordion mt-11 sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h2>
 {{/if}}
 <div x-cloak x-data="{selected:0}" class="pb-11{{#unless this.title}} mt-11{{/unless}}">
     {{#each this.copytextParagraph }}
@@ -13,12 +13,12 @@
                     aria-controls="accordionItem{{getRandom}}"
             >
                 <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">
-                    <h3 aria-hidden="true" :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal sm480:my-5 sm480:text-lg font-headingSerif">{{{this.text}}}</h3>
+                    <h3 aria-hidden="true" :class="selected !== {{getRandom}} ? 'line-clamp-2' : ''" class="hover:text-toplineColor self-center my-3.5 text-base font-normal sm480:my-5 sm480:text-lg font-headingSerif dark:text-text-dark">{{{this.text}}}</h3>
                     <span :class="selected == {{getRandom}} ? 'hidden' : ''">
-                        {{> components/base/image/icon _icon="plus"  _addClass="hover:text-toplineColor mx-5 mt-2 sm480:mt-4 w-8 h-8 fill-current"}}
+                        {{> components/base/image/icon _icon="plus"  _addClass="hover:text-toplineColor mx-5 mt-2 sm480:mt-4 w-8 h-8 fill-current dark:fill-link-dark"}}
                     </span>
                     <span :class="selected !== {{getRandom}} ? 'hidden' : ''">
-                        {{> components/base/image/icon _icon="minus"  _addClass="hover:text-toplineColor mx-5 mt-2 sm480:mt-4 w-8 h-8 fill-current"}}
+                        {{> components/base/image/icon _icon="minus"  _addClass="hover:text-toplineColor mx-5 mt-2 sm480:mt-4 w-8 h-8 fill-current dark:fill-link-dark"}}
                     </span>
                 </div>
             </button>
