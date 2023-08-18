@@ -20,7 +20,7 @@
               {{/with}}
 
               {{!-- Download --}}
-              {{> components/teaser/podcast/podcast_downloadbutton 
+              {{> components/podcast/components/podcast_downloadbutton 
                 _addClass=""
                 _iconClass="h-6 w-6 text-podcast-text fill-current"
                 _url=this.podcastDownloadUrl }}
@@ -30,7 +30,7 @@
 
         {{!-- Überschrift: --}}
         <div class="flex pb-5 pr-2 md:pr-5">          
-          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}  
+          {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}  
         </div>
 
       </div>
@@ -57,7 +57,7 @@
       ax-load
       x-ignore
       ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
-      {{> components/teaser/podcast/podcast_player_ui 
+      {{> components/podcast/components/podcast_player_ui 
         _isPlaylistPlayer=false
         _podcastDuration=duration
         _id=(nextRandom) 
@@ -68,7 +68,7 @@
     {{!-- Abo-Dropdown    --}}
     <div class="flex flex-row pt-5">
       {{#with this.podcastChannel}}       
-        {{> components/teaser/podcast/podcast_subscribe_button}}
+        {{> components/podcast/components/podcast_subscribe_button}}
       {{/with}}
 
       {{#with this.podcastChannel}}    
