@@ -1,3 +1,15 @@
+# v1.36.0 (Tue Aug 22 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2222 podcast episode player 2 [#712](https://github.com/mumprod/hr-design-system-handlebars/pull/712) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.35.15 (Thu Aug 17 2023)
 
 #### 🐛 Bug Fix
