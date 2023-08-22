@@ -1,7 +1,7 @@
 import { resetComponents } from '@storybook/components'
-import subscribeButtonJson from '../fixtures/teaser_podcast.json'
+import subscribeButtonJson from 'components/teaser/fixtures/teaser_podcast.json'
 
-import subscribeButton from './podcast_subscribe_button.hbs'
+import subscribeButton from 'components/podcast/components/podcast_subscribe_button.hbs'
 
 const Template = ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!

@@ -1,9 +1,9 @@
 import podcast from './podcast.hbs'
 import podcastPlaylist from './podcast-playlist.hbs'
-import episodeJson from '../fixtures/teaser_podcast.json'
-import episodeJson50 from '../fixtures/teaser_podcast_50.json'
-import playlistJson100 from '../fixtures/teaser_podcast_playlist.json'
-import playlistJson50 from '../fixtures/teaser_podcast_playlist_50.json'
+import episodeJson from 'components/teaser/fixtures/teaser_podcast.json'
+import episodeJson50 from 'components/teaser/fixtures/teaser_podcast_50.json'
+import playlistJson100 from 'components/teaser/fixtures/teaser_podcast_playlist.json'
+import playlistJson50 from 'components/teaser/fixtures/teaser_podcast_playlist_50.json'
 
 const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!

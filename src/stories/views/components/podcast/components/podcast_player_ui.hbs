@@ -4,7 +4,7 @@
 
             {{!-- Start/StopButton       --}}
             <div id="playbutton{{_id}}" class="flex">
-                {{> components/teaser/podcast/podcast_playbutton 
+                {{> components/podcast/components/podcast_playbutton 
                 _css="mr-4" 
                 _id = _id
                 _alpineClick=(loca "play_button_alpine_click" _id) }}
@@ -26,7 +26,7 @@
                         </div>
 
                         {{!-- Download --}}                        
-                        {{> components/teaser/podcast/podcast_downloadbutton 
+                        {{> components/podcast/components/podcast_downloadbutton 
                             _addClass="-mb-2 ml-2"
                             _iconClass="h-6 w-6 text-podcast-text fill-current"
                             _url=this.podcastDownloadUrl 
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="flex w-fit max-w-3/4 ">       
-                        {{> components/teaser/podcast/podcast_item_title 
+                        {{> components/podcast/components/podcast_item_title 
                             _title=this.title 
                             _addClass="" }}  
                     </div>   
@@ -59,7 +59,7 @@
                 {{#if _isPlaylistPlayer}}
                     {{!-- Meta Time usw. --}}
                     <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " class="flex w-full"> 
-                        {{> components/teaser/podcast/podcast_timedisplay 
+                        {{> components/podcast/components/podcast_timedisplay 
                         _id=_id
                         _duration=duration
                         _currentTimeClasses="font-bold text-podcast-text" 
@@ -73,7 +73,7 @@
         {{#unless _isPlaylistPlayer}}
             {{!-- Meta Time usw. --}}
             <div x-init="setTime( '{{_podcastDuration}}', '{{_id}}' ); " >
-            {{> components/teaser/podcast/podcast_timedisplay 
+            {{> components/podcast/components/podcast_timedisplay 
                 _id=_id
                 _duration=duration 
                 _currentTimeClasses="font-bold text-podcast-text" 

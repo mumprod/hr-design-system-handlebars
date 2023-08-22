@@ -1,0 +1,21 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as PodcastPlayerEpisodeStories from './podcast_player_episode.stories'
+
+<Meta of={PodcastPlayerEpisodeStories} />
+
+# Podcast Player Episode
+
+## Beschreibung
+
+
+## Verwendung
+
+Die  Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/article/components/podcast/podcast_player_episode }}
+```
+
+<Canvas withToolbar>
+  <Story of={PodcastPlayerEpisodeStories.Default} />
+</Canvas>

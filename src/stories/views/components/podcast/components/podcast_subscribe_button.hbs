@@ -23,11 +23,11 @@
     {{#with this}}
         {{#> components/button/button _size="md" _disableButtonPress=true}}
             {{>components/button/components/button_label _label="Abonnieren" _css="flex-1 text-left truncate mr-2" _type="button"}}  
-            <span x-cloak x-show="open" class="w-3 h-3">
-                {{> components/base/image/icon _icon='arrow-up' _addClass="flex self-center w-3 h-3 fill-white" }}
+            <span x-cloak x-show="open" class="inline-flex w-3 h-3">
+                {{> components/base/image/icon _icon='arrow-up' _addClass="mt-[1px] w-3 h-3 fill-white" }}
             </span>
-            <span x-show="!open" class="w-3 h-3">
-                {{> components/base/image/icon _icon='arrow-down' _addClass="flex self-center w-3 h-3 fill-white" }}
+            <span x-show="!open" class="inline-flex w-3 h-3">
+                {{> components/base/image/icon _icon='arrow-down' _addClass="mt-[1px] w-3 h-3 fill-white" }}
             </span>
         {{/components/button/button}}
         {{#*inline "htmlProperties"}}
