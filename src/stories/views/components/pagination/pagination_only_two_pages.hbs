@@ -2,7 +2,7 @@
     <div class="flex"> 
     {{> components/pagination/pagination_button_left }}
     {{#with this}}
-        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1"}}
+        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1 dark:fill-link-dark"}}
             <span class="sr-only">Aktuelle Seite: </span>
             {{> components/button/components/button_label _label="1" _css=""}}
         {{/components/button/link_button}}  
@@ -24,7 +24,7 @@
         {{> components/button/components/button_label _label="1" _css=""}}
     {{/components/button/link_button}}
     {{#with this}}
-        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1"}}
+        {{#> components/button/link_button _size="md" _variant="primary" _css="mr-1 ml-1 dark:fill-link-dark"}}
             <span class="sr-only">Aktuelle Seite: </span>
             {{> components/button/components/button_label _label="2" _css=""}}
         {{/components/button/link_button}}  
