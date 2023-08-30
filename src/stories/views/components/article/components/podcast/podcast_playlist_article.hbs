@@ -6,7 +6,7 @@
         {{~#if this.remainingPlaylistItems}}
             <div class="flex items-center justify-center js-load"
                  data-hr-podcast-channel-remaining-episodes-loader='{"dynLoadTrigSelector":".js-load-remaining-items-button","dynLoadReplaceSelector":".js-placeholder-reload", "url":"{{this.reloadUrl}}"}'>
-                {{#> components/button/link_button _size="lg" _title="Weitere Episoden laden" _type="button" _css=".js-load-remaining-items-button" _link=this.allEpisodeUrl }}
+                {{#> components/button/link_button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" _link=this.allEpisodeUrl }}
                     {{> components/button/components/button_label _label="Weitere Episoden laden"}}
                     {{> components/button/components/button_icon _icon="reload" _iconmap="icons"}}
                 {{/components/button/link_button}}
