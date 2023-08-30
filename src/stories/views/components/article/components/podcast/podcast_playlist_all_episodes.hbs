@@ -1,21 +1,9 @@
 <article class="grid grid-page">
     <div class="grid grid-cols-12 col-full sm:col-main gap-x-6 gap-y-10 md:gap-y-14">
     <div class="order-1 col-span-9 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
-        {{> components/podcast/podcast_playlist_player _type="podcastPlaylistPlayer"}}
+        {{> components/podcast/podcast_playlist_player_all_episodes _type="podcastPlaylistPlayer"}}
 
-        {{~#if this.remainingPlaylistItems}}
-            <div class="flex items-center justify-center js-load"
-                 data-hr-podcast-channel-remaining-episodes-loader='{"dynLoadTrigSelector":".js-load-remaining-items-button","dynLoadReplaceSelector":".js-placeholder-reload", "url":"{{this.reloadUrl}}"}'>
-                {{#> components/button/link_button _size="lg" _title="Weitere Episoden laden" _type="button" _css=".js-load-remaining-items-button" _link=this.allEpisodeUrl }}
-                    {{> components/button/components/button_label _label="Weitere Episoden laden"}}
-                    {{> components/button/components/button_icon _icon="reload" _iconmap="icons"}}
-                {{/components/button/link_button}}
-                {{#*inline "htmlProperties"}}
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "weitereEpisodenLaden:ButtonClick"}]}'
-                {{/inline}}
-            </div>
-            <div class="js-placeholder-reload"></div>
-        {{~/if~}}
+        
     </div>
 
     <aside class="grid order-2 col-span-3" aria-label='{{loca "appendix_title"}}'>

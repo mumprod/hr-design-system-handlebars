@@ -18,20 +18,13 @@
           {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
         </div>
 
-        {{!-- {{#switch this.realTeaserSize }}
-          {{#case "100"}}
-            {{> components/podcast/components/podcast_playlist_shorttext}}
-          {{/case}}
-        {{/switch}} --}}
-
         {{> components/podcast/components/podcast_playlist_shorttext}}
 
         {{!-- Abo-Dropdown --}}
-        {{#if this.isSingleChannel}}
-          
+        {{#if this.isSingleChannel}}         
             {{> components/podcast/components/podcast_subscribe_button}}
-          
         {{/if}} 
+      
       </div>
 
       {{!-- Podcast Image --}}
@@ -47,15 +40,6 @@
         </div>
       </div>
     </div>
-
-    {{!-- {{#switch this.realTeaserSize }}
-      {{#case "50"}}
-        <div class="flex flex-row w-full px-5 md:pl-5">
-          {{> components/podcast/components/podcast_playlist_shorttext}}
-        </div>
-      {{/case}}
-    {{/switch}} --}}
-    
     
   </div>
 </div>
@@ -67,7 +51,7 @@
   ax-load 
   x-ignore
   ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
-    {{#each this.playlistItems}}
+    {{#each this.allPlaylistItems}}
       <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}">
         {{> components/podcast/components/podcast_player_ui
           _isPlaylistPlayer=true
