@@ -1,6 +1,6 @@
 <article class="grid grid-page">
     <div class="grid grid-cols-12 col-full sm:col-main gap-x-6 gap-y-10 md:gap-y-14">
-    <div class="grid order-1 w-full col-span-9 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
+    <div class="order-1 w-full col-span-9 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
         {{> components/podcast/podcast_playlist_player _type="podcastPlaylistArticlePlayer"}}
 
         {{~#if this.remainingPlaylistItems}}
@@ -18,7 +18,7 @@
         {{~/if~}}
     </div>
 
-    <aside class="grid order-2 col-span-3" aria-label='{{loca "appendix_title"}}'>
+    <aside class="grid order-2 col-span-3 py-6" aria-label='{{loca "appendix_title"}}'>
         <div class="c-appendix">
             {{#unless _webview}}
                 {{~#with this.backLinkUrl ~}}
