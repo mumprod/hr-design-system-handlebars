@@ -1,4 +1,4 @@
-<div class="flex w-full pb-5 border-b border-white">
+<div class="flex w-full py-5 border-b border-white">
   <div class="flex flex-col grow">
     {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
@@ -18,12 +18,6 @@
           {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
         </div>
 
-        {{!-- {{#switch this.realTeaserSize }}
-          {{#case "100"}}
-            {{> components/podcast/components/podcast_playlist_shorttext}}
-          {{/case}}
-        {{/switch}} --}}
-
         {{> components/podcast/components/podcast_playlist_shorttext}}
 
         {{!-- Abo-Dropdown --}}
@@ -36,7 +30,7 @@
 
       {{!-- Podcast Image --}}
       <div class="flex flex-col pb-5">
-        <div class="w-22 {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}">
+        <div class="w-22 md:w-32 lg:w-42">
           {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
             _variant="default"
@@ -47,21 +41,11 @@
         </div>
       </div>
     </div>
-
-    {{!-- {{#switch this.realTeaserSize }}
-      {{#case "50"}}
-        <div class="flex flex-row w-full px-5 md:pl-5">
-          {{> components/podcast/components/podcast_playlist_shorttext}}
-        </div>
-      {{/case}}
-    {{/switch}} --}}
-    
-    
   </div>
 </div>
 
 {{!-- Player UI --}}
-<div  class="flex flex-col col-span-12 gap-5 px-5"
+<div  class="flex flex-col col-span-12 gap-5 p-5"
   x-data="playaudio()" 
   x-init="listenToGlobalStop()" 
   ax-load 
