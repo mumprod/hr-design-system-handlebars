@@ -7,7 +7,7 @@
     x-ignore
     ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
       {{#each this}}
-        <div class="flex pb-5 {{#if @first}}pt-5 border-t border-white{{/if}}{{#unless @last}}border-white border-b{{/unless}}">
+        <div class="flex pb-5 {{#if @first}}pt-5 border-t border-white {{/if}}{{#unless @last}}border-white border-b{{/unless}}">
           {{> components/podcast/components/podcast_player_ui
             _isPlaylistPlayer=true
             _podcastDuration=this.duration
