@@ -1,3 +1,16 @@
+# v1.36.2 (Fri Sep 01 2023)
+
+#### 🐛 Bug Fix
+
+- workaround for enabling DarkMode only for WebView [#714](https://github.com/mumprod/hr-design-system-handlebars/pull/714) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.36.1 (Tue Aug 29 2023)
 
 #### 🐛 Bug Fix
