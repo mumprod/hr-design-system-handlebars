@@ -1,7 +1,7 @@
 <article class="grid grid-page">
     <div class="grid grid-cols-12 col-full sm:col-main gap-x-6 gap-y-10 md:gap-y-14">
     <div class="order-1 w-full col-span-12 my-6 md:col-span-9 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
-        {{> components/podcast/podcast_playlist_player _type="podcastPlaylistArticlePlayer"}}
+        {{> components/podcast/podcast_playlist_player _isArticlePlayer=true}}
 
         {{~#if this.remainingPlaylistItems}}
             <div class="flex items-center justify-center pb-5 js-load"
