@@ -16,5 +16,6 @@ see: https://github.com/storybookjs/storybook/issues/11706 -->
     }
     const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
     darkModePreference.addEventListener("change",  setColorScheme);
+    setColorScheme(darkModePreference);
     
 </script>
