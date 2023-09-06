@@ -28,7 +28,7 @@
 
       {{!-- Podcast Image --}}
       <div class="flex flex-col pb-5">
-        <div class="w-22 md:w-32 lg:w-42 {{#unless _isArticlePlayer}} {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/unless}} ">
+        <div class="{{#if _isArticlePlayer}}w-22 md:w-32 lg:w-42{{else}}{{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}{{/if}} ">
           {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
             _variant="default"
