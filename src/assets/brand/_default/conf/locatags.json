@@ -5,6 +5,8 @@
     "anchor_sectionNav": "Bereichsnavigation anspringen",
     "anchor_serviceNav": "Servicenavigation anspringen",
     "anchor_subNav": "Subnavigation des Bereichs {0} anspringen",
+    "appendix_title": "Zusatzinformationen",
+    "appendix_links_title": "Weitere Hinweise",
     "archive_content": "Dieser Inhalt ist zeitlich unbegrenzt verfügbar.",
     "close_button_alpine_click": "avStart = false; $dispatch('player_closed',{playerId: {0}})",
     "play_button_alpine_click": "playAndStop({0});/* $dispatch('stopotherplayers',{playerId: {0}}) */",

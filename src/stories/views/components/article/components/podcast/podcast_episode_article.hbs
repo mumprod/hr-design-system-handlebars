@@ -1,0 +1,40 @@
+<article class="grid grid-page">
+<div class="col-span-12 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
+    {{> components/podcast/podcast_player _linkTitle="true" _isSinglePage=false _type="podcastEpisodePlayer"}}
+</div>
+<div class="order-1 col-span-8 px-5">
+    {{> components/podcast/components/podcast_player_shorttext }}
+</div>
+<div class="order-3 col-span-8">
+    {{> components/content/content_footer/content_footer 
+        _author=this.audioAuthor
+        _showDate=this.hasDwellTime
+        _date=this.airdateDate
+        _copyright=this.copyright
+        _isArchiveContent=this.isArchiveContent
+        _posterCopyright="poster_copyright"}}
+</div>
+
+<aside class="order-4 col-full md:order-2 md:col-span-4"
+    aria-label='{{loca "appendix_title"}}'>
+    <div class="c-appendix">
+        {{#unless _webview}}
+            {{~#with this.backLinkUrl ~}}
+                {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
+            {{~/with~}}
+
+            {{~#with this.geotag ~}}
+                {{~> modules/geotag/geotag-list ~}}
+            {{~/with~}}
+
+            {{~#with this.topictags ~}}
+                {{~> modules/topictag/topictag-list ~}}
+            {{~/with~}}
+
+            {{~#with this.socialSharing ~}}
+                {{~> modules/socialmedia/shareit ~}}
+            {{~/with~}}
+        {{/unless}}
+    </div>
+</aside>    
+</article>
