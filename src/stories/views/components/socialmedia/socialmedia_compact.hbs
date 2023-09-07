@@ -1,0 +1,25 @@
+<div class="c-shareCompact">
+    <div class="c-shareCompact__wrapper -isClosed js-share-compact-wrapper js-load"
+         data-hr-share-compact='{"title":"{{../this.escapedTitle}}", "url":"{{../this.socialSharingUrl}}" }'>
+        <div class="c-shareCompact__mainButton">
+            <button class="link--shareIcon touchArea "
+                    id="{{../this.anchor}}-s"
+                    rel="noopener noreferrer"
+                    title="{{loca "share_headline" }}"
+            >
+                {{~> base/image/icon _addClass="icon--teilen-button" _icon="teilen-button" _iconmap="icons" ~}}
+            </button>
+
+        </div>
+        <div class="c-shareCompact__shareButtons hide">
+            <ul>
+                {{~> modules/socialmedia/shareCompact-icons ~}}
+            </ul>
+        </div>
+        <div class="c-shareCompact__message hide">
+            {{~> base/image/icon _addClass="" _icon="status-done" _iconmap="icons" ~}}
+            {{loca "ticker_sharing_message" }}
+        </div>
+    </div>
+
+</div>
