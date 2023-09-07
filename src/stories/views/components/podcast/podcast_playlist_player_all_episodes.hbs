@@ -1,4 +1,4 @@
-<div class="flex w-full py-5 border-b border-white">
+<div class="flex w-full pb-5 border-b border-white">
   <div class="flex flex-col grow">
     {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
@@ -21,14 +21,15 @@
         {{> components/podcast/components/podcast_playlist_shorttext}}
 
         {{!-- Abo-Dropdown --}}
-        {{#if this.isSingleChannel}}
+        {{#if this.isSingleChannel}}         
             {{> components/podcast/components/podcast_subscribe_button}}
         {{/if}} 
+      
       </div>
 
       {{!-- Podcast Image --}}
       <div class="flex flex-col pb-5">
-        <div class="w-22 {{#if _isArticlePlayer}} md:w-32 lg:w-42{{else}}{{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}{{/if}} ">
+        <div class="w-22 {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}">
           {{> components/base/image/responsive_image this.teaseritem
             _type="podcastEpisodePlayer"
             _variant="default"
@@ -39,17 +40,18 @@
         </div>
       </div>
     </div>
+    
   </div>
 </div>
 
 {{!-- Player UI --}}
-<div  class="flex flex-col col-span-12 gap-5 px-5 {{#if _isArticlePlayer }}pt-5 {{/if}} "
+<div  class="flex flex-col col-span-12 gap-5 px-5"
   x-data="playaudio()" 
   x-init="listenToGlobalStop()" 
   ax-load 
   x-ignore
   ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
-    {{#each this.playlistItems}}
+    {{#each this.allPlaylistItems}}
       <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}">
         {{> components/podcast/components/podcast_player_ui
           _isPlaylistPlayer=true
