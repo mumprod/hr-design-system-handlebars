@@ -1,3 +1,15 @@
+# v1.38.0 (Thu Sep 07 2023)
+
+#### 🚀 Enhancement
+
+- Reactivates PianoHelper in clickTracking.feature [#717](https://github.com/mumprod/hr-design-system-handlebars/pull/717) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.37.0 (Thu Sep 07 2023)
 
 #### 🚀 Enhancement
