@@ -21,12 +21,12 @@
     <aside class="grid order-2 col-span-3 py-6" aria-label='{{loca "appendix_title"}}'>
         <div class="c-appendix">
             {{#unless _webview}}
-                {{~#with this.backLinkUrl ~}}
+                {{!-- {{~#with this.backLinkUrl ~}}
                     {{~> base/link/backlink _addClass="appendix__backlink" ~}}
-                {{~/with~}}
+                {{~/with~}} --}}
 
                 {{~#with this.socialSharing ~}}
-                    {{~> modules/socialmedia/shareit ~}}
+                    {{~> components/socialmedia/socialmedia ~}}
                 {{~/with~}}
             {{/unless}}
             {{~#with this.programReference~}}

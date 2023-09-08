@@ -1,3 +1,15 @@
+# v1.38.2 (Fri Sep 08 2023)
+
+#### 🐛 Bug Fix
+
+- - ordner und dateien angelegt in sb [#719](https://github.com/mumprod/hr-design-system-handlebars/pull/719) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.38.1 (Thu Sep 07 2023)
 
 #### 🐛 Bug Fix
