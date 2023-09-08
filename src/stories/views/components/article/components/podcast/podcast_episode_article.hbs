@@ -19,7 +19,7 @@
     aria-label='{{loca "appendix_title"}}'>
     <div class="c-appendix">
         {{#unless _webview}}
-            {{~#with this.backLinkUrl ~}}
+           {{!--  {{~#with this.backLinkUrl ~}}
                 {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
             {{~/with~}}
 
@@ -29,10 +29,10 @@
 
             {{~#with this.topictags ~}}
                 {{~> modules/topictag/topictag-list ~}}
-            {{~/with~}}
+            {{~/with~}} --}}
 
             {{~#with this.socialSharing ~}}
-                {{~> modules/socialmedia/shareit ~}}
+                {{~> components/socialmedia/socialmedia ~}}
             {{~/with~}}
         {{/unless}}
     </div>

@@ -1,0 +1,78 @@
+<div class="w-full flex px-3 first:border-t last:pb-6 border-[#797979] -socialsharing">
+    <div class="flex flex-wrap justify-start p-0 m-0 -mx-3">
+        <span class="inline-flex text-2xl font-heading">{{loca "share_headline" }}</span><!--
+        -->
+        <ul class="flex flex-wrap w-full px-5 lg:px-0 -socialsharing">
+            {{~#with this.twitterLink ~}}
+                <li class="inline-flex pl-10 mr-6 lg:ml-0">
+                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                       href="{{this}}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       title="{{loca "share_twitter_linktitle" }}"
+                        {{#with ../../this.content.trackingData}}
+                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::twitter"}]}'
+                        {{/with}}
+                    >
+                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#55acee]" _icon="twitter" _iconmap="icons" ~}}
+                    </a>
+                </li>
+            {{~/with~}}
+            {{~#with this.facebookLink ~}}
+                <li class="inline-flex pl-10 mr-6 lg:ml-0">
+                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                       href="{{this}}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       title="{{loca "share_facebook_linktitle" }}"
+                        {{#with ../../this.content.trackingData}}
+                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
+                        {{/with}}
+                    >
+                        {{~> components/base/image/icon _addClass="icon--facebook" _icon="facebook-ds" _iconmap="icons" ~}}
+                    </a>
+                </li>
+            {{~/with~}}
+            {{~#with this.whatsappLink ~}}
+                <li class="inline-flex pl-10 mr-6 lg:ml-0 list__item--whatsapp">
+                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                       href="{{this}}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       title="{{loca "share_whatsapp_linktitle" }}"
+                        {{#with ../../this.content.trackingData}}
+                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
+                        {{/with}}
+                    >
+                        {{~> components/base/image/icon _addClass="icon--whatsapp" _icon="whatsapp-ds" _iconmap="icons" ~}}
+                    </a>
+                </li>
+            {{~/with~}}
+            {{~#with this.mailtoLink ~}}
+                <li class="inline-flex pl-10 mr-6 lg:ml-0">
+                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                       href="{{this}}"
+                       title="{{loca "share_mail_linktitle" }}"
+                        {{#with ../../this.content.trackingData}}
+                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mailto"}]}'
+                        {{/with}}
+                    >
+                        {{~> components/base/image/icon _addClass="icon--mailto" _icon="mail-ds" _iconmap="icons" ~}}
+                    </a>
+                </li>
+            {{~/with~}}
+
+            <li class="inline-flex pl-10 mr-6 lg:ml-0">
+                <a class="link--shareIcon touchArea{{#with ../this.content.trackingData}} js-load{{/with}}"
+                   href="javascript:window.print()"
+                   title="{{loca "share_print_linktitle" }}"
+                    {{#with ../this.content.trackingData}}
+                   data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::printbutton"}]}'
+                    {{/with}}
+                >
+                    {{~> components/base/image/icon _addClass="icon--print" _icon="print" _iconmap="icons" ~}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
