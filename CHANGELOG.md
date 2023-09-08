@@ -1,3 +1,15 @@
+# v1.38.1 (Thu Sep 07 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: piano tracking is used in podcast_player.alpine.js [#720](https://github.com/mumprod/hr-design-system-handlebars/pull/720) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.0 (Thu Sep 07 2023)
 
 #### 🚀 Enhancement
