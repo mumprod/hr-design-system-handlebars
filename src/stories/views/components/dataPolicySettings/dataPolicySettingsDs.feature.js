@@ -1,7 +1,7 @@
 import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
 import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
 const DataPolicySettings = function (context) {
     const { options } = context,
@@ -24,7 +24,7 @@ const DataPolicySettings = function (context) {
         //isWebview = window.location.href.match(/(app)/i), //App URL ...app.hr.de
         cookie = {}
 
-        console.log("gelaaaadeeeeeeeen")
+    console.log('gelaaaadeeeeeeeen')
     ///////////////////
     // OVERLAY START //
     ///////////////////
@@ -39,7 +39,7 @@ const DataPolicySettings = function (context) {
             } else {
                 settingsButton.style.display = 'inline-flex'
             }
-        } else { 
+        } else {
             settingsButton.style.display = 'inline-flex'
             console.log('Button immer anzeigen, weil nicht App')
         }

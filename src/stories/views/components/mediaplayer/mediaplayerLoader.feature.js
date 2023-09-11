@@ -1,5 +1,5 @@
 import { hr$, listenOnce, listen } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 import ArdPlayerLoader from 'components/mediaplayer/ardPlayerLoader.subfeature'
 
 const MediaplayerLoader = function (context) {

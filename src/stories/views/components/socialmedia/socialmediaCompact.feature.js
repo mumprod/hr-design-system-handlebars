@@ -1,5 +1,5 @@
 import { fireEvent, getJSONCookie, hr$, listen, setJSONCookie, unlisten } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
 const ShareCompact = (context) => {
     const { options } = context
