@@ -8,7 +8,7 @@ const MediaplayerLoader = function (context) {
     const { options } = context,
         { element: rootElement } = context,
         isAutoplay = options.isAutoplay,
-        teasersize = options.teasersize,
+        teaserSize = options.teaserSize,
         mediaplayerButton = hr$('.js-mediaplayer__button', rootElement.parentNode)[0]
 
     const removeVideoHover = function () {
@@ -19,7 +19,7 @@ const MediaplayerLoader = function (context) {
     const loadArdPlayerLoader = function () {
         new ArdPlayerLoader(options)
         removeVideoHover()
-        uxAction('mediabuttonclick::' + teasersize + '::playButtonClick')
+        uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
     }
 
     if (isAutoplay) {
