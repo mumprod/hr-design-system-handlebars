@@ -1,3 +1,15 @@
+# v1.38.3 (Fri Sep 08 2023)
+
+#### 🐛 Bug Fix
+
+- adds a minimal json for socialmedia [#718](https://github.com/mumprod/hr-design-system-handlebars/pull/718) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.38.2 (Fri Sep 08 2023)
 
 #### 🐛 Bug Fix

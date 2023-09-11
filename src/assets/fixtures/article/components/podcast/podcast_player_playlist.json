@@ -10,6 +10,12 @@
                 "title": "Im Haifischbecken - der Social-Media-Podcast",
                 "shortText": "shortText",
                 "dontLazyload": true,
+                "socialSharing": {
+                    "twitterLink" : "#",
+                    "whatsappLink" : "#",
+                    "facebookLink" : "#",
+                    "mailtoLink" : "#"
+                },
                 "genreImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
                     "@->contentpath": "teaser_podcast",
