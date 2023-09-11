@@ -1,3 +1,15 @@
+# v1.38.5 (Mon Sep 11 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: teaserSize property is camelcased [#722](https://github.com/mumprod/hr-design-system-handlebars/pull/722) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.4 (Mon Sep 11 2023)
 
 #### 🐛 Bug Fix
