@@ -1,5 +1,5 @@
 import { clearRequestInterval, hr$, requestInterval } from 'hrQuery'
-import { uxAction } from 'base/tracking/atiHelper.subfeature'
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
 const NativeScroll = function (context) {
     console.log('loaded feature ...')
@@ -20,10 +20,13 @@ const NativeScroll = function (context) {
         let step = scrollbar.clientWidth - oneScrollbarItem.clientWidth * 1.5,
             direction = e.currentTarget.classList.contains('-left') ? -1 : 1,
             distance = direction * step
-            console.log("🚀 ~ file: nativeScroll.feature.js ~ line 22 ~ doScroll ~ direction", direction)
-            console.log("🚀 ~ file: nativeScroll.feature.js ~ line 24 ~ doScroll ~ distance", distance)
+        console.log(
+            '🚀 ~ file: nativeScroll.feature.js ~ line 22 ~ doScroll ~ direction',
+            direction
+        )
+        console.log('🚀 ~ file: nativeScroll.feature.js ~ line 24 ~ doScroll ~ distance', distance)
 
-            console.log('scrollbar ', scrollbar)
+        console.log('scrollbar ', scrollbar)
         console.log('scrollbar width ', scrollbar.clientWidth)
         console.log('oneScrollbarItem ', oneScrollbarItem)
         console.log('oneScrollbarItem width ', oneScrollbarItem.clientWidth)
@@ -37,11 +40,17 @@ const NativeScroll = function (context) {
             if (isTeaser) uxAction('Eventkalender:: Pfeil links geklickt', 1)
             else uxAction('Eventkalender-Monat:: Pfeil links geklickt', 1)
         }
-        console.log("🚀 ~ file: nativeScroll.feature.js ~ line 42 ~ doScroll ~ hasNativeSmoothScroll", hasNativeSmoothScroll)
+        console.log(
+            '🚀 ~ file: nativeScroll.feature.js ~ line 42 ~ doScroll ~ hasNativeSmoothScroll',
+            hasNativeSmoothScroll
+        )
 
         if (hasNativeSmoothScroll) {
             scrollbar.scrollLeft += distance
-            console.log("🚀 ~ file: nativeScroll.feature.js ~ line 43 ~ doScroll ~ scrollbar.scrollLeft", scrollbar.scrollLeft)
+            console.log(
+                '🚀 ~ file: nativeScroll.feature.js ~ line 43 ~ doScroll ~ scrollbar.scrollLeft',
+                scrollbar.scrollLeft
+            )
         } else {
             console.log('start smooth scroll')
             startSmoothScroll(scrollbar.scrollLeft, Date.now(), distance)
@@ -60,7 +69,10 @@ const NativeScroll = function (context) {
             percentage = timeLapsed / duration
 
         percentage = percentage > 1 ? 1 : percentage
-        console.log("🚀 ~ file: nativeScroll.feature.js ~ line 61 ~ loopSmoothScroll ~ percentage", percentage)
+        console.log(
+            '🚀 ~ file: nativeScroll.feature.js ~ line 61 ~ loopSmoothScroll ~ percentage',
+            percentage
+        )
 
         scrollbar.scrollLeft = start_pos + distance * easeInOutCubic(percentage)
 
