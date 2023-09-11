@@ -1,3 +1,16 @@
+# v1.38.4 (Mon Sep 11 2023)
+
+#### 🐛 Bug Fix
+
+- Feature: Remove unused atiHelper [#721](https://github.com/mumprod/hr-design-system-handlebars/pull/721) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### Authors: 2
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.3 (Fri Sep 08 2023)
 
 #### 🐛 Bug Fix
