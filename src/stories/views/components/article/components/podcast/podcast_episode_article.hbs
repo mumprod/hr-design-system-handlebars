@@ -1,40 +1,49 @@
 <article class="grid grid-page">
-<div class="col-span-12 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
-    {{> components/podcast/podcast_player _linkTitle="true" _isSinglePage=false _type="podcastEpisodePlayer"}}
-</div>
-<div class="order-1 col-span-8 px-5">
-    {{> components/podcast/components/podcast_player_shorttext }}
-</div>
-<div class="order-3 col-span-8">
-    {{> components/content/content_footer/content_footer 
-        _author=this.audioAuthor
-        _showDate=this.hasDwellTime
-        _date=this.airdateDate
-        _copyright=this.copyright
-        _isArchiveContent=this.isArchiveContent
-        _posterCopyright="poster_copyright"}}
-</div>
-
-<aside class="order-4 col-full md:order-2 md:col-span-4"
-    aria-label='{{loca "appendix_title"}}'>
-    <div class="c-appendix">
-        {{#unless _webview}}
-           {{!--  {{~#with this.backLinkUrl ~}}
-                {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
-            {{~/with~}}
-
-            {{~#with this.geotag ~}}
-                {{~> modules/geotag/geotag-list ~}}
-            {{~/with~}}
-
-            {{~#with this.topictags ~}}
-                {{~> modules/topictag/topictag-list ~}}
-            {{~/with~}} --}}
-
-            {{!-- {{~#with this.socialSharing ~}}
-                {{~> components/socialmedia/socialmedia ~}}
-            {{~/with~}} --}}
-        {{/unless}}
+    <div class="{{> components/grid/grid_group_wrapper_classes }} md:px-6 md:pb-6 !bg-highlight-1 rounded-tl-hr rounded-br-hr" >
+        {{#>components/grid/grid_group _size="100" }}
+            {{#>components/grid/grid_item _size="12"  }}
+                {{> components/podcast/podcast_player _linkTitle="true" _isSinglePage=true _isArticlePlayer=true}}
+            {{/components/grid/grid_item}} 
+        {{/components/grid/grid_group}} 
     </div>
-</aside>    
+    <div class="{{> components/grid/grid_group_wrapper_classes }} md:p-6" >
+        {{#>components/grid/grid_group _size="100" }}
+            {{#>components/grid/grid_item _size="8"  }}
+                {{> components/podcast/components/podcast_player_shorttext }}
+                {{> components/content/content_footer/content_footer 
+                        _author=this.audioAuthor
+                        _showDate=this.hasDwellTime
+                        _date=this.airdateDate
+                        _copyright=this.copyright
+                        _isArchiveContent=this.isArchiveContent
+                        _posterCopyright="poster_copyright"}}
+            {{/components/grid/grid_item}} 
+            {{#>components/grid/grid_item _size="4"  }}
+                <aside class="order-4 col-auto md:order-2 md:col-span-3"
+                    aria-label='{{loca "appendix_title"}}'>
+                    <div class="c-appendix">
+                        {{#unless _webview}}
+                        {{!--  {{~#with this.backLinkUrl ~}}
+                                {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
+                            {{~/with~}}
+
+                            {{~#with this.geotag ~}}
+                                {{~> modules/geotag/geotag-list ~}}
+                            {{~/with~}}
+
+                            {{~#with this.topictags ~}}
+                                {{~> modules/topictag/topictag-list ~}}
+                            {{~/with~}} --}}
+
+                            {{~#with this.socialSharing ~}}
+                                {{~> components/socialmedia/socialmedia ~}}
+                            {{~/with~}}
+                        {{/unless}}
+                    </div>
+                </aside>    
+            {{/components/grid/grid_item}} 
+        {{/components/grid/grid_group}} 
+    </div>
+
+
 </article>
