@@ -39,22 +39,23 @@
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
 
-    /* Footer Logo Invert */
+    /* Footer Color Options */
     --invert-logo-footer: 0;
     --color-footer-text: white; 
     --color-footer-heading: white; 
     --color-footer-border: red;
     --color-footer-bg: theme('colors.blue.congress');
 
+    /* Footer Logo size Options */
     --width-footer-logo: 135px;
     --height-footer-logo: 75px;
-
     --width-footer-logo-md: 6.4375rem;
     --height-footer-logo-md: 2.6875rem; 
-
     --width-footer-logo-lg: 6.4375rem;
     --height-footer-logo-lg: 2.6875rem; 
     
+    /* Footer padding : 132px when a radioplayer is used */
+    --footer-padding-bottom: 16px;
 
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
@@ -133,6 +134,8 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
+    --color-toggle-confirmation: #2c7e13; 
+    --color-toggle-default: #797979;
 }
 
 [data-theme='hessenschau'] {
@@ -318,6 +321,8 @@
     --color-footer-heading:theme('colors.black.DEFAULT'); 
 
     --search-border-color-desktop: #276b9e; 
+
+    --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
@@ -782,6 +787,8 @@
     --width-footer-logo-lg: 3.4375rem;
     --height-footer-logo-lg: 2.6875rem;
 
+    --footer-padding-bottom: 132px;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive');
     /* Ticker, Live, Livestream */
@@ -858,6 +865,8 @@
 
     --color-footer-bg: #74747f; 
     --color-footer-border: theme('colors.orange.clementine');
+
+    --footer-padding-bottom: 132px;
 
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
@@ -946,6 +955,8 @@
 
     --color-footer-bg: #9b0112 ;
     --color-footer-border: #007179;
+
+    --footer-padding-bottom: 132px;
 
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
@@ -1038,6 +1049,8 @@
     --color-footer-bg: #407596; 
     --color-footer-border: #168378;
 
+    --footer-padding-bottom: 132px;
+
     --width-footer-logo: 2.5rem;
     --height-footer-logo: 2.5rem;
     --width-footer-logo-md: 2.5rem;
@@ -1127,6 +1140,8 @@
 
     --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
+    
+    --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');

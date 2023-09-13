@@ -1,0 +1,9 @@
+{{#unless _isSinglePage}}
+  {{#unless this.hideShortText}}
+      {{~#with this.shorttext}}
+          <div class="col-span-12 text-sm md:text-base font-copy c-podcastEpisodePlayer__shortText">
+              <span class="c-teaser__shorttext"> {{this}} </span>
+          </div>
+      {{/with~}}
+  {{/unless}}
+{{/unless}}

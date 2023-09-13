@@ -8,7 +8,7 @@ import overlayHandler from 'components/site_header/overlayHandler.alpine'
 import dropdown from 'components/site_header/dropdown.alpine'
 
 AsyncAlpine.init(Alpine)
-    .data('podcastPlayer', () => import('components/teaser/podcast/podcast_player.alpine.js'))
+    .data('podcastPlayer', () => import('components/podcast/podcast_player.alpine.js'))
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )

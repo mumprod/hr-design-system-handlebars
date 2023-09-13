@@ -1,4 +1,4 @@
-import { isTrackingAllowed, pi } from 'base/tracking/atiHelper.subfeature'
+import { isTrackingAllowed, pi } from 'base/tracking/pianoHelper.subfeature'
 
 const ATIMediaHelper = function (
     avType,

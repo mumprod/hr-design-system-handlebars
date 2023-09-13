@@ -1,3 +1,351 @@
+# v1.38.6 (Wed Sep 13 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix: set empty htmlProperties to make sure [#723](https://github.com/mumprod/hr-design-system-handlebars/pull/723) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.38.5 (Mon Sep 11 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: teaserSize property is camelcased [#722](https://github.com/mumprod/hr-design-system-handlebars/pull/722) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.38.4 (Mon Sep 11 2023)
+
+#### 🐛 Bug Fix
+
+- Feature: Remove unused atiHelper [#721](https://github.com/mumprod/hr-design-system-handlebars/pull/721) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### Authors: 2
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.38.3 (Fri Sep 08 2023)
+
+#### 🐛 Bug Fix
+
+- adds a minimal json for socialmedia [#718](https://github.com/mumprod/hr-design-system-handlebars/pull/718) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.38.2 (Fri Sep 08 2023)
+
+#### 🐛 Bug Fix
+
+- - ordner und dateien angelegt in sb [#719](https://github.com/mumprod/hr-design-system-handlebars/pull/719) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.38.1 (Thu Sep 07 2023)
+
+#### 🐛 Bug Fix
+
+- FEATURE: piano tracking is used in podcast_player.alpine.js [#720](https://github.com/mumprod/hr-design-system-handlebars/pull/720) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.38.0 (Thu Sep 07 2023)
+
+#### 🚀 Enhancement
+
+- Reactivates PianoHelper in clickTracking.feature [#717](https://github.com/mumprod/hr-design-system-handlebars/pull/717) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.37.0 (Thu Sep 07 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2223 podcast playlist player [#715](https://github.com/mumprod/hr-design-system-handlebars/pull/715) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.36.3 (Fri Sep 01 2023)
+
+#### 🐛 Bug Fix
+
+- add setColorScheme(darkModePreference); [#716](https://github.com/mumprod/hr-design-system-handlebars/pull/716) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.36.2 (Fri Sep 01 2023)
+
+#### 🐛 Bug Fix
+
+- workaround for enabling DarkMode only for WebView [#714](https://github.com/mumprod/hr-design-system-handlebars/pull/714) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.36.1 (Tue Aug 29 2023)
+
+#### 🐛 Bug Fix
+
+- improvements for Dark Mode [#713](https://github.com/mumprod/hr-design-system-handlebars/pull/713) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.36.0 (Tue Aug 22 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2222 podcast episode player 2 [#712](https://github.com/mumprod/hr-design-system-handlebars/pull/712) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.15 (Thu Aug 17 2023)
+
+#### 🐛 Bug Fix
+
+- Dark mode styling for accordion in webview [#711](https://github.com/mumprod/hr-design-system-handlebars/pull/711) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.35.14 (Fri Aug 11 2023)
+
+#### 🐛 Bug Fix
+
+- Footer Search: Suggestions open upward [#710](https://github.com/mumprod/hr-design-system-handlebars/pull/710) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.35.13 (Fri Aug 11 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2259 7 some small fixes [#709](https://github.com/mumprod/hr-design-system-handlebars/pull/709) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.12 (Thu Aug 10 2023)
+
+#### 🐛 Bug Fix
+
+- improve accessibility [#708](https://github.com/mumprod/hr-design-system-handlebars/pull/708) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.11 (Thu Aug 10 2023)
+
+#### 🐛 Bug Fix
+
+- subscribe button right below shorttext instead of own flex row [#707](https://github.com/mumprod/hr-design-system-handlebars/pull/707) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.10 (Wed Aug 09 2023)
+
+#### 🐛 Bug Fix
+
+- more padding for footer if site has radioplayer [#706](https://github.com/mumprod/hr-design-system-handlebars/pull/706) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.9 (Wed Aug 09 2023)
+
+#### 🐛 Bug Fix
+
+- BUGFIX: External links in section navigation render an incorrect url [#705](https://github.com/mumprod/hr-design-system-handlebars/pull/705) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.35.8 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2259 5 [#704](https://github.com/mumprod/hr-design-system-handlebars/pull/704) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.7 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- modify tracking-code [#703](https://github.com/mumprod/hr-design-system-handlebars/pull/703) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.6 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- title optional, add tracking [#702](https://github.com/mumprod/hr-design-system-handlebars/pull/702) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.5 (Tue Aug 08 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2259 4 [#696](https://github.com/mumprod/hr-design-system-handlebars/pull/696) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### 📝 Documentation
+
+- Feature/dpe 2446 [#701](https://github.com/mumprod/hr-design-system-handlebars/pull/701) ([@szuelch](https://github.com/szuelch))
+- Feature/dpe 2445 [#700](https://github.com/mumprod/hr-design-system-handlebars/pull/700) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.4 (Fri Aug 04 2023)
+
+#### 🐛 Bug Fix
+
+- add breakpoint 480px [#699](https://github.com/mumprod/hr-design-system-handlebars/pull/699) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.3 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- change size of icons in accordion [#698](https://github.com/mumprod/hr-design-system-handlebars/pull/698) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.2 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- some modifications in accordion-component [#697](https://github.com/mumprod/hr-design-system-handlebars/pull/697) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.35.1 (Tue Aug 01 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2259 3 [#695](https://github.com/mumprod/hr-design-system-handlebars/pull/695) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.35.0 (Tue Aug 01 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2259 2 [#691](https://github.com/mumprod/hr-design-system-handlebars/pull/691) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.34.7 (Tue Aug 01 2023)
 
 #### 🐛 Bug Fix

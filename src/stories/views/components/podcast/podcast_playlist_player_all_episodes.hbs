@@ -1,4 +1,4 @@
-<div class="flex col-span-12 pb-5 border-b border-white">
+<div class="flex w-full pb-5 border-b border-white">
   <div class="flex flex-col grow">
     {{!-- First Row --}}
     <div class="flex flex-row px-5 md:pl-5 {{#if ../_ordered}} pl-8 {{/if}} ">
@@ -15,16 +15,16 @@
 
         {{!-- Überschrift: --}}
         <div class="flex pb-5 pr-2 md:pr-5">
-          {{> components/teaser/podcast/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
+          {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
         </div>
 
-        {{!-- {{#switch this.realTeaserSize }}
-          {{#case "100"}}
-            {{> components/teaser/podcast/podcast_playlist_shorttext}}
-          {{/case}}
-        {{/switch}} --}}
+        {{> components/podcast/components/podcast_playlist_shorttext}}
 
-        {{> components/teaser/podcast/podcast_playlist_shorttext}}
+        {{!-- Abo-Dropdown --}}
+        {{#if this.isSingleChannel}}         
+            {{> components/podcast/components/podcast_subscribe_button}}
+        {{/if}} 
+      
       </div>
 
       {{!-- Podcast Image --}}
@@ -40,21 +40,7 @@
         </div>
       </div>
     </div>
-
-    {{!-- {{#switch this.realTeaserSize }}
-      {{#case "50"}}
-        <div class="flex flex-row w-full px-5 md:pl-5">
-          {{> components/teaser/podcast/podcast_playlist_shorttext}}
-        </div>
-      {{/case}}
-    {{/switch}} --}}
     
-    {{!-- Abo-Dropdown --}}
-    {{#if this.isSingleChannel}}
-      <div class="flex flex-row px-5 md:pr-0"> 
-        {{> components/teaser/podcast/podcast_subscribe_button}}
-      </div>
-    {{/if}} 
   </div>
 </div>
 
@@ -64,9 +50,9 @@
   x-init="listenToGlobalStop()" 
   ax-load 
   x-ignore>
-    {{#each this.playlistItems}}
+    {{#each this.allPlaylistItems}}
       <div class="flex pb-5 {{#unless @last}}border-white border-b{{/unless}}">
-        {{> components/teaser/podcast/podcast_player_ui
+        {{> components/podcast/components/podcast_player_ui
           _isPlaylistPlayer=true
           _podcastDuration=this.duration
           _title=this.title

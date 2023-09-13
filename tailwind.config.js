@@ -3,6 +3,9 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    // workaround damit darkmode nur in der Webview in Delivery funktioniert
+    darkMode: ['class', "[class~='tw-dark']"],
+
     experimental: {
         optimizeUniversalDefaults: true,
     },
@@ -16,6 +19,7 @@ module.exports = {
         screens: {
             print: { raw: 'print' },
             xs: '360px',
+            sm480: '480px',
             sm: '640px',
             // => @media (min-width: 640px) { ... }
             md: '768px',
@@ -99,6 +103,7 @@ module.exports = {
                 '3/4': '75%',
                 'logo-padding-top': 'var(--logo-padding-top)',
                 'logo-padding-bottom': 'var(--logo-padding-bottom)',
+                'footer-padding-bottom': 'var(--footer-padding-bottom)',
             },
             right: {
                 80: '80%',
@@ -108,7 +113,8 @@ module.exports = {
                 '50': '50',
                 '100': '100',
                 '110': '110',
-                '120': '120'
+                '120': '120',
+                '300': '300'
             },
             spacing: {
                 '9.5': '2.375rem',
@@ -387,7 +393,9 @@ module.exports = {
                 'tickerTeaserlabelByline': 'var(--color-ticker-teaser-label-byline)',
                 'tickerTeaserTimelineScore': 'var(--color-ticker-teaser-timeline-score)',
                 'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
-                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)'
+                'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
+                'toggle-confirmation': 'var(--color-toggle-confirmation)',
+                'toggle-default': 'var(--color-toggle-default)'
             },
         },
     },

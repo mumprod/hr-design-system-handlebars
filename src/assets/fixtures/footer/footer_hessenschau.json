@@ -248,5 +248,46 @@
             "isTargetBlank": true,
             "title": "Impressum"
         }
-    }
+    },
+    "serviceList" :[
+        {   "key" : "ard_mediathek",
+            "value" : "ARD Mediathek (Video)"
+        },
+        {   "key" : "arte_concert",
+            "value" : "Arte Concert"
+        },
+        {   "key" : "arte_concert_new",
+            "value" : "Arte Concert 2.0"
+        },
+        {   "key" : "datawrapper_cdn",
+            "value" : "Datawrapper (Datengrafik)"
+        },
+        {   "key" : "esri",
+            "value" : "Esri (Notfallkarte)"
+        },
+        {   "key" : "facebook_post",
+            "value" : "Facebook"
+        },
+        {   "key" : "flourish",
+            "value" : "Flourish (Datengrafik)"
+        },
+        {   "key" : "giphy",
+            "value" : "Giphy (animiertes GIF)"
+        },
+        {   "key" : "instagram",
+            "value" : "Instagram"
+        },
+        {   "key" : "twitter_post",
+            "value" : "Twitter"
+        },
+        {   "key" : "vimeo",
+            "value" : "Vimeo (Video)"
+        },
+        {   "key" : "youtube",
+            "value" : "YouTube (Video)"
+        },
+        {   "key" : "youtube360",
+            "value" : "YouTube 360 (360° Video)"
+        }
+    ]
 }

@@ -1,0 +1,99 @@
+<div class="flex items-center justify-center mt-4 md:mt-0 md:justify-end js-load" data-hr-data-policy-settings-ds='{}'>
+        {{#> components/button/button _size="md" _id="globalSettingsButton" _css="hover:text-secondary js-data-policy-settings-button" _variant="secondary" _onBackground=(configProperty "footer.onBackground") }}
+            {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
+            {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
+        {{/components/button/button}}
+    
+        <div class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-300 pb-6 bg-black/[0.5] js-data-policy-settings-overlay{{#if _webview}} hidden{{/if}}">
+        <div class="m-auto pt-0 max-w-[480px] bg-white">
+            <div class="flex w-full px-6 bg-primary z-100">
+                <span class="flex justify-start w-full py-4">
+                    <span
+                        class="pr-4 -ml-1 fill-white"> {{> components/base/image/icon _icon="settings" _addClass="h-7 w-7 inline" }}</span>
+                    <span class="w-full text-2xl text-white font-headingSerif">Einstellungen</span>
+                    <button class="text-white bg-transparent fill-current button js-data-policy-settings-close-button">
+                        {{> components/base/image/icon _icon="close" _addClass="h-6 w-6 inline"}}
+                    </button>
+                </span>
+            </div>
+
+            <div class="bg-[#d8e9f6] p-6 {{#if _webview}} hidden{{/if}}">
+                <span class="block text-lg text-black font-headingSerif">{{loca "cookies_setting_tracking_service_description_title"}}</span>
+                <p class="mt-4 text-black">
+                    {{#with this.footerMetadata}}
+                        {{#with this.dataProtectionLink}}
+                            {{loca "cookies_setting_tracking_service_description_text"}}
+                            <a class="block mt-2 text-link hover:underline" target="_blank"
+                               rel="noopener noreferrer" href="{{this.url}}"
+                               title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
+                               {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            </a>
+                        {{/with}}
+                    {{/with}}
+                </p>
+            </div>
+
+            <div class="bg-[#e3e3e3] py-2.5 px-6{{#if _webview}} hidden{{/if}}">
+                <span class="text-lg text-black font-headingSerif">{{loca "cookies_setting_tracking_service_section_title"}}</span>
+            </div>
+
+            <ul class="{{#if _webview}} hidden{{/if}}">
+                <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_1">
+                    <span class="text-base text-black">AGF <a
+                        class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.agf.de/" title="AGF">(https://www.agf.de/)</a></span>
+                    <div class="flex w-fit toggleSwitch">
+                        {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
+                    </div>
+                </li>
+                <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_2">
+                    <span class="text-base text-black">AT Internet <a
+                        class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.atinternet.com/de/"
+                        title="AT Internet">(https://www.atinternet.com/de/)</a></span>
+                    <div class="flex w-fit toggleSwitch">
+                        {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bg-[#d8e9f6] p-6">
+                <span class="block text-lg text-black font-headingSerif ">{{loca "cookies_setting_description_title"}}</span>
+                <p class="mt-4 text-base text-black">
+                    {{#with this.footerMetadata}}
+                        {{#with this.dataProtectionLink}}
+                            {{loca "cookies_setting_description_text"}}
+                            <a class="block mt-2 text-link hover:underline" target="_blank"
+                               rel="noopener noreferrer" href="{{this.url}}"
+                               title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
+                               {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            </a>
+                        {{/with}}
+                    {{/with}}
+                </p>
+            </div>
+            <div class="bg-[#e3e3e3] py-2.5 px-6">
+                <span class="block pb-2 text-lg text-black font-headingSerif">{{loca "cookies_setting_section_title"}}</span>
+                <div class="flex justify-between all">
+                    <span class="inline-flex text-base text-black js-providerTitle">x</span>
+                    <div class="flex float-right toggleSwitch">
+                        {{> components/forms/toggle_button _id="all" _addClass="js-toggleSwitch-checkbox-all"}}
+                    </div>
+                </div>
+            </div>
+
+            <ul>
+                {{#with this.serviceList}}
+                    {{#each this}}
+                        <li class="bg-white py-2.5 px-6 border-t border-[#e3e3e3] {{this.key}}">
+                            <span class="inline-flex text-base leading-6 text-black align-text-top">{{this.value}}</span>
+                            <div class="flex float-right toggleSwitch">
+                                {{> components/forms/toggle_button _id=this.key _addClass="js-toggleSwitch-checkbox js-toggleSwitch-external" _isInitiallyHidden=this.isInitiallyHidden }}
+                            </div>
+                        </li>
+                    {{/each}}
+                {{/with}}
+            </ul>
+        </div>
+    </div>
+    </div>

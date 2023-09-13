@@ -3,4 +3,14 @@
 see: https://github.com/storybookjs/storybook/issues/11706 -->
 <script>
     document.documentElement.setAttribute('lang', 'de')
+
+    // Javascript workaround damit darkmode nur in der Webview in Delivery funktioniert
+    // todo bessere Lösung finden !
+    function setColorScheme(e) {
+        e.matches ? document.getElementsByTagName("html")[0].classList.add("tw-dark") : document.getElementsByTagName("html")[0].classList.remove("tw-dark")
+    }
+    const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+    darkModePreference.addEventListener("change",  setColorScheme);
+    setColorScheme(darkModePreference);
+    
 </script>

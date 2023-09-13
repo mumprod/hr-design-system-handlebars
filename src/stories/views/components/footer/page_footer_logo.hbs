@@ -1,7 +1,7 @@
 <div class="self-end inline-block float-right mt-8 w-fit md:mt-0">
     <a href="{{resourceUrl "index.html"}}" title="{{loca "header_homepage_link_title"}}">
         {{#if (configProperty "iconConfig.brandlogo.footer")}}
-            {{> components/base/image/icon _icon=(configProperty "iconConfig.brandlogo.footer") _iconmap="logo" _addClass="inline-block w-footer-logo md:w-footer-logo-md lg:w-footer-logo-lg h-footer-logo md:h-footer-logo-md lg:h-footer-logo-lg flex self-end invert-logo-footer"}}
+            {{> components/base/image/icon _icon=(configProperty "iconConfig.brandlogo.footer") _iconmap="logo" _addClass="inline-block w-footer-logo md:w-footer-logo-md lg:w-footer-logo-lg h-footer-logo md:h-footer-logo-md lg:h-footer-logo-lg flex self-end invert-logo-footer fill-current text-footer-text"}}
         {{else}}
             {{> components/base/image/icon _icon="brandlogo--desk" _iconmap="logo" _addClass="inline-block bg-logo-footer rounded-logo-footer w-footer-logo md:w-footer-logo-md lg:w-footer-logo-lg h-footer-logo md:h-footer-logo-md lg:h-footer-logo-lg fill-current md:mt-2 lg:mt-1 md:flex invert-logo-footer text-footer-text"}}
         {{/if}}

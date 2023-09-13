@@ -418,22 +418,25 @@ var helpers = {
         if (arguments.length >= 1) {
             configProperty = arguments[0]
             switch (configProperty) {
+                case 'footer.onBackground':
+                    configProperty = brand == 'hr-inforadio' ? false : true
+                    break
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
                     break
                 case 'iconConfig.brandlogo.footer':
                     configProperty =
                         brand == 'you-fm'
-                            ? 'brandlogo--footer'
+                            ? 'brandlogo--footer-desk'
                             /* : brand == 'hr-bigband'
                             ? 'brandlogo--mobile'
                             : brand == 'hr-sinfonieorchester'
                             ? 'brandlogo--mobile'
                             : brand == 'hessenschau'
                             ? undefined
-                            
+                            */
                             : brand == 'hr-inforadio'
-                            ? 'brandlogo--footer' */
+                            ? 'brandlogo--footer' 
                             : brand == 'hr2'
                             ? 'brandlogo--footer'
                             : undefined
