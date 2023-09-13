@@ -1,3 +1,15 @@
+# v1.39.0 (Wed Sep 13 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: label footer and quicksearch-form [#724](https://github.com/mumprod/hr-design-system-handlebars/pull/724) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.6 (Wed Sep 13 2023)
 
 #### 🐛 Bug Fix
