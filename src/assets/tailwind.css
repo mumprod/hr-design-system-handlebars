@@ -689,13 +689,25 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.deepCerulean'); 
-    /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
-    --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
+    --color-navigation-bg: white; /*theme('colors.blue.deepCerulean');*/ 
+    --color-brandnavigation-bg: #fff; 
+    /* Navigation Icons */
+    --color-navigation-icons: #000;
+    /* Navigation Text */
+    --color-navigation-text: #000;
+    /* Brandnavigation Border and :before Color */
+    --color-brandnavigation-border-color: #000;
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueLuxury');
+    /* Sectionnavigation Border Bottom Width */
+    --border-navigation-border-width: 4px;
 
-    --color-footer-bg: theme('colors.blue.deepCerulean');
-    --color-footer-border: #a2bc09;
+    --search-border-color-desktop: #000;
+    --search-border-color-mobile: var(--color-primary-ds);
+
+    --color-footer-bg: white;
+    --color-footer-border: theme('colors.blue.blueLuxury');
 
     --width-footer-logo: 3.4375rem;
     --height-footer-logo: 2.6875rem; 

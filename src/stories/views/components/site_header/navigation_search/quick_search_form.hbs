@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 {{~#if _footer}} py-3 {{else}} py-2 {{/if}} text-base leading-4 placeholder-opacity-100 rounded-l shadow-inner appearance-none lg:top-10 placeholder-text-xs placeholder-secondary text-secondary focus:outline-none"
+            class="w-full px-2 {{~#if _footer}} py-3 {{else}} py-2 {{/if}} text-base leading-4 placeholder-opacity-100 rounded-l appearance-none lg:top-10 placeholder-text-xs placeholder-navigation-text text-navigation-text  focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"
@@ -67,7 +67,7 @@
         type="submit" 
         class="pl-2 pr-2 bg-white border-l rounded-r cursor-pointer lg:search-border-desktop link-focus-inset md:bg-white text-primary "
     >
-        {{> components/base/image/icon _icon="suche-ds" _addClass="w-7 h-7 text-primary fill-current bg-transparent"}}
+        {{> components/base/image/icon _icon="suche-ds" _addClass="w-7 h-7 text-navigation-text fill-current bg-transparent"}}
     </button>
 </form>
 
