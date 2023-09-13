@@ -1,3 +1,15 @@
+# v1.38.6 (Wed Sep 13 2023)
+
+#### 🐛 Bug Fix
+
+- Bugfix: set empty htmlProperties to make sure [#723](https://github.com/mumprod/hr-design-system-handlebars/pull/723) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.5 (Mon Sep 11 2023)
 
 #### 🐛 Bug Fix
