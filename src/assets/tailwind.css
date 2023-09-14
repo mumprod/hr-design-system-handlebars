@@ -29,6 +29,7 @@
     --color-brandnav-pseudo: theme('colors.blue.congress');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
+    --color-servicenavigation-border-color:  #fff;
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Logo-Container Padding */
@@ -692,18 +693,19 @@
     --color-navigation-bg: white; /*theme('colors.blue.deepCerulean');*/ 
     --color-brandnavigation-bg: #fff; 
     /* Navigation Icons */
-    --color-navigation-icons: #000;
+    --color-navigation-icons: theme('colors.gray.darker');
     /* Navigation Text */
-    --color-navigation-text: #000;
+    --color-navigation-text: theme('colors.gray.darker');
     /* Brandnavigation Border and :before Color */
-    --color-brandnavigation-border-color: #000;
+    --color-brandnavigation-border-color: theme('colors.gray.darker');
     --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
-    /* Service/Sectionnavigation Border-Color */
+    /* Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.blueLuxury');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 4px;
+    --color-servicenavigation-border-color: theme('colors.gray.darker');
 
-    --search-border-color-desktop: #000;
+    --search-border-color-desktop: theme('colors.gray.darker');
     --search-border-color-mobile: var(--color-primary-ds);
 
     --color-footer-bg: white;
@@ -869,6 +871,7 @@
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
     --color-navigation-border-color:theme('colors.orange.clementine');
+    --color-servicenavigation-border-color:theme('colors.orange.clementine');
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
     /* Logo paddings */
@@ -959,6 +962,7 @@
     --color-brandnav-pseudo: theme('colors.red.monza'); 
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.red.monza');
+    --color-servicenavigation-border-color: theme('colors.red.monza');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
     /* Logo padding */
@@ -1142,6 +1146,7 @@
     --color-brandnav-pseudo: #007179; 
     /* Service/Sectionnavigation Border Color*/
     --color-navigation-border-color:#000;
+    --color-servicenavigation-border-color:#000;
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on youfm */
