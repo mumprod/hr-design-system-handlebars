@@ -134,6 +134,8 @@
 
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
+
+    --color-search-footer-text: #333;
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
@@ -684,8 +686,8 @@
 }
 
 [data-theme='hr'] {
-    --color-primary-ds: theme('colors.blue.deepCerulean');
-    --color-secondary-ds: #007179;
+    --color-primary-ds: theme('colors.blue.blueLuxury');
+    --color-secondary-ds: #007396;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
@@ -708,6 +710,9 @@
     --search-border-color-desktop: theme('colors.gray.darker');
     --search-border-color-mobile: var(--color-primary-ds);
 
+    /* Footer Color Options */
+    --color-footer-text: theme('colors.gray.darker');
+    --color-footer-heading: theme('colors.gray.darker');
     --color-footer-bg: white;
     --color-footer-border: theme('colors.blue.blueLuxury');
 
@@ -721,7 +726,7 @@
     --height-footer-logo-lg: 2.6875rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.deepCerulean');
+    --color-label-media: theme('colors.blue.blueLuxury');
     /* Ticker, Live, Livestream */
     --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
@@ -755,10 +760,10 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.blue.deepCerulean');
-    --color-button--dark: theme('colors.blue.astronautBlue');
-    --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark: theme('colors.blue.accented');
+    --color-button: theme('colors.gray.darker');
+    --color-button--dark: theme('colors.white.DEFAULT');
+    --color-button-inverted:  theme('colors.gray.darker');
+    --color-button-inverted--dark: theme('colors.gray.darker');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */

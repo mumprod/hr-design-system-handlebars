@@ -354,7 +354,7 @@ module.exports = {
                 'footer-text': 'var(--color-footer-text)',
                 'footer-heading': 'var(--color-footer-heading)',
                 'footer-border': 'var(--color-footer-border)',
-
+                'search-footer-text': 'var(--color-search-footer-text)',
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',
