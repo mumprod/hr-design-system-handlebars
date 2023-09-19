@@ -760,10 +760,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.gray.darker');
-    --color-button--dark: theme('colors.white.DEFAULT');
-    --color-button-inverted:  theme('colors.gray.darker');
-    --color-button-inverted--dark: theme('colors.gray.darker');
+ 
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
