@@ -136,6 +136,7 @@
     --search-border-color-mobile: var(--color-primary-ds);
 
     --color-search-footer-text: #333;
+
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
@@ -784,15 +785,20 @@
     /* Navigation Icons und Text Colors*/
     --color-navigation-icons: #433d37;
     --color-navigation-text: #433d37;
+
+    --color-navigation-border-color: theme('colors.yellow.corn');
+    --color-servicenavigation-border-color: theme('colors.yellow.corn');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
 
     /* Footer Color Options */
-    --color-footer-text:#1d1d1b;
-    --color-footer-heading: #1d1d1b;; 
+    --color-footer-text:#433d37;
+    --color-footer-heading: #433d37;; 
     --color-footer-bg: white;
     --color-footer-border: theme('colors.yellow.corn');
+    --search-border-color-desktop: #433d37;
+    --search-border-color-mobile: #433d37;
 
     --width-footer-logo: 3.4375rem;
     --height-footer-logo: 2.6875rem; 
@@ -840,7 +846,7 @@
     --color-cluster-teaser-link: theme('colors.black.DEFAULT');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.yellow.olive');
+    --color-button: #433d37;
     --color-button--dark: theme('colors.green.goBen');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');

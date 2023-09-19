@@ -419,7 +419,7 @@ var helpers = {
             configProperty = arguments[0]
             switch (configProperty) {
                 case 'footer.onBackground':
-                    configProperty = brand == 'hr-inforadio' || brand == 'hr' ? false : true
+                    configProperty = brand == 'hr-inforadio' || brand == 'hr' || brand == 'hr1' ? false : true
                     break
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
