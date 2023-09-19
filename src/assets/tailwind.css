@@ -767,7 +767,7 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     
     /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: theme('colors.yellow.corn');
+    --color-navigation-bg: white;
     /* Navigation Icons und Text Colors*/
     --color-navigation-icons: #433d37;
     --color-navigation-text: #433d37;
@@ -775,7 +775,10 @@
     --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
 
-    --color-footer-bg: #433d37 ; 
+    /* Footer Color Options */
+    --color-footer-text:#1d1d1b;
+    --color-footer-heading: #1d1d1b;; 
+    --color-footer-bg: white;
     --color-footer-border: theme('colors.yellow.corn');
 
     --width-footer-logo: 3.4375rem;
