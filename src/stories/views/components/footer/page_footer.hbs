@@ -1,11 +1,12 @@
-<footer class="cy-footer flex justify-center w-full text-base border-t pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
+<footer class="flex justify-center w-full text-base border-t cy-footer pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
     <div class="flex md:container lg:px-10">
         <span class="hidden">Footer Navigation</span>
                 
         <div class="flex flex-wrap justify-start list-none">
             {{~> components/footer/page_footer_content ~}}
-            <div class="flex w-auto mx-auto md:mx-0 md:pl-4 lg:pl-0">
-                {{> components/footer/page_footer_logo }}
+            <div class="flex w-auto mx-auto mt-4 md:mt-0 md:mx-0 md:pl-4 lg:pl-0">
+               {{!--  {{> components/footer/page_footer_logo }} --}}
+                {{> components/site_header/service_logo }}
             </div>
             <div class="flex flex-col w-full pt-2 text-left md:items-end md:justify-between md:pl-4 md:flex-row lg:pl-0">
                 {{> components/footer/page_footer_metadata 

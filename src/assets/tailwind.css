@@ -974,19 +974,21 @@
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px;
 
-    --color-footer-bg: #9b0112 ;
+    /* Footer Logo size Options */
+    --width-footer-logo: 135px;
+    --height-footer-logo: 75px;
+    --width-footer-logo-md: 100px;
+    --height-footer-logo-md: 55px; 
+    --width-footer-logo-lg: 100px;
+    --height-footer-logo-lg: 3.875rem;
+
+    /* Footer Color Options */
+    --color-footer-text:theme('colors.gray.scorpion');
+    --color-footer-heading: theme('colors.gray.scorpion');
+    --color-footer-bg: white;
     --color-footer-border: #007179;
 
     --footer-padding-bottom: 132px;
-
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
@@ -1024,7 +1026,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.red.scarlett');
+    --color-button: theme('colors.gray.scorpion');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.red.burntUmber');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -1042,7 +1044,7 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
 
-    --search-border-color-desktop:  var(--color-primary-ds);
+    --search-border-color-desktop: theme('colors.gray.scorpion');
 }
 
 [data-theme='hr4'] {
