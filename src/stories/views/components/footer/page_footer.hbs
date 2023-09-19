@@ -4,9 +4,10 @@
                 
         <div class="flex flex-wrap justify-start list-none">
             {{~> components/footer/page_footer_content ~}}
-
-            <div class="flex flex-col w-full pt-8 text-left md:items-end md:justify-between md:pl-4 md:pt-16 md:flex-row lg:pl-0">
-
+            <div class="flex w-auto mx-auto md:mx-0 md:pl-4 lg:pl-0">
+                {{> components/footer/page_footer_logo }}
+            </div>
+            <div class="flex flex-col w-full pt-2 text-left md:items-end md:justify-between md:pl-4 md:flex-row lg:pl-0">
                 {{> components/footer/page_footer_metadata 
                     _hrDeLink=this.footerMetadata.hrDeLink
                     _ardDeLink=this.footerMetadata.ardDeLink
@@ -14,11 +15,6 @@
                     _imprintLink=this.footerMetadata.imprintLink
                     _iconName="extern"
                 }}
-                
-                <div class="flex justify-center w-auto px-4 lg:pr-0 md:h-12">
-                    {{> components/footer/page_footer_logo }}
-                </div>
-                
             </div>
         </div>
     </div>
