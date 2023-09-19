@@ -716,15 +716,6 @@
     --color-footer-bg: white;
     --color-footer-border: theme('colors.blue.blueLuxury');
 
-    --width-footer-logo: 3.4375rem;
-    --height-footer-logo: 2.6875rem; 
-
-    --width-footer-logo-md: 3.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-
-    --width-footer-logo-lg: 3.4375rem;
-    --height-footer-logo-lg: 2.6875rem; 
-
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueLuxury');
     /* Ticker, Live, Livestream */
