@@ -885,18 +885,15 @@
     /* Logo paddings */
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px; 
+    /* Footer Color Options */
 
-    --color-footer-bg: #74747f; 
+    --color-footer-text:#433d37;
+    --color-footer-heading:#433d37;
+    --color-footer-bg: white;
     --color-footer-border: theme('colors.orange.clementine');
 
     --footer-padding-bottom: 132px;
 
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
@@ -932,10 +929,10 @@
     --color-cluster-teaser-link: theme('colors.red.paprika');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.red.paprika');
+    --color-button: #433d37;
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark: theme('colors.blue.accented');
+    --color-button-inverted--dark:  #433d37;
     /* Media-Button */
     --color-media-button: theme('colors.orange.burntOrange');
     /* States */
