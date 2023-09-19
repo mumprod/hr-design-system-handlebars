@@ -258,6 +258,7 @@ module.exports = {
                     tarawera: '#0a3355',
                     turquoiseCerulian: '#007fa0',
                     linkWater: '#d3e2f4',
+                    blueLuxury: '#007396'
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -298,6 +299,7 @@ module.exports = {
                     brightGray: '#E5F2F3',
                     concrete: '#f3f3f3',
                     dark: '#707070',
+                    darker: '#333333',
                     lightGray: '#d4d4d4',
                     mercury: '#E6E6E6',
                     platinum: '#E5E8E8',
@@ -347,12 +349,12 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
-
+                'servicenavigation-border-color': 'var(--color-servicenavigation-border-color)',
                 'footer-bg': 'var(--color-footer-bg)',
                 'footer-text': 'var(--color-footer-text)',
                 'footer-heading': 'var(--color-footer-heading)',
                 'footer-border': 'var(--color-footer-border)',
-
+                'search-footer-text': 'var(--color-search-footer-text)',
                 'labelMedia': 'var(--color-label-media)',
                 'labelEvent': 'var(--color-label-event)',
                 'labelBreakingnews': 'var(--color-label-breakingnews)',
