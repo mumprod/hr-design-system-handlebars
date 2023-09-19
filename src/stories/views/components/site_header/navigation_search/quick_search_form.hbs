@@ -3,7 +3,7 @@
     role="search" 
     action="{{resourceUrl "suche/index.nocache"}}" 
     method="get" 
-    class="relative flex w-full border rounded lg:search-border-desktop search-border-mobile sb-quick-search-form md:justify-end"
+    class="relative flex w-full border rounded cy-quick-search-form lg:search-border-desktop search-border-mobile sb-quick-search-form md:justify-end"
 >
     <div 
         class="flex {{~#if _footer}} flex-col-reverse h-10 gap-y-1 {{else}} lg:h-10 {{/if}} w-full" 
@@ -19,7 +19,7 @@
             name="query" 
             x-model="query"
             placeholder='{{loca "search_input_placeholder" }}' 
-            class="w-full px-2 {{~#if _footer}} py-3 placeholder-search-footer-text text-search-footer-text {{else}} py-2 placeholder-navigation-text text-primary {{/if}} text-base leading-4 placeholder-opacity-100 rounded-l appearance-none lg:top-10 placeholder-text-xs focus:outline-none"
+            class="cy-quick-search w-full px-2 {{~#if _footer}} py-3 placeholder-search-footer-text text-search-footer-text {{else}} py-2 placeholder-navigation-text text-primary {{/if}} text-base leading-4 placeholder-opacity-100 rounded-l appearance-none lg:top-10 placeholder-text-xs focus:outline-none"
             type="text"
             id="searchInput--{{getRandom}}"
             autocomplete="off"

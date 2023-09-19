@@ -1,3 +1,27 @@
+# v1.39.1 (Wed Sep 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2490 Abstand bei Bannern [#725](https://github.com/mumprod/hr-design-system-handlebars/pull/725) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.39.0 (Wed Sep 13 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: label footer and quicksearch-form [#724](https://github.com/mumprod/hr-design-system-handlebars/pull/724) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.6 (Wed Sep 13 2023)
 
 #### 🐛 Bug Fix
