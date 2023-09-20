@@ -232,13 +232,29 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.purple.jazzberry');
+    --color-navigation-bg: white;
+    --color-brandnavigation-bg: #fff; 
+    /* Navigation Icons */
+    --color-navigation-icons: theme('colors.black.DEFAULT');
+    /* Navigation Text */
+    --color-navigation-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.purple.jazzberry');
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-brandnav-pseudo: theme('colors.purple.jazzberry');
-    --color-footer-bg: #4b6464;
-    --color-footer-border:  #6d0041;
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
+    /* Footer Color Options */
+    --color-footer-text: theme('colors.black.DEFAULT');
+    --color-footer-heading: theme('colors.black.DEFAULT'); 
+    --color-footer-bg: white;
+    --color-footer-border: theme('colors.blue.blueLuxury'); 
+
+    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
+    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -273,7 +289,7 @@
     --color-cluster-teaser-link: theme('colors.purple.jazzberry');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
     /* Button */
-    --color-button: theme('colors.purple.jazzberry');
+    --color-button: theme('colors.black.DEFAULT'); 
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -319,6 +335,7 @@
     --color-footer-heading:theme('colors.black.DEFAULT'); 
 
     --search-border-color-desktop: theme('colors.black.DEFAULT'); 
+    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
     --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
