@@ -299,18 +299,26 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.astronautBlue'); 
+    --color-navigation-bg: white;
+    /* Navigation Icons */
+    --color-navigation-icons: theme('colors.black.DEFAULT');
+    /* Navigation Text */
+    --color-navigation-text: theme('colors.black.DEFAULT');
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.astronautBlue'); 
+    --color-servicenavigation-border-color:  theme('colors.blue.astronautBlue'); 
+    /* Sectionnavigation Border Bottom Width */
+    --border-navigation-border-width: 1px;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
     
-    --color-footer-bg: #e5edf1; 
-    --color-footer-border: #e5007d; 
-    --color-footer-text: #276b9e;
+    --color-footer-bg: #fff; 
+    --color-footer-border:  theme('colors.blue.astronautBlue');
+    --color-footer-text: theme('colors.black.DEFAULT'); 
     --color-footer-heading:theme('colors.black.DEFAULT'); 
 
-    --search-border-color-desktop: #276b9e; 
-
+    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
     --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -346,7 +354,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.blue.jellyBean');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
