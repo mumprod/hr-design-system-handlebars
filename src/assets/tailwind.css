@@ -1054,32 +1054,28 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.green.genoa');
+    --color-navigation-bg: #fff;
+    --color-navigation-icons: theme('colors.gray.scorpion');
+    --color-navigation-text: theme('colors.gray.scorpion');
+    /* Service/Sectionnavigation Border Color */
+    --color-navigation-border-color: theme('colors.green.genoa');
+    --color-servicenavigation-border-color: theme('colors.green.genoa');
+
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
-    /* Logo-Container Padding */
-    --logo-padding-top: 4px;
-    --logo-padding-bottom: 4px;
-    --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
-    --logo-padding-top-lg: 8px;
-    --logo-padding-bottom-lg: 8px;
 
-    --bg-logo-footer: linear-gradient(to right top, #9b0058, #d6007f);;
-    --rounded-logo-footer: 7px 0px 7px 0px; 
+    --search-border-color-desktop: theme('colors.gray.scorpion');
 
-    --color-footer-bg: #407596; 
+    /* Footer Color Options */
+    --color-footer-text:theme('colors.gray.scorpion');
+    --color-footer-heading: theme('colors.gray.scorpion');
+    --color-footer-bg: white;
     --color-footer-border: #168378;
 
     --footer-padding-bottom: 132px;
 
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem;
+
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
