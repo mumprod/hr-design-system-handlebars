@@ -469,14 +469,30 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
+
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.deepCerulean'); 
+    --color-navigation-bg: white; 
+    /* Navigation Icons */
+    --color-navigation-icons: theme('colors.black.DEFAULT');
+    /* Navigation Text */
+    --color-navigation-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
 
-    --color-footer-bg: #006eb7; 
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.deepCerulean'); 
+    --color-servicenavigation-border-color: theme('colors.blue.deepCerulean'); 
+    /* Footer Color Options */
+    --color-footer-text: theme('colors.black.DEFAULT');
+    --color-footer-heading: theme('colors.black.DEFAULT'); 
+    --color-footer-bg: white;
     --color-footer-border: #a2bc09;
+
+    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
+    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
+
+
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -513,7 +529,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
-    --color-button: theme('colors.blue.deepCerulean');
+    --color-button: theme('colors.black.DEFAULT'); 
     --color-button--dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
