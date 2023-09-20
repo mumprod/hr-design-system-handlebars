@@ -46,14 +46,6 @@
     --color-footer-heading: white; 
     --color-footer-border: red;
     --color-footer-bg: theme('colors.blue.congress');
-
-    /* Footer Logo size Options */
-    --width-footer-logo: 135px;
-    --height-footer-logo: 75px;
-    --width-footer-logo-md: 6.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-    --width-footer-logo-lg: 6.4375rem;
-    --height-footer-logo-lg: 2.6875rem; 
     
     /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
@@ -163,13 +155,6 @@
 
     --color-footer-bg: #606060;
     --color-footer-border: #accfe9;
-
-    --width-footer-logo: 135px;
-    --height-footer-logo: 75px;
-    --width-footer-logo-md: 9.375rem;
-    --height-footer-logo-md: 2rem; 
-    --width-footer-logo-lg: 9.375rem;
-    --height-footer-logo-lg: 2rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -800,15 +785,6 @@
     --search-border-color-desktop: #433d37;
     --search-border-color-mobile: #433d37;
 
-    --width-footer-logo: 3.4375rem;
-    --height-footer-logo: 2.6875rem; 
-
-    --width-footer-logo-md: 3.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-
-    --width-footer-logo-lg: 3.4375rem;
-    --height-footer-logo-lg: 2.6875rem;
-
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -973,14 +949,6 @@
     /* Logo padding */
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px;
-
-    /* Footer Logo size Options */
-    --width-footer-logo: 135px;
-    --height-footer-logo: 75px;
-    --width-footer-logo-md: 100px;
-    --height-footer-logo-md: 55px; 
-    --width-footer-logo-lg: 100px;
-    --height-footer-logo-lg: 3.875rem;
 
     /* Footer Color Options */
     --color-footer-text:theme('colors.gray.scorpion');
@@ -1155,13 +1123,15 @@
     /* The Fancy special border on youfm */
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
-    /* Footer Logo Invert */
+    /* Footer Color Options */
     --invert-logo-footer: 0;
-
-    --color-footer-bg: #606060; 
+    --color-footer-text: #000;
+    --color-footer-heading: #000;
     --color-footer-border: #007ea1;
+    --color-footer-bg: white;
     
     --footer-padding-bottom: 132px;
+
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
@@ -1197,7 +1167,7 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.blue.sea');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted--dark: theme('colors.blue.accented');
