@@ -621,11 +621,20 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: theme('colors.blue.blueStone');
+    --color-navigation-bg: white;
+    --color-brandnavigation-bg: #fff; 
+    /* Navigation Icons */
+    --color-navigation-icons: theme('colors.black.DEFAULT');
+    /* Navigation Text */
+    --color-navigation-text: theme('colors.black.DEFAULT');
+
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
-    
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueStone'); 
+    --color-servicenavigation-border-color: theme('colors.blue.blueStone');
+
     /* Logo-Container Padding */
     --logo-padding-top: 8px;
     --logo-padding-bottom: 8px;
@@ -634,15 +643,15 @@
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
-    --color-footer-bg: #575756; 
-    --color-footer-border: #c1bc2b;
+    /* Footer Color Options */
+    --color-footer-text: theme('colors.black.DEFAULT');
+    --color-footer-heading: theme('colors.black.DEFAULT'); 
+    --color-footer-bg: white;
+    --color-footer-border: theme('colors.blue.blueLuxury'); 
 
-    --width-footer-logo: 7.4375rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 5.4375rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 5.4375rem;
-    --height-footer-logo-lg: 2.5rem; 
+    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
+    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
+
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -677,7 +686,7 @@
     --color-cluster-teaser-link: theme('colors.green.teal');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button: theme('colors.green.teal');
+    --color-button:  theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
