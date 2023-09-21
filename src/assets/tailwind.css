@@ -24,6 +24,7 @@
     --color-navigation-icons: #fff;
     /* Navigation Text */
     --color-navigation-text: #fff;
+    --color-search-header-text: #000;
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.blue.congress'); 
     --color-brandnav-pseudo: theme('colors.blue.congress');
@@ -235,7 +236,7 @@
 
     /* Navigation Hintergrund */
     --color-navigation-bg: white;
-    --color-brandnavigation-bg: #fff; 
+
     /* Navigation Icons */
     --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
@@ -408,8 +409,10 @@
     --logo-padding-bottom-md: 8px;    
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
+
     --color-footer-bg: #606060; 
     --color-footer-border: ##276b9e;
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -491,8 +494,6 @@
 
     --search-border-color-desktop: theme('colors.black.DEFAULT'); 
     --search-border-color-mobile: theme('colors.black.DEFAULT'); 
-
-
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -646,7 +647,7 @@
 
     /* Navigation Hintergrund, Borders und Icons */
     --color-navigation-bg: white;
-    --color-brandnavigation-bg: #fff; 
+
     /* Navigation Icons */
     --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
@@ -736,8 +737,8 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: white; /*theme('colors.blue.deepCerulean');*/ 
-    --color-brandnavigation-bg: #fff; 
+    --color-navigation-bg: white; 
+
     /* Navigation Icons */
     --color-navigation-icons: theme('colors.gray.darker');
     /* Navigation Text */
@@ -840,6 +841,7 @@
     --color-footer-heading: #433d37;; 
     --color-footer-bg: white;
     --color-footer-border: theme('colors.yellow.corn');
+
     --search-border-color-desktop: #433d37;
     --search-border-color-mobile: #433d37;
 
@@ -1182,14 +1184,12 @@
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Footer Color Options */
-    --invert-logo-footer: 0;
     --color-footer-text: #000;
     --color-footer-heading: #000;
     --color-footer-border: #007ea1;
     --color-footer-bg: white;
     
     --footer-padding-bottom: 132px;
-
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
