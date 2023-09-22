@@ -15,16 +15,16 @@
     --color-highlight-3: theme('colors.gray.dark');
 
     /* Text */
-    --color-standard-text: #000;
+    --color-standard-text: theme('colors.black.DEFAULT');
     --color-standard-text-dark: #F0F0F0;
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.congress');
+    --color-navigation-bg: #fff;
     --color-brandnavigation-bg: #fff; 
     /* Navigation Icons */
-    --color-navigation-icons: #fff;
+    --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
-    --color-navigation-text: #fff;
-    --color-search-header-text: #000;
+    --color-navigation-text: theme('colors.black.DEFAULT');
+    --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.blue.congress'); 
     --color-brandnav-pseudo: theme('colors.blue.congress');
@@ -33,6 +33,11 @@
     --color-servicenavigation-border-color:  #fff;
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
+    /* Suchfeld Header und Footer */
+    --search-border-color-desktop:  theme('colors.blue.congress');
+    --search-border-color-mobile:  theme('colors.blue.congress');
+    --color-search-footer-text:  theme('colors.blue.congress');
+
     /* Logo-Container Padding */
     --logo-padding-top: 10px;
     --logo-padding-bottom: 10px;
@@ -43,10 +48,10 @@
 
     /* Footer Color Options */
     --invert-logo-footer: 0;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: theme('colors.black.DEFAULT');
+    --color-footer-heading: theme('colors.black.DEFAULT');
     --color-footer-border: red;
-    --color-footer-bg: theme('colors.blue.congress');
+    --color-footer-bg: white;
     
     /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
@@ -125,11 +130,6 @@
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 
-    --search-border-color-desktop: theme('colors.transparent');
-    --search-border-color-mobile: var(--color-primary-ds);
-
-    --color-search-footer-text: #333;
-
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
@@ -145,6 +145,15 @@
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
+    --color-navigation-bg:theme('colors.blue.congress');
+    /* Navigation Icons */
+    --color-navigation-icons: #fff;
+    /* Navigation Text */
+    --color-navigation-text: #fff;
+    /* Suchfeld Header und Footer */
+    --search-border-color-desktop: theme('colors.transparent');
+    --search-border-color-mobile: var(--color-primary-ds);
+    --color-search-footer-text: #000;
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -154,8 +163,12 @@
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
-    --color-footer-bg: #606060;
+    /* Footer Color Options */
+    --invert-logo-footer: 0;
+    --color-footer-text: white; 
+    --color-footer-heading: white; 
     --color-footer-border: #accfe9;
+    --color-footer-bg: #606060;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -234,27 +247,15 @@
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: white;
-
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.black.DEFAULT');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.black.DEFAULT');
+    
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-brandnav-pseudo: theme('colors.purple.jazzberry');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
-    /* Footer Color Options */
-    --color-footer-text: theme('colors.black.DEFAULT');
-    --color-footer-heading: theme('colors.black.DEFAULT'); 
-    --color-footer-bg: white;
+   
     --color-footer-border: theme('colors.blue.blueLuxury'); 
-
-    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
-    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -315,12 +316,6 @@
     --color-highlight-1: theme('colors.blue.aqua');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: white;
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.black.DEFAULT');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.black.DEFAULT');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.astronautBlue'); 
     --color-servicenavigation-border-color:  theme('colors.blue.astronautBlue'); 
@@ -330,13 +325,8 @@
     --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
     
-    --color-footer-bg: #fff; 
     --color-footer-border:  theme('colors.blue.astronautBlue');
-    --color-footer-text: theme('colors.black.DEFAULT'); 
-    --color-footer-heading:theme('colors.black.DEFAULT'); 
 
-    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
-    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
     --footer-padding-bottom: 132px;
     
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -399,6 +389,10 @@
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.gray.scorpion');
+    /* Navigation Icons */
+    --color-navigation-icons: #fff;
+    /* Navigation Text */
+    --color-navigation-text: #fff;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
@@ -410,8 +404,8 @@
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
 
-    --color-footer-bg: #606060; 
-    --color-footer-border: ##276b9e;
+    --color-footer-bg: theme('colors.gray.scorpion'); 
+    --color-footer-border: #276b9e;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -473,12 +467,6 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: white; 
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.black.DEFAULT');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
@@ -486,14 +474,8 @@
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-servicenavigation-border-color: theme('colors.blue.deepCerulean'); 
-    /* Footer Color Options */
-    --color-footer-text: theme('colors.black.DEFAULT');
-    --color-footer-heading: theme('colors.black.DEFAULT'); 
-    --color-footer-bg: white;
-    --color-footer-border: #a2bc09;
 
-    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
-    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
+    --color-footer-border: #a2bc09;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -555,13 +537,6 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: white;
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.black.DEFAULT');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.black.DEFAULT');
-
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
@@ -578,14 +553,7 @@
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
-    /* Footer Color Options */
-    --color-footer-text: theme('colors.black.DEFAULT');
-    --color-footer-heading: theme('colors.black.DEFAULT'); 
-    --color-footer-bg: white; 
     --color-footer-border: #8d2725; 
-
-    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
-    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
@@ -645,14 +613,6 @@
     --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: white;
-
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.black.DEFAULT');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.black.DEFAULT');
-
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
@@ -668,15 +628,7 @@
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
-    /* Footer Color Options */
-    --color-footer-text: theme('colors.black.DEFAULT');
-    --color-footer-heading: theme('colors.black.DEFAULT'); 
-    --color-footer-bg: white;
     --color-footer-border: theme('colors.blue.blueLuxury'); 
-
-    --search-border-color-desktop: theme('colors.black.DEFAULT'); 
-    --search-border-color-mobile: theme('colors.black.DEFAULT'); 
-
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -739,10 +691,6 @@
     /* Navigation Hintergrund */
     --color-navigation-bg: white; 
 
-    /* Navigation Icons */
-    --color-navigation-icons: theme('colors.gray.darker');
-    /* Navigation Text */
-    --color-navigation-text: theme('colors.gray.darker');
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.gray.darker');
     --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
@@ -751,9 +699,6 @@
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 4px;
     --color-servicenavigation-border-color: theme('colors.gray.darker');
-
-    --search-border-color-desktop: theme('colors.gray.darker');
-    --search-border-color-mobile: var(--color-primary-ds);
 
     /* Footer Color Options */
     --color-footer-text: theme('colors.gray.darker');
@@ -824,11 +769,6 @@
     --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     
-    /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: white;
-    /* Navigation Icons und Text Colors*/
-    --color-navigation-icons: #433d37;
-    --color-navigation-text: #433d37;
 
     --color-navigation-border-color: theme('colors.yellow.corn');
     --color-servicenavigation-border-color: theme('colors.yellow.corn');
@@ -836,14 +776,7 @@
     --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
 
-    /* Footer Color Options */
-    --color-footer-text:#433d37;
-    --color-footer-heading: #433d37;; 
-    --color-footer-bg: white;
     --color-footer-border: theme('colors.yellow.corn');
-
-    --search-border-color-desktop: #433d37;
-    --search-border-color-mobile: #433d37;
 
     --footer-padding-bottom: 132px;
 
@@ -907,29 +840,21 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: #433d37;
-    --color-navigation-text: #433d37;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
     --color-navigation-border-color:theme('colors.orange.clementine');
     --color-servicenavigation-border-color:theme('colors.orange.clementine');
+
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
     /* Logo paddings */
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px; 
-    /* Footer Color Options */
-
-    --color-footer-text:#433d37;
-    --color-footer-heading:#433d37;
-    --color-footer-bg: white;
+   
     --color-footer-border: theme('colors.orange.clementine');
 
     --footer-padding-bottom: 132px;
-
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
@@ -994,10 +919,6 @@
     --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: theme('colors.gray.scorpion');
-    --color-navigation-text: theme('colors.gray.scorpion');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.monza');
     --color-brandnav-pseudo: theme('colors.red.monza'); 
@@ -1010,10 +931,6 @@
     --logo-padding-top:8px;
     --logo-padding-bottom: 8px;
 
-    /* Footer Color Options */
-    --color-footer-text:theme('colors.gray.scorpion');
-    --color-footer-heading: theme('colors.gray.scorpion');
-    --color-footer-bg: white;
     --color-footer-border: #007179;
 
     --footer-padding-bottom: 132px;
@@ -1081,10 +998,6 @@
     --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: theme('colors.gray.scorpion');
-    --color-navigation-text: theme('colors.gray.scorpion');
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.green.genoa');
     --color-servicenavigation-border-color: theme('colors.green.genoa');
@@ -1093,17 +1006,9 @@
     --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
 
-    --search-border-color-desktop: theme('colors.gray.scorpion');
-
-    /* Footer Color Options */
-    --color-footer-text:theme('colors.gray.scorpion');
-    --color-footer-heading: theme('colors.gray.scorpion');
-    --color-footer-bg: white;
     --color-footer-border: #168378;
 
     --footer-padding-bottom: 132px;
-
-
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
@@ -1168,10 +1073,6 @@
     --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: #000;
-    --color-navigation-text: #000;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: #000;
     --color-brandnav-pseudo: #007179; 
@@ -1191,11 +1092,7 @@
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
-    /* Footer Color Options */
-    --color-footer-text: #000;
-    --color-footer-heading: #000;
     --color-footer-border: #007ea1;
-    --color-footer-bg: white;
     
     --footer-padding-bottom: 132px;
 

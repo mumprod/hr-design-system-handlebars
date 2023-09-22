@@ -300,6 +300,7 @@ module.exports = {
                     concrete: '#f3f3f3',
                     dark: '#707070',
                     darker: '#333333',
+                    darkest: '#010101',
                     lightGray: '#d4d4d4',
                     mercury: '#E6E6E6',
                     platinum: '#E5E8E8',
