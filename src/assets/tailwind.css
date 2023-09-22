@@ -406,6 +406,8 @@
 
     --color-footer-bg: theme('colors.gray.scorpion'); 
     --color-footer-border: #276b9e;
+    --color-footer-text: white; 
+    --color-footer-heading: white; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
