@@ -39,8 +39,8 @@
     --color-search-footer-text:  theme('colors.blue.congress');
 
     /* Logo-Container Padding */
-    --logo-padding-top: 10px;
-    --logo-padding-bottom: 10px;
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --logo-padding-top-md: 10px;
     --logo-padding-bottom-md: 10px;    
     --logo-padding-top-lg: 10px;
@@ -546,7 +546,7 @@
     --color-servicenavigation-border-color: theme('colors.red.burntUmber');
 
     /* Logo-Container Padding */
-    --logo-padding-top: 4px;
+    --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 4px;
     --logo-padding-bottom-md: 4px;    
@@ -621,8 +621,6 @@
     --color-servicenavigation-border-color: theme('colors.blue.blueStone');
 
     /* Logo-Container Padding */
-    --logo-padding-top: 8px;
-    --logo-padding-bottom: 8px;
     --logo-padding-top-md: 4px;
     --logo-padding-bottom-md: 4px;    
     --logo-padding-top-lg: 4px;
@@ -699,7 +697,13 @@
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 4px;
     --color-servicenavigation-border-color: theme('colors.gray.darker');
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 4px;
+    --logo-padding-bottom: 8px;
+    --logo-padding-top-md: 10px;
+    --logo-padding-bottom-md: 10px;    
+    --logo-padding-top-lg: 10px;
+    --logo-padding-bottom-lg: 10px;
     /* Footer Color Options */
     --color-footer-text: theme('colors.gray.darker');
     --color-footer-heading: theme('colors.gray.darker');
@@ -777,6 +781,9 @@
     --color-brandnav-pseudo: theme('colors.yellow.corn');
 
     --color-footer-border: theme('colors.yellow.corn');
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
 
     --footer-padding-bottom: 132px;
 
@@ -845,12 +852,11 @@
     --color-brandnav-pseudo: theme('colors.orange.clementine');
     --color-navigation-border-color:theme('colors.orange.clementine');
     --color-servicenavigation-border-color:theme('colors.orange.clementine');
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
-    /* Logo paddings */
-    --logo-padding-top:8px;
-    --logo-padding-bottom: 8px; 
    
     --color-footer-border: theme('colors.orange.clementine');
 
@@ -927,12 +933,11 @@
     --color-servicenavigation-border-color: theme('colors.red.monza');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
-    /* Logo padding */
-    --logo-padding-top:8px;
-    --logo-padding-bottom: 8px;
 
     --color-footer-border: #007179;
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -1005,7 +1010,9 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.green.genoa');
     --color-brandnav-pseudo: theme('colors.green.genoa');
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --color-footer-border: #168378;
 
     --footer-padding-bottom: 132px;
@@ -1085,8 +1092,8 @@
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
     /* Logo-Container Padding */
-    --logo-padding-top: 10px;
-    --logo-padding-bottom: 10px;
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
     --logo-padding-bottom-md: 6px;    
     --logo-padding-top-lg: 6px;
