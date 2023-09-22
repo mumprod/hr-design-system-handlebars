@@ -34,9 +34,9 @@
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Suchfeld Header und Footer */
-    --search-border-color-desktop:  theme('colors.blue.congress');
-    --search-border-color-mobile:  theme('colors.blue.congress');
-    --color-search-footer-text:  theme('colors.blue.congress');
+    --search-border-color-desktop:  theme('colors.black.DEFAULT');
+    --search-border-color-mobile:  theme('colors.black.DEFAULT');
+    --color-search-footer-text:  theme('colors.black.DEFAULT');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -242,7 +242,7 @@
 }
 
 [data-theme='hr-fernsehen'] {
-    --color-primary-ds: theme('colors.purple.jazzberry');
+    --color-primary-ds: theme('colors.blue.blueLuxury'); 
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
@@ -250,7 +250,7 @@
     
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-brandnav-pseudo: theme('colors.purple.jazzberry');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
@@ -998,18 +998,18 @@
 }
 
 [data-theme='hr4'] {
-    --color-primary-ds: theme('colors.green.genoa');
+    --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Service/Sectionnavigation Border Color */
-    --color-navigation-border-color: theme('colors.green.genoa');
-    --color-servicenavigation-border-color: theme('colors.green.genoa');
+    --color-navigation-border-color: theme('colors.pink.fuchsie');
+    --color-servicenavigation-border-color: theme('colors.pink.fuchsie');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.green.genoa');
-    --color-brandnav-pseudo: theme('colors.green.genoa');
+    --color-brandnavigation-border-color: theme('colors.pink.fuchsie');
+    --color-brandnav-pseudo: theme('colors.pink.fuchsie');
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
