@@ -1055,7 +1055,7 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.green.casal');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.green.eden');
     --color-button-inverted--dark: theme('colors.blue.accented');
