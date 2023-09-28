@@ -1,3 +1,15 @@
+# v1.40.1 (Thu Sep 28 2023)
+
+#### 🐛 Bug Fix
+
+- - some color fixes for hrfernsehen & hrwerbung [#727](https://github.com/mumprod/hr-design-system-handlebars/pull/727) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.40.0 (Thu Sep 28 2023)
 
 #### 🚀 Enhancement
