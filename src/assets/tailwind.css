@@ -15,25 +15,32 @@
     --color-highlight-3: theme('colors.gray.dark');
 
     /* Text */
-    --color-standard-text: #000;
+    --color-standard-text: theme('colors.black.DEFAULT');
     --color-standard-text-dark: #F0F0F0;
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.congress');
+    --color-navigation-bg: #fff;
     --color-brandnavigation-bg: #fff; 
     /* Navigation Icons */
-    --color-navigation-icons: #fff;
+    --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
-    --color-navigation-text: #fff;
+    --color-navigation-text: theme('colors.black.DEFAULT');
+    --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.blue.congress'); 
     --color-brandnav-pseudo: theme('colors.blue.congress');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
+    --color-servicenavigation-border-color:  #fff;
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
+    /* Suchfeld Header und Footer */
+    --search-border-color-desktop:  theme('colors.black.DEFAULT');
+    --search-border-color-mobile:  theme('colors.black.DEFAULT');
+    --color-search-footer-text:  theme('colors.black.DEFAULT');
+
     /* Logo-Container Padding */
-    --logo-padding-top: 10px;
-    --logo-padding-bottom: 10px;
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --logo-padding-top-md: 10px;
     --logo-padding-bottom-md: 10px;    
     --logo-padding-top-lg: 10px;
@@ -41,18 +48,10 @@
 
     /* Footer Color Options */
     --invert-logo-footer: 0;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: theme('colors.black.DEFAULT');
+    --color-footer-heading: theme('colors.black.DEFAULT');
     --color-footer-border: red;
-    --color-footer-bg: theme('colors.blue.congress');
-
-    /* Footer Logo size Options */
-    --width-footer-logo: 135px;
-    --height-footer-logo: 75px;
-    --width-footer-logo-md: 6.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-    --width-footer-logo-lg: 6.4375rem;
-    --height-footer-logo-lg: 2.6875rem; 
+    --color-footer-bg: white;
     
     /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
@@ -131,8 +130,6 @@
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 
-    --search-border-color-desktop: theme('colors.transparent');
-    --search-border-color-mobile: var(--color-primary-ds);
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
@@ -148,6 +145,15 @@
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
+    --color-navigation-bg:theme('colors.blue.congress');
+    /* Navigation Icons */
+    --color-navigation-icons: #fff;
+    /* Navigation Text */
+    --color-navigation-text: #fff;
+    /* Suchfeld Header und Footer */
+    --search-border-color-desktop: theme('colors.transparent');
+    --search-border-color-mobile: var(--color-primary-ds);
+    --color-search-footer-text: #000;
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -157,15 +163,12 @@
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
-    --color-footer-bg: #606060;
+    /* Footer Color Options */
+    --invert-logo-footer: 0;
+    --color-footer-text: white; 
+    --color-footer-heading: white; 
     --color-footer-border: #accfe9;
-
-    --width-footer-logo: 135px;
-    --height-footer-logo: 75px;
-    --width-footer-logo-md: 6.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-    --width-footer-logo-lg: 9.375rem;
-    --height-footer-logo-lg: 2rem; 
+    --color-footer-bg: #606060;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science');
@@ -239,17 +242,21 @@
 }
 
 [data-theme='hr-fernsehen'] {
-    --color-primary-ds: theme('colors.purple.jazzberry');
+    --color-primary-ds: theme('colors.blue.blueLuxury'); 
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.purple.jazzberry');
+
+    
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.purple.jazzberry');
-    --color-brandnav-pseudo: theme('colors.purple.jazzberry');
-    --color-footer-bg: #4b6464;
-    --color-footer-border:  #6d0041;
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
+   
+    --color-footer-border: theme('colors.blue.blueLuxury'); 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -284,7 +291,7 @@
     --color-cluster-teaser-link: theme('colors.purple.jazzberry');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
     /* Button */
-    --color-button: theme('colors.purple.jazzberry');
+    --color-button: theme('colors.black.DEFAULT'); 
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -309,18 +316,16 @@
     --color-highlight-1: theme('colors.blue.aqua');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.astronautBlue'); 
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.astronautBlue'); 
+    --color-servicenavigation-border-color:  theme('colors.blue.astronautBlue'); 
+    /* Sectionnavigation Border Bottom Width */
+    --border-navigation-border-width: 1px;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
     
-    --color-footer-bg: #e5edf1; 
-    --color-footer-border: #e5007d; 
-    --color-footer-text: #276b9e;
-    --color-footer-heading:theme('colors.black.DEFAULT'); 
-
-    --search-border-color-desktop: #276b9e; 
+    --color-footer-border:  theme('colors.blue.astronautBlue');
 
     --footer-padding-bottom: 132px;
     
@@ -357,7 +362,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.blue.jellyBean');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -384,6 +389,10 @@
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.gray.scorpion');
+    /* Navigation Icons */
+    --color-navigation-icons: #fff;
+    /* Navigation Text */
+    --color-navigation-text: #fff;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.gray.scorpion');
     --color-brandnav-pseudo: theme('colors.gray.scorpion');
@@ -394,8 +403,12 @@
     --logo-padding-bottom-md: 8px;    
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
-    --color-footer-bg: #606060; 
-    --color-footer-border: ##276b9e;
+
+    --color-footer-bg: theme('colors.gray.scorpion'); 
+    --color-footer-border: #276b9e;
+    --color-footer-text: white; 
+    --color-footer-heading: white; 
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
     /* Ticker, Live, Livestream */
@@ -455,13 +468,15 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.deepCerulean'); 
+
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
     --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
 
-    --color-footer-bg: #006eb7; 
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.deepCerulean'); 
+    --color-servicenavigation-border-color: theme('colors.blue.deepCerulean'); 
+
     --color-footer-border: #a2bc09;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
@@ -499,7 +514,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
-    --color-button: theme('colors.blue.deepCerulean');
+    --color-button: theme('colors.black.DEFAULT'); 
     --color-button--dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -523,30 +538,24 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.red.burntUmber');
+
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
     --color-brandnav-pseudo: theme('colors.red.burntUmber');
+
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.red.burntUmber');
+    --color-servicenavigation-border-color: theme('colors.red.burntUmber');
+
     /* Logo-Container Padding */
-    --logo-padding-top: 4px;
+    --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 4px;
     --logo-padding-bottom-md: 4px;    
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
-    --color-footer-bg: #575756; 
     --color-footer-border: #8d2725; 
-
-    --width-footer-logo: 7.4375rem;
-    --height-footer-logo: 2.5rem;
-
-    --width-footer-logo-md: 7.4375rem;
-    --height-footer-logo-md: 2.5rem; 
-
-    --width-footer-logo-lg: 7.4375rem;
-    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
@@ -581,7 +590,7 @@
     --color-cluster-teaser-link: theme('colors.red.wellRead');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button: theme('colors.red.wellRead');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.red.burntUmber');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -606,29 +615,20 @@
     --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: theme('colors.blue.blueStone');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
-    
+    /* Service/Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueStone'); 
+    --color-servicenavigation-border-color: theme('colors.blue.blueStone');
+
     /* Logo-Container Padding */
-    --logo-padding-top: 8px;
-    --logo-padding-bottom: 8px;
     --logo-padding-top-md: 4px;
     --logo-padding-bottom-md: 4px;    
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
-    --color-footer-bg: #575756; 
-    --color-footer-border: #c1bc2b;
-
-    --width-footer-logo: 7.4375rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 5.4375rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 5.4375rem;
-    --height-footer-logo-lg: 2.5rem; 
+    --color-footer-border: theme('colors.blue.blueLuxury'); 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -663,7 +663,7 @@
     --color-cluster-teaser-link: theme('colors.green.teal');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button: theme('colors.green.teal');
+    --color-button:  theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -683,31 +683,37 @@
 }
 
 [data-theme='hr'] {
-    --color-primary-ds: theme('colors.blue.deepCerulean');
-    --color-secondary-ds: #007179;
+    --color-primary-ds: theme('colors.blue.blueLuxury');
+    --color-secondary-ds: #007396;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.blue.deepCerulean'); 
-    /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.deepCerulean'); 
-    --color-brandnav-pseudo: theme('colors.blue.deepCerulean');
+    --color-navigation-bg: white; 
 
-    --color-footer-bg: theme('colors.blue.deepCerulean');
-    --color-footer-border: #a2bc09;
-
-    --width-footer-logo: 3.4375rem;
-    --height-footer-logo: 2.6875rem; 
-
-    --width-footer-logo-md: 3.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-
-    --width-footer-logo-lg: 3.4375rem;
-    --height-footer-logo-lg: 2.6875rem; 
+    /* Brandnavigation Border and :before Color */
+    --color-brandnavigation-border-color: theme('colors.gray.darker');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
+    /* Sectionnavigation Border-Color */
+    --color-navigation-border-color: theme('colors.blue.blueLuxury');
+    /* Sectionnavigation Border Bottom Width */
+    --border-navigation-border-width: 4px;
+    --color-servicenavigation-border-color: theme('colors.gray.darker');
+    /* Logo-Container Padding */
+    --logo-padding-top: 4px;
+    --logo-padding-bottom: 8px;
+    --logo-padding-top-md: 10px;
+    --logo-padding-bottom-md: 10px;    
+    --logo-padding-top-lg: 10px;
+    --logo-padding-bottom-lg: 10px;
+    /* Footer Color Options */
+    --color-footer-text: theme('colors.gray.darker');
+    --color-footer-heading: theme('colors.gray.darker');
+    --color-footer-bg: white;
+    --color-footer-border: theme('colors.blue.blueLuxury');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.deepCerulean');
+    --color-label-media: theme('colors.blue.blueLuxury');
     /* Ticker, Live, Livestream */
     --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
@@ -741,10 +747,13 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.blue.deepCerulean');
-    --color-button--dark: theme('colors.blue.astronautBlue');
+    --color-button: theme('colors.gray.darker');
+    --color-button--dark: theme('colors.blue.blueLuxury');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark: theme('colors.blue.accented');
+    --color-button-inverted--dark: theme('colors.blue.blueLuxury');
+    --color-button-disabled: theme('colors.gray.lightGray');
+    --color-button-disabled--dark: theme('colors.gray.boulder');
+ 
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -766,26 +775,17 @@
     --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     
-    /* Navigation Hintergrund, Borders und Icons */
-    --color-navigation-bg: theme('colors.yellow.corn');
-    /* Navigation Icons und Text Colors*/
-    --color-navigation-icons: #433d37;
-    --color-navigation-text: #433d37;
+
+    --color-navigation-border-color: theme('colors.yellow.corn');
+    --color-servicenavigation-border-color: theme('colors.yellow.corn');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.yellow.corn');
     --color-brandnav-pseudo: theme('colors.yellow.corn');
 
-    --color-footer-bg: #433d37 ; 
     --color-footer-border: theme('colors.yellow.corn');
-
-    --width-footer-logo: 3.4375rem;
-    --height-footer-logo: 2.6875rem; 
-
-    --width-footer-logo-md: 3.4375rem;
-    --height-footer-logo-md: 2.6875rem; 
-
-    --width-footer-logo-lg: 3.4375rem;
-    --height-footer-logo-lg: 2.6875rem;
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
 
     --footer-padding-bottom: 132px;
 
@@ -824,7 +824,7 @@
     --color-cluster-teaser-link: theme('colors.black.DEFAULT');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.yellow.olive');
+    --color-button: #433d37;
     --color-button--dark: theme('colors.green.goBen');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -849,31 +849,20 @@
     --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: #433d37;
-    --color-navigation-text: #433d37;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
     --color-navigation-border-color:theme('colors.orange.clementine');
+    --color-servicenavigation-border-color:theme('colors.orange.clementine');
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
-    /* Logo paddings */
-    --logo-padding-top:8px;
-    --logo-padding-bottom: 8px; 
-
-    --color-footer-bg: #74747f; 
+   
     --color-footer-border: theme('colors.orange.clementine');
 
     --footer-padding-bottom: 132px;
-
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem; 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
@@ -909,10 +898,10 @@
     --color-cluster-teaser-link: theme('colors.red.paprika');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.red.paprika');
+    --color-button: #433d37;
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark: theme('colors.blue.accented');
+    --color-button-inverted--dark:  #433d37;
     /* Media-Button */
     --color-media-button: theme('colors.orange.burntOrange');
     /* States */
@@ -938,34 +927,20 @@
     --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: theme('colors.gray.scorpion');
-    --color-navigation-text: theme('colors.gray.scorpion');
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.monza');
     --color-brandnav-pseudo: theme('colors.red.monza'); 
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.red.monza');
+    --color-servicenavigation-border-color: theme('colors.red.monza');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
-    /* Logo padding */
-    --logo-padding-top:8px;
-    --logo-padding-bottom: 8px;
 
-    --color-footer-bg: #9b0112 ;
     --color-footer-border: #007179;
-
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --footer-padding-bottom: 132px;
-
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.monza');
@@ -1003,7 +978,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.red.scarlett');
+    --color-button: theme('colors.gray.scorpion');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.red.burntUmber');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -1021,42 +996,28 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
 
-    --search-border-color-desktop:  var(--color-primary-ds);
+    --search-border-color-desktop: theme('colors.gray.scorpion');
 }
 
 [data-theme='hr4'] {
-    --color-primary-ds: theme('colors.green.genoa');
+    --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.azureish');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund */
-    --color-navigation-bg: theme('colors.green.genoa');
+    /* Service/Sectionnavigation Border Color */
+    --color-navigation-border-color: theme('colors.pink.fuchsie');
+    --color-servicenavigation-border-color: theme('colors.pink.fuchsie');
+
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.green.genoa');
-    --color-brandnav-pseudo: theme('colors.green.genoa');
+    --color-brandnavigation-border-color: theme('colors.pink.fuchsie');
+    --color-brandnav-pseudo: theme('colors.pink.fuchsie');
     /* Logo-Container Padding */
-    --logo-padding-top: 4px;
-    --logo-padding-bottom: 4px;
-    --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
-    --logo-padding-top-lg: 8px;
-    --logo-padding-bottom-lg: 8px;
-
-    --bg-logo-footer: linear-gradient(to right top, #9b0058, #d6007f);;
-    --rounded-logo-footer: 7px 0px 7px 0px; 
-
-    --color-footer-bg: #407596; 
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
     --color-footer-border: #168378;
 
     --footer-padding-bottom: 132px;
-
-    --width-footer-logo: 2.5rem;
-    --height-footer-logo: 2.5rem;
-    --width-footer-logo-md: 2.5rem;
-    --height-footer-logo-md: 2.5rem; 
-    --width-footer-logo-lg: 2.5rem;
-    --height-footer-logo-lg: 2.5rem;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
@@ -1094,7 +1055,7 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.green.casal');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.green.eden');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -1121,24 +1082,25 @@
     --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    /* Navigation Hintergrund, Text und Icons */
-    --color-navigation-bg: #fff;
-    --color-navigation-icons: #000;
-    --color-navigation-text: #000;
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: #000;
     --color-brandnav-pseudo: #007179; 
     /* Service/Sectionnavigation Border Color*/
     --color-navigation-border-color:#000;
+    --color-servicenavigation-border-color:#000;
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on youfm */
     --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
    
-    /* Footer Logo Invert */
-    --invert-logo-footer: 0;
+    /* Logo-Container Padding */
+    --logo-padding-top: 6px;
+    --logo-padding-bottom: 6px;
+    --logo-padding-top-md: 6px;
+    --logo-padding-bottom-md: 6px;    
+    --logo-padding-top-lg: 6px;
+    --logo-padding-bottom-lg: 6px;
 
-    --color-footer-bg: #606060; 
     --color-footer-border: #007ea1;
     
     --footer-padding-bottom: 132px;
@@ -1177,7 +1139,7 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.blue.sea');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted--dark: theme('colors.blue.accented');
