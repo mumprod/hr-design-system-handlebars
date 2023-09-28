@@ -1,3 +1,15 @@
+# v1.40.0 (Thu Sep 28 2023)
+
+#### 🚀 Enhancement
+
+- Testing/new footer new logos [#726](https://github.com/mumprod/hr-design-system-handlebars/pull/726) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.39.1 (Wed Sep 13 2023)
 
 #### 🐛 Bug Fix
