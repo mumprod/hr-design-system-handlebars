@@ -125,6 +125,36 @@
             ]
         }
     },
+    "teaser_25_1_100": {
+        "includePath": "components/teaser/group_teaser/group_teaser",
+        "includeModel": {
+            "hasLink": true,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "hasGroupItems": true,
+            "groupTitle": "Gruppe 25%",
+            "teaserSize": "25",
+            "realTeaserSize": "25",
+            "headlineTag": "h2",
+            "isRelatedContent": false,
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "100"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
     "teaser_3_33": {
         "includePath": "components/teaser/group_teaser/group_teaser",
         "includeModel": {
