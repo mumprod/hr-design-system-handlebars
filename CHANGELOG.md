@@ -1,3 +1,15 @@
+# v1.40.3 (Fri Sep 29 2023)
+
+#### 🐛 Bug Fix
+
+- - fixes search border in footer with FF [#729](https://github.com/mumprod/hr-design-system-handlebars/pull/729) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.40.2 (Fri Sep 29 2023)
 
 #### 🐛 Bug Fix
