@@ -1,6 +1,7 @@
 import groupTeaser from './group_teaser.hbs'
 import groupTeaserAccented from './group_teaser_accented.hbs'
 import teaserGroup100 from '../fixtures/teaser_group_100.json'
+import teaserGroup25 from '../fixtures/teaser_group_25.json'
 import teaserGroupRelatedContent100 from '../fixtures/teaser_group_related_content_100.json'
 import teaserGroup100highlight from '../fixtures/teaser_group_100_highlight.json'
 import teaserGroup100highlight2 from '../fixtures/teaser_group_100_highlight_2.json'
@@ -58,6 +59,11 @@ export const $100GruppeMitUberschrift = {
     render: groupTeaserTemplate.bind({}),
     name: '100% Gruppe mit Überschrift',
     args: teaserGroup100.includeModel,
+}
+export const $25GruppeMitUberschrift = {
+    render: groupTeaserTemplate.bind({}),
+    name: '25% Gruppe mit Überschrift',
+    args: teaserGroup25.includeModel,
 }
 
 export const $100GruppeMitUberschriftHighlight1 = {

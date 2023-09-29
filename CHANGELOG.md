@@ -1,3 +1,15 @@
+# v1.40.2 (Fri Sep 29 2023)
+
+#### 🐛 Bug Fix
+
+- Fehlende Abstände bei 25% Teasern DPE-2398 [#728](https://github.com/mumprod/hr-design-system-handlebars/pull/728) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.40.1 (Thu Sep 28 2023)
 
 #### 🐛 Bug Fix
