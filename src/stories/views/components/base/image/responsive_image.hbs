@@ -16,7 +16,7 @@
         <picture class="{{~#if ../_addClass}} {{../_addClass}}{{/if}}">
             {{#unless _disableNoScript}}
                 <noscript>
-                    <img class="w-full h-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}">
+                    <img class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}">
                 </noscript>
             {{/unless}}
             {{#with this.sources}}
@@ -26,7 +26,7 @@
                            {{#with this.srcset}} srcset="{{this}}"{{/with}}>
                 {{/each}}
             {{/with}}
-                <img class="w-full h-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
+                <img class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
         </picture>
     {{/if}}
 
@@ -35,7 +35,7 @@
             {{~#with ../../_addClass }}<div class="{{this}}">{{/with}}
             {{#unless ../../_disableNoScript}}
                 <noscript>
-                    <img class="w-full h-full{{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
+                    <img class="w-full{{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
                 </noscript>
             {{/unless}}
             <img {{#with this.sizes}}sizes="{{this}}" {{/with~}}
