@@ -1,4 +1,4 @@
-import { pi, uxAction } from 'base/tracking/atiHelper.subfeature'
+import { pi, uxAction } from 'base/tracking/pianoHelper.subfeature'
 import { hr$, isString, listen, reinitializeFeature, simulateClickOn } from 'hrQuery'
 import $ from 'zepto-modules'
 
