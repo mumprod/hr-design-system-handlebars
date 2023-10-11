@@ -1,3 +1,87 @@
+# v1.41.0 (Fri Oct 06 2023)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2498 [#730](https://github.com/mumprod/hr-design-system-handlebars/pull/730) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.40.3 (Fri Sep 29 2023)
+
+#### 🐛 Bug Fix
+
+- - fixes search border in footer with FF [#729](https://github.com/mumprod/hr-design-system-handlebars/pull/729) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.40.2 (Fri Sep 29 2023)
+
+#### 🐛 Bug Fix
+
+- Fehlende Abstände bei 25% Teasern DPE-2398 [#728](https://github.com/mumprod/hr-design-system-handlebars/pull/728) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.40.1 (Thu Sep 28 2023)
+
+#### 🐛 Bug Fix
+
+- - some color fixes for hrfernsehen & hrwerbung [#727](https://github.com/mumprod/hr-design-system-handlebars/pull/727) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.40.0 (Thu Sep 28 2023)
+
+#### 🚀 Enhancement
+
+- Testing/new footer new logos [#726](https://github.com/mumprod/hr-design-system-handlebars/pull/726) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.39.1 (Wed Sep 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2490 Abstand bei Bannern [#725](https://github.com/mumprod/hr-design-system-handlebars/pull/725) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.39.0 (Wed Sep 13 2023)
+
+#### 🚀 Enhancement
+
+- FEATURE: label footer and quicksearch-form [#724](https://github.com/mumprod/hr-design-system-handlebars/pull/724) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.38.6 (Wed Sep 13 2023)
 
 #### 🐛 Bug Fix
