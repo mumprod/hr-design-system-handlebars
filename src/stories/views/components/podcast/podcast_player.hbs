@@ -52,11 +52,10 @@
 
     {{!-- Player UI --}}
     <div class="flex {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}}" 
-      x-data="playaudio()"
+      x-data="podcastPlayer()"
       x-init="listenToGlobalStop()"
       ax-load
-      x-ignore
-      ax-load-src={{resourceUrl "assets/js/vendor/podcast_player.alpine.js" }}>
+      x-ignore>
       {{> components/podcast/components/podcast_player_ui 
         _isPlaylistPlayer=false
         _podcastDuration=duration
