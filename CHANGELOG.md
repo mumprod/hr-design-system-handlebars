@@ -1,3 +1,15 @@
+# v1.42.2 (Fri Oct 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2550 - Button hängt über Hintergrund- [#733](https://github.com/mumprod/hr-design-system-handlebars/pull/733) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.42.1 (Fri Oct 13 2023)
 
 #### 🐛 Bug Fix
