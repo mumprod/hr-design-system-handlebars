@@ -1,3 +1,15 @@
+# v1.42.1 (Fri Oct 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2205 - Contentnavi Button mit zusätzlichen Icon versehen [#732](https://github.com/mumprod/hr-design-system-handlebars/pull/732) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.42.0 (Thu Oct 12 2023)
 
 #### 🚀 Enhancement
