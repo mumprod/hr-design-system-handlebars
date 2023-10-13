@@ -16,7 +16,7 @@
         x-on:keydown.escape.prevent.stop="close($refs.button)"
         x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
         x-id="['dropdown-button']"
-        class="flex flex-col h-10 w-fit z-100"
+        class="z-50 flex flex-col h-10 w-fit"
     >
 
     {{!-- Button --}}
