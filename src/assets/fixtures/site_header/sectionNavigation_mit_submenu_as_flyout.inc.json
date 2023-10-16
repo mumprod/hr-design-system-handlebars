@@ -86,7 +86,7 @@
                                 "text": "Programm",
                                 "link": {
                                     "url": "http://www.test.de",
-                                    "hasIcon": false,
+                                    "hasIcon": true,
                                     "iconName": "extern"
                                 }
                             }
