@@ -13,6 +13,7 @@
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
     --color-highlight-3: theme('colors.gray.dark');
+    --color-highlight-1-dark: theme('colors.blue.nightRider');
 
     /* Text */
     --color-standard-text: theme('colors.black.DEFAULT');
@@ -114,7 +115,9 @@
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
     --color-podcast: theme('colors.blue.science');
+    --color-podcast-dark : var(--color-highlight-1-dark);
     --color-podcast-text: var(--color-link);
+    --color-podcast-text-dark: var(---color-standard-text-dark);
     /* Byline */
     --color-byline: theme('colors.gray.scorpion');
     /* Font */
