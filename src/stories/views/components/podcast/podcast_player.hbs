@@ -1,84 +1,84 @@
-<div class="flex col-span-12 {{#unless _isArticlePlayer}} p-5 {{/unless}} {{#if _isArticlePlayer}} bg-highlight-1 {{/if}}">   
-  <div class="flex flex-col grow">
-  {{!-- First Row --}}
-    <div class="flex flex-row {{#if ../_ordered}} pl-8 {{/if}} ">
-      <div class="flex flex-col grow">  
-        <div class="flex max-h-6">
-          {{!-- Label / Airdate --}}
-          {{#with label}} 
-            <div class="">
+<div class="flex col-span-12 {{#unless _isArticlePlayer}} p-5 {{/unless}} {{#if _isArticlePlayer}} bg-highlight-1 {{/if}}">
+    <div class="flex flex-col grow">
+        {{!-- First Row --}}
+        <div class="flex flex-row {{#if ../_ordered}} pl-8 {{/if}} ">
+            <div class="flex flex-col grow">
+                <div class="flex max-h-6">
+                    {{!-- Label / Airdate --}}
+                    {{#with label}}
+                        <div class="">
               <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
-                {{ loca this.loca }}
+                  {{ loca this.loca }}
               </span>
-            </div> 
-          {{/with}}
-          
-          
-            <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text">
-              {{~#with airdateDate}}
-                <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-              {{/with}}
+                        </div>
+                    {{/with}}
 
-              {{!-- Download --}}
-              {{> components/podcast/components/podcast_downloadbutton 
-                _addClass=""
-                _iconClass="h-6 w-6 text-podcast-text fill-current"
-                _url=this.podcastDownloadUrl }}
+
+                    <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text">
+                        {{~#with airdateDate}}
+                            <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                        {{/with}}
+
+                        {{!-- Download --}}
+                        {{> components/podcast/components/podcast_downloadbutton
+                                _addClass=""
+                                _iconClass="h-6 w-6 text-podcast-text fill-current"
+                                _url=this.podcastDownloadUrl }}
+
+                    </div>
+                </div>
+
+                {{!-- Überschrift: --}}
+                <div class="flex pb-5 pr-2 md:pr-5">
+                    {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
+                </div>
 
             </div>
+
+            {{!-- Podcast Image      --}}
+            <div class="flex flex-col ">
+                <div class="w-22 {{#if _isArticlePlayer }} md:w-32 lg:w-42 {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/if}}">
+                    {{> components/base/image/responsive_image this.teaseritem
+                            _type="podcastEpisodePlayer"
+                            _variant="default"
+                            _addClass="overflow-hidden"
+                            _noDelay=this.dontLazyload
+                            _addClassImg="w-full block"
+                    }}
+                </div>
+            </div>
+
         </div>
 
-        {{!-- Überschrift: --}}
-        <div class="flex pb-5 pr-2 md:pr-5">          
-          {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}  
+        {{!-- Player UI --}}
+        <div class="flex {{#if _isArticlePlayer }} lg:pr-48 lg:-mt-14 {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}} {{/if}}"
+             x-data="podcastPlayer()"
+             x-init="listenToGlobalStop()"
+             ax-load
+             x-ignore>
+            {{> components/podcast/components/podcast_player_ui
+                    _isPlaylistPlayer=false
+                    _podcastDuration=duration
+                    _id=(nextRandom)
+                    _first=true
+            }}
         </div>
 
-      </div>
+        {{!-- Abo-Dropdown    --}}
+        <div class="flex flex-row pt-5">
+            {{#with this.podcastChannel}}
+                {{> components/podcast/components/podcast_subscribe_button}}
+            {{/with}}
 
-      {{!-- Podcast Image      --}}
-      <div class="flex flex-col ">
-        <div class="w-22 {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}}">
-          {{> components/base/image/responsive_image this.teaseritem 
-            _type="podcastEpisodePlayer"
-            _variant="default"
-            _addClass="overflow-hidden"
-            _noDelay=this.dontLazyload 
-            _addClassImg="w-full block"
-          }}
+            {{#with this.podcastChannel}}
+            {{!-- Sendungs-Link --}}
+                <div class="flex justify-end w-full pl-4">
+                    <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
+                        <span class="self-end font-bold">Zur Sendung</span>
+                        <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
+                    </div>
+                </div>
+            {{/with}}
         </div>
-      </div>
-
     </div>
-
-    {{!-- Player UI --}}
-    <div class="flex {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}}" 
-      x-data="podcastPlayer()"
-      x-init="listenToGlobalStop()"
-      ax-load
-      x-ignore>
-      {{> components/podcast/components/podcast_player_ui 
-        _isPlaylistPlayer=false
-        _podcastDuration=duration
-        _id=(nextRandom) 
-        _first=true
-      }}    
-    </div>    
-  
-    {{!-- Abo-Dropdown    --}}
-    <div class="flex flex-row pt-5">
-      {{#with this.podcastChannel}}       
-        {{> components/podcast/components/podcast_subscribe_button}}
-      {{/with}}
-
-      {{#with this.podcastChannel}}    
-        {{!-- Sendungs-Link --}}
-        <div class="flex justify-end w-full pl-4">
-          <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
-            <span class="self-end font-bold">Zur Sendung</span>
-            <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
-          </div>
-        </div>
-      {{/with}}          
-    </div>
-  </div>  
 </div>
