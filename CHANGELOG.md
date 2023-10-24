@@ -1,3 +1,51 @@
+# v1.42.3 (Mon Oct 16 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2205 b [#734](https://github.com/mumprod/hr-design-system-handlebars/pull/734) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.42.2 (Fri Oct 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2550 - Button hängt über Hintergrund- [#733](https://github.com/mumprod/hr-design-system-handlebars/pull/733) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.42.1 (Fri Oct 13 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2205 - Contentnavi Button mit zusätzlichen Icon versehen [#732](https://github.com/mumprod/hr-design-system-handlebars/pull/732) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.42.0 (Thu Oct 12 2023)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2416 [#731](https://github.com/mumprod/hr-design-system-handlebars/pull/731) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.41.0 (Fri Oct 06 2023)
 
 #### 🚀 Enhancement
