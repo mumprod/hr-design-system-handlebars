@@ -258,7 +258,8 @@ module.exports = {
                     tarawera: '#0a3355',
                     turquoiseCerulian: '#007fa0',
                     linkWater: '#d3e2f4',
-                    blueLuxury: '#007396'
+                    blueLuxury: '#007396',
+                    nightRider:'#2d2d2d',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -338,6 +339,7 @@ module.exports = {
                 'primary': 'var(--color-primary-ds)',
                 'secondary': 'var(--color-secondary-ds)',
                 'highlight-1': 'var(--color-highlight-1)',
+                'highlight-1-dark': 'var(--color-highlight-1-dark)',
                 'highlight-2': 'var(--color-highlight-2)',
                 'highlight-3': 'var(--color-highlight-3)',
                 'top-topic-background': 'var(--color-top-topic-background)',
@@ -387,7 +389,9 @@ module.exports = {
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
                 'podcast': 'var(--color-podcast)',
+                'podcast-dark': 'var(--color-podcast-dark)',
                 'podcast-text': 'var(--color-podcast-text)',
+                'podcast-text-dark': 'var(--color-standard-text-dark)',
                 'event-status': 'var(--color-event-status)',
                 'event-calendar-primary': 'var(--color-eventcalendar-primary)',
                 'event-calendar-secondary': 'var(--color-eventcalendar-secondary)',
