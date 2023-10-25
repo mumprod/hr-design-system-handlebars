@@ -5,7 +5,7 @@
         <ul class="flex flex-wrap w-full gap-x-2 gap-y-2 -socialsharing">
             {{~#with this.twitterLink ~}}
                 <li>
-                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
                        href="{{this}}"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -20,7 +20,7 @@
             {{~/with~}}
             {{~#with this.facebookLink ~}}
                 <li>
-                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
                        href="{{this}}"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -34,8 +34,8 @@
                 </li>
             {{~/with~}}
             {{~#with this.whatsappLink ~}}
-                <li class="list__item--whatsapp">
-                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                <li>
+                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
                        href="{{this}}"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -50,7 +50,7 @@
             {{~/with~}}
             {{~#with this.mailtoLink ~}}
                 <li>
-                    <a class="link--shareIcon touchArea{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
                        href="{{this}}"
                        title="{{loca "share_mail_linktitle" }}"
                         {{#with ../../this.content.trackingData}}
@@ -63,7 +63,7 @@
             {{~/with~}}
 
             <li>
-                <a class="link--shareIcon touchArea{{#with ../this.content.trackingData}} js-load{{/with}}"
+                <a class="{{#with ../this.content.trackingData}} js-load{{/with}}"
                    href="javascript:window.print()"
                    title="{{loca "share_print_linktitle" }}"
                     {{#with ../this.content.trackingData}}
