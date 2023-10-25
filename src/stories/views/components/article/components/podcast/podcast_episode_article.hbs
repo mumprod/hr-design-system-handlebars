@@ -1,6 +1,6 @@
 <article class="grid grid-page">
-    <div class="grid pt-4 col-main grid-content md:pt-6">
-        <div class="head md:px-6 md:py-6 !bg-highlight-1 rounded-tl-hr rounded-br-hr">
+    <div class="grid pt-6 col-main grid-content">
+        <div class="head p-6 !bg-highlight-1 rounded-tl-hr rounded-br-hr">
             {{> components/podcast/podcast_player _linkTitle=true _isSinglePage=true _isArticlePlayer=true}}
         </div>
         <div class="p-4 main md:p-6">
@@ -13,30 +13,29 @@
                     _isArchiveContent=this.isArchiveContent
                     _posterCopyright="poster_copyright"}}
         </div>
-        <div class="py-4 aside md:py-6">
-            <aside class="order-4 col-auto md:order-2 md:col-span-3"
-                   aria-label='{{loca "appendix_title"}}'>
-                <div class="c-appendix">
-                    {{#unless _webview}}
-                    {{!--  {{~#with this.backLinkUrl ~}}
-                            {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
-                        {{~/with~}}
 
-                        {{~#with this.geotag ~}}
-                            {{~> modules/geotag/geotag-list ~}}
-                        {{~/with~}}
+        <aside class="order-4 py-6 md:p-6 aside md:order-2 "
+               aria-label='{{loca "appendix_title"}}'>
+            <div class="c-appendix">
+                {{#unless _webview}}
+                {{!--  {{~#with this.backLinkUrl ~}}
+                        {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
+                    {{~/with~}}
 
-                        {{~#with this.topictags ~}}
-                            {{~> modules/topictag/topictag-list ~}}
-                        {{~/with~}} --}}
+                    {{~#with this.geotag ~}}
+                        {{~> modules/geotag/geotag-list ~}}
+                    {{~/with~}}
 
-                        {{~#with this.socialSharing ~}}
-                            {{~> components/socialmedia/socialmedia ~}}
-                        {{~/with~}}
-                    {{/unless}}
-                </div>
-            </aside>
-        </div>
+                    {{~#with this.topictags ~}}
+                        {{~> modules/topictag/topictag-list ~}}
+                    {{~/with~}} --}}
+
+                    {{~#with this.socialSharing ~}}
+                        {{~> components/socialmedia/socialmedia ~}}
+                    {{~/with~}}
+                {{/unless}}
+            </div>
+        </aside>
     </div>
 </article>
 
