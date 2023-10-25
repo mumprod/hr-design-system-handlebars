@@ -10,14 +10,14 @@
               <span class='sb-label mr-2 rounded px-1.5 pt-px inline-block tracking-wide text-white text-base leading-5.5 font-heading bg-labelMedia'>
                   {{ loca this.loca }}
               </span>
-                        </div>
-                    {{/with}}
-
-
-                    <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text">
-                        {{~#with airdateDate}}
-                            <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
-                        {{/with}}
+            </div> 
+          {{/with}}
+          
+          
+            <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text dark:text-podcast-text-dark">
+              {{~#with airdateDate}}
+                <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+              {{/with}}
 
                         {{!-- Download --}}
                         {{> components/podcast/components/podcast_downloadbutton
@@ -70,15 +70,15 @@
                 {{> components/podcast/components/podcast_subscribe_button}}
             {{/with}}
 
-            {{#with this.podcastChannel}}
-            {{!-- Sendungs-Link --}}
-                <div class="flex justify-end w-full pl-4">
-                    <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text">
-                        <span class="self-end font-bold">Zur Sendung</span>
-                        <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
-                    </div>
-                </div>
-            {{/with}}
+      {{#with this.podcastChannel}}    
+        {{!-- Sendungs-Link --}}
+        <div class="flex justify-end w-full pl-4">
+          <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text dark:text-podcast-text-dark">
+            <span class="self-end font-bold">Zur Sendung</span>
+            <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
+          </div>
         </div>
+      {{/with}}          
     </div>
+  </div>  
 </div>

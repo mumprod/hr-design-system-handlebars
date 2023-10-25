@@ -52,7 +52,7 @@
                         min="0" 
                         max="1000"
                         value="0"
-                        class="h-1 my-4 bg-white appearance-none cursor-pointer ds-link grow seek_slider" 
+                        class="h-1 my-4 bg-white appearance-none cursor-pointer dark:bg-podcast-text ds-link grow seek_slider" 
                         aria-label="Schieberegler" >  
                 </div>
 
@@ -62,8 +62,8 @@
                         {{> components/podcast/components/podcast_timedisplay 
                         _id=_id
                         _duration=duration
-                        _currentTimeClasses="font-bold text-podcast-text" 
-                        _durationClasses="text-podcast-text" 
+                        _currentTimeClasses="font-bold text-podcast-text dark:text-podcast-text-dark" 
+                        _durationClasses="text-podcast-text dark:text-podcast-text-dark" 
                         _containerCss="flex text-sm grow font-heading" }}
                     </div>
                 {{/if}}
@@ -76,8 +76,8 @@
             {{> components/podcast/components/podcast_timedisplay 
                 _id=_id
                 _duration=duration 
-                _currentTimeClasses="font-bold text-podcast-text" 
-                _durationClasses="text-podcast-text" 
+                _currentTimeClasses="font-bold text-podcast-text dark:text-podcast-text-dark" 
+                _durationClasses="text-podcast-text dark:text-podcast-text-dark" 
                 _containerCss="pl-16 -mt-3 flex text-sm grow font-heading"}}              
             </div>
         {{/unless}}

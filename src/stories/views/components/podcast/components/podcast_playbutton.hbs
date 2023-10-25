@@ -5,10 +5,10 @@
     class="flex justify-start cursor-pointer group ds-button-round  {{_css}}"
     aria-label="Podcast starten"
     >           
-    <div class="text-white rounded-full js-playbutton bg-podcast ring-white ring js-load" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastPlayer:play"}]}'>
+    <div class="text-white rounded-full js-playbutton bg-podcast dark:bg-podcast-dark ring-white dark:ring-podcast dark:text-podcast-text ring js-load" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastPlayer:play"}]}'>
         {{> components/base/image/icon _icon="play-wide" _iconmap="icons" _addClass="inline w-12 h-12 fill-current"}}
     </div>
-    <div class="hidden bg-white rounded-full js-pausebutton ring-podcast ring text-podcast-text js-load" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastPlayer:pause"}]}'>
+    <div class="hidden bg-white rounded-full dark:bg-podcast-dark js-pausebutton ring-podcast ring text-podcast-text js-load" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "podcastPlayer:pause"}]}'>
         {{> components/base/image/icon _icon="pause" _iconmap="icons" _addClass="inline py-2 w-12 h-12 fill-current"}}
     </div>  
 </button>
