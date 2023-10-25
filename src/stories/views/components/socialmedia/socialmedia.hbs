@@ -1,8 +1,8 @@
-<div class="w-full flex first:border-t last:border-b last:pb-6 border-dotted border-[#797979] -socialsharing">
+<div class="w-full flex first:border-t last:border-b py-6 border-dotted border-[#797979] -socialsharing">
     <div class="flex flex-wrap">
-        <span class="inline-flex py-2 text-xl font-headingSerif">{{loca "share_headline" }}</span>
+        <span class="inline-flex text-xl font-headingSerif">{{loca "share_headline" }}</span>
 
-        <ul class="flex flex-wrap w-full gap-x-2 gap-y-2 -socialsharing">
+        <ul class="flex flex-wrap w-full pt-2 gap-x-2 gap-y-2 -socialsharing">
             {{~#with this.twitterLink ~}}
                 <li>
                     <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
