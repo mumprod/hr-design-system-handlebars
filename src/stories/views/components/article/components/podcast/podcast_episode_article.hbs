@@ -1,9 +1,9 @@
 <article class="grid grid-page">
     <div class="grid pt-6 col-main grid-content">
-        <div class="p-6 head bg-highlight-1 dark:bg-highlight-1-dark rounded-tl-hr rounded-br-hr">
+        <div class="p-5 head bg-highlight-1 dark:bg-highlight-1-dark rounded-tl-hr rounded-br-hr">
             {{> components/podcast/podcast_player _linkTitle=true _isSinglePage=true _isArticlePlayer=true}}
         </div>
-        <div class="p-4 main md:p-6">
+        <div class="pt-6 main">
             {{> components/podcast/components/podcast_player_shorttext }}
             {{> components/content/content_footer/content_footer
                     _author=this.audioAuthor
@@ -14,7 +14,7 @@
                     _posterCopyright="poster_copyright"}}
         </div>
 
-        <aside class="order-4 py-6 md:p-6 aside md:order-2 "
+        <aside class="order-4 pt-6 md:p-6 aside md:order-2 "
                aria-label='{{loca "appendix_title"}}'>
             <div class="c-appendix">
                 {{#unless _webview}}
