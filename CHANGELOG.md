@@ -1,3 +1,15 @@
+# v1.43.0 (Wed Oct 25 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2222 use grid for episode player [#736](https://github.com/mumprod/hr-design-system-handlebars/pull/736) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.42.4 (Wed Oct 25 2023)
 
 #### 🐛 Bug Fix
