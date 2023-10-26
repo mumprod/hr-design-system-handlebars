@@ -1,3 +1,15 @@
+# v1.45.0 (Thu Oct 26 2023)
+
+#### 🚀 Enhancement
+
+- geotag list / css fixes for mobile view [#739](https://github.com/mumprod/hr-design-system-handlebars/pull/739) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.44.0 (Thu Oct 26 2023)
 
 #### 🚀 Enhancement
