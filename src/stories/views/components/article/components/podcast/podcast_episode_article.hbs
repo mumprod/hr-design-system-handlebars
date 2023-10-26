@@ -24,11 +24,11 @@
 
                     {{~#with this.geotag ~}}
                         {{~> modules/geotag/geotag-list ~}}
-                    {{~/with~}}
+                    {{~/with~}}--}}
 
                     {{~#with this.topictags ~}}
-                        {{~> modules/topictag/topictag-list ~}}
-                    {{~/with~}} --}}
+                        {{~> components/topictag/topictag_list ~}}
+                    {{~/with~}} 
 
                     {{~#with this.socialSharing ~}}
                         {{~> components/socialmedia/socialmedia ~}}
