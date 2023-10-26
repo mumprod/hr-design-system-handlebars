@@ -1,3 +1,16 @@
+# v1.43.1 (Thu Oct 26 2023)
+
+#### 🐛 Bug Fix
+
+- Integrate Dark Mode for Podcast Channel Player [#737](https://github.com/mumprod/hr-design-system-handlebars/pull/737) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.43.0 (Wed Oct 25 2023)
 
 #### 🚀 Enhancement
