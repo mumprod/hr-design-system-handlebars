@@ -1,78 +1,78 @@
-<div class="w-full flex first:border-t last:border-b py-6 border-dotted border-[#797979] -socialsharing">
-    <div class="flex flex-wrap">
-        <span class="inline-flex text-xl font-headingSerif">{{loca "share_headline" }}</span>
+<div class="-socialsharing">
+    <div class="block">    
+    <span class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{loca "share_headline" }}</span>
 
-        <ul class="flex flex-wrap w-full pt-2 gap-x-2 gap-y-2 -socialsharing">
-            {{~#with this.twitterLink ~}}
-                <li>
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
-                       href="{{this}}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       title="{{loca "share_twitter_linktitle" }}"
-                        {{#with ../../this.content.trackingData}}
-                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::twitter"}]}'
-                        {{/with}}
-                    >
-                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#55acee]" _icon="twitter" _iconmap="icons" ~}}
-                    </a>
-                </li>
-            {{~/with~}}
-            {{~#with this.facebookLink ~}}
-                <li>
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
-                       href="{{this}}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       title="{{loca "share_facebook_linktitle" }}"
-                        {{#with ../../this.content.trackingData}}
-                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
-                        {{/with}}
-                    >
-                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#3b5999]" _icon="facebook" _iconmap="icons" ~}}
-                    </a>
-                </li>
-            {{~/with~}}
-            {{~#with this.whatsappLink ~}}
-                <li>
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
-                       href="{{this}}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       title="{{loca "share_whatsapp_linktitle" }}"
-                        {{#with ../../this.content.trackingData}}
-                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
-                        {{/with}}
-                    >
-                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#4dc247]" _icon="whatsapp" _iconmap="icons" ~}}
-                    </a>
-                </li>
-            {{~/with~}}
-            {{~#with this.mailtoLink ~}}
-                <li>
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
-                       href="{{this}}"
-                       title="{{loca "share_mail_linktitle" }}"
-                        {{#with ../../this.content.trackingData}}
-                       data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mailto"}]}'
-                        {{/with}}
-                    >
-                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#006dc1]" _icon="mail" _iconmap="icons" ~}}
-                    </a>
-                </li>
-            {{~/with~}}
-
+    <ul class="flex flex-wrap pt-2 w-fit sm:w-full gap-x-6 sm:gap-x-2 gap-y-2">
+        {{~#with this.twitterLink ~}}
             <li>
-                <a class="{{#with ../this.content.trackingData}} js-load{{/with}}"
-                   href="javascript:window.print()"
-                   title="{{loca "share_print_linktitle" }}"
-                    {{#with ../this.content.trackingData}}
-                   data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::printbutton"}]}'
+                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    href="{{this}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="{{loca "share_twitter_linktitle" }}"
+                    {{#with ../../this.content.trackingData}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::twitter"}]}'
                     {{/with}}
                 >
-                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#606060]" _icon="print" _iconmap="icons" ~}}
+                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#55acee]" _icon="twitter" _iconmap="icons" ~}}
                 </a>
             </li>
-        </ul>
+        {{~/with~}}
+        {{~#with this.facebookLink ~}}
+            <li>
+                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    href="{{this}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="{{loca "share_facebook_linktitle" }}"
+                    {{#with ../../this.content.trackingData}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
+                    {{/with}}
+                >
+                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#3b5999]" _icon="facebook" _iconmap="icons" ~}}
+                </a>
+            </li>
+        {{~/with~}}
+        {{~#with this.whatsappLink ~}}
+            <li>
+                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    href="{{this}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="{{loca "share_whatsapp_linktitle" }}"
+                    {{#with ../../this.content.trackingData}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
+                    {{/with}}
+                >
+                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#4dc247]" _icon="whatsapp" _iconmap="icons" ~}}
+                </a>
+            </li>
+        {{~/with~}}
+        {{~#with this.mailtoLink ~}}
+            <li>
+                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    href="{{this}}"
+                    title="{{loca "share_mail_linktitle" }}"
+                    {{#with ../../this.content.trackingData}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mailto"}]}'
+                    {{/with}}
+                >
+                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#006dc1]" _icon="mail" _iconmap="icons" ~}}
+                </a>
+            </li>
+        {{~/with~}}
+
+        <li>
+            <a class="{{#with ../this.content.trackingData}} js-load{{/with}}"
+                href="javascript:window.print()"
+                title="{{loca "share_print_linktitle" }}"
+                {{#with ../this.content.trackingData}}
+                data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::printbutton"}]}'
+                {{/with}}
+            >
+                {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#606060]" _icon="print" _iconmap="icons" ~}}
+            </a>
+        </li>
+    </ul>
     </div>
 </div>
