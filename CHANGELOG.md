@@ -1,3 +1,15 @@
+# v1.46.0 (Thu Oct 26 2023)
+
+#### 🚀 Enhancement
+
+- introduce backlink.hbs [#740](https://github.com/mumprod/hr-design-system-handlebars/pull/740) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.45.0 (Thu Oct 26 2023)
 
 #### 🚀 Enhancement
