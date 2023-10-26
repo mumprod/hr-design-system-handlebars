@@ -24,6 +24,16 @@
                     "title": "topictag2"
                 }
             },
+            "geotag": {
+                "GeoTag1": {
+                    "url":"#",
+                    "title": "geotag1"
+                },
+                "GeoTag2": {
+                    "url":"#",
+                    "title": "geotag2"
+                }
+            },
             "socialSharing": {
                 "twitterLink" : "#",
                 "whatsappLink" : "#",
