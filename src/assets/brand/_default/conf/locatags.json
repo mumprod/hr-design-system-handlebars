@@ -8,6 +8,7 @@
     "appendix_title": "Zusatzinformationen",
     "appendix_links_title": "Weitere Hinweise",
     "archive_content": "Dieser Inhalt ist zeitlich unbegrenzt verfügbar.",
+    "backlink_title": "Zurück zum Artikel",
     "close_button_alpine_click": "avStart = false; $dispatch('player_closed',{playerId: {0}})",
     "play_button_alpine_click": "playAndStop({0});/* $dispatch('stopotherplayers',{playerId: {0}}) */",
     "comment_anchor_1": "zu den ",
