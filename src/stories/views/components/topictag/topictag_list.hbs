@@ -1,12 +1,12 @@
 <div class="appendix__entry">
-    <nav role="navigation" aria-label="{{loca "topictag_related_content_headline"}}" class="o-layout">
+    <nav role="navigation" aria-label="{{loca "topictag_related_content_headline"}}" class="">
         <span class="text-xl font-headingSerif">{{loca "topictag_related_content_headline"}}</span><!--
         -->
-        <ul class="list -appendix">
+        <ul class="w-full pt-2 ">
             {{~#each this~}}
-                <li class="list__item">
-                    <a class="link touchArea" href="{{this.url}}">
-                        {{~> components/base/image/icon _icon="taglabel" _addClass="w-5 h-5 icon--primary list__icon"~}}
+                <li class="flex w-full text-primary">
+                    <a class="flex gap-x-2" href="{{this.url}}">
+                        {{~> components/base/image/icon _icon="taglabel" _addClass="w-5 h-5 fill-current"~}}
 
                         {{~this.title~}}
 
