@@ -14,6 +14,16 @@
             "isMobile1to1": false,
             "hasDwellTime": true,
             "isSingleChannel": false,
+            "topictags": {
+                "topic1": {
+                    "url":"#",
+                    "title": "topictag1"
+                },
+                "topic2": {
+                    "url":"#",
+                    "title": "topictag2"
+                }
+            },
             "socialSharing": {
                 "twitterLink" : "#",
                 "whatsappLink" : "#",
