@@ -22,6 +22,18 @@
                 "topic2": {
                     "url":"#",
                     "title": "topictag2"
+                },
+                "topic3": {
+                    "url":"#",
+                    "title": "topictagmitlangemnamen"
+                },
+                "topic4": {
+                    "url":"#",
+                    "title": "topic tag schnack"
+                },
+                "topic5": {
+                    "url":"#",
+                    "title": "topictag2Taggigtop"
                 }
             },
             "geotag": {
@@ -31,7 +43,19 @@
                 },
                 "GeoTag2": {
                     "url":"#",
-                    "title": "geotag2"
+                    "title": "geotag mit langem namen"
+                },
+                "GeoTag3": {
+                    "url":"#",
+                    "title": "Far out"
+                },
+                "GeoTag4": {
+                    "url":"#",
+                    "title": "Stuttgart"
+                },
+                "GeoTag5": {
+                    "url":"#",
+                    "title": "FFM"
                 }
             },
             "socialSharing": {
