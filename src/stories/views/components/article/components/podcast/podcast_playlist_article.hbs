@@ -29,13 +29,14 @@
                     {{~> components/socialmedia/socialmedia ~}}
                 {{~/with~}}
             {{/unless}}
-            {{!--{{~#with this.programReference~}}
+            {{~#with this.programReference~}}
                 {{~#if this.hasReference~}}
                     <div class="appendix__entry">
-                        {{> modules/program_reference/program_reference }}
+                        {{> components/program_reference/program_reference }}
                     </div>
                 {{~/if~}}
             {{~/with~}}
+            {{!--
             {{~#with this.appendixLinks~}}
 
                 <div class="appendix__entry">
