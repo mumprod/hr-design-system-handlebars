@@ -1,35 +1,35 @@
 <article class="grid grid-page">
-    <div class="grid grid-cols-12 col-full sm:col-main gap-x-6 gap-y-10 md:gap-y-14">
-    <div class="order-1 w-full col-span-12 my-6 md:col-span-9 bg-highlight-1 rounded-tl-hr rounded-br-hr dark:bg-highlight-1-dark" >
-        {{> components/podcast/podcast_playlist_player _isArticlePlayer=true}}
+    <div class="grid pt-6 col-main grid-content">
+        <div class="main bg-highlight-1 dark:bg-highlight-1-dark rounded-tl-hr rounded-br-hr" >
+            {{> components/podcast/podcast_playlist_player _isArticlePlayer=true}}
 
-        {{~#if this.remainingPlaylistItems}}
-            <div class="flex items-center justify-center pb-5 js-load"
-                 data-hr-podcast-channel-remaining-episodes-loader='{"dynLoadTrigSelector":".js-load-remaining-items-button","dynLoadReplaceSelector":".js-placeholder-reload", "url":"{{this.reloadUrl}}"}'>
-                {{#> components/button/link_button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" _link=this.allEpisodeUrl }}
-                    {{> components/button/components/button_label _label="Weitere Episoden laden"}}
-                    {{> components/button/components/button_icon _icon="reload" _iconmap="icons"}}
-                {{/components/button/link_button}}
-                {{#*inline "htmlProperties"}}
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "weitereEpisodenLaden:ButtonClick"}]}'
-                {{/inline}}
-            </div>
-            <div class="js-placeholder-reload"></div>
-        {{~/if~}}
-    </div>
+            {{~#if this.remainingPlaylistItems}}
+                <div class="flex items-center justify-center pb-5 js-load"
+                    data-hr-podcast-channel-remaining-episodes-loader='{"dynLoadTrigSelector":".js-load-remaining-items-button","dynLoadReplaceSelector":".js-placeholder-reload", "url":"{{this.reloadUrl}}"}'>
+                    {{#> components/button/link_button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" _link=this.allEpisodeUrl }}
+                        {{> components/button/components/button_label _label="Weitere Episoden laden"}}
+                        {{> components/button/components/button_icon _icon="reload" _iconmap="icons"}}
+                    {{/components/button/link_button}}
+                    {{#*inline "htmlProperties"}}
+                        data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "weitereEpisodenLaden:ButtonClick"}]}'
+                    {{/inline}}
+                </div>
+                <div class="js-placeholder-reload"></div>
+            {{~/if~}}
+        </div>
 
-    <aside class="grid order-2 col-span-3 py-6" aria-label='{{loca "appendix_title"}}'>
-        <div class="c-appendix">
-            {{!-- {{#unless _webview}}
+    <aside class="order-4 pt-6 aside md:order-2 sm:ml-8 sm:w-[220px]" aria-label='{{loca "appendix_title"}}'>
+        <div class="c-appendix  flex flex-col first:border-t last:border-b py-6 gap-y-6 border-dotted border-[#797979]">
+            {{#unless _webview}}
                 {{~#with this.backLinkUrl ~}}
-                    {{~> base/link/backlink _addClass="appendix__backlink" ~}}
+                    {{~> components/base/backlink ~}}
                 {{~/with~}}
 
                 {{~#with this.socialSharing ~}}
                     {{~> components/socialmedia/socialmedia ~}}
                 {{~/with~}}
             {{/unless}}
-            {{~#with this.programReference~}}
+            {{!--{{~#with this.programReference~}}
                 {{~#if this.hasReference~}}
                     <div class="appendix__entry">
                         {{> modules/program_reference/program_reference }}
