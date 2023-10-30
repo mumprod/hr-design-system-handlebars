@@ -1,3 +1,15 @@
+# v1.47.1 (Mon Oct 30 2023)
+
+#### 🐛 Bug Fix
+
+- indextext:title not mandatory, accordion:strip html [#743](https://github.com/mumprod/hr-design-system-handlebars/pull/743) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.47.0 (Fri Oct 27 2023)
 
 #### 🚀 Enhancement
