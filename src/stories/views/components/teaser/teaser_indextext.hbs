@@ -8,14 +8,16 @@
         }}
         '
 >
-    <h3
-        class='text-2xl md:text-4xl font-title
-            {{~inline-switch this.teaserType '["highlighted"]' '[" text-white",""]'}}'
-    >
-        {{this.title}}
-    </h3>
+    {{#if this.title}}
+        <h3
+            class='text-2xl md:text-4xl font-title
+                {{~inline-switch this.teaserType '["highlighted"]' '[" text-white",""]'}}'
+        >
+            {{this.title}}
+        </h3>
+    {{/if}}
     <p
-        class='mt-6 text-sm md:text-base font-copy
+        class='{{#if this.title}}mt-6 {{/if}}text-sm md:text-base font-copy
             {{~inline-switch this.teaserType '["highlighted"]' '[" text-white",""]'}}'
     >
         {{{this.shorttext}}}
