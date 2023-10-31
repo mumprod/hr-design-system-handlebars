@@ -1,3 +1,15 @@
+# v1.49.0 (Tue Oct 31 2023)
+
+#### 🚀 Enhancement
+
+- - appendixLinks [#744](https://github.com/mumprod/hr-design-system-handlebars/pull/744) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.48.0 (Tue Oct 31 2023)
 
 #### 🚀 Enhancement
