@@ -11,6 +11,26 @@
                 "shortText": "shortText",
                 "dontLazyload": true,
                 "backLinkUrl": "#",
+                "programReference": {
+                    "hasReference" : true,
+                    "name": "hessenschau",
+                    "link": {
+                        "url": "/teaser1",
+                        "name": "hessenschau",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": false,
+                        "hasIcon": false,
+                        "iconName": "iconName"
+                    },
+                    "date": {
+                        "htmlDateTime" : "01.01.2000 19:30Uhr",
+                        "date": "01.01.2000",
+                        "dateSeparatorTime": "19:30"
+                    },
+                    "displayWithTime" : false
+
+
+                },
                 "topictags": {
                     "topic1": {
                         "url":"#",
