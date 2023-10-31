@@ -10,6 +10,25 @@
                 "title": "Im Haifischbecken - der Social-Media-Podcast",
                 "shortText": "shortText",
                 "dontLazyload": true,
+                "appendixLinksTitle": "Appendix-Links",
+                "appendixLinks": [
+                        {
+                            "url": "/link1",
+                            "name": "link 1",
+                            "webviewUrl": "/link1#webview",
+                            "isTargetBlank": true,
+                            "hasIcon": true,
+                            "iconName": "extern"
+                        },
+                        {
+                            "url": "/link2",
+                            "name": "link 2",
+                            "webviewUrl": "/link2#webview",
+                            "isTargetBlank": true,
+                            "hasIcon": true,
+                            "iconName": "extern"
+                        }
+                    ],
                 "backLinkUrl": "#",
                 "programReference": {
                     "hasReference" : true,

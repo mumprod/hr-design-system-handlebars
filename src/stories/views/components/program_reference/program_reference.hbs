@@ -11,7 +11,7 @@
         {{/if}}
         {{#if this.date}}
             <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
-                  class="programReference__date text__byline">
+                  class="text-xs font-copy programReference__date text__byline">
                 {{#if this.displayWithTime}}
                     {{loca "date_simple_at" this.date.dateSeparatorTime}}
                 {{else}}
