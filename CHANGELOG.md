@@ -1,3 +1,15 @@
+# v1.48.0 (Tue Oct 31 2023)
+
+#### 🚀 Enhancement
+
+- WIP: Dpe 2610 appendix program reference [#742](https://github.com/mumprod/hr-design-system-handlebars/pull/742) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.47.1 (Mon Oct 30 2023)
 
 #### 🐛 Bug Fix
