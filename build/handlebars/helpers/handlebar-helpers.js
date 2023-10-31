@@ -466,6 +466,10 @@ var helpers = {
 
         return tokenStr
     },
+
+    'strip': function (input, param) {
+        return input
+    },
 }
 
 // Export helpers
