@@ -31,13 +31,32 @@
                     ],
                 "backLinkUrl": "#",
                 "programSupplier" : {
+                    "showProgramSupplier": true,
                     "link": {
-                        "url": "/teaser1",
+                        "url": "/test",
                         "name": "hessenschau",
                         "webviewUrl": "/teaser1#webview",
                         "isTargetBlank": false,
                         "hasIcon": false,
                         "iconName": "iconName"
+                        
+                    },
+                    "content": {
+                        "programLogo": {
+                            "alttext" : "bla",
+                            "url": {
+                                "program_logo": "http://localhost:6006/images/logos/hessenschau.png"
+                            }
+                        },
+                        "title": "programSupplierTitle"
+                    },
+                    
+                    "hasSongTitle" : true,
+                    "programLogo": {
+                        "alttext" : "bla",
+                        "url": {
+                            "program_logo": "hessenschau"
+                        }
                     }
 
                 },

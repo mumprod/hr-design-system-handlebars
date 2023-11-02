@@ -19,6 +19,7 @@
 	"copyright_symbol": "© {0}",
 	"date_simple_at": "{0} Uhr",
 	"date_published": "Veröffentlicht am {0} um {1} Uhr",
+	"epg_program_supplier": "Zur Webseite",
 	"event_calendar_no_events_available": "<strong>Hinweis:</strong><br />Es liegen aktuell noch keine Einträge für den gewählten Zeitraum vor.",
 	"event_calendar_monthly_overview_link": "Zur Monats-Übersicht",
 	"event_calendar_title": "Eventkalender",
