@@ -30,6 +30,17 @@
                         }
                     ],
                 "backLinkUrl": "#",
+                "programSupplier" : {
+                    "link": {
+                        "url": "/teaser1",
+                        "name": "hessenschau",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": false,
+                        "hasIcon": false,
+                        "iconName": "iconName"
+                    }
+
+                },
                 "programReference": {
                     "hasReference" : true,
                     "name": "hessenschau",

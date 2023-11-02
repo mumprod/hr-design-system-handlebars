@@ -190,6 +190,10 @@ var helpers = {
         if (text.includes('assets/vendor/ardplayer/')) {
             resourceUrl = text.replace('assets/', './')
         }
+        // PROGRAMREFERENCE Folder
+        if (text.includes('assets/images/logos/')) {
+            resourceUrl = text.replace('assets/images/logos/', './images/logos/')
+        }
         // VENDOR Folder
         if (text.includes('assets/js/vendor/')) {
             resourceUrl = text.replace('assets/js/vendor', './vendor/js')

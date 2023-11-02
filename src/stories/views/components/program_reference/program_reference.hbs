@@ -4,10 +4,10 @@
     <div class="flex flex-wrap sm:block gap-x-4 w-fit sm:w-full sm:pt-2">
         {{#if this.link}}
             {{#>components/base/link _link=this.link _css="programReference__link"}}
-                <img class="max-w-full" alt="{{defaultIfEmpty _logo ../this.name}}" src="{{resourceUrl "images/logos/"}}{{defaultIfEmpty _logo ../this.name}}.png">
+                <img class="max-w-full" alt="{{defaultIfEmpty _logo ../this.name}}" src="{{resourceUrl "assets/images/logos/"}}{{defaultIfEmpty _logo ../this.name}}.png">
             {{/components/base/link}}
         {{else}}
-            <img class="max-w-full" alt="{{defaultIfEmpty _logo this.name}}" src="{{resourceUrl "images/logos/"}}{{defaultIfEmpty _logo this.name}}.png">
+            <img class="max-w-full" alt="{{defaultIfEmpty _logo this.name}}" src="{{resourceUrl "assets/images/logos/"}}{{defaultIfEmpty _logo this.name}}.png">
         {{/if}}
         {{#if this.date}}
             <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
