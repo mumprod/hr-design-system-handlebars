@@ -45,7 +45,7 @@
                         "programLogo": {
                             "alttext" : "bla",
                             "url": {
-                                "program_logo": "http://localhost:6006/images/logos/hessenschau.png"
+                                "program_logo": "/images/logos/hessenschau.png"
                             }
                         },
                         "title": "programSupplierTitle"
