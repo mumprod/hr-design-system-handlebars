@@ -1,3 +1,15 @@
+# v1.49.2 (Fri Nov 03 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2616-appendix-program-supplier [#745](https://github.com/mumprod/hr-design-system-handlebars/pull/745) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.49.1 (Thu Nov 02 2023)
 
 #### 🐛 Bug Fix
