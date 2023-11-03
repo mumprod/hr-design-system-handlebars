@@ -1,3 +1,15 @@
+# v1.49.1 (Thu Nov 02 2023)
+
+#### 🐛 Bug Fix
+
+- add style for ul in indextext-teaser [#746](https://github.com/mumprod/hr-design-system-handlebars/pull/746) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.49.0 (Tue Oct 31 2023)
 
 #### 🚀 Enhancement
