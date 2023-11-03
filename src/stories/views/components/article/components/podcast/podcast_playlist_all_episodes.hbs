@@ -7,7 +7,7 @@
         <div class="c-appendix">
             {{#unless _webview}}
                 {{~#with this.backLinkUrl ~}}
-                    {{~> base/link/backlink _addClass="appendix__backlink" ~}}
+                    {{~> components/base/backlink _addClass="appendix__backlink" ~}}
                 {{~/with~}}
 
                 {{~#with this.socialSharing ~}}
@@ -16,8 +16,8 @@
             {{/unless}}
             {{~#with this.programReference~}}
                 {{~#if this.hasReference~}}
-                    <div class="appendix__entry">
-                        {{> modules/program_reference/program_reference }}
+                    <div class="flex flex-wrap">
+                        {{> components/program_reference/program_reference }}
                     </div>
                 {{~/if~}}
             {{~/with~}}

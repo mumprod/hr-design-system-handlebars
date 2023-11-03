@@ -36,7 +36,13 @@
                     </div>
                 {{~/if~}}
             {{~/with~}}
-           
+           {{#with this.programSupplier}}
+            {{#if this.showProgramSupplier}}
+                <div class="flex flex-wrap">
+                    {{> components/program_supplier/program_supplier}}
+                </div>
+            {{/if}}
+        {{/with}}
             {{~#with this.appendixLinks~}}
 
                 <div class="flex flex-wrap">
