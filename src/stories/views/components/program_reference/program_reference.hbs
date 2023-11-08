@@ -1,9 +1,9 @@
 <div class="flex flex-wrap ">
     <span class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{loca "story_program_supplier"}}</span><!--
      -->
-    <div class="flex flex-wrap sm:block gap-x-4 w-fit sm:w-full sm:pt-2">
+    <div class="flex flex-wrap pt-2 gap-x-4 w-fit sm:w-full">
         {{#if this.link}}
-            {{#>components/base/link _link=this.link _css="programReference__link"}}
+            {{#>components/base/link _link=this.link _css="w-full"}}
                 <img class="max-w-full" alt="{{defaultIfEmpty _logo ../this.name}}" src="{{resourceUrl "assets/images/logos/"}}{{defaultIfEmpty _logo ../this.name}}.png">
             {{/components/base/link}}
         {{else}}
@@ -11,7 +11,7 @@
         {{/if}}
         {{#if this.date}}
             <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
-                  class="text-xs font-copy programReference__date text__byline">
+                  class="pt-1 text-xs font-copy">
                 {{#if this.displayWithTime}}
                     {{loca "date_simple_at" this.date.dateSeparatorTime}}
                 {{else}}
