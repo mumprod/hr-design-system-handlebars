@@ -12,15 +12,21 @@
                 "dontLazyload": true,
                 "appendixLinksTitle": "Appendix-Links",
                 "appendixLinks": [
-                        {
+                    { 
+                        "title": "LinkTITLE1",
+                        "link": {
                             "url": "/link1",
                             "name": "link 1",
                             "webviewUrl": "/link1#webview",
                             "isTargetBlank": true,
                             "hasIcon": true,
                             "iconName": "extern"
-                        },
-                        {
+                        }
+
+                    },
+                    {
+                        "title": "LinkTITLE2",
+                        "link": {
                             "url": "/link2",
                             "name": "link 2",
                             "webviewUrl": "/link2#webview",
@@ -28,6 +34,7 @@
                             "hasIcon": true,
                             "iconName": "extern"
                         }
+                    }
                     ],
                 "backLinkUrl": "#",
                 "programSupplier" : {
@@ -91,7 +98,7 @@
                     },
                     "topic3": {
                         "url":"#",
-                        "title": "topictagmitlangemnamen"
+                        "title": "topictag mit extrem langem namen"
                     },
                     "topic4": {
                         "url":"#",
@@ -109,7 +116,7 @@
                     },
                     "GeoTag2": {
                         "url":"#",
-                        "title": "geotag mit langem namen"
+                        "title": "geotag mit extrem langem namen"
                     },
                     "GeoTag3": {
                         "url":"#",
