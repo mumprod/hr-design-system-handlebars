@@ -28,16 +28,16 @@
                         <h4 class="appendix__headline text__headline">{{../this.appendixLinksTitle}}</h4>
                         <ul class="list -appendix -vertical">
                             {{#each this}}
-                                <li class="list__item -noIndent">
-                                    {{#decorator "base/link/link" _cssClasses="touchArea"}}
-                                        {{this.content.title}}{{~#if
-                                            this.hasIcon}}{{~> components/base/image/icon _icon=this.iconName _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if~}}
-                                    {{/decorator}}
+                                <li class="text-primary">
+                                    {{#>components/base/link _link=this.link _css="block hover:underline gap-x-1"}}
+                                        {{this.title}}{{~#if this.link.hasIcon}}{{~> components/base/image/icon _icon=this.link.iconName _addClass="inline ml-1 -mt-0.5 w-4 h-4 fill-current" _iconmap="icons"~}}{{/if~}}
+                                    {{/components/base/link}}
                                 </li>
                             {{/each}}
                         </ul>
                     </div>
                 </div>
+
             {{~/with~}}
         </div>
     </aside>

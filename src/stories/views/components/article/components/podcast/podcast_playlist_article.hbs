@@ -29,6 +29,7 @@
                     {{~> components/socialmedia/socialmedia ~}}
                 {{~/with~}}
             {{/unless}}
+            
             {{~#with this.programReference~}}
                 {{~#if this.hasReference~}}
                     <div class="flex flex-wrap">
@@ -36,29 +37,22 @@
                     </div>
                 {{~/if~}}
             {{~/with~}}
-           {{#with this.programSupplier}}
-            {{#if this.showProgramSupplier}}
-                <div class="flex flex-wrap">
-                    {{> components/program_supplier/program_supplier}}
-                </div>
-            {{/if}}
-        {{/with}}
+           
             {{~#with this.appendixLinks~}}
 
                 <div class="flex flex-wrap">
-                    <div class="o-layout">
+                    
                         <h4 class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{../this.appendixLinksTitle}}</h4>
                         <ul class="flex flex-wrap sm:block gap-x-4 w-fit sm:w-full sm:pt-2">
                             {{#each this}}
                                 <li class="text-primary">
-                                    {{#> components/base/link _link=this _css="flex flex-nowrap hover:underline"}}
-                                        {{this.name}}
-                                        {{~#if this.hasIcon}}{{~> components/base/image/icon _icon=this.iconName _addClass="w-5 h-5 fill-current" _iconmap="icons"~}}{{/if~}}
+                                    {{#>components/base/link _link=this.link _css="block hover:underline gap-x-1"}}
+                                        {{this.title}}{{~#if this.link.hasIcon}}{{~> components/base/image/icon _icon=this.link.iconName _addClass="inline ml-1 -mt-0.5 w-4 h-4 fill-current" _iconmap="icons"~}}{{/if~}}
                                     {{/components/base/link}}
                                 </li>
                             {{/each}}
                         </ul>
-                    </div>
+                    
                 </div>
             {{~/with~}}
         </div>
