@@ -1,3 +1,16 @@
+# v1.50.2 (Thu Nov 09 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2624: Related Content tracken [#750](https://github.com/mumprod/hr-design-system-handlebars/pull/750) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.50.1 (Wed Nov 08 2023)
 
 #### 🐛 Bug Fix
