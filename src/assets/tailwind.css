@@ -4,8 +4,6 @@
 @import 'css/custom-components.css';
 @import 'tailwindcss/utilities';
 @import 'css/custom-utilities.css';
-@import 'css/delivery/banner.scss';
-@import 'css/delivery/breadcrumb.scss';
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
