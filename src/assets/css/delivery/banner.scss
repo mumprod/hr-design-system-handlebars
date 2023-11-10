@@ -1,0 +1,31 @@
+.banner {
+    @apply pb-4 relative border-b border-solid border-gray-boulder;
+    
+    .page__header.-withStructureNav & {
+        @apply border-b-0;
+    }
+
+    &__wrap {    
+        @apply relative pt-5 bg-white;
+       
+        &.-image {
+            @apply bg-transparent pt-0 lg:px-0;;            
+        }
+
+    }
+
+    &.-hasImage {
+        @apply border-b-0 pb-0;
+    }
+
+    &__image {
+        @apply absolute z-10 print:hidden
+    }
+
+
+    &.-hideMobile .banner__image,
+    &__footer.-hideMobile {
+        @apply hidden lg:block print:lg:hidden
+    }
+
+}

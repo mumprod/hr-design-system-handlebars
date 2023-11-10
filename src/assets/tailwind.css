@@ -4,7 +4,8 @@
 @import 'css/custom-components.css';
 @import 'tailwindcss/utilities';
 @import 'css/custom-utilities.css';
-
+@import 'css/delivery/banner.scss';
+@import 'css/delivery/breadcrumb.scss';
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
@@ -133,6 +134,18 @@
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
+
+    
+    --banner__background-color: theme('colors.white.DEFAULT');
+    --banner__background-color--with-image:theme('colors.transparent');
+    --banner-overlay_background-color: theme('colors.white.DEFAULT');
+    --banner-overlay__background-color--rgba: rgba(--banner-overlay_background-color, 0.85);
+    --banner-topline__color: theme('colors.black.DEFAULT');
+
+    --banner-specialinfo__background-color: theme('colors.white.DEFAULT');
+    --banner-specialinfo__color: theme('colors.black.DEFAULT');
+    --banner-specialinfo__background-color--invert: theme('colors.black.DEFAULT');
+    --banner-specialinfo__color--invert: theme('colors.white.DEFAULT');
 }
 
 [data-theme='hessenschau'] {
