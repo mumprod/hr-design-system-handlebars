@@ -11,7 +11,7 @@
                     <span
                         class="pr-4 -ml-1 fill-white"> {{> components/base/image/icon _icon="settings" _addClass="h-7 w-7 inline" }}</span>
                     <span class="w-full text-2xl text-white font-headingSerif">Einstellungen</span>
-                    <button class="text-white bg-transparent fill-current js-data-policy-settings-close-button">
+                    <button class="link-focus-white text-white bg-transparent fill-current js-data-policy-settings-close-button">
                         {{> components/base/image/icon _icon="close" _addClass="h-6 w-6 inline"}}
                     </button>
                 </span>
@@ -23,7 +23,7 @@
                     {{#with this.footerMetadata}}
                         {{#with this.dataProtectionLink}}
                             {{loca "cookies_setting_tracking_service_description_text"}}
-                            <a class="block mt-2 text-link hover:underline" target="_blank"
+                            <a class="ds-link block mt-2 text-link hover:underline" target="_blank"
                                rel="noopener noreferrer" href="{{this.url}}"
                                title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
                                {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
@@ -40,19 +40,19 @@
             <ul class="{{#if _webview}} hidden{{/if}}">
                 <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_1">
                     <span class="text-base text-black">AGF <a
-                        class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
+                        class="ds-link mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
                         href="https://www.agf.de/" title="AGF">(https://www.agf.de/)</a></span>
                     <div class="flex w-fit toggleSwitch">
-                        {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
+                        {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="agf tracking aktivieren/deaktivieren" }}
                     </div>
                 </li>
                 <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_2">
                     <span class="text-base text-black">AT Internet <a
-                        class="mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
+                        class="ds-link mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
                         href="https://www.atinternet.com/de/"
                         title="AT Internet">(https://www.atinternet.com/de/)</a></span>
                     <div class="flex w-fit toggleSwitch">
-                        {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false }}
+                        {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="at internet tracking aktivieren/deaktivieren"}}
                     </div>
                 </li>
             </ul>
@@ -63,7 +63,7 @@
                     {{#with this.footerMetadata}}
                         {{#with this.dataProtectionLink}}
                             {{loca "cookies_setting_description_text"}}
-                            <a class="block mt-2 text-link hover:underline" target="_blank"
+                            <a class=ds-link block mt-2 text-link hover:underline" target="_blank"
                                rel="noopener noreferrer" href="{{this.url}}"
                                title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
                                {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
@@ -77,7 +77,7 @@
                 <div class="flex justify-between all">
                     <span class="inline-flex text-base text-black js-providerTitle">x</span>
                     <div class="flex float-right toggleSwitch">
-                        {{> components/forms/toggle_button _id="all" _addClass="js-toggleSwitch-checkbox-all"}}
+                        {{> components/forms/toggle_button _id="all" _addClass="js-toggleSwitch-checkbox-all" _screenReaderText="alle deaktivieren"}}
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <li class="bg-white py-2.5 px-6 border-t border-[#e3e3e3] {{this.key}}">
                             <span class="inline-flex text-base leading-6 text-black align-text-top">{{this.value}}</span>
                             <div class="flex float-right toggleSwitch">
-                                {{> components/forms/toggle_button _id=this.key _addClass="js-toggleSwitch-checkbox js-toggleSwitch-external" _isInitiallyHidden=this.isInitiallyHidden }}
+                                {{> components/forms/toggle_button _id=this.key _addClass="js-toggleSwitch-checkbox js-toggleSwitch-external" _isInitiallyHidden=this.isInitiallyHidden _screenReaderText=(loca "screen_reader_text_external_anbieter" this.key)}}
                             </div>
                         </li>
                     {{/each}}

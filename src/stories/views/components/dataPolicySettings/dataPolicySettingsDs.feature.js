@@ -85,6 +85,14 @@ const DataPolicySettings = function (context) {
         if (e.target !== this) return
         closeDialog()
     }
+
+    // EventListener to close the dialog box at any point using the ESC key
+    document.addEventListener('keyup', function (e) {
+        if ( e.key === "Escape" )   {
+            closeDialog()
+        }
+      })
+
     const closeDialog = function () {
         overlay.classList.remove('!flex')
         bodyElement.classList.remove('optionOpen')
