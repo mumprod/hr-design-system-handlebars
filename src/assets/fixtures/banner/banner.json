@@ -1,0 +1,12 @@
+{
+    "bannerImage":{
+        "@->jsoninclude": "banner/bannerImages.inc.json",
+        "@->contentpath": "banner",
+        "@->replaceToken": [
+            {
+                "@->token": "image",
+                "@->value": "rueckkehr-nach-abschiebung-102"
+            }
+        ]
+    }
+}
