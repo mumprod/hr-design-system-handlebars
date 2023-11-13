@@ -1,0 +1,7 @@
+<div class="grid grid-page w-full order-2{{#if _hasImage}} -image{{else}} -text{{/if}}">
+    <div role="banner" class="grid col-full sm:col-main relative{{#unless _hasImage}} mx-4 md:mx-5 lg:mx-10 border-b border-gray-boulder pb-4{{/unless}}">
+        <div class="relative {{#if _hasImage}}-hasImage ar-16-9 sm480:ar-16-7 md:ar-100-27{{/if}}{{~#if _hideOnMobile}} -hideMobileImage{{/if}}">
+            {{> @partial-block }}
+        </div>
+    </div>
+</div>
