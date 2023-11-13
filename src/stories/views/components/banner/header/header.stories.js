@@ -1,4 +1,5 @@
 import header from './header.hbs'
+import bannerData from './../fixtures/banner.json'
 
 const TemplateHeader = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -23,5 +24,6 @@ export default {
 export const Seitenfooter = {
     render: TemplateHeader.bind({}),
     name: 'BannerHeader',
+    args: bannerData
   
 }
