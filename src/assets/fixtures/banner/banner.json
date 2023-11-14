@@ -8,5 +8,11 @@
                 "@->value": "rueckkehr-nach-abschiebung-102"
             }
         ]
+    },
+    "structureNav":{
+        "contentNav":{
+            "@->jsoninclude": "banner/structureNav.json",
+            "@->contentpath": "contentNav"
+        }
     }
 }
