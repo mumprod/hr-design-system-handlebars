@@ -398,7 +398,8 @@ module.exports = {
                 'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
                 'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
                 'toggle-confirmation': 'var(--color-toggle-confirmation)',
-                'toggle-default': 'var(--color-toggle-default)'
+                'toggle-default': 'var(--color-toggle-default)',
+                'structure-nav': 'var(--structure-nav-background)'
             },
         },
     },
