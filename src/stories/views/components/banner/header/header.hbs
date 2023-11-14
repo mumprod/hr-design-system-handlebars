@@ -20,7 +20,10 @@
             {{/components/banner/header/titleBackground }}
         {{/components/banner/header/bannerOverlay }}
         {{~> components/base/image/responsive_image this.bannerImage _type="banner" _variant="default" _noDelay=true _addClassImg="banner__image ar__content" ~}}   
-    {{/components/banner/header/bannerWrapper }}          
+    {{/components/banner/header/bannerWrapper }}   
+    {{~#with this.structureNav}}
+        {{> components/banner/structureNav/structureNav}}
+    {{/with}}       
 </div>
 <div class="mt-8">
     {{#> components/banner/header/bannerWrapper _hasImage=false _hideOnMobile=false}}
