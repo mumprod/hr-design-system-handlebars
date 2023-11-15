@@ -1,3 +1,15 @@
+# v1.50.3 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes in positioning appendixes [#749](https://github.com/mumprod/hr-design-system-handlebars/pull/749) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.2 (Thu Nov 09 2023)
 
 #### 🐛 Bug Fix
