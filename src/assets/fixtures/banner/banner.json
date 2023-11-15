@@ -14,5 +14,24 @@
             "@->jsoninclude": "banner/structureNav.json", 
             "@->contentpath": "contentNav"
         }
+    },
+    "breadcrumbSsi":{
+        "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+        "@->contentpath": "breadcrumb.breadcrumb.breadcrumbSsi",
+        "@->overrides": [
+            {
+                "@->contentpath": "breadcrumb",
+                "@->value": [
+                    {
+                        "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                        "@->contentpath": "level-1"
+                    },
+                    {
+                        "url": "shows",
+                        "title": "Shows"
+                    }
+                ]
+            }
+        ]
     }
 }

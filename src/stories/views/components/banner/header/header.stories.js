@@ -24,6 +24,10 @@ export default {
 export const Seitenfooter = {
     render: TemplateHeader.bind({}),
     name: 'BannerHeader',
-    args: bannerData
+    args: {
+        ...bannerData,
+        _currentPageUrl: '#currentPage',
+        _currentPageTitle:  'Der hr3 Nachmittag'
+    }
   
 }
