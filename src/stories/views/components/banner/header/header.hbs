@@ -1,4 +1,8 @@
-<div class="bg-slate-500">
+<div class="flex flex-col py-6 bg-slate-500">
+    {{#> components/banner/header/breadcrumbWrapper _hasContentNav=true  }}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumbWrapper }} 
+
     {{#> components/banner/header/bannerWrapper _hasImage=true _hideOnMobile=false}}
         {{#> components/banner/header/bannerOverlay _hasBackground=true}}
             {{#> components/banner/header/specialInfo _invert="true"}}
@@ -25,7 +29,35 @@
         {{> components/banner/structureNav/structureNav}}
     {{/with}}       
 </div>
-<div class="mt-8">
+<div class="flex flex-col py-6 bg-orange-500">
+    {{#> components/banner/header/breadcrumbWrapper _hasContentNav=false }}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumbWrapper }} 
+
+    {{#> components/banner/header/bannerWrapper _hasImage=true _hideOnMobile=false}}
+        {{#> components/banner/header/bannerOverlay _hasBackground=true}}
+            {{#> components/banner/header/specialInfo _invert="true"}}
+                Montag bis Freitag von 5 bis 11.00 Uhr
+            {{/components/banner/header/specialInfo }}
+            {{#> components/banner/header/titleBackground _hasBackground=true}}
+                {{#> components/banner/header/topline }}
+                    Diese Sendung bringt euch gut in den Tag
+                {{/components/banner/header/topline }}
+                {{#> components/banner/header/headline ~}}
+                    Die hr3 Morningshow
+                    {{~#> components/banner/header/additionalInfo ~}}
+                        AdditionalInfo
+                    {{~/components/banner/header/additionalInfo ~}}
+                {{/components/banner/header/headline }}
+                {{#> components/banner/header/byline }}
+                        Aktualisiert am 03.11.23 um 12:33 Uhr
+                {{/components/banner/header/byline }}
+            {{/components/banner/header/titleBackground }}
+        {{/components/banner/header/bannerOverlay }}
+        {{~> components/base/image/responsive_image this.bannerImage _type="banner" _variant="default" _noDelay=true _addClassImg="banner__image ar__content" ~}}   
+    {{/components/banner/header/bannerWrapper }}         
+</div>
+<div class="flex flex-col mt-8">
     {{#> components/banner/header/bannerWrapper _hasImage=false _hideOnMobile=false}}
         {{#> components/banner/header/bannerOverlay _hasBackground=false}}
             {{#> components/banner/header/specialInfo _invert="true"}}
