@@ -11,7 +11,7 @@
     },
     "structureNav":{
         "contentNav":{
-            "@->jsoninclude": "banner/structureNav.json",
+            "@->jsoninclude": "banner/structureNav.json", 
             "@->contentpath": "contentNav"
         }
     }
