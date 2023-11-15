@@ -1,8 +1,8 @@
-<nav id="breadcrumb-nav" class="print:hidden px-4 md:px-5 h-7 lg:px-10 inline-block mt-2 bg-white rounded-r{{~#unless this.showBreadcrumbTitleAlways}} hide-last-item-below-sm{{/unless~}}"
+<nav id="breadcrumb-nav" class="print:hidden px-4 md:px-5 lg:px-10 inline-block bg-white rounded-r{{~#unless this.showBreadcrumbTitleAlways}} hide-last-item-below-sm{{/unless~}}"
      role="navigation"
      aria-label="{{loca "breadcrumb_headline"}}"
 >
-    <ul class="pb-1">
+    <ul>
         {{#with this.breadcrumbSsi}}
             {{> components/base/loadSSI _templatePath="components/navigation/breadcrumb/breadcrumb_items.ssi"}}
         {{/with}}
