@@ -146,6 +146,8 @@
     --banner-specialinfo__color--invert: theme('colors.white.DEFAULT');
 
     --structure-nav-background: var(--color-primary-ds);
+    --structure-nav-text: theme('colors.white.DEFAULT');
+    --structure-nav-text-mobile: var(--color-primary-ds);
 }
 
 [data-theme='hessenschau'] {
@@ -858,6 +860,10 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Structure Nav */
+    --structure-nav-background: var(--color-primary-ds);
+    --structure-nav-text: #433d37;
+    --structure-nav-text-mobile: theme('colors.yellow.olive');
 }
 
 [data-theme='hr2'] {
@@ -1179,6 +1185,8 @@
     --search-border-color-desktop:  var(--color-navigation-icons);
     /* Structure Navigation */
     --structure-nav-background: theme('colors.yellow.goldenSand');
+    --structure-nav-text: theme('colors.black.DEFAULT');
+    --structure-nav-text-mobile: theme('colors.blue.lightCerulean');
 }
 
 /*! purgecss end ignore */

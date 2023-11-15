@@ -399,7 +399,9 @@ module.exports = {
                 'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
                 'toggle-confirmation': 'var(--color-toggle-confirmation)',
                 'toggle-default': 'var(--color-toggle-default)',
-                'structure-nav': 'var(--structure-nav-background)'
+                'structure-nav': 'var(--structure-nav-background)',
+                'structure-nav-text': 'var(--structure-nav-text)',
+                'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)'
             },
         },
     },
