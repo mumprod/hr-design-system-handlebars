@@ -1,3 +1,15 @@
+# v1.50.4 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2223 4 appendix refactorings 3 [#752](https://github.com/mumprod/hr-design-system-handlebars/pull/752) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.3 (Wed Nov 15 2023)
 
 #### 🐛 Bug Fix
