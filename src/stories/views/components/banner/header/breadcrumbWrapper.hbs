@@ -1,5 +1,6 @@
-<div class="grid grid-page {{#if _hasContentNav }}order-4{{else}}order-1 z-10 [&:has(+.-image)]:order-4 [&:has(+.-image)]:mb-0 lg:[&:has(+.-image)]:-mb-9  lg:[&:has(+.-image)]:order-1 bg-white lg:bg-transparent{{/if}}">
-    <div class="col-full sm:col-main{{#if _hasContentNav }} bg-white py-2{{/if}}">
+<div class="grid grid-page {{#if _hasContentNav }}order-4{{else}}order-1 mb-2 [&:has(+.-image)]:order-4 [&:has(+.-image)]:mb-0 lg:[&:has(+.-image)]:-mb-9 lg:[&:has(+.-image)]:order-1 lg:[&:has(+.-image)]:pt-3 z-10 bg-white lg:bg-transparent{{/if}}">
+    <div class="col-full sm:col-main{{#if _hasContentNav }} bg-white py-2{{else}}{{/if}}">
         {{> @partial-block }}
     </div>
 </div>
+{{!--  --}}
