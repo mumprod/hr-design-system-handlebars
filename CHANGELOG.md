@@ -1,3 +1,15 @@
+# v1.50.7 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- brandnav: adds md:before:border-l-transparent [#755](https://github.com/mumprod/hr-design-system-handlebars/pull/755) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.6 (Thu Nov 16 2023)
 
 #### 🐛 Bug Fix
