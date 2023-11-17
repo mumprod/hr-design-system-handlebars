@@ -1,0 +1,17 @@
+{{~#partial "staticHeader"~}}
+    <link rel="preconnect" href="//mp3podcasthr-a.akamaihd.net/">
+{{~/partial~}}
+
+{{~#partial "body" ~}}
+    <div class="o-wrapper u-content-background">
+        {{> components/article/components/podcast/podcast_episode_article }}
+
+        {{{ this.relatedContentSsi }}}
+    </div>
+    <script type="application/ld+json">
+         {{{this.structuredData}}}
+
+    </script>
+{{~/partial~}}
+
+{{~> modules/page/base ~}}
