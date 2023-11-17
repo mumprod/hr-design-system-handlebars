@@ -1,3 +1,15 @@
+# v1.50.8 (Fri Nov 17 2023)
+
+#### 🐛 Bug Fix
+
+- new entry hbs files for episode and channel [#756](https://github.com/mumprod/hr-design-system-handlebars/pull/756) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.7 (Thu Nov 16 2023)
 
 #### 🐛 Bug Fix
