@@ -1,0 +1,25 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as TeaserFeaturedContentStories from './teaser_featured_content.stories'
+
+<Meta of={TeaserFeaturedContentStories} />
+
+# Zeilenteaser
+
+## Beschreibung
+
+Im Zeilentaeser werden links zu featured Dokumenten angezeigt. Er wird unterhalb des Teasertextes bzw. unterhalb der Byline angezeigt.
+Beispiele: [Standard 50 mit Zeilenteaser](?path=/story/komponenten-teaser-standard--standard-50-mit-featured-content), [Alternativ 100 mit Zeilenteaser](?path=/story/komponenten-teaser-alternativ--alternativ-100-mit-featured-content)
+
+## Verwendung
+
+Die Zeilenteaser-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/components/teaser_featured_content}}
+```
+
+<Canvas withToolbar>
+    <Story of={TeaserFeaturedContentStories.Default} />
+</Canvas>
+
+<ArgsTable story="default" />

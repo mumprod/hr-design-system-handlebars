@@ -1,0 +1,3 @@
+{
+    "@->jsoninclude": "teaser/teaser_featured_content.inc.json"
+}

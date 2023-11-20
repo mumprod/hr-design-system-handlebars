@@ -6,6 +6,7 @@ import teaserHeroSerif from './fixtures/teaser_standard_hero_serif.json'
 import teaser100Serif from './fixtures/teaser_standard_100_serif.json'
 import teaser50Serif from './fixtures/teaser_standard_50_serif.json'
 import teaser50SerifWithoutTeaserImage from './fixtures/teaser_standard_without_teaserimage_50_serif.json'
+import teaser50SerifFeaturedContent from'./fixtures/teaser_standard_50_serif_featured_content'
 import teaser33Serif from './fixtures/teaser_standard_33_serif.json'
 import teaser25Serif from './fixtures/teaser_standard_25_serif.json'
 import teaser25SerifWithoutTeaserimage from './fixtures/teaser_standard_without_teaserimage_25_serif.json'
@@ -121,6 +122,12 @@ export const Standard50MitExternemLink = {
     render: Template.bind({}),
     name: 'Standard 50 mit externem Link',
     args: teaser50Link.logicItem.includeModel,
+}
+
+export const Standard50MitFeaturedContent = {
+    render: Template.bind({}),
+    name: 'Standard 50 mit Zeilenteaser',
+    args: teaser50SerifFeaturedContent,
 }
 
 export const Standard33 = {
