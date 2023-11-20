@@ -1,0 +1,33 @@
+{{!--<div class="infobox{{#if this.showFullSize.isTrue}} copytext__clearBox{{else}} -small copytext__box {{/if}} border--topBottom">--}}
+
+{{!--   {{~> base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}} --}}
+
+<div class="border-y border-gray-boulder mt-13 mb-5 {{#unless this.showFullSize.isTrue}} mt-7.5 mb-6 mr-6 md:w-6/12 float-left{{/unless}}">
+    {{#if this.title}}
+        <h3 class="mt-6 -mb-1 text-xl font-normal sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h3>
+    {{/if}}
+    {{#if (isStorybook)}}  
+        {{#each this.copytextParagraph }}
+            {{#if this.isParagraph}}
+                {{#each this.text.split}}
+                    {{#if this.isText}}
+                        <p class="mb-5 text-base sm480:text-lg">{{{this.text}}}</p>
+                    {{/if}}
+                    {{#if this.isUl}}
+                        <ul class="mb-5 ml-5 text-base list-disc sm480:text-lg">{{{this.text}}}</ul>
+                    {{/if}}
+                    {{#if this.isOl}}
+                        <ol class="mb-5 ml-5 text-base list-decimal sm480:text-lg">{{{this.text}}}</ol>
+                    {{/if}}
+                {{/each}}
+            {{/if}}
+        {{/each}}
+    {{else}}            
+        {{> modules/story/copytext-contentbox ~}}
+    {{/if}} 
+
+ {{!--   {{~#block "subParagraphs"}}{{/block~}} --}}
+
+ {{!--    {{~> base/a11y/hiddenText _locaTag="story_infobox_outro_sr" ~}} --}}
+ 
+</div>
