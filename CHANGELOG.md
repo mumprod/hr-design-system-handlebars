@@ -1,3 +1,15 @@
+# v1.50.10 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fixxed some px values in Typography documentation [#758](https://github.com/mumprod/hr-design-system-handlebars/pull/758) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.50.9 (Mon Nov 20 2023)
 
 #### 🐛 Bug Fix
