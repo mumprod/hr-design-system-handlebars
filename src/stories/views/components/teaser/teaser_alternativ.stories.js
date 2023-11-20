@@ -8,6 +8,7 @@ import heroTeaserLink from './fixtures/teaser_alternative_hero_serif_link.json'
 import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.json'
 import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
 import teaser100 from './fixtures/teaser_alternative_100_serif.json'
+import teaser100FeaturedContent from './fixtures/teaser_alternative_100_serif_featured_content.json'
 import teaser50 from './fixtures/teaser_alternative_50_serif.json'
 import teaser50WithoutTeaserImage from './fixtures/teaser_alternative_without_teaserimage_50_serif.json'
 import teaser50Link from './fixtures/teaser_alternative_50_serif_link.json'
@@ -99,6 +100,12 @@ export const Alternativ100MitExternemLink = {
     render: Template.bind({}),
     name: 'Alternativ 100 mit externem Link',
     args: teaser100Link.logicItem.includeModel,
+}
+
+export const Alternativ100MitFeaturedContent = {
+    render: Template.bind({}),
+    name: 'Alternativ 100 mit Zeilenteaser',
+    args: teaser100FeaturedContent,
 }
 
 export const Alternativ50 = {

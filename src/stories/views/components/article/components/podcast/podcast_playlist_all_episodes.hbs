@@ -4,10 +4,10 @@
         {{> components/podcast/podcast_playlist_player_all_episodes _isArticlePlayer=true}}      
     </div>
     <aside class="grid order-2 col-span-3" aria-label='{{loca "appendix_title"}}'>
-        <div class="c-appendix">
+        <div>
             {{#unless _webview}}
                 {{~#with this.backLinkUrl ~}}
-                    {{~> base/link/backlink _addClass="appendix__backlink" ~}}
+                    {{~> components/base/backlink _addClass="appendix__backlink" ~}}
                 {{~/with~}}
 
                 {{~#with this.socialSharing ~}}
@@ -16,28 +16,28 @@
             {{/unless}}
             {{~#with this.programReference~}}
                 {{~#if this.hasReference~}}
-                    <div class="appendix__entry">
-                        {{> modules/program_reference/program_reference }}
+                    <div class="flex flex-wrap">
+                        {{> components/program_reference/program_reference }}
                     </div>
                 {{~/if~}}
             {{~/with~}}
             {{~#with this.appendixLinks~}}
 
                 <div class="appendix__entry">
-                    <div class="o-layout">
-                        <h4 class="appendix__headline text__headline">{{../this.appendixLinksTitle}}</h4>
-                        <ul class="list -appendix -vertical">
+                    <div class="flex flex-wrap">
+                        <h4 class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{../this.appendixLinksTitle}}</h4>
+                        <ul class="flex flex-wrap gap-x-4 w-fit sm:w-full sm:pt-2">
                             {{#each this}}
-                                <li class="list__item -noIndent">
-                                    {{#decorator "base/link/link" _cssClasses="touchArea"}}
-                                        {{this.content.title}}{{~#if
-                                            this.hasIcon}}{{~> components/base/image/icon _icon=this.iconName _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if~}}
-                                    {{/decorator}}
+                                <li class="w-full text-primary">
+                                    {{#>components/base/link _link=this.link _css="block hover:underline gap-x-1"}}
+                                        {{this.title}}{{~#if this.link.hasIcon}}{{~> components/base/image/icon _icon=this.link.iconName _addClass="inline ml-1 -mt-0.5 w-4 h-4 fill-current" _iconmap="icons"~}}{{/if~}}
+                                    {{/components/base/link}}
                                 </li>
                             {{/each}}
                         </ul>
                     </div>
                 </div>
+
             {{~/with~}}
         </div>
     </aside>

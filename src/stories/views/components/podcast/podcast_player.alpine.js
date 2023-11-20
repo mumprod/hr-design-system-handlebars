@@ -101,6 +101,9 @@ export default function playaudio() {
         },
 
         updateCurrentTime(range, timeDisplay, newTime, id) {
+            let darkmodeColor;
+            window.matchMedia('(prefers-color-scheme: dark)').matches && document.getElementsByTagName('html')[0].classList.contains('tw-dark') ? darkmodeColor = "var(--color-podcast) " : darkmodeColor = "white "
+
             timeDisplay.querySelector('.js-currentTime').innerHTML = this.fancyTimeFormat(
                 newTime,
                 false
@@ -108,7 +111,7 @@ export default function playaudio() {
             range.style.background =
                 'linear-gradient(to right, var(--color-podcast) ' +
                 range.value / 10 +
-                '%, white ' +
+                '%,'+ darkmodeColor +
                 range.value / 10 +
                 '% )'
             range.value = ((100 * newTime) / this.playlist[id].audioElement.duration) * 10

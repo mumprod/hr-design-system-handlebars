@@ -8,8 +8,8 @@
             <button type="button"
                     class="w-full text-left accordion link-focus"
                     @click="selected !== {{nextRandom}} ? (selected = {{getRandom}}, setTimeout(() => {if($el.getBoundingClientRect().top<0){$el.scrollIntoView({ block: 'start' })}}, 700)) : selected = null"
-                    x-effect="$el.setAttribute('aria-label', selected  == {{getRandom}} ? 'Abschnitt {{this.text}} schließen' : 'Abschnitt {{this.text}} öffnen');$el.setAttribute('aria-expanded', selected  == {{getRandom}} ? 'true' : 'false')"
-                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Akkordeon::{{this.text}}-Link geklickt"}]}'
+                    x-effect="$el.setAttribute('aria-label', selected  == {{getRandom}} ? 'Abschnitt {{strip this.text html}} schließen' : 'Abschnitt {{strip this.text html}} öffnen');$el.setAttribute('aria-expanded', selected  == {{getRandom}} ? 'true' : 'false')"
+                    data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Akkordeon::{{strip this.text html}}-Link geklickt"}]}'
                     aria-controls="accordionItem{{getRandom}}"
             >
                 <div class="flex flex-row justify-between border-t basis-10/12 content-evenly border-gray-alto">

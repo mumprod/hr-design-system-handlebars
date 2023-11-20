@@ -1,0 +1,37 @@
+<div class="flex flex-wrap">
+    <span class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{loca 'epg_program_supplier' }}</span>
+    
+    <div class='flex flex-wrap pt-2 w-fit sm:w-full gap-x-6 sm:gap-x-2 gap-y-2'>
+        {{#if this.link}}
+            {{#>components/base/link _link=this.link _cssClasses='programReference__link'}}
+                {{#if this.content.programLogo}}
+                    {{#with this.content.programLogo}}
+                        <img
+                            class='max-w-full'
+                            alt='{{this.alttext}}'
+                            src='{{this.url.program_logo}}'
+                        />
+                    {{/with}}
+                {{else}}
+                    <span class='text-base font-bold text-primary hover:underline'>
+                        {{this.title}}
+                    </span>
+                {{/if}}
+            {{/components/base/link}}
+        {{else}}
+            {{#if this.programLogo}}
+                {{#with this.programLogo}}
+                    <img
+                        class='max-w-full'
+                        alt='{{this.alttext}}'
+                        src='{{this.url.program_logo}}'
+                    />
+                {{/with}}
+            {{else}}
+                <span class='text-base font-bold text-primary hover:underline'>
+                    {{this.title}}
+                </span>
+            {{/if}}
+        {{/if}}
+    </div>
+</div>

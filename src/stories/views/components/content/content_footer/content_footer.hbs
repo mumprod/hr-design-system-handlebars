@@ -1,19 +1,19 @@
-<footer class="flex flex-col px-5 text-sm font-copy{{#if _addClass}} {{_addClass}}{{/if}}">
+<footer class="flex flex-col mt-10 text-xs font-copy{{#if _addClass}} {{_addClass}}{{/if}}">
     {{~#with _author ~}}
-        <p class="block first:mt-6 contentFooter__byline text__byline">
+        <p>
             Autor: {{this}}
         </p>
     {{~/with~}}
     {{#if _showDate ~}}
         {{#with _date}}
-            <p class="block contentFooter__byline text__byline">
+            <p>
                 <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
             </p>
         {{/with~}}
     {{/if}}
 
     {{~#with _source}}
-        <p class="block contentFooter__byline text__byline">
+        <p>
             {{~loca "copyright_source"~}}
             {{~#each this}}
                 {{~#if @first}} {{this}}{{else}}, {{this}}{{/if~}}
@@ -22,20 +22,20 @@
     {{/with~}}
 
     {{~#with _copyright ~}}
-        <p class="block contentFooter__byline text__byline">
+        <p>
             {{~loca "copyright_source"}} {{loca "copyright_symbol" this ~}}
         </p>
     {{~/with~}}
 
     {{~#if _isArchiveContent}}
-        <p class="block contentFooter__byline text__byline">
+        <p>
             {{loca "archive_content"}}
         </p>
     {{/if}}
 
     {{~#with _posterCopyright ~}}
         {{~#with ../teaseritem.copyrightWithLinks}}
-            <p class="block contentFooter__byline text__byline">
+            <p>
                 {{~loca ../this this}}
             </p>
         {{~/with~}}
@@ -43,7 +43,7 @@
 
     <!-- TODO teaseritem.copyrightWithLinks dont work in gallery, generalize model -->
     {{~#with _galleryCopyright ~}}
-        <p class="block contentFooter__byline text__byline">
+        <p>
             {{~loca this ../copyrightWithLinks}}
         </p>
     {{~/with~}}

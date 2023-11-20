@@ -1,3 +1,282 @@
+# v1.50.10 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fixxed some px values in Typography documentation [#758](https://github.com/mumprod/hr-design-system-handlebars/pull/758) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.9 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- add featured-content-component [#757](https://github.com/mumprod/hr-design-system-handlebars/pull/757) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.8 (Fri Nov 17 2023)
+
+#### 🐛 Bug Fix
+
+- new entry hbs files for episode and channel [#756](https://github.com/mumprod/hr-design-system-handlebars/pull/756) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.7 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- brandnav: adds md:before:border-l-transparent [#755](https://github.com/mumprod/hr-design-system-handlebars/pull/755) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.6 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- adds json for whatsapp [#754](https://github.com/mumprod/hr-design-system-handlebars/pull/754) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.5 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- new brandlogo hr rundfunkrat [#753](https://github.com/mumprod/hr-design-system-handlebars/pull/753) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.4 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2223 4 appendix refactorings 3 [#752](https://github.com/mumprod/hr-design-system-handlebars/pull/752) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.3 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes in positioning appendixes [#749](https://github.com/mumprod/hr-design-system-handlebars/pull/749) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.2 (Thu Nov 09 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2624: Related Content tracken [#750](https://github.com/mumprod/hr-design-system-handlebars/pull/750) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.1 (Wed Nov 08 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2223 3 appendix refactorings [#748](https://github.com/mumprod/hr-design-system-handlebars/pull/748) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.0 (Wed Nov 08 2023)
+
+#### 🚀 Enhancement
+
+- :bug: DPE-2646 - Remove [#747](https://github.com/mumprod/hr-design-system-handlebars/pull/747) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.49.2 (Fri Nov 03 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2616-appendix-program-supplier [#745](https://github.com/mumprod/hr-design-system-handlebars/pull/745) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.49.1 (Thu Nov 02 2023)
+
+#### 🐛 Bug Fix
+
+- add style for ul in indextext-teaser [#746](https://github.com/mumprod/hr-design-system-handlebars/pull/746) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.49.0 (Tue Oct 31 2023)
+
+#### 🚀 Enhancement
+
+- - appendixLinks [#744](https://github.com/mumprod/hr-design-system-handlebars/pull/744) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.48.0 (Tue Oct 31 2023)
+
+#### 🚀 Enhancement
+
+- WIP: Dpe 2610 appendix program reference [#742](https://github.com/mumprod/hr-design-system-handlebars/pull/742) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.47.1 (Mon Oct 30 2023)
+
+#### 🐛 Bug Fix
+
+- indextext:title not mandatory, accordion:strip html [#743](https://github.com/mumprod/hr-design-system-handlebars/pull/743) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.47.0 (Fri Oct 27 2023)
+
+#### 🚀 Enhancement
+
+- use grid for playlist player [#741](https://github.com/mumprod/hr-design-system-handlebars/pull/741) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.46.0 (Thu Oct 26 2023)
+
+#### 🚀 Enhancement
+
+- introduce backlink.hbs [#740](https://github.com/mumprod/hr-design-system-handlebars/pull/740) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.45.0 (Thu Oct 26 2023)
+
+#### 🚀 Enhancement
+
+- geotag list / css fixes for mobile view [#739](https://github.com/mumprod/hr-design-system-handlebars/pull/739) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.44.0 (Thu Oct 26 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2484 appendix topictags [#738](https://github.com/mumprod/hr-design-system-handlebars/pull/738) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.43.1 (Thu Oct 26 2023)
+
+#### 🐛 Bug Fix
+
+- Integrate Dark Mode for Podcast Channel Player [#737](https://github.com/mumprod/hr-design-system-handlebars/pull/737) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.43.0 (Wed Oct 25 2023)
+
+#### 🚀 Enhancement
+
+- Dpe 2222 use grid for episode player [#736](https://github.com/mumprod/hr-design-system-handlebars/pull/736) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.42.4 (Wed Oct 25 2023)
+
+#### 🐛 Bug Fix
+
+- Integrate Dark Mode for Podcast Episode Player [#735](https://github.com/mumprod/hr-design-system-handlebars/pull/735) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.42.3 (Mon Oct 16 2023)
 
 #### 🐛 Bug Fix

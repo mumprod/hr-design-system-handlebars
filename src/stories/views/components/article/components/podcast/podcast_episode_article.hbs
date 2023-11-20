@@ -1,40 +1,41 @@
 <article class="grid grid-page">
-<div class="col-span-12 my-6 bg-highlight-1 rounded-tl-hr rounded-br-hr" >
-    {{> components/podcast/podcast_player _linkTitle="true" _isSinglePage=false _type="podcastEpisodePlayer"}}
-</div>
-<div class="order-1 col-span-8 px-5">
-    {{> components/podcast/components/podcast_player_shorttext }}
-</div>
-<div class="order-3 col-span-8">
-    {{> components/content/content_footer/content_footer 
-        _author=this.audioAuthor
-        _showDate=this.hasDwellTime
-        _date=this.airdateDate
-        _copyright=this.copyright
-        _isArchiveContent=this.isArchiveContent
-        _posterCopyright="poster_copyright"}}
-</div>
+    <div class="grid pt-6 col-main grid-content">
+        <div class="p-5 head bg-highlight-1 dark:bg-highlight-1-dark rounded-tl-hr rounded-br-hr">
+            {{> components/podcast/podcast_player _linkTitle=true _isSinglePage=true _isArticlePlayer=true}}
+        </div>
+        <div class="pt-6 main">
+            {{> components/podcast/components/podcast_player_shorttext }}
+            {{> components/content/content_footer/content_footer
+                    _author=this.audioAuthor
+                    _showDate=this.hasDwellTime
+                    _date=this.airdateDate
+                    _copyright=this.copyright
+                    _isArchiveContent=this.isArchiveContent
+                    _posterCopyright="poster_copyright"}}
+        </div>
 
-<aside class="order-4 col-full md:order-2 md:col-span-4"
-    aria-label='{{loca "appendix_title"}}'>
-    <div class="c-appendix">
-        {{#unless _webview}}
-           {{!--  {{~#with this.backLinkUrl ~}}
-                {{~> components/base/link/backlink _addClass="appendix__backlink" ~}}
-            {{~/with~}}
+        <aside class="order-4 pt-6 aside md:order-2 sm:ml-8 sm:w-[220px]"
+               aria-label='{{loca "appendix_title"}}'>
+            <div class="flex flex-col first:border-t last:border-b py-6 gap-y-6 border-dotted border-[#797979] ">
+                {{#unless _webview}}
+                    {{~#with this.backLinkUrl ~}}
+                        {{~> components/base/backlink ~}}
+                    {{~/with~}}
 
-            {{~#with this.geotag ~}}
-                {{~> modules/geotag/geotag-list ~}}
-            {{~/with~}}
+                    {{~#with this.geotag ~}}
+                        {{~> components/geoTag/geoTag_list ~}}
+                    {{~/with~}}
 
-            {{~#with this.topictags ~}}
-                {{~> modules/topictag/topictag-list ~}}
-            {{~/with~}} --}}
+                    {{~#with this.topictags ~}}
+                        {{~> components/topictag/topictag_list ~}}
+                    {{~/with~}} 
 
-            {{!-- {{~#with this.socialSharing ~}}
-                {{~> components/socialmedia/socialmedia ~}}
-            {{~/with~}} --}}
-        {{/unless}}
+                    {{~#with this.socialSharing ~}}
+                        {{~> components/socialmedia/socialmedia ~}}
+                    {{~/with~}}
+                {{/unless}}
+            </div>
+        </aside>
     </div>
-</aside>    
 </article>
+

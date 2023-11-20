@@ -14,6 +14,51 @@
             "isMobile1to1": false,
             "hasDwellTime": true,
             "isSingleChannel": false,
+            "backLinkUrl": "#",
+            "topictags": {
+                "topic1": {
+                    "url":"#",
+                    "title": "topictag1"
+                },
+                "topic2": {
+                    "url":"#",
+                    "title": "topictag2"
+                },
+                "topic3": {
+                    "url":"#",
+                    "title": "topictag mit extrem langem namen"
+                },
+                "topic4": {
+                    "url":"#",
+                    "title": "topic tag schnack"
+                },
+                "topic5": {
+                    "url":"#",
+                    "title": "topictag2Taggigtop"
+                }
+            },
+            "geotag": {
+                "GeoTag1": {
+                    "url":"#",
+                    "title": "geotag1"
+                },
+                "GeoTag2": {
+                    "url":"#",
+                    "title": "geotag mit extrem langem namen"
+                },
+                "GeoTag3": {
+                    "url":"#",
+                    "title": "Far out"
+                },
+                "GeoTag4": {
+                    "url":"#",
+                    "title": "Stuttgart"
+                },
+                "GeoTag5": {
+                    "url":"#",
+                    "title": "FFM"
+                }
+            },
             "socialSharing": {
                 "twitterLink" : "#",
                 "whatsappLink" : "#",

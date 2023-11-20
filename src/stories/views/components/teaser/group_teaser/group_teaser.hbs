@@ -7,7 +7,9 @@
                     {{~#if this.hasLink}}</a>{{/if~}}
                 </{{if this.headlineTag this.headlineTag "h2"}}>
             {{/if}}
-            <div class="grid items-start content-start grid-cols-12 col-span-12 gap-y-10 md:gap-y-14{{inline-switch this.teaserSize '["25"]' '[""," gap-x-6"]'}}">
+            <div class="grid items-start content-start grid-cols-12 col-span-12 gap-y-10 md:gap-y-14{{#if this.isRelatedContent}} js-load{{/if}}{{inline-switch this.teaserSize '["25"]' '[""," gap-x-6"]'}}"
+                {{#if this.isRelatedContent}} data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Related-Content geklickt"}]}'{{/if}}
+            >
                 {{~> components/teaser/teaser_logic/teaser_logic ~}}
             </div>
     {{/components/grid/grid_group}}

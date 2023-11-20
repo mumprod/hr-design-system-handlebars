@@ -10,6 +10,127 @@
                 "title": "Im Haifischbecken - der Social-Media-Podcast",
                 "shortText": "shortText",
                 "dontLazyload": true,
+                "appendixLinksTitle": "Appendix-Links",
+                "appendixLinks": [
+                    { 
+                        "title": "LinkTITLE1",
+                        "link": {
+                            "url": "/link1",
+                            "name": "link 1",
+                            "webviewUrl": "/link1#webview",
+                            "isTargetBlank": true,
+                            "hasIcon": true,
+                            "iconName": "extern"
+                        }
+
+                    },
+                    {
+                        "title": "LinkTITLE2",
+                        "link": {
+                            "url": "/link2",
+                            "name": "link 2",
+                            "webviewUrl": "/link2#webview",
+                            "isTargetBlank": true,
+                            "hasIcon": true,
+                            "iconName": "extern"
+                        }
+                    }
+                    ],
+                "backLinkUrl": "#",
+                "programSupplier" : {
+                    "showProgramSupplier": true,
+                    "link": {
+                        "url": "/test",
+                        "name": "hessenschau",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": false,
+                        "hasIcon": false,
+                        "iconName": "iconName"
+                        
+                    },
+                    "content": {
+                        "programLogo": {
+                            "alttext" : "bla",
+                            "url": {
+                                "program_logo": "/images/logos/hessenschau.png"
+                            }
+                        },
+                        "title": "programSupplierTitle"
+                    },
+                    
+                    "hasSongTitle" : true,
+                    "programLogo": {
+                        "alttext" : "bla",
+                        "url": {
+                            "program_logo": "hessenschau"
+                        }
+                    }
+
+                },
+                "programReference": {
+                    "hasReference" : true,
+                    "name": "hessenschau",
+                    "link": {
+                        "url": "/teaser1",
+                        "name": "hessenschau",
+                        "webviewUrl": "/teaser1#webview",
+                        "isTargetBlank": false,
+                        "hasIcon": false,
+                        "iconName": "iconName"
+                    },
+                    "date": {
+                        "htmlDateTime" : "01.01.2000 19:30Uhr",
+                        "date": "01.01.2000",
+                        "dateSeparatorTime": "19:30"
+                    },
+                    "displayWithTime" : false
+
+
+                },
+                "topictags": {
+                    "topic1": {
+                        "url":"#",
+                        "title": "topictag1"
+                    },
+                    "topic2": {
+                        "url":"#",
+                        "title": "topictag2"
+                    },
+                    "topic3": {
+                        "url":"#",
+                        "title": "topictag mit extrem langem namen"
+                    },
+                    "topic4": {
+                        "url":"#",
+                        "title": "topic tag schnack"
+                    },
+                    "topic5": {
+                        "url":"#",
+                        "title": "topictag2Taggigtop"
+                    }
+                },
+                "geotag": {
+                    "GeoTag1": {
+                        "url":"#",
+                        "title": "geotag1"
+                    },
+                    "GeoTag2": {
+                        "url":"#",
+                        "title": "geotag mit extrem langem namen"
+                    },
+                    "GeoTag3": {
+                        "url":"#",
+                        "title": "Far out"
+                    },
+                    "GeoTag4": {
+                        "url":"#",
+                        "title": "Stuttgart"
+                    },
+                    "GeoTag5": {
+                        "url":"#",
+                        "title": "FFM"
+                    }
+                },
                 "socialSharing": {
                     "twitterLink" : "#",
                     "whatsappLink" : "#",
