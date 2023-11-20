@@ -1,3 +1,15 @@
+# v1.50.9 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- add featured-content-component [#757](https://github.com/mumprod/hr-design-system-handlebars/pull/757) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.8 (Fri Nov 17 2023)
 
 #### 🐛 Bug Fix
