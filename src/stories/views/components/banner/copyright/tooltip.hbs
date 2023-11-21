@@ -6,12 +6,12 @@
         {{/if}}
         {{#if _copyrightText}}
             <footer class="block">
-                <small class="text-xs">{{_copyrightText}}</small>
+                <small class="text-xs">{{~loca "banner_image_copyright"}} {{_copyrightText}}</small>
             </footer>   
         {{/if}}
     </div>
-    <button aria-hidden="true" class="w-6 h-6 m-1 leading-7 rounded text-text font-heading bg-white/80 dark:bg-black/60 dark:text-text-dark">
-        ©
+    <button aria-hidden="true" class="inline-flex items-center justify-center w-6 h-6 m-1 leading-7 rounded text-text font-heading bg-white/80 dark:bg-black/60 dark:text-text-dark">
+        {{> components/base/image/icon _icon="copyright" _addClass="w-4 h-4 fill-text dark:fill-text-dark"}}                
     </button>
   </figcaption>
 </div>
