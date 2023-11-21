@@ -1,3 +1,15 @@
+# v1.50.11 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- change line-space between links [#759](https://github.com/mumprod/hr-design-system-handlebars/pull/759) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.10 (Mon Nov 20 2023)
 
 #### 🐛 Bug Fix
