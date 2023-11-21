@@ -1,0 +1,17 @@
+<div class="absolute top-0 right-0 z-50 p-1">
+  <figcaption class="relative flex flex-row group"> 
+    <div class="absolute items-center h-6 px-2 py-1 m-1 text-xs font-medium rounded opacity-0 pointer-events-none w-max font-headingSerif bg-white/60 dark:bg-black/60 dark:text-text-dark text-text group-hover:opacity-100 group-hover:static">
+        {{#if _captionText}}
+            <span class="block mr-1">{{_captionText}}</span>
+        {{/if}}
+        {{#if _copyrightText}}
+            <footer class="block">
+                <small class="text-xs">{{_copyrightText}}</small>
+            </footer>   
+        {{/if}}
+    </div>
+    <button aria-hidden="true" class="w-6 h-6 m-1 leading-7 rounded text-text font-heading bg-white/80 dark:bg-black/60 dark:text-text-dark">
+        ©
+    </button>
+  </figcaption>
+</div>
