@@ -4,9 +4,9 @@
             <span class="block mt-4 text-base font-heading">{{loca "featured_content_headline"}}</span>
             <ul class="list-disc">
                 {{#each this.featuredContentItems}}
-                    <li class="{{#if @first}}mt-3{{else}}mt-0.5{{/if}} ml-4">
+                    <li class="{{#if @first}}mt-3{{else}}mt-1{{/if}} ml-4">
                         {{#> components/base/link _link=this.link _css="hover:underline relative inline text-link text-sm ds-focus" }}
-                            {{this.title}}
+                            <h3><span class="group-hover:underline">{{this.title}}</span></h3>
                         {{/components/base/link}}
                     </li>
                 {{/each}}
