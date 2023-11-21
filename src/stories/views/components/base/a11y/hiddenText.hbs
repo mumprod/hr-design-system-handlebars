@@ -1,0 +1,22 @@
+{{!--@
+Creates a text element that is only relevant for screenreaders. It will not be visible at all.
+
+```hbs
+{{> base/a11y/hiddenText
+    _text="..."
+    _locaTag="..."
+    }}
+```
+
+`_text`     The text for the screen reader.<br>
+`_locaTag`  The loca tag for the text for the screen reader.<br>
+
+--}}
+<span class="sr-only">
+    {{~#if _text ~}}
+        {{~_text~}}
+    {{else}}
+        {{~#with _locaTag ~}}
+            {{~loca this ~}}
+        {{~/with~}}
+    {{~/if}} </span>
