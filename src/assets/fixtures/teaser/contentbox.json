@@ -10,7 +10,7 @@
                     "isImage": true,
                     "Image": {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "teaser_poster_50",
+                        "@->contentpath": "teaser_standard",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -38,32 +38,6 @@
                         }
                     ]   
                 }
-            },
-            {
-                "isParagraph": true,
-                "text": {
-                    "split": [
-                        {
-                            "isText": true,
-                            "text": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen?"
-                        }
-                    ]   
-                }
-            },
-            {
-                "isParagraph": true,
-                "text": {
-                    "split": [
-                        {
-                            "isText": true,
-                            "text": "Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen?"
-                        },
-                        {
-                            "isUl": true,
-                            "text": "<li>Auch gibt es niemanden,</li><li>der den Schmerz an sich liebt</li>"
-                        }
-                    ]   
-                }                 
             }
         ]
     }
