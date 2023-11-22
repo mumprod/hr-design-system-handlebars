@@ -1,3 +1,16 @@
+# v1.50.14 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2593: Contentbox kommt aus Storybook [#762](https://github.com/mumprod/hr-design-system-handlebars/pull/762) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.50.13 (Tue Nov 21 2023)
 
 #### 🐛 Bug Fix
