@@ -1,0 +1,38 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser.logicItem.includeModel",
+    "@->extends": {
+        "@->jsoninclude": "teaser/teaser_featured_content.inc.json"
+    },
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "realTeaserSize",
+            "@->value": "100"
+        },
+        {
+            "@->contentpath": "teaserType",
+            "@->value": "alternative"
+        },
+        {
+            "@->contentpath": "isMobile1to1",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "teaserImage",
+            "@->value": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "teaser_alternative_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "rueckkehr-nach-abschiebung-102"
+                    }
+                ]
+            }
+        }
+    ]
+}

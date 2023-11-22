@@ -1,0 +1,50 @@
+{
+    "showFeaturedContent": true,
+    "featuredContentItems": [
+        {
+            "title": "Lindemann-Konzert in Kassel abgesagt",
+            "link": {
+                "url": "/teaser1",
+                "webviewUrl": "/teaser1#webview",
+                "isTargetBlank": false,
+                "hasIcon": false,
+                "iconName": "iconName",
+                "readMoreText": {
+                    "readMoreScreenreader": "Zum Artikel",
+                    "readMore": "mehr",
+                    "readMoreLong": "read More Long"
+                }
+            }
+        },
+        {
+            "title": "Ex-Kraftwerk-Mitglied vertont Stummfilm-Klassiker | Video",
+            "link": {
+                "url": "/teaser2",
+                "webviewUrl": "/teaser2#webview",
+                "isTargetBlank": false,
+                "hasIcon": false,
+                "iconName": "iconName",
+                "readMoreText": {
+                    "readMoreScreenreader": "Zum Videp",
+                    "readMore": "mehr",
+                    "readMoreLong": "read More Long"
+                }
+            }
+        },
+        {
+            "title": "Lilien-Trainingslager wieder in El Saler | Audio",
+            "link": {
+                "url": "/teaser3",
+                "webviewUrl": "/teaser3#webview",
+                "isTargetBlank": false,
+                "hasIcon": false,
+                "iconName": "iconName",
+                "readMoreText": {
+                    "readMoreScreenreader": "Zum Audio",
+                    "readMore": "mehr",
+                    "readMoreLong": "read More Long"
+                }
+            }
+        }
+    ]
+}    

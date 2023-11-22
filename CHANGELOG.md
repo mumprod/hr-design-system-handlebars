@@ -1,3 +1,87 @@
+# v1.50.13 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- add text-sm to h3 [#761](https://github.com/mumprod/hr-design-system-handlebars/pull/761) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.12 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- title within h3 [#760](https://github.com/mumprod/hr-design-system-handlebars/pull/760) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.11 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- change line-space between links [#759](https://github.com/mumprod/hr-design-system-handlebars/pull/759) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.10 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fixxed some px values in Typography documentation [#758](https://github.com/mumprod/hr-design-system-handlebars/pull/758) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.9 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- add featured-content-component [#757](https://github.com/mumprod/hr-design-system-handlebars/pull/757) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.8 (Fri Nov 17 2023)
+
+#### 🐛 Bug Fix
+
+- new entry hbs files for episode and channel [#756](https://github.com/mumprod/hr-design-system-handlebars/pull/756) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.7 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- brandnav: adds md:before:border-l-transparent [#755](https://github.com/mumprod/hr-design-system-handlebars/pull/755) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.6 (Thu Nov 16 2023)
 
 #### 🐛 Bug Fix
