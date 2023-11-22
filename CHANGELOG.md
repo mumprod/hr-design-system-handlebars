@@ -1,3 +1,15 @@
+# v1.50.16 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- prepare content-nav for copytext [#764](https://github.com/mumprod/hr-design-system-handlebars/pull/764) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.15 (Wed Nov 22 2023)
 
 #### 🐛 Bug Fix
