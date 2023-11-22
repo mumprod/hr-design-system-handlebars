@@ -144,6 +144,8 @@
 	"ext_service_datapolicy_text": "An dieser Stelle befindet sich ein von unserer Redaktion empfohlener Inhalt von <b>{0}</b>. Beim Laden des Inhalts werden Daten an den Anbieter und ggf. weitere Dritte übertragen. Nähere Informationen erhalten Sie in unseren <a class='link c-dataPolicy__link' target='_blank' href=\"{<% hrcms.delivery.hr.baseurl %>}datenschutz/index.html\">Datenschutzbestimmungen<span class=\"unbreakable\"><svg class=\"icon icon--primary icon--textRight\" role=\"presentation\"><use xlink:href=\"{<% hrcms.delivery.current.assetBaseUrl %>}base/icons/icons/svgmap.min.svg#extern\"/></svg></span></a>.",
 	"ext_service_datapolicy_no_js_text": "An dieser Stelle befindet sich ein von unserer Redaktion empfohlener Inhalt von <b>{0}</b>. Da Sie in Ihrem Browser Javascript deaktiviert haben, kann dieser hier nicht angezeigt werden. Der nachfolgende Link öffnet den Inhalt auf der Seite des Anbieters.",
 	"ext_service_datapolicy_no_js_link": "{0}-Inhalt öffnen",
+	"story_infobox_intro_sr": "Weitere Informationen",
+	"story_infobox_outro_sr": "Ende der weiteren Informationen",
 	"header_homepage_link_title": "Startseite hr4 . d e",
 	"meta_application_name": "hr4.de"
 }

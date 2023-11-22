@@ -1,0 +1,12 @@
+<div class="border-y border-gray-boulder mt-13 mb-5 sm480:pb-7.5 pb-5 sm:px-0 px-5.5 {{#unless this.showFullSize.isTrue}} mt-7.5 mb-6 mr-0 sm:mr-6 md:w-6/12 float-left{{/unless}}">
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}}
+    {{#if this.title}}
+        <h3 class="mt-6 -mb-1 text-lg font-normal contentbox font-headingSerif dark:text-text-dark">{{this.title}}</h3>
+    {{/if}}
+    {{#if (isStorybook)}}  
+        {{> components/article/components/contentbox/storybook-contentbox }} 
+    {{else}}            
+        {{> modules/story/copytext-contentbox ~}}
+    {{/if}}
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_outro_sr" ~}}
+</div>
