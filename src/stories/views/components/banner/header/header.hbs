@@ -82,7 +82,10 @@
                 {{/components/banner/header/byline }}
             {{/components/banner/header/titleBackground }}
         {{/components/banner/header/bannerOverlay }}
-        {{~> components/base/image/responsive_image this.bannerImage _type="banner" _variant="default" _noDelay=true _addClassImg="hidden lg:block" ~}}   
+        <figure>
+            {{~> components/banner/copyright/tooltip _copyrightText="Max Mustermann" _hideOnMobile=true }}
+            {{~> components/base/image/responsive_image this.bannerImage _type="banner" _variant="default" _noDelay=true _addClassImg="hidden md:flex" ~}}   
+        </figure>
     {{/components/banner/header/bannerWrapper }}         
 </div>
 <div class="flex flex-col py-6 bg-white dark:bg-black ">
