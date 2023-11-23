@@ -1,5 +1,5 @@
-import header from './header.hbs'
-import bannerData from './../fixtures/banner.json'
+import header from './banner.storybook.hbs'
+import bannerData from './fixtures/banner.json'
 
 const TemplateHeader = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -9,7 +9,7 @@ const TemplateHeader = (args, { globals: { theme } }) => {
 }
 
 export default {
-    title: 'Komponenten/Banner/Header',
+    title: 'Komponenten/Banner',
     argTypes: {},
 
     parameters: {
