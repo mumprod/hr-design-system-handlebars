@@ -3,12 +3,12 @@
         <nav class="md:px-5 lg:px-10 col-full sm:col-main bg-structure-nav"
             x-data="{ isOpen: false}">
             <div class="relative flex flex-wrap items-center mx-auto" @click.outside="isOpen = false"> 
-                {{#> components/button/button _size="lg" _variant="tertiary" _disableButtonPress=true _alpineClick="isOpen = !isOpen" _css="md:hidden mr-2 " _onBackground=true}}
+                {{#> components/button/button _size="lg" _variant="tertiary" _disableButtonPress=true _alpineClick="isOpen = !isOpen" _css="md:hidden mr-2" _onBackground=true}}
                     <span class="hidden" :class="{ 'hidden': isOpen }">
-                        {{> components/button/components/button_icon _icon="burger--weiss" _iconmap="icons" _css="" }}
+                        {{> components/button/components/button_icon _icon="burger--weiss" _iconmap="icons" _css="fill-structure-nav-text" }}
                     </span> 
                     <span class="hidden" :class="{ 'hidden': !isOpen }">
-                        {{> components/button/components/button_icon _icon="close" _iconmap="icons" _css="" }}
+                        {{> components/button/components/button_icon _icon="close" _iconmap="icons" _css="fill-structure-nav-text" }}
                     </span>
                 {{/components/button/button}}
                 <span class="md:hidden text-structure-nav-text">{{this.title}}</span>
