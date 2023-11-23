@@ -135,7 +135,7 @@
     }
 
     .-currentBrand {
-        @apply before:content-[''] md:before:relative md:before:-right-1/2 md:before:w-0 md:before:h-0 md:before:border-t-0 md:before:border-r-8 md:before:border-r-transparent md:before:border-l-8 md:before:border-l-white md:before:border-b-8 md:before:border-brandnav-pseudo md:before:mt-6;
+        @apply before:content-[''] md:before:relative md:before:-right-1/2 md:before:w-0 md:before:h-0 md:before:border-t-0 md:before:border-r-8 md:before:border-r-transparent md:before:border-l-8 md:before:border-l-transparent md:before:border-b-8 md:before:border-brandnav-pseudo md:before:mt-6;
     }
     .-currentService {
         @apply before:content-[''] before:hidden lg:before:flex before:relative before:w-0 before:h-0 before:mr-4 before:mt-0 before:border-r-0 before:border-t-8 before:border-t-transparent before:border-l-8 before:border-l-white before:border-b-8 before:border-b-transparent lg:before:absolute lg:before:w-0 lg:before:h-0 lg:before:mr-0 lg:before:border-t-0 lg:before:border-r-8 lg:before:border-r-transparent lg:before:border-l-8 lg:before:border-l-transparent lg:before:border-b-8 lg:before:border-b-white lg:before:mt-12;

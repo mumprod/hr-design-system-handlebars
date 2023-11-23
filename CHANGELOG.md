@@ -1,3 +1,173 @@
+# v1.50.16 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- prepare content-nav for copytext [#764](https://github.com/mumprod/hr-design-system-handlebars/pull/764) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.15 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2593: some fixes [#763](https://github.com/mumprod/hr-design-system-handlebars/pull/763) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.14 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2593: Contentbox kommt aus Storybook [#762](https://github.com/mumprod/hr-design-system-handlebars/pull/762) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.13 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- add text-sm to h3 [#761](https://github.com/mumprod/hr-design-system-handlebars/pull/761) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.12 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- title within h3 [#760](https://github.com/mumprod/hr-design-system-handlebars/pull/760) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.11 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- change line-space between links [#759](https://github.com/mumprod/hr-design-system-handlebars/pull/759) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.10 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fixxed some px values in Typography documentation [#758](https://github.com/mumprod/hr-design-system-handlebars/pull/758) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.9 (Mon Nov 20 2023)
+
+#### 🐛 Bug Fix
+
+- add featured-content-component [#757](https://github.com/mumprod/hr-design-system-handlebars/pull/757) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.8 (Fri Nov 17 2023)
+
+#### 🐛 Bug Fix
+
+- new entry hbs files for episode and channel [#756](https://github.com/mumprod/hr-design-system-handlebars/pull/756) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.7 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- brandnav: adds md:before:border-l-transparent [#755](https://github.com/mumprod/hr-design-system-handlebars/pull/755) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.6 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- adds json for whatsapp [#754](https://github.com/mumprod/hr-design-system-handlebars/pull/754) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.5 (Thu Nov 16 2023)
+
+#### 🐛 Bug Fix
+
+- new brandlogo hr rundfunkrat [#753](https://github.com/mumprod/hr-design-system-handlebars/pull/753) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.4 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2223 4 appendix refactorings 3 [#752](https://github.com/mumprod/hr-design-system-handlebars/pull/752) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.3 (Wed Nov 15 2023)
+
+#### 🐛 Bug Fix
+
+- some fixes in positioning appendixes [#749](https://github.com/mumprod/hr-design-system-handlebars/pull/749) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.2 (Thu Nov 09 2023)
 
 #### 🐛 Bug Fix

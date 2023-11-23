@@ -1,0 +1,17 @@
+{
+    "@->jsoninclude": "teaser/teasers.inc.json",
+    "@->contentpath": "teaser.logicItem.includeModel",
+    "@->extends": {
+        "@->jsoninclude": "teaser/teaser_featured_content.inc.json"
+    },
+    "@->overrides": [
+        {
+            "@->contentpath": "teaserSize",
+            "@->value": "50"
+        },
+        {
+            "@->contentpath": "realTeaserSize",
+            "@->value": "50"
+        }
+    ]
+}
