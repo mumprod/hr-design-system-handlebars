@@ -1,4 +1,5 @@
-<footer class="flex justify-center w-full text-base border-t cy-footer pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
+<footer x-data x-intersect="$store.footerStore.isVisible = true" x-intersect:leave="$store.footerStore.isVisible = false"
+    class="flex justify-center w-full text-base border-t cy-footer pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
     <div class="flex md:container lg:px-10">
         <span class="hidden">Footer Navigation</span>
                 
@@ -18,4 +19,9 @@
             </div>
         </div>
     </div>
+    <script>
+        Alpine.store('footerStore', {
+            isVisible: false
+        })
+    </script>
 </footer>
