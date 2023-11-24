@@ -1,0 +1,46 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Map-component</div>
+{{~else~}}
+    {{> content/geomap/page/components/map
+        _addClass="copytext__clearBox"
+        _id=this.uuid
+        _tilesURL=this.mapTilesUrl
+        _iconURLStyle1=this.markerIconUrl
+        _iconURLStyle2=this.markerIconUrlS2
+        _iconURLStyle3=this.markerIconUrlS3
+        _markerList=this.showMarkerList
+        _fixedTooltip=this.showFixedTooltip
+        _markerCluster=this.showMarkercluster
+        _showOwnLocation=this.showOwnLocation
+        _initView=this.initView
+        _initLat=this.initViewLat
+        _initLng=this.initViewLong
+        _initZoom=this.initZoom
+        _border=this.showBorders
+        _colorBorder=this.borderColor
+        _borderStrokeWeight=this.borderStrokeWeight
+        _countryFillColor=this.countryFillColor
+        _countryFillOpacity=this.countryFillOpacity
+        _colorAreasStyle1=this.polygonColor
+        _opacityAreasStyle1=this.polygonOpacity
+        _weightAreasStyle1=this.polygonWeight
+        _colorAreasStyle2=this.polygonColorS2
+        _opacityAreasStyle2=this.polygonOpacityS2
+        _weightAreasStyle2=this.polygonWeightS2
+        _colorAreasStyle3=this.polygonColorS3
+        _opacityAreasStyle3=this.polygonOpacityS3
+        _weightAreasStyle3=this.polygonWeightS3
+        _colorLinesStyle1=this.polylineColor
+        _weightLinesStyle1=this.polylineWeight
+        _colorLinesStyle2=this.polylineColorS2
+        _weightLinesStyle2=this.polylineWeightS2
+        _colorLinesStyle3=this.polylineColorS3
+        _weightLinesStyle3=this.polylineWeightS3
+        _aspectRatio=this.mapAspectRatio
+        _initZoomMax=this.initZoomMax
+        _initZoomMin=this.initZoomMin
+        _clusterMinIconURL=this.clusterMinIconUrl
+        _clusterMedIconURL=this.clusterMedIconUrl
+        _clusterMaxIconURL=this.clusterMaxIconUrl
+    }}
+{{~/if~}} 

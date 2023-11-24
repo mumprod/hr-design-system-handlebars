@@ -1,0 +1,9 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Voting-component</div>
+{{~else~}}
+    {{#if this.isMultiVote}}
+        {{> modules/teaser/voting-teaser/multiVotingTeaser _addClass="copytext__clearBox"}}
+    {{else}}
+        {{> modules/teaser/voting-teaser/singleVotingTeaser _addClass="copytext__clearBox"}}
+    {{/if}}
+{{~/if~}}

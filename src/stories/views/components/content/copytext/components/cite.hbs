@@ -1,0 +1,20 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Cite-component</div>
+{{~else~}}
+    <div class="{{#if this.paragraphProperties.[0].showFullSize }}copytext__clearBox {{else}}copytext__box{{/if}}">
+        {{~> base/a11y/hiddenText _locaTag="story_cite_intro_sr" ~}}
+        <blockquote class="cite copytext__cite">
+            <cite class="cite__text">„{{{this.text}}}“</cite>
+            {{#with this.paragraphProperties}}
+                {{#with this.[0]}}
+                    {{#with this.citeAuthor}}
+                        <span class="cite__author">
+                            {{~> base/a11y/hiddenText _locaTag="story_cite_author_sr" ~}}
+                            {{this}}</span>
+                    {{/with}}
+                {{/with}}
+            {{/with}}
+        </blockquote>
+        {{~> base/a11y/hiddenText _locaTag="story_cite_outro_sr" ~}}
+    </div>
+{{~/if~}} 
