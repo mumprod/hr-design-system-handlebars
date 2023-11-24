@@ -1,5 +1,5 @@
-import structureNav from './structureNav.hbs'
-import structureNavData from './../fixtures/structureNav.json'
+import structureNav from './structure_nav.hbs'
+import structureNavData from '../fixtures/structureNav.json'
 
 const TemplateStructureNav = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
