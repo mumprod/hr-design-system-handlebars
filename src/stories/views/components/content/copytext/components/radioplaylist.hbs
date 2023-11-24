@@ -1,0 +1,11 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Radioplaylist-component</div>
+{{~else~}}
+    {{#with this.toModel.songvoteParagraphBox}}
+        {{#if this.showRanking }}
+            <div class="copytext__clearBox marginTrailer--m">
+                {{{this.rankingSSI}}}
+            </div>
+        {{/if}}
+    {{/with}}
+{{~/if~}} 

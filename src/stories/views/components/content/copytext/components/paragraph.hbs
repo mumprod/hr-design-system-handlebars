@@ -1,0 +1,11 @@
+{{#each this.text.split}}
+    {{#if this.isText}}
+        <p class="mt-6 text-base sm480:text-lg dark:text-text-dark">{{{this.text}}}</p>
+    {{/if}}
+    {{#if this.isUl}}
+        <ul class="mt-6 ml-5 text-base list-disc sm480:text-lg dark:text-text-dark">{{{this.text}}}</ul>
+    {{/if}}
+    {{#if this.isOl}}
+        <ol class="mt-6 ml-5 text-base list-decimal sm480:text-lg dark:text-text-dark">{{{this.text}}}</ol>
+    {{/if}}
+{{/each}}

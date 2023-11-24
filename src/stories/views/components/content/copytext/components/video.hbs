@@ -1,0 +1,9 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Video-component</div>
+{{~else~}}
+    {{#if this.showFullSize.isTrue }}
+        {{> modules/media/media_figure _fullSize=true _addClass="copytext__clearBox dontPrint" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
+    {{else}}
+        {{> modules/media/media_figure _fullSize=false _addClass="copytext__box dontPrint" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
+    {{/if}}
+{{~/if~}}
