@@ -1,8 +1,8 @@
-<div class="h-0" x-data="{ isVisible: false }">
-    <div class="grid grid-page z-100" :class="{ 'fixed bottom-0 left-0 w-full': !$store.footerStore.isVisible }">
-        <div class="flex justify-end -mt-14 col-full sm:col-main ">
+<div class="h-8" x-data="{ isVisible: false }">
+    <div class="grid grid-page z-100" :class="{ 'fixed bottom-0 left-0 h-8 w-full': !$store.footerIsVisible }">
+        <div class="flex justify-end -mt-6 col-full sm:col-main ">
             <button
-                @scroll.window="isVisible = (window.pageYOffset < (window.innerHeight || (document.documentElement || document.body).clientHeight)  ) ? false: true"
+                @scroll.window="isVisible = (window.pageYOffset > (window.innerHeight || (document.documentElement || document.body).clientHeight))"
                 @click.window="window.scrollTo({top: 0, behavior: 'smooth'})"
                 x-show="isVisible"
                 class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} z-100 p-3 h-max mr-2 [@media(min-width:1170px)]:-mr-14"

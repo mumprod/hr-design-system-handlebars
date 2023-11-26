@@ -34,6 +34,7 @@ Alpine.store('serviceID', {
 })
 Alpine.store('navIsVisible', true)
 Alpine.store('subNavIsVisible', false)
+Alpine.store('footerIsVisible', false)
 
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)
