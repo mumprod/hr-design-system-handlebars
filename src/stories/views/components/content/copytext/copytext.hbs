@@ -1,0 +1,129 @@
+{{#each this.copytextParagraph }}
+    {{{this.structuredDataSsi}}}
+    {{#if this.isHeadline}}
+        {{> components/content/copytext/components/headline }}
+    {{/if}}
+
+    {{#unless this.isInfoBox}}
+        {{~#with this.paragraphBoxItem }}
+            {{~#if this.isImage}}
+                {{> components/content/copytext/components/image }}    
+            {{/if~}}
+            {{~#if this.isContentBox}}
+                {{~> components/article/components/contentbox/contentbox ~}}
+            {{/if~}}
+            {{~#if this.isAccordion}}
+               {{~> components/article/components/accordion/accordion ~}}
+            {{/if~}}
+            {{~#if this.isGallery}}                
+                {{> components/content/copytext/components/gallery }}                
+            {{/if~}}
+            {{~#if this.isFileDownload}}
+                {{> components/content/copytext/components/filedownload }}                
+            {{/if~}}
+            {{~#if this.isMap}}
+                {{> components/content/copytext/components/map }}    
+            {{/if~}}
+            {{~#if this.isWebForm}}
+                {{> components/content/copytext/components/webform }}
+            {{/if~}}
+            {{~#if this.isNewsletter}}
+                {{> components/content/copytext/components/newsletter }}    
+            {{/if~}}
+            {{~#if this.isAudio}}
+                {{> components/content/copytext/components/audio }}
+            {{/if~}}
+            {{~#if this.isAudioEventLivestream}}
+                {{> components/content/copytext/components/audioeventlivestream }}
+            {{/if~}}
+            {{~#if this.isPodcastEpisode}}
+                {{> components/content/copytext/components/podcastepisode }}
+            {{/if~}}
+            {{~#if this.isVideo}}
+                {{> components/content/copytext/components/video }}
+            {{/if~}}
+            {{~#if this.isLivestream}}
+                {{> components/content/copytext/components/livestream }}
+            {{/if~}}
+            {{~#if this.isTweet}}
+                {{> components/content/copytext/components/tweet }}
+            {{~/if}}
+            {{~#if this.isRadioPlaylist}}
+                {{> components/content/copytext/components/radioplaylist }}
+            {{~/if}}
+            {{~#if this.isVoting}}
+                {{> components/content/copytext/components/voting }}
+            {{/if~}}
+            {{~#if this.isExternalService}}
+                {{> components/content/copytext/components/externalservice }}
+            {{/if~}}
+            {{~#if this.isContentNav}}
+                {{#with this.toModel.contentNavigationTeaser}}
+                    {{~> components/teaser/content_nav/teaser_content_nav _isCopytext=true ~}}
+                {{/with}}
+            {{/if~}}
+        {{~/with}}
+    {{/unless}}
+
+    {{~#with this.paragraphTeaserItem }}
+        {{~#if this.isTopictag}}
+            {{#with this.toModel.genericTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isTicker}}
+            {{#with this.toModel.genericTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isLink}}
+            {{#with this.toModel.genericTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isStructureNodeDocument}}
+            {{#with this.toModel.structureNodeTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isStory}}
+            {{#with this.toModel.genericTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isProgram}}
+            {{#with this.toModel.genericTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+        {{~#if this.isEvent}}
+            {{#with this.toModel.eventTeaser}}
+                {{> components/content/copytext/components/posterteaser }}
+            {{/with}}
+        {{/if~}}
+    {{~/with}}
+
+    {{#if this.isParagraph}}
+        {{> components/content/copytext/components/paragraph }}
+    {{/if}}
+
+    {{#if this.isCite}}
+        {{> components/content/copytext/components/cite }}
+    {{/if}}
+
+    {{#if this.isInfoBox}}
+        {{> components/content/copytext/components/infobox }}
+    {{/if}}
+    {{#if this.isAdditionalInfo}}
+        {{> components/content/copytext/components/additionalinfo }}
+    {{/if}}
+    {{#if this.isDownloadBox}}
+        {{> components/content/copytext/components/downloadbox }}
+    {{/if}}
+    {{#if this.isFAQ}}
+        {{> components/content/copytext/components/faq }}
+    {{/if}}
+    {{#if this.isJobposting}}
+        {{> components/content/copytext/components/jobposting }}
+    {{/if}}
+{{/each}}

@@ -1,0 +1,7 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Tweet-component</div>
+{{~else~}}
+    {{#with this.toModel.tweet}}
+        {{> modules/twitter/copytext_twitter _addClass="copytext__clearBox" }}
+    {{/with}}
+{{~/if~}} 
