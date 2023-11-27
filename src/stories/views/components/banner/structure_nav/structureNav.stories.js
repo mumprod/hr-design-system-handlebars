@@ -13,6 +13,9 @@ export default {
     argTypes: {},
 
     parameters: {
+        chromatic: {
+            viewports: [360, 768, 1024],
+        },
         layout: 'fullscreen',
         docs: {
             inlineStories: false,
