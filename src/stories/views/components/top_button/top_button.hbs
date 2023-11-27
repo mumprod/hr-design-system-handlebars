@@ -5,6 +5,12 @@
                 @scroll.window="isVisible = (window.pageYOffset > (window.innerHeight || (document.documentElement || document.body).clientHeight))"
                 @click.window="window.scrollTo({top: 0, behavior: 'smooth'})"
                 x-show="isVisible"
+                x-transition:enter="transition-transform ease-in-out duration-250"
+                x-transition:enter-start="transform translate-y-full"
+                x-transition:enter-end="transform translate-y-0"
+                x-transition:leave="transition-transform ease-in duration-250"
+                x-transition:leave-start="transform translate-y-0"
+                x-transition:leave-end="transform translate-y-full"                
                 class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} z-100 p-3 h-max mr-2 [@media(min-width:1170px)]:-mr-14"
                 >
                 {{> components/base/image/icon _icon="arrow-up"  _addClass="w-5 h-5 fill-current dark:fill-link-dark"}}            
