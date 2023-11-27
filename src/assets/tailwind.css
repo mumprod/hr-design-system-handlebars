@@ -151,6 +151,8 @@
     --structure-nav-background: var(--color-primary-ds);
     --structure-nav-text: theme('colors.white.DEFAULT');
     --structure-nav-text-mobile: var(--color-primary-ds);
+
+    --feature-box-height: 0;
 }
 
 [data-theme='hessenschau'] {
@@ -399,6 +401,8 @@
     --font-weight-title: theme('fontWeight.bold');
     /* Structure Navigation */
     --structure-nav-background: theme('colors.blue.astronautBlue');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -867,6 +871,8 @@
     --structure-nav-background: var(--color-primary-ds);
     --structure-nav-text: #433d37;
     --structure-nav-text-mobile: theme('colors.yellow.olive');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr2'] {
@@ -945,6 +951,8 @@
     --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
 
     --search-border-color-desktop:  var(--color-navigation-icons);
+    
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr3'] {
@@ -1023,6 +1031,8 @@
     --font-weight-title: theme('fontWeight.bold');
 
     --search-border-color-desktop: theme('colors.gray.scorpion');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr4'] {
@@ -1102,6 +1112,7 @@
     --border-radius-hr: theme('borderRadius.3xl');
     /* Structure Navigation */
     --structure-nav-background: theme('colors.green.genoa');
+    --feature-box-height: 96px;
 }
 
 [data-theme='you-fm'] {
@@ -1190,6 +1201,7 @@
     --structure-nav-background: theme('colors.yellow.goldenSand');
     --structure-nav-text: theme('colors.black.DEFAULT');
     --structure-nav-text-mobile: theme('colors.blue.lightCerulean');
+    --feature-box-height: 96px;
 }
 
 /*! purgecss end ignore */

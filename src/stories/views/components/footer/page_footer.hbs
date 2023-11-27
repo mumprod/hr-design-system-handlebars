@@ -1,5 +1,5 @@
-<footer x-data x-intersect="$store.footerIsVisible = true" x-intersect:leave="$store.footerIsVisible = false"
-    class="flex justify-center w-full text-base border-t cy-footer pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
+<footer class="relative flex justify-center w-full text-base border-t cy-footer pb-footer-padding-bottom text-footer-text print:hidden bg-footer-bg border-footer-border js-pageFooter" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter" >
+    <div class="absolute top-feature-box-height" x-data x-intersect="$store.footerIsVisible = true" x-intersect:leave="$store.footerIsVisible = false"></div>
     <div class="flex md:container lg:px-10">
         <span class="hidden">Footer Navigation</span>
                 

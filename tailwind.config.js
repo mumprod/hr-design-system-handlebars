@@ -121,8 +121,8 @@ module.exports = {
                 '22': '5.5rem',
                 '135': '33.75rem',
                 'stage': '56%',
-
                 'full-hd': '120rem',
+                'feature-box-height': 'var(--feature-box-height)'
             },
             width: {
                 '18': '4.5rem',
