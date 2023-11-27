@@ -18,4 +18,7 @@
             </button>
         </div>
     </div>
+    {{! Dieses DIV ist notwendig um bei Seiten mit einem Hintergrund zu vermeiden dass unten eine Lücke entsteht bei der das hintergrundbild durchscheint}}
+    {{! TODO: Wenn Alle Seiten (auch artikel) auf grid umgestellt sind kann unter den Contentschlauch ein padding hinzugefügt werden. dann kann das hier umgebaut werden }}
+    <div class="grid h-8 grid-page" :class="{ 'hidden': $store.footerIsVisible }"><div class="flex justify-end h-8 bg-white col-full sm:col-main"></div></div>
 </div>
