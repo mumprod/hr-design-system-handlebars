@@ -1,7 +1,8 @@
-<nav id="breadcrumb-nav" class="print:hidden{{~#unless this.showBreadcrumbTitleAlways}} hide-last-item-below-sm{{/unless~}}"
-        role="navigation"
-        aria-label="{{loca "breadcrumb_headline"}}"
->   <ul>
+<nav id="breadcrumb-nav" class="print:hidden px-4 md:px-5 lg:px-10 inline-block bg-white rounded-r{{~#unless this.showBreadcrumbTitleAlways}} hide-last-item-below-sm{{/unless~}}"
+     role="navigation"
+     aria-label="{{loca "breadcrumb_headline"}}"
+>
+    <ul>
         {{#with this.breadcrumbSsi}}
             {{> components/base/loadSSI _templatePath="components/navigation/breadcrumb/breadcrumb_items.ssi"}}
         {{/with}}

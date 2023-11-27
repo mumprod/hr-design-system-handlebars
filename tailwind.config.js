@@ -123,8 +123,8 @@ module.exports = {
                 '22': '5.5rem',
                 '135': '33.75rem',
                 'stage': '56%',
-
                 'full-hd': '120rem',
+                'feature-box-height': 'var(--feature-box-height)'
             },
             width: {
                 '18': '4.5rem',
@@ -404,7 +404,10 @@ module.exports = {
                 'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
                 'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
                 'toggle-confirmation': 'var(--color-toggle-confirmation)',
-                'toggle-default': 'var(--color-toggle-default)'
+                'toggle-default': 'var(--color-toggle-default)',
+                'structure-nav': 'var(--structure-nav-background)',
+                'structure-nav-text': 'var(--structure-nav-text)',
+                'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)'
             },
         },
     },

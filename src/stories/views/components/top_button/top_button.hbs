@@ -1,0 +1,24 @@
+<div class="h-8" x-data="{ isVisible: false }">
+    <div class="grid h-8 grid-page z-100" :class="{ 'fixed bottom-feature-box-height left-0 w-full': !$store.footerIsVisible }">
+        <div class="flex justify-end h-8 col-full sm:col-main"
+        :class="{ 'bg-white': $store.footerIsVisible }">
+            <button
+                @scroll.window="isVisible = (window.pageYOffset > (window.innerHeight || (document.documentElement || document.body).clientHeight))"
+                @click.window="window.scrollTo({top: 0, behavior: 'smooth'})"
+                x-show="isVisible"
+                x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-500 transform order-first"
+                x-transition:enter-start="opacity-0 -translate-y-8"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-12"               
+                class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} -mt-6 z-100 p-3 h-max mr-2 [@media(min-width:1170px)]:-mr-14"
+                >
+                {{> components/base/image/icon _icon="arrow-up"  _addClass="w-5 h-5 fill-current dark:fill-link-dark"}}            
+            </button>
+        </div>
+    </div>
+    {{! Dieses DIV ist notwendig um bei Seiten mit einem Hintergrund zu vermeiden dass unten eine Lücke entsteht bei der das hintergrundbild durchscheint}}
+    {{! TODO: Wenn Alle Seiten (auch artikel) auf grid umgestellt sind kann unter den Contentschlauch ein padding hinzugefügt werden. dann kann das hier umgebaut werden }}
+    <div class="grid h-8 grid-page" :class="{ 'hidden': $store.footerIsVisible }"><div class="flex justify-end h-8 bg-white col-full sm:col-main"></div></div>
+</div>
