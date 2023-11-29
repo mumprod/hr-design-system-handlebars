@@ -1,3 +1,15 @@
+# v1.50.23 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- switch to full-width on sm480 [#771](https://github.com/mumprod/hr-design-system-handlebars/pull/771) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.22 (Wed Nov 29 2023)
 
 #### 🐛 Bug Fix
