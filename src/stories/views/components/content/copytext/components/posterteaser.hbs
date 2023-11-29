@@ -1,5 +1,7 @@
 {{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: Posterteaser-component</div>
+    <div class="{{#if this.showFullSize.isTrue }}clear-both w-full mt-12 {{#unless this.showStretched.isTrue }}md:w-2/3 md:mx-auto{{/unless}}{{else}}w-full md:w-1/2 float-left my-7 mr-0 md:mr-5{{/if}}">
+        {{> components/teaser/teaser_poster _isCopytext=true }} 
+    </div>    
 {{~else~}}
     {{> modules/teaser/poster-teaser/posterTeaser-story}}
 {{~/if~}} 

@@ -233,6 +233,46 @@
             ]
         }
     },
+    "teaser_poster_small": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (min-width: 480px)",
+                    "sizes": "(min-width: 700px) 660px, 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9.jpg 992w, images/{#image}_v-16to9__retina.jpg 1920w"
+                },
+                {
+                    "media": "all and (max-width: 479px)",
+                    "sizes": "100vw",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1__medium__extended.jpg 640w, images/{#image}_v-1to1.jpg 960w, images/{#image}_v-1to1__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "teaser_poster_wide": {
+        "copyrightWithLinks": "",
+        "responsiveImage": {
+            "asPicture": true,
+            "asImage": false,
+            "fallback": "images/{#image}_v-16to7__medium.jpg",
+            "sources": [
+                {
+                    "media": "all and (min-width: 480px)",
+                    "sizes": "(min-width: 700px) 660px, 100vw",
+                    "srcset": "images/{#image}_v-16to7__small.jpg 320w, images/{#image}_v-16to7__medium.jpg 480w, images/{#image}_v-16to7.jpg 992w, images/{#image}_v-16to7__retina.jpg 1920w"
+                },
+                {
+                    "media": "all and (max-width: 479px)",
+                    "sizes": "100vw",
+                    "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1__medium__extended.jpg 640w, images/{#image}_v-1to1.jpg 960w, images/{#image}_v-1to1__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
     "teaser_poster_33": {
         "copyrightWithLinks": "",
         "responsiveImage": {

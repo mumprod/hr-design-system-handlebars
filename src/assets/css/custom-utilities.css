@@ -17,7 +17,25 @@
             content: '';
         }
 
-        .ar-16-19::after {
+        .ar-16-9::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .ar-16-7 {
+        aspect-ratio: 16 / 7;
+    }
+
+    @supports not (aspect-ratio: 16 / 7) {
+        .ar-16-7::before {
+            float: left;
+            padding-top: 43.75%;
+            content: '';
+        }
+
+        .ar-16-7::after {
             display: block;
             content: '';
             clear: both;
