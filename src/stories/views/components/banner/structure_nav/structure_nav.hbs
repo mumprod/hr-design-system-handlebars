@@ -1,0 +1,34 @@
+{{#with this.contentNav}}
+    <div class="grid order-3 grid-page">       
+        <nav class="md:px-5 lg:px-10 col-full sm:col-main bg-structure-nav"
+            x-data="{ isOpen: false}">
+            <div class="relative flex flex-wrap items-center mx-auto" @click.outside="isOpen = false"> 
+                {{#> components/button/button _size="lg" _variant="tertiary" _disableButtonPress=true _alpineClick="isOpen = !isOpen" _css="md:hidden mr-2" _onBackground=true}}
+                    <span class="hidden" :class="{ 'hidden': isOpen }">
+                        {{> components/button/components/button_icon _icon="burger--weiss" _iconmap="icons" _css="fill-structure-nav-text" }}
+                    </span> 
+                    <span class="hidden" :class="{ 'hidden': !isOpen }">
+                        {{> components/button/components/button_icon _icon="close" _iconmap="icons" _css="fill-structure-nav-text" }}
+                    </span>
+                {{/components/button/button}}
+                <span class="md:hidden text-structure-nav-text">{{this.title}}</span>
+                <div class="absolute z-10 w-full top-9 md:static md:block md:w-auto" id="navbar-default" 
+                    :class="isOpen ? '' : 'hidden'"
+                    >
+                    <ul class="flex flex-col font-medium bg-white md:bg-transparent md:flex-row md:space-x-3 rtl:space-x-reverse"> 
+                        {{~#each this.contentNavEntries~}}
+                            <li class="border-b border-structure-nav md:border-b-0">
+                                {{#> "components/base/link" _link=this.link _css="block w-full px-3 py-2 text-base font-bold break-words text-structure-nav-text-mobile md:text-structure-nav-text hover:underline"}}
+                                    {{this.content.title}}
+                                {{/components/base/link}}
+                                {{#*inline "css"~}}
+                                    {{#if @first }}md:pl-0{{/if}}
+                                {{~/inline}}
+                            </li>
+                        {{~/each~}}
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+    </div>
+{{/with}}

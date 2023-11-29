@@ -1,3 +1,51 @@
+# v1.50.21 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- adds darkmode to podcast shorttext and appendixes [#769](https://github.com/mumprod/hr-design-system-handlebars/pull/769) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.20 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- Podcast webview Bug [#768](https://github.com/mumprod/hr-design-system-handlebars/pull/768) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.19 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2673-1 [#767](https://github.com/mumprod/hr-design-system-handlebars/pull/767) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.18 (Mon Nov 27 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2296 [#766](https://github.com/mumprod/hr-design-system-handlebars/pull/766) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.50.17 (Fri Nov 24 2023)
 
 #### 🐛 Bug Fix

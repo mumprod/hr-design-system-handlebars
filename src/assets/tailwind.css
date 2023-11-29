@@ -4,7 +4,6 @@
 @import 'css/custom-components.css';
 @import 'tailwindcss/utilities';
 @import 'css/custom-utilities.css';
-
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
@@ -136,6 +135,24 @@
     --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
     --color-toggle-confirmation: #2c7e13; 
     --color-toggle-default: #797979;
+
+    
+    --banner__background-color: theme('colors.white.DEFAULT');
+    --banner__background-color--with-image:theme('colors.transparent');
+    --banner-overlay_background-color: theme('colors.white.DEFAULT');
+    --banner-overlay__background-color--rgba: rgba(--banner-overlay_background-color, 0.85);
+    --banner-topline__color: theme('colors.black.DEFAULT');
+
+    --banner-specialinfo__background-color: theme('colors.white.DEFAULT');
+    --banner-specialinfo__color: theme('colors.black.DEFAULT');
+    --banner-specialinfo__background-color--invert: theme('colors.black.DEFAULT');
+    --banner-specialinfo__color--invert: theme('colors.white.DEFAULT');
+
+    --structure-nav-background: var(--color-primary-ds);
+    --structure-nav-text: theme('colors.white.DEFAULT');
+    --structure-nav-text-mobile: var(--color-primary-ds);
+
+    --feature-box-height: 0;
 }
 
 [data-theme='hessenschau'] {
@@ -382,6 +399,10 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Structure Navigation */
+    --structure-nav-background: theme('colors.blue.astronautBlue');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr-rundfunkrat'] {
@@ -464,6 +485,8 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Structure Navigation */
+    --structure-nav-background: theme('colors.blue.deepCerulean');
 }
 
 [data-theme='hr-werbung'] {
@@ -844,6 +867,12 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+    /* Structure Nav */
+    --structure-nav-background: var(--color-primary-ds);
+    --structure-nav-text: #433d37;
+    --structure-nav-text-mobile: theme('colors.yellow.olive');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr2'] {
@@ -922,6 +951,8 @@
     --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
 
     --search-border-color-desktop:  var(--color-navigation-icons);
+    
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr3'] {
@@ -1000,6 +1031,8 @@
     --font-weight-title: theme('fontWeight.bold');
 
     --search-border-color-desktop: theme('colors.gray.scorpion');
+
+    --feature-box-height: 96px;
 }
 
 [data-theme='hr4'] {
@@ -1077,6 +1110,9 @@
     --font-weight-title: theme('fontWeight.bold');
     /* Border */
     --border-radius-hr: theme('borderRadius.3xl');
+    /* Structure Navigation */
+    --structure-nav-background: theme('colors.green.genoa');
+    --feature-box-height: 96px;
 }
 
 [data-theme='you-fm'] {
@@ -1161,6 +1197,11 @@
     --font-weight-title: theme('fontWeight.bold');
 
     --search-border-color-desktop:  var(--color-navigation-icons);
+    /* Structure Navigation */
+    --structure-nav-background: theme('colors.yellow.goldenSand');
+    --structure-nav-text: theme('colors.black.DEFAULT');
+    --structure-nav-text-mobile: theme('colors.blue.lightCerulean');
+    --feature-box-height: 96px;
 }
 
 /*! purgecss end ignore */
