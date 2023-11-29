@@ -1,3 +1,15 @@
+# v1.50.22 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- include poster-teaser in copytext [#770](https://github.com/mumprod/hr-design-system-handlebars/pull/770) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.21 (Wed Nov 29 2023)
 
 #### 🐛 Bug Fix
