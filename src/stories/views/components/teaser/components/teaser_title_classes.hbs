@@ -10,7 +10,6 @@ the 4 parameters are:
 - fontVariant
 
 }}
-
 {{~#switch _teaserType~}}
     {{~#case 'standard'~}}
         {{~#if _isMobile1to1~}}
@@ -79,7 +78,11 @@ the 4 parameters are:
         ~}}
     {{~/case~}}
     {{~#case 'poster'~}}
-        {{~inline-switch _size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
+        {{#if _isCopytext~}}
+            {{~#if this.showFullSize.isTrue~}}text-2xl md:text-4xl{{else}}text-2xl{{~/if~}}
+        {{else}}
+            {{~inline-switch _size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
+        {{/if}}    
     {{~/case~}}
     {{~#case 'cluster'~}}
         {{#if _firstItem}}
