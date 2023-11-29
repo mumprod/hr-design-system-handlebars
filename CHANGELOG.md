@@ -1,3 +1,15 @@
+# v1.50.21 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- adds darkmode to podcast shorttext and appendixes [#769](https://github.com/mumprod/hr-design-system-handlebars/pull/769) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.20 (Wed Nov 29 2023)
 
 #### 🐛 Bug Fix
