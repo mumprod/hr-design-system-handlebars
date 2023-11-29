@@ -1,0 +1,4 @@
+{
+    "@->jsoninclude": "content/copytext/copytext.inc.json",
+    "@->contentpath": "copytext_1"
+}

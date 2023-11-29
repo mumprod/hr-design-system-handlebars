@@ -1,0 +1,41 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Image-component</div>
+{{~else~}}
+
+    {{#if this.showPortrait.isTrue }}
+        {{#if this.showFullSize.isTrue }}
+            {{> modules/figure/figure
+                _cssClass="copytext__clearBox"
+                _type="story"
+                _variant="100-copytext-portrait"
+                _noAr="true"
+                _pictureAddClass="copytext__box__picture"
+                _isWebview=../../_isWebview}}
+        {{else}}
+            {{> modules/figure/figure
+                _cssClass="copytext__box"
+                _type="story"
+                _variant="copytext-portrait"
+                _noAr="true"
+                _pictureAddClass="copytext__box__picture"
+                _isWebview=../../_isWebview}}
+        {{/if}}
+    {{else}}
+        {{#if this.showFullSize.isTrue}}
+            {{> modules/figure/figure
+                _cssClass="copytext__clearBox"
+                _type="story"
+                _variant="100-copytext"
+                _pictureAddClass="ar--16x9 copytext__box__picture"
+                _isWebview=../../_isWebview}}
+        {{else}}
+            {{> modules/figure/figure
+                _cssClass="copytext__box"
+                _type="story"
+                _variant="copytext"
+                _pictureAddClass="ar--16x9 copytext__box__picture"
+                _isWebview=../../_isWebview}}
+        {{/if}}
+    {{/if}}
+
+{{~/if~}}

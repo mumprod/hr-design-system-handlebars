@@ -98,6 +98,8 @@ module.exports = {
             padding: {
                 '1.5': '0.375rem',
                 '2.5': '0.625rem',
+                '5.5': '1.3125rem',
+                '7.5': '1.875rem',
                 '11.5': '2.875rem',
                 '13': '3.25rem',
                 '3/4': '75%',
@@ -121,8 +123,8 @@ module.exports = {
                 '22': '5.5rem',
                 '135': '33.75rem',
                 'stage': '56%',
-
                 'full-hd': '120rem',
+                'feature-box-height': 'var(--feature-box-height)'
             },
             width: {
                 '18': '4.5rem',
@@ -172,8 +174,8 @@ module.exports = {
                 11: '2.75rem',
             },
             margin: {
+                '7.5': '1.875rem',
                 '13': '3.125rem',
-                '13-2': '3.375rem',
                 '30': '7.5rem',
                 '240': '60rem',
                 'half-screen': '50vw',
@@ -402,7 +404,10 @@ module.exports = {
                 'tickerTeaserFooter': 'var(--color-ticker-teaser-footer)',
                 'tickerTeaserHeadlineUnderline': 'var(--color-ticker-teaser-headline-underline)',
                 'toggle-confirmation': 'var(--color-toggle-confirmation)',
-                'toggle-default': 'var(--color-toggle-default)'
+                'toggle-default': 'var(--color-toggle-default)',
+                'structure-nav': 'var(--structure-nav-background)',
+                'structure-nav-text': 'var(--structure-nav-text)',
+                'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)'
             },
         },
     },

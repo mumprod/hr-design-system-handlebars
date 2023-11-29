@@ -1,5 +1,5 @@
 <div class="flex flex-wrap">
-    <span class="text-sm uppercase font-headingSerif w-fit sm:w-full">{{loca 'epg_program_supplier' }}</span>
+    <span class="text-sm uppercase font-headingSerif w-fit sm:w-full dark:text-standard-text-dark">{{loca 'epg_program_supplier' }}</span>
     
     <div class='flex flex-wrap pt-2 w-fit sm:w-full gap-x-6 sm:gap-x-2 gap-y-2'>
         {{#if this.link}}
@@ -13,7 +13,7 @@
                         />
                     {{/with}}
                 {{else}}
-                    <span class='text-base font-bold text-primary hover:underline'>
+                    <span class='text-base font-bold text-primary hover:underline dark:text-standard-text-dark'>
                         {{this.title}}
                     </span>
                 {{/if}}
@@ -28,7 +28,7 @@
                     />
                 {{/with}}
             {{else}}
-                <span class='text-base font-bold text-primary hover:underline'>
+                <span class='text-base font-bold text-primary hover:underline dark:text-standard-text-dark'>
                     {{this.title}}
                 </span>
             {{/if}}

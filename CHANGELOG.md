@@ -1,3 +1,137 @@
+# v1.50.21 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- adds darkmode to podcast shorttext and appendixes [#769](https://github.com/mumprod/hr-design-system-handlebars/pull/769) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.20 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- Podcast webview Bug [#768](https://github.com/mumprod/hr-design-system-handlebars/pull/768) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.19 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2673-1 [#767](https://github.com/mumprod/hr-design-system-handlebars/pull/767) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.18 (Mon Nov 27 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2296 [#766](https://github.com/mumprod/hr-design-system-handlebars/pull/766) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.17 (Fri Nov 24 2023)
+
+#### 🐛 Bug Fix
+
+- add copytext + sub-components [#765](https://github.com/mumprod/hr-design-system-handlebars/pull/765) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.16 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- prepare content-nav for copytext [#764](https://github.com/mumprod/hr-design-system-handlebars/pull/764) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.15 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2593: some fixes [#763](https://github.com/mumprod/hr-design-system-handlebars/pull/763) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.14 (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2593: Contentbox kommt aus Storybook [#762](https://github.com/mumprod/hr-design-system-handlebars/pull/762) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.13 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- add text-sm to h3 [#761](https://github.com/mumprod/hr-design-system-handlebars/pull/761) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.12 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- title within h3 [#760](https://github.com/mumprod/hr-design-system-handlebars/pull/760) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.11 (Tue Nov 21 2023)
+
+#### 🐛 Bug Fix
+
+- change line-space between links [#759](https://github.com/mumprod/hr-design-system-handlebars/pull/759) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.10 (Mon Nov 20 2023)
 
 #### 🐛 Bug Fix
