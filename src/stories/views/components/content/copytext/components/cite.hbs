@@ -1,20 +1,16 @@
-{{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: Cite-component</div>
-{{~else~}}
-    <div class="{{#if this.paragraphProperties.[0].showFullSize }}copytext__clearBox {{else}}copytext__box{{/if}}">
-        {{~> base/a11y/hiddenText _locaTag="story_cite_intro_sr" ~}}
-        <blockquote class="cite copytext__cite">
-            <cite class="cite__text">„{{{this.text}}}“</cite>
-            {{#with this.paragraphProperties}}
-                {{#with this.[0]}}
-                    {{#with this.citeAuthor}}
-                        <span class="cite__author">
-                            {{~> base/a11y/hiddenText _locaTag="story_cite_author_sr" ~}}
-                            {{this}}</span>
-                    {{/with}}
+<div class="{{#if this.paragraphProperties.[0].showFullSize }}clear-both mt-7{{else}}mr-0 md:mr-5 mb-0 md:mb-7 mt-7 w-full md:w-1/2 md:float-left{{/if}}">
+    <span class="sr-only">{{loca "story_cite_intro_sr" }}</span>
+    <blockquote class="">
+        <cite class="block text-base italic font-bold font-headingSerif md:ml-6 sm480:text-lg dark:text-text-dark">„{{{this.text}}}“</cite>
+        {{#with this.paragraphProperties}}
+            {{#with this.[0]}}
+                {{#with this.citeAuthor}}
+                    <span class="block md:ml-6 italic mt-2.5 font-headingSerif text-sm text-gray-scorpion">
+                        <span class="sr-only">{{loca "story_cite_author_sr" }}</span>
+                        {{this}}</span>
                 {{/with}}
             {{/with}}
-        </blockquote>
-        {{~> base/a11y/hiddenText _locaTag="story_cite_outro_sr" ~}}
-    </div>
-{{~/if~}} 
+        {{/with}}
+    </blockquote>
+    <span class="sr-only">{{loca "story_cite_outro_sr" }}</span>
+</div>
