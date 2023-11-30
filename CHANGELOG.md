@@ -1,3 +1,16 @@
+# v1.50.24 (Thu Nov 30 2023)
+
+#### 🐛 Bug Fix
+
+- Fehlende Abstände bei der Contentbox [#773](https://github.com/mumprod/hr-design-system-handlebars/pull/773) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.50.23 (Wed Nov 29 2023)
 
 #### 🐛 Bug Fix
