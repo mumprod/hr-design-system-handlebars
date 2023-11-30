@@ -1,0 +1,124 @@
+<div class="flex flex-col py-6 bg-slate-500">
+    <div class="grid mb-4 grid-page">
+        <h1 class="text-3xl font-title col-full sm:col-main">Maximalausprägung mit Struktur Navigation</h1>
+    </div>
+    {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=true  }}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumb_wrapper }} 
+
+    {{#> components/banner/header/banner_wrapper _hasImage=true _hideOnMobile=false}}
+        {{#> components/banner/header/banner_overlay _hasBackground=true}}
+            {{#> components/banner/header/special_info _invert="true"}}
+                Montag bis Freitag von 5 bis 11.00 Uhr
+            {{/components/banner/header/special_info }}
+            {{#> components/banner/header/title_background _hasBackground=true}}
+                {{#> components/banner/header/topline }}
+                    Diese Sendung bringt euch gut in den Tag
+                {{/components/banner/header/topline }}
+                {{#> components/banner/header/headline ~}}
+                    Die hr3 Morningshow
+                    {{~#> components/banner/header/additional_info ~}}
+                        AdditionalInfo
+                    {{~/components/banner/header/additional_info ~}}
+                {{/components/banner/header/headline }}
+                {{#> components/banner/header/byline }}
+                        Aktualisiert am 03.11.23 um 12:33 Uhr
+                {{/components/banner/header/byline }}
+            {{/components/banner/header/title_background }}
+        {{/components/banner/header/banner_overlay }}
+        {{~> components/banner/header/banner_image _hideOnMobile=true }}   
+    {{/components/banner/header/banner_wrapper }}   
+    {{~#with this.structureNav}}
+        {{> components/banner/structure_nav/structure_nav}}
+    {{/with}}       
+</div>
+<div class="flex flex-col py-6 bg-orange-500">
+    <div class="grid mb-4 grid-page">
+        <h1 class="text-3xl font-title col-full sm:col-main">Maximalausprägung ohne Struktur Navigation</h1>
+    </div>
+    {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=false }}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumb_wrapper }} 
+
+    {{#> components/banner/header/banner_wrapper _hasImage=true _hideOnMobile=false}}
+        {{#> components/banner/header/banner_overlay _hasBackground=true}}
+            {{#> components/banner/header/special_info _invert="true"}}
+                Montag bis Freitag von 5 bis 11.00 Uhr
+            {{/components/banner/header/special_info }}
+            {{#> components/banner/header/title_background _hasBackground=true}}
+                {{#> components/banner/header/topline }}
+                    Diese Sendung bringt euch gut in den Tag
+                {{/components/banner/header/topline }}
+                {{#> components/banner/header/headline ~}}
+                    Die hr3 Morningshow
+                    {{~#> components/banner/header/additional_info ~}}
+                        AdditionalInfo
+                    {{~/components/banner/header/additional_info ~}}
+                {{/components/banner/header/headline }}
+                {{#> components/banner/header/byline }}
+                        Aktualisiert am 03.11.23 um 12:33 Uhr
+                {{/components/banner/header/byline }}
+            {{/components/banner/header/title_background }}
+        {{/components/banner/header/banner_overlay }}
+        
+        {{~> components/banner/header/banner_image }}
+    {{/components/banner/header/banner_wrapper }}         
+</div>
+<div class="flex flex-col py-6 bg-green-800">
+    <div class="grid mb-4 grid-page">
+        <h1 class="text-3xl font-title col-full sm:col-main">Maximalausprägung Mobil kein Bild</h1>
+    </div>
+    {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=false}}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumb_wrapper }} 
+
+    {{#> components/banner/header/banner_wrapper _hasImage=true _hideOnMobile=true}}
+        {{#> components/banner/header/banner_overlay _hasBackground=true _hideOnMobile=true}}
+            {{#> components/banner/header/title_background _hasBackground=true}}
+                {{#> components/banner/header/topline }}
+                    Diese Sendung bringt euch gut in den Tag
+                {{/components/banner/header/topline }}
+                {{#> components/banner/header/headline ~}}
+                    Die hr3 Morningshow
+                    {{~#> components/banner/header/additional_info ~}}
+                        AdditionalInfo
+                    {{~/components/banner/header/additional_info ~}}
+                {{/components/banner/header/headline }}
+                {{#> components/banner/header/byline }}
+                        Aktualisiert am 03.11.23 um 12:33 Uhr
+                {{/components/banner/header/byline }}
+            {{/components/banner/header/title_background }}
+        {{/components/banner/header/banner_overlay }}
+        {{~> components/banner/header/banner_image _hideOnMobile=true }}
+        
+    {{/components/banner/header/banner_wrapper }}         
+</div>
+<div class="flex flex-col py-6 bg-white dark:bg-black ">
+    <div class="grid mb-4 grid-page">
+        <h1 class="text-3xl font-title col-full sm:col-main">Maximalausprägung kein Bild</h1>
+    </div>
+    {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=false }}
+        {{> components/navigation/breadcrumb/breadcrumb }}
+    {{/components/banner/header/breadcrumb_wrapper }} 
+    {{#> components/banner/header/banner_wrapper _hasImage=false _hideOnMobile=false}}
+        {{#> components/banner/header/banner_overlay _hasBackground=false}}
+            {{#> components/banner/header/special_info _invert="true"}}
+                Montag bis Freitag von 5 bis 11.00 Uhr
+            {{/components/banner/header/special_info }}
+            {{#> components/banner/header/title_background _hasBackground=false}}
+                {{#> components/banner/header/topline }}
+                    Diese Sendung bringt euch gut in den Tag
+                {{/components/banner/header/topline }}
+                {{#> components/banner/header/headline ~}}
+                    Die hr3 Morningshow
+                    {{~#> components/banner/header/additional_info ~}}
+                        AdditionalInfo
+                    {{~/components/banner/header/additional_info ~}}
+                {{/components/banner/header/headline }}
+                {{#> components/banner/header/byline }}
+                        Aktualisiert am 03.11.23 um 12:33 Uhr
+                {{/components/banner/header/byline }}
+            {{/components/banner/header/title_background }}
+        {{/components/banner/header/banner_overlay }} 
+    {{/components/banner/header/banner_wrapper }}          
+</div>
