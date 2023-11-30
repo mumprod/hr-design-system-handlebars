@@ -1,3 +1,15 @@
+# v1.50.25 (Thu Nov 30 2023)
+
+#### 🐛 Bug Fix
+
+- add cite-component [#774](https://github.com/mumprod/hr-design-system-handlebars/pull/774) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.24 (Thu Nov 30 2023)
 
 #### 🐛 Bug Fix
