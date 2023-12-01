@@ -4,7 +4,7 @@
             {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
         {{/components/button/button}}
     
-        <div class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-300 pb-6 bg-black/[0.5] js-data-policy-settings-overlay{{#if _webview}} hidden{{/if}}">
+        <div  x-trap="true" class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-300 pb-6 bg-black/[0.5] js-data-policy-settings-overlay{{#if _webview}} hidden{{/if}}">
         <div class="m-auto pt-0 max-w-[480px] bg-white">
             <div class="flex w-full px-6 bg-primary z-100">
                 <span class="flex justify-start w-full py-4">
