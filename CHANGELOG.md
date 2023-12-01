@@ -1,3 +1,15 @@
+# v1.50.26 (Fri Dec 01 2023)
+
+#### 🐛 Bug Fix
+
+- - fixed hover colors in structurNav [#775](https://github.com/mumprod/hr-design-system-handlebars/pull/775) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.50.25 (Thu Nov 30 2023)
 
 #### 🐛 Bug Fix
