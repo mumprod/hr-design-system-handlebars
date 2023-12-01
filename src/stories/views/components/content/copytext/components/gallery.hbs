@@ -1,0 +1,7 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: Gallery-component</div>
+{{~else~}}
+    {{#with this.toModel.galleryPage}}
+        {{> modules/media/media_figure _addClass="copytext__clearBox dontPrint" _a11yIntro-loca="story_gallery_intro_sr" _a11yOutro-loca="story_gallery_outro_sr" }}
+    {{/with}}
+{{~/if~}}    

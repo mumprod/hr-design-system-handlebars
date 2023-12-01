@@ -1,0 +1,61 @@
+{{~#if (isStorybook)~}}
+    <div class="mt-6 italic text-gray-dark">coming soon: External-service-component</div>
+{{~else~}}
+    {{#with this.toModel.externalService}}
+        {{#if this.externalServiceConfig.makeConfigurable}}
+            {{~> modules/externalService/externalService~}}
+        {{else}}
+            {{#if this.externalServiceConfig.embedAsIFrame}}
+                {{#if this.fixedHeight}}
+                    {{#if this.serviceUrl}}
+                        <div class="copytext__externalService">
+                            {{~> base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
+                            <div class="copytext__scrollWrapper -fixedHeight"
+                                    style="height:{{this.fixedHeight}}px;">
+                                <iframe frameborder="0" width="100%" height="100%"
+                                        src="{{{this.serviceUrl}}}" webkitallowfullscreen mozallowfullscreen
+                                        allowfullscreen scrolling='no'></iframe>
+                            </div>
+                            {{~> base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
+                            {{#with this.externalServiceCaption}}
+                                <div class="copytext__captionLine">
+                                    <span class="figcaption">{{this}}</span>
+                                </div>
+                            {{/with}}
+                        </div>
+                    {{/if}}
+                {{else}}
+                    {{#if this.serviceUrl}}
+                        <div class="copytext__externalService">
+                            {{~> base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
+                            <div class="copytext__scrollWrapper">
+                                <div class="ar--{{defaultIfEmpty this.aspectRatio "auto"}}">
+                                    <iframe frameborder="0" class="ar__content" width="100%" height="100%"
+                                            src="{{{this.serviceUrl}}}" webkitallowfullscreen
+                                            mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            {{#with this.externalServiceCaption}}
+                                <div class="copytext__captionLine">
+                                    <span class="figcaption">{{this}}</span>
+                                </div>
+                            {{/with}}
+                            {{~> base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
+                        </div>
+                    {{/if}}
+                {{/if}}
+            {{else}}
+                <div class="copytext__externalService">
+                    <div class="c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
+                            data-hr-external-service='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": false, "iFrameConfig":{}}'>
+                    </div>
+                    {{#with this.externalServiceCaption}}
+                        <div class="copytext__captionLine js-externalservice__caption">
+                            <span class="figcaption">{{this}}</span>
+                        </div>
+                    {{/with}}
+                </div>
+            {{/if}}
+        {{/if}}
+    {{/with}}
+{{~/if~}}
