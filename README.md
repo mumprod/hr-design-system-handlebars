@@ -118,3 +118,5 @@ Makro hintereinander aus:
 7. Setze den Befehl `yarn optimize-assets` ab und führe ihn aus
 
 Weitere Details und Grundlagen zum Gebrauch des Designsystems können direkt in dessen Dokumentation eingesehen werden.
+
+Test
