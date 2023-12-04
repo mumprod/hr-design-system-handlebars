@@ -1,3 +1,15 @@
+# v1.50.29 (Mon Dec 04 2023)
+
+#### 🐛 Bug Fix
+
+- add _size-Parameter [#776](https://github.com/mumprod/hr-design-system-handlebars/pull/776) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.28 (Mon Dec 04 2023)
 
 #### ⚠️ Pushed to `main`
