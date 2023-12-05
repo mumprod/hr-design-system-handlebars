@@ -1,3 +1,16 @@
+# v1.50.36 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2667: X instead of Twitter [#780](https://github.com/mumprod/hr-design-system-handlebars/pull/780) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.50.35 (Tue Dec 05 2023)
 
 #### 🐛 Bug Fix
