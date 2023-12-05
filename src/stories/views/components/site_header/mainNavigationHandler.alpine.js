@@ -41,9 +41,9 @@ export default () => ({
             //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
         }
         // Listeners
-        window.addEventListener('mousedown', mouseDownHandler, false)
-        window.addEventListener('wheel', mouseEvent, false)
-        window.addEventListener('touchmove', mouseEvent, false)
+        window.addEventListener('mousedown', mouseDownHandler,false)
+        window.addEventListener('wheel', mouseEvent, {passive: true})
+        window.addEventListener('touchmove', mouseEvent, {passive: true})
         window.addEventListener('scroll', this.debounce(scrollHandler, 50), { passive: true })
     },
     //Holds the percentage of scrolled viewport
