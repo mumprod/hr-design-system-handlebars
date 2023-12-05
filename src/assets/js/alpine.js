@@ -7,7 +7,6 @@ import mainNavigationHandler from 'components/site_header/mainNavigationHandler.
 import flyoutHandler from 'components/site_header/flyoutHandler.alpine'
 import overlayHandler from 'components/site_header/overlayHandler.alpine'
 import dropdown from 'components/site_header/dropdown.alpine'
-import focus from '@alpinejs/focus'
  
 
 AsyncAlpine.init(Alpine)
@@ -47,7 +46,6 @@ Alpine.data('dropdown', dropdown)
 // Initialization of plugins
 Alpine.plugin(Toolkit)
 Alpine.plugin(collapse)
-Alpine.plugin(focus)
 Alpine.plugin(intersect)
 
 
