@@ -1,3 +1,15 @@
+# v1.50.34 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- fixes font, size and line height in shorttext and content footer [#778](https://github.com/mumprod/hr-design-system-handlebars/pull/778) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.33 (Tue Dec 05 2023)
 
 #### 🐛 Bug Fix
