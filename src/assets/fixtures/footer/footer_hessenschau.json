@@ -160,11 +160,11 @@
             {
                 "links": [
                     {
-                        "text": "twitter-ds",
+                        "text": "x-ds",
                         "url": "https://twitter.com/hessenschau",
                         "extern": true,
                         "isTargetBlank": true,
-                        "title": "hessenschau Twitter"
+                        "title": "hessenschau X"
                     },
                     {
                         "text": "instagram-ds",
