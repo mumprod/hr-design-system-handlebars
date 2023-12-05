@@ -1,6 +1,6 @@
-<div class="grid grid-page w-full order-2{{#if _hasImage}} overflow-hidden -image{{else}} -text{{/if}}{{~#if _hideOnMobile}} -hideOnMobile{{/if}}">
-    <div role="banner" class="grid col-full sm:col-main relative{{#unless _hasImage}} mx-4 md:mx-5 lg:mx-10 border-b border-gray-boulder pb-4{{/unless}}">
-        <div class="relative {{#if _hasImage}}-hasImage{{~#if _hideOnMobile}} aspect-auto bg-white dark:bg-black{{else}} ar-16-9 sm480:ar-16-7 md:ar-100-27{{/if}}{{/if}}">
+<div class="grid grid-page w-full order-2{{#if _hasBannerImage}} overflow-hidden -image{{else}} -text{{/if}}{{~#if _hideOnMobile}} -hideOnMobile{{/if}}">
+    <div role="banner" class="grid col-full sm:col-main relative{{#unless _hasBannerImage}} px-4 md:px-5 lg:px-10 border-b border-gray-boulder pb-4 bg-white dark:bg-black{{/unless}}">
+        <div class="relative {{#if _hasBannerImage}}-hasImage{{~#if _hideOnMobile}} aspect-auto bg-white dark:bg-black{{else}} ar-16-9 sm480:ar-16-7 md:ar-100-27{{/if}}{{/if}}">
             {{> @partial-block }}
         </div>
     </div>
