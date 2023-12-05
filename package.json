@@ -106,7 +106,6 @@
     "dependencies": {
         "@alpine-collective/toolkit": "^1.0.0",
         "@alpinejs/collapse": "^3.8.1",
-        "@alpinejs/focus": "^3.13.3",
         "@alpinejs/intersect": "^3.13.3",
         "@tailwindcss/line-clamp": "^0.4.2",
         "a11y-dialog": "^8.0.4",
