@@ -23,8 +23,6 @@ const DataPolicySettings = function (context) {
         providerTitle = hr$('.js-providerTitle', container)[0],
         trackingCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10
         let isWebview = window.parent.document.documentElement.classList.contains('webview'),
-        //isWebview = window.location.href.match(/(app)(\.[a-zA-Z]*)(\.de)/i), //App URL ...app.hr.de
-        //isWebview = window.location.href.match(/(app)/i), //App URL ...app.hr.de
         cookie = {}
 
     console.log('gelaaaadeeeeeeeen')
@@ -54,41 +52,11 @@ const DataPolicySettings = function (context) {
         cookie = 'true'
         setJSONCookie('hsAppSettingsButton', cookie, trackingCookieLifetime)
     }
-    /* const initializeSettingsButtons = function () {
-        for (let i = 0; i < settingsButtons.length; ++i) {
-            if (settingsButtons.length - i == 1) {
-                listen(
-                    'click',
-                    function () {
-                        openDialog('Footer')
-                        atiSecondLevelId = 1
-                    },
-                    settingsButtons[i]
-                )
-            } else {
-                if (!settingsButtons[i].getAttribute('listener')) {
-                    listen(
-                        'click',
-                        function () {
-                            openDialog('DSGVO-Overlay')
-                        },
-                        settingsButtons[i]
-                    )
-                    settingsButtons[i].setAttribute('listener', 'true')
-                }
-            }
-        }
-    } */
-    /* const openDialog = function (settingsButtonLocation) {
-        overlay.classList.add('!flex')
-        bodyElement.classList.add('optionOpen')
-        uxAction('Einstellungsdialog geöffnet - ' + settingsButtonLocation, atiSecondLevelId)
-    } */
 
     const onDialogShow = function (event) {
         bodyElement.classList.add('optionOpen')
-        const opener = event.detail.target.closest('[data-a11y-dialog-show]')
-        const pianoTracking = undefined !== opener.dataset.pianoTracking ? JSON.parse(opener.dataset.pianoTracking) : {label:"Datenschutzerklärung"}
+        const opener = event.detail == null && event.detail.target.closest('[data-a11y-dialog-show]') ? event.detail.target.closest('[data-a11y-dialog-show]') : null
+        const pianoTracking = null != opener && undefined !== opener.dataset.pianoTracking ? JSON.parse(opener.dataset.pianoTracking) : {label:"Datenschutzerklärung"}
         if(undefined !== pianoTracking.secondLevelId){
             console.log(pianoTracking)
             uxAction('Einstellungsdialog geöffnet - ' + pianoTracking.label, pianoTracking.secondLevelId)
@@ -97,12 +65,6 @@ const DataPolicySettings = function (context) {
             uxAction('Einstellungsdialog geöffnet - ' + pianoTracking.label)
         }
     }
-
-
-    // EventListener to close the dialog box at any point using the ESC key
-
-
-
 
     const onDialogHide = function () {
         console.log("Hide")
@@ -272,33 +234,22 @@ const DataPolicySettings = function (context) {
         return trackingCookie.isTrackingCookieExistent(trackingService)
     }
     const initializeEventListeners = function () {
-        /* listen('hr:settingsButtonInsideDataPolicyBoxClicked', function () {
-            openDialog('DSGVO-Overlay')
-        }) */
         listen('change', toggleAll, toggleAllSwitch)
         listen("show", onDialogShow, container)
         listen("hide", onDialogHide, container)
     }
     // steuert die Darstellung des Buttons für die hs-App ///
     showSettingsButton()
-    //// 1. Alle Settings Buttons initialisieren ////
-    //initializeSettingsButtons()
-
-    //// 2. Toggle States aller Switches setzen ////
+    //// 1. Toggle States aller Switches setzen ////
     ////    Cookies setzen usw.                 ////
     initializeToggleStateExternal()
 
     initializeToggleStateTracking()
 
-    //// 3. Event Listener initialisieren ////
+    //// 2. Event Listener initialisieren ////
     initializeEventListeners()
 
     shouldDialogBeOpendOnLoad()
-
-    //// 4. Funktion extern aufrufbar machen ////
-    return {
-        //initializeSettingsButtons: initializeSettingsButtons,
-    }
 }
 
 export default DataPolicySettings
