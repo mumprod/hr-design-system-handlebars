@@ -3,23 +3,26 @@ import TrackingCookie from 'components/externalService/trackingCookie.subfeature
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
+import A11yDialog from 'a11y-dialog'
+
 const DataPolicySettings = function (context) {
     const { options } = context,
         { element: rootElement } = context,
+        container = hr$('#datapolicy-settings-dialog',document)[0],
+        dialog = new A11yDialog(container),
         settingsButtons = hr$('.js-data-policy-settings-button', document),
         overlay = hr$('.js-data-policy-settings-overlay', rootElement)[0],
         closeButton = hr$('.js-data-policy-settings-close-button', rootElement)[0],
         bodyElement = document.getElementsByTagName('html')[0],
         datapolicyCookie = new DatapolicyCookie(),
         trackingCookie = new TrackingCookie(),
-        toggleSwitches = hr$('.js-toggleSwitch-checkbox', rootElement),
-        toggleSwitchesExternal = hr$('.js-toggleSwitch-external', rootElement),
-        toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', rootElement),
-        toggleAllSwitch = hr$('.js-toggleSwitch-checkbox-all', rootElement)[0],
-        providerTitle = hr$('.js-providerTitle', rootElement)[0],
+        toggleSwitches = hr$('.js-toggleSwitch-checkbox', container),
+        toggleSwitchesExternal = hr$('.js-toggleSwitch-external', container),
+        toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', container),
+        toggleAllSwitch = hr$('.js-toggleSwitch-checkbox-all', container)[0],
+        providerTitle = hr$('.js-providerTitle', container)[0],
         trackingCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10
-    let atiSecondLevelId = window.xtn2,
-        isWebview = window.parent.document.documentElement.classList.contains('webview'),
+        let isWebview = window.parent.document.documentElement.classList.contains('webview'),
         //isWebview = window.location.href.match(/(app)(\.[a-zA-Z]*)(\.de)/i), //App URL ...app.hr.de
         //isWebview = window.location.href.match(/(app)/i), //App URL ...app.hr.de
         cookie = {}
@@ -51,7 +54,7 @@ const DataPolicySettings = function (context) {
         cookie = 'true'
         setJSONCookie('hsAppSettingsButton', cookie, trackingCookieLifetime)
     }
-    const initializeSettingsButtons = function () {
+    /* const initializeSettingsButtons = function () {
         for (let i = 0; i < settingsButtons.length; ++i) {
             if (settingsButtons.length - i == 1) {
                 listen(
@@ -75,32 +78,40 @@ const DataPolicySettings = function (context) {
                 }
             }
         }
-    }
-    const openDialog = function (settingsButtonLocation) {
+    } */
+    /* const openDialog = function (settingsButtonLocation) {
         overlay.classList.add('!flex')
         bodyElement.classList.add('optionOpen')
         uxAction('Einstellungsdialog geöffnet - ' + settingsButtonLocation, atiSecondLevelId)
+    } */
+
+    const onDialogShow = function (event) {
+        bodyElement.classList.add('optionOpen')
+        const opener = event.detail.target.closest('[data-a11y-dialog-show]')
+        const pianoTracking = undefined !== opener.dataset.pianoTracking ? JSON.parse(opener.dataset.pianoTracking) : {label:"Datenschutzerklärung"}
+        if(undefined !== pianoTracking.secondLevelId){
+            console.log(pianoTracking)
+            uxAction('Einstellungsdialog geöffnet - ' + pianoTracking.label, pianoTracking.secondLevelId)
+        }else{
+            console.log(pianoTracking)
+            uxAction('Einstellungsdialog geöffnet - ' + pianoTracking.label)
+        }
     }
-    const closeDialogeOnOverlay = function (e) {
-        if (e.target !== this) return
-        closeDialog()
-    }
+
 
     // EventListener to close the dialog box at any point using the ESC key
-    document.addEventListener('keyup', function (e) {
-        if ( e.key === "Escape" )   {
-            closeDialog()
-        }
-      })
 
-    const closeDialog = function () {
-        overlay.classList.remove('!flex')
+
+
+
+    const onDialogHide = function () {
+        console.log("Hide")
         bodyElement.classList.remove('optionOpen')
     }
     const shouldDialogBeOpendOnLoad = function () {
         const urlParam = getUrlVars()['openDialog']
         if (typeof urlParam !== 'undefined' && urlParam === 'true') {
-            openDialog('Datenschutzerklärung')
+            dialog.show()
         }
     }
     const getUrlVars = function () {
@@ -261,17 +272,17 @@ const DataPolicySettings = function (context) {
         return trackingCookie.isTrackingCookieExistent(trackingService)
     }
     const initializeEventListeners = function () {
-        listen('hr:settingsButtonInsideDataPolicyBoxClicked', function () {
+        /* listen('hr:settingsButtonInsideDataPolicyBoxClicked', function () {
             openDialog('DSGVO-Overlay')
-        })
+        }) */
         listen('change', toggleAll, toggleAllSwitch)
-        listen('click', closeDialog, closeButton)
-        listen('click', closeDialogeOnOverlay, overlay)
+        listen("show", onDialogShow, container)
+        listen("hide", onDialogHide, container)
     }
     // steuert die Darstellung des Buttons für die hs-App ///
     showSettingsButton()
     //// 1. Alle Settings Buttons initialisieren ////
-    initializeSettingsButtons()
+    //initializeSettingsButtons()
 
     //// 2. Toggle States aller Switches setzen ////
     ////    Cookies setzen usw.                 ////
@@ -286,7 +297,7 @@ const DataPolicySettings = function (context) {
 
     //// 4. Funktion extern aufrufbar machen ////
     return {
-        initializeSettingsButtons: initializeSettingsButtons,
+        //initializeSettingsButtons: initializeSettingsButtons,
     }
 }
 

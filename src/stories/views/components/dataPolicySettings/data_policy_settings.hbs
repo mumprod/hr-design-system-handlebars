@@ -1,32 +1,42 @@
 <div class="flex items-center justify-center mt-4 md:mt-2 md:justify-end js-load" data-hr-data-policy-settings-ds='{}'>
-        {{#> components/button/button _size="md" _id="globalSettingsButton" _css=" js-data-policy-settings-button" _variant="secondary" _onBackground=(configProperty "footer.onBackground") }}
-            {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
-            {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
-        {{/components/button/button}}
-    
-        <div  x-trap="true" class="hidden fixed overflow-scroll w-full h-full top-0 left-0 right-0 bottom-0 z-300 pb-6 bg-black/[0.5] js-data-policy-settings-overlay{{#if _webview}} hidden{{/if}}">
-        <div class="m-auto pt-0 max-w-[480px] bg-white">
+        {{#with this}}
+            {{#> components/button/button _size="md" _id="globalSettingsButton" _css=" js-data-policy-settings-button" _variant="secondary" _onBackground=(configProperty "footer.onBackground") }}
+                {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
+                {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
+            {{/components/button/button}}
+            {{#*inline "htmlProperties"}}
+                data-piano-tracking='{"label":"Footer","secondLevelId":"1"}'
+                data-a11y-dialog-show="datapolicy-settings-dialog"
+            {{/inline}}
+        {{/with}}
+    </div>
+    <div id="datapolicy-settings-dialog"
+  aria-labelledby="datapolicy-settings-title"
+  aria-hidden="true" class="aria-hidden:hidden flex justify-center fixed inset-0 z-300 overflow-y-scroll">
+        <div class="fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black/[0.5] js-data-policy-settings-overlay{{#if _webview}} hidden{{/if}}" data-a11y-dialog-hide>
+        </div>
+        <div role="document" class="pt-0 max-w-[480px] z-300 bg-white mb-6">
             <div class="flex w-full px-6 bg-primary z-100">
                 <span class="flex justify-start w-full py-4">
                     <span
                         class="pr-4 -ml-1 fill-white"> {{> components/base/image/icon _icon="settings" _addClass="h-7 w-7 inline" }}</span>
                     <span class="w-full text-2xl text-white font-headingSerif">Einstellungen</span>
-                    <button class="link-focus-white text-white bg-transparent fill-current js-data-policy-settings-close-button">
+                    <button type="button" "aria-label="Close dialog" class="link-focus-white text-white bg-transparent fill-current js-data-policy-settings-close-button" data-a11y-dialog-hide>
                         {{> components/base/image/icon _icon="close" _addClass="h-6 w-6 inline"}}
                     </button>
                 </span>
             </div>
 
             <div class="bg-[#d8e9f6] p-6 {{#if _webview}} hidden{{/if}}">
-                <span class="block text-lg text-black font-headingSerif">{{loca "cookies_setting_tracking_service_description_title"}}</span>
+                <span id="datapolicy-settings-title" class="block text-lg text-black font-headingSerif">{{loca "cookies_setting_tracking_service_description_title"}}</span>
                 <p class="mt-4 text-black">
                     {{#with this.footerMetadata}}
                         {{#with this.dataProtectionLink}}
                             {{loca "cookies_setting_tracking_service_description_text"}}
                             <a class="ds-link block mt-2 text-link hover:underline" target="_blank"
-                               rel="noopener noreferrer" href="{{this.url}}"
-                               title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
-                               {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            rel="noopener noreferrer" href="{{this.url}}"
+                            title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
+                            {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
                             </a>
                         {{/with}}
                     {{/with}}
@@ -64,9 +74,9 @@
                         {{#with this.dataProtectionLink}}
                             {{loca "cookies_setting_description_text"}}
                             <a class=ds-link block mt-2 text-link hover:underline" target="_blank"
-                               rel="noopener noreferrer" href="{{this.url}}"
-                               title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
-                               {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            rel="noopener noreferrer" href="{{this.url}}"
+                            title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
+                            {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
                             </a>
                         {{/with}}
                     {{/with}}
@@ -95,5 +105,4 @@
                 {{/with}}
             </ul>
         </div>
-    </div>
     </div>
