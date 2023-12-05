@@ -1,3 +1,15 @@
+# v1.50.33 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2693 - Banner ohne Bild darf nicht transparent sein [#777](https://github.com/mumprod/hr-design-system-handlebars/pull/777) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.50.29 (Mon Dec 04 2023)
 
 #### 🐛 Bug Fix
