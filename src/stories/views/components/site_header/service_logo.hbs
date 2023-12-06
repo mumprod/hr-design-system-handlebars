@@ -4,7 +4,7 @@
 
         <div x-cloak 
             {{#if _useSticky}}
-                class="absolute {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg flex transition-opacity duration-500 ease-in-out h-10 lg:h-[3.875rem] w-12 lg:w-[3.875rem]{{/if}}" 
+                class="absolute {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg flex transition-opacity duration-250 ease-in h-10 lg:h-[3.875rem] w-12 lg:w-[3.875rem]{{/if}}" 
                 :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'"
             {{else}}
                 class="relative flex h-10 {{#unless _isFooter}}brand-logo-size {{/unless}} md:hidden"
@@ -16,8 +16,8 @@
         
         <div 
             {{#if _useSticky}}
-                class="w-auto {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg transition-opacity duration-500 ease-in-out h-12 lg:h-[3.875rem]{{/if}}"
-                :class="`${percent}` < 50 ? 'delay-1000 opacity-100' : 'delay-200 opacity-0 hidden'"
+                class="w-auto {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg transition-opacity duration-250 ease-in-out h-12 lg:h-[3.875rem]{{/if}}"
+                :class="`${percent}` < 50 ? ' opacity-100' : 'opacity-0 '"
             {{else}}    
                 class="md:flex hidden justify-start w-auto {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg h-12 lg:h-[3.875rem]{{/if}} "
             {{/if}}
@@ -27,3 +27,6 @@
         </div>
           
 </a>
+<script>
+    percent = 0
+</script>

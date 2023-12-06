@@ -12,7 +12,7 @@ export default () => ({
             let a = this.$refs.sectionnavigation.scrollHeight + this.$el.scrollHeight
             let brandNavHeight = this.percent > 0 ? 40 : 0
             if (window.innerWidth < 1024) {
-                if (value == true) {
+                if (value == true) { console.log("true")
                     if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
                         this.$refs.sectionnavigation.style.maxHeight = a + 'px'
                         this.$refs.sectionnavigation.style.overflowY = 'hidden'
@@ -24,11 +24,13 @@ export default () => ({
                             'px'
                         this.$refs.sectionnavigation.style.overflowY = 'scroll'
                     }
-                } else {
+                } else { 
                     if (a < window.innerHeight - this.$refs.sectionnavigation.offsetTop) {
-                        this.$refs.sectionnavigation.style.overflowY = 'hidden'
+                        this.$refs.sectionnavigation.style.overflowY = 'hidden' 
+                       
                     } else {
                         this.$refs.sectionnavigation.style.overflowY = 'scroll'
+                        console.log("close is true")
                     }
                 }
             }
