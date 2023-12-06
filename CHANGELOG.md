@@ -1,3 +1,15 @@
+# v1.50.38 (Wed Dec 06 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2174 navigation refactoring [#782](https://github.com/mumprod/hr-design-system-handlebars/pull/782) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.37 (Wed Dec 06 2023)
 
 #### 🐛 Bug Fix
