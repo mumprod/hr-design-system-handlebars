@@ -44,7 +44,7 @@ export default () => ({
         window.addEventListener('mousedown', mouseDownHandler,false)
         window.addEventListener('wheel', mouseEvent, {passive: true})
         window.addEventListener('touchmove', mouseEvent, {passive: true})
-        window.addEventListener('scroll', this.debounce(scrollHandler, 50), { passive: true })
+        window.addEventListener('scroll', scrollHandler, { passive: true })
     },
     //Holds the percentage of scrolled viewport
     percent: 0,
