@@ -4,7 +4,7 @@
             {{> components/podcast/podcast_player _linkTitle=true _isSinglePage=true _isArticlePlayer=true}}
         </div>
         <div class="pt-6 main">
-            {{> components/podcast/components/podcast_player_shorttext }}
+            {{> components/podcast/components/podcast_player_shorttext _isSinglePage=true}}
             {{> components/content/content_footer/content_footer
                     _author=this.audioAuthor
                     _showDate=this.hasDwellTime

@@ -1,3 +1,161 @@
+# v1.50.37 (Wed Dec 06 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2694 [#781](https://github.com/mumprod/hr-design-system-handlebars/pull/781) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.36 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2667: X instead of Twitter [#780](https://github.com/mumprod/hr-design-system-handlebars/pull/780) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.35 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- adds dark mode text color to content footer [#779](https://github.com/mumprod/hr-design-system-handlebars/pull/779) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.34 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- fixes font, size and line height in shorttext and content footer [#778](https://github.com/mumprod/hr-design-system-handlebars/pull/778) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.33 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2693 - Banner ohne Bild darf nicht transparent sein [#777](https://github.com/mumprod/hr-design-system-handlebars/pull/777) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.29 (Mon Dec 04 2023)
+
+#### 🐛 Bug Fix
+
+- add _size-Parameter [#776](https://github.com/mumprod/hr-design-system-handlebars/pull/776) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.28 (Mon Dec 04 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Test commit ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.50.27 (Fri Dec 01 2023)
+
+#### ⚠️ Pushed to `main`
+
+- :art: merge master ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.50.26 (Fri Dec 01 2023)
+
+#### 🐛 Bug Fix
+
+- - fixed hover colors in structurNav [#775](https://github.com/mumprod/hr-design-system-handlebars/pull/775) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.25 (Thu Nov 30 2023)
+
+#### 🐛 Bug Fix
+
+- add cite-component [#774](https://github.com/mumprod/hr-design-system-handlebars/pull/774) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.24 (Thu Nov 30 2023)
+
+#### 🐛 Bug Fix
+
+- Fehlende Abstände bei der Contentbox [#773](https://github.com/mumprod/hr-design-system-handlebars/pull/773) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.23 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- switch to full-width on sm480 [#771](https://github.com/mumprod/hr-design-system-handlebars/pull/771) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.50.22 (Wed Nov 29 2023)
+
+#### 🐛 Bug Fix
+
+- include poster-teaser in copytext [#770](https://github.com/mumprod/hr-design-system-handlebars/pull/770) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.50.21 (Wed Nov 29 2023)
 
 #### 🐛 Bug Fix

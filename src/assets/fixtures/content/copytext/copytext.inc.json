@@ -24,7 +24,7 @@
                             "text": "<li>In der rund 1.200 Einwohner großen Gemeinde Waldbrunn</li><li>rund 13 Kilometer vom rheinland-pfälzischen Westerburg entfernt</li>"
                         }
                     ]   
-                }                  
+                }
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
@@ -40,13 +40,7 @@
                             "text": "Nach Informationen der Rhein-Zeitung soll es im Frühjahr 2022 einen Zwischenfall an der Schule gegeben haben. Der heute 18-Jährige soll demnach einen Mitschüler beschimpft und nach einer verbalen Auseinandersetzung mit einer Flasche geschlagen haben."
                         }
                     ]   
-                },
-                "paragraphBoxItem": {
-                    "isImage": true,
-                    "showFullSize": {
-                        "isTrue": true
-                    }
-                }                 
+                }
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
@@ -68,17 +62,46 @@
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isCite": true,
-                "text": "Dies ist ein Zitat"
+                "text":"Dies ist ein Zitat. Es wird über die volle Breite angezeigt.",
+                "paragraphProperties": [
+                    {
+                        "showFullSize":true,
+                        "citeAuthor":"Horst Schlemmer"
+                    }
+                ]
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isCite": true,
+                "text":"Dies ist ein Zitat. Es wird über die halbe Breite angezeigt.",
+                "paragraphProperties": [
+                    {
+                        "showFullSize":false,
+                        "citeAuthor":"Horst Schlemmer"
+                    }
+                ]
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Weitere Absatztypen"
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isInfoBox": true,
                 "text": "Dies ist eine Infobox"
-            },
-            {
-                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
-                "isAdditionalInfo": true,
-                "text": "Dies ist eine additional Info"
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
@@ -94,7 +117,240 @@
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isJobposting": true,
                 "text": "Dies ist ein Jobposting"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isAdditionalInfo": true,
+                "text": "Dies ist eine additional Info"
             }
         ]
-    }
+    },
+    "copytext_posterteaser": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Speichermedien sowie Waffen und Munition sichergestellt"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "In der rund 1.200 Einwohner großen Gemeinde Waldbrunn, rund 13 Kilometer vom rheinland-pfälzischen Westerburg entfernt, engagiert sich der 18-Jährige nach hr-Informationen bei der Freiwilligen Feuerwehr. Der Ortsvorsteher aus Waldbrunn beschrieb den Terrorverdächtigen als zurückhaltend, höflich und hilfsbereit."
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,    
+                "paragraphTeaserItem": {
+                    "isStory": true,
+                    "toModel": {
+                        "genericTeaser": {                            
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser.logicItem.includeModel",
+                            "@->extends": {
+                                "showFullSize": {
+                                    "isTrue": true
+                                }
+                            },
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teaserType",
+                                    "@->value": "poster"
+                                },
+                                {
+                                    "@->contentpath": "teaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "realTeaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "link.readMoreText.readMoreLong",
+                                    "@->value": "Zum Artikel"
+                                },
+                                {
+                                    "@->contentpath": "teaserImage",
+                                    "@->value": {
+                                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                        "@->contentpath": "teaser_poster_50",
+                                        "@->replaceToken": [
+                                            {
+                                                "@->token": "image",
+                                                "@->value": "rueckkehr-nach-abschiebung-102"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]                            
+                        }
+                    }
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        },
+                        {
+                            "isText": true,
+                            "text": "Nach Informationen der Rhein-Zeitung soll es im Frühjahr 2022 einen Zwischenfall an der Schule gegeben haben. Der heute 18-Jährige soll demnach einen Mitschüler beschimpft und nach einer verbalen Auseinandersetzung mit einer Flasche geschlagen haben."
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,                
+                "paragraphTeaserItem": {
+                    "isStory": true,
+                    "toModel": {
+                        "genericTeaser": {
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser.logicItem.includeModel",
+                            "@->extends": {
+                                "showFullSize": {
+                                    "isTrue": false
+                                }
+                            },
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teaserType",
+                                    "@->value": "poster"
+                                },
+                                {
+                                    "@->contentpath": "teaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "realTeaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "link.readMoreText.readMoreLong",
+                                    "@->value": "Zum Artikel"
+                                },
+                                {
+                                    "@->contentpath": "teaserImage",
+                                    "@->value": {
+                                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                        "@->contentpath": "teaser_poster_small",
+                                        "@->replaceToken": [
+                                            {
+                                                "@->token": "image",
+                                                "@->value": "rueckkehr-nach-abschiebung-102"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]                            
+                        }
+                    }
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Medienbericht: Flaschenangriff auf Mitschüler"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,                
+                "paragraphTeaserItem": {
+                    "isStory": true,
+                    "toModel": {
+                        "genericTeaser": {
+                            "@->jsoninclude": "teaser/teasers.inc.json",
+                            "@->contentpath": "teaser.logicItem.includeModel",
+                            "@->extends": {
+                                "showFullSize": {
+                                    "isTrue": true
+                                },
+                                "showStretched": {
+                                    "isTrue": true
+                                }
+                            },
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "teaserType",
+                                    "@->value": "poster"
+                                },
+                                {
+                                    "@->contentpath": "teaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "realTeaserSize",
+                                    "@->value": "50"
+                                },
+                                {
+                                    "@->contentpath": "link.readMoreText.readMoreLong",
+                                    "@->value": "Zum Artikel"
+                                },
+                                {
+                                    "@->contentpath": "teaserImage",
+                                    "@->value": {
+                                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                        "@->contentpath": "teaser_poster_wide",
+                                        "@->replaceToken": [
+                                            {
+                                                "@->token": "image",
+                                                "@->value": "rueckkehr-nach-abschiebung-102"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]                            
+                        }
+                    }
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            }
+        ]
+    }    
 }    

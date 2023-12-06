@@ -776,7 +776,7 @@
     --color-button: theme('colors.gray.darker');
     --color-button--dark: theme('colors.blue.blueLuxury');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark: theme('colors.blue.blueLuxury');
+    --color-button-inverted--dark: theme('colors.gray.lightGray');
     --color-button-disabled: theme('colors.gray.lightGray');
     --color-button-disabled--dark: theme('colors.gray.boulder');
  

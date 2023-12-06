@@ -9,12 +9,12 @@
                     href="{{this}}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="{{loca "share_twitter_linktitle" }}"
+                    title="{{loca "share_x_linktitle" }}"
                     {{#with ../../this.content.trackingData}}
-                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::twitter"}]}'
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::X"}]}'
                     {{/with}}
                 >
-                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#55acee] hover:scale-105" _icon="twitter" _iconmap="icons" ~}}
+                    {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#0f1419] hover:scale-105" _icon="x" _iconmap="icons" ~}}
                 </a>
             </li>
         {{~/with~}}
