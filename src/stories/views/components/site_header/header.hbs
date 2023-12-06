@@ -20,7 +20,7 @@
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 
-                class="relative flex justify-center order-2 w-full transition-all duration-500 ease-in border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
+                class="relative flex justify-center order-2 w-full transition-[margin-top] duration-500 ease-in border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
                 <div id="serviceNavMainContainer" 
                     class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-110">
 
@@ -85,6 +85,7 @@
             />
     </div>
     <div x-ref="myOverlay">
-        <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-100 lg:hidden opacity-70"></div>
+        <div x-cloak x-data="overlayHandler()" @click.debounce="overlayWasClicked()" x-show="shouldOverlayBeShown()" 
+            class="fixed top-0 left-0 w-screen h-screen bg-gray-800 z-100 lg:hidden opacity-70"></div>
     </div>
 </div>

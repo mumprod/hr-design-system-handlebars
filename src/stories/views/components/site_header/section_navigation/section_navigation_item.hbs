@@ -2,8 +2,8 @@
     <li x-data="dropdown"
         @click.outside="dropped = false" 
         @close-servicemenu.window="dropped = false" 
-        :class="dropped ? 'border-b-0 lg:bg-white lg:text-primary max-h-auto' : 'max-h-10 lg:hover:underline'" 
-        class="flex flex-wrap justify-start order-2 w-full list-none transition-all duration-1000 ease-in border-b border-navigation-border-color text-navigation-text sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:last:pr-8 lg:first:pl-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-navigation-bg lg:rounded-t">  
+        :class="dropped ? 'border-b-0 lg:bg-white lg:text-primary ' : ' lg:hover:underline'" 
+        class="flex flex-wrap justify-start order-2 w-full list-none transition-[max-height] md:transition-none duration-1000 ease-out border-b border-navigation-border-color text-navigation-text sb-section-navigation-item first:lg:-ml-4 md:pl-0 lg:last:pr-8 lg:first:pl-0 first:font-normal last:border-b-0 lg:border-0 lg:w-auto bg-navigation-bg lg:rounded-t">  
         
         {{#if this.isCluster ~}}
             {{!-- Gilt z.B. für REGIONEN:  --}}        
