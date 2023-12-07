@@ -1,3 +1,15 @@
+# v1.50.39 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2656 Navigation im Footer: Abstände verbessern [#783](https://github.com/mumprod/hr-design-system-handlebars/pull/783) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.50.38 (Wed Dec 06 2023)
 
 #### 🐛 Bug Fix
