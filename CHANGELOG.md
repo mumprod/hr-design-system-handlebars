@@ -1,3 +1,15 @@
+# v1.50.40 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2174 part2 add alpine plugin [#784](https://github.com/mumprod/hr-design-system-handlebars/pull/784) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.39 (Thu Dec 07 2023)
 
 #### 🐛 Bug Fix
