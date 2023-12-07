@@ -1,3 +1,15 @@
+# v1.50.41 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- move duration to ternary [#785](https://github.com/mumprod/hr-design-system-handlebars/pull/785) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.40 (Thu Dec 07 2023)
 
 #### 🐛 Bug Fix
