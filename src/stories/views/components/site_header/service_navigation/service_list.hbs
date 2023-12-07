@@ -2,8 +2,8 @@
     id="serviceList"
     @click.outside="$store.serviceNavIsOpen = false; toggleScrolling(!$store.searchFieldOpen && !$store.burgeropen)"
     x-ref="serviceList"
-    :class="shouldServiceIconsBeHidden() ? 'delay-300 -mt-40' : 'delay-0 duration-0 mt-0'"
-    class="absolute transition-[margin-top] ease-in duration-500 left-0 flex justify-center flex-initial w-full h-10 max-w-full align-top ease-in border-b border-navigation-border-color sb-service-list -z-40 md:z-100 md:h-12 top-[41px] bg-navigation-bg md:border-0 md:top-auto md:w-auto md:left-auto md:static md:justify-end md:flex md:flex-auto lg:h-16 lg:pl-0 lg:pr-4 lg:w-3/4 "
+    :class="shouldServiceIconsBeHidden() ? 'delay-300 duration-500 -mt-40' : 'delay-0 duration-0 mt-0'"
+    class="absolute transition-[margin-top] ease-in left-0 flex justify-center flex-initial w-full h-10 max-w-full align-top ease-in border-b border-navigation-border-color sb-service-list -z-40 md:z-100 md:h-12 top-[41px] bg-navigation-bg md:border-0 md:top-auto md:w-auto md:left-auto md:static md:justify-end md:flex md:flex-auto lg:h-16 lg:pl-0 lg:pr-4 lg:w-3/4 "
 >
     {{#with this.serviceNavigationSSILinks}}
         <ul class="flex justify-around w-full h-full -itemCount-{{ count }} lg:w-auto lg:justify-end lg:pt-1">
