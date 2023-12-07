@@ -105,6 +105,7 @@
     },
     "dependencies": {
         "@alpine-collective/toolkit": "^1.0.0",
+        "@alpinejs/anchor": "^3.13.3",
         "@alpinejs/collapse": "^3.8.1",
         "@alpinejs/intersect": "^3.13.3",
         "@tailwindcss/line-clamp": "^0.4.2",
