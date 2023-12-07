@@ -1,8 +1,11 @@
 import AsyncAlpine from 'async-alpine'
+
 import collapse from '@alpinejs/collapse'
 import Toolkit from '@alpine-collective/toolkit'
 import Alpine from 'alpinejs'
+import anchor from '@alpinejs/anchor'
 import intersect from '@alpinejs/intersect'
+
 import mainNavigationHandler from 'components/site_header/mainNavigationHandler.alpine'
 import flyoutHandler from 'components/site_header/flyoutHandler.alpine'
 import overlayHandler from 'components/site_header/overlayHandler.alpine'
@@ -46,6 +49,6 @@ Alpine.data('dropdown', dropdown)
 Alpine.plugin(Toolkit)
 Alpine.plugin(collapse)
 Alpine.plugin(intersect)
-
+Alpine.plugin(anchor)
 
 Alpine.start()
