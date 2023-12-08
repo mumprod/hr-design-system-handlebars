@@ -1,3 +1,15 @@
+# v1.51.1 (Fri Dec 08 2023)
+
+#### 🐛 Bug Fix
+
+- corrects z-index in servicelist [#786](https://github.com/mumprod/hr-design-system-handlebars/pull/786) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.51.0 (Fri Dec 08 2023)
 
 #### 🚀 Enhancement
