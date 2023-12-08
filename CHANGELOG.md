@@ -1,3 +1,100 @@
+# v1.50.41 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- move duration to ternary [#785](https://github.com/mumprod/hr-design-system-handlebars/pull/785) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.40 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2174 part2 add alpine plugin [#784](https://github.com/mumprod/hr-design-system-handlebars/pull/784) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.39 (Thu Dec 07 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2656 Navigation im Footer: Abstände verbessern [#783](https://github.com/mumprod/hr-design-system-handlebars/pull/783) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.50.38 (Wed Dec 06 2023)
+
+#### 🐛 Bug Fix
+
+- Dpe 2174 navigation refactoring [#782](https://github.com/mumprod/hr-design-system-handlebars/pull/782) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.37 (Wed Dec 06 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2694 [#781](https://github.com/mumprod/hr-design-system-handlebars/pull/781) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.50.36 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2667: X instead of Twitter [#780](https://github.com/mumprod/hr-design-system-handlebars/pull/780) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.50.35 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- adds dark mode text color to content footer [#779](https://github.com/mumprod/hr-design-system-handlebars/pull/779) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.50.34 (Tue Dec 05 2023)
+
+#### 🐛 Bug Fix
+
+- fixes font, size and line height in shorttext and content footer [#778](https://github.com/mumprod/hr-design-system-handlebars/pull/778) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.50.33 (Tue Dec 05 2023)
 
 #### 🐛 Bug Fix

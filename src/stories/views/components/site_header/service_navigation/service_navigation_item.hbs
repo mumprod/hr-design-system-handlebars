@@ -3,17 +3,14 @@
         {{#if this.subNavigation}} 
             <button 
                 id="{{nextRandom}}" 
-                @click.debounce.100ms="toggleServiceNav()" 
+                @click="toggleServiceNav()" 
                 @click.outside="dropped = false;"
                 @close-servicemenu.window="dropped = false; $store.serviceNavIsOpen = false"
-
                 x-data="dropdown"
                 id="{{getRandom}}"
-                
                 class="js-load flex flex-col items-center justify-center h-full px-4 text-left lg:justify-start lg:px-3 lg:pt-1 lg:hover:underline lg:relative lg:rounded-t lg:border-0 lg:left-0 text-navigation-icons link-focus-inset-white {{#if this.selected}}-currentService{{/if}}"
 
                 :class="dropped ? 'bg-white fill-current text-primary lg:border-0 lg:underline' : ''" 
-
                 aria-owns="flyout-{{getRandom}}" 
                 aria-controls="flyout-{{getRandom}}"
                 x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('aria-label', dropped ? '{{this.text}}-Menü schließen' : '{{this.text}}-Menü öffnen')"
