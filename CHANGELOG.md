@@ -1,3 +1,15 @@
+# v1.51.3 (Fri Dec 08 2023)
+
+#### 🐛 Bug Fix
+
+- moved z-index to ternary [#788](https://github.com/mumprod/hr-design-system-handlebars/pull/788) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.51.2 (Fri Dec 08 2023)
 
 #### 🐛 Bug Fix
