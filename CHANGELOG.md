@@ -1,3 +1,16 @@
+# v1.51.0 (Fri Dec 08 2023)
+
+#### 🚀 Enhancement
+
+- WIP: DPE-2582 Einstellungsmenü mit Screenreader bedienbar machen [#751](https://github.com/mumprod/hr-design-system-handlebars/pull/751) ([@Sunny1112358](https://github.com/Sunny1112358) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.50.41 (Thu Dec 07 2023)
 
 #### 🐛 Bug Fix
