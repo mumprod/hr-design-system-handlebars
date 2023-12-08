@@ -4297,6 +4297,13 @@
     "@types/emscripten" "^1.39.6"
     tslib "^1.13.0"
 
+a11y-dialog@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/a11y-dialog/-/a11y-dialog-8.0.4.tgz#731a983d38d059665ff7e62daccedf5214131be8"
+  integrity sha512-MQrLxqLPx4E8+ynGwulBs6OjtxQT/XemgnlNPb+cR8K/qdwHBQv1WZQZpBuTVhlWGpAwWmSYffUZ/78anhcD3w==
+  dependencies:
+    focusable-selectors "^0.8.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
@@ -7024,6 +7031,11 @@ flush-write-stream@^1.0.2:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+focusable-selectors@^0.8.0:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/focusable-selectors/-/focusable-selectors-0.8.4.tgz#2ee34129b29371766ce201499e3b88c6f79ea4c1"
+  integrity sha512-0XxbkD0KhOnX10qmnfF9U8DkDD8N/e4M77wMYw2Itoi4vdcoRjSkqXLZFIzkrLIOxzmzCGy88fNG1EbeXMD/zw==
 
 for-each@^0.3.3:
   version "0.3.3"
