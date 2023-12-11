@@ -1,3 +1,15 @@
+# v1.51.5 (Mon Dec 11 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2695 - HR_Produktentwicklung Banner lädt langsam (CLS) [#790](https://github.com/mumprod/hr-design-system-handlebars/pull/790) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.51.4 (Fri Dec 08 2023)
 
 #### 🐛 Bug Fix
