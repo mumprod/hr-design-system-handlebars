@@ -1,3 +1,15 @@
+# v1.51.6 (Tue Dec 12 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2705 Social Links im Footer bekommen falsche Fokus Klassen [#791](https://github.com/mumprod/hr-design-system-handlebars/pull/791) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.51.5 (Mon Dec 11 2023)
 
 #### 🐛 Bug Fix
