@@ -14,5 +14,5 @@ run(
 )
 run(`npx copyfiles \"./src/assets/brand/*/icons/logo/*.svg\" dist --up=1`)
 run(`npx copyfiles \"./src/assets/**/*.{woff,svg}\" dist --up=1`)
-run(`npx copyfiles \"./src/assets/brand/*/conf/locatags.json\" dist --up=1`)
+run(`npx copyfiles \"./src/assets/brand/*/conf/locatags.merged.json\" dist --up=1`)
 run(`npx copyfiles \"./src/assets/images/logos/*.png\" dist --up=1`)
