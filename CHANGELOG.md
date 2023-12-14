@@ -1,3 +1,15 @@
+# v1.51.7 (Thu Dec 14 2023)
+
+#### 🐛 Bug Fix
+
+- DPE-2056 Teaser: Locatags aus Designsystem mit Locatags aus Delivery mergen [#792](https://github.com/mumprod/hr-design-system-handlebars/pull/792) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.51.6 (Tue Dec 12 2023)
 
 #### 🐛 Bug Fix
