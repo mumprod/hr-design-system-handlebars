@@ -1,5 +1,16 @@
-{{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: Additional-info-component</div>
-{{~else~}}
-    {{~> modules/story/paragraphs/additional-info ~}}
-{{~/if~}} 
+<div class="mt-3 text-xs sm480:text-sm sm480:mt-5 text-gray-scorpion dark:text-text-dark font-headingSerif">
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}}
+        {{#each this.text.split}}
+            {{#if this.isText}}
+                <p class="my-2">{{{this.text}}}</p>
+            {{/if}}
+            {{#if this.isUl}}
+                <ul class="my-2 ml-5 list-disc">{{{this.text}}}</ul>
+            {{/if}}
+            {{#if this.isOl}}
+                <ol class="mt-2 ml-4 list-decimal">{{{this.text}}}</ol>
+            {{/if}}
+        {{/each}}
+    {{~#block "subParagraphs"}}{{/block~}}
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_outro_sr" ~}}
+</div>
