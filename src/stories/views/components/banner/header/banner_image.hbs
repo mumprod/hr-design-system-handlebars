@@ -3,9 +3,9 @@
         <a href="{{../bannerLink}}">
     {{/if}}
     {{#unless ../_hideOnMobile }}
-        {{~> components/base/image/responsive_image _type="banner" _variant="default" _addClass="" _noDelay="true" _title=(loca "banner_image_copyright" (strip this.copyrightWithLinks html)) ~}}
+        {{~> components/base/image/responsive_image _type="banner" _variant="default" _addClass="print:hidden" _noDelay="true" _title=(loca "banner_image_copyright" (strip this.copyrightWithLinks html)) ~}}
     {{else}}
-        {{~> components/base/image/responsive_image _type="banner" _variant="mobileHidden" _addClass="hidden lg:block" _noDelay="true" _title=(loca "banner_image_copyright" (strip this.copyrightWithLinks html)) ~}}
+        {{~> components/base/image/responsive_image _type="banner" _variant="mobileHidden" _addClass="hidden lg:block print:lg:hidden" _noDelay="true" _title=(loca "banner_image_copyright" (strip this.copyrightWithLinks html)) ~}}
     {{/unless}}
     {{#if ../bannerLink}}
         </a>
