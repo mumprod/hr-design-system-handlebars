@@ -1,3 +1,15 @@
+# v1.51.10 (Mon Dec 18 2023)
+
+#### 🐛 Bug Fix
+
+- Banner print bug 2 [#795](https://github.com/mumprod/hr-design-system-handlebars/pull/795) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.51.9 (Mon Dec 18 2023)
 
 #### 🐛 Bug Fix
