@@ -6,6 +6,25 @@
     /*! ****************************/
     /*! Aspect Ratio with fallback */
     /*! ****************************/
+    .ar-auto {
+        aspect-ratio: auto;
+    }
+
+    @supports not (aspect-ratio: auto) {
+        .ar-auto::before {
+            float: left;
+            padding-top: 0;
+            content: '';
+        }
+
+        .ar-auto::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+
     .ar-16-9 {
         aspect-ratio: 16 / 9;
     }
@@ -146,6 +165,14 @@
             [main-start] minmax(0, 63.75rem) [main-end]
             minmax(0, 1fr) [full-end];
     }
+    @media print {
+        .grid-page {
+            grid-template-columns:
+                [full-start] minmax(0, 1fr)
+                [main-start] minmax(0, 43.75rem) [main-end]
+                minmax(0, 1fr) [full-end];
+        }
+    }
 
     .grid-content {
         grid-template-areas:
@@ -230,7 +257,7 @@
     }
 
     .toggleSwitch-checkbox:focus+.toggleSwitch-label { 
-        @apply shadow-teaser-focus shadow-focus-state outline-none;
+        @apply outline-none shadow-teaser-focus shadow-focus-state;
     }
     
     .toggleSwitch-label {
