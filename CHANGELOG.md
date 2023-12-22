@@ -1,3 +1,15 @@
+# v1.51.11 (Fri Dec 22 2023)
+
+#### 🐛 Bug Fix
+
+- adapt cite to new layout [#796](https://github.com/mumprod/hr-design-system-handlebars/pull/796) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.51.10 (Mon Dec 18 2023)
 
 #### 🐛 Bug Fix
