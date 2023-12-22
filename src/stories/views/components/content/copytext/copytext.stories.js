@@ -2,6 +2,7 @@ import copytext from './copytext.hbs'
 import copytext_json from './fixtures/copytext.json'
 import copytext_posterteaser_json from './fixtures/copytext_posterteaser.json'
 import copytext_additionalInfo_json from './fixtures/copytext_additionalInfo.json'
+import copytext_cite_json from './fixtures/copytext_cite.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -27,4 +28,10 @@ export const WithAdditionalInfo = {
     render: Template.bind({}),
     name: 'Zusatzinfo',
     args: copytext_additionalInfo_json,
+}
+
+export const WithCite = {
+    render: Template.bind({}),
+    name: 'Zitat',
+    args: copytext_cite_json,
 }

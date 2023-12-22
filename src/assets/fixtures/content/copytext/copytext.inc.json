@@ -62,22 +62,22 @@
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isCite": true,
-                "text":"Dies ist ein Zitat. Es wird über die volle Breite angezeigt.",
+                "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
                 "paragraphProperties": [
                     {
                         "showFullSize":true,
-                        "citeAuthor":"Horst Schlemmer"
+                        "citeAuthor":"Marlene Dietrich"
                     }
                 ]
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isCite": true,
-                "text":"Dies ist ein Zitat. Es wird über die halbe Breite angezeigt.",
+                "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
                 "paragraphProperties": [
                     {
                         "showFullSize":false,
-                        "citeAuthor":"Horst Schlemmer"
+                        "citeAuthor":"Marlene Dietrich"
                     }
                 ]
             },
@@ -88,7 +88,7 @@
                     "split": [
                         {
                             "isText": true,
-                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde."
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
                         }
                     ]   
                 }                  
@@ -441,5 +441,72 @@
             }
 
         ]
-    }     
+    },
+    "copytext_cite": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Medienbericht: Flaschenangriff auf Mitschüler"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isCite": true,
+                "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+                "paragraphProperties": [
+                    {
+                        "showFullSize":true,
+                        "citeAuthor":"Marlene Dietrich"
+                    }
+                ]
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isCite": true,
+                "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+                "paragraphProperties": [
+                    {
+                        "showFullSize":false,
+                        "citeAuthor":"Marlene Dietrich"
+                    }
+                ]
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            }
+        ]
+    }
 }    
