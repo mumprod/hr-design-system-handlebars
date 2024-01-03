@@ -1,9 +1,11 @@
 import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
 import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
+import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
 import A11yDialog from 'a11y-dialog'
+import { deleteCookie } from '../../generic/hrQuery.subfeature'
 
 const DataPolicySettings = function (context) {
     const { options } = context,
@@ -16,6 +18,7 @@ const DataPolicySettings = function (context) {
         bodyElement = document.getElementsByTagName('html')[0],
         datapolicyCookie = new DatapolicyCookie(),
         trackingCookie = new TrackingCookie(),
+        settingsCookie = new SettingsCookie(),
         toggleSwitches = hr$('.js-toggleSwitch-checkbox', container),
         toggleSwitchesExternal = hr$('.js-toggleSwitch-external', container),
         toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', container),
@@ -23,34 +26,39 @@ const DataPolicySettings = function (context) {
         providerTitle = hr$('.js-providerTitle', container)[0],
         trackingCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10
         let isWebview = window.parent.document.documentElement.classList.contains('webview'),
-        cookie = {}
+        appSettingsCookie = {},
+        dataDataPolicyCookie = {},
+        dataTrackingCookie = {}
 
-    console.log('gelaaaadeeeeeeeen')
     ///////////////////
     // OVERLAY START //
     ///////////////////
+    const checkForExistingCookies = function () {
+        if(getJSONCookie('datapolicy') || getJSONCookie('tracking')){
+            console.log("Beide Cookies existieren")
+            deleteCookiesandTransferData()
+        }
+        else{
+            console.log("Alte Cookies nicht zur Verfügung")
+            //initializeAllToggles()
+        }
+    }
     const showSettingsButton = function () {
         let settingsButton = document.getElementById('globalSettingsButton')
         if (isWebview) {
-            console.log('Button Anzeige steuern')
             readAppSettingsButtonCookie()
-            console.log(cookie['hidePrivacySettingsButton'])
-            if (cookie['hidePrivacySettingsButton'] === true) {
+            if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.style.display = 'none'
             } else {
                 settingsButton.style.display = 'inline-flex'
             }
         } else {
             settingsButton.style.display = 'inline-flex'
-            console.log('Button immer anzeigen, weil nicht App')
         }
     }
     const readAppSettingsButtonCookie = function () {
-        cookie = getJSONCookie('appSettings') || {}
-    }
-    const writeAppSettingsButtonCookie = function () {
-        cookie = 'true'
-        setJSONCookie('hsAppSettingsButton', cookie, trackingCookieLifetime)
+        /* Das Cookie 'appSettings' wird in der App-Logik für die Webview erzeugt. Hier nur ausgelesen, um die Option für den Settings-Button abzufragen */
+        appSettingsCookie = getJSONCookie('appSettings') || {}
     }
 
     const onDialogShow = function (event) {
@@ -93,6 +101,28 @@ const DataPolicySettings = function (context) {
     /////////////////////
     // TOGGLES START ////
     /////////////////////
+    const deleteCookiesandTransferData = function () {
+        dataDataPolicyCookie = getJSONCookie('datapolicy') || {}
+        dataTrackingCookie = getJSONCookie('tracking') || {}
+        let objMerge 
+        objMerge = JSON.stringify(dataDataPolicyCookie) + JSON.stringify(dataTrackingCookie);
+        objMerge = objMerge.replace(/\}\{/, ",");
+        objMerge = JSON.parse(objMerge);
+        let objArray = Object.entries(objMerge);
+        objArray.forEach(([key, value]) => {
+            setCookieForSettings(key, value)
+        });
+        //deleteCookie('datapolicy')
+        //deleteCookie('tracking')
+    }
+    
+    const initializeAllToggles = function () {
+        for (let i = 0; i < toggleSwitches.length; ++i) {
+           
+        }
+        changeProviderTitle()
+    }
+
 
     const initializeToggleStateExternal = function () {
         for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
@@ -109,6 +139,7 @@ const DataPolicySettings = function (context) {
                 toggleSwitchesExternal[i].checked = true
                 setCookieForService(toggleSwitchesExternal[i])
             }
+            
         }
 
         toggleAllSwitch.checked = allTogglesChecked()
@@ -188,6 +219,9 @@ const DataPolicySettings = function (context) {
             fireEvent('hr:trackingService-deactivate-' + element.id)
         }
     }
+    const setCookieForSettings = function (key, value) {
+        settingsCookie.setCookieForOptions(key, value)
+    }
     const toggleAll = function () {
         console.log('Toggle All' + toggleAllSwitch.checked)
 
@@ -239,7 +273,9 @@ const DataPolicySettings = function (context) {
         listen("hide", onDialogHide, container)
     }
     // steuert die Darstellung des Buttons für die hs-App ///
+    checkForExistingCookies()
     showSettingsButton()
+    
     //// 1. Toggle States aller Switches setzen ////
     ////    Cookies setzen usw.                 ////
     initializeToggleStateExternal()
@@ -250,6 +286,8 @@ const DataPolicySettings = function (context) {
     initializeEventListeners()
 
     shouldDialogBeOpendOnLoad()
+
+   
 }
 
 export default DataPolicySettings
