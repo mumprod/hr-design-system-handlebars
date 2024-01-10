@@ -37,6 +37,7 @@
     --search-border-color-desktop:  theme('colors.black.DEFAULT');
     --search-border-color-mobile:  theme('colors.black.DEFAULT');
     --color-search-footer-text:  theme('colors.black.DEFAULT');
+    --search-icon-color: theme('colors.black.DEFAULT');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -174,6 +175,7 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-search-footer-text: #000;
+    --search-icon-color: theme('colors.blue.congress');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;

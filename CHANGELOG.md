@@ -1,3 +1,27 @@
+# v1.51.14 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe-2706 Lupe in Suchfeld hat falsche Farbe [#798](https://github.com/mumprod/hr-design-system-handlebars/pull/798) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.51.13 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: make anchor nav visible for screenreaders [#799](https://github.com/mumprod/hr-design-system-handlebars/pull/799) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.51.12 (Wed Jan 10 2024)
 
 #### 🐛 Bug Fix
