@@ -1,3 +1,15 @@
+# v1.51.12 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- :alembic: always use preventDefault on flyout link [#797](https://github.com/mumprod/hr-design-system-handlebars/pull/797) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.51.11 (Fri Dec 22 2023)
 
 #### 🐛 Bug Fix
