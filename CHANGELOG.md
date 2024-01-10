@@ -1,3 +1,16 @@
+# v1.51.15 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- Adding short doc for Quicksearch [#800](https://github.com/mumprod/hr-design-system-handlebars/pull/800) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.51.14 (Wed Jan 10 2024)
 
 #### 🐛 Bug Fix
