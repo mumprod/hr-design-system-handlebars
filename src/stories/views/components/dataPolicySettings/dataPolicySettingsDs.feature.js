@@ -28,21 +28,61 @@ const DataPolicySettings = function (context) {
         let isWebview = window.parent.document.documentElement.classList.contains('webview'),
         appSettingsCookie = {},
         dataDataPolicyCookie = {},
-        dataTrackingCookie = {}
+        dataTrackingCookie = {},
+        dataSettingsCookie = {}
 
     ///////////////////
     // OVERLAY START //
     ///////////////////
+
+    //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
         if(getJSONCookie('datapolicy') || getJSONCookie('tracking')){
             console.log("Beide Cookies existieren")
-            deleteCookiesandTransferData()
+            deleteOldCookiesandTransferData()
         }
         else{
             console.log("Alte Cookies nicht zur Verfügung")
-            //initializeAllToggles()
+            getAllToggleValues()
         }
     }
+
+    const deleteOldCookiesandTransferData = function () {
+        dataDataPolicyCookie = getJSONCookie('datapolicy') || {}
+        dataTrackingCookie = getJSONCookie('tracking') || {}
+        let objMerge 
+        // Beide bestehenden JSONs aus Tracking und Service werden zusammengeführt.
+        objMerge = JSON.stringify(dataTrackingCookie) + JSON.stringify(dataDataPolicyCookie);
+        objMerge = objMerge.replace(/\}\{/, ",");
+        objMerge = JSON.parse(objMerge);
+        let objArray = Object.entries(objMerge);
+        objArray.forEach(([key, value]) => {
+            //hrSettingsCookie wird geschrieben
+            setCookieForSettings(key, value)
+        });
+        //deleteCookie('datapolicy')
+        //deleteCookie('tracking')
+        setAllToggleValuesFromSettings()
+    }
+
+    const setCookieForSettings = function (key, value) {
+        settingsCookie.setCookieForOptions(key, value)
+    }
+
+    const getAllToggleValues = function () {
+
+    }
+
+    const setAllToggleValuesFromSettings = function () {
+        dataSettingsCookie = getJSONCookie('hrSettings') || {}
+        for (let i = 0; i < toggleSwitches.length; ++i) {
+         let settingId = toggleSwitches[i].id
+         let settingState = dataSettingsCookie.settingId
+            document.getElementById(toggleSwitches[i].id).checked = settingState 
+        }
+    }
+
+    //Für die hs-App wird der Button ein und ausgeblendet
     const showSettingsButton = function () {
         let settingsButton = document.getElementById('globalSettingsButton')
         if (isWebview) {
@@ -101,29 +141,7 @@ const DataPolicySettings = function (context) {
     /////////////////////
     // TOGGLES START ////
     /////////////////////
-    const deleteCookiesandTransferData = function () {
-        dataDataPolicyCookie = getJSONCookie('datapolicy') || {}
-        dataTrackingCookie = getJSONCookie('tracking') || {}
-        let objMerge 
-        objMerge = JSON.stringify(dataDataPolicyCookie) + JSON.stringify(dataTrackingCookie);
-        objMerge = objMerge.replace(/\}\{/, ",");
-        objMerge = JSON.parse(objMerge);
-        let objArray = Object.entries(objMerge);
-        objArray.forEach(([key, value]) => {
-            setCookieForSettings(key, value)
-        });
-        //deleteCookie('datapolicy')
-        //deleteCookie('tracking')
-    }
     
-    const initializeAllToggles = function () {
-        for (let i = 0; i < toggleSwitches.length; ++i) {
-           
-        }
-        changeProviderTitle()
-    }
-
-
     const initializeToggleStateExternal = function () {
         for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
             initializeEventListenerForService(i)
@@ -164,6 +182,7 @@ const DataPolicySettings = function (context) {
             }
         }
     }
+    
     const initializeEventListenerForService = function (serviceId) {
         listen(
             'hr:externalService-activate-' + toggleSwitchesExternal[serviceId].id,
@@ -219,10 +238,9 @@ const DataPolicySettings = function (context) {
             fireEvent('hr:trackingService-deactivate-' + element.id)
         }
     }
-    const setCookieForSettings = function (key, value) {
-        settingsCookie.setCookieForOptions(key, value)
-    }
+   
     const toggleAll = function () {
+
         console.log('Toggle All' + toggleAllSwitch.checked)
 
         for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
@@ -231,18 +249,17 @@ const DataPolicySettings = function (context) {
                 setCookieForService(toggleSwitchesExternal[i])
             }
         }
-
         changeProviderTitle()
     }
     const allTogglesChecked = function () {
         let allChecked
 
         for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
+            
             if (toggleSwitchesExternal[i].checked) {
                 allChecked = true
             } else {
                 allChecked = false
-
                 break
             }
         }
@@ -279,7 +296,6 @@ const DataPolicySettings = function (context) {
     //// 1. Toggle States aller Switches setzen ////
     ////    Cookies setzen usw.                 ////
     initializeToggleStateExternal()
-
     initializeToggleStateTracking()
 
     //// 2. Event Listener initialisieren ////
