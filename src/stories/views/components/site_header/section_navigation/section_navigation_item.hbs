@@ -25,10 +25,10 @@
                     {{!-- Gilt z.B. für "SHOWS" bei HR3 --}} 
                     <a href="{{if this.extern this.url (resourceUrl this.url)}}"
                         id="button-{{getRandom}}-1" 
-                        @click="preventDefault(true,$event); toggle(); correctFlyoutPos()"
+                        @click="preventDefault(isDesktopView(),$event); toggle(); correctFlyoutPos()"
                         @resize.window="dropped=false; correctFlyoutPos()" 
                         :class="dropped ? 'lg:underline font-bold lg:font-normal' : 'font-normal'"
-                        class="{{#if this.selected}}-currentSection lg:justify-center !font-bold {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pr-4 flex flex-auto justify-between lg:flex-initial h-10 lg:w-full items-center leading-4" 
+                        class="js-noStateManager {{#if this.selected}}-currentSection lg:justify-center !font-bold {{/if}}link-focus-inset-white js-load pl-4 pr-8 lg:pr-4 flex flex-auto justify-between lg:flex-initial h-10 lg:w-full items-center leading-4" 
                         aria-haspopup="true"  
                         x-effect="$el.setAttribute('aria-expanded', dropped);$el.setAttribute('tabindex',  $store.burgeropen ? '0' : '-1')"
                         aria-owns="flyout-{{getRandom}}" 
