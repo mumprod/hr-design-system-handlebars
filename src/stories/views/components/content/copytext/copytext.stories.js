@@ -24,14 +24,14 @@ export const WithPosterteaser = {
     args: copytext_posterteaser_json,
 }
 
-export const WithAdditionalInfo = {
-    render: Template.bind({}),
-    name: 'Zusatzinfo',
-    args: copytext_additionalInfo_json,
-}
-
 export const WithCite = {
     render: Template.bind({}),
     name: 'Zitat',
     args: copytext_cite_json,
+}
+
+export const WithAdditionalInfo = {
+    render: Template.bind({}),
+    name: 'Zusatzinfo',
+    args: copytext_additionalInfo_json,
 }
