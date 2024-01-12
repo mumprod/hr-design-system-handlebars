@@ -145,7 +145,7 @@
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isHeadline": true,
-                "text": "Speichermedien sowie Waffen und Munition sichergestellt"
+                "text": "Poster-Teaser 1:1, volle Breite"
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
@@ -216,7 +216,20 @@
                         {
                             "isText": true,
                             "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
-                        },
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Poster-Teaser 1:1, halbe Breite"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [                                    
                         {
                             "isText": true,
                             "text": "Nach Informationen der Rhein-Zeitung soll es im Frühjahr 2022 einen Zwischenfall an der Schule gegeben haben. Der heute 18-Jährige soll demnach einen Mitschüler beschimpft und nach einer verbalen Auseinandersetzung mit einer Flasche geschlagen haben."
@@ -259,7 +272,7 @@
                                     "@->contentpath": "teaserImage",
                                     "@->value": {
                                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                        "@->contentpath": "teaser_poster_small",
+                                        "@->contentpath": "teaser_poster_50",
                                         "@->replaceToken": [
                                             {
                                                 "@->token": "image",
@@ -288,7 +301,7 @@
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
                 "isHeadline": true,
-                "text": "Medienbericht: Flaschenangriff auf Mitschüler"
+                "text": "Poster-Teaser 16:9, (immer) volle Breite"
             },
             {
                 "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
@@ -340,7 +353,7 @@
                                     "@->contentpath": "teaserImage",
                                     "@->value": {
                                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                        "@->contentpath": "teaser_poster_wide",
+                                        "@->contentpath": "teaser_poster_16_to_9",
                                         "@->replaceToken": [
                                             {
                                                 "@->token": "image",
