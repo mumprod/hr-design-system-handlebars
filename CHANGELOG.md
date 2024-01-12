@@ -1,3 +1,15 @@
+# v1.52.1 (Fri Jan 12 2024)
+
+#### 🐛 Bug Fix
+
+- adapt Posterteaser in copytext to new design [#802](https://github.com/mumprod/hr-design-system-handlebars/pull/802) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.0 (Fri Jan 12 2024)
 
 #### 🚀 Enhancement
