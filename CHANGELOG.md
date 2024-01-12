@@ -1,3 +1,15 @@
+# v1.52.0 (Fri Jan 12 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Make pi method parameterless [#801](https://github.com/mumprod/hr-design-system-handlebars/pull/801) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.51.15 (Wed Jan 10 2024)
 
 #### 🐛 Bug Fix
