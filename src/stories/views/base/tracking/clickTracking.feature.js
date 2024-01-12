@@ -30,7 +30,7 @@ const ClickTracking = function (context) {
                     download(trackingSetting.clickLabel, trackingSetting.secondLevelId)
                     break
                 case 'pi':
-                    pi(trackingSetting.clickLabel, trackingSetting.secondLevelId)
+                    pi()
                     break
                 case 'uxAction':
                     uxAction(trackingSetting.clickLabel, trackingSetting.secondLevelId)

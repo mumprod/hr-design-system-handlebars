@@ -25,7 +25,7 @@ const uxNavigation = (label, secondLevelId) => {
     }
 }
 
-const pi = (label, secondLevelId) => {
+const pi = () => {
     if (typeof pa != "undefined" && pa != undefined  && isTrackingAllowed()) {
         pa.sendEvent('page.display', pageDisplayConfig)
     }
