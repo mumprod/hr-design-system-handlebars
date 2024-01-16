@@ -1,3 +1,15 @@
+# v1.52.2 (Tue Jan 16 2024)
+
+#### 🐛 Bug Fix
+
+- removes shorttext from podcast episode teaser [#803](https://github.com/mumprod/hr-design-system-handlebars/pull/803) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.1 (Fri Jan 12 2024)
 
 #### 🐛 Bug Fix
