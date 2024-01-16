@@ -1,3 +1,15 @@
+# v1.52.3 (Tue Jan 16 2024)
+
+#### 🐛 Bug Fix
+
+- -change "link-focus-inset-white" to "link-focus-inset" [#804](https://github.com/mumprod/hr-design-system-handlebars/pull/804) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.2 (Tue Jan 16 2024)
 
 #### 🐛 Bug Fix
