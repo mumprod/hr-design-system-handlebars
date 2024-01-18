@@ -1,3 +1,15 @@
+# v1.52.4 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-podcast component [#805](https://github.com/mumprod/hr-design-system-handlebars/pull/805) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.3 (Tue Jan 16 2024)
 
 #### 🐛 Bug Fix
