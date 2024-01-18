@@ -1,3 +1,15 @@
+# v1.52.6 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- changes footer border color [#807](https://github.com/mumprod/hr-design-system-handlebars/pull/807) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.5 (Thu Jan 18 2024)
 
 #### 🐛 Bug Fix
