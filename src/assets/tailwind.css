@@ -504,7 +504,10 @@
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
-
+    /* Sectionnavigation Border Bottom Width*/
+    --border-navigation-border-width: 11px;
+    /* The Fancy special border on youfm */
+    --border-navigation-border-image: linear-gradient(to right, #dda91e 0%, #dda91e 20%, #c32728 20%, #c32728 40%, #bf0171 40%, #bf0171 60%, #003a5c 60%, #003a5c 80%,#000206 80%, #007a9f 100%);
     --color-footer-border: #a2bc09;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
