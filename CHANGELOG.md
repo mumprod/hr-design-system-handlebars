@@ -1,3 +1,15 @@
+# v1.52.5 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2795 farbbalken hr werbung [#806](https://github.com/mumprod/hr-design-system-handlebars/pull/806) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.4 (Thu Jan 18 2024)
 
 #### 🐛 Bug Fix
