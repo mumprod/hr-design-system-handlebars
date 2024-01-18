@@ -521,5 +521,98 @@
                 }                  
             }
         ]
-    }
+    },
+    "copytext_podcast_episode": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Copytext mit Podcast-Episode-Player"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "paragraphBoxItem": {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                    "@->extends": {
+                        "isPodcastEpisode": true,
+                        "showFullSize": {
+                            "isTrue": true
+                        }
+                    },
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "teaserSize",
+                            "@->value": "100"
+                        },
+                        {
+                            "@->contentpath": "realTeaserSize",
+                            "@->value": "100"
+                        } 
+                    ]                    
+                }                 
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "paragraphBoxItem": {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                    "@->extends": {
+                        "isPodcastEpisode": true,
+                        "showFullSize": {
+                            "isTrue": false
+                        }
+                    },
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "teaserSize",
+                            "@->value": "50"
+                        },
+                        {
+                            "@->contentpath": "realTeaserSize",
+                            "@->value": "50"
+                        } 
+                    ]                    
+                }                 
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet. Der Mitschüler erlitt dem Bericht zufolge eine Schienbeinprellung und eine kleine Schnittwunde. Die Eltern hätten daraufhin Anzeige erstattet – eine hr-Anfrage an die zuständige Polizei blieb bislang unbeantwortet."
+                        }
+                    ]   
+                }                  
+            }
+        ]
+    }    
 }    
