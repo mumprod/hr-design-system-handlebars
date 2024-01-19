@@ -1,3 +1,15 @@
+# v1.52.8 (Fri Jan 19 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-faq component [#809](https://github.com/mumprod/hr-design-system-handlebars/pull/809) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.7 (Fri Jan 19 2024)
 
 #### 🐛 Bug Fix
