@@ -1,3 +1,15 @@
+# v1.52.7 (Fri Jan 19 2024)
+
+#### 🐛 Bug Fix
+
+- fixes color in border [#808](https://github.com/mumprod/hr-design-system-handlebars/pull/808) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.6 (Thu Jan 18 2024)
 
 #### 🐛 Bug Fix
