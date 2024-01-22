@@ -1,4 +1,6 @@
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
+import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
+import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
@@ -41,7 +43,10 @@ const DataPolicySettings = function (context) {
                 getAllToggleValuesFromSettings()
             }
             else {
-                //hier gehts rein, wenn ein total neuer User der noch nie die hessenschau aufgemacht hat, die Seite aufruft
+                console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
+                for (let i = 0; i < toggleSwitches.length; ++i) {
+                    setCookieForSettings(toggleSwitches[i].id, 'false')
+                }
             }
         }
     }
