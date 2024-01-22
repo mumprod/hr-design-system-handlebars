@@ -79,6 +79,7 @@ module.exports = {
             },
             fill: {
                 current: 'currentColor',
+                search: 'var(--search-icon-color)',
                 black: '#000000',
             },
             borderWidth: {
