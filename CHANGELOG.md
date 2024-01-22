@@ -1,3 +1,15 @@
+# v1.52.9 (Mon Jan 22 2024)
+
+#### 🐛 Bug Fix
+
+- add decorator for copytext [#810](https://github.com/mumprod/hr-design-system-handlebars/pull/810) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.8 (Fri Jan 19 2024)
 
 #### 🐛 Bug Fix
