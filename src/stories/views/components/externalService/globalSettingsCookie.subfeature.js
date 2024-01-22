@@ -1,7 +1,7 @@
 import { getJSONCookie, setJSONCookie } from 'hrQuery'
 
 const GlobalSettingsCookie = function () {
-    const globalSettingsCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10 /* 10 years */
+    const settingsCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10 /* 10 years */
     let cookie = {}
 
     const setCookieForOptions = function (option, state) {
@@ -9,26 +9,32 @@ const GlobalSettingsCookie = function () {
             state = true
         }
         console.log('Schreibe Settings-Cookie: ' + option + ': ' + state)
-        readGlobalSettingsCookie()
+        readSettingsCookie()
         cookie[option] = state
-        writeGlobalSettingsCookie()
+        writeSettingsCookie()
     }
 
-    const writeGlobalSettingsCookie = function () {
-        setJSONCookie('hrSettings', cookie, globalSettingsCookieLifetime)
+    const isSettingsCookieAccepted = function (externalService) {
+        readSettingsCookie()
+        return cookie[externalService] === true
     }
 
-    const readGlobalSettingsCookie = function () {
+    const writeSettingsCookie = function () {
+        setJSONCookie('hrSettings', cookie, settingsCookieLifetime)
+    }
+
+    const readSettingsCookie = function () {
         cookie = getJSONCookie('hrSettings') || {}
     }
 
-    const isGlobalSettingsCookieExistent = function (option) {
-        readGlobalSettingsCookie()
+    const isSettingsCookieExistent = function (option) {
+        readSettingsCookie()
         return cookie.hasOwnProperty(option)
     }
     return {
         setCookieForOptions: setCookieForOptions,
-        isGlobalSettingsCookieExistent: isGlobalSettingsCookieExistent,
+        isSettingsCookieExistent: isSettingsCookieExistent,
+        isSettingsCookieAccepted: isSettingsCookieAccepted
     }
 }
 

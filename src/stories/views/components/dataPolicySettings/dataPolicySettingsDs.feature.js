@@ -1,5 +1,3 @@
-import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
-import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
@@ -23,27 +21,28 @@ const DataPolicySettings = function (context) {
         toggleSwitchesExternal = hr$('.js-toggleSwitch-external', container),
         toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', container),
         toggleAllSwitch = hr$('.js-toggleSwitch-checkbox-all', container)[0],
-        providerTitle = hr$('.js-providerTitle', container)[0],
-        trackingCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10
+        providerTitle = hr$('.js-providerTitle', container)[0]
+
         let isWebview = window.parent.document.documentElement.classList.contains('webview'),
         appSettingsCookie = {},
         dataDataPolicyCookie = {},
         dataTrackingCookie = {},
         dataSettingsCookie = {}
 
-    ///////////////////
-    // OVERLAY START //
-    ///////////////////
-
     //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
         if(getJSONCookie('datapolicy') || getJSONCookie('tracking')){
-            console.log("Beide Cookies existieren")
+            console.log("hessenschau bisher => Beide Cookies existieren")
             deleteOldCookiesandTransferData()
         }
         else{
-            console.log("Alte Cookies nicht zur Verfügung")
-            getAllToggleValues()
+            console.log("hessenschau neu => nach der Löschung der beiden alten Cookies muß hier gelesen werden")
+            if(getJSONCookie('hrSettings')) {
+                getAllToggleValuesFromSettings()
+            }
+            else {
+                //hier gehts rein, wenn ein total neuer User der noch nie die hessenschau aufgemacht hat, die Seite aufruft
+            }
         }
     }
 
@@ -60,16 +59,26 @@ const DataPolicySettings = function (context) {
             //hrSettingsCookie wird geschrieben
             setCookieForSettings(key, value)
         });
-        //deleteCookie('datapolicy')
-        //deleteCookie('tracking')
         setAllToggleValuesFromSettings()
+        changeProviderTitle()
+        deleteCookie('datapolicy')
+        deleteCookie('tracking')
     }
 
     const setCookieForSettings = function (key, value) {
         settingsCookie.setCookieForOptions(key, value)
+        if (value) {
+            fireEvent('hr:externalService-activate-' + key)
+        } else {
+            fireEvent('hr:externalService-deactivate-' + key)
+        }
     }
 
-    const getAllToggleValues = function () {
+    const getAllToggleValuesFromSettings = function () {
+        setAllToggleValuesFromSettings()
+        changeProviderTitle()
+        //initial alles deaktivieren
+        //hr-settings schreiben
 
     }
 
@@ -79,7 +88,92 @@ const DataPolicySettings = function (context) {
          let settingId = toggleSwitches[i].id
          let settingState = dataSettingsCookie.settingId
             document.getElementById(toggleSwitches[i].id).checked = settingState 
+            setAllToggleEventListeners(toggleSwitches[i])
+            initializeAllToggleEventListeners(i)
+
+            if (isCookieSetForSettings(toggleSwitches[i].id)) {
+                toggleSwitches[i].checked = true
+            } else if (
+                !isCookieExistForSettings(toggleSwitches[i].id) &&
+                toggleSwitches[i].getAttribute('initial') == 'checked'
+            ) {
+                toggleSwitches[i].checked = true
+                setCookieForSettings(toggleSwitches[i].id,toggleSwitches[i].checked)
+            }
         }
+        toggleAllSwitch.checked = allTogglesExternalServiceChecked()
+    }
+
+    const isCookieSetForSettings = function (externalService) {
+        return settingsCookie.isSettingsCookieAccepted(externalService)
+    }
+
+    const isCookieExistForSettings = function (externalService) {
+        return settingsCookie.isSettingsCookieExistent(externalService)
+    }
+
+    const initializeAllToggleEventListeners = function (serviceId) {
+        listen(
+            'hr:externalService-activate-' + toggleSwitches[serviceId].id,
+            function () {
+                toggleSwitches[serviceId].checked = true
+            },
+            document
+        )
+    }
+
+    const setAllToggleEventListeners = function (element) {
+        listen(
+            'change',
+            function () {
+                setCookieForSettings(element.id, element.checked)
+                toggleAllSwitch.checked = allTogglesExternalServiceChecked()
+                changeProviderTitle()
+            },
+            element
+        )
+    }
+
+    const toggleAll = function () {
+        for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
+            if (toggleSwitchesExternal[i].checked != toggleAllSwitch.checked) {
+                toggleSwitchesExternal[i].checked = toggleAllSwitch.checked
+                setCookieForSettings(toggleSwitchesExternal[i].id, toggleSwitchesExternal[i].checked)
+            }
+        }
+        changeProviderTitle()
+    }
+
+    const allTogglesExternalServiceChecked = function () {
+        let allChecked
+        for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
+            if (toggleSwitchesExternal[i].checked) {
+                allChecked = true
+            } else {
+                allChecked = false
+                break
+            }
+        }
+        return allChecked
+    }
+
+    const changeProviderTitle = function () {
+        if (toggleAllSwitch.checked == true) {
+            providerTitle.textContent = 'Alle Anbieter deaktivieren'
+        } else {
+            providerTitle.textContent = 'Alle Anbieter aktivieren'
+        }
+    }
+
+    const initializeEventListeners = function () {
+        listen('change', toggleAll, toggleAllSwitch)
+        listen("show", onDialogShow, container)
+        listen("hide", onDialogHide, container)
+    }
+
+    const readAppSettingsButtonCookie = function () {
+        /* Das Cookie 'appSettings' wird in der App-Logik für die Webview erzeugt. Hier nur ausgelesen, um die Option für den Settings-Button abzufragen */
+        appSettingsCookie = getJSONCookie('appSettings') || {}
     }
 
     //Für die hs-App wird der Button ein und ausgeblendet
@@ -95,10 +189,6 @@ const DataPolicySettings = function (context) {
         } else {
             settingsButton.style.display = 'inline-flex'
         }
-    }
-    const readAppSettingsButtonCookie = function () {
-        /* Das Cookie 'appSettings' wird in der App-Logik für die Webview erzeugt. Hier nur ausgelesen, um die Option für den Settings-Button abzufragen */
-        appSettingsCookie = getJSONCookie('appSettings') || {}
     }
 
     const onDialogShow = function (event) {
@@ -134,175 +224,13 @@ const DataPolicySettings = function (context) {
         )
         return vars
     }
-    ///////////////////
-    // OVERLAY END ////
-    ///////////////////
-
-    /////////////////////
-    // TOGGLES START ////
-    /////////////////////
-    
-    const initializeToggleStateExternal = function () {
-        for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
-            initializeEventListenerForService(i)
-
-            setListenerForService(toggleSwitchesExternal[i])
-
-            if (isCookieSetForService(toggleSwitchesExternal[i].id)) {
-                toggleSwitchesExternal[i].checked = true
-            } else if (
-                !isCookieExistForService(toggleSwitchesExternal[i].id) &&
-                toggleSwitchesExternal[i].getAttribute('initial') == 'checked'
-            ) {
-                toggleSwitchesExternal[i].checked = true
-                setCookieForService(toggleSwitchesExternal[i])
-            }
-            
-        }
-
-        toggleAllSwitch.checked = allTogglesChecked()
-        changeProviderTitle()
-    }
-    const initializeToggleStateTracking = function () {
-        for (let i = 0; i < toggleSwitchesTracking.length; ++i) {
-            initializeEventListenerForTracking(i)
-
-            setListenerForTracking(toggleSwitchesTracking[i])
-
-            if (isCookieSetForTracking(toggleSwitchesTracking[i].id)) {
-                toggleSwitchesTracking[i].checked = true
-            }
-
-            if (
-                !isCookieExistForTracking(toggleSwitchesTracking[i].id) &&
-                toggleSwitchesTracking[i].getAttribute('initial') == 'checked'
-            ) {
-                toggleSwitchesTracking[i].checked = true
-                setCookieForTracking(toggleSwitchesTracking[i])
-            }
-        }
-    }
-    
-    const initializeEventListenerForService = function (serviceId) {
-        listen(
-            'hr:externalService-activate-' + toggleSwitchesExternal[serviceId].id,
-            function () {
-                toggleSwitchesExternal[serviceId].checked = true
-            },
-            document
-        )
-    }
-    const initializeEventListenerForTracking = function (serviceId) {
-        listen(
-            'hr:trackingService-activate-' + toggleSwitchesTracking[serviceId].id,
-            function () {
-                toggleSwitchesTracking[serviceId].checked = true
-            },
-            document
-        )
-    }
-    const setListenerForService = function (element) {
-        listen(
-            'change',
-            function () {
-                setCookieForService(element)
-                toggleAllSwitch.checked = allTogglesChecked()
-                changeProviderTitle()
-            },
-            element
-        )
-    }
-    const setListenerForTracking = function (element) {
-        listen(
-            'change',
-            function () {
-                setCookieForTracking(element)
-            },
-            element
-        )
-    }
-    const setCookieForService = function (element) {
-        datapolicyCookie.setCookieForExternalService(element.id, element.checked)
-        if (element.checked) {
-            fireEvent('hr:externalService-activate-' + element.id)
-        } else {
-            console.log('fireEvent: hr:externalService-deactivate-' + element.id)
-            fireEvent('hr:externalService-deactivate-' + element.id)
-        }
-    }
-    const setCookieForTracking = function (element) {
-        trackingCookie.setCookieForTracking(element.id, element.checked)
-        if (element.checked) {
-            fireEvent('hr:trackingService-activate-' + element.id)
-        } else {
-            fireEvent('hr:trackingService-deactivate-' + element.id)
-        }
-    }
    
-    const toggleAll = function () {
-
-        console.log('Toggle All' + toggleAllSwitch.checked)
-
-        for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
-            if (toggleSwitchesExternal[i].checked != toggleAllSwitch.checked) {
-                toggleSwitchesExternal[i].checked = toggleAllSwitch.checked
-                setCookieForService(toggleSwitchesExternal[i])
-            }
-        }
-        changeProviderTitle()
-    }
-    const allTogglesChecked = function () {
-        let allChecked
-
-        for (let i = 0; i < toggleSwitchesExternal.length; ++i) {
-            
-            if (toggleSwitchesExternal[i].checked) {
-                allChecked = true
-            } else {
-                allChecked = false
-                break
-            }
-        }
-        return allChecked
-    }
-    const changeProviderTitle = function () {
-        if (toggleAllSwitch.checked == true) {
-            providerTitle.textContent = 'Alle Anbieter deaktivieren'
-        } else {
-            providerTitle.textContent = 'Alle Anbieter aktivieren'
-        }
-    }
-    const isCookieSetForService = function (externalService) {
-        return datapolicyCookie.isDatapolicyAccepted(externalService)
-    }
-    const isCookieSetForTracking = function (trackingService) {
-        return trackingCookie.isTrackingAccepted(trackingService)
-    }
-    const isCookieExistForService = function (externalService) {
-        return datapolicyCookie.isDatapolicyExistent(externalService)
-    }
-    const isCookieExistForTracking = function (trackingService) {
-        return trackingCookie.isTrackingCookieExistent(trackingService)
-    }
-    const initializeEventListeners = function () {
-        listen('change', toggleAll, toggleAllSwitch)
-        listen("show", onDialogShow, container)
-        listen("hide", onDialogHide, container)
-    }
     // steuert die Darstellung des Buttons für die hs-App ///
-    checkForExistingCookies()
     showSettingsButton()
-    
-    //// 1. Toggle States aller Switches setzen ////
-    ////    Cookies setzen usw.                 ////
-    initializeToggleStateExternal()
-    initializeToggleStateTracking()
-
-    //// 2. Event Listener initialisieren ////
+    // Überprüfen ob die alten Cookies vorhanden sind
+    checkForExistingCookies()
     initializeEventListeners()
-
     shouldDialogBeOpendOnLoad()
-
    
 }
 
