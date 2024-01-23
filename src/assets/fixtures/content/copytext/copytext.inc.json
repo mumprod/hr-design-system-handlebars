@@ -614,6 +614,86 @@
                 }                  
             }
         ]
+    }, 
+    "copytext_faq": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Copytext mit FAQs"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Viele Corona-Maßnahmen in Hessen sind nach und nach weggefallen. Was ist nun erlaubt und was noch nicht? Ein Überblick."
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isFAQ": true,
+                "text": "Wo brauche ich noch Corona-Test?",
+                "paragraphProperties": [
+                    {
+                        "faqAnswer": {
+                            "split": [
+                                {
+                                    "isText": true,
+                                    "text": "Es besteht keine Testpflicht mehr. Auch in Krankenhäusern, Alten- und Pflegeheimen sowie Sammelunterkünften muss sich seit dem 1. März niemand mehr testen lassen."
+                                },
+                                {
+                                    "isUl": true,
+                                    "text": "<li>Es besteht keine Testpflicht mehr</li><li>Auch in Krankenhäusern, Alten- und Pflegeheimen</li>"
+                                },
+                                {
+                                    "isOl": true,
+                                    "text": "<li>Es besteht keine Testpflicht mehr</li><li>Auch in Krankenhäusern, Alten- und Pflegeheimen</li>"
+                                }
+                            ]           
+                        }
+                    }
+                ]
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isFAQ": true,
+                "text": "Gibt es noch Bürgertests?",
+                "paragraphProperties": [
+                    {
+                        "faqAnswer": {
+                            "split": [
+                                {
+                                    "isText": true,
+                                    "text": "Seit dem 1. März 2023 besteht keine Möglichkeit mehr zur kostenlosen Bürgertestung. Alle Testangebote sind kostenpflichtig."
+                                }
+                            ]           
+                        }
+                    }
+                ]   
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isFAQ": true,
+                "text": "Wo muss ich Maske tragen?",
+                "paragraphProperties": [
+                    {
+                        "faqAnswer": {
+                            "split": [
+                                {
+                                    "isText": true,
+                                    "text": "Ab dem 8. April 2023 ist die Maskenpflicht in Hessen in allen Bereichen aufgehoben."
+                                }
+                            ]           
+                        }
+                    }
+                ]
+            }
+        ]
     },
     "copytext_image": {
         "copytextParagraph": [
@@ -694,5 +774,5 @@
             }
            
         ]
-    }   
+    }      
 }    
