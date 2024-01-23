@@ -716,48 +716,50 @@
             },
             {
                 "paragraphBoxItem": {
-                "isImage": true,
-                "showFullSize": {
-                    "isTrue": true
-                },
-                "showPortrait": {
-                    "isTrue": false
-                },
-                "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
-                "copyrightWithLinks": "Karsten Hufer",
-                "Image": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_standard",
+                    "@->contentpath": "copytext_image_100",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
                             "@->value": "buchmesse-fahnen-102"
                         }
                     ]
-                    }
                 }
             },
             {
                 "paragraphBoxItem": {
-                "isImage": true,
-                "showFullSize": {
-                    "isTrue": false
-                },
-                "showPortrait": {
-                    "isTrue": false
-                },
-                "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
-                "copyrightWithLinks": "Karsten Hufer",
-                "Image": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_standard",
+                    "@->contentpath": "copytext_image_50",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
                             "@->value": "buchmesse-fahnen-102"
                         }
                     ]
-                    }
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        }
+                    ]   
                 }
             },
             {
