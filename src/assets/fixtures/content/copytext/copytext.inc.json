@@ -694,5 +694,56 @@
                 ]
             }
         ]
-    }       
+    }, 
+    "copytext_jobposting": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Copytext mit Jobposting"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Digitale Produkte, Fernsehen, Radio– wir sind Hessens größtes Medienunternehmen. Als Mitglied der ARD sind wir stolz darauf, mit unseren vielfältigen und qualitativ hochwertigen Programmangeboten wesentlich zur Meinungs- und Medienvielfalt in Deutschland beizutragen. Zur Verstärkung unseres Teams suchen wir befristet für zunächst 3 Jahre eine*n innovative*n"
+                        }
+                    ]   
+                }                  
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Java-Entwickler*in"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isJobposting": true,
+                "text": "Wo brauche ich noch Corona-Test?",
+                "paragraphProperties": [
+                    {
+                        "jobDescription": {
+                            "split": [
+                                {
+                                    "isText": true,
+                                    "text": "Du hast Spaß an neuen Technologien und bist ein*e Experte*in in der Java-Entwicklung? Du suchst spannende und vielfältige Projekte in einem dynamischen Medienumfeld? Dann vernetze gemeinsam mit uns die Mediensysteme der ARD."
+                                },
+                                {
+                                    "isUl": true,
+                                    "text": "<li>Du hast Spaß daran selbstorganisiert in einem agilen Umfeld und interdisziplinären Projektteams zu arbeiten.</li><li>Du bringst ein abgeschlossenes informatikorientiertes Studium bzw. eine vergleichbare Qualifikation mit und verfügst über Berufserfahrung im Bereich Softwareentwicklung.</li><li>Sehr gute Java-Kenntnisse, Kenntnisse in modernen Schnittstellentechnologien und Datenbanksystemen setzen wir voraus.</li>"
+                                },
+                                {
+                                    "isOl": true,
+                                    "text": "<li>Du implementierst als Full-Stack-Entwickler*in Features vertikal durch alle Softwareschichten.</li><li>Im Team entwickelst du die Applikation in enger Zusammenarbeit mit Anwender*innen fachlich weiter.</li>"
+                                }
+                            ]           
+                        }
+                    }
+                ]
+            }
+        ]
+    }             
 }    
