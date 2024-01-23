@@ -1,4 +1,4 @@
-<figcaption class="mx-4 sm480:mx-0 flex items-start mt-3 sm480:mt-4 text-xs sm480:text-sm font-copy{{#if _profileCopyright}} -profileCopyright{{/if}}"
+<figcaption class="flex items-start mx-4 mt-3 text-xs sm480:mx-0 sm480:mt-4 sm480:text-sm font-copy"
             x-data="{ 
                 open: false,
                 truncated: true,
@@ -15,12 +15,12 @@
     {{#if this.showFullSize.isTrue}} :class="!open ? 'line-clamp-2 md:line-clamp-none' : 'line-clamp-none'" {{else}} :class="!open ? 'line-clamp-2' : 'line-clamp-none'" {{/if}}>
         {{#if this.caption}}
             {{~#unless _hideCaption~}}
-                <span class="figcaption{{#if _smallCaption}} -smallCaption{{/if}}{{#if _figcaptionAddClass}} {{_figcaptionAddClass}}{{/if}}">
+                <span>
                     {{this.caption}} 
                 </span>
             {{~/unless~}}
         {{/if}}
-        <span class="text-gray-scorpion dark:text-text-dark figcaption__copyright{{#if _smallCaption}} -smallCaption{{/if}}{{#unless caption}} figcaption__copyright--noCaption{{/unless}}">
+        <span class="text-gray-scorpion dark:text-text-dark">
             {{~loca "figures_copyright"}} {{{copyrightWithLinks}}} 
         </span>
     </div>

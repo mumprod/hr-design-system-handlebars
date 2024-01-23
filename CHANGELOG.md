@@ -1,3 +1,15 @@
+# v1.52.10 (Tue Jan 23 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-jobposting-component [#812](https://github.com/mumprod/hr-design-system-handlebars/pull/812) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.9 (Mon Jan 22 2024)
 
 #### 🐛 Bug Fix
