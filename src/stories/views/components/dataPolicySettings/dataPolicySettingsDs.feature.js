@@ -44,9 +44,17 @@ const DataPolicySettings = function (context) {
             }
             else {
                 console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
+                let whitelist = ["agf","ati","ard_mediathek","arte_concert","arte_concert_new","datawrapper_cdn"]
                 for (let i = 0; i < toggleSwitches.length; ++i) {
-                    setCookieForSettings(toggleSwitches[i].id, 'false')
+                    if(toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new" || toggleSwitches[i].id == "datawrapper_cdn"){
+                        setCookieForSettings(toggleSwitches[i].id, true)
+                    }
+                    else {
+                        setCookieForSettings(toggleSwitches[i].id, false)
+                    }
                 }
+                setAllToggleValuesFromSettings()
+                changeProviderTitle()
             }
         }
     }
@@ -89,10 +97,13 @@ const DataPolicySettings = function (context) {
 
     const setAllToggleValuesFromSettings = function () {
         dataSettingsCookie = getJSONCookie('hrSettings') || {}
+        let settingId
+        let settingState
         for (let i = 0; i < toggleSwitches.length; ++i) {
-         let settingId = toggleSwitches[i].id
-         let settingState = dataSettingsCookie.settingId
+          settingId = toggleSwitches[i].id
+          settingState = dataSettingsCookie.settingId
             document.getElementById(toggleSwitches[i].id).checked = settingState 
+              
             setAllToggleEventListeners(toggleSwitches[i])
             initializeAllToggleEventListeners(i)
 
