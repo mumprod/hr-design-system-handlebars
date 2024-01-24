@@ -1,6 +1,9 @@
 import '!style-loader!css-loader!postcss-loader!tailwind'
 import 'tailwind'
 import { withThemeByDataAttribute } from '@storybook/addon-styling'
+import '@storybook/addon-console'
+import { setConsoleOptions } from '@storybook/addon-console';
+import { configureActions } from '@storybook/addon-actions';
 
 import hrDesignsystemDark from './HRDesignsystemDark'
 import hrDesignsystemLight from './HRDesignsystemLight'
@@ -10,6 +13,38 @@ import Initializer from '../build/webpack/feature-loader/initializer/initializer
 import loadFeature from '../build/webpack/feature-loader/initializer/loader'
 import '../src/assets/js/alpine.js'
 import '../src/assets/tailwind.css'
+
+import { CheckCSS } from 'checkcss';
+
+configureActions({
+    clearOnStoryChange: true, 
+  });
+  
+// Create CheckCSS instance
+const checkcss = new CheckCSS();
+
+checkcss.onClassnameDetected = function (classname, element) {
+    // Return `false` to disable checks for `classname`.
+    // For example, to ignore classnames starting with
+    // "license-" or "maintainer-"...
+    var storybookRoot = document.getElementById('storybook-root');
+    var prefixes = /^js-|^cy-|^sb-/.test(classname) ? false : true
+    return storybookRoot.contains(element) && prefixes
+}
+checkcss.onUndefinedClassname = function (classname) {
+    console.log(
+        `checkcss: No CSS rule for .${classname}`,
+      );
+  };
+
+checkcss.scan().watch();
+
+const panelInclude = setConsoleOptions({}).panelInclude;
+
+setConsoleOptions({
+    panelInclude: [...panelInclude, /checkcss/],
+}); 
+
 
 function loadDelayedImages() {
     setTimeout(function () {
@@ -173,11 +208,12 @@ export const parameters = {
                 [
                     'Entwicklung',
                     [
-                        'Installation und Update von Dependencies im Entwicklungs Projekt',
-                        'Installation der Design-System Komponenten im Delivery Projekt',
+                        'Installation und Update von Dependencies',
+                        'Design System im Delivery Projekt installieren',
+                        'Konventionen und Datenstrukturen',
+                        'Testdatenbereitstellung',
+                        'Konsolenausgaben'
                     ],
-                    'Konventionen und Datenstrukturen',
-                    'Testdatenbereitstellung',
                     '*',
                 ],
                 'Komponenten',
