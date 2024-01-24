@@ -1,3 +1,16 @@
+# v1.52.11 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2698: add copytext-image component [#813](https://github.com/mumprod/hr-design-system-handlebars/pull/813) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.52.10 (Tue Jan 23 2024)
 
 #### 🐛 Bug Fix
