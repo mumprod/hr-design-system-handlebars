@@ -233,7 +233,7 @@
             ]
         }
     },
-    "teaser_poster_small": {
+    "teaser_poster_16_to_9": {
         "copyrightWithLinks": "",
         "responsiveImage": {
             "asPicture": true,
@@ -241,12 +241,12 @@
             "fallback": "images/{#image}_v-16to9__medium.jpg",
             "sources": [
                 {
-                    "media": "all and (min-width: 480px)",
-                    "sizes": "(min-width: 700px) 660px, 100vw",
+                    "media": "all and (min-width: 640px)",
+                    "sizes": "100vw",
                     "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9.jpg 992w, images/{#image}_v-16to9__retina.jpg 1920w"
                 },
                 {
-                    "media": "all and (max-width: 479px)",
+                    "media": "all and (max-width: 639px)",
                     "sizes": "100vw",
                     "srcset": "images/{#image}_v-1to1__small.jpg 320w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1__medium__extended.jpg 640w, images/{#image}_v-1to1.jpg 960w, images/{#image}_v-1to1__retina.jpg 1920w"
                 }
@@ -405,6 +405,50 @@
                 {
                     "media": "all and (min-width: 48em)",
                     "srcset": "images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    },
+    "copytext_image_100": {
+        "isImage": true,
+        "showFullSize": {
+            "isTrue": true
+        },
+        "showPortrait": {
+            "isTrue": false
+        },
+        "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
+        "copyrightWithLinks": "Karsten Hufer",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "copytext_image_50": {
+        "isImage": true,
+        "showFullSize": {
+            "isTrue": false
+        },
+        "showPortrait": {
+            "isTrue": false
+        },
+        "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
+        "copyrightWithLinks": "Karsten Hufer",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
                 }
             ]
         }

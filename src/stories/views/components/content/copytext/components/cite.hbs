@@ -1,13 +1,15 @@
-<div class="{{#if this.paragraphProperties.[0].showFullSize }}clear-both mt-7{{else}}mr-0 md:mr-5 mb-0 md:mb-7 mt-7 w-full md:w-1/2 md:float-left{{/if}}">
+<div class="{{#if this.paragraphProperties.[0].showFullSize }}mt-7{{else}}mr-0 sm:mr-5 mb-0 sm:mb-7 mt-7 w-full sm:w-1/2 sm:float-left{{/if}}">
+    {{> components/base/image/icon _icon="quotation"  _addClass="sm:ml-4 mr-2 mt-px float-left text-gray-scorpion w-6 h-6 sm480:w-8 sm480:h-8 fill-current dark:fill-link-dark"}}
     <span class="sr-only">{{loca "story_cite_intro_sr" }}</span>
-    <blockquote class="">
-        <cite class="block text-base italic font-bold font-headingSerif md:ml-6 sm480:text-lg dark:text-text-dark">„{{{this.text}}}“</cite>
+    <blockquote>
+        <cite class="block mx-8 text-base not-italic sm480:mx-10 font-headingSerif sm:mx-14 sm480:text-xl dark:text-text-dark">{{{this.text}}}</cite>
         {{#with this.paragraphProperties}}
             {{#with this.[0]}}
                 {{#with this.citeAuthor}}
-                    <span class="block md:ml-6 italic mt-2.5 font-headingSerif text-sm text-gray-scorpion">
+                    <span class="block mx-8 mt-3 text-xs sm480:mx-10 sm480:text-sm sm:mx-14 font-headingSerif text-gray-scorpion dark:text-text-dark">
                         <span class="sr-only">{{loca "story_cite_author_sr" }}</span>
-                        {{this}}</span>
+                        {{this}}
+                    </span>
                 {{/with}}
             {{/with}}
         {{/with}}

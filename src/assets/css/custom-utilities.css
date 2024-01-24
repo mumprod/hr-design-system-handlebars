@@ -230,7 +230,7 @@
     }
 
     .link-focus-inset {
-        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-gray-scorpion/50;
+        @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-gray-lightGray/80;
     }
     .link-focus {
         @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-scorpion/50;

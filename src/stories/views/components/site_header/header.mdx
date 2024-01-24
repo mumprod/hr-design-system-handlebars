@@ -361,6 +361,40 @@ Innerhalb der Service-List können mittels der Funktion **"shouldServiceIconsBeH
 
 <br />
 
+<b>Quicksearch</b>
+
+Der sog. Suchschlitz ermöglicht die Eingabe von Suchbegriffen, um gezielt Inhalte auf der Hessenschau-Seite (und auch bei den Seiten der Programmbegleitung) zu finden. 
+Nach der Eingabe eines Suchbegriffs erscheint (s. Abb.) eine Liste unterhalb mit Vorschlägen zum Suchbegriff.
+
+<br />
+
+<img src="/images/quicksearch.png" />
+
+<br />
+
+Nach der Bestätigung der Eingabe über Klick auf das Lupen-Icon erscheint die Suchseite. Sie enthält folgenden Angaben:
+
+<ul>
+<li>Anzahl aller gefundenen Einträge zum gewählten Suchbegriff (und die jeweilige Webseite)</li>
+<li>Erweitertes Suchformular, mit eingrenzender Filterung nach Webseite</li>
+<li>Darstellung der Inhalte als Liste, wobei Einzelinhalte als Alternativ-Teaser dargestellt werden. Die Liste ist nach Datum und Relevanz sortierbar</li>
+<li>Paginierung am Ende der Seite, bei einer hohen Anzahl von Suchergebnissen</li>
+</ul>
+
+<img src="/images/quicksearch_results.png" />
+
+<br />
+<br />
+
+Die Quicksearch besteht aus Suchschlitz - einem Eingabefeld - und einem Button mit Lupen-Icon - ein Absenden-Button - und ist damit ein minimales Suchformular. Die beiden Bestandteile sind wiederverwendbar und werden über
+```html
+{{> components/site_header/navigation_search/quick_search_button }}
+{{> components/site_header/navigation_search/quick_search_form }}
+```
+in das Markup eingebunden. Beide gemeinsam bilden die Komponente **(navigation_search.hbs)**
+
+<br />
+
 Service-Navigation Flyout Desktop:
 
 <br />
