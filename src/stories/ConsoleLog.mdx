@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+
+<Meta title="Grundlegendes/Entwicklung/Konsolenausgaben" />
+
+# Konsolenausgaben im Action Tab
+-   [Allgemein](#allgemein)
+-   [Festlegen welche Logs angezeigt werden sollen](#festlegen-welche-logs-angezeigt-werden-sollen)
+
+
+## Allgemein
+
+Es ist möglich console.log() ausgaben im "Action Tab" einer Story anzuzeigen. Dafür wird das Plugin "@storybook/addon-console" verwendet. Auf grund eines Bugs benötigt addon-console die Storybook Plugins @storybook/addon-actions und @storybook/addon-essentials jeweils in der version 7.5.3
+Aus diesem Grund dürfen diese nicht Upgedatet werden bis der Bug in addon-console behoben wurde. 
+
+Zur Zeit aktualisiert der Tab sich leider nicht automatisch beim wechsel in eine andere Story weshalb um die Korrekten Logs angezeigt zu bekommen ein reload(F5) der Seite durchgefürt werden muss.
+
+## Festlegen welche Logs angezeigt werden sollen
+
+standardmäßig würden alle console.log() im Action Tab angezeigt. Um nur für uns relevante Meldungen anzuzeigen werden über einen Filter nicht "relevante" logs ausgefiltert.
+
+Dies kann in der function setConsoleOptions() in der preview.js über eine REGEX konfiguriert werden.
+```javascript
+
+setConsoleOptions({
+    panelInclude: [...panelInclude, /checkcss/],
+});
+
+```
+Die REGEX sorgt dafür das ausschließlich LOGs angezeigt werden, in denen der String "checkcss" vorkommt. Bei zukünftigen Ausgaben ist es somit notwendig diese mit einem vorangestellten Prefix zu kennzeichnen. z.b. "testausgabe:" . Die angepasste REGEX um die testausgaben auch anzuzeigen würde dann so aussehen:
+
+```javascript
+
+setConsoleOptions({
+    panelInclude: [...panelInclude, /checkcss|testausgabe/],
+});
+
+```
+

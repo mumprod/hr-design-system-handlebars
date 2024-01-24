@@ -1,3 +1,15 @@
+# v1.52.12 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- Add console to storybook [#811](https://github.com/mumprod/hr-design-system-handlebars/pull/811) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.52.11 (Wed Jan 24 2024)
 
 #### 🐛 Bug Fix
