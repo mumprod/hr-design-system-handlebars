@@ -1,4 +1,40 @@
 {
-    "@->jsoninclude": "content/copytext/copytext.inc.json",
-    "@->contentpath": "copytext_additionalInfo"
+    "copytextParagraph": [
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Copytext mit Zusatzinfo"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isAdditionalInfo": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Sendung: hr-fernsehen, hessenschau, 13.12.2022, 19.30 Uhr"
+                    },
+                    {
+                        "isOl": true,
+                        "text": "<li>eins</li><li>zwei</li><li>drei</li>"
+                    },
+                    {
+                        "isUl": true,
+                        "text": "<li>eins</li><li>zwei</li><li>drei</li>"
+                    },
+                    {
+                        "isText": true,
+                        "text": "Quelle: hessenschau.de/Jörn Perske"
+                    }
+                ]   
+            }     
+        }
+
+    ]
 }
