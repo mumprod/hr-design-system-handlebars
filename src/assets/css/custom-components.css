@@ -295,3 +295,8 @@
 article.indexText ul {
     @apply pl-4 list-disc;
 }
+
+/* -------------------------COPYTEXT ------------------------------- */
+a.link {
+    @apply underline decoration-1 text-link dark:text-link-dark;
+}

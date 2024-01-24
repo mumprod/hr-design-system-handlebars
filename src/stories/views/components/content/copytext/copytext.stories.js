@@ -35,6 +35,12 @@ export const WithFAQ = {
     args: copytext_faq_json,
 }
 
+export const WithImage = {
+    render: Template.bind({}),
+    name: 'Image',
+    args: copytext_image_json,
+}
+
 export const WithJobposting = {
     render: Template.bind({}),
     name: 'Jobposting',
@@ -63,10 +69,4 @@ export const WithAdditionalInfo = {
     render: Template.bind({}),
     name: 'Zusatzinfo',
     args: copytext_additionalInfo_json,
-}
-
-export const WithImage = {
-    render: Template.bind({}),
-    name: 'Image',
-    args: copytext_image_json,
 }
