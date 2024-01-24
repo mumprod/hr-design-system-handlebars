@@ -745,5 +745,87 @@
                 ]
             }
         ]
-    }             
+    },
+    "copytext_image": {
+        "copytextParagraph": [
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isHeadline": true,
+                "text": "Speichermedien sowie Waffen und Munition sichergestellt"
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "In der rund 1.200 Einwohner großen Gemeinde Waldbrunn, rund 13 Kilometer vom rheinland-pfälzischen Westerburg entfernt, engagiert sich der 18-Jährige nach hr-Informationen bei der Freiwilligen Feuerwehr. Der Ortsvorsteher aus Waldbrunn beschrieb den Terrorverdächtigen als zurückhaltend, höflich und hilfsbereit."
+                        }
+                    ]   
+                }
+            },
+            {
+                "paragraphBoxItem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            },
+            {
+                "paragraphBoxItem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        }
+                    ]   
+                }
+            },
+            {
+                "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+                "isParagraph": true,
+                "text": {
+                    "split": [
+                        {
+                            "isText": true,
+                            "text": "Nach der Festnahme in der vergangenen Woche hätten bereits Gespräche mit Mitschülerinnen und Mitschülern des 18 Jahre alten Oberstufenschülers stattgefunden. Auch die Eltern seien in Kenntnis gesetzt worden, sagte der Schulleiter."
+                        }
+                    ]   
+                }
+            }
+           
+        ]
+    }            
 }    
