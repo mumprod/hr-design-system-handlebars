@@ -1,3 +1,15 @@
+# v1.52.13 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- refactoring of copytext-json [#815](https://github.com/mumprod/hr-design-system-handlebars/pull/815) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.12 (Wed Jan 24 2024)
 
 #### 🐛 Bug Fix
