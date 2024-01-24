@@ -1,4 +1,66 @@
 {
-    "@->jsoninclude": "content/copytext/copytext.inc.json",
-    "@->contentpath": "copytext_podcast_episode"
+    "copytextParagraph": [
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Copytext mit Podcastepisode"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": true
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    } 
+                ]                    
+            }                 
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": false
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    } 
+                ]                    
+            }                 
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
 }
