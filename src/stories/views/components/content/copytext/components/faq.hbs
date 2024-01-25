@@ -1,5 +1,16 @@
-{{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: FAQ-component</div>
-{{~else~}}
-    {{~> modules/story/paragraphs/faq ~}}
-{{~/if~}}
+<h2 class="clear-both text-lg sm480:text-2xl font-headingSerif mt-11 dark:text-text-dark">{{{this.text}}}</h2>
+{{#with this.paragraphProperties.[0]}}
+    {{#with this.faqAnswer}}
+        {{#each this.split}}
+            {{#if this.isText}}
+                <p class="mt-6 text-base sm480:text-xl dark:text-text-dark">{{{this.text}}}</p>
+            {{/if}}
+            {{#if this.isUl}}
+                <ul class="mt-6 ml-5 text-base list-disc sm480:text-xl dark:text-text-dark">{{{this.text}}}</ul>
+            {{/if}}
+            {{#if this.isOl}}
+                <ol class="mt-6 ml-5 text-base list-decimal sm480:text-xl dark:text-text-dark">{{{this.text}}}</ol>
+            {{/if}}
+        {{/each}}
+    {{/with}}
+{{/with}}

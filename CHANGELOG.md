@@ -1,3 +1,209 @@
+# v1.52.11 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2698: add copytext-image component [#813](https://github.com/mumprod/hr-design-system-handlebars/pull/813) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.52.10 (Tue Jan 23 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-jobposting-component [#812](https://github.com/mumprod/hr-design-system-handlebars/pull/812) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.9 (Mon Jan 22 2024)
+
+#### 🐛 Bug Fix
+
+- add decorator for copytext [#810](https://github.com/mumprod/hr-design-system-handlebars/pull/810) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.8 (Fri Jan 19 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-faq component [#809](https://github.com/mumprod/hr-design-system-handlebars/pull/809) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.7 (Fri Jan 19 2024)
+
+#### 🐛 Bug Fix
+
+- fixes color in border [#808](https://github.com/mumprod/hr-design-system-handlebars/pull/808) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.6 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- changes footer border color [#807](https://github.com/mumprod/hr-design-system-handlebars/pull/807) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.5 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2795 farbbalken hr werbung [#806](https://github.com/mumprod/hr-design-system-handlebars/pull/806) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.4 (Thu Jan 18 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-podcast component [#805](https://github.com/mumprod/hr-design-system-handlebars/pull/805) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.3 (Tue Jan 16 2024)
+
+#### 🐛 Bug Fix
+
+- -change "link-focus-inset-white" to "link-focus-inset" [#804](https://github.com/mumprod/hr-design-system-handlebars/pull/804) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.2 (Tue Jan 16 2024)
+
+#### 🐛 Bug Fix
+
+- removes shorttext from podcast episode teaser [#803](https://github.com/mumprod/hr-design-system-handlebars/pull/803) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.1 (Fri Jan 12 2024)
+
+#### 🐛 Bug Fix
+
+- adapt Posterteaser in copytext to new design [#802](https://github.com/mumprod/hr-design-system-handlebars/pull/802) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.0 (Fri Jan 12 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Make pi method parameterless [#801](https://github.com/mumprod/hr-design-system-handlebars/pull/801) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.51.15 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- Adding short doc for Quicksearch [#800](https://github.com/mumprod/hr-design-system-handlebars/pull/800) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.51.14 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe-2706 Lupe in Suchfeld hat falsche Farbe [#798](https://github.com/mumprod/hr-design-system-handlebars/pull/798) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.51.13 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: make anchor nav visible for screenreaders [#799](https://github.com/mumprod/hr-design-system-handlebars/pull/799) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.51.12 (Wed Jan 10 2024)
+
+#### 🐛 Bug Fix
+
+- :alembic: always use preventDefault on flyout link [#797](https://github.com/mumprod/hr-design-system-handlebars/pull/797) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.51.11 (Fri Dec 22 2023)
+
+#### 🐛 Bug Fix
+
+- adapt cite to new layout [#796](https://github.com/mumprod/hr-design-system-handlebars/pull/796) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.51.10 (Mon Dec 18 2023)
 
 #### 🐛 Bug Fix

@@ -1,0 +1,33 @@
+<figcaption class="flex items-start mx-4 mt-3 text-xs sm480:mx-0 sm480:mt-4 sm480:text-sm font-copy"
+            x-data="{ 
+                open: false,
+                truncated: true,
+                init() {
+                    this.$nextTick(() => {
+                        if (this.$refs.caption.scrollHeight === this.$refs.caption.clientHeight) {
+                            this.truncated = false;
+                        }
+                    });
+                }
+            }"
+            @resize.window="open = false; $refs.caption.scrollHeight === $refs.caption.clientHeight ? truncated = false : truncated = true">
+    <div  class="dark:text-text-dark overflow-anywhere hyphens-auto"  x-ref="caption" 
+    {{#if this.showFullSize.isTrue}} :class="!open ? 'line-clamp-2 md:line-clamp-none' : 'line-clamp-none'" {{else}} :class="!open ? 'line-clamp-2' : 'line-clamp-none'" {{/if}}>
+        {{#if this.caption}}
+            {{~#unless _hideCaption~}}
+                <span>
+                    {{this.caption}} 
+                </span>
+            {{~/unless~}}
+        {{/if}}
+        <span class="text-gray-scorpion dark:text-text-dark">
+            {{~loca "figures_copyright"}} {{{copyrightWithLinks}}} 
+        </span>
+    </div>
+    <template x-if="truncated">
+        <button x-cloak type="button">
+            <span  x-show="!open"  @click.prevent="open = true">{{~> components/base/image/icon _icon="arrow-down" _addClass="m-2 mt-4.5 sm480:mt-5.5 h-3 w-3 fill-link dark:fill-link-dark" _iconmap="icons"~}}</span>
+            <span x-show="open" @click.prevent="open = false">{{~> components/base/image/icon _icon="arrow-up" _addClass="m-2 mt-4.5 sm480:mt-5.5 h-3 w-3 fill-link dark:fill-link-dark" _iconmap="icons"~}}</span>
+        </button>
+    </template>
+</figcaption>

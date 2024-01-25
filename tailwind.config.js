@@ -79,6 +79,7 @@ module.exports = {
             },
             fill: {
                 current: 'currentColor',
+                search: 'var(--search-icon-color)',
                 black: '#000000',
             },
             borderWidth: {
@@ -176,6 +177,8 @@ module.exports = {
                 11: '2.75rem',
             },
             margin: {
+                '4.5': '1.125rem',
+                '5.5': '1.375rem',
                 '7.5': '1.875rem',
                 '13': '3.125rem',
                 '30': '7.5rem',

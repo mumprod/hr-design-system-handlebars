@@ -37,6 +37,7 @@
     --search-border-color-desktop:  theme('colors.black.DEFAULT');
     --search-border-color-mobile:  theme('colors.black.DEFAULT');
     --color-search-footer-text:  theme('colors.black.DEFAULT');
+    --search-icon-color: theme('colors.black.DEFAULT');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -174,6 +175,7 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-search-footer-text: #000;
+    --search-icon-color: theme('colors.blue.congress');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -502,8 +504,11 @@
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
     --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
-
-    --color-footer-border: #a2bc09;
+    /* Sectionnavigation Border Bottom Width*/
+    --border-navigation-border-width: 11px;
+    /* The Fancy special border on werbung */
+    --border-navigation-border-image: linear-gradient(to right, #dda91e 0%, #dda91e 17%, #c32728 17%, #c32728 34%, #bf0171 34%, #bf0171 51%, #003a5c 51%, #003a5c 68%,#000206 68%,#000206 84%,#007a9f 84%, #007a9f 100%);
+    --color-footer-border: theme('colors.blue.blueLuxury'); 
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueLuxury'); 
