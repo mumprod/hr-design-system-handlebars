@@ -1,3 +1,15 @@
+# v1.52.14 (Thu Jan 25 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2802 podcast episoden teaser nicht verlinkt [#816](https://github.com/mumprod/hr-design-system-handlebars/pull/816) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.13 (Wed Jan 24 2024)
 
 #### 🐛 Bug Fix
