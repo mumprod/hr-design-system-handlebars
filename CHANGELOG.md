@@ -1,3 +1,15 @@
+# v1.52.18 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- adjust font-sizes [#820](https://github.com/mumprod/hr-design-system-handlebars/pull/820) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.17 (Fri Jan 26 2024)
 
 #### 🐛 Bug Fix
