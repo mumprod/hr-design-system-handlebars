@@ -1,3 +1,16 @@
+# v1.52.16 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Adjust image spacing in copytext [#819](https://github.com/mumprod/hr-design-system-handlebars/pull/819) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.52.15 (Fri Jan 26 2024)
 
 #### 🐛 Bug Fix
