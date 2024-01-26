@@ -1,3 +1,15 @@
+# v1.52.15 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Update font size 3xl [#818](https://github.com/mumprod/hr-design-system-handlebars/pull/818) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.52.14 (Thu Jan 25 2024)
 
 #### 🐛 Bug Fix
