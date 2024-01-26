@@ -1,3 +1,15 @@
+# v1.52.17 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Scrollpfeil bei hauptnavi sichtbar obwohl nicht nötig [#817](https://github.com/mumprod/hr-design-system-handlebars/pull/817) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.52.16 (Fri Jan 26 2024)
 
 #### 🐛 Bug Fix
