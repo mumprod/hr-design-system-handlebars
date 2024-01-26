@@ -25,6 +25,26 @@ export default function slider() {
         checkIfScrollable(e){     
             e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;  
             this.arrowsDisplay(e);
+        },
+        throttle(f, delay) {
+            let timer = 0;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => f.apply(this, args), delay);
+            }
+        },
+        initialize(e) {
+            console.log("log-> Init:");
+            this.checkIfScrollable(e);
+
+            const resizeObserver = new ResizeObserver(this.throttle((entries) => {
+                entries.forEach(entry => {
+                    this.checkIfScrollable(e);
+                    console.log("log-> RESIZE");
+                });
+            }, 100));
+            
+            resizeObserver.observe(e);
         }
     };
 }
