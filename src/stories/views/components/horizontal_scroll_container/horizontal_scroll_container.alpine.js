@@ -34,13 +34,11 @@ export default function slider() {
             }
         },
         initialize(e) {
-            console.log("log-> Init:");
             this.checkIfScrollable(e);
 
             const resizeObserver = new ResizeObserver(this.throttle((entries) => {
                 entries.forEach(entry => {
                     this.checkIfScrollable(e);
-                    console.log("log-> RESIZE");
                 });
             }, 100));
             

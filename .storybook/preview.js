@@ -42,7 +42,7 @@ checkcss.scan().watch();
 const panelInclude = setConsoleOptions({}).panelInclude;
 
 setConsoleOptions({
-    panelInclude: [...panelInclude, /checkcss|log/],
+    panelInclude: [...panelInclude, /checkcss/],
 }); 
 
 
