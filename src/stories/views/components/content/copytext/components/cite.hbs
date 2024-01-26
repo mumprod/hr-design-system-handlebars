@@ -2,7 +2,7 @@
     {{> components/base/image/icon _icon="quotation"  _addClass="sm:ml-4 mr-2 mt-px float-left text-gray-scorpion w-6 h-6 sm480:w-8 sm480:h-8 fill-current dark:fill-link-dark"}}
     <span class="sr-only">{{loca "story_cite_intro_sr" }}</span>
     <blockquote>
-        <cite class="block mx-8 text-base not-italic sm480:mx-10 font-headingSerif sm:mx-14 sm480:text-xl dark:text-text-dark">{{{this.text}}}</cite>
+        <cite class="block mx-8 text-lg leading-[1.625rem] not-italic sm480:mx-10 font-headingSerif sm:mx-14 sm480:text-xl sm480:leading-normal dark:text-text-dark">{{{this.text}}}</cite>
         {{#with this.paragraphProperties}}
             {{#with this.[0]}}
                 {{#with this.citeAuthor}}
