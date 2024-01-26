@@ -1,0 +1,9 @@
+{{#if this.isText}}
+    <p class="mt-6 text-lg leading-[1.625rem] sm480:text-xl sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
+{{/if}}
+{{#if this.isUl}}
+    <ul class="mt-6 ml-5 text-lg leading-[1.625rem] list-disc sm480:text-xl sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
+{{/if}}
+{{#if this.isOl}}
+    <ol class="mt-6 ml-5 text-lg leading-[1.625rem] list-decimal sm480:text-xl sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
+{{/if}}
