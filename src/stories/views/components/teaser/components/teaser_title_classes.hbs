@@ -16,13 +16,13 @@ the 4 parameters are:
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-lg md:text-4xl","text-lg md:text-4xl","text-lg","text-lg md:text-2xl"]'
+                '["text-lg md:text-5xl","text-lg md:text-5xl","text-lg","text-lg md:text-2xl"]'
             ~}}
         {{~else~}}
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
+                '["text-2xl md:text-5xl","text-2xl md:text-5xl","text-lg","text-2xl"]'
             ~}}
         {{~/if~}}
     {{~/case~}}
@@ -31,13 +31,13 @@ the 4 parameters are:
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-lg md:text-4xl","text-lg md:text-4xl","text-lg","text-lg md:text-2xl"]'
+                '["text-lg md:text-5xl","text-lg md:text-5xl","text-lg","text-lg md:text-2xl"]'
             ~}}
         {{~else~}}
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
+                '["text-2xl md:text-5xl","text-2xl md:text-5xl","text-lg","text-2xl"]'
             ~}}
         {{~/if~}}
     {{~/case~}}
@@ -46,13 +46,13 @@ the 4 parameters are:
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-lg md:text-4xl","text-lg md:text-4xl","text-lg","text-lg md:text-2xl"]'
+                '["text-lg md:text-5xl","text-lg md:text-5xl","text-lg","text-lg md:text-2xl"]'
             ~}}
         {{~else~}}
             {{~inline-switch
                 _size
                 '["hero","100","25"]'
-                '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-lg","text-2xl"]'
+                '["text-2xl md:text-5xl","text-2xl md:text-5xl","text-lg","text-2xl"]'
             ~}}
         {{~/if~}}
     {{~/case~}}
@@ -60,28 +60,28 @@ the 4 parameters are:
         {{~inline-switch
             _size
             '["hero","100","50"]'
-            '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
+            '["text-2xl md:text-4xl","text-lg md:text-4xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
     {{~#case 'event-alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
-            '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
+            '["text-2xl md:text-4xl","text-lg md:text-4xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
     {{~#case 'tabbox-alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
-            '["text-2xl md:text-3xl","text-lg md:text-3xl","text-lg md:text-2xl"]'
+            '["text-2xl md:text-4xl","text-lg md:text-4xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
     {{~#case 'poster'~}}
         {{#if _isCopytext~}}
-            {{~#if this.showFullSize.isTrue~}}text-xl sm480:text-2xl md:text-4xl{{else}}text-xl sm480:text-2xl{{~/if~}}
+            {{~#if this.showFullSize.isTrue~}}text-xl sm480:text-2xl md:text-5xl{{else}}text-xl sm480:text-2xl{{~/if~}}
         {{else}}
-            {{~inline-switch _size '["50","33"]' '["text-2xl md:text-4xl","text-2xl"]'~}}
+            {{~inline-switch _size '["50","33"]' '["text-2xl md:text-5xl","text-2xl"]'~}}
         {{/if}}    
     {{~/case~}}
     {{~#case 'cluster'~}}
@@ -92,7 +92,7 @@ the 4 parameters are:
         {{/if}}
     {{~/case~}}
     {{~#case 'stage'~}}
-        {{~inline-switch _size '["100"]' '[" text-2xl md:text-4xl"," text-2xl"]'}}
+        {{~inline-switch _size '["100"]' '[" text-2xl md:text-5xl"," text-2xl"]'}}
     {{~/case~}}
     {{~#case 'calendar'~}}
        text-2xl
@@ -101,14 +101,14 @@ the 4 parameters are:
         {{~inline-switch
             _size
             '["hero","100","25"]'
-            '["text-2xl md:text-4xl","text-2xl md:text-4xl","text-2xl md:text-lg","text-2xl"]'
+            '["text-2xl md:text-5xl","text-2xl md:text-5xl","text-2xl md:text-lg","text-2xl"]'
         ~}}
     {{~/case~}}
     {{~#case 'ticker-alternative'~}}
         {{~inline-switch
             _size
             '["hero","100","50"]'
-            '["text-2xl md:text-4xl","text-2xl md:text-2xl","text-lg md:text-2xl"]'
+            '["text-2xl md:text-5xl","text-2xl md:text-2xl","text-lg md:text-2xl"]'
         ~}}
     {{~/case~}}
 {{~/switch~}}

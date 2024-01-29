@@ -1,3 +1,88 @@
+# v1.52.18 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- adjust font-sizes [#820](https://github.com/mumprod/hr-design-system-handlebars/pull/820) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.17 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Scrollpfeil bei hauptnavi sichtbar obwohl nicht nötig [#817](https://github.com/mumprod/hr-design-system-handlebars/pull/817) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.52.16 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Adjust image spacing in copytext [#819](https://github.com/mumprod/hr-design-system-handlebars/pull/819) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.52.15 (Fri Jan 26 2024)
+
+#### 🐛 Bug Fix
+
+- Update font size 3xl [#818](https://github.com/mumprod/hr-design-system-handlebars/pull/818) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.52.14 (Thu Jan 25 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2802 podcast episoden teaser nicht verlinkt [#816](https://github.com/mumprod/hr-design-system-handlebars/pull/816) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.13 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- refactoring of copytext-json [#815](https://github.com/mumprod/hr-design-system-handlebars/pull/815) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.52.12 (Wed Jan 24 2024)
+
+#### 🐛 Bug Fix
+
+- Add console to storybook [#811](https://github.com/mumprod/hr-design-system-handlebars/pull/811) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.52.11 (Wed Jan 24 2024)
 
 #### 🐛 Bug Fix

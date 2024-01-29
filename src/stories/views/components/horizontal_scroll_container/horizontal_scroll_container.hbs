@@ -1,6 +1,5 @@
 <div x-data="slider()"
-    x-init="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
-    @resize.window="checkIfScrollable($refs.scrollContainer_{{getRandom}})"
+    x-init="initialize($refs.scrollContainer_{{getRandom}})"
     class="relative w-full"
     ax-load 
     x-ignore

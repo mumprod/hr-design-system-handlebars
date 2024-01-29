@@ -1,4 +1,39 @@
 {
-    "@->jsoninclude": "content/copytext/copytext.inc.json",
-    "@->contentpath": "copytext_1"
+    "copytextParagraph": [
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Copytext"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,
+            "text": {
+                "split": [
+                    {
+                        "isUl": true,
+                        "text": "<li>Lorem ipsum dolor sit amet</li><li>At vero eos et accusam et justo</li><li>Stet clita kasd gubergren</li>"
+                    },
+                    {
+                        "isOl": true,
+                        "text": "<li>Lorem ipsum dolor sit amet</li><li>At vero eos et accusam et justo</li><li>Stet clita kasd gubergren</li>"
+                    }
+                ]   
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Zwischenüberschrift"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
 }

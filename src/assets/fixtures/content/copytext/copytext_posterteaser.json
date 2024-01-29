@@ -1,4 +1,187 @@
 {
-    "@->jsoninclude": "content/copytext/copytext.inc.json",
-    "@->contentpath": "copytext_posterteaser"
+    "copytextParagraph": [
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Copytext mit Posterteaser"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,    
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "genericTeaser": {                            
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": true
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]                            
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Posterteaser halbe Breite"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,                
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "genericTeaser": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": false
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]                            
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Poster-Teaser 16:9"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isParagraph": true,                
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "genericTeaser": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": true
+                            },
+                            "showStretched": {
+                                "isTrue": true
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_16_to_9",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]                            
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
 }
