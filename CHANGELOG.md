@@ -1,3 +1,15 @@
+# v1.52.22 (Tue Jan 30 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-infobox-component [#823](https://github.com/mumprod/hr-design-system-handlebars/pull/823) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.21 (Tue Jan 30 2024)
 
 #### 🐛 Bug Fix
