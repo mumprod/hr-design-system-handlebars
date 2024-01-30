@@ -14,7 +14,7 @@ const PodcastChannelRemainingEpisodesLoader = function (context) {
 
     const handleDynLoad = function (event) {
         event.preventDefault()
-        dynLoadTrigElement.classList.add('-loading')
+        dynLoadTrigElement.classList.add('animate-spin')
         ajaxLoad(event.currentTarget, true)
     }
     const ajaxLoad = function (target, push, cache) {
@@ -37,7 +37,7 @@ const PodcastChannelRemainingEpisodesLoader = function (context) {
                 }, 1000)
             })
             .fail(function (data, status, xhr) {
-                dynLoadTrigElement.classList.remove('-loading')
+                dynLoadTrigElement.classList.remove('animate-spin')
                 console.log('fail')
             })
     }
