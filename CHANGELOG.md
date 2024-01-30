@@ -1,3 +1,40 @@
+# v1.52.21 (Tue Jan 30 2024)
+
+#### 🐛 Bug Fix
+
+- css to icon instead of div :-) [#822](https://github.com/mumprod/hr-design-system-handlebars/pull/822) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.20 (Tue Jan 30 2024)
+
+#### 🐛 Bug Fix
+
+- use button instead of link for remaining items loader [#821](https://github.com/mumprod/hr-design-system-handlebars/pull/821) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.52.19 (Mon Jan 29 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2708 [#814](https://github.com/mumprod/hr-design-system-handlebars/pull/814) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.52.18 (Fri Jan 26 2024)
 
 #### 🐛 Bug Fix
