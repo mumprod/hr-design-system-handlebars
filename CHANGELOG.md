@@ -1,3 +1,15 @@
+# v1.52.21 (Tue Jan 30 2024)
+
+#### 🐛 Bug Fix
+
+- css to icon instead of div :-) [#822](https://github.com/mumprod/hr-design-system-handlebars/pull/822) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.20 (Tue Jan 30 2024)
 
 #### 🐛 Bug Fix
