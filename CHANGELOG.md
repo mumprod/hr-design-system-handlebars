@@ -1,3 +1,15 @@
+# v1.52.20 (Tue Jan 30 2024)
+
+#### 🐛 Bug Fix
+
+- use button instead of link for remaining items loader [#821](https://github.com/mumprod/hr-design-system-handlebars/pull/821) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.19 (Mon Jan 29 2024)
 
 #### 🐛 Bug Fix
