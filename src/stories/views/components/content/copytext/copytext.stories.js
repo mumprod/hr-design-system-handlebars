@@ -7,6 +7,7 @@ import copytext_podcastepisode_json from './fixtures/copytext_podcastepisode.jso
 import copytext_faq_json from './fixtures/copytext_faq.json'
 import copytext_jobposting_json from './fixtures/copytext_jobposting.json'
 import copytext_image_json from './fixtures/copytext_image.json'
+import copytext_infobox_json from './fixtures/copytext_infobox.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -39,6 +40,12 @@ export const WithImage = {
     render: Template.bind({}),
     name: 'Image',
     args: copytext_image_json,
+}
+
+export const WithInfobox = {
+    render: Template.bind({}),
+    name: 'Infobox',
+    args: copytext_infobox_json,
 }
 
 export const WithJobposting = {
