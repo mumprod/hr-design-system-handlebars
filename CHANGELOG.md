@@ -1,3 +1,15 @@
+# v1.52.24 (Wed Jan 31 2024)
+
+#### 🐛 Bug Fix
+
+- - fixes wrong tabindex  in section_navigation_item.hbs [#825](https://github.com/mumprod/hr-design-system-handlebars/pull/825) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.23 (Wed Jan 31 2024)
 
 #### 🐛 Bug Fix
