@@ -1,3 +1,15 @@
+# v1.52.23 (Wed Jan 31 2024)
+
+#### 🐛 Bug Fix
+
+- change spaces in fuckin infobox [#824](https://github.com/mumprod/hr-design-system-handlebars/pull/824) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.52.22 (Tue Jan 30 2024)
 
 #### 🐛 Bug Fix
