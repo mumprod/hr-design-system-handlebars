@@ -1,3 +1,15 @@
+# v1.53.1 (Fri Feb 02 2024)
+
+#### 🐛 Bug Fix
+
+- adapt copytext to delivery [#828](https://github.com/mumprod/hr-design-system-handlebars/pull/828) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.53.0 (Fri Feb 02 2024)
 
 #### 🚀 Enhancement
