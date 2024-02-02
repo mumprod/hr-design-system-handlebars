@@ -1,3 +1,15 @@
+# v1.53.0 (Fri Feb 02 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Add support for statically generated navigation on error pages [#827](https://github.com/mumprod/hr-design-system-handlebars/pull/827) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.52.24 (Wed Jan 31 2024)
 
 #### 🐛 Bug Fix
