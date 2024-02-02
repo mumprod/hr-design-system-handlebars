@@ -298,5 +298,5 @@ article.indexText ul {
 
 /* -------------------------COPYTEXT ------------------------------- */
 a.link {
-    @apply underline decoration-1 text-link dark:text-link-dark;
+    @apply underline decoration-1 hover:!decoration-1 text-link dark:text-link-dark;
 }

@@ -67,17 +67,17 @@
 
     {{~#with this.paragraphTeaserItem }}
         {{~#if this.isTopictag}}
-            {{#with this.toModel.genericTeaser}}
+            {{#with this.toModel.baseTeaserDS}}
                 {{> components/content/copytext/components/posterteaser }}
             {{/with}}
         {{/if~}}
         {{~#if this.isTicker}}
-            {{#with this.toModel.genericTeaser}}
+            {{#with this.toModel.baseTeaserDS}}
                 {{> components/content/copytext/components/posterteaser }}
             {{/with}}
         {{/if~}}
         {{~#if this.isLink}}
-            {{#with this.toModel.genericTeaser}}
+            {{#with this.toModel.baseTeaserDS}}
                 {{> components/content/copytext/components/posterteaser }}
             {{/with}}
         {{/if~}}
@@ -87,12 +87,12 @@
             {{/with}}
         {{/if~}}
         {{~#if this.isStory}}
-            {{#with this.toModel.genericTeaser}}
+            {{#with this.toModel.baseTeaserDS}}
                 {{> components/content/copytext/components/posterteaser }}
             {{/with}}
         {{/if~}}
         {{~#if this.isProgram}}
-            {{#with this.toModel.genericTeaser}}
+            {{#with this.toModel.baseTeaserDS}}
                 {{> components/content/copytext/components/posterteaser }}
             {{/with}}
         {{/if~}}

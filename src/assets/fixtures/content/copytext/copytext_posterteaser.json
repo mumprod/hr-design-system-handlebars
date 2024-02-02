@@ -14,7 +14,7 @@
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
-                    "genericTeaser": {                            
+                    "baseTeaserDS": {                            
                         "@->jsoninclude": "teaser/teasers.inc.json",
                         "@->contentpath": "teaser.logicItem.includeModel",
                         "@->extends": {
@@ -74,7 +74,7 @@
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
-                    "genericTeaser": {
+                    "baseTeaserDS": {
                         "@->jsoninclude": "teaser/teasers.inc.json",
                         "@->contentpath": "teaser.logicItem.includeModel",
                         "@->extends": {
@@ -134,7 +134,7 @@
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
-                    "genericTeaser": {
+                    "baseTeaserDS": {
                         "@->jsoninclude": "teaser/teasers.inc.json",
                         "@->contentpath": "teaser.logicItem.includeModel",
                         "@->extends": {
@@ -142,7 +142,7 @@
                                 "isTrue": true
                             },
                             "showStretched": {
-                                "isTrue": true
+                                "isTrue": "true"
                             }
                         },
                         "@->overrides": [
