@@ -9,18 +9,22 @@
 
         {{#with this.sectionNavigationSSILinks}}
             <ul class="flex flex-col items-center w-full text-left list-none text-navigation-icons lg:flex-row lg:h-auto lg:mt-1">
-                {{#each this}}   
-                    {{#if (isStorybook)}}  
-                        {{> components/site_header/section_navigation/section_navigation_item }}   
-                    {{else}}
-                        {{{this}}}
-                    {{/if}}
-                    {{#if @first}}
-                        {{#with ../../this.topTopicsNavigation }}                               
-                            {{> components/site_header/section_navigation/section_navigation_top_topics }}                             
-                        {{/with}}
-                    {{/if}}
-                {{/each}} 
+                {{#if this.errorPageNavigation}}
+                    {{> components/site_header/section_navigation/section_navigation_item}}
+                {{else}}
+                    {{#each this}}   
+                        {{#if (isStorybook)}}  
+                            {{> components/site_header/section_navigation/section_navigation_item }}   
+                        {{else}}
+                            {{{this}}}
+                        {{/if}}
+                        {{#if @first}}
+                            {{#with ../../this.topTopicsNavigation }}                               
+                                {{> components/site_header/section_navigation/section_navigation_top_topics }}                             
+                            {{/with}}
+                        {{/if}}
+                    {{/each}} 
+                {{/if}}
             </ul>
         {{/with}}
 
