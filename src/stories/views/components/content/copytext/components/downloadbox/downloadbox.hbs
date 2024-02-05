@@ -1,0 +1,16 @@
+{{~#partial "subParagraphs"~}}
+    {{~#with this.paragraphbox }}
+        {{~#with this.downloadBoxItems }}
+            <ul class="">
+                {{#each this}}
+                    {{#if this.isEpgPdfExport}}
+                        {{{this.ssi.downloadBoxItem}}}
+                    {{else}}
+                        {{> components/content/copytext/components/downloadbox/downloadbox_item }}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        {{/with}}
+    {{/with}}
+{{/partial}}
+{{> components/content/copytext/components/infobox }}

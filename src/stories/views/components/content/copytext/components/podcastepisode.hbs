@@ -1,11 +1,3 @@
-{{~#if (isStorybook)~}}
-    <div class="mt-7 {{#if this.showFullSize.isTrue }}clear-both {{else}}sm:w-1/2 clear-both sm:float-left sm:mr-5{{/if}}">
-        {{> components/teaser/podcast/podcast _isCopytext=true }} 
-    </div>
-{{~else~}}
-    {{#if this.showFullSize.isTrue }}
-        {{> modules/media/media_figure _addClass="copytext__clearBox dontPrint" _a11yIntro-loca="story_audio_intro_sr" _a11yOutro-loca="story_audio_outro_sr" }}
-    {{else}}
-        {{> modules/media/media_figure _addClass="copytext__box dontPrint" _a11yIntro-loca="story_audio_intro_sr" _a11yOutro-loca="story_audio_outro_sr" }}
-    {{/if}}
-{{~/if~}}
+<div class="mt-7 {{#if this.showFullSize.isTrue }}clear-both {{else}}sm:w-1/2 clear-both sm:float-left sm:mr-5{{/if}}">
+    {{> components/teaser/podcast/podcast _isCopytext=true }} 
+</div>

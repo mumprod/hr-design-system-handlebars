@@ -34,7 +34,7 @@ const DataPolicyCookie = function () {
     return {
         setCookieForExternalService: setCookieForExternalService,
         isDatapolicyAccepted: isDatapolicyAccepted,
-        isDatapolicyExistent: isDatapolicyExistent,
+        isDatapolicyExistent: isDatapolicyExistent
     }
 }
 

@@ -9,12 +9,13 @@ const PodcastChannelRemainingEpisodesLoader = function (context) {
         { element: rootElement } = context,
         dynLoadTrigSelector = options.dynLoadTrigSelector,
         dynLoadTrigElement = hr$(dynLoadTrigSelector, rootElement)[0],
+        dynLoadTrigIcon = hr$('svg', dynLoadTrigElement)[0],
         dynLoadReplaceSelector = options.dynLoadReplaceSelector,
         url = options.url
 
     const handleDynLoad = function (event) {
         event.preventDefault()
-        dynLoadTrigElement.classList.add('-loading')
+        dynLoadTrigIcon.classList.add('animate-spin')
         ajaxLoad(event.currentTarget, true)
     }
     const ajaxLoad = function (target, push, cache) {
@@ -37,7 +38,7 @@ const PodcastChannelRemainingEpisodesLoader = function (context) {
                 }, 1000)
             })
             .fail(function (data, status, xhr) {
-                dynLoadTrigElement.classList.remove('-loading')
+                dynLoadTrigIcon.classList.remove('animate-spin')
                 console.log('fail')
             })
     }
