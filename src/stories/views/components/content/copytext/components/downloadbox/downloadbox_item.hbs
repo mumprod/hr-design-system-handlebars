@@ -1,0 +1,10 @@
+<li class="mt-3">
+    <a class="link js-load" href="{{this.url}}" {{#with this.content.trackingData}}
+    data-hr-click-tracking='{"settings": [{"type": "download", "secondLevelId": "{{this.secondLevelId}}", "clickLabel": "{{this.pageName}}"}]}'{{/with}}>
+        {{~#with this.downloadBoxMetadata ~}}
+            <span class="text-base sm480:text-lg">{{{this.title}}} [{{this.displaySuffix}}{{#with this.displaySize}}
+            - {{this}}{{/with}}]</span>
+        {{~/with~}}
+        {{> components/base/image/icon _icon="download-neu"  _addClass="align-middle sm480:align-top inline hover:text-link ml-2 w-4 h-4 sm480:w-5 sm480:h-5 fill-current dark:fill-link-dark"}}
+    </a>
+</li>
