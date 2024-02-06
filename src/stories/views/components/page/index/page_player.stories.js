@@ -1,5 +1,5 @@
 import page from './page_players.hbs'
-import AudioDataMixed from '../page/fixtures/page.json'
+import AudioDataMixed from '../fixtures/page.json'
 
 const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
