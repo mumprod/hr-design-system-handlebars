@@ -1,3 +1,15 @@
+# v1.56.0 (Tue Feb 06 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Make data policy overlay display [#834](https://github.com/mumprod/hr-design-system-handlebars/pull/834) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.55.1 (Tue Feb 06 2024)
 
 #### 🐛 Bug Fix
