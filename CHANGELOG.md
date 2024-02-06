@@ -1,3 +1,15 @@
+# v1.54.2 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- introduces content footer component [#826](https://github.com/mumprod/hr-design-system-handlebars/pull/826) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.54.1 (Mon Feb 05 2024)
 
 #### 🐛 Bug Fix
