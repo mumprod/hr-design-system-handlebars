@@ -1,5 +1,5 @@
 import page from './page.hbs'
-import page_pagination from './page_pagination.hbs'
+import page_pagination from '../pagination/page_pagination.hbs'
 import {
     NavigationDataWithTeaser,
     NavigationDataWithTeaser2,
@@ -7,7 +7,7 @@ import {
     NavigationDataWithTeaser4,
 } from './page.data.js'
 
-import { NavigationDataWithMixedContent } from './page_pagination.data.js'
+import { NavigationDataWithMixedContent } from '../pagination/page_pagination.data.js'
 
 const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!

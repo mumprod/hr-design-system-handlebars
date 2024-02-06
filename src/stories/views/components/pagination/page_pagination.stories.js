@@ -106,7 +106,7 @@ const TemplateOnlyThree = (args, { globals: { customConditionalToolbar } }) => {
 
 
 export default {
-    title: 'Komponenten/Page/Pagination',
+    title: 'Komponenten/Pagination',
     argTypes: {},
 
     parameters: {
