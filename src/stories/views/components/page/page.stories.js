@@ -24,7 +24,7 @@ const Template2 = (args, { globals: { theme } }) => {
 }
 
 export default {
-    title: 'Komponenten/Page/Page',
+    title: 'Seiten/Index',
     argTypes: {},
 
     parameters: {

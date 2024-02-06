@@ -10,7 +10,7 @@ const Template = (args, { globals: { customConditionalToolbar } }) => {
 }
 
 export default {
-    title: 'Komponenten/Page/Page mit Player',
+    title: 'Seiten/Index mit Player',
     argTypes: {},
 
     parameters: {
