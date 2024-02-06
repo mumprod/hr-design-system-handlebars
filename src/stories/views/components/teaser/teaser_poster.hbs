@@ -1,7 +1,19 @@
 <article class="{{#if _isCopytext~}}mx-0{{else}}mx-5 sm:mx-0{{/if}} relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
     <figure class="ar-1-1{{#if _isCopytext~}}{{#if this.showFullSize.isTrue }}{{#if this.showStretched.isTrue }} sm:ar-16-9{{/if}}{{/if}}{{/if}}" aria-hidden="true">
-        {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
-    </figure> 
+        {{#if _isCopytext~}}
+            {{#if this.showFullSize.isTrue }}
+                {{#if this.showStretched.isTrue }}
+                    {{~> components/base/image/responsive_image this.teaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+                {{else}}
+                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+                {{/if}}
+            {{else}}
+                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+            {{/if}}
+        {{else}}
+            {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+        {{/if}}
+    </figure>
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
         {{#>components/base/link _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
             {{#> components/teaser/components/teaser_header}}
@@ -15,7 +27,7 @@
                     {{#if this.topline}}
                         {{> components/teaser/components/teaser_topline _css="!text-white" _text=this.topline}}
                     {{/if}}
-                    {{> components/teaser/components/teaser_title _css="whitespace-pre-wrap" _text=this.title _size=this.realTeaserSize _teaserType=this.teaserType _isCopytext=_isCopytext}}
+                    {{> components/teaser/components/teaser_title _css="whitespace-pre-wrap" _text=this.title _size=this.realTeaserSize _teaserType="poster" _isCopytext=_isCopytext-adjust_context}}
                     {{#if this.extendedTitle}}
                         {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
                     {{/if}}
@@ -25,7 +37,7 @@
         <span class="absolute flex items-end justify-center w-full h-full ds-cta">
             {{#if _isCopytext~}}
                 {{#if this.showFullSize.isTrue~}}
-                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '[false,true]' '["z-20 mb-4 sm480:mb-7 md:mb-16","z-20 mb-4 sm480:mb-7 md:mb-5","z-20 mb-4 sm480:mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '["false","true"]' '["z-20 mb-4 sm480:mb-7 md:mb-16","z-20 mb-4 sm480:mb-7 md:mb-5","z-20 mb-4 sm480:mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                         {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                     {{/components/button/link_button}}
                 {{else}}

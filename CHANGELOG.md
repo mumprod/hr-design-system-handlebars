@@ -1,3 +1,39 @@
+# v1.54.1 (Mon Feb 05 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-downloadbox-component [#830](https://github.com/mumprod/hr-design-system-handlebars/pull/830) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.54.0 (Mon Feb 05 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/2829 [#829](https://github.com/mumprod/hr-design-system-handlebars/pull/829) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.53.1 (Fri Feb 02 2024)
+
+#### 🐛 Bug Fix
+
+- adapt copytext to delivery [#828](https://github.com/mumprod/hr-design-system-handlebars/pull/828) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.53.0 (Fri Feb 02 2024)
 
 #### 🚀 Enhancement
