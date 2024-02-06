@@ -36,7 +36,7 @@
                             <a class="ds-link block mt-2 text-link hover:underline" target="_blank"
                             rel="noopener noreferrer" href="{{this.url}}"
                             title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
-                            {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            {{#if this.isTargetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}{{/if}}
                             </a>
                         {{/with}}
                     {{/with}}
@@ -50,17 +50,17 @@
             <ul class="{{#if _webview}} hidden{{/if}}">
                 <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_1">
                     <span class="text-base text-black">AGF <a
-                        class="ds-link mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
-                        href="https://www.agf.de/" title="AGF">(https://www.agf.de/)</a></span>
+                        class="ds-link mt-3 -mb-1 text-link hover:underline" target="_blank" rel="noopener noreferrer"
+                        href="https://www.agf.de/" title="AGF">(https://www.agf.de/){{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}</a></span>
                     <div class="flex w-fit toggleSwitch">
                         {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="agf aktivieren/deaktivieren" }}
                     </div>
                 </li>
                 <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_2">
                     <span class="text-base text-black">AT Internet <a
-                        class="ds-link mt-3 -mb-1 text-link" target="_blank" rel="noopener noreferrer"
+                        class="ds-link mt-3 -mb-1 text-link hover:underline" target="_blank" rel="noopener noreferrer"
                         href="https://www.atinternet.com/de/"
-                        title="AT Internet">(https://www.atinternet.com/de/)</a></span>
+                        title="AT Internet">(https://www.atinternet.com/de/){{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}</a></span>
                     <div class="flex w-fit toggleSwitch">
                         {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="at internet aktivieren/deaktivieren"}}
                     </div>
@@ -73,10 +73,10 @@
                     {{#with this.footerMetadata}}
                         {{#with this.dataProtectionLink}}
                             {{loca "cookies_setting_description_text"}}
-                            <a class=ds-link block mt-2 text-link hover:underline" target="_blank"
+                            <a class="ds-link block mt-2 text-link hover:underline" target="_blank"
                             rel="noopener noreferrer" href="{{this.url}}"
                             title="Mehr Informationen zum Thema Datenschutz">Mehr Informationen zum Thema Datenschutz
-                            {{#if this.targetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="icon--primary icon--textRight" _iconmap="icons"~}}{{/if}}
+                            {{#if this.isTargetBlank}}{{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}{{/if}}
                             </a>
                         {{/with}}
                     {{/with}}
