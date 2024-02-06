@@ -1,3 +1,15 @@
+# v1.55.1 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- -wrap links in with-block for hbs-compatibility [#833](https://github.com/mumprod/hr-design-system-handlebars/pull/833) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.55.0 (Tue Feb 06 2024)
 
 #### 🚀 Enhancement
