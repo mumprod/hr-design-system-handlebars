@@ -8,7 +8,7 @@ const Template = ({ ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/Artikel/Komponenten/Podcast-Player (Episode)',
+    title: 'Seiten/Podcast-Episode',
 }
 
 export const Default = {

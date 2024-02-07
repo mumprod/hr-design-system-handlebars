@@ -1,7 +1,7 @@
 {
     "isSsi": true,
     "logicItem": {
-        "includePath": "components/article/components/podcast/podcast_player_episode",
+        "includePath": "components/page/podcast/podcast_player_episode",
         "includeModel": {
             "byline": "Byline",
             "title": "Legal Kiffen: Cannabis-Gesetz sorgt für Kritik",

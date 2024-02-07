@@ -1,7 +1,7 @@
 {
     "teaserPodcastPlaylist": {
         "logicItem": {
-            "includePath": "components/article/components/podcast/podcast_playlist_article",
+            "includePath": "components/page/podcast/podcast_playlist_article",
             "includeModel": {
                 "teaserSize": "100",
                 "realTeaserSize": "100",
