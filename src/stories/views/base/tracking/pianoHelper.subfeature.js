@@ -10,7 +10,7 @@ const uxAction = (label, secondLevelId) => {
     if (typeof pa != "undefined" && pa != undefined && isTrackingAllowed()) {
         pa.sendEvent('click.action', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
@@ -20,7 +20,7 @@ const uxNavigation = (label, secondLevelId) => {
     if (typeof pa != "undefined" && pa != undefined  && isTrackingAllowed()) {
         pa.sendEvent('click.navigation', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
@@ -36,7 +36,7 @@ const download = (label, secondLevelId) => {
     if (typeof pa != "undefined" && pa != undefined  && isTrackingAllowed()) {
         pa.sendEvent('click.download', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
