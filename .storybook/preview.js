@@ -216,6 +216,12 @@ export const parameters = {
                     ],
                     '*',
                 ],
+                'Seiten',
+                [
+                    'Artikel',
+                    'Index',
+                    'Index mit Player'
+                ],
                 'Komponenten',
                 [
                     'Buttons',
