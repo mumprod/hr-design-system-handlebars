@@ -15,7 +15,7 @@ export default {
     argTypes: {
         _link: {
             description:
-                'Das Objekt, welches, den Link beschreibt. Es muss mindestens das Feld `url` beinhalten. Weitere mögliche Felder sind `webviewUrl`, `isTargetBlank`, `hasIcon`, `iconName`, `readMoreText`, `hasNoReferrerFlag`',
+                'Das Objekt, welches, den Link beschreibt. Es muss mindestens das Feld `url` beinhalten. Weitere mögliche Felder sind `webviewUrl`, `isTargetBlank`, `hasIcon`, `iconName`, `readMoreText`, `hasNoReferrerFlag`, `isStaticUrl`',
             control: 'object',
         },
 

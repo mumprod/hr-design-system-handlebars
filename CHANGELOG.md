@@ -1,3 +1,111 @@
+# v1.56.0 (Tue Feb 06 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Make data policy overlay display [#834](https://github.com/mumprod/hr-design-system-handlebars/pull/834) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.55.1 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- -wrap links in with-block for hbs-compatibility [#833](https://github.com/mumprod/hr-design-system-handlebars/pull/833) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.55.0 (Tue Feb 06 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/2829 [#832](https://github.com/mumprod/hr-design-system-handlebars/pull/832) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.54.2 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- introduces content footer component [#826](https://github.com/mumprod/hr-design-system-handlebars/pull/826) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.54.1 (Mon Feb 05 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-downloadbox-component [#830](https://github.com/mumprod/hr-design-system-handlebars/pull/830) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.54.0 (Mon Feb 05 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/2829 [#829](https://github.com/mumprod/hr-design-system-handlebars/pull/829) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.53.1 (Fri Feb 02 2024)
+
+#### 🐛 Bug Fix
+
+- adapt copytext to delivery [#828](https://github.com/mumprod/hr-design-system-handlebars/pull/828) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.53.0 (Fri Feb 02 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Add support for statically generated navigation on error pages [#827](https://github.com/mumprod/hr-design-system-handlebars/pull/827) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.52.24 (Wed Jan 31 2024)
+
+#### 🐛 Bug Fix
+
+- - fixes wrong tabindex  in section_navigation_item.hbs [#825](https://github.com/mumprod/hr-design-system-handlebars/pull/825) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.52.23 (Wed Jan 31 2024)
 
 #### 🐛 Bug Fix
