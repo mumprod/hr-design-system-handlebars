@@ -1,3 +1,63 @@
+# v1.57.0 (Thu Feb 08 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2841 [#836](https://github.com/mumprod/hr-design-system-handlebars/pull/836) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.56.0 (Tue Feb 06 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Make data policy overlay display [#834](https://github.com/mumprod/hr-design-system-handlebars/pull/834) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.55.1 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- -wrap links in with-block for hbs-compatibility [#833](https://github.com/mumprod/hr-design-system-handlebars/pull/833) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.55.0 (Tue Feb 06 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/2829 [#832](https://github.com/mumprod/hr-design-system-handlebars/pull/832) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.54.2 (Tue Feb 06 2024)
+
+#### 🐛 Bug Fix
+
+- introduces content footer component [#826](https://github.com/mumprod/hr-design-system-handlebars/pull/826) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.54.1 (Mon Feb 05 2024)
 
 #### 🐛 Bug Fix

@@ -1,26 +1,27 @@
 import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
+import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 
 const isTrackingAllowed = () => {
-    const trackingCookie = new TrackingCookie()
-    return trackingCookie.isTrackingAccepted('ati')
+    const settingsCookie = new SettingsCookie()
+    return settingsCookie.isSettingsCookieAccepted('ati')
 }
 
 const uxAction = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
+    secondLevelId = secondLevelId || typeof pageDisplayConfig != "undefined" && pageDisplayConfig != undefined ? pageDisplayConfig.site_level2_id:99
     if (typeof pa != "undefined" && pa != undefined && isTrackingAllowed()) {
         pa.sendEvent('click.action', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
 
 const uxNavigation = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
+    secondLevelId = secondLevelId || typeof pageDisplayConfig != "undefined" && pageDisplayConfig != undefined ? pageDisplayConfig.site_level2_id:99
     if (typeof pa != "undefined" && pa != undefined  && isTrackingAllowed()) {
         pa.sendEvent('click.navigation', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
@@ -32,11 +33,11 @@ const pi = () => {
 }
 
 const download = (label, secondLevelId) => {
-    secondLevelId = secondLevelId || pageDisplayConfig.site_level2
+    secondLevelId = secondLevelId || typeof pageDisplayConfig != "undefined" && pageDisplayConfig != undefined ? pageDisplayConfig.site_level2_id:99
     if (typeof pa != "undefined" && pa != undefined  && isTrackingAllowed()) {
         pa.sendEvent('click.download', {
             click: label,
-            site_level2: secondLevelId,
+            site_level2_id: secondLevelId,
         })
     }
 }
