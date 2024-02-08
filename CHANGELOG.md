@@ -1,3 +1,15 @@
+# v1.57.2 (Thu Feb 08 2024)
+
+#### 🐛 Bug Fix
+
+- add copytext-filedownload-component [#837](https://github.com/mumprod/hr-design-system-handlebars/pull/837) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.57.1 (Thu Feb 08 2024)
 
 #### 🐛 Bug Fix
