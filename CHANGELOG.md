@@ -1,3 +1,27 @@
+# v1.57.1 (Thu Feb 08 2024)
+
+#### 🐛 Bug Fix
+
+- Cheesebox design for Indextext [#831](https://github.com/mumprod/hr-design-system-handlebars/pull/831) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.57.0 (Thu Feb 08 2024)
+
+#### 🚀 Enhancement
+
+- Bugfix/dpe 2841 [#836](https://github.com/mumprod/hr-design-system-handlebars/pull/836) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.56.0 (Tue Feb 06 2024)
 
 #### 🚀 Enhancement
