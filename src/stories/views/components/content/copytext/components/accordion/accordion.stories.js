@@ -1,5 +1,6 @@
 import accordion from './accordion.hbs'
-import accordionJson from '../../../teaser/fixtures/accordion.json'
+
+import accordionJson from './fixtures/accordion.json'
 
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
