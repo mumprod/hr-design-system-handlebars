@@ -9,7 +9,7 @@ const Template = ({ ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/Artikel/Komponenten/Akkordeon',
+    title: 'Komponenten/Content/Copytext/Akkordeon',
 }
 
 export const Default = {

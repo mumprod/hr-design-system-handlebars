@@ -8,7 +8,7 @@ const Template = ({ ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/Artikel/Komponenten/Contentbox',
+    title: 'Komponenten/Content/Copytext/Contentbox',
 }
 
 export const Default = {
