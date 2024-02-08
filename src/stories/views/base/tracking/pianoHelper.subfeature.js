@@ -1,8 +1,9 @@
 import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
+import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 
 const isTrackingAllowed = () => {
-    const trackingCookie = new TrackingCookie()
-    return trackingCookie.isTrackingAccepted('ati')
+    const settingsCookie = new SettingsCookie()
+    return settingsCookie.isSettingsCookieAccepted('ati')
 }
 
 const uxAction = (label, secondLevelId) => {
