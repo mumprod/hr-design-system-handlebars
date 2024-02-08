@@ -1,5 +1,5 @@
 import contentbox from './contentbox.hbs'
-import contentboxJson from '../../../teaser/fixtures/contentbox.json'
+import contentboxJson from './fixtures/contentbox.json'
 
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
