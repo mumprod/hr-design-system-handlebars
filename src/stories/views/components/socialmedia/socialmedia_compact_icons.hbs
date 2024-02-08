@@ -40,7 +40,7 @@
            href="{{this}}"
            title="{{loca "share_mail_linktitle" }}"
             {{#with ../../this.content.trackingData}}
-           data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "newSocialShareClick::compact-mailto"}]}'
+           data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": {{this.secondLevelId}},"clickLabel": "newSocialShareClick::compact-mailto"}]}'
             {{/with}}
         >
             {{~> base/image/icon _addClass="icon--mailto" _icon="mail" _iconmap="icons" ~}}
@@ -53,7 +53,7 @@
 
             title="{{loca "share_copy_linktitle" }}"
         {{#with ../../this.content.trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "newSocialShareClick::compact-copy"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": {{this.secondLevelId}},"clickLabel": "newSocialShareClick::compact-copy"}]}'
         {{/with}}
     >
         {{~> base/image/icon _addClass="icon--mailto" _icon="copy" _iconmap="icons" ~}}

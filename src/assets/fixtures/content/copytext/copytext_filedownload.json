@@ -1,0 +1,150 @@
+{
+    "copytextParagraph": [
+        {
+            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
+            "isHeadline": true,
+            "text": "Copytext mit File-Download"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "link": {
+                    "url": "/download1",
+                    "isTargetBlank": false,
+                    "trackingData": {
+                        "secondLevelId": "2",
+                        "pageName": "download1"
+                    }    
+                }, 
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download mit Bild, intern",
+                        "link": {
+                            "url": "/download1",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": false,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download1"
+                        }                         
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]    
+                }           
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },        
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "link": {
+                    "url": "/download2",
+                    "isTargetBlank": false,
+                    "trackingData": {
+                        "secondLevelId": "2",
+                        "pageName": "download2"
+                    }    
+                }, 
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download mit Bild, extern",
+                        "link": {
+                            "url": "/download2",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": true,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",                         
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download2"
+                        }                         
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]    
+                }           
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download ohne Bild, extern",
+                        "link": {
+                            "url": "/download3",
+                            "isTargetBlank": false                            
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": true,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",                         
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download3"
+                        }                                         
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}

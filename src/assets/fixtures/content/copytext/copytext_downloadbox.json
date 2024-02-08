@@ -22,13 +22,11 @@
                 "downloadBoxItems": [
                     {
                         "isEpgPdfExport": false,
-                        "url": "Download-Url-1",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2",
-                                "pageName": "Page-Name"
-                            }
-                        },
+                        "url": "Download-Url-1",                        
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },                        
                         "downloadBoxMetadata": {
                             "title": "Download-File-1, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
                             "displaySuffix": "JPG",
@@ -38,11 +36,9 @@
                     {
                         "isEpgPdfExport": false,
                         "url": "Download-Url-2",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
-                                "pageName": "Page-Name"
-                            }
+                        "trackingData": {
+                            "secondLevelId": "2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+                            "pageName": "Page-Name"
                         },
                         "downloadBoxMetadata": {
                             "title": "Download-File-2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
@@ -53,11 +49,9 @@
                     {
                         "isEpgPdfExport": false,
                         "url": "Download-Url-3",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2",
-                                "pageName": "Page-Name"
-                            }
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
                         },
                         "downloadBoxMetadata": {
                             "title": "Download-File-3",
@@ -86,11 +80,9 @@
                     {
                         "isEpgPdfExport": false,
                         "url": "Download-Url-1",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2",
-                                "pageName": "Page-Name"
-                            }
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
                         },
                         "downloadBoxMetadata": {
                             "title": "Download-File-1",
@@ -101,11 +93,9 @@
                     {
                         "isEpgPdfExport": false,
                         "url": "Download-Url-2",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2",
-                                "pageName": "Page-Name"
-                            }
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
                         },
                         "downloadBoxMetadata": {
                             "title": "Download-File-2",
@@ -116,11 +106,9 @@
                     {
                         "isEpgPdfExport": false,
                         "url": "Download-Url-3",
-                        "content": {
-                            "trackingData": {
-                                "secondLevelId": "2",
-                                "pageName": "Page-Name"
-                            }
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
                         },
                         "downloadBoxMetadata": {
                             "title": "Download-File-3",

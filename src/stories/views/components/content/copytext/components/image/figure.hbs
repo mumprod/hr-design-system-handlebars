@@ -2,7 +2,18 @@
     {{#if _noAr }}
         {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _isWebview=_isWebview _noDelay=_noDelay}}
     {{else}}
-        {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _addClassImg="ar__content" _isWebview=_isWebview _noDelay=_noDelay}}
+        {{#if _filedownloadLink }}
+            {{#>components/base/link _link=_filedownloadLink }}
+                {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _addClassImg="ar__content" _isWebview=_isWebview _noDelay=_noDelay}}
+            {{/components/base/link}}    
+            {{#*inline "htmlProperties"}} 
+                {{~#with _filedownloadLink }}               
+                    {{> components/tracking/download_tracking}}
+                {{/with}}
+            {{/inline}}                         
+        {{else}}
+            {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _addClassImg="ar__content" _isWebview=_isWebview _noDelay=_noDelay}}
+        {{/if}}
     {{/if}}
     {{#unless _voting-option}}
         {{~> components/content/copytext/components/image/figcaption _cssClassCaption=_cssClassCaption~}}
