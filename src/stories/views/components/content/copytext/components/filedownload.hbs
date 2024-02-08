@@ -1,5 +1,36 @@
-{{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: File-download-component</div>
-{{~else~}}
-    {{> modules/media/media_figure _addClass="copytext__box" _a11yIntro-loca="story_download_intro_sr" _a11yOutro-loca="story_download_outro_sr" }}
-{{~/if~}}     
+{{#>components/content/copytext/components/common/paragraphbox_frame}}
+    
+    <span class="sr-only">{{loca "story_download_intro_sr" }}</span>
+ 
+    {{#with this.label}}
+        {{#> components/label/label_group}}
+            {{> components/label/label _type=this.type _text=(loca this.loca)}}
+            {{> components/label/label_byline _css="ml-2"}}
+        {{/components/label/label_group}}
+    {{/with~}}
+
+    {{#with this.toModel.mediaBacklinkToStoryTeaser}}
+        {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+            <h3 class="mt-2.5 text-lg -mt-[4px] sm480:text-xl font-headingSerif dark:text-text-dark">{{this.title}}</h3>
+            {{~#if this.isForeignBrand}}
+                <span>[{{this.readMore}}]</span>
+            {{/if}}
+        {{/components/base/link}}
+        {{#*inline "htmlProperties"}}                
+            {{> components/tracking/download_tracking}}
+        {{/inline}}                          
+    {{/with}} 
+    {{~#with this.teaseritem }}       
+        {{> components/content/copytext/components/image/figure 
+            _cssClass="!mt-5 !mb-0 !mx-0"
+            _cssClassCaption="!mx-0"
+            _type="story"
+            _variant="copytext"
+            _pictureAddClass="ar-16-9"
+            _isWebview=../../_isWebview
+            _filedownloadLink=../this.link}}  
+    {{/with}}
+
+    <span class="sr-only">{{loca "story_download_outro_sr" }}</span>
+    
+{{/components/content/copytext/components/common/paragraphbox_frame}}

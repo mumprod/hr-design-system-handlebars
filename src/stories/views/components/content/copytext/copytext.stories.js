@@ -9,6 +9,7 @@ import copytext_jobposting_json from './fixtures/copytext_jobposting.json'
 import copytext_image_json from './fixtures/copytext_image.json'
 import copytext_infobox_json from './fixtures/copytext_infobox.json'
 import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
+import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -41,6 +42,12 @@ export const WithFAQ = {
     render: Template.bind({}),
     name: 'FAQ',
     args: copytext_faq_json,
+}
+
+export const WithFiledownload = {
+    render: Template.bind({}),
+    name: 'File-Download',
+    args: copytext_filedownload_json,
 }
 
 export const WithImage = {

@@ -1,4 +1,4 @@
-<div class="ml-1 sm:ml-6 px-4 sm:px-6 border-l-4 border-gray-boulder overflow-auto {{#if this.paragraphProperties.[0].showFullSize }}clear-both my-12 sm:my-14 {{else}}mb-12 sm:mb-14 sm:mt-7 mt-12 mr-0 sm:mr-5 w-full sm:w-1/2 sm:float-left{{/if}}">
+{{#>components/content/copytext/components/common/paragraphbox_frame _showFullsize=this.paragraphProperties.[0].showFullSize}}
     
     <span class="sr-only">{{loca "story_infobox_intro_sr" }}</span>
     
@@ -50,4 +50,4 @@
 
     <span class="sr-only">{{loca "story_infobox_outro_sr" }}</span>
     
-</div>
+{{/components/content/copytext/components/common/paragraphbox_frame}}
