@@ -1,10 +1,11 @@
 <li class="mt-3">
-    {{#>components/base/link _link=this.link _css="underline decoration-1 hover:!decoration-1 text-link dark:text-link-dark"}}
+    <a class="link js-load" href="{{this.url}}" {{#with this.content.trackingData}}
+           data-hr-click-tracking='{"settings": [{"type": "download", "secondLevelId": "{{this.secondLevelId}}", "clickLabel": "{{this.pageName}}"}]}'{{/with}}>
         {{~#with this.downloadBoxMetadata ~}}
             <span class="text-base sm480:text-lg">{{{this.title}}}</span> 
             <span class="text-base whitespace-nowrap sm480:text-lg">[{{this.displaySuffix}}{{#with this.displaySize}} - {{this}}{{/with}}]{{> components/base/image/icon _icon="download-neu"  _addClass="align-middle sm480:align-top inline hover:text-link ml-2 w-4 h-4 sm480:w-5 sm480:h-5 fill-current dark:fill-link-dark"}}</span>
         {{~/with~}}
-    {{/components/base/link}}
+    </a>
     {{#*inline "htmlProperties"}}                
         {{> components/tracking/download_tracking}}
     {{/inline}}
