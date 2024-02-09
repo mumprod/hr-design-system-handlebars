@@ -16,7 +16,7 @@
     </figure>
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
         {{#>components/base/link _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
-            {{#> components/teaser/components/teaser_header}}
+            {{#> components/teaser/components/teaser_header _css="text-center"}}
                 {{#with this.label}}
                     {{#> components/label/label_group}}
                         {{> components/label/label _type=this.type _text=(loca this.loca)}}
