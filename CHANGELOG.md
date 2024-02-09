@@ -1,3 +1,15 @@
+# v1.57.3 (Fri Feb 09 2024)
+
+#### 🐛 Bug Fix
+
+- add adjust_context to image-parameter [#838](https://github.com/mumprod/hr-design-system-handlebars/pull/838) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.57.2 (Thu Feb 08 2024)
 
 #### 🐛 Bug Fix
