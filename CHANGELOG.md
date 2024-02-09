@@ -1,3 +1,15 @@
+# v1.57.5 (Fri Feb 09 2024)
+
+#### 🐛 Bug Fix
+
+- add text-center to header of posterteaser [#840](https://github.com/mumprod/hr-design-system-handlebars/pull/840) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.57.4 (Fri Feb 09 2024)
 
 #### 🐛 Bug Fix
