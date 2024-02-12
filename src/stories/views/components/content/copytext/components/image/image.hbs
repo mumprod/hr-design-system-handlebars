@@ -1,6 +1,7 @@
 {{#if this.showPortrait.isTrue }}
         {{#if this.showFullSize.isTrue }}
             {{> components/content/copytext/components/image/figure 
+                _cssClass="clear-both"
                 _type="story"
                 _variant="100-copytext-portrait"
                 _noAr="true"
@@ -16,6 +17,7 @@
 {{else}}
         {{#if this.showFullSize.isTrue}}
             {{> components/content/copytext/components/image/figure 
+                _cssClass="clear-both"
                 _type="story"
                 _variant="100-copytext"
                 _pictureAddClass="ar-16-9"
