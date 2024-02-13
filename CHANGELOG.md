@@ -1,3 +1,39 @@
+# v1.57.6 (Mon Feb 12 2024)
+
+#### 🐛 Bug Fix
+
+- copytext bugfixes 1 [#841](https://github.com/mumprod/hr-design-system-handlebars/pull/841) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.57.5 (Fri Feb 09 2024)
+
+#### 🐛 Bug Fix
+
+- add text-center to header of posterteaser [#840](https://github.com/mumprod/hr-design-system-handlebars/pull/840) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.57.4 (Fri Feb 09 2024)
+
+#### 🐛 Bug Fix
+
+- fix link [#839](https://github.com/mumprod/hr-design-system-handlebars/pull/839) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.57.3 (Fri Feb 09 2024)
 
 #### 🐛 Bug Fix
