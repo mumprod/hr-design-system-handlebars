@@ -1,8 +1,10 @@
 {{#>components/content/copytext/components/common/paragraphbox_frame _showFullsize=this.paragraphProperties.[0].showFullSize}}
     
     <span class="sr-only">{{loca "story_infobox_intro_sr" }}</span>
-    
-    <h3 class="text-lg -mt-[4px] sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.paragraphProperties.[0].title}}</h3>
+
+    {{~#if this.paragraphProperties.[0].title}}
+        <h3 class="text-lg -mt-[4px] sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.paragraphProperties.[0].title}}</h3>
+    {{/if}}
 
     {{~#with this.paragraphBoxItem }}
         {{~#if this.isImage}}
@@ -12,20 +14,39 @@
                 {{/unless}}
             {{/if}}
             {{#if this.showPortrait.isTrue }}
-                {{> components/content/copytext/components/image/figure 
-                    _cssClass=""
-                    _type="story"
-                    _variant="copytext-portrait"
-                    _noAr="true"
-                    _isWebview=../../_isWebview}}
+                {{~#if ../this.paragraphProperties.[0].title}}
+                    {{> components/content/copytext/components/image/figure
+                        _cssClass="!mt-5 !mb-0 !mx-0"
+                        _type="story"
+                        _variant="copytext-portrait"
+                        _noAr="true"
+                        _isWebview=../../_isWebview}}
+                {{else}}
+                    {{> components/content/copytext/components/image/figure
+                        _cssClass="!mt-0 !mb-0 !mx-0"
+                        _type="story"
+                        _variant="copytext-portrait"
+                        _noAr="true"
+                        _isWebview=../../_isWebview}}
+                {{/if}}
             {{else}}
-                {{> components/content/copytext/components/image/figure 
-                    _cssClass="!mt-5 !mb-0 !mx-0"
-                    _cssClassCaption="!mx-0"
-                    _type="story"
-                    _variant="100-copytext"
-                    _pictureAddClass="ar-16-9"
-                    _isWebview=../../_isWebview}}
+                {{~#if ../this.paragraphProperties.[0].title}}
+                    {{> components/content/copytext/components/image/figure
+                        _cssClass="!mt-5 !mb-0 !mx-0"
+                        _cssClassCaption="!mx-0"
+                        _type="story"
+                        _variant="100-copytext"
+                        _pictureAddClass="ar-16-9"
+                        _isWebview=../../_isWebview}}
+                {{else}}
+                    {{> components/content/copytext/components/image/figure
+                        _cssClass="!mt-0 !mb-0 !mx-0"
+                        _cssClassCaption="!mx-0"
+                        _type="story"
+                        _variant="100-copytext"
+                        _pictureAddClass="ar-16-9"
+                        _isWebview=../../_isWebview}}
+                {{/if}}
             {{/if}}
             {{#if ../paragraphProperties.[0].showFullSize }}
                 {{#unless this.showFullSize.isTrue }}
