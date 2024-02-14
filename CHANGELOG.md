@@ -1,3 +1,16 @@
+# v1.57.9 (Wed Feb 14 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2842: contentbox new design [#843](https://github.com/mumprod/hr-design-system-handlebars/pull/843) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.57.8 (Wed Feb 14 2024)
 
 #### 🐛 Bug Fix
