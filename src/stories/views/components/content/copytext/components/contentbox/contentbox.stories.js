@@ -9,6 +9,13 @@ const Template = ({ ...args }) => {
 
 export default {
     title: 'Komponenten/Content/Copytext/Contentbox',
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto">  
+             ${Story()} 
+             </div>`
+        },
+    ],
 }
 
 export const Default = {
