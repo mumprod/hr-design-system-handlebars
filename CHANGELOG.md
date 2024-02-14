@@ -1,3 +1,15 @@
+# v1.57.8 (Wed Feb 14 2024)
+
+#### 🐛 Bug Fix
+
+- Artikel Wrapper AND Refactoring and rearranging of old file structure [#835](https://github.com/mumprod/hr-design-system-handlebars/pull/835) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.57.7 (Tue Feb 13 2024)
 
 #### 🐛 Bug Fix
