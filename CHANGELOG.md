@@ -1,3 +1,15 @@
+# v1.58.0 (Thu Feb 15 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Fix the check for the existence of the [#845](https://github.com/mumprod/hr-design-system-handlebars/pull/845) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.57.10 (Wed Feb 14 2024)
 
 #### 🐛 Bug Fix
