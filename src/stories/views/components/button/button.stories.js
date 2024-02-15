@@ -262,7 +262,7 @@ export const Spielplatz = {
 
     args: {
         _size: 'md',
-        _label: 'Button'
+        _label: 'Button',
     },
     
 }
@@ -276,8 +276,8 @@ export const ButtonLg = {
             control: false,
             table: {
                 disable: true,
-              }
-        }
+              },
+        },
     },
 
     args: {
@@ -295,8 +295,8 @@ export const ButtonMd = {
             control: false,
             table: {
                 disable: true,
-              }
-        }
+              },
+        },
     },
 
     args: {
@@ -314,8 +314,8 @@ export const ButtonSm = {
             control: false,
             table: {
                 disable: true,
-              }
-        }
+            },
+        },
     },
 
     args: {
@@ -333,7 +333,7 @@ export const ButtonPrimary = {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
@@ -352,7 +352,7 @@ export const ButtonSecondary = {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
@@ -372,7 +372,7 @@ export const ButtonTertiary = {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
@@ -392,21 +392,21 @@ export const ButtonPrimaryDisabled = {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
 
         _variant: {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
     args: {
         _size: 'lg',
         _label: 'Primary',
-        _disabled : true
+        _disabled : true,
     },
 }
 
@@ -419,14 +419,14 @@ export const ButtonSecondaryDisabled = {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
 
         _variant: {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
@@ -434,7 +434,7 @@ export const ButtonSecondaryDisabled = {
         _size: 'lg',
         _label: 'Secondary',
         _variant: 'secondary',
-        _disabled : true
+        _disabled : true,
     },
 }
 
@@ -447,14 +447,14 @@ export const ButtonTertiaryDisabled = {
             control: false,
             table: {
                 disable: true,
-              }  
+            },  
         },
 
         _variant: {
             control: false,
             table: {
                 disable: true,
-              }
+            },
         },
     },
 
