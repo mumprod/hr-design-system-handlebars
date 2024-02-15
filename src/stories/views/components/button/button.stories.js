@@ -226,6 +226,10 @@ export default {
         '_icon': {
             description: 'Der Name des Icons in der Iconmap',
             control: 'text',
+            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right'],
+            control: {
+                type: 'select',
+            },
 
             table: {
                 category: 'Icon',
@@ -260,7 +264,8 @@ export const Spielplatz = {
     args: {
         _size: 'md',
         _label: 'Button',
-    }, 
+    },
+    
 }
 
 export const ButtonLg = {
