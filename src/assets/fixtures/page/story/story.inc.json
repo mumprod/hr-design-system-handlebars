@@ -1,0 +1,108 @@
+{
+    "topline": "Quer über den großen Sylter Deich",
+    "title": "Zwei flinke Boxer jagen die quirlige Eva und ihren Mops",
+    "shorttext": "Vogel Quax zwickt Johnys Pferd Bim. Sylvia wagt quick den Jux bei Pforzheim. Polyfon zwitschernd aßen Mäxchens Vögel Rüben, Joghurt und Quark. Fix quäkt Jürgen blöd vom Paß. Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. Falsches Üben von Xylophonmusik quält jeden größeren Zwerg.",
+    "hasDwellTime": false,
+    "isArchiveContent": false,
+    "displayPageLead": {
+        "isFalse": false
+    },
+    "teaseritem": {
+        "@->jsoninclude": "page/story/story_images.inc.json",
+        "@->contentpath": "story_image_lead",
+        "@->replaceToken": [
+            {
+                "@->token": "image",
+                "@->value": "connichi-106"
+            }
+        ]    
+    },
+    "documentModificationDate": {
+        "isModificationDate": false,
+        "isPublicationDate": true,
+        "htmlDateTime": "2024-02-15T19:30+0200",
+        "date": "15.02.24",
+        "time": "19:30"
+    },
+    "documentPublicationDate": {
+        "htmlDateTime": "2024-02-15T19:30+0200",
+        "date": "15.02.24",
+        "time": "19:30"
+    },    
+    "userComments": {
+        "HasOneComment": false,
+        "quantity": "117"
+    },
+    "byline": "Bylinetext",
+    "authorItems": [
+        {
+            "hasProfileLink": false,
+            "from": "Von",
+            "textAfterAuthor": "Horst Schlämmer",
+            "delimiter": " und "
+        },
+        {
+            "hasProfileLink": true,
+            "from": "",
+            "authorName": "Gisela",
+            "delimiter": "",
+            "link": {
+                "url": "/author-url",
+                "isTargetBlank": false   
+            }            
+        }
+    ],
+    "copytextParagraph": {
+        "@->jsoninclude": "content/copytext/copytext.json",
+        "@->contentpath": "copytextParagraph"
+    },
+    "source": ["Horst Schlämmer","hessenschau.de"],
+    "geotag": [
+        {
+            "url": "/Frankfurt-url",
+            "title": "Frankfurt"
+        },
+        {
+            "url": "/Offenbach-url",
+            "title": "Offenbach"
+        },
+        {
+            "url": "/Darmstadt-url",
+            "title": "Darmstadt"
+        }                
+    ],
+    "topictags": [
+        {
+            "url": "/Parteien-url",
+            "title": "Parteien"
+        },
+        {
+            "url": "/Wahlen-url",
+            "title": "Wahlen"
+        },
+        {
+            "url": "/Landtagswahl-url",
+            "title": "Landtagswahl"
+        }                        
+    ],
+    "socialSharing": {
+        "twitterLink": "/twitterLink-url",
+        "facebookLink": "/facebookLink-url",
+        "whatsappLink": "/whatsappLink-url",
+        "mailtoLink": "/mailtoLink-url"
+    },
+    "programReference": {
+        "hasReference": true,
+        "name": "Program-name",
+        "link": {
+            "url": "/Program-url",
+            "isTargetBlank": true   
+        },
+        "displayWithTime": true,
+        "date": {
+            "htmlDateTime": "2024-02-15T19:30+0200",
+            "date": "15.02.24",
+            "dateSeparatorTime": "19:30"
+        }           
+    }
+}
