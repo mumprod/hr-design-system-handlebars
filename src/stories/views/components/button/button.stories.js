@@ -456,17 +456,7 @@ export const ButtonTertiaryDisabled = {
 export const ButtonIconRechts = {
     render: buttonWithLabelAndIconRightTemplate.bind({}),
     name: 'Button - Icon rechts',
-
-    argTypes: {
-        _size: {
-            control: false,
-        },
-
-        _variant: {
-            control: false,
-        },
-    },
-
+    
     args: {
         _size: 'lg',
         _label: 'Icon rechts',
@@ -478,17 +468,7 @@ export const ButtonIconRechts = {
 export const ButtonIconLinks = {
     render: buttonWithLabelAndIconLeftTemplate.bind({}),
     name: 'Button - Icon links',
-
-    argTypes: {
-        _size: {
-            control: false,
-        },
-
-        _variant: {
-            control: false,
-        },
-    },
-
+    
     args: {
         _size: 'lg',
         _label: 'Icon links',
