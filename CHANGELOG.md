@@ -1,3 +1,15 @@
+# v1.58.4 (Fri Feb 16 2024)
+
+#### 🐛 Bug Fix
+
+- add story-shorttext component [#850](https://github.com/mumprod/hr-design-system-handlebars/pull/850) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.58.3 (Fri Feb 16 2024)
 
 #### 🐛 Bug Fix
