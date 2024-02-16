@@ -225,10 +225,7 @@ export default {
 
         '_icon': {
             description: 'Der Name des Icons in der Iconmap',
-            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right'],
-            control: {
-                type: 'select',
-            },
+            control: 'text',
 
             table: {
                 category: 'Icon',
@@ -264,7 +261,6 @@ export const Spielplatz = {
         _size: 'md',
         _label: 'Button',
     },
-    
 }
 
 export const ButtonLg = {
@@ -273,14 +269,14 @@ export const ButtonLg = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
         _label: {
-            control: false
+            control: false,
         },
     },
 
@@ -296,11 +292,11 @@ export const ButtonMd = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
     },
 
@@ -316,11 +312,11 @@ export const ButtonSm = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
     },
 
@@ -336,11 +332,11 @@ export const ButtonPrimary = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
     },
 
@@ -356,11 +352,11 @@ export const ButtonSecondary = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
     },
 
@@ -377,11 +373,11 @@ export const ButtonTertiary = {
 
     argTypes: {
         _size: {
-            control: false
+            control: false,
         },
 
         _variant: {
-            control: false
+            control: false,
         },
     },
 
@@ -389,78 +385,23 @@ export const ButtonTertiary = {
         _size: 'lg',
         _label: 'Tertiary',
         _variant: 'tertiary',
-    },
-}
-
-export const ButtonPrimaryDisabled = {
-    render: buttonWithLabelTemplate.bind({}),
-    name: 'Button - Primary Deaktiviert',
-
-    argTypes: {
-        _size: {
-            control: false
-        },
-
-        _variant: {
-            control: false
-        },
-    },
-
-    args: {
-        _size: 'lg',
-        _label: 'Primary',
-        _disabled : true
-    },
-}
-
-export const ButtonSecondaryDisabled = {
-    render: buttonWithLabelTemplate.bind({}),
-    name: 'Button - Secondary Deaktiviert',
-
-    argTypes: {
-        _size: {
-            control: false
-        },
-
-        _variant: {
-            control: false
-        },
-    },
-
-    args: {
-        _size: 'lg',
-        _label: 'Secondary',
-        _variant: 'secondary',
-        _disabled : true
-    },
-}
-
-export const ButtonTertiaryDisabled = {
-    render: buttonWithLabelTemplate.bind({}),
-    name: 'Button - Tertiary Deaktiviert',
-
-    argTypes: {
-        _size: {
-            control: false
-        },
-
-        _variant: {
-            control: false
-        },
-    },
-
-    args: {
-        _size: 'lg',
-        _label: 'Tertiary',
-        _variant: 'tertiary',
-        _disabled : true
     },
 }
 
 export const ButtonIconRechts = {
     render: buttonWithLabelAndIconRightTemplate.bind({}),
     name: 'Button - Icon rechts',
-     
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
     args: {
         _size: 'lg',
         _label: 'Icon rechts',
@@ -468,10 +409,19 @@ export const ButtonIconRechts = {
     },
 }
 
-
 export const ButtonIconLinks = {
     render: buttonWithLabelAndIconLeftTemplate.bind({}),
     name: 'Button - Icon links',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
 
     args: {
         _size: 'lg',
