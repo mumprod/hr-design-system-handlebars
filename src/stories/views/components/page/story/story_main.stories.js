@@ -1,4 +1,5 @@
 import story_template from './story_article.hbs'
+import story_json from './fixtures/story.json'
 
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -13,5 +14,5 @@ export default {
 export const Default = {
     render: Template.bind({}),
     name: 'default',
-
+    args: story_json,
 }
