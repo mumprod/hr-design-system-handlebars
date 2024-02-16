@@ -1,3 +1,15 @@
+# v1.58.2 (Fri Feb 16 2024)
+
+#### 🐛 Bug Fix
+
+- bugfix button story [#848](https://github.com/mumprod/hr-design-system-handlebars/pull/848) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.58.1 (Fri Feb 16 2024)
 
 #### 🐛 Bug Fix
