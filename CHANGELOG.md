@@ -1,3 +1,15 @@
+# v1.58.3 (Fri Feb 16 2024)
+
+#### 🐛 Bug Fix
+
+- update storybook and chromatic to latest [#849](https://github.com/mumprod/hr-design-system-handlebars/pull/849) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.58.2 (Fri Feb 16 2024)
 
 #### 🐛 Bug Fix
