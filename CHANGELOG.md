@@ -1,3 +1,20 @@
+# v1.58.1 (Fri Feb 16 2024)
+
+#### 🐛 Bug Fix
+
+- add story-json, rename paragraphbox_frame [#847](https://github.com/mumprod/hr-design-system-handlebars/pull/847) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### 📝 Documentation
+
+- add size and variant controls to icon storys [#846](https://github.com/mumprod/hr-design-system-handlebars/pull/846) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.58.0 (Thu Feb 15 2024)
 
 #### 🚀 Enhancement
