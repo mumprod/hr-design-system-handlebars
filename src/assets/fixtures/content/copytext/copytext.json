@@ -1,11 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
-            "isHeadline": true,
-            "text": "Copytext"
-        },
-        {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {

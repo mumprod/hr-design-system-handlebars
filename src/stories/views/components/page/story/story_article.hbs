@@ -1,12 +1,14 @@
 {{#>components/page/base/page_wrapper}}
-    <h2 class="mb-4 text-3xl">{{this.title}}</h2>
-    <p class="mb-4 font-bold">{{this.shorttext}}</p>
+    
+    <h2 class="text-3xl font-headingSerif sm480:text-5xl">{{this.title}}</h2>
+
+    {{> components/page/story/components/story_shorttext }}
     
     {{#unless this.displayPageLead.isFalse}}
         {{#with this.teaseritem }}
             {{#if this.isImage}}
                 {{> components/content/copytext/components/image/figure
-                    _cssClass="article-breakout"
+                    _cssClass="article-breakout !mb-0"
                     _cssClassCaption=""
                     _type="story"
                     _variant="100-top"
