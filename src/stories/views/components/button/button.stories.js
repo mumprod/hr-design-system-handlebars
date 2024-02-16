@@ -226,6 +226,10 @@ export default {
         '_icon': {
             description: 'Der Name des Icons in der Iconmap',
             control: 'text',
+            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right'],
+            control: {
+                type: 'select',
+            },
 
             table: {
                 category: 'Icon',
@@ -261,6 +265,7 @@ export const Spielplatz = {
         _size: 'md',
         _label: 'Button',
     },
+    
 }
 
 export const ButtonLg = {
@@ -269,14 +274,14 @@ export const ButtonLg = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
         _label: {
-            control: false,
+            control: false
         },
     },
 
@@ -292,11 +297,11 @@ export const ButtonMd = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -312,11 +317,11 @@ export const ButtonSm = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -332,11 +337,11 @@ export const ButtonPrimary = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -352,11 +357,11 @@ export const ButtonSecondary = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -373,11 +378,11 @@ export const ButtonTertiary = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -394,11 +399,11 @@ export const ButtonPrimaryDisabled = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -415,11 +420,11 @@ export const ButtonSecondaryDisabled = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -437,11 +442,11 @@ export const ButtonTertiaryDisabled = {
 
     argTypes: {
         _size: {
-            control: false,
+            control: false
         },
 
         _variant: {
-            control: false,
+            control: false
         },
     },
 
@@ -456,17 +461,7 @@ export const ButtonTertiaryDisabled = {
 export const ButtonIconRechts = {
     render: buttonWithLabelAndIconRightTemplate.bind({}),
     name: 'Button - Icon rechts',
-
-    argTypes: {
-        _size: {
-            control: false,
-        },
-
-        _variant: {
-            control: false,
-        },
-    },
-
+     
     args: {
         _size: 'lg',
         _label: 'Icon rechts',
@@ -478,16 +473,6 @@ export const ButtonIconRechts = {
 export const ButtonIconLinks = {
     render: buttonWithLabelAndIconLeftTemplate.bind({}),
     name: 'Button - Icon links',
-
-    argTypes: {
-        _size: {
-            control: false,
-        },
-
-        _variant: {
-            control: false,
-        },
-    },
 
     args: {
         _size: 'lg',
