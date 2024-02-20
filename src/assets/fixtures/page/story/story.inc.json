@@ -2,7 +2,8 @@
     "topline": "Quer über den großen Sylter Deich",
     "title": "Zwei flinke Boxer jagen die quirlige Eva und ihren Mops",
     "shorttext": "Vogel Quax zwickt Johnys Pferd Bim. Sylvia wagt quick den Jux bei Pforzheim. Polyfon zwitschernd aßen Mäxchens Vögel Rüben, Joghurt und Quark. Fix quäkt Jürgen blöd vom Paß. Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. Falsches Üben von Xylophonmusik quält jeden größeren Zwerg.",
-    "hasDwellTime": false,
+    "hasMoreThanOneAuthor": false,
+    "hasDwellTime": true,
     "isArchiveContent": false,
     "displayPageLead": {
         "isFalse": false
@@ -34,17 +35,36 @@
         "quantity": "117"
     },
     "byline": "Bylinetext",
+    "authorTitle": "Steffen Rebhahn",
+    "authorImage": {
+        "@->jsoninclude": "page/story/story_images.inc.json",
+        "@->contentpath": "author",
+        "@->replaceToken": [
+            {
+                "@->token": "image",
+                "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+            }
+        ]            
+    },
+    "authorUrl": "/author-url",
+    "webviewAuthorUrl": "webview-author-url",
     "authorItems": [
         {
             "hasProfileLink": false,
             "from": "Von",
             "textAfterAuthor": "Horst Schlämmer",
+            "delimiter": ", "
+        },
+        {
+            "hasProfileLink": false,
+            "from": "",
+            "textAfterAuthor": "Karl Dall",
             "delimiter": " und "
         },
         {
             "hasProfileLink": true,
             "from": "",
-            "authorName": "Gisela",
+            "authorName": "Peter Lustig",
             "delimiter": "",
             "link": {
                 "url": "/author-url",
