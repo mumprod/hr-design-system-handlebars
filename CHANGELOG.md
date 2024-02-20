@@ -1,3 +1,15 @@
+# v1.58.5 (Tue Feb 20 2024)
+
+#### 🐛 Bug Fix
+
+- add metadatabox-component + sub-components [#852](https://github.com/mumprod/hr-design-system-handlebars/pull/852) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.58.4 (Fri Feb 16 2024)
 
 #### 🐛 Bug Fix
