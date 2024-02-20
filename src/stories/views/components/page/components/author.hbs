@@ -1,0 +1,27 @@
+{{#if this.hasMoreThanOneAuthor}}
+    author-list
+{{else}}
+
+    {{#if this.authorTitle~}}
+        <div class="flex items-center h-10">
+            {{#if this.authorImage.isImage}}
+                <div class="w-10 h-10 mr-4 basis-10 grow-0">
+                    {{~> components/base/image/responsive_image this.authorImage
+                            _type="profile" 
+                            _variant="ticker" 
+                            _addClass=""
+                            _addClassImg="ar-1-1 rounded-full" ~}}
+                </div>
+            {{/if}}
+            <div class="self-start text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
+                {{#unless _hideFrom }}Von{{/unless}}
+                {{#if this.authorUrl~}}
+                    <a href="{{this.authorUrl}}" {{#with this.webviewAuthorUrl}}data-webviewurl="{{this}}"{{/with}} class="text-link hover:underline ">{{this.authorTitle}}</a>
+                {{else}}
+                    {{this.authorTitle}}
+                {{/if}}
+            </div>
+        </div>
+    {{~/if}}
+
+{{/if}}

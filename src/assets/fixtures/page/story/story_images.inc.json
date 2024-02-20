@@ -58,5 +58,21 @@
                 }
             ]
         }
-    }
+    },
+    "author": {
+        "isImage": true,
+        "caption": "Steffen Rebhahn",
+        "copyrightWithLinks": "hr",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-1to1_small.jpg",
+            "sources": [
+                {
+                    "sizes": "50px",
+                    "srcset": "images/{#image}_v-1to1__xsmall.jpg 260w, images/{#image}_v-1to1__small.jpg 380w, images/{#image}_v-1to1__medium.jpg 480w, images/{#image}_v-1to1.jpg 720w, images/{#image}_v-1to1__large.jpg 960w"
+                }
+            ]
+        }
+    }    
 }

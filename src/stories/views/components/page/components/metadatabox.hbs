@@ -1,0 +1,16 @@
+<div class="clear-both mt-3 border-y-2 border-gray-scorpion">
+    <div class="flex clear-both w-full mt-4 mb-3">
+        <div>
+        {{> components/page/components/author _hideFrom=false }}
+
+        {{#if _showDate }}
+            {{> components/page/components/publicationdate }}
+        {{/if}}
+
+        {{> components/page/components/commentlink }}
+        </div>
+
+        {{> components/page/components/socialsharing }}
+
+    </div>
+</div>
