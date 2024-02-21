@@ -1,3 +1,15 @@
+# v1.59.0 (Wed Feb 21 2024)
+
+#### 🚀 Enhancement
+
+- :bug: use globalSettingsCookie instead of incompatible trackingCookie. [#853](https://github.com/mumprod/hr-design-system-handlebars/pull/853) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.58.5 (Tue Feb 20 2024)
 
 #### 🐛 Bug Fix
