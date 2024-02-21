@@ -1,5 +1,23 @@
 {{#if this.hasMoreThanOneAuthor}}
-    author-list
+    
+    {{#with this.authorItems}}
+        <p class="mb-1 text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
+            {{#each this}}
+                {{#if this.hasProfileLink}}
+                    {{this.from}}
+                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                        <span>{{../this.authorName~}}</span>
+                    {{/components/base/link}}                    
+                    {{#with this.textAfterAuthor}} {{this}}{{/with}}
+                    {{this.delimiter}}
+                {{else}}
+                    {{this.from}}
+                    {{#with this.textAfterAuthor}} {{this}}{{/with}}{{this.delimiter}}
+                {{/if}}
+            {{/each}}
+        </p>
+    {{/with}}
+
 {{else}}
 
     {{#if this.authorTitle~}}
@@ -16,7 +34,7 @@
             <div class="self-start text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
                 {{#unless _hideFrom }}Von{{/unless}}
                 {{#if this.authorUrl~}}
-                    <a href="{{this.authorUrl}}" {{#with this.webviewAuthorUrl}}data-webviewurl="{{this}}"{{/with}} class="text-link hover:underline ">{{this.authorTitle}}</a>
+                    <a href="{{this.authorUrl}}" {{#with this.webviewAuthorUrl}}data-webviewurl="{{this}}"{{/with}} class="text-link hover:underline dark:text-link-dark ">{{this.authorTitle}}</a>
                 {{else}}
                     {{this.authorTitle}}
                 {{/if}}
