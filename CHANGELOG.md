@@ -1,3 +1,15 @@
+# v1.59.3 (Thu Feb 22 2024)
+
+#### 🐛 Bug Fix
+
+- reduce line-thickness [#858](https://github.com/mumprod/hr-design-system-handlebars/pull/858) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.2 (Thu Feb 22 2024)
 
 #### 🐛 Bug Fix
