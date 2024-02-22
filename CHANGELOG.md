@@ -1,3 +1,19 @@
+# v1.59.1 (Thu Feb 22 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Update auto package to it's latest version to solve the issue from https://github.com/intuit/auto/issues/2425 [#856](https://github.com/mumprod/hr-design-system-handlebars/pull/856) ([@szuelch](https://github.com/szuelch))
+- small whitespace change [#855](https://github.com/mumprod/hr-design-system-handlebars/pull/855) ([@vascoeduardo](https://github.com/vascoeduardo))
+- add author-list [#854](https://github.com/mumprod/hr-design-system-handlebars/pull/854) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.0 (Wed Feb 21 2024)
 
 #### 🚀 Enhancement
