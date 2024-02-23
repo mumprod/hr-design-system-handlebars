@@ -1,12 +1,10 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit Jobposting"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isParagraph": true,
             "text": {
                 "split": [
@@ -18,12 +16,10 @@
             }                  
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Java-Entwickler*in"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isJobposting": true,
             "text": "Wo brauche ich noch Corona-Test?",
             "paragraphProperties": [
