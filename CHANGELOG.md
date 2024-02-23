@@ -1,3 +1,27 @@
+# v1.59.6 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- increased diffThreshold to 0.3 ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.5 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- changed diffThreshold to 0.25 for testing ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.4 (Fri Feb 23 2024)
 
 #### 🐛 Bug Fix
