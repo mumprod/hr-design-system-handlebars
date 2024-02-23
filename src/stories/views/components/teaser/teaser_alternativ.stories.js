@@ -30,7 +30,7 @@ export default {
 
         chromatic: {
             viewports: [360, 1024],
-            diffThreshold: 0.5,
+            diffThreshold: 0.25,
         },
     },
 
