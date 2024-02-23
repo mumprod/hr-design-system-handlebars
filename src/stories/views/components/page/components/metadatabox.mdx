@@ -1,0 +1,29 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as MetadataboxStories from './metadatabox.stories'
+
+<Meta of={MetadataboxStories} />
+
+# Metadaten-Box
+
+## Beschreibung
+
+Die Metadaten-Box enthält folgende Elemente: 
+- Autor-Name(n)
+- Autor-Bild (wenn nur ein Autor)
+- Aktualisierungs- oder Veröffentlichungsdatum
+- Anker-Link zu den Kommentaren
+- social-sharing-buttons
+
+## Verwendung
+
+Die Metadatenbox-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/page/components/metadatabox _showDate=true|false }}
+```
+
+<Canvas withToolbar>
+    <Story of={MetadataboxStories.Default} />
+</Canvas>
+
+<ArgsTable story="default" />
