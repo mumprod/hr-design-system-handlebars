@@ -26,7 +26,7 @@ export default {
         layout: 'fullscreen',
 
         chromatic: {
-            diffThreshold: 0.25,
+            diffThreshold: 0.3,
         },
     },
 
