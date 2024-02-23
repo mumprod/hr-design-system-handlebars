@@ -1,3 +1,51 @@
+# v1.59.7 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- Implemented 'layout: fullscreen' parameter in Storybook configuration… [#860](https://github.com/mumprod/hr-design-system-handlebars/pull/860) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.6 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- increased diffThreshold to 0.3 ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.5 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- changed diffThreshold to 0.25 for testing ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.4 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: remove structuredData.ssi  because it is not longer used [#859](https://github.com/mumprod/hr-design-system-handlebars/pull/859) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.59.3 (Thu Feb 22 2024)
 
 #### 🐛 Bug Fix

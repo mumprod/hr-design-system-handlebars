@@ -1,7 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit Image"
         },
