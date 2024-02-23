@@ -1,3 +1,15 @@
+# v1.59.7 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- Implemented 'layout: fullscreen' parameter in Storybook configuration… [#860](https://github.com/mumprod/hr-design-system-handlebars/pull/860) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.6 (Fri Feb 23 2024)
 
 #### ⚠️ Pushed to `main`
