@@ -1,7 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit Infobox"
         },
@@ -9,7 +8,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isInfoBox": true,
             "text": {
                 "split": [
@@ -40,7 +38,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isInfoBox": true,
             "text": {
                 "split": [
@@ -71,7 +68,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isInfoBox": true,
             "text": {
                 "split": [
@@ -105,7 +101,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isInfoBox": true,
             "text": {
                 "split": [
@@ -126,7 +121,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isInfoBox": true,
             "text": {
                 "split": [

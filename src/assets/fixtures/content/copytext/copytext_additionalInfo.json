@@ -1,7 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit Zusatzinfo"
         },
@@ -12,7 +11,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isAdditionalInfo": true,
             "text": {
                 "split": [
