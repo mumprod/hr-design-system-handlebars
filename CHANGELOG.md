@@ -1,3 +1,15 @@
+# v1.59.8 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- add story for metadatabox [#861](https://github.com/mumprod/hr-design-system-handlebars/pull/861) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.7 (Fri Feb 23 2024)
 
 #### 🐛 Bug Fix
