@@ -1,3 +1,15 @@
+# v1.59.4 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: remove structuredData.ssi  because it is not longer used [#859](https://github.com/mumprod/hr-design-system-handlebars/pull/859) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.59.3 (Thu Feb 22 2024)
 
 #### 🐛 Bug Fix
