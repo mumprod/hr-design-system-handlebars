@@ -15,4 +15,7 @@ export const Default = {
     render: Template.bind({}),
     name: 'default',
     args: story_json,
+    parameters: {
+        layout: 'fullscreen',
+    }    
 }
