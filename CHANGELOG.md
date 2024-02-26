@@ -1,3 +1,15 @@
+# v1.59.9 (Mon Feb 26 2024)
+
+#### 🐛 Bug Fix
+
+- Adjust grid behaviour of full width image [#862](https://github.com/mumprod/hr-design-system-handlebars/pull/862) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.8 (Fri Feb 23 2024)
 
 #### 🐛 Bug Fix
