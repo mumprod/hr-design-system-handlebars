@@ -16,14 +16,14 @@
             {{#if this.showPortrait.isTrue }}
                 {{~#if ../this.paragraphProperties.[0].title}}
                     {{> components/content/copytext/components/image/figure
-                        _cssClass="!mt-5 !mb-0"
+                        _cssClass="mt-5 mb-0"
                         _type="story"
                         _variant="copytext-portrait"
                         _noAr="true"
                         _isWebview=../../_isWebview}}
                 {{else}}
                     {{> components/content/copytext/components/image/figure
-                        _cssClass="!mt-0 !mb-0"
+                        _cssClass="my-0"
                         _type="story"
                         _variant="copytext-portrait"
                         _noAr="true"
@@ -32,7 +32,7 @@
             {{else}}
                 {{~#if ../this.paragraphProperties.[0].title}}
                     {{> components/content/copytext/components/image/figure
-                        _cssClass="!mt-5 !mb-0"
+                        _cssClass="mt-5 mb-0"
                         _cssClassCaption=""
                         _type="story"
                         _variant="100-copytext"
@@ -40,7 +40,7 @@
                         _isWebview=../../_isWebview}}
                 {{else}}
                     {{> components/content/copytext/components/image/figure
-                        _cssClass="!mt-0 !mb-0"
+                        _cssClass="my-0"
                         _cssClassCaption=""
                         _type="story"
                         _variant="100-copytext"
