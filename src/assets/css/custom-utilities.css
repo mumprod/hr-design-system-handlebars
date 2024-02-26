@@ -174,9 +174,9 @@
         }
     }
     .grid-article {
-        --mobile-padding: 1.25rem;
-        --desktop-padding: 40px;
-        --narrow-max-width: 726px;
+        --mobile-padding: theme(margin.5);
+        --desktop-padding: theme(margin.10);
+        --narrow-max-width: calc(var(--breakpoint-md) - (var(--mobile-padding) * 2));
         --content-max-width: 940px;
         --breakout-size: calc((var(--content-max-width) - var(--narrow-max-width)) / 2);
         
