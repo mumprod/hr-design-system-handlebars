@@ -17,5 +17,12 @@ export const Default = {
     args: story_json,
     parameters: {
         layout: 'fullscreen',
-    }    
+    },
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-page">     
+                        ${Story()} 
+                    </div>`
+        },
+    ],    
 }

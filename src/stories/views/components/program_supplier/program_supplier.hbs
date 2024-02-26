@@ -3,7 +3,7 @@
     
     <div class='flex flex-wrap pt-2 w-fit sm:w-full gap-x-6 sm:gap-x-2 gap-y-2'>
         {{#if this.link}}
-            {{#>components/base/link _link=this.link _cssClasses='programReference__link'}}
+            {{#>components/base/link _link=this.link }}
                 {{#if this.content.programLogo}}
                     {{#with this.content.programLogo}}
                         <img

@@ -7,6 +7,12 @@
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
+    --breakpoint-xs:  theme(screens.xs);
+    --breakpoint-sm480: theme(screens.sm480);
+    --breakpoint-sm: theme(screens.sm);
+    --breakpoint-md: theme(screens.md); 
+    --breakpoint-lg: theme(screens.lg);
+    
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
