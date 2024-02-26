@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html 
+    class="no-js no-js-burgerMenu preload noMicroInteraction"
+    data-theme="hessenschau" 
+    lang="de"
+>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <title>hessenschau.de | Nachrichten aus Hessen</title>
+        <meta name="application-name" content="hessenschau.de" />
+        <meta name="copyright" content="Hessischer Rundfunk, Frankfurt, Germany" />
+        <meta name="author" content="hessenschau.de, Frankfurt, Germany" />
+        <meta name="publisher" content="hessenschau.de" />
+        <meta name="language" content="Deutsch" />
+
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div class="js-pageSwap">
+                      
+            {{> components/site_header/offline_header }}          
+            
+            <main 
+                onclick="void(0)" 
+                role="main" 
+                id="content"
+                class="flex items-center justify-center"
+            >
+                <div class="grid grid-page">
+                    <div class="{{> components/grid/grid_group_wrapper_classes }}">
+                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
+                            <div class="flex items-center flex-wrap max-w-lg">
+                                <div>
+                                    <div>
+                                        {{> components/base/image/icon _icon="hilfe" _addClass="size-full h-52" _iconmap="404"~}}
+                                        <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">
+                                             {{loca "offline_page_info_text"}}
+                                        </h3>
+                                        {{#> components/button/button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" }}
+                        {{> components/button/components/button_label _label="Erneut versuchen"}}
+                    {{/components/button/button}}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

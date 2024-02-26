@@ -44,6 +44,7 @@
     "group_tabbed_more": "weitere Meldungen aus {0}",
     "homepage_metatitle": "Nachrichten aus Hessen",
     "javascript_disabled": "Keine Videowiedergabe möglich. Bitte aktivieren Sie Javascript oder deaktivieren Sie Tools, die die Scriptausführung im Browser unterbinden.",
+    "offline_page_info_text": "Keine Verbindung zum Server möglich. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.",
     "label_analysis": "Analyse",
     "label_audio": "Audio",
     "label_audio_event_livestream": "Livestream",
