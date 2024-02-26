@@ -1,3 +1,15 @@
+# v1.59.10 (Mon Feb 26 2024)
+
+#### 🐛 Bug Fix
+
+- :sparkles: DPE 2722 [#851](https://github.com/mumprod/hr-design-system-handlebars/pull/851) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.9 (Mon Feb 26 2024)
 
 #### 🐛 Bug Fix
