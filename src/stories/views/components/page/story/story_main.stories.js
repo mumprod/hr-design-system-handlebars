@@ -24,5 +24,12 @@ export const WithLabel = {
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',
-    }    
+    },
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-page">     
+                        ${Story()} 
+                    </div>`
+        },
+    ],    
 }
