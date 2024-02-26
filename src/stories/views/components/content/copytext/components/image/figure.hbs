@@ -1,4 +1,4 @@
-<figure class="relative my-6 sm480:my-7 {{#if _cssClasses}} {{_cssClasses}}{{/if}} {{_cssClass}}">
+<figure class="relative{{#if _cssClass}} {{_cssClass}}{{/if}}">
     {{#if _noAr }}
         {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _isWebview=_isWebview _noDelay=_noDelay}}
     {{else}}
