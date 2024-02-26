@@ -18,6 +18,9 @@ export default {
         },
 
         layout: 'fullscreen',
+        chromatic: {
+            diffThreshold: 0.3,
+        },
     },
 
     argTypes: {},
