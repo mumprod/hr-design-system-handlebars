@@ -1,10 +1,10 @@
 {{#>components/page/base/page_wrapper}}
-   
-    <h2 class="text-3xl font-headingSerif sm480:text-5xl">{{this.title}}</h2>
+    {{> components/page/base/page_header}}
 
     {{> components/page/components/shorttext _text=this.shorttext }}
 
     {{> components/page/components/metadatabox _showDate=this.hasDwellTime}}
+    
     
     {{#unless this.displayPageLead.isFalse}}
         {{#with this.teaseritem }}

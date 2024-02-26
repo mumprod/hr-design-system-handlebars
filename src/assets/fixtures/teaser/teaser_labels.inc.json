@@ -119,5 +119,9 @@
             },
             "bylineText": "BylineText"
         }
+    },
+    "glosse": {
+        "type": "glosse",
+        "loca": "label_glosse"
     }
 }

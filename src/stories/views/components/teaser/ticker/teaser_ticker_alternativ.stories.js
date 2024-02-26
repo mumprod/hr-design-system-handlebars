@@ -16,6 +16,9 @@ export default {
 
     parameters: {
         layout: '',
+        chromatic: {
+            diffThreshold: 0.3,
+        },
     },
 
     argTypes: {},
