@@ -1,7 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit FAQs"
         },
@@ -9,7 +8,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isFAQ": true,
             "text": "Wo brauche ich noch Corona-Test?",
             "paragraphProperties": [
@@ -34,7 +32,6 @@
             ]
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isFAQ": true,
             "text": "Gibt es noch Bürgertests?",
             "paragraphProperties": [
@@ -51,7 +48,6 @@
             ]   
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isFAQ": true,
             "text": "Wo muss ich Maske tragen?",
             "paragraphProperties": [

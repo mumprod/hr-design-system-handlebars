@@ -22,4 +22,7 @@ export const WithLabel = {
     render: Template.bind({}),
     name: 'Artikel mit Label',
     args: data_story_with_label,
+    parameters: {
+        layout: 'fullscreen',
+    }    
 }

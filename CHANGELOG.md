@@ -1,3 +1,127 @@
+# v1.59.8 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- add story for metadatabox [#861](https://github.com/mumprod/hr-design-system-handlebars/pull/861) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.59.7 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- Implemented 'layout: fullscreen' parameter in Storybook configuration… [#860](https://github.com/mumprod/hr-design-system-handlebars/pull/860) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.6 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- increased diffThreshold to 0.3 ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.5 (Fri Feb 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- changed diffThreshold to 0.25 for testing ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.4 (Fri Feb 23 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: remove structuredData.ssi  because it is not longer used [#859](https://github.com/mumprod/hr-design-system-handlebars/pull/859) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.59.3 (Thu Feb 22 2024)
+
+#### 🐛 Bug Fix
+
+- reduce line-thickness [#858](https://github.com/mumprod/hr-design-system-handlebars/pull/858) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.59.2 (Thu Feb 22 2024)
+
+#### 🐛 Bug Fix
+
+- add social-sharing-component [#857](https://github.com/mumprod/hr-design-system-handlebars/pull/857) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.59.1 (Thu Feb 22 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Update auto package to it's latest version to solve the issue from https://github.com/intuit/auto/issues/2425 [#856](https://github.com/mumprod/hr-design-system-handlebars/pull/856) ([@szuelch](https://github.com/szuelch))
+- small whitespace change [#855](https://github.com/mumprod/hr-design-system-handlebars/pull/855) ([@vascoeduardo](https://github.com/vascoeduardo))
+- add author-list [#854](https://github.com/mumprod/hr-design-system-handlebars/pull/854) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 3
+
+- [@szuelch](https://github.com/szuelch)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.0 (Wed Feb 21 2024)
+
+#### 🚀 Enhancement
+
+- :bug: use globalSettingsCookie instead of incompatible trackingCookie. [#853](https://github.com/mumprod/hr-design-system-handlebars/pull/853) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.58.5 (Tue Feb 20 2024)
+
+#### 🐛 Bug Fix
+
+- add metadatabox-component + sub-components [#852](https://github.com/mumprod/hr-design-system-handlebars/pull/852) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.58.4 (Fri Feb 16 2024)
 
 #### 🐛 Bug Fix

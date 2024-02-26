@@ -1,7 +1,6 @@
 {
     "copytextParagraph": [
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isHeadline": true,
             "text": "Copytext mit Download-Box"
         },
@@ -9,7 +8,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isDownloadBox": true,
             "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "paragraphProperties": [
@@ -66,7 +64,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "structuredDataSsi": "<!--#include virtual='structuredDataSsiPath' -->",
             "isDownloadBox": true,
             "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "paragraphProperties": [

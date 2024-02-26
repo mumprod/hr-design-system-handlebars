@@ -1,7 +1,10 @@
 {{#>components/page/base/page_wrapper}}
-
     {{> components/page/base/page_header}}
+
     {{> components/page/story/components/story_shorttext }}
+
+    {{> components/page/components/metadatabox _showDate=this.hasDwellTime}}
+    
     
     {{#unless this.displayPageLead.isFalse}}
         {{#with this.teaseritem }}
