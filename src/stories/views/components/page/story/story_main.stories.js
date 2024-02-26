@@ -16,6 +16,9 @@ export const Default = {
     render: Template.bind({}),
     name: 'Artikel mit Topline',
     args: data_story,
+    parameters: {
+        layout: 'fullscreen',
+    } 
 }
 
 export const WithLabel = {
@@ -24,12 +27,5 @@ export const WithLabel = {
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',
-    },
-    decorators: [
-        (Story) => {
-            return `<div class="grid grid-page">     
-                        ${Story()} 
-                    </div>`
-        },
-    ],    
+    }  
 }
