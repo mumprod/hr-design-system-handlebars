@@ -1,15 +1,17 @@
 {{#>components/page/base/page_wrapper}}
-    
-    <h2 class="text-3xl font-headingSerif sm480:text-5xl">{{this.title}}</h2>
+    {{> components/page/base/page_header}}
 
-    {{> components/page/story/components/story_shorttext }}
+    {{> components/page/components/shorttext _text=this.shorttext }}
+
+    {{> components/page/components/metadatabox _showDate=this.hasDwellTime}}
+    
     
     {{#unless this.displayPageLead.isFalse}}
         {{#with this.teaseritem }}
             {{#if this.isImage}}
                 {{> components/content/copytext/components/image/figure
-                    _cssClass="article-breakout !mb-0"
-                    _cssClassCaption=""
+                    _cssClass="article-full-width md:article-breakout mt-6 sm480:mt-7 "
+                    _cssClassCaption="mx-5 md:mx-0"
                     _type="story"
                     _variant="100-top"
                     _pictureAddClass="ar-16-9"

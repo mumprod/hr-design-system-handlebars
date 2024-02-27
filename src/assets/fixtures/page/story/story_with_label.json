@@ -1,0 +1,15 @@
+{
+
+    "@->jsoninclude": "page/story/story.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "label",
+            "@->value": 
+                {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "glosse"
+                }
+            
+        }
+    ]    
+}

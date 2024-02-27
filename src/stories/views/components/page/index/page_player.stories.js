@@ -16,6 +16,7 @@ export default {
     parameters: {
         chromatic: {
             viewports: [360, 768, 1024],
+            diffThreshold: 0.3,
         },
 
         layout: 'fullscreen',

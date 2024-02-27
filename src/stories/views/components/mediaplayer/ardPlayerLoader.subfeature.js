@@ -1,5 +1,5 @@
 import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
-import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
+import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 
 const ArdPlayerLoader = function (options, rootElement) {
     'use strict'
@@ -8,7 +8,7 @@ const ArdPlayerLoader = function (options, rootElement) {
         ardplayerUrl = options.jsUrl,
         smarttagUrl = options.atiSmarttagUrl,
         playerId = options.playerId,
-        trackingCookie = new TrackingCookie(),
+        settingsCookie = new SettingsCookie(),
         isPlayerDebug = options.isPlayerDebug || false
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
@@ -45,12 +45,12 @@ const ArdPlayerLoader = function (options, rootElement) {
     }
 
     const createPlayer = function () {
-        if (!trackingCookie.isTrackingAccepted('ati')) {
+        if (!settingsCookie.isSettingsCookieAccepted('ati')) {
             if (undefined != playerConfig.pluginData['trackingPiano@all'])
                 playerConfig.pluginData['trackingPiano@all'].isEnabled = false
         }
         if (
-            !trackingCookie.isTrackingAccepted('agf') &&
+            !settingsCookie.isSettingsCookieAccepted('agf') &&
             undefined != playerConfig.pluginData['trackingAgf@all']
         ) {
             playerConfig.pluginData['trackingAgf@all'].isEnabled = false
@@ -113,18 +113,7 @@ const ArdPlayerLoader = function (options, rootElement) {
         })
     }
 
-    if (
-        trackingCookie.isTrackingAccepted('agf') &&
-        window.gfkConnector &&
-        playerConfig.pluginData['trackingAgf@all']
-    ) {
-        gfkConnector.init(function (gfkLinkID) {
-            playerConfig.pluginData['trackingAgf@all'].clipData.nol_c20 = 'p20,' + gfkLinkID
-            setupPlayer()
-        })
-    } else {
-        setupPlayer()
-    }
+    setupPlayer()
 }
 
 export default ArdPlayerLoader

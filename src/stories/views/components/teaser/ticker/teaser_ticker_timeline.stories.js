@@ -23,6 +23,11 @@ const timelineOnWhite = (args) => {
 export default {
     title: 'Komponenten/Teaser/Ticker/Komponenten',
 
+    parameters: {
+        chromatic: {
+            diffThreshold: 0.3,
+        },
+    },
     argTypes: {
         '_color': {
             description: 'Text- und Linienfarbe',

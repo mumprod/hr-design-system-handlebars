@@ -1,0 +1,15 @@
+<div class="{{#unless this.hasMoreThanOneAuthor}}{{#if this.authorImage.isImage}}-mt-5 ml-14 {{/if}}{{/unless}}text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
+
+    {{#with this.documentModificationDate~}}
+        
+            {{#if this.isModificationDate }}
+                <time datetime="{{this.htmlDateTime}}">{{loca "date_updated_fixed" this.date this.time }}</time>
+            {{~else}}
+                {{#if this.isPublicationDate ~}}
+                    <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
+                {{~/if}}
+            {{~/if}}
+               
+    {{~/with}}
+    
+</div>
