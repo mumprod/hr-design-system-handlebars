@@ -28,19 +28,21 @@
                 id="content"
                 class="flex items-center justify-center"
             >
-                <div class="grid grid-page">
+                <div class="grid grid-page flex items-center flex-wrap justify-center">
                     <div class="{{> components/grid/grid_group_wrapper_classes }}">
-                        <section class="grid items-start content-start grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6 ">
-                            <div class="flex items-center flex-wrap max-w-lg">
+                        <section class="grid items-center justify-center grid-cols-12 col-span-12 bg-white gap-x-6 gap-y-6">
+                            <div class="items-start relative col-span-12 flex gap-y-3 gap-x-4 flex-col">
                                 <div>
-                                    <div>
+                                    <div class="flex justify-center flex-wrap text-center">
                                         {{> components/base/image/icon _icon="hilfe" _addClass="size-full h-52" _iconmap="404"~}}
-                                        <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">
+                                        </div>
+                                        <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark flex justify-center flex-wrap text-center mt-9">
                                              {{loca "offline_page_info_text"}}
                                         </h3>
+                                        <div class="flex justify-center flex-wrap text-center mt-9" onclick="window.location.reload();">
                                         {{#> components/button/button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" }}
-                        {{> components/button/components/button_label _label="Erneut versuchen"}}
-                    {{/components/button/button}}
+                                        {{> components/button/components/button_label _label="Erneut versuchen"}}
+                                        {{/components/button/button}}
                                     </div>
                                 </div>
                             </div>
