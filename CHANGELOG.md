@@ -1,3 +1,15 @@
+# v1.59.11 (Tue Feb 27 2024)
+
+#### ⚠️ Pushed to `main`
+
+- :sparkles: DPE-2816 Sticky sharing ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.10 (Mon Feb 26 2024)
 
 #### 🐛 Bug Fix
