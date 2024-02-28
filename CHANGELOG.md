@@ -1,3 +1,15 @@
+# v1.59.16 (Wed Feb 28 2024)
+
+#### 🐛 Bug Fix
+
+- fix indexText-bug [#866](https://github.com/mumprod/hr-design-system-handlebars/pull/866) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.15 (Wed Feb 28 2024)
 
 #### 🐛 Bug Fix
