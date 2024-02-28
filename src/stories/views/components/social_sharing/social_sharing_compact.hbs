@@ -1,0 +1,73 @@
+<div x-data="{
+        open: false,
+        sharingIsVisible: true,
+        toggle() {
+            var isMobileApple = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i);
+            var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
+            var isMobile= isMobileApple || isMobileOther;
+            if (navigator.share && isMobile) {
+                navigator.share({
+                    title: 'Awesome Content',
+                    text: 'Check out this awesome content!',
+                    url: 'https://example.com',
+                })
+                .then(() => console.log('Shared successfully'))
+                .catch((error) => console.error('Sharing failed:', error));
+            } else {
+                if (this.open) {
+                    return this.close()
+                }
+                this.$refs.button.focus()
+                this.open = true
+            }
+            
+        },
+        close(focusAfter) {
+            if (! this.open) return
+
+            this.open = false
+
+            focusAfter && focusAfter.focus()
+        }
+    }"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-id="['dropdown-button']"
+    class="flex self-center justify-end grow "
+    x-intersect:leave="sharingIsVisible = false"
+    x-intersect:enter="sharingIsVisible = true"
+>
+    <div x-text="sharingIsVisible" class="fixed left-1 top-1"></div>
+    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': !sharingIsVisible }">
+        <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
+            <div class="flex gap-3" :class="{ 'bottom-5 left-5 flex-col absolute bg-white': !sharingIsVisible }">
+                <button 
+                    class="order-2 w-8 h-8 ds-button font-heading active:scale-95 hover:scale-105 group"
+                    :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')">
+                    {{> components/base/image/icon _addClass="w-full h-full fill-button group-hover:fill-button--dark" _icon="teilen-button" _iconmap="icons" }}
+                </button> 
+
+
+                <!-- Panel -->
+                <div
+                    x-ref="panel"
+                    x-show="open"
+                    x-transition.origin.right
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    style="display: none;"
+                    class="bg-white"
+                >
+                    <ul class="flex gap-3"  :class="{ 'flex-col': ! sharingIsVisible }">
+                        
+                        {{> components/social_sharing/social_sharing_compact_icons }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

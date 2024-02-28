@@ -1,0 +1,66 @@
+<li>
+    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+        href="{{this}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="{{loca "share_x_linktitle" }}"
+        {{#with ../../this.content.trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::X"}]}'
+        {{/with}}
+    >
+        {{~> components/base/image/icon _addClass="w-full h-full fill-[#0f1419] " _icon="x" _iconmap="icons" ~}}
+    </a>
+</li>
+<li class="">
+    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+        href="{{this}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="{{loca "share_facebook_linktitle" }}"
+        {{#with ../../this.content.trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
+        {{/with}}
+    >
+        {{~> components/base/image/icon _addClass="w-full h-full fill-[#3b5999] " _icon="facebook" _iconmap="icons" ~}}
+    </a>
+</li>
+<li class="">
+    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+        href="{{this}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="{{loca "share_whatsapp_linktitle" }}"
+        {{#with ../../this.content.trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
+        {{/with}}
+    >
+        {{~> components/base/image/icon _addClass="w-full h-full fill-[#4dc247] " _icon="whatsapp" _iconmap="icons" ~}}
+    </a>
+</li>
+<li class="">
+    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+        href="{{this}}"
+        title="{{loca "share_mail_linktitle" }}"
+        {{#with ../../this.content.trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mailto"}]}'
+        {{/with}}
+    >
+        {{~> components/base/image/icon _addClass="w-full h-full fill-[#006dc1] " _icon="mail" _iconmap="icons" ~}}
+    </a>
+</li>
+<li class="">
+    <a class="{{#with ../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+        href="javascript:window.print()"
+        title="{{loca "share_print_linktitle" }}"
+        {{#with ../this.content.trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::printbutton"}]}'
+        {{/with}}
+    >
+        {{~> components/base/image/icon _addClass="w-full h-full fill-[#606060] " _icon="print" _iconmap="icons" ~}}
+    </a>
+</li>

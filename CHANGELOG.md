@@ -1,3 +1,39 @@
+# v1.59.13 (Wed Feb 28 2024)
+
+#### ⚠️ Pushed to `main`
+
+- 🐛 DPE-2928 ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.59.12 (Tue Feb 27 2024)
+
+#### 🐛 Bug Fix
+
+- add comments [#864](https://github.com/mumprod/hr-design-system-handlebars/pull/864) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.59.11 (Tue Feb 27 2024)
+
+#### ⚠️ Pushed to `main`
+
+- :sparkles: DPE-2816 Sticky sharing ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.10 (Mon Feb 26 2024)
 
 #### 🐛 Bug Fix

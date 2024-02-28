@@ -1,0 +1,12 @@
+{{~#if (isStorybook)~}}
+    <div id="commentList" class="my-14 bg-highlight-1 h-96">
+        <h2 class="m-8">
+            {{> components/base/image/icon _icon="kommentar" _iconmap="icons" _addClass="mr-0.5 inline w-5 h-5 fill-current"}}
+            <span class="text-base font-headingSerif">Ihre Kommentare</span>
+            <span class="block clear-both mt-3 text-2xl sm480:text-3xl sm480:leading-9 font-headingSerif dark:text-text-dark">Kommentar-Dummy</span>
+        </h2>
+        <p class="mx-8 my-6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+    </div>
+{{~else~}}
+    {{> content/comments/components/comments ~}}
+{{~/if~}}

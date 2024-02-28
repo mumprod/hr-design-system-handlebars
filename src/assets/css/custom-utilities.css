@@ -32,7 +32,7 @@
     @supports not (aspect-ratio: 16 / 9) {
         .ar-16-9::before {
             float: left;
-            padding-top: 56.25%;
+            padding-top: calc(9 / 16 * 100%);
             content: '';
         }
 
@@ -50,7 +50,7 @@
     @supports not (aspect-ratio: 16 / 7) {
         .ar-16-7::before {
             float: left;
-            padding-top: 43.75%;
+            padding-top: calc(7 / 16 * 100%);
             content: '';
         }
 
@@ -68,7 +68,7 @@
     @supports not (aspect-ratio: 4 / 3) {
         .ar-4-3::before {
             float: left;
-            padding-top: calc(4 / 3 * 100%);
+            padding-top: calc(3 / 4 * 100%);
             content: '';
         }
 
@@ -96,23 +96,6 @@
             clear: both;
         }
     }
-    .ar-16-7 {
-        aspect-ratio: 16 / 7;
-    }
-
-    @supports not (aspect-ratio: 16 / 7) {
-        .ar-16-7::before {
-            float: left;
-            padding-top: calc(16 / 7 * 100%);
-            content: '';
-        }
-
-        .ar-16-7::after {
-            display: block;
-            content: '';
-            clear: both;
-        }
-    }
     .ar-100-27 {
         aspect-ratio: 100 / 27.1;
     }
@@ -120,7 +103,7 @@
     @supports not (aspect-ratio: 100 / 27.1) {
         .ar-100-27::before {
             float: left;
-            padding-top: calc(100 / 27.1 * 100%);
+            padding-top: calc(27.1 / 100 * 100%);
             content: '';
         }
 
@@ -128,23 +111,6 @@
             display: block;
             content: '';
             clear: both;
-        }
-    }
-    .ar-auto {
-        aspect-ratio: auto;
-    }
-
-    @supports not (aspect-ratio: auto) {
-        .ar-auto::before {
-            float: initial;
-            padding-top: 0;
-            content: '';
-        }
-
-        .ar-auto::after {
-            display: inline;
-            content: '';
-            clear: none;
         }
     }
 
