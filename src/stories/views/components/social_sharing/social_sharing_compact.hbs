@@ -1,6 +1,7 @@
 <div x-data="{
         open: false,
         sharingIsVisible: true,
+        isDesktop: true,
         toggle() {
             var isMobileApple = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i);
             var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
@@ -28,8 +29,13 @@
             this.open = false
 
             focusAfter && focusAfter.focus()
+        },
+        checkIfDesktop() {
+            this.isDesktop = (window.innerWidth >= 768) ? true : false 
         }
     }"
+    x-init = "checkIfDesktop()"
+    x-on:resize.window = "checkIfDesktop()"
     x-on:keydown.escape.prevent.stop="close($refs.button)"
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-id="['dropdown-button']"
@@ -37,13 +43,18 @@
     x-intersect:leave="sharingIsVisible = false"
     x-intersect:enter="sharingIsVisible = true"
 >
-    <div x-text="sharingIsVisible" class="fixed left-1 top-1"></div>
+    <div class="fixed left-1 top-1">
+        sharingIsVisible:<span x-text="sharingIsVisible" ></span><br>
+        open:<span x-text="open" ></span><br>
+        isDesktop:<span x-text="isDesktop" ></span>
+    </div>
     <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': !sharingIsVisible }">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
             <div class="flex gap-3" :class="{ 'bottom-5 left-5 flex-col absolute bg-white': !sharingIsVisible }">
                 <button 
                     class="order-2 w-8 h-8 ds-button font-heading active:scale-95 hover:scale-105 group"
                     :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
+                    x-show="!isDesktop"
                     x-ref="button"
                     x-on:click="toggle()"
                     :aria-expanded="open"
@@ -55,11 +66,10 @@
                 <!-- Panel -->
                 <div
                     x-ref="panel"
-                    x-show="open"
+                    x-show="open || isDesktop"
                     x-transition.origin.right
                     x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')"
-                    style="display: none;"
                     class="bg-white"
                 >
                     <ul class="flex gap-3"  :class="{ 'flex-col': ! sharingIsVisible }">
