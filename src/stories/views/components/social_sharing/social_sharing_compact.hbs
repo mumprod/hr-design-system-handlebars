@@ -50,10 +50,9 @@
     </div>
     <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': !sharingIsVisible }">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div class="flex gap-3" :class="{ 'bottom-5 left-5 flex-col absolute bg-white': !sharingIsVisible }">
+            <div class="flex gap-3" :class="{ 'bottom-5 -left-8 flex-col absolute bg-white': !sharingIsVisible }">
                 <button 
                     class="order-2 w-8 h-8 ds-button font-heading active:scale-95 hover:scale-105 group"
-                    :class="{ 'w-8 h-8': sharingIsVisible, 'w-12 h-12': !sharingIsVisible }"
                     x-show="!isDesktop"
                     x-ref="button"
                     x-on:click="toggle()"
