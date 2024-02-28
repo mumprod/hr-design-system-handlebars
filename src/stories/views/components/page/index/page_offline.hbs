@@ -39,9 +39,12 @@
                                         <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark flex justify-center flex-wrap text-center mt-9">
                                              {{loca "offline_page_info_text"}}
                                         </h3>
-                                        <div class="flex justify-center flex-wrap text-center mt-9" onclick="window.location.reload();">
+                                        <div class="flex justify-center flex-wrap text-center mt-9" >
                                         {{#> components/button/button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" }}
                                         {{> components/button/components/button_label _label="Erneut versuchen"}}
+                                        {{#*inline "htmlProperties"}}
+                                            onClick="window.location.reload();"
+                                        {{/inline}} 
                                         {{/components/button/button}}
                                     </div>
                                 </div>
