@@ -292,6 +292,19 @@
 }
 
 /* -------------------------INDEXTEXT-TEASER ------------------------ */
-article.indexText ul {
+article.indexTextDS ul {
     @apply pl-4 list-disc;
+}
+
+article.indexTextDS .link {
+    @apply underline text-link decoration-1;
+}
+
+article.indexTextDS .indexTextHighlighted .link {
+    @apply text-white underline decoration-1;
+}
+
+/* -----------------------------COPYTEXT ---------------------------- */
+.copytextParagraphDS .link {
+    @apply underline text-link decoration-1 dark:text-link-dark;
 }
