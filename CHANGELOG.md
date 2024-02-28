@@ -1,3 +1,15 @@
+# v1.59.13 (Wed Feb 28 2024)
+
+#### ⚠️ Pushed to `main`
+
+- 🐛 DPE-2928 ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.12 (Tue Feb 27 2024)
 
 #### 🐛 Bug Fix
