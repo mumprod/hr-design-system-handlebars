@@ -1,3 +1,16 @@
+# v1.59.14 (Wed Feb 28 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2808 Offline-Seite kommt aus Storybook [#863](https://github.com/mumprod/hr-design-system-handlebars/pull/863) ([@Sunny1112358](https://github.com/Sunny1112358) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.13 (Wed Feb 28 2024)
 
 #### ⚠️ Pushed to `main`
