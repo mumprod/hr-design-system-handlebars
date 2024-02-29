@@ -31,7 +31,7 @@
             focusAfter && focusAfter.focus()
         },
         checkIfDesktop() {
-            this.isDesktop = (window.innerWidth >= 768) ? true : false 
+            this.isDesktop = (window.innerWidth >= 1040) ? true : false 
         }
     }"
     x-init = "checkIfDesktop()"
@@ -48,9 +48,9 @@
         open:<span x-text="open" ></span><br>
         isDesktop:<span x-text="isDesktop" ></span>
     </div>
-    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': !sharingIsVisible }">
+    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible }">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div class="flex gap-3" :class="{ 'bottom-5 -left-8 flex-col absolute bg-white': !sharingIsVisible }">
+            <div class="flex gap-3" :class="{ 'bottom-5 socialShareDesktop:top-5 left-5 socialShareDesktop:left-1 flex-col absolute bg-white': !sharingIsVisible }">
                 <button 
                     class="order-2 w-8 h-8 ds-button font-heading active:scale-95 hover:scale-105 group"
                     x-show="!isDesktop"
