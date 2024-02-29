@@ -5,7 +5,7 @@
     lang="de"
 >
     <head>
-
+        <link href="{{resourceUrl "assets/index.css"}}" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
         <title>hessenschau.de | Nachrichten aus Hessen</title>
@@ -41,11 +41,11 @@
                                         </h3>
                                         <div class="flex justify-center flex-wrap text-center mt-9" >
                                         {{#> components/button/button _size="lg" _title="Weitere Episoden laden" _type="button" _css="js-load-remaining-items-button" }}
-                                        {{> components/button/components/button_label _label="Erneut versuchen"}}
+                                            {{> components/button/components/button_label _label="Erneut versuchen"}}
+                                        {{/components/button/button}}
                                         {{#*inline "htmlProperties"}}
                                             onClick="window.location.reload();"
                                         {{/inline}} 
-                                        {{/components/button/button}}
                                     </div>
                                 </div>
                             </div>
