@@ -31,6 +31,7 @@ module.exports = {
             '2xl': '1536px',
             // => @media (min-width: 1536px) { ... } */
             tablet: { min: '768px', max: '1023px' },
+            socialShareDesktop: '1040px',
         },
         letterSpacing: {
             tighter: '-.025em',
