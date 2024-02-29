@@ -1,3 +1,15 @@
+# v1.59.19 (Thu Feb 29 2024)
+
+#### 🐛 Bug Fix
+
+- adjust spaces [#869](https://github.com/mumprod/hr-design-system-handlebars/pull/869) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.18 (Thu Feb 29 2024)
 
 #### 🐛 Bug Fix
