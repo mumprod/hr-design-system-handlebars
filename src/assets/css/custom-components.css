@@ -306,5 +306,5 @@ article.indexTextDS .indexTextHighlighted .link {
 
 /* -----------------------------COPYTEXT ---------------------------- */
 .copytextParagraphDS .link {
-    @apply underline text-link decoration-1 dark:text-link-dark;
+    @apply underline text-link decoration-1 hover:decoration-1 dark:text-link-dark;
 }
