@@ -1,3 +1,16 @@
+# v1.59.18 (Thu Feb 29 2024)
+
+#### 🐛 Bug Fix
+
+- :art: Add missing class & make relead button functionalble in delivery [#868](https://github.com/mumprod/hr-design-system-handlebars/pull/868) ([@Sunny1112358](https://github.com/Sunny1112358) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.17 (Thu Feb 29 2024)
 
 #### 🐛 Bug Fix
