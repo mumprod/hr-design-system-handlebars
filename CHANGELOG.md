@@ -1,3 +1,15 @@
+# v1.59.20 (Mon Mar 04 2024)
+
+#### 🐛 Bug Fix
+
+- :art: Add brand mobile logo logic [#870](https://github.com/mumprod/hr-design-system-handlebars/pull/870) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.59.19 (Thu Feb 29 2024)
 
 #### 🐛 Bug Fix
