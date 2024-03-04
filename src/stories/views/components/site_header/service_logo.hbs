@@ -2,8 +2,9 @@
     href={{resourceUrl "index.html"}} 
     title="{{loca "header_homepage_link_title"}}">
 
-        <div x-cloak 
+        <div  
             {{#if _useSticky}}
+                x-cloak
                 class="absolute {{#if _isFooter}}h-10 lg:h-12 {{else}}brand-logo-size md:brand-logo-size-md lg:brand-logo-size-lg flex transition-opacity duration-250 ease-in h-10 lg:h-[3.875rem] w-12 lg:w-[3.875rem]{{/if}}" 
                 :class="`${percent}` < 50 ? 'opacity-0' : 'opacity-100'"
             {{else}}
