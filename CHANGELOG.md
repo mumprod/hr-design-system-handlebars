@@ -1,3 +1,15 @@
+# v1.59.21 (Tue Mar 05 2024)
+
+#### 🐛 Bug Fix
+
+- add div to copytext [#871](https://github.com/mumprod/hr-design-system-handlebars/pull/871) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.20 (Mon Mar 04 2024)
 
 #### 🐛 Bug Fix
