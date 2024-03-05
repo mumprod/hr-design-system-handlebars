@@ -19,38 +19,15 @@
 
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
-                
                 class="relative flex justify-center order-2 w-full transition-[margin-top] duration-250 ease-in-out border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
-                <div id="serviceNavMainContainer" 
-                    class="flex w-full h-10 lg:container md:h-12 lg:px-10 lg:h-16 z-110">
-
-                    <span id="serviceNavHeadline" class="hidden print:hidden">Service Navigation</span>
-
-                    <div id="serviceLogoWrapper"  
-                        class="flex items-center order-1 w-full pl-4 pr-2 tablet:pl-5 bg-navigation-bg md:px-0 md:h-12 lg:h-16 md:w-1/2 md:max-w-1/2 lg:w-1/4 lg:max-w-1/4">
-                        {{> components/site_header/service_logo _useSticky=_useSticky}}
-                    </div>
-                    
-                    <div id="serviceItemsWrapper"                
-                        class="flex items-center justify-end flex-initial order-2 inline-block w-full max-w-full align-top bg-navigation-bg md:h-12 lg:h-16 lg:order-2 lg:w-3/4 lg:max-w-3/4 md:mt-0 md:w-1/2 md:max-w-1/2 md:order-2 md:border-0">
-                        {{> components/site_header/service_navigation/service_list }}
-
-                        {{> components/site_header/navigation_search/navigation_search }}
-                    
-                        <div id="burgerWrapper" 
-                            class="flex justify-end flex-none order-2 lg:order-4 md:order-4 lg:hidden"> 
-                            {{> components/site_header/burger }}    
-                        </div>
-                        
-                    </div>
-                </div>
+                {{> components/site_header/service_navigation/service_navigation }}
             </div>
 
             <div id="sectionNavWrapper"      
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
                 :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
-                class="flex justify-center order-3 w-full overflow-hidden duration-500 transition-{max-height} lg:border-navigation-border-color [border-image-source:var(--border-navigation-border-image)] [border-image-slice:1] lg:border-b-navigation-border-width lg:transition-{margin-top} lg:duration-500 tablet:absolute tablet:top-20 tablet:w-half-screen tablet:ml-half-screen max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-navigation-bg z-100 print:hidden"
+                class="lg:grid lg:grid-page flex justify-center order-3 w-full overflow-hidden duration-500 transition-{max-height} lg:border-navigation-border-color [border-image-source:var(--border-navigation-border-image)] [border-image-slice:1] lg:border-b-navigation-border-width lg:transition-{margin-top} lg:duration-500 tablet:absolute tablet:top-20 tablet:w-[calc(50%-0.75rem)] tablet:ml-[calc(50%+0.75rem)] max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-navigation-bg z-100 print:hidden "
             >   
                 {{> components/site_header/section_navigation/section_navigation }}
             </div>
