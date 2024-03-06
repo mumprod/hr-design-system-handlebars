@@ -1,3 +1,15 @@
+# v1.59.22 (Tue Mar 05 2024)
+
+#### 🐛 Bug Fix
+
+- change image-variant and pdf-download-ssi [#873](https://github.com/mumprod/hr-design-system-handlebars/pull/873) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.21 (Tue Mar 05 2024)
 
 #### 🐛 Bug Fix

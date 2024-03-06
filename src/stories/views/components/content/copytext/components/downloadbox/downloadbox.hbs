@@ -4,7 +4,7 @@
             <ul>
                 {{#each this}}
                     {{#if this.isEpgPdfExport}}
-                        {{{this.ssi.downloadBoxItem}}}
+                        {{{this.ssi.downloadBoxItemSB}}}
                     {{else}}
                         {{> components/content/copytext/components/downloadbox/downloadbox_item }}
                     {{/if}}
