@@ -13,13 +13,13 @@
             </div>
 
             <div id="brandNavWrapper" 
-                class="box-content relative flex items-center justify-center order-1 w-full bg-white border-b border-brandnavigation-border-color z-130">
+                class="box-content relative grid order-1 w-full h-8 bg-white border-b sb-brand-navigation grid-page border-brandnavigation-border-color z-130">
                 {{> components/site_header/brand_navigation/brand_navigation }} 
             </div>
 
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
-                class="relative flex justify-center order-2 w-full transition-[margin-top] duration-250 ease-in-out border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
+                class="relative grid grid-page order-2 w-full transition-[margin-top] duration-200 ease-in-out border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
                 {{> components/site_header/service_navigation/service_navigation }}
             </div>
 
@@ -27,7 +27,7 @@
                 x-ref="sectionnavigation"
                 @toggle-sectionnav.window="toggleSectionNav"
                 :class="shouldSectionNavBeHidden() ? '-mt-40 md:-mt-40 lg:-mt-40' : ''"  
-                class="lg:grid lg:grid-page flex justify-center order-3 w-full overflow-hidden duration-500 transition-{max-height} lg:border-navigation-border-color [border-image-source:var(--border-navigation-border-image)] [border-image-slice:1] lg:border-b-navigation-border-width lg:transition-{margin-top} lg:duration-500 tablet:absolute tablet:top-20 tablet:w-[calc(50%-0.75rem)] tablet:ml-[calc(50%+0.75rem)] max-h-0 lg:overflow-visible md:mt-0 lg:flex lg:max-h-full lg:h-auto bg-navigation-bg z-100 print:hidden "
+                class="lg:grid lg:grid-page justify-center order-3 w-full overflow-hidden duration-200 lg:border-navigation-border-color [border-image-source:var(--border-navigation-border-image)] [border-image-slice:1] lg:border-b-navigation-border-width lg:duration-0 tablet:absolute tablet:top-20 tablet:w-[calc(50%-0.75rem)] tablet:ml-[calc(50%+0.75rem)] max-h-0 lg:overflow-visible md:mt-0 lg:max-h-full lg:h-auto bg-navigation-bg z-100 print:hidden "
             >   
                 {{> components/site_header/section_navigation/section_navigation }}
             </div>

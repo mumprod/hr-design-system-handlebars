@@ -1,16 +1,14 @@
-<div class="grid h-8 sb-brand-navigation grid-page">
-    <div class="grid-cols-12 px-5 lg:px-9.5 col-full sm:col-main">
-        {{#> components/horizontal_scroll_container/horizontal_scroll_container _viewport="xs" _bgcolor="var(--color-brandnavigation-bg)" _iconcolor="primary" }}
-            <nav class="flex w-full text-xs list-none text-grey-scorpion">
-                    <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
-                    {{#with this.brandNavigationItems}}
-                        <ul class="flex pr-3 md:px-0 flex-nowrap lg:mr-0">
-                            {{#each this}}
-                                {{> components/site_header/brand_navigation/brand_navigation_item }}
-                            {{/each}} 
-                        </ul>
-                    {{/with}}      
-            </nav>
-        {{/components/horizontal_scroll_container/horizontal_scroll_container}}
-    </div>
+<div class="grid-cols-12 px-5 lg:px-9.5 col-full sm:col-main">
+    {{#> components/horizontal_scroll_container/horizontal_scroll_container _viewport="xs" _bgcolor="var(--color-brandnavigation-bg)" _iconcolor="primary" }}
+        <nav class="flex w-full text-xs list-none text-grey-scorpion">
+                <span id="brandNavHeading" class="hidden">Navigation der Marken des Hessischen Rundfunks</span>
+                {{#with this.brandNavigationItems}}
+                    <ul class="flex pr-3 md:px-0 flex-nowrap lg:mr-0">
+                        {{#each this}}
+                            {{> components/site_header/brand_navigation/brand_navigation_item }}
+                        {{/each}} 
+                    </ul>
+                {{/with}}      
+        </nav>
+    {{/components/horizontal_scroll_container/horizontal_scroll_container}}
 </div>

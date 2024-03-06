@@ -135,8 +135,8 @@ export default () => ({
         } else {
             // todo vasco: checken ob das wieder rein sollte
             // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
-            // this.$refs.sectionnavigation.classList.add('hidden')
-            // this.$refs.sectionnavigation.style.maxHeight="0px"
+            this.$refs.sectionnavigation.classList.add('hidden')
+            this.$refs.sectionnavigation.style.maxHeight="0px"
         }
 
         let nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight
