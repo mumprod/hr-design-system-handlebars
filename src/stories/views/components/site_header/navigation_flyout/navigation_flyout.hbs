@@ -11,7 +11,7 @@
                 {{~#if ../_isSectionNav}} relative md:top-auto md:left-auto lg:mt-10 w-full transition-all duration-500 ease-in-out
                     {{#unless this.showAsFlyout}}
                         {{#if ../this.selected}}
-                            isSelectedAndOpen  lg:ml-0 z-100 lg:border-b lg:border-primary lg:filter-none lg:left-0 flex justify-center
+                            isSelectedAndOpen  lg:ml-0 z-100 lg:border-b lg:border-primary lg:filter-none lg:left-0 justify-center grid grid-page
                         {{else}} z-120 lg:left-auto lg:w-auto {{/if}}
                     {{else}} z-120 lg:left-auto lg:w-auto divide-y divide-gray-200{{/unless}}
                 {{else}} z-120 lg:rounded-b absolute w-full top-10 left-0 md:w-80 lg:w-92 md:top-12 lg:px-4 md:mt-0 md:left-0 lg:top-15 lg:left-0 divide-y divide-gray-200 tablet:w-half-screen tablet:ml-half-screen tablet:right-0 tablet:left-auto {{/if}}
@@ -40,7 +40,7 @@
             {{/if}}          
         {{/if}}
         
-        <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} w-full lg:px-10 lg:container {{/if}}{{/if}}">
+        <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} lg:grid-cols-12 lg:px-9.5 col-main  {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
                     {{> components/site_header/navigation_flyout/navigation_flyout_column _count=../this.columnCount _navtype=../../_navigationType _parent=../../_parent _flyout=true~}}
