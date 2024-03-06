@@ -1,3 +1,15 @@
+# v1.59.23 (Wed Mar 06 2024)
+
+#### 🐛 Bug Fix
+
+- 💄 DPE-2938 -Mobile Ansicht Logo und Burger-Icon nicht auf Linie [#872](https://github.com/mumprod/hr-design-system-handlebars/pull/872) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.22 (Tue Mar 05 2024)
 
 #### 🐛 Bug Fix
