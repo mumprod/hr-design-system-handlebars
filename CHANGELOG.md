@@ -1,3 +1,15 @@
+# v1.59.24 (Wed Mar 06 2024)
+
+#### 🐛 Bug Fix
+
+- 🐛 fix Bug in SubNavigation [#874](https://github.com/mumprod/hr-design-system-handlebars/pull/874) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.23 (Wed Mar 06 2024)
 
 #### 🐛 Bug Fix
