@@ -1,4 +1,4 @@
-<div class="copytext__externalService">
+<div class="grid">
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
              data-hr-external-service='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": true,"iFrameConfig": {"heightClass":"ar_iframe"{{#if
@@ -12,9 +12,13 @@
             </div>
         {{/with}}
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
-        {{~> components/externalService/external_service_settings_button ~}}
-        {{#*inline "htmlProperties"}}
-            data-piano-tracking='{"label":"DSGVO-Overlay"}'
-            data-a11y-dialog-show="datapolicy-settings-dialog"
-        {{/inline}}
+        <div >
+            <div class="float-right">
+            {{~> components/externalService/external_service_settings_button ~}}
+            {{#*inline "htmlProperties"}}
+                data-piano-tracking='{"label":"DSGVO-Overlay"}'
+                data-a11y-dialog-show="datapolicy-settings-dialog"
+            {{/inline}}
+            </div>
+        </div>
 </div>

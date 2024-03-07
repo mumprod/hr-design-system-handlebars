@@ -1,10 +1,13 @@
-<div id="service--{{nextRandom}}" class="o-box -accented c-dataPolicy js-datapolicy rounded-tl-hr rounded-br-hr">
-    <h3 class="text__headline c-dataPolicy__headline">{{loca "ext_service_datapolicy_headline" this.externalServiceConfig.externalServiceName}}</h3>
-    <div class="u-js-embed">
-        <p class="c-dataPolicy__description text__copytext">
+<div id="service--{{nextRandom}}" class="p-10 sm:mx-0 col-span-12 grid bg-highlight-1 rounded-tl-hr rounded-br-hr js-datapolicy">
+    <h3 class="text-2xl font-headingSerif">
+        {{loca "ext_service_datapolicy_headline" this.externalServiceConfig.externalServiceName}}
+    </h3>
+    <div class="">
+        <p class="pt-4 text-base font-copy">
             {{loca "ext_service_datapolicy_text" this.externalServiceConfig.externalServiceName}}
+            {{~> components/externalService/data_policy_link ~}}
         </p>
-        <div class="c-form__row">
+        <div class="pt-4">
             <div class="c-form__choiceCtn ">
                 <input id="dataPolicyAcceptPermanently-{{getRandom}}"
                        class="c-form__checkbox js-dataPolicy-acceptPermanentely" name="dataPolicyAcceptPermanently"
@@ -18,26 +21,33 @@
                 </label>
             </div>
         </div>
-        <div class="( c-form__row -controls )">
-            {{~> components/externalService/external_service_load_content_button ~}}
-            {{#*inline "htmlProperties"}}{{/inline}}
+        <div class="pt-4 float-right">
             {{#with this}}
+                <div class="inline-flex">
                  {{~> components/externalService/external_service_settings_button ~}}
                 {{#*inline "htmlProperties"}}
                     data-piano-tracking='{"label":"DSGVO-Overlay"}'
                     data-a11y-dialog-show="datapolicy-settings-dialog"
                 {{/inline}}
+                </div>
             {{/with}}
+            <div class="inline-flex">
+            {{~> components/externalService/external_service_load_content_button ~}}
+            {{#*inline "htmlProperties"}}{{/inline}}
+            </div>
         </div>
     </div>
     <noscript>
-        <p class="c-dataPolicy__description text__copytext">
+        <p class="pt-4 text-base font-copy">
             {{loca "ext_service_datapolicy_no_js_text" this.externalServiceConfig.externalServiceName}}
         </p>
-        {{#> components/base/link _link=this.link}}
-                Hier kommt der Inhalt des Links hin.
+        {{#>components/base/link _link=this.link _css="relative inline text-link z-20 ds-focus"}}
+            <span class="hover:underline decoration-1 font-copy">
+                {{loca "ext_service_datapolicy_no_js_link" this.content.externalServiceConfig.externalServiceName}}
+                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="inline -mt-0.5 w-5 h-5 fill-current ml-1"}}
+            </span>
         {{/components/base/link}}
-        {{#*inline "htmlProperties"}}
-        {{/inline}}
+        {{#*inline "htmlProperties"~}}
+        {{~/inline}}
     </noscript>
 </div>
