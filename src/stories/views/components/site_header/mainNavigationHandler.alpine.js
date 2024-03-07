@@ -176,6 +176,7 @@ export default () => ({
                 this.$refs.sectionnavigation.style.maxHeight = '0px'
             } else {
                 this.$refs.sectionnavigation.style.maxHeight = ''
+                
             }
         } else {
             let winheightcorr =
