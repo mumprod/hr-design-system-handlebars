@@ -1,0 +1,20 @@
+<div class="copytext__externalService">
+        {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
+        <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
+             data-hr-external-service='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": true,"iFrameConfig": {"heightClass":"ar_iframe"{{#if
+                 this.fixedHeight}},"fixedHeight":"{{this.fixedHeight}}", "fixedHeightClass":"-fixedHeight"{{else}},{{#if
+                 this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{else}}"aspectRatio":"16x9"{{/if}}{{/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}","refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"}}'>
+            {{~> components/externalService/external_service_data_policy ~}}
+        </div>
+        {{#with this.externalServiceCaption}}
+            <div class="copytext__captionLine">
+                <span class="figcaption">{{this}}</span>
+            </div>
+        {{/with}}
+        {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
+        {{~> components/externalService/external_service_settings_button ~}}
+        {{#*inline "htmlProperties"}}
+            data-piano-tracking='{"label":"DSGVO-Overlay"}'
+            data-a11y-dialog-show="datapolicy-settings-dialog"
+        {{/inline}}
+</div>
