@@ -10,6 +10,7 @@ import copytext_image_json from './fixtures/copytext_image.json'
 import copytext_infobox_json from './fixtures/copytext_infobox.json'
 import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
 import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
+import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -36,6 +37,12 @@ export const WithDownloadbox = {
     render: Template.bind({}),
     name: 'Download-Box',
     args: copytext_downloadbox_json,
+}
+
+export const WithDownExternalservice = {
+    render: Template.bind({}),
+    name: 'Externe Dienste',
+    args: copytext_externalservice_json,
 }
 
 export const WithFAQ = {

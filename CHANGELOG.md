@@ -1,3 +1,15 @@
+# v1.59.25 (Thu Mar 07 2024)
+
+#### 🐛 Bug Fix
+
+- add json for external services [#877](https://github.com/mumprod/hr-design-system-handlebars/pull/877) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.59.24 (Wed Mar 06 2024)
 
 #### 🐛 Bug Fix
