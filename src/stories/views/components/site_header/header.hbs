@@ -20,7 +20,7 @@
             <div id="serviceNavWrapper" 
                 :class="shouldServiceNavBeHidden() ? '-mt-40' : ''"
                 class="relative grid grid-page order-2 w-full transition-[margin-top] duration-200 ease-in-out border-b border-servicenavigation-border-color bg-navigation-bg z-120">   
-                {{> components/site_header/service_navigation/service_navigation }}
+                {{> components/site_header/service_navigation/service_navigation _useSticky=_useSticky}}
             </div>
 
             <div id="sectionNavWrapper"      
