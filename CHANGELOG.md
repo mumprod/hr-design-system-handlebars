@@ -1,3 +1,16 @@
+# v1.59.26 (Fri Mar 08 2024)
+
+#### 🐛 Bug Fix
+
+- added parameter to component call [#876](https://github.com/mumprod/hr-design-system-handlebars/pull/876) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.59.25 (Thu Mar 07 2024)
 
 #### 🐛 Bug Fix
