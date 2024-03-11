@@ -11,7 +11,7 @@ const TemplatePageExternalService = (args, { globals: { theme } }) => {
 }
 
 export default {
-    title: 'Komponenten/Externe_Dienste',
+    title: 'Komponenten/Externe Dienste',
     argTypes: {},
 
     parameters: {

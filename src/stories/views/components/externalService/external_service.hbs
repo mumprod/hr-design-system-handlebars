@@ -6,11 +6,7 @@
                  this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{else}}"aspectRatio":"16x9"{{/if}}{{/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}","refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"}}'>
             {{~> components/externalService/external_service_data_policy ~}}
         </div>
-        {{#with this.externalServiceCaption}}
-            <div class="copytext__captionLine">
-                <span class="figcaption">{{this}}</span>
-            </div>
-        {{/with}}
+        {{~> components/externalService/external_service_caption ~}}
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
         <div >
             <div class="float-right">

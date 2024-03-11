@@ -3,12 +3,26 @@ import * as ExternalServiceStories from './external_service.stories'
 
 <Meta of={ExternalServiceStories} />
 
-# Externe Dienste Dummy
+# Externe Dienste 
+
+## Platzhalter (Dummy) für externe Dienste gemäß DSGVO 
+
+Der hier beschriebene "Dummy" ist ein visueller Platzhalter für Content der von externen Anbietern kommt und an der Stelle des Platzhalters dargestellt werden soll.
+Aus rechtlichen (z.B.DSGVO) Gründen, werden diese Inhalte aber nicht permanent dargestellt sondern nur durch eine explizite "Freischaltung" durch den Nutzer.
+<p>Hierbei kann der Nutzer entscheiden ob er den Inhalt des Anbieters einmalig oder dauerhaft angezeigt bekommen möchte.</p>
+<p>Zu den klassischen Anbietern zählen z.B. Video-Inhalte von Youtube, Social-Media-Inhalte von Instagram, Facebook und Co aber auch animierte GIFs oder Datengrafiken, die
+nicht im CMS des HR eingegeben / gepflegt wurden.</p>
 
 
 
 # Grundaufbau
-
-
+Der Dummy setzt sich aus Titel, einem kurzen Erklärtext und interaktiven Auswahlelementen zusammen.
+Titel und Erklärtext stellen den Namen des jeweiligen - noch nicht aktivierten - externen Dienstes dar, bis der Nutzer diesen dauerhaft oder einmalig aktiviert hat.
+Die interaktiven Elemente sind:
+<ul>
+<li> eine Checkbox um entsprechenden Dienst DAUERHAFT zu aktivieren. Der Status wird im Cookie "hrSettings" gespeichert.</li>
+<li> einen Einstellungs-Button, der den globalen Einstellungsdialog als Overlay öffnet und DAUERHAFT aktivierte Dienste anzeigt.</li>
+<li> einen Aktions-Button, der den Inhalt einmalig, bis zum nächsten Refresh oder erneuten Besuch der Seite anzeigt.</li>
+</ul>
 
 <Story of={ExternalServiceStories.ExterneDienste} />
