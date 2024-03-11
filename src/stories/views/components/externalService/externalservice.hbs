@@ -1,0 +1,49 @@
+{{!#if this.externalServiceConfig.makeConfigurable}}
+    
+    <!--External-Service-Dummy-->
+
+{{!else}}
+    
+    {{#if this.serviceUrl}}
+        <div class="clear-both mt-10">
+            <span class="sr-only">{{loca "story_externalservice_intro_sr" }}</span>    
+            {{#if this.externalServiceConfig.embedAsIFrame}}
+                {{#if this.fixedHeight}}                  
+                    
+                    <div class="overflow-y-hidden" style="height:{{this.fixedHeight}}px;">
+                        <iframe frameborder="0" width="100%" height="100%"
+                                src="{{{this.serviceUrl}}}" webkitallowfullscreen mozallowfullscreen
+                                allowfullscreen scrolling='no'>
+                        </iframe>
+                    </div>
+            
+                {{else}}
+            
+                    <div class="overflow-hidden">
+                        <div class="ar-{{defaultIfEmpty this.aspectRatio "16x9"}}-DS">
+                            <iframe frameborder="0" width="100%" height="100%"
+                                    src="{{{this.serviceUrl}}}" webkitallowfullscreen
+                                    mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                {{/if}}
+            {{else}}
+            
+                <div class="c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
+                    data-hr-external-service='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": false, "iFrameConfig":{}}'>
+                </div>
+                
+            {{/if}}
+                
+            {{#with this.externalServiceCaption}}
+                <div class="py-2.5">
+                    <span class="text-sm font-copy dark:text-text-dark">{{this}}</span>
+                </div>
+            {{/with}}
+            <span class="sr-only">{{loca "story_externalservice_outro_sr" }}</span>    
+        </div>
+    {{/if}}
+
+{{!/if}}

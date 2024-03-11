@@ -25,18 +25,18 @@
     }
 
 
-    .ar-16-9 {
+    .ar-16-9, .ar-16x9-DS {
         aspect-ratio: 16 / 9;
     }
 
     @supports not (aspect-ratio: 16 / 9) {
-        .ar-16-9::before {
+        .ar-16-9::before, .ar-16x9-DS::before {
             float: left;
             padding-top: calc(9 / 16 * 100%);
             content: '';
         }
 
-        .ar-16-9::after {
+        .ar-16-9::after, .ar-16x9-DS::after {
             display: block;
             content: '';
             clear: both;
@@ -79,18 +79,18 @@
         }
     }
 
-    .ar-1-1 {
+    .ar-1-1, .ar-100-DS {
         aspect-ratio: 1 / 1;
     }
 
     @supports not (aspect-ratio: 1 / 1) {
-        .ar-1-1::before {
+        .ar-1-1::before, .ar-100-DS::before {
             float: left;
             padding-top: 100%;
             content: '';
         }
 
-        .ar-1-1::after {
+        .ar-1-1::after, .ar-100-DS::after {
             display: block;
             content: '';
             clear: both;
