@@ -1,5 +1,22 @@
 {{~#if (isStorybook)~}}
-    <div class="mt-6 italic text-gray-dark">coming soon: External-service-component</div>
+    
+    {{#with this.toModel.externalService}}
+    
+        <div>this.externalServiceConfig.makeConfigurable: <b>{{this.externalServiceConfig.makeConfigurable}}</b></div>
+        <!--div>this.ServiceUrl: <b>{{this.ServiceUrl}}</b></div-->
+        <div>this.externalServiceConfig.externalServiceId: <b>{{this.externalServiceConfig.externalServiceId}}</b></div>
+        <div>this.externalServiceConfig.externalServiceEmbedType: <b>{{this.externalServiceConfig.externalServiceEmbedType}}</b></div>
+        <div>this.fixedHeight: <b>{{this.fixedHeight}}</b></div>
+        <div>this.aspectRatio: <b>{{this.aspectRatio}}</b></div>
+        <div>this.setResponsiveIframe: <b>{{this.setResponsiveIframe}}</b></div>
+        <div>this.setTimedReloadIframe: <b>{{this.setTimedReloadIframe}}</b></div>
+        <div>this.setTimeForReload: <b>{{this.setTimeForReload}}</b></div>
+        <div>this.externalServiceCaption: <b>{{this.externalServiceCaption}}</b></div>
+        <div>this.externalServiceConfig.externalServiceName: <b>{{this.externalServiceConfig.externalServiceName}}</b></div>
+        <div>this.externalServiceConfig.embedAsIFrame: <b>{{this.externalServiceConfig.embedAsIFrame}}</b></div>
+        
+    {{/with}}
+
 {{~else~}}
     {{#with this.toModel.externalService}}
         {{#if this.externalServiceConfig.makeConfigurable}}
