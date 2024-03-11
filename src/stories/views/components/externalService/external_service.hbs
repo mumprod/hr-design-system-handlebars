@@ -11,10 +11,7 @@
         <div >
             <div class="float-right">
             {{~> components/externalService/external_service_settings_button ~}}
-            {{#*inline "htmlProperties"}}
-                data-piano-tracking='{"label":"DSGVO-Overlay"}'
-                data-a11y-dialog-show="datapolicy-settings-dialog"
-            {{/inline}}
             </div>
         </div>
 </div>
+{{~> components/dataPolicySettings/data_policy_settings ~}}
