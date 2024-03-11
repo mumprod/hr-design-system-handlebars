@@ -7,8 +7,8 @@ auf die folgenden Versionen aktualisieren.
 
 | Werkzeug | Version |
 | -------- | ------- |
-| Node.js  | 16.14.2 |
-| NPM      | 8.5.0   |
+| Node.js  | 20.11.1 |
+| NPM      | 10.2.4  |
 
 ---
 
@@ -16,6 +16,71 @@ auf die folgenden Versionen aktualisieren.
 
 Node.js installiert man am besten mit dem Node Version Manager NVM. Dies ist zwar eigentlich ein Linux Projekt, kann aber als nvm-windows auch unter Windows genutzt werden. Die Installationsdateien können unter https://github.com/coreybutler/nvm-windows/releases heruntergeladen werden. NVM gestattet es je nach Bedarf schnell über die Konsole zwischen mehreren Versionen von node.js zu wechseln. Seit der Version 1.18 von NVM müssen zur korrekten Nutzung die Hinweise unter https://github.com/coreybutler/nvm-windows/wiki/Common-Issues#permissions-exit-1-exit-5-access-denied-exit-145 beachtet werden.
 
+Die zu verwendende Node.js Version ist auch in der Date .nvmrc festgehalten. Sofern nvm genutzt wird um Node.js zu installieren, sorgt dieses Datei dafür, dass automatisch, wenn in das Verzeichnis dieses Projekts gewechselt wird, die korrekte Node.js Version für dieses Projekt geladen wird. Mehr dazu unter https://github.com/nvm-sh/nvm?tab=readme-ov-file#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file
+
+Damit das ganze auf Windows Rechnern funktioniert, müssen zuvor noch ein paar Anpassungen an der Command Shell gemacht werden. Für git bash müssen dazu in der Datei .bashrc (diese liegt direkt im Benutzerverzeichnis des aktiven Nutzers) folgende Anpassungen gemacht werden. Ans Ende der Datei bitte folgenden Code einfügen:
+
+```
+# Traverse up in directory tree to find containing folder
+nvm_find_up() {
+  local path_
+  path_="${PWD}"
+  while [ "${path_}" != "" ] && [ ! -f "${path_}/${1-}" ]; do
+    path_=${path_%/*}
+  done
+  nvm_echo "${path_}"
+}
+
+nvm_find_nvmrc() {
+  local dir
+  dir="$(nvm_find_up '.nvmrc')"
+  if [ -e "${dir}/.nvmrc" ]; then
+    nvm_echo "${dir}/.nvmrc"
+  fi
+}
+
+load-nvmrc() {
+  local node_version="$(node.exe -v)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ ! -z "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(cat "${nvmrc_path}")
+  fi
+
+  local target_version="${nvmrc_node_version:-v16.14.2}"
+
+  if [ "$target_version" != "$node_version" ]; then
+    echo "Switch node from $node_version to $target_version"
+    nvm use $target_version
+  else
+    echo "node in use $target_version"
+  fi
+}
+
+# create a PROPMT_COMMAND equivalent to store chpwd functions
+typeset -g CHPWD_COMMAND="load-nvmrc"
+
+_chpwd_hook() {
+  shopt -s nullglob
+
+  local f
+
+  # run commands in CHPWD_COMMAND variable on dir change
+  if [[ "$PREVPWD" != "$PWD" ]]; then
+    local IFS=$';'
+    for f in $CHPWD_COMMAND; do
+      "$f"
+    done
+    unset IFS
+  fi
+  # refresh last working dir record
+  export PREVPWD="$PWD"
+}
+
+# add `;` after _chpwd_hook if PROMPT_COMMAND is not empty
+PROMPT_COMMAND="_chpwd_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+
+```
 ---
 
 Zur Verwaltung der Node Packages des Design Systems verwenden wir statt npm den Paketmanager [yarn](https://classic.yarnpkg.com/en/).
