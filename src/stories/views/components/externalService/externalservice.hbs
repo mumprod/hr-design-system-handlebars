@@ -7,28 +7,17 @@
     {{#if this.serviceUrl}}
         <div class="clear-both mt-10">
             <span class="sr-only">{{loca "story_externalservice_intro_sr" }}</span>    
-            {{#if this.externalServiceConfig.embedAsIFrame}}
-                {{#if this.fixedHeight}}                  
+            {{#if this.externalServiceConfig.embedAsIFrame}}              
                     
-                    <div class="overflow-y-hidden" style="height:{{this.fixedHeight}}px;">
+                <div class="{{#if this.fixedHeight}}overflow-y-hidden{{else}}overflow-hidden{{/if}}" {{#if this.fixedHeight}}style="height:{{this.fixedHeight}}px;"{{/if}}>
+                    {{#unless this.fixedHeight}}<div class="ar-{{defaultIfEmpty this.aspectRatio "16x9"}}-DS">{{/unless}}
                         <iframe frameborder="0" width="100%" height="100%"
                                 src="{{{this.serviceUrl}}}" webkitallowfullscreen mozallowfullscreen
                                 allowfullscreen scrolling='no'>
                         </iframe>
-                    </div>
+                    {{#unless this.fixedHeight}}</div>{{/unless}}                        
+                </div>
             
-                {{else}}
-            
-                    <div class="overflow-hidden">
-                        <div class="ar-{{defaultIfEmpty this.aspectRatio "16x9"}}-DS">
-                            <iframe frameborder="0" width="100%" height="100%"
-                                    src="{{{this.serviceUrl}}}" webkitallowfullscreen
-                                    mozallowfullscreen allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    
-                {{/if}}
             {{else}}
             
                 <div class="c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
