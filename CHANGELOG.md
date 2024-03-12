@@ -1,3 +1,15 @@
+# v1.60.1 (Tue Mar 12 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2959 - add external services [#879](https://github.com/mumprod/hr-design-system-handlebars/pull/879) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.60.0 (Mon Mar 11 2024)
 
 #### 🚀 Enhancement
