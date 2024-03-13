@@ -1,3 +1,16 @@
+# v1.60.3 (Wed Mar 13 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2962- Externe Dienste Dummy Template [#881](https://github.com/mumprod/hr-design-system-handlebars/pull/881) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.60.2 (Wed Mar 13 2024)
 
 #### 🐛 Bug Fix
