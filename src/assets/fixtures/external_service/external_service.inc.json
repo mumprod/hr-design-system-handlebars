@@ -214,7 +214,7 @@
             "externalServiceEmbedType": "js",
             "externalServiceName": "Wahlmonitor"
         },
-        "serviceUrl": "https://www.tagesschau.de/wahl/monitor-15/wahlmonitor.html?id=2023-10-08-LT-DE-HE&ratio=43&externalembed=4e1_wahlmonitor_2023-10-08-LT-DE-HE&hideLinkContainer=1&lra=hr&arrows=1",
+        "serviceUrl": "https://www.tagesschau.de/wahl/monitor-15/4e1_monitor_embed.js*data-externalembed=true data-electionid=2023-10-08-LT-DE-HE data-ratio=43 data-arrows=1 data-hideLinkContainer=1 data-lra=hr data-tagesschau=1",
         "setResponsiveIframe": false,
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
@@ -227,7 +227,7 @@
             "externalServiceEmbedType": "js",
             "externalServiceName": "Wahlkreiskarte"
         },
-        "serviceUrl": "https://www.tagesschau.de/wahl/archiv/2023-10-08-LT-DE-HE/karte21.shtml?y=&a=K&k=&p=&elements=&data-site=&q=",
+        "serviceUrl": "https://www.tagesschau.de/wahl/karte21/current/4e1_karte_embed.js*data-electionid=2023-10-08-LT-DE-HE data-y= data-a=K data-k= data-p= data-elements= data-site= data-q=",
         "setResponsiveIframe": false,
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
