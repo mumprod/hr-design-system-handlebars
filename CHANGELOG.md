@@ -1,3 +1,39 @@
+# v1.60.2 (Wed Mar 13 2024)
+
+#### 🐛 Bug Fix
+
+- add Ds to external-service-js-filename [#880](https://github.com/mumprod/hr-design-system-handlebars/pull/880) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.60.1 (Tue Mar 12 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2959 - add external services [#879](https://github.com/mumprod/hr-design-system-handlebars/pull/879) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.60.0 (Mon Mar 11 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2978 [#878](https://github.com/mumprod/hr-design-system-handlebars/pull/878) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.59.26 (Fri Mar 08 2024)
 
 #### 🐛 Bug Fix
