@@ -1,0 +1,17 @@
+<fieldset>
+    <div class="mt-6 space-y-6">
+    <div class="relative flex gap-x-3">
+        <div class="flex h-6 items-center">
+        <input id="dataPolicyAcceptPermanently-{{getRandom}}" name="dataPolicyAcceptPermanently"
+                    title="Externe Inhalte von {{this.externalServiceConfig.externalServiceName}} zukünftig immer laden."
+                    placeholder="Externe Inhalte von {{this.externalServiceConfig.externalServiceName}} zukünftig immer laden."
+                    value="0" required="" type="checkbox" class="h-6 w-6 rounded border-gray text-indigo focus:ring-indigo">
+        </div>
+        <div class="text-sm leading-6">
+        <label for="dataPolicyAcceptPermanently-{{getRandom}}" class="text-base font-copy">
+            {{loca "ext_service_datapolicy_accept_permanently_text" this.externalServiceConfig.externalServiceName}}
+        </label>
+        </div>
+    </div>
+</fieldset>
+      
