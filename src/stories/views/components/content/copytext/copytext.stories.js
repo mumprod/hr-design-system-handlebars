@@ -39,7 +39,7 @@ export const WithDownloadbox = {
     args: copytext_downloadbox_json,
 }
 
-export const WithDownExternalservice = {
+export const WithExternalservice = {
     render: Template.bind({}),
     name: 'Externe Dienste',
     args: copytext_externalservice_json,
