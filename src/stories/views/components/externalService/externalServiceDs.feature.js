@@ -1,4 +1,6 @@
 import SettingsCookie from './globalSettingsCookie.subfeature'
+import DataWrapperContentRefresher from './dataWrapperContentRefresher.subfeature'
+import DataWrapperNoResponsiveIframe from './dataWrapperNoResponsiveIframe.subfeature'
 import {
     fireEvent,
     hr$,
@@ -12,9 +14,9 @@ import {
 } from 'hrQuery'
 
 const ExternalService = function (context) {
-    const { options } = context,
-        { element: rootElement } = context,
-        rootParent = rootElement.parentNode
+    const   { options } = context,
+            { element: rootElement } = context,
+            rootParent = rootElement.parentNode
     let dataPolicyBox = hr$('.js-datapolicy', rootElement)[0]
     const dataPolicyBoxHTML = typeof dataPolicyBox !== 'undefined' ? dataPolicyBox.outerHTML : '',
         contentSettingsButton = hr$('.js-content-settings-button', rootParent)[0],
@@ -31,24 +33,10 @@ const ExternalService = function (context) {
         embedCode = options.embedCode,
         iframe,
         settingsCookie,
+        contentRefresher = new DataWrapperContentRefresher(context)
+        noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight)
         isExternalServiceLoaded = false
 
-    const syncAppOptionsToSettingsCookie = function () {
-        if (getJSONCookie('datapolicy')) {
-            let dataPolicyCookie = getJSONCookie('datapolicy') || {}
-            let objArray = Object.entries(dataPolicyCookie)
-            objArray.forEach(([key, value]) => {
-                settingsCookie.setCookieForOptions(key, value)
-            })
-        }
-    }
-
-    const setWhitelistServicesForInitialApp = function () {
-        let whitelist = ['ard_mediathek', 'arte_concert', 'arte_concert_new', 'datawrapper_cdn']
-        for (let i = 0; i < whitelist.length; ++i) {
-            settingsCookie.setCookieForDataPolicy(whitelist[i], true)
-        }
-    }
 
     const embedExternalService = function (callback) {
         $.ajax({
@@ -84,66 +72,7 @@ const ExternalService = function (context) {
             })
     }
 
-    const handleDatapolicy = function (event) {
-        if (acceptAlwaysCheckbox.checked == true) {
-            fireEvent('hr:externalService-activate-' + id)
-            settingsCookie.setCookieForOptions(id)
-            if (isWebview) {
-                settingsCookie.setCookieForDataPolicy(id)
-            }
-        } else {
-            loadServiceWithDataPolicyButton()
-            console.log('External Service once loaded - ' + id)
-        }
-        event.stopPropagation()
-    }
-    const loadServiceWithDataPolicyButton = function () {
-        if (rootElement.children[0].classList.contains('js-datapolicy')) {
-            insertExternalService()
-            isExternalServiceLoaded = true
-            toggleContentSettingsButton()
-        }
-    }
-    const toggleContentSettingsButton = function () {
-        if (isExternalServiceLoaded) {
-            contentSettingsButton.classList.remove('hideExtButton')
-        } else {
-            contentSettingsButton.classList.add('hideExtButton')
-        }
-        console.log('Toggle den Einstellungsbutton außerhalb weil ' + isExternalServiceLoaded)
-    }
-
-    const removeDatapolicyBox = function () {
-        rootElement.innerHTML = ''
-        rootElement.classList.remove('c-dataPolicy')
-    }
-
-    const initDataPolicy = function () {
-        if (dataPolicyCheck) {
-            settingsCookie = new SettingsCookie()
-            acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
-            listen('click', handleDatapolicy, acceptButton)
-            if (isWebview) {
-                if (settingsCookie.isDataPolicyCookieAccepted(id)) {
-                    loadServiceWithDataPolicyButton()
-                } else {
-                    dataPolicyBox.style.visibility = 'visible'
-                }
-            } else {
-                if (settingsCookie.isSettingsCookieAccepted(id)) {
-                    loadServiceWithDataPolicyButton()
-                } else {
-                    dataPolicyBox.style.visibility = 'visible'
-                }
-            }
-            listen('hr:externalService-activate-' + id, loadServiceWithDataPolicyButton)
-            listen('hr:externalService-deactivate-' + id, removeExternalService)
-        } else {
-            insertExternalService()
-        }
-    }
-
-    const insertExternalService = function () {
+   const insertExternalService = function () {
         switch (embedType) {
             case 'js':
                 switch (id) {
@@ -197,41 +126,18 @@ const ExternalService = function (context) {
         rootElement.appendChild(script)
     }
 
-    const createDataWrapperUniqueID = function () {
-        return Math.random()
+    const createDataWrapperEmbed = function () {
+        removeDatapolicyBox()
+        var uniqueID = function () {
+            return Math.random()
             .toString(36)
             .replace(/[^a-z]+/g, '')
             .substr(2, 10)
-    }
-    const createDataWrapperEmbed = function () {
-        removeDatapolicyBox()
-        var uniqueID = createDataWrapperUniqueID()
+        }
         if (iFrameConfig.noResponsiveIframe == 'true') {
-            var parentDiv = document.createElement('div')
-            parentDiv.className = 'copytext__scrollWrapper'
-            var div = document.createElement('div')
-            if (iFrameConfig.aspectRatio === undefined) {
-                div.className = 'noaspect_datawrapper_cdn'
-                div.style.height = iFrameConfig.fixedHeight + 'px'
-                div.style.width = '100%'
-            } else {
-                div.className = 'ar--' + iFrameConfig.aspectRatio + ' datawrapper_cdn'
-            }
-            var iframe = document.createElement('iframe')
-            iframe.className = 'ar_iframe datawrapper_cdn'
-            iframe.setAttribute('id', 'i_frame')
-            iframe.setAttribute('data-isloaded', '0')
-            iframe.setAttribute('webkitallowfullscreen', '')
-            iframe.setAttribute('mozallowfullscreen', '')
-            iframe.setAttribute('allowfullscreen', '')
-            iframe.setAttribute('scrolling', 'no')
-            iframe.setAttribute('frameborder', '0')
-            iframe.src = embedCode
-
-            div.appendChild(iframe)
-            parentDiv.appendChild(div)
-            rootElement.appendChild(parentDiv)
-        } else {
+            noResponsiveIframe.createNoResponsiveIframe()
+        } 
+        else {
             var iframe = document.createElement('iframe')
             iframe.className = 'dataWrapper-embed'
             iframe.style.width = '0'
@@ -252,78 +158,7 @@ const ExternalService = function (context) {
                 true
             )
             if (iFrameConfig.refreshContent == 'true') {
-                var remainingTime
-                var timer
-                var iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
-                var divCounter = document.createElement('div')
-                var divOverlay = document.createElement('div')
-                var divTextOverlay = document.createElement('div')
-                divOverlay.id = 'overlay' + uniqueID
-                divOverlay.style.position = 'absolute'
-                divOverlay.style.top = '0'
-                divOverlay.style.display = 'none'
-                divOverlay.style.alignItems = 'center'
-                divOverlay.style.justifyContent = 'center'
-                divOverlay.style.backgroundColor = '#fff'
-                divOverlay.style.width = '100%'
-                divOverlay.style.height = 'calc(100% - 36px)'
-                divOverlay.style.backgroundColor = '#d8e9f6'
-                divTextOverlay.innerHTML = 'Lade Inhalt neu...'
-                divTextOverlay.style.backgroundColor = '#005293'
-                divTextOverlay.style.padding = '8px'
-                divTextOverlay.style.color = '#fff'
-                divTextOverlay.style.fontWeight = '800'
-                divTextOverlay.style.fontFamily = 'RobotoSlab'
-                divTextOverlay.style.borderRadius = '6px 6px 6px 6px'
-                divOverlay.appendChild(divTextOverlay)
-                divCounter.id = 'counter' + uniqueID
-                divCounter.style.backgroundColor = '#006dc1'
-                divCounter.style.color = '#fff'
-                divCounter.style.fontSize = '12px'
-                divCounter.style.padding = '8px'
-                divCounter.style.borderRadius = '0 0 4px 4px'
-                rootElement.style.position = 'relative'
-                rootElement.appendChild(divCounter)
-                rootElement.appendChild(divOverlay)
-
-                const refreshIframe = function () {
-                    console.log('Reload')
-                    iframeRefresh.style.opacity = '0'
-                    iframeRefresh.src =
-                        iframeRefresh.src.split('?')[0] + '?_=' + new Date().getTime()
-                    clearInterval(timer)
-                }
-                const startCountdown = function () {
-                    remainingTime = Number(iFrameConfig.refreshIntervall)
-                    setTimeout(function () {
-                        iframeRefresh.style.opacity = '1'
-                        document.getElementById('overlay' + uniqueID).style.display = 'none'
-                    }, 1000)
-                    timer = setInterval(function () {
-                        checkTimer()
-                    }, 1000)
-                }
-                const checkTimer = function () {
-                    if (remainingTime >= 0) {
-                        document.getElementById('counter' + uniqueID).innerHTML =
-                            'Dieser Inhalt wird automatisch aktualisiert in ' +
-                            secondsToTimeString(remainingTime) +
-                            ' Min.'
-                        remainingTime -= 1
-                        if (remainingTime == -1) {
-                            document.getElementById('overlay' + uniqueID).style.display = 'flex'
-                            document.getElementById('counter' + uniqueID).innerHTML =
-                                'Zeitintervall wird neu gestartet...'
-                        }
-                    } else {
-                        refreshIframe()
-                        startCountdown()
-                    }
-                }
-                const secondsToTimeString = function (seconds) {
-                    return new Date(seconds * 1000).toISOString().substr(14, 5)
-                }
-                startCountdown()
+                contentRefresher.createRefresher()
             }
         }
     }
@@ -458,6 +293,66 @@ const ExternalService = function (context) {
         replaceAnimated(rootElement, iframe, false)
     }
 
+    const initDataPolicy = function () {
+        if (dataPolicyCheck) {
+            settingsCookie = new SettingsCookie()
+            acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
+            listen('click', handleDatapolicy, acceptButton)
+            if (isWebview) {
+                if (settingsCookie.isDataPolicyCookieAccepted(id)) {
+                    loadServiceWithDataPolicyButton()
+                } else {
+                    dataPolicyBox.style.visibility = 'visible'
+                }
+            } else {
+                if (settingsCookie.isSettingsCookieAccepted(id)) {
+                    loadServiceWithDataPolicyButton()
+                } else {
+                    dataPolicyBox.style.visibility = 'visible'
+                }
+            }
+            listen('hr:externalService-activate-' + id, loadServiceWithDataPolicyButton)
+            listen('hr:externalService-deactivate-' + id, removeExternalService)
+        } else {
+            insertExternalService()
+        }
+    }
+
+    const handleDatapolicy = function (event) {
+        if (acceptAlwaysCheckbox.checked == true) {
+            fireEvent('hr:externalService-activate-' + id)
+            settingsCookie.setCookieForOptions(id)
+            if (isWebview) {
+                settingsCookie.setCookieForDataPolicy(id)
+            }
+        } else {
+            loadServiceWithDataPolicyButton()
+            console.log('External Service once loaded - ' + id)
+        }
+        event.stopPropagation()
+    }
+
+    const loadServiceWithDataPolicyButton = function () {
+        if (rootElement.children[0].classList.contains('js-datapolicy')) {
+            insertExternalService()
+            isExternalServiceLoaded = true
+            toggleContentSettingsButton()
+        }
+    }
+    const toggleContentSettingsButton = function () {
+        if (isExternalServiceLoaded) {
+            contentSettingsButton.classList.remove('hideExtButton')
+        } else {
+            contentSettingsButton.classList.add('hideExtButton')
+        }
+        console.log('Toggle den Einstellungsbutton außerhalb weil ' + isExternalServiceLoaded)
+    }
+
+    const removeDatapolicyBox = function () {
+        rootElement.innerHTML = ''
+        rootElement.classList.remove('c-dataPolicy')
+    }
+
     const removeExternalService = function () {
         replaceAnimated(rootElement, dataPolicyBoxHTML, true, reinitiateDataPolicyBox)
     }
@@ -470,6 +365,23 @@ const ExternalService = function (context) {
         isExternalServiceLoaded = false
         initDataPolicy()
         toggleContentSettingsButton()
+    }
+
+    const syncAppOptionsToSettingsCookie = function () {
+        if (getJSONCookie('datapolicy')) {
+            let dataPolicyCookie = getJSONCookie('datapolicy') || {}
+            let objArray = Object.entries(dataPolicyCookie)
+            objArray.forEach(([key, value]) => {
+                settingsCookie.setCookieForOptions(key, value)
+            })
+        }
+    }
+
+    const setWhitelistServicesForInitialApp = function () {
+        let whitelist = ['ard_mediathek', 'arte_concert', 'arte_concert_new', 'datawrapper_cdn']
+        for (let i = 0; i < whitelist.length; ++i) {
+            settingsCookie.setCookieForDataPolicy(whitelist[i], true)
+        }
     }
     const resetCheckboxForPermanentService = function () {
         /*Die Autocompletion des Browsers merkt sich die Zustände von Formularelementen nach einem Refresh, das wird hier hart zurückgesetzt*/
