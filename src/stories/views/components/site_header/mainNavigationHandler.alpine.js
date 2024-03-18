@@ -135,6 +135,7 @@ export default () => ({
         } else {
             // todo vasco: checken ob das wieder rein sollte
             // hidden needs to be set here to avoid flickering of the sectionNav on viewport change, gets removed in timeout
+            console.log("resetNav")
             this.$refs.sectionnavigation.classList.add('hidden')
             this.$refs.sectionnavigation.style.maxHeight="0px"
         }
@@ -142,13 +143,18 @@ export default () => ({
         let nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight
         let nowClientWidth = document.documentElement.clientWidth || document.body.clientWidth
         let nextNowClientHeight = this.$store.clientHeight
-        if (nextNowClientHeight >= nowClientHeight && this.$store.clientWidth == nowClientWidth) {
+        let timeout
+        if (nextNowClientHeight >= nowClientHeight && this.$store.clientWidth == nowClientWidth) {  
+            clearTimeout(timeout)
+            timeout = setTimeout(() => {
+                this.$refs.sectionnavigation.classList.remove('hidden')
+            }, 250)
             // Event handling of keyboard pop-up
             nextNowClientHeight = nowClientHeight
             this.$store.clientWidth = nowClientWidth
         } else {
             // timeout is used to dispatch events after the resize is done
-            let timeout
+            
             clearTimeout(timeout)
             timeout = setTimeout(() => {
                 this.$refs.sectionnavigation.classList.remove('hidden')
