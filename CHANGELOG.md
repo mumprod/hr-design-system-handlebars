@@ -1,3 +1,15 @@
+# v1.60.5 (Tue Mar 19 2024)
+
+#### 🐛 Bug Fix
+
+- show settings button via inline-switch [#883](https://github.com/mumprod/hr-design-system-handlebars/pull/883) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.60.4 (Mon Mar 18 2024)
 
 #### 🐛 Bug Fix
