@@ -1,13 +1,24 @@
 <div class="flex items-center justify-center mt-4 md:mt-2 md:justify-end js-load" data-hr-data-policy-settings-ds='{}'>
-        {{#with this}}       
-            {{#> components/button/button _size="md" _id="globalSettingsButton" _css=" js-data-policy-settings-button" _variant="secondary" _onBackground=(inline-switch _webview false (configProperty "footer.onBackground")) }}
-                {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
-                {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
-            {{/components/button/button}}
-            {{#*inline "htmlProperties"}}
-                data-piano-tracking='{"label":"Footer","secondLevelId":1}'
-                data-a11y-dialog-show="datapolicy-settings-dialog"
-            {{/inline}}          
+        {{#with this}}  
+            {{#if _webview}}
+                {{#> components/button/button _size="md" _id="globalSettingsButton" _css=" js-data-policy-settings-button" _variant="secondary" _onBackground=false }}
+                    {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
+                    {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
+                {{/components/button/button}}
+                {{#*inline "htmlProperties"}}
+                    data-piano-tracking='{"label":"Footer","secondLevelId":1}'
+                    data-a11y-dialog-show="datapolicy-settings-dialog"
+                {{/inline}}
+            {{else}}
+                {{#> components/button/button _size="md" _id="globalSettingsButton" _css=" js-data-policy-settings-button" _variant="secondary" _onBackground=(configProperty "footer.onBackground") }}
+                    {{> components/button/components/button_icon _icon="settings" _iconmap="icons" _css="w-5 h-5"}}
+                    {{> components/button/components/button_label _label=(loca "cookies_setting_button_text")}}
+                {{/components/button/button}}
+                {{#*inline "htmlProperties"}}
+                    data-piano-tracking='{"label":"Footer","secondLevelId":1}'
+                    data-a11y-dialog-show="datapolicy-settings-dialog"
+                {{/inline}} 
+            {{/if}}      
         {{/with}}
     </div>
     <div id="datapolicy-settings-dialog" aria-labelledby="datapolicy-settings-title" aria-hidden="true" class="fixed inset-0 flex justify-center overflow-y-scroll aria-hidden:hidden z-300">
