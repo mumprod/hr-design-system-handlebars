@@ -124,5 +124,9 @@
             "date": "15.02.24",
             "dateSeparatorTime": "19:30"
         }           
+    },
+    "relatedContent": {
+        "@->jsoninclude": "teaser/teaser_groups.inc.json",
+        "@->contentpath": "teaser_4_25_relatedcontent"
     }
 }
