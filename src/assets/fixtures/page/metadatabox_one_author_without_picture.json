@@ -1,6 +1,7 @@
 {
     "_showDate": true,
     "hasMoreThanOneAuthor": false,
+    "hasOneAuthor": true,
     "hasDwellTime": true,
     "documentModificationDate": {
         "isModificationDate": false,
