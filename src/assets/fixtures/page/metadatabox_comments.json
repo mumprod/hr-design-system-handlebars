@@ -1,7 +1,6 @@
 {
     "_showDate": true,
     "hasMoreThanOneAuthor": false,
-    "hasOneAuthor": true,
     "hasDwellTime": true,
     "documentModificationDate": {
         "isModificationDate": false,
@@ -10,19 +9,10 @@
         "date": "15.02.24",
         "time": "19:30"
     },
-    "authorTitle": "Steffen Rebhahn",
-    "authorImage": {
-        "@->jsoninclude": "page/story/story_images.inc.json",
-        "@->contentpath": "author",
-        "@->replaceToken": [
-            {
-                "@->token": "image",
-                "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
-            }
-        ]            
-    },
-    "authorUrl": "/author-url",
-    "webviewAuthorUrl": "webview-author-url",
+    "userComments": {
+        "HasOneComment": false,
+        "quantity": "117"
+    },    
     "socialSharing": {
         "twitterLink": "/twitterLink-url",
         "facebookLink": "/facebookLink-url",

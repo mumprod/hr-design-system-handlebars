@@ -1,5 +1,6 @@
 import metadatabox_template from './metadatabox.hbs'
 import metadatabox_json from '../fixtures/metadatabox.json'
+import metadatabox_comments_json from '../fixtures/metadatabox_comments.json'
 import metadatabox_one_author_json from '../fixtures/metadatabox_one_author.json'
 import metadatabox_one_author_without_picture_json from '../fixtures/metadatabox_one_author_without_picture.json'
 import metadatabox_one_author_comments_json from '../fixtures/metadatabox_one_author_comments.json'
@@ -33,6 +34,12 @@ export const Default = {
     render: Template.bind({}),
     name: 'Nur Datum',
     args: metadatabox_json,
+}
+
+export const WithComments = {
+    render: Template.bind({}),
+    name: 'Datum und Kommentar-Link',
+    args: metadatabox_comments_json,
 }
 
 export const WithOneAuthor = {
