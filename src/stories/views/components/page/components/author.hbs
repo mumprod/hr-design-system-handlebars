@@ -20,7 +20,7 @@
 
 {{else}}
 
-    {{#if this.authorTitle~}}
+    {{#if this.hasOneAuthor~}}
         <div class="flex items-center {{#if this.authorImage.isImage}}h-10{{else}}mb-1{{/if}}">
             {{#if this.authorImage.isImage}}
                 <div class="w-10 h-10 mr-4 basis-10 grow-0">
@@ -39,6 +39,7 @@
                 {{else}}
                     {{this.authorTitle}}
                 {{/if}}
+                {{#with this.textAfterAuthor}} {{this}}{{/with}}
             </div>
         </div>
     {{~/if}}
