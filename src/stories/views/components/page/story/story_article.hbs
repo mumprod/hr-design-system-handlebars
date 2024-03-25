@@ -27,6 +27,4 @@
 
 {{/components/page/base/page_wrapper}}
 
-{{#if (isStorybook)}}
-    {{> components/related-content/related-content_article }} 
-{{/if}}
+{{> components/base/loadSSI this.relatedContentSsi _templatePath="components/page/story/components/related-content.ssi"}}
