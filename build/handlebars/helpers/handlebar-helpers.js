@@ -443,6 +443,9 @@ var helpers = {
                             ? 'brandlogo--footer' 
                             : undefined
                     break
+                    case 'site.name':
+                    configProperty = brand
+                    break
             }
         } else {
             configProperty = 'No config-property defined.'
