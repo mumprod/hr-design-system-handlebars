@@ -1,3 +1,15 @@
+# v1.61.0 (Mon Mar 25 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Configure theme in offline page [#887](https://github.com/mumprod/hr-design-system-handlebars/pull/887) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.60.8 (Mon Mar 25 2024)
 
 #### 🐛 Bug Fix
