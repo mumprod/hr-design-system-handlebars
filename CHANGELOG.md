@@ -1,3 +1,17 @@
+# v1.60.8 (Mon Mar 25 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2818: add related content to the article [#884](https://github.com/mumprod/hr-design-system-handlebars/pull/884) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.60.7 (Thu Mar 21 2024)
 
 #### 🐛 Bug Fix
