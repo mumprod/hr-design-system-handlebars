@@ -1,0 +1,8 @@
+{{#>components/page/base/page_wrapper}}
+    <div class="mx-5 mb-10 article-full-width md:article-breakout md:mx-0">
+        {{~#partial "cache-entry"~}}
+            {{~addCacheEntry "storyRelatedContent_ssi" uuid ~}}
+        {{~/partial~}}
+        {{> components/related-content/related-content }} 
+    </div> 
+{{/components/page/base/page_wrapper}}

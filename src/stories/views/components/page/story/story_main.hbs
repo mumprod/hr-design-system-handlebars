@@ -1,20 +1,5 @@
-{{~#partial "body"~}}   
+{{~#partial "body"~}}
       {{~>components/page/story/story_article}}     
 
-      {{#if this.hasFAQ}}
-            <script type="application/ld+json">
-                  {{{this.faqJsonLd}}}
-            </script>
-      {{/if}}
-      {{#if this.hasJobposting}}
-            <script type="application/ld+json">
-                  {{{this.jobpostingJsonLd}}}
-            </script>
-      {{/if}}
-      {{#if this.isRecipe}}
-            <script type="application/ld+json">
-                  {{{this.recipeJsonLd}}}
-            </script>
-      {{/if}}
 {{/partial}}
 {{> "modules/page/base" }}

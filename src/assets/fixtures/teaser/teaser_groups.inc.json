@@ -341,5 +341,142 @@
     },
     "tabBoxTeaser": {
         "@->jsoninclude": "teaser/teaser_tabbox.json"
+    },
+    "teaser_4_25_relatedcontent": {
+            "hasLink": false,
+            "link": "#gruppe1",
+            "hasGroupTitle": true,
+            "hasGroupItems": true,
+            "isRelatedContent": true,
+            "groupTitle": "Das könnte Sie auch interessieren",
+            "teaserSize": "100",
+            "realTeaserSize": "100",
+            "logicItems": [
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_2",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "jugendfeuerwehr-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_video",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "sonniger-herbst-100"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@->jsoninclude": "teaser/teasers.inc.json",
+                    "@->contentpath": "teaser_audio",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                            "@->value": "25"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                            "@->value": "true"
+                        },
+                        {
+                            "@->contentpath": "logicItem.includeModel.teaserImage",
+                            "@->value": {
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "teaser_tabbox_standard_25",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "hasebe-kane-102"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+       
     }
 }
