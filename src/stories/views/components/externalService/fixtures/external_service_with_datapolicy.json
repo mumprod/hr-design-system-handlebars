@@ -81,9 +81,9 @@
         },
         "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
         "fixedHeight": "700",
-        "setResponsiveIframe": true,
+        "setResponsiveIframe": false,
         "setTimedReloadIframe": true,
-        "setTimeForReload": "500",
+        "setTimeForReload": "30",
         "externalServiceCaption":"Feste Höhe von 700px werden übergeben"
     },
     "Esri": {
