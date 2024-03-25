@@ -23,21 +23,23 @@ const ExternalService = function (context) {
         embedType = options.embedType,
         dataPolicyCheck = options.dataPolicyCheck || false,
         id = options.id,
-        iFrameConfig = options.iFrameConfig,
-        isWebview = window.parent.document.documentElement.classList.contains('webview'),
-        button = hr$('.js-dataPolicyTeaser__button', rootElement)[0]
-
+        iFrameConfig = options.iFrameConfig
     let acceptButton,
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0],
-        dataPolicySettingsButton = hr$('.js-data-policy-settings-button', rootParent)[0],
-        embedCode = options.embedCode,
+        dataPolicySettingsButton = hr$('.js-data-policy-settings-button', rootParent)[0]
+    let embedCode = options.embedCode,
         iframe,
         settingsCookie,
-        contentRefresher = new DataWrapperContentRefresher(context)
-        noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight)
-        isExternalServiceLoaded = false
+        noResponsiveIframe,
+        contentRefresher,
+        isExternalServiceLoaded = false,
+        isWebview = window.parent.document.documentElement.classList.contains('webview')
 
-
+    const testDOMElements = function () {
+        console.log(rootElement)
+        console.log(rootParent)
+        console.log(acceptAlwaysCheckbox)
+    }
     const embedExternalService = function (callback) {
         $.ajax({
             type: 'GET',
@@ -125,31 +127,27 @@ const ExternalService = function (context) {
         script.type = 'text/javascript'
         rootElement.appendChild(script)
     }
-
+    const createUniqueID = function() {
+        var id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10)
+        return id
+    }
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
-        var uniqueID = function () {
-            return Math.random()
-            .toString(36)
-            .replace(/[^a-z]+/g, '')
-            .substr(2, 10)
-        }
         if (iFrameConfig.noResponsiveIframe == 'true') {
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, embedCode)
             noResponsiveIframe.createNoResponsiveIframe()
         } 
         else {
             var iframe = document.createElement('iframe')
-            iframe.className = 'dataWrapper-embed'
-            iframe.style.width = '0'
-            iframe.style.minWidth = '100% !important'
-            iframe.style.border = 'none'
+              //Auflösen nach Tailwind-Klassen //dataWrapper-embed
+            iframe.className = 'w-0 !min-w-full border-0'
             iframe.setAttribute('webkitallowfullscreen', '')
             iframe.setAttribute('mozallowfullscreen', '')
             iframe.setAttribute('allowfullscreen', '')
             iframe.setAttribute('scrolling', 'no')
             iframe.setAttribute('frameborder', '0')
             iframe.src = embedCode
-            iframe.id = 'datawrapper-chart-' + uniqueID
+            iframe.id = 'datawrapper-chart-' + createUniqueID()
             rootElement.insertBefore(iframe, null)
 
             loadScript(
@@ -158,6 +156,8 @@ const ExternalService = function (context) {
                 true
             )
             if (iFrameConfig.refreshContent == 'true') {
+                console.log("contentRefresher anfügen")
+                contentRefresher = new DataWrapperContentRefresher(context, createUniqueID(), iFrameConfig.refreshIntervall)
                 contentRefresher.createRefresher()
             }
         }
@@ -392,6 +392,7 @@ const ExternalService = function (context) {
     }
     initDataPolicy()
     resetCheckboxForPermanentService()
+    testDOMElements()
     if (isWebview) {
         /*Für die App werden Cookie-Daten des neuen Cookies wieder mit dem alten Cookie synchronisiert */
         syncAppOptionsToSettingsCookie()

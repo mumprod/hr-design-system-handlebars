@@ -35,10 +35,56 @@
             "externalServiceName": "Datawrapper (Datengrafik)"
         },
         "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
-        "fixedHeight": "380",
+        "fixedHeight": "700",
+        "setResponsiveIframe": false,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": "",
+        "externalServiceCaption":"fixedHeight von 700 wird übergeben aber Responsives Iframe ist aktiviert"
+    },
+    "Datawrapper_CDN_NoResponsiveFixedHeight": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "fixedHeight": "700",
         "setResponsiveIframe": true,
         "setTimedReloadIframe": false,
-        "setTimeForReload": ""
+        "setTimeForReload": "",
+        "externalServiceCaption":"Feste Höhe von 700px werden übergeben"
+    },
+    "Datawrapper_CDN_NoResponsiveAspectRatio": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "aspectRatio": "100",
+        "setResponsiveIframe": true,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": "",
+        "externalServiceCaption":"Aspect Ratio 1x1 ist ausgewählt"
+    },
+    "Datawrapper_CDN_NoResponsiveFixedHeightReload": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "fixedHeight": "700",
+        "setResponsiveIframe": true,
+        "setTimedReloadIframe": true,
+        "setTimeForReload": "500",
+        "externalServiceCaption":"Feste Höhe von 700px werden übergeben"
     },
     "Esri": {
         "externalServiceConfig": {
