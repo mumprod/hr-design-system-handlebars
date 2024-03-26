@@ -163,6 +163,9 @@
     .article-full-width {
         grid-column: full-width;
     }
+    .article-narrow {
+        grid-column: narrow;
+    }
 
     .grid-content {
         grid-template-areas:
