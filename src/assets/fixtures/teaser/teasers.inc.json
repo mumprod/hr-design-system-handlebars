@@ -1659,7 +1659,8 @@
                         "readMoreScreenreader": "Zur Tagesschau Website",
                         "readMore": "Zur Tagesschau Website",
                         "readMoreLong": "Zur Tagesschau Website"
-                    }
+                    },
+                    "needsUserConsent": false
                 }
             }
         }
