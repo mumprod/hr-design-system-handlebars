@@ -6,20 +6,28 @@ const Modal = (context) => {
     const { options } = context,
         { element: rootElement } = context,
         dialogPolyfillBaseUrl = options.dialogPolyfillBaseUrl || 'vendor/dialog-polyfill',
-        modalTriggerId = options.modalTriggerId ? '#' + options.modalTriggerId : '',
-        modalTrigger = hr$(modalTriggerId)[0],
-        modalCloseTriggers = hr$('.js-modal-close', rootElement),
+        modalTriggerClass = options.triggerClass ? `.${options.modalTriggerClass}` : '',
+        modalTriggerElement = options.triggerElement || '', 
         modal = hr$('.js-modal', rootElement)[0],
+        triggerRoot = document.body,
         ticketShopButton = hr$('.js-ticket-ok-button', rootElement)[0],
         trackingInformations = options.trackingInformations
 
     const configureEventListeners = () => {
         listen('click', clickTracking, ticketShopButton)
-        listen('click', show, modalTrigger)
+        listen('click', handleClickOnTrigger, triggerRoot)
+    }
 
-        modalCloseTriggers.forEach((modalCloseTrigger) => {
-            listen('click', close, modalCloseTrigger)
-        })
+    const handleClickOnTrigger = (event) =>{        
+        if('' !== modalTriggerElement && event.target.tagName === modalTriggerElement.toUpperCase() || event.target.parentNode.tagName  === modalTriggerElement.toUpperCase()){
+            let triggerNode = event.target.tagName  === modalTriggerElement.toUpperCase() ? event.target : event.target.parentNode
+            if(triggerNode.classList.contains("js-modal-close")){
+                close()
+            } else {
+                event.preventDefault()
+                show()
+            }
+        }
     }
 
     const configurePolyfillIfNeeded = () => {
