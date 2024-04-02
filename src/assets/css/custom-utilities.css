@@ -163,7 +163,12 @@
     .article-full-width {
         grid-column: full-width;
     }
-
+    .article-narrow {
+        grid-column: narrow;
+    }
+    .copytextWrapper > :not(.article-breakout, .article-full-width){
+        grid-column: narrow;
+    }
     .grid-content {
         grid-template-areas:
     "head"

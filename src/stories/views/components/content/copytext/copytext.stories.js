@@ -20,11 +20,14 @@ export default {
     title: 'Komponenten/Content/Copytext',
     decorators: [
         (Story) => {
-            return `<div class="max-w-[724px] mx-auto">  
-             ${Story()} 
-             </div>`
+            return `<div class="grid grid-page">
+                        <div class="grid bg-white grid-article">
+                            ${Story()} 
+                        </div>
+                    </div>`
         },
     ],
+    parameters:{layout:'fullscreen'}
 }
 
 export const Default = {
