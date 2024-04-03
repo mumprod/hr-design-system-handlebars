@@ -1,3 +1,15 @@
+# v1.61.3 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes margin in tabbox buttons in mobile view [#890](https://github.com/mumprod/hr-design-system-handlebars/pull/890) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.61.2 (Wed Apr 03 2024)
 
 #### 🐛 Bug Fix
