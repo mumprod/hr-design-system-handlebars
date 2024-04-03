@@ -25,89 +25,123 @@
     }
 
 
-    .ar-16-9, .ar-16x9-DS {
+    .ar-16-9 {
         aspect-ratio: 16 / 9;
     }
 
     @supports not (aspect-ratio: 16 / 9) {
-        .ar-16-9::before, .ar-16x9-DS::before {
+        .ar-16-9::before {
             float: left;
             padding-top: calc(9 / 16 * 100%);
             content: '';
         }
 
-        .ar-16-9::after, .ar-16x9-DS::after {
+        .ar-16-9::after {
             display: block;
             content: '';
             clear: both;
         }
     }
 
-    .ar-16-7, .ar-16x7-DS {
+    .ar-16-7 {
         aspect-ratio: 16 / 7;
     }
 
     @supports not (aspect-ratio: 16 / 7) {
-        .ar-16-7::before, .ar-16x7-DS::before {
+        .ar-16-7::before {
             float: left;
             padding-top: calc(7 / 16 * 100%);
             content: '';
         }
 
-        .ar-16-7::after, .ar-16x7-DS::after {
+        .ar-16-7::after {
             display: block;
             content: '';
             clear: both;
         }
     }
 
-    .ar-4-3, .ar-4x3-DS {
+    .ar-4-3 {
         aspect-ratio: 4 / 3;
     }
 
     @supports not (aspect-ratio: 4 / 3) {
-        .ar-4-3::before, .ar-4x3-DS::before {
+        .ar-4-3::before {
             float: left;
             padding-top: calc(3 / 4 * 100%);
             content: '';
         }
 
-        .ar-4-3::after, .ar-4x3-DS::after {
+        .ar-4-3::after {
             display: block;
             content: '';
             clear: both;
         }
     }
 
-    .ar-1-1, .ar-100-DS {
+    .ar-1-1 {
         aspect-ratio: 1 / 1;
     }
 
     @supports not (aspect-ratio: 1 / 1) {
-        .ar-1-1::before, .ar-100-DS::before {
+        .ar-1-1::before {
             float: left;
             padding-top: 100%;
             content: '';
         }
 
-        .ar-1-1::after, .ar-100-DS::after {
+        .ar-1-1::after {
             display: block;
             content: '';
             clear: both;
         }
     }
-    .ar-100-27, .ar-100x27 {
+    .ar-100-27 {
         aspect-ratio: 100 / 27.1;
     }
 
     @supports not (aspect-ratio: 100 / 27.1) {
-        .ar-100-27::before, .ar-100x27::before {
+        .ar-100-27::before {
             float: left;
             padding-top: calc(27.1 / 100 * 100%);
             content: '';
         }
 
-        .ar-100-27::after, .ar-100x27::after {
+        .ar-100-27::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .ar-9-16 {
+        aspect-ratio: 9 / 16;
+    }
+    @supports not (aspect-ratio: 9 / 16) {
+        .ar-9-16::before {
+            float: left;
+            padding-top: calc(16 / 9 * 100%);
+            content: '';
+        }
+
+        .ar-9-16::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .ar-7-16 {
+        aspect-ratio: 7 / 16;
+    }
+    @supports not (aspect-ratio: 7 / 16) {
+        .ar-7-16::before {
+            float: left;
+            padding-top: calc(16 / 7 * 100%);
+            content: '';
+        }
+
+        .ar-7-16::after {
             display: block;
             content: '';
             clear: both;
@@ -163,7 +197,12 @@
     .article-full-width {
         grid-column: full-width;
     }
-
+    .article-narrow {
+        grid-column: narrow;
+    }
+    .copytextWrapper > :not(.article-breakout, .article-full-width){
+        grid-column: narrow;
+    }
     .grid-content {
         grid-template-areas:
     "head"

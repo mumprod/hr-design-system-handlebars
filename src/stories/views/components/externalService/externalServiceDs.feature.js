@@ -33,8 +33,6 @@ const ExternalService = function (context) {
         embedCode = options.embedCode,
         iframe,
         settingsCookie,
-        contentRefresher = new DataWrapperContentRefresher(context)
-        noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight)
         isExternalServiceLoaded = false
 
 
@@ -132,10 +130,13 @@ const ExternalService = function (context) {
             return Math.random()
             .toString(36)
             .replace(/[^a-z]+/g, '')
-            .substr(2, 10)
+            .substring(2, 10)
         }
+        let contentRefresher = new DataWrapperContentRefresher(context, uniqueID)
+        let noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, embedCode)
+
         if (iFrameConfig.noResponsiveIframe == 'true') {
-            noResponsiveIframe.createNoResponsiveIframe()
+            noResponsiveIframe.createNoResponsiveIframe(getAspectRatioClass())
         } 
         else {
             var iframe = document.createElement('iframe')
@@ -208,7 +209,7 @@ const ExternalService = function (context) {
             embedCode +
             "?utm_source=ig_embed&amp;utm_campaign=loading'" +
             "data-instgrm-version='14'" +
-            "style='background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:660px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);' >" +
+            "style='background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:724px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);' >" +
             '</blockquote>'
         replaceAnimated(rootElement, instagramEmbedCode, false, reloadInstagramEmbed)
     }
@@ -250,6 +251,27 @@ const ExternalService = function (context) {
         }, 250)
     }
 
+    const getAspectRatioClass = function () {
+        switch (iFrameConfig.aspectRatio) {
+            case '16x9':
+                return "ar-16-9"
+            case '16x7':
+                return "ar-16-7"
+            case '4x3':
+                return "ar-4-3"
+            case '100x27':
+                return "ar-100-27"
+            case '100':
+                return "ar-1-1"                
+            case '9x16':
+                return "ar-9-16"
+            case '7x16':
+                return "ar-7-16"
+            default:
+                return "ar-16-9"
+        }   
+    }
+
     const loadIframe = function () {
         console.log('load iframe ' + id)
         iframe =
@@ -260,13 +282,13 @@ const ExternalService = function (context) {
             "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
             iframe =
-                "<div class='copytext__scrollWrapper'><div class='ar--" +
-                iFrameConfig.aspectRatio +
+                "<div class='copytext__scrollWrapper'><div class='" +
+                getAspectRatioClass() +
                 ' ' +
                 id +
                 "'><iframe id='i_frame' data-isloaded='0' src='" +
                 embedCode +
-                "' frameborder='0' class='" +
+                "' frameborder='0' class='w-full h-full " +
                 iFrameConfig.heightClass +
                 ' ' +
                 id +
@@ -277,14 +299,14 @@ const ExternalService = function (context) {
                 iframe =
                     "<div class='copytext__scrollWrapper -fixedHeight' style='height:" +
                     iFrameConfig.fixedHeight +
-                    "px'><iframe data-isloaded='0' src='" +
+                    "px'><iframe data-isloaded='0' class='w-full h-full' src='" +
                     embedCode +
                     "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
                 iframe =
                     "<div class='copytext__scrollWrapper " +
                     id +
-                    "'><iframe data-isloaded='0' src='" +
+                    "'><iframe data-isloaded='0' class='w-full h-full' src='" +
                     embedCode +
                     "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
@@ -341,9 +363,9 @@ const ExternalService = function (context) {
     }
     const toggleContentSettingsButton = function () {
         if (isExternalServiceLoaded) {
-            contentSettingsButton.classList.remove('hideExtButton')
+            contentSettingsButton.classList.remove('hidden')
         } else {
-            contentSettingsButton.classList.add('hideExtButton')
+            contentSettingsButton.classList.add('hidden')
         }
         console.log('Toggle den Einstellungsbutton außerhalb weil ' + isExternalServiceLoaded)
     }

@@ -1,8 +1,8 @@
-{{!#if this.externalServiceConfig.makeConfigurable}}
+{{#if this.externalServiceConfig.makeConfigurable}}
     
-    <!--External-Service-Dummy-->
+    {{> components/externalService/external_service_with_datapolicy_check }}
 
-{{!else}}
+{{else}}
     
     {{#if this.serviceUrl}}
         <div class="clear-both mt-10">
@@ -10,7 +10,7 @@
             {{#if this.externalServiceConfig.embedAsIFrame}}              
                     
                 <div class="{{#if this.fixedHeight}}overflow-y-hidden{{else}}overflow-hidden{{/if}}" {{#if this.fixedHeight}}style="height:{{this.fixedHeight}}px;"{{/if}}>
-                    {{#unless this.fixedHeight}}<div class="ar-{{defaultIfEmpty this.aspectRatio "16x9"}}-DS">{{/unless}}
+                    {{#unless this.fixedHeight}}<div class="{{~inline-switch this.aspectRatio  '["16x9","16x7","4x3","100x27","100","9x16","7x16"]' '["ar-16-9","ar-16-7","ar-4-3","ar-100-27","ar-1-1","ar-9-16","ar-7-16","ar-16-9"]'~}}">{{/unless}}
                         <iframe frameborder="0" width="100%" height="100%"
                                 src="{{{this.serviceUrl}}}" webkitallowfullscreen mozallowfullscreen
                                 allowfullscreen scrolling='no'>
@@ -26,13 +26,10 @@
                 
             {{/if}}
                 
-            {{#with this.externalServiceCaption}}
-                <div class="py-2.5">
-                    <span class="text-sm font-copy dark:text-text-dark">{{this}}</span>
-                </div>
-            {{/with}}
+            {{~> components/externalService/components/external_service_caption ~}}
+            
             <span class="sr-only">{{loca "story_externalservice_outro_sr" }}</span>    
         </div>
     {{/if}}
 
-{{!/if}}
+{{/if}}

@@ -1,11 +1,11 @@
         
-const DataWrapperContentRefresher = function (context) {
+const DataWrapperContentRefresher = function (context, uniqueID) {
         const { element: rootElement } = context
         let remainingTime
         let timer
         let iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
         
-        const createRefresher = function () {
+        const createRefresher = function (uniqueID) {
             let divCounter = document.createElement('div')
             let divOverlay = document.createElement('div')
             let divTextOverlay = document.createElement('div')

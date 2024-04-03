@@ -1,18 +1,16 @@
-<div class="grid">
+<div class="grid clear-both mt-10">
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
              data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": true,"iFrameConfig": {"heightClass":"ar_iframe"{{#if
                  this.fixedHeight}},"fixedHeight":"{{this.fixedHeight}}", "fixedHeightClass":"-fixedHeight"{{else}},{{#if
                  this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{else}}"aspectRatio":"16x9"{{/if}}{{/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}","refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"}}'>
-            {{~> components/externalService/external_service_data_policy ~}}
+            {{~> components/externalService/components/external_service_data_policy ~}}
         </div>
-        {{~> components/externalService/external_service_caption ~}}
+        {{~> components/externalService/components/external_service_caption ~}}
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_outro_sr" ~}}
-        <div >
+        <div class="hidden js-content-settings-button">
             <div class="float-right">
-            {{~> components/externalService/external_service_settings_button ~}}
+            {{~> components/externalService/components/external_service_settings_button ~}}
             </div>
         </div>
 </div>
-<!-- TODO Hier wird der Global EInstellungsbutton bis zum Refactor eingebaut, damit der Einstellungsdialog aufgerufen werden kann -->
-{{~> components/dataPolicySettings/data_policy_settings ~}}

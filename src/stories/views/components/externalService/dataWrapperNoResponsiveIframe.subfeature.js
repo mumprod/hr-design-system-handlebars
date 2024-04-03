@@ -1,10 +1,11 @@
-const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight) {
+const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight, comfigEmbedCode) {
     
     const { element: rootElement } = context
     let aspectRatio = configAR
     let fixedHeight = configFixedHeight
+    let embedCode = comfigEmbedCode
 
-    const createNoResponsiveIframe = function () {
+    const createNoResponsiveIframe = function (aspectRatioClass) {
 
    
     var parentDiv = document.createElement('div')
@@ -18,10 +19,10 @@ const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHe
     } 
     // Aspect-Ratio ausgewählt
     else {
-            div.className = 'ar--' + aspectRatio + ' datawrapper_cdn'
+            div.className = aspectRatioClass + ' datawrapper_cdn'
     }
     var iframe = document.createElement('iframe')
-    iframe.className = 'ar_iframe datawrapper_cdn'
+    iframe.className = 'w-full h-full datawrapper_cdn'
     iframe.setAttribute('id', 'i_frame')
     iframe.setAttribute('data-isloaded', '0')
     iframe.setAttribute('webkitallowfullscreen', '')
