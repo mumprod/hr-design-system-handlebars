@@ -1,3 +1,15 @@
+# v1.61.2 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding in mobile view [#889](https://github.com/mumprod/hr-design-system-handlebars/pull/889) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.61.1 (Tue Apr 02 2024)
 
 #### 🐛 Bug Fix
