@@ -1,3 +1,15 @@
+# v1.61.4 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes right margin in mobile view [#891](https://github.com/mumprod/hr-design-system-handlebars/pull/891) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.61.3 (Wed Apr 03 2024)
 
 #### 🐛 Bug Fix
