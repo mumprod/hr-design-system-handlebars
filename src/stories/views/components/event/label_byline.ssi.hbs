@@ -3,7 +3,7 @@
         {{> components/event/event_status _css="ml-2" _status=(loca this.statusDescriptionForLabelShort)}} 
     {{else}}
         {{#> components/text/byline _css="ml-2"}}
-            {{this.startDateTime.date}}, {{this.startDateTime.time}} Uhr
+            {{this.startDateTime.date}}{{#if this.hasStartTime}}, {{this.startDateTime.time}} Uhr{{/if}}
         {{/components/text/byline}}
     {{/if}}
 {{/with}}
