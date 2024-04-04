@@ -1,3 +1,65 @@
+# v1.62.0 (Thu Apr 04 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Add the possibilty to turn [#892](https://github.com/mumprod/hr-design-system-handlebars/pull/892) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.61.4 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes right margin in mobile view [#891](https://github.com/mumprod/hr-design-system-handlebars/pull/891) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.3 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes margin in tabbox buttons in mobile view [#890](https://github.com/mumprod/hr-design-system-handlebars/pull/890) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.2 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding in mobile view [#889](https://github.com/mumprod/hr-design-system-handlebars/pull/889) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.1 (Tue Apr 02 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2952 [#888](https://github.com/mumprod/hr-design-system-handlebars/pull/888) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.61.0 (Mon Mar 25 2024)
 
 #### 🚀 Enhancement
