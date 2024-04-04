@@ -1,7 +1,7 @@
 import { 
     ExternalServiceContent
 } from './external_service.data.js'
-import externalService from './external_service.hbs'
+import externalService from './external_service_with_datapolicy_check.hbs'
 
 const TemplatePageExternalService = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!

@@ -77,7 +77,7 @@ const Template11 = ({ text, ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/grid',
+    title: 'Komponenten/Grid',
     argTypes: {},
 }
 

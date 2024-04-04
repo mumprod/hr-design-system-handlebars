@@ -128,3 +128,12 @@
         {{/if}}
     {{/each}}
 </div>
+{{! Globaler Einstellungsbutton; nur für Copytext/Externe Dienste Story; 
+damit der Einstellungsdialog aufgerufen werden kann }}
+{{~#if (isStorybook)~}}
+    {{#with @root.dataPolicy}}
+        <div class="p-4 bg-footer-bg mt-14">
+            {{~> components/dataPolicySettings/data_policy_settings ~}}
+        </div>
+    {{/with}}
+{{~/if~}}
