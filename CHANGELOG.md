@@ -1,3 +1,15 @@
+# v1.62.0 (Thu Apr 04 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Add the possibilty to turn [#892](https://github.com/mumprod/hr-design-system-handlebars/pull/892) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.61.4 (Wed Apr 03 2024)
 
 #### 🐛 Bug Fix
