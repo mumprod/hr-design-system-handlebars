@@ -1,3 +1,16 @@
+# v1.63.0 (Thu Apr 04 2024)
+
+#### 🚀 Enhancement
+
+- Dpe 2975+2962 [#893](https://github.com/mumprod/hr-design-system-handlebars/pull/893) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.62.0 (Thu Apr 04 2024)
 
 #### 🚀 Enhancement
