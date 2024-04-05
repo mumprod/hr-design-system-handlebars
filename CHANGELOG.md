@@ -1,3 +1,15 @@
+# v1.63.1 (Fri Apr 05 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding left in fig caption / desktop view [#894](https://github.com/mumprod/hr-design-system-handlebars/pull/894) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.0 (Thu Apr 04 2024)
 
 #### 🚀 Enhancement
