@@ -3,11 +3,11 @@
 {{/components/teaser/components/teaser_headline}}
 <p class="mt-2 text-base font-copy">{{_text}}</p>
 
-<div class="flex flex-wrap mt-4">
+<div class="flex flex-wrap mt-4"> 
     {{#> components/button/button _size="lg" _variant="tertiary" _value="cancel" _css="mr-4 mt-4"}}
         {{>components/button/components/button_label _label=_labelCancel-adjust_context _css=""}}
     {{/components/button/button}}
-    {{#> components/button/link_button _link=_link _size="lg" _css="js-modal-ok js-ticket-ok-button js-modal-close mt-4"}}
+    {{#> components/button/link_button _link='{"url":"#", "isTargetBlank": false, "hasIcon": false}' _size="lg" _css="js-user-consent-ok js-modal-close mt-4"}}
         {{>components/button/components/button_label _label=_labelOk-adjust_context _css=""}}
     {{/components/button/link_button}}
 </div>

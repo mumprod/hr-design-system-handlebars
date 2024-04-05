@@ -15,7 +15,7 @@
             "@->value": "https://tagesschau.de"
         },
         {
-            "@->contentpath": "logicItem.includeModel.link.needsUserConsent",
+            "@->contentpath": "logicItem.includeModel.link.isUserConsentNeeded",
             "@->value": true
         }
     ]

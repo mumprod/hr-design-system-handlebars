@@ -1660,7 +1660,7 @@
                         "readMore": "Zur Tagesschau Website",
                         "readMoreLong": "Zur Tagesschau Website"
                     },
-                    "needsUserConsent": false
+                    "isUserConsentNeeded": false
                 }
             }
         }
