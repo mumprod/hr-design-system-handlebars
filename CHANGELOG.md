@@ -1,3 +1,15 @@
+# v1.63.2 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- change locatag for update-date [#895](https://github.com/mumprod/hr-design-system-handlebars/pull/895) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.63.1 (Fri Apr 05 2024)
 
 #### 🐛 Bug Fix
