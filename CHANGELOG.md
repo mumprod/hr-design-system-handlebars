@@ -1,3 +1,15 @@
+# v1.63.4 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- remove ar_iframe [#897](https://github.com/mumprod/hr-design-system-handlebars/pull/897) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.63.3 (Mon Apr 08 2024)
 
 #### 🐛 Bug Fix
