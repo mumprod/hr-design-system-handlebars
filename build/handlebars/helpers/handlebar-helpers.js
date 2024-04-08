@@ -174,9 +174,9 @@ var helpers = {
             file = file.replace(
                 /{{resourceUrl\s\"(assets)(.*)\"\s?}}/g,
                 helpers.helperOptions.resourceUrl.relativePath +
-                    '$1_' +
-                    helpers.helperOptions.buildVersion +
-                    '$2'
+                '$1_' +
+                helpers.helperOptions.buildVersion +
+                '$2'
             )
         }
 
@@ -247,6 +247,10 @@ var helpers = {
         } else {
             return defaultValue
         }
+    },
+
+    'isUserConsentNeeded': function (url, options) {
+        return false
     },
 
     'isStorybook': function () {
@@ -423,7 +427,7 @@ var helpers = {
             configProperty = arguments[0]
             switch (configProperty) {
                 case 'footer.onBackground':
-                    configProperty = brand == 'hessenschau' || brand == 'hr-rundfunkrat' ? true : false; 
+                    configProperty = brand == 'hessenschau' || brand == 'hr-rundfunkrat' ? true : false;
                     break
                 case 'dialogPolyfill.baseUrl':
                     configProperty = 'vendor/dialog-polyfill'
@@ -440,10 +444,10 @@ var helpers = {
                             ? undefined
                             */
                             : brand == 'hr-inforadio'
-                            ? 'brandlogo--footer' 
-                            : undefined
+                                ? 'brandlogo--footer'
+                                : undefined
                     break
-                    case 'site.name':
+                case 'site.name':
                     configProperty = brand
                     break
             }

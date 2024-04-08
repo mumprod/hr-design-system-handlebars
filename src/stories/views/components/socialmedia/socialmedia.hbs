@@ -5,7 +5,7 @@
     <ul class="flex flex-wrap w-full pt-2 gap-x-2 gap-y-2">
         {{~#with this.twitterLink ~}}
             <li>
-                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                     href="{{this}}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -20,7 +20,7 @@
         {{~/with~}}
         {{~#with this.facebookLink ~}}
             <li>
-                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                     href="{{this}}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -35,7 +35,7 @@
         {{~/with~}}
         {{~#with this.whatsappLink ~}}
             <li>
-                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                     href="{{this}}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -50,7 +50,7 @@
         {{~/with~}}
         {{~#with this.mailtoLink ~}}
             <li>
-                <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                     href="{{this}}"
                     title="{{loca "share_mail_linktitle" }}"
                     {{#with ../../this.content.trackingData}}

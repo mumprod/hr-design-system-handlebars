@@ -1,6 +1,6 @@
 <div class="flex flex-col border-event-calendar-secondary border gap-x-4 js-load" data-hr-filterer-ds="{}"> 
     {{> @partial-block }}
-    {{#> components/modal/modal _type="userConsent" _trigger=".js-user-consent-needed"}}
+    {{#> components/modal/modal _type="userConsent" _trigger=".js-ticket-button-user-consent-needed"}}
         {{> components/modal/user_consent _link=this.link _headline=(loca "modal_user_consent_headline") _text=(loca "modal_user_consent_text") _labelOk=(loca "modal_user_consent_label_ok") _labelCancel=(loca "modal_user_consent_label_cancel")}}
     {{/components/modal/modal}}
 </div>
