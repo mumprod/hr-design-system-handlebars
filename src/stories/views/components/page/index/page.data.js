@@ -6,6 +6,8 @@ import NavigationData4 from '../../site_header/fixtures/site_header_mit_top_topi
 
 import hero_teaser from '../../teaser/fixtures/teaser_standard_hero_serif.json'
 
+import data_story from '../story/fixtures/story.json'
+
 const NavigationDataWithTeaser = structuredClone(
     Object.assign({}, NavigationData, hero_teaser.logicItem.includeModel)
 )
@@ -18,5 +20,7 @@ const NavigationDataWithTeaser3 = structuredClone(
 const NavigationDataWithTeaser4 = structuredClone(
     Object.assign({}, NavigationData4, hero_teaser.logicItem.includeModel)
 )
-
-export { NavigationDataWithTeaser, NavigationDataWithTeaser2, NavigationDataWithTeaser3, NavigationDataWithTeaser4 }
+const NavigationDataWithTeaser5 = structuredClone(
+    Object.assign({}, NavigationData, data_story)
+)
+export { NavigationDataWithTeaser, NavigationDataWithTeaser2, NavigationDataWithTeaser3, NavigationDataWithTeaser4,NavigationDataWithTeaser5  }
