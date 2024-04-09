@@ -1,3 +1,15 @@
+# v1.63.5 (Tue Apr 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2648 Abstände bei indexText Dpe [#898](https://github.com/mumprod/hr-design-system-handlebars/pull/898) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.63.4 (Mon Apr 08 2024)
 
 #### 🐛 Bug Fix
