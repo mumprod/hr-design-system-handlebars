@@ -240,7 +240,9 @@
     .col-full {
         grid-column: full;
     }
-
+    .hideGridGroupIfEmpty:not(.hideGridGroupIfEmpty:has(section)) {
+        display: none;
+    }
     .-currentBrand {
         @apply before:content-[''] md:before:absolute md:before:left-[calc(50%-0.5rem)] md:before:w-0 md:before:h-0 md:before:border-t-0 md:before:border-r-8 md:before:border-r-transparent md:before:border-l-8 md:before:border-l-transparent md:before:border-b-8 md:before:border-brandnav-pseudo md:before:mt-6;
     }
