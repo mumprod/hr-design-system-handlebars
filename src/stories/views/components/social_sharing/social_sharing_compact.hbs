@@ -42,15 +42,17 @@
     class="flex self-center justify-end grow "
     x-intersect:leave="sharingIsVisible = false"
     x-intersect:enter="sharingIsVisible = true"
+    
 >
-    <div class="fixed left-1 top-40">
+   {{!--  <div class="fixed left-1 top-40">
         sharingIsVisible:<span x-text="sharingIsVisible" ></span><br>
         open:<span x-text="open" ></span><br>
         isDesktop:<span x-text="isDesktop" ></span>
-    </div>
+    </div> --}}
+
     <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible }">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div class="flex gap-3" :class="{ 'bottom-5 socialShareDesktop:top-44 left-5 shadow-xl socialShareDesktop:-left-12 flex-col absolute bg-white': !sharingIsVisible }">
+            <div class="flex gap-3" :class="{ 'bottom-5 socialShareDesktop:top-32 left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute bg-white': !sharingIsVisible }">
                 <button 
                     class="order-2 w-8 h-8 ds-button font-heading active:scale-95 hover:scale-105 group"
                     x-show="!isDesktop"
