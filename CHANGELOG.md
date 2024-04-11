@@ -1,3 +1,63 @@
+# v1.63.5 (Tue Apr 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2648 Abstände bei indexText Dpe [#898](https://github.com/mumprod/hr-design-system-handlebars/pull/898) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.63.4 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- remove ar_iframe [#897](https://github.com/mumprod/hr-design-system-handlebars/pull/897) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.3 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- update locatags [#896](https://github.com/mumprod/hr-design-system-handlebars/pull/896) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.2 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- change locatag for update-date [#895](https://github.com/mumprod/hr-design-system-handlebars/pull/895) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.1 (Fri Apr 05 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding left in fig caption / desktop view [#894](https://github.com/mumprod/hr-design-system-handlebars/pull/894) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.0 (Thu Apr 04 2024)
 
 #### 🚀 Enhancement
