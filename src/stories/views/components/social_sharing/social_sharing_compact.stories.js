@@ -17,7 +17,7 @@ export const Default = {
     },
     decorators: [
         (Story) => {
-            return `<div class="w-full h-[500rem]">  
+            return `<div class="w-full mt-40 h-[500rem]">  
              ${Story()} 
              </div>`
         },
