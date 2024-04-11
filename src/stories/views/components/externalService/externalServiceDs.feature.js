@@ -129,7 +129,7 @@ const ExternalService = function (context) {
         rootElement.appendChild(script)
     }
     const createUniqueID = function() {
-       uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10)
+       uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
     }
 
     const getAspectRatioClass = function () {
