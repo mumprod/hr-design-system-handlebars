@@ -106,7 +106,7 @@ const ExternalService = function (context) {
                 }
                 break
             default:
-                loadIframe()
+                loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
         }
     }
 
@@ -131,6 +131,28 @@ const ExternalService = function (context) {
     const createUniqueID = function() {
        uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10)
     }
+
+    const getAspectRatioClass = function () {
+        switch (iFrameConfig.aspectRatio) {
+            case '16x9':
+                return "ar-16-9"
+            case '16x7':
+                return "ar-16-7"
+            case '4x3':
+                return "ar-4-3"
+            case '100x27':
+                return "ar-100-27"
+            case '100':
+                return "ar-1-1"                
+            case '9x16':
+                return "ar-9-16"
+            case '7x16':
+                return "ar-7-16"
+            default:
+                return "ar-16-9"
+        }   
+    }
+
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
         createUniqueID()
@@ -256,38 +278,34 @@ const ExternalService = function (context) {
         iframe =
             "<iframe id='i_frame' data-isloaded='0' src='" +
             embedCode +
-            "' frameborder='0' class='" +
-            iFrameConfig.heightClass +
-            "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+            "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
             iframe =
-                "<div class='copytext__scrollWrapper'><div class='ar--" +
-                iFrameConfig.aspectRatio +
+                "<div class='!h-full'><div class=" +
+                getAspectRatioClass() +
                 ' ' +
                 id +
                 "'><iframe id='i_frame' data-isloaded='0' src='" +
                 embedCode +
-                "' frameborder='0' class='" +
-                iFrameConfig.heightClass +
-                ' ' +
+                "' frameborder='0' class='w-full h-full '" +
                 id +
                 "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
             if (iFrameConfig.fixedHeight) {
                 iframe =
-                    "<div class='copytext__scrollWrapper -fixedHeight' style='height:" +
+                    "<div class='!h-full' style='height:" +
                     iFrameConfig.fixedHeight +
                     "px'><iframe data-isloaded='0' src='" +
                     embedCode +
-                    "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
                 iframe =
-                    "<div class='copytext__scrollWrapper " +
+                    "<div class='!h-full " +
                     id +
                     "'><iframe data-isloaded='0' src='" +
                     embedCode +
-                    "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
 
