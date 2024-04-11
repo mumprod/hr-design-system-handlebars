@@ -23,8 +23,29 @@ export default {
     },
 }
 
-export const ExterneDienste = {
+export const ExterneDiensteGiphy = {
     render: TemplatePageExternalService.bind({}),
-    name: 'Externe Dienste',
-    args: ExternalServiceContent, 
+    name: 'Externe Dienste Giphy',
+    args: ExternalServiceContent.Giphy, 
 }
+export const ExterneDiensteDatawrapper = {
+    render: TemplatePageExternalService.bind({}),
+    name: 'Externe Dienste Datawrapper MIT Responsivem Iframe',
+    args: ExternalServiceContent.Datawrapper_CDN, 
+}
+export const ExterneDiensteDatawrapperNoResponsiveFixedHeight = {
+    render: TemplatePageExternalService.bind({}),
+    name: 'Externe Dienste Datawrapper OHNE Responsivem Iframe (Feste Höhe)',
+    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveFixedHeight, 
+}
+export const ExterneDiensteDatawrapperNoResponsiveAspectRatio = {
+    render: TemplatePageExternalService.bind({}),
+    name: 'Externe Dienste Datawrapper OHNE Responsivem Iframe (Aspect Ratio)',
+    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveAspectRatio, 
+}
+export const ExterneDiensteDatawrapperContentRefresher = {
+    render: TemplatePageExternalService.bind({}),
+    name: 'Externe Dienste Datawrapper mit ContentRefresher',
+    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveFixedHeightReload, 
+}
+
