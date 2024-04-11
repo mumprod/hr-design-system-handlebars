@@ -71,8 +71,8 @@
                     x-transition.origin.right
                     x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')"
-                    class="p-1 bg-white"
-                    :class="sharingIsVisible ? 'h-8' : 'w-8'}"
+                    class="p-1 bg-white "
+                    :class="sharingIsVisible ? 'h-8 absolute right-[60px] z-100 md:relative md:right-0' : 'relative right-0 z-1 w-8'"
                 >
                     <ul class="flex gap-3"  :class="{ 'flex-col': ! sharingIsVisible }">
                         
