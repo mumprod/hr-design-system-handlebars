@@ -39,6 +39,9 @@ Alpine.store('serviceID', {
 Alpine.store('navIsVisible', true)
 Alpine.store('subNavIsVisible', false)
 Alpine.store('footerIsVisible', false)
+Alpine.store('globalPercent', {
+    current: '0'
+})
 
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)

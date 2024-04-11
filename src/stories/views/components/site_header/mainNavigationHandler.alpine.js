@@ -34,6 +34,7 @@ export default () => ({
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop
             winScroll > lastScrollTop ? (this.scrollingDown = true) : (this.scrollingDown = false)
             this.percent = Math.round((winScroll / height) * 100)
+            this.$store.globalPercent.current = this.percent
             lastScrollTop = winScroll
             this.$store.navIsVisible = !this.isNavHidden()
             this.$store.subNavIsVisible = !this.isSubNavHidden()
