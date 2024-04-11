@@ -1,3 +1,15 @@
+# v1.63.9 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- some little damn fixes [#903](https://github.com/mumprod/hr-design-system-handlebars/pull/903) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.8 (Thu Apr 11 2024)
 
 #### 🐛 Bug Fix
