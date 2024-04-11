@@ -1,3 +1,15 @@
+# v1.63.7 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes mobile behaviour of sticky sharing [#901](https://github.com/mumprod/hr-design-system-handlebars/pull/901) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.6 (Thu Apr 11 2024)
 
 #### 🐛 Bug Fix
