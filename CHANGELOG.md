@@ -1,3 +1,15 @@
+# v1.63.8 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- add external-service-teaser [#902](https://github.com/mumprod/hr-design-system-handlebars/pull/902) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.63.7 (Thu Apr 11 2024)
 
 #### 🐛 Bug Fix
