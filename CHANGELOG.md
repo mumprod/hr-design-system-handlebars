@@ -1,3 +1,15 @@
+# v1.63.10 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- Several fixes for Javascript and Iframe Styles [#899](https://github.com/mumprod/hr-design-system-handlebars/pull/899) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.63.9 (Thu Apr 11 2024)
 
 #### 🐛 Bug Fix
