@@ -270,6 +270,7 @@ module.exports = {
                     linkWater: '#d3e2f4',
                     blueLuxury: '#007396',
                     nightRider:'#2d2d2d',
+                    danube:  '#759ace',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -352,6 +353,7 @@ module.exports = {
                 'highlight-1-dark': 'var(--color-highlight-1-dark)',
                 'highlight-2': 'var(--color-highlight-2)',
                 'highlight-3': 'var(--color-highlight-3)',
+                'content-navi-border-dark': 'rgb(var(--color-content-navi-border-dark)/0.75)',
                 'top-topic-background': 'var(--color-top-topic-background)',
                 'text': 'var(--color-standard-text)',
                 'text-dark': 'var(--color-standard-text-dark)',
@@ -362,6 +364,7 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
+                'navigation-border-color-dark': 'var(--color-navigation-border-color-dark)',
                 'servicenavigation-border-color': 'var(--color-servicenavigation-border-color)',
                 'footer-bg': 'var(--color-footer-bg)',
                 'footer-text': 'var(--color-footer-text)',
