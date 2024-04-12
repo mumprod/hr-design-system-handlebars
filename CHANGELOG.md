@@ -1,3 +1,15 @@
+# v1.63.13 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- margin bottom for labelgroup and topline [#905](https://github.com/mumprod/hr-design-system-handlebars/pull/905) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.12 (Fri Apr 12 2024)
 
 #### 🐛 Bug Fix
