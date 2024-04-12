@@ -1,3 +1,15 @@
+# v1.63.12 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- less margin top in figure cation [#906](https://github.com/mumprod/hr-design-system-handlebars/pull/906) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.11 (Fri Apr 12 2024)
 
 #### 🐛 Bug Fix
