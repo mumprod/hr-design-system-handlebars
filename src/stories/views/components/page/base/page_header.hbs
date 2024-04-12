@@ -2,13 +2,13 @@
     <h2>
         {{#if this.label }}
             {{#with this.label}}
-                {{#> components/label/label_group}}
+                {{#> components/label/label_group _css="mb-2"}}
                     {{> components/label/label _type=this.type _text=(loca this.loca)}}
                 {{/components/label/label_group}}
             {{/with}}         
         {{else}}   
             {{~#if topline}}
-                <span class="block text-base sm480:text-xl font-heading">{{this.topline}}</span>
+                <span class="block mb-2 text-base sm480:text-xl font-heading">{{this.topline}}</span>
             {{/if~}}
         {{/if~}}
         <span class="text-3xl font-headingSerif sm480:text-4xl">{{this.title}}</span>
