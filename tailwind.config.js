@@ -353,7 +353,6 @@ module.exports = {
                 'highlight-1-dark': 'var(--color-highlight-1-dark)',
                 'highlight-2': 'var(--color-highlight-2)',
                 'highlight-3': 'var(--color-highlight-3)',
-                'content-navi-border-dark': 'rgb(var(--color-content-navi-border-dark)/0.75)',
                 'top-topic-background': 'var(--color-top-topic-background)',
                 'text': 'var(--color-standard-text)',
                 'text-dark': 'var(--color-standard-text-dark)',

@@ -170,7 +170,7 @@
         @apply text-base;
         @apply font-copy;
         @apply list-none;
-        @apply border-button--dark;
+        @apply border-button--dark dark:border-navigation-border-color-dark;
         @apply fill-content-nav;
         @apply text-content-nav;
         @apply bg-white;
