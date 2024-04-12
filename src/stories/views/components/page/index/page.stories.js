@@ -1,10 +1,13 @@
 import page from './page.hbs'
 import page_pagination from '../../pagination/page_pagination.hbs'
+import page_article from './page_test_story.hbs'
+
 import {
     NavigationDataWithTeaser,
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
     NavigationDataWithTeaser4,
+    NavigationDataWithTeaser5
 } from './page.data.js'
 
 import { NavigationDataWithMixedContent } from '../../pagination/page_pagination.data.js'
@@ -23,6 +26,12 @@ const Template2 = (args, { globals: { theme } }) => {
     return page_pagination({ brand, ...args })
 }
 
+const Template3 = (args, { globals: { theme } }) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    let brand = undefined !== theme ? theme : 'hessenschau' 
+    return page_article({ brand, ...args })
+}
 export default {
     title: 'Seiten/Index',
     argTypes: {},
@@ -70,4 +79,10 @@ export const MitTopTopics = {
     render: Template.bind({}),
     name: 'Mit Top-Topics',
     args: NavigationDataWithTeaser4,
+}
+
+export const MitArtikel = {
+    render: Template3.bind({}),
+    name: 'Mit Artikel',
+    args: NavigationDataWithTeaser5,
 }

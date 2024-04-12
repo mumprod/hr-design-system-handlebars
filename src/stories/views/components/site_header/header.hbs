@@ -2,6 +2,7 @@
     <header class="print:hidden relative z-110 {{#if _useSticky}}{{#if this.hasOpenSubNavigation}}lg:h-header-lg-big {{else}}lg:h-header-lg-small {{/if}}{{else}}lg:h-auto {{/if}}md:h-header-md h-header-sm">   
         <div x-data 
             id="headerWrapper"
+            x-ref="headerWrapper"
             @resize.window="resetNav()" 
             :class="shouldBrandNavBeHidden() ? '-mt-[33px] md:-mt-[33px]' : ''  "
             class="{{#if _useSticky }}fixed top-0 left-0{{/if}} flex flex-wrap max-w-full transition-all duration-500 transform font-copy lg:justify-center lg:w-full ">

@@ -1,3 +1,51 @@
+# v1.63.9 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- some little damn fixes [#903](https://github.com/mumprod/hr-design-system-handlebars/pull/903) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.8 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- add external-service-teaser [#902](https://github.com/mumprod/hr-design-system-handlebars/pull/902) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.7 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes mobile behaviour of sticky sharing [#901](https://github.com/mumprod/hr-design-system-handlebars/pull/901) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.6 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3006 [#900](https://github.com/mumprod/hr-design-system-handlebars/pull/900) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.63.5 (Tue Apr 09 2024)
 
 #### 🐛 Bug Fix
