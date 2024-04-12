@@ -23,19 +23,24 @@ const ExternalService = function (context) {
         embedType = options.embedType,
         dataPolicyCheck = options.dataPolicyCheck || false,
         id = options.id,
-        iFrameConfig = options.iFrameConfig,
-        isWebview = window.parent.document.documentElement.classList.contains('webview'),
-        button = hr$('.js-dataPolicyTeaser__button', rootElement)[0]
-
+        iFrameConfig = options.iFrameConfig
     let acceptButton,
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0],
-        dataPolicySettingsButton = hr$('.js-data-policy-settings-button', rootParent)[0],
-        embedCode = options.embedCode,
+        dataPolicySettingsButton = hr$('.js-data-policy-settings-button', rootParent)[0]
+    let embedCode = options.embedCode,
         iframe,
         settingsCookie,
-        isExternalServiceLoaded = false
+        noResponsiveIframe,
+        contentRefresher,
+        uniqueId,
+        isExternalServiceLoaded = false,
+        isWebview = window.parent.document.documentElement.classList.contains('webview')
 
-
+    const testDOMElements = function () {
+        console.log(rootElement)
+        console.log(rootParent)
+        console.log(acceptAlwaysCheckbox)
+    }
     const embedExternalService = function (callback) {
         $.ajax({
             type: 'GET',
@@ -101,7 +106,7 @@ const ExternalService = function (context) {
                 }
                 break
             default:
-                loadIframe()
+                loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
         }
     }
 
@@ -123,34 +128,49 @@ const ExternalService = function (context) {
         script.type = 'text/javascript'
         rootElement.appendChild(script)
     }
+    const createUniqueID = function() {
+       uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
+    }
+
+    const getAspectRatioClass = function () {
+        switch (iFrameConfig.aspectRatio) {
+            case '16x9':
+                return "ar-16-9"
+            case '16x7':
+                return "ar-16-7"
+            case '4x3':
+                return "ar-4-3"
+            case '100x27':
+                return "ar-100-27"
+            case '100':
+                return "ar-1-1"                
+            case '9x16':
+                return "ar-9-16"
+            case '7x16':
+                return "ar-7-16"
+            default:
+                return "ar-16-9"
+        }   
+    }
 
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
-        var uniqueID = function () {
-            return Math.random()
-            .toString(36)
-            .replace(/[^a-z]+/g, '')
-            .substring(2, 10)
-        }
-        let contentRefresher = new DataWrapperContentRefresher(context, uniqueID)
-        let noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, embedCode)
-
+        createUniqueID()
         if (iFrameConfig.noResponsiveIframe == 'true') {
-            noResponsiveIframe.createNoResponsiveIframe(getAspectRatioClass())
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, embedCode)
+            noResponsiveIframe.createNoResponsiveIframe()
         } 
         else {
             var iframe = document.createElement('iframe')
-            iframe.className = 'dataWrapper-embed'
-            iframe.style.width = '0'
-            iframe.style.minWidth = '100% !important'
-            iframe.style.border = 'none'
+              //Auflösen nach Tailwind-Klassen //dataWrapper-embed
+            iframe.className = 'w-0 !min-w-full border-0'
             iframe.setAttribute('webkitallowfullscreen', '')
             iframe.setAttribute('mozallowfullscreen', '')
             iframe.setAttribute('allowfullscreen', '')
             iframe.setAttribute('scrolling', 'no')
             iframe.setAttribute('frameborder', '0')
             iframe.src = embedCode
-            iframe.id = 'datawrapper-chart-' + uniqueID
+            iframe.id = 'datawrapper-chart-' + uniqueId
             rootElement.insertBefore(iframe, null)
 
             loadScript(
@@ -159,6 +179,8 @@ const ExternalService = function (context) {
                 true
             )
             if (iFrameConfig.refreshContent == 'true') {
+                console.log("contentRefresher anfügen")
+                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
                 contentRefresher.createRefresher()
             }
         }
@@ -251,64 +273,39 @@ const ExternalService = function (context) {
         }, 250)
     }
 
-    const getAspectRatioClass = function () {
-        switch (iFrameConfig.aspectRatio) {
-            case '16x9':
-                return "ar-16-9"
-            case '16x7':
-                return "ar-16-7"
-            case '4x3':
-                return "ar-4-3"
-            case '100x27':
-                return "ar-100-27"
-            case '100':
-                return "ar-1-1"                
-            case '9x16':
-                return "ar-9-16"
-            case '7x16':
-                return "ar-7-16"
-            default:
-                return "ar-16-9"
-        }   
-    }
-
     const loadIframe = function () {
         console.log('load iframe ' + id)
         iframe =
             "<iframe id='i_frame' data-isloaded='0' src='" +
             embedCode +
-            "' frameborder='0' class='" +
-            iFrameConfig.heightClass +
-            "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+            "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
             iframe =
-                "<div class='copytext__scrollWrapper'><div class='" +
+                "<div class='!h-full'><div class=" +
                 getAspectRatioClass() +
                 ' ' +
                 id +
                 "'><iframe id='i_frame' data-isloaded='0' src='" +
                 embedCode +
-                "' frameborder='0' class='w-full h-full " +
-                iFrameConfig.heightClass +
-                ' ' +
+                "' frameborder='0' class='w-full h-full '" +
                 id +
                 "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
             if (iFrameConfig.fixedHeight) {
                 iframe =
-                    "<div class='copytext__scrollWrapper -fixedHeight' style='height:" +
+                    "<div class='!h-full' style='height:" +
                     iFrameConfig.fixedHeight +
-                    "px'><iframe data-isloaded='0' class='w-full h-full' src='" +
+                    "px'><iframe data-isloaded='0' src='" +
                     embedCode +
-                    "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
                 iframe =
-                    "<div class='copytext__scrollWrapper " +
+                    "<div class='!h-full " +
                     id +
-                    "'><iframe data-isloaded='0' class='w-full h-full' src='" +
+                    "'><iframe data-isloaded='0' src='" +
                     embedCode +
-                    "' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
 
@@ -414,6 +411,7 @@ const ExternalService = function (context) {
     }
     initDataPolicy()
     resetCheckboxForPermanentService()
+    testDOMElements()
     if (isWebview) {
         /*Für die App werden Cookie-Daten des neuen Cookies wieder mit dem alten Cookie synchronisiert */
         syncAppOptionsToSettingsCookie()
