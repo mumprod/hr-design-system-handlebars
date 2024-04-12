@@ -40,8 +40,8 @@
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-id="['dropdown-button']"
     class="flex self-center justify-end grow "
-    x-intersect:leave.margin.-160px.0px.0px.0px="sharingIsVisible = false"
-    x-intersect:enter.margin.-160px.0px.0px.0px="sharingIsVisible = true"
+    x-intersect:leave="sharingIsVisible = false"
+    x-intersect:enter="sharingIsVisible = true"
      
 >
    {{!-- <div class="fixed left-1 top-40">
