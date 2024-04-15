@@ -20,6 +20,47 @@ const extractBrandFromUrl = function () {
     return brand
 }
 
+const ParamPlaceHolder = function (placeholder, index) {
+    this.placeholder = placeholder
+    this.index = index
+
+    const replace = function (text, params) {
+        let replacedText
+        if (undefined !== text && undefined !== params && this.index >= 0 && this.index < params.length && params[this.index] !== null) {
+            replacedText = text.replace(this.placeholder, params[this.index])
+        } else {
+            replacedText = text
+        }
+        return replacedText
+    }
+    return {
+        index: this.index,
+        placeholder: this.placeholder,
+        replace: replace
+    }
+}
+
+const UserConsentPlaceHolder = function (placeholder, url) {
+    this.placeholder = placeholder
+    this.url = url
+
+    const replace = function (text, params) {
+        let replacedText
+        if (undefined !== text && undefined !== this.url) {
+            replacedText = text.replace(this.placeholder, '')
+        }
+        else {
+            replacedText = text
+        }
+        return replacedText
+    }
+    return {
+        placeholder: this.placeholder,
+        url: this.url,
+        replace: replace
+    }
+}
+
 var helpers = {
     'helperOptions': null,
 
@@ -386,13 +427,26 @@ var helpers = {
                 // Check loca-tag
                 if (typeof helpers.helperOptions.locaTags[brand][loca] === 'string') {
                     loca = helpers.helperOptions.locaTags[brand][loca]
-
-                    // Exchange variables in loca-text
-                    // - the last argument is the "context" object which can be
-                    // ignored
-                    for (var i = 1; i < arguments.length - 1; ++i) {
-                        var locaRegExp = new RegExp('\\{' + (i - 1) + '\\}', 'gi')
-                        loca = loca.replace(locaRegExp, arguments[i])
+                    const args = Array.prototype.slice.call(arguments);
+                    // Extract params from arguments object. No params are present when length of arguments array is <= 2
+                    let params = args.length > 2 ? args.slice(1, args.length - 1) : []
+                    const regex = /(?<property>{<%(?<propertyKey>.*?)%>})|(?<userConsent>{nuc\s(?<userConsentUrl>.*?)\snuc})|(?<param>{(?<paramKey>.*?)})/g
+                    const matches = loca.matchAll(regex)
+                    const placeHolders = []
+                    for (const match of matches) {
+                        if (undefined !== match.groups.userConsent) {
+                            let placeHolder = match.groups.userConsent
+                            let url = match.groups.userConsentKey
+                            placeHolders.push(new UserConsentPlaceHolder(placeHolder, url))
+                        }
+                        if (undefined !== match.groups.param) {
+                            let placeHolder = match.groups.param
+                            let index = match.groups.paramKey
+                            placeHolders.push(new ParamPlaceHolder(placeHolder, index))
+                        }
+                    }
+                    for (const placeHolder of placeHolders) {
+                        loca = placeHolder.replace(loca, params)
                     }
                 } else {
                     loca = "Loca-tag '" + loca + "' not found"
