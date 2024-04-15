@@ -32,16 +32,21 @@
         },
         checkIfDesktop() {
             this.isDesktop = (window.innerWidth >= 1040) ? true : false 
+        },
+        checkNaviHeight() {
+            let naviHeight = document.querySelector('#headerWrapper').offsetHeight -20
+            if(!this.sharingIsVisible && window.innerWidth >= 1040 ) this.$refs.sharingWrapper.style.top = naviHeight+'px'
         }
     }"
     x-init = "checkIfDesktop()"
     x-on:resize.window = "checkIfDesktop()"
+    x-on:scroll.window.debounce = "checkNaviHeight()"
     x-on:keydown.escape.prevent.stop="close($refs.button)"
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-id="['dropdown-button']"
     class="flex self-center justify-end grow "
-    x-intersect:leave.margin.-160px.0px.0px.0px="sharingIsVisible = false"
-    x-intersect:enter.margin.-160px.0px.0px.0px="sharingIsVisible = true"
+    x-intersect:leave="sharingIsVisible = false"
+    x-intersect:enter="sharingIsVisible = true"
      
 >
    {{!-- <div class="fixed left-1 top-40">
@@ -53,7 +58,7 @@
 
     <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible }">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div class="flex gap-3" :class="{ 'bg-white w-10 bottom-5 socialShareDesktop:top-32 left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute': !sharingIsVisible }">
+            <div x-ref="sharingWrapper" class="flex gap-3 transition-[top]" :class="{ 'bg-white w-10 bottom-5 socialShareDesktop:top-[78px] left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute': !sharingIsVisible }">
                 <button 
                     class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
                     x-show="!isDesktop"

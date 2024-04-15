@@ -7,7 +7,7 @@ import {
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
     NavigationDataWithTeaser4,
-    NavigationDataWithTeaser5
+    NavigationDataWithBreadcrumb
 } from './page.data.js'
 
 import { NavigationDataWithMixedContent } from '../../pagination/page_pagination.data.js'
@@ -84,5 +84,5 @@ export const MitTopTopics = {
 export const MitArtikel = {
     render: Template3.bind({}),
     name: 'Mit Artikel',
-    args: NavigationDataWithTeaser5,
+    args: NavigationDataWithBreadcrumb,
 }

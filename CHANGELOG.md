@@ -1,3 +1,63 @@
+# v1.63.14 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- makes the top position dependent on navi height on desktop [#907](https://github.com/mumprod/hr-design-system-handlebars/pull/907) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.13 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- margin bottom for labelgroup and topline [#905](https://github.com/mumprod/hr-design-system-handlebars/pull/905) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.12 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- less margin top in figure cation [#906](https://github.com/mumprod/hr-design-system-handlebars/pull/906) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.11 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3007 [#904](https://github.com/mumprod/hr-design-system-handlebars/pull/904) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.10 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- Several fixes for Javascript and Iframe Styles [#899](https://github.com/mumprod/hr-design-system-handlebars/pull/899) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.63.9 (Thu Apr 11 2024)
 
 #### 🐛 Bug Fix
