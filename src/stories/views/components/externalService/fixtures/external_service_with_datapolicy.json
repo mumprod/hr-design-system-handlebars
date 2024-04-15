@@ -26,6 +26,51 @@
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
     },      
+    "Datawrapper_CDN_NoResponsiveFixedHeightReload": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "fixedHeight": "700",
+        "aspectRatio": "",
+        "setResponsiveIframe": true,
+        "setTimedReloadIframe": true,
+        "setTimeForReload": "300"
+    },
+    "Datawrapper_CDN_NoResponsiveFixedHeight": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "fixedHeight": "700",
+        "aspectRatio": "",
+        "setResponsiveIframe": true,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
+    },
+    "Datawrapper_CDN_NoResponsiveAspectRatio": {
+        "externalServiceConfig": {
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "datawrapper_cdn",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "Datawrapper (Datengrafik)"
+        },
+        "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
+        "fixedHeight": "",
+        "aspectRatio": "4x3",
+        "setResponsiveIframe": true,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
+    },
     "Datawrapper_CDN": {
         "externalServiceConfig": {
             "makeConfigurable": true,
@@ -35,8 +80,9 @@
             "externalServiceName": "Datawrapper (Datengrafik)"
         },
         "serviceUrl": "https://datawrapper.dwcdn.net/IC3Xn/1/",
-        "fixedHeight": "380",
-        "setResponsiveIframe": true,
+        "fixedHeight": "",
+        "aspectRatio": "",
+        "setResponsiveIframe": false,
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
     },
