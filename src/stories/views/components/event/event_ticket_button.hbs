@@ -2,10 +2,10 @@
     {{#with this}}
         {{#> components/button/button _css="js-ticket-button-user-consent-needed"_id=(nextRandom) _size="lg"}}
             {{> components/button/components/button_icon _icon="ticket" _iconmap="icons" _css="mr-2"}}
-            {{>components/button/components/button_label _label="Tickets"}}
+            {{>components/button/components/button_label _css='' _label="Tickets"}}
         {{/components/button/button}}
         {{#*inline "htmlProperties"~}}
-        data-user-consent-url="{{this.link.url}}"
+        data-user-consent-link='{"url":"{{this.link.url}}","isTargetBlank":{{this.link.isTargetBlank}} }'
         data-user-consent-tracking-data="{{this.link.cmsDocument.trackingInformations.ticketLink}}"
         {{~/inline}}
     {{/with}}
