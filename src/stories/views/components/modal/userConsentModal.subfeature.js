@@ -3,14 +3,23 @@ import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 import dialogPolyfill from 'dialog-polyfill'
 
 const UserConsentModal = function (options, rootElement) {
+    let triggerNode = null,
+        isDesktopViewport = true
     const dialogPolyfillBaseUrl = options.dialogPolyfillBaseUrl || 'vendor/dialog-polyfill',
-        modalTrigger = options.trigger || null,
+        modalTrigger = options.trigger || '.js-user-consent-needed',
+        modalTriggerWithDropdownInDesktopViewport = 'js-dropdown-in-desktop',
         triggerRoot = document.body,
         modal = hr$('.js-modal', rootElement)[0],
         okButtonTrigger = '.js-user-consent-ok',
         okButton = hr$(okButtonTrigger, rootElement)[0],
-        closeButtonTrigger = ".js-modal-close"
-    let triggerNode = null
+        closeButtonTrigger = ".js-modal-close",
+        desktopViewport = 1024,
+        resizeObserver = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                isDesktopViewport = entry.borderBoxSize[0].inlineSize >= desktopViewport
+            }
+        })
+
 
     const configureEventListeners = () => {
         listen('click', handleClickOnTrigger, triggerRoot)
@@ -23,9 +32,12 @@ const UserConsentModal = function (options, rootElement) {
             let closeButton = event.target.closest(closeButtonTrigger)
 
             if (null !== triggerNode) {
-                event.preventDefault()
-                setUrlToFollowAfterConsent(triggerNode)
-                show()
+                let showModal = triggerNode.classList.contains(modalTriggerWithDropdownInDesktopViewport) && !isDesktopViewport || !triggerNode.classList.contains(modalTriggerWithDropdownInDesktopViewport)
+                if (showModal) {
+                    event.preventDefault()
+                    setUrlToFollowAfterConsent(triggerNode)
+                    show()
+                }
             }
             if (null !== okButton) {
                 handleClickTracking()
@@ -40,9 +52,16 @@ const UserConsentModal = function (options, rootElement) {
         let urlToFollowAfterConsent = "",
             target = null,
             rel = null
-
-        if ("userConsentUrl" in triggerNode.dataset) {
-            urlToFollowAfterConsent = triggerNode.dataset.userConsentUrl
+        if ("userConsentLink" in triggerNode.dataset) {
+            let link = null
+            try {
+                link = JSON.parse(triggerNode.dataset.userConsentLink)
+            } catch {
+                link = {}
+            }
+            urlToFollowAfterConsent = link.url || '#'
+            target = link.isTargetBlank ? '_blank' : null
+            rel = link.isTargetBlank ? 'noopener' : null
         } else {
             urlToFollowAfterConsent = triggerNode.href
             target = triggerNode.hasAttribute("target") ? triggerNode.target : null
@@ -95,6 +114,7 @@ const UserConsentModal = function (options, rootElement) {
 
     configurePolyfillIfNeeded()
     configureEventListeners()
+    resizeObserver.observe(document.body)
 }
 
 export default UserConsentModal
