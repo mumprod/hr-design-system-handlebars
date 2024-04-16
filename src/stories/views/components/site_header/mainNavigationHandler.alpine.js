@@ -38,6 +38,7 @@ export default () => ({
             lastScrollTop = winScroll
             this.$store.navIsVisible = !this.isNavHidden()
             this.$store.subNavIsVisible = !this.isSubNavHidden()
+            this.$store.sectionNavIsVisible = !this.shouldSectionNavBeHidden()
             //console.log('winscroll: '+winScroll+' screen height: '+height + '  percent scrolled: '+ this.percent)
             //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
         }
