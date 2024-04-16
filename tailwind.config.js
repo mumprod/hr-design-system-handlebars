@@ -270,6 +270,7 @@ module.exports = {
                     linkWater: '#d3e2f4',
                     blueLuxury: '#007396',
                     nightRider:'#2d2d2d',
+                    danube:  '#759ace',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -362,6 +363,7 @@ module.exports = {
                 'brandnav-pseudo': 'var(--color-brandnav-pseudo)',
                 'brandnavigation-bg': 'var(--color-brandnavigation-bg)',
                 'navigation-border-color': 'var(--color-navigation-border-color)',
+                'navigation-border-color-dark': 'var(--color-navigation-border-color-dark)',
                 'servicenavigation-border-color': 'var(--color-servicenavigation-border-color)',
                 'footer-bg': 'var(--color-footer-bg)',
                 'footer-text': 'var(--color-footer-text)',
