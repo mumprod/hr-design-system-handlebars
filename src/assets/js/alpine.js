@@ -43,7 +43,9 @@ Alpine.store('sectionNavIsVisible', false)
 Alpine.store('globalPercent', {
     current: '0'
 })
-
+Alpine.store('sharingBottomPos', {
+    current: '0'
+})
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)
 Alpine.data('overlayHandler', overlayHandler)

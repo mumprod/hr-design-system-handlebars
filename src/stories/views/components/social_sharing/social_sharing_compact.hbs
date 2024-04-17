@@ -31,28 +31,22 @@
             focusAfter && focusAfter.focus()
         }
     }"
-
-    
-    
     x-on:keydown.escape.prevent.stop="close($refs.button)"
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-id="['dropdown-button']"
     class="flex self-center justify-end grow "
     x-intersect:leave="sharingIsVisible = false"
     x-intersect:enter="sharingIsVisible = true"
-     
 >
-
-
     <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible}">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div x-ref="sharingWrapper" class="flex gap-3 transition-[top]" 
+            <div x-bind:style="$store.footerIsVisible && {bottom:$store.sharingBottomPos.current}"  x-ref="sharingWrapper" id="sharingWrapper" class="flex gap-3 transition-[top]" 
                 :class="{ 'bg-white w-10 bottom-5 left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute mt-3': !sharingIsVisible,
                 'top-[146px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
                 'top-[110px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
                 'top-[65px]' : !$store.sectionNavIsVisible && $screen('lg') && !$store.footerIsVisible,
-                'test' : $store.footerIsVisible
-                }" 
+                '!fixed socialShareDesktop:left-2 left-5' : $store.footerIsVisible
+                }"
                 >
                 <button 
                     class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
