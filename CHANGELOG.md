@@ -1,3 +1,15 @@
+# v1.64.1 (Wed Apr 17 2024)
+
+#### 🐛 Bug Fix
+
+- Code cleanup aspectratio fix [#909](https://github.com/mumprod/hr-design-system-handlebars/pull/909) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.64.0 (Wed Apr 17 2024)
 
 #### 🚀 Enhancement
