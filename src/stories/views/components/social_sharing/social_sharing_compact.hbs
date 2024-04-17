@@ -42,21 +42,18 @@
     x-intersect:enter="sharingIsVisible = true"
      
 >
-   {{!-- <div class="fixed left-1 top-40">
-        sharingIsVisible:<span x-text="sharingIsVisible" ></span><br>
-        open:<span x-text="open" ></span><br>
-        isDesktop:<span x-text="isDesktop" ></span><br>
-        PercentScrolled:<span x-text="$store.globalPercent.current"></span>
-    </div> --}}
 
-    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible }">
+
+    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible}">
         <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
             <div x-ref="sharingWrapper" class="flex gap-3 transition-[top]" 
                 :class="{ 'bg-white w-10 bottom-5 left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute mt-3': !sharingIsVisible,
-                'top-[146px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg'),
-                'top-[110px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg'),
-                'top-[65px]' : !$store.sectionNavIsVisible && $screen('lg')
-                }">
+                'top-[146px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
+                'top-[110px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
+                'top-[65px]' : !$store.sectionNavIsVisible && $screen('lg') && !$store.footerIsVisible,
+                'test' : $store.footerIsVisible
+                }" 
+                >
                 <button 
                     class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
                     x-show="!$screen('lg')"
