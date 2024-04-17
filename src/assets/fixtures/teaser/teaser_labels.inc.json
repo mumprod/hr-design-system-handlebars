@@ -81,6 +81,7 @@
                 "firstInstant": {
                     "hasStatus": false,
                     "statusDescriptionForLabelShort": "event_status_cancelled",
+                    "hasStartTime": true,
                     "startDateTime": {
                         "date": "14.10.22",
                         "time": "20:00"

@@ -24,4 +24,23 @@ Die interaktiven Elemente sind:
 <li> einen Aktions-Button, der den Inhalt einmalig, bis zum nächsten Refresh oder erneuten Besuch der Seite anzeigt.</li>
 </ul>
 
-<Story of={ExternalServiceStories.ExterneDienste} />
+
+## Beispiel Dienst Giphy
+<Story of={ExternalServiceStories.ExterneDiensteGiphy} />
+
+## Beispiel Dienst Datawrapper mit responsivem Iframe
+Der Datawrapper wird standardmässig mit einem responsiven Iframe geladen, d.h. das der Inhalt des Iframes - die Datengrafik - an den äußeren Container skaliert wird.
+
+<Story of={ExternalServiceStories.ExterneDiensteDatawrapper} />
+
+## Beispiel Dienst Datawrapper ohne responsives Iframe und fester Höhe
+Ist die Konfiguration "NoResponsiveIFrame" auf TRUE gesetzt werden die Felder für "FixedHeight" und "AspectRatio" ausgelesen. Ist das Feld FixedHeight befüllt, wird der Wert daraus übernommen
+<Story of={ExternalServiceStories.ExterneDiensteDatawrapperNoResponsiveFixedHeight} />
+
+## Beispiel Dienst Datawrapper ohne responsives Iframe und AspectRatio
+Ist die Konfiguration "NoResponsiveIFrame" auf TRUE gesetzt werden die Felder für "FixedHeight" und "AspectRatio" ausgelesen. Ist das Feld AspectRatio ausgewählt wird der Wert daraus übernommen
+<Story of={ExternalServiceStories.ExterneDiensteDatawrapperNoResponsiveAspectRatio} />
+
+
+## Beispiel Dienst Datawrapper mit ContentRefresher
+<Story of={ExternalServiceStories.ExterneDiensteDatawrapperContentRefresher} />

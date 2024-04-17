@@ -23,7 +23,7 @@ export default {
     },    
     decorators: [
         (Story) => {
-            return `<div class="max-w-[724px] mx-auto mt-10">  
+            return `<div class="max-w-[724px] mx-auto mt-60">  
              ${Story()} 
              </div>`
         },

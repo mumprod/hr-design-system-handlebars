@@ -45,6 +45,9 @@
     --color-search-footer-text:  theme('colors.black.DEFAULT');
     --search-icon-color: theme('colors.black.DEFAULT');
 
+    /* Content navi button border color for dark mode */
+    --color-navigation-border-color-dark: theme('colors.blue.danube');
+
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;

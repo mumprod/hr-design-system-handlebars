@@ -1,3 +1,258 @@
+# v1.63.15 (Tue Apr 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2669 Dark mode for Content-Navi [#908](https://github.com/mumprod/hr-design-system-handlebars/pull/908) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.63.14 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- makes the top position dependent on navi height on desktop [#907](https://github.com/mumprod/hr-design-system-handlebars/pull/907) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.13 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- margin bottom for labelgroup and topline [#905](https://github.com/mumprod/hr-design-system-handlebars/pull/905) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.12 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- less margin top in figure cation [#906](https://github.com/mumprod/hr-design-system-handlebars/pull/906) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.11 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3007 [#904](https://github.com/mumprod/hr-design-system-handlebars/pull/904) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.10 (Fri Apr 12 2024)
+
+#### 🐛 Bug Fix
+
+- Several fixes for Javascript and Iframe Styles [#899](https://github.com/mumprod/hr-design-system-handlebars/pull/899) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.63.9 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- some little damn fixes [#903](https://github.com/mumprod/hr-design-system-handlebars/pull/903) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.8 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- add external-service-teaser [#902](https://github.com/mumprod/hr-design-system-handlebars/pull/902) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.7 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes mobile behaviour of sticky sharing [#901](https://github.com/mumprod/hr-design-system-handlebars/pull/901) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.6 (Thu Apr 11 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3006 [#900](https://github.com/mumprod/hr-design-system-handlebars/pull/900) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.5 (Tue Apr 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2648 Abstände bei indexText Dpe [#898](https://github.com/mumprod/hr-design-system-handlebars/pull/898) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.63.4 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- remove ar_iframe [#897](https://github.com/mumprod/hr-design-system-handlebars/pull/897) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.3 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- update locatags [#896](https://github.com/mumprod/hr-design-system-handlebars/pull/896) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.2 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- change locatag for update-date [#895](https://github.com/mumprod/hr-design-system-handlebars/pull/895) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.63.1 (Fri Apr 05 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding left in fig caption / desktop view [#894](https://github.com/mumprod/hr-design-system-handlebars/pull/894) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.63.0 (Thu Apr 04 2024)
+
+#### 🚀 Enhancement
+
+- Dpe 2975+2962 [#893](https://github.com/mumprod/hr-design-system-handlebars/pull/893) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.62.0 (Thu Apr 04 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Add the possibilty to turn [#892](https://github.com/mumprod/hr-design-system-handlebars/pull/892) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.61.4 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes right margin in mobile view [#891](https://github.com/mumprod/hr-design-system-handlebars/pull/891) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.3 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes margin in tabbox buttons in mobile view [#890](https://github.com/mumprod/hr-design-system-handlebars/pull/890) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.2 (Wed Apr 03 2024)
+
+#### 🐛 Bug Fix
+
+- fixes padding in mobile view [#889](https://github.com/mumprod/hr-design-system-handlebars/pull/889) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.61.1 (Tue Apr 02 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 2952 [#888](https://github.com/mumprod/hr-design-system-handlebars/pull/888) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.61.0 (Mon Mar 25 2024)
 
 #### 🚀 Enhancement
