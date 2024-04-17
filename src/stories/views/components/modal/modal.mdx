@@ -1,0 +1,104 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import * as ModalStories from './modal.stories'
+
+<Meta of={ModalStories} />
+
+
+# Modal
+
+-   [Übersicht](#übersicht)
+-   [Eigenschaften](#eigenschaften)
+-   [Varianten](#varianten)
+-   [Verwendung](#verwendung)
+
+## Übersicht
+
+Die Modal Komponente erlaubt es frei wählbare Inhalte in einem Modal anzuzeigen. Geöffnet werden kann ein Modal durch klicken auf einen
+mit einer bestimmten CSS Klasse ausgezeichneten Link oder Button. Zur Anzeige des Modal wird das native [HTML Dialog Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog?retiredLocale=de) verwendet. 
+Standardmäßig kann dieses durch Drücken der `ESC` Taste geschlossen werden.
+Damit auch ältere Browser, die das Dialog Element noch nicht unterstützen, das Modal anzeigen können, wird ein Polyfill eingebunden.
+
+<Canvas>
+    <Story of={ModalStories.defaultModal} />
+</Canvas>
+
+## Eigenschaften
+
+<ArgsTable story="Default Modal" />
+
+## Varianten
+
+Das Modal existiert derzeit in zwei Varianten. Die zu nutzende Variante wird beim Einbinden der Modal Komponente 
+über den Parameter `_variant` konfiguriert. 
+
+<Canvas>
+  <Story of={ModalStories.defaultModal} />
+</Canvas>
+
+und `userConsent`
+<Canvas>
+<Story of={ModalStories.userConsentModal} />
+</Canvas>
+
+## Verwendung
+
+Die Modal Komponente wird mit der Handlebar Komponente `components/modal/modal` eingebunden.
+Die Komponente ist so konzipiert, dass sie im optimalen Fall nur einmal auf einer Seite eingebunden werden muss (am besten in der Nähe des Footers).
+Jeder Link oder jeder Button auf einer Seite kann so konfiguriert werden, dass er das Modal öffnet. Mit welcher CSS Hook Klasse das Modal
+geöffnet werden soll, wird bei der Einbindung der Komponente mit dem Parameter `_trigger` konfiguriert. Jeder Button oder jeder Link auf der Seite
+in der die Komponente eingebunden ist und die im Modal konfigurierte CSS Hook Klasse besitzt, öffnet bei Klick das Modal.
+
+Die Modal Komponente ist eine Block Komponente. Auf diese Weise ist es möglich ein Modal mit beliebigem Inhalt anzulegen. 
+
+### Default
+
+Die Einbindung eines Default Modals erfolgt wie anhand folgenden Beispiels zu sehen.
+
+```handlebars
+    {{#> components/modal/modal _variant="default" _trigger="js-modal"}}
+        {{#> components/teaser/components/teaser_headline}}
+            {{> components/teaser/components/teaser_title _text="Überschrift Default Modal" _css="text-2xl"}}
+        {{/components/teaser/components/teaser_headline}}
+        <p class="mt-2 text-base font-copy">Hier steht der Text des Modals. Dies ist nur ein Beispiel. Das modal Template stellt nur den Rahmen 
+        des Modals zur Verfügung. In dem Modal kann dargestellt werden was man möchte.</p>
+    {{/components/modal/modal}}
+```
+
+Innerhalb des Modals kann beliebiges Markup und/oder beliebige andere Komponenten angezeigt werden. Die hier konfigurierte Trigger Klasse
+`js-modal` ist lediglich ein Beispiel. Sie sollte jedoch, um sich klar von normalen CSS-Klassen zu unterscheiden das Prefix `js-` tragen. 
+Ein mit der Variante `default` erzeugtes Modal besitzt nur die Grundfunktionalität eines Modals. Sie erlaubt das Modal durch Klick auf ein mit der 
+Trigger Klasse ausgezeichneten Link oder Button zu öffnen. Weiterhin kann das geöffnete Modal durch Drücken der `ESC` Taste, durch Klicken in den 
+ausgegrauten Bereich außerhalb des Modals oder durch Klicken auf einen Button, dessen `value` Parameter den Wert `cancel` trägt, geschlossen werden.
+Da als Basis der Modal Komponente das native HTML Dialog Element genutzt wird, ist sie auch bereits standarmäßig weitgehend barrierfrei. Ein Focus Trap,
+das heißt sofern ich das Modal nicht explizit schließe bleibe ich bei Drücken der `Tab` Taste ausschließlich innerhalb des Modals, steht standardmäßig zur 
+Verfügung. 
+
+### User Consent
+Dieses Variante wurde speziell für den Anwendungsfall einer Zweiklicklösung erstellt. Sie ermöglicht es, dass bei Klick auf einen Link 
+der Nutzer in einem Modal darauf hingewiesen wird, dass er nun das HR Internetangebot verlässt und er erst bei einer aktiven Bestätigung
+mit Hilfe eines weiteren Klicks den eigentlichen Link aufrufen kann. Die Variante kann, wie im Folgenen gezeigt, eingebunden werden.
+
+
+```handlebars
+    {{#> components/modal/modal _variant="userConsent" _trigger="js-user-consent-needed"}}
+        {{> components/modal/user_consent _headline=(loca "modal_user_consent_headline") _text=(loca "modal_user_consent_text") _labelOk=(loca "modal_user_consent_label_ok") _labelCancel=(loca "modal_user_consent_label_cancel")}}
+    {{/components/modal/modal}}
+```
+
+Für den Inhalt des Modals wurde eine eigene Komponente `components/modal/user_consent` erstellt. Sie erzeugt eine Überschrift, einen erläuternden Text sowie
+einen Abbrechen- und einen Ok-Button. Die konkreten Texte können der Komponente entweder über die Parameter `_headline`, `_text`, `_labelOk` und `_labelCancel`
+direkt beim Aufruf übergeben werden oder werden, wenn beim Aufruf keine Parameter übergeben werden, aus den Locatags `modal_user_consent_headline`, `modal_user_consent_text`,
+`modal_user_consent_label_ok` und `modal_user_consent_label_cancel` gezogen.
+Für die speziellen Funktionen dieser Variante wurde ein separates Javascript Subfeature erzeugt. Dies sorgt dafür, dass der Variante neben allen
+Eigenschaften der `default` Variante, auch noch speziell für die Zweiklick Lösung benötigte Funktionalitäten zur Verfügung stehen.
+Ist das das Modal aufrufende Element ein Link, werden aus diesem die Werte des `href`, des `target` und des `rel` Attributes ausgelesen und damit
+der Link des `OK`-Buttons erzeugt. Ist das aufrufende Element ein Button (z.B. beim [Event-Ticket-Button](?path=/story/komponenten-teaser-eventkalender--teaser-100)), 
+müssen diese Information in dem `data-user-consent-link`-Attribut des Buttons als JSON in der Form 
+`{"url":"https://www.beispiel.de","isTargetBlank":true/false}` hinterlegt werden. Wird hier bei `isTargetBlank` der Wert `true` übergeben, erhält der 
+im Modal erzeugte Link des OK-Buttons automatisch das attribut `rel="noopener"` gesetzt. 
+
+### Neue Varianten
+Wird ein Modal mit einer komplett neuen Funktionalität benötigt, muss eine neue Variante erstellt und der Komponente hinzugefügt werden. Hierzu muss 
+ein Name für die neue Variante gewählt und die `switch`-Anweisung in `components/modal/modal.feature.js` um einen neuen Fall mit diesem
+Namen erweitert werden. Die eigentliche Funktionalität muss in einem Javascript Subfeature umgesetzt werden. 
+

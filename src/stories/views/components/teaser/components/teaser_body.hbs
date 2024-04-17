@@ -21,6 +21,15 @@
                         {{/if}}
                     {{/components/teaser/components/teaser_headline}}
                 {{/components/base/link}} 
+                {{#if (isStorybook)}}
+                    {{#if this.link.isUserConsentNeeded}}
+                        {{#with this}}
+                            {{#> components/modal/modal _type="userConsent" _css="" _trigger=".js-user-consent-needed"}}
+                                {{> components/modal/user_consent _link=this.link _headline=(loca "modal_user_consent_headline") _text=(loca "modal_user_consent_text") _labelOk=(loca "modal_user_consent_label_ok") _labelCancel=(loca "modal_user_consent_label_cancel")}}
+                            {{/components/modal/modal}}
+                        {{/with}}
+                    {{/if}}
+                {{/if}}
         {{/components/teaser/components/teaser_header}}
         {{#*inline "htmlProperties"}}
             {{#if this.isFileDownload}}
@@ -32,7 +41,7 @@
     {{#unless this.hideBylineAndShorttext}}
         <div class="sm:px-0{{#unless this.isMobile1to1}} px-5{{/unless}}">
             {{#if this.shorttext}}
-                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize}}
+                {{> components/teaser/components/teaser_text _text=this.shorttext _size=this.teaserSize }}
             {{/if}}
             {{> components/teaser/components/teaser_byline}} 
         </div>

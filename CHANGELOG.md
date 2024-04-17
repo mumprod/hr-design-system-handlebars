@@ -1,3 +1,27 @@
+# v1.64.0 (Wed Apr 17 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2696 [#910](https://github.com/mumprod/hr-design-system-handlebars/pull/910) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.63.15 (Tue Apr 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2669 Dark mode for Content-Navi [#908](https://github.com/mumprod/hr-design-system-handlebars/pull/908) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.63.14 (Fri Apr 12 2024)
 
 #### 🐛 Bug Fix

@@ -8,7 +8,7 @@
         {{/with}}
         <li class="inline">
             <h1 class="inline{{#unless this.showBreadcrumbTitleAlways}} sr-only sm:not-sr-only{{/unless}}">
-                <a href="{{_currentPageUrl}}" class="{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}}">{{~_currentPageTitle~}}</a>
+                <a href="{{_currentPageUrl}}" class="{{if (isUserConsentNeeded _currentPageUrl) 'js-user-consent-needed ' ''}}{{> components/navigation/breadcrumb/utils/breadcrumb_link_classes}}">{{~_currentPageTitle~}}</a>
             </h1>
         </li>
     </ul>

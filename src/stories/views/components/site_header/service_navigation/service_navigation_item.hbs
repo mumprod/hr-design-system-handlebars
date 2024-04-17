@@ -1,5 +1,5 @@
 {{#each this.navigationItems}}
-    <li class="sb-service-navigation-item -{{this.id}} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-navigation-icons border-navigation-border-color" >
+    <li class="sb-service-navigation-item -{{this.id}} flex flex-col h-10 lg:h-15 md:h-full w-full tablet:first:border-l border-r last:border-r-0 lg:border-r-0 text-navigation-icons border-navigation-border-color">
         {{#if this.subNavigation}} 
             <button 
                 id="{{nextRandom}}" 
@@ -20,9 +20,9 @@
         {{else}}
 
             {{#if this.extern}}
-                <a href="{{this.url}}" target="_blank" x-init="dropped = false" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": 1, "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{this.url}}" target="_blank" x-init="dropped = false" class="{{if (isUserConsentNeeded this.url) 'js-user-consent-needed ' ''}}flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": 1, "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{else}}
-                <a href="{{resourceUrl this.url}}" x-init="dropped = false" class="flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": 1, "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
+                <a href="{{resourceUrl this.url}}" x-init="dropped = false" class="{{if (isUserConsentNeeded (resourceUrl this.url)) 'js-user-consent-needed ' ''}}flex flex-col items-center justify-center h-full px-4 lg:justify-start lg:px-3 lg:pt-1 lg:rounded-t link-focus-inset js-load" id="flyout-{{nextRandom}}-1" data-hr-click-tracking='{"settings": [{"type": "uxNavigation", "secondLevelId": 1, "clickLabel": "Servicenavigation::{{this.text}}-Link geklickt"}]}'>
             {{/if}}
 
         {{/if}}

@@ -1,6 +1,6 @@
 {{#with this.bannerImage}}
     {{#if ../bannerLink}}
-        <a href="{{../bannerLink}}">
+        <a href="{{../bannerLink}}"{{#if (isUserConsentNeeded ../bannerLink)}} class="js-user-consent-needed"{{/if}}>
     {{/if}}
     {{#unless ../_hideOnMobile }}
         {{~> components/base/image/responsive_image _type="banner" _variant="default" _addClass="print:hidden" _noDelay="true" _title=(loca "banner_image_copyright" (strip this.copyrightWithLinks html)) ~}}
