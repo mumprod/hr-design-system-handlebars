@@ -1,9 +1,8 @@
 <div class="grid clear-both mt-10">
-        {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}
+        {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}        
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
-             data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}", "embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}", "dataPolicyCheck": true,"iFrameConfig": {"heightClass":""{{#if
-                 this.fixedHeight}},"fixedHeight":"{{this.fixedHeight}}", "fixedHeightClass":"-fixedHeight"{{else}},{{#if
-                 this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{else}}"aspectRatio":"16x9"{{/if}}{{/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}","refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"}}'>
+             data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType":"{{this.externalServiceConfig.externalServiceEmbedType}}","dataPolicyCheck": true,"iFrameConfig": { {{#if this.fixedHeight}}
+                "fixedHeight":"{{this.fixedHeight}}"{{else}}{{#if this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{else}}"aspectRatio":"16x9"{{/if}}{{/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}"{{#if this.setTimedReloadIframe}},"refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"{{/if}} }}'>
             {{~> components/externalService/components/external_service_data_policy ~}}
         </div>
         {{~> components/externalService/components/external_service_caption ~}}

@@ -157,8 +157,14 @@ const ExternalService = function (context) {
         removeDatapolicyBox()
         createUniqueID()
         if (iFrameConfig.noResponsiveIframe == 'true') {
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, embedCode)
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
             noResponsiveIframe.createNoResponsiveIframe()
+
+            if (iFrameConfig.refreshContent == 'true') {
+                console.log("contentRefresher anfügen")
+                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
+                contentRefresher.createRefresher()
+            }
         } 
         else {
             var iframe = document.createElement('iframe')
@@ -178,6 +184,7 @@ const ExternalService = function (context) {
                 'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
                 true
             )
+
             if (iFrameConfig.refreshContent == 'true') {
                 console.log("contentRefresher anfügen")
                 contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
@@ -275,40 +282,17 @@ const ExternalService = function (context) {
 
     const loadIframe = function () {
         console.log('load iframe ' + id)
-        iframe =
-            "<iframe id='i_frame' data-isloaded='0' src='" +
-            embedCode +
-            "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        iframe = "<iframe id='i_frame' data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
-            iframe =
-                "<div class='!h-full'><div class=" +
-                getAspectRatioClass() +
-                ' ' +
-                id +
-                "'><iframe id='i_frame' data-isloaded='0' src='" +
-                embedCode +
-                "' frameborder='0' class='w-full h-full '" +
-                id +
-                "' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+            iframe ="<div class='!h-full'><div class='"+ getAspectRatioClass() +"'><iframe id='i_frame' data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
             if (iFrameConfig.fixedHeight) {
-                iframe =
-                    "<div class='!h-full' style='height:" +
-                    iFrameConfig.fixedHeight +
-                    "px'><iframe data-isloaded='0' src='" +
-                    embedCode +
-                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div style='height:"+ iFrameConfig.fixedHeight +"px'><iframe data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
-                iframe =
-                    "<div class='!h-full " +
-                    id +
-                    "'><iframe data-isloaded='0' src='" +
-                    embedCode +
-                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div class='!h-full'><iframe data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
-
         replaceAnimated(rootElement, iframe, false)
     }
 
