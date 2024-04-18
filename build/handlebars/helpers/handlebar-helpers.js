@@ -284,9 +284,9 @@ var helpers = {
 
     'appendToDefault': function (context, defaultValue) {
         if (context) {
-            return defaultValue + ' ' + context
+            return defaultValue + context
         } else {
-            return defaultValue
+            return defaultValue.trim()
         }
     },
 
