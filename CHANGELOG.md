@@ -1,3 +1,15 @@
+# v1.65.1 (Mon Apr 22 2024)
+
+#### 🐛 Bug Fix
+
+- Introducing isTeaser-flag [#912](https://github.com/mumprod/hr-design-system-handlebars/pull/912) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.65.0 (Thu Apr 18 2024)
 
 #### 🚀 Enhancement
