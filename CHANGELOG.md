@@ -1,3 +1,15 @@
+# v1.65.2 (Mon Apr 22 2024)
+
+#### 🐛 Bug Fix
+
+- Flag for Datapolicy [#913](https://github.com/mumprod/hr-design-system-handlebars/pull/913) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.65.1 (Mon Apr 22 2024)
 
 #### 🐛 Bug Fix
