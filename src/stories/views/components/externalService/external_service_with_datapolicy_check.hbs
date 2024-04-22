@@ -1,4 +1,4 @@
-<div class="grid clear-both mt-10">
+<div class="grid clear-both{{#unless _isTeaser}}mt-10{{/unless}}">
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}        
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
              data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType":"{{this.externalServiceConfig.externalServiceEmbedType}}","dataPolicyCheck": true,"iFrameConfig": { {{#if this.fixedHeight}}
