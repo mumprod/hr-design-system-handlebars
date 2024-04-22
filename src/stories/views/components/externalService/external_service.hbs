@@ -1,11 +1,11 @@
 {{#if this.externalServiceConfig.makeConfigurable}}
     <!-- Embedding via JS with DataPolicyCheck-->  
-    {{> components/externalService/external_service_with_datapolicy_check }}
+    {{> components/externalService/external_service_with_datapolicy_check _isTeaser=_isTeaser}}
 
 {{else}}
     
     {{#if this.serviceUrl}}
-        <div class="clear-both {{#unless _isTeaser}}mt-10{{/unless}}">
+        <div class="clear-both{{#unless _isTeaser}}mt-10{{/unless}}">
             <span class="sr-only">{{loca "story_externalservice_intro_sr" }}</span>    
             {{#if this.externalServiceConfig.embedAsIFrame}}              
                 <!-- Embedding via Iframe -->    
