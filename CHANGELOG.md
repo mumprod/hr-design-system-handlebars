@@ -1,3 +1,15 @@
+# v1.66.0 (Tue Apr 23 2024)
+
+#### 🚀 Enhancement
+
+- :recycle: Headline of PodcastFilter Teaser is no longer a link. Title… [#914](https://github.com/mumprod/hr-design-system-handlebars/pull/914) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.65.2 (Mon Apr 22 2024)
 
 #### 🐛 Bug Fix
