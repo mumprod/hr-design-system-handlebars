@@ -1,0 +1,10 @@
+{
+    "@->jsoninclude": "teaser/teasersPodcastPlaylist.inc.json",
+    "@->contentpath": "teaserPodcastPlaylist",
+    "@->overrides": [
+        {
+            "@->contentpath": "logicItem.includeModel.isPodcastFilter",
+            "@->value": true
+        }
+    ]
+}
