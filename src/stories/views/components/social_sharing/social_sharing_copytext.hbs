@@ -1,4 +1,4 @@
-<div x-show="$screen('lg') && $store.sharingIsVisible == false" class="sticky w-10 col-start-2 col-end-2 mt-6 mb-12 h-fit"
+<div x-show="$screen('lg') && $store.sharingIsVisible == false" class="sticky w-10 col-start-2 mt-6 mb-12 h-fit"
     :class="{'top-[166px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') ,
             'top-[130px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') ,
             'top-[85px]' : !$store.sectionNavIsVisible && $screen('lg')}"
