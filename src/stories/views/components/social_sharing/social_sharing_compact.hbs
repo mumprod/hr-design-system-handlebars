@@ -1,4 +1,49 @@
-<div x-data="{
+<div x-data="stickySharingHandler"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-id="['dropdown-button']"
+    class="flex self-center justify-end grow "
+    x-intersect:leave="$store.sharingIsVisible=false"
+    x-intersect:enter="$store.sharingIsVisible=true"
+>
+    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': $store.sharingIsVisible == false}">
+        <div id="sharingWrapper"  class="" :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
+            <div x-bind:style="($store.footerIsVisible && !$screen('lg') ) && {bottom:$store.sharingBottomPos.current} " 
+                class="flex gap-3" 
+                :class="{ 'bg-white w-10 bottom-5 left-5 flex-col absolute mt-3': $store.sharingIsVisible == false}"
+                >
+                <button 
+                    class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
+                    x-show="!$screen('lg')"
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')">
+                    {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
+                </button> 
+
+                <!-- Panel -->
+                <div
+                    x-ref="panel" 
+                    x-show="open || $screen('lg')"
+                    x-transition.origin.right
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    class="p-1 bg-white "
+                    :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[60px] md:relative md:right-0 md:h-auto' : 'relative right-0 md:h-auto lg:hidden '"
+                >
+                    <ul class="flex gap-3"  :class="{ 'flex-col': $store.sharingIsVisible == false }">
+                        
+                        {{> components/social_sharing/social_sharing_compact_icons }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function stickySharingHandler(){
+        return {
         open: false,
         sharingIsVisible: true,
         isDesktop: true,
@@ -30,50 +75,6 @@
 
             focusAfter && focusAfter.focus()
         }
-    }"
-    x-on:keydown.escape.prevent.stop="close($refs.button)"
-    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-    x-id="['dropdown-button']"
-    class="flex self-center justify-end grow "
-    x-intersect:leave="sharingIsVisible = false"
-    x-intersect:enter="sharingIsVisible = true"
->
-    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible}">
-        <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div x-bind:style="$store.footerIsVisible && {bottom:$store.sharingBottomPos.current}"  x-ref="sharingWrapper" id="sharingWrapper" class="flex gap-3 transition-[top]" 
-                :class="{ 'bg-white w-10 bottom-5 left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute mt-3': !sharingIsVisible,
-                'top-[146px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
-                'top-[110px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') && !$store.footerIsVisible,
-                'top-[65px]' : !$store.sectionNavIsVisible && $screen('lg') && !$store.footerIsVisible,
-                '!fixed socialShareDesktop:left-2 left-5' : $store.footerIsVisible
-                }"
-                >
-                <button 
-                    class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
-                    x-show="!$screen('lg')"
-                    x-ref="button"
-                    x-on:click="toggle()"
-                    :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')">
-                    {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
-                </button> 
-
-                <!-- Panel -->
-                <div
-                    x-ref="panel"
-                    x-show="open || $screen('lg')"
-                    x-transition.origin.right
-                    x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')"
-                    class="p-1 bg-white "
-                    :class="sharingIsVisible ? 'h-8 absolute right-[60px] md:relative md:right-0 md:h-auto' : 'relative right-0 md:h-auto '"
-                >
-                    <ul class="flex gap-3"  :class="{ 'flex-col': ! sharingIsVisible }">
-                        
-                        {{> components/social_sharing/social_sharing_compact_icons }}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    }
+    }
+</script>

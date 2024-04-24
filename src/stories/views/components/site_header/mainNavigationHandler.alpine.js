@@ -37,7 +37,7 @@ export default () => ({
             this.$store.globalPercent.current = this.percent
 
             this.$store.footerIsVisible ? this.$store.sharingBottomPos.current = window.innerHeight - document.querySelector('.js-pageFooter').getBoundingClientRect().top + 16 +'px' : null
-
+           
             lastScrollTop = winScroll
             this.$store.navIsVisible = !this.isNavHidden()
             this.$store.subNavIsVisible = !this.isSubNavHidden()
