@@ -6,7 +6,7 @@
     x-intersect:leave="$store.sharingIsVisible=false"
     x-intersect:enter="$store.sharingIsVisible=true"
 >
-    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height left-0 w-full': $store.sharingIsVisible == false}">
+    <div :class="{ 'grid grid-page z-110 fixed bottom-feature-box-height left-0 w-full': $store.sharingIsVisible == false}">
         <div :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
             <div :style="($store.footerIsVisible && !$screen('lg')) && {bottom:$store.sharingBottomPos.current}" 
                 :class="{ 'bottom-5 flex-col absolute mt-3': $store.sharingIsVisible == false && $store.footerIsVisible == false,
@@ -28,11 +28,11 @@
                 <div 
                     x-ref="panel" 
                     x-show="open || $screen('lg') && $store.sharingIsOpen == true || $screen('lg') && $store.sharingIsVisible == true"
-                    x-transition.origin.right
+                    x-transition.origin.bottom.right
                     x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')"
-                    class="bg-white "
-                    :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[60px] md:relative md:right-0 md:h-auto' : 'relative self-center right-0 md:h-auto lg:hidden '"
+                    class="bg-white"
+                    :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[68px] md:relative md:right-0 md:h-auto' : 'relative self-center right-0 md:h-auto lg:hidden '"
                 >
                     <ul class="flex gap-3"  :class="{ 'flex-col': $store.sharingIsVisible == false }">
                         
