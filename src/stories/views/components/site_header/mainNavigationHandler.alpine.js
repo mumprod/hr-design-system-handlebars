@@ -36,7 +36,7 @@ export default () => ({
             this.percent = Math.round((winScroll / height) * 100)
             lastScrollTop = winScroll
 
-            checkFooterTopForSharingBottomPos()
+            this.checkFooterTopForSharingBottomPos()
 
             this.$store.navIsVisible = !this.isNavHidden()
             this.$store.subNavIsVisible = !this.isSubNavHidden()
