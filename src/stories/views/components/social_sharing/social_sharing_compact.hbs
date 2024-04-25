@@ -2,7 +2,7 @@
     x-on:keydown.escape.prevent.stop="close($refs.button)"
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-id="['dropdown-button']"
-    class="flex self-center justify-end grow "
+    class="flex self-center justify-end ml-3 grow"
     x-intersect:leave="$store.sharingIsVisible=false"
     x-intersect:enter="$store.sharingIsVisible=true"
 >
@@ -15,7 +15,7 @@
                 class="flex gap-3 bg-white left-5" 
                 >
                 <button 
-                    class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
+                    class="order-2 h-10 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
                     x-show="!$screen('lg')"
                     x-ref="button"
                     x-on:click="toggle()"
