@@ -29,15 +29,18 @@ export default () => ({
         const mouseDownHandler = (e) => {
             clickedOnScrollbar(e.clientX) ? mouseEvent() : null
         }
-        // main scroll handler, defines scroll direction, percent of viewport scrolled, visibility of navigation and subnavigation
+        // main scroll handler, defines scroll direction, percent of viewport scrolled, visibility of navigation and subnavigation, checks footer top position in desktop viewport for positioning sticky sharing 
         const scrollHandler = () => {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop
             winScroll > lastScrollTop ? (this.scrollingDown = true) : (this.scrollingDown = false)
             this.percent = Math.round((winScroll / height) * 100)
-            this.$store.globalPercent.current = this.percent
             lastScrollTop = winScroll
+
+            this.checkFooterTopForSharingBottomPos()
+
             this.$store.navIsVisible = !this.isNavHidden()
             this.$store.subNavIsVisible = !this.isSubNavHidden()
+            this.$store.sectionNavIsVisible = !this.shouldSectionNavBeHidden()
             //console.log('winscroll: '+winScroll+' screen height: '+height + '  percent scrolled: '+ this.percent)
             //console.log('Scroll initiated by ' + (window.userScroll == true ? "user" : "browser"));
         }
@@ -47,6 +50,11 @@ export default () => ({
         window.addEventListener('touchmove', mouseEvent, {passive: true})
         window.addEventListener('scroll', scrollHandler, { passive: true })
     },
+
+    checkFooterTopForSharingBottomPos(){
+        this.$store.footerIsVisible ? this.$store.sharingBottomPos.current = window.innerHeight - document.querySelector('.js-pageFooter').getBoundingClientRect().top + 16 +'px' : null
+    },
+
     //Holds the percentage of scrolled viewport
     percent: 0,
 

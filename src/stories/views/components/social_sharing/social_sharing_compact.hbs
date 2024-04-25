@@ -1,5 +1,52 @@
-<div x-data="{
-        open: false,
+<div x-data="stickySharingHandler"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-id="['dropdown-button']"
+    class="flex self-center justify-end ml-3 grow"
+    x-intersect:leave="$store.sharingIsVisible=false"
+    x-intersect:enter="$store.sharingIsVisible=true"
+>
+    <div :class="{ 'grid grid-page z-110 fixed bottom-feature-box-height left-0 w-full': $store.sharingIsVisible == false}">
+        <div :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
+            <div :style="($store.footerIsVisible && !$screen('lg')) && {bottom:$store.sharingBottomPos.current}" 
+                :class="{ 'bottom-5 flex-col absolute mt-3 rounded-md': $store.sharingIsVisible == false && $store.footerIsVisible == false,
+                            'flex-col absolute mt-3' : $store.footerIsVisible == true
+                        }"
+                class="flex self-center gap-3 bg-white left-5" 
+                >
+                <button 
+                    class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
+                    x-show="!$screen('lg')"
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')">
+                    {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
+                </button> 
+
+                <!-- Panel -->
+                <div 
+                    x-ref="panel" 
+                    x-show="open || $screen('lg') && $store.sharingIsOpen == true || $screen('lg') && $store.sharingIsVisible == true"
+                    x-transition.origin.bottom.right
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    class="self-center bg-white"
+                    :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[68px] md:relative md:right-0 md:h-auto' : 'relative right-0 md:h-auto lg:hidden '"
+                >
+                    <ul class="flex gap-3"  :class="{ 'flex-col': $store.sharingIsVisible == false }">
+                        
+                        {{> components/social_sharing/social_sharing_compact_icons }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function stickySharingHandler(){
+        return {
+        open: this.$store.sharingIsOpen,
         sharingIsVisible: true,
         isDesktop: true,
         toggle() {
@@ -20,6 +67,7 @@
                 }
                 this.$refs.button.focus()
                 this.open = true
+                this.$store.sharingIsOpen = true
             }
             
         },
@@ -27,64 +75,9 @@
             if (! this.open) return
 
             this.open = false
-
+            this.$store.sharingIsOpen = false
             focusAfter && focusAfter.focus()
-        },
-        checkIfDesktop() {
-            this.isDesktop = (window.innerWidth >= 1040) ? true : false 
-        },
-        checkNaviHeight() {
-            let naviHeight = document.querySelector('#headerWrapper').offsetHeight -20
-            if(!this.sharingIsVisible && window.innerWidth >= 1040 ) this.$refs.sharingWrapper.style.top = naviHeight+'px'
         }
-    }"
-    x-init = "checkIfDesktop()"
-    x-on:resize.window = "checkIfDesktop()"
-    x-on:scroll.window.debounce = "checkNaviHeight()"
-    x-on:keydown.escape.prevent.stop="close($refs.button)"
-    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-    x-id="['dropdown-button']"
-    class="flex self-center justify-end grow "
-    x-intersect:leave="sharingIsVisible = false"
-    x-intersect:enter="sharingIsVisible = true"
-     
->
-   {{!-- <div class="fixed left-1 top-40">
-        sharingIsVisible:<span x-text="sharingIsVisible" ></span><br>
-        open:<span x-text="open" ></span><br>
-        isDesktop:<span x-text="isDesktop" ></span><br>
-        PercentScrolled:<span x-text="$store.globalPercent.current"></span>
-    </div> --}}
-
-    <div :class="{ 'grid grid-page z-100 fixed bottom-feature-box-height socialShareDesktop:bottom-auto socialShareDesktop:top-0 left-0 w-full': !sharingIsVisible }">
-        <div class="" :class="{ 'flex justify-start col-full sm:col-main relative': !sharingIsVisible }">
-            <div x-ref="sharingWrapper" class="flex gap-3 transition-[top]" :class="{ 'bg-white w-10 bottom-5 socialShareDesktop:top-[78px] left-5 shadow-xl socialShareDesktop:-left-2 flex-col absolute': !sharingIsVisible }">
-                <button 
-                    class="order-2 h-10 p-2 text-white border bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
-                    x-show="!isDesktop"
-                    x-ref="button"
-                    x-on:click="toggle()"
-                    :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')">
-                    {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
-                </button> 
-
-                <!-- Panel -->
-                <div
-                    x-ref="panel"
-                    x-show="open || isDesktop"
-                    x-transition.origin.right
-                    x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')"
-                    class="p-1 bg-white "
-                    :class="sharingIsVisible ? 'h-8 absolute right-[60px] md:relative md:right-0 md:h-auto' : 'relative right-0 w-8 md:h-auto '"
-                >
-                    <ul class="flex gap-3"  :class="{ 'flex-col': ! sharingIsVisible }">
-                        
-                        {{> components/social_sharing/social_sharing_compact_icons }}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    }
+    }
+</script>

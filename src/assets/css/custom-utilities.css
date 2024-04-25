@@ -188,7 +188,7 @@
         minmax(var(--mobile-padding), var(--desktop-padding)) [full-width-end]; 
         grid-column: main;
     }
-    .grid-article > :not(.article-breakout, .article-full-width){
+    .grid-article > :not(.article-breakout, .article-full-width, .sticky){
         grid-column: narrow;
     }
     .article-breakout {
@@ -203,6 +203,7 @@
     .copytextWrapper > :not(.article-breakout, .article-full-width){
         grid-column: narrow;
     }
+
     .grid-content {
         grid-template-areas:
     "head"
