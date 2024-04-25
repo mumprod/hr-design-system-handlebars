@@ -1,3 +1,75 @@
+# v1.66.0 (Tue Apr 23 2024)
+
+#### 🚀 Enhancement
+
+- :recycle: Headline of PodcastFilter Teaser is no longer a link. Title… [#914](https://github.com/mumprod/hr-design-system-handlebars/pull/914) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.65.2 (Mon Apr 22 2024)
+
+#### 🐛 Bug Fix
+
+- Flag for Datapolicy [#913](https://github.com/mumprod/hr-design-system-handlebars/pull/913) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.65.1 (Mon Apr 22 2024)
+
+#### 🐛 Bug Fix
+
+- Introducing isTeaser-flag [#912](https://github.com/mumprod/hr-design-system-handlebars/pull/912) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.65.0 (Thu Apr 18 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2696 [#911](https://github.com/mumprod/hr-design-system-handlebars/pull/911) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.64.1 (Wed Apr 17 2024)
+
+#### 🐛 Bug Fix
+
+- Code cleanup aspectratio fix [#909](https://github.com/mumprod/hr-design-system-handlebars/pull/909) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.64.0 (Wed Apr 17 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 2696 [#910](https://github.com/mumprod/hr-design-system-handlebars/pull/910) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.63.15 (Tue Apr 16 2024)
 
 #### 🐛 Bug Fix

@@ -1659,7 +1659,8 @@
                         "readMoreScreenreader": "Zur Tagesschau Website",
                         "readMore": "Zur Tagesschau Website",
                         "readMoreLong": "Zur Tagesschau Website"
-                    }
+                    },
+                    "isUserConsentNeeded": false
                 }
             }
         }
@@ -1894,6 +1895,7 @@
                 "teaserSize": "100",
                 "realTeaserSize": "100",
                 "title": "Konzertkalender",
+                "uuid": "0a9e6389-d1a1-4af5-875d-4047cc2a82cb",
                 "eventCalendar": {
                     "months": {
                         "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",

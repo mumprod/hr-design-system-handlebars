@@ -28,6 +28,11 @@ export const ExterneDiensteGiphy = {
     name: 'Externe Dienste Giphy',
     args: ExternalServiceContent.Giphy, 
 }
+export const ExterneDiensteFlourish = {
+    render: TemplatePageExternalService.bind({}),
+    name: 'Externe Dienste Flourish',
+    args: ExternalServiceContent.Flourish, 
+}
 export const ExterneDiensteDatawrapper = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper MIT Responsivem Iframe',

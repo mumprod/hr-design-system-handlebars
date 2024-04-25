@@ -5,7 +5,9 @@
             "includeModel": {
                 "teaserSize": "100",
                 "realTeaserSize": "100",
+                "headlineTag": "h2",
                 "isSingleChannel": true,
+                "isPodcastFilter": false,
                 "url": "#url",
                 "title": "Im Haifischbecken - der Social-Media-Podcast",
                 "shortText": "shortText",

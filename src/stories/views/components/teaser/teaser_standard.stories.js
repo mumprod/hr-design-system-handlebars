@@ -14,6 +14,7 @@ import teaser100Download from './fixtures/teaser_standard_100_serif_download.jso
 import teaser100Link from './fixtures/teaser_standard_100_serif_link.json'
 import teaser100Program from './fixtures/teaser_standard_100_serif_program.json'
 import teaser50Link from './fixtures/teaser_standard_50_serif_link.json'
+import teaser50LinkTwoClick from './fixtures/teaser_standard_50_serif_link_two_click.json'
 import teaser33Link from './fixtures/teaser_standard_33_serif_link.json'
 import teaser25Link from './fixtures/teaser_standard_25_serif_link.json'
 import teaser33LongGeotag from './fixtures/teaser_standard_33_long_geotag.json'
@@ -122,6 +123,12 @@ export const Standard50MitExternemLink = {
     render: Template.bind({}),
     name: 'Standard 50 mit externem Link',
     args: teaser50Link.logicItem.includeModel,
+}
+
+export const Standard50LinkWithTwoClick = {
+    render: Template.bind({}),
+    name: 'Standard 50 mit zwei Klick Lösung',
+    args: teaser50LinkTwoClick.logicItem.includeModel,
 }
 
 export const Standard50MitFeaturedContent = {

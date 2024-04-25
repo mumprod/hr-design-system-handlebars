@@ -4,7 +4,7 @@
         <ul class="flex justify-end">
             {{~#with this.twitterLink ~}}
                 <li class="float-left mr-3">
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                         href="{{this}}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -19,7 +19,7 @@
             {{~/with~}}
             {{~#with this.facebookLink ~}}
                 <li class="float-left mr-3">
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                         href="{{this}}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -34,7 +34,7 @@
             {{~/with~}}
             {{~#with this.whatsappLink ~}}
                 <li class="float-left mr-3">
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                         href="{{this}}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -49,7 +49,7 @@
             {{~/with~}}
             {{~#with this.mailtoLink ~}}
                 <li class="float-left mr-3">
-                    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}}"
+                    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
                         href="{{this}}"
                         title="{{loca "share_mail_linktitle" }}"
                         {{#with ../../this.content.trackingData}}

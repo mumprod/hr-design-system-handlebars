@@ -30,7 +30,7 @@
 
                 {{!-- Überschrift: --}}
                 <div class="flex pb-5 pr-2 md:pr-5">
-                    {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" }}
+                    {{> components/podcast/components/podcast_title _title=this.title _teaserSize=this.realTeaserSize _addClass="" _headlineTag=this.headlineTag }}
                 </div>
 
             </div>
@@ -75,7 +75,7 @@
         <div class="flex justify-end w-full pl-4">
           <div class="flex flex-col flex-wrap self-end text-xs font-heading text-podcast-text dark:text-podcast-text-dark">
             <span class="self-end font-bold">Zur Sendung</span>
-            <a class="self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
+            <a class="{{if (isUserConsentNeeded this.url) 'js-user-consent-needed ' ''}}self-end underline ds-link" href="{{this.url}}">{{this.title}}</a>
           </div>
         </div>
       {{/with}}          

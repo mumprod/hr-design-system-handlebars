@@ -1,8 +1,9 @@
-const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight, embedCode) {
+const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight, id, embedCode) {
     
     const { element: rootElement } = context
     let aspectRatio = configAR
     let fixedHeight = configFixedHeight
+    let uniqueId = id
 
     const createNoResponsiveIframe = function () {
 
@@ -65,7 +66,8 @@ const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHe
     iframe.setAttribute('scrolling', 'no')
     iframe.setAttribute('frameborder', '0')
     iframe.src = embedCode
-
+    iframe.id = 'datawrapper-chart-' + uniqueId
+    
     div.appendChild(iframe)
     parentDiv.appendChild(div)
     rootElement.appendChild(parentDiv)

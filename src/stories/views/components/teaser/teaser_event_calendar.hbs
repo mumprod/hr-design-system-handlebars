@@ -1,8 +1,11 @@
 <article class="col-span-12{{~inline-switch this.teaserSize '["50"]' '[" md:col-span-6"]'}}">
     {{#> components/event/calendar/event_calendar}}
+        {{#> components/modal/modal _type="userConsent" _trigger=(appendToDefault this.uuid '.js-ticket-button-user-consent-needed-')}}
+            {{> components/modal/user_consent _link=this.link _headline=(loca "ticket_modal_headline") _text=(loca "ticket_modal_text") _labelOk=(loca "ticket_modal_label_ok") _labelCancel=(loca "ticket_modal_label_cancel")}}
+        {{/components/modal/modal}}
         {{> components/event/calendar/event_calendar_heading _headlineTag="h3"}}
         {{> components/event/calendar/event_calendar_nav this.eventCalendar.months}}
-        {{> components/event/calendar/event_calendar_content this.eventCalendar}}
+        {{> components/event/calendar/event_calendar_content this.eventCalendar _userConsentCheckId=this.uuid}}
         {{> components/event/calendar/event_calendar_footer}}
     {{/components/event/calendar/event_calendar}}
 </article>

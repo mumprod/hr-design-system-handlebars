@@ -1,5 +1,5 @@
 <li>
-    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         target="_blank"
@@ -13,7 +13,7 @@
     </a>
 </li>
 <li class="">
-    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         target="_blank"
@@ -27,7 +27,7 @@
     </a>
 </li>
 <li class="">
-    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         target="_blank"
@@ -41,7 +41,7 @@
     </a>
 </li>
 <li class="">
-    <a class="{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         title="{{loca "share_mail_linktitle" }}"

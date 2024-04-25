@@ -36,7 +36,7 @@
                         </div>
                         {{> components/event/event_details this}}
                         {{#with this.ticketLink}}
-                            {{> components/event/event_ticket_button}}
+                            {{> components/event/event_ticket_button _userConsentCheckId=../_userConsentCheckId}}
                         {{/with}}
                     </div> 
                 </div>
