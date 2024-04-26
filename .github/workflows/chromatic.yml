@@ -10,11 +10,11 @@ jobs:
     chromatic:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
               with:
                   fetch-depth: 0
             - name: Use Node.js 20.x
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
                   node-version: 20.x
             - name: install
@@ -30,7 +30,7 @@ jobs:
                   traceChanged: false
                   diagnostics: true
                   skip: ${{ github.event.pull_request.draft == true }}
-            - uses: actions/upload-artifact@v2
+            - uses: actions/upload-artifact@v4
               if: always()
               with:
                   name: chromatic-build-artifacts-${{ github.run_id }}

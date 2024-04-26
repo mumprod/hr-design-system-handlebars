@@ -1,3 +1,28 @@
+# v1.67.0 (Thu Apr 25 2024)
+
+#### 🚀 Enhancement
+
+- Social sharing code impovements [#915](https://github.com/mumprod/hr-design-system-handlebars/pull/915) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.66.1 (Thu Apr 25 2024)
+
+#### 🐛 Bug Fix
+
+- :construction_worker: update actions to their latest versions [#916](https://github.com/mumprod/hr-design-system-handlebars/pull/916) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.66.0 (Tue Apr 23 2024)
 
 #### 🚀 Enhancement
