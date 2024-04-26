@@ -20,9 +20,12 @@
             {{/if}}
         {{/with}}
     {{/unless}}
-    
-    {{> components/social_sharing/social_sharing_copytext}}
-    
+
+    {{#unless _webview}}
+        {{~#with this.socialSharing ~}}
+            {{> components/social_sharing/social_sharing_copytext}}
+        {{~/with~}}
+    {{/unless}}
     {{~> components/content/copytext/copytext _isWebview=_webview ~}}
 
     {{> components/page/components/comments }}

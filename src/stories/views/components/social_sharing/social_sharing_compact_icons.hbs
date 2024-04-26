@@ -1,3 +1,4 @@
+{{~#with this.twitterLink ~}}
 <li>
     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
@@ -12,6 +13,8 @@
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105 " _icon="x-ds" _iconmap="icons" ~}}
     </a>
 </li>
+{{/with}}
+{{~#with this.facebookLink}}
 <li class="">
     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
@@ -26,6 +29,8 @@
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="facebook-ds" _iconmap="icons" ~}}
     </a>
 </li>
+{{/with}}
+{{~#with this.whatsappLink}}
 <li class="">
     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
@@ -40,6 +45,8 @@
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="whatsapp-ds" _iconmap="icons" ~}}
     </a>
 </li>
+{{/with}}
+{{~#with this.mailtoLink}}
 <li class="">
     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
@@ -52,6 +59,8 @@
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="kontakt-ds" _iconmap="icons" ~}}
     </a>
 </li>
+{{/with}}
+
 <li class="">
     <a class="{{#with ../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         

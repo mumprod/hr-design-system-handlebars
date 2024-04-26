@@ -5,7 +5,6 @@
     lang="de"
 >
     <head>
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
         <title>hessenschau.de | Nachrichten aus Hessen</title>
@@ -14,33 +13,29 @@
         <meta name="author" content="hessenschau.de, Frankfurt, Germany" />
         <meta name="publisher" content="hessenschau.de" />
         <meta name="language" content="Deutsch" />
-
     </head>
 
     <body itemscope itemtype="http://schema.org/WebPage">
+
     {{> components/site_header/header }}
+    
     {{#unless _webview}}
-        
-            {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=this.structureNav.contentNav
-                                                                _hasBannerImage=this.hasBannerImage}}
-                {{> components/navigation/breadcrumb/breadcrumb this.breadcrumb _currentPageUrl=this.url _currentPageTitle=this.breadcrumbTitle }}
-            {{/components/banner/header/breadcrumb_wrapper }}
-       
+        {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=this.structureNav.contentNav _hasBannerImage=this.hasBannerImage}}
+            {{> components/navigation/breadcrumb/breadcrumb this.breadcrumb _currentPageUrl=this.url _currentPageTitle=this.breadcrumbTitle }}
+        {{/components/banner/header/breadcrumb_wrapper }}   
     {{/unless}}
 
-        <div class="js-pageSwap">
-            <main 
-                onclick="void(0)" 
-                role="main" 
-                id="content"
-                class="flex flex-col items-center justify-center"
-            >
-           
+    <div class="js-pageSwap">
+        <main 
+            onclick="void(0)" 
+            role="main" 
+            id="content"
+            class="flex flex-col items-center justify-center"
+        >
             {{> components/page/story/story_article }} 
             {{> components/top_button/top_button }}
             {{> components/footer/page_footer }}
-            </main>
-
-        </div>
+        </main>
+    </div>
     </body>
 </html>
