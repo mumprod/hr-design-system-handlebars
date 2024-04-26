@@ -11,10 +11,8 @@
             <div :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
                 <div :style="($store.footerIsVisible && !$screen('lg')) && {bottom:$store.sharingBottomPos.current}" 
                     :class="{ 'bottom-5 flex-col absolute mt-3 rounded-md': $store.sharingIsVisible == false && $store.footerIsVisible == false,
-                                'flex-col absolute mt-3' : $store.footerIsVisible == true
-                            }"
-                    class="flex self-center gap-3 bg-white left-5" 
-                    >
+                                'flex-col absolute mt-3' : $store.footerIsVisible == true }"
+                    class="flex self-center gap-3 bg-white left-5">
                     <button 
                         class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
                         x-show="!$screen('lg')"
@@ -36,7 +34,6 @@
                         :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[68px] md:relative md:right-0 md:h-auto' : 'relative right-0 md:h-auto lg:hidden '"
                     >
                         <ul class="flex gap-3"  :class="{ 'flex-col': $store.sharingIsVisible == false }">
-                            
                             {{> components/social_sharing/social_sharing_compact_icons }}
                         </ul>
                     </div>
@@ -58,7 +55,7 @@
             if (navigator.share && isMobile) {
                 navigator.share({
                     title: document.title,
-                    text: 'Check out this awesome content!',
+                    text: 'Schau mal was ich auf hessenschau.de gefunden habe!',
                     url: window.location.href,
                 })
                 .then(() => console.log('Shared successfully'))
@@ -75,7 +72,6 @@
         },
         close(focusAfter) {
             if (! this.open) return
-
             this.open = false
             this.$store.sharingIsOpen = false
             focusAfter && focusAfter.focus()
