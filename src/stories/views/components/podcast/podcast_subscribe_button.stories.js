@@ -1,4 +1,5 @@
 import { resetComponents } from '@storybook/components'
+import { userEvent, within } from '@storybook/testing-library';
 import subscribeButtonJson from 'components/teaser/fixtures/teaser_podcast.json'
 
 import subscribeButton from 'components/podcast/components/podcast_subscribe_button.hbs'
@@ -44,8 +45,12 @@ export const SubscribeButtonOpen = {
     render: Template.bind({}),
     name: 'Subscribe Button Open',
 
-    args: {
-        ...subscribeButtonJson.logicItem.includeModel.podcastChannel,
-        storybookOpen: true,
+    args: subscribeButtonJson.logicItem.includeModel.podcastChannel,
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const button = canvas.getByRole('button');
+
+        await userEvent.click(button);
     },
 }
