@@ -4744,7 +4744,7 @@
     fs-extra "^11.1.0"
     read-pkg-up "^7.0.1"
 
-"@storybook/test-runner@<0.17.0":
+"@storybook/test-runner@~0.16.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.16.0.tgz#dbac234a0c81c815e8ca4c486f0a340f4493331d"
   integrity sha512-LDmNbKFoEDW/VS9o6KR8e1r5MnbCc5ZojUfi5yqLdq80gFD7BvilgKgV0lUh/xWHryzoy+Ids5LYgrPJZmU2dQ==
