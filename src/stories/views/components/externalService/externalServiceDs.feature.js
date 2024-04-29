@@ -100,6 +100,9 @@ const ExternalService = function (context) {
                     case 'wahlkreiskarte':
                         createWahlEmbed()
                         break
+                    case 'wahlomat':
+                        createWahlOMatEmbed()
+                        break    
                     default:
                         console.error('No JS Config for external service ' + id)
                         break
@@ -108,6 +111,19 @@ const ExternalService = function (context) {
             default:
                 loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
         }
+    }
+
+    const createWahlOMatEmbed = function () {
+
+        const divTag = document.createElement('div')
+        divTag.id = 'wahl-o-mat'
+        rootElement.insertBefore(divTag, null)
+        loadScript(
+            'wahl-o-mat-js',
+            'https://static.hr.de/wahl-o-mat/embed.js',
+            true
+        )
+
     }
 
     const createWahlEmbed = function () {
