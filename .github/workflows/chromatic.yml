@@ -21,7 +21,7 @@ jobs:
               run: yarn
             - name: create partials
               run: yarn partialsToJs
-            - uses: chromaui/action@latest
+            - uses: chromaui/action@v11.3.0
               with:
                   # 👇 Chromatic projectToken, refer to the manage page to obtain it.
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

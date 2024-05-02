@@ -1,3 +1,28 @@
+# v1.67.2 (Thu May 02 2024)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 3061 [#919](https://github.com/mumprod/hr-design-system-handlebars/pull/919) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.67.1 (Mon Apr 29 2024)
+
+#### 🐛 Bug Fix
+
+- Adding wahl-o-mat [#918](https://github.com/mumprod/hr-design-system-handlebars/pull/918) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.67.0 (Thu Apr 25 2024)
 
 #### 🚀 Enhancement

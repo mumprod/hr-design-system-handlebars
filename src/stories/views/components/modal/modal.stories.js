@@ -1,3 +1,5 @@
+import { userEvent, within } from '@storybook/testing-library';
+
 const handlebars = require('hrHandlebars')
 
 const defaultModalTemplate = (args, { globals: { customConditionalToolbar } }) => {
@@ -28,7 +30,7 @@ const userConsentModalTemplate = (args, { globals: { customConditionalToolbar } 
         {{> components/modal/user_consent _headline=(loca "modal_user_consent_headline") _text=(loca "modal_user_consent_text") _labelOk=(loca "modal_user_consent_label_ok") _labelCancel=(loca "modal_user_consent_label_cancel")}}
     {{/components/modal/modal}}
 
-    <a href="https://hessenschau.de" class="js-user-consent-needed" rel="noopener" target="_blank">User Consent Modal</a>
+    <a data-testid="modal-hook" href="https://hessenschau.de" class="js-user-consent-needed" rel="noopener" target="_blank">User Consent Modal</a>
   `)
     return hbsTemplate({ brand, ...args })
 }
@@ -74,6 +76,22 @@ export const userConsentModal = {
     args: {
         _trigger: '.js-user-consent-needed',
         _type: 'userConsent'
+    },
+}
+
+export const openedUserConsentModal = {
+    render: userConsentModalTemplate.bind({}),
+    name: 'User Consent Modal geöffnet',
+    args: {
+        _trigger: '.js-user-consent-needed',
+        _type: 'userConsent'
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const link = canvas.getByTestId('modal-hook');
+
+        await userEvent.click(link);
     },
 }
 

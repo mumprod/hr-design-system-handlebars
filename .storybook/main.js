@@ -9,6 +9,7 @@ const config = {
         '../src/**/*.mdx',
         '../src/**/*.stories.@(js|jsx|ts|tsx)',
     ],
+    features: { buildStoriesJson: true },
     addons: [
         '@storybook/addon-links',
         {
@@ -44,6 +45,7 @@ const config = {
                 },
             },
         },
+        '@storybook/addon-interactions'
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
