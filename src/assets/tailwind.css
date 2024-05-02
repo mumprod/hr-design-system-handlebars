@@ -270,6 +270,28 @@
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
     --color-ticker-teaser-headline : theme('colors.white.DEFAULT');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: #199bff;
+        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+        --ardplayer-color-tertiary-base: theme('colors.blue.congress');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.congress');
+                color: var(--ardplayer-color-lightest);
+        } 
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.congress');
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.congress');
+    }
 }
 
 [data-theme='hr-fernsehen'] {
