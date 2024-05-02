@@ -1,3 +1,16 @@
+# v1.67.3 (Thu May 02 2024)
+
+#### 🐛 Bug Fix
+
+- Socail sharing code improvements 2 [#917](https://github.com/mumprod/hr-design-system-handlebars/pull/917) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.67.2 (Thu May 02 2024)
 
 #### 🐛 Bug Fix
