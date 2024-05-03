@@ -460,6 +460,32 @@
     --structure-nav-background: theme('colors.blue.astronautBlue');
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.jellyBean');
+        --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
+        --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.jellyBean');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.jellyBean');
+    }
 }
 
 [data-theme='hr-rundfunkrat'] {
