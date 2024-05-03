@@ -7,12 +7,12 @@
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
-    --breakpoint-xs:  theme(screens.xs);
+    --breakpoint-xs: theme(screens.xs);
     --breakpoint-sm480: theme(screens.sm480);
     --breakpoint-sm: theme(screens.sm);
-    --breakpoint-md: theme(screens.md); 
+    --breakpoint-md: theme(screens.md);
     --breakpoint-lg: theme(screens.lg);
-    
+
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
@@ -22,27 +22,27 @@
 
     /* Text */
     --color-standard-text: theme('colors.black.DEFAULT');
-    --color-standard-text-dark: #F0F0F0;
+    --color-standard-text-dark: #f0f0f0;
     /* Navigation Hintergrund */
     --color-navigation-bg: #fff;
-    --color-brandnavigation-bg: #fff; 
+    --color-brandnavigation-bg: #fff;
     /* Navigation Icons */
     --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
     --color-navigation-text: theme('colors.black.DEFAULT');
     --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
-    --color-brandnavigation-border-color: theme('colors.blue.congress'); 
+    --color-brandnavigation-border-color: theme('colors.blue.congress');
     --color-brandnav-pseudo: theme('colors.blue.congress');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
-    --color-servicenavigation-border-color:  #fff;
+    --color-servicenavigation-border-color: #fff;
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Suchfeld Header und Footer */
-    --search-border-color-desktop:  theme('colors.black.DEFAULT');
-    --search-border-color-mobile:  theme('colors.black.DEFAULT');
-    --color-search-footer-text:  theme('colors.black.DEFAULT');
+    --search-border-color-desktop: theme('colors.black.DEFAULT');
+    --search-border-color-mobile: theme('colors.black.DEFAULT');
+    --color-search-footer-text: theme('colors.black.DEFAULT');
     --search-icon-color: theme('colors.black.DEFAULT');
 
     /* Content navi button border color for dark mode */
@@ -52,7 +52,7 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 10px;
-    --logo-padding-bottom-md: 10px;    
+    --logo-padding-bottom-md: 10px;
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
 
@@ -62,7 +62,7 @@
     --color-footer-heading: theme('colors.black.DEFAULT');
     --color-footer-border: red;
     --color-footer-bg: white;
-    
+
     /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
 
@@ -124,7 +124,7 @@
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
     --color-podcast: theme('colors.blue.science');
-    --color-podcast-dark : var(--color-highlight-1-dark);
+    --color-podcast-dark: var(--color-highlight-1-dark);
     --color-podcast-text: var(--color-link);
     --color-podcast-text-dark: var(---color-standard-text-dark);
     /* Byline */
@@ -142,13 +142,12 @@
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 
-    --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
-    --color-toggle-confirmation: #2c7e13; 
+    --color-ticker-teaser-headline-underline: theme('colors.white.DEFAULT');
+    --color-toggle-confirmation: #2c7e13;
     --color-toggle-default: #797979;
 
-    
     --banner__background-color: theme('colors.white.DEFAULT');
-    --banner__background-color--with-image:theme('colors.transparent');
+    --banner__background-color--with-image: theme('colors.transparent');
     --banner-overlay_background-color: theme('colors.white.DEFAULT');
     --banner-overlay__background-color--rgba: rgba(--banner-overlay_background-color, 0.85);
     --banner-topline__color: theme('colors.black.DEFAULT');
@@ -175,7 +174,7 @@
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
-    --color-navigation-bg:theme('colors.blue.congress');
+    --color-navigation-bg: theme('colors.blue.congress');
     /* Navigation Icons */
     --color-navigation-icons: #fff;
     /* Navigation Text */
@@ -190,14 +189,14 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
+    --logo-padding-bottom-md: 6px;
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
     /* Footer Color Options */
     --invert-logo-footer: 0;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: white;
+    --color-footer-heading: white;
     --color-footer-border: #accfe9;
     --color-footer-bg: #606060;
 
@@ -269,7 +268,7 @@
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-headline : theme('colors.white.DEFAULT');
+    --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
 
     .ardplayer {
         --ardplayer-color-primary-base: #199bff;
@@ -281,7 +280,7 @@
             .ardplayer-controlbar-hover {
                 --ardplayer-color-lightest: theme('colors.blue.congress');
                 color: var(--ardplayer-color-lightest);
-        } 
+            }
         }
 
         .ardplayer-bottom-sheet-container {
@@ -295,20 +294,19 @@
 }
 
 [data-theme='hr-fernsehen'] {
-    --color-primary-ds: theme('colors.blue.blueLuxury'); 
+    --color-primary-ds: theme('colors.blue.blueLuxury');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
-    
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
-   
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --color-navigation-border-color: theme('colors.blue.blueLuxury');
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury');
+
+    --color-footer-border: theme('colors.blue.blueLuxury');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -329,22 +327,22 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.blue.blueLuxury'); 
+    --color-topline: theme('colors.blue.blueLuxury');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.blueLuxury'); 
-    --color-link-dark: theme('colors.blue.blueLuxury'); 
+    --color-link: theme('colors.blue.blueLuxury');
+    --color-link-dark: theme('colors.blue.blueLuxury');
     /* Stage */
     --color-stage-text-box: 234 237 237;
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
     --color-stage-link: var(--color-link);
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.blueLuxury'); 
+    --color-cluster-teaser-link: theme('colors.blue.blueLuxury');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT'); 
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -355,12 +353,38 @@
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.blueLuxury'); 
+    --color-podcast: theme('colors.blue.blueLuxury');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.blue.allports');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury');
+        --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
+        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+    }
 }
 
 [data-theme='hr-inforadio'] {
@@ -370,18 +394,18 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.astronautBlue'); 
-    --color-servicenavigation-border-color:  theme('colors.blue.astronautBlue'); 
+    --color-navigation-border-color: theme('colors.blue.astronautBlue');
+    --color-servicenavigation-border-color: theme('colors.blue.astronautBlue');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
+    --color-brandnavigation-border-color: theme('colors.blue.astronautBlue');
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
-    
-    --color-footer-border:  theme('colors.blue.astronautBlue');
+
+    --color-footer-border: theme('colors.blue.astronautBlue');
 
     --footer-padding-bottom: 132px;
-    
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.jellyBean');
     /* Ticker, Live, Livestream */
@@ -457,14 +481,14 @@
     --logo-padding-top: 8px;
     --logo-padding-bottom: 8px;
     --logo-padding-top-md: 8px;
-    --logo-padding-bottom-md: 8px;    
+    --logo-padding-bottom-md: 8px;
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
 
-    --color-footer-bg: theme('colors.gray.scorpion'); 
+    --color-footer-bg: theme('colors.gray.scorpion');
     --color-footer-border: #276b9e;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: white;
+    --color-footer-heading: white;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.deepCerulean');
@@ -523,26 +547,40 @@
 }
 
 [data-theme='hr-werbung'] {
-    --color-primary-ds: theme('colors.blue.blueLuxury'); 
+    --color-primary-ds: theme('colors.blue.blueLuxury');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
 
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
+    --color-navigation-border-color: theme('colors.blue.blueLuxury');
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury');
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on werbung */
-    --border-navigation-border-image: linear-gradient(to right, #dda91e 0%, #dda91e 17%, #c32728 17%, #c32728 34%, #bf0171 34%, #bf0171 51%, #003a5c 51%, #003a5c 68%,#000206 68%,#000206 84%,#007a9f 84%, #007a9f 100%);
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --border-navigation-border-image: linear-gradient(
+        to right,
+        #dda91e 0%,
+        #dda91e 17%,
+        #c32728 17%,
+        #c32728 34%,
+        #bf0171 34%,
+        #bf0171 51%,
+        #003a5c 51%,
+        #003a5c 68%,
+        #000206 68%,
+        #000206 84%,
+        #007a9f 84%,
+        #007a9f 100%
+    );
+    --color-footer-border: theme('colors.blue.blueLuxury');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.blueLuxury'); 
+    --color-label-media: theme('colors.blue.blueLuxury');
     /* Ticker, Live, Livestream */
     --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
@@ -556,13 +594,13 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.blueLuxury'); 
+    --color-label-pm: theme('colors.blue.blueLuxury');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
-    --color-eventcalendar-primary: theme('colors.blue.blueLuxury'); 
+    --color-eventcalendar-primary: theme('colors.blue.blueLuxury');
     /* Dachzeile */
-    --color-topline: theme('colors.blue.blueLuxury'); 
+    --color-topline: theme('colors.blue.blueLuxury');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
@@ -574,10 +612,10 @@
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: var(--color-primary-ds);
-    --color-cluster-teaser-headline: theme('colors.blue.blueLuxury'); 
+    --color-cluster-teaser-headline: theme('colors.blue.blueLuxury');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT'); 
-    --color-button--dark: theme('colors.blue.blueLuxury'); 
+    --color-button: theme('colors.black.DEFAULT');
+    --color-button--dark: theme('colors.blue.blueLuxury');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -587,7 +625,7 @@
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.blueLuxury'); 
+    --color-podcast: theme('colors.blue.blueLuxury');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.chelseaGem');
     /* Font */
@@ -613,11 +651,11 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 4px;
-    --logo-padding-bottom-md: 4px;    
+    --logo-padding-bottom-md: 4px;
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
-    --color-footer-border: #8d2725; 
+    --color-footer-border: #8d2725;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
@@ -678,19 +716,19 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
+    --color-brandnavigation-border-color: theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueStone'); 
+    --color-navigation-border-color: theme('colors.blue.blueStone');
     --color-servicenavigation-border-color: theme('colors.blue.blueStone');
 
     /* Logo-Container Padding */
     --logo-padding-top-md: 4px;
-    --logo-padding-bottom-md: 4px;    
+    --logo-padding-bottom-md: 4px;
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --color-footer-border: theme('colors.blue.blueLuxury');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
@@ -725,7 +763,7 @@
     --color-cluster-teaser-link: theme('colors.green.teal');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button:  theme('colors.black.DEFAULT');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -751,7 +789,7 @@
     --color-highlight-2: theme('colors.orange.spicyCarrot');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: white; 
+    --color-navigation-bg: white;
 
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.gray.darker');
@@ -765,7 +803,7 @@
     --logo-padding-top: 4px;
     --logo-padding-bottom: 8px;
     --logo-padding-top-md: 10px;
-    --logo-padding-bottom-md: 10px;    
+    --logo-padding-bottom-md: 10px;
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
     /* Footer Color Options */
@@ -815,7 +853,7 @@
     --color-button-inverted--dark: theme('colors.gray.lightGray');
     --color-button-disabled: theme('colors.gray.lightGray');
     --color-button-disabled--dark: theme('colors.gray.boulder');
- 
+
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -836,7 +874,6 @@
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.floral');
     --color-highlight-2: theme('colors.orange.spicyCarrot');
-    
 
     --color-navigation-border-color: theme('colors.yellow.corn');
     --color-servicenavigation-border-color: theme('colors.yellow.corn');
@@ -920,14 +957,14 @@
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
-    --color-navigation-border-color:theme('colors.orange.clementine');
-    --color-servicenavigation-border-color:theme('colors.orange.clementine');
+    --color-navigation-border-color: theme('colors.orange.clementine');
+    --color-servicenavigation-border-color: theme('colors.orange.clementine');
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
-   
+
     --color-footer-border: theme('colors.orange.clementine');
 
     --footer-padding-bottom: 132px;
@@ -969,7 +1006,7 @@
     --color-button: #433d37;
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark:  #433d37;
+    --color-button-inverted--dark: #433d37;
     /* Media-Button */
     --color-media-button: theme('colors.orange.burntOrange');
     /* States */
@@ -986,8 +1023,8 @@
     /* ticker-Teaser*/
     --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
 
-    --search-border-color-desktop:  var(--color-navigation-icons);
-    
+    --search-border-color-desktop: var(--color-navigation-icons);
+
     --feature-box-height: 96px;
 }
 
@@ -999,7 +1036,7 @@
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.monza');
-    --color-brandnav-pseudo: theme('colors.red.monza'); 
+    --color-brandnav-pseudo: theme('colors.red.monza');
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.red.monza');
     --color-servicenavigation-border-color: theme('colors.red.monza');
@@ -1159,25 +1196,39 @@
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: #000;
-    --color-brandnav-pseudo: #007179; 
+    --color-brandnav-pseudo: #007179;
     /* Service/Sectionnavigation Border Color*/
-    --color-navigation-border-color:#000;
-    --color-servicenavigation-border-color:#000;
+    --color-navigation-border-color: #000;
+    --color-servicenavigation-border-color: #000;
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on youfm */
-    --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
-   
+    --border-navigation-border-image: linear-gradient(
+        to right,
+        #ec6a19 0%,
+        #ec6a19 17%,
+        #00aec5 17%,
+        #00aec5 34%,
+        #00a781 34%,
+        #00a781 51%,
+        #fcbf1f 51%,
+        #fcbf1f 68%,
+        #e51353 68%,
+        #e51353 85%,
+        #8d3b8e 85%,
+        #8d3b8e 100%
+    );
+
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
+    --logo-padding-bottom-md: 6px;
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
     --color-footer-border: #007ea1;
-    
+
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
@@ -1232,7 +1283,7 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
 
-    --search-border-color-desktop:  var(--color-navigation-icons);
+    --search-border-color-desktop: var(--color-navigation-icons);
     /* Structure Navigation */
     --structure-nav-background: theme('colors.yellow.goldenSand');
     --structure-nav-text: theme('colors.black.DEFAULT');
