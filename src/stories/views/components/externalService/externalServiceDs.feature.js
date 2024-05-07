@@ -172,19 +172,11 @@ const ExternalService = function (context) {
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
         createUniqueID()
-        if (iFrameConfig.noResponsiveIframe == 'true') {
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
-            noResponsiveIframe.createNoResponsiveIframe()
-
-            if (iFrameConfig.refreshContent == 'true') {
-                console.log("contentRefresher anfügen")
-                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
-                contentRefresher.createRefresher()
-            }
-        } 
-        else {
+        if (iFrameConfig.responsiveIframe == 'true') {
+            
+            //Responsives Iframe
             var iframe = document.createElement('iframe')
-              //Auflösen nach Tailwind-Klassen //dataWrapper-embed
+            //Auflösen nach Tailwind-Klassen //dataWrapper-embed
             iframe.className = 'w-0 !min-w-full border-0'
             iframe.setAttribute('webkitallowfullscreen', '')
             iframe.setAttribute('mozallowfullscreen', '')
@@ -199,13 +191,53 @@ const ExternalService = function (context) {
                 'datawrapper-js',
                 'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
                 true
-            )
-
+            ) 
             if (iFrameConfig.refreshContent == 'true') {
                 console.log("contentRefresher anfügen")
-                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
+                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
                 contentRefresher.createRefresher()
             }
+        } 
+        else {
+            if(iFrameConfig.webcomponent == 'true') {
+                
+                // Webcomponent
+                const divTag = document.createElement('div')
+                divTag.id = 'datawrapper-chart-' + uniqueID
+                rootElement.insertBefore(divTag, null)
+                const scriptTag = document.createElement('script')
+                scriptTag.setAttribute('id', 'datawrapper-component-js')
+                scriptTag.setAttribute('type', 'text/javascript')
+                scriptTag.setAttribute('defer', 'defer')
+                scriptTag.setAttribute('src', embedCode + 'embed.js?v=1')
+                scriptTag.setAttribute('charset', 'utf-8')
+                const noScriptTag = document.createElement('noscript')
+                const imageTag = document.createElement('img')
+                imageTag.src = embedCode + 'full.png'
+                imageTag.alt = ''
+                noScriptTag.appendChild(imageTag)
+                divTag.appendChild(scriptTag)
+                divTag.appendChild(noScriptTag)
+
+                if (iFrameConfig.refreshContent == 'true') {
+                    console.log("contentRefresher anfügen")
+                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, true)
+                    contentRefresher.createRefresher()
+                }
+            }
+            else {
+                //Klassisches Iframe mit AR-Wrapper oder fester Höhe
+                noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
+                noResponsiveIframe.createNoResponsiveIframe()
+    
+                if (iFrameConfig.refreshContent == 'true') {
+                    console.log("contentRefresher anfügen")
+                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                    contentRefresher.createRefresher()
+                }
+            }
+           
+           
         }
     }
 

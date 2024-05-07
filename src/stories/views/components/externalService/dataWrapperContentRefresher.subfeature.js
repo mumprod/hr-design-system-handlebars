@@ -1,11 +1,18 @@
         
-const DataWrapperContentRefresher = function (context, id, refreshIntervall) {
+const DataWrapperContentRefresher = function (context, id, refreshIntervall, webcomponent) {
     const { element: rootElement } = context
     let remainingTime
     let timer
     let uniqueID = id
     let intervall = refreshIntervall
+    
+    if (webcomponent) {
+    let container = document.getElementById('datawrapper-chart-' + uniqueID)
+    let script = document.getElementById('datawrapper-component-js')
+    }
+    else{
     let iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
+    }
     
     const createRefresher = function () {
         console.log("Refresher bauen")
@@ -45,15 +52,26 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall) {
 
     const refreshIframe = function () {
         console.log('Reload')
-        iframeRefresh.style.opacity = '0'
-        iframeRefresh.src =
-            iframeRefresh.src.split('?')[0] + '?_=' + new Date().getTime()
+        if(webcomponent) {
+            container.style.opacity = '0'
+            script.src = script.src.split('?')[0] + '?_=' + new Date().getTime()
+        }
+        else{
+            iframeRefresh.style.opacity = '0'
+            iframeRefresh.src =
+                iframeRefresh.src.split('?')[0] + '?_=' + new Date().getTime()
+        }
         clearInterval(timer)
     }
     const startCountdown = function () {
         remainingTime = Number(intervall)
         setTimeout(function () {
-            iframeRefresh.style.opacity = '1'
+            if(webcomponent) {
+                container.style.opacity = '1'    
+            }
+            else{
+                iframeRefresh.style.opacity = '1'
+            }
             document.getElementById('overlay' + uniqueID).style.display = 'none'
         }, 1000)
         timer = setInterval(function () {
