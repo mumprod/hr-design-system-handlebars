@@ -1,3 +1,15 @@
+# v1.67.4 (Tue May 07 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3079 Print Icon austauschen [#921](https://github.com/mumprod/hr-design-system-handlebars/pull/921) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.67.3 (Thu May 02 2024)
 
 #### 🐛 Bug Fix
