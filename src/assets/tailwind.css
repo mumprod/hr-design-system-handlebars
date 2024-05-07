@@ -271,7 +271,7 @@
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
 
     .ardplayer {
-        --ardplayer-color-primary-base: #199bff;
+        --ardplayer-color-primary-base: theme('colors.blue.science');
         --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
         --ardplayer-color-tertiary-base: theme('colors.blue.congress');
         --ardplayer-color-lightest: theme('colors.white.DEFAULT');
@@ -285,6 +285,13 @@
 
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.congress');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.congress');
+                }
+            }
         }
     }
 
