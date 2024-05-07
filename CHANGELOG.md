@@ -1,3 +1,15 @@
+# v1.67.5 (Tue May 07 2024)
+
+#### 🐛 Bug Fix
+
+- commentlink as ssi [#922](https://github.com/mumprod/hr-design-system-handlebars/pull/922) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.67.4 (Tue May 07 2024)
 
 #### 🐛 Bug Fix
