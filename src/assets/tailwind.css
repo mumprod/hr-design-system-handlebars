@@ -805,6 +805,35 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.red.wellRead');
+        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+        --ardplayer-color-tertiary-base: theme('colors.red.wellRead');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.red.wellRead');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.red.wellRead');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.red.wellRead');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.red.wellRead');
+    }
 }
 
 [data-theme='hr-bigband'] {
