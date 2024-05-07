@@ -700,6 +700,35 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury');
+        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.blueLuxury');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
+    }
 }
 
 [data-theme='hr-sinfonieorchester'] {
