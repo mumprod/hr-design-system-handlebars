@@ -1,0 +1,11 @@
+<a class="text-xs sm480:text-sm font-headingSerif text-link hover:underline dark:text-link-dark" href="#commentList">
+    {{> components/base/image/icon _icon="kommentar" _iconmap="icons" _addClass="mr-0.5 inline w-5 h-5 text-link dark:text-link-dark fill-current"}}
+    <span class="sr-only">{{loca "comment_anchor_1"}}</span>
+    <span class="text-link">{{this.quantity}}</span>
+    {{#if this.hasOneComment}}
+        <span class="text-link">{{loca "comment_label_text"}}</span>
+    {{else}}
+        <span class="text-link">{{loca "comment_label_text_many"}}</span>
+    {{/if}}
+    <span class="sr-only">{{loca "comment_anchor_2"}}</span>
+</a>
