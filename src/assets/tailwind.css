@@ -584,6 +584,35 @@
     --font-weight-title: theme('fontWeight.bold');
     /* Structure Navigation */
     --structure-nav-background: theme('colors.blue.deepCerulean');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.deepCerulean');
+        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+        --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.deepCerulean');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.deepCerulean');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.deepCerulean');
+    }
 }
 
 [data-theme='hr-werbung'] {
