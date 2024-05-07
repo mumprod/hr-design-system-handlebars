@@ -490,6 +490,9 @@
 
             .ardplayer-option:hover.ardplayer-option-active {
                 color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.jellyBean');
+                }
             }
         }
     }
