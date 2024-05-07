@@ -907,6 +907,35 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.teal.DEFAULT');
+        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+        --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.teal.DEFAULT');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.teal.DEFAULT');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.teal.DEFAULT');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.teal.DEFAULT');
+    }
 }
 
 [data-theme='hr'] {
