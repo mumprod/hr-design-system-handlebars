@@ -1,3 +1,16 @@
+# v1.67.6 (Fri May 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2970: Add 1:1 image in mobile lead story [#923](https://github.com/mumprod/hr-design-system-handlebars/pull/923) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.67.5 (Tue May 07 2024)
 
 #### 🐛 Bug Fix
