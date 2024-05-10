@@ -4,6 +4,23 @@
         "caption": "Bildunterschrift",
         "copyrightWithLinks": "picture-alliance/dpa",
         "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+
+                }
+            ]
+        }
+    },
+    "story_image_lead_square": {
+        "isImage": true,
+        "caption": "Bildunterschrift",
+        "copyrightWithLinks": "picture-alliance/dpa",
+        "responsiveImage": {
             "asPicture": true,
             "asImage": false,
             "fallback": "images/{#image}_v-16to9__medium.jpg",
@@ -20,7 +37,7 @@
                 }
             ]
         }
-    },    
+    },      
     "copytext_image_100": {
         "isImage": true,
         "showFullSize": {
