@@ -1131,6 +1131,35 @@
     --structure-nav-text-mobile: theme('colors.yellow.olive');
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.yellow.olive');
+        --ardplayer-color-primary-dark-base: theme('colors.white.floral');
+        --ardplayer-color-tertiary-base: theme('colors.yellow.olive');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.yellow.olive');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.yellow.olive');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.yellow.olive');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.yellow.olive');
+    }
 }
 
 [data-theme='hr2'] {
