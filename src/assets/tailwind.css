@@ -1458,6 +1458,35 @@
     /* Structure Navigation */
     --structure-nav-background: theme('colors.green.genoa');
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.green.eden');
+        --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
+        --ardplayer-color-tertiary-base: theme('colors.green.eden');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.green.eden');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.green.eden');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.green.eden');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.green.eden');
+    }
 }
 
 [data-theme='you-fm'] {
