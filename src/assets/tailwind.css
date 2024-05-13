@@ -1590,6 +1590,35 @@
     --structure-nav-text: theme('colors.black.DEFAULT');
     --structure-nav-text-mobile: theme('colors.blue.lightCerulean');
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.sea');
+        --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
+        --ardplayer-color-tertiary-base: theme('colors.blue.sea');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.sea');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.sea');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.sea');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.sea');
+    }
 }
 
 /*! purgecss end ignore */
