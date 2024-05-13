@@ -1222,7 +1222,7 @@
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: #433d37;
     /* Media-Button */
-    --color-media-button: theme('colors.orange.burntOrange');
+    --color-media-button: theme('colors.red.paprika');
     /* States */
     --color-focus-state: theme('colors.red.paprika');
     /* Content-Nav */
@@ -1240,6 +1240,35 @@
     --search-border-color-desktop: var(--color-navigation-icons);
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.red.paprika');
+        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+        --ardplayer-color-tertiary-base: theme('colors.red.paprika');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.red.paprika');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.red.paprika');
+
+            .ardplayer-option:hover.ardplayer-option-active {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.red.paprika');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.red.paprika');
+    }
 }
 
 [data-theme='hr3'] {
