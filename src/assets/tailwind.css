@@ -162,6 +162,19 @@
     --structure-nav-text-mobile: var(--color-primary-ds);
 
     --feature-box-height: 0;
+
+    .ardplayer {
+        --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot');
+
+        &.ardplayer-state-live {
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+                    color: var(--ardplayer-color-lightest);
+                }
+            }
+        }
+    }
 }
 
 [data-theme='hessenschau'] {
@@ -286,7 +299,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.congress');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.congress');
@@ -383,7 +396,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
 
                 .ardplayer-icon {
@@ -488,7 +501,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.jellyBean');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.jellyBean');
@@ -601,7 +614,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.deepCerulean');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.deepCerulean');
@@ -717,7 +730,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.blueLuxury');
@@ -822,7 +835,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.red.wellRead');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.red.wellRead');
@@ -924,7 +937,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.teal.DEFAULT');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.teal.DEFAULT');
@@ -1040,7 +1053,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.blueLuxury');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.blueLuxury');
@@ -1148,7 +1161,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.yellow.olive');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.yellow.olive');
@@ -1257,7 +1270,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.red.paprika');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.red.paprika');
@@ -1366,7 +1379,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.red.monza');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.red.monza');
@@ -1475,7 +1488,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.green.eden');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.green.eden');
@@ -1607,7 +1620,7 @@
         .ardplayer-bottom-sheet-container {
             --ardplayer-color-lightest: theme('colors.blue.sea');
 
-            .ardplayer-option:hover.ardplayer-option-active {
+            .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
                     color: theme('colors.blue.sea');
