@@ -19,7 +19,7 @@ export const Default = {
     args: data_story,
     parameters: {
         layout: 'fullscreen',
-        chromatic: { delay: 2000 }
+        chromatic: { delay: 4000 }
     } 
 }
 
