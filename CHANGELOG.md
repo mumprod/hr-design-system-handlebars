@@ -1,3 +1,15 @@
+# v1.67.7 (Wed May 15 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Revert to old print icon [#925](https://github.com/mumprod/hr-design-system-handlebars/pull/925) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.67.6 (Fri May 10 2024)
 
 #### 🐛 Bug Fix
