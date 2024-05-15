@@ -1,3 +1,16 @@
+# v1.67.8 (Wed May 15 2024)
+
+#### 🐛 Bug Fix
+
+- Refactoring datawrapper for webcomponent optional [#920](https://github.com/mumprod/hr-design-system-handlebars/pull/920) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.67.7 (Wed May 15 2024)
 
 #### 🐛 Bug Fix
