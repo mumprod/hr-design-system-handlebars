@@ -1,0 +1,11 @@
+{{#with this.userComments ~}}
+    <div class="{{#unless ../this.hasMoreThanOneAuthor}}{{#if ../this.authorImage.isImage}}ml-14 {{/if}}{{/unless}}mt-0.5 -mb-1">
+        <span class="relative z-30 whitespace-nowrap">
+            {{~#if (isStorybook)~}}
+                {{> components/page/components/commentlink.ssi }}               
+            {{else}}
+                {{{this.ssi.comments-pageheaderDS}}}
+            {{~/if~}}
+        </span>
+    </div>
+{{/with}}
