@@ -1,3 +1,40 @@
+# v1.67.6 (Fri May 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2970: Add 1:1 image in mobile lead story [#923](https://github.com/mumprod/hr-design-system-handlebars/pull/923) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.67.5 (Tue May 07 2024)
+
+#### 🐛 Bug Fix
+
+- commentlink as ssi [#922](https://github.com/mumprod/hr-design-system-handlebars/pull/922) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.67.4 (Tue May 07 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3079 Print Icon austauschen [#921](https://github.com/mumprod/hr-design-system-handlebars/pull/921) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.67.3 (Thu May 02 2024)
 
 #### 🐛 Bug Fix
