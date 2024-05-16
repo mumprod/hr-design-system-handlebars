@@ -44,14 +44,14 @@ module.exports = {
 
         extend: {
             backgroundImage: {
-                'logo-footer' : 'var(--bg-logo-footer)'
+                'logo-footer': 'var(--bg-logo-footer)'
             },
             invert: {
-                'logo-footer' : 'var(--invert-logo-footer)',
+                'logo-footer': 'var(--invert-logo-footer)',
             },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
-                'logo-footer' : 'var(--rounded-logo-footer)',
+                'logo-footer': 'var(--rounded-logo-footer)',
             },
             fontSize: {
                 'xs': ['0.75rem', '1.0625rem'],
@@ -157,7 +157,7 @@ module.exports = {
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.125rem',
                 'header-sm': '7.125rem',
-                'footer-logo':'var(--height-footer-logo)',
+                'footer-logo': 'var(--height-footer-logo)',
                 'footer-logo-md': 'var(--height-footer-logo-md)',
                 'footer-logo-lg': 'var(--height-footer-logo-lg)',
             },
@@ -245,7 +245,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
-                'inherit': 'inherit', 
+                'inherit': 'inherit',
                 'blue': {
                     accented: '#eaf3fa',
                     allports: '#007899',
@@ -269,8 +269,8 @@ module.exports = {
                     turquoiseCerulian: '#007fa0',
                     linkWater: '#d3e2f4',
                     blueLuxury: '#007396',
-                    nightRider:'#2d2d2d',
-                    danube:  '#759ace',
+                    nightRider: '#2d2d2d',
+                    danube: '#759ace',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -398,6 +398,7 @@ module.exports = {
                 'button-disabled': 'var(--color-button-disabled)',
                 'button-disabled--dark': 'var(--color-button-disabled--dark)',
                 'media-button': 'var(--color-media-button)',
+                'media-button-live': 'var(--color-media-button-live)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
                 'podcast': 'var(--color-podcast)',
