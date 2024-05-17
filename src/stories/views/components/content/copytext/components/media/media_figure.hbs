@@ -1,0 +1,11 @@
+<figure class="relative {{_addClass}}" x-data="{ avStart: false }">
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
+    {{#if this.isVideo}}
+        {{#if _isLead}}
+            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true  _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true _noDelay=true ~}}
+        {{else}}
+            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true~}}
+        {{/if}}
+    {{/if}}
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
+</figure>
