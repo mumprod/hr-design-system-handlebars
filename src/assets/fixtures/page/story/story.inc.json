@@ -9,7 +9,7 @@
     "displayPageLead": {
         "isFalse": false
     },
-    "teaseritem": {
+    "teaseritemDS": {
         "@->jsoninclude": "page/story/story_images.inc.json",
         "@->contentpath": "story_image_lead",
         "@->replaceToken": [
