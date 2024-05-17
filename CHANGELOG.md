@@ -1,3 +1,15 @@
+# v1.68.1 (Fri May 17 2024)
+
+#### 🐛 Bug Fix
+
+- show lead-image in articles with lead-audio [#927](https://github.com/mumprod/hr-design-system-handlebars/pull/927) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.68.0 (Fri May 17 2024)
 
 #### 🚀 Enhancement
