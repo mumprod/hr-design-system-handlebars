@@ -1,3 +1,15 @@
+# v1.68.0 (Fri May 17 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Podcast Episode Page uses [#926](https://github.com/mumprod/hr-design-system-handlebars/pull/926) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.67.8 (Wed May 15 2024)
 
 #### 🐛 Bug Fix
