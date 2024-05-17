@@ -19,7 +19,7 @@ export const Default = {
     args: data_story,
     parameters: {
         layout: 'fullscreen',
-    } 
+    }
 }
 
 export const WithSquareImage = {
@@ -28,7 +28,7 @@ export const WithSquareImage = {
     args: data_story_with_square_image,
     parameters: {
         layout: 'fullscreen',
-    } 
+    }
 }
 
 export const WithLabel = {
@@ -37,5 +37,6 @@ export const WithLabel = {
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',
-    }  
+        chromatic: { delay: 1000 }
+    }
 }
