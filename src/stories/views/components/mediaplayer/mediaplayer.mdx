@@ -1,0 +1,35 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as MediaplayerStories from './mediaplayer.stories'
+
+<Meta of={MediaplayerStories} />
+
+# Mediaplayer
+
+## Beschreibung
+
+Die Mediaplayer-Komponente kann, abhängig von der Konfiguration, einen Video- oder einen Audio-Player erzeugen. Technische Basis
+dieser Player ist der ARD-Player. Wird sie in einem Teaser verwendet wird ein statisches Teaser-Bild mit einem Play-Button
+dem eigentlichen Player vorgeschaltet. Erst bei Klick auf den Play-Button wird der eigenliche Player geladen.
+
+## Parameter
+
+Zur Konfiguration des Players stehen die im Folgenden beschrieben Parameter zur Verfügung:
+
+<ArgsTable story="default" />
+
+## Verwendung
+
+Die Topline-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/teaser/components/teaser_topline text=topline readMore=readMore
+teaserType=teaserType}}
+```
+
+<Canvas withToolbar>
+    <Story of={MediaplayerStories.Videoplayer} />
+</Canvas>
+
+<Canvas withToolbar>
+    <Story of={MediaplayerStories.VideoplayerLive} />
+</Canvas>

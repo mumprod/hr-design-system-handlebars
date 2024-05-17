@@ -1,0 +1,52 @@
+{
+    "video":{
+        "ardPlayerConfig": {
+            "@->jsoninclude": "video/videos.inc.json",
+            "@->contentpath": "video-1"
+        },
+        "ardPlayerJsonConfig": {
+            "@->jsoninclude": "video/videos.inc.json",
+            "@->contentpath": "video-1",
+            "@->overrides": [
+                {
+                    "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "isAutoplay",
+                    "@->value": false
+                }
+            ]
+        }
+        
+    },
+    "video_livestream":{
+        "ardPlayerConfig": {
+            "@->jsoninclude": "video/videos.inc.json",
+            "@->contentpath": "video-livestream-hr-fernsehen"
+        },
+        "ardPlayerJsonConfig": {
+            "@->jsoninclude": "video/videos.inc.json",
+            "@->contentpath": "video-livestream-hr-fernsehen",
+            "@->overrides": [
+                {
+                    "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "isAutoplay",
+                    "@->value": false
+                }
+            ]
+        }
+        
+    }
+}
