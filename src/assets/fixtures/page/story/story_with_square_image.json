@@ -3,7 +3,7 @@
     "@->jsoninclude": "page/story/story.inc.json",
     "@->overrides": [
         {
-            "@->contentpath": "teaseritem",
+            "@->contentpath": "teaseritemDS",
             "@->value": {
                 "@->jsoninclude": "page/story/story_images.inc.json",
                 "@->contentpath": "story_image_lead_square",
