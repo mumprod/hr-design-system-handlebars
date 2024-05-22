@@ -1,3 +1,15 @@
+# v1.68.2 (Wed May 22 2024)
+
+#### 🐛 Bug Fix
+
+- Changing priority to Responsive Iframe [#929](https://github.com/mumprod/hr-design-system-handlebars/pull/929) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.68.1 (Fri May 17 2024)
 
 #### 🐛 Bug Fix
