@@ -1,3 +1,64 @@
+# v1.68.2 (Wed May 22 2024)
+
+#### 🐛 Bug Fix
+
+- Changing priority to Responsive Iframe [#929](https://github.com/mumprod/hr-design-system-handlebars/pull/929) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.68.1 (Fri May 17 2024)
+
+#### 🐛 Bug Fix
+
+- show lead-image in articles with lead-audio [#927](https://github.com/mumprod/hr-design-system-handlebars/pull/927) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.68.0 (Fri May 17 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Podcast Episode Page uses [#926](https://github.com/mumprod/hr-design-system-handlebars/pull/926) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.67.8 (Wed May 15 2024)
+
+#### 🐛 Bug Fix
+
+- Refactoring datawrapper for webcomponent optional [#920](https://github.com/mumprod/hr-design-system-handlebars/pull/920) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.67.7 (Wed May 15 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Revert to old print icon [#925](https://github.com/mumprod/hr-design-system-handlebars/pull/925) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.67.6 (Fri May 10 2024)
 
 #### 🐛 Bug Fix
