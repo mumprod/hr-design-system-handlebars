@@ -46,13 +46,13 @@ export const VideoplayerSettings = {
     args: { "_isTeaser": false, ...videoJson.video },
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement);
-        const playButton = await canvas.findByTitle('Wiedergabe [Leertaste]')
-        await userEvent.click(playButton);
-        //const video = await canvas.findByRole("video")
-        //await console.log("Video:", video)
-        //await userEvent.click(canvas.getByRole("video"))
-        const settingsButton = await canvas.findByTitle('Einstellungen an / aus')
-        await userEvent.click(settingsButton)
+        await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'));
+        //await console.log(await canvas.findByTitle('Pause [Leertaste oder K]'))
+        const pauseButton = canvas.getByRole('button', { name: 'Pause [Leertaste oder K]' })
+        await userEvent.keyboard('{space}')
+        //await userEvent.click(pauseButton);
+        //console.log(canvas.getByRole('button', { name: 'Pause [Leertaste oder K]' }))
+        //await userEvent.click(await canvas.findByTitle('Einstellungen an / aus'));
     },
 }
 
