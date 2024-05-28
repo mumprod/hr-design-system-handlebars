@@ -1,3 +1,15 @@
+# v1.68.3 (Tue May 28 2024)
+
+#### 🐛 Bug Fix
+
+- fixes bottom position of sharing button in mobile view [#930](https://github.com/mumprod/hr-design-system-handlebars/pull/930) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.68.2 (Wed May 22 2024)
 
 #### 🐛 Bug Fix
