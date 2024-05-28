@@ -10,7 +10,7 @@
         <div :class="{ 'grid grid-page z-110 fixed bottom-feature-box-height left-0 w-full': $store.sharingIsVisible == false}">
             <div :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
                 <div :style="($store.footerIsVisible && !$screen('lg')) && {bottom:$store.sharingBottomPos.current}" 
-                    :class="{ 'bottom-5 flex-col absolute mt-3 rounded-md': $store.sharingIsVisible == false && $store.footerIsVisible == false,
+                    :class="{ 'bottom-[19px] flex-col absolute mt-3 rounded-md': $store.sharingIsVisible == false && $store.footerIsVisible == false,
                                 'flex-col absolute mt-3' : $store.footerIsVisible == true }"
                     class="flex self-center gap-3 bg-white left-5">
                     <button 
