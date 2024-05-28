@@ -40,6 +40,7 @@ export default {
         chromatic: {
             viewports: [360, 768, 1024],
             diffThreshold: 0.3,
+            delay: 2000, 
         },
 
         layout: 'fullscreen',
@@ -85,4 +86,7 @@ export const MitArtikel = {
     render: Template3.bind({}),
     name: 'Mit Artikel',
     args: NavigationDataWithBreadcrumb,
+    parameters: {
+        chromatic: { delay: 2000 }
+    }  
 }
