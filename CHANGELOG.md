@@ -1,3 +1,15 @@
+# v1.68.4 (Tue May 28 2024)
+
+#### 🐛 Bug Fix
+
+- general line heigt 1.5 in copytext [#924](https://github.com/mumprod/hr-design-system-handlebars/pull/924) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.68.3 (Tue May 28 2024)
 
 #### 🐛 Bug Fix
