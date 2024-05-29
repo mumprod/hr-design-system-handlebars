@@ -1,3 +1,15 @@
+# v1.68.5 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Make sure that the regex in the loca helper only matches when it recognizes numbers in between opening and closing curly braces. [#931](https://github.com/mumprod/hr-design-system-handlebars/pull/931) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.68.4 (Tue May 28 2024)
 
 #### 🐛 Bug Fix
