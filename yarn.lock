@@ -6119,9 +6119,9 @@ ast-types@^0.16.1:
     tslib "^2.0.1"
 
 async-alpine@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/async-alpine/-/async-alpine-1.0.0.tgz"
-  integrity sha512-9t09H/A7+9l1hCEDR+2z73piXcROMUAt8pnAtIXedo7YLGkwfURxehpfW3F4JCpyzEWBGL26FYlQO88VV79ZFA==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/async-alpine/-/async-alpine-1.2.2.tgz#dd8a2c867c847c20b5e0500f210fd1ca2187fd15"
+  integrity sha512-WWX/CGYFVt8BztCNygoxMGxW60RBpxXl7pXf88rmed46eJ0znAONcmnYV+8XVl4K9n4bUfMRzODcenTskkB2vQ==
 
 async-done@^1.2.0, async-done@^1.2.2:
   version "1.3.2"
