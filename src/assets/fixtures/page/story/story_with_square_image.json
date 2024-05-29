@@ -1,0 +1,19 @@
+{
+
+    "@->jsoninclude": "page/story/story.inc.json",
+    "@->overrides": [
+        {
+            "@->contentpath": "teaseritemDS",
+            "@->value": {
+                "@->jsoninclude": "page/story/story_images.inc.json",
+                "@->contentpath": "story_image_lead_square",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "connichi-106"
+                    }
+        ]    
+            }
+        }
+    ]    
+}

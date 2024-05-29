@@ -52,7 +52,7 @@ export default () => ({
     },
 
     checkFooterTopForSharingBottomPos(){
-        this.$store.footerIsVisible ? this.$store.sharingBottomPos.current = window.innerHeight - document.querySelector('.js-pageFooter').getBoundingClientRect().top + 16 +'px' : null
+        this.$store.footerIsVisible ? this.$store.sharingBottomPos.current = Math.round(window.innerHeight - document.querySelector('.js-pageFooter').getBoundingClientRect().top) + 19 +'px' : null
     },
 
     //Holds the percentage of scrolled viewport

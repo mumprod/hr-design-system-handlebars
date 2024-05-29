@@ -173,39 +173,74 @@ const ExternalService = function (context) {
         removeDatapolicyBox()
         createUniqueID()
         if (iFrameConfig.noResponsiveIframe == 'true') {
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
-            noResponsiveIframe.createNoResponsiveIframe()
 
-            if (iFrameConfig.refreshContent == 'true') {
-                console.log("contentRefresher anfügen")
-                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
-                contentRefresher.createRefresher()
-            }
+             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
+             noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
+             noResponsiveIframe.createNoResponsiveIframe()
+ 
+             if (iFrameConfig.refreshContent == 'true') {
+                 console.log("contentRefresher anfügen")
+                 contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                 contentRefresher.createRefresher()
+             }
+            
         } 
         else {
-            var iframe = document.createElement('iframe')
-              //Auflösen nach Tailwind-Klassen //dataWrapper-embed
-            iframe.className = 'w-0 !min-w-full border-0'
-            iframe.setAttribute('webkitallowfullscreen', '')
-            iframe.setAttribute('mozallowfullscreen', '')
-            iframe.setAttribute('allowfullscreen', '')
-            iframe.setAttribute('scrolling', 'no')
-            iframe.setAttribute('frameborder', '0')
-            iframe.src = embedCode
-            iframe.id = 'datawrapper-chart-' + uniqueId
-            rootElement.insertBefore(iframe, null)
+            if(iFrameConfig.webcomponent == 'true') {
+                
+                // Webcomponent
+                const divTag = document.createElement('div')
+                divTag.id = 'datawrapper-chart-' + uniqueID
+                rootElement.insertBefore(divTag, null)
+                const scriptTag = document.createElement('script')
+                scriptTag.setAttribute('id', 'datawrapper-component-js')
+                scriptTag.setAttribute('type', 'text/javascript')
+                scriptTag.setAttribute('defer', 'defer')
+                scriptTag.setAttribute('src', embedCode + 'embed.js?v=1')
+                scriptTag.setAttribute('charset', 'utf-8')
+                const noScriptTag = document.createElement('noscript')
+                const imageTag = document.createElement('img')
+                imageTag.src = embedCode + 'full.png'
+                imageTag.alt = ''
+                noScriptTag.appendChild(imageTag)
+                divTag.appendChild(scriptTag)
+                divTag.appendChild(noScriptTag)
 
-            loadScript(
-                'datawrapper-js',
-                'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
-                true
-            )
-
-            if (iFrameConfig.refreshContent == 'true') {
-                console.log("contentRefresher anfügen")
-                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall)
-                contentRefresher.createRefresher()
+                if (iFrameConfig.refreshContent == 'true') {
+                    console.log("contentRefresher anfügen")
+                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, true)
+                    contentRefresher.createRefresher()
+                }
             }
+            else {
+
+                //Responsives Iframe
+                var iframe = document.createElement('iframe')
+                //Auflösen nach Tailwind-Klassen //dataWrapper-embed
+                iframe.className = 'w-0 !min-w-full border-0'
+                iframe.setAttribute('webkitallowfullscreen', '')
+                iframe.setAttribute('mozallowfullscreen', '')
+                iframe.setAttribute('allowfullscreen', '')
+                iframe.setAttribute('scrolling', 'no')
+                iframe.setAttribute('frameborder', '0')
+                iframe.src = embedCode
+                iframe.id = 'datawrapper-chart-' + uniqueId
+                rootElement.insertBefore(iframe, null)
+
+                loadScript(
+                    'datawrapper-js',
+                    'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
+                    true
+                ) 
+                if (iFrameConfig.refreshContent == 'true') {
+                    console.log("contentRefresher anfügen")
+                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                    contentRefresher.createRefresher()
+                }
+               
+            }
+           
+           
         }
     }
 
