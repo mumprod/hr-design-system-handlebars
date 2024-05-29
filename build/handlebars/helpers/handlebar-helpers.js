@@ -430,7 +430,7 @@ var helpers = {
                     const args = Array.prototype.slice.call(arguments);
                     // Extract params from arguments object. No params are present when length of arguments array is <= 2
                     let params = args.length > 2 ? args.slice(1, args.length - 1) : []
-                    const regex = /(?<property>{<%(?<propertyKey>.*?)%>})|(?<userConsent>{nuc\s(?<userConsentUrl>.*?)\snuc})|(?<param>{(?<paramKey>.*?)})/g
+                    const regex = /(?<property>{<%(?<propertyKey>.*?)%>})|(?<userConsent>{nuc\s(?<userConsentUrl>.*?)\snuc})|(?<param>{(?<paramKey>\d*?)})/g
                     const matches = loca.matchAll(regex)
                     const placeHolders = []
                     for (const match of matches) {
