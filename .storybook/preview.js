@@ -17,9 +17,9 @@ import '../src/assets/tailwind.css'
 import { CheckCSS } from 'checkcss';
 
 configureActions({
-    clearOnStoryChange: true, 
-  });
-  
+    clearOnStoryChange: true,
+});
+
 // Create CheckCSS instance
 const checkcss = new CheckCSS();
 
@@ -34,8 +34,8 @@ checkcss.onClassnameDetected = function (classname, element) {
 checkcss.onUndefinedClassname = function (classname) {
     console.log(
         `checkcss: No CSS rule for .${classname}`,
-      );
-  };
+    );
+};
 
 checkcss.scan().watch();
 
@@ -43,7 +43,7 @@ const panelInclude = setConsoleOptions({}).panelInclude;
 
 setConsoleOptions({
     panelInclude: [...panelInclude, /checkcss/],
-}); 
+});
 
 
 function loadDelayedImages() {
@@ -74,16 +74,10 @@ let eventSrcUrl = null
 
 document.addEventListener('DOMContentLoaded', function (event) {
     console.log('DOM fully loaded and parsed')
-    if (eventSrcUrl != event.srcElement.URL) {
-        eventSrcUrl = event.srcElement.URL
+    console.log('Start feature initialization')
 
-        console.log('Start feature initialization')
-
-        Initializer.run(document, loadFeature)
-        setTimeout(loadDelayedImages, 200)
-    } else {
-        console.log('second DOMContentLoaded Event was blocked!')
-    }
+    Initializer.run(document, loadFeature)
+    setTimeout(loadDelayedImages, 200)
 })
 
 /*if (process.env.NODE_ENV !== 'production') {

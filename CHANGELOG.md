@@ -1,3 +1,45 @@
+# v1.68.6 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- Try to make chromatic take screenshots of the opened modal by inserti… [#933](https://github.com/mumprod/hr-design-system-handlebars/pull/933) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### 🔩 Dependency Updates
+
+- updates async-alpine to latest version [#932](https://github.com/mumprod/hr-design-system-handlebars/pull/932) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 3
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.68.5 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Make sure that the regex in the loca helper only matches when it recognizes numbers in between opening and closing curly braces. [#931](https://github.com/mumprod/hr-design-system-handlebars/pull/931) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.68.4 (Tue May 28 2024)
+
+#### 🐛 Bug Fix
+
+- general line heigt 1.5 in copytext [#924](https://github.com/mumprod/hr-design-system-handlebars/pull/924) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.68.3 (Tue May 28 2024)
 
 #### 🐛 Bug Fix
