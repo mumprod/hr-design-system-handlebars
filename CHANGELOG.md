@@ -1,3 +1,21 @@
+# v1.68.6 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- Try to make chromatic take screenshots of the opened modal by inserti… [#933](https://github.com/mumprod/hr-design-system-handlebars/pull/933) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### 🔩 Dependency Updates
+
+- updates async-alpine to latest version [#932](https://github.com/mumprod/hr-design-system-handlebars/pull/932) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 3
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.68.5 (Wed May 29 2024)
 
 #### 🐛 Bug Fix
