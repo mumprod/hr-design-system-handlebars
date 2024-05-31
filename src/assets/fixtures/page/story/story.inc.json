@@ -90,6 +90,14 @@
         {
             "url": "/Darmstadt-url",
             "title": "Darmstadt"
+        },
+        {
+            "url": "/Kassel-url",
+            "title": "Kassel"
+        },
+        {
+            "url": "/Hanau-url",
+            "title": "Hanau"
         }                
     ],
     "topictags": [
@@ -104,6 +112,22 @@
         {
             "url": "/Landtagswahl-url",
             "title": "Landtagswahl"
+        },
+        {
+            "url": "/Kriminalität-url",
+            "title": "Kriminalität"
+        },
+        {
+            "url": "/Tiere-url",
+            "title": "Tiere"
+        },
+        {
+            "url": "/Umwelt-url",
+            "title": "Umwelt"
+        },
+        {
+            "url": "/Gesundheit-url",
+            "title": "Gesundheit"
         }                        
     ],
     "socialSharing": {
@@ -114,7 +138,7 @@
     },
     "programReference": {
         "hasReference": true,
-        "name": "Program-name",
+        "name": "hessenschau",
         "link": {
             "url": "/Program-url",
             "isTargetBlank": true   
