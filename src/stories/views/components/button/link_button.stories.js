@@ -289,6 +289,28 @@ export const ButtonSecondary = {
     },
 }
 
+export const ButtonSecondaryWhite = {
+    render: buttonWithLabelTemplate.bind({}),
+    name: 'Button - Secondary auf weiß',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+    },
+
+    args: {
+        _size: 'lg',
+        _label: 'Secondary',
+        _variant: 'secondary',
+        _onWhite: true,
+    },
+}
+
 export const ButtonTertiary = {
     render: buttonWithLabelTemplate.bind({}),
     name: 'Button - Tertiary',

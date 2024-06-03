@@ -1,0 +1,17 @@
+<div class="mt-12 md:mt-14">
+    {{~#with this.programReference~}}
+        {{~#if this.hasReference~}}
+            <div class="clear-both mb-8 md:mb-10">
+                {{> components/program_reference/program_reference _isArticle=../_isArticle}}
+            </div>
+        {{~/if~}}
+    {{~/with~}}    
+    {{#unless _webview}}
+        {{~#with this.geotag}}          
+            {{> components/geoTag/geotag_collection }}
+        {{/with~}}
+        {{#with this.topictags}}
+            {{> components/topictag/topictag_collection }}
+        {{/with}}
+    {{/unless}}
+</div>

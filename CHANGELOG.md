@@ -1,3 +1,15 @@
+# v1.69.0 (Fri May 31 2024)
+
+#### 🚀 Enhancement
+
+- add appendix [#934](https://github.com/mumprod/hr-design-system-handlebars/pull/934) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.68.6 (Wed May 29 2024)
 
 #### 🐛 Bug Fix
