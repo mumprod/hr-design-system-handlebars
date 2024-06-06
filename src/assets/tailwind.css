@@ -7,42 +7,42 @@
 /*! purgecss start ignore */
 :root,
 [data-theme='default'] {
-    --breakpoint-xs:  theme(screens.xs);
+    --breakpoint-xs: theme(screens.xs);
     --breakpoint-sm480: theme(screens.sm480);
     --breakpoint-sm: theme(screens.sm);
-    --breakpoint-md: theme(screens.md); 
+    --breakpoint-md: theme(screens.md);
     --breakpoint-lg: theme(screens.lg);
-    
+
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
     --color-highlight-1-dark: theme('colors.blue.nightRider');
 
     /* Text */
     --color-standard-text: theme('colors.black.DEFAULT');
-    --color-standard-text-dark: #F0F0F0;
+    --color-standard-text-dark: #f0f0f0;
     /* Navigation Hintergrund */
     --color-navigation-bg: #fff;
-    --color-brandnavigation-bg: #fff; 
+    --color-brandnavigation-bg: #fff;
     /* Navigation Icons */
     --color-navigation-icons: theme('colors.black.DEFAULT');
     /* Navigation Text */
     --color-navigation-text: theme('colors.black.DEFAULT');
     --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
-    --color-brandnavigation-border-color: theme('colors.blue.congress'); 
+    --color-brandnavigation-border-color: theme('colors.blue.congress');
     --color-brandnav-pseudo: theme('colors.blue.congress');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
-    --color-servicenavigation-border-color:  #fff;
+    --color-servicenavigation-border-color: #fff;
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Suchfeld Header und Footer */
-    --search-border-color-desktop:  theme('colors.black.DEFAULT');
-    --search-border-color-mobile:  theme('colors.black.DEFAULT');
-    --color-search-footer-text:  theme('colors.black.DEFAULT');
+    --search-border-color-desktop: theme('colors.black.DEFAULT');
+    --search-border-color-mobile: theme('colors.black.DEFAULT');
+    --color-search-footer-text: theme('colors.black.DEFAULT');
     --search-icon-color: theme('colors.black.DEFAULT');
 
     /* Content navi button border color for dark mode */
@@ -52,7 +52,7 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 10px;
-    --logo-padding-bottom-md: 10px;    
+    --logo-padding-bottom-md: 10px;
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
 
@@ -62,16 +62,16 @@
     --color-footer-heading: theme('colors.black.DEFAULT');
     --color-footer-border: red;
     --color-footer-bg: white;
-    
+
     /* Footer padding : 132px when a radioplayer is used */
     --footer-padding-bottom: 16px;
 
     /*Hauptmenü*/
     --color-top-topic-background: theme('colors.blue.linkWater');
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
+    --color-label-media: theme('colors.blue.science.hex');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.spicyCarrot.hex');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
@@ -85,7 +85,7 @@
     /* Download */
     --color-label-download: theme('colors.gray.scorpion');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.deepCerulean');
+    --color-label-pm: theme('colors.blue.deepCerulean.hex');
     /* Sendungsdokument */
     --color-label-program: theme('colors.blue.pacificBlue');
     /* Kurzmeldung */
@@ -101,30 +101,32 @@
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.deepCerulean');
-    --color-link-dark: theme('colors.blue.deepCerulean');
+    --color-link: theme('colors.blue.deepCerulean.hex');
+    --color-link-dark: theme('colors.blue.deepCerulean.hex');
     /* Stage */
     --color-stage-text-box: 0 110 183;
     --color-stage-text: theme('colors.white.DEFAULT');
-    --color-stage-primary: theme('colors.blue.deepCerulean');
+    --color-stage-primary: theme('colors.blue.deepCerulean.hex');
     --color-stage-link: var('--color-link');
     /* geoTag */
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-link: theme('colors.blue.science.hex');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-hollow: theme('colors.blue.science');
+    --color-button-hollow: theme('colors.blue.science.hex');
     /* Media-Button */
-    --color-media-button: theme('colors.blue.jellyBean');
+    --color-media-button: theme('colors.blue.jellyBean.hex');
+    /* Media-Button Live */
+    --color-media-button-live: theme('colors.orange.spicyCarrot.hex');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.science');
-    --color-podcast-dark : var(--color-highlight-1-dark);
+    --color-podcast: theme('colors.blue.science.hex');
+    --color-podcast-dark: var(--color-highlight-1-dark);
     --color-podcast-text: var(--color-link);
     --color-podcast-text-dark: var(---color-standard-text-dark);
     /* Byline */
@@ -139,16 +141,15 @@
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot.hex');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 
-    --color-ticker-teaser-headline-underline : theme('colors.white.DEFAULT');
-    --color-toggle-confirmation: #2c7e13; 
+    --color-ticker-teaser-headline-underline: theme('colors.white.DEFAULT');
+    --color-toggle-confirmation: #2c7e13;
     --color-toggle-default: #797979;
 
-    
     --banner__background-color: theme('colors.white.DEFAULT');
-    --banner__background-color--with-image:theme('colors.transparent');
+    --banner__background-color--with-image: theme('colors.transparent');
     --banner-overlay_background-color: theme('colors.white.DEFAULT');
     --banner-overlay__background-color--rgba: rgba(--banner-overlay_background-color, 0.85);
     --banner-topline__color: theme('colors.black.DEFAULT');
@@ -163,19 +164,35 @@
     --structure-nav-text-mobile: var(--color-primary-ds);
 
     --feature-box-height: 0;
+
+    .ardplayer {
+        --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
+        --ardplayer-color-primary-live-transparent-30: rgba(
+            theme('colors.orange.spicyCarrot.rgb') / 70%
+        );
+
+        &.ardplayer-state-live {
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+                    color: var(--ardplayer-color-lightest);
+                }
+            }
+        }
+    }
 }
 
 [data-theme='hessenschau'] {
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.blue.congress');
 
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
-    --color-navigation-bg:theme('colors.blue.congress');
+    --color-navigation-bg: theme('colors.blue.congress');
     /* Navigation Icons */
     --color-navigation-icons: #fff;
     /* Navigation Text */
@@ -190,21 +207,19 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
+    --logo-padding-bottom-md: 6px;
     --logo-padding-top-lg: 8px;
     --logo-padding-bottom-lg: 8px;
 
     /* Footer Color Options */
     --invert-logo-footer: 0;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: white;
+    --color-footer-heading: white;
     --color-footer-border: #accfe9;
     --color-footer-bg: #606060;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.science');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.science.hex');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
@@ -218,17 +233,17 @@
     /* Download */
     --color-label-download: theme('colors.gray.scorpion');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.deepCerulean');
+    --color-label-pm: theme('colors.blue.deepCerulean.hex');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.blue.science');
+    --color-topline: theme('colors.blue.science.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.science');
+    --color-link: theme('colors.blue.science.hex');
     --color-link-dark: #199bff;
     /*Stage */
     --color-stage-text-box: 67 61 55;
@@ -238,23 +253,23 @@
     /* geoTag */
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.science');
+    --color-cluster-teaser-link: theme('colors.blue.science.hex');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
-    --color-button: theme('colors.blue.science');
+    --color-button: theme('colors.blue.science.hex');
     --color-button--dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     --color-button-disabled: theme('colors.gray.lightGray');
     --color-button-disabled--dark: theme('colors.gray.boulder');
     /* Media-Button */
-    --color-media-button: theme('colors.blue.science');
+    --color-media-button: theme('colors.blue.science.hex');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.science');
+    --color-podcast: theme('colors.blue.science.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.chelseaGem');
     /* Font */
@@ -267,31 +282,58 @@
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot.hex');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-headline : theme('colors.white.DEFAULT');
+    --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.science.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.science.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+        --ardplayer-color-tertiary-base: theme('colors.blue.congress');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.congress');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.congress');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.congress');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.congress');
+    }
 }
 
 [data-theme='hr-fernsehen'] {
-    --color-primary-ds: theme('colors.blue.blueLuxury'); 
+    --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
-    
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury.hex');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury.hex');
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
-   
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --color-navigation-border-color: theme('colors.blue.blueLuxury.hex');
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury.hex');
+
+    --color-footer-border: theme('colors.blue.blueLuxury.hex');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.deepCerulean');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.deepCerulean.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -307,22 +349,22 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.blue.blueLuxury'); 
+    --color-topline: theme('colors.blue.blueLuxury.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.blueLuxury'); 
-    --color-link-dark: theme('colors.blue.blueLuxury'); 
+    --color-link: theme('colors.blue.blueLuxury.hex');
+    --color-link-dark: theme('colors.blue.blueLuxury.hex');
     /* Stage */
     --color-stage-text-box: 234 237 237;
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-primary: theme('colors.purple.pompadour');
     --color-stage-link: var(--color-link);
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.blueLuxury'); 
+    --color-cluster-teaser-link: theme('colors.blue.blueLuxury.hex');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT'); 
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -333,43 +375,74 @@
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.blueLuxury'); 
+    --color-podcast: theme('colors.blue.blueLuxury.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.blue.allports');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.blueLuxury.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
+        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+
+                .ardplayer-icon {
+                    color: theme('colors.blue.blueLuxury.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+    }
 }
 
 [data-theme='hr-inforadio'] {
-    --color-primary-ds: theme('colors.blue.jellyBean');
+    --color-primary-ds: theme('colors.blue.jellyBean.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.aqua');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.astronautBlue'); 
-    --color-servicenavigation-border-color:  theme('colors.blue.astronautBlue'); 
+    --color-navigation-border-color: theme('colors.blue.astronautBlue');
+    --color-servicenavigation-border-color: theme('colors.blue.astronautBlue');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 1px;
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.astronautBlue'); 
+    --color-brandnavigation-border-color: theme('colors.blue.astronautBlue');
     --color-brandnav-pseudo: theme('colors.blue.astronautBlue');
-    
-    --color-footer-border:  theme('colors.blue.astronautBlue');
+
+    --color-footer-border: theme('colors.blue.astronautBlue');
 
     --footer-padding-bottom: 132px;
-    
+
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.jellyBean');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.jellyBean.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.pink.rose');
+    --color-label-program: theme('colors.pink.rose.hex');
     /* Download */
     --color-label-download: theme('colors.gray.scorpion');
     /* Event */
@@ -379,12 +452,12 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.blue.jellyBean');
+    --color-topline: theme('colors.blue.jellyBean.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.jellyBean');
-    --color-link-dark: theme('colors.blue.jellyBean');
+    --color-link: theme('colors.blue.jellyBean.hex');
+    --color-link-dark: theme('colors.blue.jellyBean.hex');
     /* Stage */
     --color-stage-text-box: 0 55 93;
     --color-stage-primary: theme('colors.blue.astronautBlue');
@@ -404,7 +477,7 @@
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.jellyBean');
+    --color-podcast: theme('colors.blue.jellyBean.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.red.lipstick');
     /* Font */
@@ -414,13 +487,45 @@
     --structure-nav-background: theme('colors.blue.astronautBlue');
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.jellyBean.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.jellyBean.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
+        --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.jellyBean.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+    }
 }
 
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.gray.scorpion');
@@ -435,19 +540,17 @@
     --logo-padding-top: 8px;
     --logo-padding-bottom: 8px;
     --logo-padding-top-md: 8px;
-    --logo-padding-bottom-md: 8px;    
+    --logo-padding-bottom-md: 8px;
     --logo-padding-top-lg: 12px;
     --logo-padding-bottom-lg: 12px;
 
-    --color-footer-bg: theme('colors.gray.scorpion'); 
+    --color-footer-bg: theme('colors.gray.scorpion');
     --color-footer-border: #276b9e;
-    --color-footer-text: white; 
-    --color-footer-heading: white; 
+    --color-footer-text: white;
+    --color-footer-heading: white;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.deepCerulean');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.deepCerulean.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -459,70 +562,114 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.deepCerulean');
+    --color-label-pm: theme('colors.blue.deepCerulean.hex');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
-    --color-eventcalendar-primary: theme('colors.blue.deepCerulean');
+    --color-eventcalendar-primary: theme('colors.blue.deepCerulean.hex');
     /* Dachzeile */
-    --color-topline: theme('colors.blue.deepCerulean');
+    --color-topline: theme('colors.blue.deepCerulean.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.deepCerulean');
-    --color-link-dark: theme('colors.blue.deepCerulean');
+    --color-link: theme('colors.blue.deepCerulean.hex');
+    --color-link-dark: theme('colors.blue.deepCerulean.hex');
     /* Stage */
     --color-stage-text-box: 0 110 183;
-    --color-stage-primary: theme('colors.blue.deepCerulean');
+    --color-stage-primary: theme('colors.blue.deepCerulean.hex');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.blue.deepCerulean');
+    --color-cluster-teaser-link: theme('colors.blue.deepCerulean.hex');
     --color-cluster-teaser-headline: theme('colors.blue.congress');
     /* Button */
-    --color-button: theme('colors.blue.deepCerulean');
+    --color-button: theme('colors.blue.deepCerulean.hex');
     --color-button--dark: theme('colors.blue.congress');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
-    --color-focus-state: theme('colors.blue.deepCerulean');
+    --color-focus-state: theme('colors.blue.deepCerulean.hex');
     /* Content-Nav */
-    --color-content-nav: theme('colors.blue.deepCerulean');
+    --color-content-nav: theme('colors.blue.deepCerulean.hex');
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.deepCerulean');
+    --color-podcast: theme('colors.blue.deepCerulean.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.chelseaGem');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
     /* Structure Navigation */
-    --structure-nav-background: theme('colors.blue.deepCerulean');
+    --structure-nav-background: theme('colors.blue.deepCerulean.hex');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.deepCerulean.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.deepCerulean.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+        --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.deepCerulean.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+    }
 }
 
 [data-theme='hr-werbung'] {
-    --color-primary-ds: theme('colors.blue.blueLuxury'); 
+    --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-brandnav-pseudo: theme('colors.blue.blueLuxury'); 
+    --color-brandnavigation-border-color: theme('colors.blue.blueLuxury.hex');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury.hex');
 
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueLuxury'); 
-    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury'); 
+    --color-navigation-border-color: theme('colors.blue.blueLuxury.hex');
+    --color-servicenavigation-border-color: theme('colors.blue.blueLuxury.hex');
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on werbung */
-    --border-navigation-border-image: linear-gradient(to right, #dda91e 0%, #dda91e 17%, #c32728 17%, #c32728 34%, #bf0171 34%, #bf0171 51%, #003a5c 51%, #003a5c 68%,#000206 68%,#000206 84%,#007a9f 84%, #007a9f 100%);
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --border-navigation-border-image: linear-gradient(
+        to right,
+        #dda91e 0%,
+        #dda91e 17%,
+        #c32728 17%,
+        #c32728 34%,
+        #bf0171 34%,
+        #bf0171 51%,
+        #003a5c 51%,
+        #003a5c 68%,
+        #000206 68%,
+        #000206 84%,
+        #007a9f 84%,
+        #007a9f 100%
+    );
+    --color-footer-border: theme('colors.blue.blueLuxury.hex');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.blueLuxury'); 
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.blueLuxury.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -534,13 +681,13 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Pressemitteilungen */
-    --color-label-pm: theme('colors.blue.blueLuxury'); 
+    --color-label-pm: theme('colors.blue.blueLuxury.hex');
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
-    --color-eventcalendar-primary: theme('colors.blue.blueLuxury'); 
+    --color-eventcalendar-primary: theme('colors.blue.blueLuxury.hex');
     /* Dachzeile */
-    --color-topline: theme('colors.blue.blueLuxury'); 
+    --color-topline: theme('colors.blue.blueLuxury.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
@@ -552,10 +699,10 @@
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: var(--color-primary-ds);
-    --color-cluster-teaser-headline: theme('colors.blue.blueLuxury'); 
+    --color-cluster-teaser-headline: theme('colors.blue.blueLuxury.hex');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT'); 
-    --color-button--dark: theme('colors.blue.blueLuxury'); 
+    --color-button: theme('colors.black.DEFAULT');
+    --color-button--dark: theme('colors.blue.blueLuxury.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -565,19 +712,51 @@
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.blue.blueLuxury'); 
+    --color-podcast: theme('colors.blue.blueLuxury.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.chelseaGem');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.blueLuxury.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.blueLuxury.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+    }
 }
 
 [data-theme='hr-sinfonieorchester'] {
     --color-primary-ds: theme('colors.red.burntUmber');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
@@ -591,16 +770,14 @@
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 4px;
-    --logo-padding-bottom-md: 4px;    
+    --logo-padding-bottom-md: 4px;
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
-    --color-footer-border: #8d2725; 
+    --color-footer-border: #8d2725;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.red.burntUmber');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -616,18 +793,18 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.red.wellRead');
+    --color-topline: theme('colors.red.wellRead.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.red.wellRead');
-    --color-link-dark: theme('colors.red.wellRead');
+    --color-link: theme('colors.red.wellRead.hex');
+    --color-link-dark: theme('colors.red.wellRead.hex');
     /* Stage */
     --color-stage-text-box: 141 39 37;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.red.wellRead');
+    --color-cluster-teaser-link: theme('colors.red.wellRead.hex');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
     --color-button: theme('colors.black.DEFAULT');
@@ -635,45 +812,73 @@
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
-    --color-media-button: theme('colors.red.wellRead');
+    --color-media-button: theme('colors.red.wellRead.hex');
     /* States */
-    --color-focus-state: theme('colors.red.wellRead');
+    --color-focus-state: theme('colors.red.wellRead.hex');
     /* Content-Nav */
-    --color-content-nav: theme('colors.red.wellRead');
+    --color-content-nav: theme('colors.red.wellRead.hex');
     /* Podcast-Player */
-    --color-podcast: theme('colors.red.wellRead');
+    --color-podcast: theme('colors.red.wellRead.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.black.DEFAULT');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.wellRead.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+        --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.red.wellRead.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+    }
 }
 
 [data-theme='hr-bigband'] {
     --color-primary-ds: theme('colors.blue.blueStone');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.blackSqueeze');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color:  theme('colors.blue.blueStone');
+    --color-brandnavigation-border-color: theme('colors.blue.blueStone');
     --color-brandnav-pseudo: theme('colors.blue.blueStone');
     /* Service/Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueStone'); 
+    --color-navigation-border-color: theme('colors.blue.blueStone');
     --color-servicenavigation-border-color: theme('colors.blue.blueStone');
 
     /* Logo-Container Padding */
     --logo-padding-top-md: 4px;
-    --logo-padding-bottom-md: 4px;    
+    --logo-padding-bottom-md: 4px;
     --logo-padding-top-lg: 4px;
     --logo-padding-bottom-lg: 4px;
 
-    --color-footer-border: theme('colors.blue.blueLuxury'); 
+    --color-footer-border: theme('colors.blue.blueLuxury.hex');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.blueStone');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.yellow.hokeyPokey');
     /* Eilmeldung */
@@ -703,7 +908,7 @@
     --color-cluster-teaser-link: theme('colors.green.teal');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button:  theme('colors.black.DEFAULT');
+    --color-button: theme('colors.black.DEFAULT');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -720,22 +925,52 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.teal.DEFAULT.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.teal.DEFAULT.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+        --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.teal.DEFAULT.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+    }
 }
 
 [data-theme='hr'] {
-    --color-primary-ds: theme('colors.blue.blueLuxury');
+    --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007396;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
-    --color-navigation-bg: white; 
+    --color-navigation-bg: white;
 
     /* Brandnavigation Border and :before Color */
     --color-brandnavigation-border-color: theme('colors.gray.darker');
-    --color-brandnav-pseudo: theme('colors.blue.blueLuxury');
+    --color-brandnav-pseudo: theme('colors.blue.blueLuxury.hex');
     /* Sectionnavigation Border-Color */
-    --color-navigation-border-color: theme('colors.blue.blueLuxury');
+    --color-navigation-border-color: theme('colors.blue.blueLuxury.hex');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 4px;
     --color-servicenavigation-border-color: theme('colors.gray.darker');
@@ -743,19 +978,17 @@
     --logo-padding-top: 4px;
     --logo-padding-bottom: 8px;
     --logo-padding-top-md: 10px;
-    --logo-padding-bottom-md: 10px;    
+    --logo-padding-bottom-md: 10px;
     --logo-padding-top-lg: 10px;
     --logo-padding-bottom-lg: 10px;
     /* Footer Color Options */
     --color-footer-text: theme('colors.gray.darker');
     --color-footer-heading: theme('colors.gray.darker');
     --color-footer-bg: white;
-    --color-footer-border: theme('colors.blue.blueLuxury');
+    --color-footer-border: theme('colors.blue.blueLuxury.hex');
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.blue.blueLuxury');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.blue.blueLuxury.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Eilmeldung */
@@ -788,12 +1021,12 @@
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
     --color-button: theme('colors.gray.darker');
-    --color-button--dark: theme('colors.blue.blueLuxury');
+    --color-button--dark: theme('colors.blue.blueLuxury.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.gray.lightGray');
     --color-button-disabled: theme('colors.gray.lightGray');
     --color-button-disabled--dark: theme('colors.gray.boulder');
- 
+
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
     /* States */
@@ -807,14 +1040,45 @@
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.blueLuxury.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.blueLuxury.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+    }
 }
 
 [data-theme='hr1'] {
     --color-primary-ds: theme('colors.yellow.corn');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.floral');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
-    
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     --color-navigation-border-color: theme('colors.yellow.corn');
     --color-servicenavigation-border-color: theme('colors.yellow.corn');
@@ -830,11 +1094,9 @@
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.yellow.olive');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.yellow.olive.hex');
     /* Kommentar */
-    --color-label-comment: theme('colors.pink.rose');
+    --color-label-comment: theme('colors.pink.rose.hex');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.purple.disco');
     /* Sendung */
@@ -850,12 +1112,12 @@
     /* Eventkalender */
     --color-eventcalendar-primary: theme('colors.blue.turquoiseCerulian');
     /* Dachzeile */
-    --color-topline: theme('colors.yellow.olive');
+    --color-topline: theme('colors.yellow.olive.hex');
     /* Subline */
-    --color-subline: theme('colors.yellow.olive');
+    --color-subline: theme('colors.yellow.olive.hex');
     /* Link */
-    --color-link: theme('colors.yellow.olive');
-    --color-link-dark: theme('colors.yellow.olive');
+    --color-link: theme('colors.yellow.olive.hex');
+    --color-link-dark: theme('colors.yellow.olive.hex');
     /* Stage */
     --color-stage-text-box: 67 61 55;
     --color-stage-primary: theme('colors.yellow.corn');
@@ -869,13 +1131,13 @@
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
-    --color-media-button: theme('colors.yellow.olive');
+    --color-media-button: theme('colors.yellow.olive.hex');
     /* States */
-    --color-focus-state: theme('colors.yellow.olive');
+    --color-focus-state: theme('colors.yellow.olive.hex');
     /* Content-Nav */
-    --color-content-nav: theme('colors.yellow.olive');
+    --color-content-nav: theme('colors.yellow.olive.hex');
     /* Podcast-Player */
-    --color-podcast: theme('colors.yellow.olive');
+    --color-podcast: theme('colors.yellow.olive.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.green.teal');
     /* Font */
@@ -884,28 +1146,58 @@
     /* Structure Nav */
     --structure-nav-background: var(--color-primary-ds);
     --structure-nav-text: #433d37;
-    --structure-nav-text-mobile: theme('colors.yellow.olive');
+    --structure-nav-text-mobile: theme('colors.yellow.olive.hex');
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.yellow.olive.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.yellow.olive.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.white.floral');
+        --ardplayer-color-tertiary-base: theme('colors.yellow.olive.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.yellow.olive.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+    }
 }
 
 [data-theme='hr2'] {
     --color-primary-ds: theme('colors.orange.clementine');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
     --color-brandnav-pseudo: theme('colors.orange.clementine');
-    --color-navigation-border-color:theme('colors.orange.clementine');
-    --color-servicenavigation-border-color:theme('colors.orange.clementine');
+    --color-navigation-border-color: theme('colors.orange.clementine');
+    --color-servicenavigation-border-color: theme('colors.orange.clementine');
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     /* Sectionnavigation Border bottom Width */
     --border-navigation-border-width: 8px;
-   
+
     --color-footer-border: theme('colors.orange.clementine');
 
     --footer-padding-bottom: 132px;
@@ -913,13 +1205,13 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.pink.rose');
+    --color-label-live: theme('colors.pink.rose.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.red.paprika');
+    --color-label-program: theme('colors.red.paprika.hex');
     /* Download */
     --color-label-download: theme('colors.gray.scorpion');
     /* Event */
@@ -927,60 +1219,94 @@
     /* Kurzmeldung */
     --color-label-kurzmeldung: theme('colors.blue.tarawera');
     /* Eventkalender */
-    --color-eventcalendar-primary: theme('colors.red.paprika');
+    --color-eventcalendar-primary: theme('colors.red.paprika.hex');
     /* Dachzeile */
-    --color-topline: theme('colors.red.paprika');
+    --color-topline: theme('colors.red.paprika.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.red.paprika');
-    --color-link-dark: theme('colors.red.paprika');
+    --color-link: theme('colors.red.paprika.hex');
+    --color-link-dark: theme('colors.red.paprika.hex');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: var(--color-primary-ds);
     --color-stage-text: theme('colors.black.DEFAULT');
     --color-stage-link: var(--color-link);
     /* Cluster-Teaser */
-    --color-cluster-teaser-link: theme('colors.red.paprika');
+    --color-cluster-teaser-link: theme('colors.red.paprika.hex');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
     --color-button: #433d37;
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button-inverted--dark:  #433d37;
+    --color-button-inverted--dark: #433d37;
     /* Media-Button */
-    --color-media-button: theme('colors.orange.burntOrange');
+    --color-media-button: theme('colors.red.paprika.hex');
+    /* Media-Button Live */
+    --color-media-button-live: theme('colors.pink.rose.hex');
     /* States */
-    --color-focus-state: theme('colors.red.paprika');
+    --color-focus-state: theme('colors.red.paprika.hex');
     /* Content-Nav */
-    --color-content-nav: theme('colors.red.paprika');
+    --color-content-nav: theme('colors.red.paprika.hex');
     /* Podcast-Player */
-    --color-podcast: theme('colors.red.paprika');
+    --color-podcast: theme('colors.red.paprika.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.orange.oregon');
     /* Font */
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
     /* ticker-Teaser*/
-    --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
+    --color-ticker-teaser-timeline-score: theme('colors.pink.rose.hex');
 
-    --search-border-color-desktop:  var(--color-navigation-icons);
-    
+    --search-border-color-desktop: var(--color-navigation-icons);
+
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.paprika.rgb') / 70%);
+        --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+        --ardplayer-color-primary-live-transparent-30: rgba(theme('colors.pink.rose.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+        --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.red.paprika.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+    }
 }
 
 [data-theme='hr3'] {
-    --color-primary-ds: theme('colors.red.monza');
+    --color-primary-ds: theme('colors.red.monza.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.mercury');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
-    --color-brandnavigation-border-color: theme('colors.red.monza');
-    --color-brandnav-pseudo: theme('colors.red.monza'); 
+    --color-brandnavigation-border-color: theme('colors.red.monza.hex');
+    --color-brandnav-pseudo: theme('colors.red.monza.hex');
     /* Service/Sectionnavigation Border Color */
-    --color-navigation-border-color: theme('colors.red.monza');
-    --color-servicenavigation-border-color: theme('colors.red.monza');
+    --color-navigation-border-color: theme('colors.red.monza.hex');
+    --color-servicenavigation-border-color: theme('colors.red.monza.hex');
     /* Sectionnavigation Border Bottom Width */
     --border-navigation-border-width: 8px;
 
@@ -991,9 +1317,7 @@
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
-    --color-label-media: theme('colors.red.monza');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-media: theme('colors.red.monza.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.pacifica');
     /* Eilmeldung */
@@ -1047,13 +1371,43 @@
     --search-border-color-desktop: theme('colors.gray.scorpion');
 
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.red.monza.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.monza.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
+        --ardplayer-color-tertiary-base: theme('colors.red.monza.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.red.monza.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.red.monza.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.red.monza.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.red.monza.hex');
+    }
 }
 
 [data-theme='hr4'] {
     --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.azureish');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.pink.fuchsie');
@@ -1071,8 +1425,6 @@
 
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.green.genoa');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.dodgerBlue');
     /* Eilmeldung */
@@ -1090,12 +1442,12 @@
     /* Eventkalender */
     --color-eventcalendar-primary: var(--color-primary-ds);
     /* Dachzeile */
-    --color-topline: theme('colors.green.eden');
+    --color-topline: theme('colors.green.eden.hex');
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.green.eden');
-    --color-link-dark: theme('colors.green.eden');
+    --color-link: theme('colors.green.eden.hex');
+    --color-link-dark: theme('colors.green.eden.hex');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.green.genoa');
@@ -1107,16 +1459,16 @@
     /* Button */
     --color-button: theme('colors.black.DEFAULT');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button--dark: theme('colors.green.eden');
+    --color-button--dark: theme('colors.green.eden.hex');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
-    --color-media-button: theme('colors.green.eden');
+    --color-media-button: theme('colors.green.eden.hex');
     /* States */
     --color-focus-state: var(--color-link);
     /* Content-Nav */
     --color-content-nav: var(--color-primary-ds);
     /* Podcast-Player */
-    --color-podcast: theme('colors.green.eden');
+    --color-podcast: theme('colors.green.eden.hex');
     --color-podcast-text: var(--color-link);
     --color-podcast-highlight: theme('colors.pink.fuchsie');
     /* Font */
@@ -1127,41 +1479,83 @@
     /* Structure Navigation */
     --structure-nav-background: theme('colors.green.genoa');
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.green.eden.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.green.eden.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
+        --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.green.eden.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.green.eden.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.green.eden.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.green.eden.hex');
+    }
 }
 
 [data-theme='you-fm'] {
     --color-primary-ds: #007179 /* #c20016 */;
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.platinum');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: #000;
-    --color-brandnav-pseudo: #007179; 
+    --color-brandnav-pseudo: #007179;
     /* Service/Sectionnavigation Border Color*/
-    --color-navigation-border-color:#000;
-    --color-servicenavigation-border-color:#000;
+    --color-navigation-border-color: #000;
+    --color-servicenavigation-border-color: #000;
     /* Sectionnavigation Border Bottom Width*/
     --border-navigation-border-width: 11px;
     /* The Fancy special border on youfm */
-    --border-navigation-border-image: linear-gradient(to right, #ec6a19 0%, #ec6a19 17%, #00aec5 17%, #00aec5 34%, #00a781 34%, #00a781 51%, #fcbf1f 51%, #fcbf1f 68%, #e51353 68%, #e51353 85%, #8d3b8e 85%, #8d3b8e 100%);
-   
+    --border-navigation-border-image: linear-gradient(
+        to right,
+        #ec6a19 0%,
+        #ec6a19 17%,
+        #00aec5 17%,
+        #00aec5 34%,
+        #00a781 34%,
+        #00a781 51%,
+        #fcbf1f 51%,
+        #fcbf1f 68%,
+        #e51353 68%,
+        #e51353 85%,
+        #8d3b8e 85%,
+        #8d3b8e 100%
+    );
+
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
     --logo-padding-bottom: 6px;
     --logo-padding-top-md: 6px;
-    --logo-padding-bottom-md: 6px;    
+    --logo-padding-bottom-md: 6px;
     --logo-padding-top-lg: 6px;
     --logo-padding-bottom-lg: 6px;
 
     --color-footer-border: #007ea1;
-    
+
     --footer-padding-bottom: 132px;
 
     /* Medieninhalte, Video, Audio, Bildergalerien */
     --color-label-media: theme('colors.black.DEFAULT');
-    /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -1181,8 +1575,8 @@
     /* Subline */
     --color-subline: var(--color-topline);
     /* Link */
-    --color-link: theme('colors.blue.sea');
-    --color-link-dark: theme('colors.blue.sea');
+    --color-link: theme('colors.blue.sea.hex');
+    --color-link-dark: theme('colors.blue.sea.hex');
     /* Stage */
     --color-stage-text-box: 255 255 255;
     --color-stage-primary: theme('colors.yellow.goldenSand');
@@ -1210,12 +1604,42 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
 
-    --search-border-color-desktop:  var(--color-navigation-icons);
+    --search-border-color-desktop: var(--color-navigation-icons);
     /* Structure Navigation */
     --structure-nav-background: theme('colors.yellow.goldenSand');
     --structure-nav-text: theme('colors.black.DEFAULT');
     --structure-nav-text-mobile: theme('colors.blue.lightCerulean');
     --feature-box-height: 96px;
+
+    .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
+        --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        .ardplayer-controlbar {
+            .ardplayer-controlbar-hover {
+                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+                color: var(--ardplayer-color-lightest);
+            }
+        }
+
+        .ardplayer-bottom-sheet-container {
+            --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+
+            .ardplayer-option:hover {
+                color: theme('colors.white.DEFAULT');
+                .ardplayer-icon {
+                    color: theme('colors.blue.sea.hex');
+                }
+            }
+        }
+    }
+
+    .ardplayer.ardplayer-state-audio {
+        --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+    }
 }
 
 /*! purgecss end ignore */

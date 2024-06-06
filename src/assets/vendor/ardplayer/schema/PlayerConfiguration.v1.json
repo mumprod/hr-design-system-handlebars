@@ -1,0 +1,896 @@
+{
+    "type": "object",
+    "title": "PlayerConfiguration",
+    "x-examples": {},
+    "properties": {
+        "generic": {
+            "type": "object",
+            "description": "Generisches Objekt, dessen Eigenschaften für alle Plattformen verwendet werden.",
+            "properties": {
+                "isShowSubtitleAtStart": {
+                    "type": "boolean",
+                    "description": "Default: false. Erzwingt die Darstellung der Untertitel bei Clipstart."
+                },
+                "isTimeRemainingDisplay ": {
+                    "type": "boolean",
+                    "description": "Gibt an, ob bei VOD die verbleibene Zeit statt der Gesamtzeit angezeigt werden soll."
+                },
+                "isAutoplay": {
+                    "type": "boolean",
+                    "description": "Default: false. Aktiviert den automatischen Wiedergabestart (falls möglich)."
+                },
+                "volumePercent": {
+                    "type": "integer",
+                    "example": 30,
+                    "description": "Erzwingt eine Start-Lautstärke. Falls nicht gesetzt, wird die Lautstärke aus der Nutzerpräferenz (letzte Änderung) übernommen.",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "isMuted": {
+                    "type": "boolean",
+                    "description": "Erzwingt den Mute-Zustand bei Clipstart. Wenn nicht gesetzt, wird der Zustand aus der Nutzerpräferenz übernommen."
+                },
+                "vodInitialPlayheadSeconds": {
+                    "type": "integer",
+                    "description": "Initiale Position des Playheads relativ zur gesamten Cliplänge (in Sekunden)"
+                },
+                "vodStartSeconds": {
+                    "type": "integer",
+                    "description": "Startzeit des Wiedergabefensters in Sekunden (nur für VOD)"
+                },
+                "vodEndSeconds": {
+                    "type": "integer",
+                    "description": "Endzeit des Wiedergabefensters in Sekunden (nur für VOD), Subclipping"
+                },
+                "isDvrEnabled": {
+                    "type": "boolean",
+                    "description": "De-/Aktiviert den DVR-Support im Player."
+                },
+                "isEmbedded": {
+                    "type": "boolean",
+                    "description": "Flag das angibt, ob der Player sich in einer integrierten Umgebung befindet (z.B. Hybrid-Kontext)"
+                },
+                "imageTemplateConfig": {
+                    "type": "object",
+                    "description": "Konfiguration für Template-Variablen",
+                    "properties": {
+                        "width": {
+                            "type": "object",
+                            "description": "Konfiguration der (automatisch generierten) Auflösungsstufen zur Verwendung in der Platzhaltervariable {width}",
+                            "properties": {
+                                "min": {
+                                    "type": "integer",
+                                    "description": "Minimal-Wert"
+                                },
+                                "max": {
+                                    "type": "integer",
+                                    "description": "Maximal-Wert"
+                                },
+                                "stepSize": {
+                                    "type": "integer",
+                                    "description": "Schrittgröße der zu generierenden Stufen zwischen min und max (inklusive der Start- und End-Werte)"
+                                }
+                            }
+                        },
+                        "size": {
+                            "type": "array",
+                            "minItems": 1,
+                            "uniqueItems": true,
+                            "description": "Definiert die Auflösung des Parameters {size} abhängig der angegebenen Mindestbreite.",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "minWidth": {
+                                        "type": "integer",
+                                        "description": "Mindestbreite in Pixeln"
+                                    },
+                                    "value": {
+                                        "type": "string",
+                                        "description": "Variablen-Wert, z.B. \"xs\" oder \"s\" usw."
+                                    }
+                                },
+                                "required": [
+                                    "minWidth",
+                                    "value"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "web": {
+            "type": "object",
+            "properties": {
+                "baseUrl": {
+                    "type": "string",
+                    "description": "Basis-Url, von der aus der Player auf sein Dist-Verzeichnis zugreift. Wird benötigt, um Chunks nachzuladen."
+                },
+                "hlsOptimizationLevel": {
+                    "type": "string",
+                    "enum": [
+                        "quality",
+                        "smoothest",
+                        "responsive"
+                    ],
+                    "default": "quality",
+                    "description": "Optimierungs-Level für Akamai-Hls Streams (siehe Dokumentation von plugin-hls)"
+                },
+                "forcedVolumePercent": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "Erzwungene Initial-Lautstärke, überschreibt alle Präferenzen und Konfigurationen (auch Standardwert aus generic.volume)."
+                },
+                "isForcedAutoplay": {
+                    "type": "boolean",
+                    "description": "Erzwingt bei Verwendung mehrerer Player auf einer Seite den Autoplay-Zustand über alle Player-Instanzen hinweg. Eine Ausnahme dazu sind per iFrame eingebettete Player, bei denen der zuletzt spielende den Zustand beibehält."
+                },
+                "isAudioSticky": {
+                    "type": "boolean",
+                    "description": "Gibt an, ob der Audioplayer standardmäßig im Sticky-Modus initialisiert werden soll."
+                },
+                "isForcedVideoView": {
+                    "type": "boolean",
+                    "description": "Erzwingt bei Verwendung des Audioplayers das Layout des Videoplayers."
+                },
+                "disablePosterImage": {
+                    "type": "boolean",
+                    "description": "Optionales Deaktivieren des Posterbildes, falls die umliegende Seite dies (zB auf Sendungsseiten) bereits vorhält."
+                },
+                "enableBackButton": {
+                    "type": "boolean",
+                    "description": "Falls true wird ein Back-Button in der UI angezeigt"
+                },
+                "allowBackButtonInFullscreen": {
+                    "type": "boolean",
+                    "description": "Falls true wird ein angezeigter Back-Button im Vollbildmodus nicht ausgeblendet"
+                },
+                "disableBackButtonTitle": {
+                    "type": "boolean"
+                },
+                "disablePosterTitle": {
+                    "type": "boolean"
+                },
+                "enableMaturityLogin": {
+                    "type": "boolean",
+                    "description": "Aktiviert auf der FSK-Fehlerseite einen zusätzlichen Button, um das Alter zu bestätigen."
+                },
+                "isFullscreenManagedExternally": {
+                    "type": "boolean",
+                    "description": "Wechselt im Web nicht eigenständig in den Vollbildmodus, sondern gibt nur das Event 'Player.TOGGLE_FULLSCREEN' mit dem Feld 'fullscreen': boolean aus wenn der Anzeigemodus des Players verändert wird."
+                }
+            },
+            "required": [
+                "baseUrl"
+            ]
+        },
+        "ios": {
+            "type": "object"
+        },
+        "android": {
+            "type": "object"
+        },
+        "tv": {
+            "type": "object",
+            "properties": {
+                "mpdManipulatorUrl": {
+                    "type": "string"
+                },
+                "isHdrSupported": {
+                    "type": "boolean"
+                },
+                "isHlsSupported": {
+                    "type": "boolean"
+                },
+                "isHttpsSupported": {
+                    "type": "boolean"
+                },
+                "isDashSupported": {
+                    "type": "boolean"
+                },
+                "isMpegTsDisabled": {
+                    "type": "boolean"
+                },
+                "isHighResImageSupported": {
+                    "type": "boolean"
+                },
+                "isForceMpdManipulation": {
+                    "type": "boolean"
+                },
+                "defaultMediaQualityId": {
+                    "type": "integer"
+                }
+            }
+        },
+        "pluginData": {
+            "$ref": "#/definitions/PluginData.v1"
+        }
+    },
+    "required": [
+        "pluginData"
+    ],
+    "definitions": {
+        "PluginData.v1": {
+            "title": "PluginData",
+            "type": "object",
+            "description": "PluginData als Platzhalter für alle Plugin-spezifischen Konfigurationen. Es kann sowohl in PlayerConfiguration als auch MediaCollection gesetzt werden, wobei die MC die PC überschreibt.",
+            "x-examples": {},
+            "properties": {
+                "sharing@all": {
+                    "type": "object",
+                    "properties": {
+                        "link": {
+                            "type": "string"
+                        },
+                        "embedCode": {
+                            "type": "string"
+                        },
+                        "params": {
+                            "type": "string"
+                        },
+                        "legal": {
+                            "type": "string"
+                        },
+                        "body": {
+                            "type": "string"
+                        },
+                        "subject": {
+                            "type": "string"
+                        },
+                        "services": {
+                            "type": "array",
+                            "items": {
+                                "type": [
+                                    "string",
+                                    "object"
+                                ],
+                                "enum": [
+                                    "url",
+                                    "fb-messenger",
+                                    "facebook",
+                                    "threema",
+                                    "telegram",
+                                    "twitter",
+                                    "embed",
+                                    "whatsapp",
+                                    "email"
+                                ],
+                                "minLength": 1,
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "enum": [
+                                            "whatsapp",
+                                            "url",
+                                            "fb-messenger",
+                                            "facebook",
+                                            "threema",
+                                            "telegram",
+                                            "twitter",
+                                            "embed"
+                                        ]
+                                    },
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "class": {
+                                        "type": "string"
+                                    },
+                                    "target": {
+                                        "type": "string"
+                                    },
+                                    "targetParams": {
+                                        "type": "object",
+                                        "minProperties": 1
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "title",
+                                    "class",
+                                    "target",
+                                    "targetParams"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "link",
+                        "embedCode",
+                        "params",
+                        "legal",
+                        "body",
+                        "subject",
+                        "services"
+                    ]
+                },
+                "recommendation@all": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        },
+                        "timerSeconds": {
+                            "type": "integer",
+                            "description": "Laufzeit des Timers in Sekunden",
+                            "minimum": 0,
+                            "example": 60
+                        },
+                        "isAutoplay": {
+                            "type": "boolean",
+                            "description": "Empfehlungen nach Ablauf der Zeit timerSeconds automatisch abspielen."
+                        }
+                    },
+                    "required": [
+                        "url",
+                        "timerSeconds"
+                    ]
+                },
+                "multicdn@web": {
+                    "type": "object",
+                    "properties": {
+                        "isDebug": {
+                            "type": "boolean"
+                        },
+                        "resolverUrl": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "isDebug",
+                        "resolverUrl"
+                    ]
+                },
+                "jumpmarks@all": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "description": "Remote-Datenstruktur und/oder Live-Marken"
+                        },
+                        "refreshSeconds": {
+                            "type": "integer",
+                            "default": 10,
+                            "description": "Update-Intervall (nur Live-Sprungmarken)"
+                        },
+                        "chapterArray": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "chapterTime": {
+                                        "type": "integer",
+                                        "description": "Sekunden\n"
+                                    },
+                                    "chapterTitle": {
+                                        "type": "string"
+                                    },
+                                    "chapterImg": {
+                                        "type": "string",
+                                        "description": "Optionales Bild"
+                                    },
+                                    "chapterSubtitle": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "chapterTime"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "refreshSeconds"
+                    ]
+                },
+                "addon360@web": {
+                    "type": "object",
+                    "properties": {
+                        "projection": {
+                            "type": "string",
+                            "default": "360",
+                            "enum": [
+                                "cubic",
+                                "180",
+                                "360"
+                            ]
+                        },
+                        "audio": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "lib": {
+                                            "type": "string",
+                                            "enum": [
+                                                "omnitone"
+                                            ]
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "enum": [
+                                                "foa",
+                                                "hoa"
+                                            ],
+                                            "default": "foa"
+                                        }
+                                    },
+                                    "required": [
+                                        "lib"
+                                    ]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "lib": {
+                                            "type": "string",
+                                            "default": "facebook",
+                                            "enum": [
+                                                "facebook"
+                                            ]
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "enum": [
+                                                "AMBIX_FOA",
+                                                "AMBIX_SOA",
+                                                "TBE_6",
+                                                "TBE_6_2",
+                                                "TBE_8",
+                                                "TBE_8_2",
+                                                "AMBIX_9_2"
+                                            ],
+                                            "default": "AMBIX_FOA"
+                                        }
+                                    },
+                                    "required": [
+                                        "lib"
+                                    ]
+                                },
+                                {
+                                    "type": "string",
+                                    "default": "none",
+                                    "enum": [
+                                        "none"
+                                    ]
+                                }
+                            ]
+                        },
+                        "stereo": {
+                            "type": "string",
+                            "default": "none",
+                            "enum": [
+                                "none",
+                                "tb",
+                                "lr"
+                            ]
+                        },
+                        "initialFOV": {
+                            "type": "number",
+                            "default": 50,
+                            "minimum": 15,
+                            "maximum": 100
+                        }
+                    }
+                },
+                "breakingNews@all": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "feedUrl": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "pollRate": {
+                            "type": "number",
+                            "default": 60,
+                            "description": "Aktualisierungsrate für den Neswscrawler in Sekunden"
+                        }
+                    }
+                },
+                "plugin-dash@web": {
+                    "type": "object",
+                    "properties": {
+                        "liveDelay": {
+                            "type": "number",
+                            "default": "3,0",
+                            "example": "Target Latency (secs)"
+                        },
+                        "liveCatchUpMinDrift": {
+                            "type": "number",
+                            "default": "0,05",
+                            "example": "Min. drift (secs)"
+                        },
+                        "liveCatchUpPlaybackRate": {
+                            "type": "number",
+                            "default": "0,5",
+                            "example": "Catch-up playback rate (%)"
+                        },
+                        "liveCatchupLatencyThreshold": {
+                            "type": "number",
+                            "default": 30,
+                            "example": "Live catchup latency threshold (secs)"
+                        }
+                    }
+                },
+                "trackingAti@all": {
+                    "$ref": "#/definitions/TrackingAti.v1"
+                },
+                "trackingIvw@all": {
+                    "$ref": "#/definitions/TrackingIvw.v1"
+                },
+                "trackingArgos@all": {
+                    "$ref": "#/definitions/TrackingArgos.v1"
+                },
+                "trackingAgf@all": {
+                    "$ref": "#/definitions/TrackingAgf.v1"
+                },
+                "trackingSola@all": {
+                    "$ref": "#/definitions/TrackingSola.v1"
+                },
+                "trackingGFK@hbbtv": {
+                    "$ref": "#/definitions/TrackingGfkTV.v1"
+                }
+            }
+        },
+        "TrackingAgf.v1": {
+            "title": "TrackingAgf",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "debug": {
+                    "type": "boolean"
+                },
+                "permLive": {
+                    "type": "boolean"
+                },
+                "appId": {
+                    "type": "string"
+                },
+                "playerId": {
+                    "type": "string"
+                },
+                "clipData": {
+                    "type": "object",
+                    "description": "ClipData-Objekt wird an AGF-SDK durchgereicht",
+                    "properties": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "program": {
+                            "type": "string"
+                        },
+                        "length": {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        },
+                        "assetid": {
+                            "type": "string"
+                        },
+                        "livestream": {
+                            "type": "string"
+                        },
+                        "nol_c0": {
+                            "type": "string"
+                        },
+                        "nol_c1": {
+                            "type": "string"
+                        },
+                        "nol_c2": {
+                            "type": "string"
+                        },
+                        "nol_c3": {
+                            "type": "string"
+                        },
+                        "nol_c4": {
+                            "type": "string"
+                        },
+                        "nol_c5": {
+                            "type": "string"
+                        },
+                        "nol_c6": {
+                            "type": "string"
+                        },
+                        "nol_c7": {
+                            "type": "string"
+                        },
+                        "nol_c8": {
+                            "type": "string"
+                        },
+                        "nol_c9": {
+                            "type": "string"
+                        },
+                        "nol_c10": {
+                            "type": "string"
+                        },
+                        "nol_c11": {
+                            "type": "string"
+                        },
+                        "nol_c12": {
+                            "type": "string"
+                        },
+                        "nol_c13": {
+                            "type": "string"
+                        },
+                        "nol_c14": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "appId",
+                "clipData"
+            ]
+        },
+        "TrackingArgos.v1": {
+            "title": "TrackingArgos",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "providerKey": {
+                            "type": "string"
+                        },
+                        "argosMediaTitle": {
+                            "type": "string"
+                        },
+                        "argosMediaUrl": {
+                            "type": "string"
+                        },
+                        "argosSeries": {
+                            "type": "string"
+                        },
+                        "argosCrid": {
+                            "type": "string"
+                        },
+                        "argosCustomData": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "providerKey",
+                "argosMediaTitle"
+            ]
+        },
+        "TrackingAti.v1": {
+            "title": "TrackingAti",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "site": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "forceSite": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "config": {
+                    "type": "object",
+                    "properties": {
+                        "site": {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        },
+                        "log": {
+                            "type": "string"
+                        },
+                        "logSSL": {
+                            "type": "string"
+                        },
+                        "domain": {
+                            "type": "string"
+                        },
+                        "collectDomain": {
+                            "type": "string"
+                        },
+                        "collectDomainSSL": {
+                            "type": "string"
+                        },
+                        "userIdOrigin": {
+                            "type": "string"
+                        },
+                        "secure": {
+                            "type": "boolean"
+                        },
+                        "pixelPath": {
+                            "type": "string"
+                        },
+                        "disableCookie": {
+                            "type": "boolean"
+                        },
+                        "disableStorage": {
+                            "type": "boolean"
+                        },
+                        "cookieSecure": {
+                            "type": "boolean"
+                        },
+                        "cookieDomain": {
+                            "type": "string"
+                        },
+                        "ignoreEmptyChapterValue": {
+                            "type": "boolean"
+                        },
+                        "clientSideUserId": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "identifiedVisitor": {
+                    "type": "object"
+                },
+                "isEmbedded": {
+                    "type": "boolean"
+                },
+                "page": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "level2": {
+                            "type": "string"
+                        },
+                        "chapter1": {
+                            "type": "string"
+                        },
+                        "chapter2": {
+                            "type": "string"
+                        },
+                        "chapter3": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "siteVars": {
+                    "type": "object"
+                },
+                "richMedia": {
+                    "type": "object",
+                    "properties": {
+                        "mediaType": {
+                            "type": "string",
+                            "enum": [
+                                "audio",
+                                "video"
+                            ]
+                        },
+                        "playerId": {
+                            "type": "string"
+                        },
+                        "mediaLevel2": {
+                            "type": "string"
+                        },
+                        "mediaLabel": {
+                            "type": "string"
+                        },
+                        "mediaTheme1": {
+                            "type": "string"
+                        },
+                        "mediaTheme2": {
+                            "type": "string"
+                        },
+                        "mediaTheme3": {
+                            "type": "string"
+                        },
+                        "duration": {
+                            "type": "string"
+                        },
+                        "broadcastMode": {
+                            "type": "string",
+                            "enum": [
+                                "clip",
+                                "live"
+                            ]
+                        },
+                        "webdomain": {
+                            "type": "string"
+                        },
+                        "refreshDuration": {
+                            "type": "object",
+                            "description": "Sample: {\"0\": 5, \"1\": 12, \"12\": 15, \"18\": 30}"
+                        }
+                    },
+                    "required": [
+                        "mediaType",
+                        "mediaLevel2",
+                        "mediaLabel",
+                        "duration",
+                        "broadcastMode"
+                    ]
+                },
+                "sdkUrls": {
+                    "type": "array",
+                    "description": "Optional paths to smarttag.js, addition sdk-scripts e.g.; needed to inject config to native clients.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "TrackingGfkTV.v1": {
+            "title": "TrackingGfkTV",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "jsLibraryUrl": {
+                    "type": "string"
+                }
+            }
+        },
+        "TrackingIvw.v1": {
+            "title": "TrackingIvw",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "st": {
+                            "type": "string"
+                        },
+                        "cp": {
+                            "type": "string"
+                        },
+                        "co": {
+                            "type": "string"
+                        },
+                        "xp": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "TrackingSola.v1": {
+            "title": "TrackingSola",
+            "type": "object",
+            "properties": {
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "beaconUrl": {
+                    "type": "string"
+                },
+                "jsLibraryUrl": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "metadata"
+                }
+            },
+            "required": [
+                "beaconUrl",
+                "jsLibraryUrl",
+                "data"
+            ]
+        }
+    }
+}

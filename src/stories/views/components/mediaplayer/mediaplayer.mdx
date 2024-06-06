@@ -1,0 +1,72 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/blocks'
+import * as MediaplayerStories from './mediaplayer.stories'
+
+<Meta of={MediaplayerStories} />
+
+# Mediaplayer
+
+## Beschreibung
+
+Die Mediaplayer-Komponente kann, abhängig von der Konfiguration, einen Video- oder einen Audio-Player erzeugen. Technische Basis
+dieser Player ist der ARD-Player. Wird sie in einem Teaser verwendet wird ein statisches Teaser-Bild mit einem Play-Button
+dem eigentlichen Player vorgeschaltet. Erst bei Klick auf den Play-Button wird der eigenliche Player geladen.
+
+## Parameter
+
+Zur Konfiguration des Players stehen die im Folgenden beschrieben Parameter zur Verfügung:
+
+<ArgsTable story="Videoplayer" />
+
+## Varianten
+
+Ein Mediaplayer kann in unterschiedlichen Ausprägungen genutzt werden. Es gibt den Player als Video- und als Audio-Player.
+Es gibt jeweils Varianten für OnDemend Medien sowie für Livestreams.
+
+### Video-OnDemand-Player
+
+<Canvas withToolbar>
+    <Story of={MediaplayerStories.Videoplayer} />
+</Canvas>
+
+### Video-Livestream-Player
+
+<Canvas withToolbar>
+    <Story of={MediaplayerStories.VideoplayerLive} />
+</Canvas>
+
+## Verwendung
+
+Die Mediaplayer-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/mediaplayer/media_player _uiTestHook="ui-test-video-ondemand-player"}}
+```
+
+## Styling
+
+Als technische Basis des Mediaplayer dient wie einleitend beschrieben der ARD-Player. dieser
+kann mit Hilfe von CSS Variablen individuel gestyled werden. Zu beachten ist, dass hier lediglich
+geringfügige optische Anpassungen, wie Farben, Abstände und Icons vorgenommen werden können.
+
+Wir haben die Player pro Marke in den Markenfarben gestyled. Hierzu nutzen wir, wie für den 
+Rest unseres Themings, die Datei `tailwind.css`. Die vom ARD-Player zum Styling verfügbaren
+Variablen können unter https://gitlab.com/ard.de/ardplayer/web/ardplayer-core/-/blob/develop/app/styles/color-vars.scss (der Zugriff ist hierauf nur möglich
+wenn man Zugriff auf das ARD-Player Gitlab Projekt hat) eingesehen werden.
+
+Da das Styling nur im Kontext des ARD-Players passieren soll, müssen die Variablen alle unter 
+dem Kontext der Klasse `.ardplayer` gesetzt werden.
+
+```css 
+.ardplayer {
+        // ------------- HR2 --------------------------
+        --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.paprika.rgb') / 70%);
+        --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+        --ardplayer-color-primary-live-transparent-30: rgba(theme('colors.pink.rose.rgb') / 70%);
+        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+        --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
+        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+
+        // Hier folgen weitere individuelle Anpassungen für einzelne Elemente des Players
+    }
+``` 

@@ -24,7 +24,7 @@
         }
     },
     "video_livestream": {
-        "type": "media",
+        "type": "livestream",
         "loca": "label_video_livestream",
         "byline": {
             "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
@@ -45,7 +45,7 @@
         }
     },
     "audio_livestream": {
-        "type": "media",
+        "type": "livestream",
         "loca": "label_audio_event_livestream",
         "byline": {
             "bylineSsi": "components/multimedia/livestream/label_byline.ssi",

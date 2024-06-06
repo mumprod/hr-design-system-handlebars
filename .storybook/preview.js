@@ -28,7 +28,7 @@ checkcss.onClassnameDetected = function (classname, element) {
     // For example, to ignore classnames starting with
     // "license-" or "maintainer-"...
     var storybookRoot = document.getElementById('storybook-root');
-    var prefixes = /^js-|^cy-|^sb-/.test(classname) ? false : true
+    var prefixes = /^js-|^ui-test-|^sb-/.test(classname) ? false : true
     return storybookRoot.contains(element) && prefixes
 }
 checkcss.onUndefinedClassname = function (classname) {
