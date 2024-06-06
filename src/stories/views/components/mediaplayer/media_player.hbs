@@ -1,4 +1,4 @@
-<div{{#if _isTeaser}} x-show="avStart" x-cloak{{/if}} id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream cy-mediaplayer" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div{{#if _isTeaser}} x-show="avStart" x-cloak{{/if}} id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isTeaser}} z-20{{/if}} js-load {{if _uiTestHook _uiTestHook 'ui-test-mediaplayer'}}" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
 {{#if _isTeaser}}
     <div class="relative {{_aspectRatio}}" x-show="!avStart" >
