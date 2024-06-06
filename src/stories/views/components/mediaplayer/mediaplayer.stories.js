@@ -1,7 +1,8 @@
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within, waitFor } from '@storybook/testing-library';
 import videoJson from 'components/mediaplayer/fixtures/mediaplayer.json'
 
 import mediaPlayer from 'components/mediaplayer/media_player.hbs'
+import { delay } from 'underscore';
 
 const Template = ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -17,6 +18,13 @@ export default {
             control: 'boolean',
             description: 'Legt fest, ob der Player in einem Teaser verwendet wird und, falls dies der Fall ist, ein statisches Teaser-Bild vorgeschaltet bekommt.',
         },
+        _uiTestHook: {
+            control: 'text',
+            description: 'Hierüber kann eine CSS Hook Klasse gesetzt werden, um den Player Container in einem UI-Test einfach selektieren zu können.',
+            defaultValue: {
+                summary: 'ui-test-mediaplayer',
+            }
+        }
     },
 
     parameters: {
@@ -47,12 +55,9 @@ export const VideoplayerSettings = {
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement);
         await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'));
-        //await console.log(await canvas.findByTitle('Pause [Leertaste oder K]'))
-        const pauseButton = canvas.getByRole('button', { name: 'Pause [Leertaste oder K]' })
-        await userEvent.keyboard('{space}')
-        //await userEvent.click(pauseButton);
-        //console.log(canvas.getByRole('button', { name: 'Pause [Leertaste oder K]' }))
-        //await userEvent.click(await canvas.findByTitle('Einstellungen an / aus'));
+        userEvent.keyboard('{ArrowLeft}', { delay: 1000 })
+        userEvent.keyboard('[Space]', { delay: 1000 })
+        await userEvent.click(await canvas.findByTitle('Einstellungen an / aus'), { delay: 1500 });
     },
 }
 
