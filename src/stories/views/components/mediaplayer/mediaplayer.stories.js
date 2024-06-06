@@ -55,9 +55,9 @@ export const VideoplayerSettings = {
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement);
         await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'));
-        userEvent.keyboard('{ArrowLeft}', { delay: 1000 })
         userEvent.keyboard('[Space]', { delay: 1000 })
-        await userEvent.click(await canvas.findByTitle('Einstellungen an / aus'), { delay: 1500 });
+        userEvent.keyboard('{ArrowLeft}', { delay: 1500 })
+        await userEvent.click(await canvas.findByTitle('Einstellungen an / aus'), { delay: 2000 });
     },
 }
 
