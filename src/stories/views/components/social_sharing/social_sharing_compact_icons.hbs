@@ -72,7 +72,7 @@
     </a>
 </li>
 <div class="absolute flex flex-row items-center justify-end hidden w-full h-8 text-xs bg-white js-copyMessage sm480:text-sm font-headingSerif dark:text-text-dark">
-    {{~> components/base/image/icon _addClass="w-5 h-5 fill-green-eden.hex mr-4" _icon="status-done" _iconmap="icons" ~}}
+    {{~> components/base/image/icon _addClass="w-6 h-6 text-green-600 mr-4" _icon="status-done" _iconmap="icons" ~}}
     {{loca "share_copy_message" }}
 </div>
 
@@ -90,12 +90,10 @@
                 el.select()
                 document.execCommand('copy')
                 document.body.removeChild(el)
-
                 messageDiv.classList.remove('hidden')
-
                 window.setTimeout(() => {
                     messageDiv.classList.add('hidden')
-                }, 200000)
+                }, 2000)
             }
         }
     }
