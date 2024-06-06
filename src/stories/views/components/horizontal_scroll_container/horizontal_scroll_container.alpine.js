@@ -3,11 +3,11 @@ export default function slider() {
     return {     
         isScrollable:false,
         arrowLeftDisplay:false,
-        arrowRightDisplay:true,
+        arrowRightDisplay:false,
 
         arrowsDisplay(e) { 
             e.scrollLeft > 1 ? this.arrowLeftDisplay=true : this.arrowLeftDisplay=false;
-            e.scrollLeft + e.offsetWidth >= e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
+            e.scrollLeft + e.offsetWidth + 50 >= e.scrollWidth ? this.arrowRightDisplay=false : this.arrowRightDisplay=true;
         },
 
         prev(e) {
@@ -23,7 +23,7 @@ export default function slider() {
         },
         
         checkIfScrollable(e){     
-            e.scrollWidth > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;  
+            e.scrollWidth + 50 > e.clientWidth ? this.isScrollable=true : this.isScrollable=false;  
             this.arrowsDisplay(e);
         },
         throttle(f, delay) {
