@@ -1,3 +1,15 @@
+# v1.69.2 (Thu Jun 06 2024)
+
+#### 🐛 Bug Fix
+
+- adds second top topic + 50px to width of scrollcontainer to prevent u… [#936](https://github.com/mumprod/hr-design-system-handlebars/pull/936) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.69.1 (Thu Jun 06 2024)
 
 #### 🐛 Bug Fix
