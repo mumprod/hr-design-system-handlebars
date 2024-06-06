@@ -16,7 +16,7 @@
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
     --color-highlight-1-dark: theme('colors.blue.nightRider');
 
@@ -71,7 +71,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.blue.science.hex');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.orange.spicyCarrot');
+    --color-label-live: theme('colors.orange.spicyCarrot.hex');
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
@@ -119,7 +119,7 @@
     /* Media-Button */
     --color-media-button: theme('colors.blue.jellyBean.hex');
     /* Media-Button Live */
-    --color-media-button-live: theme('colors.orange.spicyCarrot');
+    --color-media-button-live: theme('colors.orange.spicyCarrot.hex');
     /* States */
     --color-focus-state: var(--color-primary-ds);
     /* Content-Nav */
@@ -141,7 +141,7 @@
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot.hex');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
 
     --color-ticker-teaser-headline-underline: theme('colors.white.DEFAULT');
@@ -166,7 +166,10 @@
     --feature-box-height: 0;
 
     .ardplayer {
-        --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot');
+        --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
+        --ardplayer-color-primary-live-transparent-30: rgba(
+            theme('colors.orange.spicyCarrot.rgb') / 70%
+        );
 
         &.ardplayer-state-live {
             .ardplayer-controlbar {
@@ -183,7 +186,7 @@
     --color-primary-ds: theme('colors.blue.congress');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.blue.congress');
 
     /* Text */
@@ -279,7 +282,7 @@
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
-    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot');
+    --color-ticker-teaser-timeline-score: theme('colors.orange.spicyCarrot.hex');
     --color-ticker-teaser-footer: theme('colors.white.DEFAULT');
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
 
@@ -318,7 +321,7 @@
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.blackhaze');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.blueLuxury.hex');
@@ -417,7 +420,7 @@
     --color-primary-ds: theme('colors.blue.jellyBean.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.aqua');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: theme('colors.blue.astronautBlue');
@@ -439,7 +442,7 @@
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.red.thunderbird');
     /* Sendung */
-    --color-label-program: theme('colors.pink.rose');
+    --color-label-program: theme('colors.pink.rose.hex');
     /* Download */
     --color-label-download: theme('colors.gray.scorpion');
     /* Event */
@@ -522,7 +525,7 @@
     --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
     --color-navigation-bg: theme('colors.gray.scorpion');
@@ -636,7 +639,7 @@
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.blueLuxury.hex');
@@ -753,7 +756,7 @@
     --color-primary-ds: theme('colors.red.burntUmber');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.burntUmber');
@@ -857,7 +860,7 @@
     --color-primary-ds: theme('colors.blue.blueStone');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.blue.blackSqueeze');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.blue.blueStone');
@@ -958,7 +961,7 @@
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007396;
     --color-highlight-1: theme('colors.blue.accented');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
     --color-navigation-bg: white;
@@ -1075,7 +1078,7 @@
     --color-primary-ds: theme('colors.yellow.corn');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.floral');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     --color-navigation-border-color: theme('colors.yellow.corn');
     --color-servicenavigation-border-color: theme('colors.yellow.corn');
@@ -1093,7 +1096,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.yellow.olive.hex');
     /* Kommentar */
-    --color-label-comment: theme('colors.pink.rose');
+    --color-label-comment: theme('colors.pink.rose.hex');
     /* Eilmeldung */
     --color-label-breakingnews: theme('colors.purple.disco');
     /* Sendung */
@@ -1182,7 +1185,7 @@
     --color-primary-ds: theme('colors.orange.clementine');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.alto');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.orange.clementine');
@@ -1202,7 +1205,7 @@
     /* Medieninhalte, Video, Audio, Bildergalerie */
     --color-label-media: theme('colors.orange.burntOrange');
     /* Ticker, Live, Livestream */
-    --color-label-live: theme('colors.pink.rose');
+    --color-label-live: theme('colors.pink.rose.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
@@ -1240,7 +1243,7 @@
     /* Media-Button */
     --color-media-button: theme('colors.red.paprika.hex');
     /* Media-Button Live */
-    --color-media-button-live: theme('colors.pink.rose');
+    --color-media-button-live: theme('colors.pink.rose.hex');
     /* States */
     --color-focus-state: theme('colors.red.paprika.hex');
     /* Content-Nav */
@@ -1253,7 +1256,7 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
     /* ticker-Teaser*/
-    --color-ticker-teaser-timeline-score: theme('colors.pink.rose');
+    --color-ticker-teaser-timeline-score: theme('colors.pink.rose.hex');
 
     --search-border-color-desktop: var(--color-navigation-icons);
 
@@ -1262,7 +1265,8 @@
     .ardplayer {
         --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
         --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.paprika.rgb') / 70%);
-        --ardplayer-color-primary-live: theme('colors.pink.rose');
+        --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+        --ardplayer-color-primary-live-transparent-30: rgba(theme('colors.pink.rose.rgb') / 70%);
         --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
         --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
         --ardplayer-color-lightest: theme('colors.white.DEFAULT');
@@ -1295,7 +1299,7 @@
     --color-primary-ds: theme('colors.red.monza.hex');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.mercury');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: theme('colors.red.monza.hex');
@@ -1403,7 +1407,7 @@
     --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.white.azureish');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border Color */
     --color-navigation-border-color: theme('colors.pink.fuchsie');
@@ -1511,7 +1515,7 @@
     --color-primary-ds: #007179 /* #c20016 */;
     --color-secondary-ds: #007179;
     --color-highlight-1: theme('colors.gray.platinum');
-    --color-highlight-2: theme('colors.orange.spicyCarrot');
+    --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
     --color-brandnavigation-border-color: #000;

@@ -291,7 +291,7 @@ module.exports = {
                 'pink': {
                     fuchsie: '#bf0071',
                     ripeRaspberries: '#be005a',
-                    rose: '#e5007d',
+                    rose: { rgb: '229 0 125', hex: '#e5007d' },
                 },
                 'orange': {
                     bridesmaid: '#FCF2ED',
@@ -300,7 +300,7 @@ module.exports = {
                     clementine: '#ec6602',
                     goldDrop: '#f07800',
                     oregon: '#A14702',
-                    spicyCarrot: '#d34600',
+                    spicyCarrot: { rgb: '211 70 0', hex: '#d34600' },
                 },
                 'teal': {
                     DEFAULT: { rgb: '0 122 124', hex: '#007A7C' },
