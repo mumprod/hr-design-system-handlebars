@@ -1,5 +1,5 @@
 import { userEvent, within, waitFor } from '@storybook/testing-library';
-import videoJson from 'components/mediaplayer/fixtures/mediaplayer.json'
+import mediaplayerJson from 'components/mediaplayer/fixtures/mediaplayer.json'
 
 import mediaPlayer from 'components/mediaplayer/media_player.hbs'
 import { delay } from 'underscore';
@@ -45,13 +45,13 @@ export default {
 export const Videoplayer = {
     render: Template.bind({}),
     name: 'Videoplayer',
-    args: { "_isTeaser": false, ...videoJson.video },
+    args: { "_isTeaser": false, ...mediaplayerJson.video },
 }
 
 export const VideoplayerSettings = {
     render: Template.bind({}),
     name: 'Videoplayer Einstellungen',
-    args: { "_isTeaser": false, ...videoJson.video },
+    args: { "_isTeaser": false, ...mediaplayerJson.video },
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement);
         await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'));
@@ -64,5 +64,17 @@ export const VideoplayerSettings = {
 export const VideoplayerLive = {
     render: Template.bind({}),
     name: 'Videoplayer Livestream',
-    args: { "_isTeaser": false, ...videoJson.video_livestream },
+    args: { "_isTeaser": false, ...mediaplayerJson.video_livestream },
+}
+
+export const Audioplayer = {
+    render: Template.bind({}),
+    name: 'Audioplayer',
+    args: { "_isTeaser": false, _isAudioView: true, ...mediaplayerJson.audio },
+}
+
+export const AudioplayerLivestream = {
+    render: Template.bind({}),
+    name: 'Audioplayer Livestream',
+    args: { "_isTeaser": false, _isAudioView: true, ...mediaplayerJson.audio_event_livestream },
 }
