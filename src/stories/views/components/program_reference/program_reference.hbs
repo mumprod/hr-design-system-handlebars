@@ -1,5 +1,5 @@
 <div class="flex flex-wrap ">
-    <span class="w-full text-sm {{#unless _isArticle}}uppercase{{/unless}} sm:w-fit font-headingSerif ">{{loca "story_program_supplier"}}</span><!--
+    <span class="w-full {{#if _isArticle}}text-2xl {{else}}text-sm {{/if}}{{#unless _isArticle}}uppercase{{/unless}} sm:w-fit font-headingSerif ">{{loca "story_program_supplier"}}</span><!--
      -->
     <div class="flex flex-wrap pt-2 gap-x-4 w-fit sm:w-full">
         {{#if this.link}}
