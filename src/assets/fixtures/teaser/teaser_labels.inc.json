@@ -124,5 +124,9 @@
     "glosse": {
         "type": "glosse",
         "loca": "label_glosse"
+    },
+    "video": {
+        "type": "video",
+        "loca": "label_video"
     }
 }

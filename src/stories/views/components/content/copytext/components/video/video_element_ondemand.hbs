@@ -1,6 +1,5 @@
 <div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream cy-mediaplayer" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
-
 {{#if _isTeaser}}
     <div class="relative flex items-center justify-center ar-16-9" x-show="!avStart" >
         {{#unless _hideGeotag}}
