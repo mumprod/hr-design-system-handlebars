@@ -160,6 +160,8 @@
     "ext_service_datapolicy_no_js_text": "An dieser Stelle befindet sich ein von unserer Redaktion empfohlener Inhalt von <b>{0}</b>. Da Sie in Ihrem Browser Javascript deaktiviert haben, kann dieser hier nicht angezeigt werden. Der nachfolgende Link öffnet den Inhalt auf der Seite des Anbieters.",
     "ext_service_datapolicy_no_js_link": "{0}-Inhalt öffnen",
     "story_infobox_intro_sr": "Weitere Informationen",
-    "story_infobox_outro_sr": "Ende der weiteren Informationen"
+    "story_infobox_outro_sr": "Ende der weiteren Informationen",
+    "story_video_intro_sr": "Videobeitrag",
+    "story_video_outro_sr": "Ende des Videobeitrags"
 
 }

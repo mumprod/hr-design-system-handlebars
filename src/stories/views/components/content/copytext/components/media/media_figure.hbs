@@ -1,0 +1,32 @@
+<figure class="relative ar-16-9 my-6 sm480:my-7 {{_addClass}}" x-data="{ avStart: false }">
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
+    {{#unless _voting-option}}
+        <figcaption class="py-3 mx-5 sm:mx-0 sm:py-4 border-t-[3px] border-gray-boulder">
+            {{#with this.label}}
+                {{#> components/label/label_group}}
+                    {{> components/label/label _type=this.type _text=(loca this.loca) }}
+                    {{> components/label/label_byline _css="ml-2"}}
+                    {{#with ../this}}{{> components/content/copytext/components/media/media_figure_byline}}{{/with~}}
+                {{/components/label/label_group}}
+            {{/with~}}
+            {{#with this.toModel.mediaBacklinkToStoryTeaser}}
+                {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                    {{> components/content/copytext/components/media/media_figure_headline}}
+                {{/components/base/link}}
+            {{/with}}
+        </figcaption>
+    {{/unless}}
+    {{#if this.isVideo}}
+        {{#if _isLead}}
+            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true  _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true _noDelay=true ~}}
+        {{else}}
+            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true~}}
+        {{/if}}
+    {{/if}}
+    {{#unless _voting-option}}
+        {{#with this.teaseritem}}
+            {{~> components/content/copytext/components/image/figcaption  _cssClassCaption="mx-5 sm:mx-0"~}}
+        {{/with}}
+    {{/unless}}
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
+</figure>

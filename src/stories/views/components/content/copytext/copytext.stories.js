@@ -11,6 +11,7 @@ import copytext_infobox_json from './fixtures/copytext_infobox.json'
 import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
 import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
+import copytext_video_json from './fixtures/copytext_video.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -100,4 +101,10 @@ export const WithAdditionalInfo = {
     render: Template.bind({}),
     name: 'Zusatzinfo',
     args: copytext_additionalInfo_json,
+}
+
+export const WithVideo = {
+    render: Template.bind({}),
+    name: 'Video',
+    args: copytext_video_json,
 }
