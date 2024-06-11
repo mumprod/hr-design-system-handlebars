@@ -1,3 +1,141 @@
+# v1.70.0 (Tue Jun 11 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Add audioplayer and audiolivestream player to mediaplayer config [#938](https://github.com/mumprod/hr-design-system-handlebars/pull/938) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.69.3 (Tue Jun 11 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3141 [#937](https://github.com/mumprod/hr-design-system-handlebars/pull/937) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.69.2 (Thu Jun 06 2024)
+
+#### 🐛 Bug Fix
+
+- adds second top topic + 50px to width of scrollcontainer to prevent u… [#936](https://github.com/mumprod/hr-design-system-handlebars/pull/936) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.69.1 (Thu Jun 06 2024)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 3071 [#935](https://github.com/mumprod/hr-design-system-handlebars/pull/935) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.69.0 (Fri May 31 2024)
+
+#### 🚀 Enhancement
+
+- add appendix [#934](https://github.com/mumprod/hr-design-system-handlebars/pull/934) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.68.6 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- Try to make chromatic take screenshots of the opened modal by inserti… [#933](https://github.com/mumprod/hr-design-system-handlebars/pull/933) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### 🔩 Dependency Updates
+
+- updates async-alpine to latest version [#932](https://github.com/mumprod/hr-design-system-handlebars/pull/932) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 3
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.68.5 (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Make sure that the regex in the loca helper only matches when it recognizes numbers in between opening and closing curly braces. [#931](https://github.com/mumprod/hr-design-system-handlebars/pull/931) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.68.4 (Tue May 28 2024)
+
+#### 🐛 Bug Fix
+
+- general line heigt 1.5 in copytext [#924](https://github.com/mumprod/hr-design-system-handlebars/pull/924) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.68.3 (Tue May 28 2024)
+
+#### 🐛 Bug Fix
+
+- fixes bottom position of sharing button in mobile view [#930](https://github.com/mumprod/hr-design-system-handlebars/pull/930) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.68.2 (Wed May 22 2024)
+
+#### 🐛 Bug Fix
+
+- Changing priority to Responsive Iframe [#929](https://github.com/mumprod/hr-design-system-handlebars/pull/929) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.68.1 (Fri May 17 2024)
+
+#### 🐛 Bug Fix
+
+- show lead-image in articles with lead-audio [#927](https://github.com/mumprod/hr-design-system-handlebars/pull/927) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.68.0 (Fri May 17 2024)
 
 #### 🚀 Enhancement

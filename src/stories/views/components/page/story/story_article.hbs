@@ -7,7 +7,7 @@
     
     
     {{#unless this.displayPageLead.isFalse}}
-        {{#with this.teaseritem }}
+        {{#with this.teaseritemDS }}
             {{#if this.isImage}}
                 {{> components/content/copytext/components/image/figure
                     _cssClass="article-full-width md:article-breakout mt-6 sm480:mt-7 "
@@ -28,6 +28,8 @@
     {{/unless}}
     {{~> components/content/copytext/copytext _isWebview=_webview ~}}
 
+    {{> components/page/components/appendix _isArticle=true }}
+    
     {{> components/page/components/comments }}
 
 {{/components/page/base/page_wrapper}}

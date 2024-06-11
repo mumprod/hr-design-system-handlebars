@@ -1,20 +1,2 @@
-<div x-show="avStart" x-cloak id="{{this.ardPlayerConfig.playerId}}" class="ar-16-9 h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isTeaser}} z-20{{/if}} js-load {{if _cypressHook _cypressHook 'js-media-element'}} js-video-livestream cy-mediaplayer" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div{{#if _isUsedInTeaser}} x-show="avStart" x-cloak{{/if}} id="{{this.ardPlayerConfig.playerId}}" class="{{#unless _isAudioView}}ar-16-9 {{/unless}}h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isUsedInTeaser}} z-20{{/if}} js-load {{if _uiTestHook _uiTestHook 'ui-test-mediaplayer'}}" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
-{{#if _isTeaser}}
-    <div class="relative {{_aspectRatio}}" x-show="!avStart" >
-        {{#unless _hideGeotag}}
-            {{~#with _geotag}}
-                {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../_teaserSize _isMobile1to1=../_isMobile1to1}}
-            {{/with~}}
-        {{/unless}}
-        {{#with _teaser}}
-            {{#if this.isTickerTeaser}}<a href="{{this.link.url}}" aria-label="Zum Ticker" tabindex="-1"{{#if (isUserConsentNeeded this.link.url)}} class="js-user-consent-needed"{{/if}}>{{/if}}
-                {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg=(appendToDefault _addClassImg-adjust_context "ar__content ") _noDelay=this.dontLazyload ~}}                             
-            {{#if this.isTickerTeaser}}</a>{{/if}}
-        {{/with}}
-
-        {{#with this}}
-            {{> components/mediaplayer/mediaplayer_button _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel _teaserSize=_teaserSize _teaserType=_teaserType _isMobile1to1=_isMobile1to1}}   
-        {{/with}} 
-    </div>
-{{/if}}

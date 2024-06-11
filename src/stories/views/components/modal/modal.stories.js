@@ -91,7 +91,9 @@ export const openedUserConsentModal = {
 
         const link = canvas.getByTestId('modal-hook');
 
-        await userEvent.click(link);
+        await userEvent.click(link, {
+            delay: 3000,
+        });
     },
 }
 

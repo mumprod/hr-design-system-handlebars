@@ -1,33 +1,22 @@
 {
     "items": [
         {
-            "title": "Corona",
-            "text": "Corona",
+            "title": "Europawahl",
+            "text": "Europawahl",
             "link": {
-                "url": "http://www.Corona.de",
+                "url": "https://www.hessenschau.de",
                 "hasIcon": false,
                 "iconName": "extern"
             }
         },
         {
-            "title": "Unwetter",
-            "text": "Unwetter",
-            "selected": true,
+            "title": "XYZ",
+            "text": "XYZ",
             "link": {
-                "url": "http://www.Unwetter.de",
+                "url": "https://www.hessenschau.de",
                 "hasIcon": false,
                 "iconName": "extern"
             }
-        },
-        {
-            "title": "Regionen",
-            "text": "Regionen",
-            "selected": false,
-            "link": {
-                "url": "http://www.Regionen.de",
-                "hasIcon": false,
-                "iconName": "extern"
-            }
-        }
+        } 
     ]
 }

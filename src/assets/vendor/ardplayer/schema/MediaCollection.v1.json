@@ -1,0 +1,1136 @@
+{
+    "title": "MediaCollection",
+    "type": "object",
+    "description": "",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Optionale, eindeutige ID der Mediacollection"
+        },
+        "comment": {
+            "type": "string",
+            "description": "Optionale Beschreibung der MediaCollection."
+        },
+        "isGeoBlocked": {
+            "type": "boolean",
+            "description": "Default: false. Gibt an, ob der Stream über einen Geoblock verfügt."
+        },
+        "streams": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Definition der Streams",
+            "items": {
+                "title": "Stream",
+                "type": "object",
+                "properties": {
+                    "kind": {
+                        "type": "string",
+                        "enum": [
+                            "main",
+                            "subtitle-burn-in",
+                            "sign-language"
+                        ],
+                        "default": "main"
+                    },
+                    "kindName": {
+                        "type": "string",
+                        "default": "Standardvideo"
+                    },
+                    "videoLanguageCode": {
+                        "type": "string"
+                    },
+                    "isAudioOnly": {
+                        "type": "boolean",
+                        "description": "isAudioOnly"
+                    },
+                    "media": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": false,
+                        "items": {
+                            "title": "Media",
+                            "type": "object",
+                            "examples": [
+                                {
+                                    "url": "string",
+                                    "mimeType": "string",
+                                    "maxHResolutionPx": 1920,
+                                    "aspectRatio": "16:9",
+                                    "isHighDynamicRange": true,
+                                    "isUltraLowLatency": true,
+                                    "videoCodec": "string",
+                                    "isAdaptiveQualitySelectable": false,
+                                    "audios": [
+                                        {
+                                            "kind": "standard",
+                                            "languageCode": "ISO-639-3",
+                                            "channels": "mono",
+                                            "channelCount": 0,
+                                            "codec": "string",
+                                            "default": true,
+                                            "nativeId": "string",
+                                            "label": "string"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "properties": {
+                                "url": {
+                                    "type": "string"
+                                },
+                                "mimeType": {
+                                    "type": "string"
+                                },
+                                "videoCodec": {
+                                    "type": "string"
+                                },
+                                "maxHResolutionPx": {
+                                    "type": "integer"
+                                },
+                                "maxVResolutionPx": {
+                                    "type": "integer"
+                                },
+                                "aspectRatio": {
+                                    "type": "string",
+                                    "enum": [
+                                        "16:9",
+                                        "1:1",
+                                        "4:3"
+                                    ]
+                                },
+                                "isHighDynamicRange": {
+                                    "type": "boolean"
+                                },
+                                "isUltraLowLatency": {
+                                    "type": "boolean",
+                                    "description": "Gibt an, ob es sich um einen Ultra-Low-Latency Stream handelt."
+                                },
+                                "isAdaptiveQualitySelectable": {
+                                    "type": "boolean",
+                                    "description": "Erlaubt dem Nutzer das direkte Auswählen der Qualitätsstufen von adaptiven Streams.\nDas Medium wird zu Wiedergabebeginn dann immer ausgewählt, im Fehlerfall fällt der Player zurück auf die anderen konfigurierten Medien.",
+                                    "default": false
+                                },
+                                "fallbackGroup": {
+                                    "type": "number",
+                                    "description": "Optionale Angabe einer Gruppen-Zugehörigkeit (1,2,3,…) um mehrere alternative Streams zusammenzufassen und im Fehlerfall automatisch anzuwählen."
+                                },
+                                "hasEmbeddedSubtitles": {
+                                    "type": "boolean",
+                                    "description": "True if DASH/HLS manifest contains one or more in-band subtitles (mandatory for hbbtv support)"
+                                },
+                                "forcedLabel": {
+                                    "type": "string"
+                                },
+                                "isHbbTV": {
+                                    "type": "boolean",
+                                    "description": "Gibt an, ob es sich um eine HbbTV-spezifische Konfiguration handelt."
+                                },
+                                "audios": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "kind": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "standard",
+                                                    "audio-description",
+                                                    "simple-language",
+                                                    "speech-optimized"
+                                                ]
+                                            },
+                                            "languageCode": {
+                                                "type": "string",
+                                                "example": "ISO-639-3"
+                                            },
+                                            "channels": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "mono",
+                                                    "stereo",
+                                                    "surround"
+                                                ],
+                                                "description": "optional für die Anzeige beim Nutzer?"
+                                            },
+                                            "channelCount": {
+                                                "type": "number",
+                                                "description": "Vor allem benötigt zur Auswahl des korrekten Audiostreams bei mehreren einträgen für die gleiche Sprache - Wenn eine Audiospur als \"SURROUND\" angegeben ist und kein Label konfiguriert wurde wird channelCount in den generierten Anzeigenamen übernommen"
+                                            },
+                                            "codec": {
+                                                "type": "string"
+                                            },
+                                            "default": {
+                                                "type": "boolean",
+                                                "description": "falls gesetzt und true wird diese spur als standard-spur für die sprache behandelt (zb für zurückwechsel bei deaktivieren von audiodeskription)"
+                                            },
+                                            "nativeId": {
+                                                "type": "string",
+                                                "description": "hilfreich zum mapping von konfigurationen zu streams in HLS / DASH\ngibt die id des zugehörigen Audiostreams (als _string_) an und wird (falls gesetzt) mit höchster Priorität zur Auswahl herangezogen"
+                                            },
+                                            "label": {
+                                                "type": "string",
+                                                "description": "Anzeigename der Audiospur (z.B. \"Deutsch - Dolby Atmos\") - wenn gesetzt _muss_ entweder nativeId korrekt gesetzt sein oder label exakt mit dem label des Audiostreams (in HLS / DASH) übereinstimmen damit eine Auswahl möglich ist"
+                                            }
+                                        },
+                                        "required": [
+                                            "kind",
+                                            "languageCode"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "url",
+                                "mimeType",
+                                "audios"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "kind",
+                    "media"
+                ]
+            }
+        },
+        "subtitles": {
+            "type": "array",
+            "description": "Definition der zugehörigen Untertitel.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "kind": {
+                        "type": "string",
+                        "example": "normale Sprache, einfache Sprache etc.",
+                        "enum": [
+                            "normal",
+                            "simple-language",
+                            "closed-captions"
+                        ],
+                        "description": "(Inhaltlicher) Typ des Untertitels (einfache Sprache, Normal usw). Für mögliche Typen siehe Enum-Beschreibung."
+                    },
+                    "languageCode": {
+                        "type": "string",
+                        "example": "ISO-639-3",
+                        "description": "ISO-Definition der zugehörigen Sprache."
+                    },
+                    "sources": {
+                        "type": "array",
+                        "description": "Verwendbare Quellen zu diesem UT-Format (z.B. vtt, ebu usw).",
+                        "items": {
+                            "type": "object",
+                            "minProperties": 1,
+                            "properties": {
+                                "kind": {
+                                    "type": "string",
+                                    "enum": [
+                                        "ebutt",
+                                        "webvtt",
+                                        "embedded"
+                                    ],
+                                    "description": "Format der Abrufquellen."
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "description": "Optional kann die url leer sein, falls UT über Stream übertragen werden."
+                                }
+                            },
+                            "required": [
+                                "kind"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "kind",
+                    "languageCode",
+                    "sources"
+                ]
+            }
+        },
+        "live": {
+            "type": "object",
+            "description": "wenn live definiert, handelt es sich IMMER um einen Live-Clip",
+            "properties": {
+                "dvrWindowSeconds": {
+                    "type": "integer",
+                    "description": "Längen-Angabe des DVR-Fensters"
+                },
+                "availFromDateTime": {
+                    "type": "string",
+                    "example": "2020-01-25T22:55:00Z",
+                    "format": "date-time",
+                    "description": "Start-Zeitstempel des erlaubten DVR-Wiedergabebereichs"
+                },
+                "availToDateTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "'2020-01-25T22:55:00Z",
+                    "description": "Zeitstempel des geplanten Wiedergabe-Endes"
+                }
+            },
+            "required": [
+                "dvrWindowSeconds"
+            ]
+        },
+        "meta": {
+            "title": "Meta",
+            "type": "object",
+            "properties": {
+                "durationSeconds": {
+                    "type": "integer"
+                },
+                "maturityContentRating": {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string",
+                            "example": "fsk",
+                            "enum": [
+                                "fsk",
+                                "other"
+                            ]
+                        },
+                        "age": {
+                            "type": "integer"
+                        },
+                        "isBlocked": {
+                            "type": "boolean",
+                            "description": "Feld das angibt, ob die Wiedergabe aufgrund von Altersbeschränkungen unterbunden werden soll."
+                        }
+                    },
+                    "required": [
+                        "kind",
+                        "age",
+                        "isBlocked"
+                    ]
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "kind": {
+                                "type": "string",
+                                "enum": [
+                                    "preview",
+                                    "audio",
+                                    "maturityContentBlocked"
+                                ]
+                            },
+                            "url": {
+                                "type": "string",
+                                "description": "Platzhalter-URL {width} {aspectRatio}"
+                            },
+                            "imageSourceName": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string",
+                                "description": "Titel des Bildes"
+                            },
+                            "alt": {
+                                "type": "string",
+                                "description": "Alternativer Titel"
+                            }
+                        },
+                        "required": [
+                            "kind",
+                            "url"
+                        ]
+                    }
+                },
+                "title": {
+                    "type": "string",
+                    "description": "alias für \"clipTitle\""
+                },
+                "subHeading": {
+                    "type": "string"
+                },
+                "seriesTitle": {
+                    "type": "string"
+                },
+                "synopsis": {
+                    "type": "string",
+                    "description": "alias für \"clipDescription\""
+                },
+                "availableToDateTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "alias für \"clipAvailEnd\""
+                },
+                "broadcastedOnDateTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "alias für \"clipDate\""
+                },
+                "clipSourceName": {
+                    "type": "string",
+                    "description": "Allgemeine Quellenangabe; alias für \"clipContentSrc\""
+                },
+                "publicationService": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "enum": [
+                                "3sat",
+                                "ard",
+                                "ardalpha",
+                                "arte",
+                                "br",
+                                "daserste",
+                                "funk",
+                                "hr",
+                                "kika",
+                                "mdr",
+                                "ndr",
+                                "one",
+                                "radiobremen",
+                                "rbb",
+                                "sr",
+                                "swr",
+                                "tagesschau24",
+                                "wdr"
+                            ]
+                        },
+                        "partner": {
+                            "type": "string",
+                            "enum": [
+                                "3sat",
+                                "alpha",
+                                "ard",
+                                "arte",
+                                "br",
+                                "daserste",
+                                "dw",
+                                "deutschlandradio",
+                                "funk",
+                                "hr",
+                                "kika",
+                                "mdr",
+                                "ndr",
+                                "one",
+                                "phoenix",
+                                "radiobremen",
+                                "rbb",
+                                "sportschau",
+                                "sr",
+                                "swr",
+                                "tagesschau24",
+                                "wdr",
+                                "zdf",
+                                "zdfinfo",
+                                "zdfneo"
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "example": "Das Erste",
+                            "description": "alias für \"channelTitle\""
+                        },
+                        "logoUrl": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "partner",
+                        "name"
+                    ]
+                },
+                "embed": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "De-/Aktiviert das Embed-Senderlogo"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Embedding-Titel (bei Videoplayer oben links)"
+                        },
+                        "link": {
+                            "type": "string",
+                            "description": "Ziel-Adresse der Verlinkung des Sender-Logos"
+                        },
+                        "linkText": {
+                            "type": "string",
+                            "description": "Mouseover-Text des Embed-Logos"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "images",
+                "title"
+            ]
+        },
+        "pluginData": {
+            "title": "PluginData",
+            "type": "object",
+            "description": "PluginData als Platzhalter für alle Plugin-spezifischen Konfigurationen. Es kann sowohl in PlayerConfiguration als auch MediaCollection gesetzt werden, wobei die MC die PC überschreibt.",
+            "properties": {
+                "sharing@all": {
+                    "type": "object",
+                    "properties": {
+                        "link": {
+                            "type": "string"
+                        },
+                        "embedCode": {
+                            "type": "string"
+                        },
+                        "params": {
+                            "type": "string"
+                        },
+                        "legal": {
+                            "type": "string"
+                        },
+                        "body": {
+                            "type": "string"
+                        },
+                        "subject": {
+                            "type": "string"
+                        },
+                        "services": {
+                            "type": "array",
+                            "items": {
+                                "type": [
+                                    "string",
+                                    "object"
+                                ],
+                                "enum": [
+                                    "url",
+                                    "fb-messenger",
+                                    "facebook",
+                                    "threema",
+                                    "telegram",
+                                    "twitter",
+                                    "embed",
+                                    "whatsapp",
+                                    "email"
+                                ],
+                                "minLength": 1,
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "enum": [
+                                            "whatsapp",
+                                            "url",
+                                            "fb-messenger",
+                                            "facebook",
+                                            "threema",
+                                            "telegram",
+                                            "twitter",
+                                            "embed"
+                                        ]
+                                    },
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "class": {
+                                        "type": "string"
+                                    },
+                                    "target": {
+                                        "type": "string"
+                                    },
+                                    "targetParams": {
+                                        "type": "object",
+                                        "minProperties": 1
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "title",
+                                    "class",
+                                    "target",
+                                    "targetParams"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "link",
+                        "embedCode",
+                        "params",
+                        "legal",
+                        "body",
+                        "subject",
+                        "services"
+                    ]
+                },
+                "recommendation@all": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        },
+                        "timerSeconds": {
+                            "type": "integer",
+                            "description": "Laufzeit des Timers in Sekunden",
+                            "minimum": 0,
+                            "example": 60
+                        },
+                        "isAutoplay": {
+                            "type": "boolean",
+                            "description": "Empfehlungen nach Ablauf der Zeit timerSeconds automatisch abspielen."
+                        }
+                    },
+                    "required": [
+                        "url",
+                        "timerSeconds"
+                    ]
+                },
+                "multicdn@web": {
+                    "type": "object",
+                    "properties": {
+                        "isDebug": {
+                            "type": "boolean"
+                        },
+                        "resolverUrl": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "isDebug",
+                        "resolverUrl"
+                    ]
+                },
+                "jumpmarks@all": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "description": "Remote-Datenstruktur und/oder Live-Marken"
+                        },
+                        "refreshSeconds": {
+                            "type": "integer",
+                            "default": 10,
+                            "description": "Update-Intervall (nur Live-Sprungmarken)"
+                        },
+                        "chapterArray": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "chapterTime": {
+                                        "type": "integer",
+                                        "description": "Sekunden\n"
+                                    },
+                                    "chapterTitle": {
+                                        "type": "string"
+                                    },
+                                    "chapterImg": {
+                                        "type": "string",
+                                        "description": "Optionales Bild"
+                                    },
+                                    "chapterSubtitle": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "chapterTime"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "refreshSeconds"
+                    ]
+                },
+                "addon360@web": {
+                    "type": "object",
+                    "properties": {
+                        "projection": {
+                            "type": "string",
+                            "default": "360",
+                            "enum": [
+                                "cubic",
+                                "180",
+                                "360"
+                            ]
+                        },
+                        "audio": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "lib": {
+                                            "type": "string",
+                                            "enum": [
+                                                "omnitone"
+                                            ]
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "enum": [
+                                                "foa",
+                                                "hoa"
+                                            ],
+                                            "default": "foa"
+                                        }
+                                    },
+                                    "required": [
+                                        "lib"
+                                    ]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "lib": {
+                                            "type": "string",
+                                            "default": "facebook",
+                                            "enum": [
+                                                "facebook"
+                                            ]
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "enum": [
+                                                "AMBIX_FOA",
+                                                "AMBIX_SOA",
+                                                "TBE_6",
+                                                "TBE_6_2",
+                                                "TBE_8",
+                                                "TBE_8_2",
+                                                "AMBIX_9_2"
+                                            ],
+                                            "default": "AMBIX_FOA"
+                                        }
+                                    },
+                                    "required": [
+                                        "lib"
+                                    ]
+                                },
+                                {
+                                    "type": "string",
+                                    "default": "none",
+                                    "enum": [
+                                        "none"
+                                    ]
+                                }
+                            ]
+                        },
+                        "stereo": {
+                            "type": "string",
+                            "default": "none",
+                            "enum": [
+                                "none",
+                                "tb",
+                                "lr"
+                            ]
+                        },
+                        "initialFOV": {
+                            "type": "number",
+                            "default": 50,
+                            "minimum": 15,
+                            "maximum": 100
+                        }
+                    }
+                },
+                "breakingNews@all": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "feedUrl": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "pollRate": {
+                            "type": "number",
+                            "default": 60,
+                            "description": "Aktualisierungsrate für den Neswscrawler in Sekunden"
+                        }
+                    }
+                },
+                "plugin-dash@web": {
+                    "type": "object",
+                    "properties": {
+                        "liveDelay": {
+                            "type": "number",
+                            "default": "3,0",
+                            "example": "Target Latency (secs)"
+                        },
+                        "liveCatchUpMinDrift": {
+                            "type": "number",
+                            "default": "0,05",
+                            "example": "Min. drift (secs)"
+                        },
+                        "liveCatchUpPlaybackRate": {
+                            "type": "number",
+                            "default": "0,5",
+                            "example": "Catch-up playback rate (%)"
+                        },
+                        "liveCatchupLatencyThreshold": {
+                            "type": "number",
+                            "default": 30,
+                            "example": "Live catchup latency threshold (secs)"
+                        }
+                    }
+                },
+                "trackingAti@all": {
+                    "title": "TrackingAti",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "site": {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        },
+                        "forceSite": {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        },
+                        "config": {
+                            "type": "object",
+                            "properties": {
+                                "site": {
+                                    "type": [
+                                        "string",
+                                        "number"
+                                    ]
+                                },
+                                "log": {
+                                    "type": "string"
+                                },
+                                "logSSL": {
+                                    "type": "string"
+                                },
+                                "domain": {
+                                    "type": "string"
+                                },
+                                "collectDomain": {
+                                    "type": "string"
+                                },
+                                "collectDomainSSL": {
+                                    "type": "string"
+                                },
+                                "userIdOrigin": {
+                                    "type": "string"
+                                },
+                                "secure": {
+                                    "type": "boolean"
+                                },
+                                "pixelPath": {
+                                    "type": "string"
+                                },
+                                "disableCookie": {
+                                    "type": "boolean"
+                                },
+                                "disableStorage": {
+                                    "type": "boolean"
+                                },
+                                "cookieSecure": {
+                                    "type": "boolean"
+                                },
+                                "cookieDomain": {
+                                    "type": "string"
+                                },
+                                "ignoreEmptyChapterValue": {
+                                    "type": "boolean"
+                                },
+                                "clientSideUserId": {
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "identifiedVisitor": {
+                            "type": "object"
+                        },
+                        "isEmbedded": {
+                            "type": "boolean"
+                        },
+                        "page": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "level2": {
+                                    "type": "string"
+                                },
+                                "chapter1": {
+                                    "type": "string"
+                                },
+                                "chapter2": {
+                                    "type": "string"
+                                },
+                                "chapter3": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "siteVars": {
+                            "type": "object"
+                        },
+                        "richMedia": {
+                            "type": "object",
+                            "properties": {
+                                "mediaType": {
+                                    "type": "string",
+                                    "enum": [
+                                        "audio",
+                                        "video"
+                                    ]
+                                },
+                                "playerId": {
+                                    "type": "string"
+                                },
+                                "mediaLevel2": {
+                                    "type": "string"
+                                },
+                                "mediaLabel": {
+                                    "type": "string"
+                                },
+                                "mediaTheme1": {
+                                    "type": "string"
+                                },
+                                "mediaTheme2": {
+                                    "type": "string"
+                                },
+                                "mediaTheme3": {
+                                    "type": "string"
+                                },
+                                "duration": {
+                                    "type": "string"
+                                },
+                                "broadcastMode": {
+                                    "type": "string",
+                                    "enum": [
+                                        "clip",
+                                        "live"
+                                    ]
+                                },
+                                "webdomain": {
+                                    "type": "string"
+                                },
+                                "refreshDuration": {
+                                    "type": "object",
+                                    "description": "Sample: {\"0\": 5, \"1\": 12, \"12\": 15, \"18\": 30}"
+                                }
+                            },
+                            "required": [
+                                "mediaType",
+                                "mediaLevel2",
+                                "mediaLabel",
+                                "duration",
+                                "broadcastMode"
+                            ]
+                        },
+                        "sdkUrls": {
+                            "type": "array",
+                            "description": "Optional paths to smarttag.js, addition sdk-scripts e.g.; needed to inject config to native clients.",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "trackingIvw@all": {
+                    "title": "TrackingIvw",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "data": {
+                            "type": "object",
+                            "properties": {
+                                "st": {
+                                    "type": "string"
+                                },
+                                "cp": {
+                                    "type": "string"
+                                },
+                                "co": {
+                                    "type": "string"
+                                },
+                                "xp": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "trackingArgos@all": {
+                    "title": "TrackingArgos",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "data": {
+                            "type": "object",
+                            "properties": {
+                                "providerKey": {
+                                    "type": "string"
+                                },
+                                "argosMediaTitle": {
+                                    "type": "string"
+                                },
+                                "argosMediaUrl": {
+                                    "type": "string"
+                                },
+                                "argosSeries": {
+                                    "type": "string"
+                                },
+                                "argosCrid": {
+                                    "type": "string"
+                                },
+                                "argosCustomData": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "providerKey",
+                        "argosMediaTitle"
+                    ]
+                },
+                "trackingAgf@all": {
+                    "title": "TrackingAgf",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "debug": {
+                            "type": "boolean"
+                        },
+                        "permLive": {
+                            "type": "boolean"
+                        },
+                        "appId": {
+                            "type": "string"
+                        },
+                        "playerId": {
+                            "type": "string"
+                        },
+                        "clipData": {
+                            "type": "object",
+                            "description": "ClipData-Objekt wird an AGF-SDK durchgereicht",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "program": {
+                                    "type": "string"
+                                },
+                                "length": {
+                                    "type": [
+                                        "string",
+                                        "number"
+                                    ]
+                                },
+                                "assetid": {
+                                    "type": "string"
+                                },
+                                "livestream": {
+                                    "type": "string"
+                                },
+                                "nol_c0": {
+                                    "type": "string"
+                                },
+                                "nol_c1": {
+                                    "type": "string"
+                                },
+                                "nol_c2": {
+                                    "type": "string"
+                                },
+                                "nol_c3": {
+                                    "type": "string"
+                                },
+                                "nol_c4": {
+                                    "type": "string"
+                                },
+                                "nol_c5": {
+                                    "type": "string"
+                                },
+                                "nol_c6": {
+                                    "type": "string"
+                                },
+                                "nol_c7": {
+                                    "type": "string"
+                                },
+                                "nol_c8": {
+                                    "type": "string"
+                                },
+                                "nol_c9": {
+                                    "type": "string"
+                                },
+                                "nol_c10": {
+                                    "type": "string"
+                                },
+                                "nol_c11": {
+                                    "type": "string"
+                                },
+                                "nol_c12": {
+                                    "type": "string"
+                                },
+                                "nol_c13": {
+                                    "type": "string"
+                                },
+                                "nol_c14": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "appId",
+                        "clipData"
+                    ]
+                },
+                "trackingSola@all": {
+                    "title": "TrackingSola",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "beaconUrl": {
+                            "type": "string"
+                        },
+                        "jsLibraryUrl": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "object",
+                            "description": "metadata"
+                        }
+                    },
+                    "required": [
+                        "beaconUrl",
+                        "jsLibraryUrl",
+                        "data"
+                    ]
+                },
+                "trackingGFK@hbbtv": {
+                    "title": "TrackingGfkTV",
+                    "type": "object",
+                    "properties": {
+                        "isEnabled": {
+                            "type": "boolean"
+                        },
+                        "jsLibraryUrl": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "streams",
+        "meta"
+    ]
+}
