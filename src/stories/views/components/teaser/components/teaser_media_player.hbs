@@ -1,0 +1,15 @@
+<div class="relative {{_aspectRatio}}" x-show="!avStart" >
+    {{#unless this.hideGeotag}}
+        {{~#with this.geotag}}
+            {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../this.teaserSize _isMobile1to1=../this.isMobile1to1}}
+        {{/with~}}
+    {{/unless}}
+
+    {{#if this.isTickerTeaser}}<a href="{{this.link.url}}" aria-label="Zum Ticker" tabindex="-1"{{#if (isUserConsentNeeded this.link.url)}} class="js-user-consent-needed"{{/if}}>{{/if}}
+        {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.content.imageVariant this.content.imageVariant '100-copytext') _addClassImg=(appendToDefault _addClassImg-adjust_context "ar__content ") _noDelay=this.dontLazyload ~}}                             
+    {{#if this.isTickerTeaser}}</a>{{/if}}
+
+    {{#with this}}
+        {{> components/mediaplayer/mediaplayer_button _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel _teaserSize=this.teaserSize _teaserType=this.teaserType _isMobile1to1=this.isMobile1to1}}   
+    {{/with}} 
+</div>

@@ -48,5 +48,63 @@
             ]
         }
         
+    },
+    "audio":{
+        "ardPlayerConfig": {
+            "@->jsoninclude": "audio/audios.inc.json",
+            "@->contentpath": "audio-1"
+        },
+        "ardPlayerJsonConfig": {
+            "@->jsoninclude": "audio/audios.inc.json",
+            "@->contentpath": "audio-1",
+            "@->overrides": [
+                {
+                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "isAutoplay",
+                    "@->value": false
+                }
+            ]
+        }
+        
+    },
+    "audio_event_livestream":{
+        "ardPlayerConfig": {
+            "@->jsoninclude": "audio/audios.inc.json",
+            "@->contentpath": "audio-event-livestream"
+        },
+        "ardPlayerJsonConfig": {
+            "@->jsoninclude": "audio/audios.inc.json",
+            "@->contentpath": "audio-event-livestream",
+            "@->overrides": [
+                {
+                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "isAutoplay",
+                    "@->value": false
+                }
+            ]
+        }
+        
     }
 }
