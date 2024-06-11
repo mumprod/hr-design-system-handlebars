@@ -44,14 +44,14 @@ module.exports = {
 
         extend: {
             backgroundImage: {
-                'logo-footer' : 'var(--bg-logo-footer)'
+                'logo-footer': 'var(--bg-logo-footer)'
             },
             invert: {
-                'logo-footer' : 'var(--invert-logo-footer)',
+                'logo-footer': 'var(--invert-logo-footer)',
             },
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
-                'logo-footer' : 'var(--rounded-logo-footer)',
+                'logo-footer': 'var(--rounded-logo-footer)',
             },
             fontSize: {
                 'xs': ['0.75rem', '1.0625rem'],
@@ -157,7 +157,7 @@ module.exports = {
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.125rem',
                 'header-sm': '7.125rem',
-                'footer-logo':'var(--height-footer-logo)',
+                'footer-logo': 'var(--height-footer-logo)',
                 'footer-logo-md': 'var(--height-footer-logo-md)',
                 'footer-logo-lg': 'var(--height-footer-logo-lg)',
             },
@@ -245,7 +245,7 @@ module.exports = {
                 titleCluster: 'var(--font-weight-titleCluster)',
             },
             colors: {
-                'inherit': 'inherit', 
+                'inherit': 'inherit',
                 'blue': {
                     accented: '#eaf3fa',
                     allports: '#007899',
@@ -254,23 +254,25 @@ module.exports = {
                     blackSqueeze: '#eaf5f7',
                     blueStone: '#00646f',
                     congress: '#005293',
-                    deepCerulean: '#006eb7',
+                    deepCerulean: { rgb: '0 110 183', hex: '#006eb7' },
                     deeperPool: '#097d8e',
                     deepSeaDream: '#002c6b',
                     dodgerBlue: '#407596',
-                    jellyBean: '#276b9e',
+                    jellyBean: { rgb: '39 107 158', hex: '#276b9e' },
                     lightCerulean: '#007EA1',
                     matisse: '#1B7C96',
                     midnight: '#023770',
                     pacificBlue: '#009bc6',
-                    science: '#006dc1',
-                    sea: '#006783',
+                    science: { rgb: '0 109 193', hex: '#006dc1' },
+                    sea: { rgb: '0 103 131', hex: '#006783' },
                     tarawera: '#0a3355',
                     turquoiseCerulian: '#007fa0',
                     linkWater: '#d3e2f4',
-                    blueLuxury: '#007396',
-                    nightRider:'#2d2d2d',
-                    danube:  '#759ace',
+                    blueLuxury: {
+                        rgb: '0 115 150', hex: '#007396'
+                    },
+                    nightRider: '#2d2d2d',
+                    danube: '#759ace',
                 },
                 'black': {
                     DEFAULT: '#000000',
@@ -280,16 +282,16 @@ module.exports = {
                     burntUmber: '#8d2725',
                     lipstick: '#CC006E',
                     mexican: '#a12644',
-                    monza: '#c20016',
-                    paprika: '#8C033D',
+                    monza: { rgb: '194 0 22', hex: '#c20016' },
+                    paprika: { rgb: '140 3 61', hex: '#8C033D' },
                     scarlett: '#9b0112',
                     thunderbird: '#cc1a14',
-                    wellRead: '#AB2F2D',
+                    wellRead: { rgb: '171 47 45', hex: '#AB2F2D' },
                 },
                 'pink': {
                     fuchsie: '#bf0071',
                     ripeRaspberries: '#be005a',
-                    rose: '#e5007d',
+                    rose: { rgb: '229 0 125', hex: '#e5007d' },
                 },
                 'orange': {
                     bridesmaid: '#FCF2ED',
@@ -298,10 +300,10 @@ module.exports = {
                     clementine: '#ec6602',
                     goldDrop: '#f07800',
                     oregon: '#A14702',
-                    spicyCarrot: '#d34600',
+                    spicyCarrot: { rgb: '211 70 0', hex: '#d34600' },
                 },
                 'teal': {
-                    DEFAULT: '#007A7C',
+                    DEFAULT: { rgb: '0 122 124', hex: '#007A7C' },
                     deeperPool: '#097d8e',
                 },
                 'gray': {
@@ -320,7 +322,7 @@ module.exports = {
                 },
                 'green': {
                     casal: '#29675d',
-                    eden: '#0F6157',
+                    eden: { rgb: '15 97 87', hex: '#0F6157' },
                     flint: '#6e675e',
                     genoa: '#168378',
                     goBen: '#6e6748',
@@ -344,7 +346,7 @@ module.exports = {
                     corn: '#e0ae00',
                     goldenSand: '#f2da6c',
                     hokeyPokey: '#c1bc2b',
-                    olive: '#916B00',
+                    olive: { rgb: '145 107 0', hex: '#916B00' },
                 },
 
                 'primary': 'var(--color-primary-ds)',
@@ -398,6 +400,7 @@ module.exports = {
                 'button-disabled': 'var(--color-button-disabled)',
                 'button-disabled--dark': 'var(--color-button-disabled--dark)',
                 'media-button': 'var(--color-media-button)',
+                'media-button-live': 'var(--color-media-button-live)',
                 'focus-state': 'var(--color-focus-state)',
                 'content-nav': 'var(--color-content-nav)',
                 'podcast': 'var(--color-podcast)',

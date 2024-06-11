@@ -124,6 +124,7 @@
     "share_mail_body": "Linktipp: {0}\n{1}\n{2}\n(Beitrag von hessenschau.de)",
     "share_mail_linktitle": "Per E-Mail versenden",
     "share_copy_linktitle": "In die Zwischenablage kopieren",
+    "share_copy_message": "Link kopiert!",
     "share_mail_subject": "Linktipp: {0} (hessenschau.de)",
     "share_x_linktitle": "Bei X teilen",
     "share_whatsapp_linktitle": "Bei Whatsapp teilen",
