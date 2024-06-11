@@ -1,3 +1,15 @@
+# v1.70.0 (Tue Jun 11 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: Add audioplayer and audiolivestream player to mediaplayer config [#938](https://github.com/mumprod/hr-design-system-handlebars/pull/938) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.69.3 (Tue Jun 11 2024)
 
 #### 🐛 Bug Fix
