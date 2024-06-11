@@ -1,3 +1,16 @@
+# v1.70.1 (Tue Jun 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-323: add add copytext-video component [#928](https://github.com/mumprod/hr-design-system-handlebars/pull/928) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.70.0 (Tue Jun 11 2024)
 
 #### 🚀 Enhancement
