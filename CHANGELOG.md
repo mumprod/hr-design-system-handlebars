@@ -1,3 +1,15 @@
+# v1.70.5 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- Europawahl: Externen Dienst für Ergebnisse einrichten [#942](https://github.com/mumprod/hr-design-system-handlebars/pull/942) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.70.4 (Wed Jun 12 2024)
 
 #### 🐛 Bug Fix
