@@ -11,7 +11,7 @@
             <div :class="{ 'flex justify-start col-full sm:col-main relative': $store.sharingIsVisible == false }">
                 <div :style="($store.footerIsVisible && !$screen('lg')) && {bottom:$store.sharingBottomPos.current}" 
                     :class="{ 'bottom-[19px] flex-col absolute mt-3 rounded-md': $store.sharingIsVisible == false && $store.footerIsVisible == false,
-                                'flex-col absolute mt-3' : $store.footerIsVisible == true }"
+                                'flex-col absolute mt-3' : !$screen('lg') && $store.footerIsVisible == true && window.innerHeight > document.querySelector('#content').offsetHeight + document.querySelector('.sb-main-navigation').offsetHeight + (window.innerHeight - document.querySelector('footer').offsetTop) - document.querySelector('footer').offsetHeight}"
                     class="flex self-center gap-3 bg-white left-5">
                     <button 
                         class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
