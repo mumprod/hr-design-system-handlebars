@@ -208,5 +208,20 @@
         "setTimedReloadIframe": false,
         "setTimeForReload": "",
         "externalServiceCaption": "Eine Demo der Virtual Reality-Inszenierung '2049: Zeitreise Mobilität'"
+    },
+    "Wahl_Gemeinde_Ergebnis": {
+        "externalServiceConfig": {
+            "makeConfigurable": false,
+            "embedAsIFrame": false,
+            "externalServiceId": "wahl-gemeinde-ergebnis",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "wahl-gemeinde-ergebnis"
+        },
+        "serviceUrl": "https://www.tagesschau.de/wahl/archiv/2024-06-09-EP-DE/charts/wahlkreis-detail/G06412000-{version}.shtml?externalEmbed*G06412000*&2024-06-09-EP-DE*&https%3A%2F%2Fwww.hessenschau.de%2Fpolitik%2Flandtagswahl%2Fkandidatencheck%2Fwk-versions.json",
+        "fixedHeight": "",
+        "aspectRatio": "",
+        "setResponsiveIframe": false,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
     }                                                
 }
