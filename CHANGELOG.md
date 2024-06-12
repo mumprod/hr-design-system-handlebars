@@ -1,3 +1,15 @@
+# v1.70.4 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- better positioning and handling of copymessage [#941](https://github.com/mumprod/hr-design-system-handlebars/pull/941) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.70.3 (Tue Jun 11 2024)
 
 #### 🐛 Bug Fix
