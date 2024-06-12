@@ -1,3 +1,15 @@
+# v1.70.6 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ h-Auszeichnungen der Label überarbeiten [#943](https://github.com/mumprod/hr-design-system-handlebars/pull/943) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.70.5 (Wed Jun 12 2024)
 
 #### 🐛 Bug Fix
