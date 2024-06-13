@@ -1,3 +1,15 @@
+# v1.70.7 (Thu Jun 13 2024)
+
+#### 🐛 Bug Fix
+
+- some fine tuning for the message div [#944](https://github.com/mumprod/hr-design-system-handlebars/pull/944) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.70.6 (Wed Jun 12 2024)
 
 #### 🐛 Bug Fix
