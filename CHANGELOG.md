@@ -1,3 +1,15 @@
+# v1.70.8 (Thu Jun 13 2024)
+
+#### 🐛 Bug Fix
+
+- sets a z-index in social_sharing_copytext [#945](https://github.com/mumprod/hr-design-system-handlebars/pull/945) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.70.7 (Thu Jun 13 2024)
 
 #### 🐛 Bug Fix
