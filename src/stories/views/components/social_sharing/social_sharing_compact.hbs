@@ -40,7 +40,7 @@
                         :class="$store.sharingIsVisible == true ? 'h-8 absolute right-[68px] md:relative md:right-0 md:h-auto' : 'relative right-0 md:h-auto lg:hidden '"
                     >
                         <ul class="flex gap-3"  :class="{ 'flex-col': $store.sharingIsVisible == false }">
-                            {{> components/social_sharing/social_sharing_compact_icons }}
+                            {{> components/social_sharing/social_sharing_compact_icons _trackingData=../this.trackingData}}
                         </ul>
                     </div>
                 </div>
