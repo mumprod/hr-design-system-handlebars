@@ -1,12 +1,12 @@
 {{~#with this.twitterLink ~}}
 <li>
-    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../../this.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         target="_blank"
         rel="noopener noreferrer"
         title="{{loca "share_x_linktitle" }}"
-        {{#with ../../this.content.trackingData}}
+        {{#with ../../this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::X"}]}'
         {{/with}}
     >
@@ -22,7 +22,7 @@
         target="_blank"
         rel="noopener noreferrer"
         title="{{loca "share_facebook_linktitle" }}"
-        {{#with ../../this.content.trackingData}}
+        {{#with ../../this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
         {{/with}}
     >
@@ -38,7 +38,7 @@
         target="_blank"
         rel="noopener noreferrer"
         title="{{loca "share_whatsapp_linktitle" }}"
-        {{#with ../../this.content.trackingData}}
+        {{#with ../../this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
         {{/with}}
     >
@@ -48,7 +48,7 @@
 {{/with}}
 {{~#with this.mailtoLink}}
 <li class="">
-    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         
         href="{{this}}"
         title="{{loca "share_mail_linktitle" }}"
@@ -62,9 +62,9 @@
 {{/with}}
 
 <li x-data="copyHandler()" x-on:click="copyToClipboard" class="">
-    <a class="{{#with ../this.content.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+    <a class="{{#with ../this.trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         title="{{loca "share_copy_linktitle" }}"
-        {{#with ../this.content.trackingData}}
+        {{#with ../this.trackingData}}
             data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::copybutton"}]}'
         {{/with}}
     >

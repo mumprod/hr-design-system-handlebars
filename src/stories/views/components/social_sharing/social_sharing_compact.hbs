@@ -14,12 +14,18 @@
                                 'flex-col absolute mt-3' : !$screen('lg') && $store.footerIsVisible == true && window.innerHeight > document.querySelector('#content').offsetHeight + document.querySelector('.sb-main-navigation').offsetHeight + (window.innerHeight - document.querySelector('footer').offsetTop) - document.querySelector('footer').offsetHeight}"
                     class="flex self-center gap-3 bg-white left-5">
                     <button 
-                        class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
+                        class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group"
                         x-show="!$screen('lg')"
                         x-ref="button"
                         x-on:click="toggle()"
                         :aria-expanded="open"
-                        :aria-controls="$id('dropdown-button')">
+                        :aria-controls="$id('dropdown-button')"
+                        
+                        {{#with ../this.trackingData}}
+                            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
+                        {{/with}}
+                        
+                        >
                         {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
                     </button> 
 

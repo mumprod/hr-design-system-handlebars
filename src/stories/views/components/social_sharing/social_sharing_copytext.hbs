@@ -1,4 +1,4 @@
-<div x-show="$screen('lg') && $store.sharingIsVisible == false" x-init="$store.sharingIsOpen = false" class="sticky w-10 col-start-2 mt-6 z-100 h-fit"
+<div x-show="$screen('lg') && $store.sharingIsVisible == false && document.querySelector('.copytextWrapper').offsetHeight > $el.offsetHeight" x-init="$store.sharingIsOpen = false" class="sticky w-10 col-start-2 mt-6 z-100 h-fit"
     :class="{'top-[166px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') ,
             'top-[130px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') ,
             'top-[85px]' : !$store.sectionNavIsVisible && $screen('lg')}"
