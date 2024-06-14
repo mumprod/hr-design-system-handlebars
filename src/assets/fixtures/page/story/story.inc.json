@@ -155,5 +155,9 @@
             "@->jsoninclude": "teaser/teaser_groups.inc.json",
             "@->contentpath": "teaser_4_25_relatedcontent"
         }
+    },
+    "trackingData": {
+        "secondLevelId": "2",
+        "pageName": "bla"
     }
 }
