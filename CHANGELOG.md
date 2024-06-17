@@ -1,3 +1,15 @@
+# v1.70.11 (Mon Jun 17 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Webview Adjustments DPE-2945 [#949](https://github.com/mumprod/hr-design-system-handlebars/pull/949) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.70.10 (Mon Jun 17 2024)
 
 #### 🐛 Bug Fix
