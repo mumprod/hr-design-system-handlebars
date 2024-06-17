@@ -1,3 +1,15 @@
+# v1.70.10 (Mon Jun 17 2024)
+
+#### 🐛 Bug Fix
+
+- add w-full [#948](https://github.com/mumprod/hr-design-system-handlebars/pull/948) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.70.9 (Fri Jun 14 2024)
 
 #### 🐛 Bug Fix
