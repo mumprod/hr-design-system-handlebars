@@ -6,7 +6,7 @@
                 {{#> components/label/label_group}}
                     {{> components/label/label _type=this.type _text=(loca this.loca) }}
                     {{> components/label/label_byline _css="ml-2"}}
-                    {{#with ../this}}{{> components/content/copytext/components/media/media_figure_byline}}{{/with~}}
+                    {{#with ../../../../this}}{{> components/content/copytext/components/media/media_figure_byline}}{{/with~}}
                 {{/components/label/label_group}}
             {{/with~}}
             {{#with this.toModel.mediaBacklinkToStoryTeaser}}
