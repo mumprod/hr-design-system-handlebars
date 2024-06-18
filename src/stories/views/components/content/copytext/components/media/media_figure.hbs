@@ -17,11 +17,8 @@
         </figcaption>
     {{/unless}}
     {{#if this.isVideo}}
-        {{#if _isLead}}
-            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true  _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true _noDelay=true ~}}
-        {{else}}
-            {{~> components/content/copytext/components/video/video_element _isCopyText=true _teaser=this _isTeaser=true _fullSize=_fullSize _addClassVideo="ar__content" _mediaMetadata=true~}}
-        {{/if}}
+        {{~> components/mediaplayer/media_player this.toModel.videoElement _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=_addClassImg ~}}
+        {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}
     {{/if}}
     {{#unless _voting-option}}
         {{#with this.teaseritem}}
