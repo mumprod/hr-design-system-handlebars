@@ -1,3 +1,16 @@
+# v1.74.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- hide geotag for video in copytext [#955](https://github.com/mumprod/hr-design-system-handlebars/pull/955) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.74.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
