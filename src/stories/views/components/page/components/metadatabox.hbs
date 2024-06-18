@@ -1,16 +1,18 @@
-<div class="clear-both mt-5 border-y border-gray-scorpion">
-    <div class="flex clear-both w-full my-4 sm:my-4">
-        <div class="self-center">
-            {{> components/page/components/author _hideFrom=false }}
+{{#unless this.hideMetadatabox}}
+    <div class="clear-both mt-5 border-y border-gray-scorpion">
+        <div class="flex clear-both w-full my-4 sm:my-4">
+            <div class="self-center">
+                {{> components/page/components/author _hideFrom=false }}
 
-            {{#if _showDate }}
-                {{> components/page/components/publicationdate }}
-            {{/if}}
+                {{#if _showDate }}
+                    {{> components/page/components/publicationdate }}
+                {{/if}}
 
-            {{> components/page/components/commentinfo }}
+                {{> components/page/components/commentinfo }}
+            </div>
+            {{#unless _webview}}
+                {{> components/social_sharing/social_sharing_compact _isVertical=false}}
+            {{/unless}}
         </div>
-
-        {{> components/social_sharing/social_sharing_compact _isVertical=false}}
-
     </div>
-</div>
+{{/unless}}
