@@ -28,6 +28,12 @@
     {{/unless}}
     {{~> components/content/copytext/copytext _isWebview=_webview-adjust_context ~}}
 
+     {{~> components/content/content_footer/content_footer 
+        _showDate=this.hasDwellTime
+        _date=this.documentPublicationDate
+        _source=this.source
+        _isArchiveContent=this.isArchiveContent ~}}
+
     {{> components/page/components/appendix _isArticle=true }}
     
     {{> components/page/components/comments }}
