@@ -6,6 +6,21 @@
         },
         {
             "isHeadline": true,
+            "text": "Wahl Gemeinde Ergebnis"
+        },        
+        {
+            "paragraphBoxItem": {
+                "isExternalService": true,
+                "toModel": {
+                    "externalService": {
+                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->contentpath": "Wahl_Gemeinde_Ergebnis"
+                    }
+                }
+            }
+        },
+        {
+            "isHeadline": true,
             "text": "360Grad"
         },        
         {

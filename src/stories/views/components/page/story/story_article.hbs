@@ -3,7 +3,7 @@
 
     {{> components/page/components/shorttext _text=this.shorttext }}
 
-    {{> components/page/components/metadatabox _showDate=this.hasDwellTime}}
+    {{> components/page/components/metadatabox _showDate=this.hasDwellTime _webview=_webview-adjust_context}}
     
     
     {{#unless this.displayPageLead.isFalse}}
@@ -21,12 +21,12 @@
         {{/with}}
     {{/unless}}
 
-    {{#unless _webview}}
+    {{#unless _webview-adjust_context}}
         {{~#with this.socialSharing ~}}
             {{> components/social_sharing/social_sharing_copytext}}
         {{~/with~}}
     {{/unless}}
-    {{~> components/content/copytext/copytext _isWebview=_webview ~}}
+    {{~> components/content/copytext/copytext _isWebview=_webview-adjust_context ~}}
 
     {{> components/page/components/appendix _isArticle=true }}
     

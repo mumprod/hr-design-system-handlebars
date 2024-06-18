@@ -1,3 +1,123 @@
+# v1.70.11 (Mon Jun 17 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Webview Adjustments DPE-2945 [#949](https://github.com/mumprod/hr-design-system-handlebars/pull/949) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.70.10 (Mon Jun 17 2024)
+
+#### 🐛 Bug Fix
+
+- add w-full [#948](https://github.com/mumprod/hr-design-system-handlebars/pull/948) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.70.9 (Fri Jun 14 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3143 [#946](https://github.com/mumprod/hr-design-system-handlebars/pull/946) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.70.8 (Thu Jun 13 2024)
+
+#### 🐛 Bug Fix
+
+- sets a z-index in social_sharing_copytext [#945](https://github.com/mumprod/hr-design-system-handlebars/pull/945) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.70.7 (Thu Jun 13 2024)
+
+#### 🐛 Bug Fix
+
+- some fine tuning for the message div [#944](https://github.com/mumprod/hr-design-system-handlebars/pull/944) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.70.6 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ h-Auszeichnungen der Label überarbeiten [#943](https://github.com/mumprod/hr-design-system-handlebars/pull/943) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.70.5 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- Europawahl: Externen Dienst für Ergebnisse einrichten [#942](https://github.com/mumprod/hr-design-system-handlebars/pull/942) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.70.4 (Wed Jun 12 2024)
+
+#### 🐛 Bug Fix
+
+- better positioning and handling of copymessage [#941](https://github.com/mumprod/hr-design-system-handlebars/pull/941) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.70.3 (Tue Jun 11 2024)
+
+#### 🐛 Bug Fix
+
+- add _onWhite-Parameter [#940](https://github.com/mumprod/hr-design-system-handlebars/pull/940) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.70.2 (Tue Jun 11 2024)
+
+#### 🐛 Bug Fix
+
+- show two topnews in 33% Ticker-Teaser (desktop) [#939](https://github.com/mumprod/hr-design-system-handlebars/pull/939) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.70.1 (Tue Jun 11 2024)
 
 #### 🐛 Bug Fix
