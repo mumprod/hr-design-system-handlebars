@@ -1,8 +1,11 @@
 <div class="relative{{#if _css}} {{_css}}{{/if}} {{_aspectRatio}}" x-show="!avStart" >
-    {{#unless this.hideGeotag}}
-        {{~#with this.geotag}}
-            {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../this.teaserSize _isMobile1to1=../this.isMobile1to1}}
-        {{/with~}}
+
+    {{#unless _isUsedInCopytext}}
+        {{#unless this.hideGeotag}}
+            {{~#with this.geotag}}
+                {{> components/geoTag/geoTag _text=this.[0].title _teaserSize=../this.teaserSize _isMobile1to1=../this.isMobile1to1}}
+            {{/with~}}
+        {{/unless}}
     {{/unless}}
 
     {{#if this.isTickerTeaser}}<a href="{{this.link.url}}" aria-label="Zum Ticker" tabindex="-1"{{#if (isUserConsentNeeded this.link.url)}} class="js-user-consent-needed"{{/if}}>{{/if}}
