@@ -1,3 +1,40 @@
+# v1.73.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- Display video byline correctly [#953](https://github.com/mumprod/hr-design-system-handlebars/pull/953) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.73.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Fix a bug that caused the airdate not being displayed in the delivery [#952](https://github.com/mumprod/hr-design-system-handlebars/pull/952) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.72.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- new template for new content_footer [#951](https://github.com/mumprod/hr-design-system-handlebars/pull/951) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.71.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
