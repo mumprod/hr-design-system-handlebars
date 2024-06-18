@@ -1,3 +1,28 @@
+# v1.74.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- integrate content footer in story [#954](https://github.com/mumprod/hr-design-system-handlebars/pull/954) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.73.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- Display video byline correctly [#953](https://github.com/mumprod/hr-design-system-handlebars/pull/953) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.73.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
