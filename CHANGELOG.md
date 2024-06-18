@@ -1,3 +1,15 @@
+# v1.74.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- integrate content footer in story [#954](https://github.com/mumprod/hr-design-system-handlebars/pull/954) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.73.1 (Tue Jun 18 2024)
 
 #### 🐛 Bug Fix
