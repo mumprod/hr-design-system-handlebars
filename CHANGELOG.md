@@ -1,3 +1,16 @@
+# v1.73.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- Display video byline correctly [#953](https://github.com/mumprod/hr-design-system-handlebars/pull/953) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.73.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
