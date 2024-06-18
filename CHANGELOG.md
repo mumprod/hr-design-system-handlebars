@@ -1,3 +1,15 @@
+# v1.72.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- new template for new content_footer [#951](https://github.com/mumprod/hr-design-system-handlebars/pull/951) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.71.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
