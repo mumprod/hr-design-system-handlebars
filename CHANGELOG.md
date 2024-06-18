@@ -1,3 +1,15 @@
+# v1.73.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Fix a bug that caused the airdate not being displayed in the delivery [#952](https://github.com/mumprod/hr-design-system-handlebars/pull/952) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.72.0 (Tue Jun 18 2024)
 
 #### 🚀 Enhancement
