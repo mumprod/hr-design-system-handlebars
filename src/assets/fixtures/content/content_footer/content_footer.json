@@ -42,8 +42,7 @@
             "url": "/programReference-url",
             "isTargetBlank": false   
             },
-        "name": "hr",
-        "title": "Testtitel",
+        "name": "Testtitel",
         "displayWithTime": true,
         "date": {
             "htmlDateTime": "2022-10-31T19:30+0200",
