@@ -1,3 +1,15 @@
+# v1.74.2 (Wed Jun 19 2024)
+
+#### 🐛 Bug Fix
+
+- fixes wrong json/hbs, adds some css [#956](https://github.com/mumprod/hr-design-system-handlebars/pull/956) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.1 (Tue Jun 18 2024)
 
 #### 🐛 Bug Fix
