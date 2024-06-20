@@ -1,3 +1,15 @@
+# v1.74.4 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- readds hover css [#958](https://github.com/mumprod/hr-design-system-handlebars/pull/958) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.3 (Thu Jun 20 2024)
 
 #### 🐛 Bug Fix
