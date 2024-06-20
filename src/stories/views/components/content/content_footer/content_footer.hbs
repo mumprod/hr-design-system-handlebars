@@ -1,12 +1,13 @@
 <footer class="flex flex-col mt-10 text-xs md:text-sm text-gray-scorpion dark:text-text-dark font-headingSerif{{#if _addClass}} {{_addClass}}{{/if}}">
     {{#with this.editorialStaffItems}}
-        <p class="">
+        <p>
             Redaktion:
             {{#each this}}
                 {{#if this.hasProfileLink}}
                     {{#>components/base/link _link=this.link _css="text-link" }}
-                        <span>{{../this.authorName~}}</span>{{/components/base/link}}{{#with
-                        this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
+                        <span>{{../this.authorName~}}</span>
+                    {{/components/base/link}}
+                    {{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
                 {{else}}
                     {{this.from}}{{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
                 {{/if}}
@@ -15,11 +16,11 @@
     {{/with}}
     {{~#with this.programReferenceAlt~}}
         {{~#if this.hasReference~}}
-            <div class="">
+            <div>
                 Sendung: 
                 {{#if this.link}}
                     {{#>components/base/link _link=this.link _css="text-link" }}
-                        <span>{{../this.name}}</span> 
+                        <span>{{../this.name}},</span> 
                     {{/components/base/link}}
                         {{#if this.date}}   
                             <span>
@@ -34,7 +35,7 @@
                             </span>
                         {{/if}}
                 {{else}}
-                    <span>{{this.name}} {{#if this.date}}   
+                    <span>{{this.name}},{{#if this.date}}   
                             <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
                                 class="{{#if _isArticle}}{{else}}{{/if}} ">
                                 {{#if this.displayWithTime}}
