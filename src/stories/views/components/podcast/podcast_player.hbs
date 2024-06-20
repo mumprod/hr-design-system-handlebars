@@ -14,7 +14,7 @@
           {{/with}}
           
           
-            <div class="flex text-xs grow {{#if this.teaserItem}}pr-2 md:pr-5 {{else}}pr-2 md:pr-0 {{/if}}font-headingSerif text-podcast-text dark:text-podcast-text-dark">
+            <div class="flex pr-2 text-xs grow {{#if this.hasTeaserItem}}md:pr-5 {{else}}md:pr-0 {{/if}} font-headingSerif text-podcast-text dark:text-podcast-text-dark">
               {{~#with airdateDate}}
                 <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
               {{/with}}
@@ -36,23 +36,23 @@
             </div>
 
             {{!-- Podcast Image      --}}
-            {{#with this.teaseritem}}
+            {{#if this.hasTeaserItem}}
               <div class="flex flex-col ">
-                  <div class="w-22 {{#if ../_isArticlePlayer }} md:w-32 lg:w-42 {{else}} {{inline-switch ../this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/if}}">
-                      {{> components/base/image/responsive_image this
+                  <div class="w-22 {{#if _isArticlePlayer }} md:w-32 lg:w-42 {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/if}}">
+                      {{> components/base/image/responsive_image this.teaseritem
                               _type="podcastEpisodePlayer"
                               _variant="default"
                               _addClass="overflow-hidden"
-                              _noDelay=../this.dontLazyload
+                              _noDelay=this.dontLazyload
                               _addClassImg="w-full block"
                       }}
                   </div>
               </div>
-            {{/with}}
+            {{/if}}
         </div>
 
         {{!-- Player UI --}}
-        <div class="flex {{#if _isArticlePlayer }} lg:pr-48 lg:-mt-14 {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}} {{/if}}"
+        <div class="flex {{#if _isArticlePlayer }}lg:-mt-14{{#if this.hasTeaserItem}} lg:pr-48 {{else}} lg:pr-0 {{/if}} {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["lg:pr-48 lg:-mt-14"," "]'}} {{/if}}"
              x-data="podcastPlayer()"
              x-init="listenToGlobalStop()"
              ax-load
