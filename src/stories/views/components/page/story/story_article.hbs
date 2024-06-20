@@ -18,6 +18,9 @@
                     _isWebview=../../_isWebview
                     _noDelay=true}}
             {{/if}}
+            {{#if this.isVideo}}
+               {{> components/content/copytext/components/media/media_figure _isLead=true _fullSize=true _addClass="print:hidden article-full-width md:article-breakout my-12 sm:my-14" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
+            {{/if}}
         {{/with}}
     {{/unless}}
 

@@ -2,6 +2,7 @@ import story_template from './story_article.hbs'
 import data_story from './fixtures/story.json'
 import data_story_with_label from './fixtures/story_with_label.json'
 import data_story_with_square_image from './fixtures/story_with_square_image.json'
+import data_story_with_video from './fixtures/story_with_video.json'
 
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -38,5 +39,14 @@ export const WithLabel = {
     parameters: {
         layout: 'fullscreen',
         chromatic: { delay: 1000 }
+    }
+}
+
+export const WithVideo = {
+    render: Template.bind({}),
+    name: 'Artikel mit Video im Aufmacher',
+    args: data_story_with_video,
+    parameters: {
+        layout: 'fullscreen',
     }
 }
