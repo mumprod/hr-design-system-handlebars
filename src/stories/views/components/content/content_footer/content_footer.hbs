@@ -4,9 +4,7 @@
             Redaktion:
             {{#each this}}
                 {{#if this.hasProfileLink}}
-                    {{#>components/base/link _link=this.link _css="text-link" }}
-                        <span>{{../this.authorName~}}</span>
-                    {{/components/base/link}}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline"}}<span>{{../this.authorName~}}</span>{{/components/base/link}}
                     {{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
                 {{else}}
                     {{this.from}}{{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
@@ -19,7 +17,7 @@
             <div>
                 Sendung: 
                 {{#if this.link}}
-                    {{#>components/base/link _link=this.link _css="text-link" }}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline" }}
                         <span>{{../this.name}},</span> 
                     {{/components/base/link}}
                         {{#if this.date}}   
