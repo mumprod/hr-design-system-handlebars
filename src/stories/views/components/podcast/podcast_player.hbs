@@ -2,7 +2,7 @@
     <div class="flex flex-col grow">
         {{!-- First Row --}}
         <div class="flex flex-row {{#if ../_ordered}} pl-8 {{/if}} ">
-            <div class="flex flex-col grow min-h-40">
+            <div class="flex flex-col min-h-[160px] grow ">
                 <div class="flex max-h-6">
                     {{!-- Label / Airdate --}}
                     {{#with label}}
@@ -14,7 +14,7 @@
           {{/with}}
           
           
-            <div class="flex pr-2 text-xs grow md:pr-5 font-headingSerif text-podcast-text dark:text-podcast-text-dark">
+            <div class="flex text-xs grow {{#if this.teaserItem}}pr-2 md:pr-5 {{else}}pr-2 md:pr-0 {{/if}}font-headingSerif text-podcast-text dark:text-podcast-text-dark">
               {{~#with airdateDate}}
                 <time class="flex grow pt-1.5" datetime="{{this.htmlDateTime}}">{{this.date}}</time>
               {{/with}}
@@ -38,7 +38,7 @@
             {{!-- Podcast Image      --}}
             {{#with this.teaseritem}}
               <div class="flex flex-col ">
-                  <div class="w-22 {{#if _isArticlePlayer }} md:w-32 lg:w-42 {{else}} {{inline-switch this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/if}}">
+                  <div class="w-22 {{#if ../_isArticlePlayer }} md:w-32 lg:w-42 {{else}} {{inline-switch ../this.realTeaserSize '["100","50"]' '["md:w-32 lg:w-42","md:w-22 lg:w-32", ""]'}} {{/if}}">
                       {{> components/base/image/responsive_image this
                               _type="podcastEpisodePlayer"
                               _variant="default"
