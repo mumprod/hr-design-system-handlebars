@@ -46,39 +46,16 @@ setConsoleOptions({
 });
 
 
-function loadDelayedImages() {
-    setTimeout(function () {
-        var t,
-            e = document.images,
-            s = [],
-            a = function (t) {
-                void 0 !== window.picturefill && window.picturefill({ reevaluate: !0, elements: t })
-            }
-        for (var i = 0; i < e.length; ++i)
-            (t = e[i].dataset ? e[i].dataset.srcset : e[i].getAttribute('data-srcset')) &&
-                (0 === e[i].getBoundingClientRect().top
-                    ? s.push(e[i])
-                    : e[i].setAttribute('srcset', t))
-        a(e),
-            setTimeout(function () {
-                var t
-                for (var i = 0; i < s.length; ++i)
-                    (t = s[i].dataset ? s[i].dataset.srcset : s[i].getAttribute('data-srcset')),
-                        s[i].setAttribute('srcset', t)
-                a(s)
-            }, 900)
-    }, 0)
-}
+
 
 let eventSrcUrl = null
 
 document.addEventListener('DOMContentLoaded', function (event) {
-    console.log('DOM fully loaded and parsed')
     console.log('Start feature initialization')
-
-    Initializer.run(document, loadFeature)
-    setTimeout(loadDelayedImages, 200)
+    Initializer.run(document, loadFeature)  
 })
+
+
 
 /*if (process.env.NODE_ENV !== 'production') {
     console.log(Initializer)
