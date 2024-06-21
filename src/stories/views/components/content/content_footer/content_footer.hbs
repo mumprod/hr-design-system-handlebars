@@ -1,17 +1,51 @@
-<footer class="flex flex-col mt-10 text-xs md:text-sm font-headingSerif dark:text-text-dark {{#if _addClass}} {{_addClass}}{{/if}}">
-    {{~#with _author ~}}
+<footer class="flex flex-col mt-10 text-xs md:text-sm text-gray-scorpion dark:text-text-dark font-headingSerif{{#if _addClass}} {{_addClass}}{{/if}}">
+    {{#with this.editorialStaffItems}}
         <p>
-            Autor: {{this}}
+            Redaktion:
+            {{#each this}}
+                {{#if this.hasProfileLink}}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline"}}<span>{{../this.authorName~}}</span>{{/components/base/link~}}
+                    {{~#with this.textAfterAuthor}}{{this}}{{/with}}{{~this.delimiter~}}
+                {{else}}
+                    {{this.from}}{{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
+                {{/if}}
+            {{/each}}
         </p>
+    {{/with}}
+    {{~#with this.programReferenceAlt~}}
+        {{~#if this.hasReference~}}
+            <div>
+                Sendung:
+                {{#if this.link}}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline"~}}
+                        <span>{{~ ../this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
+                        <span>
+                                <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                                      class="{{#if _isArticle}}{{else}}{{/if}} ">
+                                    {{#if this.displayWithTime}}
+                                        {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                                    {{else}}
+                                        {{this.date.date}}
+                                    {{/if}}
+                                </time>
+                            </span>
+                    {{/if}}
+                {{else}}
+                    <span>{{~this.programLabel~}},{{~#if this.date~}}
+                        <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                              class="{{#if _isArticle}}{{else}}{{/if}} ">
+                            {{~#if this.displayWithTime~}}
+                                {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                            {{~else~}}
+                                {{this.date.date}}
+                            {{~/if~}}
+                        </time>
+                    {{~/if~}}
+                    </span>
+                {{/if}}
+            </div>
+        {{~/if~}}
     {{~/with~}}
-    {{#if _showDate ~}}
-        {{#with _date}}
-            <p>
-                <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
-            </p>
-        {{/with~}}
-    {{/if}}
-
     {{~#with _source}}
         <p>
             {{~loca "copyright_source"~}}
@@ -20,31 +54,16 @@
             {{/each~}}
         </p>
     {{/with~}}
-
-    {{~#with _copyright ~}}
-        <p>
-            {{~loca "copyright_source"}} {{loca "copyright_symbol" this ~}}
-        </p>
-    {{~/with~}}
-
     {{~#if _isArchiveContent}}
         <p>
             {{loca "archive_content"}}
         </p>
     {{/if}}
-
-    {{~#with _posterCopyright ~}}
-        {{~#with ../teaseritem.copyrightWithLinks}}
+    {{#if _showDate ~}}
+        {{#with _date}}
             <p>
-                {{~loca ../this this}}
+                <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
             </p>
-        {{~/with~}}
-    {{~/with~}}
-
-    <!-- TODO teaseritem.copyrightWithLinks dont work in gallery, generalize model -->
-    {{~#with _galleryCopyright ~}}
-        <p>
-            {{~loca this ../copyrightWithLinks}}
-        </p>
-    {{~/with~}}
+        {{/with~}}
+    {{/if}}
 </footer>

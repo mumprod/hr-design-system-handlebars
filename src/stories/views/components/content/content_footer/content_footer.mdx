@@ -15,14 +15,11 @@ Die Content-Footer-Komponente wird in handlebars wie folgt eingebaut:
 
 ```html
 {{> components/content/content_footer/content_footer
-        _addCss = ""
-        _source_=this.source
-        _author=this.audioAuthor
         _showDate=this.hasDwellTime
-        _date=this.airdateDate
-        _copyright=this.copyright
+        _date=this.documentPublicationDate
+        _source=this.source
         _isArchiveContent=this.isArchiveContent
-        _posterCopyright="poster_copyright" }} 
+        }} 
 ```
 
 <Canvas withToolbar>
