@@ -1,9 +1,9 @@
 <figure class="relative ar-16-9 {{_addClass}}" x-data="{ avStart: false }">
     {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
     {{#unless _voting-option}}
-        <figcaption class="py-3 sm:py-4 border-t-[3px] border-gray-boulder {{_cssClassCaption}}">
+        <figcaption class="py-3 sm:py-4 border-t-[3px] border-gray-boulder dark:border-text-dark {{_cssClassCaption}}">
             {{#if this.label}}
-                {{#> components/label/label_group}}
+                {{#> components/label/label_group _css="dark:text-text-dark"}}
                     {{#with this.label}}
                         {{> components/label/label _type=this.type _text=(loca this.loca) }}
                         {{> components/label/label_byline _css="ml-2"}}
