@@ -1,3 +1,16 @@
+# v1.74.9 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- Video darkmode [#962](https://github.com/mumprod/hr-design-system-handlebars/pull/962) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.74.8 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix
