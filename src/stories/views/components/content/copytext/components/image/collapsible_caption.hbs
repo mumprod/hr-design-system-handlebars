@@ -13,16 +13,7 @@
             @resize.window="open = false; $refs.caption.scrollHeight === $refs.caption.clientHeight ? truncated = false : truncated = true">
     <div  class="dark:text-text-dark overflow-anywhere hyphens-auto"  x-ref="caption" 
     {{#if this.showFullSize.isTrue}} :class="!open ? 'line-clamp-2 md:line-clamp-none' : 'line-clamp-none'" {{else}} :class="!open ? 'line-clamp-2' : 'line-clamp-none'" {{/if}}>
-        {{#if this.caption}}
-            {{~#unless _hideCaption~}}
-                <span class="pr-3">
-                    {{this.caption}} 
-                </span>
-            {{~/unless~}}
-        {{/if}}
-        <span class="text-gray-scorpion dark:text-text-dark">
-            {{~loca "figures_copyright"}} {{{copyrightWithLinks}}} 
-        </span>
+        {{> @partial-block }}
     </div>
     <template x-if="truncated">
         <button x-cloak 

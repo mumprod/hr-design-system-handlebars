@@ -1,30 +1,53 @@
-<figure class="relative ar-16-9 my-6 sm480:my-7 {{_addClass}}" x-data="{ avStart: false }">
+<figure class="relative my-6 sm480:my-7 {{_addClass}}" x-data="{ avStart: false }">
     {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
     {{#unless _voting-option}}
-        <figcaption class="py-3 mx-5 sm:mx-0 sm:py-4 border-t-[3px] border-gray-boulder">
-            {{#if this.label}}
+        <div class="py-3 mx-5 sm:mx-0 sm:py-4 border-t-[3px] border-gray-boulder">
+            {{#if this.label~}}
                 {{#> components/label/label_group}}
                     {{#with this.label}}
-                        {{> components/label/label _type=this.type _text=(loca this.loca) }}
-                        {{> components/label/label_byline _css="ml-2"}}
-                    {{/with}}
-                    {{> components/content/copytext/components/media/media_figure_byline this}}
+                        {{~> components/label/label _type=this.type _text=(loca this.loca) }}
+                        {{~> components/label/label_byline _css="ml-2"}}
+                    {{/with~}}
+                    {{~> components/content/copytext/components/media/media_figure_byline this}}
                 {{/components/label/label_group}}
             {{/if~}}
-            {{#with this.toModel.mediaBacklinkToStoryTeaser}}
-                {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
-                    {{> components/content/copytext/components/media/media_figure_headline}}
-                {{/components/base/link}}
-            {{/with}}
-        </figcaption>
+            {{#if this.isVideo}}
+                {{#with this.toModel.mediaBacklinkToStoryTeaser}}
+                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                        {{> components/content/copytext/components/media/media_figure_headline}}
+                    {{/components/base/link}}
+                {{/with}}
+            {{/if}}
+        </div>
     {{/unless}}
-    {{#if this.isVideo}}
+    {{#if this.isAudioOnDemand}}
+        {{~> components/mediaplayer/media_player this.toModel.audioElement _uiTestHook="ui-test-audio-ondemand-player" _isAudioView=true _addClassImg=_addClassImg ~}}
+    {{/if}}
+    {{#if this.isVideoOnDemand}}
         {{~> components/mediaplayer/media_player this.toModel.videoElement _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=_addClassImg ~}}
         {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}
     {{/if}}
     {{#unless _voting-option}}
         {{#with this.teaseritem}}
-            {{~> components/content/copytext/components/image/figcaption  _cssClassCaption="mx-5 sm:mx-0"~}}
+            {{~#> components/content/copytext/components/image/collapsible_caption _cssClassCaption="mx-5 sm:mx-0"}}
+                {{#unless ../../this.isAudio}}
+                    {{~> components/content/copytext/components/image/image_caption_text}}
+                {{/unless}}
+                {{~> components/content/copytext/components/image/image_copyright}}
+                {{#if ../../this.isAudio~}}
+                    <span class="mx-1">|</span>
+                    {{#with ../../this.toModel.mediaBacklinkToStoryTeaser}}
+                        {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
+                            <span>
+                                {{~this.readMore~}}
+                                {{~#if this.hasIcon}}
+                                    {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
+                                {{~/if~}}
+                            </span>
+                        {{/components/base/link}}
+                    {{/with}}
+                {{/if}}
+            {{~/components/content/copytext/components/image/collapsible_caption}}
         {{/with}}
     {{/unless}}
     {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
