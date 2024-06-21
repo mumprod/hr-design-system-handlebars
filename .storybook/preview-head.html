@@ -1,7 +1,8 @@
 <script src="vendor/modernizr/modernizr.cust.js"></script>
-<!--to be sure hyphems work correctly lang Attribute needs to be "de"
-see: https://github.com/storybookjs/storybook/issues/11706 -->
+
 <script>
+    //  to be sure hyphems work correctly lang Attribute needs to be "de"
+    //  see: https://github.com/storybookjs/storybook/issues/11706
     document.documentElement.setAttribute('lang', 'de')
 
     // Javascript workaround damit darkmode nur in der Webview in Delivery funktioniert
@@ -13,64 +14,35 @@ see: https://github.com/storybookjs/storybook/issues/11706 -->
     darkModePreference.addEventListener("change",  setColorScheme);
     setColorScheme(darkModePreference);
     
-    
-</script>
-<script>
     // https://github.com/storybookjs/storybook/issues/6113#issuecomment-1183339597
-    function loadDelayedImages() {
-        setTimeout(function () {
-            var t,
-                e = document.images,
-                s = [],
-                a = function (t) {
-                    void 0 !== window.picturefill && window.picturefill({ reevaluate: !0, elements: t })
-                }
-            for (var i = 0; i < e.length; ++i)
-                (t = e[i].dataset ? e[i].dataset.srcset : e[i].getAttribute('data-srcset')) &&
-                    (0 === e[i].getBoundingClientRect().top
-                        ? s.push(e[i])
-                        : e[i].setAttribute('srcset', t))
-            a(e),
-                setTimeout(function () {
-                    var t
-                    for (var i = 0; i < s.length; ++i)
-                        (t = s[i].dataset ? s[i].dataset.srcset : s[i].getAttribute('data-srcset')),
-                            s[i].setAttribute('srcset', t)
-                    a(s)
-                }, 900)
-        }, 0)
-    }
-
     // On page change, fire DOMContentLoaded event
     function pageChange() {
         console.log("pageChange")
-        setTimeout(loadDelayedImages, 500)
-      // Dispatch DOMContentLoaded event
-      window.document.dispatchEvent(new Event('DOMContentLoaded', {
-        bubbles: true,
-        cancelable: true
-      }));
+        window.document.dispatchEvent(new Event('storyWasSwitchedAndIsLoaded', {
+            bubbles: true,
+            cancelable: true
+        }));
     }
   
     function watchForChanges() {
-        console.log("watchForChanges")
-      const mutationObserver = function(mutationsList) {
-        for (let i = 0, len = mutationsList.length; i < len; i++) {
-          if (mutationsList[i].type == 'childList') {
-            pageChange();
-            break;
-          }
-        }
-      };
+        const mutationObserver = function(mutationsList) {
+            for (let i = 0, len = mutationsList.length; i < len; i++) {
+                if (mutationsList[i].type == 'childList') {
+                    pageChange();
+                    break;
+                }
+            }
+        };
   
-      const observer = new MutationObserver(mutationObserver);
-      const config = { childList: true, subtree: true };
-      observer.observe(document.getElementById('storybook-root'), config);
-  
-      // Remove event listener, otherwise we will re-run this function when we fire our manual event
-      document.removeEventListener('DOMContentLoaded', watchForChanges);
+        const observer = new MutationObserver(mutationObserver);
+        const config = { childList: true, subtree: false };
+        observer.observe(document.getElementById('storybook-root'), config);
+
+        // Remove event listener, otherwise we will re-run this function when we fire our manual event
+        document.removeEventListener('DOMContentLoaded', watchForChanges);
     }
   
     // Initially create mutation observer
     document.addEventListener('DOMContentLoaded', watchForChanges);
+
   </script>
