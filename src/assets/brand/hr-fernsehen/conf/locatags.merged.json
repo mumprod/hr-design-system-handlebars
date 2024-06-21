@@ -163,6 +163,16 @@
 	"story_infobox_outro_sr": "Ende der weiteren Informationen",
 	"story_video_intro_sr": "Videobeitrag",
 	"story_video_outro_sr": "Ende des Videobeitrags",
+	"teaser_more_audio": "zur Audioseite",
+	"teaser_more_audio_brand": "zur {0} Audioseite",
+	"teaser_more_video": "Videoseite",
+	"teaser_more_video_brand": "zur {0} Videoseite",
+	"teaser_more_video_brand_sr": "zum {0} Video",
+	"teaser_more_video_livestream": "Livestream",
+	"teaser_more_video_livestream_brand": "zum {0} Livestream",
+	"teaser_more_video_livestream_brand_sr": "zum {0} Livestream",
+	"teaser_more_video_livestream_sr": "zum Livestream",
+	"teaser_more_video_sr": "zum Video",
 	"header_homepage_link_title": "Startseite hr-fernsehen . d e",
 	"meta_application_name": "hr-fernsehen.de"
 }
