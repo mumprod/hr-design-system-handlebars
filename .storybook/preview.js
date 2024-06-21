@@ -45,7 +45,6 @@ setConsoleOptions({
     panelInclude: [...panelInclude, /checkcss/],
 });
 
-
 function loadDelayedImages() {
     setTimeout(function () {
         var t,
@@ -70,15 +69,12 @@ function loadDelayedImages() {
     }, 0)
 }
 
-let eventSrcUrl = null
-
-document.addEventListener('DOMContentLoaded', function (event) {
-    console.log('DOM fully loaded and parsed')
-    console.log('Start feature initialization')
-
-    Initializer.run(document, loadFeature)
-    setTimeout(loadDelayedImages, 200)
+document.addEventListener('storyWasSwitchedAndIsLoaded', function (event) {
+    console.log('storyWasSwitchedAndIsLoaded')
+    Initializer.run(document, loadFeature)  
+    setTimeout(loadDelayedImages, 500)
 })
+console.log('preview.js is loaded')
 
 /*if (process.env.NODE_ENV !== 'production') {
     console.log(Initializer)
