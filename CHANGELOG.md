@@ -1,3 +1,15 @@
+# v1.74.10 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- Bug dpe 3167 Fixing Edge and Chrome SVG [#964](https://github.com/mumprod/hr-design-system-handlebars/pull/964) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.74.9 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix
