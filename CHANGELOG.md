@@ -1,3 +1,138 @@
+# v1.74.5 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/podcast without teaser item [#959](https://github.com/mumprod/hr-design-system-handlebars/pull/959) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.4 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- readds hover css [#958](https://github.com/mumprod/hr-design-system-handlebars/pull/958) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.3 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- adds hover:underline to links [#957](https://github.com/mumprod/hr-design-system-handlebars/pull/957) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.2 (Wed Jun 19 2024)
+
+#### 🐛 Bug Fix
+
+- fixes wrong json/hbs, adds some css [#956](https://github.com/mumprod/hr-design-system-handlebars/pull/956) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- hide geotag for video in copytext [#955](https://github.com/mumprod/hr-design-system-handlebars/pull/955) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.74.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- integrate content footer in story [#954](https://github.com/mumprod/hr-design-system-handlebars/pull/954) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.73.1 (Tue Jun 18 2024)
+
+#### 🐛 Bug Fix
+
+- Display video byline correctly [#953](https://github.com/mumprod/hr-design-system-handlebars/pull/953) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.73.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Fix a bug that caused the airdate not being displayed in the delivery [#952](https://github.com/mumprod/hr-design-system-handlebars/pull/952) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.72.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- new template for new content_footer [#951](https://github.com/mumprod/hr-design-system-handlebars/pull/951) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.71.0 (Tue Jun 18 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3023 [#950](https://github.com/mumprod/hr-design-system-handlebars/pull/950) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### Authors: 2
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.70.11 (Mon Jun 17 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Webview Adjustments DPE-2945 [#949](https://github.com/mumprod/hr-design-system-handlebars/pull/949) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.70.10 (Mon Jun 17 2024)
 
 #### 🐛 Bug Fix
