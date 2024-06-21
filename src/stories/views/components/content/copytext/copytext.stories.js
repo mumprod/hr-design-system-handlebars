@@ -66,7 +66,15 @@ export const WithImage = {
     name: 'Image',
     args: copytext_image_json,
 }
-
+export const WithImageWebview = {
+    render: Template.bind({}),
+    name: 'Image Webview',
+    
+    args: {
+        ...copytext_image_json,
+        _isWebview: true
+    }
+}
 export const WithInfobox = {
     render: Template.bind({}),
     name: 'Infobox',
