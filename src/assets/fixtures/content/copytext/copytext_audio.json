@@ -2,60 +2,75 @@
     "copytextParagraph": [
         {
             "isHeadline": true,
-            "text": "Copytext mit Video"
+            "text": "Copytext mit Audio"
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
             "paragraphBoxItem": {
-                "isVideo": true,
-                "isVideoOnDemand": true,
+                "isAudio": true,
+                "isAudioOnDemand": true,
                 "showFullSize": {
                     "isTrue": true
                 },
                 "label": {
-                    "type": "video",
-                    "loca": "label_video",
+                    "type": "audio",
+                    "loca": "label_audio",
                     "byline": {
-                        "bylineText": "03:20 Min."
+                        "bylineText": "00:39 Min."
                     }
                 },
-                "copyright": "hessenschau",
+                "copyright": "hr",
+                "audioAuthor": "Michael Pörtner",
                 "showAirdate": true,
                 "airdateDate": {
-                    "htmlDateTime": "2022-10-31T19:30+0200",
-                    "htmlDate": "31.10.2022",
-                    "date": "31.10.22",
-                    "dateSeparatorTime": "31.10.22, 19:30"
+                    "htmlDateTime": "2024-06-21T14:30+0200",
+                    "htmlDate": "21.06.2024",
+                    "date": "21.06.24",
+                    "dateSeparatorTime": "21.06.24, 14:30"
                 },
                 "toModel": {
-                    "videoElement": {
+                    "audioElement": {
                         "ardPlayerConfig": {
-                            "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-1"
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2"
                         },
                         "ardPlayerJsonConfig": {
-                            "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-1"
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                }
+                            ]
                         }
                     },
                     "mediaBacklinkToStoryTeaser": {
                         "link": {
-                            "url": "/videoseite",
+                            "url": "/audioseite",
                             "isTargetBlank": false
                         },
-                        "readMoreScreenreader": "zum hr3.de Video",
+                        "readMoreScreenreader": "zum hessenschau.de Audio",
                         "title": "Musik macht deinen Tag",
-                        "isForeignBrand": true,
-                        "readMore": "zur hr3.de Videoseite",
-                        "hasIcon": true,
+                        "isForeignBrand": false,
+                        "readMore": "zur Audioseite",
+                        "hasIcon": false,
                         "iconName": "extern"
                     }
                 },
                 "teaseritem": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "copytext_image_100",
+                    "@->contentpath": "copytext_image_50",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
@@ -66,7 +81,7 @@
 
                 "teaserImage": {
                     "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "copytext_image_100",
+                    "@->contentpath": "copytext_image_50",
                     "@->replaceToken": [
                         {
                             "@->token": "image",
@@ -81,19 +96,19 @@
         },
         {
             "paragraphBoxItem": {
-                "isVideo": true,
-                "isVideoOnDemand": true,
+                "isAudio": true,
+                "isAudioOnDemand": true,
                 "showFullSize": {
                     "isTrue": false
                 },
                 "label": {
-                    "type": "video",
-                    "loca": "label_video",
+                    "type": "audio",
+                    "loca": "label_audio",
                     "byline": {
-                        "bylineText": "03:20 Min."
+                        "bylineText": "00:20 Min."
                     }
                 },
-                "copyright": "hessenschau",
+                "audioAuthor": "Karsten Hufer",
                 "showAirdate": true,
                 "airdateDate": {
                     "htmlDateTime": "2022-10-31T19:30+0200",
@@ -102,26 +117,50 @@
                     "dateSeparatorTime": "31.10.22, 19:30"
                 },
                 "toModel": {
-                    "videoElement": {
+                    "audioElement": {
                         "ardPlayerConfig": {
-                            "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-2"
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
                         },
                         "ardPlayerJsonConfig": {
-                            "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-2"
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
                         }
                     },
                     "mediaBacklinkToStoryTeaser": {
                         "link": {
-                            "url": "/videoseite",
+                            "url": "/audioseite",
                             "isTargetBlank": false
                         },
-                        "readMoreScreenreader": "zum hr3.de Video",
+                        "readMoreScreenreader": "zum Audio",
                         "title": "Musik macht deinen Tag",
                         "isForeignBrand": false,
-                        "readMore": "zur hr3.de Videoseite",
-                        "hasIcon": true,
+                        "readMore": "zur Audioseite",
+                        "hasIcon": false,
                         "iconName": "extern"
                     }
                 },

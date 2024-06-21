@@ -12,6 +12,7 @@ import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
 import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
 import copytext_video_json from './fixtures/copytext_video.json'
+import copytext_audio_json from './fixtures/copytext_audio.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -28,7 +29,7 @@ export default {
                     </div>`
         },
     ],
-    parameters:{layout:'fullscreen'}
+    parameters: { layout: 'fullscreen' }
 }
 
 export const Default = {
@@ -107,4 +108,10 @@ export const WithVideo = {
     render: Template.bind({}),
     name: 'Video',
     args: copytext_video_json,
+}
+
+export const WithAudio = {
+    render: Template.bind({}),
+    name: 'Audio',
+    args: copytext_audio_json,
 }
