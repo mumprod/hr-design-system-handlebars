@@ -1,3 +1,15 @@
+# v1.74.12 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- fixes some unneeded spaces from the template rendering [#966](https://github.com/mumprod/hr-design-system-handlebars/pull/966) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.11 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix
