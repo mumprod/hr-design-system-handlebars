@@ -38,6 +38,7 @@
         }],
     "programReferenceAlt":{
          "hasReference": true,
+         "programLabel": "Hessenschau",
          "link": {
             "url": "/programReference-url",
             "isTargetBlank": false   
