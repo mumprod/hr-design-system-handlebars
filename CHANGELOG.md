@@ -1,3 +1,15 @@
+# v1.74.8 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- -new getter "programLabel" for programReferenceAlt [#963](https://github.com/mumprod/hr-design-system-handlebars/pull/963) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.7 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix
