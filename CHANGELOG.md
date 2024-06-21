@@ -1,3 +1,15 @@
+# v1.74.13 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- fixes some space issues [#967](https://github.com/mumprod/hr-design-system-handlebars/pull/967) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.12 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix
