@@ -31,16 +31,16 @@
                             </span>
                     {{/if}}
                 {{else}}
-                    <span>{{~this.programLabel~}},{{~#if this.date~}}
+                    <span>{{this.programLabel}}{{#if this.date}}, 
                         <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
                               class="{{#if _isArticle}}{{else}}{{/if}} ">
-                            {{~#if this.displayWithTime~}}
+                            {{#if this.displayWithTime}}
                                 {{loca "date_simple_at" this.date.dateSeparatorTime}}
-                            {{~else~}}
+                            {{else}}
                                 {{this.date.date}}
-                            {{~/if~}}
+                            {{/if}}
                         </time>
-                    {{~/if~}}
+                    {{/if}}
                     </span>
                 {{/if}}
             </div>
