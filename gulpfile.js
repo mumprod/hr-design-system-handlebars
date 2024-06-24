@@ -53,6 +53,7 @@ function createSvgMaps() {
                             },
 
                             'convertStyleToAttrs',
+                            'removeStyleElement'
                         ],
                     })
                 )
@@ -114,6 +115,7 @@ function createSvgMapsForBrands() {
                                     },
                                 },
                                  'convertStyleToAttrs',  
+                                 'removeStyleElement'
                             ],
                         })
                     )
@@ -253,7 +255,7 @@ function minimizeSvgSrcFiles() {
                                 },
                             },
                             'convertStyleToAttrs',
-                        ],
+                            'removeStyleElement'
                     })
                 )
                 .pipe(
