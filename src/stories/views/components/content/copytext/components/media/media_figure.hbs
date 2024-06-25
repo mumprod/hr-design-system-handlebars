@@ -23,6 +23,9 @@
     {{#if this.isAudioOnDemand}}
         {{~> components/mediaplayer/media_player this.toModel.audioElement _uiTestHook="ui-test-audio-ondemand-player" _isAudioView=true _addClassImg=_addClassImg ~}}
     {{/if}}
+    {{#if this.isAudioEventLivestream}}
+        {{~> components/mediaplayer/media_player this.toModel.audioLivestreamElement _uiTestHook="ui-test-audio-livestream-player" _isAudioView=true _addClassImg=_addClassImg ~}}
+    {{/if}}
     {{#if this.isVideoOnDemand}}
         {{~> components/mediaplayer/media_player this.toModel.videoElement _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=_addClassImg ~}}
         {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}

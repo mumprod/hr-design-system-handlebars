@@ -1,0 +1,192 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Audio"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Startet am 25.06.24 um 14:00 Uhr."
+                    }
+                },
+                "copyright": "hr",
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T14:00+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 14:00"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hessenschau.de Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audioseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Jetzt Live"
+                    }
+                },
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T08:30+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 08:30"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audioseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}

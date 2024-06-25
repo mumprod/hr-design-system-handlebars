@@ -13,6 +13,7 @@ import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
 import copytext_video_json from './fixtures/copytext_video.json'
 import copytext_audio_json from './fixtures/copytext_audio.json'
+import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -114,4 +115,10 @@ export const WithAudio = {
     render: Template.bind({}),
     name: 'Audio',
     args: copytext_audio_json,
+}
+
+export const WithAudioEventStream = {
+    render: Template.bind({}),
+    name: 'Audio-Livestream',
+    args: copytext_audio_event_stream_json,
 }
