@@ -1,3 +1,149 @@
+# v1.74.13 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- fixes some space issues [#967](https://github.com/mumprod/hr-design-system-handlebars/pull/967) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.12 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- fixes some unneeded spaces from the template rendering [#966](https://github.com/mumprod/hr-design-system-handlebars/pull/966) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.11 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- better min height for lg [#965](https://github.com/mumprod/hr-design-system-handlebars/pull/965) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.10 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- Bug dpe 3167 Fixing Edge and Chrome SVG [#964](https://github.com/mumprod/hr-design-system-handlebars/pull/964) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.74.9 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- Video darkmode [#962](https://github.com/mumprod/hr-design-system-handlebars/pull/962) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.74.8 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- -new getter "programLabel" for programReferenceAlt [#963](https://github.com/mumprod/hr-design-system-handlebars/pull/963) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.7 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2945 V2 [#961](https://github.com/mumprod/hr-design-system-handlebars/pull/961) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.74.6 (Fri Jun 21 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3164: Video im Aufmacher [#960](https://github.com/mumprod/hr-design-system-handlebars/pull/960) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.74.5 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/podcast without teaser item [#959](https://github.com/mumprod/hr-design-system-handlebars/pull/959) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.4 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- readds hover css [#958](https://github.com/mumprod/hr-design-system-handlebars/pull/958) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.3 (Thu Jun 20 2024)
+
+#### 🐛 Bug Fix
+
+- adds hover:underline to links [#957](https://github.com/mumprod/hr-design-system-handlebars/pull/957) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.74.2 (Wed Jun 19 2024)
+
+#### 🐛 Bug Fix
+
+- fixes wrong json/hbs, adds some css [#956](https://github.com/mumprod/hr-design-system-handlebars/pull/956) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.74.1 (Tue Jun 18 2024)
 
 #### 🐛 Bug Fix

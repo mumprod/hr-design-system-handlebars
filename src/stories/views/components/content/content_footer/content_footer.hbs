@@ -1,49 +1,46 @@
 <footer class="flex flex-col mt-10 text-xs md:text-sm text-gray-scorpion dark:text-text-dark font-headingSerif{{#if _addClass}} {{_addClass}}{{/if}}">
     {{#with this.editorialStaffItems}}
-        <p class="">
+        <p>
             Redaktion:
             {{#each this}}
                 {{#if this.hasProfileLink}}
-                    {{#>components/base/link _link=this.link _css="" }}
-                        <span>{{../this.authorName~}}</span>{{/components/base/link}}{{#with
-                        this.textAfterAuthor}} {{this}}{{/with}}{{this.delimiter}}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline"}}<span>{{../this.authorName~}}</span>{{/components/base/link~}}
+                    {{~#with this.textAfterAuthor}}{{this}}{{/with}}{{~this.delimiter~}}
                 {{else}}
-                    {{this.from}}{{#with this.textAfterAuthor}} {{this}}{{/with}}{{this.delimiter}}
+                    {{this.from}}{{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
                 {{/if}}
             {{/each}}
         </p>
     {{/with}}
     {{~#with this.programReferenceAlt~}}
         {{~#if this.hasReference~}}
-            <div class="">
-                Sendung: 
+            <div>
+                Sendung:
                 {{#if this.link}}
-                    {{#>components/base/link _link=this.link }}
-                            <span class='hover:underline'>
-                                {{this.title}} {{#if this.date}}   
-                            <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
-                                class="{{#if _isArticle}}{{else}}{{/if}} ">
-                                {{#if this.displayWithTime}}
-                                    {{loca "date_simple_at" this.date.dateSeparatorTime}}
-                                {{else}}
-                                    {{this.date.date}}
-                                {{/if}}
-                            </time>
-                        {{/if}}
+                    {{#>components/base/link _link=this.link _css="text-link hover:underline"~}}
+                        <span>{{~ ../this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
+                        <span>
+                                <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                                      class="{{#if _isArticle}}{{else}}{{/if}} ">
+                                    {{#if this.displayWithTime}}
+                                        {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                                    {{else}}
+                                        {{this.date.date}}
+                                    {{/if}}
+                                </time>
                             </span>
-                    {{/components/base/link}}
+                    {{/if}}
                 {{else}}
-                    <span class=''>{{this.title}} {{#if this.date}}   
-                            <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
-                                class="{{#if _isArticle}}{{else}}{{/if}} ">
-                                {{#if this.displayWithTime}}
-                                    {{loca "date_simple_at" this.date.dateSeparatorTime}}
-                                {{else}}
-                                    {{this.date.date}}
-                                {{/if}}
-                            </time>
-                        {{/if}}
-                        
+                    <span>{{this.programLabel}}{{#if this.date}}, 
+                        <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                              class="{{#if _isArticle}}{{else}}{{/if}} ">
+                            {{#if this.displayWithTime}}
+                                {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                            {{else}}
+                                {{this.date.date}}
+                            {{/if}}
+                        </time>
+                    {{/if}}
                     </span>
                 {{/if}}
             </div>
