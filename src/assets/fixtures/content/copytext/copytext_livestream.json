@@ -1,0 +1,137 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Livestream"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isLivestream": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "isSsi": true,
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream_copytext_100"
+                },
+                "toModel": {
+                    "videoLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        }
+                        },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/livestreamseite",
+                            "isTargetBlank": false
+                        },
+                        "content": {
+                            "readMoreScreenreader": "zum hr3.de Livestream",
+                            "title": "Ab 18 Uhr: Eröffnung der Frankfurter Buchmesse",
+                            "isForeignBrand": true,
+                            "readMore": "zum hr3.de Livestreamseite"
+                        },
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "isSsi": true,
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream_copytext_50"
+                },
+                "toModel": {
+                    "videoLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        }
+                        },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/livestreamseite",
+                            "isTargetBlank": false
+                        },
+                        "content": {
+                            "readMoreScreenreader": "zum hr3.de Livestream",
+                            "title": "Eröffnung der Frankfurter Buchmesse",
+                            "isForeignBrand": false,
+                            "readMore": "zum hr3.de Livestreamseite"
+                        },
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}
