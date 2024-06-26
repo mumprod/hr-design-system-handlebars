@@ -2,7 +2,7 @@
     "copytextParagraph": [
         {
             "isHeadline": true,
-            "text": "Copytext mit Audio"
+            "text": "Copytext mit Audio-Livestream"
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
