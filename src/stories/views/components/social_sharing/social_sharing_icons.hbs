@@ -7,7 +7,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_x_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::X"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::X"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105 " _icon="x-ds" _iconmap="icons" ~}}
@@ -23,7 +23,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_facebook_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::facebook"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::facebook"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="facebook-ds" _iconmap="icons" ~}}
@@ -39,7 +39,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_whatsapp_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::whatsapp"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::whatsapp"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="whatsapp-ds" _iconmap="icons" ~}}
@@ -53,47 +53,50 @@
         href="{{this}}"
         title="{{loca "share_mail_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mailto"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::mailto"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="kontakt-ds" _iconmap="icons" ~}}
     </a>
 </li>
 {{/with}}
-
-<li x-data="copyHandler()" x-on:click="copyToClipboard" class="">
+{{~#with this.copyToClipboardLink}}
+<li x-data="copyHandler()" x-on:click="copyToClipboard" class="relative">
     <button class="{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         title="{{loca "share_copy_linktitle" }}"
+        data-url="{{this}}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::copybutton"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::copybutton"}]}'
         {{/with}}
     >
-        {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="copy-ds" _iconmap="icons" ~}}
+        <span x-cloak class="w-full h-full" x-show="!copySuccess">{{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="copy-ds" _iconmap="icons" ~}}</span>
+        <span x-cloak class="flex items-center justify-center w-full h-full" x-show="copySuccess">{{~> components/base/image/icon _addClass="w-6 h-6 text-green-600" _icon="status-done" _iconmap="icons" ~}}</span>
     </button>
-    <div class="absolute flex flex-row items-center justify-start rounded pr-4 shadow hidden w-auto h-8 -mt-8 ml-0.5 text-xs bg-white whitespace-nowrap js-copyMessage sm480:text-sm font-headingSerif dark:text-text-dark">
-        {{~> components/base/image/icon _addClass="w-7 h-7 text-green-600 mr-4" _icon="status-done" _iconmap="icons" ~}}
+    <div x-cloak x-show="copySuccess" class="absolute left-8 flex flex-row items-center justify-start px-4 shadow w-auto h-8 top-0 ml-0.5 text-xs bg-white whitespace-nowrap sm480:text-sm font-headingSerif dark:text-text-dark">    
         {{loca "share_copy_message" }}
     </div>
 </li>
+{{/with}}
 <script>
     function copyHandler(){
         return  {  
+            copySuccess: false,
             copyToClipboard(event) {
                 const clickedContainer = event.currentTarget.parentNode
-                const messageDiv = clickedContainer.querySelector('.js-copyMessage')
-                const el = document.createElement('textarea')
-                el.value = window.location.href
-                el.setAttribute('readonly', '')
-                el.style.position = 'absolute'
-                el.style.left = '-9999px'
-                document.body.appendChild(el)
-                el.select()
-                document.execCommand('copy')
-                document.body.removeChild(el)
-                messageDiv.classList.remove('hidden')
-                window.setTimeout(() => {
-                    messageDiv.classList.add('hidden')
-                }, 2000)
+                const url = clickedContainer.querySelector ("button:first-of-type").getAttribute('data-url');
+                //TODO: maby do this with a magical helper in alpine
+                navigator.clipboard
+                .writeText(url)
+                .then(() => {
+                    console.log("successfully copied");
+                    this.copySuccess = true
+                    window.setTimeout(() => {
+                        this.copySuccess = false
+                    }, 2000)
+                })
+                .catch(() => {
+                    console.log("something went wrong with copy");
+                });
             }
         }
     }
