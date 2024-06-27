@@ -44,6 +44,42 @@
             "bylineText": "BylineText"
         }
     },
+    "video_livestream_copytext_100": {
+        "type": "livestream",
+        "loca": "label_video_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": false,
+                    "isHasPlayed": false,
+                    "isWillPlay": true
+                },
+                "airdateDate": {
+                    "htmlDateTime": "",
+                    "date": "14.07.24",
+                    "time": "18:00"
+                },
+                "airdateWithoutTime": false
+            },
+            "bylineText": "BylineText"
+        }
+    },
+    "video_livestream_copytext_50": {
+        "type": "livestream",
+        "loca": "label_video_livestream",
+        "byline": {
+            "bylineSsi": "components/multimedia/livestream/label_byline.ssi",
+            "context": {
+                "labelInfo": {
+                    "isPlaysNow": true,
+                    "isHasPlayed": false,
+                    "isWillPlay": false
+                }
+            },
+            "bylineText": "BylineText"
+        }
+    },
     "audio_livestream": {
         "type": "livestream",
         "loca": "label_audio_event_livestream",
