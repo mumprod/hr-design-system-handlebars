@@ -1,3 +1,16 @@
+# v1.75.1 (Thu Jun 27 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3181: Livestream im Aufmacher [#971](https://github.com/mumprod/hr-design-system-handlebars/pull/971) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.75.0 (Wed Jun 26 2024)
 
 #### 🚀 Enhancement
