@@ -1,3 +1,15 @@
+# v1.75.2 (Fri Jun 28 2024)
+
+#### 🐛 Bug Fix
+
+- 🎨 refactor of social sharing DPE-3176 [#970](https://github.com/mumprod/hr-design-system-handlebars/pull/970) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.75.1 (Thu Jun 27 2024)
 
 #### 🐛 Bug Fix
