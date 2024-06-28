@@ -1,6 +1,5 @@
 <div class="" x-data="{ isVisible: false }">
-    <div class="grid grid-page z-100" :class="{ 'fixed bottom-feature-box-height left-0 w-full': !$store.footerIsVisible }">
-        
+    <div class="grid grid-page z-100" :class="{ 'fixed bottom-feature-box-height left-0 w-full': !$store.footerIsVisible }">       
         <div class="flex justify-between h-0 col-full sm:col-main"
         :class="{ 'bg-white h-8': $store.footerIsVisible }"
         x-show="!$store.sharingIsVisible && isVisible"
@@ -18,7 +17,7 @@
                 
                 @click="window.scrollTo({top: 0, behavior: 'smooth'})"
                 :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"        
-                class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} z-100 p-2 h-max mr-5 hover:scale-105  [@media(min-width:1170px)]:-mr-14"
+                class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} ml-auto z-100 p-2 h-max mr-5 hover:scale-105  [@media(min-width:1170px)]:-mr-14"
                 >
                 {{> components/base/image/icon _icon="arrow-up"  _addClass="w-5 h-5 fill-current dark:fill-link-dark"}}            
             </button>

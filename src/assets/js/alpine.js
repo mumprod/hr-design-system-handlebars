@@ -40,7 +40,7 @@ Alpine.store('navIsVisible', true)
 Alpine.store('subNavIsVisible', false)
 Alpine.store('footerIsVisible', false)
 Alpine.store('sectionNavIsVisible', false)
-Alpine.store('sharingIsVisible', true)
+Alpine.store('sharingIsVisible', false)
 Alpine.store('sharingIsOpenHorizontal', false)
 Alpine.store('sharingIsOpenMobile', false)
 Alpine.store('sharingBottomPos', {
