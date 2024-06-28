@@ -1,3 +1,15 @@
+# v1.75.3 (Fri Jun 28 2024)
+
+#### 🐛 Bug Fix
+
+- Posterteaser fine-tuning [#972](https://github.com/mumprod/hr-design-system-handlebars/pull/972) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.75.2 (Fri Jun 28 2024)
 
 #### 🐛 Bug Fix
