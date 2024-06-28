@@ -1,39 +1,38 @@
 
 {{~#with this.socialSharing ~}}    
-    <div x-data="stickySharingHandlerMobile"
-        class=" relative ml-5 z-100 h-9.5 w-9.5"
-        :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"  
-        x-on:resize.window="open=false"
-        x-on:click.outside="close($refs.button)"  
+<div x-data="stickySharingHandlerMobile"
+    class=" relative ml-5 z-100 h-9.5 w-9.5"
+    :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"  
+    x-on:resize.window="$store.sharingIsOpenMobile = false"    
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    @click.outside="close()"
     >
     <div class="absolute bottom-0 flex flex-col self-center gap-3 bg-white">
-            <button 
-                class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                
-                {{#with ../this.trackingData}}
-                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
-                {{/with}}
-                
-                >
-                                {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
-            </button>
+        <button 
+            class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
+            x-ref="button"
+            x-on:click="toggle()"
+            :aria-expanded="open"
+            :aria-controls="$id('dropdown-button')"
             
-            <div 
-                x-ref="panel" 
-                
-                :class="open ? 'flex' : 'hidden '"
-                    
-                :id="$id('dropdown-button')"
-                class="relative right-0 self-center bg-white md:h-auto lg:hidden"
+            {{#with ../this.trackingData}}
+                data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
+            {{/with}}
+            
             >
-                <ul class="flex flex-col gap-3 mt-2">  
-                    {{> components/social_sharing/social_sharing_icons _socialSharingType="mobile-sticky"}}
-                </ul>
-            </div>
+                {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
+        </button>
+        <div 
+            x-ref="panel" 
+            :class="$store.sharingIsOpenMobile ? 'flex' : 'hidden '"                    
+            :id="$id('dropdown-button')"
+            class="relative right-0 self-center bg-white md:h-auto lg:hidden"
+        >
+            <ul class="flex flex-col gap-3 mt-2">  
+                {{> components/social_sharing/social_sharing_icons _socialSharingType="mobile-sticky"}}
+            </ul>
+        </div>
+    </div>
 </div>
     <script>
         function stickySharingHandlerMobile(){
@@ -42,7 +41,7 @@
             sharingIsVisible: true,
             isDesktop: true,
             toggle() {
-                var isMobileApple = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i);
+                var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
                 var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
                 var isMobile= isMobileApple || isMobileOther;
                 if (navigator.share && isMobile) {
@@ -54,22 +53,19 @@
                     .then(() => console.log('Shared successfully'))
                     .catch((error) => console.error('Sharing failed:', error));
                 } else {
-                    if (this.open) {
+                    if (this.$store.sharingIsOpenMobile) {
                         return this.close()
-                    }
+                    }    
                     this.$refs.button.focus()
-                    this.open = true
-                    
+                    this.$store.sharingIsOpenMobile = true             
                 }
                 
             },
             close(focusAfter) {
-                if (! this.open) return
-                this.open = false
-                focusAfter && focusAfter.focus()
+                if (!this.$store.sharingIsOpenMobile) return
+                this.$store.sharingIsOpenMobile = false
             }
         }
         }
     </script>
-</div>
 {{/with}}
