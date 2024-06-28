@@ -8,7 +8,7 @@
         x-on:keydown.escape.prevent.stop="close($refs.button)"
         @click.outside="close()"
     >
-        <div class="relative right-0 flex gap-3 p-1 bg-white md:h-auto"  >
+        <div class="relative right-0 flex gap-3 bg-white md:h-auto"  >
             <button 
                 class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
                 x-ref="button"
