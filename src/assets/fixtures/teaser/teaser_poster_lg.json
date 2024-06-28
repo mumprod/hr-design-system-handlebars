@@ -15,6 +15,10 @@
             "@->value": "50"
         },
         {
+            "@->contentpath": "logicItem.includeModel.title",
+            "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+        },
+        {
             "@->contentpath": "logicItem.includeModel.link.readMoreText.readMoreLong",
             "@->value": "Zum Artikel"
         },

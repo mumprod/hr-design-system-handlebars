@@ -22,6 +22,10 @@
                         },
                         "@->overrides": [
                             {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
                                 "@->contentpath": "teaserType",
                                 "@->value": "poster"
                             },
@@ -79,6 +83,10 @@
                             }
                         },
                         "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
                             {
                                 "@->contentpath": "teaserType",
                                 "@->value": "poster"
@@ -140,6 +148,10 @@
                             }
                         },
                         "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
                             {
                                 "@->contentpath": "teaserType",
                                 "@->value": "poster"
