@@ -3,6 +3,7 @@ import data_story from './fixtures/story.json'
 import data_story_with_label from './fixtures/story_with_label.json'
 import data_story_with_square_image from './fixtures/story_with_square_image.json'
 import data_story_with_video from './fixtures/story_with_video.json'
+import data_story_with_livestream from './fixtures/story_with_livestream.json'
 
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -46,6 +47,15 @@ export const WithVideo = {
     render: Template.bind({}),
     name: 'Artikel mit Video im Aufmacher',
     args: data_story_with_video,
+    parameters: {
+        layout: 'fullscreen',
+    }
+}
+
+export const WithLivestream = {
+    render: Template.bind({}),
+    name: 'Artikel mit Livestream im Aufmacher',
+    args: data_story_with_livestream,
     parameters: {
         layout: 'fullscreen',
     }
