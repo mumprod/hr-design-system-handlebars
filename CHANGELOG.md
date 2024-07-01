@@ -1,3 +1,15 @@
+# v1.75.5 (Mon Jul 01 2024)
+
+#### 🐛 Bug Fix
+
+- Abstand social sharing auf PB Seiten [#975](https://github.com/mumprod/hr-design-system-handlebars/pull/975) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.75.4 (Mon Jul 01 2024)
 
 #### 🐛 Bug Fix
