@@ -59,10 +59,10 @@
                             "url": "/audioseite",
                             "isTargetBlank": false
                         },
-                        "readMoreScreenreader": "zum hessenschau.de Audio",
+                        "readMoreScreenreader": "zum hessenschau.de Audio-Livestream",
                         "title": "Musik macht deinen Tag",
                         "isForeignBrand": false,
-                        "readMore": "zur Audioseite",
+                        "readMore": "zum Audio-Livestream",
                         "hasIcon": false,
                         "iconName": "extern"
                     }
@@ -154,10 +154,10 @@
                             "url": "/audioseite",
                             "isTargetBlank": false
                         },
-                        "readMoreScreenreader": "zum Audio",
+                        "readMoreScreenreader": "zum Audio-Livestream",
                         "title": "Musik macht deinen Tag",
                         "isForeignBrand": false,
-                        "readMore": "zur Audioseite",
+                        "readMore": "zum Audio-Livestream",
                         "hasIcon": false,
                         "iconName": "extern"
                     }
