@@ -31,15 +31,15 @@
         {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isLead=_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}
     {{/if}}
     {{#unless _voting-option}}
-        {{#with this.teaseritem}}
-            {{~#> components/content/copytext/components/image/collapsible_caption _cssClassCaption="mx-5 sm:mx-0"}}
-                {{#unless ../../this.isAudio}}
+        {{#if this.teaseritem}}
+            {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"}}
+                {{#unless ../this.isAudio-adjust_context}}
                     {{~> components/content/copytext/components/image/image_caption_text}}
                 {{/unless}}
                 {{~> components/content/copytext/components/image/image_copyright}}
-                {{#if ../../this.isAudio~}}
+                {{#if ../this.isAudio-adjust_context~}}
                     <span class="mx-1">|</span>
-                    {{#with ../../this.toModel.mediaBacklinkToStoryTeaser}}
+                    {{#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context}}
                         {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
                             <span>
                                 {{~this.readMore~}}
@@ -51,7 +51,7 @@
                     {{/with}}
                 {{/if}}
             {{~/components/content/copytext/components/image/collapsible_caption}}
-        {{/with}}
+        {{/if}}
     {{/unless}}
     {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
 </figure>
