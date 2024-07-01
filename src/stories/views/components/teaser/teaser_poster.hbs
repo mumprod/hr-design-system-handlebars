@@ -16,14 +16,15 @@
     </figure>
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
         {{#>components/base/link _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
+            <div class="-mt-8 line-clamp-4 xs:line-clamp-5 md:line-clamp-4 {{#if ../this.showStretched.isTrue}}lg:line-clamp-4{{else}}lg:line-clamp-5{{/if}}">
             {{#> components/teaser/components/teaser_header _css="text-center"}}
                 {{#with this.label}}
                     {{#> components/label/label_group}}
                         {{> components/label/label _type=this.type _text=(loca this.loca)}}
-                        {{> components/label/label_byline _css="ml-2"}}
+                        <span class="text-white">{{> components/label/label_byline _css="ml-2"}}</span>
                     {{/components/label/label_group}}
                 {{/with~}}
-                 {{#> components/teaser/components/teaser_headline _headlineTag="h2" _css="text-shadow text-center text-white mb-4 mx-2 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8 line-clamp-4 xs:line-clamp-6 md:line-clamp-4 lg:line-clamp-5"}}
+                 {{#> components/teaser/components/teaser_headline _headlineTag="h2" _css="text-shadow text-center text-white mb-4 mx-2 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8"}}
                     {{#if this.topline}}
                         {{> components/teaser/components/teaser_topline _css="!text-white" _text=this.topline}}
                     {{/if}}
@@ -33,20 +34,21 @@
                     {{/if}}
                 {{/components/teaser/components/teaser_headline}}
             {{/components/teaser/components/teaser_header}}
+            </div>
         {{/components/base/link}}
         <span class="absolute flex items-end justify-center w-full h-full ds-cta">
             {{#if _isCopytext~}}
                 {{#if this.showFullSize.isTrue~}}
-                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '["false","true"]' '["z-20 mb-4 sm480:mb-7 md:mb-16","z-20 mb-4 sm480:mb-7 md:mb-5","z-20 mb-4 sm480:mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '["false","true"]' '["z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white","z-20 mb-4 sm480:mb-7 md:mb-3 hover:bg-white","z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                         {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                     {{/components/button/link_button}}
                 {{else}}
-                    {{#> components/button/link_button _link=this.link _size="lg" _css="z-20 mb-4 sm480:mb-7" _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                    {{#> components/button/link_button _link=this.link _size="lg" _css="z-20 mb-4 sm480:mb-7 hover:bg-white" _variant="secondary" _isAriaHidden=true _onBackground=true}}
                         {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                     {{/components/button/link_button}}
-                {{/if}}    
+                {{/if}}
             {{else}}
-                {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7","z-20 mb-7 md:mb-16"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7 hover:bg-white","z-20 mb-7 md:mb-16 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                     {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                 {{/components/button/link_button}}
             {{/if}}

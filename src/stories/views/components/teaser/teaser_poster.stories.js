@@ -2,6 +2,7 @@ import teaser from './teaser_poster.hbs'
 import teserPosterLg from './fixtures/teaser_poster_lg.json'
 import teserPosterMd from './fixtures/teaser_poster_md.json'
 import teserPosterMdLabel from './fixtures/teaser_poster_md_label.json'
+import teserPosterMdLabelByline from './fixtures/teaser_poster_md_label_byline.json'
 
 const Template = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -64,4 +65,10 @@ export const Poster33MitLabel = {
     render: Template.bind({}),
     name: 'Poster 33 mit Label',
     args: teserPosterMdLabel.logicItem.includeModel,
+}
+
+export const Poster33MitLabelByline = {
+    render: Template.bind({}),
+    name: 'Poster 33 mit Label und Byline',
+    args: teserPosterMdLabelByline.logicItem.includeModel,
 }

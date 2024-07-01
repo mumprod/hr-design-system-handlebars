@@ -27,6 +27,7 @@
         "twitterLink": "/twitterLink-url",
         "facebookLink": "/facebookLink-url",
         "whatsappLink": "/whatsappLink-url",
-        "mailtoLink": "/mailtoLink-url"
+        "mailtoLink": "/mailtoLink-url",
+        "copyToClipboardLink": "/copyToClipboard-url"
     }
 }
