@@ -9,6 +9,7 @@
         },
         {
             "paragraphBoxItem": {
+                "isVideo": true,
                 "isLivestream": true,
                 "showFullSize": {
                     "isTrue": true
@@ -28,18 +29,18 @@
                             "@->jsoninclude": "video/videos.inc.json",
                             "@->contentpath": "video-livestream-hr-fernsehen"
                         }
-                        },
+                    },
                     "mediaBacklinkToStoryTeaser": {
                         "link": {
                             "url": "/livestreamseite",
                             "isTargetBlank": false
                         },
-                        "content": {
-                            "readMoreScreenreader": "zum hr3.de Livestream",
-                            "title": "Ab 18 Uhr: Eröffnung der Frankfurter Buchmesse",
-                            "isForeignBrand": true,
-                            "readMore": "zum hr3.de Livestreamseite"
-                        },
+
+                        "readMoreScreenreader": "zum hr3.de Livestream",
+                        "title": "Ab 18 Uhr: Eröffnung der Frankfurter Buchmesse",
+                        "isForeignBrand": true,
+                        "readMore": "zum hr3.de Livestreamseite",
+
                         "hasIcon": true,
                         "iconName": "extern"
                     }
@@ -72,6 +73,7 @@
         },
         {
             "paragraphBoxItem": {
+                "isVideo": true,
                 "isLivestream": true,
                 "showFullSize": {
                     "isTrue": false
@@ -91,7 +93,7 @@
                             "@->jsoninclude": "video/videos.inc.json",
                             "@->contentpath": "video-livestream-hr-fernsehen"
                         }
-                        },
+                    },
                     "mediaBacklinkToStoryTeaser": {
                         "link": {
                             "url": "/livestreamseite",

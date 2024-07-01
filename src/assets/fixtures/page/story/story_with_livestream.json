@@ -30,12 +30,10 @@
                             "url": "/livestreamseite",
                             "isTargetBlank": false
                         },
-                        "content": {
-                            "readMoreScreenreader": "zum hr3.de Livestream",
-                            "title": "Eröffnung der Frankfurter Buchmesse",
-                            "isForeignBrand": false,
-                            "readMore": "zum hr3.de Livestreamseite"
-                        },
+                        "readMoreScreenreader": "zum hr3.de Livestream",
+                        "title": "Eröffnung der Frankfurter Buchmesse",
+                        "isForeignBrand": false,
+                        "readMore": "zum hr3.de Livestreamseite",
                         "hasIcon": true,
                         "iconName": "extern"
                     }
