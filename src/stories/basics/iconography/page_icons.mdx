@@ -11,11 +11,11 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
 
 {Object.entries(svgList).map((token, key) => {
         return (
-            <div style={{backgroundColor:'#fafafa', padding:'1rem', margin: '1rem', border: '1px solid #cacaca',  display: 'inline-block'}}>
+            <div style={{backgroundColor:'#fafafa', padding:'1rem', margin: '1rem', border: '1px solid #cacaca',  display: 'flex'}}>
             <svg className="svg-item"> 
                 <use xlinkHref={token[1]}></use>
             </svg>
-            <span style={{textAlign:'justify'}}>Name:{token[0]}</span>
+            <span style={{textAlign:'center'}}>Name:{token[0]}</span>
             </div>
         )
 })}
