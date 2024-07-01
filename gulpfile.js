@@ -53,6 +53,7 @@ function createSvgMaps() {
                             },
 
                             'convertStyleToAttrs',
+                            'removeStyleElement'
                         ],
                     })
                 )
