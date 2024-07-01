@@ -1,3 +1,15 @@
+# v1.75.4 (Mon Jul 01 2024)
+
+#### 🐛 Bug Fix
+
+- - added  'removeStyleElement' to gulpfile [#973](https://github.com/mumprod/hr-design-system-handlebars/pull/973) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.75.3 (Fri Jun 28 2024)
 
 #### 🐛 Bug Fix
