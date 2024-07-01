@@ -1,3 +1,65 @@
+# v1.75.3 (Fri Jun 28 2024)
+
+#### 🐛 Bug Fix
+
+- Posterteaser fine-tuning [#972](https://github.com/mumprod/hr-design-system-handlebars/pull/972) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.75.2 (Fri Jun 28 2024)
+
+#### 🐛 Bug Fix
+
+- 🎨 refactor of social sharing DPE-3176 [#970](https://github.com/mumprod/hr-design-system-handlebars/pull/970) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.75.1 (Thu Jun 27 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3181: Livestream im Aufmacher [#971](https://github.com/mumprod/hr-design-system-handlebars/pull/971) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.75.0 (Wed Jun 26 2024)
+
+#### 🚀 Enhancement
+
+- prepare copytext for accordion [#969](https://github.com/mumprod/hr-design-system-handlebars/pull/969) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.74.14 (Wed Jun 26 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3180: add copytext-livestream component [#968](https://github.com/mumprod/hr-design-system-handlebars/pull/968) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.74.13 (Fri Jun 21 2024)
 
 #### 🐛 Bug Fix

@@ -14,6 +14,7 @@ import copytext_externalservice_json from './fixtures/copytext_externalservice.j
 import copytext_video_json from './fixtures/copytext_video.json'
 import copytext_audio_json from './fixtures/copytext_audio.json'
 import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
+import copytext_livestream_json from './fixtures/copytext_livestream.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -71,7 +72,7 @@ export const WithImage = {
 export const WithImageWebview = {
     render: Template.bind({}),
     name: 'Image Webview',
-    
+
     args: {
         ...copytext_image_json,
         _isWebview: true
@@ -119,6 +120,11 @@ export const WithVideo = {
     args: copytext_video_json,
 }
 
+export const WithLivestream = {
+    render: Template.bind({}),
+    name: 'Livestream',
+    args: copytext_livestream_json,
+}
 export const WithAudio = {
     render: Template.bind({}),
     name: 'Audio',

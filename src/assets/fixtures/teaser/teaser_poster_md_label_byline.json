@@ -16,11 +16,11 @@
         },
         {
             "@->contentpath": "logicItem.includeModel.title",
-            "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+            "@->value": "hr-Bigband feat. Omer Klein und Becca Stevens +++ Jakob Bänsch Quartett +++ Emma Rawicz CHROMA"
         },
         {
             "@->contentpath": "logicItem.includeModel.link.readMoreText.readMoreLong",
-            "@->value": "Zum Ticker"
+            "@->value": "Zur Veranstaltung"
         },
         {
             "@->contentpath": "logicItem.includeModel.teaserImage",
@@ -43,17 +43,7 @@
             "@->contentpath": "logicItem.includeModel.label",
             "@->value": {
                 "@->jsoninclude": "teaser/teaser_labels.inc.json",
-                "@->contentpath": "ticker",
-                "@->overrides": [
-                    {
-                        "@->contentpath": "byline.bylineSsi",
-                        "@->value": ""
-                    },
-                    {
-                        "@->contentpath": "byline.bylineText",
-                        "@->value": ""
-                    }
-                ]
+                "@->contentpath": "event"
             }
         }
     ]
