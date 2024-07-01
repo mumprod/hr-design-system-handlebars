@@ -504,6 +504,9 @@ var helpers = {
                 case 'site.name':
                     configProperty = brand
                     break
+                case 'templates.useStickyNav':
+                    configProperty = brand == 'hessenschau' ? true : false;
+                    break
             }
         } else {
             configProperty = 'No config-property defined.'
