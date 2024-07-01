@@ -9,8 +9,13 @@ import svgList from './page_icon_data.js'
 In den Webauftritten des Hessischen Rundfunks werden SVG-Icons unterschiedlicher Genese verwendet, Das Iconset ist organisch gewachsen, so das die aktuellesten hier für Storybook-Komponenten zu oberst, der vollständigkeithalber
 aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
 
-
-
-<div style={{backgroundColor:'red', padding:'1rem'}}>
-{[svgList]}
-</div>
+{Object.entries(svgList).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', padding:'1rem', margin: '1rem', border: '1px solid #cacaca',  display: 'inline-block'}}>
+            <svg className="svg-item"> 
+                <use xlinkHref={token[1]}></use>
+            </svg>
+            <span style={{textAlign:'justify'}}>Name:{token[0]}</span>
+            </div>
+        )
+})}
