@@ -30,6 +30,9 @@ const iconFoldersToCleanUp = ['icons', 'logo']
 const svgmapFilename = 'svgmap.min.svg'
 
 const svgMapsCache = new FileCache(`${options.paths.build.gulp}/cache/.svgMapsCache`)
+function copySingleSVGIcons() {
+    return src('./src/icons/icons/svgmap/*.svg').pipe(dest('./stories/basics/iconography/images'))
+}
 function createSvgMaps() {
     return mergeStream(
         glob.sync(`${iconsDirRoot}/*`).map(function (iconsDir) {
@@ -451,7 +454,8 @@ exports.default = series(
         mergeLocatags,
         series(createModernizr, addCustomModernizrTests),
         saveLogoFilesToFolder,
-        createSvgMapsForBrands
+        createSvgMapsForBrands,
+        copySingleSVGIcons
     ),
     watchFiles
 )
