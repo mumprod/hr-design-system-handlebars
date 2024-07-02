@@ -1,5 +1,5 @@
 <div x-data="burger()" class="flex items-center justify-center h-full fill-current sb-burger">
-    <nav class="h-10">
+    <nav class="h-10 tablet:h-12">
         <button {{!-- :class="$store.burgeropen ? 'text-primary' : 'text-white'" --}}  
             class="relative w-10 h-10 text-navigation-text tablet:w-18 tablet:h-12 focus:outline-none bg-brand"
             @burger-close.window="burgerClose()"
