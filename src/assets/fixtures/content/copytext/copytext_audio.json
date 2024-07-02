@@ -63,7 +63,7 @@
                         "readMoreScreenreader": "zum hessenschau.de Audio",
                         "title": "Musik macht deinen Tag",
                         "isForeignBrand": false,
-                        "readMore": "zur Audioseite",
+                        "readMore": "zur Audio-Einzelseite",
                         "hasIcon": false,
                         "iconName": "extern"
                     }
@@ -159,7 +159,7 @@
                         "readMoreScreenreader": "zum Audio",
                         "title": "Musik macht deinen Tag",
                         "isForeignBrand": false,
-                        "readMore": "zur Audioseite",
+                        "readMore": "zur Audio-Einzelseite",
                         "hasIcon": false,
                         "iconName": "extern"
                     }
