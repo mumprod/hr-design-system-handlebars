@@ -1,11 +1,11 @@
 <h3 class="mt-1">
-    {{> components/base/a11y/ariaLabelText _text=this.content.readMoreScreenreader }}
+    {{> components/base/a11y/ariaLabelText _text=this.readMoreScreenreader }}
     <span class="text-lg sm480:text-xl font-headingSerif dark:text-text-dark">
-        {{this.content.title}}
+        {{this.title}}
     </span>
-    {{~#if this.content.isForeignBrand}}
+    {{~#if this.isForeignBrand}}
         <span aria-hidden=true class="ml-4">
-            [{{this.content.readMore}}
+            [{{this.readMore}}
             {{~#if this.hasIcon}}
                 {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
             {{/if~}}]

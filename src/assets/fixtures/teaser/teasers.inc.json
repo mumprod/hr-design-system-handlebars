@@ -1549,7 +1549,7 @@
                 "teaserLead": {
                     "isPodcast": true,
                     "toModel": {
-                        "audioElement": {
+                        "audioElementForVideoView": {
                             "isPodcast": true,
                             "ardPlayerConfig": {
                                 "@->jsoninclude": "audio/audios.inc.json",

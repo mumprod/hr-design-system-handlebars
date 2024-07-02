@@ -18,7 +18,7 @@
                 Sendung:
                 {{#if this.link}}
                     {{#>components/base/link _link=this.link _css="text-link hover:underline"~}}
-                        <span>{{~ ../this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
+                        <span>{{~ this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
                         <span>
                                 <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
                                       class="{{#if _isArticle}}{{else}}{{/if}} ">

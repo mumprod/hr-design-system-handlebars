@@ -236,7 +236,7 @@ Sollen an Subkomponenten, die in Partial-Blocks und/oder Inline-Partials aufgeru
 Dies ist leider notwendig, da [Handlebars.js](https://handlebarsjs.com) und [Handlebars.java](https://github.com/jknack/handlebars.java)
 innerhalb von Partial-Blocks und Inline-Partials die Datenkontexte anders auflösen. Der Wert des Parameters `_css` kann in
 Handlebars.js direkt, in Handlebars.java aber nur ausgelesen werden, wenn mittels `../../_css` zwei Ebenen nach oben gegangen wird.
-Durch setzen des Postfixes `-adjust_context` können mittels eines Gulp-Skriptes diese Vatriablen in Komponenten herausgefiltert werden
+Durch setzen des Postfixes `-adjust_context` können mittels eines Gulp-Skriptes diese Variablen in Komponenten herausgefiltert werden
 und je nachdem wofür gerade gebaut wird der Kontext automatisiert angepasst werden oder nicht. Hierzu ein kurzes Beispiel.
 
 ```handlebars
@@ -275,6 +275,43 @@ der Wert des Parameters korrekt ausgelesen werden kann.
     {{/inline}}
 {{/with}}
 ```
+
+#### Besonderheiten bei Model Variablen in Partial-Blocks
+Auch bei Variablen, die direkt aus der Model Schicht in Partial-Blocks genutzt werden sollen, lassen sich Unterschiede zwischen Handlebars.js und
+Handlebars.java feststellen. Diese treten auf, wenn innerhalb des Partial-Blocks Kontext-Wechsel nötig werden.
+
+```handlebars
+{{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"}}
+    {{#unless ../this.isAudio}}
+        {{~> components/content/copytext/components/image/image_caption_text}}
+    {{/unless}}
+    {{~> components/content/copytext/components/image/image_copyright}}
+    {{#if ../this.isAudio~}}
+        <span class="mx-1">|</span>
+        {{#with ../this.toModel.mediaBacklinkToStoryTeaser}}
+            {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
+                <span>
+                    {{~this.readMore~}}
+                    {{~#if this.hasIcon}}
+                        {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
+                    {{~/if~}}
+                </span>
+            {{/components/base/link}}
+        {{/with}}
+    {{/if}}
+{{~/components/content/copytext/components/image/collapsible_caption}}
+```
+Das Beispiel zeigt die Verwendung der Komponente `components/content/copytext/components/image/collapsible_caption`. Um z.B. auf den Inhalt der 
+Variablen `this.isAudio` zugreifen zu können, muss in Handlebars.js  mit `../this.isAudio` im Kontext eine Ebene zurückgegangen werden. Damit das
+ganze in Handlebars.java exakt gleich funktioniert, muss mit `../../this.isAudio` hingegen im Kontext um zwei Ebenen zurückgegangen werden. Zwischen
+Handlebars.js und Handlebars.java besteht ein Unterschied von einer Kontext-Ebene. Um diesen Unterschied auszugleichen, muss, wie im vorigen Kapitel bei 
+Komponenten-Parametern gezeigt, an den Namen der Variablen das Postfix `-adjust_context` angefügt werden. Beim Build wird bei diesen Variablen eine 
+zusätzliche Ebene im Kontext nach oben gegangen. Aus `../this.isAudio` in Handlebars.js wird damit in Handlebars.java `../../this.isAudio`. 
+
+Das Anhängen des Postfixes `-adjust_context` ist nur nötig, wenn in Handlebars.js bereits mindestens eine Ebene zurückgegangen werden muss. Ist in 
+Handlebars.ja keine Kontextwechsel nötig, dann muss auch in Handlebars.java keiner erfolgen.
+
+
 
 ### JSON
 

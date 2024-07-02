@@ -1,2 +1,2 @@
-<div{{#if _isUsedInTeaser}} x-show="avStart" x-cloak{{/if}} id="{{this.ardPlayerConfig.playerId}}" class="{{#unless _isAudioView}}ar-16-9 {{/unless}}h-full {{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isUsedInTeaser}} z-20{{/if}} js-load {{if _uiTestHook _uiTestHook 'ui-test-mediaplayer'}}" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
+<div{{#if _isUsedInTeaser}} x-show="avStart" x-cloak{{/if}} id="{{this.ardPlayerConfig.playerId}}" class="{{#if _isAudioView}}ar-4-1 h-auto{{else}}ar-16-9 h-full{{/if}}{{~#if _addClassImg}} {{_addClassImg}}{{/if}} {{#if _isUsedInTeaser}} z-20{{/if}} js-load {{if _uiTestHook _uiTestHook 'ui-test-mediaplayer'}}" data-hr-mediaplayer-loader='{{json this.ardPlayerJsonConfig}}'>
 </div>
