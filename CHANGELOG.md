@@ -1,3 +1,15 @@
+# v1.75.6 (Tue Jul 02 2024)
+
+#### 🐛 Bug Fix
+
+- adds h-10 to nav element [#978](https://github.com/mumprod/hr-design-system-handlebars/pull/978) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.75.5 (Mon Jul 01 2024)
 
 #### 🐛 Bug Fix
