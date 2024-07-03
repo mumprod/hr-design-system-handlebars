@@ -1,3 +1,15 @@
+# v1.77.0 (Wed Jul 03 2024)
+
+#### 🚀 Enhancement
+
+- DPE-3187 - Abstand der Breadcrumb anpassen [#979](https://github.com/mumprod/hr-design-system-handlebars/pull/979) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.76.0 (Wed Jul 03 2024)
 
 #### 🚀 Enhancement
