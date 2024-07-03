@@ -21,7 +21,7 @@
         "avDocument": {
             "isAudio": true,
             "toModel": {
-                "audioElement": {
+                "audioElementForVideoView": {
                     "isPodcast": false,
                     "ardPlayerConfig": {
                         "@->jsoninclude": "audio/audios.inc.json",
@@ -40,7 +40,7 @@
         "avDocument": {
             "isAudioEventLivestream": true,
             "toModel": {
-                "audioLivestreamElement": {
+                "audioLivestreamElementForVideoView": {
                     "ardPlayerConfig": {
                         "@->jsoninclude": "audio/audios.inc.json",
                         "@->contentpath": "audio-event-livestream"
@@ -58,7 +58,7 @@
         "avDocument": {
             "isPodcast": true,
             "toModel": {
-                "audioElement": {
+                "audioElementForVideoView": {
                     "isPodcast": true,
                     "ardPlayerConfig": {
                         "@->jsoninclude": "audio/audios.inc.json",
