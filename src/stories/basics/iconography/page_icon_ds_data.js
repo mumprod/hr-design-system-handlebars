@@ -1,14 +1,14 @@
-const images = require.context('./icons/icons', true);
+const images = require.context('./icons/ds', true);
 
 let imageList = {}
 let fileName
 let svgString
-let svgList = {}
+let svgListDs = {}
 imageList = images.keys().map(image => images(image));
 
 for(let i=0; i < imageList.length; i++){
     fileName = imageList[i].replace(/^.*[\\/]/, '').slice(0,-4)
-    svgList[fileName] = "./icons/icons/svgmap.min.svg#"+fileName
+    svgListDs[fileName] = "./icons/icons/svgmap.min.svg#"+fileName
 }
 
-export default svgList;
+export default svgListDs;

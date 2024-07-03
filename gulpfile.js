@@ -31,7 +31,7 @@ const svgmapFilename = 'svgmap.min.svg'
 
 const svgMapsCache = new FileCache(`${options.paths.build.gulp}/cache/.svgMapsCache`)
 function copySingleSVGIcons() {
-    return src('./src/icons/icons/svgmap/*.svg').pipe(dest('./stories/basics/iconography/images'))
+    return src('./src/icons/icons/svgmap/*.svg').pipe(dest('./stories/basics/iconography/icons'))
 }
 function createSvgMaps() {
     return mergeStream(
@@ -454,8 +454,8 @@ exports.default = series(
         mergeLocatags,
         series(createModernizr, addCustomModernizrTests),
         saveLogoFilesToFolder,
-        createSvgMapsForBrands,
-        copySingleSVGIcons
+        //copySingleSVGIcons,
+        createSvgMapsForBrands
     ),
     watchFiles
 )
@@ -464,6 +464,7 @@ exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
 exports.mergeLocatags = mergeLocatags
 exports.convertPartialsToJs = convertPartialsToJs
+//exports.copySingleSvgIcons = copySingleSVGIcons /*TODO Copy all icons from assets for overview*/
 exports.preparePartialsForDelivery = series(
     preparePartialsForDelivery,
     preparePartialsForStaticDelivery

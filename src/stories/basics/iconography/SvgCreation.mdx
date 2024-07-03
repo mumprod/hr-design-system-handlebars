@@ -1,0 +1,61 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+
+<Meta title="Grundlegendes/Iconographie/Herstellung der Icons" />
+
+# Herstellung von SVG-Icons
+
+-   [Übersicht](#übersicht)
+-   [Aufbau der Datenstruktur des Designsystems](#aufbau-der-datenstruktur-des-designsystems)
+-   [Namenskonventionen](#namenskonventionen)
+    -   [Stories](#stories)
+
+## Übersicht
+
+In den Webauftritten des Hessischen Rundfunks wird ein Set an Icons verwendet, um Funktionen innerhalb der Weboberfläche, intuitiv verständlich zu machen. Sie sollen im Folgenden als hs-Iconwelt bezeichnet werden.
+Alle in dieser Welt vorkommenden Icons, lassen sich über einfache gestalterische Regeln herstellen. Im Idealfall lassen sich hierbei neue Icons von den bereits bestehenden ableiten.
+Die Icons lassen sich neben der Funktion auch visuell zu Familien gruppieren.
+
+## Software
+Die hessenschau Icons wurden ausschließlich mit der Software `Adobe Illustrator` (in diversen Versionen ab CC 2014) erstellt.
+Jedwede Software zur Herstellung von vektorbasierten Grafiken ist ebenfalls zulässig. Die Software sollte explizit den Export als SVG vorsehen.
+Gegenüber den proprietären Formaten, die softwarespezifisch sind, dient das SVG-Dateiformat als Austausch- und Darstellungsformat.
+
+ ## Wie ist ein Icon aufgebaut?
+Ein Icon wird aus geometrischen Primitiven erzeugt (siehe hierzu den Punkt "Aufbau eines Icons").
+Jede dieser Primitiven hat Eigenschaften, die sich in der Software manipulieren lassen z.B. Strichdicke, Füll-Farbe, Strich-Farbe etc. 
+Ihre Position und Aussehen im Raum wird über den Vektor bestimmt, d.h. eine mathematische Beschreibung über x Punkte und Kurven-Gleichungen.
+Je nach Komplexizität des Icons, besteht es aus vielen Linien, Rechtecke und Kreise die sich ggf. überlappen, verdecken und alle in Strichdicke usw. manipulierbar bleiben.
+
+ ## Export als SVG
+ Vor dem Export der Icons in das SVG-Format werden sie wie folgt "vorbehandelt":
+-   **Doppeltes Icon-Set anlegen** — Es werden zwei Illustrator-Dateien vom Designer für das Set vorgehalten. Eine dient weiterhin dem einheitliche Editieren der Icons (Strichdicke, Abstände!), 
+    wohingegen das Duplikat die "gepfadeten" Icons für den SVG-Export enthält. Die gepfadeten Icons sind auch, aber wesentlich schwerer, editierbar.
+-   **Komplexizitätsreduktion der Icons** — Ggf. "Stanzung" von überlagernden Objekten bzw. Zusammenfassung sind durchzuführen
+
+ ## Was heißt "gepfadet"?
+Eine sog. "Linie" setzt sich in der Welt eines Vektorprogramms aus EINEM Pfad und den Eigenschaften "Linien-Dicke" und "Linien-Farbe" zusammen. 
+Ein Pfad für sich ist zunächst eindimensional und wird mathematisch über x-Punkte und Kurvengleichungen beschrieben.
+Die sog. "Pfadung" bewirkt das aus der eindimensionalen Linie eine zweidimensionale Fläche wird, die nun von ZWEI geschlossenen Pfaden begrenzt / umschlossen wird und die Eigenschaft "Füllung" besitzt.
+
+**Anmerk. des Verf.: Formal findet eine Pfadung statt, um vormals Linie-Objekte mit Kreis-/Rechteckflächen etc. addieren zu können und um eine Fehleranfälligkeit bei der finalen Darstellung zu minimieren. 
+Der Web-Entwickler kann nach der Pfadung nicht mehr auf die Eigenschaften der einzelnen Objekte via CSS zugreifen. Er kann nur das gesamte Objekt via CSS manipulieren.**
+
+## Was heißt "gestanzt"?
+Bei überlagernden Objekten, wird das zu oberst liegende Objekt (im Beispiel das weiße "e") vom dahinterliegenden (im Beispiel der schwarze Kreis) subtrahiert, 
+d.h. wie mit einem Locher oder einer Schere aus dem Objekt herausgeschnitten.
+Dadurch wird die Anzahl von seperaten Objekten gering gehalten, was sich z.B. auch auf Dateigröße der SVG-Datei auswirkt. Daneben bewirkt die Stanzung, 
+das alle "weiß"-farbig hervorgehobenen Elemente eines Icons, nicht mehr über die Eigenschaft "Füllung" als weiß erscheinen, sondern der Hintergrund der Zeichenfläche "durchscheint" und die Farbe des 
+Elements durch die Farbe des Hintergrunds bestimmt wird.
+Während oder nach der Stanzung erfolgt eine weitere Zusammenfassung. Dabei werden alle einzelnen Pfadobjekte, zu einem Gesamt-Pfad addiert. 
+Liegen die Objekte getrennt vor, führt die Zusammenfassung lediglich zu einer Gruppierung, mathematisch bleiben sie damit weiterhin unabhängig.
+
+## Arbeit im Vektorprogramm
+In der Software muß zunächst ein Zeichenrahmen erstellt werden, also die Fläche auf der das Icon gezeichnet wird.
+Die Dimension eines einzelnen Zeichenrahmens ist 100 x 100 px. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen.
+Alle Icons die die allgemeinen Funktionen in der Weboberfläche abbilden, wurden zur Gruppe - die Familie -  "Allgemein" zusammengefasst und in einer Datei abgelegt. 
+Für "Allgemein" wurden x Zeichenrahmen (a 100 x 100px) erstellt, die alle in einer Datei gespeichert sind.
+
+Jeder Zeichenrahmen wird später automatisiert als seperate SVG-Datei exportiert werden. 
+Jeder Zeichenrahmen erhält einen eindeutigen Namen, der über die ganze Produktionskette hinweg bis hin zur SVG erhalten bleibt und beim Einbinden des Icons ihm diesen seinen Namen verleiht.
+Im Adobe Illustrator geschieht das über die Zeichenrahmen (hier "Zeichenflächen") Verwaltung. 
+Hier lassen sich Dimension und Benamung eines jeden Zeichenrahmens editieren.

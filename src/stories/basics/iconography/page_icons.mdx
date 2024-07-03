@@ -1,21 +1,73 @@
 import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
-/*import * as IconographyStories from './page_icons.stories'*/
 import svgList from './page_icon_data.js'
+import svgListDs from './page_icon_ds_data.js'
+import svgList404 from './page_icon_404_data.js'
+import svgListWeather from './page_icon_weather_data.js'
 
-<Meta title="Grundlegendes/Iconographie/Icons" />
+<Meta title="Grundlegendes/Iconographie/Iconwelt" />
 
-# Iconographie
+# hessenschau Iconwelt
 
 In den Webauftritten des Hessischen Rundfunks werden SVG-Icons unterschiedlicher Genese verwendet, Das Iconset ist organisch gewachsen, so das die aktuellesten hier für Storybook-Komponenten zu oberst, der vollständigkeithalber
 aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
 
+## Icons für das Design-System
+
+{Object.entries(svgListDs).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={token[1]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+
+## Icons aus dem Delivery
+
 {Object.entries(svgList).map((token, key) => {
         return (
-            <div style={{backgroundColor:'#fafafa', padding:'1rem', margin: '1rem', border: '1px solid #cacaca',  display: 'flex'}}>
-            <svg className="svg-item"> 
-                <use xlinkHref={token[1]}></use>
-            </svg>
-            <span style={{textAlign:'center'}}>Name:{token[0]}</span>
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={token[1]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für 404
+
+{Object.entries(svgList404).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={token[1]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für Wetter
+
+{Object.entries(svgListWeather).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={token[1]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
             </div>
         )
 })}
