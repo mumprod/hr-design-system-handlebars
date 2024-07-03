@@ -40,7 +40,7 @@
             {{/if}}          
         {{/if}}
         
-        <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} lg:grid-cols-12 lg:px-9.5 col-main  {{/if}}{{/if}}">
+        <div class="{{#if this.showAsFlyout}}lg:flex lg:flex-row -columnCount--{{this.columnCount}} lg:divide-x lg:divide-gray-200 {{else}} {{#if ../this.selected}} lg:grid-cols-12 lg:px-10 col-main  {{/if}}{{/if}}">
             {{#if this.showAsFlyout}}
                 {{#each this.columns}}
                     {{> components/site_header/navigation_flyout/navigation_flyout_column _count=../this.columnCount _navtype=../../_navigationType _parent=../../_parent _flyout=true~}}
