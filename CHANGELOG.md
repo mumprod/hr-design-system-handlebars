@@ -1,3 +1,15 @@
+# v1.77.3 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- Kein Abstand zum Footer - DPE-3207 [#981](https://github.com/mumprod/hr-design-system-handlebars/pull/981) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.77.2 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
