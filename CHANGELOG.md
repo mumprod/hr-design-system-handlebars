@@ -1,3 +1,39 @@
+# v1.77.0 (Wed Jul 03 2024)
+
+#### 🚀 Enhancement
+
+- DPE-3187 - Abstand der Breadcrumb anpassen [#979](https://github.com/mumprod/hr-design-system-handlebars/pull/979) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.76.0 (Wed Jul 03 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3093 [#976](https://github.com/mumprod/hr-design-system-handlebars/pull/976) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.75.6 (Tue Jul 02 2024)
+
+#### 🐛 Bug Fix
+
+- adds h-10 to nav element [#978](https://github.com/mumprod/hr-design-system-handlebars/pull/978) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.75.5 (Mon Jul 01 2024)
 
 #### 🐛 Bug Fix

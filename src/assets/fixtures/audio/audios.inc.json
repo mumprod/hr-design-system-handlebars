@@ -54,7 +54,65 @@
             "pluginData": {},
             "geoBlocked": false
         },
-        "playerId": "2563",
+        "playerId": "2565",
+        "type": "audioOndemand",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.0b83d962.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
+        "isAutoplay": true,
+        "teaserSize": "100",
+        "realTeaserSize": "100"
+    },
+    "audio-2": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "imageTemplateConfig": {
+                    "size": [{ "minWidth": 0, "value": "__xsmall" }]
+                }
+            },
+            "web": {
+                "baseUrl": "./vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "isAudioOnly": true,
+                    "media": [
+                        {
+                            "url": "https://hr-a.akamaihd.net/audio/hs/2024_06/240621093838_hsr_strongman_Poertner_Ost.mp3",
+                            "mimeType": "audio/mp3",
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "meta": {
+                "durationSeconds": 39,
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "images/strongman-100_v-1to1{size}.jpg"
+                    }
+                ],
+                "title": "Strongman-WM in Fulda",
+                "synopsis": "Stromgman-WM in Fulda zieht Kraftsportler aus aller Welt an."
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "2565",
         "type": "audioOndemand",
         "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.0b83d962.css",
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",

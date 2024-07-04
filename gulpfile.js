@@ -114,7 +114,7 @@ function createSvgMapsForBrands() {
                                         },
                                     },
                                 },
-                                 'convertStyleToAttrs',  
+                                'convertStyleToAttrs',
                             ],
                         })
                     )
@@ -391,6 +391,7 @@ function watchFiles() {
 async function convertPartialsToJs() {
     src(`${options.paths.assets.views}/**/*.hbs`)
         .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '$1'))
+        .pipe(replace(/(this.[0-9a-zA-Z_.]+)-adjust_context/g, '$1'))
         .pipe(replace(/(\\")/g, '\\$1')) // replace occurences of \" by \\" to make sure that " are correctly rendered in json strings
         .pipe(htmlToJs({ concat: 'handlebar-partials.js' }))
         .pipe(dest(options.paths.dist.handlebarPartials))
@@ -399,12 +400,14 @@ async function convertPartialsToJs() {
 async function preparePartialsForDelivery() {
     src(`${options.paths.assets.components}/**/*.hbs`)
         .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '../../$1-adjust_context'))
+        .pipe(replace(/(this.[0-9a-zA-Z_.]+)-adjust_context/g, '../$1-adjust_context'))
         .pipe(dest(options.paths.dist.dist_components))
 }
 
 async function preparePartialsForStaticDelivery() {
     src(`${options.paths.assets.components}/**/*.hbs`)
         .pipe(replace(/(_[0-9a-zA-Z_]+)-adjust_context/g, '$1'))
+        .pipe(replace(/(this.[0-9a-zA-Z_.]+)-adjust_context/g, '$1'))
         .pipe(dest(options.paths.dist.dist_static_components))
 }
 
