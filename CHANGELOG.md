@@ -1,3 +1,15 @@
+# v1.77.2 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Make teasers that have video or audio to [#980](https://github.com/mumprod/hr-design-system-handlebars/pull/980) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.77.1 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
