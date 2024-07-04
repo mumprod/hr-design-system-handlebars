@@ -1,3 +1,15 @@
+# v1.77.4 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- add group-title for tabbox [#982](https://github.com/mumprod/hr-design-system-handlebars/pull/982) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.77.3 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
