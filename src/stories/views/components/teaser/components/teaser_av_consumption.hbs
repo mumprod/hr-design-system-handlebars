@@ -1,5 +1,5 @@
 {{#with this.teaserLead.avDocument}}
-     {{~#if this.isVideo ~}}
+     {{~#if this.isVideoOnDemand ~}}
           {{#with this.toModel.videoElement}}
                {{~> components/mediaplayer/media_player _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}
                {{#with ../../this}}
@@ -10,7 +10,7 @@
                {{~/if~}}
           {{/with}}
      {{~/if~}}
-     {{~#if this.isAudio ~}}
+     {{~#if this.isAudioOnDemand ~}}
           {{#with this.toModel.audioElementForVideoView}}
                {{~> components/mediaplayer/media_player _uiTestHook="ui-test-audio-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}                  
                {{#with ../../this}}
