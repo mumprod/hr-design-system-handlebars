@@ -1,3 +1,16 @@
+# v1.77.1 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3188 Abstand von Breadcrumb und Dachzeile zu groß [#977](https://github.com/mumprod/hr-design-system-handlebars/pull/977) ([@Sunny1112358](https://github.com/Sunny1112358) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.77.0 (Wed Jul 03 2024)
 
 #### 🚀 Enhancement
