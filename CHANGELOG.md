@@ -1,3 +1,15 @@
+# v1.77.5 (Fri Jul 05 2024)
+
+#### 🐛 Bug Fix
+
+- -adds items-baseline to grid-article div in page_wrapper.hbs [#983](https://github.com/mumprod/hr-design-system-handlebars/pull/983) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.77.4 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
