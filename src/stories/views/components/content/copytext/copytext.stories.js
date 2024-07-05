@@ -31,7 +31,7 @@ export default {
                     </div>`
         },
     ],
-    parameters: { layout: 'fullscreen' }
+    parameters: { layout: 'fullscreen' },
 }
 
 export const Default = {
@@ -75,8 +75,8 @@ export const WithImageWebview = {
 
     args: {
         ...copytext_image_json,
-        _isWebview: true
-    }
+        _isWebview: true,
+    },
 }
 export const WithInfobox = {
     render: Template.bind({}),

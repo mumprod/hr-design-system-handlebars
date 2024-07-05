@@ -49,4 +49,3 @@ export const TickerTeaserAlternativ100 = {
     name: 'Alternativ 100',
     args: tickerTeaser100Alternativ.logicItem.includeModel,
 }
-

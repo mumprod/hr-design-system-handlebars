@@ -1,7 +1,6 @@
 import socialMediaLinks from './social_media_links.hbs'
 import socialMediaLinksData from './fixtures/social_media_links.json'
 
-
 const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${socialMediaLinks}</div>`;
@@ -11,8 +10,7 @@ const Template = ({ ...args }) => {
 export default {
     title: 'Komponenten/Content/SocialMediaLinks',
 
-    argTypes: {
-    },
+    argTypes: {},
 
     decorators: [
         (Story) => {
@@ -28,6 +26,6 @@ export const ThreeLinks = {
     name: '3 Links',
 
     args: {
-        ...socialMediaLinksData
+        ...socialMediaLinksData,
     },
 }
