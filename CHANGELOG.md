@@ -1,3 +1,15 @@
+# v1.77.6 (Fri Jul 05 2024)
+
+#### 🐛 Bug Fix
+
+- adds new line-height in paragraphs for desktop view of copytext [#984](https://github.com/mumprod/hr-design-system-handlebars/pull/984) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.77.5 (Fri Jul 05 2024)
 
 #### 🐛 Bug Fix
