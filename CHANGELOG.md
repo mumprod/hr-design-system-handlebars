@@ -1,3 +1,15 @@
+# v1.77.10 (Mon Jul 08 2024)
+
+#### 🐛 Bug Fix
+
+- removed all ar__content from templates [#988](https://github.com/mumprod/hr-design-system-handlebars/pull/988) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.77.9 (Mon Jul 08 2024)
 
 #### 🐛 Bug Fix
