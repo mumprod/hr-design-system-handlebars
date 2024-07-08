@@ -56,19 +56,77 @@ Liegen die Objekte getrennt vor, führt die Zusammenfassung lediglich zu einer G
 
 ## Arbeit im Vektorprogramm
 In der Software muß zunächst ein Zeichenrahmen erstellt werden, also die Fläche auf der das Icon gezeichnet wird.
-Die Dimension eines einzelnen Zeichenrahmens ist ``100 x 100 px``. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen.
+Die Dimension eines einzelnen Zeichenrahmens ist ``100 x 100 px``. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen (siehe Abbildung B).
 Alle Icons die die allgemeinen Funktionen in der Weboberfläche abbilden, wurden zur Gruppe - die Familie -  "Allgemein" zusammengefasst und in einer Datei abgelegt. 
 Für "Allgemein" wurden x Zeichenrahmen (a 100 x 100px) erstellt, die alle in einer Datei gespeichert sind.
 
-<figure>
-  <img src="./images/figures/Abb_Zeichenfläche.jpg" alt="Zeichenflächen im Illustrator" />
-  <figcaption>Abb.01 Einzelne Zeichenflächen mit dem Icon-Set in Adobe Illustrator (B), Zeichenflächen mit finaler Benamung über die Produktionskette (A)</figcaption>
-</figure>
 
+  <img src="./images/figures/Abb_Zeichenfläche.jpg" alt="Zeichenflächen im Illustrator" />
+ 
 Jeder Zeichenrahmen wird später automatisiert als seperate SVG-Datei exportiert werden. 
-Jeder Zeichenrahmen erhält einen eindeutigen Namen, der über die ganze Produktionskette hinweg bis hin zur SVG erhalten bleibt und beim Einbinden des Icons ihm diesen seinen Namen verleiht.
-Im Adobe Illustrator geschieht das über die Zeichenrahmen (hier "Zeichenflächen") Verwaltung. 
+Jeder Zeichenrahmen erhält einen eindeutigen Name, der über die ganze Produktionskette hinweg bis hin zur SVG erhalten bleibt und beim Einbinden des Icons ihm diesen seinen Namen verleiht.
+Im Adobe Illustrator geschieht das über die Zeichenrahmen (hier "Zeichenflächen") Verwaltung (siehe in Abbildung A). 
 Hier lassen sich Dimension und Benamung eines jeden Zeichenrahmens editieren.
+
+## Aufbau eines Icons (Beispiel)
+
+Hier soll exemplarisch gezeigt werden, wie ein Verkehrsicon (Zug als Symbol für ÖPNV) aus grafischen Primitiven gebaut wird. Es sei angemerkt, das die Bauweise dem Designer frei steht. 
+Es soll hierbei lediglich aufgezeigt werden, wie Einzelobjekte für das SVG zusammengeführt werden sollen.
+
+<p style={{display: 'flex'}}>
+<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/01.jpg"/>
+</div>
+<div style={{display: 'block', marginLeft: '50px'}}>
+Zeichnung von min. 6 grafischen Primitiven:
+- Ein großes Rechteck => Zugkörper
+- Zwei kleine Kreise => Lampen / Stoßpoller des Zugs
+- Zwei kleine Rechtecke => Fenster des Zugs
+- Eine gewinkelte Linie => Räder des Zugs
+(Die Strichdicke, Füllung etc. ist dabei zunächst nicht wichtig)
+</div>
+</p>
+
+<p style={{display: 'flex'}}>
+<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/02.jpg"/>
+</div>
+<div style={{display: 'block', marginLeft: '50px'}}>
+Die Ecken des großen Rechtecks asymmetrisch abrunden und kleine Quadrate in ein trapezoide Form überführen. Generell gilt:
+mit möglichst einfachen Transformationen, die ursprünglichen Objekte verändern, um wenige Pfadpunkte zu erzeugen.
+</div>
+</p>
+
+<p style={{display: 'flex'}}>
+<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/03.jpg"/>
+</div>
+<div style={{display: 'block', marginLeft: '50px'}}>
+Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
+Gewinkelte Linie im Winkel verkleinern und ebenfalls mit dem großen Rechteck überlappen
+Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
+</div>
+</p>
+
+<p style={{display: 'flex'}}>
+<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/04.jpg"/>
+</div>
+<div style={{display: 'block', marginLeft: '50px'}}>
+Das Icon ist fertig erstellt. Alle Primitiven, liegen als editierbare Objekte vor und können jederzeit in Form oder Gestalt geändert werden.
+</div>
+</p>
+
+<p style={{display: 'flex'}}>
+<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/05.jpg"/>
+</div>
+<div style={{display: 'block', marginLeft: '50px'}}>
+
+</div>
+</p>
+
+
 
 ## Beispiele für schlechtes SVG-Markup
 ```html
@@ -89,37 +147,3 @@ Ggf. sorgen die Attribute aber für eine falsche Darstellung. Die zulässigen At
 - "preserve--style"
 zu. `
 Ansonsten sollten die Pfad-Repräsentionen / Pfad-Tags (```<path...>```) ohne weitere (überflüssige) Attribute auskommen.
-
-## Aufbau eines Icons (Beispiel)
-
-Hier soll exemplarisch gezeigt werden, wie ein Verkehrsicon (Zug als Symbol für ÖPNV) aus grafischen Primitiven gebaut wird. Es sei angemerkt, das die Bauweise dem Designer frei steht. 
-Es soll hierbei lediglich aufgezeigt werden, wie Einzelobjekte für das SVG zusammengeführt werden sollen.
-
-Zeichnung von min. 6 grafischen Primitiven:
-- Ein großes Rechteck => Zugkörper
-- Zwei kleine Kreise => Lampen / Stoßpoller des Zugs
-- Zwei kleine Rechtecke => Fenster des Zugs
-- Eine gewinkelte Linie => Räder des Zugs
-
-<figure>
-  <img src="./images/figures/Abb_Geometrische_Primitive.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
-</figure>
-
-(Die Strichdicke, Füllung etc. ist dabei zunächst nicht wichtig)
-
-Die Ecken des großen Rechtecks asymmetrisch abrunden und kleine Quadrate in ein trapezoide Form überführen
-<figure>
-  <img src="./images/figures/Abb_Geometrische_Primitive_04.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
-</figure>
-
-Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
-<figure>
-  <img src="./images/figures/Abb_Geometrische_Primitive_05.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
-</figure>
-
-Gewinkelte Linie im Winkel verkleinern und ebenaflls mit dem großen Rechteck überlappen
-Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
-
-<figure>
-  <img src="./images/figures/Abb_Geometrische_Primitive_06.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
-</figure>
