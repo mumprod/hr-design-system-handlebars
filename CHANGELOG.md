@@ -1,3 +1,15 @@
+# v1.77.7 (Fri Jul 05 2024)
+
+#### 🐛 Bug Fix
+
+- adds test hook class "ui-test-story-title" to title span [#985](https://github.com/mumprod/hr-design-system-handlebars/pull/985) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.77.6 (Fri Jul 05 2024)
 
 #### 🐛 Bug Fix
