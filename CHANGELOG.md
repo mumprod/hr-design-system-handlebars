@@ -1,3 +1,16 @@
+# v1.77.9 (Mon Jul 08 2024)
+
+#### 🐛 Bug Fix
+
+- Fix: Caption of the cover image [#987](https://github.com/mumprod/hr-design-system-handlebars/pull/987) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.77.8 (Mon Jul 08 2024)
 
 #### 🐛 Bug Fix
