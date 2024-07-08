@@ -4,7 +4,7 @@
 {{#unless this.isInfoBox}}
     {{~#with this.paragraphBoxItem }}
         {{~#if this.isImage}}
-            {{~> components/content/copytext/components/image/image}}
+            {{~> components/content/copytext/components/image/image _isWebview=../_isWebview}}
         {{/if~}}
         {{~#if this.isContentBox}}
             {{~> components/content/copytext/components/contentbox/contentbox ~}}
