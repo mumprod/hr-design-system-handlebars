@@ -16,7 +16,6 @@ import '../src/assets/tailwind.css'
 
 import { CheckCSS } from 'checkcss';
 
-import '../src/tailwind.css';
 
 configureActions({
     clearOnStoryChange: true,
@@ -250,4 +249,4 @@ export const decorators = [
         attributeName: 'data-theme',
     }),
 ]
-export const tags = ['autodocs'];
+//export const tags = ['autodocs'];

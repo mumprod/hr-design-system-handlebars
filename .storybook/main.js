@@ -24,14 +24,10 @@ const config = {
             name: '@storybook/addon-docs',
             options: {
                 mdxPluginOptions: {
-                    mdxCompileOptions: {
-                        remarkPlugins: [remarkGfm],
-                    },
                 },
             },
         },
         '@storybook/addon-interactions',
-        '@storybook/addon-webpack5-compiler-babel',
         '@chromatic-com/storybook',
         '@storybook/addon-styling-webpack',
         {
@@ -53,7 +49,7 @@ const config = {
                             {
                                 loader: require.resolve('postcss-loader'),
                                 options: {
-                                    implementation: require.resolve('postcss'),
+                                    implementation: require('postcss'),
                                 },
                             },
                         ],
@@ -61,6 +57,7 @@ const config = {
                 ],
             },
         },
+        '@storybook/addon-webpack5-compiler-swc',
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
