@@ -5,9 +5,7 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
 # Herstellung von SVG-Icons
 
 -   [Übersicht](#übersicht)
--   [Aufbau der Datenstruktur des Designsystems](#aufbau-der-datenstruktur-des-designsystems)
--   [Namenskonventionen](#namenskonventionen)
-    -   [Stories](#stories)
+
 
 ## Übersicht
 
@@ -26,11 +24,12 @@ Jede dieser Primitiven hat Eigenschaften, die sich in der Software manipulieren 
 Ihre Position und Aussehen im Raum wird über den Vektor bestimmt, d.h. eine mathematische Beschreibung über x Punkte und Kurven-Gleichungen.
 Je nach Komplexizität des Icons, besteht es aus vielen Linien, Rechtecke und Kreise die sich ggf. überlappen, verdecken und alle in Strichdicke usw. manipulierbar bleiben.
 
- ## Export als SVG
+ ## Arbeiten mit Icon-Sets
  Vor dem Export der Icons in das SVG-Format werden sie wie folgt "vorbehandelt":
--   **Doppeltes Icon-Set anlegen** — Es werden zwei Illustrator-Dateien vom Designer für das Set vorgehalten. Eine dient weiterhin dem einheitliche Editieren der Icons (Strichdicke, Abstände!), 
-    wohingegen das Duplikat die "gepfadeten" Icons für den SVG-Export enthält. Die gepfadeten Icons sind auch, aber wesentlich schwerer, editierbar.
+-   **Doppeltes Icon-Set anlegen** — Es werden idellerweise zwei Illustrator-Dateien vom Designer für das Set vorgehalten. Eine dient weiterhin dem einheitliche Editieren der Icons (Strichdicke, Abstände!), 
+    wohingegen das Duplikat die "gepfadeten" Icons für den SVG-Export enthält. (die gepfadeten Icons sind auch, aber wesentlich schwerer, editierbar)
 -   **Komplexizitätsreduktion der Icons** — Ggf. "Stanzung" von überlagernden Objekten bzw. Zusammenfassung sind durchzuführen
+
 
  ## Was heißt "gepfadet"?
 Eine sog. "Linie" setzt sich in der Welt eines Vektorprogramms aus EINEM Pfad und den Eigenschaften "Linien-Dicke" und "Linien-Farbe" zusammen. 
@@ -39,6 +38,12 @@ Die sog. "Pfadung" bewirkt das aus der eindimensionalen Linie eine zweidimension
 
 **Anmerk. des Verf.: Formal findet eine Pfadung statt, um vormals Linie-Objekte mit Kreis-/Rechteckflächen etc. addieren zu können und um eine Fehleranfälligkeit bei der finalen Darstellung zu minimieren. 
 Der Web-Entwickler kann nach der Pfadung nicht mehr auf die Eigenschaften der einzelnen Objekte via CSS zugreifen. Er kann nur das gesamte Objekt via CSS manipulieren.**
+
+<div style={{display: 'flex'}}>
+    <img src="./images/figures/Abb_Linienobjekt.jpg" alt="Linienobjekt" width="300px" />
+    <img src="./images/figures/Abb_Pfadobjekt.jpg" alt="Pfadobjekt" width="300px" />
+</div>
+
 
 ## Was heißt "gestanzt"?
 Bei überlagernden Objekten, wird das zu oberst liegende Objekt (im Beispiel das weiße "e") vom dahinterliegenden (im Beispiel der schwarze Kreis) subtrahiert, 
@@ -51,11 +56,70 @@ Liegen die Objekte getrennt vor, führt die Zusammenfassung lediglich zu einer G
 
 ## Arbeit im Vektorprogramm
 In der Software muß zunächst ein Zeichenrahmen erstellt werden, also die Fläche auf der das Icon gezeichnet wird.
-Die Dimension eines einzelnen Zeichenrahmens ist 100 x 100 px. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen.
+Die Dimension eines einzelnen Zeichenrahmens ist ``100 x 100 px``. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen.
 Alle Icons die die allgemeinen Funktionen in der Weboberfläche abbilden, wurden zur Gruppe - die Familie -  "Allgemein" zusammengefasst und in einer Datei abgelegt. 
 Für "Allgemein" wurden x Zeichenrahmen (a 100 x 100px) erstellt, die alle in einer Datei gespeichert sind.
+
+<figure>
+  <img src="./images/figures/Abb_Zeichenfläche.jpg" alt="Zeichenflächen im Illustrator" />
+  <figcaption>Abb.01 Einzelne Zeichenflächen mit dem Icon-Set in Adobe Illustrator (B), Zeichenflächen mit finaler Benamung über die Produktionskette (A)</figcaption>
+</figure>
 
 Jeder Zeichenrahmen wird später automatisiert als seperate SVG-Datei exportiert werden. 
 Jeder Zeichenrahmen erhält einen eindeutigen Namen, der über die ganze Produktionskette hinweg bis hin zur SVG erhalten bleibt und beim Einbinden des Icons ihm diesen seinen Namen verleiht.
 Im Adobe Illustrator geschieht das über die Zeichenrahmen (hier "Zeichenflächen") Verwaltung. 
 Hier lassen sich Dimension und Benamung eines jeden Zeichenrahmens editieren.
+
+## Beispiele für schlechtes SVG-Markup
+```html
+<svg xmlns="..." xml:space="..." width="..." height="..." viewBox="...">
+  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="..."/>
+</svg>
+```
+Das obige Markup enthält diverse Attribute, die für die Auspielung nicht relevant sind. Hierzu zählen alle Attribute die eine Strichdicke bestimmen
+- stroke
+- stroke-linejoin
+- stroke-miterlimit
+- stroke-width
+
+Nach der Pfadung eines Linienobjekts sind diese Attribute überflüssig, da die Strichdicke nicht mehr direkt manipulierbar sein wird.
+Ggf. sorgen die Attribute aber für eine falsche Darstellung. Die zulässigen Attributierung (siehe SVG-Optimierung) lässt maximal die Attribute
+- fill
+- "preserve--fill"
+- "preserve--style"
+zu. `
+Ansonsten sollten die Pfad-Repräsentionen / Pfad-Tags (```<path...>```) ohne weitere (überflüssige) Attribute auskommen.
+
+## Aufbau eines Icons (Beispiel)
+
+Hier soll exemplarisch gezeigt werden, wie ein Verkehrsicon (Zug als Symbol für ÖPNV) aus grafischen Primitiven gebaut wird. Es sei angemerkt, das die Bauweise dem Designer frei steht. 
+Es soll hierbei lediglich aufgezeigt werden, wie Einzelobjekte für das SVG zusammengeführt werden sollen.
+
+Zeichnung von min. 6 grafischen Primitiven:
+- Ein großes Rechteck => Zugkörper
+- Zwei kleine Kreise => Lampen / Stoßpoller des Zugs
+- Zwei kleine Rechtecke => Fenster des Zugs
+- Eine gewinkelte Linie => Räder des Zugs
+
+<figure>
+  <img src="./images/figures/Abb_Geometrische_Primitive.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
+</figure>
+
+(Die Strichdicke, Füllung etc. ist dabei zunächst nicht wichtig)
+
+Die Ecken des großen Rechtecks asymmetrisch abrunden und kleine Quadrate in ein trapezoide Form überführen
+<figure>
+  <img src="./images/figures/Abb_Geometrische_Primitive_04.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
+</figure>
+
+Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
+<figure>
+  <img src="./images/figures/Abb_Geometrische_Primitive_05.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
+</figure>
+
+Gewinkelte Linie im Winkel verkleinern und ebenaflls mit dem großen Rechteck überlappen
+Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
+
+<figure>
+  <img src="./images/figures/Abb_Geometrische_Primitive_06.jpg" alt="Zeichenflächen im Illustrator" width="400px"/>
+</figure>

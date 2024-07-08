@@ -1,4 +1,4 @@
-const images = require.context('./icons/404', true);
+const images = require.context('/src/assets/icons/404/svgmap', true);
 
 let imageList = {}
 let fileName
