@@ -3,15 +3,15 @@
         {{#if _isCopytext~}}
             {{#if this.showFullSize.isTrue }}
                 {{#if this.showStretched.isTrue }}
-                    {{~> components/base/image/responsive_image this.teaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+                    {{~> components/base/image/responsive_image this.teaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{else}}
-                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{/if}}
             {{else}}
-                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
             {{/if}}
         {{else}}
-            {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="ar__content rounded-tl-hr rounded-br-hr" ~}}
+            {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
         {{/if}}
     </figure>
     <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
