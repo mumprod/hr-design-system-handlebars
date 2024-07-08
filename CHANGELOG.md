@@ -1,3 +1,15 @@
+# v1.77.8 (Mon Jul 08 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3210 AND DPE-3211- Darkmode bugs new story page [#986](https://github.com/mumprod/hr-design-system-handlebars/pull/986) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.77.7 (Fri Jul 05 2024)
 
 #### 🐛 Bug Fix
