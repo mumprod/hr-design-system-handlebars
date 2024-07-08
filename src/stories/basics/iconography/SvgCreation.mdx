@@ -73,59 +73,58 @@ Hier lassen sich Dimension und Benamung eines jeden Zeichenrahmens editieren.
 Hier soll exemplarisch gezeigt werden, wie ein Verkehrsicon (Zug als Symbol für ÖPNV) aus grafischen Primitiven gebaut wird. Es sei angemerkt, das die Bauweise dem Designer frei steht. 
 Es soll hierbei lediglich aufgezeigt werden, wie Einzelobjekte für das SVG zusammengeführt werden sollen.
 
-<p style={{display: 'flex'}}>
-<div style={{display: 'block', width: '400px'}}>
-<img src="./images/figures/01.jpg"/>
-</div>
-<div style={{display: 'block', marginLeft: '50px'}}>
 Zeichnung von min. 6 grafischen Primitiven:
 - Ein großes Rechteck => Zugkörper
 - Zwei kleine Kreise => Lampen / Stoßpoller des Zugs
 - Zwei kleine Rechtecke => Fenster des Zugs
 - Eine gewinkelte Linie => Räder des Zugs
-(Die Strichdicke, Füllung etc. ist dabei zunächst nicht wichtig)
-</div>
-</p>
+- (Die Strichdicke, Füllung etc. ist dabei zunächst nicht wichtig)
 
-<p style={{display: 'flex'}}>
-<div style={{display: 'block', width: '400px'}}>
+<img src="./images/figures/01.jpg"/>
+
+- Die Ecken des großen Rechtecks asymmetrisch abrunden und kleine Quadrate in ein trapezoide Form überführen. 
+- Generell gilt: mit möglichst einfachen Transformationen, die ursprünglichen Objekte verändern, um wenige Pfadpunkte zu erzeugen.
+
 <img src="./images/figures/02.jpg"/>
-</div>
-<div style={{display: 'block', marginLeft: '50px'}}>
-Die Ecken des großen Rechtecks asymmetrisch abrunden und kleine Quadrate in ein trapezoide Form überführen. Generell gilt:
-mit möglichst einfachen Transformationen, die ursprünglichen Objekte verändern, um wenige Pfadpunkte zu erzeugen.
-</div>
-</p>
 
-<p style={{display: 'flex'}}>
-<div style={{display: 'block', width: '400px'}}>
+
+- Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
+- Gewinkelte Linie im Winkel verkleinern und ebenfalls mit dem großen Rechteck überlappen
+- Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
+
 <img src="./images/figures/03.jpg"/>
-</div>
-<div style={{display: 'block', marginLeft: '50px'}}>
-Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
-Gewinkelte Linie im Winkel verkleinern und ebenfalls mit dem großen Rechteck überlappen
-Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
-</div>
-</p>
 
-<p style={{display: 'flex'}}>
-<div style={{display: 'block', width: '400px'}}>
+- Das Icon ist fertig erstellt. 
+- Alle Primitiven, liegen als editierbare Objekte vor und können jederzeit in Form oder Gestalt geändert werden.
+- Beschnitte oder Verdeckungen können wie im Beispiel ebenfalls so belassen werden oder bereits in diesem Arbeitsschritt durch geeigneten Methoden (Pathfinder, Schneidewerkzeug etc.), auf die Objekte angewendet werden.
+
 <img src="./images/figures/04.jpg"/>
-</div>
-<div style={{display: 'block', marginLeft: '50px'}}>
-Das Icon ist fertig erstellt. Alle Primitiven, liegen als editierbare Objekte vor und können jederzeit in Form oder Gestalt geändert werden.
-</div>
-</p>
 
-<p style={{display: 'flex'}}>
-<div style={{display: 'block', width: '400px'}}>
+- Für den Export werden jetzt alle Einzelobjekte zu eine Gesamtobjekt verbunden (soweit das die gestalterischen Vorgaben erlauben). 
+- Allgemein gilt: Linienobjekte in Pfade umwandeln, um sie in den nächsten Arbeitsschritten mit anderen Objekten (Flächen) "addieren" zu können. 
+
 <img src="./images/figures/05.jpg"/>
-</div>
-<div style={{display: 'block', marginLeft: '50px'}}>
 
-</div>
-</p>
+- Für das Zusammenführen aller einzelnen Objekte wird das Werkzeug ```Pathfinder``` eingesetzt. 
+- Im Beispiel wird über Subtraktion die weiße Beschnittfläche vom gepfadeten Linienobjekt abgezogen.
 
+<img src="./images/figures/06.jpg"/>
+
+- Das beschnitten Objekt wird mit der Zugkörper-Fäche "addiert" also zu einem geschlossenen Pfad verbunden. 
+- Für die Stanzung der Fenster und Lampen / Stoßpoller des Zugs aus dieser neuen Pfad-Objekt, wird das Objekt in den Hintergrund verschoben, so das die weißen Objekte wieder zu oberst auf dem neuen Pfad-Objekt liegen.
+
+<img src="./images/figures/07.jpg"/>
+
+- Die weißen Objekte werden dann von der Zugkörper-Fläche "subtrahiert" (gestanzt).
+- Das so enststehende Objekt, ist ein geschlossener Pfad, der über den ```Speichern``` Dialog von Illustrator als SVG gespeichert werden kann.
+
+<img src="./images/figures/08.jpg"/>
+
+Zur Kontrolle lässt sich ein farbiger Hintergrund einfügen, um entsprechende Stanzungen oder noch nicht zusammengeführte Objekte sichtbar zu machen. (Diese farbige Kontrollfläche wird NICHT exportiert)
+Anmerkung: Bei mehrfarbigen Icons (z.B. das Unwetterwarnungs-Icon) ist diese Methode der Zusammenführung nur für die einzelnen zu färbenden Objekte anzuwenden. Stanzungen gelten nur, wenn die Hintergrund-Farbe
+durchscheinen soll.
+
+<img src="./images/figures/09.jpg"/>
 
 
 ## Beispiele für schlechtes SVG-Markup
