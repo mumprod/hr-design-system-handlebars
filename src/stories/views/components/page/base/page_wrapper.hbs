@@ -1,5 +1,5 @@
 <div class="grid grid-page">
-    <article class="grid items-baseline bg-white dark:bg-black grid-article">
+    <{{#if _isArticle}}article{{else}}div{{/if}} class="grid items-baseline bg-white dark:bg-black grid-article">
         {{> @partial-block }}    
-    </article>
+    </{{#if _isArticle}}article{{else}}div{{/if}}>
 </div>
