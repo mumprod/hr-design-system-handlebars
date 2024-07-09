@@ -1,3 +1,15 @@
+# v1.80.0 (Tue Jul 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: truncate text in the player headline not before the end of… [#993](https://github.com/mumprod/hr-design-system-handlebars/pull/993) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.79.1 (Tue Jul 09 2024)
 
 #### 🐛 Bug Fix
