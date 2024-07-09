@@ -1,10 +1,10 @@
 <span class='text-xs text-inherit font-headingSerif{{#if _css}} {{_css}}{{/if~}}'>
     {{~#if this.showAirdate}}
         {{~#with this.airdateDate ~}}
-            <span class="mx-1">|</span>
-            {{#if ../this.isAudioOnDemand}}
+            <span class="mx-1.5">|</span>
+            {{~#if ../this.isAudioOnDemand~}}
                 <time datetime="{{this.htmlDate}}">{{this.date}}</time>
-            {{else}}
+            {{~else~}}
                 {{~#if this.airdateWithoutTime ~}}
                     <time datetime="{{this.htmlDate}}">{{this.date}}</time>
                 {{~else~}}
@@ -12,14 +12,14 @@
                 {{~/if~}}
                 {{/if}}
         {{~/with~}}
-        {{~#if this.isVideoOnDemand}}
+        {{~#if this.isVideoOnDemand~}}
             {{~#with this.copyright~}}
-                <span class="mx-1">|</span>{{this}}
-            {{/with}}
-        {{else}}
+                <span class="mx-1.5">|</span>{{this}}
+            {{~/with}}
+        {{~else~}}
             {{~#with this.audioAuthor~}}
-                <span class="mx-1">|</span>{{this}}
-            {{/with}}
-        {{/if}}
+                <span class="mx-1.5">|</span>{{this}}
+            {{~/with}}
+        {{~/if~}}
     {{/if}}
 </span>
