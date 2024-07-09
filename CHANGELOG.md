@@ -1,3 +1,15 @@
+# v1.79.1 (Tue Jul 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3224 - SEO: Semantisches HTML [#992](https://github.com/mumprod/hr-design-system-handlebars/pull/992) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.79.0 (Tue Jul 09 2024)
 
 #### 🚀 Enhancement
