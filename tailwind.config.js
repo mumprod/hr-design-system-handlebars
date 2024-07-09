@@ -4,7 +4,7 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     // workaround damit darkmode nur in der Webview in Delivery funktioniert
-    darkMode: ['class', "[class~='tw-dark']"],
+    darkMode: ['class'],
 
     experimental: {
         optimizeUniversalDefaults: true,

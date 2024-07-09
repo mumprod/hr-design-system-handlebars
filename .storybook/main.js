@@ -11,6 +11,7 @@ const config = {
     ],
     features: { buildStoriesJson: true },
     addons: [
+        'storybook-addon-tw-dm-toggle',
         '@storybook/addon-links',
         {
             name: '@storybook/addon-essentials',

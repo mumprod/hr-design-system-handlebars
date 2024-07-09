@@ -101,6 +101,7 @@
         "remark-gfm": "^3.0.1",
         "rimraf": "^3.0.2",
         "storybook": "^7.6.16",
+        "storybook-addon-tw-dm-toggle": "^7.0.19",
         "storybook-conditional-toolbar-selector": "^1.0.3",
         "tailwindcss": "^3.0.23",
         "tailwindcss-hyphens": "^0.1.0",
