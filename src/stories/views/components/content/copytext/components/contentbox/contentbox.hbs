@@ -1,12 +1,52 @@
-{{#if (isStorybook)}}  
-    {{> components/content/copytext/components/contentbox/storybook-contentbox }} 
-{{else}}            
-    <div class="border-y border-gray-boulder overflow-auto contentbox-box mt-13 mb-5 sm480:pb-7.5 pb-5 sm:px-0 px-5.5 {{#unless this.showFullSize.isTrue}} mt-7.5 mb-6 mr-0 sm:mr-6 md:w-6/12 float-left{{/unless}}">
-        {{~> components/base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}}
-        {{#if this.title}}
-            <h3 class="mt-6 text-lg font-normal contentbox-title font-headingSerif dark:text-text-dark">{{this.title}}</h3>
-        {{/if}}         
-        {{> modules/story/copytext-contentbox ~}}
-        {{~> components/base/a11y/hiddenText _locaTag="story_infobox_outro_sr" ~}}
-    </div>
-{{/if}}
+{{#>components/content/copytext/components/common/paragraphbox_wrapper _showFullsize=this.showFullSize.isTrue}}
+
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}}
+
+    {{~#if this.title}}
+        <h3 class="text-lg -mt-[4px] sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h3>
+    {{/if}}
+
+    {{~#with this.copytextParagraph.[0].paragraphBoxItem }}
+        {{~#if this.isImage}}
+            {{#if ../this.showFullSize.isTrue }}
+                {{#unless this.showFullSize.isTrue }}
+                    <div class="w-full mr-0 sm:mr-5 sm:w-1/2 sm:float-left">
+                {{/unless}}
+            {{/if}}
+            {{> components/content/copytext/components/image/figure
+                    _cssClass=(if ../this.title "mt-5 mb-0" "my-0" )
+                    _type="story"
+                    _variant=(if this.showPortrait.isTrue "copytext-portrait" "100-copytext")
+                    _noAr=(if this.showPortrait.isTrue true false)
+                    _pictureAddClass=(if this.showPortrait.isTrue "" "ar-16-9")
+                    _cssClassCaption="mb-3"
+                    _isWebview=../../_isWebview}}
+            {{#if ../this.showFullSize.isTrue }}
+                {{#unless this.showFullSize.isTrue }}
+                    </div>
+                {{/unless}}
+            {{/if}}
+        {{/if~}}
+    {{/with}}
+
+    {{#with this.copytext}}
+        {{#each this.paragraph}}
+            {{#each this.text.split}}
+                {{#if this.isText}}
+                    <p class="mt-4 text-base copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
+                {{/if}}
+                {{#if this.isUl}}
+                    <ul class="pl-5 mt-4 overflow-hidden text-base list-disc copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
+                {{/if}}
+                {{#if this.isOl}}
+                    <ol class="pl-5 mt-4 overflow-hidden text-base list-decimal copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
+                {{/if}}
+            {{/each}}
+        {{/each}}
+    {{/with}}
+
+    {{~#block "subParagraphs"}}{{/block~}}
+
+    {{~> components/base/a11y/hiddenText _locaTag="story_infobox_outro_sr" ~}}
+
+{{/components/content/copytext/components/common/paragraphbox_wrapper}}
