@@ -5,6 +5,13 @@ import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
 # Herstellung von SVG-Icons
 
 -   [Übersicht](#übersicht)
+-   [Software](#software)
+-   [Wie ist ein Icon aufgebaut?](#wie-ist-ein-icon-aufgebaut)
+-   [Arbeiten mit Icon-Sets](#arbeiten-mit-icon-sets)
+-   [Was heißt gepfadet?](#was-heißt-gepfadet)
+-   [Was heißt gestanzt?](#was-heißt-gestanzt)
+-   [Arbeit im Vektorprogramm](#arbeit-im-Vektorprogramm)
+-   [Aufbau eines Icons (Beispiel)](#aufbau-eines-icons-beispiel)
 
 
 ## Übersicht
@@ -40,13 +47,13 @@ Die sog. "Pfadung" bewirkt das aus der eindimensionalen Linie eine zweidimension
 Der Web-Entwickler kann nach der Pfadung nicht mehr auf die Eigenschaften der einzelnen Objekte via CSS zugreifen. Er kann nur das gesamte Objekt via CSS manipulieren.**
 
 <div style={{display: 'flex'}}>
-    <img src="./images/figures/Abb_Linienobjekt.jpg" alt="Linienobjekt" width="300px" />
-    <img src="./images/figures/Abb_Pfadobjekt.jpg" alt="Pfadobjekt" width="300px" />
+    <img src="./images/figures/00A.jpg" alt="Linienobjekt" width="300px" />
+    <img src="./images/figures/00B.jpg" alt="Pfadobjekt" width="300px" />
 </div>
 
 
 ## Was heißt "gestanzt"?
-Bei überlagernden Objekten, wird das zu oberst liegende Objekt (im Beispiel das weiße "e") vom dahinterliegenden (im Beispiel der schwarze Kreis) subtrahiert, 
+Bei überlagernden Objekten, wird das zu oberst liegende Objekt (im Beispiel die [Fenster und die Lampen/Poller](#export-vorbereitung-linienobjekte-in-pfade)) vom dahinterliegenden (im Beispiel der Zugkörper) subtrahiert, 
 d.h. wie mit einem Locher oder einer Schere aus dem Objekt herausgeschnitten.
 Dadurch wird die Anzahl von seperaten Objekten gering gehalten, was sich z.B. auch auf Dateigröße der SVG-Datei auswirkt. Daneben bewirkt die Stanzung, 
 das alle "weiß"-farbig hervorgehobenen Elemente eines Icons, nicht mehr über die Eigenschaft "Füllung" als weiß erscheinen, sondern der Hintergrund der Zeichenfläche "durchscheint" und die Farbe des 
@@ -57,13 +64,13 @@ Liegen die Objekte getrennt vor, führt die Zusammenfassung lediglich zu einer G
 ## Arbeit im Vektorprogramm
 In der Software muß zunächst ein Zeichenrahmen erstellt werden, also die Fläche auf der das Icon gezeichnet wird.
 Die Dimension eines einzelnen Zeichenrahmens ist ``100 x 100 px``. Je nach Software ist es möglich ein Set an Icons in einer Datei zu verwalten, also mehrere Zeichenrahmen in einer Datei anzulegen (siehe Abbildung B).
-Alle Icons die die allgemeinen Funktionen in der Weboberfläche abbilden, wurden zur Gruppe - die Familie -  "Allgemein" zusammengefasst und in einer Datei abgelegt. 
-Für "Allgemein" wurden x Zeichenrahmen (a 100 x 100px) erstellt, die alle in einer Datei gespeichert sind.
+Alle Icons die z.B. die allgemeinen Funktionen in der Weboberfläche abbilden, werden zur Gruppe - die Familie -  "Allgemein" zusammengefasst und in einer Datei abgelegt usw.
+Es entsteht eine Illustrator-Datei "Allgemein" die x Zeichenrahmen (a 100 x 100px) enthält und für die Editierung vorgehalten wird und eine Datei nach selbem Schema - das Duplikat - in der aber alle Icons für den SVG Export 
+umgewandelt wurden. Im Beispiel unten wurden 12 Zeichenflächen für die Gruppe "Verkehr" angelegt.
 
-
-  <img src="./images/figures/Abb_Zeichenfläche.jpg" alt="Zeichenflächen im Illustrator" />
+<img src="./images/figures/00.jpg" alt="Zeichenflächen im Illustrator" />
  
-Jeder Zeichenrahmen wird später automatisiert als seperate SVG-Datei exportiert werden. 
+Jeder Zeichenrahmen wird später automatisiert als separate SVG-Datei exportiert werden. 
 Jeder Zeichenrahmen erhält einen eindeutigen Name, der über die ganze Produktionskette hinweg bis hin zur SVG erhalten bleibt und beim Einbinden des Icons ihm diesen seinen Namen verleiht.
 Im Adobe Illustrator geschieht das über die Zeichenrahmen (hier "Zeichenflächen") Verwaltung (siehe in Abbildung A). 
 Hier lassen sich Dimension und Benamung eines jeden Zeichenrahmens editieren.
@@ -88,7 +95,7 @@ Zeichnung von min. 6 grafischen Primitiven:
 <img src="./images/figures/02.jpg"/>
 
 
-- Kleine trapezoide Quadrate und Kreise "weiß" füllen und mit dem großen Rechteck (Zugkörper) überlappen...
+- Kleine trapezoide Quadrate und Kreise "weiß" füllen (für eine bessere optische Positionierung auf dem schwarzen Zugkörper) und mit dem großen Rechteck (Zugkörper) überlappen...
 - Gewinkelte Linie im Winkel verkleinern und ebenfalls mit dem großen Rechteck überlappen
 - Weißes Rechteck aufziehen und mit der Linie üperlappen. Die Enden der gewinkelten Linie sehen so begradigt aus
 
@@ -100,12 +107,13 @@ Zeichnung von min. 6 grafischen Primitiven:
 
 <img src="./images/figures/04.jpg"/>
 
+## Export Vorbereitung Linienobjekte in Pfade
 - Für den Export werden jetzt alle Einzelobjekte zu eine Gesamtobjekt verbunden (soweit das die gestalterischen Vorgaben erlauben). 
 - Allgemein gilt: Linienobjekte in Pfade umwandeln, um sie in den nächsten Arbeitsschritten mit anderen Objekten (Flächen) "addieren" zu können. 
 
 <img src="./images/figures/05.jpg"/>
 
-- Für das Zusammenführen aller einzelnen Objekte wird das Werkzeug ```Pathfinder``` eingesetzt. 
+- Für das Zusammenführen aller einzelnen Objekte wird das Illustrator-Werkzeug ```Pathfinder``` eingesetzt. 
 - Im Beispiel wird über Subtraktion die weiße Beschnittfläche vom gepfadeten Linienobjekt abgezogen.
 
 <img src="./images/figures/06.jpg"/>
@@ -114,6 +122,8 @@ Zeichnung von min. 6 grafischen Primitiven:
 - Für die Stanzung der Fenster und Lampen / Stoßpoller des Zugs aus dieser neuen Pfad-Objekt, wird das Objekt in den Hintergrund verschoben, so das die weißen Objekte wieder zu oberst auf dem neuen Pfad-Objekt liegen.
 
 <img src="./images/figures/07.jpg"/>
+
+## Export Vorbereitung Stanzung
 
 - Die weißen Objekte werden dann von der Zugkörper-Fläche "subtrahiert" (gestanzt).
 - Das so enststehende Objekt, ist ein geschlossener Pfad, der über den ```Speichern``` Dialog von Illustrator als SVG gespeichert werden kann.
