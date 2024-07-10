@@ -1,3 +1,15 @@
+# v1.80.1 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - removes unneeded {{this.from}} [#995](https://github.com/mumprod/hr-design-system-handlebars/pull/995) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.80.0 (Tue Jul 09 2024)
 
 #### 🚀 Enhancement
