@@ -1,3 +1,16 @@
+# v1.81.1 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2844:  ContentBox uses new copytext + refactoring infobox [#1000](https://github.com/mumprod/hr-design-system-handlebars/pull/1000) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.81.0 (Wed Jul 10 2024)
 
 #### 🚀 Enhancement
