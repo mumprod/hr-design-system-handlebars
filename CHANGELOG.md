@@ -1,3 +1,100 @@
+# v1.80.3 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3227 - Infobox: Umlaut-Großbuchstaben haben keine Punkte [#994](https://github.com/mumprod/hr-design-system-handlebars/pull/994) ([@vascoeduardo](https://github.com/vascoeduardo) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.80.2 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - success icon now same size as copy icon [#996](https://github.com/mumprod/hr-design-system-handlebars/pull/996) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.1 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - removes unneeded {{this.from}} [#995](https://github.com/mumprod/hr-design-system-handlebars/pull/995) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.0 (Tue Jul 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: truncate text in the player headline not before the end of… [#993](https://github.com/mumprod/hr-design-system-handlebars/pull/993) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.79.1 (Tue Jul 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3224 - SEO: Semantisches HTML [#992](https://github.com/mumprod/hr-design-system-handlebars/pull/992) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.79.0 (Tue Jul 09 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3093 [#991](https://github.com/mumprod/hr-design-system-handlebars/pull/991) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.78.0 (Mon Jul 08 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3218 [#990](https://github.com/mumprod/hr-design-system-handlebars/pull/990) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.77.11 (Mon Jul 08 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3219 - Sharing aus Nicht-Artikeln raus [#989](https://github.com/mumprod/hr-design-system-handlebars/pull/989) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.77.10 (Mon Jul 08 2024)
 
 #### 🐛 Bug Fix
