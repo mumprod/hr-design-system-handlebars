@@ -10,6 +10,7 @@
         {
             "paragraphBoxItem": {
                 "isVideo": true,
+                "isVideoOnDemand": true,
                 "showFullSize": {
                     "isTrue": true
                 },
@@ -21,6 +22,7 @@
                     }
                 },
                 "copyright": "hessenschau",
+                "showAirdate": true,
                 "airdateDate": {
                     "htmlDateTime": "2022-10-31T19:30+0200",
                     "htmlDate": "31.10.2022",
@@ -43,12 +45,10 @@
                             "url": "/videoseite",
                             "isTargetBlank": false
                         },
-                        "content": {
-                            "readMoreScreenreader": "zum hr3.de Video",
-                            "title": "Musik macht deinen Tag",
-                            "isForeignBrand": true,
-                            "readMore": "zum hr3.de Videoseite"
-                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Video-Einzelseite",
                         "hasIcon": true,
                         "iconName": "extern"
                     }
@@ -82,6 +82,7 @@
         {
             "paragraphBoxItem": {
                 "isVideo": true,
+                "isVideoOnDemand": true,
                 "showFullSize": {
                     "isTrue": false
                 },
@@ -93,6 +94,7 @@
                     }
                 },
                 "copyright": "hessenschau",
+                "showAirdate": true,
                 "airdateDate": {
                     "htmlDateTime": "2022-10-31T19:30+0200",
                     "htmlDate": "31.10.2022",
@@ -115,12 +117,10 @@
                             "url": "/videoseite",
                             "isTargetBlank": false
                         },
-                        "content": {
-                            "readMoreScreenreader": "zum hr3.de Video",
-                            "title": "Musik macht deinen Tag",
-                            "isForeignBrand": false,
-                            "readMore": "zum hr3.de Videoseite"
-                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur hr3.de VideoEinzel-seite",
                         "hasIcon": true,
                         "iconName": "extern"
                     }

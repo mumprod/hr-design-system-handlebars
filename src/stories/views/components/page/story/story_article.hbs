@@ -1,4 +1,4 @@
-{{#>components/page/base/page_wrapper}}
+{{#>components/page/base/page_wrapper _isArticle=true}}
     {{> components/page/base/page_header}}
 
     {{> components/page/components/shorttext _text=this.shorttext }}
@@ -11,14 +11,14 @@
             {{#if this.isImage}}
                 {{> components/content/copytext/components/image/figure
                     _cssClass="article-full-width md:article-breakout mt-6 sm480:mt-7 "
-                    _cssClassCaption="mx-5 md:mx-0 lg:pl-[108px] lg:pr-5"
+                    _cssClassCaption="mx-5 md:mx-0"
                     _type="story"
                     _variant=(if this.showSquareImage.isTrue "100-top-sb-1x1" "100-top-sb")
                     _pictureAddClass=(if this.showSquareImage.isTrue "grid ar-1-1 md:ar-16-9" "ar-16-9")
                     _isWebview=../_webview-adjust_context
                     _noDelay=true}}
             {{/if}}
-            {{#if this.isVideo}}
+            {{#if this.isVideoOnDemand}}
                {{> components/content/copytext/components/media/media_figure _isLead=true _fullSize=true _addClass="print:hidden article-full-width md:article-breakout mt-12 mb-6 sm:mt-14 sm:mb-8" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
             {{/if}}
             {{#if this.isLivestream}}

@@ -1,4 +1,4 @@
-<header class="mt-6 sm480:mt-8">
+<header class="mt-3 sm480:mt-8">
     {{#with this.label}}
         {{#> components/label/label_group _css="mb-2"}}
             {{> components/label/label _type=this.type _text=(loca this.loca)}}
@@ -10,6 +10,6 @@
                 <span class="block mb-2 text-base sm480:text-xl font-heading dark:text-text-dark">{{this.topline}}</span>
             {{/if~}}
         {{/unless~}}
-        <span class="text-3xl font-headingSerif sm480:text-4xl dark:text-text-dark">{{this.title}}</span>
+        <span class="text-3xl ui-test-story-title font-headingSerif sm480:text-4xl dark:text-text-dark">{{this.title}}</span>
     </h2>
 </header>

@@ -4,7 +4,7 @@
 {{#unless this.isInfoBox}}
     {{~#with this.paragraphBoxItem }}
         {{~#if this.isImage}}
-            {{~> components/content/copytext/components/image/image}}
+            {{~> components/content/copytext/components/image/image _isWebview=../_isWebview}}
         {{/if~}}
         {{~#if this.isContentBox}}
             {{~> components/content/copytext/components/contentbox/contentbox ~}}
@@ -27,7 +27,7 @@
         {{~#if this.isNewsletter}}
             {{> components/content/copytext/components/newsletter }}
         {{/if~}}
-        {{~#if this.isAudio}}
+        {{~#if this.isAudioOnDemand}}
             {{> components/content/copytext/components/audio }}
         {{/if~}}
         {{~#if this.isAudioEventLivestream}}
@@ -36,7 +36,7 @@
         {{~#if this.isPodcastEpisode}}
             {{> components/content/copytext/components/podcastepisode }}
         {{/if~}}
-        {{~#if this.isVideo}}
+        {{~#if this.isVideoOnDemand}}
             {{> components/content/copytext/components/video/video }}
         {{/if~}}
         {{~#if this.isLivestream}}

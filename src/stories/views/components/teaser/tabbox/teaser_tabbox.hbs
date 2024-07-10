@@ -1,7 +1,14 @@
 </div>
+{{~#if this.hasGroupTitle}}
+    <div class="grid grid-cols-12 bg-white mt-12 md:mt-14 sm:px-9.5 col-full sm:col-main gap-x-6 gap-y-10 md:gap-y-14">
+        <h2 class="py-0 text-2xl md:text-5xl col-span-full font-title headline-barrier">
+            {{this.groupTitle}}
+        </h2>
+    </div>
+{{/if}}
 <div 
   x-data="{ tab: '{{this.tabbedGroup.[0].title}}', test:true }"
-  class="grid grid-cols-12 pt-6 mx-0 mb-5 md:mb-7 mt-14 col-full md:pt-7 bg-highlight-1 md:rounded-tl-hr md:rounded-br-hr md:col-main gap-x-6 gap-y-6"
+  class="grid grid-cols-12 pt-6 mx-0 mb-5 md:mb-7 {{#if this.hasGroupTitle}}mt-5{{else}}mt-14{{/if}} col-full md:pt-7 bg-highlight-1 md:rounded-tl-hr md:rounded-br-hr md:col-main gap-x-6 gap-y-6"
 >
   <section class="px-0 col-span-full sm:px-8 md:px-0">
     <div class="flex flex-wrap justify-center mx-5 gap-y-3 mb-7 gap-x-2" role="tablist">
@@ -19,4 +26,4 @@
     {{~> components/teaser/teaser_logic/teaser_logic ~}}
   </section>
 </div>
-<div class="{{> components/grid/grid_group_wrapper_classes }} hideGridGroupIfEmpty"> 
+<div class="{{> components/grid/grid_group_wrapper_classes }} hideGridGroupIfEmpty">

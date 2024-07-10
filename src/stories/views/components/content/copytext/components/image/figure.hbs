@@ -4,7 +4,7 @@
     {{else}}
         {{#if _filedownloadLink }}
             {{#>components/base/link _link=_filedownloadLink }}
-                {{> components/base/image/responsive_image _type=_type-adjust_context _variant=_variant-adjust_context _addClass=_pictureAddClass-adjust_context _addClassImg="ar__content" _isWebview=_isWebview-adjust_context _noDelay=_noDelay-adjust_context}}
+                {{> components/base/image/responsive_image _type=_type-adjust_context _variant=_variant-adjust_context _addClass=_pictureAddClass-adjust_context _isWebview=_isWebview-adjust_context _noDelay=_noDelay-adjust_context}}
             {{/components/base/link}}
             {{#*inline "htmlProperties"}} 
                 {{~#with _trackingData-adjust_context }}
@@ -12,10 +12,13 @@
                 {{/with}}
             {{/inline}}                         
         {{else}}
-            {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _addClassImg="ar__content" _isWebview=_isWebview _noDelay=_noDelay}}
+            {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _isWebview=_isWebview _noDelay=_noDelay}}
         {{/if}}
     {{/if}}
     {{#unless _voting-option}}
-        {{~> components/content/copytext/components/image/figcaption _fullSize=this.showFullSize.isTrue _cssClassCaption=_cssClassCaption~}}
+        {{~#> components/content/copytext/components/image/collapsible_caption _cssClassCaption=_cssClassCaption~}}
+                {{~> components/content/copytext/components/image/image_caption_text}}
+                {{~> components/content/copytext/components/image/image_copyright}}
+        {{/components/content/copytext/components/image/collapsible_caption }}
     {{/unless}}
 </figure>

@@ -380,61 +380,61 @@
     "item7": {
         "title": "Untergrund war Strategie: Punk in der DDR",
         "url": "/teaser1",
-                "teaseritem": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_podcast",
-                    "@->replaceToken": [
-                        {
-                            "@->token": "image",
-                            "@->value": "heiner-goebbels-102"
-                        }
-                    ]
-                },
-                "podcastDuration": "53:13",
-                "teaserInfo": {
-                    "showTeaserInfo": true,
-                    "showTeaserInfoSection": false,
-                    "showTeaserInfoChannel": true,
-                    "showTeaserInfoAll": true,
-                    "showTeaserInfoDate": false,
-                    "showTeaserInfoDateTime": true,
-                    "showTeaserInfoProgramRef": false
-                },
-                "podcastChannel": {
-                    "title": "Der Tag in Hessen",
-                    "url": "#ChannelURL",
+        "teaseritem": {
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "teaser_podcast",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "heiner-goebbels-102"
+                }
+            ]
+        },
+        "podcastDuration": "53:13",
+        "teaserInfo": {
+            "showTeaserInfo": true,
+            "showTeaserInfoSection": false,
+            "showTeaserInfoChannel": true,
+            "showTeaserInfoAll": true,
+            "showTeaserInfoDate": false,
+            "showTeaserInfoDateTime": true,
+            "showTeaserInfoProgramRef": false
+        },
+        "podcastChannel": {
+            "title": "Der Tag in Hessen",
+            "url": "#ChannelURL",
 
-                    "podcastHoster": [
-                        {
-                            "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
-                            "podcastHosterName": "ITunes"
-                        },
-                        {
-                            "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
-                            "podcastHosterName": "RSS"
-                        },
-                        {
-                            "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
-                            "podcastHosterName": "Google Podcasts"
-                        },
-                        {
-                            "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
-                            "podcastHosterName": "ARD Audiothek"
-                        }
-                    ]
+            "podcastHoster": [
+                {
+                    "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
+                    "podcastHosterName": "ITunes"
                 },
-                "audioUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
-                "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
-                "teaserImage": {
-                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                    "@->contentpath": "teaser_podcast",
-                    "@->replaceToken": [
-                        {
-                            "@->token": "image",
-                            "@->value": "heiner-goebbels-102"
-                        }
-                    ]
+                {
+                    "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
+                    "podcastHosterName": "RSS"
                 },
+                {
+                    "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
+                    "podcastHosterName": "Google Podcasts"
+                },
+                {
+                    "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
+                    "podcastHosterName": "ARD Audiothek"
+                }
+            ]
+        },
+        "audioUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+        "podcastDownloadUrl": "https://mp3podcasthrdl-a.akamaihd.net/mp3/podcast/hr2_doppelkopf/hr2_doppelkopf_20221031_96251016.mp3",
+        "teaserImage": {
+            "@->jsoninclude": "teaser/teaser_images.inc.json",
+            "@->contentpath": "teaser_podcast",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "heiner-goebbels-102"
+                }
+            ]
+        },
 
         "teaserSize": "hero",
         "realTeaserSize": "hero",
@@ -463,7 +463,9 @@
         "isEvent": false,
         "isTicker": false,
         "isAudio": false,
+        "isAudioOnDemand": false,
         "isVideo": false,
+        "isVideoOnDemand": false,
         "isPodcast": true,
         "isPodcastEpisode": true,
         "isExtOrBrandLink": false,
@@ -515,4 +517,3 @@
         }
     }
 }
-        

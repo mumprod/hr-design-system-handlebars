@@ -1,0 +1,194 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Audio"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "audio",
+                    "loca": "label_audio",
+                    "byline": {
+                        "bylineText": "00:39 Min."
+                    }
+                },
+                "copyright": "hr",
+                "audioAuthor": "Michael Pörtner",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-21T14:30+0200",
+                    "htmlDate": "21.06.2024",
+                    "date": "21.06.24",
+                    "dateSeparatorTime": "21.06.24, 14:30"
+                },
+                "toModel": {
+                    "audioElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hessenschau.de Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audio-Einzelseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioOnDemand": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "audio",
+                    "loca": "label_audio",
+                    "byline": {
+                        "bylineText": "00:20 Min."
+                    }
+                },
+                "audioAuthor": "Karsten Hufer",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "audioElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audio-Einzelseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}
