@@ -3,7 +3,7 @@
     <span class="sr-only">{{loca "story_infobox_intro_sr" }}</span>
 
     {{~#if this.paragraphProperties.[0].title}}
-        <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.paragraphProperties.[0].title}}</h3>
+        <h3 class="-mt-1 text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.paragraphProperties.[0].title}}</h3>
     {{/if}}
 
     {{~#with this.paragraphBoxItem }}
@@ -13,41 +13,14 @@
                     <div class="w-full mr-0 sm:mr-5 sm:w-1/2 sm:float-left">
                 {{/unless}}
             {{/if}}
-            {{#if this.showPortrait.isTrue }}
-                {{~#if ../this.paragraphProperties.[0].title}}
-                    {{> components/content/copytext/components/image/figure
-                        _cssClass="mt-5 mb-0"
-                        _type="story"
-                        _variant="copytext-portrait"
-                        _noAr="true"
-                        _isWebview=../../_isWebview}}
-                {{else}}
-                    {{> components/content/copytext/components/image/figure
-                        _cssClass="my-0"
-                        _type="story"
-                        _variant="copytext-portrait"
-                        _noAr="true"
-                        _isWebview=../../_isWebview}}
-                {{/if}}
-            {{else}}
-                {{~#if ../this.paragraphProperties.[0].title}}
-                    {{> components/content/copytext/components/image/figure
-                        _cssClass="mt-5 mb-0"
-                        _cssClassCaption=""
-                        _type="story"
-                        _variant="100-copytext"
-                        _pictureAddClass="ar-16-9"
-                        _isWebview=../../_isWebview}}
-                {{else}}
-                    {{> components/content/copytext/components/image/figure
-                        _cssClass="my-0"
-                        _cssClassCaption=""
-                        _type="story"
-                        _variant="100-copytext"
-                        _pictureAddClass="ar-16-9"
-                        _isWebview=../../_isWebview}}
-                {{/if}}
-            {{/if}}
+            {{> components/content/copytext/components/image/figure
+                    _cssClass=(if ../this.paragraphProperties.[0].title "mt-5 mb-0" "my-0" )
+                    _type="story"
+                    _variant=(if this.showPortrait.isTrue "copytext-portrait" "100-copytext")
+                    _noAr=(if this.showPortrait.isTrue true false)
+                    _pictureAddClass=(if this.showPortrait.isTrue "" "ar-16-9")
+                    _cssClassCaption="mb-3"
+                    _isWebview=../../_isWebview}}
             {{#if ../paragraphProperties.[0].showFullSize }}
                 {{#unless this.showFullSize.isTrue }}
                     </div>
@@ -58,13 +31,13 @@
 
     {{#each this.text.split}}
         {{#if this.isText}}
-            <p class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}}mt-4{{else}}{{#if ../this.paragraphBoxItem}}mt-4{{else}}-mt-0.5{{/if}}{{/if}} text-base sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
+            <p class="mt-4 text-base copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
         {{/if}}
         {{#if this.isUl}}
-            <ul class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}}mt-4{{else}}{{#if ../this.paragraphBoxItem}}mt-4{{else}}-mt-0.5{{/if}}{{/if}} overflow-hidden pl-9 text-base list-disc sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
+            <ul class="pl-5 mt-4 overflow-hidden text-base list-disc copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
         {{/if}}
         {{#if this.isOl}}
-            <ol class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}}mt-4{{else}}{{#if ../this.paragraphBoxItem}}mt-4{{else}}-mt-0.5{{/if}}{{/if}} overflow-hidden pl-9 text-base list-decimal sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
+            <ol class="pl-5 mt-4 overflow-hidden text-base list-decimal copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
         {{/if}}
     {{/each}}
     {{~#block "subParagraphs"}}{{/block~}}
