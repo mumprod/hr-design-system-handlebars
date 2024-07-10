@@ -11,7 +11,7 @@
                 }
             }"
             @resize.window="open = false; $refs.caption.scrollHeight === $refs.caption.clientHeight ? truncated = false : truncated = true">
-    <div  class="dark:text-text-dark overflow-anywhere hyphens-auto"  x-ref="caption" 
+    <div  class="flex dark:text-text-dark overflow-anywhere hyphens-auto gap-x-3"  x-ref="caption" 
     {{#if this.showFullSize.isTrue}} :class="!open ? 'line-clamp-2 md:line-clamp-none' : 'line-clamp-none'" {{else}} :class="!open ? 'line-clamp-2' : 'line-clamp-none'" {{/if}}>
         {{> @partial-block }}
     </div>
