@@ -1,3 +1,40 @@
+# v1.80.4 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- revise spaces in copytext [#997](https://github.com/mumprod/hr-design-system-handlebars/pull/997) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.80.3 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3227 - Infobox: Umlaut-Großbuchstaben haben keine Punkte [#994](https://github.com/mumprod/hr-design-system-handlebars/pull/994) ([@vascoeduardo](https://github.com/vascoeduardo) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.80.2 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - success icon now same size as copy icon [#996](https://github.com/mumprod/hr-design-system-handlebars/pull/996) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.80.1 (Wed Jul 10 2024)
 
 #### 🐛 Bug Fix
