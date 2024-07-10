@@ -36,14 +36,11 @@
     {{/if}}
     {{#unless _voting-option}}
         {{#if this.teaseritem}}
-            {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"}}
-                {{#unless ../this.isAudio-adjust_context}}
-                    {{~> components/content/copytext/components/image/image_caption_text}}
-                {{/unless}}
-                {{~> components/content/copytext/components/image/image_copyright}}
-                {{#if ../this.isAudio-adjust_context~}}
-                    <span class="mx-1">|</span>
-                    {{#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context}}
+            {{#if this.isAudio}}
+                {{~#> components/content/copytext/components/image/caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
+                    {{~> components/content/copytext/components/image/image_copyright~}}
+                    <span class="mx-1.5">|</span>
+                    {{~#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context~}}
                         {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
                             <span>
                                 {{~this.readMore~}}
@@ -51,10 +48,15 @@
                                     {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
                                 {{~/if~}}
                             </span>
-                        {{/components/base/link}}
-                    {{/with}}
-                {{/if}}
-            {{~/components/content/copytext/components/image/collapsible_caption}}
+                        {{~/components/base/link~}}
+                    {{~/with~}}
+                {{~/components/content/copytext/components/image/caption~}}
+            {{else}}
+                {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
+                    {{~> components/content/copytext/components/image/image_caption_text~}}
+                    {{~> components/content/copytext/components/image/image_copyright~}}
+                {{~/components/content/copytext/components/image/collapsible_caption~}}
+            {{/if}}
         {{/if}}
     {{/unless}}
     {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}

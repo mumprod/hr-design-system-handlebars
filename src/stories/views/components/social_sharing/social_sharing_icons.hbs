@@ -8,7 +8,7 @@
         {{/with}}
     >
         <span x-cloak class="flex items-center justify-center w-full h-full" x-show="!copySuccess">{{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="copy-ds" _iconmap="icons" ~}}</span>
-        <span x-cloak class="flex items-center justify-center w-full h-full" x-show="copySuccess">{{~> components/base/image/icon _addClass="w-6 h-6 text-green-600" _icon="status-done" _iconmap="icons" ~}}</span>
+        <span x-cloak class="flex items-center justify-center w-full h-full" x-show="copySuccess">{{~> components/base/image/icon _addClass="w-full h-full text-green-600" _icon="status-done" _iconmap="icons" ~}}</span>
     </button>
     <div x-cloak x-show="copySuccess" class="absolute left-8 flex flex-row items-center justify-start px-4 shadow w-auto h-8 top-0 ml-0.5 text-xs bg-white whitespace-nowrap sm480:text-sm font-headingSerif dark:text-text-dark">    
         {{loca "share_copy_message" }}
