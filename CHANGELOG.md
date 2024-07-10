@@ -1,3 +1,15 @@
+# v1.80.2 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - success icon now same size as copy icon [#996](https://github.com/mumprod/hr-design-system-handlebars/pull/996) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.80.1 (Wed Jul 10 2024)
 
 #### 🐛 Bug Fix
