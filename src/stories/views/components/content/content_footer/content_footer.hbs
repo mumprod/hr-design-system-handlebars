@@ -1,10 +1,10 @@
 <footer class="flex flex-col mt-10 text-xs md:text-sm text-gray-scorpion dark:text-text-dark font-headingSerif{{#if _addClass}} {{_addClass}}{{/if}}">
     {{#with this.editorialStaffItems}}
         <p>
-            Redaktion:
+            <span>{{~loca "editorial_office"}}:</span>
             {{#each this}}
                 {{#if this.hasProfileLink}}
-                    {{#>components/base/link _link=this.link _css="text-link hover:underline"}}<span>{{../this.authorName~}}</span>{{/components/base/link~}}
+                    {{#>components/base/link _link=this.link _css="text-link dark:text-link-dark hover:underline"}}<span>{{../this.authorName~}}</span>{{/components/base/link~}}
                     {{~#with this.textAfterAuthor}}{{this}}{{/with}}{{~this.delimiter~}}
                 {{else}}
                     {{#with this.textAfterAuthor}}{{this}}{{/with}}{{this.delimiter}}
@@ -15,9 +15,9 @@
     {{~#with this.programReferenceAlt~}}
         {{~#if this.hasReference~}}
             <div>
-                Sendung:
+                <span>{{~loca "broadcast"}}:</span>
                 {{#if this.link}}
-                    {{#>components/base/link _link=this.link _css="text-link hover:underline"~}}
+                    {{#>components/base/link _link=this.link _css="text-link dark:text-link-dark hover:underline"~}}
                         <span>{{~ this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
                         <span>
                                 <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
