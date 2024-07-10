@@ -34,7 +34,7 @@
             {{#if (isStorybook)}}  
                 {{> components/content/copytext/components/accordion/accordion_item }}   
             {{else}}            
-                {{> modules/story/copytext-accordion ~}}
+                {{~> components/content/copytext/copytext_body _isWebview=_isWebview ~}}
             {{/if}}    
             {{#if @last}}</div></div><div class="w-full border-b border-gray-alto"></div>{{/if}}
         {{/if}}
