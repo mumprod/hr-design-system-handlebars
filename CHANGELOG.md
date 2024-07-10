@@ -1,3 +1,39 @@
+# v1.80.6 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- removes flex and stuff again.. oh dear [#999](https://github.com/mumprod/hr-design-system-handlebars/pull/999) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.5 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3234 [#998](https://github.com/mumprod/hr-design-system-handlebars/pull/998) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.4 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- revise spaces in copytext [#997](https://github.com/mumprod/hr-design-system-handlebars/pull/997) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.80.3 (Wed Jul 10 2024)
 
 #### 🐛 Bug Fix
