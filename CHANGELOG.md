@@ -1,3 +1,15 @@
+# v1.80.7 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- include new copytext in accordion [#1001](https://github.com/mumprod/hr-design-system-handlebars/pull/1001) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.80.6 (Wed Jul 10 2024)
 
 #### 🐛 Bug Fix
