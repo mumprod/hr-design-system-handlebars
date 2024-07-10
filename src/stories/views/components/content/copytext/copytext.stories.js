@@ -11,6 +11,10 @@ import copytext_infobox_json from './fixtures/copytext_infobox.json'
 import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
 import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
+import copytext_video_json from './fixtures/copytext_video.json'
+import copytext_audio_json from './fixtures/copytext_audio.json'
+import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
+import copytext_livestream_json from './fixtures/copytext_livestream.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -27,7 +31,7 @@ export default {
                     </div>`
         },
     ],
-    parameters:{layout:'fullscreen'}
+    parameters: { layout: 'fullscreen' }
 }
 
 export const Default = {
@@ -65,7 +69,15 @@ export const WithImage = {
     name: 'Image',
     args: copytext_image_json,
 }
+export const WithImageWebview = {
+    render: Template.bind({}),
+    name: 'Image Webview',
 
+    args: {
+        ...copytext_image_json,
+        _isWebview: true
+    }
+}
 export const WithInfobox = {
     render: Template.bind({}),
     name: 'Infobox',
@@ -100,4 +112,27 @@ export const WithAdditionalInfo = {
     render: Template.bind({}),
     name: 'Zusatzinfo',
     args: copytext_additionalInfo_json,
+}
+
+export const WithVideo = {
+    render: Template.bind({}),
+    name: 'Video',
+    args: copytext_video_json,
+}
+
+export const WithLivestream = {
+    render: Template.bind({}),
+    name: 'Livestream',
+    args: copytext_livestream_json,
+}
+export const WithAudio = {
+    render: Template.bind({}),
+    name: 'Audio',
+    args: copytext_audio_json,
+}
+
+export const WithAudioEventStream = {
+    render: Template.bind({}),
+    name: 'Audio-Livestream',
+    args: copytext_audio_event_stream_json,
 }

@@ -2,7 +2,7 @@
     <ul class="">
         {{~#each this~}}
             <li class="float-left mt-2 mr-2">
-                {{~#> components/button/link_button _url=this.url _variant="secondary" _size="sm" _css="overflow-hidden" _onWhite=true}}
+                {{~#> components/button/link_button _url=this.url _variant="secondary" _size="sm" _css="overflow-hidden" _onWhite="true"}}
                     {{> components/button/components/button_icon _icon="ortsmarke" _iconmap="icons" _css=""}}
                     {{>components/button/components/button_label _label=this.title _css="flex-1 truncate"}}
                 {{/components/button/link_button}}                            

@@ -1,12 +1,14 @@
-<div x-show="$screen('lg') && $store.sharingIsVisible == false" x-init="$store.sharingIsOpen = false" class="sticky w-10 col-start-2 mt-6 h-fit"
-    :class="{'top-[166px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') ,
-            'top-[130px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') ,
-            'top-[85px]' : !$store.sectionNavIsVisible && $screen('lg')}"
+<div x-show="$screen('lg') && $store.sharingIsVisible == false && document.querySelector('.copytextWrapper').offsetHeight > 220" x-init="$store.sharingIsOpen = false" class="{{#unless _useSticky}}top-0 {{/unless}}sticky w-10 col-start-2 pt-6 z-100 h-fit"
+    {{#if _useSticky}}
+    :class="{'top-[142px]':  $store.sectionNavIsVisible && $store.subNavIsVisible && $screen('lg') ,
+            'top-[106px]':  $store.sectionNavIsVisible && !$store.subNavIsVisible && $screen('lg') ,
+            'top-[61px]' : !$store.sectionNavIsVisible && $screen('lg')}"
+    {{/if}}
 >
     <div 
         class="relative right-0 p-1 bg-white md:h-auto">
             <ul class="flex flex-col gap-3">  
-                {{> components/social_sharing/social_sharing_compact_icons }}
+                {{> components/social_sharing/social_sharing_icons _socialSharingType="vertical-desktop" }}
             </ul>
     </div>
 </div>

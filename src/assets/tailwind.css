@@ -179,6 +179,13 @@
                 }
             }
         }
+        &.ardplayer-state-audio-inline {
+            .ardplayer-audio {
+                h2 {
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
     }
 }
 
@@ -290,30 +297,30 @@
         --ardplayer-color-primary-base: theme('colors.blue.science.hex');
         --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.science.rgb') / 70%);
         --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.congress');
+        --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
         --ardplayer-color-lightest: theme('colors.white.DEFAULT');
 
         .ardplayer-controlbar {
             .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.congress');
+                --ardplayer-color-lightest: theme('colors.blue.science.hex');
                 color: var(--ardplayer-color-lightest);
             }
         }
 
         .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.congress');
+            --ardplayer-color-lightest: theme('colors.blue.science.hex');
 
             .ardplayer-option:hover {
                 color: theme('colors.white.DEFAULT');
                 .ardplayer-icon {
-                    color: theme('colors.blue.congress');
+                    color: theme('colors.blue.science.hex');
                 }
             }
         }
     }
 
     .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.congress');
+        --ardplayer-color-lightest: theme('colors.blue.science.hex');
     }
 }
 

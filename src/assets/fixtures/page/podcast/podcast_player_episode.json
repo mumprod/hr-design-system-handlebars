@@ -15,55 +15,56 @@
             "hasDwellTime": true,
             "isSingleChannel": false,
             "backLinkUrl": "#",
+
             "topictags": {
                 "topic1": {
-                    "url":"#",
+                    "url": "#",
                     "title": "topictag1"
                 },
                 "topic2": {
-                    "url":"#",
+                    "url": "#",
                     "title": "topictag2"
                 },
                 "topic3": {
-                    "url":"#",
+                    "url": "#",
                     "title": "topictag mit extrem langem namen"
                 },
                 "topic4": {
-                    "url":"#",
+                    "url": "#",
                     "title": "topic tag schnack"
                 },
                 "topic5": {
-                    "url":"#",
+                    "url": "#",
                     "title": "topictag2Taggigtop"
                 }
             },
             "geotag": {
                 "GeoTag1": {
-                    "url":"#",
+                    "url": "#",
                     "title": "geotag1"
                 },
                 "GeoTag2": {
-                    "url":"#",
+                    "url": "#",
                     "title": "geotag mit extrem langem namen"
                 },
                 "GeoTag3": {
-                    "url":"#",
+                    "url": "#",
                     "title": "Far out"
                 },
                 "GeoTag4": {
-                    "url":"#",
+                    "url": "#",
                     "title": "Stuttgart"
                 },
                 "GeoTag5": {
-                    "url":"#",
+                    "url": "#",
                     "title": "FFM"
                 }
             },
             "socialSharing": {
-                "twitterLink" : "#",
-                "whatsappLink" : "#",
-                "facebookLink" : "#",
-                "mailtoLink" : "#"
+                "twitterLink": "#",
+                "whatsappLink": "#",
+                "facebookLink": "#",
+                "mailtoLink": "#"
             },
             "airdateDate": {
                 "htmlDateTime": "2022-10-31T19:30+0200",
@@ -78,10 +79,12 @@
                     "asPicture": false,
                     "asImage": true,
                     "fallback": "images/heiner-goebbels-102_v-1to1__medium.jpg",
-                    "sources": [{
-                        "sizes": "300px",
-                        "srcset": "images/heiner-goebbels-102_v-1to1__small.jpg 380w, images/heiner-goebbels-102_v-1to1__medium.jpg 480w, images/heiner-goebbels-102_v-1to1.jpg 720w, images/heiner-goebbels-102_v-1to1__large.jpg 960w"
-                    }]
+                    "sources": [
+                        {
+                            "sizes": "300px",
+                            "srcset": "images/heiner-goebbels-102_v-1to1__small.jpg 380w, images/heiner-goebbels-102_v-1to1__medium.jpg 480w, images/heiner-goebbels-102_v-1to1.jpg 720w, images/heiner-goebbels-102_v-1to1__large.jpg 960w"
+                        }
+                    ]
                 }
             },
             "duration": "14:35",
@@ -98,19 +101,24 @@
             "podcastChannel": {
                 "title": "hr2 Doppelkopf",
                 "url": "#ChannelURL",
-                "podcastHoster": [{
-                    "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
-                    "podcastHosterName": "ITunes"
-                }, {
-                    "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
-                    "podcastHosterName": "RSS"
-                }, {
-                    "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
-                    "podcastHosterName": "Google Podcasts"
-                }, {
-                    "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
-                    "podcastHosterName": "ARD Audiothek"
-                }]
+                "podcastHoster": [
+                    {
+                        "podcastHosterUrl": "https://podcasts.apple.com/podcast/hr2-doppelkopf/id212822590",
+                        "podcastHosterName": "ITunes"
+                    },
+                    {
+                        "podcastHosterUrl": "https://podcast.hr.de/hr2_doppelkopf/podcast.xml",
+                        "podcastHosterName": "RSS"
+                    },
+                    {
+                        "podcastHosterUrl": "https://podcasts.google.com/feed/aHR0cHM6Ly9wb2RjYXN0LmhyLmRlL2hyMl9kb3BwZWxrb3BmL3BvZGNhc3QueG1s?hl=de",
+                        "podcastHosterName": "Google Podcasts"
+                    },
+                    {
+                        "podcastHosterUrl": "https://www.ardaudiothek.de/episode/hr2-doppelkopf/ich-hoere-bei-jedem-geraeusch-gleich-die-tonhoehe-oder-komponist-und-theatermacher-heiner-goebbels-erneuert-das-musiktheater/hr2-kultur/12056783/",
+                        "podcastHosterName": "ARD Audiothek"
+                    }
+                ]
             },
             "audioUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20230816_98732247.mp3",
             "podcastDownloadUrl": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/der_tag_in_hessen/der_tag_in_hessen_20230816_98732247.mp3",
@@ -120,10 +128,12 @@
                     "asPicture": false,
                     "asImage": true,
                     "fallback": "images/heiner-goebbels-102_v-1to1__medium.jpg",
-                    "sources": [{
-                        "sizes": "300px",
-                        "srcset": "images/heiner-goebbels-102_v-1to1__small.jpg 380w, images/heiner-goebbels-102_v-1to1__medium.jpg 480w, images/heiner-goebbels-102_v-1to1.jpg 720w, images/heiner-goebbels-102_v-1to1__large.jpg 960w"
-                    }]
+                    "sources": [
+                        {
+                            "sizes": "300px",
+                            "srcset": "images/heiner-goebbels-102_v-1to1__small.jpg 380w, images/heiner-goebbels-102_v-1to1__medium.jpg 480w, images/heiner-goebbels-102_v-1to1.jpg 720w, images/heiner-goebbels-102_v-1to1__large.jpg 960w"
+                        }
+                    ]
                 }
             },
             "mediaMetadata": {
@@ -191,7 +201,7 @@
             "copyright": "Copyright Text",
             "audioAuthor": "Anna Magel",
             "hasStatus": false,
-            "hasTeaserItem": false,
+            "hasTeaserItem": true,
             "allowAVConsumption": true,
             "displayEpgInfos": false,
             "aspectRatio": "ar--teaserTop",
@@ -214,26 +224,31 @@
             "teaserLead": {
                 "isPodcast": true,
                 "toModel": {
-                    "audioElement": {
+                    "audioElementForVideoView": {
                         "isPodcast": true,
                         "ardPlayerConfig": {
                             "playerConfig": {
                                 "generic": {
                                     "isAutoplay": true,
                                     "imageTemplateConfig": {
-                                        "size": [{
-                                            "minWidth": 0,
-                                            "value": "480/270"
-                                        }, {
-                                            "minWidth": 480,
-                                            "value": "640/360"
-                                        }, {
-                                            "minWidth": 640,
-                                            "value": "960/540"
-                                        }, {
-                                            "minWidth": 960,
-                                            "value": "1920/1080"
-                                        }]
+                                        "size": [
+                                            {
+                                                "minWidth": 0,
+                                                "value": "480/270"
+                                            },
+                                            {
+                                                "minWidth": 480,
+                                                "value": "640/360"
+                                            },
+                                            {
+                                                "minWidth": 640,
+                                                "value": "960/540"
+                                            },
+                                            {
+                                                "minWidth": 960,
+                                                "value": "1920/1080"
+                                            }
+                                        ]
                                     }
                                 },
                                 "web": {
@@ -274,24 +289,32 @@
                                 }
                             },
                             "mediaCollection": {
-                                "streams": [{
-                                    "kind": "main",
-                                    "isAudioOnly": true,
-                                    "media": [{
-                                        "url": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
-                                        "mimeType": "audio/mp3",
-                                        "audios": [{
-                                            "kind": "standard",
-                                            "languageCode": "de"
-                                        }]
-                                    }]
-                                }],
+                                "streams": [
+                                    {
+                                        "kind": "main",
+                                        "isAudioOnly": true,
+                                        "media": [
+                                            {
+                                                "url": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                                                "mimeType": "audio/mp3",
+                                                "audios": [
+                                                    {
+                                                        "kind": "standard",
+                                                        "languageCode": "de"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "meta": {
                                     "durationSeconds": 3040,
-                                    "images": [{
-                                        "kind": "preview",
-                                        "url": "https://picsum.photos/id/101/{size}"
-                                    }],
+                                    "images": [
+                                        {
+                                            "kind": "preview",
+                                            "url": "https://picsum.photos/id/101/{size}"
+                                        }
+                                    ],
                                     "title": "Muslim Fashion. Mehr als ein Kopftuch.",
                                     "synopsis": "Wo immer die Ausstellung \"Contemporary Muslim Fashion“ ins Museum kommt,  entfacht sie heftige Diskussionen. Nachdem die Schau in San Francisco für Furore sorgte, wird sie demnächst im Frankfurter Museum für Angewandte Kunst als erste Station in Europa gezeigt. Die \"Modest Fashion“, die dezente Mode, so das Schlagwort für die verhüllende, aber keineswegs unsichtbar machende Mode, spaltet das feministische Lager: Ist sie eine Momentaufnahme aktueller muslimischer Kleidungsstile aus aller Welt oder Werbung für die weibliche Verschleierung? In jedem Fall zeigt die Ausstellung, dass die Verhüllung des weiblichen Körpers und der Frisur nicht nur trist, sondern auch schön sein kann - und für manche Trägerinnen befreiend. Und sie ist durchaus politisch, diskutiert gesetzliche Kleiderordnungen und die Frage politischer Symbolik. Inzwischen wollen auch westliche Firmen von der Vielfalt muslimischer Mode profitieren. Sie haben die Konsumentinnen im Nahen Osten und Südostasien als kaufkräftige Klientel entdeckt. Dort ist ein riesiger Markt zu erschließen. Nicht selten wagen sie sich damit an die Grenzen religiöser und gesellschaftlicher Akzeptanz. Kann Mode solche Grenzen überwinden? "
                                 },
@@ -311,19 +334,24 @@
                                 "generic": {
                                     "isAutoplay": true,
                                     "imageTemplateConfig": {
-                                        "size": [{
-                                            "minWidth": 0,
-                                            "value": "480/270"
-                                        }, {
-                                            "minWidth": 480,
-                                            "value": "640/360"
-                                        }, {
-                                            "minWidth": 640,
-                                            "value": "960/540"
-                                        }, {
-                                            "minWidth": 960,
-                                            "value": "1920/1080"
-                                        }]
+                                        "size": [
+                                            {
+                                                "minWidth": 0,
+                                                "value": "480/270"
+                                            },
+                                            {
+                                                "minWidth": 480,
+                                                "value": "640/360"
+                                            },
+                                            {
+                                                "minWidth": 640,
+                                                "value": "960/540"
+                                            },
+                                            {
+                                                "minWidth": 960,
+                                                "value": "1920/1080"
+                                            }
+                                        ]
                                     }
                                 },
                                 "web": {
@@ -364,24 +392,32 @@
                                 }
                             },
                             "mediaCollection": {
-                                "streams": [{
-                                    "kind": "main",
-                                    "isAudioOnly": true,
-                                    "media": [{
-                                        "url": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
-                                        "mimeType": "audio/mp3",
-                                        "audios": [{
-                                            "kind": "standard",
-                                            "languageCode": "de"
-                                        }]
-                                    }]
-                                }],
+                                "streams": [
+                                    {
+                                        "kind": "main",
+                                        "isAudioOnly": true,
+                                        "media": [
+                                            {
+                                                "url": "https://mp3podcasthr-a.akamaihd.net/mp3/podcast/derTag/derTag_20190320_81142988.mp3",
+                                                "mimeType": "audio/mp3",
+                                                "audios": [
+                                                    {
+                                                        "kind": "standard",
+                                                        "languageCode": "de"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "meta": {
                                     "durationSeconds": 3040,
-                                    "images": [{
-                                        "kind": "preview",
-                                        "url": "https://picsum.photos/id/101/{size}"
-                                    }],
+                                    "images": [
+                                        {
+                                            "kind": "preview",
+                                            "url": "https://picsum.photos/id/101/{size}"
+                                        }
+                                    ],
                                     "title": "Muslim Fashion. Mehr als ein Kopftuch.",
                                     "synopsis": "Wo immer die Ausstellung \"Contemporary Muslim Fashion“ ins Museum kommt,  entfacht sie heftige Diskussionen. Nachdem die Schau in San Francisco für Furore sorgte, wird sie demnächst im Frankfurter Museum für Angewandte Kunst als erste Station in Europa gezeigt. Die \"Modest Fashion“, die dezente Mode, so das Schlagwort für die verhüllende, aber keineswegs unsichtbar machende Mode, spaltet das feministische Lager: Ist sie eine Momentaufnahme aktueller muslimischer Kleidungsstile aus aller Welt oder Werbung für die weibliche Verschleierung? In jedem Fall zeigt die Ausstellung, dass die Verhüllung des weiblichen Körpers und der Frisur nicht nur trist, sondern auch schön sein kann - und für manche Trägerinnen befreiend. Und sie ist durchaus politisch, diskutiert gesetzliche Kleiderordnungen und die Frage politischer Symbolik. Inzwischen wollen auch westliche Firmen von der Vielfalt muslimischer Mode profitieren. Sie haben die Konsumentinnen im Nahen Osten und Südostasien als kaufkräftige Klientel entdeckt. Dort ist ein riesiger Markt zu erschließen. Nicht selten wagen sie sich damit an die Grenzen religiöser und gesellschaftlicher Akzeptanz. Kann Mode solche Grenzen überwinden? "
                                 },

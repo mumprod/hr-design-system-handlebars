@@ -174,7 +174,11 @@
         @apply dark:border-opacity-75;
         @apply fill-content-nav;
         @apply text-content-nav;
+        @apply dark:fill-text-dark;
+        @apply dark:text-text-dark;
+
         @apply bg-white;
+        @apply dark:bg-black;
         @apply hover:bg-content-nav;
         @apply hover:fill-white;
         @apply hover:text-white;

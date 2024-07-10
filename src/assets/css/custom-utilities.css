@@ -24,7 +24,6 @@
         }
     }
 
-
     .ar-16-9 {
         aspect-ratio: 16 / 9;
     }
@@ -73,6 +72,24 @@
         }
 
         .ar-4-3::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .ar-4-1 {
+        aspect-ratio: 4 / 1;
+    }
+
+    @supports not (aspect-ratio: 4 / 1) {
+        .ar-4-1::before {
+            float: left;
+            padding-top: calc(1 / 4 * 100%);
+            content: '';
+        }
+
+        .ar-4-1::after {
             display: block;
             content: '';
             clear: both;
@@ -179,16 +196,19 @@
         --narrow-max-width: calc(var(--breakpoint-md) - (var(--mobile-padding) * 2));
         --content-max-width: 940px;
         --breakout-size: calc((var(--content-max-width) - var(--narrow-max-width)) / 2);
-        
-        grid-template-columns: 
-        [full-width-start] minmax(var(--mobile-padding), var(--desktop-padding)) 
-        [content-start] minmax(0, var(--breakout-size)) 
-        [narrow-start] min(100% - (var(--mobile-padding) * 2),var(--narrow-max-width)) [narrow-end] 
-        minmax(0, var(--breakout-size)) [content-end] 
-        minmax(var(--mobile-padding), var(--desktop-padding)) [full-width-end]; 
+
+        grid-template-columns:
+            [full-width-start] minmax(var(--mobile-padding), var(--desktop-padding))
+            [content-start] minmax(0, var(--breakout-size))
+            [narrow-start] min(
+                100% - (var(--mobile-padding) * 2),
+                var(--narrow-max-width)
+            ) [narrow-end]
+            minmax(0, var(--breakout-size)) [content-end]
+            minmax(var(--mobile-padding), var(--desktop-padding)) [full-width-end];
         grid-column: main;
     }
-    .grid-article > :not(.article-breakout, .article-full-width, .sticky){
+    .grid-article > :not(.article-breakout, .article-full-width, .sticky) {
         grid-column: narrow;
     }
     .article-breakout {
@@ -200,37 +220,37 @@
     .article-narrow {
         grid-column: narrow;
     }
-    .copytextWrapper > :not(.article-breakout, .article-full-width){
+    .copytextWrapper > :not(.article-breakout, .article-full-width) {
         grid-column: narrow;
     }
 
     .grid-content {
         grid-template-areas:
-    "head"
-    "main "
-    "aside";
+            'head'
+            'main '
+            'aside';
         grid-template-columns: 100%;
     }
 
-    @media only screen and (min-width: 600px){
+    @media only screen and (min-width: 600px) {
         .grid-content {
             grid-template-areas:
-    "head head"
-    "main  aside";
+                'head head'
+                'main  aside';
 
             grid-template-columns: 3fr 1fr;
         }
     }
 
-    .head{
+    .head {
         grid-area: head;
     }
 
-    .main{
+    .main {
         grid-area: main;
     }
 
-    .aside{
+    .aside {
         grid-area: aside;
     }
 
@@ -280,22 +300,21 @@
     /*! ****************************/
     /*! DataPolicy stuff           */
     /*! ****************************/
-    .toggleSwitch-checkbox:checked+.toggleSwitch-label {
-        @apply after:left-[27px]
+    .toggleSwitch-checkbox:checked + .toggleSwitch-label {
+        @apply after:left-[27px];
     }
 
-    .toggleSwitch-checkbox:checked+.toggleSwitch-label {
+    .toggleSwitch-checkbox:checked + .toggleSwitch-label {
         @apply bg-toggle-confirmation;
     }
 
-    .toggleSwitch-checkbox:focus+.toggleSwitch-label { 
+    .toggleSwitch-checkbox:focus + .toggleSwitch-label {
         @apply outline-none shadow-teaser-focus shadow-focus-state;
     }
-    
-    .toggleSwitch-label {
-        @apply after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[21px] after:h-[21px] after:bg-white after:rounded-2xl after:transition-all after:duration-300 
-    }
 
+    .toggleSwitch-label {
+        @apply after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[21px] after:h-[21px] after:bg-white after:rounded-2xl after:transition-all after:duration-300;
+    }
 
     /*! ****************************/
     /*! text-shadow                */
@@ -379,7 +398,6 @@
         content: attr(data-prop-loading);
     }
 
-  
     @responsive {
         .brand-logo-size-lg {
             padding-top: var(--logo-padding-top-lg);
@@ -394,7 +412,7 @@
             padding-bottom: var(--logo-padding-bottom);
         }
     }
-    
+
     /*! ****************************/
     /*! Search-Box-border          */
     /*! ****************************/
@@ -405,5 +423,20 @@
         .search-border-desktop {
             border-color: var(--search-border-color-desktop);
         }
+    }
+
+    /*! ***********************************/
+    /*! restrict number of li-elements    */
+    /*! **********************************/
+    ul.restrictedToTwo li:nth-of-type(1n + 3) {
+        display: none;
+    }
+
+    ul.restrictedToTwo li:nth-of-type(2) {
+        padding-bottom: 0;
+    }
+
+    ul.restrictedToTwo li:nth-of-type(1n + 2) .timelineBorder {
+        display: none;
     }
 }
