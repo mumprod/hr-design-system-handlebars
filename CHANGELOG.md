@@ -1,3 +1,15 @@
+# v1.81.4 (Thu Jul 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3232-  Data-Attribute fehlen bei Bildergalerie-Link [#1004](https://github.com/mumprod/hr-design-system-handlebars/pull/1004) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.81.3 (Thu Jul 11 2024)
 
 #### 🐛 Bug Fix
