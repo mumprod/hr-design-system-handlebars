@@ -1,14 +1,13 @@
 const images = require.context('/src/assets/icons/traffic/svgmap', true);
 
 let imageList = {}
-let fileName
-let svgString
-let svgListTraffic = {}
+let file
+let svgList = {}
 imageList = images.keys().map(image => images(image));
 
 for(let i=0; i < imageList.length; i++){
-    fileName = imageList[i].replace(/^.*[\\/]/, '').slice(0,-4)
-    svgListTraffic[fileName] = "./icons/traffic/svgmap.min.svg#"+fileName
+    file = imageList[i].replace(/^.*[\\/]/, '').slice(0,-4)
+    svgList[file] = file
 }
 
-export default svgListTraffic;
+export default svgList;
