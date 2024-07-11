@@ -1,3 +1,15 @@
+# v1.81.3 (Thu Jul 11 2024)
+
+#### 🐛 Bug Fix
+
+- Fixing wrong object entry name on style.hr.de [#1003](https://github.com/mumprod/hr-design-system-handlebars/pull/1003) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.81.2 (Wed Jul 10 2024)
 
 #### 🐛 Bug Fix
