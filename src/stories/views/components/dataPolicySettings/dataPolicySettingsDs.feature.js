@@ -220,7 +220,7 @@ const DataPolicySettings = function (context) {
                     }
                 });
                 document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                   jsSettingsButton.style.display = 'inline-block'
+                   jsSettingsButton.style.display = 'inline-flex'
                 });
             }
         } else {
@@ -234,7 +234,7 @@ const DataPolicySettings = function (context) {
                 }
             });
             document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                jsSettingsButton.style.display = 'inline-block'
+                jsSettingsButton.style.display = 'inline-flex'
              });
         }
     }
