@@ -205,17 +205,22 @@ const DataPolicySettings = function (context) {
                    
                     jscontentSettingsButton.style.display = 'none'
                 });
+                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                    jsSettingsButton.style.display = 'none'
+                });
             } else {
                 settingsButton.style.display = 'inline-flex'
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
                     
-                    console.log("Button eigentlich versteckt"+jscontentSettingsButton.classList.contains('hidden'))
                     if(jscontentSettingsButton.classList.contains('hidden')) {
                         jscontentSettingsButton.style.display = 'none'
                     }
                     else{
                         jscontentSettingsButton.style.display = 'inline-block'
                     }
+                });
+                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                   jsSettingsButton.style.display = 'inline-block'
                 });
             }
         } else {
@@ -228,6 +233,9 @@ const DataPolicySettings = function (context) {
                     jscontentSettingsButton.style.display = 'inline-block'
                 }
             });
+            document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                jsSettingsButton.style.display = 'inline-block'
+             });
         }
     }
 
