@@ -24,7 +24,7 @@
                         <span class="text-white">{{> components/label/label_byline _css="ml-2"}}</span>
                     {{/components/label/label_group}}
                 {{/with~}}
-                 {{#> components/teaser/components/teaser_headline _headlineTag=(if _isCopytext "h3" "h2") _css="text-shadow text-center text-white mb-4 mx-2 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8"}}
+                 {{#> components/teaser/components/teaser_headline _headlineTag=(if _isCopytext-adjust_context "h3" "h2") _css="text-shadow text-center text-white mb-4 mx-2 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8"}}
                     {{#if this.topline}}
                         {{> components/teaser/components/teaser_topline _css="!text-white" _text=this.topline}}
                     {{/if}}
