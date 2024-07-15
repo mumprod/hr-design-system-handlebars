@@ -1,3 +1,15 @@
+# v1.82.1 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Add an adjust_context to _isCopytext parameter to make sure the parameter can be accessed in the delivery [#1007](https://github.com/mumprod/hr-design-system-handlebars/pull/1007) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.82.0 (Fri Jul 12 2024)
 
 #### 🚀 Enhancement
