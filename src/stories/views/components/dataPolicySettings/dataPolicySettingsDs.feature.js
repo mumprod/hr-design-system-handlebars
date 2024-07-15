@@ -200,19 +200,31 @@ const DataPolicySettings = function (context) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.style.display = 'none'
+                console.log()
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                   
                     jscontentSettingsButton.style.display = 'none'
                 });
             } else {
                 settingsButton.style.display = 'inline-flex'
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                    jscontentSettingsButton.style.display = 'inline-flex'
+                    if(jscontentSettingsButton.classList.contains('hidden')) {
+                        jscontentSettingsButton.style.display = 'none'
+                    }
+                    else{
+                        jscontentSettingsButton.style.display = 'inline-block'
+                    }
                 });
             }
         } else {
             settingsButton.style.display = 'inline-flex'
             document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                jscontentSettingsButton.style.display = 'inline-flex'
+                if(jscontentSettingsButton.classList.contains('hidden')) {
+                    jscontentSettingsButton.style.display = 'none'
+                }
+                else{
+                    jscontentSettingsButton.style.display = 'inline-block'
+                }
             });
         }
     }
