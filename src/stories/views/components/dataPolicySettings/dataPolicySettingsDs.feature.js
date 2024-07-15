@@ -208,6 +208,8 @@ const DataPolicySettings = function (context) {
             } else {
                 settingsButton.style.display = 'inline-flex'
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                    
+                    console.log("Button eigentlich versteckt"+jscontentSettingsButton.classList.contains('hidden'))
                     if(jscontentSettingsButton.classList.contains('hidden')) {
                         jscontentSettingsButton.style.display = 'none'
                     }
