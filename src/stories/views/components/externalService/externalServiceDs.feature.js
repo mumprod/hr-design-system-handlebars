@@ -35,9 +35,8 @@ const ExternalService = function (context) {
         contentRefresher,
         gemeindewahlergebnis,
         uniqueId,
-        isExternalServiceLoaded = false,
-        isWebview = window.parent.document.documentElement.classList.contains('webview')
-
+        isExternalServiceLoaded = false
+        
     const testDOMElements = function () {
         console.log(rootElement)
         console.log(rootParent)
@@ -119,7 +118,7 @@ const ExternalService = function (context) {
     }
    
     const createWahlGemeindeErgebnisEmbed = function () {
-        gemeindewahlergebnis = new CreateWahlGemeindeErgebnis(embedCode)
+        gemeindewahlergebnis = new CreateWahlGemeindeErgebnis(embedCode,rootElement)
         gemeindewahlergebnis.createErgebnis()
     }
     const createWahlOMatEmbed = function () {

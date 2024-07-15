@@ -1,4 +1,4 @@
-const CreateWahlGemeindeErgebnis = function (embedCode) {
+const CreateWahlGemeindeErgebnis = function (embedCode,rootElement) {
     let eCode = embedCode,
         cleanUrl,
         wahlKreisVersionJsonUrl,
