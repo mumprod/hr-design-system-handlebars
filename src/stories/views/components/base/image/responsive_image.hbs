@@ -42,9 +42,9 @@
                 {{#with this.sizes}} sizes="{{this}}" {{/with~}}
                 loading="{{#if ../../_noDelay}}auto{{else}}lazy{{/if}}"
                 {{#if ../../_noDelay}}
-                        fetchpriority="high"
-                 {{/if}}
-                 {{#with this.srcset}} {{#if ../../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
+                    fetchpriority="high"
+                {{/if}}
+                {{#with this.srcset}} {{#if ../../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                 alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}"
                 class="w-full{{~#with ../../_addClassImg }} {{this}}{{/with}}"
