@@ -7,7 +7,7 @@
             {{~> components/content/copytext/components/image/image _isWebview=../_isWebview}}
         {{/if~}}
         {{~#if this.isContentBox}}
-            {{~> components/content/copytext/components/contentbox/contentbox ~}}
+            {{~> components/content/copytext/components/contentbox/contentbox _isWebview=../_isWebview ~}}
         {{/if~}}
         {{~#if this.isAccordion}}
         {{~> components/content/copytext/components/accordion/accordion ~}}
@@ -109,7 +109,7 @@
 {{/if}}
 
 {{#if this.isInfoBox}}
-    {{> components/content/copytext/components/infobox }}
+    {{> components/content/copytext/components/infobox _isWebview=_isWebview }}
 {{/if}}
 {{#if this.isAdditionalInfo}}
     {{> components/content/copytext/components/additionalinfo }}
