@@ -192,18 +192,28 @@ const DataPolicySettings = function (context) {
         appSettingsCookie = getJSONCookie('appSettings') || {}
     }
 
-    //Für die hs-App wird der Button ein und ausgeblendet
+    //Für die hs-App wird der Globale Einstellungsbutton ein- und ausgeblendet, 
+    //sowie der Einstellungsbutton für einen einzelnen externen Dienst, sobald dieser einmalig oder dauerhaft aktiviert wurde
     const showSettingsButton = function () {
         let settingsButton = document.getElementById('globalSettingsButton')
         if (isWebview) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.style.display = 'none'
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                    jscontentSettingsButton.style.display = 'none'
+                });
             } else {
                 settingsButton.style.display = 'inline-flex'
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                    jscontentSettingsButton.style.display = 'inline-flex'
+                });
             }
         } else {
             settingsButton.style.display = 'inline-flex'
+            document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                jscontentSettingsButton.style.display = 'inline-flex'
+            });
         }
     }
 

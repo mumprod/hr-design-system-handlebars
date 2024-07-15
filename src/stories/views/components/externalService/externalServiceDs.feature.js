@@ -9,9 +9,7 @@ import {
     loadScript,
     removeScript,
     replaceAnimated,
-    requestTimeout,
-    //getJSONCookie,
-    //deleteCookie,
+    requestTimeout
 } from 'hrQuery'
 
 const ExternalService = function (context) {
@@ -27,7 +25,6 @@ const ExternalService = function (context) {
         iFrameConfig = options.iFrameConfig
     let acceptButton,
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0]
-        //dataPolicySettingsButton = hr$('.js-data-policy-settings-button', rootParent)[0]
     let embedCode = options.embedCode,
         iframe,
         settingsCookie,
