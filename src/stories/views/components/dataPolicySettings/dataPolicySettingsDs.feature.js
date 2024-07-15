@@ -1,6 +1,4 @@
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
-import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
-import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
@@ -12,16 +10,10 @@ const DataPolicySettings = function (context) {
         { element: rootElement } = context,
         container = hr$('#datapolicy-settings-dialog',document)[0],
         dialog = new A11yDialog(container),
-        //settingsButtons = hr$('.js-data-policy-settings-button', document),
-        //overlay = hr$('.js-data-policy-settings-overlay', rootElement)[0],
-        //closeButton = hr$('.js-data-policy-settings-close-button', rootElement)[0],
         bodyElement = document.getElementsByTagName('html')[0],
-        //datapolicyCookie = new DatapolicyCookie(),
-        //trackingCookie = new TrackingCookie(),
         settingsCookie = new SettingsCookie(),
         toggleSwitches = hr$('.js-toggleSwitch-checkbox', container),
         toggleSwitchesExternal = hr$('.js-toggleSwitch-external', container),
-        //toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', container),
         toggleAllSwitch = hr$('.js-toggleSwitch-checkbox-all', container)[0],
         providerTitle = hr$('.js-providerTitle', container)[0]
 
