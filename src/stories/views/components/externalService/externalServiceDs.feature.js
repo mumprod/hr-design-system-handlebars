@@ -59,10 +59,8 @@ const ExternalService = function (context) {
                 console.log('Done')
                 if (undefined !== callback) {
                     replaceAnimated(rootElement, data.html, false, callback)
-                    alert('boing')
                 } else {
                     replaceAnimated(rootElement, data.html, false)
-                    alert('boing, boing')
                 }
             })
             //Add handlers to be called when the Deferred object is rejected.
