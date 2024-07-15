@@ -192,7 +192,6 @@ const DataPolicySettings = function (context) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.style.display = 'none'
-                console.log()
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
                    
                     jscontentSettingsButton.style.display = 'none'
