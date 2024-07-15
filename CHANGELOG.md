@@ -1,3 +1,39 @@
+# v1.82.2 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- fixed context problems in infoboxes and contentboxes [#1008](https://github.com/mumprod/hr-design-system-handlebars/pull/1008) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.1 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Add an adjust_context to _isCopytext parameter to make sure the parameter can be accessed in the delivery [#1007](https://github.com/mumprod/hr-design-system-handlebars/pull/1007) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.82.0 (Fri Jul 12 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3184 [#1006](https://github.com/mumprod/hr-design-system-handlebars/pull/1006) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.81.4 (Thu Jul 11 2024)
 
 #### 🐛 Bug Fix

@@ -26,9 +26,13 @@
                     {
                         "@->contentpath": "realTeaserSize",
                         "@->value": "100"
-                    } 
-                ]                    
-            }                 
+                    },
+                    {
+                        "@->contentpath": "headlineTag",
+                        "@->value": ""
+                    }
+                ]
+            }
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
@@ -52,9 +56,9 @@
                     {
                         "@->contentpath": "realTeaserSize",
                         "@->value": "50"
-                    } 
-                ]                    
-            }                 
+                    }
+                ]
+            }
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
