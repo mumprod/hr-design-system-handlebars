@@ -179,6 +179,7 @@ const ExternalService = function (context) {
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
         createUniqueID()
+        console.log("UniqueID"+uniqueId)
         if (iFrameConfig.noResponsiveIframe == 'true') {
 
              //Klassisches Iframe mit AR-Wrapper oder fester Höhe
@@ -197,7 +198,7 @@ const ExternalService = function (context) {
                 
                 // Webcomponent
                 const divTag = document.createElement('div')
-                divTag.id = 'datawrapper-chart-' + uniqueID
+                divTag.id = 'datawrapper-chart-' + uniqueId
                 rootElement.insertBefore(divTag, null)
                 const scriptTag = document.createElement('script')
                 scriptTag.setAttribute('id', 'datawrapper-component-js')
