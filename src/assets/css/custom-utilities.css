@@ -26,6 +26,7 @@
 
     .ar-16-9 {
         aspect-ratio: 16 / 9;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 16 / 9) {
@@ -44,6 +45,7 @@
 
     .ar-16-7 {
         aspect-ratio: 16 / 7;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 16 / 7) {
@@ -62,6 +64,7 @@
 
     .ar-4-3 {
         aspect-ratio: 4 / 3;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 4 / 3) {
@@ -80,6 +83,7 @@
 
     .ar-4-1 {
         aspect-ratio: 4 / 1;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 4 / 1) {
@@ -98,6 +102,7 @@
 
     .ar-1-1 {
         aspect-ratio: 1 / 1;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 1 / 1) {
@@ -115,6 +120,7 @@
     }
     .ar-100-27 {
         aspect-ratio: 100 / 27.1;
+        overflow: hidden;
     }
 
     @supports not (aspect-ratio: 100 / 27.1) {
@@ -133,6 +139,7 @@
 
     .ar-9-16 {
         aspect-ratio: 9 / 16;
+        overflow: hidden;
     }
     @supports not (aspect-ratio: 9 / 16) {
         .ar-9-16::before {
@@ -150,6 +157,7 @@
 
     .ar-7-16 {
         aspect-ratio: 7 / 16;
+        overflow: hidden;
     }
     @supports not (aspect-ratio: 7 / 16) {
         .ar-7-16::before {
