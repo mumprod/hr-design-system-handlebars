@@ -151,6 +151,7 @@ const ExternalService = function (context) {
         rootElement.appendChild(script)
     }
     const createUniqueID = function() {
+       console.log("Erzeuge einzigartige ID")
        uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
     }
 
