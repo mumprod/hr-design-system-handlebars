@@ -1,3 +1,15 @@
+# v1.82.3 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3170 SVG Icons Optimierung (hs-Logos) [#1010](https://github.com/mumprod/hr-design-system-handlebars/pull/1010) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.82.2 (Mon Jul 15 2024)
 
 #### 🐛 Bug Fix
