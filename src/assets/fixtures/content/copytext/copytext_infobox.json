@@ -15,12 +15,12 @@
                         "isText": true,
                         "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
                     }
-                ]   
+                ]
             },
             "paragraphProperties": [
                 {
-                    "title":"Volle Breite, mit Bild über halbe Breite",
-                    "showFullSize":true
+                    "title": "Volle Breite, mit Bild über halbe Breite",
+                    "showFullSize": true
                 }
             ],
             "paragraphBoxItem": {
@@ -45,12 +45,12 @@
                         "isText": true,
                         "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
                     }
-                ]   
+                ]
             },
             "paragraphProperties": [
                 {
-                    "title":"Volle Breite, mit Bild über volle Breite",
-                    "showFullSize":true
+                    "title": "Volle Breite, mit Bild über volle Breite",
+                    "showFullSize": true
                 }
             ],
             "paragraphBoxItem": {
@@ -75,12 +75,61 @@
                         "isText": true,
                         "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
                     }
-                ]   
+                ]
             },
             "paragraphProperties": [
                 {
-                    "title":"Halbe Breite, mit Bild über halbe oder volle Breite",
-                    "showFullSize":false
+                    "title": "Halbe Breite, mit Bild über halbe oder volle Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Infobox in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Halbe Breite, mit Bild über halbe oder volle Breite",
+                    "showFullSize": false
                 }
             ],
             "paragraphBoxItem": {
@@ -108,12 +157,12 @@
                         "isText": true,
                         "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
                     }
-                ]   
+                ]
             },
             "paragraphProperties": [
                 {
-                    "title":"Volle Breite, ohne Bild",
-                    "showFullSize":true
+                    "title": "Volle Breite, ohne Bild",
+                    "showFullSize": true
                 }
             ]
         },
@@ -128,17 +177,17 @@
                         "isText": true,
                         "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
                     }
-                ]   
+                ]
             },
             "paragraphProperties": [
                 {
-                    "title":"Halbe Breite, ohne Bild",
-                    "showFullSize":false
+                    "title": "Halbe Breite, ohne Bild",
+                    "showFullSize": false
                 }
             ]
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         }
-    ]    
+    ]
 }
