@@ -1,3 +1,15 @@
+# v1.82.5 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- added data-primary-type and data-image-id to img tag inside picture e… [#1011](https://github.com/mumprod/hr-design-system-handlebars/pull/1011) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.82.4 (Tue Jul 16 2024)
 
 #### 🐛 Bug Fix
