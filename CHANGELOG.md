@@ -1,3 +1,15 @@
+# v1.82.4 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3248 - Teaser-Bilder laden im 1:1-Format bei langsamer Internetverbindung [#1009](https://github.com/mumprod/hr-design-system-handlebars/pull/1009) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.82.3 (Tue Jul 16 2024)
 
 #### 🐛 Bug Fix
