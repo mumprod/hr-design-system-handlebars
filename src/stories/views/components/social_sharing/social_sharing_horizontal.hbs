@@ -15,6 +15,7 @@
                 x-on:click="toggle()"
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-button')"
+                aria-label="{{loca "share_linktitle" }}"
                 x-show="$store.sharingIsVisible"
                 {{#with ../this.trackingData}}
                     data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
