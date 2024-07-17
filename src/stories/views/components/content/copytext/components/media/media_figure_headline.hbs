@@ -1,5 +1,4 @@
-<h3 class="mt-1">
-    {{> components/base/a11y/ariaLabelText _text=this.readMoreScreenreader }}
+<h3 class="mt-1"  aria-label="{{this.readMoreScreenreader}} {{this.title}}">
     <span class="text-lg sm480:text-xl font-headingSerif dark:text-text-dark">
         {{this.title}}
     </span>

@@ -13,7 +13,7 @@
             {{/if~}}
             {{#if this.isVideo}}
                 {{#with this.toModel.mediaBacklinkToStoryTeaser}}
-                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
                         {{> components/content/copytext/components/media/media_figure_headline}}
                     {{/components/base/link}}
                 {{/with}}

@@ -6,5 +6,6 @@
     {{/components/base/link}}
     {{#*inline "htmlProperties"}}
         {{> components/tracking/navigation_tracking _clickLabelType="TopThemenNavigation" _clickLabelPrefix1=this.title}}
+        x-effect="$el.setAttribute('tabindex',  $store.burgeropen || $screen('lg') ? '0' : '-1')"
     {{/inline}}
 {{/with}}

@@ -3,7 +3,7 @@
     {{~> components/base/a11y/hiddenText _locaTag="story_infobox_intro_sr" ~}}
 
     {{~#if this.title}}
-        <h3 class="-mt-1 text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h3>
+        <h3 class="text-lg sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h3>
     {{/if}}
 
     {{~#with this.copytextParagraph.[0].paragraphBoxItem }}
@@ -20,7 +20,7 @@
                     _noAr=(if this.showPortrait.isTrue true false)
                     _pictureAddClass=(if this.showPortrait.isTrue "" "ar-16-9")
                     _cssClassCaption="mb-3"
-                    _isWebview=../../_isWebview}}
+                    _isWebview=../_isWebview-adjust_context}}
             {{#if ../this.showFullSize.isTrue }}
                 {{#unless this.showFullSize.isTrue }}
                     </div>

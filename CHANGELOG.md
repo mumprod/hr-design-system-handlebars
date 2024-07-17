@@ -1,3 +1,123 @@
+# v1.82.8 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3227 b [#1012](https://github.com/mumprod/hr-design-system-handlebars/pull/1012) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.7 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3240 AND DPE-3238 AND DPE-3240 - Barrierefreiheit und SEO für neuen Artikel [#1014](https://github.com/mumprod/hr-design-system-handlebars/pull/1014) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.6 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify current month look & non-selected months in event calendar [#1013](https://github.com/mumprod/hr-design-system-handlebars/pull/1013) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.82.5 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- added data-primary-type and data-image-id to img tag inside picture e… [#1011](https://github.com/mumprod/hr-design-system-handlebars/pull/1011) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.4 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3248 - Teaser-Bilder laden im 1:1-Format bei langsamer Internetverbindung [#1009](https://github.com/mumprod/hr-design-system-handlebars/pull/1009) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.3 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3170 SVG Icons Optimierung (hs-Logos) [#1010](https://github.com/mumprod/hr-design-system-handlebars/pull/1010) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.82.2 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- fixed context problems in infoboxes and contentboxes [#1008](https://github.com/mumprod/hr-design-system-handlebars/pull/1008) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.1 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Add an adjust_context to _isCopytext parameter to make sure the parameter can be accessed in the delivery [#1007](https://github.com/mumprod/hr-design-system-handlebars/pull/1007) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.82.0 (Fri Jul 12 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3184 [#1006](https://github.com/mumprod/hr-design-system-handlebars/pull/1006) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.81.4 (Thu Jul 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3232-  Data-Attribute fehlen bei Bildergalerie-Link [#1004](https://github.com/mumprod/hr-design-system-handlebars/pull/1004) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.81.3 (Thu Jul 11 2024)
 
 #### 🐛 Bug Fix
