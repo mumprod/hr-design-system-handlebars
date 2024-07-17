@@ -202,12 +202,8 @@ const DataPolicySettings = function (context) {
             } else {
                 settingsButton.style.display = 'inline-flex'
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                    
-                    if(jscontentSettingsButton.classList.contains('hidden')) {
-                        jscontentSettingsButton.style.display = 'none'
-                    }
-                    else{
-                        jscontentSettingsButton.style.display = 'inline-block'
+                    if(!jscontentSettingsButton.classList.contains('hidden')) {
+                        jscontentSettingsButton.classList.add('hidden')
                     }
                 });
                 document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
@@ -217,11 +213,8 @@ const DataPolicySettings = function (context) {
         } else {
             settingsButton.style.display = 'inline-flex'
             document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                if(jscontentSettingsButton.classList.contains('hidden')) {
-                    jscontentSettingsButton.style.display = 'none'
-                }
-                else{
-                    jscontentSettingsButton.style.display = 'inline-block'
+                if(!jscontentSettingsButton.classList.contains('hidden')) {
+                    jscontentSettingsButton.classList.add('hidden')
                 }
             });
             document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
