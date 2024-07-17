@@ -191,34 +191,33 @@ const DataPolicySettings = function (context) {
         if (isWebview) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
-                settingsButton.style.display = 'none'
+                settingsButton.classList.add('hidden')
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                   
-                    jscontentSettingsButton.style.display = 'none'
+                   jscontentSettingsButton.classList.add('hidden')
                 });
                 document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                    jsSettingsButton.style.display = 'none'
+                    jsSettingsButton.classList.add('hidden')
                 });
             } else {
-                settingsButton.style.display = 'inline-flex'
+                settingsButton.classList.remove('hidden')
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
                     if(!jscontentSettingsButton.classList.contains('hidden')) {
-                        jscontentSettingsButton.classList.add('hidden')
+                        jscontentSettingsButton.classList.remove('hidden')
                     }
                 });
                 document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                   jsSettingsButton.style.display = 'inline-flex'
+                   jsSettingsButton.classList.remove('hidden')
                 });
             }
         } else {
-            settingsButton.style.display = 'inline-flex'
+            settingsButton.classList.remove('hidden')
             document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
                 if(!jscontentSettingsButton.classList.contains('hidden')) {
-                    jscontentSettingsButton.classList.add('hidden')
+                    jscontentSettingsButton.classList.remove('hidden')
                 }
             });
             document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                jsSettingsButton.style.display = 'inline-flex'
+                jsSettingsButton.classList.remove('hidden')
              });
         }
     }
