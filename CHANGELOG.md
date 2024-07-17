@@ -1,3 +1,16 @@
+# v1.82.9 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- fix: ticker teaser missing border-radius [#1015](https://github.com/mumprod/hr-design-system-handlebars/pull/1015) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.82.8 (Wed Jul 17 2024)
 
 #### 🐛 Bug Fix
