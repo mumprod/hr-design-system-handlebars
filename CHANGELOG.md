@@ -1,3 +1,15 @@
+# v1.82.6 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify current month look & non-selected months in event calendar [#1013](https://github.com/mumprod/hr-design-system-handlebars/pull/1013) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.82.5 (Tue Jul 16 2024)
 
 #### 🐛 Bug Fix
