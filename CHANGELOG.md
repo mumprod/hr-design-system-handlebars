@@ -1,3 +1,15 @@
+# v1.82.7 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3240 AND DPE-3238 AND DPE-3240 - Barrierefreiheit und SEO für neuen Artikel [#1014](https://github.com/mumprod/hr-design-system-handlebars/pull/1014) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.82.6 (Wed Jul 17 2024)
 
 #### 🐛 Bug Fix
