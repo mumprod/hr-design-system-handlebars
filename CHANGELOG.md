@@ -1,3 +1,15 @@
+# v1.83.4 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- large space between BU and Image only when image in full-size [#1021](https://github.com/mumprod/hr-design-system-handlebars/pull/1021) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.83.3 (Thu Jul 18 2024)
 
 #### 🐛 Bug Fix
