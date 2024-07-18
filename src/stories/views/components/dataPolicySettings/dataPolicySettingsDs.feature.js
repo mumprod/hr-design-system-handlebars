@@ -193,9 +193,12 @@ const DataPolicySettings = function (context) {
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.classList.add('hidden')
                 document.querySelectorAll('.js-settings-inner-button').forEach(function(jsSettingsButton) {
-                    
                     jsSettingsButton.classList.add('hidden')
-                    
+                });
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
+                   if(!jsContentSettingsButton.classList.contains('hidden')) {
+                    jsContentSettingsButton.classList.add('hidden')
+                    }
                 });
             } else {
                 settingsButton.classList.remove('hidden')
@@ -205,8 +208,6 @@ const DataPolicySettings = function (context) {
                     }
                 });
             }
-        } else {
-          
         }
     }
 
