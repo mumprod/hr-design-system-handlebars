@@ -1,3 +1,16 @@
+# v1.83.1 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3245: Fix horizontal spacing in Infobox/Content-Box/file-download [#1018](https://github.com/mumprod/hr-design-system-handlebars/pull/1018) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.83.0 (Thu Jul 18 2024)
 
 #### 🚀 Enhancement
