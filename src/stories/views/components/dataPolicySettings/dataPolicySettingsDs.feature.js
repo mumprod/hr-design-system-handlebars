@@ -192,31 +192,25 @@ const DataPolicySettings = function (context) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.classList.add('hidden')
-                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                   
-                    jscontentSettingsButton.classList.add('hidden')
-              
-                });
-                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                    
+                document.querySelectorAll('.js-settings-inner-button').forEach(function(jsSettingsButton) {
                     jsSettingsButton.classList.add('hidden')
-                    
+                });
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
+                    jsContentSettingsButton.style.display = 'none'                    
                 });
             } else {
                 settingsButton.classList.remove('hidden')
-                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
-                    if(jscontentSettingsButton.classList.contains('hidden')) {
-                        jscontentSettingsButton.classList.remove('hidden')
-                    }
-                });
-                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
-                    if(jscontentSettingsButton.classList.contains('hidden')) {
+                document.querySelectorAll('.js-settings-inner-button').forEach(function(jsSettingsButton) {
+                    if(jsSettingsButton.classList.contains('hidden')) {
                     jsSettingsButton.classList.remove('hidden')
                     }
                 });
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
+                    if(!jsContentSettingsButton.classList.contains('hidden')){
+                    jsContentSettingsButton.style.display = 'inline-block'    
+                    }                
+                });
             }
-        } else {
-          
         }
     }
 
