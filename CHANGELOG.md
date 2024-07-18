@@ -1,3 +1,15 @@
+# v1.83.0 (Thu Jul 18 2024)
+
+#### 🚀 Enhancement
+
+- Feature/vertical spacing [#1017](https://github.com/mumprod/hr-design-system-handlebars/pull/1017) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.82.11 (Thu Jul 18 2024)
 
 #### 🐛 Bug Fix
