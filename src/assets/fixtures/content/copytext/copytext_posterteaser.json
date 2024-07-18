@@ -8,11 +8,11 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "isParagraph": true,    
+            "isParagraph": true,
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
-                    "baseTeaserDS": {                            
+                    "baseTeaserDS": {
                         "@->jsoninclude": "teaser/teasers.inc.json",
                         "@->contentpath": "teaser.logicItem.includeModel",
                         "@->extends": {
@@ -54,10 +54,14 @@
                                     ]
                                 }
                             }
-                        ]                            
+                        ]
                     }
                 }
             }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Posterteaser"
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
@@ -70,7 +74,7 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "isParagraph": true,                
+            "isParagraph": true,
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
@@ -116,7 +120,78 @@
                                     ]
                                 }
                             }
-                        ]                            
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Posterteaser in halber Breite unter Bild"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": false
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
                     }
                 }
             }
@@ -132,7 +207,7 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "isParagraph": true,                
+            "isParagraph": true,
             "paragraphTeaserItem": {
                 "isStory": true,
                 "toModel": {
@@ -181,7 +256,7 @@
                                     ]
                                 }
                             }
-                        ]                            
+                        ]
                     }
                 }
             }

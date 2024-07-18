@@ -9,22 +9,22 @@
         },
         {
             "isDownloadBox": true,
-            "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "paragraphProperties": [
                 {
-                    "title":"Download-Box volle Breite",
-                    "showFullSize":true
+                    "title": "Download-Box volle Breite",
+                    "showFullSize": true
                 }
             ],
             "paragraphbox": {
                 "downloadBoxItems": [
                     {
                         "isEpgPdfExport": false,
-                        "url": "Download-Url-1",                        
+                        "url": "Download-Url-1",
                         "trackingData": {
                             "secondLevelId": "2",
                             "pageName": "Page-Name"
-                        },                        
+                        },
                         "downloadBoxMetadata": {
                             "title": "Download-File-1, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
                             "displaySuffix": "JPG",
@@ -56,7 +56,7 @@
                             "displaySuffix": "PDF",
                             "displaySize": "48kb"
                         }
-                    }                                        
+                    }
                 ]
             }
         },
@@ -65,11 +65,11 @@
         },
         {
             "isDownloadBox": true,
-            "text":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "paragraphProperties": [
                 {
-                    "title":"Download-Box halbe Breite",
-                    "showFullSize":false
+                    "title": "Download-Box halbe Breite",
+                    "showFullSize": false
                 }
             ],
             "paragraphbox": {
@@ -112,7 +112,79 @@
                             "displaySuffix": "PDF",
                             "displaySize": "48kb"
                         }
-                    }                    
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Downloadbox in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isDownloadBox": true,
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "paragraphProperties": [
+                {
+                    "title": "Download-Box halbe Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphbox": {
+                "downloadBoxItems": [
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-1",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-1",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-2",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-2",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-3",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-3",
+                            "displaySuffix": "PDF",
+                            "displaySize": "48kb"
+                        }
+                    }
                 ]
             }
         },

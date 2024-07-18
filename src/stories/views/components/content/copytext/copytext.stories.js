@@ -1,5 +1,7 @@
 import copytext from './copytext.hbs'
 import copytext_json from './fixtures/copytext.json'
+import copytext_media_components_json from './fixtures/copytext_media_components.json'
+import copytext_non_media_components_json from './fixtures/copytext_non_media_components.json'
 import copytext_posterteaser_json from './fixtures/copytext_posterteaser.json'
 import copytext_additionalInfo_json from './fixtures/copytext_additionalInfo.json'
 import copytext_cite_json from './fixtures/copytext_cite.json'
@@ -31,7 +33,7 @@ export default {
                     </div>`
         },
     ],
-    parameters: { layout: 'fullscreen' }
+    parameters: { layout: 'fullscreen', chromatic: { disableSnapshot: true } }
 }
 
 export const Default = {
@@ -135,4 +137,22 @@ export const WithAudioEventStream = {
     render: Template.bind({}),
     name: 'Audio-Livestream',
     args: copytext_audio_event_stream_json,
+}
+
+export const SnapshotWithMedia = {
+    render: Template.bind({}),
+    name: 'Snapshot 1',
+    args: copytext_media_components_json,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    },
+}
+
+export const SnapshotWithoutMedia = {
+    render: Template.bind({}),
+    name: 'Snapshot 2',
+    args: copytext_non_media_components_json,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    },
 }
