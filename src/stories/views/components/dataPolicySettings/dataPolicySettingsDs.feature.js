@@ -1,6 +1,4 @@
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
-import DatapolicyCookie from 'components/externalService/datapolicyCookie.subfeature'
-import TrackingCookie from 'components/externalService/trackingCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
@@ -12,16 +10,10 @@ const DataPolicySettings = function (context) {
         { element: rootElement } = context,
         container = hr$('#datapolicy-settings-dialog',document)[0],
         dialog = new A11yDialog(container),
-        settingsButtons = hr$('.js-data-policy-settings-button', document),
-        overlay = hr$('.js-data-policy-settings-overlay', rootElement)[0],
-        closeButton = hr$('.js-data-policy-settings-close-button', rootElement)[0],
         bodyElement = document.getElementsByTagName('html')[0],
-        datapolicyCookie = new DatapolicyCookie(),
-        trackingCookie = new TrackingCookie(),
         settingsCookie = new SettingsCookie(),
         toggleSwitches = hr$('.js-toggleSwitch-checkbox', container),
         toggleSwitchesExternal = hr$('.js-toggleSwitch-external', container),
-        toggleSwitchesTracking = hr$('.js-toggleSwitch-tracking', container),
         toggleAllSwitch = hr$('.js-toggleSwitch-checkbox-all', container)[0],
         providerTitle = hr$('.js-providerTitle', container)[0]
 
@@ -192,18 +184,39 @@ const DataPolicySettings = function (context) {
         appSettingsCookie = getJSONCookie('appSettings') || {}
     }
 
-    //Für die hs-App wird der Button ein und ausgeblendet
+    //Für die hs-App wird der Globale Einstellungsbutton ein- und ausgeblendet, 
+    //sowie der Einstellungsbutton für einen einzelnen externen Dienst, sobald dieser einmalig oder dauerhaft aktiviert wurde
     const showSettingsButton = function () {
         let settingsButton = document.getElementById('globalSettingsButton')
         if (isWebview) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
-                settingsButton.style.display = 'none'
+                settingsButton.classList.add('hidden')
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                   
+                    jscontentSettingsButton.classList.add('hidden')
+              
+                });
+                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                    
+                    jsSettingsButton.classList.add('hidden')
+                    
+                });
             } else {
-                settingsButton.style.display = 'inline-flex'
+                settingsButton.classList.remove('hidden')
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jscontentSettingsButton) {
+                    if(jscontentSettingsButton.classList.contains('hidden')) {
+                        jscontentSettingsButton.classList.remove('hidden')
+                    }
+                });
+                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                    if(jscontentSettingsButton.classList.contains('hidden')) {
+                    jsSettingsButton.classList.remove('hidden')
+                    }
+                });
             }
         } else {
-            settingsButton.style.display = 'inline-flex'
+          
         }
     }
 
