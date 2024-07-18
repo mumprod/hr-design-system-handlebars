@@ -1,3 +1,15 @@
+# v1.82.11 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Fixing setting button behaviour [#1016](https://github.com/mumprod/hr-design-system-handlebars/pull/1016) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.82.10 (Thu Jul 18 2024)
 
 #### 🐛 Bug Fix
