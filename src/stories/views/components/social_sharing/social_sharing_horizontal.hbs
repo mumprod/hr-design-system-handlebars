@@ -24,11 +24,11 @@
                 >
                     {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
             </button>
-            <div 
-                x-ref="panel" 
-                :class="$store.sharingIsOpenHorizontal ? 'flex' : 'hidden '"              
+            <div                
+                x-ref="panel"   
+                :class="{ 'hidden': !$store.sharingIsOpenHorizontal,'flex': $store.sharingIsOpenHorizontal }"           
                 :id="$id('dropdown-button')"
-                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto lg:flex"
+                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
             >
                 <ul class="flex gap-3">  
                     {{> components/social_sharing/social_sharing_icons _socialSharingType="metadatabox"}}

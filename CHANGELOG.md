@@ -1,3 +1,15 @@
+# v1.83.2 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- social sharing icons are hidden on mobile load [#1019](https://github.com/mumprod/hr-design-system-handlebars/pull/1019) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.1 (Thu Jul 18 2024)
 
 #### 🐛 Bug Fix
