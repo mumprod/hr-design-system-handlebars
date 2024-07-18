@@ -92,62 +92,6 @@
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
-            "isDownloadBox": true,
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-            "paragraphProperties": [
-                {
-                    "title": "Download-Box halbe Breite",
-                    "showFullSize": false
-                }
-            ],
-            "paragraphbox": {
-                "downloadBoxItems": [
-                    {
-                        "isEpgPdfExport": false,
-                        "url": "Download-Url-1",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "Page-Name"
-                        },
-                        "downloadBoxMetadata": {
-                            "title": "Download-File-1",
-                            "displaySuffix": "MP3",
-                            "displaySize": "3mb"
-                        }
-                    },
-                    {
-                        "isEpgPdfExport": false,
-                        "url": "Download-Url-2",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "Page-Name"
-                        },
-                        "downloadBoxMetadata": {
-                            "title": "Download-File-2",
-                            "displaySuffix": "MP3",
-                            "displaySize": "3mb"
-                        }
-                    },
-                    {
-                        "isEpgPdfExport": false,
-                        "url": "Download-Url-3",
-                        "trackingData": {
-                            "secondLevelId": "2",
-                            "pageName": "Page-Name"
-                        },
-                        "downloadBoxMetadata": {
-                            "title": "Download-File-3",
-                            "displaySuffix": "PDF",
-                            "displaySize": "48kb"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
             "isHeadline": true,
             "text": "Downloadbox in halber Breite unter Bild in voller Breite"
         },
@@ -519,28 +463,6 @@
         },
         {
             "isHeadline": true,
-            "text": "Zwischenüberschrift"
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "paragraphBoxItem": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "copytext_image_50",
-                "@->replaceToken": [
-                    {
-                        "@->token": "image",
-                        "@->value": "buchmesse-fahnen-102"
-                    }
-                ]
-            }
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isHeadline": true,
             "text": "Bild in halber Breite unter Video in voller Breite"
         },
         {
@@ -690,39 +612,6 @@
                     }
                 ]
             }
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isInfoBox": true,
-            "text": {
-                "split": [
-                    {
-                        "isText": true,
-                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
-                    }
-                ]
-            },
-            "paragraphProperties": [
-                {
-                    "title": "Halbe Breite, mit Bild über halbe oder volle Breite",
-                    "showFullSize": false
-                }
-            ],
-            "paragraphBoxItem": {
-                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                "@->contentpath": "copytext_image_50",
-                "@->replaceToken": [
-                    {
-                        "@->token": "image",
-                        "@->value": "buchmesse-fahnen-102"
-                    }
-                ]
-            }
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
@@ -920,75 +809,6 @@
         },
         {
             "isHeadline": true,
-            "text": "Zwischenüberschrift unter Posterteaser"
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isHeadline": true,
-            "text": "Posterteaser halbe Breite"
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isParagraph": true,
-            "paragraphTeaserItem": {
-                "isStory": true,
-                "toModel": {
-                    "baseTeaserDS": {
-                        "@->jsoninclude": "teaser/teasers.inc.json",
-                        "@->contentpath": "teaser.logicItem.includeModel",
-                        "@->extends": {
-                            "showFullSize": {
-                                "isTrue": false
-                            }
-                        },
-                        "@->overrides": [
-                            {
-                                "@->contentpath": "title",
-                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
-                            },
-                            {
-                                "@->contentpath": "teaserType",
-                                "@->value": "poster"
-                            },
-                            {
-                                "@->contentpath": "teaserSize",
-                                "@->value": "50"
-                            },
-                            {
-                                "@->contentpath": "realTeaserSize",
-                                "@->value": "50"
-                            },
-                            {
-                                "@->contentpath": "link.readMoreText.readMoreLong",
-                                "@->value": "Zum Artikel"
-                            },
-                            {
-                                "@->contentpath": "teaserImage",
-                                "@->value": {
-                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                    "@->contentpath": "teaser_poster_50",
-                                    "@->replaceToken": [
-                                        {
-                                            "@->token": "image",
-                                            "@->value": "rueckkehr-nach-abschiebung-102"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isHeadline": true,
             "text": "Posterteaser in halber Breite unter Bild"
         },
         {
@@ -1136,19 +956,6 @@
             "paragraphProperties": [
                 {
                     "showFullSize": true,
-                    "citeAuthor": "Marlene Dietrich"
-                }
-            ]
-        },
-        {
-            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
-        },
-        {
-            "isCite": true,
-            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
-            "paragraphProperties": [
-                {
-                    "showFullSize": false,
                     "citeAuthor": "Marlene Dietrich"
                 }
             ]
