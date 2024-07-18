@@ -1,3 +1,15 @@
+# v1.82.10 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Removing App-Cookie Fallback [#1005](https://github.com/mumprod/hr-design-system-handlebars/pull/1005) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.82.9 (Wed Jul 17 2024)
 
 #### 🐛 Bug Fix
