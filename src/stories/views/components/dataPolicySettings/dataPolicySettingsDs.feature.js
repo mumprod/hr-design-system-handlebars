@@ -192,14 +192,14 @@ const DataPolicySettings = function (context) {
             readAppSettingsButtonCookie()
             if (appSettingsCookie['hidePrivacySettingsButton'] === true) {
                 settingsButton.classList.add('hidden')
-                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                document.querySelectorAll('.js-settings-inner-button').forEach(function(jsSettingsButton) {
                     
                     jsSettingsButton.classList.add('hidden')
                     
                 });
             } else {
                 settingsButton.classList.remove('hidden')
-                document.querySelectorAll('.js-settings-button-inner').forEach(function(jsSettingsButton) {
+                document.querySelectorAll('.js-settings-inner-button').forEach(function(jsSettingsButton) {
                     if(jsSettingsButton.classList.contains('hidden')) {
                     jsSettingsButton.classList.remove('hidden')
                     }
