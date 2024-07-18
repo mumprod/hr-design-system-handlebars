@@ -196,9 +196,7 @@ const DataPolicySettings = function (context) {
                     jsSettingsButton.classList.add('hidden')
                 });
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
-                   if(!jsContentSettingsButton.classList.contains('hidden')) {
-                    jsContentSettingsButton.classList.add('hidden')
-                    }
+                    jsContentSettingsButton.style.display = 'none'                    
                 });
             } else {
                 settingsButton.classList.remove('hidden')
@@ -206,6 +204,9 @@ const DataPolicySettings = function (context) {
                     if(jsSettingsButton.classList.contains('hidden')) {
                     jsSettingsButton.classList.remove('hidden')
                     }
+                });
+                document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
+                    jsContentSettingsButton.style.display = 'inline-block'                    
                 });
             }
         }
