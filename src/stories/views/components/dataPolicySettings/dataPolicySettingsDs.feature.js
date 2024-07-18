@@ -206,7 +206,9 @@ const DataPolicySettings = function (context) {
                     }
                 });
                 document.querySelectorAll('.js-content-settings-button').forEach(function(jsContentSettingsButton) {
-                    jsContentSettingsButton.style.display = 'inline-block'                    
+                    if(!jsContentSettingsButton.classList.contains('hidden')){
+                    jsContentSettingsButton.style.display = 'inline-block'    
+                    }                
                 });
             }
         }
