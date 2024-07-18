@@ -5,7 +5,7 @@ import svgList404 from './page_icon_404_data.js'
 import svgListWeather from './page_icon_weather_data.js'
 import svgListPublicTransport from './page_icon_public_transport_data.js'
 import svgListTraffic from './page_icon_traffic_data.js'
-import svgListEPG from './page_icon_epg_data.js'
+import svgListEpg from './page_icon_epg_data.js'
 
 <Meta title="Grundlegendes/Iconographie/Iconwelt" />
 
@@ -52,7 +52,7 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
             <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
                 <svg className="svg-item" width="120px" height="100px"> 
-                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                    <use xlinkHref={'./icons/404/svgmap.min.svg#'+token[0]}></use>
                 </svg>
                 <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
                 </div>
@@ -67,7 +67,7 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
             <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
                 <svg className="svg-item" width="120px" height="100px"> 
-                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                    <use xlinkHref={'./icons/weather/svgmap.min.svg#'+token[0]}></use>
                 </svg>
                 <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
                 </div>
@@ -82,7 +82,7 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
             <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
                 <svg className="svg-item" width="120px" height="100px"> 
-                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                    <use xlinkHref={'./icons/publictransport/svgmap.min.svg#'+token[0]}></use>
                 </svg>
                 <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
                 </div>
@@ -97,7 +97,7 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
             <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
                 <svg className="svg-item" width="120px" height="100px"> 
-                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                    <use xlinkHref={'./icons/traffic/svgmap.min.svg#'+token[0]}></use>
                 </svg>
                 <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
                 </div>
@@ -107,12 +107,12 @@ aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
 
 ## Icons für EPG
 
-{Object.entries(svgListEPG).map((token, key) => {
+{Object.entries(svgListEpg).map((token, key) => {
         return (
             <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
                 <svg className="svg-item" width="120px" height="100px"> 
-                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                    <use xlinkHref={'./icons/epg/svgmap.min.svg#'+token[0]}></use>
                 </svg>
                 <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
                 </div>

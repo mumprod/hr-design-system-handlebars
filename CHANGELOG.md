@@ -1,3 +1,76 @@
+# v1.82.10 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Removing App-Cookie Fallback [#1005](https://github.com/mumprod/hr-design-system-handlebars/pull/1005) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.82.9 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- fix: ticker teaser missing border-radius [#1015](https://github.com/mumprod/hr-design-system-handlebars/pull/1015) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.82.8 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3227 b [#1012](https://github.com/mumprod/hr-design-system-handlebars/pull/1012) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.7 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3240 AND DPE-3238 AND DPE-3240 - Barrierefreiheit und SEO für neuen Artikel [#1014](https://github.com/mumprod/hr-design-system-handlebars/pull/1014) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.6 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify current month look & non-selected months in event calendar [#1013](https://github.com/mumprod/hr-design-system-handlebars/pull/1013) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.82.5 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- added data-primary-type and data-image-id to img tag inside picture e… [#1011](https://github.com/mumprod/hr-design-system-handlebars/pull/1011) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.82.4 (Tue Jul 16 2024)
 
 #### 🐛 Bug Fix

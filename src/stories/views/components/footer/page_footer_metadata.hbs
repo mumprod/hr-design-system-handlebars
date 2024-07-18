@@ -1,5 +1,5 @@
 <div class="flex flex-col self-center text-sm md:self-end w-fit md:flex-row">
-    <div class="flex justify-center w-auto md:justify-start">
+    <div class="flex items-center justify-center w-auto h-8 md:justify-start md:h-auto">
         {{#with this}}
         {{#> components/base/link _link=_hrDeLink _css="flex whitespace-nowrap hover:underline"}}
             &copy; {{{_hrDeLink-adjust_context.text}}} {{{_hrDeLink-adjust_context.currentTime.year}}}
@@ -23,7 +23,7 @@
 
     <span class="hidden px-2 md:flex ">|</span>
 
-    <div class="flex justify-center w-auto md:justify-start">
+    <div class="flex items-center justify-center w-auto h-8 md:justify-start md:h-auto">
         {{#with this}}
         {{#> components/base/link _link=_ardDeLink _css="flex whitespace-nowrap hover:underline"}}
             {{{_ardDeLink-adjust_context.text}}}
@@ -47,7 +47,7 @@
 
     <span class="hidden px-2 md:flex ">|</span>
 
-    <div class="flex justify-center w-auto md:justify-start">
+    <div class="flex items-center justify-center w-auto h-8 md:justify-start md:h-auto">
         {{#with this}}
          {{#> components/base/link _link=_dataProtectionLink _css="flex whitespace-nowrap hover:underline"}}
             {{{_dataProtectionLink-adjust_context.text}}}
@@ -71,7 +71,7 @@
 
     <span class="hidden px-2 md:flex ">|</span>
 
-    <div class="flex justify-center w-auto md:justify-start">
+    <div class="flex items-center justify-center w-auto h-8 md:justify-start md:h-auto">
         {{#with this}}
          {{#> components/base/link _link=_imprintLink _css="flex whitespace-nowrap hover:underline"}}
             {{{_imprintLink-adjust_context.text}}}
