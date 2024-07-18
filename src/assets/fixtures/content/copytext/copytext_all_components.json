@@ -1,0 +1,2538 @@
+{
+    "copytextParagraph": [
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "text": {
+                "split": [
+                    {
+                        "isUl": true,
+                        "text": "<li>Lorem ipsum dolor sit amet</li><li>At vero eos et accusam et justo</li><li>Stet clita kasd gubergren</li>"
+                    },
+                    {
+                        "isOl": true,
+                        "text": "<li>Lorem ipsum dolor sit amet</li><li>At vero eos et accusam et justo</li><li>Stet clita kasd gubergren</li>"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Download-Box"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isDownloadBox": true,
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "paragraphProperties": [
+                {
+                    "title": "Download-Box volle Breite",
+                    "showFullSize": true
+                }
+            ],
+            "paragraphbox": {
+                "downloadBoxItems": [
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-1",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-1, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+                            "displaySuffix": "JPG",
+                            "displaySize": "175kb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-2",
+                        "trackingData": {
+                            "secondLevelId": "2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-2, Lorem ipsum dolor sit amet, consetetur sadipscing elitr",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-3",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-3",
+                            "displaySuffix": "PDF",
+                            "displaySize": "48kb"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isDownloadBox": true,
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "paragraphProperties": [
+                {
+                    "title": "Download-Box halbe Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphbox": {
+                "downloadBoxItems": [
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-1",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-1",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-2",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-2",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-3",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-3",
+                            "displaySuffix": "PDF",
+                            "displaySize": "48kb"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Downloadbox in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isDownloadBox": true,
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "paragraphProperties": [
+                {
+                    "title": "Download-Box halbe Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphbox": {
+                "downloadBoxItems": [
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-1",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-1",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-2",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-2",
+                            "displaySuffix": "MP3",
+                            "displaySize": "3mb"
+                        }
+                    },
+                    {
+                        "isEpgPdfExport": false,
+                        "url": "Download-Url-3",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "Page-Name"
+                        },
+                        "downloadBoxMetadata": {
+                            "title": "Download-File-3",
+                            "displaySuffix": "PDF",
+                            "displaySize": "48kb"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit FAQs"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isFAQ": true,
+            "text": "Wo brauche ich noch Corona-Test?",
+            "paragraphProperties": [
+                {
+                    "faqAnswer": {
+                        "split": [
+                            {
+                                "isText": true,
+                                "text": "Es besteht keine Testpflicht mehr. Auch in Krankenhäusern, Alten- und Pflegeheimen sowie Sammelunterkünften muss sich seit dem 1. März niemand mehr testen lassen."
+                            },
+                            {
+                                "isUl": true,
+                                "text": "<li>Es besteht keine Testpflicht mehr</li><li>Auch in Krankenhäusern, Alten- und Pflegeheimen</li>"
+                            },
+                            {
+                                "isOl": true,
+                                "text": "<li>Es besteht keine Testpflicht mehr</li><li>Auch in Krankenhäusern, Alten- und Pflegeheimen</li>"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "isFAQ": true,
+            "text": "Gibt es noch Bürgertests?",
+            "paragraphProperties": [
+                {
+                    "faqAnswer": {
+                        "split": [
+                            {
+                                "isText": true,
+                                "text": "Seit dem 1. März 2023 besteht keine Möglichkeit mehr zur kostenlosen Bürgertestung. Alle Testangebote sind kostenpflichtig."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "isFAQ": true,
+            "text": "Wo muss ich Maske tragen?",
+            "paragraphProperties": [
+                {
+                    "faqAnswer": {
+                        "split": [
+                            {
+                                "isText": true,
+                                "text": "Ab dem 8. April 2023 ist die Maskenpflicht in Hessen in allen Bereichen aufgehoben."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit File-Download"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "link": {
+                    "url": "/download1",
+                    "isTargetBlank": false,
+                    "trackingData": {
+                        "secondLevelId": "2",
+                        "pageName": "download1"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download mit Bild, intern",
+                        "link": {
+                            "url": "/download1",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": false,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download1"
+                        }
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Filedownload unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "link": {
+                    "url": "/download1",
+                    "isTargetBlank": false,
+                    "trackingData": {
+                        "secondLevelId": "2",
+                        "pageName": "download1"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download mit Bild, intern",
+                        "link": {
+                            "url": "/download1",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": false,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download1"
+                        }
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "link": {
+                    "url": "/download2",
+                    "isTargetBlank": false,
+                    "trackingData": {
+                        "secondLevelId": "2",
+                        "pageName": "download2"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download mit Bild, extern",
+                        "link": {
+                            "url": "/download2",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": true,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download2"
+                        }
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isFileDownload": true,
+                "label": {
+                    "type": "download",
+                    "loca": "label_download",
+                    "byline": {
+                        "bylineText": "PDF - 4mb"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "title": "File-Download ohne Bild, extern",
+                        "link": {
+                            "url": "/download3",
+                            "isTargetBlank": false
+                        },
+                        "hasIcon": true,
+                        "iconName": "download-neu",
+                        "isForeignBrand": true,
+                        "readMoreScreenreader": "zum hr3.de Download",
+                        "readMore": "zum hr3.de Download",
+                        "readMoreLong": "zum hr3.de Download",
+                        "trackingData": {
+                            "secondLevelId": "2",
+                            "pageName": "download3"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Image"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Bild in halber Breite unter Video in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Video-Einzelseite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Infobox"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Volle Breite, mit Bild über halbe Breite",
+                    "showFullSize": true
+                }
+            ],
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Volle Breite, mit Bild über volle Breite",
+                    "showFullSize": true
+                }
+            ],
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Halbe Breite, mit Bild über halbe oder volle Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Infobox in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Halbe Breite, mit Bild über halbe oder volle Breite",
+                    "showFullSize": false
+                }
+            ],
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Volle Breite, ohne Bild",
+                    "showFullSize": true
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isInfoBox": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt</strong> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                    }
+                ]
+            },
+            "paragraphProperties": [
+                {
+                    "title": "Halbe Breite, ohne Bild",
+                    "showFullSize": false
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Jobposting"
+        },
+        {
+            "isParagraph": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Digitale Produkte, Fernsehen, Radio– wir sind Hessens größtes Medienunternehmen. Als Mitglied der ARD sind wir stolz darauf, mit unseren vielfältigen und qualitativ hochwertigen Programmangeboten wesentlich zur Meinungs- und Medienvielfalt in Deutschland beizutragen. Zur Verstärkung unseres Teams suchen wir befristet für zunächst 3 Jahre eine*n innovative*n"
+                    }
+                ]
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Java-Entwickler*in"
+        },
+        {
+            "isJobposting": true,
+            "text": "Wo brauche ich noch Corona-Test?",
+            "paragraphProperties": [
+                {
+                    "jobDescription": {
+                        "split": [
+                            {
+                                "isText": true,
+                                "text": "Du hast Spaß an neuen Technologien und bist ein*e Experte*in in der Java-Entwicklung? Du suchst spannende und vielfältige Projekte in einem dynamischen Medienumfeld? Dann vernetze gemeinsam mit uns die Mediensysteme der ARD."
+                            },
+                            {
+                                "isUl": true,
+                                "text": "<li>Du hast Spaß daran selbstorganisiert in einem agilen Umfeld und interdisziplinären Projektteams zu arbeiten.</li><li>Du bringst ein abgeschlossenes informatikorientiertes Studium bzw. eine vergleichbare Qualifikation mit und verfügst über Berufserfahrung im Bereich Softwareentwicklung.</li><li>Sehr gute Java-Kenntnisse, Kenntnisse in modernen Schnittstellentechnologien und Datenbanksystemen setzen wir voraus.</li>"
+                            },
+                            {
+                                "isOl": true,
+                                "text": "<li>Du implementierst als Full-Stack-Entwickler*in Features vertikal durch alle Softwareschichten.</li><li>Im Team entwickelst du die Applikation in enger Zusammenarbeit mit Anwender*innen fachlich weiter.</li>"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Podcastepisode"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": true
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "headlineTag",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": false
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Podcast Episode in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": false
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Podcast Episode in voller Breite über Bild in halber Breite"
+        },
+        {
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": true
+                    }
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_50",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Posterteaser"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": true
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Posterteaser"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Posterteaser halbe Breite"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": false
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Posterteaser in halber Breite unter Bild"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": false
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Poster-Teaser 16:9"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": true
+                            },
+                            "showStretched": {
+                                "isTrue": "true"
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "teaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_16_to_9",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Zitat"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": true,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": false,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Zitat in voller Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": true,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Zitat in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": false,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Zusatzinfo"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isAdditionalInfo": true,
+            "text": {
+                "split": [
+                    {
+                        "isText": true,
+                        "text": "Sendung: hr-fernsehen, hessenschau, 13.12.2022, 19.30 Uhr"
+                    },
+                    {
+                        "isOl": true,
+                        "text": "<li>eins</li><li>zwei</li><li>drei</li>"
+                    },
+                    {
+                        "isUl": true,
+                        "text": "<li>eins</li><li>zwei</li><li>drei</li>"
+                    },
+                    {
+                        "isText": true,
+                        "text": "Quelle: hessenschau.de/Jörn Perske"
+                    }
+                ]
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Video"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Video-Einzelseite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Video"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-1"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Video-Einzelseite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur hr3.de VideoEinzel-seite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Video in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur hr3.de VideoEinzel-seite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Livestream"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isLivestream": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "isSsi": true,
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream_copytext_100"
+                },
+                "toModel": {
+                    "videoLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/livestreamseite",
+                            "isTargetBlank": false
+                        },
+
+                        "readMoreScreenreader": "zum hr3.de Livestream",
+                        "title": "Ab 18 Uhr: Eröffnung der Frankfurter Buchmesse",
+                        "isForeignBrand": true,
+                        "readMore": "zum hr3.de Livestreamseite",
+
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Livestream"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "isSsi": true,
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream_copytext_50"
+                },
+                "toModel": {
+                    "videoLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/livestreamseite",
+                            "isTargetBlank": false
+                        },
+
+                        "readMoreScreenreader": "zum hr3.de Livestream",
+                        "title": "Eröffnung der Frankfurter Buchmesse",
+                        "isForeignBrand": false,
+                        "readMore": "zum hr3.de Livestreamseite",
+
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Video-Livestream in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "isSsi": true,
+                "label": {
+                    "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                    "@->contentpath": "video_livestream_copytext_50"
+                },
+                "toModel": {
+                    "videoLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-livestream-hr-fernsehen"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/livestreamseite",
+                            "isTargetBlank": false
+                        },
+
+                        "readMoreScreenreader": "zum hr3.de Livestream",
+                        "title": "Eröffnung der Frankfurter Buchmesse",
+                        "isForeignBrand": false,
+                        "readMore": "zum hr3.de Livestreamseite",
+
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "buchmesse-fahnen-102"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Audio"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "audio",
+                    "loca": "label_audio",
+                    "byline": {
+                        "bylineText": "00:39 Min."
+                    }
+                },
+                "copyright": "hr",
+                "audioAuthor": "Michael Pörtner",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-21T14:30+0200",
+                    "htmlDate": "21.06.2024",
+                    "date": "21.06.24",
+                    "dateSeparatorTime": "21.06.24, 14:30"
+                },
+                "toModel": {
+                    "audioElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hessenschau.de Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audio-Einzelseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Audio"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioOnDemand": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "audio",
+                    "loca": "label_audio",
+                    "byline": {
+                        "bylineText": "00:20 Min."
+                    }
+                },
+                "audioAuthor": "Karsten Hufer",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "audioElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2564"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audio-Einzelseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Audio in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioOnDemand": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "audio",
+                    "loca": "label_audio",
+                    "byline": {
+                        "bylineText": "00:20 Min."
+                    }
+                },
+                "audioAuthor": "Karsten Hufer",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "audioElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2567"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-1",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2567"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur Audio-Einzelseite",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Audio-Livestream"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Startet am 25.06.24 um 14:00 Uhr."
+                    }
+                },
+                "copyright": "hr",
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T14:00+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 14:00"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hessenschau.de Audio-Livestream",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zum Audio-Livestream",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Audio Event-Livestream"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Jetzt Live"
+                    }
+                },
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T08:30+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 08:30"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2664"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2664"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio-Livestream",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zum Audio-Livestream",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Audio-Livestream in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Jetzt Live"
+                    }
+                },
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T08:30+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 08:30"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2667"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2667"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio-Livestream",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zum Audio-Livestream",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}
