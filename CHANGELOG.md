@@ -1,3 +1,15 @@
+# v1.83.6 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- SEO BUG - livestream player images allways prefetched [#1023](https://github.com/mumprod/hr-design-system-handlebars/pull/1023) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.5 (Fri Jul 19 2024)
 
 #### 🐛 Bug Fix
