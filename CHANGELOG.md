@@ -1,3 +1,15 @@
+# v1.83.7 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3081 - related content and breadcrumb are in line with content now [#1024](https://github.com/mumprod/hr-design-system-handlebars/pull/1024) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.6 (Fri Jul 19 2024)
 
 #### 🐛 Bug Fix
