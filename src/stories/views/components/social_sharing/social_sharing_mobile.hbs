@@ -1,13 +1,14 @@
 
 {{~#with this.socialSharing ~}}    
-<div x-data="stickySharingHandlerMobile"
+<div x-data="socialSharingHandler('mobilesticky')"
     class=" relative ml-5 z-100 h-9.5 w-9.5"
     :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"  
-    x-on:resize.window="$store.sharingIsOpenMobile = false"    
-    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:resize.window="$store.sharingIsOpen.mobilesticky = false"    
+    x-on:keydown.escape.prevent.stop="close()"
     @click.outside="close()"
     >
     <div class="absolute bottom-0 flex flex-col self-center gap-3 bg-white">
+       
         <button 
             class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
             x-ref="button"
@@ -16,7 +17,7 @@
             :aria-controls="$id('dropdown-button')"
             aria-label='{{loca "share_linktitle" }}'
             {{#with ../this.trackingData}}
-                data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
+                data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mobilesticky::sharingIconClicked"}]}'
             {{/with}}
             
             >
@@ -24,48 +25,14 @@
         </button>
         <div 
             x-ref="panel" 
-            :class="$store.sharingIsOpenMobile ? 'flex' : 'hidden '"                    
+            :class="$store.sharingIsOpen.mobilesticky ? 'flex' : 'hidden '"                    
             :id="$id('dropdown-button')"
             class="relative right-0 self-center bg-white md:h-auto lg:hidden"
         >
             <ul class="flex flex-col gap-3 mt-2">  
-                {{> components/social_sharing/social_sharing_icons _socialSharingType="mobile-sticky"}}
+                {{> components/social_sharing/social_sharing_icons _socialSharingType="mobilesticky" _trackingData=../this.trackingData}}
             </ul>
         </div>
     </div>
 </div>
-    <script>
-        function stickySharingHandlerMobile(){
-            return {
-            open: false,
-            sharingIsVisible: true,
-            isDesktop: true,
-            toggle() {
-                var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
-                var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
-                var isMobile= isMobileApple || isMobileOther;
-                if (navigator.share && isMobile) {
-                    navigator.share({
-                        title: document.title,
-                        text: 'Schau mal was ich auf hessenschau.de gefunden habe!',
-                        url: window.location.href,
-                    })
-                    .then(() => console.log('Shared successfully'))
-                    .catch((error) => console.error('Sharing failed:', error));
-                } else {
-                    if (this.$store.sharingIsOpenMobile) {
-                        return this.close()
-                    }    
-                    this.$refs.button.focus()
-                    this.$store.sharingIsOpenMobile = true             
-                }
-                
-            },
-            close(focusAfter) {
-                if (!this.$store.sharingIsOpenMobile) return
-                this.$store.sharingIsOpenMobile = false
-            }
-        }
-        }
-    </script>
 {{/with}}
