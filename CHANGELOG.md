@@ -1,3 +1,15 @@
+# v1.83.9 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- added sm:article-narrow  for spacing problems in related content [#1026](https://github.com/mumprod/hr-design-system-handlebars/pull/1026) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.8 (Tue Jul 23 2024)
 
 #### 🐛 Bug Fix
