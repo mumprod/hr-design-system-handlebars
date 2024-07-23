@@ -8,6 +8,8 @@
         x-on:resize.window="$store.sharingIsOpen.metadatabox = false"       
         x-on:keydown.escape.prevent.stop="close()"
         @click.outside="close()"
+        ax-load 
+        x-ignore
     >
         <div class="relative right-0 flex gap-3 bg-white md:h-auto"  >
             <button 

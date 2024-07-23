@@ -10,7 +10,6 @@ import mainNavigationHandler from 'components/site_header/mainNavigationHandler.
 import flyoutHandler from 'components/site_header/flyoutHandler.alpine'
 import overlayHandler from 'components/site_header/overlayHandler.alpine'
 import dropdown from 'components/site_header/dropdown.alpine'
-import socialSharingHandler from 'components/social_sharing/socialSharingHandler.alpine'
  
 
 AsyncAlpine.init(Alpine)
@@ -18,6 +17,7 @@ AsyncAlpine.init(Alpine)
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )
+    .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .start()
 
 window.Alpine = Alpine
@@ -54,7 +54,6 @@ Alpine.data('mainNavigationHandler', mainNavigationHandler)
 Alpine.data('overlayHandler', overlayHandler)
 Alpine.data('flyoutHandler', flyoutHandler)
 Alpine.data('dropdown', dropdown)
-Alpine.data('socialSharingHandler', socialSharingHandler)
 
 // Initialization of plugins
 Alpine.plugin(Toolkit)

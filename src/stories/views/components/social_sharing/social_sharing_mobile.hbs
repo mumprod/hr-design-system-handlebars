@@ -6,6 +6,8 @@
     x-on:resize.window="$store.sharingIsOpen.mobilesticky = false"    
     x-on:keydown.escape.prevent.stop="close()"
     @click.outside="close()"
+    ax-load 
+    x-ignore
     >
     <div class="absolute bottom-0 flex flex-col self-center gap-3 bg-white">
        
