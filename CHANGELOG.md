@@ -1,3 +1,15 @@
+# v1.83.8 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3261 - Social Sharing Tracking noch fehlerhaft [#1025](https://github.com/mumprod/hr-design-system-handlebars/pull/1025) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.7 (Fri Jul 19 2024)
 
 #### 🐛 Bug Fix
