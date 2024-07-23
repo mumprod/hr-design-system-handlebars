@@ -10,6 +10,7 @@ import mainNavigationHandler from 'components/site_header/mainNavigationHandler.
 import flyoutHandler from 'components/site_header/flyoutHandler.alpine'
 import overlayHandler from 'components/site_header/overlayHandler.alpine'
 import dropdown from 'components/site_header/dropdown.alpine'
+import socialSharingHandler from 'components/social_sharing/socialSharingHandler.alpine'
  
 
 AsyncAlpine.init(Alpine)
@@ -41,8 +42,10 @@ Alpine.store('subNavIsVisible', false)
 Alpine.store('footerIsVisible', false)
 Alpine.store('sectionNavIsVisible', false)
 Alpine.store('sharingIsVisible', false)
-Alpine.store('sharingIsOpenHorizontal', false)
-Alpine.store('sharingIsOpenMobile', false)
+Alpine.store('sharingIsOpen', {
+    metadatabox: false,
+    mobilesticky: false
+})
 Alpine.store('sharingBottomPos', {
     current: '0'
 })
@@ -51,6 +54,7 @@ Alpine.data('mainNavigationHandler', mainNavigationHandler)
 Alpine.data('overlayHandler', overlayHandler)
 Alpine.data('flyoutHandler', flyoutHandler)
 Alpine.data('dropdown', dropdown)
+Alpine.data('socialSharingHandler', socialSharingHandler)
 
 // Initialization of plugins
 Alpine.plugin(Toolkit)
