@@ -1,3 +1,15 @@
+# v1.83.10 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- :rewind: [#1027](https://github.com/mumprod/hr-design-system-handlebars/pull/1027) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.83.9 (Tue Jul 23 2024)
 
 #### 🐛 Bug Fix
