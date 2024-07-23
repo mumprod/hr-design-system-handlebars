@@ -27,10 +27,8 @@
         {{/with}}
     {{/unless}}
 
-    {{#unless _webview-adjust_context}}
-        {{~#with this.socialSharing ~}}
-            {{> components/social_sharing/social_sharing_copytext _useSticky=(configProperty "templates.useStickyNav")}}
-        {{~/with~}}
+    {{#unless _webview-adjust_context}}        
+        {{> components/social_sharing/social_sharing_copytext _useSticky=(configProperty "templates.useStickyNav")}}
     {{/unless}}
     {{~> components/content/copytext/copytext _isWebview=_webview-adjust_context ~}}
 
