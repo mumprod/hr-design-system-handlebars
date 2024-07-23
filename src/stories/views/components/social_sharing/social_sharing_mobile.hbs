@@ -10,16 +10,12 @@
     <div class="absolute bottom-0 flex flex-col self-center gap-3 bg-white">
        
         <button 
-            class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
+            class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
             x-ref="button"
             x-on:click="toggle()"
             :aria-expanded="open"
             :aria-controls="$id('dropdown-button')"
             aria-label='{{loca "share_linktitle" }}'
-            {{#with ../this.trackingData}}
-                data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::mobilesticky::sharingIconClicked"}]}'
-            {{/with}}
-            
             >
                 {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
         </button>
