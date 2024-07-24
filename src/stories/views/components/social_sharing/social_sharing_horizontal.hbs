@@ -19,7 +19,8 @@
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-button')"
                 aria-label="{{loca "share_linktitle" }}"
-                x-show="$store.sharingIsVisible"              
+                x-show="$store.sharingIsVisible" 
+                x-intersect="sharingModuleShown('metadatabox')"            
                 >
                     {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
             </button>

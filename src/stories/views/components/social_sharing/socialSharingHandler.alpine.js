@@ -4,7 +4,7 @@ export default (module) => ({
     open: false,
     sharingIsVisible: true,
     isDesktop: true,
-    
+    sharingModuleWasNeverShown: true,
     toggle() {
         
         var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
@@ -37,6 +37,13 @@ export default (module) => ({
         this.$store.sharingIsOpen[module] = false
         if(trackClick) {
             uxAction('socialShareClick::'+module+'::sharingIconClose');
+        }
+    },
+    sharingModuleShown(module){
+        if(this.sharingModuleWasNeverShown){
+            console.log('Sharing Module '+module+' was shown for the first time!!!');
+            uxAction('socialShareClick::'+module+'::shown');
+            this.sharingModuleWasNeverShown = false;
         }
     }
     
