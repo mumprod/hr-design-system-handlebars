@@ -1,3 +1,15 @@
+# v1.83.11 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- Social Sharing Tracking- first time show added [#1028](https://github.com/mumprod/hr-design-system-handlebars/pull/1028) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.10 (Tue Jul 23 2024)
 
 #### 🐛 Bug Fix
