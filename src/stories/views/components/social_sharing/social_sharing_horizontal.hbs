@@ -20,7 +20,7 @@
                 :aria-controls="$id('dropdown-button')"
                 aria-label="{{loca "share_linktitle" }}"
                 x-show="$store.sharingIsVisible" 
-                x-intersect="sharingModuleShown('metadatabox')"            
+                x-intersect="sharingModuleShown()"            
                 >
                     {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
             </button>
@@ -29,6 +29,7 @@
                 :class="{ 'hidden': !$store.sharingIsOpen.metadatabox,'flex': $store.sharingIsOpen.metadatabox }"           
                 :id="$id('dropdown-button')"
                 class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
+                x-intersect="sharingModuleShown(true)"
             >
                 <ul class="flex gap-3">  
                     {{> components/social_sharing/social_sharing_icons _socialSharingType="metadatabox" _trackingData=../this.trackingData}}

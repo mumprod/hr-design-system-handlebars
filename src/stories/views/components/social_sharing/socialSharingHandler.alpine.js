@@ -5,6 +5,7 @@ export default (module) => ({
     sharingIsVisible: true,
     isDesktop: true,
     sharingModuleWasNeverShown: true,
+    desktopSharingModuleWasNeverShown: true,
     toggle() {
         
         var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
@@ -39,11 +40,17 @@ export default (module) => ({
             uxAction('socialShareClick::'+module+'::sharingIconClose');
         }
     },
-    sharingModuleShown(module){
-        if(this.sharingModuleWasNeverShown){
+    sharingModuleShown(desktop){
+
+        if(this.sharingModuleWasNeverShown && !desktop){
             console.log('Sharing Module '+module+' was shown for the first time!!!');
             uxAction('socialShareClick::'+module+'::shown');
             this.sharingModuleWasNeverShown = false;
+        }
+        if(this.desktopSharingModuleWasNeverShown && desktop){
+            console.log('Sharing Module '+module+'Desktop was shown for the first time!!!');
+            uxAction('socialShareClick::'+module+'Desktop::shown');
+            this.desktopSharingModuleWasNeverShown = false;
         }
     }
     
