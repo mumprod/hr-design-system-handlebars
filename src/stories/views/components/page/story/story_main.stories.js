@@ -11,7 +11,6 @@ const Template = ({ ...args }) => {
     // return `<span>${topline}</span>`;
     return story_template({ ...args })
 }
-
 export default {
     title: 'Seiten/Artikel',
 }
@@ -24,7 +23,17 @@ export const Default = {
         layout: 'fullscreen',
     }
 }
-
+export const Webview = {
+    render: Template.bind({}),
+    name: 'Webview Artikel mit Topline',
+    args: {
+        ...data_story,
+        _webview: true
+    },
+    parameters: {
+        layout: 'fullscreen',
+    }
+}
 export const WithSquareImage = {
     render: Template.bind({}),
     name: 'Artikel mit 1:1-Bild',
@@ -72,3 +81,4 @@ export const WithAudio = {
         layout: 'fullscreen',
     }
 }
+
