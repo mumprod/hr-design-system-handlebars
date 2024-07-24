@@ -1,3 +1,15 @@
+# v1.83.12 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3264 - Webview: Abstand von Dachzeile nach oben [#1029](https://github.com/mumprod/hr-design-system-handlebars/pull/1029) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.83.11 (Wed Jul 24 2024)
 
 #### 🐛 Bug Fix
