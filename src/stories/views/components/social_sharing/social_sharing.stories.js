@@ -12,8 +12,7 @@ const Template_mobile = ({ ...args }) => {
 }
 export default {
     title: 'Komponenten/Social Sharing',
-    
-} 
+}
 
 export const Default = {
     render: Template_horizontal.bind({}),
@@ -22,7 +21,7 @@ export const Default = {
     parameters: {
         chromatic: {
             viewports: [360, 1024],
-        }
+        },
     },
 }
 export const Mobile = {
@@ -33,7 +32,7 @@ export const Mobile = {
         layout: 'fullscreen',
         chromatic: {
             viewports: [360, 1024],
-        }
+        },
     },
     decorators: [
         (Story) => {

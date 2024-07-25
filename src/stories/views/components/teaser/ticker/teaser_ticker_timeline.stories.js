@@ -29,11 +29,11 @@ export default {
         },
     },
     argTypes: {
-        '_color': {
+        _color: {
             description: 'Text- und Linienfarbe',
             control: false,
         },
-    }
+    },
 }
 
 export const TimelineWhite = {

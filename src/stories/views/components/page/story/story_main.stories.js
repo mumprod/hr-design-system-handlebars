@@ -21,7 +21,7 @@ export const Default = {
     args: data_story,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 export const Webview = {
     render: Template.bind({}),
@@ -40,7 +40,7 @@ export const WithSquareImage = {
     args: data_story_with_square_image,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 export const WithLabel = {
@@ -49,8 +49,8 @@ export const WithLabel = {
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',
-        chromatic: { delay: 1000 }
-    }
+        chromatic: { delay: 1000 },
+    },
 }
 
 export const WithVideo = {
@@ -59,7 +59,7 @@ export const WithVideo = {
     args: data_story_with_video,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 
@@ -70,7 +70,7 @@ export const WithLivestream = {
     args: data_story_with_livestream,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 export const WithAudio = {

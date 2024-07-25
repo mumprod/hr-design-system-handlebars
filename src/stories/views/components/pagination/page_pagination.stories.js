@@ -76,7 +76,7 @@ const TemplateMoreThanThreeLast = (args, { globals: { customConditionalToolbar }
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     return page({ brand, ...args })
 }
-const TemplateOnlyTwo= (args, { globals: { customConditionalToolbar } }) => {
+const TemplateOnlyTwo = (args, { globals: { customConditionalToolbar } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     args['onlyThreePages'] = false
@@ -103,7 +103,6 @@ const TemplateOnlyThree = (args, { globals: { customConditionalToolbar } }) => {
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
     return page({ brand, ...args })
 }
-
 
 export default {
     title: 'Komponenten/Pagination',

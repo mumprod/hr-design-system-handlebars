@@ -1,4 +1,4 @@
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/test'
 
 const handlebars = require('hrHandlebars')
 
@@ -24,7 +24,7 @@ const defaultModalTemplate = (args, { globals: { customConditionalToolbar } }) =
 const userConsentModalTemplate = (args, { globals: { customConditionalToolbar } }) => {
     let brand =
         undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    let link = { url: "https://hessenschau.de", isTargetBlank: true }
+    let link = { url: 'https://hessenschau.de', isTargetBlank: true }
     let hbsTemplate = handlebars.compile(`
     {{#> components/modal/modal}}
         {{> components/modal/user_consent _headline=(loca "modal_user_consent_headline") _text=(loca "modal_user_consent_text") _labelOk=(loca "modal_user_consent_label_ok") _labelCancel=(loca "modal_user_consent_label_cancel")}}
@@ -50,7 +50,8 @@ export default {
                 options: ['default', 'userConsent'],
             },
 
-            description: 'Der Typ des Modals, das geöffnet werden soll. Derzeit lassen sich die Typen "default" und "userConsent" auswählen.',
+            description:
+                'Der Typ des Modals, das geöffnet werden soll. Derzeit lassen sich die Typen "default" und "userConsent" auswählen.',
         },
     },
 
@@ -66,7 +67,7 @@ export const defaultModal = {
     name: 'Default Modal',
     args: {
         _trigger: '.js-modal',
-        _type: 'default'
+        _type: 'default',
     },
 }
 
@@ -75,7 +76,7 @@ export const userConsentModal = {
     name: 'User Consent Modal',
     args: {
         _trigger: '.js-user-consent-needed',
-        _type: 'userConsent'
+        _type: 'userConsent',
     },
 }
 
@@ -84,16 +85,15 @@ export const openedUserConsentModal = {
     name: 'User Consent Modal geöffnet',
     args: {
         _trigger: '.js-user-consent-needed',
-        _type: 'userConsent'
+        _type: 'userConsent',
     },
     play: async ({ canvasElement }) => {
-        const canvas = within(canvasElement);
+        const canvas = within(canvasElement)
 
-        const link = canvas.getByTestId('modal-hook');
+        const link = canvas.getByTestId('modal-hook')
 
         await userEvent.click(link, {
             delay: 3000,
-        });
+        })
     },
 }
-

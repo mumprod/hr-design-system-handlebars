@@ -3,7 +3,7 @@ import page from './page_offline.hbs'
 const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau' 
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return page({ brand, ...args })
 }
 

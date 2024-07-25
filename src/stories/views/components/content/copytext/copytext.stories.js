@@ -77,8 +77,8 @@ export const WithImageWebview = {
 
     args: {
         ...copytext_image_json,
-        _isWebview: true
-    }
+        _isWebview: true,
+    },
 }
 export const WithInfobox = {
     render: Template.bind({}),

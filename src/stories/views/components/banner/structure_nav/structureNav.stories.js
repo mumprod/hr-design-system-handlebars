@@ -4,7 +4,7 @@ import structureNavData from '../fixtures/structureNav.json'
 const TemplateStructureNav = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'       
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return structureNav({ brand, ...args })
 }
 
@@ -27,6 +27,5 @@ export default {
 export const Seitenfooter = {
     render: TemplateStructureNav.bind({}),
     name: 'StructureNav',
-    args: structureNavData
-  
+    args: structureNavData,
 }

@@ -20,7 +20,7 @@ export default {
             control: 'boolean',
             description: 'Datum anzeigen',
         },
-    },    
+    },
     decorators: [
         (Story) => {
             return `<div class="max-w-[724px] mx-auto mt-60">  
@@ -53,7 +53,6 @@ export const WithOneAuthorWithoutPicture = {
     name: 'Ein Autor ohne Bild',
     args: metadatabox_one_author_without_picture_json,
 }
-
 
 export const WithMoreAuthors = {
     render: Template.bind({}),
