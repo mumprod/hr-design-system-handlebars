@@ -5,7 +5,7 @@
             {{~#if ../this.isAudioOnDemand~}}
                 <time datetime="{{this.htmlDate}}">{{this.date}}</time>
             {{~else~}}
-                {{~#if this.airdateWithoutTime ~}}
+                {{~#if ../this.airdateWithoutTime ~}}
                     <time datetime="{{this.htmlDate}}">{{this.date}}</time>
                 {{~else~}}
                     <time datetime="{{this.htmlDateTime}}">{{loca "date_simple_at" this.dateSeparatorTime }}</time>
