@@ -1,0 +1,121 @@
+import { ArgsTable, Meta, Story, Canvas, Preview } from '@storybook/blocks'
+import svgList from './page_icon_data.js'
+import svgListDs from './page_icon_ds_data.js'
+import svgList404 from './page_icon_404_data.js'
+import svgListWeather from './page_icon_weather_data.js'
+import svgListPublicTransport from './page_icon_public_transport_data.js'
+import svgListTraffic from './page_icon_traffic_data.js'
+import svgListEpg from './page_icon_epg_data.js'
+
+<Meta title="Grundlegendes/Iconographie/Iconwelt" />
+
+# hessenschau Iconwelt
+
+In den Webauftritten des Hessischen Rundfunks werden SVG-Icons unterschiedlicher Genese verwendet, Das Iconset ist organisch gewachsen, so das die aktuellesten hier für Storybook-Komponenten zu oberst, der vollständigkeithalber
+aber auch die anderen noch aus dem alten Delivery stammenden dargestellt werden.
+
+## Generic Icons für das Design-System
+
+{Object.entries(svgListDs).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+
+## Generic Icons aus dem Delivery
+
+{Object.entries(svgList).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/icons/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für 404
+
+{Object.entries(svgList404).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/404/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für Wetter
+
+{Object.entries(svgListWeather).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/weather/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für ÖPNV
+
+{Object.entries(svgListPublicTransport).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/publictransport/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für Verkehr
+
+{Object.entries(svgListTraffic).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/traffic/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}
+
+## Icons für EPG
+
+{Object.entries(svgListEpg).map((token, key) => {
+        return (
+            <div style={{backgroundColor:'#fafafa', border: '1px solid #cacaca', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{ width: '120px', height: '150px', margin: '5px', textAlign:'center', justifyContent: 'center'}}>
+                <svg className="svg-item" width="120px" height="100px"> 
+                    <use xlinkHref={'./icons/epg/svgmap.min.svg#'+token[0]}></use>
+                </svg>
+                <span style={{textAlign:'center', fontSize:'12px', display: 'block', backgroundColor:'#000', color: '#fff', marginTop: '10px'}}>{token[0]}</span>
+                </div>
+            </div>
+        )
+})}

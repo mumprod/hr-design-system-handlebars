@@ -1,5 +1,5 @@
-<div class="grid grid-page">
-    <div class="grid bg-white dark:bg-black grid-article">
+<div class="grid grid-page{{#if _webview}} mt-4 sm:mt-0{{/if}}">
+    <{{#if _isArticle}}article{{else}}div{{/if}} class="grid items-baseline bg-white dark:bg-black grid-article">
         {{> @partial-block }}    
-    </div>
+    </{{#if _isArticle}}article{{else}}div{{/if}}>
 </div>
