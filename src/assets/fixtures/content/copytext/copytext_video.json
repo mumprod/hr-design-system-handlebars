@@ -256,6 +256,7 @@
                 },
                 "copyright": "hessenschau",
                 "showAirdate": true,
+                "airdateWithoutTime": true,
                 "airdateDate": {
                     "htmlDateTime": "2022-10-31T19:30+0200",
                     "htmlDate": "31.10.2022",
