@@ -1,3 +1,16 @@
+# v1.85.1 (Fri Jul 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- :lipstick: reduce padding of data policy box so that ([@szuelch](https://github.com/szuelch))
+- :lipstick: Add darkmode styles for data policy box ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.85.0 (Thu Jul 25 2024)
 
 #### 🚀 Enhancement
