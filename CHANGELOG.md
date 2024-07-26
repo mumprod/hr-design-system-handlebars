@@ -1,3 +1,15 @@
+# v1.87.0 (Fri Jul 26 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: Display 50% images in portrait view in full width [#1033](https://github.com/mumprod/hr-design-system-handlebars/pull/1033) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.86.0 (Fri Jul 26 2024)
 
 #### 🚀 Enhancement
