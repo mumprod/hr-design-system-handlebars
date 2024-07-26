@@ -1,3 +1,15 @@
+# v1.85.2 (Fri Jul 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update external_service_data_policy.hbs ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.85.1 (Fri Jul 26 2024)
 
 #### ⚠️ Pushed to `main`
