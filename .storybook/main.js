@@ -1,4 +1,3 @@
-import remarkGfm from 'remark-gfm'
 const path = require('path')
 const fs = require('fs')
 const FlatContextPlugin = require('../build/webpack/feature-loader/plugin/FlatContextPlugin')
@@ -12,7 +11,6 @@ const config = {
     features: { buildStoriesJson: true },
     addons: [
         '@storybook/addon-themes',
-        'storybook-addon-tw-dm-toggle',
         '@storybook/addon-links',
         {
             name: '@storybook/addon-essentials',

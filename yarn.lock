@@ -13298,11 +13298,6 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
-storybook-addon-tw-dm-toggle@^7.0.19:
-  version "7.0.19"
-  resolved "https://registry.yarnpkg.com/storybook-addon-tw-dm-toggle/-/storybook-addon-tw-dm-toggle-7.0.19.tgz#4ba51684bd190b60292cc2469c633a483e629427"
-  integrity sha512-PNBN3lDHpnRBFqsKFmlXcI06yXbu7s19E3hjPJsMLRG5ZbbRiLsb0ZaOyeiLclT62ye7bRlRrfuPMLs9h8b83A==
-
 storybook-conditional-toolbar-selector@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/storybook-conditional-toolbar-selector/-/storybook-conditional-toolbar-selector-1.0.3.tgz"
