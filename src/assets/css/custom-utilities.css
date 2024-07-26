@@ -6,7 +6,8 @@
     /*! ****************************/
     /*! Aspect Ratio with fallback */
     /*! ****************************/
-    .ar-auto {
+    .ar-auto,
+    .ar-auto > img {
         aspect-ratio: auto;
     }
 
@@ -24,7 +25,8 @@
         }
     }
 
-    .ar-16-9 {
+    .ar-16-9,
+    .ar-16-9 > img {
         aspect-ratio: 16 / 9;
     }
 
@@ -42,7 +44,8 @@
         }
     }
 
-    .ar-16-7 {
+    .ar-16-7,
+    .ar-16-7 > img {
         aspect-ratio: 16 / 7;
     }
 
@@ -60,7 +63,8 @@
         }
     }
 
-    .ar-4-3 {
+    .ar-4-3,
+    .ar-4-3 > img {
         aspect-ratio: 4 / 3;
     }
 
@@ -78,7 +82,8 @@
         }
     }
 
-    .ar-4-1 {
+    .ar-4-1,
+    .ar-4-1 > img {
         aspect-ratio: 4 / 1;
     }
 
@@ -96,7 +101,8 @@
         }
     }
 
-    .ar-1-1 {
+    .ar-1-1,
+    .ar-1-1 > img {
         aspect-ratio: 1 / 1;
     }
 
@@ -113,7 +119,8 @@
             clear: both;
         }
     }
-    .ar-100-27 {
+    .ar-100-27,
+    .ar-100-27 > img {
         aspect-ratio: 100 / 27.1;
     }
 
@@ -131,7 +138,8 @@
         }
     }
 
-    .ar-9-16 {
+    .ar-9-16,
+    .ar-9-16 > img {
         aspect-ratio: 9 / 16;
     }
     @supports not (aspect-ratio: 9 / 16) {
@@ -148,7 +156,8 @@
         }
     }
 
-    .ar-7-16 {
+    .ar-7-16,
+    .ar-7-16 > img {
         aspect-ratio: 7 / 16;
     }
     @supports not (aspect-ratio: 7 / 16) {
@@ -200,10 +209,8 @@
         grid-template-columns:
             [full-width-start] minmax(var(--mobile-padding), var(--desktop-padding))
             [content-start] minmax(0, var(--breakout-size))
-            [narrow-start] min(
-                100% - (var(--mobile-padding) * 2),
-                var(--narrow-max-width)
-            ) [narrow-end]
+            [narrow-start] min(100% - (var(--mobile-padding) * 2), var(--narrow-max-width))
+            [narrow-end]
             minmax(0, var(--breakout-size)) [content-end]
             minmax(var(--mobile-padding), var(--desktop-padding)) [full-width-end];
         grid-column: main;
@@ -220,7 +227,7 @@
     .article-narrow {
         grid-column: narrow;
     }
-    .copytextWrapper > :not(.article-breakout, .article-full-width) {
+    .copytextWrapper > :not(.article-breakout, .article-full-width, .xs\:article-full-width) {
         grid-column: narrow;
     }
 

@@ -11,6 +11,14 @@ Creates a text element that is only relevant for screenreaders. It will not be v
 `_text`     The text for the screen reader.<br>
 `_locaTag`  The loca tag for the text for the screen reader.<br>
 
+HINWEIS:
+The aria-label attribute is used to provide an accessible name for an element, 
+but it should only be applied to elements that can have a role where it makes 
+sense to provide such a label. A <span> element by itself does not have an implicit 
+role that supports an aria-label.
+
+DON'T USE THIS ANYMORE
+
 --}}
 <span aria-label="
     {{~#if _text ~}}

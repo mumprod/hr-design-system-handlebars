@@ -1,3 +1,513 @@
+# v1.85.0 (Thu Jul 25 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3272 [#1031](https://github.com/mumprod/hr-design-system-handlebars/pull/1031) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.84.0 (Thu Jul 25 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3271 [#1030](https://github.com/mumprod/hr-design-system-handlebars/pull/1030) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.83.12 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3264 - Webview: Abstand von Dachzeile nach oben [#1029](https://github.com/mumprod/hr-design-system-handlebars/pull/1029) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.11 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- Social Sharing Tracking- first time show added [#1028](https://github.com/mumprod/hr-design-system-handlebars/pull/1028) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.10 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- :rewind: [#1027](https://github.com/mumprod/hr-design-system-handlebars/pull/1027) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.83.9 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- added sm:article-narrow  for spacing problems in related content [#1026](https://github.com/mumprod/hr-design-system-handlebars/pull/1026) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.8 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3261 - Social Sharing Tracking noch fehlerhaft [#1025](https://github.com/mumprod/hr-design-system-handlebars/pull/1025) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.7 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3081 - related content and breadcrumb are in line with content now [#1024](https://github.com/mumprod/hr-design-system-handlebars/pull/1024) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.6 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- SEO BUG - livestream player images allways prefetched [#1023](https://github.com/mumprod/hr-design-system-handlebars/pull/1023) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.5 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- add ticker-topic to Posterteaser [#1022](https://github.com/mumprod/hr-design-system-handlebars/pull/1022) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.4 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- large space between BU and Image only when image in full-size [#1021](https://github.com/mumprod/hr-design-system-handlebars/pull/1021) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.3 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- revise spaces [#1020](https://github.com/mumprod/hr-design-system-handlebars/pull/1020) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.2 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- social sharing icons are hidden on mobile load [#1019](https://github.com/mumprod/hr-design-system-handlebars/pull/1019) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.1 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3245: Fix horizontal spacing in Infobox/Content-Box/file-download [#1018](https://github.com/mumprod/hr-design-system-handlebars/pull/1018) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.83.0 (Thu Jul 18 2024)
+
+#### 🚀 Enhancement
+
+- Feature/vertical spacing [#1017](https://github.com/mumprod/hr-design-system-handlebars/pull/1017) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.82.11 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Fixing setting button behaviour [#1016](https://github.com/mumprod/hr-design-system-handlebars/pull/1016) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.82.10 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Removing App-Cookie Fallback [#1005](https://github.com/mumprod/hr-design-system-handlebars/pull/1005) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.82.9 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- fix: ticker teaser missing border-radius [#1015](https://github.com/mumprod/hr-design-system-handlebars/pull/1015) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.82.8 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3227 b [#1012](https://github.com/mumprod/hr-design-system-handlebars/pull/1012) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.7 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3240 AND DPE-3238 AND DPE-3240 - Barrierefreiheit und SEO für neuen Artikel [#1014](https://github.com/mumprod/hr-design-system-handlebars/pull/1014) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.6 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify current month look & non-selected months in event calendar [#1013](https://github.com/mumprod/hr-design-system-handlebars/pull/1013) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.82.5 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- added data-primary-type and data-image-id to img tag inside picture e… [#1011](https://github.com/mumprod/hr-design-system-handlebars/pull/1011) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.4 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3248 - Teaser-Bilder laden im 1:1-Format bei langsamer Internetverbindung [#1009](https://github.com/mumprod/hr-design-system-handlebars/pull/1009) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.3 (Tue Jul 16 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3170 SVG Icons Optimierung (hs-Logos) [#1010](https://github.com/mumprod/hr-design-system-handlebars/pull/1010) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.82.2 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- fixed context problems in infoboxes and contentboxes [#1008](https://github.com/mumprod/hr-design-system-handlebars/pull/1008) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.1 (Mon Jul 15 2024)
+
+#### 🐛 Bug Fix
+
+- :bug: Add an adjust_context to _isCopytext parameter to make sure the parameter can be accessed in the delivery [#1007](https://github.com/mumprod/hr-design-system-handlebars/pull/1007) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.82.0 (Fri Jul 12 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3184 [#1006](https://github.com/mumprod/hr-design-system-handlebars/pull/1006) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.81.4 (Thu Jul 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3232-  Data-Attribute fehlen bei Bildergalerie-Link [#1004](https://github.com/mumprod/hr-design-system-handlebars/pull/1004) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.81.3 (Thu Jul 11 2024)
+
+#### 🐛 Bug Fix
+
+- Fixing wrong object entry name on style.hr.de [#1003](https://github.com/mumprod/hr-design-system-handlebars/pull/1003) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.81.2 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3167 b [#974](https://github.com/mumprod/hr-design-system-handlebars/pull/974) ([@Paul-Atreidis](https://github.com/Paul-Atreidis) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.81.1 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-2844:  ContentBox uses new copytext + refactoring infobox [#1000](https://github.com/mumprod/hr-design-system-handlebars/pull/1000) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.81.0 (Wed Jul 10 2024)
+
+#### 🚀 Enhancement
+
+- Dpe 2967 [#1002](https://github.com/mumprod/hr-design-system-handlebars/pull/1002) ([@szuelch](https://github.com/szuelch) [@ampersand83](https://github.com/ampersand83))
+
+#### Authors: 2
+
+- [@ampersand83](https://github.com/ampersand83)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.80.7 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- include new copytext in accordion [#1001](https://github.com/mumprod/hr-design-system-handlebars/pull/1001) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.80.6 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- removes flex and stuff again.. oh dear [#999](https://github.com/mumprod/hr-design-system-handlebars/pull/999) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.5 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix/dpe 3234 [#998](https://github.com/mumprod/hr-design-system-handlebars/pull/998) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.4 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- revise spaces in copytext [#997](https://github.com/mumprod/hr-design-system-handlebars/pull/997) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.80.3 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3227 - Infobox: Umlaut-Großbuchstaben haben keine Punkte [#994](https://github.com/mumprod/hr-design-system-handlebars/pull/994) ([@vascoeduardo](https://github.com/vascoeduardo) [@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 2
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.80.2 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - success icon now same size as copy icon [#996](https://github.com/mumprod/hr-design-system-handlebars/pull/996) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.1 (Wed Jul 10 2024)
+
+#### 🐛 Bug Fix
+
+- - removes unneeded {{this.from}} [#995](https://github.com/mumprod/hr-design-system-handlebars/pull/995) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.80.0 (Tue Jul 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: truncate text in the player headline not before the end of… [#993](https://github.com/mumprod/hr-design-system-handlebars/pull/993) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.79.1 (Tue Jul 09 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3224 - SEO: Semantisches HTML [#992](https://github.com/mumprod/hr-design-system-handlebars/pull/992) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.79.0 (Tue Jul 09 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3093 [#991](https://github.com/mumprod/hr-design-system-handlebars/pull/991) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.78.0 (Mon Jul 08 2024)
 
 #### 🚀 Enhancement

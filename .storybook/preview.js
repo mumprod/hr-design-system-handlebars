@@ -1,6 +1,6 @@
 import '!style-loader!css-loader!postcss-loader!tailwind'
 import 'tailwind'
-import { withThemeByDataAttribute } from '@storybook/addon-styling'
+import { withThemeByDataAttribute } from '@storybook/addon-themes'
 import '@storybook/addon-console'
 import { setConsoleOptions } from '@storybook/addon-console';
 import { configureActions } from '@storybook/addon-actions';
@@ -15,6 +15,7 @@ import '../src/assets/js/alpine.js'
 import '../src/assets/tailwind.css'
 
 import { CheckCSS } from 'checkcss';
+
 
 configureActions({
     clearOnStoryChange: true,
@@ -71,7 +72,7 @@ function loadDelayedImages() {
 
 document.addEventListener('storyWasSwitchedAndIsLoaded', function (event) {
     console.log('storyWasSwitchedAndIsLoaded')
-    Initializer.run(document, loadFeature)  
+    Initializer.run(document, loadFeature)
     setTimeout(loadDelayedImages, 500)
 })
 console.log('preview.js is loaded')
@@ -175,7 +176,6 @@ export const parameters = {
         // sets the execution mode for the addon
         manual: false,
     },
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: { expanded: true },
     docs: {
         theme: hrDesignsystemLight,
@@ -249,3 +249,4 @@ export const decorators = [
         attributeName: 'data-theme',
     }),
 ]
+//export const tags = ['autodocs'];

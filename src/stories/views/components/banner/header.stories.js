@@ -4,7 +4,7 @@ import bannerData from './fixtures/banner.json'
 const TemplateHeader = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'       
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return header({ brand, ...args })
 }
 
@@ -30,7 +30,6 @@ export const Seitenfooter = {
     args: {
         ...bannerData,
         _currentPageUrl: '#currentPage',
-        _currentPageTitle:  'Der hr3 Nachmittag'
-    }
-  
+        _currentPageTitle: 'Der hr3 Nachmittag',
+    },
 }

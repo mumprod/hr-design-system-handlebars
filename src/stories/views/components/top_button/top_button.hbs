@@ -19,6 +19,7 @@
                 @click="window.scrollTo({top: 0, behavior: 'smooth'})"
                 :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"        
                 class="{{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant="primary"}} ml-auto z-100 p-2 h-max mr-5 hover:scale-105  [@media(min-width:1170px)]:-mr-14"
+                aria-label='{{loca "top_button_aria_label" }}'
                 >
                 {{> components/base/image/icon _icon="arrow-up"  _addClass="w-5 h-5 fill-current dark:fill-link-dark"}}            
             </button>

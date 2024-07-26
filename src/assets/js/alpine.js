@@ -17,6 +17,7 @@ AsyncAlpine.init(Alpine)
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )
+    .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .start()
 
 window.Alpine = Alpine
@@ -41,8 +42,10 @@ Alpine.store('subNavIsVisible', false)
 Alpine.store('footerIsVisible', false)
 Alpine.store('sectionNavIsVisible', false)
 Alpine.store('sharingIsVisible', false)
-Alpine.store('sharingIsOpenHorizontal', false)
-Alpine.store('sharingIsOpenMobile', false)
+Alpine.store('sharingIsOpen', {
+    metadatabox: false,
+    mobilesticky: false
+})
 Alpine.store('sharingBottomPos', {
     current: '0'
 })

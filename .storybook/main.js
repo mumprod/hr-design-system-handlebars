@@ -11,6 +11,7 @@ const config = {
     ],
     features: { buildStoriesJson: true },
     addons: [
+        '@storybook/addon-themes',
         'storybook-addon-tw-dm-toggle',
         '@storybook/addon-links',
         {
@@ -21,32 +22,43 @@ const config = {
         },
         '@storybook/addon-a11y',
         {
-            name: '@storybook/addon-styling',
-            options: {
-                postCss: {
-                    implementation: require('postcss'),
-                },
-            },
-        },
-        {
             name: '@storybook/addon-docs',
             options: {
                 mdxPluginOptions: {
-                    mdxCompileOptions: {
-                        remarkPlugins: [remarkGfm],
-                    },
                 },
             },
         },
+        '@storybook/addon-interactions',
+        '@chromatic-com/storybook',
+        '@storybook/addon-styling-webpack',
         {
-            name: '@storybook/addon-styling',
+            name: '@storybook/addon-styling-webpack',
+
             options: {
-                postCss: {
-                    implementation: require.resolve('postcss'),
-                },
+                rules: [
+                    {
+                        test: /\.css$/,
+                        sideEffects: true,
+                        use: [
+                            require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1,
+                                },
+                            },
+                            {
+                                loader: require.resolve('postcss-loader'),
+                                options: {
+                                    implementation: require('postcss'),
+                                },
+                            },
+                        ],
+                    },
+                ],
             },
         },
-        '@storybook/addon-interactions'
+        '@storybook/addon-webpack5-compiler-swc',
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -143,8 +155,6 @@ const config = {
         name: '@storybook/html-webpack5',
         options: {},
     },
-    docs: {
-        autodocs: true,
-    },
+    docs: {},
 }
 export default config
