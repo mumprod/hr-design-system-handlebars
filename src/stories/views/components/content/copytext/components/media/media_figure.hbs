@@ -53,7 +53,7 @@
                 {{~/components/content/copytext/components/image/caption~}}
             {{else}}
                 {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
-                    {{~> components/content/copytext/components/image/image_caption_text~}}
+                    {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
                     {{~> components/content/copytext/components/image/image_copyright~}}
                 {{~/components/content/copytext/components/image/collapsible_caption~}}
             {{/if}}
