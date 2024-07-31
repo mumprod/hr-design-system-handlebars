@@ -9,7 +9,8 @@ const MediaplayerLoader = function (context) {
         { element: rootElement } = context,
         isAutoplay = options.isAutoplay,
         teaserSize = options.teaserSize,
-        mediaplayerButton = hr$('.js-mediaplayer__button', rootElement.parentNode)[0]
+        mediaplayerButton = hr$('.js-mediaplayer__button', rootElement.parentNode)[0],
+        trackingData = rootElement.dataset.mediaplayerTracking ? JSON.parse(rootElement.dataset.mediaplayerTracking) : {}
 
     const removeVideoHover = function () {
         rootElement.parentNode.parentNode.classList.remove('-imageHover')
@@ -17,9 +18,8 @@ const MediaplayerLoader = function (context) {
     }
 
     const loadArdPlayerLoader = function () {
-        new ArdPlayerLoader(options)
+        new ArdPlayerLoader(options, trackingData)
         removeVideoHover()
-        uxAction('mediabuttonclick::' + teaserSize + '::playButtonClick')
     }
 
     if (isAutoplay) {

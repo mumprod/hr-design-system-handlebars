@@ -1,17 +1,22 @@
 import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
 
-const ArdPlayerLoader = function (options, rootElement) {
+const ArdPlayerLoader = function (options, trackingData, rootElement) {
     'use strict'
 
     const skinPath = options.cssUrl,
         ardplayerUrl = options.jsUrl,
         smarttagUrl = options.atiSmarttagUrl,
         playerId = options.playerId,
+        type = options.type,
         settingsCookie = new SettingsCookie(),
-        isPlayerDebug = options.isPlayerDebug || false
+        isPlayerDebug = options.isPlayerDebug || false,
+        playerLocation = trackingData.playerLocation || "Default",
+        playerSize = trackingData.playerSize || options.teaserSize
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
+        isPlayerStarted = false,
         player
 
     const setupPlayer = function () {
@@ -76,7 +81,12 @@ const ArdPlayerLoader = function (options, rootElement) {
 
     const bindPlayerEvents = function () {
         player.$.on(ardplayer.Player.EVENT_PLAY_STREAM, function (event) {
+            console.debug(`options.teaserSize: ${options.teaserSize}`)
             const geotag = hr$('.js-geotag', rootElement)[0]
+            if (!isPlayerStarted) {
+                trackPlayerStart()
+                isPlayerStarted = true
+            }
             if (typeof geotag != 'undefined') {
                 geotag.classList.add('hide')
             }
@@ -113,7 +123,30 @@ const ArdPlayerLoader = function (options, rootElement) {
         })
     }
 
+    const trackPlayerStart = function () {
+        switch (type) {
+            case "audioOndemand":
+                console.debug(`Playbutton geklickt::Audio \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                uxAction(`Playbutton geklickt::Audio \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                break;
+            case "audioLivestream":
+                console.debug(`Playbutton geklickt::Audio-Event-Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                uxAction(`Playbutton geklickt::Audio-Event-Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                break;
+            case "videoOndemand":
+                console.debug(`Playbutton geklickt::Video \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                uxAction(`Playbutton geklickt::Video \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                break;
+            case "videoLivestream":
+                console.debug(`Playbutton geklickt::Video - Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                uxAction(`Playbutton geklickt::Video - Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+                break;
+        }
+    }
+
     setupPlayer()
 }
+
+
 
 export default ArdPlayerLoader
