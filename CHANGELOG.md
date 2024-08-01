@@ -1,3 +1,16 @@
+# v1.87.2 (Mon Jul 29 2024)
+
+#### 🐛 Bug Fix
+
+- Fix: Copyright for AV when no caption [#1035](https://github.com/mumprod/hr-design-system-handlebars/pull/1035) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.87.1 (Fri Jul 26 2024)
 
 #### 🐛 Bug Fix
