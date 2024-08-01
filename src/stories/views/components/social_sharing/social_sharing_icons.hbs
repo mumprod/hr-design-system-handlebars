@@ -4,7 +4,7 @@
         title="{{loca "share_copy_linktitle" }}"
         data-url="{{this}}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::copybutton"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::copybutton"}]}'
         {{/with}}
     >
         <span x-cloak class="flex items-center justify-center w-full h-full" x-show="!copySuccess">{{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="copy-ds" _iconmap="icons" ~}}</span>
@@ -48,7 +48,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_x_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::X"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::X"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105 " _icon="x-ds" _iconmap="icons" ~}}
@@ -64,7 +64,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_facebook_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::facebook"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::facebook"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="facebook-ds" _iconmap="icons" ~}}
@@ -80,7 +80,7 @@
         rel="noopener noreferrer"
         title="{{loca "share_whatsapp_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::whatsapp"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::whatsapp"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="whatsapp-ds" _iconmap="icons" ~}}
@@ -94,7 +94,7 @@
         href="{{this}}"
         title="{{loca "share_mail_linktitle" }}"
         {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../_socialSharingType ../_socialSharingType "default" }}::mailto"}]}'
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::mailto"}]}'
         {{/with}}
     >
         {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="kontakt-ds" _iconmap="icons" ~}}

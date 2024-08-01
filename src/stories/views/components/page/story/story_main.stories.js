@@ -11,7 +11,6 @@ const Template = ({ ...args }) => {
     // return `<span>${topline}</span>`;
     return story_template({ ...args })
 }
-
 export default {
     title: 'Seiten/Artikel',
 }
@@ -22,16 +21,26 @@ export const Default = {
     args: data_story,
     parameters: {
         layout: 'fullscreen',
+    },
+}
+export const Webview = {
+    render: Template.bind({}),
+    name: 'Webview Artikel mit Topline',
+    args: {
+        ...data_story,
+        _webview: true
+    },
+    parameters: {
+        layout: 'fullscreen',
     }
 }
-
 export const WithSquareImage = {
     render: Template.bind({}),
     name: 'Artikel mit 1:1-Bild',
     args: data_story_with_square_image,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 export const WithLabel = {
@@ -40,8 +49,8 @@ export const WithLabel = {
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',
-        chromatic: { delay: 1000 }
-    }
+        chromatic: { delay: 1000 },
+    },
 }
 
 export const WithVideo = {
@@ -50,7 +59,7 @@ export const WithVideo = {
     args: data_story_with_video,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 
@@ -61,7 +70,7 @@ export const WithLivestream = {
     args: data_story_with_livestream,
     parameters: {
         layout: 'fullscreen',
-    }
+    },
 }
 
 export const WithAudio = {
@@ -72,3 +81,4 @@ export const WithAudio = {
         layout: 'fullscreen',
     }
 }
+

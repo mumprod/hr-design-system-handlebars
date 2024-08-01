@@ -9,11 +9,11 @@
         },
         {
             "isCite": true,
-            "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
             "paragraphProperties": [
                 {
-                    "showFullSize":true,
-                    "citeAuthor":"Marlene Dietrich"
+                    "showFullSize": true,
+                    "citeAuthor": "Marlene Dietrich"
                 }
             ]
         },
@@ -22,11 +22,69 @@
         },
         {
             "isCite": true,
-            "text":"Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
             "paragraphProperties": [
                 {
-                    "showFullSize":false,
-                    "citeAuthor":"Marlene Dietrich"
+                    "showFullSize": false,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Zitat in voller Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": true,
+                    "citeAuthor": "Marlene Dietrich"
+                }
+            ]
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isHeadline": true,
+            "text": "Zitat in halber Breite unter Bild in voller Breite"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_image_100",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        },
+        {
+            "isCite": true,
+            "text": "Wenn ich mein Leben noch einmal leben könnte, würde ich die gleichen Fehler machen. Aber ein bisschen früher damit ich mehr davon habe.",
+            "paragraphProperties": [
+                {
+                    "showFullSize": false,
+                    "citeAuthor": "Marlene Dietrich"
                 }
             ]
         },

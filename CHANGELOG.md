@@ -1,3 +1,331 @@
+# v1.87.2 (Mon Jul 29 2024)
+
+#### 🐛 Bug Fix
+
+- Fix: Copyright for AV when no caption [#1035](https://github.com/mumprod/hr-design-system-handlebars/pull/1035) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.87.1 (Fri Jul 26 2024)
+
+#### 🐛 Bug Fix
+
+- Bug/dpe 3275 [#1034](https://github.com/mumprod/hr-design-system-handlebars/pull/1034) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.87.0 (Fri Jul 26 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: Display 50% images in portrait view in full width [#1033](https://github.com/mumprod/hr-design-system-handlebars/pull/1033) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.86.0 (Fri Jul 26 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3216 [#1032](https://github.com/mumprod/hr-design-system-handlebars/pull/1032) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.85.2 (Fri Jul 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update external_service_data_policy.hbs ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.85.1 (Fri Jul 26 2024)
+
+#### ⚠️ Pushed to `main`
+
+- :lipstick: reduce padding of data policy box so that ([@szuelch](https://github.com/szuelch))
+- :lipstick: Add darkmode styles for data policy box ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.85.0 (Thu Jul 25 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3272 [#1031](https://github.com/mumprod/hr-design-system-handlebars/pull/1031) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.84.0 (Thu Jul 25 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3271 [#1030](https://github.com/mumprod/hr-design-system-handlebars/pull/1030) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.83.12 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3264 - Webview: Abstand von Dachzeile nach oben [#1029](https://github.com/mumprod/hr-design-system-handlebars/pull/1029) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.11 (Wed Jul 24 2024)
+
+#### 🐛 Bug Fix
+
+- Social Sharing Tracking- first time show added [#1028](https://github.com/mumprod/hr-design-system-handlebars/pull/1028) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.10 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- :rewind: [#1027](https://github.com/mumprod/hr-design-system-handlebars/pull/1027) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.83.9 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- added sm:article-narrow  for spacing problems in related content [#1026](https://github.com/mumprod/hr-design-system-handlebars/pull/1026) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.8 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3261 - Social Sharing Tracking noch fehlerhaft [#1025](https://github.com/mumprod/hr-design-system-handlebars/pull/1025) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.7 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3081 - related content and breadcrumb are in line with content now [#1024](https://github.com/mumprod/hr-design-system-handlebars/pull/1024) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.6 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- SEO BUG - livestream player images allways prefetched [#1023](https://github.com/mumprod/hr-design-system-handlebars/pull/1023) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.5 (Fri Jul 19 2024)
+
+#### 🐛 Bug Fix
+
+- add ticker-topic to Posterteaser [#1022](https://github.com/mumprod/hr-design-system-handlebars/pull/1022) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.4 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- large space between BU and Image only when image in full-size [#1021](https://github.com/mumprod/hr-design-system-handlebars/pull/1021) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.3 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- revise spaces [#1020](https://github.com/mumprod/hr-design-system-handlebars/pull/1020) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.83.2 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- social sharing icons are hidden on mobile load [#1019](https://github.com/mumprod/hr-design-system-handlebars/pull/1019) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.83.1 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3245: Fix horizontal spacing in Infobox/Content-Box/file-download [#1018](https://github.com/mumprod/hr-design-system-handlebars/pull/1018) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.83.0 (Thu Jul 18 2024)
+
+#### 🚀 Enhancement
+
+- Feature/vertical spacing [#1017](https://github.com/mumprod/hr-design-system-handlebars/pull/1017) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.82.11 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Fixing setting button behaviour [#1016](https://github.com/mumprod/hr-design-system-handlebars/pull/1016) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.82.10 (Thu Jul 18 2024)
+
+#### 🐛 Bug Fix
+
+- Removing App-Cookie Fallback [#1005](https://github.com/mumprod/hr-design-system-handlebars/pull/1005) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.82.9 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- fix: ticker teaser missing border-radius [#1015](https://github.com/mumprod/hr-design-system-handlebars/pull/1015) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.82.8 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3227 b [#1012](https://github.com/mumprod/hr-design-system-handlebars/pull/1012) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.7 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3240 AND DPE-3238 AND DPE-3240 - Barrierefreiheit und SEO für neuen Artikel [#1014](https://github.com/mumprod/hr-design-system-handlebars/pull/1014) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.82.6 (Wed Jul 17 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify current month look & non-selected months in event calendar [#1013](https://github.com/mumprod/hr-design-system-handlebars/pull/1013) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.82.5 (Tue Jul 16 2024)
 
 #### 🐛 Bug Fix

@@ -7,7 +7,7 @@ import {
     NavigationDataWithTeaser2,
     NavigationDataWithTeaser3,
     NavigationDataWithTeaser4,
-    NavigationDataWithBreadcrumb
+    NavigationDataWithBreadcrumb,
 } from './page.data.js'
 
 import { NavigationDataWithMixedContent } from '../../pagination/page_pagination.data.js'
@@ -15,21 +15,21 @@ import { NavigationDataWithMixedContent } from '../../pagination/page_pagination
 const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau' 
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return page({ brand, ...args })
 }
 
 const Template2 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau' 
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return page_pagination({ brand, ...args })
 }
 
 const Template3 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau' 
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return page_article({ brand, ...args })
 }
 export default {
@@ -40,7 +40,7 @@ export default {
         chromatic: {
             viewports: [360, 768, 1024],
             diffThreshold: 0.3,
-            delay: 2000, 
+            delay: 2000,
         },
 
         layout: 'fullscreen',
@@ -87,6 +87,6 @@ export const MitArtikel = {
     name: 'Mit Artikel',
     args: NavigationDataWithBreadcrumb,
     parameters: {
-        chromatic: { delay: 2000 }
-    }  
+        chromatic: { delay: 2000 },
+    },
 }

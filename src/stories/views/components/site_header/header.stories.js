@@ -10,13 +10,13 @@ import JsonDataHR3 from './fixtures/site_header_mit_submenu_as_flyout_no_sticky.
 const Template = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau' 
+    let brand = undefined !== theme ? theme : 'hessenschau'
     return navigation({ brand, ...args })
 }
 const TemplateHr3 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hr3' 
+    let brand = undefined !== theme ? theme : 'hr3'
     return navigation({ brand, ...args })
 }
 
@@ -33,7 +33,6 @@ export default {
 
         docs: {
             inlineStories: false,
-            
         },
 
         viewport: {

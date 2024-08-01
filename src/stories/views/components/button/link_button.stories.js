@@ -349,7 +349,7 @@ export const ButtonPrimaryDisabled = {
     args: {
         _size: 'lg',
         _label: 'Primary',
-        _disabled: true
+        _disabled: true,
     },
 }
 
@@ -371,7 +371,7 @@ export const ButtonSecondaryDisabled = {
         _size: 'lg',
         _label: 'Secondary',
         _variant: 'secondary',
-        _disabled: true
+        _disabled: true,
     },
 }
 
@@ -393,10 +393,9 @@ export const ButtonTertiaryDisabled = {
         _size: 'lg',
         _label: 'Tertiary',
         _variant: 'tertiary',
-        _disabled: true
+        _disabled: true,
     },
 }
-
 
 export const ButtonIconRechts = {
     render: buttonWithLabelAndIconRightTemplate.bind({}),

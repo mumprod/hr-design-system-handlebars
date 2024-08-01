@@ -13,7 +13,7 @@
             {{/if~}}
             {{#if this.isVideo}}
                 {{#with this.toModel.mediaBacklinkToStoryTeaser}}
-                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
                         {{> components/content/copytext/components/media/media_figure_headline}}
                     {{/components/base/link}}
                 {{/with}}
@@ -28,11 +28,11 @@
     {{/if}}
     {{#if this.isVideoOnDemand}}
         {{~> components/mediaplayer/media_player this.toModel.videoElement _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=_addClassImg ~}}
-        {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isLead=_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}
+        {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isLead=_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=_isLead }}
     {{/if}}
     {{#if this.isLivestream}}
         {{~> components/mediaplayer/media_player this.toModel.videoLivestreamElement _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=_addClassImg ~}}
-        {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isLivestream=true _isLead=_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _aspectRatio="ar-16-9" _noDelay=(if _isLead true false)}}
+        {{~> components/teaser/components/teaser_media_player this _css="flex items-center justify-center" _isLivestream=true _isLead=_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _aspectRatio="ar-16-9" _noDelay=_isLead }}
     {{/if}}
     {{#unless _voting-option}}
         {{#if this.teaseritem}}
@@ -53,7 +53,7 @@
                 {{~/components/content/copytext/components/image/caption~}}
             {{else}}
                 {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
-                    {{~> components/content/copytext/components/image/image_caption_text~}}
+                    {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
                     {{~> components/content/copytext/components/image/image_copyright~}}
                 {{~/components/content/copytext/components/image/collapsible_caption~}}
             {{/if}}

@@ -1,72 +1,40 @@
 {{~#with this.socialSharing ~}}
-    <div x-data="stickySharingHandler"
-        x-init="$watch('$store.sharingIsVisible', () => {$store.sharingIsOpenHorizontal = false; $store.sharingIsOpenMobile = false})"
+    <div 
+        x-data="socialSharingHandler('metadatabox')"
+        x-init="$watch('$store.sharingIsVisible', () => {$store.sharingIsOpen.metadatabox = false; $store.sharingIsOpen.mobilesticky = false})"
         class="flex self-center justify-end ml-3 grow"
         x-intersect:leave="$store.sharingIsVisible=false"
         x-intersect:enter="$store.sharingIsVisible=true"
-        x-on:resize.window="$store.sharingIsOpenHorizontal = false"       
-        x-on:keydown.escape.prevent.stop="close($refs.button)"
+        x-on:resize.window="$store.sharingIsOpen.metadatabox = false"       
+        x-on:keydown.escape.prevent.stop="close()"
         @click.outside="close()"
+        ax-load 
+        x-ignore
     >
         <div class="relative right-0 flex gap-3 bg-white md:h-auto"  >
             <button 
-                class="{{#with ../this.trackingData}}js-load {{/with}}order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
+                class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
                 x-ref="button"
                 x-on:click="toggle()"
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-button')"
-                x-show="$store.sharingIsVisible"
-                {{#with ../this.trackingData}}
-                    data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::sharingmenuopened"}]}'
-                {{/with}}
-                
+                aria-label="{{loca "share_linktitle" }}"
+                x-show="$store.sharingIsVisible" 
+                x-intersect="sharingModuleShown()"            
                 >
                     {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
             </button>
-            <div 
-                x-ref="panel" 
-                :class="$store.sharingIsOpenHorizontal ? 'flex' : 'hidden '"              
+            <div                
+                x-ref="panel"   
+                :class="{ 'hidden': !$store.sharingIsOpen.metadatabox,'flex': $store.sharingIsOpen.metadatabox }"           
                 :id="$id('dropdown-button')"
-                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto lg:flex"
+                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
+                x-intersect="sharingModuleShown(true)"
             >
                 <ul class="flex gap-3">  
-                    {{> components/social_sharing/social_sharing_icons _socialSharingType="metadatabox"}}
+                    {{> components/social_sharing/social_sharing_icons _socialSharingType="metadatabox" _trackingData=../this.trackingData}}
                 </ul>
             </div>
         </div>
     </div>
-    <script>
-        function stickySharingHandler(){
-            return {
-            open: false,
-            sharingIsVisible: true,
-            isDesktop: true,
-            toggle() {
-                var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
-                var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
-                var isMobile= isMobileApple || isMobileOther;
-                if (navigator.share && isMobile) {
-                    navigator.share({
-                        title: document.title,
-                        text: 'Schau mal was ich auf hessenschau.de gefunden habe!',
-                        url: window.location.href,
-                    })
-                    .then(() => console.log('Shared successfully'))
-                    .catch((error) => console.error('Sharing failed:', error));
-                } else {
-                    if (this.$store.sharingIsOpenHorizontal) {
-                        return this.close()
-                    }
-                    this.$refs.button.focus()
-                    this.$store.sharingIsOpenHorizontal = true
-    
-                }               
-            },
-            close(focusAfter) {
-                if (!this.$store.sharingIsOpenHorizontal) return
-                this.$store.sharingIsOpenHorizontal = false
-            }
-        }
-    }
-    </script>
 {{/with}}
