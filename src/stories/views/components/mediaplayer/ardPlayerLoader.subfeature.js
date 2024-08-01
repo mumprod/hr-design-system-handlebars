@@ -81,6 +81,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const bindPlayerEvents = function () {
         player.$.on(ardplayer.Player.EVENT_PLAY_STREAM, function (event) {
+            console.log(event.target)
             console.debug(`options.teaserSize: ${options.teaserSize}`)
             const geotag = hr$('.js-geotag', rootElement)[0]
             if (!isPlayerStarted) {
@@ -115,10 +116,14 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
         listen('player_start', function (event) {
             if (player) {
-                if (undefined != mediaCollection.live) {
-                    player.seekToLive()
+                let playerIdFromConfig = parseInt(playerId)
+                playerIdFromConfig = isNaN(playerIdFromConfig) ? 0 : playerIdFromConfig
+                if (playerIdFromConfig === event.detail.playerId) {
+                    if (undefined != mediaCollection.live) {
+                        player.seekToLive()
+                    }
+                    player.play()
                 }
-                player.play()
             }
         })
     }
