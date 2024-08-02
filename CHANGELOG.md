@@ -1,3 +1,15 @@
+# v1.88.1 (Fri Aug 02 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3121 Monats-Übersicht im Eventkalender [#1037](https://github.com/mumprod/hr-design-system-handlebars/pull/1037) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.88.0 (Thu Aug 01 2024)
 
 #### 🚀 Enhancement
