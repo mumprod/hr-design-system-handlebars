@@ -1,3 +1,4 @@
+import { color } from '@storybook/theming'
 import { pi, uxAction } from 'base/tracking/pianoHelper.subfeature'
 import { hr$, isString, listen, reinitializeFeature, simulateClickOn } from 'hrQuery'
 import $ from 'zepto-modules'
@@ -22,9 +23,14 @@ const Filterer = (context) => {
         errorTargetDomNodes = hr$(`.${errorTargetClass}`, rootElement),
         errorDomNodes = hr$(`.${errorClass}`),
         contentTargetDomNode = hr$(contentTargetClass, rootElement)[0]
-    let targetDomNodes = hr$(`.${targetClass}`, rootElement)
+    let targetDomNodes = hr$(`.${targetClass}`, rootElement),
+         currentMonth = document.getElementsByClassName('-currentMonth')[0];
 
-    const init = function () {
+    const init = function () {          
+            currentMonth.classList.add('text-white');
+            currentMonth.classList.add('bg-black');
+
+
         for (let i = 0; i < triggerDomNodes.length; i++) {
             triggerDomNodes[i].addEventListener('click', doSetSelectedFilter.bind(this))
             triggerDomNodes[i].addEventListener('touch', doSetSelectedFilter.bind(this))
@@ -68,9 +74,22 @@ const Filterer = (context) => {
 
     const doSetSelectedFilter = function (e, forceReset) {
         clearSelected()
-
+        
+        
+        let monthWrapper = e.currentTarget.closest('.js-ns-month');
+        let monthName = monthWrapper.querySelector('.js-monthName');    
+       
         if (!forceReset) {
-            e.currentTarget.classList.add(navItemSelectedCssTrigger)
+            e.currentTarget.classList.add(navItemSelectedCssTrigger)      
+            if (monthWrapper) {
+                
+                if (monthName) {
+                    monthName.classList.remove('text-slate-500')
+                    monthName.classList.remove('bg-white')
+                    monthName.classList.add('text-white');
+                    monthName.classList.add('bg-black');
+                }
+            }
         }
 
         //hacky weil e beim start auch kein Event sein kann
@@ -82,7 +101,20 @@ const Filterer = (context) => {
     const clearSelected = function () {
         let triggerDomNodes = hr$(`.${triggerClass}.${navItemSelectedCssTrigger}`, rootElement)
 
+        // hacky die würde bald verändert
+        currentMonth.classList.remove('text-white');
+        currentMonth.classList.remove('bg-black');
+        currentMonth.classList.add('text-slate-500');
+        currentMonth.classList.add('bg-white');
+
+        
         triggerDomNodes.forEach(function (triggerDomNode) {
+
+            // hacky die würde bald verändert
+            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.remove('text-white');
+            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.remove('bg-black');
+            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.add('text-slate-500');
+            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.add('bg-white');
             triggerDomNode.classList.remove(navItemSelectedCssTrigger)
         })
     }
