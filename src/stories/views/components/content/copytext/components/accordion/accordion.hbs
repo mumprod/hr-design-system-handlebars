@@ -1,7 +1,7 @@
 {{#if this.title}}
     <h2 class="clear-both mt-12 mb-5 text-lg font-normal accordion sm480:mt-14 sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h2>
 {{/if}}
-<div x-cloak x-data="{selected:0}" class="pb-3{{#unless this.title}} clear-both mt-12 sm480:mt-14{{/unless}}">
+<div x-cloak x-data="{selected:0}" class="print:hidden pb-3{{#unless this.title}} clear-both mt-12 sm480:mt-14{{/unless}}">
     {{#each this.copytextParagraph }}
         {{#if this.isHeadline}}
             {{#unless @first}}</div></div>{{/unless}}
@@ -37,6 +37,19 @@
                 {{~> components/content/copytext/copytext_body _isWebview=_isWebview ~}}
             {{/if}}    
             {{#if @last}}</div></div><div class="w-full border-b border-gray-alto"></div>{{/if}}
+        {{/if}}
+    {{/each}}
+</div>
+<div class="hidden print:block border-y border-gray-alto">
+    {{#each this.copytextParagraph }} 
+        {{#if this.isHeadline}}
+            <h3 class="self-center my-5 text-lg font-normal font-headingSerif">{{{this.text}}}</h3>
+        {{else}}
+            {{#if (isStorybook)}}  
+                {{> components/content/copytext/components/accordion/accordion_item }}   
+            {{else}}            
+                {{~> components/content/copytext/copytext_body _isWebview=_isWebview ~}}
+            {{/if}} 
         {{/if}}
     {{/each}}
 </div>

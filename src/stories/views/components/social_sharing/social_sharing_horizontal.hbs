@@ -2,7 +2,7 @@
     <div 
         x-data="socialSharingHandler('metadatabox')"
         x-init="$watch('$store.sharingIsVisible', () => {$store.sharingIsOpen.metadatabox = false; $store.sharingIsOpen.mobilesticky = false})"
-        class="flex self-center justify-end ml-3 grow"
+        class="flex self-center justify-end ml-3 print:hidden grow"
         x-intersect:leave="$store.sharingIsVisible=false"
         x-intersect:enter="$store.sharingIsVisible=true"
         x-on:resize.window="$store.sharingIsOpen.metadatabox = false"       
