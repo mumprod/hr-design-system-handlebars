@@ -1,3 +1,15 @@
+# v1.88.3 (Sat Aug 03 2024)
+
+#### 🐛 Bug Fix
+
+- optimize print-view for article [#1039](https://github.com/mumprod/hr-design-system-handlebars/pull/1039) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.88.2 (Fri Aug 02 2024)
 
 #### 🐛 Bug Fix
