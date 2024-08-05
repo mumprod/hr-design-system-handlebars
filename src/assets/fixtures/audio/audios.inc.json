@@ -267,6 +267,7 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
         "isAutoplay": true,
         "teaserSize": "50",
-        "realTeaserSize": "50"
+        "realTeaserSize": "50",
+        "isDarkmodeAllowed": true
     }
 }
