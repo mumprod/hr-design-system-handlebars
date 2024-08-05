@@ -2,7 +2,7 @@
     <div 
         x-show="$screen('lg') && $store.sharingIsVisible == false && document.querySelector('.copytextWrapper').offsetHeight > 220" 
         x-init="" 
-        class="{{#unless ../_useSticky}}top-0 {{/unless}}sticky w-10 col-start-2 pt-6 z-100 h-fit"
+        class="print:hidden {{#unless ../_useSticky}}top-0 {{/unless}}sticky w-10 col-start-2 pt-6 z-100 h-fit"
         x-data="socialSharingHandler('vertical-desktop')"
         x-intersect="sharingModuleShown()"
         ax-load 

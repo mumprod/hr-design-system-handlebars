@@ -1,3 +1,27 @@
+# v1.88.3 (Sat Aug 03 2024)
+
+#### 🐛 Bug Fix
+
+- optimize print-view for article [#1039](https://github.com/mumprod/hr-design-system-handlebars/pull/1039) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.88.2 (Fri Aug 02 2024)
+
+#### 🐛 Bug Fix
+
+- :ok_hand: Remove bug causing import from filter feature [#1038](https://github.com/mumprod/hr-design-system-handlebars/pull/1038) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.88.1 (Fri Aug 02 2024)
 
 #### 🐛 Bug Fix
