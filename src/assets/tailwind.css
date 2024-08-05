@@ -13,12 +13,12 @@
     --breakpoint-md: theme(screens.md);
     --breakpoint-lg: theme(screens.lg);
 
-    --color-primary-ds: theme('colors.blue.congress');
+    --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
-    --color-highlight-1-dark: theme('colors.blue.nightRider');
+    --color-highlight-1-dark: theme('colors.blue.nightRider.hex');
 
     /* Text */
     --color-standard-text: theme('colors.black.DEFAULT');
@@ -32,8 +32,8 @@
     --color-navigation-text: theme('colors.black.DEFAULT');
     --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
-    --color-brandnavigation-border-color: theme('colors.blue.congress');
-    --color-brandnav-pseudo: theme('colors.blue.congress');
+    --color-brandnavigation-border-color: theme('colors.blue.congress.hex');
+    --color-brandnav-pseudo: theme('colors.blue.congress.hex');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
     --color-servicenavigation-border-color: #fff;
@@ -112,7 +112,7 @@
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science.hex');
@@ -190,16 +190,16 @@
 }
 
 [data-theme='hessenschau'] {
-    --color-primary-ds: theme('colors.blue.congress');
+    --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
-    --color-highlight-3: theme('colors.blue.congress');
+    --color-highlight-3: theme('colors.blue.congress.hex');
 
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
-    --color-navigation-bg: theme('colors.blue.congress');
+    --color-navigation-bg: theme('colors.blue.congress.hex');
     /* Navigation Icons */
     --color-navigation-icons: #fff;
     /* Navigation Text */
@@ -208,7 +208,7 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-search-footer-text: #000;
-    --search-icon-color: theme('colors.blue.congress');
+    --search-icon-color: theme('colors.blue.congress.hex');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -254,17 +254,17 @@
     --color-link-dark: #199bff;
     /*Stage */
     --color-stage-text-box: 67 61 55;
-    --color-stage-primary: theme('colors.blue.congress');
+    --color-stage-primary: theme('colors.blue.congress.hex');
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* geoTag */
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button: theme('colors.blue.science.hex');
-    --color-button--dark: theme('colors.blue.congress');
+    --color-button--dark: theme('colors.blue.congress.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     --color-button-disabled: theme('colors.gray.lightGray');
@@ -294,6 +294,14 @@
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
 
     .ardplayer {
+        --ardplayer-color-primary-base: theme('colors.blue.congress.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.congress.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.nightRider.hex');
+    }
+
+    .ardplayer-light-mode {
         --ardplayer-color-primary-base: theme('colors.blue.science.hex');
         --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.science.rgb') / 70%);
         --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
@@ -317,10 +325,10 @@
                 }
             }
         }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.science.hex');
+        &.ardplayer-state-audio {
+            --ardplayer-color-lightest: theme('colors.blue.science.hex');
+        }
     }
 }
 
@@ -587,10 +595,10 @@
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.deepCerulean.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button: theme('colors.blue.deepCerulean.hex');
-    --color-button--dark: theme('colors.blue.congress');
+    --color-button--dark: theme('colors.blue.congress.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */

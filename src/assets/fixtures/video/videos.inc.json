@@ -74,7 +74,8 @@
         "isAutoplay": true,
         "isPlayerDebug": false,
         "teaserSize": "100",
-        "realTeaserSize": "100"
+        "realTeaserSize": "100",
+        "isDarkmodeAllowed": true
     },
     "video-2": {
         "playerConfig": {
@@ -151,7 +152,8 @@
         "isAutoplay": true,
         "isPlayerDebug": true,
         "teaserSize": "100",
-        "realTeaserSize": "100"
+        "realTeaserSize": "100",
+        "isDarkmodeAllowed": true
     },
     "video-livestream-hr-fernsehen": {
         "playerConfig": {
@@ -218,6 +220,7 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
         "teaserSize": "100",
         "realTeaserSize": "100",
-        "isAutoplay": true
+        "isAutoplay": true,
+        "isDarkmodeAllowed": true
     }
 }

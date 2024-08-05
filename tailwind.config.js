@@ -258,7 +258,7 @@ module.exports = {
                     astronautBlue: '#00375d',
                     blackSqueeze: '#eaf5f7',
                     blueStone: '#00646f',
-                    congress: '#005293',
+                    congress: { rgb: '0 82 147', hex: '#005293' },
                     deepCerulean: { rgb: '0 110 183', hex: '#006eb7' },
                     deeperPool: '#097d8e',
                     deepSeaDream: '#002c6b',
@@ -276,7 +276,7 @@ module.exports = {
                     blueLuxury: {
                         rgb: '0 115 150', hex: '#007396'
                     },
-                    nightRider: '#2d2d2d',
+                    nightRider: { rgb: '45 45 45', hex: '#2d2d2d' },
                     danube: '#759ace',
                 },
                 'black': {

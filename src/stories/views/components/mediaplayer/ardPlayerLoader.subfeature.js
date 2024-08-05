@@ -13,7 +13,9 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         settingsCookie = new SettingsCookie(),
         isPlayerDebug = options.isPlayerDebug || false,
         playerLocation = trackingData.playerLocation || "Default",
-        playerSize = trackingData.playerSize || options.teaserSize
+        playerSize = trackingData.playerSize || options.teaserSize,
+        isDarkmodeAllowed = options.isDarkmodeAllowed,
+        darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
         isPlayerStarted = false,
@@ -62,6 +64,11 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
+            if (isDarkmodeAllowed) {
+                player.setLightMode(!darkModePreference.matches)
+            } else {
+                player.setLightMode(true)
+            }
             if (isPlayerDebug) {
                 ardplayer.debug(true, true, true, true)
             }
@@ -77,6 +84,15 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
                 callback(window[name])
             }
         }, interval)
+    }
+
+    const handleThemeSwitch = function (event) {
+        if (event.matches) {
+            player.setLightMode(false)
+        } else {
+            player.setLightMode(true)
+        }
+        //event.matches ? ardplayer.setLightMode(false) : ardplayer.setLightMode(true)
     }
 
     const bindPlayerEvents = function () {
@@ -114,6 +130,8 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
             }
         })
 
+
+
         listen('player_start', function (event) {
             if (player) {
                 let playerIdFromConfig = parseInt(playerId)
@@ -126,6 +144,8 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
                 }
             }
         })
+
+        listen("change", handleThemeSwitch, darkModePreference)
     }
 
     const trackPlayerStart = function () {
