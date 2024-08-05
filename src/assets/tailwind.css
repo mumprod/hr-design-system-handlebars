@@ -187,6 +187,9 @@
             }
         }
     }
+    .ardplayer-light-mode {
+        --ardplayer-color-ui-background-shim: var(--ardplayer-darkmode-color-ui-background-shim);
+    }
 }
 
 [data-theme='hessenschau'] {
