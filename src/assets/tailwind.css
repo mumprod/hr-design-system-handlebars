@@ -186,9 +186,12 @@
                 }
             }
         }
-    }
-    .ardplayer-light-mode {
-        --ardplayer-color-ui-background-shim: var(--ardplayer-darkmode-color-ui-background-shim);
+
+        &.ardplayer-light-mode {
+            --ardplayer-color-ui-background-shim: var(
+                --ardplayer-darkmode-color-ui-background-shim
+            );
+        }
     }
 }
 
@@ -302,35 +305,37 @@
             theme('colors.blue.congress.rgb') / 70%
         );
         --ardplayer-color-primary-dark-base: theme('colors.blue.nightRider.hex');
-    }
 
-    .ardplayer-light-mode {
-        --ardplayer-color-primary-base: theme('colors.blue.science.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.science.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.science.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.science.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.science.hex');
-                color: var(--ardplayer-color-lightest);
-            }
-        }
-
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.science.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.science.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.science.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
 
-        &.ardplayer-state-audio {
-            --ardplayer-color-lightest: theme('colors.blue.science.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.science.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.science.hex');
+                    }
+                }
+            }
+
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.science.hex');
+            }
         }
     }
 }
