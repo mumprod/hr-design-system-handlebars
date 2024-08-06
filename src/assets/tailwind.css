@@ -1376,11 +1376,20 @@
             --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.paprika.hex');
+
             &.ardplayer-state-live {
                 --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
                 --ardplayer-color-primary-live-transparent-30: rgba(
                     theme('colors.pink.rose.rgb') / 70%
                 );
+                --ardplayer-color-ui-background-shim: var(
+                    --ardplayer-darkmode-color-ui-background-shim
+                );
+                --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.pink.rose.hex');
+
+                .noUi-handle {
+                    background: theme('colors.pink.rose.hex');
+                }
             }
 
             .noUi-handle {
