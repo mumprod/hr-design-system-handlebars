@@ -31,13 +31,13 @@
 
     {{#each this.text.split}}
         {{#if this.isText}}
-            <p class="mt-4 text-base copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
+            <p class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}} mt-4{{else}}{{#if ../this.paragraphBoxItem}} mt-4{{else}}{{#if @first}} -mt-0.5{{else}} mt-4{{/if}}{{/if}}{{/if}} text-base sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</p>
         {{/if}}
         {{#if this.isUl}}
-            <ul class="pl-5 mt-4 overflow-hidden text-base list-disc copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
+            <ul class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}} mt-4{{else}}{{#if ../this.paragraphBoxItem}} mt-4{{else}}{{#if @first}} -mt-0.5{{else}} mt-4{{/if}}{{/if}}{{/if}}  overflow-hidden pl-5 text-base list-disc sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ul>
         {{/if}}
         {{#if this.isOl}}
-            <ol class="pl-5 mt-4 overflow-hidden text-base list-decimal copytextParagraphDS sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
+            <ol class="copytextParagraphDS {{#if ../this.paragraphProperties.[0].title}} mt-4{{else}}{{#if ../this.paragraphBoxItem}} mt-4{{else}}{{#if @first}} -mt-0.5{{else}} mt-4{{/if}}{{/if}}{{/if}}  overflow-hidden pl-5 text-base list-decimal sm480:text-lg sm480:leading-normal dark:text-text-dark">{{{this.text}}}</ol>
         {{/if}}
     {{/each}}
     {{~#block "subParagraphs"}}{{/block~}}
