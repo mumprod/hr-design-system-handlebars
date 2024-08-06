@@ -1,3 +1,16 @@
+# v1.89.1 (Tue Aug 06 2024)
+
+#### 🐛 Bug Fix
+
+- fix: reduce top margin in infobox/contentbox [#1041](https://github.com/mumprod/hr-design-system-handlebars/pull/1041) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.89.0 (Tue Aug 06 2024)
 
 #### 🚀 Enhancement
