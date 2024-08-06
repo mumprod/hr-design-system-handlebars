@@ -187,14 +187,23 @@
             }
         }
 
-        &.ardplayer-light-mode {
-            --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
-            --ardplayer-color-primary-live-transparent-30: rgba(
-                theme('colors.orange.spicyCarrot.rgb') / 70%
-            );
-            --ardplayer-color-ui-background-shim: var(
-                --ardplayer-darkmode-color-ui-background-shim
-            );
+        &.ardplayer-state-live {
+            &.ardplayer-light-mode {
+                --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
+                --ardplayer-color-primary-live-transparent-30: rgba(
+                    theme('colors.orange.spicyCarrot.rgb') / 70%
+                );
+                --ardplayer-color-ui-background-shim: var(
+                    --ardplayer-darkmode-color-ui-background-shim
+                );
+                --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                    'colors.orange.spicyCarrot.hex'
+                );
+
+                .noUi-handle {
+                    background: theme('colors.orange.spicyCarrot.hex');
+                }
+            }
         }
     }
 }
@@ -318,6 +327,11 @@
             --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
             --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.science.hex');
+
+            .noUi-handle {
+                background: theme('colors.blue.science.hex');
+            }
 
             .ardplayer-controlbar {
                 .ardplayer-controlbar-hover {
@@ -410,36 +424,45 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
+
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -516,35 +539,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.jellyBean.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.jellyBean.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
-        --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.jellyBean.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.jellyBean.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
+            --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.jellyBean.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.jellyBean.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.jellyBean.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.jellyBean.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+            }
+        }
     }
 }
 
@@ -630,35 +659,43 @@
     --structure-nav-background: theme('colors.blue.deepCerulean.hex');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.deepCerulean.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.deepCerulean.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.deepCerulean.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.deepCerulean.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.deepCerulean.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.deepCerulean.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.deepCerulean.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.deepCerulean.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+            }
+        }
     }
 }
 
@@ -747,35 +784,43 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -853,33 +898,41 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.wellRead.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
-        --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.wellRead.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.wellRead.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.red.wellRead.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.wellRead.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.wellRead.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+            }
+        }
     }
 }
 
@@ -954,33 +1007,41 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.teal.DEFAULT.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.teal.DEFAULT.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
-        --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.teal.DEFAULT.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.teal.DEFAULT.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+            --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.teal.DEFAULT.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.teal.DEFAULT.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+                    color: var(--ardplayer-color-lightest);
+                }
+            }
 
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.teal.DEFAULT.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.teal.DEFAULT.hex');
+                    }
                 }
             }
         }
-    }
-
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+        &.ardplayer-state-audio {
+            --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+        }
     }
 }
 
@@ -1069,35 +1130,43 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -1178,33 +1247,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.yellow.olive.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.yellow.olive.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.white.floral');
-        --ardplayer-color-tertiary-base: theme('colors.yellow.olive.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.yellow.olive.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.yellow.olive.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.floral');
+            --ardplayer-color-tertiary-base: theme('colors.yellow.olive.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.yellow.olive.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.yellow.olive.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.yellow.olive.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.yellow.olive.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+            }
+        }
     }
 }
 
@@ -1290,35 +1367,45 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.paprika.rgb') / 70%);
-        --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
-        --ardplayer-color-primary-live-transparent-30: rgba(theme('colors.pink.rose.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
-        --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.paprika.rgb') / 70%
+            );
+            --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+            --ardplayer-color-primary-live-transparent-30: rgba(
+                theme('colors.pink.rose.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.paprika.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.red.paprika.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.paprika.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.paprika.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.paprika.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+            }
+        }
     }
 }
 
@@ -1400,33 +1487,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.monza.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.monza.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
-        --ardplayer-color-tertiary-base: theme('colors.red.monza.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.monza.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.monza.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
+            --ardplayer-color-tertiary-base: theme('colors.red.monza.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.monza.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.monza.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.red.monza.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.monza.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.monza.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.monza.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.monza.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.monza.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.monza.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.monza.hex');
+            }
+        }
     }
 }
 
@@ -1508,33 +1603,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.green.eden.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.green.eden.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
-        --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.green.eden.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.green.eden.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
+            --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.green.eden.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.green.eden.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.green.eden.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.green.eden.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.green.eden.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.green.eden.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.green.eden.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.green.eden.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.green.eden.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.green.eden.hex');
+            }
+        }
     }
 }
 
@@ -1639,33 +1742,39 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
-        --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
+            --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
+            --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.sea.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.sea.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.sea.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.sea.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.sea.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+            }
+        }
     }
 }
 
