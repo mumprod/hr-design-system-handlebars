@@ -64,11 +64,9 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
-            if (isDarkmodeAllowed) {
-                player.setLightMode(!darkModePreference.matches)
-            } else {
-                player.setLightMode(true)
-            }
+
+            player.setLightMode(isDarkmodeAllowed ? !darkModePreference.matches : true)
+
             if (isPlayerDebug) {
                 ardplayer.debug(true, true, true, true)
             }
@@ -87,18 +85,11 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     }
 
     const handleThemeSwitch = function (event) {
-        if (event.matches) {
-            player.setLightMode(false)
-        } else {
-            player.setLightMode(true)
-        }
-        //event.matches ? ardplayer.setLightMode(false) : ardplayer.setLightMode(true)
+        player.setLightMode(!event.matches)
     }
 
     const bindPlayerEvents = function () {
         player.$.on(ardplayer.Player.EVENT_PLAY_STREAM, function (event) {
-            console.log(event.target)
-            console.debug(`options.teaserSize: ${options.teaserSize}`)
             const geotag = hr$('.js-geotag', rootElement)[0]
             if (!isPlayerStarted) {
                 trackPlayerStart()
