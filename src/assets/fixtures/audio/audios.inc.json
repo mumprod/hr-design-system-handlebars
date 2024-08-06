@@ -60,7 +60,8 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
         "isAutoplay": true,
         "teaserSize": "100",
-        "realTeaserSize": "100"
+        "realTeaserSize": "100",
+        "isDarkmodeAllowed": true
     },
     "audio-2": {
         "playerConfig": {
@@ -118,7 +119,8 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
         "isAutoplay": true,
         "teaserSize": "100",
-        "realTeaserSize": "100"
+        "realTeaserSize": "100",
+        "isDarkmodeAllowed": true
     },
     "audio-podcast": {
         "playerConfig": {
@@ -265,6 +267,7 @@
         "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.8.3.82603554.js",
         "isAutoplay": true,
         "teaserSize": "50",
-        "realTeaserSize": "50"
+        "realTeaserSize": "50",
+        "isDarkmodeAllowed": true
     }
 }

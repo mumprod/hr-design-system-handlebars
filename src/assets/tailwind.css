@@ -13,12 +13,12 @@
     --breakpoint-md: theme(screens.md);
     --breakpoint-lg: theme(screens.lg);
 
-    --color-primary-ds: theme('colors.blue.congress');
+    --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
-    --color-highlight-1-dark: theme('colors.blue.nightRider');
+    --color-highlight-1-dark: theme('colors.blue.nightRider.hex');
 
     /* Text */
     --color-standard-text: theme('colors.black.DEFAULT');
@@ -32,8 +32,8 @@
     --color-navigation-text: theme('colors.black.DEFAULT');
     --color-search-header-text: theme('colors.black.DEFAULT');
     /* Brandnavigation Border and :before Color */
-    --color-brandnavigation-border-color: theme('colors.blue.congress');
-    --color-brandnav-pseudo: theme('colors.blue.congress');
+    --color-brandnavigation-border-color: theme('colors.blue.congress.hex');
+    --color-brandnav-pseudo: theme('colors.blue.congress.hex');
     /* Service/Sectionnavigation Border-Color */
     --color-navigation-border-color: #fff;
     --color-servicenavigation-border-color: #fff;
@@ -112,7 +112,7 @@
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science.hex');
@@ -186,20 +186,50 @@
                 }
             }
         }
+
+        &.ardplayer-light-mode {
+            --ardplayer-lightmode-color-darkest: theme('colors.black.DEFAULT');
+        }
+
+        &.ardplayer-state-live {
+            &.ardplayer-light-mode {
+                --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
+                --ardplayer-color-primary-live-transparent-30: rgba(
+                    theme('colors.orange.spicyCarrot.rgb') / 70%
+                );
+                --ardplayer-color-ui-background-shim: var(
+                    --ardplayer-darkmode-color-ui-background-shim
+                );
+                --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                    'colors.orange.spicyCarrot.hex'
+                );
+
+                .ardplayer-controlbar {
+                    .ardplayer-controlbar-hover {
+                        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+                        color: var(--ardplayer-color-lightest);
+                    }
+                }
+
+                .noUi-handle {
+                    background: theme('colors.orange.spicyCarrot.hex');
+                }
+            }
+        }
     }
 }
 
 [data-theme='hessenschau'] {
-    --color-primary-ds: theme('colors.blue.congress');
+    --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
     --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
-    --color-highlight-3: theme('colors.blue.congress');
+    --color-highlight-3: theme('colors.blue.congress.hex');
 
     /* Text */
     --color-standard-text: #000;
     --color-standard-text-dark: #d8e9f6;
-    --color-navigation-bg: theme('colors.blue.congress');
+    --color-navigation-bg: theme('colors.blue.congress.hex');
     /* Navigation Icons */
     --color-navigation-icons: #fff;
     /* Navigation Text */
@@ -208,7 +238,7 @@
     --search-border-color-desktop: theme('colors.transparent');
     --search-border-color-mobile: var(--color-primary-ds);
     --color-search-footer-text: #000;
-    --search-icon-color: theme('colors.blue.congress');
+    --search-icon-color: theme('colors.blue.congress.hex');
 
     /* Logo-Container Padding */
     --logo-padding-top: 6px;
@@ -254,17 +284,17 @@
     --color-link-dark: #199bff;
     /*Stage */
     --color-stage-text-box: 67 61 55;
-    --color-stage-primary: theme('colors.blue.congress');
+    --color-stage-primary: theme('colors.blue.congress.hex');
     --color-stage-text: theme('colors.white.DEFAULT');
     --color-stage-link: theme('colors.white.DEFAULT');
     /* geoTag */
     --color-geoTag: theme('colors.gray.brightGray');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.science.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button: theme('colors.blue.science.hex');
-    --color-button--dark: theme('colors.blue.congress');
+    --color-button--dark: theme('colors.blue.congress.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     --color-button-disabled: theme('colors.gray.lightGray');
@@ -294,33 +324,48 @@
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.science.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.science.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        --ardplayer-color-primary-base: theme('colors.blue.congress.hex');
+        --ardplayer-color-primary-base-transparent-30: rgba(
+            theme('colors.blue.congress.rgb') / 70%
+        );
+        --ardplayer-color-primary-dark-base: theme('colors.blue.nightRider.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.science.hex');
-                color: var(--ardplayer-color-lightest);
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.science.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.science.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.science.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.science.hex');
+
+            .noUi-handle {
+                background: theme('colors.blue.science.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.science.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.science.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.science.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.science.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.science.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.science.hex');
+                    }
+                }
+            }
+
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.science.hex');
+            }
+        }
     }
 }
 
@@ -390,36 +435,45 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
+
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -496,35 +550,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.jellyBean.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.jellyBean.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
-        --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.jellyBean.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.jellyBean.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
+            --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.jellyBean.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.jellyBean.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.jellyBean.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.jellyBean.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.jellyBean.hex');
+            }
+        }
     }
 }
 
@@ -587,10 +647,10 @@
     --color-stage-link: theme('colors.white.DEFAULT');
     /* Cluster-Teaser */
     --color-cluster-teaser-link: theme('colors.blue.deepCerulean.hex');
-    --color-cluster-teaser-headline: theme('colors.blue.congress');
+    --color-cluster-teaser-headline: theme('colors.blue.congress.hex');
     /* Button */
     --color-button: theme('colors.blue.deepCerulean.hex');
-    --color-button--dark: theme('colors.blue.congress');
+    --color-button--dark: theme('colors.blue.congress.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -610,35 +670,43 @@
     --structure-nav-background: theme('colors.blue.deepCerulean.hex');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.deepCerulean.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.deepCerulean.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.deepCerulean.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.deepCerulean.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.deepCerulean.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.deepCerulean.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.deepCerulean.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.deepCerulean.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.deepCerulean.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.deepCerulean.hex');
+            }
+        }
     }
 }
 
@@ -727,35 +795,43 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -833,33 +909,41 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.wellRead.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
-        --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.wellRead.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.wellRead.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.red.wellRead.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.wellRead.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.wellRead.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.wellRead.hex');
+            }
+        }
     }
 }
 
@@ -934,33 +1018,41 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.teal.DEFAULT.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.teal.DEFAULT.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
-        --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.teal.DEFAULT.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.teal.DEFAULT.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
+            --ardplayer-color-tertiary-base: theme('colors.teal.DEFAULT.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.teal.DEFAULT.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.teal.DEFAULT.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+                    color: var(--ardplayer-color-lightest);
+                }
+            }
 
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.teal.DEFAULT.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.teal.DEFAULT.hex');
+                    }
                 }
             }
         }
-    }
-
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+        &.ardplayer-state-audio {
+            --ardplayer-color-lightest: theme('colors.teal.DEFAULT.hex');
+        }
     }
 }
 
@@ -1049,35 +1141,43 @@
     --font-weight-title: theme('fontWeight.bold');
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(
-            theme('colors.blue.blueLuxury.rgb') / 70%
-        );
-        --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
-        --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.blue.blueLuxury.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
+            --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme(
+                'colors.blue.blueLuxury.hex'
+            );
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.blueLuxury.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.blueLuxury.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.blueLuxury.hex');
+            }
+        }
     }
 }
 
@@ -1158,33 +1258,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.yellow.olive.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.yellow.olive.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.white.floral');
-        --ardplayer-color-tertiary-base: theme('colors.yellow.olive.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.yellow.olive.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.yellow.olive.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.floral');
+            --ardplayer-color-tertiary-base: theme('colors.yellow.olive.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.yellow.olive.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.yellow.olive.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.yellow.olive.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.yellow.olive.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.yellow.olive.hex');
+            }
+        }
     }
 }
 
@@ -1270,35 +1378,56 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.paprika.rgb') / 70%);
-        --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
-        --ardplayer-color-primary-live-transparent-30: rgba(theme('colors.pink.rose.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
-        --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.paprika.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.paprika.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
-                color: var(--ardplayer-color-lightest);
-            }
-        }
+            &.ardplayer-state-live {
+                --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+                --ardplayer-color-primary-live-transparent-30: rgba(
+                    theme('colors.pink.rose.rgb') / 70%
+                );
+                --ardplayer-color-ui-background-shim: var(
+                    --ardplayer-darkmode-color-ui-background-shim
+                );
+                --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.pink.rose.hex');
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.paprika.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.paprika.hex');
+                .noUi-handle {
+                    background: theme('colors.pink.rose.hex');
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+            .noUi-handle {
+                background: theme('colors.red.paprika.hex');
+            }
+
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+                    color: var(--ardplayer-color-lightest);
+                }
+            }
+
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.paprika.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.paprika.hex');
+            }
+        }
     }
 }
 
@@ -1380,33 +1509,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.red.monza.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.red.monza.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
-        --ardplayer-color-tertiary-base: theme('colors.red.monza.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.red.monza.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.red.monza.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
+            --ardplayer-color-tertiary-base: theme('colors.red.monza.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.monza.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.red.monza.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.red.monza.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.red.monza.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.red.monza.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.red.monza.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.red.monza.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.red.monza.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.red.monza.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.red.monza.hex');
+            }
+        }
     }
 }
 
@@ -1488,33 +1625,41 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.green.eden.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.green.eden.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
-        --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.green.eden.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(
+                theme('colors.green.eden.rgb') / 70%
+            );
+            --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
+            --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.green.eden.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.green.eden.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.green.eden.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.green.eden.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.green.eden.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.green.eden.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.green.eden.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.green.eden.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.green.eden.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.green.eden.hex');
+            }
+        }
     }
 }
 
@@ -1619,33 +1764,39 @@
     --feature-box-height: 96px;
 
     .ardplayer {
-        --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
-        --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
-        --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
-        --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
-        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+        &.ardplayer-light-mode {
+            --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
+            --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
+            --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
+            --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
+            --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+            --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.sea.hex');
 
-        .ardplayer-controlbar {
-            .ardplayer-controlbar-hover {
-                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
-                color: var(--ardplayer-color-lightest);
+            .noUi-handle {
+                background: theme('colors.blue.sea.hex');
             }
-        }
 
-        .ardplayer-bottom-sheet-container {
-            --ardplayer-color-lightest: theme('colors.blue.sea.hex');
-
-            .ardplayer-option:hover {
-                color: theme('colors.white.DEFAULT');
-                .ardplayer-icon {
-                    color: theme('colors.blue.sea.hex');
+            .ardplayer-controlbar {
+                .ardplayer-controlbar-hover {
+                    --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+                    color: var(--ardplayer-color-lightest);
                 }
             }
-        }
-    }
 
-    .ardplayer.ardplayer-state-audio {
-        --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+            .ardplayer-bottom-sheet-container {
+                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+
+                .ardplayer-option:hover {
+                    color: theme('colors.white.DEFAULT');
+                    .ardplayer-icon {
+                        color: theme('colors.blue.sea.hex');
+                    }
+                }
+            }
+            &.ardplayer-state-audio {
+                --ardplayer-color-lightest: theme('colors.blue.sea.hex');
+            }
+        }
     }
 }
 
