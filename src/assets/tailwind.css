@@ -188,6 +188,10 @@
         }
 
         &.ardplayer-light-mode {
+            --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
+            --ardplayer-color-primary-live-transparent-30: rgba(
+                theme('colors.orange.spicyCarrot.rgb') / 70%
+            );
             --ardplayer-color-ui-background-shim: var(
                 --ardplayer-darkmode-color-ui-background-shim
             );
