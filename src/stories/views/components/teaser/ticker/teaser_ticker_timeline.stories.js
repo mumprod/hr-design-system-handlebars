@@ -4,7 +4,7 @@ const handlebars = require('hrHandlebars')
 
 const timelineOnBlue = (args) => {
     let hbsTemplate = handlebars.compile(`
-    <div class="bg-blue-congress pt-5">
+    <div class="bg-blue-congress-hex pt-5">
         {{> components/teaser/ticker/teaser_ticker_timeline _color="white"}}
     </div>
   `)
