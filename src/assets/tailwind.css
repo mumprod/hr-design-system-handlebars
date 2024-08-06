@@ -1372,14 +1372,16 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.red.paprika.rgb') / 70%
             );
-            --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
-            --ardplayer-color-primary-live-transparent-30: rgba(
-                theme('colors.pink.rose.rgb') / 70%
-            );
             --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
             --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.paprika.hex');
+            &.ardplayer-state-live {
+                --ardplayer-color-primary-live: theme('colors.pink.rose.hex');
+                --ardplayer-color-primary-live-transparent-30: rgba(
+                    theme('colors.pink.rose.rgb') / 70%
+                );
+            }
 
             .noUi-handle {
                 background: theme('colors.red.paprika.hex');
