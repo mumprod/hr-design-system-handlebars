@@ -187,6 +187,10 @@
             }
         }
 
+        &.ardplayer-light-mode {
+            --ardplayer-lightmode-color-darkest: theme('colors.black.DEFAULT');
+        }
+
         &.ardplayer-state-live {
             &.ardplayer-light-mode {
                 --ardplayer-color-primary-live: theme('colors.orange.spicyCarrot.hex');
@@ -199,6 +203,13 @@
                 --ardplayer-lightmode-color-lightest-transparent-30: theme(
                     'colors.orange.spicyCarrot.hex'
                 );
+
+                .ardplayer-controlbar {
+                    .ardplayer-controlbar-hover {
+                        --ardplayer-color-lightest: theme('colors.white.DEFAULT');
+                        color: var(--ardplayer-color-lightest);
+                    }
+                }
 
                 .noUi-handle {
                     background: theme('colors.orange.spicyCarrot.hex');
