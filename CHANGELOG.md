@@ -1,3 +1,15 @@
+# v1.90.0 (Wed Aug 07 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Call the mediaplayer_button component with the player id on av teasers on index pages [#1042](https://github.com/mumprod/hr-design-system-handlebars/pull/1042) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.89.1 (Tue Aug 06 2024)
 
 #### 🐛 Bug Fix
