@@ -2,9 +2,7 @@
      {{~#if this.isVideoOnDemand ~}}
           {{#with this.toModel.videoElement}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}
-               {{#with ../../this}}
-                    {{~> components/teaser/components/teaser_media_player _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio=_aspectRatio-adjust_context _addClassImg=_addClassImg-adjust_context _noDelay=this.dontLazyload}}
-               {{/with}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -13,9 +11,7 @@
      {{~#if this.isAudioOnDemand ~}}
           {{#with this.toModel.audioElementForVideoView}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-audio-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}                  
-               {{#with ../../this}}
-                    {{~> components/teaser/components/teaser_media_player _mediaButtonIcon="audio_button" _mediaButtonLabel="Audio" _aspectRatio=_aspectRatio-adjust_context _addClassImg=_addClassImg-adjust_context _noDelay=this.dontLazyload}}
-               {{/with}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="audio_button" _mediaButtonLabel="Audio" _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -24,9 +20,7 @@
      {{~#if this.isPodcast ~}}
           {{#with this.toModel.audioElementForVideoView}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-audio-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}             
-               {{#with ../../this}}
-                    {{~> components/teaser/components/teaser_media_player _mediaButtonIcon="audio_button" _mediaButtonLabel="Podcast" _aspectRatio=_aspectRatio-adjust_context _addClassImg=_addClassImg-adjust_context _noDelay=this.dontLazyload}}
-               {{/with}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="audio_button" _mediaButtonLabel="Podcast" _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -35,9 +29,7 @@
      {{~#if this.isAudioEventLivestream ~}}
           {{#with this.toModel.audioLivestreamElementForVideoView}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-audio-livestream-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}             
-               {{#with ../../this}}
-                    {{~> components/teaser/components/teaser_media_player _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=_aspectRatio-adjust_context _addClassImg=_addClassImg-adjust_context _noDelay=this.dontLazyload}}
-               {{/with}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
@@ -46,9 +38,7 @@
      {{~#if this.isLivestream ~}}
           {{#with this.toModel.videoLivestreamElement}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-video-livestream-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}             
-               {{#with ../../this}}
-                    {{~> components/teaser/components/teaser_media_player _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=_aspectRatio-adjust_context _addClassImg=_addClassImg-adjust_context _noDelay=this.dontLazyload}}
-               {{/with}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
