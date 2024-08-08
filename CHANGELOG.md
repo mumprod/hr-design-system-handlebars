@@ -1,3 +1,15 @@
+# v1.90.1 (Thu Aug 08 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Set missing colors for lightmode [#1043](https://github.com/mumprod/hr-design-system-handlebars/pull/1043) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.90.0 (Wed Aug 07 2024)
 
 #### 🚀 Enhancement
