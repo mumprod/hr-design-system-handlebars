@@ -1,3 +1,16 @@
+# v1.90.2 (Thu Aug 08 2024)
+
+#### 🐛 Bug Fix
+
+- Fix the 1:1 cover image in Storybook [#1044](https://github.com/mumprod/hr-design-system-handlebars/pull/1044) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.90.1 (Thu Aug 08 2024)
 
 #### 🐛 Bug Fix
