@@ -320,13 +320,13 @@ article.indexTextDS .indexTextHighlighted .link {
     }
 
     &__box {
-        .copytext__icon {
+        .copytext-ds__icon {
             @apply w-5 h-5 mt-0;
         }
     }
 
     &__paragraph {
-        .copytext__icon {
+        .copytext-ds__icon {
             @apply w-6 h-6;
         }
     }
