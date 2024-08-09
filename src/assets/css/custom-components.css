@@ -310,21 +310,21 @@ article.indexTextDS .indexTextHighlighted .link {
 }
 
 /* -----------------------------COPYTEXT ---------------------------- */
-.copytext__link {
-    @apply underline text-link decoration-1 hover:decoration-1 dark:text-link-dark ds-link;
-}
-
-.copytext__icon {
-    @apply inline -mt-0.5 fill-current ml-1;
-}
-
-.copytext__box {
-    .copytext__icon {
-        @apply w-5 h-5 mt-0;
+.copytext-ds {
+    &__link {
+        @apply underline text-link decoration-1 hover:decoration-1 dark:text-link-dark ds-link;
     }
-}
 
-.copytext {
+    &__icon {
+        @apply inline -mt-0.5 fill-current ml-1;
+    }
+
+    &__box {
+        .copytext__icon {
+            @apply w-5 h-5 mt-0;
+        }
+    }
+
     &__paragraph {
         .copytext__icon {
             @apply w-6 h-6;
