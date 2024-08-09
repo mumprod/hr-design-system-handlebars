@@ -321,7 +321,7 @@ article.indexTextDS .indexTextHighlighted .link {
 
     &__box {
         .copytext-ds__icon {
-            @apply w-5 h-5 mt-0;
+            @apply w-5 h-5;
         }
     }
 
