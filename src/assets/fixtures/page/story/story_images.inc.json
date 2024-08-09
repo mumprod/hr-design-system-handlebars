@@ -17,6 +17,9 @@
     },
     "story_image_lead_square": {
         "isImage": true,
+        "showSquareImage": {
+            "isTrue": true
+        },
         "caption": "Bildunterschrift",
         "copyrightWithLinks": "picture-alliance/dpa",
         "responsiveImage": {

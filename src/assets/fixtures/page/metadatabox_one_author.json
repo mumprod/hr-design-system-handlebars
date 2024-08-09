@@ -11,6 +11,7 @@
         "time": "19:30"
     },
     "authorTitle": "Steffen Rebhahn",
+    "textAfterAuthor": "(Redaktion hessenschau.de)",
     "authorImage": {
         "@->jsoninclude": "page/story/story_images.inc.json",
         "@->contentpath": "author",
