@@ -19,9 +19,9 @@
 {{else}}
 
     {{#if this.hasOneAuthor~}}
-        <div class="flex items-center {{#if this.authorImage.isImage}}h-10{{else}}mb-1{{/if}}">
+        <div class="flex items-center">
             {{#if this.authorImage.isImage}}
-                <div class="w-10 h-10 mr-4 basis-10 grow-0">
+                <div class="self-start w-10 h-10 mr-4 basis-10 grow-0">
                     {{~> components/base/image/responsive_image this.authorImage
                             _type="profile" 
                             _variant="ticker" 
@@ -31,13 +31,16 @@
                 </div>
             {{/if}}
             <div class="self-start text-xs sm480:text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
-                {{#unless _hideFrom }}Von{{/unless}}
-                {{#if this.authorUrl~}}
-                    <a href="{{this.authorUrl}}" {{#with this.webviewAuthorUrl}}data-webviewurl="{{this}}"{{/with}} class="{{if (isUserConsentNeeded this.authorUrl) 'js-user-consent-needed ' ''}}ds-link text-link hover:underline dark:text-link-dark ">{{this.authorTitle}}</a>
-                {{else}}
-                    {{this.authorTitle}}
-                {{/if}}
-                {{#with this.textAfterAuthor}} {{this}}{{/with}}
+                <div class="mb-1">
+                    {{#unless _hideFrom }}Von{{/unless}}
+                    {{#if this.authorUrl~}}
+                        <a href="{{this.authorUrl}}" {{#with this.webviewAuthorUrl}}data-webviewurl="{{this}}"{{/with}} class="{{if (isUserConsentNeeded this.authorUrl) 'js-user-consent-needed ' ''}}ds-link text-link hover:underline dark:text-link-dark ">{{this.authorTitle}}</a>
+                    {{else}}
+                        {{this.authorTitle}}
+                    {{/if}}
+                    {{#with this.textAfterAuthor}} {{this}}{{/with}}
+                </div>
+                {{> components/page/components/publicationdate }}
             </div>
         </div>
     {{~/if}}
