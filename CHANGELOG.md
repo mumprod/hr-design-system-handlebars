@@ -1,3 +1,15 @@
+# v1.90.3 (Fri Aug 09 2024)
+
+#### 🐛 Bug Fix
+
+- refactoring of metadatabox [#1045](https://github.com/mumprod/hr-design-system-handlebars/pull/1045) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.90.2 (Thu Aug 08 2024)
 
 #### 🐛 Bug Fix
