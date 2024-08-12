@@ -1,3 +1,52 @@
+# v1.91.0 (Fri Aug 09 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3260 [#1046](https://github.com/mumprod/hr-design-system-handlebars/pull/1046) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.90.3 (Fri Aug 09 2024)
+
+#### 🐛 Bug Fix
+
+- refactoring of metadatabox [#1045](https://github.com/mumprod/hr-design-system-handlebars/pull/1045) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.90.2 (Thu Aug 08 2024)
+
+#### 🐛 Bug Fix
+
+- Fix the 1:1 cover image in Storybook [#1044](https://github.com/mumprod/hr-design-system-handlebars/pull/1044) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.90.1 (Thu Aug 08 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Set missing colors for lightmode [#1043](https://github.com/mumprod/hr-design-system-handlebars/pull/1043) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.90.0 (Wed Aug 07 2024)
 
 #### 🚀 Enhancement

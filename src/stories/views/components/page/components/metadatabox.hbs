@@ -5,7 +5,13 @@
                 {{> components/page/components/author _hideFrom=false }}
 
                 {{#if _showDate }}
-                    {{> components/page/components/publicationdate }}
+                    {{#if this.hasMoreThanOneAuthor}}
+                        {{> components/page/components/publicationdate }}
+                    {{else}}
+                        {{#unless this.hasOneAuthor}}
+                            {{> components/page/components/publicationdate }}
+                        {{/unless}}
+                    {{/if}}
                 {{/if}}
 
                 {{> components/page/components/commentinfo }}
