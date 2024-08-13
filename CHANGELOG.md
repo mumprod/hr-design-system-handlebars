@@ -1,3 +1,15 @@
+# v1.91.1 (Tue Aug 13 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify font color post UX review [#1047](https://github.com/mumprod/hr-design-system-handlebars/pull/1047) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.91.0 (Fri Aug 09 2024)
 
 #### 🚀 Enhancement
