@@ -1,3 +1,15 @@
+# v1.92.0 (Wed Aug 14 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Set an initial height in copytext-ds__icon class so that [#1048](https://github.com/mumprod/hr-design-system-handlebars/pull/1048) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.91.1 (Tue Aug 13 2024)
 
 #### 🐛 Bug Fix
