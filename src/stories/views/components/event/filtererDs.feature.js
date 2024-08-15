@@ -83,7 +83,7 @@ const Filterer = (context) => {
             if (monthWrapper) {
                 
                 if (monthName) {
-                    monthName.classList.remove('text-slate-500')
+                    monthName.classList.remove('text-gray-scorpion')
                     monthName.classList.remove('bg-white')
                     monthName.classList.add('text-white');
                     monthName.classList.add('bg-black');
@@ -103,7 +103,7 @@ const Filterer = (context) => {
         // hacky die würde bald verändert
         currentMonth.classList.remove('text-white');
         currentMonth.classList.remove('bg-black');
-        currentMonth.classList.add('text-slate-500');
+        currentMonth.classList.add('text-gray-scorpion');
         currentMonth.classList.add('bg-white');
 
         
@@ -112,7 +112,7 @@ const Filterer = (context) => {
             // hacky die würde bald verändert
             triggerDomNode.closest('.js-ns-month').firstElementChild.classList.remove('text-white');
             triggerDomNode.closest('.js-ns-month').firstElementChild.classList.remove('bg-black');
-            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.add('text-slate-500');
+            triggerDomNode.closest('.js-ns-month').firstElementChild.classList.add('text-gray-scorpion');
             triggerDomNode.closest('.js-ns-month').firstElementChild.classList.add('bg-white');
             triggerDomNode.classList.remove(navItemSelectedCssTrigger)
         })

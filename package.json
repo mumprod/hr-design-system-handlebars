@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "repository": "https://github.com/szuelch/hr-design-system-handlebars",
-  "version": "1.91.0",
+  "version": "1.93.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006 public",
@@ -118,7 +118,7 @@
     "@alpinejs/intersect": "^3.13.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "a11y-dialog": "^8.0.4",
-    "alpinejs": "^3.8.1",
+    "alpinejs": "^3.14.1",
     "async-alpine": "^1.0.0",
     "checkcss": "^2.0.9",
     "dialog-polyfill": "^0.5.6",

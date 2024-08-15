@@ -1,3 +1,39 @@
+# v1.93.0 (Thu Aug 15 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3310 [#1049](https://github.com/mumprod/hr-design-system-handlebars/pull/1049) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.92.0 (Wed Aug 14 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Set an initial height in copytext-ds__icon class so that [#1048](https://github.com/mumprod/hr-design-system-handlebars/pull/1048) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.91.1 (Tue Aug 13 2024)
+
+#### 🐛 Bug Fix
+
+- :lipstick: Modify font color post UX review [#1047](https://github.com/mumprod/hr-design-system-handlebars/pull/1047) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.91.0 (Fri Aug 09 2024)
 
 #### 🚀 Enhancement
