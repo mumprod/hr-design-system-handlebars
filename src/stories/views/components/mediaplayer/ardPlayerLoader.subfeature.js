@@ -88,24 +88,28 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         player.setLightMode(!event.matches)
     }
 
-    const bindPlayerEvents = function () {
-        player.$.on(ardplayer.Player.EVENT_PLAY_STREAM, function (event) {
-            const geotag = hr$('.js-geotag', rootElement)[0]
-            if (!isPlayerStarted) {
-                trackPlayerStart()
-                isPlayerStarted = true
-            }
-            if (typeof geotag != 'undefined') {
-                geotag.classList.add('hide')
-            }
-            fireEvent('hr:global:stopOtherAVs', 'ardplayer', true)
-        })
+    const handlePlayStream = function (event) {
+        const geotag = hr$('.js-geotag', rootElement)[0]
+        if (!isPlayerStarted) {
+            trackPlayerStart()
+            isPlayerStarted = true
+        }
+        if (typeof geotag != 'undefined') {
+            geotag.classList.add('hide')
+        }
+        fireEvent('hr:global:stopOtherAVs', 'ardplayer', true)
+    }
 
-        player.$.on(ardplayer.Player.EVENT_ERROR, function (event) {
-            if (undefined !== videoKey) {
-                fireEvent('hr:global:ardPlayerError', { key: videoKey }, true)
-            }
-        })
+    const handlePlayerErrors = function (event) {
+        if (undefined !== videoKey) {
+            fireEvent('hr:global:ardPlayerError', { key: videoKey }, true)
+        }
+    }
+
+    const bindPlayerEvents = function () {
+        listen(ardplayer.Player.EVENT_PLAY_STREAM, handlePlayStream, player)
+
+        listen(ardplayer.Player.EVENT_ERROR, handlePlayerErrors, player)
 
         listen('hr:global:stopOtherAVs', function (event) {
             if (event.detail != 'ardplayer') {
