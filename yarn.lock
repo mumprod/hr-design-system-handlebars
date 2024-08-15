@@ -14,23 +14,23 @@
 
 "@alpine-collective/toolkit@^1.0.0":
   version "1.0.2"
-  resolved "https://registry.npmjs.org/@alpine-collective/toolkit/-/toolkit-1.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/@alpine-collective/toolkit/-/toolkit-1.0.2.tgz#6e383bf3329bc0b52d3a90c82eececb570a54bb1"
   integrity sha512-fPovRTghDY5JAhR3rIJbVDLM3sXNPpi48t3FquVWWx1if+CfoUTIxad86G9qF+wbD3VSEHrySrQFEKrw0gY31Q==
 
 "@alpinejs/anchor@^3.13.3":
-  version "3.13.3"
-  resolved "https://registry.npmjs.org/@alpinejs/anchor/-/anchor-3.13.3.tgz"
-  integrity sha512-Th2ddbS64GYQ6iVkaiKxdkqi1CJ7nq8Ar+/ysWWzZk+spe41ACtlRPRpi2503wrHHovIKnTTfJ2ZLc8nu5rw6Q==
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/anchor/-/anchor-3.14.1.tgz#94bd5b496ab753764550ebef03c2863b8798a67a"
+  integrity sha512-fA3FXtLfurEbcIm0PLnyxHF2k8fQmIx5Omn7kZOE2TWYtLF6jk0NnW9WxpwzjTKwJOXKejURDiTxvIN3ViykcQ==
 
 "@alpinejs/collapse@^3.8.1":
-  version "3.12.0"
-  resolved "https://registry.npmjs.org/@alpinejs/collapse/-/collapse-3.12.0.tgz"
-  integrity sha512-/LKUr6lZD9yYSkTcwm/8eaTd/S2S4NPY9mQJHBy3TTTNai9rLzV15oHcLW0MxausaCOT5jQtQHWFTWelldZOSw==
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/collapse/-/collapse-3.14.1.tgz#3e02f60c909bb5c297c05fc4fc57c95c7294d630"
+  integrity sha512-aI0pq8SjK7c43/nMIVL1Lt8naowPRepqQGNSb9KaG7adEneOwj/vq4ZaeZYjuGbd8sq1LKPwWU+klIZIXXujUA==
 
 "@alpinejs/intersect@^3.13.3":
-  version "3.13.3"
-  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.13.3.tgz#b587604af241b97ca603264e712e8e4401baf2db"
-  integrity sha512-4iwomnp4VXP1OmFfyol0sEgWdMFmX1WBlc8/gxRt6tO8PeeJjnZMdGjJeY6gNeRWS4g6I9aTUycdsyl6OQNv7w==
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.14.1.tgz#b264851aec75099391f4c980c062fa22db2a2a14"
+  integrity sha512-+qlQief0QWPqjFjoylr+CfKOkwvnxldRQg/WT1PscyPAeykK+wJOJAEQCimwwaLnYHxiXdF6whti5o7GYPYNxw==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
@@ -4726,10 +4726,10 @@ ajv@^8.0.0, ajv@^8.9.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-alpinejs@^3.8.1:
-  version "3.13.3"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.13.3.tgz#92eb7e869b99ff548e7a55044e45660597cf530b"
-  integrity sha512-WZ6WQjkAOl+WdW/jukzNHq9zHFDNKmkk/x6WF7WdyNDD6woinrfXCVsZXm0galjbco+pEpYmJLtwlZwcOfIVdg==
+alpinejs@3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.14.0.tgz#f882fa6dcd524f30f2383949d2c0ed2fdb0c9750"
+  integrity sha512-YCWF95PMJqePe9ll6KMyDt/nLhh2R7RhqBf4loEmLzIskcHque4Br/9UgAa6cw13H0Cm3FM9e1hzDwP5z5wlDA==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
