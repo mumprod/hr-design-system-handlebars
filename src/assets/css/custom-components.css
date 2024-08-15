@@ -316,13 +316,7 @@ article.indexTextDS .indexTextHighlighted .link {
     }
 
     &__icon {
-        @apply inline -mt-0.5 fill-current ml-1;
-    }
-
-    &__box {
-        .copytext-ds__icon {
-            @apply w-5 h-5;
-        }
+        @apply inline w-5 h-5 -mt-0.5 fill-current ml-1;
     }
 
     &__paragraph {
