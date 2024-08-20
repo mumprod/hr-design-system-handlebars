@@ -60,7 +60,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
 
-            if (isDarkmodeAllowed()) {
+            if (isDarkmodeAllowed) {
                 player.setLightMode(!darkModePreference.matches)
             }
 
