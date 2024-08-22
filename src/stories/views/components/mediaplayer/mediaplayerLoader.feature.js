@@ -1,5 +1,4 @@
-import { hr$, listenOnce, listen } from 'hrQuery'
-import { uxAction } from 'base/tracking/pianoHelper.subfeature'
+import { hr$, listenOnce } from 'hrQuery'
 import ArdPlayerLoader from 'components/mediaplayer/ardPlayerLoader.subfeature'
 
 const MediaplayerLoader = function (context) {
@@ -8,7 +7,6 @@ const MediaplayerLoader = function (context) {
     const { options } = context,
         { element: rootElement } = context,
         isAutoplay = options.isAutoplay,
-        teaserSize = options.teaserSize,
         mediaplayerButton = hr$('.js-mediaplayer__button', rootElement.parentNode)[0],
         trackingData = rootElement.dataset.mediaplayerTracking ? JSON.parse(rootElement.dataset.mediaplayerTracking) : {}
 
@@ -22,11 +20,6 @@ const MediaplayerLoader = function (context) {
         removeVideoHover()
     }
 
-    if (isAutoplay) {
-        console.log('isAutoplay')
-        listenOnce('click', loadArdPlayerLoader, mediaplayerButton)
-    } else {
-        loadArdPlayerLoader()
-    }
+    isAutoplay ? listenOnce('click', loadArdPlayerLoader, mediaplayerButton) : loadArdPlayerLoader()
 }
 export default MediaplayerLoader

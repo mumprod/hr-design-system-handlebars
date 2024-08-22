@@ -7,9 +7,8 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const skinPath = options.cssUrl,
         ardplayerUrl = options.jsUrl,
-        smarttagUrl = options.atiSmarttagUrl,
-        playerId = options.playerId,
-        type = options.type,
+        playerId = isNaN(parseInt(options.playerId)) ? 0 : parseInt(options.playerId),
+        typeLabel = options.typeLabel,
         settingsCookie = new SettingsCookie(),
         isPlayerDebug = options.isPlayerDebug || false,
         playerLocation = trackingData.playerLocation || "Default",
@@ -52,20 +51,18 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     }
 
     const createPlayer = function () {
-        if (!settingsCookie.isSettingsCookieAccepted('ati')) {
-            if (undefined != playerConfig.pluginData['trackingPiano@all'])
-                playerConfig.pluginData['trackingPiano@all'].isEnabled = false
+        if (undefined != playerConfig.pluginData['trackingPiano@all']) {
+            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieAccepted('ati')
         }
-        if (
-            !settingsCookie.isSettingsCookieAccepted('agf') &&
-            undefined != playerConfig.pluginData['trackingAgf@all']
-        ) {
-            playerConfig.pluginData['trackingAgf@all'].isEnabled = false
+        if (undefined != playerConfig.pluginData['trackingAgf@all']) {
+            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieAccepted('agf')
         }
         whenAvailable('ardplayer', function () {
-            player = new ardplayer.Player(playerId, playerConfig, mediaCollection)
+            player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
 
-            player.setLightMode(isDarkmodeAllowed ? !darkModePreference.matches : true)
+            if (isDarkmodeAllowed) {
+                player.setLightMode(!darkModePreference.matches)
+            }
 
             if (isPlayerDebug) {
                 ardplayer.debug(true, true, true, true)
@@ -84,8 +81,36 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         }, interval)
     }
 
-    const handleThemeSwitch = function (event) {
-        player.setLightMode(!event.matches)
+
+    const bindPlayerEvents = function () {
+        listen(ardplayer.Player.EVENT_PLAY_STREAM, handlePlayStream, player)
+
+        listen(ardplayer.Player.EVENT_ERROR, handlePlayerErrors, player)
+
+        listen('hr:global:stopOtherAVs', function (event) {
+            if (event.detail != 'ardplayer') {
+                player.pause()
+            }
+        })
+
+        listen('player_closed', function (event) {
+            if (playerId === event.detail.playerId) {
+                player.stop()
+            }
+        })
+
+        listen('player_start', function (event) {
+            if (player) {
+                if (playerId === event.detail.playerId) {
+                    if (undefined != mediaCollection.live) {
+                        player.seekToLive()
+                    }
+                    player.play()
+                }
+            }
+        })
+
+        listen("change", handleThemeSwitch, darkModePreference)
     }
 
     const handlePlayStream = function (event) {
@@ -106,67 +131,15 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         }
     }
 
-    const bindPlayerEvents = function () {
-        listen(ardplayer.Player.EVENT_PLAY_STREAM, handlePlayStream, player)
-
-        listen(ardplayer.Player.EVENT_ERROR, handlePlayerErrors, player)
-
-        listen('hr:global:stopOtherAVs', function (event) {
-            if (event.detail != 'ardplayer') {
-                player.pause()
-            }
-        })
-
-        listen('player_closed', function (event) {
-            let playerIdFromConfig = parseInt(playerId)
-            playerIdFromConfig = isNaN(playerIdFromConfig) ? 0 : playerIdFromConfig
-            if (playerIdFromConfig === event.detail.playerId) {
-                player.stop()
-            }
-        })
-
-
-
-        listen('player_start', function (event) {
-            if (player) {
-                let playerIdFromConfig = parseInt(playerId)
-                playerIdFromConfig = isNaN(playerIdFromConfig) ? 0 : playerIdFromConfig
-                if (playerIdFromConfig === event.detail.playerId) {
-                    if (undefined != mediaCollection.live) {
-                        player.seekToLive()
-                    }
-                    player.play()
-                }
-            }
-        })
-
-        listen("change", handleThemeSwitch, darkModePreference)
+    const handleThemeSwitch = function (event) {
+        player.setLightMode(!event.matches)
     }
 
     const trackPlayerStart = function () {
-        switch (type) {
-            case "audioOndemand":
-                console.debug(`Playbutton geklickt::Audio \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                uxAction(`Playbutton geklickt::Audio \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                break;
-            case "audioLivestream":
-                console.debug(`Playbutton geklickt::Audio-Event-Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                uxAction(`Playbutton geklickt::Audio-Event-Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                break;
-            case "videoOndemand":
-                console.debug(`Playbutton geklickt::Video \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                uxAction(`Playbutton geklickt::Video \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                break;
-            case "videoLivestream":
-                console.debug(`Playbutton geklickt::Video - Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                uxAction(`Playbutton geklickt::Video - Livestream \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
-                break;
-        }
+        uxAction(`Playbutton geklickt::${typeLabel} \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
     }
 
     setupPlayer()
 }
-
-
 
 export default ArdPlayerLoader
