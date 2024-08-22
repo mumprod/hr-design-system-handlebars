@@ -45,7 +45,7 @@ export const WithSquareImage = {
 
 export const WithLabel = {
     render: Template.bind({}),
-    name: 'Artikel mit Label',
+    name: 'Artikel mit Label und Print Icon',
     args: data_story_with_label,
     parameters: {
         layout: 'fullscreen',

@@ -101,3 +101,17 @@
     </a>
 </li>
 {{/with}}
+{{~#with this.printLink}}
+<li class="">
+    <button class="{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+        title="{{loca "share_copy_linktitle" }}"
+        onclick="window.print()"
+        {{#with ../_trackingData}}
+            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::print"}]}'
+        {{/with}}
+    >
+        <span x-cloak class="flex items-center justify-center w-full h-full">{{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105" _icon="print-ds" _iconmap="icons" ~}}</span>
+
+    </button>
+</li>
+{{/with}}
