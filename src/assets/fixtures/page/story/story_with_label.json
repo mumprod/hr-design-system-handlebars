@@ -3,6 +3,18 @@
     "@->jsoninclude": "page/story/story.inc.json",
     "@->overrides": [
         {
+            "@->contentpath": "socialSharing",
+            "@->value": {
+                "twitterLink": "/twitterLink-url",
+                "facebookLink": "/facebookLink-url",
+                "whatsappLink": "/whatsappLink-url",
+                "mailtoLink": "/mailtoLink-url",
+                "copyToClipboardLink": "/copyToClipboard-url",
+                "printLink": true
+
+            }
+        },
+        {
             "@->contentpath": "label",
             "@->value": 
                 {
