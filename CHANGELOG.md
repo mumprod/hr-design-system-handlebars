@@ -1,3 +1,15 @@
+# v1.95.1 (Fri Aug 23 2024)
+
+#### 🐛 Bug Fix
+
+- Druckfunktion für hr-fernsehen DPE-3281 [#1052](https://github.com/mumprod/hr-design-system-handlebars/pull/1052) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.95.0 (Thu Aug 22 2024)
 
 #### 🚀 Enhancement
