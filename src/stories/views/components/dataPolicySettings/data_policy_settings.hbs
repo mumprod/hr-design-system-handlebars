@@ -93,7 +93,7 @@
             <ul>
                 {{#with this.serviceList}}
                     {{#each this}}
-                    {{{this}}}
+                    {{{this.isInitiallyHidden}}}
                         <li class="bg-white py-2.5 px-6 border-t border-[#e3e3e3] {{this.key}}">
                             <span class="inline-flex text-base leading-6 text-black align-text-top">{{this.value}}</span>
                             <div class="flex float-right toggleSwitch">
