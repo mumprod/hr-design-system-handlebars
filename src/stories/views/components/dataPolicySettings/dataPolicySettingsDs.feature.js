@@ -36,13 +36,16 @@ const DataPolicySettings = function (context) {
             }
             else {
                 console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
-                let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new", "datawrapper_cdn"]
+                // Alle Dienste die via I-frame und nicht via JS eingebunden werden, werden über die Checkbox "DSGVO-Prüfung durchführen" im Konfig-Dokument bestückt.
+                let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new"]
                 for (let i = 0; i < toggleSwitches.length; ++i) {
-                    if (toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new" || toggleSwitches[i].id == "datawrapper_cdn") {
+                    if (toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new") {
                         setCookieForSettings(toggleSwitches[i].id, true)
+                        toggleSwitches[i].checked = true
                     }
                     else {
                         setCookieForSettings(toggleSwitches[i].id, false)
+                        toggleSwitches[i].checked = false
                     }
                 }
                 setAllToggleValuesFromSettings()
