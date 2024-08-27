@@ -1,3 +1,15 @@
+# v1.98.0 (Tue Aug 27 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Make sure that darkmode is only displayed, when it es explicetl… [#1055](https://github.com/mumprod/hr-design-system-handlebars/pull/1055) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.97.0 (Tue Aug 27 2024)
 
 #### 🚀 Enhancement
