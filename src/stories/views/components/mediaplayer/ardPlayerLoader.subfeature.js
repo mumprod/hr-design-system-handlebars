@@ -60,9 +60,9 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
 
-            if (isDarkmodeAllowed) {
-                player.setLightMode(!darkModePreference.matches)
-            }
+
+            player.setLightMode(isDarkmodeAllowed ? !darkModePreference.matches : true)
+
 
             if (isPlayerDebug) {
                 ardplayer.debug(true, true, true, true)
@@ -132,7 +132,8 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     }
 
     const handleThemeSwitch = function (event) {
-        player.setLightMode(!event.matches)
+
+        player.setLightMode(isDarkmodeAllowed ? !event.matches : true)
     }
 
     const trackPlayerStart = function () {
