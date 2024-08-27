@@ -324,4 +324,15 @@ article.indexTextDS .indexTextHighlighted .link {
             @apply w-6 h-6;
         }
     }
+
+    h2,
+    h3,
+    h4 {
+        strong {
+            @apply font-normal;
+        }
+        em {
+            @apply not-italic;
+        }
+    }
 }
