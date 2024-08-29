@@ -1,43 +1,54 @@
+import snapshotsJson from './fixtures/button.json'
+import { snapshotsTemplate } from '/src/assets/js/utils.js'
+
 const handlebars = require('hrHandlebars')
 
-const buttonWithLabelTemplate = (args) => {
-    let hbsTemplate = handlebars.compile(`
+const hbsTemplates = []
+hbsTemplates['buttonWithLabel'] = handlebars.compile(`
     {{#> components/button/button}}
         {{> components/button/components/button_label}}
     {{/components/button/button}}
   `)
-    return hbsTemplate({ ...args })
-}
-
-const buttonWithLabelTemplateOnBackground = (args) => {
-    let hbsTemplate = handlebars.compile(`
+hbsTemplates['buttonWithLabelOnBackground'] = handlebars.compile(`
     <div class="bg-primary p-4">
         {{#> components/button/button}}
             {{> components/button/components/button_label }}
         {{/components/button/button}}
     </div>
   `)
-    return hbsTemplate({ ...args })
-}
-
-const buttonWithLabelAndIconRightTemplate = (args) => {
-    let hbsTemplate = handlebars.compile(`
+hbsTemplates['buttonWithLabelAndIconRight'] = handlebars.compile(`
     {{#> components/button/button}}
         {{> components/button/components/button_label }}
         {{> components/button/components/button_icon }}
     {{/components/button/button}}
   `)
-    return hbsTemplate({ ...args })
+hbsTemplates['buttonWithLabelAndIconLeft'] = handlebars.compile(`
+    {{#> components/button/button}}
+        {{> components/button/components/button_icon }}
+        {{> components/button/components/button_label }}
+    {{/components/button/button}}
+  `)
+
+
+
+const buttonWithLabelTemplate = (args) => {
+    return hbsTemplates['buttonWithLabel']({ ...args })
+}
+
+const buttonWithLabelTemplateOnBackground = (args) => {
+    return hbsTemplates['buttonWithLabelOnBackground']({ ...args })
+}
+
+const buttonWithLabelAndIconRightTemplate = (args) => {
+    return hbsTemplates['buttonWithLabelAndIconRight']({ ...args })
 }
 
 const buttonWithLabelAndIconLeftTemplate = (args) => {
-    let hbsTemplate = handlebars.compile(`
-    {{#> components/button/button~}}
-        {{> components/button/components/button_icon }}
-        {{> components/button/components/button_label }}
-    {{~/components/button/button}}
-  `)
-    return hbsTemplate({ ...args })
+    return hbsTemplates['buttonWithLabelAndIconLeft']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return hbsTemplates['buttonWithLabelAndIconLeft']({ ...args })
 }
 
 export default {
@@ -253,6 +264,7 @@ export default {
         controls: {
             sort: 'alpha',
         },
+        chromatic: { disableSnapshot: true }
     },
 }
 
@@ -573,4 +585,28 @@ export const ButtonTertiaryAufFarbigemHintergrund = {
         _variant: 'tertiary',
         _onBackground: true,
     },
+}
+
+export const Snapshot = {
+    render: snapshotsTemplate.bind({}),
+    name: 'Snapshot',
+
+    argTypes: {
+        _size: {
+            control: false,
+        },
+
+        _variant: {
+            control: false,
+        },
+
+        _onBackground: {
+            control: false,
+        },
+    },
+
+    args: { snapshotsJson, hbsTemplates },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
