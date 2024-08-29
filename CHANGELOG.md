@@ -1,3 +1,15 @@
+# v1.98.1 (Wed Aug 28 2024)
+
+#### 🐛 Bug Fix
+
+- changed title text for print button [#1056](https://github.com/mumprod/hr-design-system-handlebars/pull/1056) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.98.0 (Tue Aug 27 2024)
 
 #### 🚀 Enhancement

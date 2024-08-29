@@ -104,7 +104,7 @@
 {{~#with this.printLink}}
 <li class="">
     <button class="{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
-        title="{{loca "share_copy_linktitle" }}"
+        title="{{loca "share_print_linktitle" }}"
         onclick="window.print()"
         {{#with ../_trackingData}}
             data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::print"}]}'
