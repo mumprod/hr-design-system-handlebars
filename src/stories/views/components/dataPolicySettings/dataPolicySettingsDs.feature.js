@@ -26,18 +26,16 @@ const DataPolicySettings = function (context) {
     //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
         if (getJSONCookie('datapolicy') || getJSONCookie('tracking')) {
-            console.log("hessenschau bisher => Beide Cookies existieren")
             deleteOldCookiesandTransferData()
         }
         else {
-            console.log("hessenschau neu => nach der Löschung der beiden alten Cookies muß hier gelesen werden")
             if (getJSONCookie('hrSettings')) {
                 getAllToggleValuesFromSettings()
             }
             else {
                 console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
                 // Alle Dienste die via I-frame und nicht via JS eingebunden werden, werden über die Checkbox "DSGVO-Prüfung durchführen" im Konfig-Dokument bestückt.
-                let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new"]
+                /*let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new"]
                 for (let i = 0; i < toggleSwitches.length; ++i) {
                     if (toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new") {
                         setCookieForSettings(toggleSwitches[i].id, true)
@@ -47,6 +45,14 @@ const DataPolicySettings = function (context) {
                         setCookieForSettings(toggleSwitches[i].id, false)
                         toggleSwitches[i].checked = false
                     }
+                }*/
+                for (let i = 0; i < toggleSwitches.length; ++i) {
+                        if (toggleSwitches[i].getAttribute('check') == "true") {
+                            setCookieForSettings(toggleSwitches[i].id, true)
+                        }
+                        else {
+                            setCookieForSettings(toggleSwitches[i].id, false)
+                        }
                 }
                 setAllToggleValuesFromSettings()
                 changeProviderTitle()
