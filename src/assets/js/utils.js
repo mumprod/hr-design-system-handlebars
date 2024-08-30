@@ -5,7 +5,6 @@ const getSnapshotsTemplate = (args) => {
         if (!noContainer) {
             template += '<div>'
         }
-        console.log("Hubsi", hbsTemplates[value.template])
         template += hbsTemplates[value.template]({ ...value.args })
         if (!noContainer) {
             template += '</div>'
