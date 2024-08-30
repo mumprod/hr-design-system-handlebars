@@ -1,5 +1,5 @@
 import snapshotsJson from './fixtures/button.json'
-import { snapshotsTemplate } from '/src/assets/js/utils.js'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
 const handlebars = require('hrHandlebars')
 
@@ -48,8 +48,9 @@ const buttonWithLabelAndIconLeftTemplate = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return hbsTemplates['buttonWithLabelAndIconLeft']({ ...args })
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
+
 
 export default {
     title: 'Komponenten/Buttons/Button',
@@ -588,7 +589,7 @@ export const ButtonTertiaryAufFarbigemHintergrund = {
 }
 
 export const Snapshot = {
-    render: snapshotsTemplate.bind({}),
+    render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
     argTypes: {
@@ -605,7 +606,7 @@ export const Snapshot = {
         },
     },
 
-    args: { snapshotsJson, hbsTemplates },
+    args: { snapshotsJson },
     parameters: {
         chromatic: { disableSnapshot: false },
     }

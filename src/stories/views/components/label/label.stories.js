@@ -1,5 +1,5 @@
 import snapshotsJson from './fixtures/label.json'
-import { snapshotsTemplate } from '/src/assets/js/utils.js'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
 const handlebars = require('hrHandlebars')
 
@@ -12,6 +12,10 @@ const Template = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     return hbsTemplates['label']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
 
 export default {
@@ -197,7 +201,7 @@ export const Kurzmeldung = {
 }
 
 export const Snapshot = {
-    render: snapshotsTemplate.bind({}),
+    render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
     args: { snapshotsJson, hbsTemplates },

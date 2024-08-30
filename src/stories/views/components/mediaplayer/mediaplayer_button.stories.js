@@ -1,5 +1,5 @@
 import snapshotsJson from './fixtures/mediaplayer_button.json'
-import { snapshotsTemplate } from '/src/assets/js/utils.js'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 const handlebars = require('hrHandlebars')
 
 const hbsTemplates = []
@@ -14,6 +14,10 @@ const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
     {{> components/mediaplayer/mediaplayer_button _css="!static"}}
   `)
     return hbsTemplate({ brand, ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
 
 export default {
@@ -186,7 +190,7 @@ export const AudioLivestream = {
 }
 
 export const Snapshot = {
-    render: snapshotsTemplate.bind({}),
+    render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
     argTypes: {
@@ -203,7 +207,7 @@ export const Snapshot = {
         },
     },
 
-    args: { snapshotsJson, hbsTemplates },
+    args: { snapshotsJson },
     parameters: {
         chromatic: { disableSnapshot: false },
     }
