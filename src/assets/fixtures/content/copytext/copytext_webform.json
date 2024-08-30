@@ -1,0 +1,29 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Formular"
+        },
+        {
+            "paragraphBoxItem": {
+                "isWebForm": true,
+                "fields":[
+                    {
+                     "type":{
+                        "isText":true,
+                        "asString":"text"
+                     },
+                     "name":"name",
+                     "label":"Name",
+                     "description":"",
+                     "defaultValue":"",
+                     "isHidden":false,
+                     "isRequired":true,
+                     "maxLength":"140"
+                    }
+                ]
+                
+            }
+        }
+    ]
+}
