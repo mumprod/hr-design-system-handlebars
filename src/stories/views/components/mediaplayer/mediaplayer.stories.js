@@ -1,13 +1,22 @@
 import { userEvent, within, waitFor } from '@storybook/test'
 import mediaplayerJson from 'components/mediaplayer/fixtures/mediaplayer.json'
 
-import mediaPlayer from 'components/mediaplayer/media_player.hbs'
-import { delay } from 'underscore'
+import snapshotsJson from './fixtures/mediaplayer_snapshots.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
-const Template = ({ label, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return mediaPlayer({ label, ...args })
+const handlebars = require('hrHandlebars')
+
+const hbsTemplates = []
+hbsTemplates['mediaplayer'] = handlebars.compile(`
+    {{> components/mediaplayer/media_player}}  
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['mediaplayer']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
 
 export default {
@@ -33,6 +42,7 @@ export default {
         controls: {
             sort: 'requiredFirst',
         },
+        chromatic: { disableSnapshot: true }
     },
 }
 
@@ -60,6 +70,9 @@ export const VideoplayerSettings = {
         },
     ],
     args: { _isTeaser: false, ...mediaplayerJson.video },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    },
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement)
         await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'))
@@ -106,4 +119,16 @@ export const AudioplayerLivestream = {
     ],
     name: 'Audioplayer Livestream',
     args: { _isTeaser: false, _isAudioView: true, ...mediaplayerJson.audio_event_livestream },
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+
+
+    args: { snapshotsJson, noContainer: true },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
