@@ -25,6 +25,7 @@ const DataPolicySettings = function (context) {
 
     //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
+        //TODO: Kann nach einer gewissen Zeit rausgeworfen werden? Die alten Cookies sind mittlerweile rausgewachsen?
         if (getJSONCookie('datapolicy') || getJSONCookie('tracking')) {
             deleteOldCookiesandTransferData()
         }
@@ -34,24 +35,14 @@ const DataPolicySettings = function (context) {
             }
             else {
                 console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
-                // Alle Dienste die via I-frame und nicht via JS eingebunden werden, werden über die Checkbox "DSGVO-Prüfung durchführen" im Konfig-Dokument bestückt.
-                /*let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new"]
+                //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Externer Dienst initial deaktiviert, DSGVO wird geprüft" 
+                //im Konfig-Dokument bestückt.
                 for (let i = 0; i < toggleSwitches.length; ++i) {
-                    if (toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new") {
-                        setCookieForSettings(toggleSwitches[i].id, true)
-                        toggleSwitches[i].checked = true
-                    }
-                    else {
-                        setCookieForSettings(toggleSwitches[i].id, false)
-                        toggleSwitches[i].checked = false
-                    }
-                }*/
-                for (let i = 0; i < toggleSwitches.length; ++i) {
-                        if (toggleSwitches[i].getAttribute('check') == "true") {
-                            setCookieForSettings(toggleSwitches[i].id, true)
+                        if (toggleSwitches[i].getAttribute('data-checkService') == "true") {
+                            setCookieForSettings(toggleSwitches[i].id, false)
                         }
                         else {
-                            setCookieForSettings(toggleSwitches[i].id, false)
+                            setCookieForSettings(toggleSwitches[i].id, true)
                         }
                 }
                 setAllToggleValuesFromSettings()
