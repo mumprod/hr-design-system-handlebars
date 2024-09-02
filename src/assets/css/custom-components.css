@@ -310,7 +310,7 @@ article.indexTextDS .indexTextHighlighted .link {
 }
 
 /* -----------------------------COPYTEXT ---------------------------- */
-.copytext-ds {
+.hrds-copytext {
     &__link {
         @apply underline text-link decoration-1 hover:decoration-1 dark:text-link-dark ds-link;
     }
@@ -320,8 +320,19 @@ article.indexTextDS .indexTextHighlighted .link {
     }
 
     &__paragraph {
-        .copytext-ds__icon {
+        .hrds-copytext__icon {
             @apply w-6 h-6;
+        }
+    }
+
+    h2,
+    h3,
+    h4 {
+        strong {
+            @apply font-normal;
+        }
+        em {
+            @apply not-italic;
         }
     }
 }

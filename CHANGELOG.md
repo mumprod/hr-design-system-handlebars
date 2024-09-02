@@ -1,3 +1,51 @@
+# v1.98.1 (Wed Aug 28 2024)
+
+#### 🐛 Bug Fix
+
+- changed title text for print button [#1056](https://github.com/mumprod/hr-design-system-handlebars/pull/1056) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.98.0 (Tue Aug 27 2024)
+
+#### 🚀 Enhancement
+
+- :bug: Make sure that darkmode is only displayed, when it es explicetl… [#1055](https://github.com/mumprod/hr-design-system-handlebars/pull/1055) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.97.0 (Tue Aug 27 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3321 [#1054](https://github.com/mumprod/hr-design-system-handlebars/pull/1054) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.96.0 (Mon Aug 26 2024)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3322 [#1053](https://github.com/mumprod/hr-design-system-handlebars/pull/1053) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.95.1 (Fri Aug 23 2024)
 
 #### 🐛 Bug Fix

@@ -1,51 +1,37 @@
-import { download, pi, uxAction, uxNavigation } from 'base/tracking/pianoHelper.subfeature'
+import { download, pi, uxAction, uxNavigation } from 'base/tracking/pianoHelper.subfeature';
 
-const ClickTracking = function (context) {
-    const { options } = context,
-        { element: elementToTrack } = context,
-        settings = options.settings || []
+const ClickTracking = (context) => {
+    const { options, element: elementToTrack } = context;
+    const settings = options.settings || [];
 
-    const init = function () {
-        configureEventHandlers()
-    }
-
-    const configureEventHandlers = function () {
-        if (window.attachEvent) {
-            elementToTrack.attachEvent('click', clickHandler)
-        } else {
-            elementToTrack.addEventListener('click', clickHandler)
-        }
-    }
-
-    const clickHandler = function (event) {
-        settings.forEach(function (trackingSetting) {
+    const clickHandler = (event) => {
+        settings.forEach(({ type, clickLabel, secondLevelId }) => {
             /* use String.prototype.replace function with a regex and the global flag
                instead of String.prototype.replaceAll function to prevent errors in older
                browsers that don't know the replaceAll function
                see: https://www.designcise.com/web/tutorial/how-to-fix-replaceall-is-not-a-function-javascript-error
             */
-            trackingSetting.clickLabel = trackingSetting.clickLabel.replace(/&/g, '-')
-            switch (trackingSetting.type) {
+            const sanitizedLabel = clickLabel.replace(/&/g, '-');
+            switch (type) {
                 case 'download':
-                    download(trackingSetting.clickLabel, trackingSetting.secondLevelId)
-                    break
+                    download(sanitizedLabel, secondLevelId);
+                    break;
                 case 'pi':
-                    pi()
-                    break
+                    pi();
+                    break;
                 case 'uxAction':
-                    uxAction(trackingSetting.clickLabel, trackingSetting.secondLevelId)
-                    break
+                    uxAction(sanitizedLabel, secondLevelId);
+                    break;
                 case 'uxNavigation':
-                    uxNavigation(trackingSetting.clickLabel, trackingSetting.secondLevelId)
-                    break
+                    uxNavigation(sanitizedLabel, secondLevelId);
+                    break;
                 default:
-                    console.log('Fehler, es wurde kein Tracking Typ angegeben.')
-                    break
+                    console.error('Fehler, es wurde kein Tracking Typ angegeben.');
             }
-        })
-    }
+        });
+    };
 
-    init()
-}
+    elementToTrack.addEventListener('click', clickHandler);
+};
 
-export default ClickTracking
+export default ClickTracking;
