@@ -1,0 +1,116 @@
+{
+    "default": {
+        "template": "default",
+        "useAsSnapshot": false,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "default"
+        }
+    },
+    "default_not_sticky": {
+        "template": "default",
+        "useAsSnapshot": true,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "_useSticky",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "with_submenu": {
+        "template": "default",
+        "useAsSnapshot": false,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_submenu"
+        }
+    },
+    "with_submenu_not_sticky": {
+        "template": "default",
+        "css": "mt-12",
+        "useAsSnapshot": true,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_submenu",
+            "@->overrides": [
+                {
+                    "@->contentpath": "_useSticky",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "with_submenu_as_flyout": {
+        "template": "default",
+        "useAsSnapshot": false,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_submenu_as_flyout"
+        }
+    },
+    "with_submenu_as_flyout_not_sticky": {
+        "template": "default",
+        "css": "mt-12",
+        "useAsSnapshot": true,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_submenu_as_flyout",
+            "@->overrides": [
+                {
+                    "@->contentpath": "_useSticky",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "with_top_topics": {
+        "template": "default",
+        "useAsSnapshot": false,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_top_topics"
+        }
+    },
+    "with_top_topics_not_sticky": {
+        "template": "default",
+        "css": "mt-12",
+        "useAsSnapshot": true,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_top_topics",
+            "@->overrides": [
+                {
+                    "@->contentpath": "_useSticky",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "with_warnings": {
+        "template": "default",
+        "useAsSnapshot": false,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_warnings"
+        }
+    },
+    "with_warnings_not_sticky": {
+        "template": "default",
+        "css": "mt-12",
+        "useAsSnapshot": true,
+        "args": {
+            "@->jsoninclude": "site_header/site_header.inc.json",
+            "@->contentpath": "with_warnings",
+            "@->overrides": [
+                {
+                    "@->contentpath": "_useSticky",
+                    "@->value": false
+                }
+            ]
+        }
+    }
+}

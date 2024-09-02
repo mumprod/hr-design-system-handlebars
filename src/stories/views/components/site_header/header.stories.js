@@ -1,18 +1,29 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 import navigation from './header.hbs'
 import brandnav from './brand_navigation/brand_navigation.hbs'
+import snapshotsJson from './fixtures/site_header.json'
 import JsonData from './fixtures/site_header_default.json'
 import JsonData2 from './fixtures/site_header_mit_warnung.json'
 import JsonData3 from './fixtures/site_header_mit_submenu.json'
 import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json'
 import JsonDataHR3 from './fixtures/site_header_mit_submenu_as_flyout_no_sticky.json'
 
-const Template = (args, { globals: { theme } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'
-    return navigation({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/site_header/header}}  
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
 }
+
+const snapshotTemplate = (args) => {
+    console.log("Test", args)
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
+}
+
 const TemplateHr3 = (args, { globals: { theme } }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
@@ -27,6 +38,7 @@ export default {
     parameters: {
         chromatic: {
             viewports: [360, 768, 1024],
+            disableSnapshot: true
         },
 
         layout: 'fullscreen',
@@ -44,30 +56,40 @@ export default {
 export const Default = {
     render: Template.bind({}),
     name: 'Default',
-    args: JsonData,
+    args: snapshotsJson.default.args,
     parameters: {},
 }
 
 export const MitWarnung = {
     render: Template.bind({}),
     name: 'Mit Warnung',
-    args: JsonData2,
+    args: snapshotsJson.with_warnings.args,
 }
 
 export const MitTopTopics = {
     render: Template.bind({}),
     name: 'Mit Top Topics',
-    args: JsonDataTopTopics,
+    args: snapshotsJson.with_top_topics.args,
 }
 
 export const MitSubnavigation = {
     render: Template.bind({}),
     name: 'Mit Subnavigation',
-    args: JsonData3,
+    args: snapshotsJson.with_submenu.args,
 }
 
 export const MitSubnavigationAlsFlyout = {
     render: TemplateHr3.bind({}),
     name: 'Mit Subnavigation als Flyout',
-    args: JsonDataHR3,
+    args: snapshotsJson.with_submenu_as_flyout_not_sticky.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: { snapshotsJson },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
