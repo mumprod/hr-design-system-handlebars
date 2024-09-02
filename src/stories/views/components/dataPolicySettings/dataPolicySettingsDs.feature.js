@@ -38,11 +38,11 @@ const DataPolicySettings = function (context) {
                 //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Externer Dienst initial deaktiviert, DSGVO wird geprüft" 
                 //im Konfig-Dokument bestückt.
                 for (let i = 0; i < toggleSwitches.length; ++i) {
-                        if (toggleSwitches[i].getAttribute('data-checkService') == "true") {
-                            setCookieForSettings(toggleSwitches[i].id, false)
+                        if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
+                            setCookieForSettings(toggleSwitches[i].id, true)
                         }
                         else {
-                            setCookieForSettings(toggleSwitches[i].id, true)
+                            setCookieForSettings(toggleSwitches[i].id, false)
                         }
                 }
                 setAllToggleValuesFromSettings()
