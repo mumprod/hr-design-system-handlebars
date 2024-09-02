@@ -1,9 +1,12 @@
 const getSnapshotsTemplate = (args) => {
     const { hbsTemplates, snapshotsJson, noContainer } = args
+    const filteredSnapshots = Object.entries(snapshotsJson).filter(([key, value]) => {
+        return undefined !== value.useAsSnapshot ? value.useAsSnapshot : true
+    })
     let template = '<div class="flex flex-auto flex-wrap gap-3">'
-    for (const [key, value] of Object.entries(snapshotsJson)) {
+    for (const [key, value] of filteredSnapshots) {
         if (!noContainer) {
-            template += '<div>'
+            template += value.css === undefined ? '<div>' : `<div class="${value.css}">`
         }
         template += hbsTemplates[value.template]({ ...value.args })
         if (!noContainer) {
