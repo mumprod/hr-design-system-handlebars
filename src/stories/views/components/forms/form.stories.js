@@ -8,7 +8,7 @@ const Template = ({ ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/Content/Copytext/Form',
+    title: 'Komponenten/Formulare',
     decorators: [
         (Story) => {
             return `<div class="relative flex  flex-col justify-center overflow-hidden py-6 sm:py-12">
