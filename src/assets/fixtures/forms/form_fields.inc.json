@@ -1,0 +1,44 @@
+{
+    "input-text-vorname":
+    {
+        "type":{
+            "isText":true,
+            "asString":"text"
+        },
+        "name":"vorname",
+        "label":"Vorname",
+        "description":"Das ist der Beschreibungstext",
+        "defaultValue":"",
+        "isHidden":false,
+        "isRequired":false,
+        "maxLength":"140"
+    },
+    "input-text-vorname-required":
+    {
+        "type":{
+            "isText":true,
+            "asString":"text"
+        },
+        "name":"vorname",
+        "label":"Vorname",
+        "description":"",
+        "defaultValue":"",
+        "isHidden":false,
+        "isRequired":true,
+        "maxLength":"140"
+    },
+    "input-text-nachname":
+    {
+        "type":{
+            "isText":true,
+            "asString":"text"
+        },
+        "name":"nachname",
+        "label":"Nachname",
+        "description":"Das ist der Beschreibungstext von Nachname",
+        "defaultValue":"",
+        "isHidden":false,
+        "isRequired":true,
+        "maxLength":"140"
+    }         
+ }

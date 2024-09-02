@@ -9,17 +9,12 @@
                 "isWebForm": true,
                 "fields":[
                     {
-                     "type":{
-                        "isText":true,
-                        "asString":"text"
-                     },
-                     "name":"name",
-                     "label":"Name",
-                     "description":"",
-                     "defaultValue":"",
-                     "isHidden":false,
-                     "isRequired":true,
-                     "maxLength":"140"
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "input-text-vorname"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "input-text-nachname"
                     }
                 ]
                 
