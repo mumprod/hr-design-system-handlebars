@@ -1,3 +1,15 @@
+# v1.98.2 (Mon Sep 02 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3298 - Whitelist for external services from CMS [#1058](https://github.com/mumprod/hr-design-system-handlebars/pull/1058) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.98.1 (Wed Aug 28 2024)
 
 #### 🐛 Bug Fix
