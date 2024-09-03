@@ -1,15 +1,13 @@
 {
     "breadcrumb": {
-        "breadcrumb": {
-            "showBreadcrumbTitleAlways": false,
-            "breadcrumbSsi": {
-                "breadcrumb": [
-                    {
-                        "url": "item-1",
-                        "title": "Level 1"
-                    }
-                ]
-            }
+        "showBreadcrumbTitleAlways": false,
+        "breadcrumbSsi": {
+            "breadcrumb": [
+                {
+                    "url": "item-1",
+                    "title": "Level 1"
+                }
+            ]
         }
     }
 }

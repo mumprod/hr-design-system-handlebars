@@ -1,0 +1,114 @@
+{
+    "2_levels": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+            "@->contentpath": "breadcrumb",
+            "@->extends": {
+                "_currentPageUrl": "#currentPage",
+                "_currentPageTitle": "Kurzer Titel"
+            },
+            "@->overrides": [
+                {
+                    "@->contentpath": "breadcrumbSsi.breadcrumb",
+                    "@->value": [
+                        {
+                            "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                            "@->contentpath": "level-1"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "3_levels": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+            "@->contentpath": "breadcrumb",
+            "@->extends": {
+                "_currentPageUrl": "#currentPage",
+                "_currentPageTitle": "Korruptionsprozess: Verteidigung von Ex-Oberstaatsanwalt plädiert auf höchstens vier Jahre Haft"
+            },
+            "@->overrides": [
+                {
+                    "@->contentpath": "breadcrumbSsi.breadcrumb",
+                    "@->value": [
+                        {
+                            "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                            "@->contentpath": "level-1"
+                        },
+                        {
+                            "url": "panorama",
+                            "title": "Panorama"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "4_levels": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+            "@->contentpath": "breadcrumb",
+            "@->extends": {
+                "_currentPageUrl": "#currentPage",
+                "_currentPageTitle": "Darmstadt 98 bleibt trotz Enttäuschung cool: \"Keinen Stift in der Hose\""
+            },
+            "@->overrides": [
+                {
+                    "@->contentpath": "breadcrumbSsi.breadcrumb",
+                    "@->value": [
+                        {
+                            "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                            "@->contentpath": "level-1"
+                        },
+                        {
+                            "url": "sport",
+                            "title": "Sport"
+                        },
+                        {
+                            "url": "darmstadt98",
+                            "title": "Darmstadt 98"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "5_levels": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
+            "@->contentpath": "breadcrumb",
+            "@->extends": {
+                "_currentPageUrl": "#currentPage",
+                "_currentPageTitle": "Verein bestätigt: Eintracht Frankfurt trennt sich im Sommer von Oliver Glasner"
+            },
+            "@->overrides": [
+                {
+                    "@->contentpath": "breadcrumbSsi.breadcrumb",
+                    "@->value": [
+                        {
+                            "@->jsoninclude": "navigation/breadcrumb/breadcrumb_items.inc.json",
+                            "@->contentpath": "level-1"
+                        },
+                        {
+                            "url": "sport",
+                            "title": "Sport"
+                        },
+                        {
+                            "url": "fussball",
+                            "title": "Fußball"
+                        },
+                        {
+                            "url": "eintracht",
+                            "title": "Eintracht Frankfurt"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
