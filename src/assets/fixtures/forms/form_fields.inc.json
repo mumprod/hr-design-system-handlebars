@@ -7,11 +7,11 @@
         },
         "name":"vorname",
         "label":"Vorname",
-        "description":"Das ist der Beschreibungstext",
+        "description":"Das ist der Beschreibungstext von Vorname",
         "defaultValue":"",
         "isHidden":false,
-        "isRequired":false,
-        "maxLength":"140"
+        "isRequired":false
+        
     },
     "input-text-vorname-required":
     {
@@ -25,7 +25,7 @@
         "defaultValue":"",
         "isHidden":false,
         "isRequired":true,
-        "maxLength":"140"
+        "maxLength":"20"
     },
     "input-text-nachname":
     {

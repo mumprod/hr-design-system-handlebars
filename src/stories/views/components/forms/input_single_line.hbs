@@ -1,6 +1,5 @@
 <div class="relative flex flex-col w-full mb-5" x-data="{ input{{nextRandom}}: '' }">
-  <input class="invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500
-  relative w-full h-12 px-4 pt-4 text-gray-800 placeholder-transparent bg-white border-blue-500 peer border-y border-t-transparent focus:outline-none" 
+  <input class="relative w-full h-12 px-4 pt-4 text-gray-800 placeholder-transparent bg-white border-blue-500 peer border-y border-t-transparent focus:outline-none" 
 
       id="input{{getRandom}}"
       x-model="input{{getRandom}}"
@@ -27,7 +26,6 @@
       {{#if _maxLength}}
          maxlength="{{_maxLength}}"
       {{/if~}}
-      minlength="2"
       {{#if _required}} required{{/if}}
       {{#if _tabindex}} tabindex="{{_tabindex}}"{{/if}}
       {{#if _autocompleteOff}} autocomplete="off"{{/if}}
@@ -51,16 +49,11 @@
             {{/if}}
         {{/if}}
       {{/if}}
-   </label>
-   <span class="pl-4 text-xs hidden text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
-    Please enter a valid email address
-  </span>  
-   <div class="flex justify-between mb-5 min-h-4">
-      
+   </label> 
+   <div class="flex justify-between mb-5 min-h-4 font-heading mt-0.5">     
        <div class="pl-4 text-xs text-gray-500 ">{{#if _description}}{{_description}}{{else}}{{#if _required}}*Pflichtfeld{{/if}}{{/if}}</div>
       {{#if _maxLength}}
          <div class="px-4 text-xs text-gray-500 "><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
-
 </div>
