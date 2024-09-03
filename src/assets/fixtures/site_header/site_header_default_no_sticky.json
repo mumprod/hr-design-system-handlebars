@@ -1,9 +1,0 @@
-{   
-    "@->jsoninclude": "site_header/site_header_default.json",
-    "@->overrides" : [
-        { 
-            "@->contentpath": "_useSticky",
-            "@->value": false
-        }
-    ]
-}

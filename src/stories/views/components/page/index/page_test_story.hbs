@@ -21,7 +21,7 @@
     
     {{#unless _webview}}
         {{#> components/banner/header/breadcrumb_wrapper _hasContentNav=this.structureNav.contentNav _hasBannerImage=this.hasBannerImage}}
-            {{> components/navigation/breadcrumb/breadcrumb this.breadcrumb _currentPageUrl=this.url _currentPageTitle=this.breadcrumbTitle }}
+            {{> components/navigation/breadcrumb/breadcrumb this _currentPageUrl=this.url _currentPageTitle=this.breadcrumbTitle }}
         {{/components/banner/header/breadcrumb_wrapper }}   
     {{/unless}}
 

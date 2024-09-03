@@ -1,13 +1,7 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 import navigation from './header.hbs'
-import brandnav from './brand_navigation/brand_navigation.hbs'
 import snapshotsJson from './fixtures/site_header.json'
-import JsonData from './fixtures/site_header_default.json'
-import JsonData2 from './fixtures/site_header_mit_warnung.json'
-import JsonData3 from './fixtures/site_header_mit_submenu.json'
-import JsonDataTopTopics from './fixtures/site_header_mit_top_topics.json'
-import JsonDataHR3 from './fixtures/site_header_mit_submenu_as_flyout_no_sticky.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []

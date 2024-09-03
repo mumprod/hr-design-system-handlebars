@@ -26,11 +26,11 @@ const Template2 = (args, { globals: { theme } }) => {
     return page_pagination({ brand, ...args })
 }
 
-const Template3 = (args, { globals: { theme } }) => {
+const Template3 = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'
-    return page_article({ brand, ...args })
+    console.log("Artikel ", { ...args })
+    return page_article({ ...args })
 }
 export default {
     title: 'Seiten/Index',
