@@ -51,9 +51,11 @@
       {{/if}}
    </label> 
    <div class="flex justify-between mb-5 min-h-4 font-heading mt-0.5">     
-       <div class="pl-4 text-xs text-gray-500 ">{{#if _description}}{{_description}}{{else}}{{#if _required}}*Pflichtfeld{{/if}}{{/if}}</div>
+      {{#if _description}}  
+         <div class="pl-4 text-xs text-gray-500 ">{{_description}}</div>
+      {{/if}}
       {{#if _maxLength}}
-         <div class="px-4 text-xs text-gray-500 "><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
 </div>
