@@ -5,13 +5,16 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall, web
     let timer
     let uniqueID = id
     let intervall = refreshIntervall
+    let container
+    let script 
+    let iframeRefresh
     
     if (webcomponent) {
-    let container = document.getElementById('datawrapper-chart-' + uniqueID)
-    let script = document.getElementById('datawrapper-component-js')
+    container = document.getElementById('datawrapper-chart-' + uniqueID)
+    script = document.getElementById('datawrapper-component-js')
     }
     else{
-    let iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
+    iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
     }
     
     const createRefresher = function () {
