@@ -1,3 +1,15 @@
+# v1.98.3 (Wed Sep 04 2024)
+
+#### 🐛 Bug Fix
+
+- Global var initialization [#1059](https://github.com/mumprod/hr-design-system-handlebars/pull/1059) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.98.2 (Mon Sep 02 2024)
 
 #### 🐛 Bug Fix
