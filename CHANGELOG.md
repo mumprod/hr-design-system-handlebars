@@ -1,3 +1,15 @@
+# v1.99.0 (Wed Sep 04 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: add tracking for external links [#1060](https://github.com/mumprod/hr-design-system-handlebars/pull/1060) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
 # v1.98.3 (Wed Sep 04 2024)
 
 #### 🐛 Bug Fix
