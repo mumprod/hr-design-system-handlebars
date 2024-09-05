@@ -14,6 +14,7 @@ module.exports = {
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js,json}',
         './src/assets/vendor/**/*.js',
+        './src/assets/js/**/*.js',
     ],
     theme: {
         screens: {
