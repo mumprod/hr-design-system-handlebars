@@ -192,10 +192,7 @@ export const Spielplatz = {
     render: buttonWithLabelTemplate.bind({}),
     name: 'Spielplatz',
 
-    args: {
-        _size: 'md',
-        _label: 'Button',
-    },
+    args: snapshotsJson['button-md'].args,
 }
 
 export const ButtonLg = {
@@ -212,10 +209,7 @@ export const ButtonLg = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Large',
-    },
+    args: snapshotsJson['button-lg'].args,
 }
 
 export const ButtonMd = {
@@ -232,10 +226,7 @@ export const ButtonMd = {
         },
     },
 
-    args: {
-        _size: 'md',
-        _label: 'Medium',
-    },
+    args: snapshotsJson['button-md'].args,
 }
 
 export const ButtonSm = {
@@ -252,10 +243,7 @@ export const ButtonSm = {
         },
     },
 
-    args: {
-        _size: 'sm',
-        _label: 'Small',
-    },
+    args: snapshotsJson['button-sm'].args,
 }
 
 export const ButtonPrimary = {
@@ -272,10 +260,7 @@ export const ButtonPrimary = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Primary',
-    },
+    args: snapshotsJson['button-primary'].args,
 }
 
 export const ButtonSecondary = {
@@ -292,11 +277,7 @@ export const ButtonSecondary = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Secondary',
-        _variant: 'secondary',
-    },
+    args: snapshotsJson['button-secondary'].args,
 }
 
 export const ButtonSecondaryWhite = {
@@ -313,12 +294,7 @@ export const ButtonSecondaryWhite = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Secondary',
-        _variant: 'secondary',
-        _onWhite: true,
-    },
+    args: snapshotsJson['button-secondary-on-white'].args,
 }
 
 export const ButtonTertiary = {
@@ -335,11 +311,7 @@ export const ButtonTertiary = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Tertiary',
-        _variant: 'tertiary',
-    },
+    args: snapshotsJson['button-tertiary'].args,
 }
 
 export const ButtonPrimaryDisabled = {
@@ -356,11 +328,7 @@ export const ButtonPrimaryDisabled = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Primary',
-        _disabled: true,
-    },
+    args: snapshotsJson['button-primary-disabled'].args,
 }
 
 export const ButtonSecondaryDisabled = {
@@ -377,12 +345,7 @@ export const ButtonSecondaryDisabled = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Secondary',
-        _variant: 'secondary',
-        _disabled: true,
-    },
+    args: snapshotsJson['button-secondary-disabled'].args,
 }
 
 export const ButtonTertiaryDisabled = {
@@ -399,12 +362,7 @@ export const ButtonTertiaryDisabled = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Tertiary',
-        _variant: 'tertiary',
-        _disabled: true,
-    },
+    args: snapshotsJson['button-tertiary-disabled'].args,
 }
 
 export const ButtonIconRechts = {
@@ -421,11 +379,7 @@ export const ButtonIconRechts = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Icon rechts',
-        _icon: 'arrow-right',
-    },
+    args: snapshotsJson['button-icon-right'].args,
 }
 
 export const ButtonIconLinks = {
@@ -442,11 +396,7 @@ export const ButtonIconLinks = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Icon links',
-        _icon: 'arrow-left',
-    },
+    args: snapshotsJson['button-icon-left'].args,
 }
 
 export const ButtonPrimaryAufFarbigemHintergrund = {
@@ -467,11 +417,7 @@ export const ButtonPrimaryAufFarbigemHintergrund = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Primary',
-        _onBackground: true,
-    },
+    args: snapshotsJson['button-primary-background'].args,
 }
 
 export const ButtonSecondaryAufFarbigemHintergrund = {
@@ -492,12 +438,7 @@ export const ButtonSecondaryAufFarbigemHintergrund = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Secondary',
-        _variant: 'secondary',
-        _onBackground: true,
-    },
+    args: snapshotsJson['button-secondary-background'].args,
 }
 
 export const ButtonTertiaryAufFarbigemHintergrund = {
@@ -518,12 +459,7 @@ export const ButtonTertiaryAufFarbigemHintergrund = {
         },
     },
 
-    args: {
-        _size: 'lg',
-        _label: 'Tertiary',
-        _variant: 'tertiary',
-        _onBackground: true,
-    },
+    args: snapshotsJson['button-tertiary-background'].args,
 }
 
 export const Snapshot = {

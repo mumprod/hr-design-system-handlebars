@@ -35,6 +35,15 @@
             "_variant": "secondary"
         }
     },
+    "button-secondary-on-white": {
+        "template": "buttonWithLabel",
+        "args": {
+            "_label": "Secondary",
+            "_size": "lg",
+            "_variant": "secondary",
+            "_onWhite": true
+        }
+    },
     "button-tertiary": {
         "template": "buttonWithLabel",
         "args": {

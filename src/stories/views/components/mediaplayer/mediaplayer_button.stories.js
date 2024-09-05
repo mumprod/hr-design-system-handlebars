@@ -7,13 +7,8 @@ hbsTemplates['button'] = handlebars.compile(`
     {{> components/mediaplayer/mediaplayer_button _css="!static"}}
   `)
 
-const buttonTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    let hbsTemplate = handlebars.compile(`
-    {{> components/mediaplayer/mediaplayer_button _css="!static"}}
-  `)
-    return hbsTemplate({ brand, ...args })
+const buttonTemplate = (args) => {
+    return hbsTemplates['button']({ ...args })
 }
 
 const snapshotTemplate = (args) => {
@@ -57,11 +52,7 @@ export const Spielplatz = {
     render: buttonTemplate.bind({}),
     name: 'Spielplatz',
 
-    args: {
-        _icon: 'play_button',
-        _label: 'Video',
-        _isLivestream: false,
-    },
+    args: snapshotsJson['button-video'].args,
 }
 
 export const Video = {
@@ -82,11 +73,7 @@ export const Video = {
         },
     },
 
-    args: {
-        _icon: 'play_button',
-        _label: 'Video',
-        _isLivestream: false,
-    },
+    args: snapshotsJson['button-video'].args,
 }
 
 export const Audio = {
@@ -107,11 +94,7 @@ export const Audio = {
         },
     },
 
-    args: {
-        _icon: 'audio_button',
-        _label: 'Audio',
-        _isLivestream: false,
-    },
+    args: snapshotsJson['button-audio'].args,
 }
 
 export const Podcast = {
@@ -132,11 +115,7 @@ export const Podcast = {
         },
     },
 
-    args: {
-        _icon: 'podcast-button',
-        _label: 'Podcast',
-        _isLivestream: false,
-    },
+    args: snapshotsJson['button-podcast'].args,
 }
 
 export const VideoLivestream = {
@@ -157,11 +136,7 @@ export const VideoLivestream = {
         },
     },
 
-    args: {
-        _icon: 'play_button',
-        _label: 'Video - Livestream',
-        _isLivestream: true,
-    },
+    args: snapshotsJson['button-video-livestream'].args,
 }
 
 export const AudioLivestream = {
@@ -182,11 +157,7 @@ export const AudioLivestream = {
         },
     },
 
-    args: {
-        _icon: 'audio_button',
-        _label: 'Audio - Livestream',
-        _isLivestream: true,
-    },
+    args: snapshotsJson['button-audio-livestream'].args
 }
 
 export const Snapshot = {

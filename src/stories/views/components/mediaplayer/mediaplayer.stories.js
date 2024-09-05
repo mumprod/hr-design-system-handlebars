@@ -56,7 +56,7 @@ export const Videoplayer = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, ...mediaplayerJson.video },
+    args: snapshotsJson.video.args,
 }
 
 export const VideoplayerSettings = {
@@ -69,7 +69,7 @@ export const VideoplayerSettings = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, ...mediaplayerJson.video },
+    args: snapshotsJson.video.args,
     parameters: {
         chromatic: { disableSnapshot: false },
     },
@@ -92,7 +92,7 @@ export const VideoplayerLive = {
         },
     ],
     name: 'Videoplayer Livestream',
-    args: { _isTeaser: false, ...mediaplayerJson.video_livestream },
+    args: snapshotsJson.video_livestream.args,
 }
 
 export const Audioplayer = {
@@ -105,7 +105,7 @@ export const Audioplayer = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, _isAudioView: true, ...mediaplayerJson.audio },
+    args: snapshotsJson.audio.args,
 }
 
 export const AudioplayerLivestream = {
@@ -118,7 +118,7 @@ export const AudioplayerLivestream = {
         },
     ],
     name: 'Audioplayer Livestream',
-    args: { _isTeaser: false, _isAudioView: true, ...mediaplayerJson.audio_event_livestream },
+    args: snapshotsJson.audio_event_livestream.args,
 }
 
 export const Snapshot = {
