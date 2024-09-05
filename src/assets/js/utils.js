@@ -3,7 +3,7 @@ const getSnapshotsTemplate = (args) => {
     const filteredSnapshots = Object.entries(snapshotsJson).filter(([key, value]) => {
         return undefined !== value.useAsSnapshot ? value.useAsSnapshot : true
     })
-    let template = '<div class="flex flex-auto flex-wrap gap-3">'
+    let template = '<div class="flex flex-auto flex-wrap gap-8">'
     for (const [key, value] of filteredSnapshots) {
         if (!noContainer) {
             template += value.css === undefined ? '<div>' : `<div class="${value.css}">`
