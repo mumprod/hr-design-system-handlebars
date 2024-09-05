@@ -1,111 +1,269 @@
-{   
-    "moreThanOnePage": true,
-    "onlyThreePages": false,
-    "onlyTwoPages": false,
-    "firstPage": true,
-    "secondPage": false,
-    "notLastButOnePage": false,
-    "notLastPage": false,
-    "firstPageItemLink" : {
-        "url": "firstPage"
-    },
-    "nextItemLink" : {
-        "url": "nextItem"
-    },
-    "previousItemLink" : {
-        "url": "previousItem"
-    },
-    "lastPageItemLink" : {
-        "url": "lastPage"
-    },
-    "lastButOnePageItemLink" : {
-        "url": "LastButOnePage"
-    },
-    "totalPages": 4, 
-    "currentPage": 2,
-    "currentPageIndex": 0,
-    "currentPageValid": true,
-    "pageEntries":[
-        {   
-                "teaser_alternativ_100_serif":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif.json"
-                }, 
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+{
+    "more_than_three_first": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "currentPageValid",
+                    "@->value": true
                 },
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_link":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_link.json"
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_live":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_live.json"
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "totalPages",
+                    "@->value": 999
                 }
-            },
-        {   
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
-                }, 
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+            ]
+        }
+    },
+    "more_than_three_second": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": true
                 },
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_download":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "totalPages",
+                    "@->value": 999
                 }
-            }, 
-        {   
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+            ]
+        }
+    },
+    "more_than_three_but_not_last": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_audio":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "totalPages",
+                    "@->value": 999
+                },
+                {
+                    "@->contentpath": "currentPage",
+                    "@->value": 998
                 }
-            },
-        {   
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+            ]
+        }
+    },
+    "more_than_three_one_but_not_last": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": false
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": true
                 },
-                "teaser_alternativ_100_serif_video":{
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "totalPages",
+                    "@->value": 999
+                },
+                {
+                    "@->contentpath": "currentPage",
+                    "@->value": 555
                 }
-            }  
-
-            ] 
+            ]
+        }
+    },
+    "more_than_three_last": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "totalPages",
+                    "@->value": 999
+                },
+                {
+                    "@->contentpath": "currentPage",
+                    "@->value": 999
+                }
+            ]
+        }
+    },
+    "only_two": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "only_three": {
+        "template": "default",
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "onlyThreePages",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "onlyTwoPages",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "secondPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "firstPage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastButOnePage",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "notLastPage",
+                    "@->value": false
+                }
+            ]
+        }
+    }
 }
