@@ -1,16 +1,21 @@
-import metadatabox_template from './metadatabox.hbs'
-import metadatabox_json from '../fixtures/metadatabox.json'
-import metadatabox_comments_json from '../fixtures/metadatabox_comments.json'
-import metadatabox_one_author_json from '../fixtures/metadatabox_one_author.json'
-import metadatabox_one_author_without_picture_json from '../fixtures/metadatabox_one_author_without_picture.json'
-import metadatabox_one_author_comments_json from '../fixtures/metadatabox_one_author_comments.json'
-import metadatabox_more_authors_json from '../fixtures/metadatabox_more_authors.json'
-import metadatabox_more_authors_comments_json from '../fixtures/metadatabox_more_authors_comments.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import snapshotsJson from '../fixtures/metadatabox.json'
 
-const Template = ({ ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<span>${topline}</span>`;
-    return metadatabox_template({ ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/page/components/metadatabox}}  
+  `)
+
+
+
+const Template = (args) => {
+    console.log("Args: ", args)
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
 
 export default {
@@ -21,6 +26,18 @@ export default {
             description: 'Datum anzeigen',
         },
     },
+    parameters: {
+        controls: {
+            sort: 'alpha',
+        },
+        chromatic: {
+            disableSnapshot: true
+        },
+    },
+}
+
+export const Default = {
+    render: Template.bind({}),
     decorators: [
         (Story) => {
             return `<div class="max-w-[724px] mx-auto mt-60">  
@@ -28,46 +45,93 @@ export default {
              </div>`
         },
     ],
-}
-
-export const Default = {
-    render: Template.bind({}),
     name: 'Nur Datum',
-    args: metadatabox_json,
+    args: snapshotsJson.metadatabox.args,
 }
 
 export const WithComments = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Datum und Kommentar-Link',
-    args: metadatabox_comments_json,
+    args: snapshotsJson.metadatabox_with_comments.args,
 }
 
 export const WithOneAuthor = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Ein Autor',
-    args: metadatabox_one_author_json,
+    args: snapshotsJson.metadatabox_with_one_author.args,
 }
 
 export const WithOneAuthorWithoutPicture = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Ein Autor ohne Bild',
-    args: metadatabox_one_author_without_picture_json,
+    args: snapshotsJson.metadatabox_with_one_author_and_without_picture.args,
 }
 
 export const WithMoreAuthors = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Mehrere Autoren',
-    args: metadatabox_more_authors_json,
+    args: snapshotsJson.metadatabox_with_more_authors.args,
 }
 
 export const WithOneAuthorAndComments = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Ein Autor und Kommentar-Link',
-    args: metadatabox_one_author_comments_json,
+    args: snapshotsJson.metadatabox_with_one_author_and_comments.args,
 }
 
 export const WithMoreAuthorsAndComments = {
     render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
     name: 'Mehrere Autoren und Kommentar-Link',
-    args: metadatabox_more_authors_comments_json,
+    args: snapshotsJson.metadatabox_with_more_authors_and_comments.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+    args: { snapshotsJson },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

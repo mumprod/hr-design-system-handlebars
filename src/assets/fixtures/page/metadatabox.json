@@ -1,19 +1,82 @@
 {
-    "_showDate": true,
-    "hasMoreThanOneAuthor": false,
-    "hasDwellTime": true,
-    "documentModificationDate": {
-        "isModificationDate": false,
-        "isPublicationDate": true,
-        "htmlDateTime": "2024-02-15T19:30+0200",
-        "date": "15.02.24",
-        "time": "19:30"
+    "metadatabox": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "default"
+        }
     },
-    "socialSharing": {
-        "twitterLink": "/twitterLink-url",
-        "facebookLink": "/facebookLink-url",
-        "whatsappLink": "/whatsappLink-url",
-        "mailtoLink": "/mailtoLink-url",
-        "copyToClipboardLink": "/copyToClipboard-url"
+    "metadatabox_with_comments": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "default",
+            "@->extends": {
+                "userComments": {
+                    "HasOneComment": false,
+                    "quantity": "117"
+                }
+            }
+        }
+    },
+    "metadatabox_with_one_author": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_author"
+        }
+    },
+    "metadatabox_with_one_author_and_comments": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_author",
+            "@->extends": {
+                "userComments": {
+                    "HasOneComment": false,
+                    "quantity": "117"
+                }
+            }
+        }
+    },
+    "metadatabox_with_one_author_and_without_picture": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_author",
+            "@->overrides": [
+                {
+                    "@->contentpath": "authorImage",
+                    "@->value": {}
+                }
+            ]
+        }
+    },
+    "metadatabox_with_more_authors": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_more_authors"
+        }
+    },
+    "metadatabox_with_more_authors_and_comments": {
+        "template": "default",
+        "css": "w-[724px] mx-auto",
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_more_authors",
+            "@->extends": {
+                "userComments": {
+                    "HasOneComment": false,
+                    "quantity": "117"
+                }
+            }
+        }
     }
 }

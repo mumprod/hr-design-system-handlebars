@@ -1,0 +1,98 @@
+{
+    "default": {
+        "_showDate": true,
+        "hasMoreThanOneAuthor": false,
+        "hasDwellTime": true,
+        "documentModificationDate": {
+            "isModificationDate": false,
+            "isPublicationDate": true,
+            "htmlDateTime": "2024-02-15T19:30+0200",
+            "date": "15.02.24",
+            "time": "19:30"
+        },
+        "socialSharing": {
+            "twitterLink": "/twitterLink-url",
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    },
+    "with_author": {
+        "_showDate": true,
+        "hasOneAuthor": true,
+        "hasMoreThanOneAuthor": false,
+        "hasDwellTime": true,
+        "authorTitle": "Steffen Rebhahn",
+        "textAfterAuthor": "(Redaktion hessenschau.de)",
+        "authorImage": {
+            "@->jsoninclude": "page/story/story_images.inc.json",
+            "@->contentpath": "author",
+            "@->replaceToken": [
+                {
+                    "@->token": "image",
+                    "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                }
+            ]
+        },
+        "authorUrl": "/author-url",
+        "webviewAuthorUrl": "webview-author-url",
+        "documentModificationDate": {
+            "isModificationDate": false,
+            "isPublicationDate": true,
+            "htmlDateTime": "2024-02-15T19:30+0200",
+            "date": "15.02.24",
+            "time": "19:30"
+        },
+        "socialSharing": {
+            "twitterLink": "/twitterLink-url",
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    },
+    "with_more_authors": {
+        "_showDate": true,
+        "hasMoreThanOneAuthor": true,
+        "hasDwellTime": true,
+        "documentModificationDate": {
+            "isModificationDate": false,
+            "isPublicationDate": true,
+            "htmlDateTime": "2024-02-15T19:30+0200",
+            "date": "15.02.24",
+            "time": "19:30"
+        },
+        "authorItems": [
+            {
+                "hasProfileLink": false,
+                "from": "Von",
+                "textAfterAuthor": "Horst Schlämmer",
+                "delimiter": ", "
+            },
+            {
+                "hasProfileLink": false,
+                "from": "",
+                "textAfterAuthor": "Karl Dall",
+                "delimiter": " und "
+            },
+            {
+                "hasProfileLink": true,
+                "from": "",
+                "authorName": "Peter Lustig",
+                "delimiter": "",
+                "link": {
+                    "url": "/author-url",
+                    "isTargetBlank": false
+                }
+            }
+        ],
+        "socialSharing": {
+            "twitterLink": "/twitterLink-url",
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    }
+}
