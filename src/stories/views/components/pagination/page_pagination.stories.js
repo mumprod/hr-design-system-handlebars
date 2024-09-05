@@ -1,5 +1,4 @@
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
-import page from '../pagination/pagination.hbs'
 import snapshotsJson from './fixtures/page_pagination.json'
 
 const handlebars = require('hrHandlebars')
