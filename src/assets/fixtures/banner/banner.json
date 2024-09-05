@@ -1,5 +1,5 @@
 {
-    "bannerImage":{
+    "bannerImage": {
         "@->jsoninclude": "banner/bannerImages.inc.json",
         "@->contentpath": "banner",
         "@->replaceToken": [
@@ -9,15 +9,15 @@
             }
         ]
     },
-    "structureNav":{
-        "contentNav":{
-            "@->jsoninclude": "banner/structureNav.json", 
+    "structureNav": {
+        "contentNav": {
+            "@->jsoninclude": "banner/structureNav.json",
             "@->contentpath": "contentNav"
         }
     },
-    "breadcrumbSsi":{
+    "breadcrumbSsi": {
         "@->jsoninclude": "navigation/breadcrumb/breadcrumb.inc.json",
-        "@->contentpath": "breadcrumb.breadcrumb.breadcrumbSsi",
+        "@->contentpath": "breadcrumb.breadcrumbSsi",
         "@->overrides": [
             {
                 "@->contentpath": "breadcrumb",
