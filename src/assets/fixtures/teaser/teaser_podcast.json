@@ -1,4 +1,77 @@
 {
-    "@->jsoninclude": "teaser/teasers.inc.json",
-    "@->contentpath": "teaser_podcast_episode"
+    "config": {
+        "path": "logicItem.includeModel",
+        "renderSnapshotsWrapper": false
+    },
+    "episode_100": {
+        "config": {
+            "template": "episode"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaser_podcast_episode"
+        }
+    },
+    "episode_50": {
+        "config": {
+            "template": "episode"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaser_podcast_episode",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includeModel.teaserSize",
+                    "@->value": "50"
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                    "@->value": "50"
+                }
+            ]
+        }
+    },
+    "playlist_100": {
+        "config": {
+            "template": "playlist"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasersPodcastPlaylist.inc.json",
+            "@->contentpath": "teaserPodcastPlaylist"
+        }
+    },
+    "playlist_50": {
+        "config": {
+            "template": "playlist"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasersPodcastPlaylist.inc.json",
+            "@->contentpath": "teaserPodcastPlaylist",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includeModel.teaserSize",
+                    "@->value": "50"
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                    "@->value": "50"
+                }
+            ]
+        }
+    },
+    "playlist_filter": {
+        "config": {
+            "template": "playlist"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasersPodcastPlaylist.inc.json",
+            "@->contentpath": "teaserPodcastPlaylist",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includeModel.isPodcastFilter",
+                    "@->value": true
+                }
+            ]
+        }
+    }
 }

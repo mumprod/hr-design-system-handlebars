@@ -1,25 +1,26 @@
-import podcast from './podcast.hbs'
-import podcastPlaylist from './podcast-playlist.hbs'
-import episodeJson from 'components/teaser/fixtures/teaser_podcast.json'
-import episodeJson50 from 'components/teaser/fixtures/teaser_podcast_50.json'
-import playlistJson100 from 'components/teaser/fixtures/teaser_podcast_playlist.json'
-import playlistJson50 from 'components/teaser/fixtures/teaser_podcast_playlist_50.json'
-import podcastFilter from 'components/teaser/fixtures/teaser_podcast_playlist_filter.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import snapshotsJson from 'components/teaser/fixtures/teaser_podcast.json'
 
-const episodeTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return podcast({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['episode'] = handlebars.compile(`
+    {{> components/teaser/podcast/podcast }}   
+  `)
+hbsTemplates['playlist'] = handlebars.compile(`
+    {{> components/teaser/podcast/podcast-playlist }}   
+  `)
+
+
+const episodeTemplate = (args) => {
+    return hbsTemplates['episode']({ ...args })
 }
 
-const playlistTemplate = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return podcastPlaylist({ brand, ...args })
+const playlistTemplate = (args) => {
+    return hbsTemplates['playlist']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, ...args })
 }
 
 export default {
@@ -29,6 +30,7 @@ export default {
         chromatic: {
             viewports: [360, 768, 1024],
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
 
         layout: 'fullscreen',
@@ -50,29 +52,39 @@ export default {
 export const $100EpisodePlayer = {
     render: episodeTemplate.bind({}),
     name: '100% Episode Player',
-    args: episodeJson.logicItem.includeModel,
+    args: snapshotsJson.episode_100.args.logicItem.includeModel,
 }
 
 export const $50EpisodePlayer = {
     render: episodeTemplate.bind({}),
     name: '50% Episode Player',
-    args: episodeJson50.logicItem.includeModel,
+    args: snapshotsJson.episode_50.args.logicItem.includeModel,
 }
 
 export const $100ChannelPlayer = {
     render: playlistTemplate.bind({}),
     name: '100% Channel Player',
-    args: playlistJson100.logicItem.includeModel,
+    args: snapshotsJson.playlist_100.args.logicItem.includeModel,
 }
 
 export const $50ChannelPlayer = {
     render: playlistTemplate.bind({}),
     name: '50% Channel Player',
-    args: playlistJson50.logicItem.includeModel,
+    args: snapshotsJson.playlist_50.args.logicItem.includeModel,
 }
 
 export const $100FilterPlayer = {
     render: playlistTemplate.bind({}),
     name: '100% Filter Player',
-    args: podcastFilter.logicItem.includeModel,
+    args: snapshotsJson.playlist_filter.args.logicItem.includeModel,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: { snapshotsJson },
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
