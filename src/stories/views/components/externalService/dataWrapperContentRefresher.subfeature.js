@@ -110,8 +110,7 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall, web
             }
         }else{
             console.log("Element wurde entfernt")
-                clearInterval(timer)
-            )
+            clearInterval(timer)
         }
     }
     const secondsToTimeString = function (seconds) {
