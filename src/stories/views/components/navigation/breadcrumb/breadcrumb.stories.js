@@ -1,5 +1,5 @@
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
-import snapshotsJson from './fixtures/breadcrumb.json'
+import fixtures from './fixtures/breadcrumb.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
@@ -10,12 +10,11 @@ hbsTemplates['default'] = handlebars.compile(`
 const Template = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    console.log("Args: ", { ...args })
     return hbsTemplates['default']({ ...args })
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -71,32 +70,32 @@ export default {
 export const breadcrumb2Level = {
     render: Template.bind({}),
     name: 'Breadcrumb 2 Level',
-    args: snapshotsJson['2_levels'].args,
+    args: fixtures['2_levels'].args,
 }
 
 export const breadcrumb3Level = {
     render: Template.bind({}),
     name: 'Breadcrumb 3 Level',
-    args: snapshotsJson['3_levels'].args,
+    args: fixtures['3_levels'].args,
 }
 
 export const breadcrumb4Level = {
     render: Template.bind({}),
     name: 'Breadcrumb 4 Level',
-    args: snapshotsJson['4_levels'].args,
+    args: fixtures['4_levels'].args,
 }
 
 export const breadcrumb5Level = {
     render: Template.bind({}),
     name: 'Breadcrumb 5 Level',
-    args: snapshotsJson['5_levels'].args,
+    args: fixtures['5_levels'].args,
 }
 
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
-    args: { snapshotsJson },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

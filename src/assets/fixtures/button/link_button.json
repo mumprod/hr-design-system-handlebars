@@ -1,34 +1,44 @@
 {
     "button-sm": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_size": "sm",
             "_label": "Small"
         }
     },
     "button-md": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_size": "md",
             "_label": "Medium"
         }
     },
     "button-lg": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Large",
             "_size": "lg"
         }
     },
     "button-primary": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Primary",
             "_size": "lg"
         }
     },
     "button-secondary": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Secondary",
             "_size": "lg",
@@ -36,7 +46,9 @@
         }
     },
     "button-secondary-on-white": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Secondary",
             "_size": "lg",
@@ -45,7 +57,9 @@
         }
     },
     "button-tertiary": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Tertiary",
             "_size": "lg",
@@ -53,7 +67,9 @@
         }
     },
     "button-primary-disabled": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Primary Disabled",
             "_size": "lg",
@@ -61,7 +77,9 @@
         }
     },
     "button-secondary-disabled": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Secondary Disabled",
             "_size": "lg",
@@ -70,7 +88,9 @@
         }
     },
     "button-tertiary-disabled": {
-        "template": "buttonWithLabel",
+        "config": {
+            "template": "buttonWithLabel"
+        },
         "args": {
             "_label": "Tertiary Disabled",
             "_size": "lg",
@@ -79,7 +99,9 @@
         }
     },
     "button-icon-right": {
-        "template": "buttonWithLabelAndIconRight",
+        "config": {
+            "template": "buttonWithLabelAndIconRight"
+        },
         "args": {
             "_label": "Icon rechts",
             "_size": "lg",
@@ -87,7 +109,9 @@
         }
     },
     "button-icon-left": {
-        "template": "buttonWithLabelAndIconLeft",
+        "config": {
+            "template": "buttonWithLabelAndIconLeft"
+        },
         "args": {
             "_label": "Icon left",
             "_size": "lg",
@@ -95,7 +119,9 @@
         }
     },
     "button-primary-background": {
-        "template": "buttonWithLabelOnBackground",
+        "config": {
+            "template": "buttonWithLabelOnBackground"
+        },
         "args": {
             "_label": "Primary",
             "_size": "lg",
@@ -103,7 +129,9 @@
         }
     },
     "button-secondary-background": {
-        "template": "buttonWithLabelOnBackground",
+        "config": {
+            "template": "buttonWithLabelOnBackground"
+        },
         "args": {
             "_label": "Secondary",
             "_variant": "secondary",
@@ -112,7 +140,9 @@
         }
     },
     "button-tertiary-background": {
-        "template": "buttonWithLabelOnBackground",
+        "config": {
+            "template": "buttonWithLabelOnBackground"
+        },
         "args": {
             "_label": "Tertiary",
             "_variant": "tertiary",

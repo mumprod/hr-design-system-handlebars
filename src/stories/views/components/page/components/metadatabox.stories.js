@@ -1,5 +1,5 @@
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
-import snapshotsJson from '../fixtures/metadatabox.json'
+import fixtures from '../fixtures/metadatabox.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
@@ -15,7 +15,7 @@ const Template = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -46,7 +46,7 @@ export const Default = {
         },
     ],
     name: 'Nur Datum',
-    args: snapshotsJson.metadatabox.args,
+    args: fixtures.metadatabox.args,
 }
 
 export const WithComments = {
@@ -59,7 +59,7 @@ export const WithComments = {
         },
     ],
     name: 'Datum und Kommentar-Link',
-    args: snapshotsJson.metadatabox_with_comments.args,
+    args: fixtures.metadatabox_with_comments.args,
 }
 
 export const WithOneAuthor = {
@@ -72,7 +72,7 @@ export const WithOneAuthor = {
         },
     ],
     name: 'Ein Autor',
-    args: snapshotsJson.metadatabox_with_one_author.args,
+    args: fixtures.metadatabox_with_one_author.args,
 }
 
 export const WithOneAuthorWithoutPicture = {
@@ -85,7 +85,7 @@ export const WithOneAuthorWithoutPicture = {
         },
     ],
     name: 'Ein Autor ohne Bild',
-    args: snapshotsJson.metadatabox_with_one_author_and_without_picture.args,
+    args: fixtures.metadatabox_with_one_author_and_without_picture.args,
 }
 
 export const WithMoreAuthors = {
@@ -98,7 +98,7 @@ export const WithMoreAuthors = {
         },
     ],
     name: 'Mehrere Autoren',
-    args: snapshotsJson.metadatabox_with_more_authors.args,
+    args: fixtures.metadatabox_with_more_authors.args,
 }
 
 export const WithOneAuthorAndComments = {
@@ -111,7 +111,7 @@ export const WithOneAuthorAndComments = {
         },
     ],
     name: 'Ein Autor und Kommentar-Link',
-    args: snapshotsJson.metadatabox_with_one_author_and_comments.args,
+    args: fixtures.metadatabox_with_one_author_and_comments.args,
 }
 
 export const WithMoreAuthorsAndComments = {
@@ -124,13 +124,13 @@ export const WithMoreAuthorsAndComments = {
         },
     ],
     name: 'Mehrere Autoren und Kommentar-Link',
-    args: snapshotsJson.metadatabox_with_more_authors_and_comments.args,
+    args: fixtures.metadatabox_with_more_authors_and_comments.args,
 }
 
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
-    args: { snapshotsJson },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

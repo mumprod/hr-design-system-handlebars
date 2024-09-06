@@ -1,69 +1,62 @@
 {
+    "config": {
+        "template": "label"
+    },
     "label-download": {
-        "template": "label",
         "args": {
             "_type": "download",
             "_text": "Download"
         }
     },
     "label-breakingnews": {
-        "template": "label",
         "args": {
             "_type": "breakingnews",
             "_text": "Eilmeldung"
         }
     },
     "label-event": {
-        "template": "label",
         "args": {
             "_type": "event",
             "_text": "Event"
         }
     },
     "label-infografik": {
-        "template": "label",
         "args": {
             "_type": "infografik",
             "_text": "Infografik"
         }
     },
     "label-comment": {
-        "template": "label",
         "args": {
             "_type": "comment",
             "_text": "Kommentar"
         }
     },
     "label-liveticker": {
-        "template": "label",
         "args": {
             "_type": "liveticker",
             "_text": "Liveticker"
         }
     },
     "label-media": {
-        "template": "label",
         "args": {
             "_type": "media",
             "_text": "Media"
         }
     },
     "label-pm": {
-        "template": "label",
         "args": {
             "_type": "pm",
             "_text": "Pressemitteilung"
         }
     },
     "label-program": {
-        "template": "label",
         "args": {
             "_type": "program",
             "_text": "Sendung"
         }
     },
     "label-kurzmeldung": {
-        "template": "label",
         "args": {
             "_type": "kurzmeldung",
             "_text": "Kurzmeldung"

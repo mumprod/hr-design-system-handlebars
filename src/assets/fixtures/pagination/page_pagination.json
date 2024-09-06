@@ -1,6 +1,8 @@
 {
+    "config": {
+        "template": "default"
+    },
     "more_than_three_first": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -41,7 +43,6 @@
         }
     },
     "more_than_three_second": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -78,7 +79,6 @@
         }
     },
     "more_than_three_but_not_last": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -119,7 +119,6 @@
         }
     },
     "more_than_three_one_but_not_last": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -160,7 +159,6 @@
         }
     },
     "more_than_three_last": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -201,7 +199,6 @@
         }
     },
     "only_two": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",
@@ -234,7 +231,6 @@
         }
     },
     "only_three": {
-        "template": "default",
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
             "@->contentpath": "default",

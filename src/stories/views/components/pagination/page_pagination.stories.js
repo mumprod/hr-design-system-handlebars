@@ -1,5 +1,5 @@
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
-import snapshotsJson from './fixtures/page_pagination.json'
+import fixtures from './fixtures/page_pagination.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
@@ -12,7 +12,7 @@ const Template = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -35,41 +35,41 @@ export default {
 export const MitPagination = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten',
-    args: snapshotsJson.more_than_three_first.args,
+    args: fixtures.more_than_three_first.args,
 }
 export const MitPagination2 = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (zweite Seite aktiv)',
-    args: snapshotsJson.more_than_three_second.args,
+    args: fixtures.more_than_three_second.args,
 }
 export const MitPagination3 = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (vorletzte Seite aktiv)',
-    args: snapshotsJson.more_than_three_but_not_last.args,
+    args: fixtures.more_than_three_but_not_last.args,
 }
 
 export const MitPagination4 = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (Seite mitten drin aktiv)',
-    args: snapshotsJson.more_than_three_one_but_not_last.args,
+    args: fixtures.more_than_three_one_but_not_last.args,
 }
 
 export const MitPagination5 = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (letzte Seite aktiv)',
-    args: snapshotsJson.more_than_three_last.args,
+    args: fixtures.more_than_three_last.args,
 }
 
 export const MitPagination6 = {
     render: Template.bind({}),
     name: 'Pagination mit nur 2 Seiten',
-    args: snapshotsJson.only_two.args,
+    args: fixtures.only_two.args,
 }
 
 export const MitPagination7 = {
     render: Template.bind({}),
     name: 'Pagination mit nur 3 Seiten',
-    args: snapshotsJson.only_three.args,
+    args: fixtures.only_three.args,
 }
 
 export const Snapshot = {
@@ -83,7 +83,7 @@ export const Snapshot = {
         },
     ],
 
-    args: { snapshotsJson },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

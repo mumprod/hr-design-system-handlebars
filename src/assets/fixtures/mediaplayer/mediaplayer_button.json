@@ -1,6 +1,8 @@
 {
+    "config": {
+        "template": "button"
+    },
     "button-video": {
-        "template": "button",
         "args": {
             "_icon": "play_button",
             "_label": "Video",
@@ -8,7 +10,6 @@
         }
     },
     "button-audio": {
-        "template": "button",
         "args": {
             "_icon": "audio_button",
             "_label": "Audio",
@@ -16,7 +17,6 @@
         }
     },
     "button-podcast": {
-        "template": "button",
         "args": {
             "_icon": "podcast-button",
             "_label": "Podcast",
@@ -24,7 +24,6 @@
         }
     },
     "button-video-livestream": {
-        "template": "button",
         "args": {
             "_icon": "play_button",
             "_label": "Video - Livestream",
@@ -32,7 +31,6 @@
         }
     },
     "button-audio-livestream": {
-        "template": "button",
         "args": {
             "_icon": "audio_button",
             "_label": "Audio - Livestream",

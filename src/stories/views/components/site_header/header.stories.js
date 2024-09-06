@@ -1,7 +1,7 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 import navigation from './header.hbs'
-import snapshotsJson from './fixtures/site_header.json'
+import fixtures from './fixtures/site_header.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
@@ -14,8 +14,7 @@ const Template = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    console.log("Test", args)
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 const TemplateHr3 = (args, { globals: { theme } }) => {
@@ -50,39 +49,39 @@ export default {
 export const Default = {
     render: Template.bind({}),
     name: 'Default',
-    args: snapshotsJson.default.args,
+    args: fixtures.default.args,
     parameters: {},
 }
 
 export const MitWarnung = {
     render: Template.bind({}),
     name: 'Mit Warnung',
-    args: snapshotsJson.with_warnings.args,
+    args: fixtures.with_warnings.args,
 }
 
 export const MitTopTopics = {
     render: Template.bind({}),
     name: 'Mit Top Topics',
-    args: snapshotsJson.with_top_topics.args,
+    args: fixtures.with_top_topics.args,
 }
 
 export const MitSubnavigation = {
     render: Template.bind({}),
     name: 'Mit Subnavigation',
-    args: snapshotsJson.with_submenu.args,
+    args: fixtures.with_submenu.args,
 }
 
 export const MitSubnavigationAlsFlyout = {
     render: TemplateHr3.bind({}),
     name: 'Mit Subnavigation als Flyout',
-    args: snapshotsJson.with_submenu_as_flyout_not_sticky.args,
+    args: fixtures.with_submenu_as_flyout_not_sticky.args,
 }
 
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
-    args: { snapshotsJson },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

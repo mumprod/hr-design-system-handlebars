@@ -1,6 +1,4 @@
 import { userEvent, within, waitFor } from '@storybook/test'
-import mediaplayerJson from 'components/mediaplayer/fixtures/mediaplayer.json'
-
 import snapshotsJson from './fixtures/mediaplayer_snapshots.json'
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
@@ -16,7 +14,7 @@ const Template = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -124,10 +122,7 @@ export const AudioplayerLivestream = {
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
-
-
-
-    args: { snapshotsJson, noContainer: true },
+    args: snapshotsJson,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

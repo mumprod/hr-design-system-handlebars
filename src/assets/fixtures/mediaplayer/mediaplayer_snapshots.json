@@ -1,6 +1,11 @@
 {
+    "config": {
+        "template": "mediaplayer"
+    },
     "video": {
-        "template": "mediaplayer",
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
         "args": {
             "_isTeaser": false,
             "ardPlayerConfig": {
@@ -32,7 +37,9 @@
         }
     },
     "video_livestream": {
-        "template": "mediaplayer",
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
         "args": {
             "_isTeaser": false,
             "ardPlayerConfig": {
@@ -64,7 +71,9 @@
         }
     },
     "audio": {
-        "template": "mediaplayer",
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
         "args": {
             "_isTeaser": false,
             "_isAudioView": true,
@@ -101,7 +110,9 @@
         }
     },
     "audio_event_livestream": {
-        "template": "mediaplayer",
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
         "args": {
             "_isTeaser": false,
             "_isAudioView": true,

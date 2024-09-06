@@ -1,4 +1,4 @@
-import snapshotsJson from './fixtures/label.json'
+import fixtures from './fixtures/label.json'
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
 const handlebars = require('hrHandlebars')
@@ -15,7 +15,7 @@ const Template = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -204,7 +204,7 @@ export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
-    args: { snapshotsJson, hbsTemplates },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }

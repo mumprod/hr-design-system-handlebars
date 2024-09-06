@@ -1,15 +1,20 @@
 {
+    "config": {
+        "template": "default"
+    },
     "metadatabox": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "default"
         }
     },
     "metadatabox_with_comments": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "default",
@@ -22,16 +27,18 @@
         }
     },
     "metadatabox_with_one_author": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "with_author"
         }
     },
     "metadatabox_with_one_author_and_comments": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "with_author",
@@ -44,8 +51,9 @@
         }
     },
     "metadatabox_with_one_author_and_without_picture": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "with_author",
@@ -58,16 +66,18 @@
         }
     },
     "metadatabox_with_more_authors": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "with_more_authors"
         }
     },
     "metadatabox_with_more_authors_and_comments": {
-        "template": "default",
-        "css": "w-[724px] mx-auto",
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
         "args": {
             "@->jsoninclude": "page/metadatabox.inc.json",
             "@->contentpath": "with_more_authors",
