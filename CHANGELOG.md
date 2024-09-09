@@ -1,3 +1,15 @@
+# v1.100.0 (Mon Sep 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: Format text italic that is marked up in an em tag [#1062](https://github.com/mumprod/hr-design-system-handlebars/pull/1062) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.99.1 (Fri Sep 06 2024)
 
 #### 🐛 Bug Fix
