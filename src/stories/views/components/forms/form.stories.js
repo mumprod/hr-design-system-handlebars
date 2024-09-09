@@ -8,7 +8,7 @@ const Template = ({ ...args }) => {
 }
 
 export default {
-    title: 'Komponenten/Formulare',
+    title: 'Komponenten/Formulare/Input',
     decorators: [
         (Story) => {
             return `<div class="relative flex  flex-col justify-center overflow-hidden py-6 sm:py-12">
@@ -24,4 +24,16 @@ export const Input = {
     render: Template.bind({}),
     name: 'Input - Einzeiliger Text',
     args: inputJson,
+}
+
+export const InputFocused = {
+    render: Template.bind({}),
+    name: 'Input - Einzeiliger Text Focus',
+    args: inputJson,
+    parameters: {
+        pseudo: {
+          focus: ["input"],
+          
+        },
+      }
 }
