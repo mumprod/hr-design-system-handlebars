@@ -1,0 +1,24 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Formular"
+        },
+        {
+            "paragraphBoxItem": {
+                "isWebForm": true,
+                "fields":[
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "input-text-vorname"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "input-text-nachname"
+                    }
+                ]
+                
+            }
+        }
+    ]
+}

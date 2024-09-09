@@ -1,0 +1,16 @@
+{
+   "fields":[
+               {
+                  "@->jsoninclude": "forms/form_fields.inc.json",
+                  "@->contentpath": "input-text-vorname"
+               },
+               {
+                  "@->jsoninclude": "forms/form_fields.inc.json",
+                  "@->contentpath": "input-text-vorname-required"
+               },
+               {
+                  "@->jsoninclude": "forms/form_fields.inc.json",
+                  "@->contentpath": "input-text-nachname"
+               }
+            ]
+}

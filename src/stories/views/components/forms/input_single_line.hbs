@@ -1,0 +1,71 @@
+<div class="relative flex flex-col w-full mb-5" x-data="{ input{{nextRandom}}: '' , valid: false, wasFocused: false}">
+  <input class="relative w-full h-12 px-4 pt-4 text-gray-800 placeholder-transparent bg-white border-blue-500 peer border-y border-t-transparent focus:outline-none" 
+      x-model="input{{getRandom}}"
+      id="input{{getRandom}}"
+      {{#if _required}}
+         @blur="wasFocused = true;"
+         x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false"
+      {{/if}}
+      type="{{#if _type}}{{_type}}{{/if}}"
+      name="{{#if _name}}{{_name}}{{/if}}"
+      {{#if _locaKey}}
+         title="{{loca _locaKey}}{{#if _required}}*{{/if}}"
+         placeholder="placeholder:{{loca _locaKey}}{{#if _required}}*{{/if}}"
+      {{else}}
+         {{#if _label}}
+         title="{{_label}}{{#if _required}}*{{/if}}"
+         placeholder="placeholder:{{_label}}{{#if _required}}*{{/if}}"
+         {{/if}}
+      {{/if}}
+      {{#if _formField.forHtmlAttribute}}
+         value="{{_formField.forHtmlAttribute}}"
+      {{else}}
+         {{#if _value}}
+            value="{{_value}}"
+            {{else}}
+            value="{{_defaultValue}}"
+         {{/if}}
+      {{/if}}
+      {{#if _maxLength}}
+         maxlength="{{_maxLength}}"
+      {{/if~}}
+      {{#if _required}} required{{/if}}
+      {{#if _tabindex}} tabindex="{{_tabindex}}"{{/if}}
+      {{#if _autocompleteOff}} autocomplete="off"{{/if}}
+      {{#if _autoSuggestFeature}}
+         data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
+      >
+      <div class="hidden">
+         <div>DEBUGG</div>
+         <div x-text="valid"></div>
+         <div x-text="input{{getRandom}}.length "></div>
+      </div>
+  <label for="input{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+     
+     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
+     
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500 origin-top-left transform transition-transform">
+      {{#if _hasBody}}
+        {{decorator_body}}
+      {{else}}
+        {{#if _locaKey}}
+            {{loca _locaKey}}
+        {{else}}
+            {{#if _label}}
+                {{{_label}}}{{#if _required}}*{{/if}}
+            {{/if}}
+        {{/if}}
+      {{/if}}
+   </label> 
+   <div class="flex justify-between mb-5 min-h-4 font-heading mt-0.5">     
+      {{#if _description}}  
+         <div class="pl-4 text-xs text-gray-500 " {{#if _required}}:class="!valid && wasFocused ? 'hidden' : ''"{{/if}}>{{_description}}</div>
+      {{/if}}
+      {{#if _required}}
+         <div class="pl-4 text-xs font-bold text-red-700 "  :class="!valid && wasFocused ? '' : 'hidden'">Fehler</div>
+      {{/if}}
+      {{#if _maxLength}}
+         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+      {{/if~}}
+   </div>
+</div>

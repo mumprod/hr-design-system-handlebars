@@ -1,0 +1,94 @@
+{{#each this.fields}}
+    {{#if this.type.isGroup}}
+
+        {{#if this.caption}}
+            <div class="c-form__row -hasLegend">
+                <fieldset class="c-form__field-set">
+                    <legend class="c-form__legend">{{this.caption}}</legend>
+                </fieldset>
+                {{~> modules/forms/fields}}
+            </div>
+        {{else}}
+            <div class="c-form__row -expanded">
+                {{~> modules/forms/fields}}
+            </div>
+        {{/if}}
+        
+    {{else}}
+
+        <div class="c-form__row js-wrapper-{{this.name}}">
+            {{#if this.type.isTextarea}}
+                {{~> modules/forms/textarea
+                    _name=this.name
+                    _label=this.label
+                    _labelClass="hide"
+                    _description=this.description
+                    _defaultValue=this.defaultValue
+                    _counter=this.counter
+                    _rows=this.rows
+                    _cols=this.columns
+                    _required=this.isRequired
+                    _maxLength=this.maxLength
+                }}
+            {{else if this.type.isText}}
+                {{~> components/forms/input_single_line
+                    _type=this.type.asString
+                    _name=this.name
+                    _label=this.label
+                    _labelClass="hide"
+                    _description=this.description
+                    _defaultValue=this.defaultValue
+                    _inputClass=(if this.isHidden "hide")
+                    _tabindex=(if this.isHidden "-1")
+                    _required=this.isRequired
+                    _maxLength=this.maxLength
+                }}
+            {{else if this.type.isSelect}}
+                {{~> modules/forms/select
+                    _name=this.name
+                    _label=this.label
+                    _labelClass="hide"
+                    _description=this.description
+                    _items=this.options
+                    _required=this.isRequired
+                }}
+            {{else if this.type.isChoice}}
+                {{#if this.isGrouped }}
+                    {{~> modules/forms/choiceGroup
+                        _type=this.type.asString
+                        _name=this.name
+                        _label=this.label
+                        _description=this.description
+                        _items=this.options
+                        _required=this.isRequired
+                        _multipleChoice=../_multipleChoice
+                        _addClass=../_addClass
+
+                    }}
+                {{else}}
+                    {{~> modules/forms/choice
+                        _type=this.type.asString
+                        _name=this.name
+                        _label=this.label
+                        _labelClass=(if this.isMeta "-meta")
+                        _description=this.description
+                        _value=this.options.[0].value
+                        _required=this.isRequired
+                        _selected= this.options.[0].isSelected
+                    }}
+                {{/if}}
+            {{else if this.type.isUpload}}
+                {{~> modules/forms/upload
+                    _name=this.name
+                    _label=this.label
+                    _description=this.description
+                    _multiple=false
+                    _required=this.isRequired
+                    _locaKeyButton="uploadForm_label_file_button"
+                }}
+            {{/if}}
+        </div>
+    
+    {{/if}}
+    
+{{/each}}
