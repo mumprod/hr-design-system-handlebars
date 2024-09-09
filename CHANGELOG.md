@@ -1,3 +1,63 @@
+# v1.100.0 (Mon Sep 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: Format text italic that is marked up in an em tag [#1062](https://github.com/mumprod/hr-design-system-handlebars/pull/1062) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.99.1 (Fri Sep 06 2024)
+
+#### 🐛 Bug Fix
+
+- Checking contenRefresher, when element detroyed [#1061](https://github.com/mumprod/hr-design-system-handlebars/pull/1061) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.99.0 (Wed Sep 04 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: add tracking for external links [#1060](https://github.com/mumprod/hr-design-system-handlebars/pull/1060) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.98.3 (Wed Sep 04 2024)
+
+#### 🐛 Bug Fix
+
+- Global var initialization [#1059](https://github.com/mumprod/hr-design-system-handlebars/pull/1059) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.98.2 (Mon Sep 02 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3298 - Whitelist for external services from CMS [#1058](https://github.com/mumprod/hr-design-system-handlebars/pull/1058) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.98.1 (Wed Aug 28 2024)
 
 #### 🐛 Bug Fix

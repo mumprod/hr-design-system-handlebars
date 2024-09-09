@@ -51,7 +51,7 @@
                         class="{{if (isUserConsentNeeded 'https://www.agf.de/') 'js-user-consent-needed ' ''}}mt-3 -mb-1 ds-link text-link hover:underline" target="_blank" rel="noopener noreferrer"
                         href="https://www.agf.de/" title="AGF">(https://www.agf.de/){{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}</a></span>
                     <div class="flex w-fit toggleSwitch">
-                        {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="agf aktivieren/deaktivieren" }}
+                        {{> components/forms/toggle_button _id="agf" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _whitelisted=true _screenReaderText="agf aktivieren/deaktivieren" }}
                     </div>
                 </li>
                 <li class="px-6 py-3 flex justify-between items-center bg-white border-t border-[#e3e3e3] tracking_2">
@@ -60,7 +60,7 @@
                         href="https://www.atinternet.com/de/"
                         title="AT Internet">(https://www.atinternet.com/de/){{~> components/base/image/icon _icon="extern" _addClass="h-5 w-5 -mt-0.5 fill-current ml-1 inline-flex" _iconmap="icons"~}}</a></span>
                     <div class="flex w-fit toggleSwitch">
-                        {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _isInitiallyHidden=false _screenReaderText="at internet aktivieren/deaktivieren"}}
+                        {{> components/forms/toggle_button _id="ati" _addClass="js-toggleSwitch-checkbox js-toggleSwitch-tracking" _whitelisted=true _screenReaderText="at internet aktivieren/deaktivieren"}}
                     </div>
                 </li>
             </ul>
@@ -96,7 +96,7 @@
                         <li class="bg-white py-2.5 px-6 border-t border-[#e3e3e3] {{this.key}}">
                             <span class="inline-flex text-base leading-6 text-black align-text-top">{{this.value}}</span>
                             <div class="flex float-right toggleSwitch">
-                                {{> components/forms/toggle_button _id=this.key _addClass="js-toggleSwitch-checkbox js-toggleSwitch-external" _isInitiallyHidden=this.isInitiallyHidden _screenReaderText=(loca "screen_reader_text_external_anbieter" this.key)}}
+                                {{> components/forms/toggle_button _id=this.key _addClass="js-toggleSwitch-checkbox js-toggleSwitch-external" _whitelisted=this.isInitiallyHidden _screenReaderText=(loca "screen_reader_text_external_anbieter" this.key)}}
                             </div>
                         </li>
                     {{/each}}

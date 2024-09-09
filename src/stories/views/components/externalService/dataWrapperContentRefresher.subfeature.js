@@ -1,17 +1,20 @@
         
-const DataWrapperContentRefresher = function (context, id, refreshIntervall, webcomponent) {
+const DataWrapperContentRefresher = function (context, id, refreshIntervall, webcomponent, datapolicy) {
     const { element: rootElement } = context
     let remainingTime
     let timer
     let uniqueID = id
     let intervall = refreshIntervall
+    let container
+    let script 
+    let iframeRefresh
     
     if (webcomponent) {
-    let container = document.getElementById('datawrapper-chart-' + uniqueID)
-    let script = document.getElementById('datawrapper-component-js')
+    container = document.getElementById('datawrapper-chart-' + uniqueID)
+    script = document.getElementById('datawrapper-component-js')
     }
     else{
-    let iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
+    iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
     }
     
     const createRefresher = function () {
@@ -45,9 +48,16 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall, web
         divCounter.style.borderRadius = '0 0 4px 4px'
         
         rootElement.style.position = 'relative'
+        if(!datapolicy) {
         rootElement.appendChild(divCounter)
         rootElement.appendChild(divOverlay)
         startCountdown()
+        } 
+        else {
+        rootElement.removeChild(divCounter)
+        rootElement.removeChild(divOverlay)
+        stopCountdown()
+        }
     }
 
     const refreshIframe = function () {
@@ -78,21 +88,29 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall, web
             checkTimer()
         }, 1000)
     }
+    const stopCountdown = function () {
+        clearInterval(timer)
+    }
     const checkTimer = function () {
-        if (remainingTime >= 0) {
-            document.getElementById('counter' + uniqueID).innerHTML =
-                'Dieser Inhalt wird automatisch aktualisiert in ' +
-                secondsToTimeString(remainingTime) +
-                ' Min.'
-            remainingTime -= 1
-            if (remainingTime == -1) {
-                document.getElementById('overlay' + uniqueID).style.display = 'flex'
+        if(document.getElementById('counter' + uniqueID) !== null) {
+            if (remainingTime >= 0) {
                 document.getElementById('counter' + uniqueID).innerHTML =
-                    'Zeitintervall wird neu gestartet...'
+                    'Dieser Inhalt wird automatisch aktualisiert in ' +
+                    secondsToTimeString(remainingTime) +
+                    ' Min.'
+                remainingTime -= 1
+                if (remainingTime == -1) {
+                    document.getElementById('overlay' + uniqueID).style.display = 'flex'
+                    document.getElementById('counter' + uniqueID).innerHTML =
+                        'Zeitintervall wird neu gestartet...'
+                }
+            } else {
+                refreshIframe()
+                startCountdown()
             }
-        } else {
-            refreshIframe()
-            startCountdown()
+        }else{
+            console.log("Element wurde entfernt")
+            clearInterval(timer)
         }
     }
     const secondsToTimeString = function (seconds) {
