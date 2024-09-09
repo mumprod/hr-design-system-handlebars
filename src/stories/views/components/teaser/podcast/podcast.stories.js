@@ -1,5 +1,5 @@
 import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
-import snapshotsJson from 'components/teaser/fixtures/teaser_podcast.json'
+import fixtures from 'components/teaser/fixtures/teaser_podcast.json'
 
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
@@ -20,7 +20,7 @@ const playlistTemplate = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -52,38 +52,38 @@ export default {
 export const $100EpisodePlayer = {
     render: episodeTemplate.bind({}),
     name: '100% Episode Player',
-    args: snapshotsJson.episode_100.args.logicItem.includeModel,
+    args: fixtures.episode_100.args.logicItem.includeModel,
 }
 
 export const $50EpisodePlayer = {
     render: episodeTemplate.bind({}),
     name: '50% Episode Player',
-    args: snapshotsJson.episode_50.args.logicItem.includeModel,
+    args: fixtures.episode_50.args.logicItem.includeModel,
 }
 
 export const $100ChannelPlayer = {
     render: playlistTemplate.bind({}),
     name: '100% Channel Player',
-    args: snapshotsJson.playlist_100.args.logicItem.includeModel,
+    args: fixtures.playlist_100.args.logicItem.includeModel,
 }
 
 export const $50ChannelPlayer = {
     render: playlistTemplate.bind({}),
     name: '50% Channel Player',
-    args: snapshotsJson.playlist_50.args.logicItem.includeModel,
+    args: fixtures.playlist_50.args.logicItem.includeModel,
 }
 
 export const $100FilterPlayer = {
     render: playlistTemplate.bind({}),
     name: '100% Filter Player',
-    args: snapshotsJson.playlist_filter.args.logicItem.includeModel,
+    args: fixtures.playlist_filter.args.logicItem.includeModel,
 }
 
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
 
-    args: { snapshotsJson },
+    args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
     }
