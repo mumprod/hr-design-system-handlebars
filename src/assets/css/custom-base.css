@@ -1,4 +1,7 @@
 @layer base {
+    em {
+        @apply italic;
+    }
     @font-face {
         font-family: 'DIN';
         font-display: auto;
