@@ -37,8 +37,9 @@
       >
       <div class="hidden">
          <div>DEBUGG</div>
-         <div x-text="valid"></div>
-         <div x-text="input{{getRandom}}.length "></div>
+         <div>wasFocused:<span x-text="wasFocused"></span></div>
+         <div>valid:<span x-text="valid"></span></div>
+         <div>input.length:<span x-text="input{{getRandom}}.length "></span></div>
       </div>
   <label for="input{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
      
@@ -57,12 +58,12 @@
         {{/if}}
       {{/if}}
    </label> 
-   <div class="flex justify-between mb-5 min-h-4 font-heading mt-0.5">     
+   <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500 " {{#if _required}}:class="!valid && wasFocused ? 'hidden' : ''"{{/if}}>{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="pl-4 text-xs font-bold text-red-700 "  :class="!valid && wasFocused ? '' : 'hidden'">Fehler</div>
+         <div class="hidden pl-4 text-xs font-bold text-red-700" :class="{'hidden': valid || !wasFocused }" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>

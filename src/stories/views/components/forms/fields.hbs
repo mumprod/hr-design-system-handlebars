@@ -42,6 +42,7 @@
                     _tabindex=(if this.isHidden "-1")
                     _required=this.isRequired
                     _maxLength=this.maxLength
+                    _errorMessage="Bitte füllen Sie diese Pflichtfeld aus"
                 }}
             {{else if this.type.isSelect}}
                 {{~> modules/forms/select
