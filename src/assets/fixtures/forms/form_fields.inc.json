@@ -40,5 +40,22 @@
         "isHidden":false,
         "isRequired":true,
         "maxLength":"140"
-    }         
+    },
+    "textarea":
+    {
+        "type":{
+            "isTextarea":true,
+            "asString":"textarea"
+        },
+        "name":"textarea",
+        "label":"Textarea",
+        "description":"Das ist der Beschreibungstext von Textarea",
+        "defaultValue":"",
+        "isHidden":false,
+        "isRequired":true,
+        "maxLength":"300",
+        "columns":"30",
+        "rows":"10",
+        "counter":true
+    }            
  }
