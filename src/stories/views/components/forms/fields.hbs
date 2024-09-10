@@ -18,10 +18,9 @@
 
         <div class="c-form__row js-wrapper-{{this.name}}">
             {{#if this.type.isTextarea}}
-                {{~> modules/forms/textarea
+                {{~> components/forms/textarea
                     _name=this.name
                     _label=this.label
-                    _labelClass="hide"
                     _description=this.description
                     _defaultValue=this.defaultValue
                     _counter=this.counter
@@ -29,6 +28,7 @@
                     _cols=this.columns
                     _required=this.isRequired
                     _maxLength=this.maxLength
+                    _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
                 }}
             {{else if this.type.isText}}
                 {{~> components/forms/input_single_line
@@ -42,7 +42,7 @@
                     _tabindex=(if this.isHidden "-1")
                     _required=this.isRequired
                     _maxLength=this.maxLength
-                    _errorMessage="Bitte füllen Sie diese Pflichtfeld aus"
+                    _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
                 }}
             {{else if this.type.isSelect}}
                 {{~> modules/forms/select

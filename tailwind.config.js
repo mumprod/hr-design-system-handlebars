@@ -167,6 +167,9 @@ module.exports = {
             maxHeight: {
                 stage: '34.3125rem',
             },
+            minHeight: {
+                12: '3rem',
+            },
             maxWidth: {
                 '1/4': '25%',
                 '1/3': '33.33333333%',

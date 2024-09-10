@@ -1,5 +1,7 @@
 
 import inputJson from './fixtures/form_input.json'
+import textareaJson from './fixtures/form_textarea.json'
+
 const handlebars = require('hrHandlebars')
 
 
@@ -15,7 +17,17 @@ export default {
         },
     ],
 }
-const Template = (args) => {
+const TemplateInput = (args) => {
+    let hbsTemplate = handlebars.compile(`
+    {{#>components/forms/backgroundBox  }}  
+            <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
+                {{> components/forms/fields }}
+            </form>
+    {{/components/forms/backgroundBox }}
+  `)
+    return hbsTemplate({ ...args })
+}
+const TemplateTextarea = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#>components/forms/backgroundBox  }}  
             <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
@@ -26,13 +38,13 @@ const Template = (args) => {
     return hbsTemplate({ ...args })
 }
 export const Input = {
-    render: Template.bind({}),
+    render: TemplateInput.bind({}),
     name: 'Input - Einzeiliger Text',
     args: inputJson,
 }
 
 export const InputFocused = {
-    render: Template.bind({}),
+    render: TemplateInput.bind({}),
     name: 'Input - Einzeiliger Text Focus',
     args: inputJson,
     parameters: {
@@ -41,4 +53,9 @@ export const InputFocused = {
           
         },
       }
+}
+export const Textarea = {
+    render: TemplateTextarea.bind({}),
+    name: 'Textarea',
+    args: textareaJson,
 }
