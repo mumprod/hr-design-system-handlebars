@@ -1,3 +1,15 @@
+# v1.100.2 (Tue Sep 10 2024)
+
+#### 🐛 Bug Fix
+
+- Formularrahmen [#1063](https://github.com/mumprod/hr-design-system-handlebars/pull/1063) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.100.1 (Mon Sep 09 2024)
 
 #### 🐛 Bug Fix
