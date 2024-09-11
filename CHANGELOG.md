@@ -1,3 +1,15 @@
+# v1.100.3 (Wed Sep 11 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Mehrzeiliges Textfeld [#1064](https://github.com/mumprod/hr-design-system-handlebars/pull/1064) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.100.2 (Tue Sep 10 2024)
 
 #### 🐛 Bug Fix
