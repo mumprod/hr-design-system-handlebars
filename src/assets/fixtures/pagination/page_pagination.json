@@ -2,6 +2,15 @@
     "config": {
         "template": "default"
     },
+    "four_pages_first": {
+        "config": {
+            "useAsSnapshot": false
+        },
+        "args": {
+            "@->jsoninclude": "pagination/page_pagination.inc.json",
+            "@->contentpath": "default"
+        }
+    },
     "more_than_three_first": {
         "args": {
             "@->jsoninclude": "pagination/page_pagination.inc.json",
