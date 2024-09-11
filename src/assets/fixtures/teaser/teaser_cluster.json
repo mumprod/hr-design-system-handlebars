@@ -1,0 +1,682 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+    "group_100": {
+        "100": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "Neueste Beiträge"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    }
+                ]
+            }
+        },
+        "100_external": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "tagesschau_de"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "tagesschau"
+                    },
+                    {
+                        "@->contentpath": "hideTitle",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "100_with_genre_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    }
+                ]
+            }
+        },
+        "100_with_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "clusterTeaserItems",
+                        "@->value": [
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item2"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item3"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item4"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "100_ordered": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "Meistgeklickt Heute"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "isOrdered",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "100_podcast_channel": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "Der Tag in Hessen"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "genreImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_cluster_genre_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "sonniger-herbst-100"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@->contentpath": "clusterTeaserItems",
+                        "@->value": [
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item7"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item7"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item7"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item7"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "group_50": {
+        "50": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    }
+                ]
+            }
+        },
+        "50_external": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "sportschau"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "sportschau"
+                    },
+                    {
+                        "@->contentpath": "hideTitle",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "50_with_genre_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "genreImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_cluster_50",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "buchmesse-fahnen-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "50_with_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "firstEntry",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                            "@->contentpath": "item1",
+                            "@->overrides": [
+                                {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_cluster_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "connichi-106"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "clusterTeaserItems",
+                        "@->value": [
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item2"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item3"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item4"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "50_ordered": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "MEISTGEKLICKT HEUTE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "isOrdered",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        }
+    },
+    "group_33": {
+        "33": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    }
+                ]
+            }
+        },
+
+        "33_external": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "tagesschau_de"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "tagesschau"
+                    },
+                    {
+                        "@->contentpath": "hideTitle",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "33_with_genre_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "genreImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_cluster_33",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "buchmesse-fahnen-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "33_with_image": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "NEUESTE BEITRÄGE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "showFirstImageOrGenreImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "showFirstImage",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "firstEntry",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                            "@->contentpath": "item1",
+                            "@->overrides": [
+                                {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_cluster_33",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "connichi-106"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@->contentpath": "clusterTeaserItems",
+                        "@->value": [
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item2"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item3"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item4"
+                            },
+                            {
+                                "@->jsoninclude": "teaser/headline_list_item.inc.json",
+                                "@->contentpath": "item5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "33_ordered": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "MEISTGEKLICKT HEUTE"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "isOrdered",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "33_ordered_with_long_title": {
+            "args": {
+                "@->jsoninclude": "teaser/teaser_cluster.inc.json",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "title",
+                        "@->value": "Die meistgeklickten Artikel der Woche"
+                    },
+                    {
+                        "@->contentpath": "teaserLogo",
+                        "@->value": "hessenschau_de"
+                    },
+                    {
+                        "@->contentpath": "isOrdered",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "overviewLink.link",
+                        "@->value": ""
+                    }
+                ]
+            }
+        }
+    }
+}
