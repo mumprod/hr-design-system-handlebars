@@ -1,6 +1,6 @@
 {
     "config": {
-        "path": "logicItem.includeModel",
+        "path": "args.logicItem.includeModel",
         "renderSnapshotsWrapper": false
     },
     "episode_100": {

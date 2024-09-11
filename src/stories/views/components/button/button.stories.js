@@ -48,7 +48,7 @@ const buttonWithLabelAndIconLeftTemplate = (args) => {
 }
 
 const snapshotTemplate = (args) => {
-    return getSnapshotsTemplate({ hbsTemplates, ...args })
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 
@@ -547,7 +547,7 @@ export const Snapshot = {
         },
     },
 
-    args: { snapshotsJson },
+    args: snapshotsJson,
     parameters: {
         chromatic: { disableSnapshot: false },
     }
