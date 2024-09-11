@@ -57,7 +57,8 @@
                     "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
                 },
                 "teaser_alternativ_100_serif_download": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_download.json"
+                    "@->jsoninclude": "teaser/teaser_alternative.json",
+                    "@->contentpath": "group_100.100_with_download.args"
                 },
                 "teaser_alternativ_100_serif_link": {
                     "@->jsoninclude": "teaser/teaser_alternative.json",

@@ -263,7 +263,7 @@
                 ]
             }
         },
-        "100_with_donwload": {
+        "100_with_download": {
             "config": {
                 "useAsSnapshot": false
             },
