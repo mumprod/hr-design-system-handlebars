@@ -14,7 +14,7 @@
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
-                        "@->contentpath": "input-text-nachname"
+                        "@->contentpath": "input-text-vorname-required"
                     }
                 ]
                 

@@ -21,13 +21,13 @@
         },
         "name":"vorname",
         "label":"Vorname",
-        "description":"",
+        "description":"Das ist der Beschreibungstext (*Pflichtfeld)",
         "defaultValue":"",
         "isHidden":false,
         "isRequired":true,
         "maxLength":"20"
     },
-    "input-text-nachname":
+    "input-text-vorname-prefilled":
     {
         "type":{
             "isText":true,
@@ -36,9 +36,9 @@
         "name":"nachname",
         "label":"Nachname",
         "description":"Das ist der Beschreibungstext von Nachname",
-        "defaultValue":"",
+        "defaultValue":"Hier steht schon was",
         "isHidden":false,
-        "isRequired":true,
+        "isRequired":false,
         "maxLength":"140"
     },
     "textarea":

@@ -1,8 +1,9 @@
-<div class="relative flex flex-col w-full mb-5" x-data="{ textarea{{nextRandom}}: '' , valid: false, wasFocused: false}">
+<div class="relative flex flex-col w-full mb-5" x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: false, wasFocused: false, isFocused: false}">
    <textarea
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
-      @blur="wasFocused = true;"
+      @focus="isFocused = true"
+      @blur="wasFocused = true; isFocused=false"
       x-on:keyup ="textarea{{getRandom}}.length > 0 ? valid = true : valid = false"
       value=""
       name="{{#if _name}}{{_name}}{{/if}}"
@@ -25,7 +26,8 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pt-4 text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y border-t-transparent focus:outline-none" 
+      class="relative w-full px-4 pt-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
+      :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
    >{{#if _formField.isValid}}
         {{{_formField.forHtmlContent}}}
     {{else}}
@@ -47,13 +49,19 @@
          {{/if}}
       {{/if}}
    </label>
-
+   {{#if _required}}
+      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
+            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': valid || !wasFocused || isFocused }">
+               {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
+            </div>
+      </div>
+  {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused}"{{/if}}>{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs font-bold text-red-700" :class="{'hidden': valid || !wasFocused }" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs font-bold text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>

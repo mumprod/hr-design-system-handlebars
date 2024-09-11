@@ -1,12 +1,14 @@
 
 import inputJson from './fixtures/form_input.json'
+import inputMandatoryJson from './fixtures/form_input_mandatory.json'
+import inputPrefilledJson from './fixtures/form_input_prefilled.json'
 import textareaJson from './fixtures/form_textarea.json'
 
 const handlebars = require('hrHandlebars')
 
 
 export default {
-    title: 'Komponenten/Formulare/Input',
+    title: 'Komponenten/Formulare/Text Felder',
     decorators: [
         (Story) => {
             return `<div class="grid grid-page">
@@ -39,13 +41,22 @@ const TemplateTextarea = (args) => {
 }
 export const Input = {
     render: TemplateInput.bind({}),
-    name: 'Input - Einzeiliger Text',
+    name: 'Input',
     args: inputJson,
 }
-
+export const InputMandatory = {
+    render: TemplateInput.bind({}),
+    name: 'Input:mandatory',
+    args: inputMandatoryJson,
+}
+export const InputPrefilled = {
+    render: TemplateInput.bind({}),
+    name: 'Input:prefilled',
+    args: inputPrefilledJson,
+}
 export const InputFocused = {
     render: TemplateInput.bind({}),
-    name: 'Input - Einzeiliger Text Focus',
+    name: 'Input:focus',
     args: inputJson,
     parameters: {
         pseudo: {
