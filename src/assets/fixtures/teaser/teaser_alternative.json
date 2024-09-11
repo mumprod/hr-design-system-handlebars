@@ -1,0 +1,478 @@
+{
+    "config": {
+        "template": "default",
+        "path": "args.logicItem.includeModel",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+    "group_hero": {
+        "hero": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_hero",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "hero_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    }
+                ]
+            }
+        },
+        "hero_with_label": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.topline",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                            "@->contentpath": "ticker"
+                        }
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_hero",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "hero_with_comments": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithComments",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_hero",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "hero_with_program": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserProgram",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    }
+                ]
+            }
+        }
+    },
+    "group_100": {
+        "100": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "100_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "sonniger-herbst-100"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "100_with_featured_content": {
+            "config": {
+                "path": "args"
+            },
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser.logicItem.includeModel",
+                "@->extends": {
+                    "@->jsoninclude": "teaser/teaser_featured_content.inc.json"
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "isMobile1to1",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "100_with_donwload": {
+            "config": {
+                "useAsSnapshot": false
+            },
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserDownload",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                            "@->contentpath": "download"
+                        }
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "jugendfeuerwehr-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "group_50": {
+        "50": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_50",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "50_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_50",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "50_without_teaserimage": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithoutImage",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": false
+                    }
+                ]
+            }
+        },
+        "50_with_download": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserDownload",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                            "@->contentpath": "download"
+                        }
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_50",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "jugendfeuerwehr-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
