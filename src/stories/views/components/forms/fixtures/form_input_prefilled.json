@@ -1,0 +1,1 @@
+{"fields":[{"type":{"isText":true,"asString":"text"},"name":"nachname","label":"Nachname","description":"Das ist der Beschreibungstext von Nachname","defaultValue":"Hier steht schon was","isHidden":false,"isRequired":false,"maxLength":"140"}]}

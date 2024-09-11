@@ -2,7 +2,7 @@
    "fields":[
                {
                   "@->jsoninclude": "forms/form_fields.inc.json",
-                  "@->contentpath": "input-text-vorname"
+                  "@->contentpath": "input-text-vorname-prefilled"
                }
             ]
 }

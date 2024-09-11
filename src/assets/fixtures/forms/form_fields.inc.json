@@ -21,13 +21,13 @@
         },
         "name":"vorname",
         "label":"Vorname",
-        "description":"",
+        "description":"Das ist der Beschreibungstext (*Pflichtfeld)",
         "defaultValue":"",
         "isHidden":false,
         "isRequired":true,
         "maxLength":"20"
     },
-    "input-text-nachname":
+    "input-text-vorname-prefilled":
     {
         "type":{
             "isText":true,
@@ -36,9 +36,26 @@
         "name":"nachname",
         "label":"Nachname",
         "description":"Das ist der Beschreibungstext von Nachname",
+        "defaultValue":"Hier steht schon was",
+        "isHidden":false,
+        "isRequired":false,
+        "maxLength":"140"
+    },
+    "textarea":
+    {
+        "type":{
+            "isTextarea":true,
+            "asString":"textarea"
+        },
+        "name":"textarea",
+        "label":"Textarea",
+        "description":"Das ist der Beschreibungstext von Textarea",
         "defaultValue":"",
         "isHidden":false,
         "isRequired":true,
-        "maxLength":"140"
-    }         
+        "maxLength":"300",
+        "columns":"30",
+        "rows":"10",
+        "counter":true
+    }            
  }
