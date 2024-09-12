@@ -1,8 +1,9 @@
 {
-    "teaser_standard_50_audio":{
-        "@->jsoninclude": "teaser/teaser_standard_50_serif_audio.json"
+    "teaser_standard_50_audio": {
+        "@->jsoninclude": "teaser/teaser_standard_av.json",
+        "@->contentpath": "group_50.audio_ondemand.args"
     },
-    "teaser_podcast_50":{
+    "teaser_podcast_50": {
         "@->jsoninclude": "teaser/teaser_podcast_50.json"
     }
 }
