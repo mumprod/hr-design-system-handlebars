@@ -54,7 +54,8 @@
                     "@->contentpath": "group_100.100.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_download": {
                     "@->jsoninclude": "teaser/teaser_alternative.json",
@@ -65,10 +66,12 @@
                     "@->contentpath": "group_100.100_with_external_link.args"
                 },
                 "teaser_alternativ_100_serif_live": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_live.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_livestream.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 }
             },
             {
@@ -99,42 +102,54 @@
             },
             {
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_audio": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_audio.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.audio_ondemand.args"
                 }
             },
             {
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 },
                 "teaser_alternativ_100_serif_video": {
-                    "@->jsoninclude": "teaser/teaser_alternative_100_serif_video.json"
+                    "@->jsoninclude": "teaser/teaser_alternative_av.json",
+                    "@->contentpath": "group_100.video_ondemand.args"
                 }
             }
         ]
