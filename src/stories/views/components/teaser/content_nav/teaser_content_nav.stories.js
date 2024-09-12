@@ -1,25 +1,18 @@
-import { addLabel, removeLabel, changeTeaserSize } from '../labelHelper'
-import { addCommentLink } from '../jsonHelper'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/fixtures/teaser_content_nav.json'
 
-import teaser from './teaser_content_nav.hbs'
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/content_nav/teaser_content_nav }}   
+  `)
 
-import contentNavList from '../fixtures/teaser_content_nav_list_100.json'
-import contentNavList_autosuggest from '../fixtures/teaser_content_nav_list_autosuggest.json'
-import contentNavFlow from '../fixtures/teaser_content_nav_flow_100.json'
-import contentNavFlow_autosuggest from '../fixtures/teaser_content_nav_flow_autosuggest.json'
-import contentNavMixed from '../fixtures/teaser_content_nav_mixed_100.json'
-import contentNavMixed_autosuggest from '../fixtures/teaser_content_nav_mixed_autosuggest.json'
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
 
-import contentNavDropdown_autosuggest from '../fixtures/teaser_content_nav_dropdown_autosuggest_100.json'
-import contentNavDropdown from '../fixtures/teaser_content_nav_dropdown_100.json'
-import contentNavDropdown_subgroups from '../fixtures/teaser_content_nav_dropdown_subgroups.json'
-
-const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return teaser({ brand, ...args })
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -30,6 +23,7 @@ export default {
 
         chromatic: {
             viewports: [360, 768, 1024],
+            disableSnapshot: true
         },
     },
 
@@ -74,9 +68,9 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page">  
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
@@ -84,53 +78,126 @@ export default {
 export const Liste = {
     render: Template.bind({}),
     name: 'Liste',
-    args: contentNavList,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.list.args,
 }
 
 export const ListeMitFilter = {
     render: Template.bind({}),
     name: 'Liste mit Filter',
-    args: contentNavList_autosuggest,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.list_autosuggest.args,
 }
 
 export const Fluss = {
     render: Template.bind({}),
     name: 'Fluss',
-    args: contentNavFlow,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.flow.args,
 }
 
 export const FlussMitFilter = {
     render: Template.bind({}),
     name: 'Fluss mit Filter',
-    args: contentNavFlow_autosuggest,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.flow_autosuggest.args,
 }
 
 export const Gemischt = {
     render: Template.bind({}),
     name: 'Gemischt',
-    args: contentNavMixed,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.mixed.args,
 }
 
 export const GemischtMitFilter = {
     render: Template.bind({}),
     name: 'Gemischt mit Filter',
-    args: contentNavMixed_autosuggest,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.mixed_autosuggest.args,
 }
 
 export const Dropdown = {
     render: Template.bind({}),
     name: 'Dropdown',
-    args: contentNavDropdown,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.dropdown.args,
 }
 
 export const DropdownMitFilter = {
     render: Template.bind({}),
     name: 'Dropdown mit Filter',
-    args: contentNavDropdown_autosuggest,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.dropdown_autosuggest.args
 }
 
 export const DropdownMitSubgruppen = {
     render: Template.bind({}),
     name: 'Dropdown mit Subgruppen',
-    args: contentNavDropdown_subgroups,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.dropdown_with_subgroups.args
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
