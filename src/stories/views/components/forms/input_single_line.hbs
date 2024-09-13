@@ -1,12 +1,13 @@
-<div class="relative flex flex-col w-full mb-5" x-data="{ input{{nextRandom}}: '{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: false, wasFocused: false, isFocused: false}">
+<div class="relative flex flex-col w-full mb-5"
+    x-data="inputHandler">
   <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-blue-500 pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
-      :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-700': !valid && wasFocused && !isFocused }"
-      x-model="input{{getRandom}}"
+      :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+      x-model="input{{nextRandom}}"
       id="input{{getRandom}}"
       {{#if _required}}
          @focus="isFocused = true"
          @blur="wasFocused = true; isFocused=false"
-         x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false"
+         x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
       {{/if}}
       type="{{#if _type}}{{_type}}{{/if}}"
       name="{{#if _name}}{{_name}}{{/if}}"
@@ -37,12 +38,7 @@
       {{#if _autoSuggestFeature}}
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
-      <div class="hidden">
-         <div>DEBUGG</div>
-         <div>wasFocused:<span x-text="wasFocused"></span></div>
-         <div>valid:<span x-text="valid"></span></div>
-         <div>input.length:<span x-text="input{{getRandom}}.length "></span></div>
-      </div>
+      
   <label for="input{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
@@ -62,20 +58,61 @@
    </label> 
    {{#if _required}}
       <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
-            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': valid || !wasFocused || isFocused }">
+            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': hideError() }">
                {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
             </div>
       </div>
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500" {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused }"{{/if}}>{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': valid || !wasFocused || isFocused }" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
+   <div class="hidden">
+      <b>DEBUGG</b>
+      <div>isFocused:<span x-text="isFocused"></span></div>
+      <div>wasFocused:<span x-text="wasFocused"></span></div>
+      <div>valid:<span x-text="valid"></span></div>
+      <div>validEmail:<span x-text="validEmail"></span></div>
+      <div>hideDescription:<span x-text="hideDescription"></span></div>   
+      <div>hideError:<span x-text="hideError"></span></div>   
+      <div>input.length:<span x-text="input{{getRandom}}.length "></span></div>  
+      <div>input:<span x-text="input{{getRandom}} "></span></div>
+      <div>errorMessage:<span x-text="errorMessage"></span></div>    
+   </div>
+   <script>
+         function inputHandler() {
+            return {
+               input{{getRandom}}: '{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , 
+               valid: false, 
+               wasFocused: false, 
+               isFocused: false,
+               {{#if _isEmail}}
+                  validEmail: false,
+                  errorMessage(){ return  !this.valid ? '{{_errorMandatory}}' : '{{_errorEmail}}'},
+                  hideDescription() {return (!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused)},
+                  hideError() {return !this.hideDescription()},
+                  
+                  validateEmail() {
+                        var email = this.input{{getRandom}}
+                        var emailRegex = /^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
+                        this.validEmail = emailRegex.test(email);
+                        //this.validEmail = email.includes('@');
+                  }
+
+               {{else}}
+
+                  hideError() {return (this.valid || !this.wasFocused || this.isFocused)},   
+                  hideDescription() {return !this.valid && this.wasFocused && !this.isFocused},
+                  errorMessage: "{{_errorMandatory}}"
+               {{/if}}
+            };
+         }
+      </script>
 </div>
