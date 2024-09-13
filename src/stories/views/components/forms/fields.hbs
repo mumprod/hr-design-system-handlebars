@@ -33,6 +33,7 @@
             {{else if this.type.isText}}
                 {{~> components/forms/input_single_line
                     _type=this.type.asString
+                    _isEmail=this.type.isEmail
                     _name=this.name
                     _label=this.label
                     _labelClass="hide"
@@ -42,7 +43,8 @@
                     _tabindex=(if this.isHidden "-1")
                     _required=this.isRequired
                     _maxLength=this.maxLength
-                    _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
+                    _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
+                    _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
                 }}
             {{else if this.type.isSelect}}
                 {{~> modules/forms/select
