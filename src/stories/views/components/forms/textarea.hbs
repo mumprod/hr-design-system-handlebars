@@ -1,4 +1,5 @@
 <div class="relative flex flex-col w-full mb-5" x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: false, wasFocused: false, isFocused: false}">
+   <div class="w-full h-4 bg-white"></div>
    <textarea
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
@@ -26,7 +27,7 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pt-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
+      class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
    >{{#if _formField.isValid}}
         {{{_formField.forHtmlContent}}}
