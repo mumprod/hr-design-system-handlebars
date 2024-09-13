@@ -3,6 +3,7 @@ import inputJson from './fixtures/form_input.json'
 import inputMandatoryJson from './fixtures/form_input_mandatory.json'
 import inputPrefilledJson from './fixtures/form_input_prefilled.json'
 import textareaJson from './fixtures/form_textarea.json'
+import emailJson from './fixtures/form_email.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -64,6 +65,11 @@ export const InputFocused = {
           
         },
       }
+}
+export const email = {
+    render: TemplateInput.bind({}),
+    name: 'Email',
+    args: emailJson,
 }
 export const Textarea = {
     render: TemplateTextarea.bind({}),
