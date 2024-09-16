@@ -1,23 +1,34 @@
-import timelineJson from '../fixtures/teaser_ticker_timeline.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/fixtures/teaser_ticker_timeline.json'
 
 const handlebars = require('hrHandlebars')
-
-const timelineOnBlue = (args) => {
-    let hbsTemplate = handlebars.compile(`
+const hbsTemplates = []
+hbsTemplates['on_blue'] = handlebars.compile(`
     <div class="bg-blue-congress-hex pt-5">
         {{> components/teaser/ticker/teaser_ticker_timeline _color="white"}}
-    </div>
+    </div>  
   `)
-    return hbsTemplate({ ...args })
+
+hbsTemplates['on_white'] = handlebars.compile(`
+    <div class="pt-5">
+        {{> components/teaser/ticker/teaser_ticker_timeline }}
+    </div> 
+  `)
+
+
+
+
+
+const timelineOnBlue = (args) => {
+    return hbsTemplates['on_blue']({ ...args })
 }
 
 const timelineOnWhite = (args) => {
-    let hbsTemplate = handlebars.compile(`
-    <div class="pt-5">
-        {{> components/teaser/ticker/teaser_ticker_timeline }}
-    </div>
-  `)
-    return hbsTemplate({ ...args })
+    return hbsTemplates['on_white']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -26,6 +37,7 @@ export default {
     parameters: {
         chromatic: {
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
     argTypes: {
@@ -39,11 +51,21 @@ export default {
 export const TimelineWhite = {
     render: timelineOnBlue.bind({}),
     name: 'Zeitstrahl auf blau',
-    args: timelineJson,
+    args: fixtures.on_blue.args,
 }
 
 export const TimelineBlack = {
     render: timelineOnWhite.bind({}),
     name: 'Zeitstrahl auf weiß',
-    args: timelineJson,
+    args: fixtures.on_white.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
