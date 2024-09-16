@@ -1,0 +1,387 @@
+{
+    "config": {
+        "template": "default",
+        "path": "args.logicItem.includeModel",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+
+    "group_hero": {
+        "hero": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser"
+            }
+        },
+        "hero_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link"
+            }
+        },
+        "hero_with_comments": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithComments"
+            }
+        },
+        "hero_with_comments_and_without_teaser_info": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithComments",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.profiles",
+                        "@->value": ""
+                    }
+                ]
+            }
+        },
+        "hero_with_label": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.topline",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                            "@->contentpath": "ticker"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "group_100": {
+        "100": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    }
+                ]
+            }
+        },
+        "100_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    }
+                ]
+            }
+        },
+        "100_with_program": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserProgram",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    }
+                ]
+            }
+        },
+        "100_with_download": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserDownload",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                            "@->contentpath": "download"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "group_50": {
+        "50": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "50_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "50_with_external_link_and_user_consent": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.link.url",
+                        "@->value": "https://tagesschau.de"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.link.isUserConsentNeeded",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "50_with_featured_content": {
+            "config": {
+                "path": "args"
+            },
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser.logicItem.includeModel",
+                "@->extends": {
+                    "@->jsoninclude": "teaser/teaser_featured_content.inc.json"
+                },
+                "@->overrides": [
+                    {
+                        "@->contentpath": "teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "50_without_teaserimage": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithoutImage",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        }
+    },
+    "group_33": {
+        "33": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    }
+                ]
+            }
+        },
+        "33_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    }
+                ]
+            }
+        },
+        "33_with_long_geotag": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.geotag",
+                        "@->value": [
+                            {
+                                "title": "Poppenhausen (Wasserkuppe)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "group_25": {
+        "25": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "rueckkehr-nach-abschiebung-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "25_with_external_link": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_link",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "mercedes-suv-g-100"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "25_without_teaserimage": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserWithoutImage",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    }
+                ]
+            }
+        }
+    }
+}

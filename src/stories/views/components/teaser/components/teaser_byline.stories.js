@@ -1,7 +1,5 @@
 import byline from './teaser_byline.hbs'
-import teaserWithoutComments from '../fixtures/teaser_standard_hero_serif.json'
-import teaserWithComments from '../fixtures/teaser_standard_hero_serif_comments.json'
-import teaserWithoutTeaserinfo from '../fixtures/teaser_comments_without_teaserinfo.json'
+import teaserStandard from '../fixtures/teaser_standard.json'
 
 const Template = ({ ...args }) => {
     return byline({ ...args })
@@ -14,17 +12,17 @@ export default {
 export const Default = {
     render: Template.bind({}),
     name: 'default',
-    args: teaserWithoutComments.logicItem.includeModel,
+    args: teaserStandard.group_hero.hero.args.logicItem.includeModel,
 }
 
 export const WithComments = {
     render: Template.bind({}),
     name: 'with comments',
-    args: teaserWithComments.logicItem.includeModel,
+    args: teaserStandard.group_hero.hero_with_comments.args.logicItem.includeModel,
 }
 
 export const CommentsOnly = {
     render: Template.bind({}),
     name: 'comments only',
-    args: teaserWithoutTeaserinfo.logicItem.includeModel,
+    args: teaserStandard.group_hero.hero_with_comments_and_without_teaser_info.args.logicItem.includeModel,
 }
