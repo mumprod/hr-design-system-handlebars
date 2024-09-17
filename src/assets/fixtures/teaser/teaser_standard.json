@@ -25,22 +25,6 @@
                 "@->contentpath": "teaserWithComments"
             }
         },
-        "hero_with_comments_and_without_teaser_info": {
-            "args": {
-                "@->jsoninclude": "teaser/teasers.inc.json",
-                "@->contentpath": "teaserWithComments",
-                "@->overrides": [
-                    {
-                        "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
-                        "@->value": false
-                    },
-                    {
-                        "@->contentpath": "logicItem.includeModel.profiles",
-                        "@->value": ""
-                    }
-                ]
-            }
-        },
         "hero_with_label": {
             "args": {
                 "@->jsoninclude": "teaser/teasers.inc.json",

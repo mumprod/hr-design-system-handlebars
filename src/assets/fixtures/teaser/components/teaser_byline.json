@@ -1,0 +1,35 @@
+{
+    "config": {
+        "renderSnapshotsWrapper": false,
+        "path": "args.logicItem.includeModel",
+        "template": "default"
+    },
+    "byline_with_teaser_info": {
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaser"
+        }
+    },
+    "byline_with_comments_and_teaser_info": {
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaserWithComments"
+        }
+    },
+    "byline_with_comments": {
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaserWithComments",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includeModel.teaserInfo.showTeaserInfo",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.profiles",
+                    "@->value": ""
+                }
+            ]
+        }
+    }
+}
