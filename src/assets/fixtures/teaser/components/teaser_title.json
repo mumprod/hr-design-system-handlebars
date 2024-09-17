@@ -1,0 +1,38 @@
+{
+    "config": {
+        "template": "default"
+    },
+    "1_hero": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Dies ist der Titel eines 100%-Teasers",
+            "_size": "hero",
+            "_fontVariant": "serif",
+            "_teaserType": "standard"
+        }
+    },
+    "2_normal": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Dies ist der Titel eines 66%-, 50%- oder 33%-Teasers",
+            "_size": "33",
+            "_fontVariant": "serif",
+            "_teaserType": "standard"
+        }
+    },
+    "3_small": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Dies ist der Titel eines 25%-Teasers",
+            "_size": "25",
+            "_fontVariant": "serif",
+            "_teaserType": "standard"
+        }
+    }
+}
