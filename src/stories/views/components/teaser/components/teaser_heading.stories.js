@@ -1,13 +1,30 @@
-import teaserHeading from './teaser_heading.hbs'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/components/fixtures/teaser_headings.json'
 
-const Template = ({ _topline, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return teaserHeading({ _topline, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/components/teaser_heading }}   
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
     title: 'Komponenten/Teaser/Komponenten/Teaserheading',
+
+    parameters: {
+
+        chromatic: {
+            diffThreshold: 0.3,
+            disableSnapshot: true
+        },
+    },
 
     argTypes: {
         _topline: {
@@ -80,15 +97,7 @@ export const SerifHero = {
         },
     },
 
-    args: {
-        _topline: 'Das ist eine wirklich sehr lange Topline',
-        _title: 'Das ist eine wirklich sehr lange Headline',
-        _extendedTitle: 'Das ist ein erweiterter Titel',
-        _headlineTag: 'h1',
-        _fontVariant: 'serif',
-        _size: 'hero',
-        _teaserType: 'standard',
-    },
+    args: fixtures["1_hero"].args
 }
 
 export const Serif50 = {
@@ -103,14 +112,7 @@ export const Serif50 = {
         },
     },
 
-    args: {
-        _topline: 'Das ist eine wirklich sehr lange Topline',
-        _title: 'Das ist eine wirklich sehr lange Headline',
-        _headlineTag: 'h1',
-        _fontVariant: 'serif',
-        _size: '50',
-        _teaserType: 'standard',
-    },
+    args: fixtures["2_50"].args
 }
 
 export const Serif33 = {
@@ -125,14 +127,7 @@ export const Serif33 = {
         },
     },
 
-    args: {
-        _topline: 'Das ist eine wirklich sehr lange Topline',
-        _title: 'Das ist eine wirklich sehr lange Headline',
-        _headlineTag: 'h1',
-        _fontVariant: 'serif',
-        _size: '33',
-        _teaserType: 'standard',
-    },
+    args: fixtures["3_33"].args
 }
 
 export const Serif25 = {
@@ -147,12 +142,15 @@ export const Serif25 = {
         },
     },
 
-    args: {
-        _topline: 'Das ist eine wirklich sehr lange Topline',
-        _title: 'Das ist eine wirklich sehr lange Headline',
-        _headlineTag: 'h1',
-        _fontVariant: 'serif',
-        _size: '25',
-        _teaserType: 'standard',
-    },
+    args: fixtures["4_25"].args
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

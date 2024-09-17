@@ -8,6 +8,7 @@
  */
 const getSnapshotsTemplate = (args) => {
     const { hbsTemplates, args: snapshotsJson } = args
+    console.log("SnapshotsJson First", snapshotsJson)
     const config = snapshotsJson.config || {}
     const renderAsGrid = undefined !== config.layout && "grid" === config.layout
     const renderSnapshotsWrapper = undefined !== config.renderSnapshotsWrapper ? config.renderSnapshotsWrapper : true
@@ -30,6 +31,7 @@ const getSnapshotsTemplate = (args) => {
         })
         template += snapshotsWrapperEnd
     } else {
+        console.log("SnapshotsJson", snapshotsJson)
         const filteredSnapshots = Object.entries(snapshotsJson).filter(([key, value]) =>
             key !== "config" && (value.config === undefined || value.config.useAsSnapshot !== false)
         )
@@ -42,6 +44,7 @@ const getSnapshotsTemplate = (args) => {
 
 const renderSnapshots = (snapshots, hbsTemplates, defaultTemplate, defaultPath, renderSnapshotsWrapper) => {
     let template = ''
+    console.log("Snapshots", snapshots)
     snapshots.forEach(([key, value]) => {
         const snapshotItemConfig = value.config || {}
         const renderSnapshotItemWrapper = undefined !== snapshotItemConfig.renderSnapshotItemWrapper ? snapshotItemConfig.renderSnapshotItemWrapper : true
