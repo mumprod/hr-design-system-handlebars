@@ -1,0 +1,45 @@
+{
+    "config": {
+        "template": "default"
+    },
+    "1_hero": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.",
+            "_size": "hero",
+            "_font": "md:text-base md:leading-4 lg:leading-5"
+        }
+    },
+    "2_50": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.",
+            "_size": "50",
+            "_font": "md:text-base md:leading-4 lg:leading-5"
+        }
+    },
+    "3_33": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.",
+            "_size": "33",
+            "_font": "md:text-base md:leading-4 lg:leading-5"
+        }
+    },
+    "4_25": {
+        "config": {
+            "css": "w-full"
+        },
+        "args": {
+            "_text": "Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.",
+            "_size": "25",
+            "_font": "md:text-base md:leading-4 lg:leading-5"
+        }
+    }
+}
