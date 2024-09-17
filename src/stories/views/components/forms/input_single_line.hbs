@@ -76,16 +76,16 @@
    </div>
    <div class="hidden">
       <b>DEBUGG</b>
-      <div>isFocused:<span x-text="isFocused"></span></div>
-      <div>wasFocused:<span x-text="wasFocused"></span></div>
-      <div>valid:<span x-text="valid"></span></div>
-      <div>validEmail:<span x-text="validEmail"></span></div>
-      <div>hideDescription:<span x-text="hideDescription"></span></div>   
-      <div>hideError:<span x-text="hideError"></span></div>   
-      <div>input.length:<span x-text="input{{getRandom}}.length "></span></div>  
-      <div>input:<span x-text="input{{getRandom}} "></span></div>
-      <div>errorMessage:<span x-text="errorMessage"></span></div>    
-   </div>
+      <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>validEmail:<span x-text="validEmail" class="font-bold" :class="validEmail ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
+      <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>   
+      <div>input.length:<span x-text="input{{getRandom}}.length " class="font-bold" ></span></div>  
+      <div>input:<span x-text="input{{getRandom}} " class="font-bold" ></span></div>
+      <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>    
+   </div>  
    <script>
          function inputHandler() {
             return {
@@ -95,19 +95,18 @@
                isFocused: false,
                {{#if _isEmail}}
                   validEmail: false,
-                  errorMessage(){ return  !this.valid ? '{{_errorMandatory}}' : '{{_errorEmail}}'},
-                  hideDescription() {return (!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused)},
-                  hideError() {return !this.hideDescription()},
-                  
-                  validateEmail() {
-                        var email = this.input{{getRandom}}
-                        var emailRegex = /^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
-                        this.validEmail = emailRegex.test(email);
-                        //this.validEmail = email.includes('@');
+                  errorMessage(){ return !this.valid ? '{{_errorMandatory}}' : '{{_errorEmail}}'},
+                  hideDescription() { return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused))},
+                  hideError() { return Boolean(!this.hideDescription())},
+                  validateEmail(){
+                     var email = this.input{{getRandom}}.trim();
+                     // https://github.com/colinaut/alpinejs-plugin-simple-validate/blob/main/src/index.js slashes are double because webpack removes them                                                            
+                     var emailRegexEscaped = /^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;
+                     //https://emailregex.com/index.html slashes are double because webpack removes them
+                     var emailRegexV2Escaped = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/;
+                     this.validEmail = emailRegexV2Escaped.test(email);  
                   }
-
                {{else}}
-
                   hideError() {return (this.valid || !this.wasFocused || this.isFocused)},   
                   hideDescription() {return !this.valid && this.wasFocused && !this.isFocused},
                   errorMessage: "{{_errorMandatory}}"
