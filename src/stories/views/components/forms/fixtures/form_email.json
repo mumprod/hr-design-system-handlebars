@@ -1,0 +1,1 @@
+{"fields":[{"type":{"isText":true,"isEmail":true,"asString":"email"},"name":"email","label":"Email","description":"Das ist der Beschreibungstext von Email","defaultValue":"","isHidden":false,"isRequired":true,"maxLength":"140"}]}

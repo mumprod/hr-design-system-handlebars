@@ -58,6 +58,7 @@ const config = {
             },
         },
         '@storybook/addon-webpack5-compiler-swc',
+        'storybook-addon-pseudo-states'
     ],
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

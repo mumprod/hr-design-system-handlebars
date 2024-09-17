@@ -1,0 +1,9 @@
+{
+    "fields":[
+                {
+                   "@->jsoninclude": "forms/form_fields.inc.json",
+                   "@->contentpath": "input-email"
+                }
+             ]
+ }
+ 

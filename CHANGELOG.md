@@ -1,3 +1,137 @@
+# v1.100.6 (Tue Sep 17 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3292 [#1067](https://github.com/mumprod/hr-design-system-handlebars/pull/1067) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.100.5 (Mon Sep 16 2024)
+
+#### 🐛 Bug Fix
+
+- Adding icons for ts rainradar [#1066](https://github.com/mumprod/hr-design-system-handlebars/pull/1066) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.100.4 (Fri Sep 13 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Email field - DPE 3292 [#1065](https://github.com/mumprod/hr-design-system-handlebars/pull/1065) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.100.3 (Wed Sep 11 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Mehrzeiliges Textfeld [#1064](https://github.com/mumprod/hr-design-system-handlebars/pull/1064) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.100.2 (Tue Sep 10 2024)
+
+#### 🐛 Bug Fix
+
+- Formularrahmen [#1063](https://github.com/mumprod/hr-design-system-handlebars/pull/1063) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.100.1 (Mon Sep 09 2024)
+
+#### 🐛 Bug Fix
+
+- add form input [#1057](https://github.com/mumprod/hr-design-system-handlebars/pull/1057) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.100.0 (Mon Sep 09 2024)
+
+#### 🚀 Enhancement
+
+- :lipstick: Format text italic that is marked up in an em tag [#1062](https://github.com/mumprod/hr-design-system-handlebars/pull/1062) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.99.1 (Fri Sep 06 2024)
+
+#### 🐛 Bug Fix
+
+- Checking contenRefresher, when element detroyed [#1061](https://github.com/mumprod/hr-design-system-handlebars/pull/1061) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.99.0 (Wed Sep 04 2024)
+
+#### 🚀 Enhancement
+
+- :sparkles: add tracking for external links [#1060](https://github.com/mumprod/hr-design-system-handlebars/pull/1060) ([@mariokinzel](https://github.com/mariokinzel))
+
+#### Authors: 1
+
+- [@mariokinzel](https://github.com/mariokinzel)
+
+---
+
+# v1.98.3 (Wed Sep 04 2024)
+
+#### 🐛 Bug Fix
+
+- Global var initialization [#1059](https://github.com/mumprod/hr-design-system-handlebars/pull/1059) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.98.2 (Mon Sep 02 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3298 - Whitelist for external services from CMS [#1058](https://github.com/mumprod/hr-design-system-handlebars/pull/1058) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.98.1 (Wed Aug 28 2024)
 
 #### 🐛 Bug Fix

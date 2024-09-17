@@ -3769,6 +3769,11 @@
     "@storybook/theming" "^8.2.6"
     ts-dedent "^2.0.0"
 
+"@storybook/icons@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/@storybook/icons/-/icons-1.2.10.tgz#d3d44912a3a88f3f04f77ce2c23a7e47e796f766"
+  integrity sha512-310apKdDcjbbX2VSLWPwhEwAgjxTzVagrwucVZIdGPErwiAppX8KvBuWZgPo+rQLVrtH8S+pw1dbUwjcE6d7og==
+
 "@storybook/icons@^1.2.5":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/icons/-/icons-1.2.9.tgz#bb4a51a79e186b62e2dd0e04928b8617ac573838"
@@ -13297,6 +13302,13 @@ statuses@2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
+
+storybook-addon-pseudo-states@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/storybook-addon-pseudo-states/-/storybook-addon-pseudo-states-4.0.2.tgz#f8cb5fa07b343ec36567889e7eadf1797974852b"
+  integrity sha512-dTHkeq4VzqIrJfR8k2BHkX190cQ+aYBZUktWNZpDw3N5tJ8IwaRLzf6ZjHDHY6xwDshaNiTO5UkziRE0Ytukkw==
+  dependencies:
+    "@storybook/icons" "^1.2.10"
 
 storybook-conditional-toolbar-selector@^1.0.3:
   version "1.0.3"

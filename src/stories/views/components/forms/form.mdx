@@ -1,0 +1,26 @@
+import { ArgTypes, Meta, Story, Canvas } from '@storybook/blocks'
+import * as formStories from './form.stories'
+
+<Meta of={formStories} />
+
+# Formular
+
+## Beschreibung
+
+
+## Parameter
+
+
+<ArgTypes story="default" />
+
+## Verwendung
+
+Das Formular wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/forms/form }}
+```
+
+<Canvas withToolbar>
+    <Story of={formStories.Default} />
+</Canvas>

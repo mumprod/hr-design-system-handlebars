@@ -1,0 +1,117 @@
+<div class="relative flex flex-col w-full mb-5"
+    x-data="inputHandler">
+  <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-blue-500 pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
+      :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+      x-model="input{{nextRandom}}"
+      id="input{{getRandom}}"
+      {{#if _required}}
+         @focus="isFocused = true"
+         @blur="wasFocused = true; isFocused=false"
+         x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
+      {{/if}}
+      type="{{#if _type}}{{_type}}{{/if}}"
+      name="{{#if _name}}{{_name}}{{/if}}"
+      {{#if _locaKey}}
+         title="{{loca _locaKey}}{{#if _required}}*{{/if}}"
+         placeholder="placeholder:{{loca _locaKey}}{{#if _required}}*{{/if}}"
+      {{else}}
+         {{#if _label}}
+         title="{{_label}}{{#if _required}}*{{/if}}"
+         placeholder="placeholder:{{_label}}{{#if _required}}*{{/if}}"
+         {{/if}}
+      {{/if}}
+      {{#if _formField.forHtmlAttribute}}
+         value="{{_formField.forHtmlAttribute}}"
+      {{else}}
+         {{#if _value}}
+            value="{{_value}}"
+            {{else}}
+            value="{{_defaultValue}}"
+         {{/if}}
+      {{/if}}
+      {{#if _maxLength}}
+         maxlength="{{_maxLength}}"
+      {{/if~}}
+      {{#if _required}} required{{/if}}
+      {{#if _tabindex}} tabindex="{{_tabindex}}"{{/if}}
+      {{#if _autocompleteOff}} autocomplete="off"{{/if}}
+      {{#if _autoSuggestFeature}}
+         data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
+      >
+      
+  <label for="input{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+     
+     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
+     
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500 origin-top-left transform transition-transform">
+      {{#if _hasBody}}
+        {{decorator_body}}
+      {{else}}
+        {{#if _locaKey}}
+            {{loca _locaKey}}
+        {{else}}
+            {{#if _label}}
+                {{{_label}}}{{#if _required}}*{{/if}}
+            {{/if}}
+        {{/if}}
+      {{/if}}
+   </label> 
+   {{#if _required}}
+      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
+            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': hideError() }">
+               {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
+            </div>
+      </div>
+  {{/if}}
+   <div class="flex items-end justify-between h-5 font-heading">     
+      {{#if _description}}  
+         <div class="pl-4 text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
+      {{/if}}
+      {{#if _required}}
+         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      {{/if}}
+      {{#if _maxLength}}
+         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+      {{/if~}}
+   </div>
+   <div class="hidden">
+      <b>DEBUGG</b>
+      <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>validEmail:<span x-text="validEmail" class="font-bold" :class="validEmail ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
+      <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>   
+      <div>input.length:<span x-text="input{{getRandom}}.length " class="font-bold" ></span></div>  
+      <div>input:<span x-text="input{{getRandom}} " class="font-bold" ></span></div>
+      <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>    
+   </div>  
+   <script>
+         function inputHandler() {
+            return {
+               input{{getRandom}}: '{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , 
+               valid: false, 
+               wasFocused: false, 
+               isFocused: false,
+               {{#if _isEmail}}
+                  validEmail: false,
+                  errorMessage(){ return !this.valid ? '{{_errorMandatory}}' : '{{_errorEmail}}'},
+                  hideDescription() { return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused))},
+                  hideError() { return Boolean(!this.hideDescription())},
+                  validateEmail(){
+                     var email = this.input{{getRandom}}.trim();
+                     // https://github.com/colinaut/alpinejs-plugin-simple-validate/blob/main/src/index.js slashes are double because webpack removes them                                                            
+                     var emailRegexEscaped = /^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;
+                     //https://emailregex.com/index.html slashes are double because webpack removes them
+                     var emailRegexV2Escaped = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/;
+                     this.validEmail = emailRegexV2Escaped.test(email);  
+                  }
+               {{else}}
+                  hideError() {return (this.valid || !this.wasFocused || this.isFocused)},   
+                  hideDescription() {return !this.valid && this.wasFocused && !this.isFocused},
+                  errorMessage: "{{_errorMandatory}}"
+               {{/if}}
+            };
+         }
+      </script>
+</div>

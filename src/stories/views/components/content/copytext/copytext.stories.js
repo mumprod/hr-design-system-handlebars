@@ -17,6 +17,7 @@ import copytext_video_json from './fixtures/copytext_video.json'
 import copytext_audio_json from './fixtures/copytext_audio.json'
 import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
 import copytext_livestream_json from './fixtures/copytext_livestream.json'
+import copytext_webform_json from './fixtures/copytext_webform.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -64,6 +65,12 @@ export const WithFiledownload = {
     render: Template.bind({}),
     name: 'File-Download',
     args: copytext_filedownload_json,
+}
+
+export const WithWebform = {
+    render: Template.bind({}),
+    name: 'Formular',
+    args: copytext_webform_json,
 }
 
 export const WithImage = {

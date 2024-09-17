@@ -1,0 +1,1 @@
+{"fields":[{"type":{"isText":true,"asString":"text"},"name":"vorname","label":"Vorname","description":"Das ist der Beschreibungstext von Vorname","defaultValue":"","isHidden":false,"isRequired":false}]}

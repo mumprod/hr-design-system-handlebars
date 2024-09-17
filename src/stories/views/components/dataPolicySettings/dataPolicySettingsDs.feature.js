@@ -25,25 +25,25 @@ const DataPolicySettings = function (context) {
 
     //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
+        //TODO: Kann nach einer gewissen Zeit rausgeworfen werden? Die alten Cookies sind mittlerweile rausgewachsen?
         if (getJSONCookie('datapolicy') || getJSONCookie('tracking')) {
-            console.log("hessenschau bisher => Beide Cookies existieren")
             deleteOldCookiesandTransferData()
         }
         else {
-            console.log("hessenschau neu => nach der Löschung der beiden alten Cookies muß hier gelesen werden")
             if (getJSONCookie('hrSettings')) {
                 getAllToggleValuesFromSettings()
             }
             else {
                 console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
-                let whitelist = ["agf", "ati", "ard_mediathek", "arte_concert", "arte_concert_new", "datawrapper_cdn"]
+                //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Externer Dienst initial deaktiviert, DSGVO wird geprüft" 
+                //im Konfig-Dokument bestückt.
                 for (let i = 0; i < toggleSwitches.length; ++i) {
-                    if (toggleSwitches[i].id == "agf" || toggleSwitches[i].id == "ati" || toggleSwitches[i].id == "ard_mediathek" || toggleSwitches[i].id == "arte_concert" || toggleSwitches[i].id == "arte_concert_new" || toggleSwitches[i].id == "datawrapper_cdn") {
-                        setCookieForSettings(toggleSwitches[i].id, true)
-                    }
-                    else {
-                        setCookieForSettings(toggleSwitches[i].id, false)
-                    }
+                        if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
+                            setCookieForSettings(toggleSwitches[i].id, true)
+                        }
+                        else {
+                            setCookieForSettings(toggleSwitches[i].id, false)
+                        }
                 }
                 setAllToggleValuesFromSettings()
                 changeProviderTitle()
