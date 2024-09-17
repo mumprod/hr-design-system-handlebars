@@ -1,3 +1,27 @@
+# v1.100.5 (Mon Sep 16 2024)
+
+#### 🐛 Bug Fix
+
+- Adding icons for ts rainradar [#1066](https://github.com/mumprod/hr-design-system-handlebars/pull/1066) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.100.4 (Fri Sep 13 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Email field - DPE 3292 [#1065](https://github.com/mumprod/hr-design-system-handlebars/pull/1065) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.100.3 (Wed Sep 11 2024)
 
 #### 🐛 Bug Fix
