@@ -1,3 +1,15 @@
+# v1.100.7 (Tue Sep 17 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3358 Falsche Vorschau beim Sharing von Dokumenten [#1069](https://github.com/mumprod/hr-design-system-handlebars/pull/1069) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.100.6 (Tue Sep 17 2024)
 
 #### 🐛 Bug Fix
