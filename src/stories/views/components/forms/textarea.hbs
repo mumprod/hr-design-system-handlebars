@@ -3,9 +3,11 @@
    <textarea
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
-      @focus="isFocused = true"
-      @blur="wasFocused = true; isFocused=false"
-      x-on:keyup ="textarea{{getRandom}}.length > 0 ? valid = true : valid = false"
+      {{#if _required}}
+         @focus="isFocused = true"
+         @blur="wasFocused = true; isFocused=false"
+         x-on:keyup ="textarea{{getRandom}}.length > 0 ? valid = true : valid = false"
+      {{/if}}
       value=""
       name="{{#if _name}}{{_name}}{{/if}}"
       {{#if _locaKey}}
@@ -28,7 +30,9 @@
       {{/if~}}
       {{#if _required}}required{{/if}}
       class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
-      :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
+      {{#if _required}}
+         :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
+      {{/if}}
    >{{#if _formField.isValid}}
         {{{_formField.forHtmlContent}}}
     {{else}}
@@ -62,16 +66,22 @@
          <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs font-bold text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
+
    <div class="hidden">
-      <div>DEBUGG</div>
-      <div>wasFocused:<span x-text="wasFocused"></span></div>
-      <div>valid:<span x-text="valid"></span></div>
-      <div>input.length:<span x-text="textarea{{getRandom}}.length "></span></div>
+      <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
+         DEBUG
+      </div>
+      <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
+         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>input.length:<span x-text="textarea{{getRandom}}.length " class="font-bold" ></span></div>
+      </div>
    </div>
 </div>

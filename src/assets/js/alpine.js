@@ -17,7 +17,9 @@ AsyncAlpine.init(Alpine)
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )
+    
     .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
+    .data('inputHandler', ()=> import('components/forms/inputHandler.alpine.js'))
     .start()
 
 window.Alpine = Alpine
