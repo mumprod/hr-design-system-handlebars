@@ -1,3 +1,15 @@
+# v1.100.8 (Wed Sep 18 2024)
+
+#### 🐛 Bug Fix
+
+- 🎨 Form Validation as lazy loaded async script [#1070](https://github.com/mumprod/hr-design-system-handlebars/pull/1070) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.100.7 (Tue Sep 17 2024)
 
 #### 🐛 Bug Fix
