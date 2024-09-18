@@ -31,7 +31,7 @@
                     _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
                 }}
             {{else if this.type.isText}}
-                {{~> components/forms/input_single_line
+                {{~> components/forms/input
                     _type=this.type.asString
                     _isEmail=this.type.isEmail
                     _name=this.name
