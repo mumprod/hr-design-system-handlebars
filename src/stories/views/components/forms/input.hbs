@@ -1,6 +1,6 @@
 <div class="relative flex flex-col w-full mb-5"
    ax-load
-   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_errorEmail}}',{{_isEmail}})"
+   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_errorEmail}}',{{#if _isEmail}}true{{else}}false{{/if}},'{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
    x-ignore
    >
    <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-blue-500 pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
