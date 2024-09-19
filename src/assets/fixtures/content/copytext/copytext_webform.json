@@ -7,14 +7,20 @@
         {
             "paragraphBoxItem": {
                 "isWebForm": true,
+                "hasNewWebForm": true,
+                "title": "Kontaktformular",
                 "fields":[
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
-                        "@->contentpath": "input-text-vorname"
+                        "@->contentpath": "input-text-vorname-required"
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
-                        "@->contentpath": "input-text-vorname-required"
+                        "@->contentpath": "input-text-nachname-required"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "textarea"
                     }
                 ]
                 

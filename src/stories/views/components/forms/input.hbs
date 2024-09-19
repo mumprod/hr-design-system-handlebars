@@ -1,4 +1,4 @@
-<div class="relative flex flex-col w-full mb-5"
+<div class="relative flex flex-col w-full mb-5 {{_wrapperClass}}"
    ax-load
    x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_errorEmail}}',{{#if _isEmail}}true{{else}}false{{/if}},'{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
    x-ignore
@@ -42,7 +42,7 @@
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
       
-  <label for="input{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+  <label for="input{{getRandom}}" class="{{_labelClass}} absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      

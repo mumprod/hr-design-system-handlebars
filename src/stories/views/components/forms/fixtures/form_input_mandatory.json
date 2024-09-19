@@ -1,1 +1,1 @@
-{"fields":[{"type":{"isText":true,"asString":"text"},"name":"vorname","label":"Vorname","description":"Das ist der Beschreibungstext (*Pflichtfeld)","defaultValue":"","isHidden":false,"isRequired":true,"maxLength":"20"}]}
+{"fields":[{"type":{"isText":true,"asString":"text"},"name":"vorname","label":"Vorname","description":"Das ist der Beschreibungstext (*Pflichtfeld)","defaultValue":"","isHidden":false,"isRequired":true,"maxLength":"140"}]}

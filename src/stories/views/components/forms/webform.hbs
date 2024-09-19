@@ -1,9 +1,15 @@
-{{~#if (isStorybook)~}}
-        {{#>components/forms/backgroundBox  }}  
-            <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
-                {{> components/forms/fields }}
-            </form>
-        {{/components/forms/backgroundBox }}
+{{~#if _newWebForm ~}}
+    {{#>components/forms/backgroundBox  }}  
+
+        
+        <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12">
+            {{this.title}}
+        </h3>
+        
+        <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
+            {{> components/forms/fields }}
+        </form>
+    {{/components/forms/backgroundBox }}
 {{~else~}}
     {{> content/webform/components/webform _addClass="print:hidden copytext__clearBox marginTrailer--m"}}
 {{~/if~}}
