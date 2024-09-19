@@ -15,7 +15,6 @@ export default (module) => ({
         if (navigator.share && isMobile) {
             navigator.share({
                 title: document.title,
-                text: 'Schau mal was ich auf hessenschau.de gefunden habe!',
                 url: window.location.href,
             })
             .then(() => {
