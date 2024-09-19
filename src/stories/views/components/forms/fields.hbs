@@ -16,7 +16,7 @@
         
     {{else}}
 
-        <div class="c-form__row js-wrapper-{{this.name}}">
+        <div class="js-wrapper-{{this.name}}">
             {{#if this.type.isTextarea}}
                 {{~> components/forms/textarea
                     _name=this.name
@@ -36,10 +36,10 @@
                     _isEmail=this.type.isEmail
                     _name=this.name
                     _label=this.label
-                    _labelClass="hide"
+                    _labelClass=""
                     _description=this.description
                     _defaultValue=this.defaultValue
-                    _inputClass=(if this.isHidden "hide")
+                    _wrapperClass=(if this.isHidden "hidden")
                     _tabindex=(if this.isHidden "-1")
                     _required=this.isRequired
                     _maxLength=this.maxLength
