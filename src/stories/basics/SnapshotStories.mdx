@@ -1,0 +1,353 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Grundlegendes/Entwicklung/Snapshot Stories" />
+
+# Snapshot Stories
+
+Unser Storybook ist standardmäßig so konfiguriert, dass bei einem Build (wird automatisch bei einem Pull Request ausgelöst) von jeder Story
+mit Hilfe des Tools Chromatic ein sogenannter Snapshot erstellt wird. Ein Snapshot ist ein Screenshot der Story und wird verwendet, um
+automatisiert zu testen, ob sich etwas am Aussehen eine Story geändert hat. Pro Monat stehen uns in Chromatic eine bestimmte Anzahl an Snapshots
+zur verfügung (derzeit sind dies 35.000). Wird diese Grenze überschritten, muss pro zusätlichem Snapshot eine Summe X gezahlt werden. Zu Beginn der 
+Entwicklung waren die 35.000 Snapshots ausreichend, jedoch erreichen wir mit einer kontinuierlich steigenden Anzahl an Komponenten und dementsprechend
+immer mehr Stories mittlerweile sehr schnell unser Snapshot Limit und fast jeden Monat eine nicht unerhebliche Summe dazu zahlen. Um dies zu vermeiden,
+wollen wir zukünftig nur noch sogenannte Snapshot Stories mit Chromatic testen und die Tests für alle normalen Stories deaktivieren. Als Vorbild
+dient uns hier das Vorgehen von Netlify (siehe [https://www.netlify.com/blog/storybook-visual-regression-testing/?ref=storybookblog.ghost.io#main](https://www.netlify.com/blog/storybook-visual-regression-testing/?ref=storybookblog.ghost.io#main)).  
+
+Um Snapshot Kapazitäten bei Chromatic zu sparen, werden, zumindest für den automatisierten Test, alle Zustände einer Komponente in einer einzigen Story 
+zusammengefasst. Bei einem Story File mit zehn Stories werden auf diese Weise neun Snapshots eingespart. Im Folgenden wird erklärt, wie dieses Ziel erreicht werden kann.
+
+## Aufbau der Testdaten (Fixtures)
+Die Testdaten für Stories werden, wie im Kapitel [Fixtures](?path=/docs/grundlegendes-entwicklung-testdatenbereitstellung--docs) beschrieben, strukturiert in Form einer 
+JSON Datei bereitgestellt. Für die Verwendung mit Snapshot Stories wurde deren Struktur angepasst und erweitert. Die in einer Snapshot Story zusammengefassten Stories
+lassen sich gruppieren, sortieren und die Art und Weise wie sie dargestellt werden (Flexbox oder Grid) konfiguriert werden. 
+
+### Globale Konfiguration
+Zunächst muss in jeder Testdaten Datei muss ein Objekt `config` angelegt werden. Hiermit werden globale Einstellungen für die Snapshot Story festgelegt. 
+Folgende Eigenschaften können konfiguriert werden:
+
+| Property    | Beschreibung                                           |Standard-Wert|
+| :---------- | :--------------------------------------------------- |:--------------------------------------------------- |
+| **template** | Legt das Standard Template fest mit dem alle Stories einer Snapshot-Story gerendert werden. Dieser Wert kann pro Story überschrieben werden. Der hier angegebene Wert muss dem Namen eines Templates im Array `hbsTemplates` im Story File entsprechen.                         ||
+| **path**     | Erlaubt es einen Pfad zu den Testdaten anzugeben. Für die Teaser ist dieser z.B. `args.logicItem.includeModel`  |`args`|
+| **layout**   | Legt das Layout fest, mit dem die einzelnen Stories innerhalb der Snapshot-Story angeordet werden. Erlaubte Werte sind `flex` und `grid` |`flex`|
+| **renderSnapshotsWrapper** | Hierüber wird gesteuert, ob um die Stories innerhalb der Snapshot-Story, ein Wrapper Div gesetzt wird oder nicht. Obwohl dies für Flex und Grid Layouts benötigt wird, kann es sein, dass es hier ausgestellt werden muss, da im Story File mithilfe eines Decorators bereits ein Wrapper Div gesetzt wird.|`true`|
+
+Nur die Eigenschaften, die keinen Standard-Wert besitzen müssen zwingend gesetzt werden. Ein vollständig konfiguriertes Beispiel zeigt der folgende Ausschnitt aus einer Testdaten-Datei.
+
+```json
+{
+    "config":{
+        "template": "default",
+        "path": "args.logicItem.includeModel",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    }
+}
+```
+
+### Stories
+Die Stories einer Snapshot-Story werden in Form von Story-Objekten definiert. Diese können auf Ebene des globalen `config` Objekts oder innerhalb von Gruppen platziert werden.
+Eine Story muss, damit Inhalte angezeigt werden können, zwingend ein Objekt `args` mit den Testdaten der Story enthalten. Mit Hilfe eines `config` Objekts können einzelne Eigenschaften
+der globale Konfiguration überschrieben und neue Konfigurationen für die Story festgelegt werden. Folgende Eigenschaften können konfiguriert werden: 
+
+| Property    | Beschreibung                                           |Standard-Wert|
+| :---------- | :--------------------------------------------------- |:--------------------------------------------------- |
+| **template** | Erlaubt es den Namen eines individuellen Templates zum Rendering der Story anzugeben. Wird nichts angegeben, wird das in der globalen Konfiguration definierte zum Rendering verwendet.||
+| **path**     | Erlaubt es einen Storyspezifischen Pfad zu den Testdaten anzugeben. Wird hier nichts angegeben wird der Wert aus der globalen Konfiguration genutzt  ||
+| **renderSnapshotItemWrapper** | Legt fest, ob das Markup der Story von einem `<div>` umschlossen wird. Das Setzen dieser Eigenschaft hat nur eine Auswirkung, wenn die globale Eigenschaft `renderSnapshotsWrapper` auf `true`steht.   |`true`|
+| **css**   | Hierüber besteht die Möglichkeit individuelle CSS Klassen für das eine Story umschließende Wrapper `<div>` zu setzen.  ||
+| **useAsSnapshot**   | Hierüber kann gesteuert werden, ob einzelne Stories nicht in der Snapshot-Story gerendert werden sollen.  |`true`|
+
+Die Stories werden im Storybook Frontend standardmäßig nach dem Namen sortiert angezeigt. Wird bei der Ausgabe eine bestimmte Reihenfolge benötigt, kann diese durch Vorranstellen
+einer Nummer vor dem Storynamen erreicht werden. 
+
+
+```json
+{
+    "config": {
+        "renderSnapshotsWrapper": false,
+        "path": "args.logicItem.includeModel",
+        "template": "default"
+    },
+    "1_byline_with_teaser_info": {
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaser"
+        }
+    },
+    "2_byline_with_comments_and_teaser_info": {
+        "config":{
+            "template":"test"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "teaserWithComments"
+        }
+    }
+}
+```
+
+Hier werden die Daten für eine Snapshot-Story mit zwei Stories definiert. Zunächst wird in der globalen Koniguration definiert, dass die Stories nicht von einem Wrapper `<div>` 
+umschlossen werden sollen, die eigentlichen Testdaten über den Pfad `args.logicItem.includeModel` zur Verfügung stehen und zum Rendern der Stories das Template
+`default` genutzt werden soll. Die Reihenfolge der zu rendernden Stories wird durch die Vorranstellung der Nummer festelegt. Bei der Story `2_byline_with_comments_and_teaser_info`
+wird konfiguriert, dass zum Rendern statt des `default` Templates das Template `test`genutzt wird.
+
+
+### Gruppen
+Sollen bei der Ausgabe thematisch zusamengehörige Stories nebeneinander platziert werden, können Sie in Gruppen zusammengefasst werden.
+Auf diese Weise werden z.B. alle 50% Teaser in einem zusammenhängenden Block dargestellt. Gruppen werden in der Testdaten Datei als eigene Objekte auf der selben 
+Ebene wie das globale `config` Objekt platziert. Damit sie als Gruppe erkannt werden, muss ihr Name nach dem Schema `group_<Gruppenname>` aufgebaut werden. Innerhalb einer
+Gruppe können beliebig viele Stories definiert werden. Die Stories innerhalb einer Gruppe können, wie im Kapitel [Stories](#stories) beschrieben, sortiert werden.
+
+```json
+{
+    "config": {
+        "template": "default",
+        "path": "args.logicItem.includeModel",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+    "group_100": {
+        "1_<Storyname>":{},
+        "2_<Storyname>":{},
+        ...
+    },
+    "group_50": {
+        "1_<Storyname>":{},
+        "2_<Storyname>":{},
+        ...
+    },
+    "group_33": {
+        "<Storyname>":{},
+        "<Storyname>":{},
+        ...
+    }
+}
+```
+Im Codebeispiel werden drei Gruppen definiert. Die Gruppen `group_100`, `group_50` enthalten sortierte und die Gruppe `group_33` unsortierte Stories.
+
+## Verwendung der Testdaten im Story File
+Nachdem die Testdaten für die Stories wie unter [Aufbau der Testdaten](#aufbau-der-testdaten-fixtures) beschrieben definiert wurden, müssen sie, damit im Storybook
+Frontend etwas angezeigt wird auch noch ausgelesen werden. Was hierbei zu beachten ist, wird im Folgenden beschrieben.
+
+Im Kopf eines Story Files (`<storyname>.stories.js`) müssen, damit auf die Testdaten zugegriffen und eine Snapshot-Story gerendert werden kann, zwingend die Folgenden
+beiden Imports gemacht werden:
+
+```javascript
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_standard.json' // individueller Pfad zur Testdaten Datei
+``` 
+Mit dem ersten Import wird die Utility Methode `getSnapshotsTemplate` importiert. Diese Methode durchläuft in einer Schleife alle in den Testdaten bereitgestellten Stories
+und stellt sie in einem Template zur rendern der Snapshot-Story zur Verfügung. Mit dem zweiten Import wird die Testdaten Datei in ein Objekt `fixtures` importiert. Der Pfad dieser Datei muss individuell
+angepasst werden. Der Name des Testdaten Objekts kann geändert werden, aber es empfielht sich aus Konsistenzgründen den Namen `fixtures` beizubehalten.
+An dieser Stelle können nun noch weitere Story spezifischen Imports gemacht werden.
+
+Im Anschluss daran müssen die zum Rendern der Stories benötigten Handlebars Templates definiert werden.
+
+```javascript
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_standard }}   
+  `)
+``` 
+
+Damit das entsprechende Handlebars Template kompiliert werden kann, muss zunächste eine Instanz von Handlebars über den Befehl `require('hrHandlebars')` geladen werden. 
+Danach muss das Array `hbsTemplates` initialisiert und diesem mindestens ein kompiliertes Handlebars Template übergeben werden. Die hier definierten Namen der Templates
+müssen, damit das Rendering der Snapshot-Story korrekt funktioniert, mit denen aus dem Parameter `template` der Testdaten übereinstimmen.
+
+Die auf diesem Weg definierten Handlebars Templates müssen jetzt in den konkreten Storybook Templates eingesetzt werden. 
+
+```javascript
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
+}
+```
+
+Es gibt, wie hier im Beispiel gezeigt, immer mindestens ein "normales" Template für die konkreten Storybook Stories (hier das Template `Template`) und ein Template für die Snapshot-Story (dieses sollte immer `snapshotTemplate` benannt werden).
+In der Regel wird es von den "normalen" Templates immer so viele Storybook Templates geben, wie es auch Einträge im Array `hbsTemplates` gibt. Vom `snapshotTemplate` 
+gibt es hingegen immer nur genau ein Template. In diesem Template wird die `getSnapshotsTemplate` Methode aufgerufen und ihr ein Objekt bestehend aus dem Array `hbsTemplates` und den Testdaten übergeben.
+
+Damit zukünftig nur noch von der Snapshot-Story Screenshots in Chromatic gemacht werden, muss in den Einstellungen der Story-Datei (diese ist im default export zu finden)
+folgende Konfiguration vorgenommen werden:
+
+```javascript
+export default {
+    ...
+
+    parameters: {
+        ...
+
+        chromatic: {
+            disableSnapshot: true
+        }
+    },
+
+    ...
+}
+```
+
+Das Anfertigen von Snapshots wird hierdurch zunächst für alle Stories deaktiviert. Damit aber ein Snapshot der Snapshot-Story gemacht wird, muss es in dieser 
+Story explizit wieder aktiviert werden. Wie dies gemacht wird und wie die anderen Stories zukünftig definiert werden, wird im Folgenden beschrieben.
+
+```javascript
+export const StandardHero = {
+    render: Template.bind({}),
+    name: 'Standard Hero',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero.args.logicItem.includeModel,
+}
+
+export const StandardHeroMitLabel = {
+    render: Template.bind({}),
+    name: 'Standard Hero mit Label',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_label.args.logicItem.includeModel,
+}
+
+...
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
+}
+```
+
+Die ersten beiden Stories in diesem Beispiel sind "normale" Storybook Stories. Sie werden im Storybook Frontend angezeigt, aber es werden in Chromatic keine Snapshots erstellt. Über den Parameter `render`
+definieren sie, dass sie mit dem Storybook Template `Template` gerendert werden sollen. Ihr Name, der auch im Navigationsmenü angezeigt wird, erhalten sie über den Parameter `name`
+und über den Parameter `args` werden ihnen die Testdaten aus der Testdaten-Datei übergeben. Anders als bei der im Folgenden beschriebenen Snapshot-Story, muss hier
+der exakte Pfad zu den jeweiligen Testdaten angegeben werden.
+
+Als letzte Story in einer Story-Datei sollte immer die Snapshot-Story stehen. Ihr Aufbau ist in jeder Story-Datei gleich. Als Storybook-Template zum Rendern nutzt 
+sie das Template `snapshotTemplate`. Der Name der Story ist immer `Snapshot` und als Testdaten wird ihr einfach das komplette Testdaten-Objekt `fixtures` übergeben.
+Anders als bei den "normalen" Stories wird konfiguriert, dass von dieser Story ein Snapshot in Chromatic gemacht werden soll.
+
+Der vollständige Aufbau einer Story-Datei wird im Folgenden gezeigt.
+
+```javascript
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_standard.json'
+
+
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_standard }}   
+  `)
+
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
+}
+
+export default {
+    title: 'Komponenten/Teaser/Standard',
+
+    parameters: {
+        layout: 'fullscreen',
+
+        chromatic: {
+            viewports: [360, 1024],
+            diffThreshold: 0.3,
+            disableSnapshot: true
+        },
+    },
+
+    argTypes: {
+        teaserSize: {
+            control: {
+                type: 'select',
+                options: ['hero', '100', '50', '33', '25'],
+            },
+
+            description: 'Teaser Größe',
+
+            table: {
+                defaultValue: {
+                    summary: 'hero',
+                },
+            },
+        },
+    },
+
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-page">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+}
+
+export const StandardHero = {
+    render: Template.bind({}),
+    name: 'Standard Hero',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero.args.logicItem.includeModel,
+}
+
+export const StandardHeroMitLabel = {
+    render: Template.bind({}),
+    name: 'Standard Hero mit Label',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_label.args.logicItem.includeModel,
+}
+
+/* 
+    Die weiteren Stories wurden aus Platzgründen weggelassen
+*/
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
+}
+
+```
+
+<div className="bg-blue-200 !mb-4 !mt-4 p-4">
+  <h4 className="!text-stone-950 font-bold">Hinweis</h4>
+    Snapshot-Stories können nicht für alle Komponenten erstellt werden. Da Chromatic eine Obergrenze für die erstellten Screenshots hat, können 
+    beispielsweise die Stories, die ganze Inhaltsseiten abbilden nicht in Snapshot-Stories zusammengefasst werden.
+</div>
