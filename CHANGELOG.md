@@ -1,3 +1,15 @@
+# v1.101.0 (Thu Sep 19 2024)
+
+#### 🚀 Enhancement
+
+- ✨ DPE-3361 Formular in delivery einbauen [#1071](https://github.com/mumprod/hr-design-system-handlebars/pull/1071) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.100.8 (Wed Sep 18 2024)
 
 #### 🐛 Bug Fix
