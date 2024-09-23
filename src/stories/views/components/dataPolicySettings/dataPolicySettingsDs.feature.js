@@ -75,10 +75,7 @@ const DataPolicySettings = function (context) {
 
             if (isCookieSetForSettings(toggleSwitches[i].id)) {
                 toggleSwitches[i].checked = true
-            } else if (
-                !isCookieExistForSettings(toggleSwitches[i].id) &&
-                toggleSwitches[i].getAttribute('initial') == 'checked'
-            ) {
+            } else if (toggleSwitches[i].getAttribute('data-whitelist') == 'true') {
                 toggleSwitches[i].checked = true
                 setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
             }
