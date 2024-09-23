@@ -79,6 +79,10 @@ const DataPolicySettings = function (context) {
                 toggleSwitches[i].checked = true
                 setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
             }
+            else{
+                toggleSwitches[i].checked = false;
+                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked);
+            }
         }
         toggleAllSwitch.checked = allTogglesExternalServiceChecked()
     }
