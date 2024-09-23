@@ -1,3 +1,15 @@
+# v1.101.1 (Mon Sep 23 2024)
+
+#### 🐛 Bug Fix
+
+- Removing old cookie handling [#1072](https://github.com/mumprod/hr-design-system-handlebars/pull/1072) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.101.0 (Thu Sep 19 2024)
 
 #### 🚀 Enhancement
