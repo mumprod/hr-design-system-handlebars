@@ -446,4 +446,12 @@
     ul.restrictedToTwo li:nth-of-type(1n + 2) .timelineBorder {
         display: none;
     }
+    /*! ****************************/
+    /*! FORMULAR SELECT          */
+    /*! ****************************/
+    /* Custom CSS to style the label when the first empty option is selected */
+    select:has(option:checked:not([value=""])) + label{
+        @apply top-px scale-75 translate-y-0
+    }
+
 }

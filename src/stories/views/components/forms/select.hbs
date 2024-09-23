@@ -1,0 +1,30 @@
+<div class="relative flex flex-col w-full mb-5 " ax-load=""
+    x-data="inputHandler('select9339','Bitte wählen Sie eine Option aus', false, '')">
+    <select
+        class="relative w-full h-12 pt-4 pl-4 text-gray-800 border-blue-500 appearance-none bg- pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none"
+        :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }" x-model="select9339"
+        id="select9339" name="options" title="Wählen Sie eine Option" aria-label="Wählen Sie eine Option" >
+        <option value="" selected></option> 
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option> 
+    </select>
+    <label for="select9339"
+        class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-500
+              
+              peer-focus:text-blue-500 peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px
+              
+           
+
+              origin-top-left transform transition-transform 
+">
+        
+    Wen möchten Sie erreichen?*
+    </label>
+    <!-- Optional custom dropdown arrow icon -->
+    <div class="absolute transform -translate-y-1/2 pointer-events-none right-3 top-1/2">
+        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </div>
+</div>

@@ -4,6 +4,8 @@ import inputMandatoryJson from './fixtures/form_input_mandatory.json'
 import inputPrefilledJson from './fixtures/form_input_prefilled.json'
 import textareaJson from './fixtures/form_textarea.json'
 import emailJson from './fixtures/form_email.json'
+import selectJson from './fixtures/form_select.json'
+
 
 const handlebars = require('hrHandlebars')
 
@@ -67,3 +69,8 @@ export const Textarea = {
     name: 'Textarea',
     args: textareaJson,
 }
+export const Select = {
+    render: Template.bind({}),
+    name: 'Select',
+    args: selectJson,
+} 

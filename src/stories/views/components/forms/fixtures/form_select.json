@@ -1,0 +1,1 @@
+{"fields":[{"type":{"isSelect":true,"asString":"select"},"name":"Select Name","label":"Select Label","description":"Das ist der Beschreibungstext von Select","defaultValue":"","isHidden":false,"isRequired":false}]}
