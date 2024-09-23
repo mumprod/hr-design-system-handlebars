@@ -78,8 +78,7 @@ const DataPolicySettings = function (context) {
             } else if (toggleSwitches[i].getAttribute('data-whitelist') == 'true') {
                 toggleSwitches[i].checked = true
                 setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
-            }
-            else{
+            } else if (toggleSwitches[i].getAttribute('data-whitelist') == 'false') {
                 toggleSwitches[i].checked = false;
                 setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked);
             }
