@@ -1,3 +1,15 @@
+# v1.102.2 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Formulargruppen mit und ohne Überschriften [#1076](https://github.com/mumprod/hr-design-system-handlebars/pull/1076) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.102.1 (Tue Sep 24 2024)
 
 #### 🐛 Bug Fix
