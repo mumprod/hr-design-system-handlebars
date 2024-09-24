@@ -80,6 +80,29 @@
         "rows": "10",
         "counter": true
     },
+    "checkbox":
+    {
+        "isGrouped":false,
+        "type":{
+            "isChoice":true,
+            "asString":"checkbox"
+        },
+        "name":"checkbox",
+        "label":"Ich bin damit einverstanden.",
+        "isMeta":false,
+        "description":"Das ist der Beschreibungstext von Checkbox",
+        "isRequired":true,
+        "options":[
+            {
+                "value":"value0",
+                "isSelected":false
+            },
+            {
+                "value":"value1",
+                "isSelected":false
+            }
+        ]
+    },
     "select": {
         "type": {
             "isSelect": true,

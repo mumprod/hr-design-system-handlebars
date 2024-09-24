@@ -1,0 +1,97 @@
+<div class="relative flex flex-col w-full mb-6 gap-y-3 md:gap-y-4" 
+   ax-load
+   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_type}}')"
+   x-ignore
+>
+
+<div class="flex flex-row items-center w-full gap-x-4">
+
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent"
+      :class="{' border-blue-science-hex': hideError(),'border-red-700': hideDescription() }"
+      @change="validateInput"
+      x-model="isChecked"
+      id="input{{getRandom}}"
+      {{#if _required}}
+         @focus="isFocused = true"
+         @blur="wasFocused = true; isFocused=false"
+      {{/if}}
+      type="{{#if _type}}{{_type}}{{/if}}"
+      name="{{#if _name}}{{_name}}{{/if}}"
+      {{#if _locaKey}}
+         title="{{loca _locaKey}}{{#if _required}}*{{/if}}"
+      {{else}}
+         {{#if _label}}
+         title="{{_label}}{{#if _required}}*{{/if}}"
+         {{/if}}
+      {{/if}}
+      {{#if _formField.forHtmlAttribute}}
+         value="{{_formField.forHtmlAttribute}}"
+      {{else}}
+         {{#if _value}}
+            value="{{_value}}"
+            {{else}}
+            value="{{_defaultValue}}"
+         {{/if}}
+      {{/if}}
+      {{#if _required}} required{{/if}}
+      {{#unless _multipleChoice}}
+         {{#if _required}}
+            required
+         {{/if}}
+      {{/unless}}
+      {{#if _formField.rawAsBoolean}}
+         checked
+      {{else}}
+         {{#if _selected}}
+            checked
+         {{/if}}
+      {{/if~}}
+   >
+      
+  <label for="input{{getRandom}}" class="items-center justify-center text-xs text-black md:text-sm font-headingSerif ">
+      {{#if _hasBody}}
+        {{decorator_body}}{{#if _required}}*{{/if}}
+      {{else}}
+        {{#if _locaKey}}
+            {{loca _locaKey}}{{#if _required}}*{{/if}}
+        {{else}}
+            {{#if _label}}
+                {{{_label}}}{{#if _required}}*{{/if}}
+            {{/if}}
+        {{/if}}
+      {{/if}}
+   </label>
+   
+   {{#if _required}}
+      <div class="flex items-center self-start justify-center">
+         <div class="hidden w-5 h-5 font-bold" :class="{'hidden': hideError() }">
+            {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
+         </div>
+      </div>
+   {{/if}}
+
+</div>
+
+   <div class="flex items-end justify-between h-5 font-heading">     
+      {{#if _description}}  
+         <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
+      {{/if}}
+      {{#if _required}}
+         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      {{/if}}
+   </div>
+
+   <div class="hidden" >
+      <b>DEBUGG</b>
+      <div>isChecked:<span x-text="isChecked" class="font-bold" :class="isChecked ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
+      <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>
+      <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>    
+   </div> 
+   
+
+   
+</div>
