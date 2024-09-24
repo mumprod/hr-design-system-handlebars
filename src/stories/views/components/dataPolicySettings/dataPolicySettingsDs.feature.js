@@ -75,17 +75,22 @@ const DataPolicySettings = function (context) {
 
             if (isCookieSetForSettings(toggleSwitches[i].id)) {
                 toggleSwitches[i].checked = true
-            } else if (
-                !isCookieExistForSettings(toggleSwitches[i].id) &&
-                toggleSwitches[i].getAttribute('initial') == 'checked'
-            ) {
-                toggleSwitches[i].checked = true
-                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
-            }
+            } 
         }
+        checkWhiteListAttribute()
         toggleAllSwitch.checked = allTogglesExternalServiceChecked()
     }
-
+    const checkWhiteListAttribute = function() {
+        for (let i = 0; i < toggleSwitches.length; ++i) {
+            if (toggleSwitches[i].getAttribute('data-whitelist') == 'true') {
+                toggleSwitches[i].checked = true
+                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
+            } else {
+                toggleSwitches[i].checked = false;
+                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked);
+            }
+        }
+    }
     const isCookieSetForSettings = function (externalService) {
         return settingsCookie.isSettingsCookieAccepted(externalService)
     }
