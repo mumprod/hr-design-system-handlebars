@@ -1,3 +1,16 @@
+# v1.101.3 (Tue Sep 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/mumprod/hr-design-system-handlebars into main ([@vascoeduardo](https://github.com/vascoeduardo))
+- ✨ DPE-3290 Dropdown ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.101.2 (Mon Sep 23 2024)
 
 #### 🐛 Bug Fix
