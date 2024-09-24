@@ -1,0 +1,46 @@
+{
+   "fields":[
+               {
+                  "@->jsoninclude": "forms/form_fields.inc.json",
+                  "@->contentpath": "group",
+                  "@->overrides": [
+                     {
+                        "@->contentpath": "fields",
+                        "@->value": [
+                           {
+                              "@->jsoninclude": "forms/form_fields.inc.json",
+                              "@->contentpath": "input-text-vorname-required"
+                           },
+                           {
+                              "@->jsoninclude": "forms/form_fields.inc.json",
+                              "@->contentpath": "input-text-nachname-required"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "@->jsoninclude": "forms/form_fields.inc.json",
+                  "@->contentpath": "group",
+                  "@->overrides": [
+                     {
+                        "@->contentpath": "fields",
+                        "@->value": [
+                           {
+                              "@->jsoninclude": "forms/form_fields.inc.json",
+                              "@->contentpath": "input-text-vorname-required"
+                           },
+                           {
+                              "@->jsoninclude": "forms/form_fields.inc.json",
+                              "@->contentpath": "input-text-nachname-required"
+                           }
+                        ]
+                     },
+                     {
+                        "@->contentpath": "caption",
+                        "@->value": "Noch eine Gruppe mit einer anderen Überschrift"
+                     }
+                  ]
+               }
+            ]
+}

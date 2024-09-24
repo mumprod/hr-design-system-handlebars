@@ -140,5 +140,13 @@
                 "label": "Option 4"
             }
         ]
+    }, 
+    "group": {
+        "type": {
+            "isGroup": true,
+            "asString": "group"
+        },
+        "caption": "Eine Gruppe mit Überschrift",
+        "fields": []
     }
 }

@@ -1,17 +1,15 @@
 {{#each this.fields}}
     {{#if this.type.isGroup}}
 
-        {{#if this.caption}}
-            <div class="c-form__row -hasLegend">
-                <fieldset class="c-form__field-set">
-                    <legend class="c-form__legend">{{this.caption}}</legend>
-                </fieldset>
-                {{~> modules/forms/fields}}
-            </div>
+        {{#if this.caption}}         
+            <fieldset>
+                <legend class="mb-5 font-headingSerif">{{this.caption}}</legend>
+                {{~> components/forms/fields}}
+            </fieldset>            
         {{else}}
-            <div class="c-form__row -expanded">
-                {{~> modules/forms/fields}}
-            </div>
+            <fieldset>
+                {{~> components/forms/fields}}
+            </fieldset>
         {{/if}}
         
     {{else}}
