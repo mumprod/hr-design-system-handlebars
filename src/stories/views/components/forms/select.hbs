@@ -1,15 +1,23 @@
-<div class="relative flex flex-col w-full mb-5 " ax-load=""
-    x-data="inputHandler('select9339','Bitte wählen Sie eine Option aus', false, '')">
+<div class="relative flex flex-col w-full mb-5 "
+   ax-load
+   x-data="selectHandler('select{{nextRandom}}')"
+   x-ignore
+>
     <select
         class="relative w-full h-12 pt-4 pl-4 text-gray-800 bg-white border-blue-500 appearance-none bg- pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none"
         :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
-        x-model="select9339"
-        id="select9339"
+        x-model="select{{getRandom}}"
+        id="select{{getRandom}}"
         title="{{#if _locaKey}}{{loca _locaKey}}{{else}}{{#if _Label}}{{_label}}{{#if _required}}*{{/if}}{{/if}}{{/if}}"
         name="{{#if _name}}{{_name}}{{/if}}"
         {{#if _required}}required{{/if}}
+        {{#if _required}}
+            @focus="isFocused = true;"
+            @blur="wasFocused = true; isFocused=false"
+            x-on:change ="select{{getRandom}}.value != '' ? valid = true : valid = false;"
+        {{/if}}
         >
-        <option  class="text-white bg-gray-400" value="" disabled>
+        <option  class="text-white bg-gray-400" value=""{{#if _required}} disabled{{/if}} selected>
             {{#if _locaKey}}
                 {{loca _locaKey}}{{#if _required}}*{{/if}}
             {{else}}
@@ -28,7 +36,7 @@
             {{/each}}
         {{/if}}
     </select>
-    <label for="select9339"
+    <label for="select{{getRandom}}"
         class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-500
               peer-focus:text-blue-500 peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px
               origin-top-left transform transition-transform 
@@ -46,4 +54,17 @@
     <div class="absolute right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">
         {{> components/base/image/icon _icon="arrow-down" _addClass="w-3 h-3 fill-blue-500 dark:fill-text-dark "}}
     </div>
+    <div class="hidden">
+      <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
+         DEBUG
+      </div>
+      <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
+         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
+         <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>   
+         <div>select:<span x-text="select{{getRandom}}" class="font-bold" ></span></div>
+      </div>  
+   </div>  
 </div>
