@@ -1,3 +1,15 @@
+# v1.102.0 (Tue Sep 24 2024)
+
+#### 🚀 Enhancement
+
+- DPE-3290 ✨ select field for form [#1074](https://github.com/mumprod/hr-design-system-handlebars/pull/1074) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.101.3 (Tue Sep 24 2024)
 
 #### ⚠️ Pushed to `main`
