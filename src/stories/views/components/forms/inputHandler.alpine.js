@@ -1,22 +1,27 @@
-export default function inputHandler(element, errorMandatory, errorEmail, isEmail = false, prefilledText = '') {
+export default function inputHandler(element, errorMandatory, type, errorEmail, prefilledText = '') {
     return { 
         [element]: prefilledText,
         valid: false, 
         wasFocused: false, 
         isFocused: false,
         validEmail: false,
+        isChecked: false,
         errorMessage() { 
-            if( Boolean(isEmail)){
+            if( type == "email"){
                 return !this.valid ? errorMandatory : errorEmail
-            } else {
+            } 
+            else {
                 return errorMandatory
             }
         },
-        hideDescription() { 
-            if( Boolean(isEmail)){
-                return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused))
-            } else {
-                return Boolean(!this.valid && this.wasFocused && !this.isFocused)
+        hideDescription() {
+            switch (type) {
+                case "email":
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.validEmail && this.wasFocused && !this.isFocused));
+                case "checkbox":
+                    return Boolean(!this.valid && this.wasFocused && !this.isFocused && !this.isChecked);
+                default:
+                    return Boolean(!this.valid && this.wasFocused && !this.isFocused);
             }
         },
         hideError() { 

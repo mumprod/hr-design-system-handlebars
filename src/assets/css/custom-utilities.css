@@ -457,6 +457,18 @@
     select:has(option:checked[value=""]) {
         @apply text-transparent
     }
-    
 
+    input[type="checkbox"]:checked::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 6px;
+        background: transparent;
+        top: 7px;
+        left: 3px;
+        border: 3px solid white;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+    }
 }

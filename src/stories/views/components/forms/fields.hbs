@@ -70,7 +70,7 @@
 
                     }}
                 {{else}}
-                    {{~> modules/forms/choice
+                    {{~> components/forms/choice
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label
@@ -79,6 +79,7 @@
                         _value=this.options.[0].value
                         _required=this.isRequired
                         _selected= this.options.[0].isSelected
+                        _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
                     }}
                 {{/if}}
             {{else if this.type.isUpload}}
