@@ -1,104 +1,121 @@
 {
-    "input-text-vorname":
-    {
-        "type":{
-            "isText":true,
-            "asString":"text"
+    "input-text-vorname": {
+        "type": {
+            "isText": true,
+            "asString": "text"
         },
-        "name":"vorname",
-        "label":"Vorname",
-        "description":"Das ist der Beschreibungstext von Vorname",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":false
-        
+        "name": "vorname",
+        "label": "Vorname",
+        "description": "Das ist der Beschreibungstext von Vorname",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": false
     },
-    "input-text-vorname-required":
-    {
-        "type":{
-            "isText":true,
-            "asString":"text"
+    "input-text-vorname-required": {
+        "type": {
+            "isText": true,
+            "asString": "text"
         },
-        "name":"vorname",
-        "label":"Vorname",
-        "description":"Das ist der Beschreibungstext (*Pflichtfeld)",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":true,
-        "maxLength":"140"
+        "name": "vorname",
+        "label": "Vorname",
+        "description": "Das ist der Beschreibungstext (*Pflichtfeld)",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": true,
+        "maxLength": "140"
     },
-    "input-text-nachname-required":
-    {
-        "type":{
-            "isText":true,
-            "asString":"text"
+    "input-text-nachname-required": {
+        "type": {
+            "isText": true,
+            "asString": "text"
         },
-        "name":"nachname",
-        "label":"Nachname",
-        "description":"",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":true,
-        "maxLength":"140"
+        "name": "nachname",
+        "label": "Nachname",
+        "description": "",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": true,
+        "maxLength": "140"
     },
-    "input-text-vorname-prefilled":
-    {
-        "type":{
-            "isText":true,
-            "asString":"text"
+    "input-text-vorname-prefilled": {
+        "type": {
+            "isText": true,
+            "asString": "text"
         },
-        "name":"nachname",
-        "label":"Nachname",
-        "description":"Das ist der Beschreibungstext von Nachname",
-        "defaultValue":"Hier steht schon was",
-        "isHidden":false,
-        "isRequired":false,
-        "maxLength":"140"
+        "name": "nachname",
+        "label": "Nachname",
+        "description": "Das ist der Beschreibungstext von Nachname",
+        "defaultValue": "Hier steht schon was",
+        "isHidden": false,
+        "isRequired": false,
+        "maxLength": "140"
     },
-    "input-email":
-    {
-        "type":{
-            "isText":true,
-            "isEmail":true,
-            "asString":"email"
+    "input-email": {
+        "type": {
+            "isText": true,
+            "isEmail": true,
+            "asString": "email"
         },
-        "name":"email",
-        "label":"Email",
-        "description":"Das ist der Beschreibungstext von Email",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":true,
-        "maxLength":"140"
+        "name": "email",
+        "label": "Email",
+        "description": "Das ist der Beschreibungstext von Email",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": true,
+        "maxLength": "140"
     },
-    "textarea":
-    {
-        "type":{
-            "isTextarea":true,
-            "asString":"textarea"
+    "textarea": {
+        "type": {
+            "isTextarea": true,
+            "asString": "textarea"
         },
-        "name":"textarea",
-        "label":"Textarea",
-        "description":"Das ist der Beschreibungstext von Textarea",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":true,
-        "maxLength":"300",
-        "columns":"30",
-        "rows":"10",
-        "counter":true
+        "name": "textarea",
+        "label": "Textarea",
+        "description": "Das ist der Beschreibungstext von Textarea",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": true,
+        "maxLength": "300",
+        "columns": "30",
+        "rows": "10",
+        "counter": true
     },
-    "select":
-    {
-        "type":{
-            "isSelect":true,
-            "asString":"select"
+    "select": {
+        "type": {
+            "isSelect": true,
+            "asString": "select"
         },
-        "name":"Select Name",
-        "label":"Select Label",
-        "description":"Das ist der Beschreibungstext von Select",
-        "defaultValue":"",
-        "isHidden":false,
-        "isRequired":false
-        
-    }           
- }
+        "name": "Select Name",
+        "label": "Wen möchten Sie erreichen?",
+        "description": "Das ist der Beschreibungstext von Select",
+        "defaultValue": "",
+        "isHidden": false,
+        "isRequired": true,
+        "options": [
+            {
+                "id": "option1",
+                "value": "option1",
+                "selected": false,
+                "label": "Option 1"
+            },
+            {
+                "id": "option2",
+                "value": "option2",
+                "selected": false,
+                "label": "Option 2"
+            },
+            {
+                "id": "option3",
+                "value": "option3",
+                "selected": false,
+                "label": "Option 3"
+            },
+            {
+                "id": "option4",
+                "value": "option4",
+                "selected": false,
+                "label": "Option 4"
+            }
+        ]
+    }
+}
