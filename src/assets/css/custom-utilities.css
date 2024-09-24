@@ -454,4 +454,9 @@
         @apply top-px scale-75 translate-y-0
     }
 
+    select:has(option:checked[value=""]) {
+        @apply text-transparent
+    }
+    
+
 }

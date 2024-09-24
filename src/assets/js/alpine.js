@@ -20,6 +20,7 @@ AsyncAlpine.init(Alpine)
     
     .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .data('inputHandler', ()=> import('components/forms/inputHandler.alpine.js'))
+    .data('selectHandler', ()=> import('components/forms/selectHandler.alpine.js'))
     .start()
 
 window.Alpine = Alpine
