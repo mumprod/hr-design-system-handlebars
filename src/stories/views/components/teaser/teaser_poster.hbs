@@ -14,9 +14,9 @@
             {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
         {{/if}}
     </figure>
-    <div class="absolute flex flex-col justify-center w-full h-full bg-gradient-to-t from-black rounded-tl-hr rounded-br-hr">
+    <div class="absolute flex flex-col justify-end w-full h-full {{#if _isCopytext~}}{{#if this.showFullSize.isTrue~}}{{inline-switch this.showStretched.isTrue '["false","true"]' '["pb-[70px] sm480:pb-24 md:pb-32","pb-[70px] sm480:pb-[86px] sm:pb-16 md:pb-[70px]","pb-[70px] sm480:pb-24 md:pb-32"]'}}{{else}}pb-[70px] sm480:pb-24 sm:pb-[86px] md:pb-24{{/if}}{{else}}{{inline-switch this.realTeaserSize '["33","50"]' '["pb-16 sm:pb-24 md:pb-16","pb-16 sm:pb-24 md:pb-24"]'}}{{/if}} bg-gradient-to-t to-80% from-black rounded-tl-hr rounded-br-hr">
         {{#>components/base/link _link=this.link _css="ds-teaser-focus flex items-center flex-col before:rounded-tl-hr before:rounded-br-hr hover:text-toplineColor"}} 
-            <div class="-mt-8 line-clamp-4 xs:line-clamp-5 md:line-clamp-4 {{#if ../this.showStretched.isTrue}}lg:line-clamp-4{{else}}lg:line-clamp-5{{/if}}">
+            <div class="line-clamp-4 xs:line-clamp-5 md:line-clamp-4 {{#if ../this.showStretched.isTrue}}lg:line-clamp-4{{else}}lg:line-clamp-5{{/if}}">
             {{#> components/teaser/components/teaser_header _css="text-center"}}
                 {{#with this.label}}
                     {{#> components/label/label_group}}
@@ -24,11 +24,15 @@
                         <span class="text-white">{{> components/label/label_byline _css="ml-2" _text=../../../this.tickerTopic}}</span>
                     {{/components/label/label_group}}
                 {{/with~}}
-                 {{#> components/teaser/components/teaser_headline _headlineTag=(if _isCopytext-adjust_context "h3" "h2") _css="text-shadow text-center text-white mb-4 mx-2 md:mb-8 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8"}}
+                 {{#> components/teaser/components/teaser_headline _headlineTag=(if _isCopytext-adjust_context "h3" "h2") _css="text-shadow text-center text-white mx-2 xs:mx-6 sm:mx-8 md:mx-5 lg:mx-8"}}
                     {{#if this.topline}}
                         {{> components/teaser/components/teaser_topline _css="!text-white" _text=this.topline}}
                     {{/if}}
-                    {{> components/teaser/components/teaser_title _css="whitespace-pre-wrap" _text=this.title _size=this.realTeaserSize _teaserType="poster" _isCopytext=_isCopytext-adjust_context}}
+                    {{#if _isCopytext-adjust_context}}
+                        {{> components/teaser/components/teaser_title _css=(if this.showFullSize.isTrue "md:leading-10 whitespace-pre-wrap" "whitespace-pre-wrap") _text=this.title _size=this.realTeaserSize _teaserType="poster" _isCopytext=_isCopytext-adjust_context}}
+                    {{else}}
+                        {{> components/teaser/components/teaser_title _css=(inline-switch this.realTeaserSize '["33","50"]' '["whitespace-pre-wrap","md:leading-10 whitespace-pre-wrap"]') _text=this.title _size=this.realTeaserSize _teaserType="poster" _isCopytext=_isCopytext-adjust_context}}
+                    {{/if}}
                     {{#if this.extendedTitle}}
                         {{> components/teaser/components/teaser_subline _text=this.extendedTitle}}
                     {{/if}}
@@ -36,10 +40,11 @@
             {{/components/teaser/components/teaser_header}}
             </div>
         {{/components/base/link}}
+    </div>
         <span class="absolute flex items-end justify-center w-full h-full ds-cta">
             {{#if _isCopytext~}}
                 {{#if this.showFullSize.isTrue~}}
-                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '["false","true"]' '["z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white","z-20 mb-4 sm480:mb-7 md:mb-3 hover:bg-white","z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                    {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.showStretched.isTrue '["false","true"]' '["z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white","z-20 mb-4 sm480:mb-7 sm:mb-3 hover:bg-white","z-20 mb-4 sm480:mb-7 md:mb-16 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                         {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                     {{/components/button/link_button}}
                 {{else}}
@@ -48,10 +53,10 @@
                     {{/components/button/link_button}}
                 {{/if}}
             {{else}}
-                {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-7 hover:bg-white","z-20 mb-7 md:mb-16 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
+                {{#> components/button/link_button _link=this.link _size="lg" _css=(inline-switch this.realTeaserSize '["33","50"]' '["z-20 mb-3 sm:mb-7 md:mb-3 hover:bg-white","z-20 mb-3 sm:mb-7 hover:bg-white"]') _variant="secondary" _isAriaHidden=true _onBackground=true}}
                     {{> components/button/components/button_label _css="" _label=this.link.readMoreText.readMoreLong}}
                 {{/components/button/link_button}}
             {{/if}}
         </span>
-    </div>
+  
 </article>
