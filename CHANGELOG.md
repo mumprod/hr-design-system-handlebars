@@ -1,3 +1,15 @@
+# v1.102.3 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- modify Posterteaser [#1077](https://github.com/mumprod/hr-design-system-handlebars/pull/1077) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.102.2 (Tue Sep 24 2024)
 
 #### 🐛 Bug Fix
