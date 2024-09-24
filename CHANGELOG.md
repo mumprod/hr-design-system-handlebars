@@ -1,3 +1,16 @@
+# v1.102.1 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3306: add checkbox field [#1075](https://github.com/mumprod/hr-design-system-handlebars/pull/1075) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.102.0 (Tue Sep 24 2024)
 
 #### 🚀 Enhancement
