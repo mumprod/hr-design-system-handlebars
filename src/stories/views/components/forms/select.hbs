@@ -43,9 +43,16 @@
     ">      
         {{_label}}{{#if _required}}*{{/if}}
     </label>
+    {{#if _required}}
+      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-14">
+            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': hideError() }">
+               {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
+            </div>
+      </div>
+    {{/if}}
     <div class="flex items-end justify-between h-5 font-heading">     
         {{#if _description}}  
-            <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
+            <div class="pl-4 text-xs text-gray-500 " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
         {{/if}}
         {{#if _required}}
             <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
