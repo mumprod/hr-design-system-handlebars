@@ -56,9 +56,6 @@ const DataPolicySettings = function (context) {
     const getAllToggleValuesFromSettings = function () {
         setAllToggleValuesFromSettings()
         changeProviderTitle()
-        //initial alles deaktivieren
-        //hr-settings schreiben
-
     }
 
     const setAllToggleValuesFromSettings = function () {
