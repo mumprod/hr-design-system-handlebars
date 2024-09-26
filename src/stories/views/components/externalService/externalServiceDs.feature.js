@@ -27,7 +27,7 @@ const ExternalService = function (context) {
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0]
     let embedCode = options.embedCode,
         iframe,
-        settingsCookie,
+        settingsCookie = new SettingsCookie(),
         noResponsiveIframe,
         contentRefresher,
         gemeindewahlergebnis,
@@ -354,7 +354,6 @@ const ExternalService = function (context) {
 
     const initDataPolicy = function () {
         if (dataPolicyCheck) {
-            settingsCookie = new SettingsCookie()
             acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
             listen('click', handleDatapolicy, acceptButton)
             if(settingsCookie.isSettingsCookieExistent(id)){
