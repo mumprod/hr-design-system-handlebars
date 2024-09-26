@@ -357,10 +357,29 @@ const ExternalService = function (context) {
             settingsCookie = new SettingsCookie()
             acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
             listen('click', handleDatapolicy, acceptButton)
-            if (settingsCookie.isSettingsCookieAccepted(id)) {
-                    loadServiceWithDataPolicyButton()
-            } else {
-                    dataPolicyBox.style.visibility = 'visible'
+            if(settingsCookie.isSettingsCookieExistent(id)){
+                console.log("Dienst "+ id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
+                if(settingsCookie.isSettingsCookieAccepted(id)) {
+                  console.log("Lade den Dienst")
+                  loadServiceWithDataPolicyButton();
+                }
+                else {
+                  console.log("Zeige Datapolicy-Box")
+                  dataPolicyBox.style.visibility = 'visible';
+                }
+            }
+              else{
+                console.log("Dienst "+ id + " ist im Cookie nicht enthalten, prüfe daher den Default")
+                if(whiteList){
+                  console.log("Ist per Default eingeschaltet")
+                  console.log("Lade den Dienst")
+                  loadServiceWithDataPolicyButton();
+                }
+                else{
+                  console.log("Ist per Default ausgeschaltet")
+                  console.log("Zeige Datapolicy-Box")
+                  dataPolicyBox.style.visibility = 'visible';
+                }
             }
             listen('hr:externalService-activate-' + id, loadServiceWithDataPolicyButton)
             listen('hr:externalService-deactivate-' + id, removeExternalService)

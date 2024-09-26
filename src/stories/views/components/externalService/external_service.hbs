@@ -17,7 +17,7 @@
             {{else}}
                 <!-- Embedding via JS without DataPolicyCheck-->  
                 <div class="c-externalService__{{this.externalServiceConfig.externalServiceId}} js-load"
-                    data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}","dataPolicyCheck": false,"iFrameConfig":{}}'>
+                    data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}","dataPolicyCheck": false,"whiteList": false,"iFrameConfig":{}}'>
                 </div>  
             {{/if}}    
             {{~> components/externalService/components/external_service_caption ~}}
