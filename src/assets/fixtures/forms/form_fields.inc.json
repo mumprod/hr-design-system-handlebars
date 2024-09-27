@@ -91,14 +91,67 @@
         "label":"Ich bin damit einverstanden.",
         "isMeta":false,
         "description":"Das ist der Beschreibungstext von Checkbox",
-        "isRequired":true,
+        "isRequired":true
+    },
+    "checkbox-group":
+    {
+        "isGrouped":true,
+        "type":{
+            "isChoice":true,
+            "asString":"checkbox"
+        },
+        "name":"interessen",
+        "label":"Wählen Sie Ihre Interessen:",
+        "isMeta":false,
+        "description":"Bitte kreuzen Sie alle Interessen an, die auf Sie zutreffen. Ihre Auswahl hilft uns, Ihnen relevante Inhalte anzubieten.",
+        "isRequired":false,
         "options":[
             {
-                "value":"value0",
+                "value":"sport",
+                "label":"sport",
+                "title":"sport",
                 "isSelected":false
             },
             {
-                "value":"value1",
+                "value":"musik",
+                "label":"musik",
+                "title":"musik",
+                "isSelected":false
+            },
+            {
+                "value":"lesen",
+                "label":"lesen",
+                "title":"lesen",
+                "isSelected":false
+            },
+            {
+                "value":"reisen",
+                "label":"reisen",
+                "title":"reisen",
+                "isSelected":false
+            },
+            {
+                "value":"kochen",
+                "label":"kochen",
+                "title":"kochen",
+                "isSelected":false
+            },
+            {
+                "value":"filme",
+                "label":"filme",
+                "title":"filme",
+                "isSelected":false
+            },
+            {
+                "value":"tanzen",
+                "label":"tanzen",
+                "title":"tanzen",
+                "isSelected":false
+            },
+            {
+                "value":"fotografie",
+                "label":"fotografie",
+                "title":"fotografie",
                 "isSelected":false
             }
         ]

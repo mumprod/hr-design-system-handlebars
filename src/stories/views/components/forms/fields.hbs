@@ -56,7 +56,7 @@
                 }}
             {{else if this.type.isChoice}}
                 {{#if this.isGrouped }}
-                    {{~> modules/forms/choiceGroup
+                    {{~> components/forms/choiceGroup
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label
@@ -65,6 +65,7 @@
                         _required=this.isRequired
                         _multipleChoice=../_multipleChoice
                         _addClass=../_addClass
+                        _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
 
                     }}
                 {{else}}
