@@ -1,0 +1,41 @@
+<fieldset>
+<div class="relative flex flex-col w-full mb-6 md:mb-12 gap-y-4 md:gap-y-5">
+    <legend class="text-lg font-bold text-black md:text-xl font-heading">
+        {{#if _hasBody}}
+            {{decorator_body}}{{#if _required}}*{{/if}}
+        {{else}}
+            {{#if _locaKey}}
+                {{loca _locaKey}}{{#if _required}}*{{/if}}
+            {{else}}
+                {{#if _label}}
+                    {{{_label}}}{{#if _required}}*{{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    </legend>
+    <div class="flex flex-row flex-wrap gap-x-6 md:gap-x-7 gap-y-5" >
+        {{#each _items}}   
+            <div class=" c-form__option">
+                {{> components/forms/choice
+                        _type=../_type
+                        _name=../_name
+                        _value=this.value
+                        _inGroup=true
+                        _label=this.label
+                        _selected=this.selected
+                        _title=this.title
+                        _multipleChoice=../_multipleChoice
+                }}
+            </div>  
+        {{/each}}
+    </div>
+    <div class="font-heading">     
+      {{#if _description}}  
+         <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
+      {{/if}}
+      {{#if _required}}
+         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      {{/if}}
+   </div>
+</div>
+</fieldset>

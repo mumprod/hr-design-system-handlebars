@@ -1,0 +1,72 @@
+<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-6 md:mb-12{{/unless}} gap-y-4 md:gap-y-5" 
+   ax-load
+   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_type}}')"
+   x-ignore
+>
+<div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent"
+      :class="{' border-blue-science-hex': hideError(),'border-red-700': hideDescription() }"
+      @change="validateInput"
+      x-model="isChecked"
+      id="input{{getRandom}}"
+      {{#if _required}}
+         @focus="isFocused = true"
+         @blur="wasFocused = true; isFocused=false"
+      {{/if}}
+      type="{{#if _type}}{{_type}}{{/if}}"
+      name="{{#if _name}}{{_name}}{{/if}}"
+      {{#if _locaKey}}
+         title="{{loca _locaKey}}{{#if _required}}*{{/if}}"
+      {{else}}
+         {{#if _label}}
+         title="{{_label}}{{#if _required}}*{{/if}}"
+         {{/if}}
+      {{/if}}
+      {{#if _formField.forHtmlAttribute}}
+         value="{{_formField.forHtmlAttribute}}"
+      {{else}}
+         {{#if _value}}
+            value="{{_value}}"
+            {{else}}
+            value="{{_defaultValue}}"
+         {{/if}}
+      {{/if}}
+      {{#if _required}} required{{/if}}
+      {{#unless _multipleChoice}}
+         {{#if _required}}
+            required
+         {{/if}}
+      {{/unless}}
+      {{#if _formField.rawAsBoolean}}
+         checked
+      {{else}}
+         {{#if _selected}}
+            checked
+         {{/if}}
+      {{/if~}}
+   >
+  <label for="input{{getRandom}}" class="items-center justify-center text-xs text-black md:text-sm font-headingSerif ">
+      {{#if _hasBody}}
+        {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
+      {{else}}
+        {{#if _locaKey}}
+            {{loca _locaKey}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
+        {{else}}
+            {{#if _label}}
+                {{{_label}}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
+            {{/if}}
+        {{/if}}
+      {{/if}}
+   </label>
+</div>  
+   {{#unless _inGroup}}
+   <div class="font-heading">     
+      {{#if _description}}  
+         <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
+      {{/if}}
+      {{#if _required}}
+         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      {{/if}}
+   </div>
+   {{/unless}}
+</div>

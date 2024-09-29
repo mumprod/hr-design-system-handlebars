@@ -1,17 +1,15 @@
 {{#each this.fields}}
     {{#if this.type.isGroup}}
 
-        {{#if this.caption}}
-            <div class="c-form__row -hasLegend">
-                <fieldset class="c-form__field-set">
-                    <legend class="c-form__legend">{{this.caption}}</legend>
-                </fieldset>
-                {{~> modules/forms/fields}}
-            </div>
+        {{#if this.caption}}         
+            <fieldset>
+                <legend class="mb-5 font-headingSerif">{{this.caption}}</legend>
+                {{~> components/forms/fields}}
+            </fieldset>            
         {{else}}
-            <div class="c-form__row -expanded">
-                {{~> modules/forms/fields}}
-            </div>
+            <fieldset>
+                {{~> components/forms/fields}}
+            </fieldset>
         {{/if}}
         
     {{else}}
@@ -47,17 +45,18 @@
                     _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
                 }}
             {{else if this.type.isSelect}}
-                {{~> modules/forms/select
+                {{~> components/forms/select
                     _name=this.name
                     _label=this.label
                     _labelClass="hide"
                     _description=this.description
                     _items=this.options
                     _required=this.isRequired
+                    _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
                 }}
             {{else if this.type.isChoice}}
                 {{#if this.isGrouped }}
-                    {{~> modules/forms/choiceGroup
+                    {{~> components/forms/choiceGroup
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label
@@ -66,10 +65,11 @@
                         _required=this.isRequired
                         _multipleChoice=../_multipleChoice
                         _addClass=../_addClass
+                        _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
 
                     }}
                 {{else}}
-                    {{~> modules/forms/choice
+                    {{~> components/forms/choice
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label
@@ -78,6 +78,7 @@
                         _value=this.options.[0].value
                         _required=this.isRequired
                         _selected= this.options.[0].isSelected
+                        _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
                     }}
                 {{/if}}
             {{else if this.type.isUpload}}

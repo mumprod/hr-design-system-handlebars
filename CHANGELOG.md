@@ -1,3 +1,102 @@
+# v1.102.4 (Fri Sep 27 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3306-b: add checkbox group [#1079](https://github.com/mumprod/hr-design-system-handlebars/pull/1079) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.102.3 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- modify Posterteaser [#1077](https://github.com/mumprod/hr-design-system-handlebars/pull/1077) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.102.2 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Formulargruppen mit und ohne Überschriften [#1076](https://github.com/mumprod/hr-design-system-handlebars/pull/1076) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.102.1 (Tue Sep 24 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3306: add checkbox field [#1075](https://github.com/mumprod/hr-design-system-handlebars/pull/1075) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.102.0 (Tue Sep 24 2024)
+
+#### 🚀 Enhancement
+
+- DPE-3290 ✨ select field for form [#1074](https://github.com/mumprod/hr-design-system-handlebars/pull/1074) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.101.3 (Tue Sep 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/mumprod/hr-design-system-handlebars into main ([@vascoeduardo](https://github.com/vascoeduardo))
+- ✨ DPE-3290 Dropdown ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.101.2 (Mon Sep 23 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3178 b [#1073](https://github.com/mumprod/hr-design-system-handlebars/pull/1073) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.101.1 (Mon Sep 23 2024)
+
+#### 🐛 Bug Fix
+
+- Removing old cookie handling [#1072](https://github.com/mumprod/hr-design-system-handlebars/pull/1072) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.101.0 (Thu Sep 19 2024)
 
 #### 🚀 Enhancement

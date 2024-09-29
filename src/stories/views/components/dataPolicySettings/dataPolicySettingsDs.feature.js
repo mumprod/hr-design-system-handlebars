@@ -19,55 +19,29 @@ const DataPolicySettings = function (context) {
 
     let isWebview = window.parent.document.documentElement.classList.contains('webview'),
         appSettingsCookie = {},
-        dataDataPolicyCookie = {},
-        dataTrackingCookie = {},
         dataSettingsCookie = {}
 
     //Überprüfung ob die alten Cookies zusammengeführt werden müssen
     const checkForExistingCookies = function () {
-        //TODO: Kann nach einer gewissen Zeit rausgeworfen werden? Die alten Cookies sind mittlerweile rausgewachsen?
-        if (getJSONCookie('datapolicy') || getJSONCookie('tracking')) {
-            deleteOldCookiesandTransferData()
+    
+        if (getJSONCookie('hrSettings')) {
+            getAllToggleValuesFromSettings()
         }
         else {
-            if (getJSONCookie('hrSettings')) {
-                getAllToggleValuesFromSettings()
+            console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
+            //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Dienst ist initial immer aktiviert (Whitelist)" 
+            //im Konfig-Dokument bestückt.
+            for (let i = 0; i < toggleSwitches.length; ++i) {
+                    if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
+                        setCookieForSettings(toggleSwitches[i].id, true)
+                    }
+                    else {
+                        setCookieForSettings(toggleSwitches[i].id, false)
+                    }
             }
-            else {
-                console.log("hessenschau neu => wenn kein hrSettings erzeugt wurde")
-                //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Externer Dienst initial deaktiviert, DSGVO wird geprüft" 
-                //im Konfig-Dokument bestückt.
-                for (let i = 0; i < toggleSwitches.length; ++i) {
-                        if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
-                            setCookieForSettings(toggleSwitches[i].id, true)
-                        }
-                        else {
-                            setCookieForSettings(toggleSwitches[i].id, false)
-                        }
-                }
-                setAllToggleValuesFromSettings()
-                changeProviderTitle()
-            }
+            setAllToggleValuesFromSettings()
+            changeProviderTitle()
         }
-    }
-
-    const deleteOldCookiesandTransferData = function () {
-        dataDataPolicyCookie = getJSONCookie('datapolicy') || {}
-        dataTrackingCookie = getJSONCookie('tracking') || {}
-        let objMerge
-        // Beide bestehenden JSONs aus Tracking und Service werden zusammengeführt.
-        objMerge = JSON.stringify(dataTrackingCookie) + JSON.stringify(dataDataPolicyCookie);
-        objMerge = objMerge.replace(/\}\{/, ",");
-        objMerge = JSON.parse(objMerge);
-        let objArray = Object.entries(objMerge);
-        objArray.forEach(([key, value]) => {
-            //hrSettingsCookie wird geschrieben
-            setCookieForSettings(key, value)
-        });
-        setAllToggleValuesFromSettings()
-        changeProviderTitle()
-        deleteCookie('datapolicy')
-        deleteCookie('tracking')
     }
 
     const setCookieForSettings = function (key, value) {
@@ -101,17 +75,22 @@ const DataPolicySettings = function (context) {
 
             if (isCookieSetForSettings(toggleSwitches[i].id)) {
                 toggleSwitches[i].checked = true
-            } else if (
-                !isCookieExistForSettings(toggleSwitches[i].id) &&
-                toggleSwitches[i].getAttribute('initial') == 'checked'
-            ) {
-                toggleSwitches[i].checked = true
-                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
-            }
+            } 
         }
+        checkWhiteListAttribute()
         toggleAllSwitch.checked = allTogglesExternalServiceChecked()
     }
-
+    const checkWhiteListAttribute = function() {
+        for (let i = 0; i < toggleSwitches.length; ++i) {
+            if (toggleSwitches[i].getAttribute('data-whitelist') == 'true') {
+                toggleSwitches[i].checked = true
+                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked)
+            } else {
+                toggleSwitches[i].checked = false;
+                setCookieForSettings(toggleSwitches[i].id, toggleSwitches[i].checked);
+            }
+        }
+    }
     const isCookieSetForSettings = function (externalService) {
         return settingsCookie.isSettingsCookieAccepted(externalService)
     }
