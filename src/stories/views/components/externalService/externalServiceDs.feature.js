@@ -78,9 +78,12 @@ const ExternalService = function (context) {
                     case 'facebook-post':
                         createFacebookEmbed()
                         break
-                    case 'instagram':
-                        createInstagramEmbed()
+                    case 'instagram-post':
+                        createInstagramPostEmbed()
                         break
+                    case 'instagram-story':
+                        createInstagramStoryEmbed()
+                        break    
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -285,10 +288,10 @@ const ExternalService = function (context) {
         }, 125)
     }
 
-    const createInstagramEmbed = function () {
+    const createInstagramPostEmbed = function () {
         loadScript('instagram-js', '//www.instagram.com/embed.js', true)
         embedCode = options.embedCode
-        var instagramEmbedCode =
+        var instagramPostEmbedCode =
             "<blockquote class='instagram-media' data-instgrm-captioned " +
             "data-instgrm-permalink='" +
             embedCode +
@@ -298,6 +301,21 @@ const ExternalService = function (context) {
             '</blockquote>'
         replaceAnimated(rootElement, instagramEmbedCode, false, reloadInstagramEmbed)
     }
+
+    const createInstagramStoryEmbed = function () {
+        loadScript('instagram-js', '//www.instagram.com/embed.js', true)
+        embedCode = options.embedCode
+        var instagramStoryEmbedCode =
+            "<blockquote class='instagram-media' data-instgrm-captioned " +
+            "data-instgrm-permalink='" +
+            embedCode +
+            "?utm_source=ig_embed&amp;utm_campaign=loading'" +
+            "data-instgrm-version='14'" +
+            "style='background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:724px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);' >" +
+            '</blockquote>'
+        replaceAnimated(rootElement, instagramEmbedCode, false, reloadInstagramEmbed)
+    }
+
 
     const reloadInstagramEmbed = function () {
         requestTimeout(function () {
@@ -369,7 +387,7 @@ const ExternalService = function (context) {
             }
               else{
                 console.log("Dienst "+ id + " ist im Cookie nicht enthalten, prüfe daher den Default")
-                if(whiteList){
+                if(document.getElementById(id).getAttribute("data-whitelist") == "true"){
                   console.log("Ist per Default eingeschaltet")
                   console.log("Lade den Dienst")
                   loadServiceWithDataPolicyButton();
