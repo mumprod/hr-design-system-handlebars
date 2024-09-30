@@ -1,3 +1,15 @@
+# v1.103.2 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3344 [Prüfstory] Werbeblocker legt Sharing lahm [#1082](https://github.com/mumprod/hr-design-system-handlebars/pull/1082) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.103.1 (Mon Sep 30 2024)
 
 #### 🐛 Bug Fix
