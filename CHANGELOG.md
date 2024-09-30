@@ -1,3 +1,15 @@
+# v1.102.6 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3178 d [#1078](https://github.com/mumprod/hr-design-system-handlebars/pull/1078) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.102.5 (Mon Sep 30 2024)
 
 #### 🐛 Bug Fix
