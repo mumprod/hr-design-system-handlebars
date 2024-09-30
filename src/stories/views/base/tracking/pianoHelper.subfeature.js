@@ -1,5 +1,7 @@
 import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature';
 
+const pianoErrorSecondLevelId = 99;
+
 const isTrackingAllowed = () => {
     const settingsCookie = new SettingsCookie();
     return settingsCookie.isSettingsCookieAccepted('ati');
@@ -21,7 +23,7 @@ const getDefaultEvent = (label, secondLevelId) => {
 const determineSecondLevelId = (secondLevelId) => {
     return secondLevelId !== undefined
         ? secondLevelId
-        : pageDisplayConfig.site_level2_id;
+        : undefined !== pageDisplayConfig ? pageDisplayConfig.site_level2_id : pianoErrorSecondLevelId;
 };
 
 const uxAction = (label, secondLevelId) => sendEvent('click.action', getDefaultEvent(label, secondLevelId));
