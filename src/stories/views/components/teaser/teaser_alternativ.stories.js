@@ -1,25 +1,18 @@
-import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
-import { addCommentLink } from './jsonHelper'
-import teaser from './teaser_alternativ.hbs'
-import heroTeaser from './fixtures/teaser_alternative_hero_serif.json'
-import heroTeaserWithLabel from './fixtures/teaser_alternative_hero_serif_label.json'
-import heroTeaserWithComments from './fixtures/teaser_alternative_hero_serif_comments.json'
-import heroTeaserLink from './fixtures/teaser_alternative_hero_serif_link.json'
-import heroTeaserProgram from './fixtures/teaser_alternative_hero_serif_program.json'
-import teaser100Link from './fixtures/teaser_alternative_100_serif_link.json'
-import teaser100 from './fixtures/teaser_alternative_100_serif.json'
-import teaser100FeaturedContent from './fixtures/teaser_alternative_100_serif_featured_content.json'
-import teaser50 from './fixtures/teaser_alternative_50_serif.json'
-import teaser50WithoutTeaserImage from './fixtures/teaser_alternative_without_teaserimage_50_serif.json'
-import teaser50Link from './fixtures/teaser_alternative_50_serif_link.json'
-import teaser50Download from './fixtures/teaser_alternative_50_serif_download.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_alternative.json'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return teaser({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_alternativ }}   
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -31,6 +24,7 @@ export default {
         chromatic: {
             viewports: [360, 1024],
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
 
@@ -53,9 +47,9 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page">  
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
@@ -63,71 +57,165 @@ export default {
 export const AlternativHero = {
     render: Template.bind({}),
     name: 'Alternativ Hero',
-    args: heroTeaser.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero.args.logicItem.includeModel,
 }
 
 export const AlternativHeroMitKommentaren = {
     render: Template.bind({}),
     name: 'Alternativ Hero mit Kommentaren',
-    args: heroTeaserWithComments.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_comments.args.logicItem.includeModel,
 }
 
 export const AlternativHeroMitLabel = {
     render: Template.bind({}),
     name: 'Alternativ Hero mit Label',
-    args: heroTeaserWithLabel.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_label.args.logicItem.includeModel,
 }
 
 export const AlternativHeroMitExternenLinkDokument = {
     render: Template.bind({}),
     name: 'Alternativ Hero mit externen Link Dokument',
-    args: heroTeaserLink.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_external_link.args.logicItem.includeModel,
 }
 
 export const AlternativHeroMitSendungsdokument = {
     render: Template.bind({}),
     name: 'Alternativ Hero mit Sendungsdokument',
-    args: heroTeaserProgram.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_program.args.logicItem.includeModel,
 }
 
 export const Alternativ100 = {
     render: Template.bind({}),
     name: 'Alternativ 100',
-    args: teaser100.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100[100].args.logicItem.includeModel,
 }
 
 export const Alternativ100MitExternemLink = {
     render: Template.bind({}),
     name: 'Alternativ 100 mit externem Link',
-    args: teaser100Link.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100['100_with_external_link'].args.logicItem.includeModel,
 }
 
 export const Alternativ100MitFeaturedContent = {
     render: Template.bind({}),
     name: 'Alternativ 100 mit Zeilenteaser',
-    args: teaser100FeaturedContent,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100['100_with_featured_content'].args
 }
 
 export const Alternativ50 = {
     render: Template.bind({}),
     name: 'Alternativ 50',
-    args: teaser50.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50[50].args.logicItem.includeModel,
 }
 
 export const Alternativ50OhneTeaserbild = {
     render: Template.bind({}),
     name: 'Alternativ 50 ohne Teaserbild',
-    args: teaser50WithoutTeaserImage.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50['50_without_teaserimage'].args.logicItem.includeModel,
 }
 
 export const Alternativ50MitExternemLink = {
     render: Template.bind({}),
     name: 'Alternativ 50 mit externem Link',
-    args: teaser50Link.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50['50_with_external_link'].args.logicItem.includeModel,
 }
 
 export const Alternativ50MitDownload = {
     render: Template.bind({}),
     name: 'Alternativ 50 mit Download',
-    args: teaser50Download.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50['50_with_download'].args.logicItem.includeModel,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

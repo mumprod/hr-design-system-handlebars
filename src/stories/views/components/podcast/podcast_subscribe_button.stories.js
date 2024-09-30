@@ -38,14 +38,14 @@ export default {
 export const SubscribeButtonClose = {
     render: Template.bind({}),
     name: 'Subscribe Button Close',
-    args: subscribeButtonJson.logicItem.includeModel.podcastChannel,
+    args: subscribeButtonJson.episode_100.args.logicItem.includeModel.podcastChannel,
 }
 
 export const SubscribeButtonOpen = {
     render: Template.bind({}),
     name: 'Subscribe Button Open',
 
-    args: subscribeButtonJson.logicItem.includeModel.podcastChannel,
+    args: subscribeButtonJson.episode_100.args.logicItem.includeModel.podcastChannel,
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement)
 

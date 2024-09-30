@@ -1,13 +1,20 @@
 import { userEvent, within, waitFor } from '@storybook/test'
-import mediaplayerJson from 'components/mediaplayer/fixtures/mediaplayer.json'
+import snapshotsJson from './fixtures/mediaplayer_snapshots.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
-import mediaPlayer from 'components/mediaplayer/media_player.hbs'
-import { delay } from 'underscore'
+const handlebars = require('hrHandlebars')
 
-const Template = ({ label, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return mediaPlayer({ label, ...args })
+const hbsTemplates = []
+hbsTemplates['mediaplayer'] = handlebars.compile(`
+    {{> components/mediaplayer/media_player}}  
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['mediaplayer']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -33,6 +40,7 @@ export default {
         controls: {
             sort: 'requiredFirst',
         },
+        chromatic: { disableSnapshot: true }
     },
 }
 
@@ -46,7 +54,7 @@ export const Videoplayer = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, ...mediaplayerJson.video },
+    args: snapshotsJson.video.args,
 }
 
 export const VideoplayerSettings = {
@@ -59,7 +67,10 @@ export const VideoplayerSettings = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, ...mediaplayerJson.video },
+    args: snapshotsJson.video.args,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    },
     play: async ({ canvasElement }) => {
         let canvas = within(canvasElement)
         await userEvent.click(await canvas.findByTitle('Wiedergabe [Leertaste]'))
@@ -79,7 +90,7 @@ export const VideoplayerLive = {
         },
     ],
     name: 'Videoplayer Livestream',
-    args: { _isTeaser: false, ...mediaplayerJson.video_livestream },
+    args: snapshotsJson.video_livestream.args,
 }
 
 export const Audioplayer = {
@@ -92,7 +103,7 @@ export const Audioplayer = {
                      </div>`
         },
     ],
-    args: { _isTeaser: false, _isAudioView: true, ...mediaplayerJson.audio },
+    args: snapshotsJson.audio.args,
 }
 
 export const AudioplayerLivestream = {
@@ -105,5 +116,14 @@ export const AudioplayerLivestream = {
         },
     ],
     name: 'Audioplayer Livestream',
-    args: { _isTeaser: false, _isAudioView: true, ...mediaplayerJson.audio_event_livestream },
+    args: snapshotsJson.audio_event_livestream.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+    args: snapshotsJson,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

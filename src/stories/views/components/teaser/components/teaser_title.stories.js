@@ -1,13 +1,30 @@
-import titleComponent from './teaser_title.hbs'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/components/fixtures/teaser_title.json'
 
-const Template = ({ _text, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<span>${title}</span>`;
-    return titleComponent({ _text, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/components/teaser_title }}   
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
     title: 'Komponenten/Teaser/Komponenten/Titel',
+
+    parameters: {
+
+        chromatic: {
+            diffThreshold: 0.3,
+            disableSnapshot: true
+        },
+    },
 
     argTypes: {
         _text: {
@@ -52,34 +69,29 @@ export const TitelSerifHero = {
     render: Template.bind({}),
     name: 'Titel Serif - Hero',
 
-    args: {
-        _text: 'Dies ist der Titel eines 100%-Teasers',
-        _size: 'hero',
-        _fontVariant: 'serif',
-        _teaserType: 'standard',
-    },
+    args: fixtures["1_hero"].args,
 }
 
 export const TitelSerifNormal = {
     render: Template.bind({}),
     name: 'Titel Serif - normal',
 
-    args: {
-        _text: 'Dies ist der Titel eines 66%-, 50%- oder 33%-Teasers',
-        _size: '33',
-        _fontVariant: 'serif',
-        _teaserType: 'standard',
-    },
+    args: fixtures["2_normal"].args,
 }
 
 export const TitelSerifSmall = {
     render: Template.bind({}),
     name: 'Titel Serif - small',
 
-    args: {
-        _text: 'Dies ist der Titel eines 25%-Teasers',
-        _size: '25',
-        _fontVariant: 'serif',
-        _teaserType: 'standard',
-    },
+    args: fixtures["3_small"].args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

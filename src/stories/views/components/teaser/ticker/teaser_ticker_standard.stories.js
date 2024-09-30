@@ -1,17 +1,19 @@
-import ticker from './teaser_ticker_standard.hbs'
-import tickerTeaserHeroStandard from '../fixtures/ticker_teaser_standard_hero.json'
-import tickerTeaserHeroStandardAudio from '../fixtures/ticker_teaser_standard_hero_audio.json'
-import tickerTeaser100Standard from '../fixtures/ticker_teaser_standard_100.json'
-import tickerTeaser50Standard from '../fixtures/ticker_teaser_standard_50.json'
-import tickerTeaser33Standard from '../fixtures/ticker_teaser_standard_33.json'
-import tickerTeaser25Standard from '../fixtures/ticker_teaser_standard_25.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/fixtures/teaser_ticker_standard.json'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return ticker({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/ticker/teaser_ticker_standard }}   
+  `)
+
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -21,6 +23,7 @@ export default {
         layout: '',
         chromatic: {
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
 
@@ -28,9 +31,9 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page">  
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
@@ -38,35 +41,87 @@ export default {
 export const TickerTeaserHero = {
     render: Template.bind({}),
     name: 'Standard Hero',
-    args: tickerTeaserHeroStandard.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero.args.logicItem.includeModel,
 }
 
 export const TickerTeaserHeroAudio = {
     render: Template.bind({}),
     name: 'Standard Hero Media',
-    args: tickerTeaserHeroStandardAudio.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.hero_with_audio.args.logicItem.includeModel,
 }
 
 export const TickerTeaser100 = {
     render: Template.bind({}),
     name: 'Standard 100',
-    args: tickerTeaser100Standard.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100["100"].args.logicItem.includeModel,
 }
 
 export const TickerTeaser50 = {
     render: Template.bind({}),
     name: 'Standard 50',
-    args: tickerTeaser50Standard.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50["50"].args.logicItem.includeModel,
 }
 
 export const TickerTeaser33 = {
     render: Template.bind({}),
     name: 'Standard 33',
-    args: tickerTeaser33Standard.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_33["33"].args.logicItem.includeModel,
 }
 
 export const TickerTeaser25 = {
     render: Template.bind({}),
     name: 'Standard 25',
-    args: tickerTeaser25Standard.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_25["25"].args.logicItem.includeModel,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

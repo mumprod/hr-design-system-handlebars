@@ -1,0 +1,285 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "path": "args.logicItem.includeModel",
+        "renderSnapshotsWrapper": false
+    },
+    "group_50": {
+        "video_ondemand": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_video",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "video_livestream": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_video_livestream",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label.byline.context.labelInfo.isPlaysNow",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label.byline.context.labelInfo.isWillPlay",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "audio_ondemand": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_audio",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "audio_event_livestream": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_audio_livestream",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        },
+        "podcast": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    }
+                ]
+            }
+        }
+    },
+    "group_25": {
+        "video_ondemand": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_video",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "sonniger-herbst-100"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "video_livestream": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_video_livestream",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "buchmesse-fahnen-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "audio_ondemand": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_audio",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "hasebe-kane-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "audio_event_livestream": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_audio_livestream",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "stream-thumbnail-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "podcast": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "25"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.shorttext",
+                        "@->value": ""
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_25",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "hrinfo_genre_kulturlust-100"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,15 +1,19 @@
-import teaser from './teaser_indextext.hbs'
-import dataTeserIndextext100Accented from './fixtures/teaser_indextext_100_accented.json'
-import dataTeserIndextext100Boxed from './fixtures/teaser_indextext_100_boxed.json'
-import dataTeserIndextext100Highlighted from './fixtures/teaser_indextext_100_highlighted.json'
-import dataTeserIndextext50Accented from './fixtures/teaser_indextext_50_accented.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_indextext.json'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return teaser({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_indextext }}   
+  `)
+
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -19,6 +23,7 @@ export default {
         layout: 'fullscreen',
         chromatic: {
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
 
@@ -56,9 +61,9 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page"> 
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
@@ -66,23 +71,87 @@ export default {
 export const TextMitHintergrund100 = {
     render: Template.bind({}),
     name: 'Text mit Hintergrund 100',
-    args: dataTeserIndextext100Accented.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.accented.args.logicItem.includeModel
 }
 
 export const TextMitBox100 = {
     render: Template.bind({}),
     name: 'Text mit Box 100',
-    args: dataTeserIndextext100Boxed.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.boxed.args.logicItem.includeModel
 }
 
 export const HintergrundOrange100 = {
     render: Template.bind({}),
     name: 'Hintergrund orange 100',
-    args: dataTeserIndextext100Highlighted.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.highlighted.args.logicItem.includeModel
+}
+
+export const TextMitBox50 = {
+    render: Template.bind({}),
+    name: 'Text mit Box 50',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.boxed.args.logicItem.includeModel
 }
 
 export const TextMitHintergrund50 = {
     render: Template.bind({}),
     name: 'Text mit Hintergrund 50',
-    args: dataTeserIndextext50Accented.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.accented.args.logicItem.includeModel
+}
+
+export const HintergrundOrange50 = {
+    render: Template.bind({}),
+    name: 'Hintergrund orange 50',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.highlighted.args.logicItem.includeModel
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

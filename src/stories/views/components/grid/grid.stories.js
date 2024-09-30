@@ -79,6 +79,9 @@ const Template11 = ({ text, ...args }) => {
 export default {
     title: 'Komponenten/Grid',
     argTypes: {},
+    parameters: {
+        chromatic: { disableSnapshot: true }
+    },
 }
 
 export const Grid100 = {

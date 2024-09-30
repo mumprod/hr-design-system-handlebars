@@ -12,8 +12,9 @@ module.exports = {
     safelist: ['mt-12', 'bg-gray-100', '-weather_warning'],
     content: [
         './src/stories/*.mdx',
-        './src/stories/views/**/*.{mdx,hbs,js}',
+        './src/stories/views/**/*.{mdx,hbs,js,json}',
         './src/assets/vendor/**/*.js',
+        './src/assets/js/**/*.js',
     ],
     theme: {
         screens: {

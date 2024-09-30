@@ -1,12 +1,29 @@
-import teaserText from './teaser_text.hbs'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from 'components/teaser/components/fixtures/teaser_text.json'
 
-const Template = ({ _text, ...args }) => {
-    return teaserText({ _text, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/components/teaser_text }}   
+  `)
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
 }
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
+}
+
 
 export default {
     title: 'Komponenten/Teaser/Komponenten/Teasertext',
+    parameters: {
 
+        chromatic: {
+            diffThreshold: 0.3,
+            disableSnapshot: true
+        },
+    },
     argTypes: {
         _text: {
             control: 'text',
@@ -33,42 +50,36 @@ export const TeasertextHero = {
     render: Template.bind({}),
     name: 'Teasertext Hero',
 
-    args: {
-        _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
-        _size: 'hero',
-        _font: 'md:text-base md:leading-4 lg:leading-5',
-    },
+    args: fixtures["1_hero"].args,
 }
 
 export const Teasertext50 = {
     render: Template.bind({}),
     name: 'Teasertext 50',
 
-    args: {
-        _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
-        _size: '50',
-        _font: 'md:text-base md:leading-4 lg:leading-5',
-    },
+    args: fixtures["2_50"].args,
 }
 
 export const Teasertext33 = {
     render: Template.bind({}),
     name: 'Teasertext 33',
 
-    args: {
-        _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
-        _size: '33',
-        _font: 'md:text-base md:leading-4 lg:leading-5',
-    },
+    args: fixtures["3_33"].args,
 }
 
 export const Teasertext25 = {
     render: Template.bind({}),
     name: 'Teasertext 25',
 
-    args: {
-        _text: 'Woibbadinga i moan scho aa hallelujah sog i, luja, boarischer. Wiesn resch ja, wo samma denn etza, resch. Auffisteign a Hoiwe woaß, koa. Leonhardifahrt Weißwiaschd Baamwach hob liberalitas Bavariae ham hogg di hera.',
-        _size: '25',
-        _font: 'md:text-base md:leading-4 lg:leading-5',
-    },
+    args: fixtures["4_25"].args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

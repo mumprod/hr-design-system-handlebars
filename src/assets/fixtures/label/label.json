@@ -1,0 +1,65 @@
+{
+    "config": {
+        "template": "label"
+    },
+    "label-download": {
+        "args": {
+            "_type": "download",
+            "_text": "Download"
+        }
+    },
+    "label-breakingnews": {
+        "args": {
+            "_type": "breakingnews",
+            "_text": "Eilmeldung"
+        }
+    },
+    "label-event": {
+        "args": {
+            "_type": "event",
+            "_text": "Event"
+        }
+    },
+    "label-infografik": {
+        "args": {
+            "_type": "infografik",
+            "_text": "Infografik"
+        }
+    },
+    "label-comment": {
+        "args": {
+            "_type": "comment",
+            "_text": "Kommentar"
+        }
+    },
+    "label-liveticker": {
+        "args": {
+            "_type": "liveticker",
+            "_text": "Liveticker"
+        }
+    },
+    "label-media": {
+        "args": {
+            "_type": "media",
+            "_text": "Media"
+        }
+    },
+    "label-pm": {
+        "args": {
+            "_type": "pm",
+            "_text": "Pressemitteilung"
+        }
+    },
+    "label-program": {
+        "args": {
+            "_type": "program",
+            "_text": "Sendung"
+        }
+    },
+    "label-kurzmeldung": {
+        "args": {
+            "_type": "kurzmeldung",
+            "_text": "Kurzmeldung"
+        }
+    }
+}

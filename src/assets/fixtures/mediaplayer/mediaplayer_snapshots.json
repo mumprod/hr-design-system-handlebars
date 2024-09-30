@@ -1,0 +1,151 @@
+{
+    "config": {
+        "template": "mediaplayer"
+    },
+    "video": {
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
+        "args": {
+            "_isTeaser": false,
+            "ardPlayerConfig": {
+                "@->jsoninclude": "video/videos.inc.json",
+                "@->contentpath": "video-1"
+            },
+            "ardPlayerJsonConfig": {
+                "@->jsoninclude": "video/videos.inc.json",
+                "@->contentpath": "video-1",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.generic.isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerId",
+                        "@->value": "8423"
+                    }
+                ]
+            }
+        }
+    },
+    "video_livestream": {
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
+        "args": {
+            "_isTeaser": false,
+            "ardPlayerConfig": {
+                "@->jsoninclude": "video/videos.inc.json",
+                "@->contentpath": "video-livestream-hr-fernsehen"
+            },
+            "ardPlayerJsonConfig": {
+                "@->jsoninclude": "video/videos.inc.json",
+                "@->contentpath": "video-livestream-hr-fernsehen",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.generic.isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerId",
+                        "@->value": "6819"
+                    }
+                ]
+            }
+        }
+    },
+    "audio": {
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
+        "args": {
+            "_isTeaser": false,
+            "_isAudioView": true,
+            "ardPlayerConfig": {
+                "@->jsoninclude": "audio/audios.inc.json",
+                "@->contentpath": "audio-1"
+            },
+            "ardPlayerJsonConfig": {
+                "@->jsoninclude": "audio/audios.inc.json",
+                "@->contentpath": "audio-1",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedVideoView",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.generic.isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerId",
+                        "@->value": "2565"
+                    }
+                ]
+            }
+        }
+    },
+    "audio_event_livestream": {
+        "config": {
+            "renderSnapshotItemWrapper": false
+        },
+        "args": {
+            "_isTeaser": false,
+            "_isAudioView": true,
+            "ardPlayerConfig": {
+                "@->jsoninclude": "audio/audios.inc.json",
+                "@->contentpath": "audio-event-livestream"
+            },
+            "ardPlayerJsonConfig": {
+                "@->jsoninclude": "audio/audios.inc.json",
+                "@->contentpath": "audio-event-livestream",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedVideoView",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.web.isForcedAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerConfig.generic.isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "isAutoplay",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "playerId",
+                        "@->value": "1694"
+                    }
+                ]
+            }
+        }
+    }
+}

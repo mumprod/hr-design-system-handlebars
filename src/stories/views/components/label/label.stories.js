@@ -1,9 +1,21 @@
-import label from './label.hbs'
+import fixtures from './fixtures/label.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
 
-const Template = ({ _type, ...args }) => {
+const handlebars = require('hrHandlebars')
+
+const hbsTemplates = []
+hbsTemplates['label'] = handlebars.compile(`
+    {{> components/label/label}}
+  `)
+
+const Template = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return label({ _type, ...args })
+    return hbsTemplates['label']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -72,6 +84,12 @@ export default {
                 defaultValue: {
                     summary: 'media',
                 },
+            },
+            parameters: {
+                controls: {
+                    sort: 'alpha',
+                },
+                chromatic: { disableSnapshot: true }
             },
         },
 
@@ -180,4 +198,14 @@ export const Kurzmeldung = {
         _type: 'kurzmeldung',
         _text: 'Kurzmeldung',
     },
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

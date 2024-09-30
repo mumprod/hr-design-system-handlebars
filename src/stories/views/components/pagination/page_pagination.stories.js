@@ -1,107 +1,18 @@
-import { NavigationDataWithMixedContent } from './page_pagination.data.js'
-import page from '../pagination/pagination.hbs'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/page_pagination.json'
 
-const TemplateMoreThanThreeFirst = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['currentPageValid'] = true
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = false
-    args['secondPage'] = false
-    args['firstPage'] = true
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = false
-    args['totalPages'] = 999
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
-const TemplateMoreThanThreeSecond = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = false
-    args['secondPage'] = true
-    args['firstPage'] = false
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = false
-    args['totalPages'] = 999
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
-const TemplateMoreThanThreeButNotLast = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = false
-    args['secondPage'] = false
-    args['firstPage'] = false
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = true
-    args['totalPages'] = 999
-    args['currentPage'] = 998
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
-const TemplateMoreThanThreeOneButNotLast = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = false
-    args['secondPage'] = false
-    args['firstPage'] = false
-    args['notLastButOnePage'] = true
-    args['notLastPage'] = true
-    args['totalPages'] = 999
-    args['currentPage'] = 555
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/pagination/pagination }} 
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
 }
 
-const TemplateMoreThanThreeLast = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = false
-    args['secondPage'] = false
-    args['firstPage'] = false
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = false
-    args['totalPages'] = 999
-    args['currentPage'] = 999
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
-const TemplateOnlyTwo = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = false
-    args['onlyTwoPages'] = true
-    args['secondPage'] = false
-    args['firstPage'] = true
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = false
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
-}
-
-const TemplateOnlyThree = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    args['onlyThreePages'] = true
-    args['onlyTwoPages'] = false
-    args['secondPage'] = false
-    args['firstPage'] = false
-    args['notLastButOnePage'] = false
-    args['notLastPage'] = false
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return page({ brand, ...args })
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -115,45 +26,65 @@ export default {
             inlineStories: false,
             iframeHeight: 400,
         },
+        chromatic: {
+            disableSnapshot: true
+        },
     },
 }
 
 export const MitPagination = {
-    render: TemplateMoreThanThreeFirst.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.more_than_three_first.args,
 }
 export const MitPagination2 = {
-    render: TemplateMoreThanThreeSecond.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (zweite Seite aktiv)',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.more_than_three_second.args,
 }
 export const MitPagination3 = {
-    render: TemplateMoreThanThreeButNotLast.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (vorletzte Seite aktiv)',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.more_than_three_but_not_last.args,
 }
 
 export const MitPagination4 = {
-    render: TemplateMoreThanThreeOneButNotLast.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (Seite mitten drin aktiv)',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.more_than_three_one_but_not_last.args,
 }
 
 export const MitPagination5 = {
-    render: TemplateMoreThanThreeLast.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (letzte Seite aktiv)',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.more_than_three_last.args,
 }
 
 export const MitPagination6 = {
-    render: TemplateOnlyTwo.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mit nur 2 Seiten',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.only_two.args,
 }
 
 export const MitPagination7 = {
-    render: TemplateOnlyThree.bind({}),
+    render: Template.bind({}),
     name: 'Pagination mit nur 3 Seiten',
-    args: NavigationDataWithMixedContent,
+    args: fixtures.only_three.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+    decorators: [
+        (Story) => {
+            return `<div class="mx-8">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

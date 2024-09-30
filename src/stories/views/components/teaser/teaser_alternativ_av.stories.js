@@ -1,22 +1,18 @@
-import { addLabel, removeLabel, changeTeaserSize } from './labelHelper'
-import { addCommentLink } from './jsonHelper'
-import teaser from './teaser_alternativ.hbs'
-import heroTeaser_video from './fixtures/teaser_alternative_hero_serif_video.json'
-import heroTeaser_audio from './fixtures/teaser_alternative_hero_serif_audio.json'
-import heroTeaser_live from './fixtures/teaser_alternative_hero_serif_live.json'
-import teaser100_video from './fixtures/teaser_alternative_100_serif_video.json'
-import teaser100_audio from './fixtures/teaser_alternative_100_serif_audio.json'
-import teaser100_live from './fixtures/teaser_alternative_100_serif_live.json'
-import teaser50_video from './fixtures/teaser_alternative_50_serif_video.json'
-import teaser50_audio from './fixtures/teaser_alternative_50_serif_audio.json'
-import teaser50_live from './fixtures/teaser_alternative_50_serif_live.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_alternative_av.json'
 
-const Template = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return teaser({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_alternativ }}   
+  `)
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -28,6 +24,7 @@ export default {
         chromatic: {
             viewports: [360, 1024],
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
 
@@ -50,9 +47,9 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page"> 
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
@@ -60,53 +57,207 @@ export default {
 export const AlternativHeroVideo = {
     render: Template.bind({}),
     name: 'Alternativ Hero Video',
-    args: heroTeaser_video.logicItem.includeModel,
-}
-
-export const AlternativHeroAudio = {
-    render: Template.bind({}),
-    name: 'Alternativ Hero Audio',
-    args: heroTeaser_audio.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.video_ondemand.args.logicItem.includeModel,
 }
 
 export const AlternativHeroLive = {
     render: Template.bind({}),
     name: 'Alternativ Hero Live',
-    args: heroTeaser_live.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.video_livestream.args.logicItem.includeModel,
+}
+
+export const AlternativHeroAudio = {
+    render: Template.bind({}),
+    name: 'Alternativ Hero Audio',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.audio_ondemand.args.logicItem.includeModel,
+}
+
+
+
+export const AlternativHeroAudioEventLivestream = {
+    render: Template.bind({}),
+    name: 'Alternativ Hero Audio Livestream',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.audio_event_livestream.args.logicItem.includeModel,
+}
+
+export const AlternativHeroPodcast = {
+    render: Template.bind({}),
+    name: 'Alternativ Hero Podcast',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_hero.podcast.args.logicItem.includeModel,
 }
 
 export const Alternativ100Video = {
     render: Template.bind({}),
     name: 'Alternativ 100 Video',
-    args: teaser100_video.logicItem.includeModel,
-}
-
-export const Alternativ100Audio = {
-    render: Template.bind({}),
-    name: 'Alternativ 100 Audio',
-    args: teaser100_audio.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.video_ondemand.args.logicItem.includeModel,
 }
 
 export const Alternativ100Live = {
     render: Template.bind({}),
     name: 'Alternativ 100 Live',
-    args: teaser100_live.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.video_livestream.args.logicItem.includeModel,
+}
+
+export const Alternativ100Audio = {
+    render: Template.bind({}),
+    name: 'Alternativ 100 Audio',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.audio_ondemand.args.logicItem.includeModel,
+}
+
+export const Alternativ100AudioEventLivestream = {
+    render: Template.bind({}),
+    name: 'Alternativ 100 Audio Livestream',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.audio_event_livestream.args.logicItem.includeModel,
+}
+
+export const Alternativ100Podcast = {
+    render: Template.bind({}),
+    name: 'Alternativ 100 Podcast',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_100.podcast.args.logicItem.includeModel,
 }
 
 export const Alternativ50Video = {
     render: Template.bind({}),
     name: 'Alternativ 50 Video',
-    args: teaser50_video.logicItem.includeModel,
-}
-
-export const Alternativ50Audio = {
-    render: Template.bind({}),
-    name: 'Alternativ 50 Audio',
-    args: teaser50_audio.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.video_ondemand.args.logicItem.includeModel,
 }
 
 export const Alternativ50Live = {
     render: Template.bind({}),
     name: 'Alternativ 50 Live',
-    args: teaser50_live.logicItem.includeModel,
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.video_livestream.args.logicItem.includeModel,
 }
+
+export const Alternativ50Audio = {
+    render: Template.bind({}),
+    name: 'Alternativ 50 Audio',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.audio_ondemand.args.logicItem.includeModel,
+}
+
+export const Alternativ50AudioEventLivestream = {
+    render: Template.bind({}),
+    name: 'Alternativ 50 Audio Livestream',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.audio_event_livestream.args.logicItem.includeModel,
+}
+
+export const Alternativ50Podcast = {
+    render: Template.bind({}),
+    name: 'Alternativ 50 Podcast',
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.group_50.podcast.args.logicItem.includeModel,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
+}
+

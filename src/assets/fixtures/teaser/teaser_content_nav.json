@@ -1,0 +1,532 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+
+    "group_100": {
+        "list": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isList",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isListOrFlow",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "list_autosuggest": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isAutosuggest",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isList",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isListOrFlow",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "flow": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isFlow",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isListOrFlow",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "flow_autosuggest": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isAutosuggest",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isFlow",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isListOrFlow",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "mixed": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isAutosuggest",
+                        "@->value": false
+                    },
+                    {
+                        "@->contentpath": "contentNav.isMixed",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.contentNavEntries",
+                        "@->value": [
+                            {
+                                "title": "Hier steht ein viel zu langer Titel,der mittels truncate gekürzt wird",
+                                "isGroup": false,
+                                "isSelected": false,
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "extern"
+                                },
+                                "navigationGroup": [{}]
+                            },
+
+                            {
+                                "title": "Banken",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": false,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+
+                            {
+                                "title": "Energie",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Flughafen Kassel-Calden",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Gewerkschaften",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Handel",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Handwerk",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Immobilien",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "K + S",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Landwirtschaft",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "mixed_autosuggest": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isAutosuggest",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isMixed",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "dropdown": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isDropdown",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "dropdown_autosuggest": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.isAutosuggest",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "contentNav.isDropdown",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "dropdown_with_subgroups": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserContentNav",
+
+                "@->overrides": [
+                    {
+                        "@->contentpath": "contentNav.contentNavEntries",
+                        "@->value": [
+                            {
+                                "title": "Arbeitsmarkt",
+                                "isGroup": true,
+                                "isSelected": false,
+                                "navigationGroup": [
+                                    {
+                                        "title": "Arbeitsmarkt - Sub-Item 1",
+                                        "isGroup": false,
+                                        "isSelected": false,
+                                        "link": {
+                                            "url": "/teaser1",
+                                            "webviewUrl": "/teaser1#webview",
+                                            "isTargetBlank": true,
+                                            "hasIcon": false,
+                                            "iconName": "extern"
+                                        }
+                                    },
+                                    {
+                                        "title": "Arbeitsmarkt - Sub-Item 2",
+                                        "isGroup": false,
+                                        "isSelected": false,
+                                        "link": {
+                                            "url": "/teaser1",
+                                            "webviewUrl": "/teaser1#webview",
+                                            "isTargetBlank": true,
+                                            "hasIcon": false,
+                                            "iconName": "extern"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Banken",
+                                "isGroup": true,
+                                "isSelected": false,
+                                "navigationGroup": [
+                                    {
+                                        "title": "Banken - Sub-Item 1",
+                                        "isGroup": false,
+                                        "isSelected": false,
+                                        "link": {
+                                            "url": "/teaser1",
+                                            "webviewUrl": "/teaser1#webview",
+                                            "isTargetBlank": true,
+                                            "hasIcon": false,
+                                            "iconName": "extern"
+                                        }
+                                    },
+                                    {
+                                        "title": "Banken - Sub-Item 2",
+                                        "isGroup": false,
+                                        "isSelected": false,
+                                        "link": {
+                                            "url": "/teaser1",
+                                            "webviewUrl": "/teaser1#webview",
+                                            "isTargetBlank": true,
+                                            "hasIcon": false,
+                                            "iconName": "extern"
+                                        }
+                                    }
+                                ]
+                            },
+
+                            {
+                                "title": "Energie",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Flughafen Kassel-Calden",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Gewerkschaften",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Handel",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Handwerk",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Immobilien",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "K + S",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            },
+                            {
+                                "title": "Landwirtschaft",
+                                "link": {
+                                    "url": "/teaser1",
+                                    "webviewUrl": "/teaser1#webview",
+                                    "isTargetBlank": true,
+                                    "hasIcon": false,
+                                    "iconName": "iconName",
+                                    "readMoreText": {
+                                        "readMoreScreenreader": "Zum Artikel",
+                                        "readMore": "mehr",
+                                        "readMoreLong": "read More Long"
+                                    }
+                                },
+                                "isGroup": false,
+                                "isSelected": false
+                            }
+                        ]
+                    },
+                    {
+                        "@->contentpath": "contentNav.isDropdown",
+                        "@->value": true
+                    }
+                ]
+            }
+        }
+    }
+}

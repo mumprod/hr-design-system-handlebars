@@ -1,0 +1,284 @@
+{
+    "config": {
+        "template": "standard",
+        "layout": "grid",
+        "path": "args.logicItem.includeModel",
+        "renderSnapshotsWrapper": false
+    },
+    "group_100": {
+        "standard_with_single_event": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.displayTeaserBodyAsImageOverlay",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "standard_with_two_events": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.displayTeaserBodyAsImageOverlay",
+                        "@->value": true
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
+                        "@->value": "true"
+                    }
+                ]
+            }
+        },
+        "alternative_with_single_event": {
+            "config": {
+                "template": "alternative"
+            },
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event-alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "pedro-martins-102"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "alternative_with_two_events": {
+            "config": {
+                "template": "alternative"
+            },
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includePath",
+                        "@->value": "components/teaser/teaser_alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "100"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.isMobile1to1",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event-alternative"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserImage",
+                        "@->value": {
+                            "@->jsoninclude": "teaser/teaser_images.inc.json",
+                            "@->contentpath": "teaser_alternative_100",
+                            "@->replaceToken": [
+                                {
+                                    "@->token": "image",
+                                    "@->value": "pedro-martins-102"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
+                        "@->value": "true"
+                    }
+                ]
+            }
+        }
+    },
+    "group_50": {
+        "standard_with_single_event": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "50"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    }
+                ]
+            }
+        }
+    },
+    "group_33": {
+        "standard_with_single_event": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    }
+                ]
+            }
+        },
+        "standard_with_single_event_and_status": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.label.byline.context.firstInstant.hasStatus",
+                        "@->value": true
+                    }
+                ]
+            }
+        },
+        "standard_with_two_events": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
+                        "@->value": "true"
+                    }
+                ]
+            }
+        },
+        "standard_with_multiple_events": {
+            "args": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaserEvent",
+                "@->overrides": [
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.realTeaserSize",
+                        "@->value": "33"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.moreThenOneEvent",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.moreThenTwoEvents",
+                        "@->value": "true"
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.lastInstant",
+                        "@->value": {
+                            "startDate": {
+                                "monthNameShort": "OKT",
+                                "weekdayNameShort": "So",
+                                "day": "16"
+                            }
+                        }
+                    },
+                    {
+                        "@->contentpath": "logicItem.includeModel.teaserType",
+                        "@->value": "event"
+                    }
+                ]
+            }
+        }
+    }
+}

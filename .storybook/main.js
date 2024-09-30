@@ -24,6 +24,9 @@ const config = {
             name: '@storybook/addon-docs',
             options: {
                 mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        remarkPlugins: [remarkGfm],
+                    },
                 },
             },
         },
