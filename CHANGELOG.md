@@ -1,3 +1,16 @@
+# v1.102.5 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- bugfix: remove old css classes [#1080](https://github.com/mumprod/hr-design-system-handlebars/pull/1080) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.102.4 (Fri Sep 27 2024)
 
 #### 🐛 Bug Fix
