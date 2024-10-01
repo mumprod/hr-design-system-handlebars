@@ -80,10 +80,7 @@ const ExternalService = function (context) {
                         break
                     case 'instagram-post':
                         createInstagramEmbed()
-                        break
-                    case 'instagram-story':
-                        createInstagramEmbed()
-                        break    
+                        break   
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -291,7 +288,7 @@ const ExternalService = function (context) {
     const createInstagramEmbed = function () {
         loadScript('instagram-js', '//www.instagram.com/embed.js', true)
         embedCode = options.embedCode
-        var instagramPostEmbedCode =
+        var instagramEmbedCode =
             "<blockquote class='instagram-media' data-instgrm-captioned " +
             "data-instgrm-permalink='" +
             embedCode +
