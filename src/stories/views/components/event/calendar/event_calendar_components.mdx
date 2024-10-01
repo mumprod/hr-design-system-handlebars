@@ -1,46 +1,9 @@
 import { ArgTypes, Meta, Story, Canvas } from '@storybook/blocks'
-import eventCalendarHeading from './event_calendar_heading.hbs'
-import eventCalendarNav from './event_calendar_nav.hbs'
-import eventCalendarContent from './event_calendar_event_teaser.hbs'
-import eventCalendarFooter from './event_calendar_footer.hbs'
-import teaserEventCalendar100Serif from '../../teaser/fixtures/teaser_event_calendar_100_serif.json'
-import eventCalendarEventTeaserData from './fixtures/event_calendar_event_teaser.json'
-import eventCalendarFooterData from './fixtures/event_calendar_footer.json'
 import * as EventCalendarComponentsStories from './event_calendar_components.stories';
 
 <Meta of={EventCalendarComponentsStories} />
 
-export const TemplateEventCalendarHeading = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarHeading({ brand, ...args })
-}
 
-export const TemplateEventCalendarNav = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarNav({ brand, ...args })
-}
-
-export const TemplateEventCalendarContent = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarContent({ brand, ...args })
-}
-
-export const TemplateEventCalendarFooter = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarFooter({ brand, ...args })
-}
 
 # Standard-Teaser
 

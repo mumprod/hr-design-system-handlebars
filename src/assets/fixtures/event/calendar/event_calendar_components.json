@@ -1,0 +1,68 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+    "heading": {
+        "config": {
+            "template": "heading",
+            "renderSnapshotItemWrapper": true,
+            "css": "col-span-12"
+        },
+        "args": {
+            "title": "Eventkalender"
+        }
+    },
+    "navigation": {
+        "config": {
+            "template": "navigation",
+            "path": "args.months",
+            "renderSnapshotItemWrapper": true,
+            "css": "col-span-12 mt-12"
+        },
+        "args": {
+            "months": {
+                "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
+                "@->contentpath": "eventDate"
+            }
+        }
+    },
+    "content": {
+        "config": {
+            "template": "content",
+            "renderSnapshotItemWrapper": true,
+            "css": "col-span-12 mt-12"
+        },
+        "args": {
+            "@->jsoninclude": "event/calendar/event_calendar_event_teaser.inc.json",
+            "@->contentpath": "2023-01-09",
+            "@->extends": {
+                "isPodcastEpisode": true,
+                "_withConcertInfo": false,
+                "_showTeaser": true
+            }
+        }
+    },
+    "footer": {
+        "config": {
+            "template": "footer",
+            "renderSnapshotItemWrapper": true,
+            "css": "col-span-12 mt-12"
+        },
+        "args": {
+            "link": {
+                "url": "/monatsuebersicht-100",
+                "webviewUrl": "/monatsuebersicht-100#webview",
+                "isTargetBlank": false,
+                "hasIcon": false,
+                "iconName": "iconName",
+                "readMoreText": {
+                    "readMoreScreenreader": "Zum Artikel",
+                    "readMore": "mehr",
+                    "readMoreLong": "read More Long"
+                }
+            }
+        }
+    }
+}

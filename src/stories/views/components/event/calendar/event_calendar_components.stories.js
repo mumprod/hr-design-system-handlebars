@@ -1,41 +1,41 @@
-import eventCalendarHeading from './event_calendar_heading.hbs'
-import eventCalendarNav from './event_calendar_nav.hbs'
-import eventCalendarContent from './event_calendar_event_teaser.hbs'
-import eventCalendarFooter from './event_calendar_footer.hbs'
-import teaserEventCalendar100Serif from '../../teaser/fixtures/teaser_event_calendar_100_serif.json'
-import eventCalendarEventTeaserData from './fixtures/event_calendar_event_teaser.json'
-import eventCalendarFooterData from './fixtures/event_calendar_footer.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/event_calendar_components.json'
 
-const TemplateEventCalendarHeading = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarHeading({ brand, ...args })
+
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['heading'] = handlebars.compile(`
+    {{> components/event/calendar/event_calendar_heading }}   
+  `)
+hbsTemplates['navigation'] = handlebars.compile(`
+    {{> components/event/calendar/event_calendar_nav }}   
+  `)
+hbsTemplates['content'] = handlebars.compile(`
+    {{> components/event/calendar/event_calendar_event_teaser }}   
+  `)
+hbsTemplates['footer'] = handlebars.compile(`
+    {{> components/event/calendar/event_calendar_footer }}   
+  `)
+
+
+const TemplateEventCalendarHeading = (args) => {
+    return hbsTemplates['heading']({ ...args })
 }
 
-const TemplateEventCalendarNav = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarNav({ brand, ...args })
+const TemplateEventCalendarNav = (args) => {
+    return hbsTemplates['navigation']({ ...args })
 }
 
 const TemplateEventCalendarContent = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarContent({ brand, ...args })
+    return hbsTemplates['content']({ ...args })
 }
 
 const TemplateEventCalendarFooter = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return eventCalendarFooter({ brand, ...args })
+    return hbsTemplates['footer']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -43,13 +43,16 @@ export default {
 
     parameters: {
         layout: 'fullscreen',
+        chromatic: {
+            disableSnapshot: true
+        },
     },
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main"><div class="col-span-12">
+            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">
              ${Story()} 
-             </div></div></div>`
+             </div></div>`
         },
     ],
 }
@@ -57,6 +60,13 @@ export default {
 export const Heading = {
     render: TemplateEventCalendarHeading.bind({}),
     name: 'Heading',
+    decorators: [
+        (Story) => {
+            return `<div class="col-span-12"> 
+             ${Story()} 
+             </div>`
+        },
+    ],
 
     argTypes: {
         title: {
@@ -70,20 +80,32 @@ export const Heading = {
         },
     },
 
-    args: {
-        title: 'Eventkalender',
-    },
+    args: fixtures.heading.args,
 }
 
 export const Navigation = {
     render: TemplateEventCalendarNav.bind({}),
     name: 'Navigation',
-    args: teaserEventCalendar100Serif.logicItem.includeModel.eventCalendar.months,
+    decorators: [
+        (Story) => {
+            return `<div class="col-span-12"> 
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.navigation.args.months,
 }
 
 export const Inhalt = {
     render: TemplateEventCalendarContent.bind({}),
     name: 'Inhalt',
+    decorators: [
+        (Story) => {
+            return `<div class="col-span-12"> 
+             ${Story()} 
+             </div>`
+        },
+    ],
 
     argTypes: {
         statusDescriptionForLabelShort: {
@@ -115,15 +137,35 @@ export const Inhalt = {
         },
     },
 
-    args: {
-        ...eventCalendarEventTeaserData,
-        _withConcertInfo: false,
-        _showTeaser: true,
-    },
+    args: fixtures.content.args,
 }
 
 export const Footer = {
     render: TemplateEventCalendarFooter.bind({}),
     name: 'Footer',
-    args: eventCalendarFooterData,
+    decorators: [
+        (Story) => {
+            return `<div class="col-span-12"> 
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.footer.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+    decorators: [
+        (Story) => {
+            return `<div class="col-span-12"> 
+             ${Story()} 
+             </div>`
+        },
+    ],
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
