@@ -156,13 +156,6 @@ export const Footer = {
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
-    decorators: [
-        (Story) => {
-            return `<div class="col-span-12"> 
-             ${Story()} 
-             </div>`
-        },
-    ],
 
     args: fixtures,
     parameters: {
