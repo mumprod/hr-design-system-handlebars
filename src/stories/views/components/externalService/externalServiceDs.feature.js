@@ -79,10 +79,10 @@ const ExternalService = function (context) {
                         createFacebookEmbed()
                         break
                     case 'instagram-post':
-                        createInstagramPostEmbed()
+                        createInstagramEmbed()
                         break
                     case 'instagram-story':
-                        createInstagramStoryEmbed()
+                        createInstagramEmbed()
                         break    
                     case 'twitter':
                         createTwitterEmbed()
@@ -288,7 +288,7 @@ const ExternalService = function (context) {
         }, 125)
     }
 
-    const createInstagramPostEmbed = function () {
+    const createInstagramEmbed = function () {
         loadScript('instagram-js', '//www.instagram.com/embed.js', true)
         embedCode = options.embedCode
         var instagramPostEmbedCode =
@@ -301,21 +301,6 @@ const ExternalService = function (context) {
             '</blockquote>'
         replaceAnimated(rootElement, instagramEmbedCode, false, reloadInstagramEmbed)
     }
-
-    const createInstagramStoryEmbed = function () {
-        loadScript('instagram-js', '//www.instagram.com/embed.js', true)
-        embedCode = options.embedCode
-        var instagramStoryEmbedCode =
-            "<blockquote class='instagram-media' data-instgrm-captioned " +
-            "data-instgrm-permalink='" +
-            embedCode +
-            "?utm_source=ig_embed&amp;utm_campaign=loading'" +
-            "data-instgrm-version='14'" +
-            "style='background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:724px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);' >" +
-            '</blockquote>'
-        replaceAnimated(rootElement, instagramEmbedCode, false, reloadInstagramEmbed)
-    }
-
 
     const reloadInstagramEmbed = function () {
         requestTimeout(function () {
