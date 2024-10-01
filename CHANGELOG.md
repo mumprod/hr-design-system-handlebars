@@ -1,3 +1,27 @@
+# v1.103.2 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3344 [Prüfstory] Werbeblocker legt Sharing lahm [#1082](https://github.com/mumprod/hr-design-system-handlebars/pull/1082) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.103.1 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- new pause Icon for tagesschau rainradar [#1081](https://github.com/mumprod/hr-design-system-handlebars/pull/1081) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.103.0 (Mon Sep 30 2024)
 
 #### 🚀 Enhancement
