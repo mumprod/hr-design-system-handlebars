@@ -78,9 +78,12 @@ const ExternalService = function (context) {
                     case 'facebook-post':
                         createFacebookEmbed()
                         break
-                    case 'instagram':
+                    case 'instagram-post':
                         createInstagramEmbed()
                         break
+                    case 'instagram-story':
+                        createInstagramEmbed()
+                        break    
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -288,7 +291,7 @@ const ExternalService = function (context) {
     const createInstagramEmbed = function () {
         loadScript('instagram-js', '//www.instagram.com/embed.js', true)
         embedCode = options.embedCode
-        var instagramEmbedCode =
+        var instagramPostEmbedCode =
             "<blockquote class='instagram-media' data-instgrm-captioned " +
             "data-instgrm-permalink='" +
             embedCode +
@@ -369,7 +372,7 @@ const ExternalService = function (context) {
             }
               else{
                 console.log("Dienst "+ id + " ist im Cookie nicht enthalten, prüfe daher den Default")
-                if(whiteList){
+                if(document.getElementById(id).getAttribute("data-whitelist") == "true"){
                   console.log("Ist per Default eingeschaltet")
                   console.log("Lade den Dienst")
                   loadServiceWithDataPolicyButton();
