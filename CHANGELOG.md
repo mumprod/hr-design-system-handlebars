@@ -1,3 +1,15 @@
+# v1.103.7 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- use correct Method-call [#1088](https://github.com/mumprod/hr-design-system-handlebars/pull/1088) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.103.6 (Wed Oct 02 2024)
 
 #### 🐛 Bug Fix
