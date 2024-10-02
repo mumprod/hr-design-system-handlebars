@@ -33,14 +33,14 @@
       {{#if _required}}
          :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
       {{/if}}
-   >{{#if _formField.isValid}}
+   >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
-    {{else}}
-        {{#if _value}}
+    {{~else~}}
+        {{~#if _value~}}
             {{_value}}
-        {{else}}
-            {{_defaultValue}}
-        {{/if}}{{/if}}</textarea>
+        {{~else~}}
+            {{~_defaultValue~}}
+        {{~/if}}{{/if}}</textarea>
    <label for="textarea{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
@@ -56,9 +56,7 @@
    </label>
    {{#if _required}}
       <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
-            <div class="hidden w-5 h-5 font-bold" :class="{'hidden': valid || !wasFocused || isFocused }">
-               {{> components/base/image/icon _icon="info2" _addClass="w-5 h-5 fill-red-700"}}
-            </div>
+         {{> components/forms/error_icon _xclass="{'hidden': valid || !wasFocused || isFocused }"}}
       </div>
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
@@ -71,17 +69,5 @@
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
-   </div>
-
-   <div class="hidden">
-      <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
-         DEBUG
-      </div>
-      <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
-         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
-         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
-         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
-         <div>input.length:<span x-text="textarea{{getRandom}}.length " class="font-bold" ></span></div>
-      </div>
    </div>
 </div>
