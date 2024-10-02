@@ -7,13 +7,13 @@
         {
             "isHeadline": true,
             "text": "Wahl Gemeinde Ergebnis"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Wahl_Gemeinde_Ergebnis"
                     }
                 }
@@ -22,13 +22,13 @@
         {
             "isHeadline": true,
             "text": "360Grad"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "360Grad"
                     }
                 }
@@ -37,13 +37,13 @@
         {
             "isHeadline": true,
             "text": "ARD-Mediathek (Video)"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "ARD_Mediathek_Video"
                     }
                 }
@@ -52,13 +52,13 @@
         {
             "isHeadline": true,
             "text": "ARTE Concert 2.0"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "ARTE_concert_new"
                     }
                 }
@@ -67,13 +67,13 @@
         {
             "isHeadline": true,
             "text": "Bundesliga Audiostream"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Bundesliga_Audiostream"
                     }
                 }
@@ -82,13 +82,13 @@
         {
             "isHeadline": true,
             "text": "Datawrapper CDN"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Datawrapper_CDN"
                     }
                 }
@@ -97,13 +97,13 @@
         {
             "isHeadline": true,
             "text": "Esri Karte"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Esri"
                     }
                 }
@@ -112,13 +112,13 @@
         {
             "isHeadline": true,
             "text": "Facebook"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Facebook"
                     }
                 }
@@ -127,13 +127,13 @@
         {
             "isHeadline": true,
             "text": "Flourish"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Flourish"
                     }
                 }
@@ -142,13 +142,13 @@
         {
             "isHeadline": true,
             "text": "Giphy"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Giphy"
                     }
                 }
@@ -157,13 +157,13 @@
         {
             "isHeadline": true,
             "text": "Instagram"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Instagram"
                     }
                 }
@@ -172,13 +172,13 @@
         {
             "isHeadline": true,
             "text": "X"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Twitter"
                     }
                 }
@@ -187,13 +187,13 @@
         {
             "isHeadline": true,
             "text": "Vimeo"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Vimeo"
                     }
                 }
@@ -202,13 +202,13 @@
         {
             "isHeadline": true,
             "text": "Youtube"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Youtube"
                     }
                 }
@@ -217,13 +217,13 @@
         {
             "isHeadline": true,
             "text": "Youtube 360°"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Youtube_360"
                     }
                 }
@@ -232,13 +232,13 @@
         {
             "isHeadline": true,
             "text": "Statischer Dienst"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Statischer_Dienst"
                     }
                 }
@@ -247,13 +247,13 @@
         {
             "isHeadline": true,
             "text": "Wahlmonitor"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Wahlmonitor"
                     }
                 }
@@ -262,13 +262,13 @@
         {
             "isHeadline": true,
             "text": "Wahlkreiskarte"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Wahlkreiskarte"
                     }
                 }
@@ -277,60 +277,34 @@
         {
             "isHeadline": true,
             "text": "Koalitionsrechner"
-        },        
+        },
         {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
-                        "@->jsoninclude": "external_service/external_service.inc.json",
+                        "@->jsoninclude": "external-service/external_service.inc.json",
                         "@->contentpath": "Koalitionsrechner"
                     }
                 }
             }
-        }                                                                                                                                        
+        }
     ],
     "dataPolicy": {
-        "serviceList" :[
-            {   "key" : "ard_mediathek",
-                "value" : "ARD Mediathek (Video)"
-            },
-            {   "key" : "arte_concert",
-                "value" : "Arte Concert"
-            },
-            {   "key" : "arte_concert_new",
-                "value" : "Arte Concert 2.0"
-            },
-            {   "key" : "datawrapper_cdn",
-                "value" : "Datawrapper (Datengrafik)"
-            },
-            {   "key" : "esri",
-                "value" : "Esri (Notfallkarte)"
-            },
-            {   "key" : "facebook-post",
-                "value" : "Facebook"
-            },
-            {   "key" : "flourish",
-                "value" : "Flourish (Datengrafik)"
-            },
-            {   "key" : "giphy",
-                "value" : "Giphy (animiertes GIF)"
-            },
-            {   "key" : "instagram",
-                "value" : "Instagram"
-            },
-            {   "key" : "twitter-post",
-                "value" : "Twitter"
-            },
-            {   "key" : "vimeo",
-                "value" : "Vimeo (Video)"
-            },
-            {   "key" : "youtube",
-                "value" : "YouTube (Video)"
-            },
-            {   "key" : "youtube360",
-                "value" : "YouTube 360 (360° Video)"
-            }
+        "serviceList": [
+            { "key": "ard_mediathek", "value": "ARD Mediathek (Video)" },
+            { "key": "arte_concert", "value": "Arte Concert" },
+            { "key": "arte_concert_new", "value": "Arte Concert 2.0" },
+            { "key": "datawrapper_cdn", "value": "Datawrapper (Datengrafik)" },
+            { "key": "esri", "value": "Esri (Notfallkarte)" },
+            { "key": "facebook-post", "value": "Facebook" },
+            { "key": "flourish", "value": "Flourish (Datengrafik)" },
+            { "key": "giphy", "value": "Giphy (animiertes GIF)" },
+            { "key": "instagram", "value": "Instagram" },
+            { "key": "twitter-post", "value": "Twitter" },
+            { "key": "vimeo", "value": "Vimeo (Video)" },
+            { "key": "youtube", "value": "YouTube (Video)" },
+            { "key": "youtube360", "value": "YouTube 360 (360° Video)" }
         ]
     }
 }

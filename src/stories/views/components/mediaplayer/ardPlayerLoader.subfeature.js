@@ -1,6 +1,6 @@
 import { fireEvent, hr$, listen, loadScript } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
-import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
+import SettingsCookie from 'components/external-service/globalSettingsCookie.subfeature'
 
 const ArdPlayerLoader = function (options, trackingData, rootElement) {
     'use strict'

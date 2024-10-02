@@ -1,6 +1,7 @@
 {
     "360Grad": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": true,
             "externalServiceId": "360grad",
@@ -15,6 +16,7 @@
     },
     "ARD_Mediathek_Video": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "ard_mediathek",
@@ -28,6 +30,7 @@
     },
     "ARTE_concert_new": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "arte_concert_new",
@@ -42,6 +45,7 @@
     },
     "Bundesliga_Audiostream": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": true,
             "externalServiceId": "bundesligaAudiostream",
@@ -54,9 +58,10 @@
         "setResponsiveIframe": false,
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
-    },        
+    },
     "Datawrapper_CDN": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": true,
             "embedAsIFrame": false,
             "externalServiceId": "datawrapper_cdn",
@@ -71,6 +76,7 @@
     },
     "Esri": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "esri",
@@ -86,6 +92,7 @@
     },
     "Facebook": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": false,
             "externalServiceId": "facebook-post",
@@ -99,6 +106,7 @@
     },
     "Flourish": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "flourish",
@@ -113,6 +121,7 @@
     },
     "Giphy": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "giphy",
@@ -126,6 +135,7 @@
     },
     "Instagram": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": false,
             "externalServiceId": "instagram",
@@ -139,6 +149,7 @@
     },
     "Twitter": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": false,
             "externalServiceId": "twitter-post",
@@ -152,6 +163,7 @@
     },
     "Vimeo": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "vimeo",
@@ -165,6 +177,7 @@
     },
     "Youtube": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "youtube",
@@ -179,6 +192,7 @@
     },
     "Youtube_360": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": false,
             "makeConfigurable": true,
             "embedAsIFrame": true,
             "externalServiceId": "youtube360",
@@ -194,6 +208,7 @@
     },
     "Statischer_Dienst": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": true,
             "externalServiceId": "staticService",
@@ -208,6 +223,7 @@
     },
     "Wahlmonitor": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": false,
             "externalServiceId": "wahlmonitor",
@@ -221,6 +237,7 @@
     },
     "Wahlkreiskarte": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": false,
             "externalServiceId": "wahlkreiskarte",
@@ -234,6 +251,7 @@
     },
     "Koalitionsrechner": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": true,
             "externalServiceId": "koalitionsrechner",
@@ -248,6 +266,7 @@
     },
     "Wahl_Gemeinde_Ergebnis": {
         "externalServiceConfig": {
+            "makeDatapolicyCheck": true,
             "makeConfigurable": false,
             "embedAsIFrame": false,
             "externalServiceId": "wahl-gemeinde-ergebnis",
@@ -260,5 +279,5 @@
         "setResponsiveIframe": false,
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
-    }                                                                      
+    }
 }

@@ -1,0 +1,154 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false
+    },
+    "ARD_Mediathek_Video": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "ARD_Mediathek_Video"
+        }
+    },
+    "ARTE_concert_new": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "ARTE_concert_new"
+        }
+    },
+    "Datawrapper_CDN_NoResponsiveFixedHeightReload": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Datawrapper_CDN",
+            "@->overrides": [
+                {
+                    "@->contentpath": "fixedHeight",
+                    "@->value": "700"
+                },
+                {
+                    "@->contentpath": "setTimedReloadIframe",
+                    "@->value": true
+                },
+                {
+                    "@->contentpath": "setTimeForReload",
+                    "@->value": "300"
+                }
+            ],
+            "@->extends": {
+                "aspectRatio": ""
+            }
+        }
+    },
+    "Datawrapper_CDN_NoResponsiveFixedHeight": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Datawrapper_CDN",
+            "@->overrides": [
+                {
+                    "@->contentpath": "fixedHeight",
+                    "@->value": "700"
+                }
+            ],
+            "@->extends": {
+                "aspectRatio": ""
+            }
+        }
+    },
+    "Datawrapper_CDN_NoResponsiveAspectRatio": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Datawrapper_CDN",
+            "@->overrides": [
+                {
+                    "@->contentpath": "fixedHeight",
+                    "@->value": ""
+                }
+            ],
+            "@->extends": {
+                "aspectRatio": "4x3"
+            }
+        }
+    },
+    "Datawrapper_CDN": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Datawrapper_CDN",
+            "@->overrides": [
+                {
+                    "@->contentpath": "fixedHeight",
+                    "@->value": ""
+                },
+                {
+                    "@->contentpath": "setResponsiveIframe",
+                    "@->value": false
+                }
+            ],
+            "@->extends": {
+                "aspectRatio": ""
+            }
+        }
+    },
+    "Esri": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Esri"
+        }
+    },
+    "Facebook": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Facebook"
+        }
+    },
+    "Flourish": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Flourish"
+        }
+    },
+    "Giphy": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Giphy"
+        }
+    },
+    "Instagram": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Instagram"
+        }
+    },
+    "Twitter": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Twitter"
+        }
+    },
+    "Vimeo": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Vimeo"
+        }
+    },
+    "Youtube": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Youtube"
+        }
+    },
+    "Youtube_360": {
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Youtube_360"
+        }
+    },
+    "Wahl_Gemeinde_Ergebnis": {
+        "config": {
+            "template": "noDatapolicyCheck"
+        },
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "Wahl_Gemeinde_Ergebnis"
+        }
+    }
+}

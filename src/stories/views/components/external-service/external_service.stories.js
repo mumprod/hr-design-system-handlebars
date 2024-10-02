@@ -1,19 +1,28 @@
-import { ExternalServiceContent } from './external_service.data.js'
-import externalService from './external_service_with_datapolicy_check.hbs'
-import externalServiceNoDatapolicyCheck from './external_service.hbs'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/external_service.json'
 
-const TemplatePageExternalService = (args, { globals: { theme } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'
-    return externalService({ brand, ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+  {{> components/external-service/external_service }}   
+`)
+hbsTemplates['noDatapolicyCheck'] = handlebars.compile(`
+    {{> components/external-service/external_service_with_datapolicy_check }}   
+  `)
+
+
+
+const TemplatePageExternalService = (args) => {
+    return hbsTemplates['default']({ ...args })
 }
-const TemplatePageExternalServiceNoDatapolicyCheck = (args, { globals: { theme } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand = undefined !== theme ? theme : 'hessenschau'
-    return externalServiceNoDatapolicyCheck({ brand, ...args })
+const TemplatePageExternalServiceNoDatapolicyCheck = (args) => {
+    return hbsTemplates['noDatapolicyCheck']({ ...args })
 }
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
+}
+
 export default {
     title: 'Komponenten/Externe Dienste',
     argTypes: {},
@@ -24,41 +33,54 @@ export default {
             inlineStories: false,
             iframeHeight: 400,
         },
+        chromatic: {
+            disableSnapshot: true
+        },
     },
 }
 
 export const ExterneDiensteGiphy = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Giphy',
-    args: ExternalServiceContent.Giphy,
+    args: fixtures.Giphy.args,
 }
 export const ExterneDiensteFlourish = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Flourish',
-    args: ExternalServiceContent.Flourish,
+    args: fixtures.Flourish.args,
 }
 export const ExterneDiensteDatawrapper = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper MIT Responsivem Iframe',
-    args: ExternalServiceContent.Datawrapper_CDN,
+    args: fixtures.Datawrapper_CDN.args,
 }
 export const ExterneDiensteDatawrapperNoResponsiveFixedHeight = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper OHNE Responsivem Iframe (Feste Höhe)',
-    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveFixedHeight,
+    args: fixtures.Datawrapper_CDN_NoResponsiveFixedHeight.args,
 }
 export const ExterneDiensteDatawrapperNoResponsiveAspectRatio = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper OHNE Responsivem Iframe (Aspect Ratio)',
-    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveAspectRatio,
+    args: fixtures.Datawrapper_CDN_NoResponsiveAspectRatio.args
 }
 export const ExterneDiensteDatawrapperContentRefresher = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper mit ContentRefresher',
-    args: ExternalServiceContent.Datawrapper_CDN_NoResponsiveFixedHeightReload,
+    args: fixtures.Datawrapper_CDN_NoResponsiveFixedHeightReload.args,
 }
 export const WahlGemeindeErgebnis = {
     render: TemplatePageExternalServiceNoDatapolicyCheck.bind({}),
     name: 'Externe Dienste Wahl Gemeinde Ergebnis',
-    args: ExternalServiceContent.Wahl_Gemeinde_Ergebnis,
+    args: fixtures.Wahl_Gemeinde_Ergebnis.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
