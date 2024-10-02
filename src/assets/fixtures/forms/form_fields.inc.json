@@ -101,10 +101,10 @@
             "asString":"checkbox"
         },
         "name":"interessen",
-        "label":"Wählen Sie Ihre Interessen:",
+        "label":"Wählen Sie Ihre Interessen",
         "isMeta":false,
         "description":"Bitte kreuzen Sie alle Interessen an, die auf Sie zutreffen. Ihre Auswahl hilft uns, Ihnen relevante Inhalte anzubieten.",
-        "isRequired":false,
+        "isRequired":true,
         "options":[
             {
                 "value":"sport",
@@ -152,6 +152,39 @@
                 "value":"fotografie",
                 "label":"fotografie",
                 "title":"fotografie",
+                "isSelected":false
+            }
+        ]
+    },
+    "radio-group":
+    {
+        "isGrouped":true,
+        "type":{
+            "isChoice":true,
+            "asString":"radio"
+        },
+        "name":"lieblingsfarbe",
+        "label":"Wählen Sie Ihre Lieblingsfarbe",
+        "isMeta":false,
+        "description":"Bitte wählen Sie eine der folgenden Farben aus.",
+        "isRequired":true,
+        "options":[
+            {
+                "value":"rot",
+                "label":"rot",
+                "title":"rot",
+                "isSelected":false
+            },
+            {
+                "value":"blau",
+                "label":"blau",
+                "title":"blau",
+                "isSelected":false
+            },
+            {
+                "value":"grün",
+                "label":"grün",
+                "title":"grün",
                 "isSelected":false
             }
         ]
