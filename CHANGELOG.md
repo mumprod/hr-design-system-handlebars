@@ -1,3 +1,15 @@
+# v1.103.8 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Send Button DPE-3384 [#1087](https://github.com/mumprod/hr-design-system-handlebars/pull/1087) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.103.7 (Wed Oct 02 2024)
 
 #### 🐛 Bug Fix
