@@ -1,3 +1,64 @@
+# v1.103.6 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3301: add radio-button group [#1086](https://github.com/mumprod/hr-design-system-handlebars/pull/1086) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.103.5 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- - align items to start of grid in article element [#1085](https://github.com/mumprod/hr-design-system-handlebars/pull/1085) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.103.3 (Tue Oct 01 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3316 [#1083](https://github.com/mumprod/hr-design-system-handlebars/pull/1083) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.103.2 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3344 [Prüfstory] Werbeblocker legt Sharing lahm [#1082](https://github.com/mumprod/hr-design-system-handlebars/pull/1082) ([@Sunny1112358](https://github.com/Sunny1112358))
+
+#### Authors: 1
+
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.103.1 (Mon Sep 30 2024)
+
+#### 🐛 Bug Fix
+
+- new pause Icon for tagesschau rainradar [#1081](https://github.com/mumprod/hr-design-system-handlebars/pull/1081) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.103.0 (Mon Sep 30 2024)
 
 #### 🚀 Enhancement
