@@ -1,3 +1,16 @@
+# v1.103.6 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3301: add radio-button group [#1086](https://github.com/mumprod/hr-design-system-handlebars/pull/1086) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.103.5 (Wed Oct 02 2024)
 
 #### 🐛 Bug Fix
