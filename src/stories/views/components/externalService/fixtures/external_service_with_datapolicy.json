@@ -2,7 +2,6 @@
     "ARD_Mediathek_Video": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": true,
             "externalServiceId": "ard_mediathek",
             "externalServiceEmbedType": "iFrame",
@@ -16,7 +15,6 @@
     "ARTE_concert_new": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": true,
             "externalServiceId": "arte_concert_new",
             "externalServiceEmbedType": "iFrame",
@@ -31,7 +29,6 @@
     "Datawrapper_CDN_NoResponsiveFixedHeightReload": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": false,
             "externalServiceId": "datawrapper_cdn",
             "externalServiceEmbedType": "js",
@@ -47,7 +44,6 @@
     "Datawrapper_CDN_NoResponsiveFixedHeight": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": false,
             "externalServiceId": "datawrapper_cdn",
             "externalServiceEmbedType": "js",
@@ -63,7 +59,6 @@
     "Datawrapper_CDN_NoResponsiveAspectRatio": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": false,
             "externalServiceId": "datawrapper_cdn",
             "externalServiceEmbedType": "js",
@@ -79,7 +74,6 @@
     "Datawrapper_CDN": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": true,
             "embedAsIFrame": false,
             "externalServiceId": "datawrapper_cdn",
             "externalServiceEmbedType": "js",
@@ -95,7 +89,6 @@
     "Esri": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "esri",
             "externalServiceEmbedType": "iFrame",
@@ -111,7 +104,6 @@
     "Facebook": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": false,
             "externalServiceId": "facebook-post",
             "externalServiceEmbedType": "js",
@@ -125,7 +117,6 @@
     "Flourish": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "flourish",
             "externalServiceEmbedType": "iFrame",
@@ -140,7 +131,6 @@
     "Giphy": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "giphy",
             "externalServiceEmbedType": "iFrame",
@@ -154,7 +144,6 @@
     "Instagram": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": false,
             "externalServiceId": "instagram",
             "externalServiceEmbedType": "js",
@@ -168,7 +157,6 @@
     "Twitter": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": false,
             "externalServiceId": "twitter-post",
             "externalServiceEmbedType": "js",
@@ -182,7 +170,6 @@
     "Vimeo": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "vimeo",
             "externalServiceEmbedType": "iFrame",
@@ -196,7 +183,6 @@
     "Youtube": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "youtube",
             "externalServiceEmbedType": "iFrame",
@@ -211,7 +197,6 @@
     "Youtube_360": {
         "externalServiceConfig": {
             "makeConfigurable": true,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": true,
             "externalServiceId": "youtube360",
             "externalServiceEmbedType": "iFrame",
@@ -227,7 +212,6 @@
     "Wahl_Gemeinde_Ergebnis": {
         "externalServiceConfig": {
             "makeConfigurable": false,
-            "makeDatapolicyCheck": false,
             "embedAsIFrame": false,
             "externalServiceId": "wahl-gemeinde-ergebnis",
             "externalServiceEmbedType": "js",
