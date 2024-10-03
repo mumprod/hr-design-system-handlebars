@@ -11,10 +11,13 @@
             {{/inline}}  
         {{/with}}   
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>  
-        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
-            <span class="sr-only">Zur Seite: </span>
-            {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
-        {{/components/button/link_button}}
+        {{#with this}}
+            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                <span class="sr-only">Zur Seite: </span>
+                {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
+            {{/components/button/link_button}}
+            {{#*inline "htmlProperties"}}{{/inline}}
+        {{/with}}
         {{> components/pagination/pagination_button_right_linked }} 
     </div>     
 {{else}}   
@@ -35,10 +38,13 @@
             {{/inline}}  
         {{/with}}   
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>   
-        {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
-            <span class="sr-only">Zur Seite: </span>
-            {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
-        {{/components/button/link_button}}
+        {{#with this}}
+            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                <span class="sr-only">Zur Seite: </span>
+                {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
+            {{/components/button/link_button}}
+            {{#*inline "htmlProperties"}}{{/inline}}
+        {{/with}}
         {{> components/pagination/pagination_button_right_linked }} 
     </div>   
     {{else}}
@@ -62,10 +68,13 @@
                 {{~#if _notLastButOnePage~}}   
                     <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>   
                 {{~/if~}}   
-            {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
-                <span class="sr-only">Zur Seite: </span>
-                {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
-            {{/components/button/link_button}}
+                {{#with this}}
+                    {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
+                        <span class="sr-only">Zur Seite: </span>
+                        {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
+                    {{/components/button/link_button}}
+                    {{#*inline "htmlProperties"}}{{/inline}}
+                {{/with}}
             {{~/if~}}      
             {{~#if _notLastPage~}}   
                 {{> components/pagination/pagination_button_right_linked }}  
