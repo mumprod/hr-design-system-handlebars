@@ -1,7 +1,7 @@
 export default function inputHandler(element, errorMandatory, type, errorEmail, prefilledText = '') {
     return { 
         [element]: prefilledText,
-        valid: false, 
+        valid: true, 
         wasFocused: false, 
         isFocused: false,
         validEmail: false,

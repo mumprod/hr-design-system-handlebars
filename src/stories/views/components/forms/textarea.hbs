@@ -1,11 +1,13 @@
-<div class="relative flex flex-col w-full mb-5" x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: false, wasFocused: false, isFocused: false}">
+<div class="relative flex flex-col w-full mb-5"
+x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: true, wasFocused: false, isFocused: false}"
+:class="{'animate-shake': !valid && wasFocused && !isFocused }">
    <div class="w-full h-4 bg-white"></div>
    <textarea
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
       {{#if _required}}
          @focus="isFocused = true"
-         @blur="wasFocused = true; isFocused=false"
+         @blur="wasFocused = true; isFocused=false; textarea{{getRandom}}.length > 0 ? valid = true : valid = false"
          x-on:keyup ="textarea{{getRandom}}.length > 0 ? valid = true : valid = false"
       {{/if}}
       value=""
