@@ -1,3 +1,15 @@
+# v1.103.9 (Fri Oct 04 2024)
+
+#### 🐛 Bug Fix
+
+- add empty htmlProperties in pagination [#1089](https://github.com/mumprod/hr-design-system-handlebars/pull/1089) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.103.8 (Wed Oct 02 2024)
 
 #### 🐛 Bug Fix
