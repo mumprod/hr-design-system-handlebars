@@ -3,7 +3,7 @@
     <div class="flex items-center">
         <label class="order-2 cursor-pointer {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant='primary'}} {{> components/button/utilities/button_dimension_classes _size='lg'}}">     
             {{> components/base/image/icon _icon="send-ds" _addClass="w-5 h-5 fill-white dark:fill-text-dark "}}
-            <input type="submit" class="pl-2 cursor-pointer" value="Absenden" />
+            <input type="submit" class="pl-2 cursor-pointer" value="Absenden" @click.prevent="clickHandler"/>
         </label>
 
         {{#> components/button/button _variant="tertiary"_size="lg" _css="order-1 mr-4" _type="reset"}} 

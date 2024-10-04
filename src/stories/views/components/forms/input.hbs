@@ -1,4 +1,5 @@
-<div class="relative flex flex-col w-full mb-5 {{_wrapperClass}}"
+<div class="  relative flex flex-col w-full mb-5 {{_wrapperClass}}"
+   :class="{'animate-shake': hideDescription() }"
    ax-load
    x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
    x-ignore
@@ -7,9 +8,10 @@
       :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
+      x-bind:data-is-valid="valid ? 'true' : 'false'" 
       {{#if _required}}
          @focus="isFocused = true;"
-         @blur="wasFocused = true; isFocused=false"
+         @blur="wasFocused = true; isFocused=false; input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
          x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
       {{/if}}
       type="{{#if _type}}{{_type}}{{/if}}"
