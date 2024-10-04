@@ -1,3 +1,15 @@
+# v1.103.10 (Fri Oct 04 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Send Form INIT DPE-3384 [#1090](https://github.com/mumprod/hr-design-system-handlebars/pull/1090) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.103.9 (Fri Oct 04 2024)
 
 #### 🐛 Bug Fix
