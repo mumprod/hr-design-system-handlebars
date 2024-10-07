@@ -14,3 +14,6 @@
             </div>
         </div>
 </div>
+{{~#if (isStorybook)~}}
+<div id="{{this.externalServiceConfig.externalServiceId}}" data-whitelist="{{this.externalServiceConfig.makeDatapolicyCheck}}"></div>
+{{/if}}
