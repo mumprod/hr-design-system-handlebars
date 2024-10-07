@@ -1,3 +1,15 @@
+# v1.105.1 (Mon Oct 07 2024)
+
+#### 🐛 Bug Fix
+
+- ♻️ Refactor Send Button Validation check - DPE-3384 Refactoring [#1093](https://github.com/mumprod/hr-design-system-handlebars/pull/1093) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.105.0 (Mon Oct 07 2024)
 
 #### 🚀 Enhancement
