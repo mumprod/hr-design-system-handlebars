@@ -6,9 +6,59 @@
             {{this.title}}
         </h3>
         
-        <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
+        <form x-data="contactForm()"
+            
+            @submit.prevent="submitData"
+            x-ref="contactFormRef" 
+            class="relative flex flex-col justify-center overflow-hidden group" 
+            id="form--{{nextRandom}}" 
+            action="{{this.url}}" 
+            method="post" 
+            enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" 
+            accept-charset="utf-8" >     
             {{> components/forms/fields }}
+
+            {{> components/forms/controls }}
         </form>
+        <script>
+        function contactForm() {
+            return {
+                formData: {
+                    name: '',
+                    email: '',
+                    message: ''
+                },
+                clickHandler() {
+                    console.log('check for Error ');
+                    const form = this.$refs.contactFormRef;
+                    const formData = new FormData(form);
+                    const fields = Array.from(form.elements); // Array of all form fields
+
+                    // Loop through each field, focus it, blur it, and serialize the data
+                    fields.forEach((field) => {
+                        if (field.type !== 'submit') {  // Skip the submit button
+                            field.focus();  // Focus the field
+                            field.blur();   // Immediately unfocus (blur) the field
+                        }
+                    });
+                    if(form.reportValidity()){
+                        this.submitData();
+                    }
+                    
+                },
+                submitData() {
+                    const formData = new FormData(this.$refs.contactFormRef);
+                    // Convert the FormData to a serialized string
+                    const serializedData = Array.from(formData.entries())
+                        .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+                        .join('&');
+
+                    // Log the serialized form data
+                    console.log('DATA: ' + serializedData);
+                }
+            }
+        }
+    </script>
     {{/components/forms/backgroundBox }}
 {{~else~}}
     {{> content/webform/components/webform _addClass="print:hidden copytext__clearBox marginTrailer--m"}}

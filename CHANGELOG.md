@@ -1,3 +1,51 @@
+# v1.103.10 (Fri Oct 04 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Send Form INIT DPE-3384 [#1090](https://github.com/mumprod/hr-design-system-handlebars/pull/1090) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.103.9 (Fri Oct 04 2024)
+
+#### 🐛 Bug Fix
+
+- add empty htmlProperties in pagination [#1089](https://github.com/mumprod/hr-design-system-handlebars/pull/1089) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.103.8 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- ✨ Send Button DPE-3384 [#1087](https://github.com/mumprod/hr-design-system-handlebars/pull/1087) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.103.7 (Wed Oct 02 2024)
+
+#### 🐛 Bug Fix
+
+- use correct Method-call [#1088](https://github.com/mumprod/hr-design-system-handlebars/pull/1088) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.103.6 (Wed Oct 02 2024)
 
 #### 🐛 Bug Fix
