@@ -1,3 +1,15 @@
+# v1.105.0 (Mon Oct 07 2024)
+
+#### 🚀 Enhancement
+
+- :recycle: rename property makeDataPolicyCheck to isWhitelisted [#1092](https://github.com/mumprod/hr-design-system-handlebars/pull/1092) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.104.0 (Mon Oct 07 2024)
 
 #### 🚀 Enhancement
