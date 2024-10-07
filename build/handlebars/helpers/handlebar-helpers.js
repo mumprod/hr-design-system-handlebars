@@ -538,6 +538,30 @@ var helpers = {
     'strip': function (input, param) {
         return input
     },
+    /**
+     * Handlebars Helper: joinString
+     * 
+     * This helper function concatenates multiple strings or numbers into a single string.
+     * It filters out non-string and non-numeric values (such as objects, arrays, or null) 
+     * to prevent invalid data from being included in the final result.
+     * 
+     * Usage:
+     * {{joinString 'form' (generateRandom)}}
+     * 
+     * Example Output:
+     * If 'form' is passed as the first argument and the `generateRandom` function returns 408,
+     * the output will be: 'form408'.
+     * 
+     * Notes:
+     * - Strings and numbers are included in the final concatenation.
+     * - Objects, arrays, and other non-string, non-number types are ignored.
+     * 
+     * Function implementation:
+     */
+    'joinStrings': function (...args) {    
+        return args.filter(arg => typeof arg === 'string' || typeof arg === 'number').join('');
+    }
+
 }
 
 // Export helpers

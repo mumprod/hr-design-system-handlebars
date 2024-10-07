@@ -20,7 +20,7 @@ AsyncAlpine.init(Alpine)
     
     .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .data('inputHandler', ()=> import('components/forms/inputHandler.alpine.js'))
-    .data('selectHandler', ()=> import('components/forms/selectHandler.alpine.js'))
+    .data('contactForm', ()=> import('components/forms/contactForm.alpine.js'))
     .start()
 
 window.Alpine = Alpine
@@ -51,6 +51,9 @@ Alpine.store('sharingIsOpen', {
 })
 Alpine.store('sharingBottomPos', {
     current: '0'
+})
+Alpine.store('forms', {
+    submissionAttempted: []
 })
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)
