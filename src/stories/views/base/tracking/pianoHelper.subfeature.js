@@ -1,4 +1,4 @@
-import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature';
+import SettingsCookie from 'components/external-service/globalSettingsCookie.subfeature';
 
 const pianoErrorSecondLevelId = 99;
 

@@ -54,7 +54,7 @@ der globale Konfiguration überschrieben und neue Konfigurationen für die Story
 | :---------- | :--------------------------------------------------- |:--------------------------------------------------- |
 | **template** | Erlaubt es den Namen eines individuellen Templates zum Rendering der Story anzugeben. Wird nichts angegeben, wird das in der globalen Konfiguration definierte zum Rendering verwendet.||
 | **path**     | Erlaubt es einen Storyspezifischen Pfad zu den Testdaten anzugeben. Wird hier nichts angegeben wird der Wert aus der globalen Konfiguration genutzt  ||
-| **renderSnapshotItemWrapper** | Legt fest, ob das Markup der Story von einem `<div>` umschlossen wird. Das Setzen dieser Eigenschaft hat nur eine Auswirkung, wenn die globale Eigenschaft `renderSnapshotsWrapper` auf `true`steht.   |`true`|
+| **renderSnapshotItemWrapper** | Legt fest, ob das Markup der Story von einem `<div>` umschlossen wird. Der Standardwert dieser Eigenschaft entspricht dem Wert der globalen Eigenschaft `renderSnapshotsWrapper`.   |Wert der globalen Eigenschaft `renderSnapshotsWrapper` |
 | **css**   | Hierüber besteht die Möglichkeit individuelle CSS Klassen für das eine Story umschließende Wrapper `<div>` zu setzen.  ||
 | **useAsSnapshot**   | Hierüber kann gesteuert werden, ob einzelne Stories nicht in der Snapshot-Story gerendert werden sollen.  |`true`|
 

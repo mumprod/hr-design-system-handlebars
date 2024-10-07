@@ -1,0 +1,65 @@
+{
+    "config": {
+        "template": "default",
+        "layout": "grid",
+        "renderSnapshotsWrapper": false,
+        "path": "args.logicItem.includeModel"
+    },
+    "100": {
+        "config": {
+            "renderSnapshotItemWrapper": true,
+            "css": "grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "eventCalendarTeaser",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includePath",
+                    "@->value": "components/teaser/teaser_alternative"
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.teaserSize",
+                    "@->value": "100"
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.label",
+                    "@->value": {
+                        "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                        "@->contentpath": "eventLabelCalendar"
+                    }
+                }
+            ]
+        }
+    },
+    "100_no_future_events": {
+        "config": {
+            "renderSnapshotItemWrapper": true,
+            "css": "grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main"
+        },
+        "args": {
+            "@->jsoninclude": "teaser/teasers.inc.json",
+            "@->contentpath": "eventCalendarTeaser",
+            "@->overrides": [
+                {
+                    "@->contentpath": "logicItem.includeModel.eventCalendar.hasFutureEventsFromNow",
+                    "@->value": false
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.eventCalendar.months",
+                    "@->value": {
+                        "@->jsoninclude": "event/calendar/event_calendar_months.inc.json",
+                        "@->contentpath": "onlyMonthsInPast"
+                    }
+                },
+                {
+                    "@->contentpath": "logicItem.includeModel.label",
+                    "@->value": {
+                        "@->jsoninclude": "teaser/teaser_labels.inc.json",
+                        "@->contentpath": "eventLabelCalendar"
+                    }
+                }
+            ]
+        }
+    }
+}

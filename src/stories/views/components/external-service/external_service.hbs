@@ -1,6 +1,6 @@
 {{#if this.externalServiceConfig.makeConfigurable}}
     <!-- Embedding via JS with DataPolicyCheck-->  
-    {{> components/externalService/external_service_with_datapolicy_check _isTeaser=_isTeaser}}
+    {{> components/external-service/external_service_with_datapolicy_check _isTeaser=_isTeaser}}
 
 {{else}}
     
@@ -20,7 +20,7 @@
                     data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType": "{{this.externalServiceConfig.externalServiceEmbedType}}","dataPolicyCheck": false,"whiteList": false,"iFrameConfig":{}}'>
                 </div>  
             {{/if}}    
-            {{~> components/externalService/components/external_service_caption ~}}
+            {{~> components/external-service/components/external_service_caption ~}}
             <span class="sr-only">{{loca "story_externalservice_outro_sr" }}</span>    
         </div>
     {{/if}}

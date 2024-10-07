@@ -1,13 +1,20 @@
-import teaserEventCalendar from '../../components/teaser/teaser_event_calendar.hbs'
-import teaserEventCalendar100Serif from './fixtures/teaser_event_calendar_100_serif.json'
-import teaserEventCalendarWithNoFutureEventsData from './fixtures/teaser_event_calendar_100_no_future_events.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/teaser_event_calendar.json'
 
-const TemplateEventCalendarTeaser = (args, { globals: { customConditionalToolbar } }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    let brand =
-        undefined !== customConditionalToolbar ? customConditionalToolbar['brands'] : 'hessenschau'
-    return teaserEventCalendar({ brand, ...args })
+
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+    {{> components/teaser/teaser_event_calendar }}   
+  `)
+
+
+const Template = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
@@ -17,6 +24,7 @@ export default {
         layout: 'fullscreen',
         chromatic: {
             diffThreshold: 0.3,
+            disableSnapshot: true
         },
     },
 
@@ -39,57 +47,47 @@ export default {
 
     decorators: [
         (Story) => {
-            return `<div class="grid grid-page"><div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+            return `<div class="grid grid-page">  
              ${Story()} 
-             </div></div>`
+             </div>`
         },
     ],
 }
 
 export const Teaser100 = {
-    render: TemplateEventCalendarTeaser.bind({}),
+    render: Template.bind({}),
     name: 'Teaser 100',
-
-    argTypes: {
-        teaserSize: {
-            control: {
-                type: 'select',
-                options: ['50', '100'],
-            },
-
-            description: 'Teaser Größe',
-
-            table: {
-                defaultValue: {
-                    summary: '100',
-                },
-            },
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
         },
-    },
+    ],
 
-    args: teaserEventCalendar100Serif.logicItem.includeModel,
+    args: fixtures["100"].args.logicItem.includeModel,
 }
 
 export const Teaser100KeineEventsInDerZukunft = {
-    render: TemplateEventCalendarTeaser.bind({}),
+    render: Template.bind({}),
     name: 'Teaser 100 Keine Events in der Zukunft',
-
-    argTypes: {
-        teaserSize: {
-            control: {
-                type: 'select',
-                options: ['50', '100'],
-            },
-
-            description: 'Teaser Größe',
-
-            table: {
-                defaultValue: {
-                    summary: '100',
-                },
-            },
+    decorators: [
+        (Story) => {
+            return `<div class="grid grid-cols-12 py-6 col-full gap-x-6 gap-y-6 sm:px-9.5 sm:col-main">  
+             ${Story()} 
+             </div>`
         },
-    },
+    ],
 
-    args: teaserEventCalendarWithNoFutureEventsData.logicItem.includeModel,
+    args: fixtures["100_no_future_events"].args.logicItem.includeModel,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }

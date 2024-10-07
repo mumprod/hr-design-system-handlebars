@@ -5,15 +5,15 @@
     <div>
         <p class="pt-4 text-base font-copy">
             {{loca "ext_service_datapolicy_text" this.externalServiceConfig.externalServiceName}}
-            {{~> components/externalService/components/data_policy_link ~}}
+            {{~> components/external-service/components/data_policy_link ~}}
         </p>
         <div class="pt-4">
-            {{~> components/externalService/components/external_service_form_checkbox ~}}
+            {{~> components/external-service/components/external_service_form_checkbox ~}}
         </div>
         <div class="float-right pt-4">
             {{#with this}}
                 <div class="inline-flex">
-                 {{~> components/externalService/components/external_service_settings_button _css="js-settings-inner-button"~}}
+                 {{~> components/external-service/components/external_service_settings_button _css="js-settings-inner-button"~}}
                 {{#*inline "htmlProperties"}}
                     data-piano-tracking='{"label":"DSGVO-Overlay"}'
                     data-a11y-dialog-show="datapolicy-settings-dialog"
@@ -21,7 +21,7 @@
                 </div>
             {{/with}}
             <div class="inline-flex">
-            {{~> components/externalService/components/external_service_load_content_button ~}}
+            {{~> components/external-service/components/external_service_load_content_button ~}}
             {{#*inline "htmlProperties"}}{{/inline}}
             </div>
         </div>

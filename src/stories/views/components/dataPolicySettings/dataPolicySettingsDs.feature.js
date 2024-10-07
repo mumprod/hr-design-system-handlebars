@@ -1,4 +1,4 @@
-import SettingsCookie from 'components/externalService/globalSettingsCookie.subfeature'
+import SettingsCookie from 'components/external-service/globalSettingsCookie.subfeature'
 import { fireEvent, getJSONCookie, hr$, setJSONCookie, listen } from 'hrQuery'
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
@@ -22,7 +22,7 @@ const DataPolicySettings = function (context) {
 
     //Überprüfung ein Settings-Cookie da ist
     const checkForExistingCookies = function () {
-    
+
         if (getJSONCookie('hrSettings')) {
             getAllToggleValuesFromSettings()
         }
@@ -31,16 +31,16 @@ const DataPolicySettings = function (context) {
             //Wenn kein Cookie vorhanden wird diese initial über die Checkbox "Dienst ist initial immer aktiviert (Whitelist)"
             //im Konfig-Dokument bestückt.
             for (var i = 0; i < toggleSwitches.length; ++i) {
-              if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
-                toggleSwitches[i].checked = true;
-              }
-              else{
-                toggleSwitches[i].checked = false;
-              }
-              setAllToggleEventListeners(toggleSwitches[i]);
-              initializeAllToggleEventListeners(i);
+                if (toggleSwitches[i].getAttribute('data-whitelist') == "true") {
+                    toggleSwitches[i].checked = true;
+                }
+                else {
+                    toggleSwitches[i].checked = false;
+                }
+                setAllToggleEventListeners(toggleSwitches[i]);
+                initializeAllToggleEventListeners(i);
             }
-        changeProviderTitle();
+            changeProviderTitle();
         }
     }
 
@@ -62,39 +62,39 @@ const DataPolicySettings = function (context) {
         var id;
         console.log("Setze alle Settings-Regler")
         for (var i = 0; i < toggleSwitches.length; ++i) {
-          id = toggleSwitches[i].id;
-          if(settingsCookie.isSettingsCookieExistent(id)){
-            console.log("Dienst "+ id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
-            if(settingsCookie.isSettingsCookieAccepted(id)) {
-              console.log("Aktiviere den Toggle")
-              toggleSwitches[i].checked = true;
+            id = toggleSwitches[i].id;
+            if (settingsCookie.isSettingsCookieExistent(id)) {
+                console.log("Dienst " + id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
+                if (settingsCookie.isSettingsCookieAccepted(id)) {
+                    console.log("Aktiviere den Toggle")
+                    toggleSwitches[i].checked = true;
+                }
+                else {
+                    console.log("Deaktiviere den Toggle")
+                    toggleSwitches[i].checked = false;
+                }
             }
-            else{
-              console.log("Deaktiviere den Toggle")
-              toggleSwitches[i].checked = false;
+            else {
+                console.log("Dienst " + id + " ist im Cookie nicht enthalten, prüfe daher den Default")
+                var whiteList = document.getElementById(id).getAttribute("data-whitelist")
+                if (whiteList == 'true') {
+                    console.log("Ist per Default eingeschaltet")
+                    console.log("Aktiviere den Toggle")
+                    toggleSwitches[i].checked = true;
+                }
+                else {
+                    console.log("Ist per Default ausgeschaltet")
+                    console.log("Deaktiviere den Toggle")
+                    toggleSwitches[i].checked = false;
+                }
+
             }
-          }
-          else{
-            console.log("Dienst "+ id + " ist im Cookie nicht enthalten, prüfe daher den Default")
-            var whiteList = document.getElementById(id).getAttribute("data-whitelist")
-            if(whiteList == 'true'){
-              console.log("Ist per Default eingeschaltet")
-              console.log("Aktiviere den Toggle")
-              toggleSwitches[i].checked = true;
-            }
-            else{
-              console.log("Ist per Default ausgeschaltet")
-              console.log("Deaktiviere den Toggle")
-              toggleSwitches[i].checked = false;
-            }
-    
-          }
-          setAllToggleEventListeners(toggleSwitches[i]);
-          initializeAllToggleEventListeners(i);
+            setAllToggleEventListeners(toggleSwitches[i]);
+            initializeAllToggleEventListeners(i);
         }
         toggleAllSwitch.checked = allTogglesExternalServiceChecked()
     }
-    
+
     const initializeAllToggleEventListeners = function (serviceId) {
         listen(
             'hr:externalService-activate-' + toggleSwitches[serviceId].id,
