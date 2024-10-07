@@ -1,6 +1,6 @@
 <div class="relative flex flex-col w-full mb-5 "
    ax-load
-   x-data="selectHandler('select{{nextRandom}}')"
+   x-data="inputHandler('select{{nextRandom}}', '{{_formId}}','select')"
    x-ignore
 >
     <select
@@ -43,17 +43,12 @@
     ">      
         {{_label}}{{#if _required}}*{{/if}}
     </label>
-    {{#if _required}}
-      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-14">
-            {{> components/forms/error_icon _xclass="{'hidden': hideError() }"}}
-      </div>
-    {{/if}}
     <div class="flex items-end justify-between h-5 font-heading">     
         {{#if _description}}  
-            <div class="pl-4 text-xs text-gray-500 " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
+            <div class="pl-4 text-xs text-gray-500 " :class="{'hidden': hideDescription()}">{{_description}}</div>
         {{/if}}
         {{#if _required}}
-            <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
+            <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
         {{/if}}
     </div>
     <div class="absolute right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">

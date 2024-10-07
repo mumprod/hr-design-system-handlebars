@@ -1,19 +1,17 @@
 <div class="  relative flex flex-col w-full mb-5 {{_wrapperClass}}"
-   :class="{'animate-shake': hideDescription() }"
    ax-load
-   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
+   x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
+   x-init="validateField()"
    x-ignore
    >
    <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-blue-500 pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
       :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
-      x-bind:data-is-valid="valid ? 'true' : 'false'" 
-      {{#if _required}}
-         @focus="isFocused = true;"
-         @blur="wasFocused = true; isFocused=false; input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
-         x-on:keyup ="input{{getRandom}}.length > 0 ? valid = true : valid = false; validateEmail()"
-      {{/if}}
+      x-bind:data-is-valid="valid ? 'true' : 'false'"     
+      @focus="isFocused = true;"
+      @blur="wasFocused = true; isFocused=false; validateField();"
+      x-on:keyup ="validateField();"
       type="{{#if _type}}{{_type}}{{/if}}"
       name="{{#if _name}}{{_name}}{{/if}}"
       {{#if _locaKey}}
@@ -61,20 +59,35 @@
         {{/if}}
       {{/if}}
    </label> 
-   {{#if _required}}
-      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
-         {{> components/forms/error_icon _xclass="{'hidden': hideError() }"}}
-      </div>
-  {{/if}}
+   
+   <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
+      {{> components/forms/error_icon _xclass="{'hidden': hideError() }"}}
+   </div>
+ 
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
-      {{#if _required}}
-         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
-      {{/if}}
-      {{#if _maxLength}}
-         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="input{{getRandom}}.length">0</span>/{{_maxLength}}</div>
-      {{/if~}}
+      
+      <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      
+   </div>
+   <div class="hidden">
+      <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
+         DEBUG
+      </div>
+      <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
+         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+        
+         <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
+         <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>   
+         <div>input.length:<span x-text="input{{getRandom}}.length " class="font-bold" ></span></div>  
+         <div>input:<span x-text="input{{getRandom}}" class="font-bold" ></span></div>
+         <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>
+         <div>valueMissing:<span x-text="valueMissing" class="font-bold" ></span></div>
+         <div>typeMismatch:<span x-text="typeMismatch" class="font-bold" ></span></div>
+      </div> 
    </div>
 </div>

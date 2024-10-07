@@ -1,12 +1,12 @@
 <div class="relative flex flex-col w-full {{#unless _inGroup}} mb-6 md:mb-12{{/unless}} gap-y-4 md:gap-y-5" 
    ax-load
-   x-data="inputHandler('input{{nextRandom}}','{{_errorMandatory}}','{{_type}}')"
+   x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','{{_type}}')"
    x-ignore
 >
 <div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
   <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer {{~inline-switch _type '["checkbox","radio"]' '["  border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent","  border-blue-science-hex checked:bg-white checked:border-blue-congress-hex rounded-full",""]'}}"
       :class="{' border-blue-science-hex': hideError(),'border-red-700': hideDescription() }"
-      @change="validateInput"
+      @change="input{{getRandom}}.checked ? valid = true : valid = false;"
       x-model="isChecked"
       id="input{{getRandom}}"
       {{#if _required}}
