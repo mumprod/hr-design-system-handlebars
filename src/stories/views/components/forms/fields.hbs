@@ -13,7 +13,6 @@
         {{/if}}
         
     {{else}}
-
         <div class="js-wrapper-{{this.name}}">
             {{#if this.type.isTextarea}}
                 {{~> components/forms/textarea
@@ -27,6 +26,7 @@
                     _required=this.isRequired
                     _maxLength=this.maxLength
                     _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
+                    _formId=../_formId
                 }}
             {{else if this.type.isText}}
                 {{~> components/forms/input
@@ -43,6 +43,7 @@
                     _maxLength=this.maxLength
                     _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
                     _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
+                    _formId=../_formId
                 }}
             {{else if this.type.isSelect}}
                 {{~> components/forms/select
@@ -53,6 +54,7 @@
                     _items=this.options
                     _required=this.isRequired
                     _errorMessage="Bitte füllen Sie dieses Pflichtfeld aus"
+                    _formId=../_formId
                 }}
             {{else if this.type.isChoice}}
                 {{#if this.isGrouped }}
@@ -66,7 +68,7 @@
                         _multipleChoice=../_multipleChoice
                         _addClass=../_addClass
                         _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
-
+                        _formId=../_formId  
                     }}
                 {{else}}
                     {{~> components/forms/choice
@@ -79,6 +81,7 @@
                         _required=this.isRequired
                         _selected= this.options.[0].isSelected
                         _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
+                        _formId=../_formId
                     }}
                 {{/if}}
             {{else if this.type.isUpload}}
@@ -89,6 +92,7 @@
                     _multiple=false
                     _required=this.isRequired
                     _locaKeyButton="uploadForm_label_file_button"
+                    _formId=../_formId
                 }}
             {{/if}}
         </div>
