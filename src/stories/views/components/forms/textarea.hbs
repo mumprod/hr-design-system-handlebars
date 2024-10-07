@@ -1,6 +1,9 @@
 <div class="relative flex flex-col w-full mb-5"
-x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}' , valid: true, wasFocused: false, isFocused: false}"
-:class="{'animate-shake': !valid && wasFocused && !isFocused }">
+   ax-load
+   x-data="inputHandler('textarea{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','textarea','','{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
+   x-init="validateField()"
+   x-ignore
+>
    <div class="w-full h-4 bg-white"></div>
    <textarea
       x-model="textarea{{getRandom}}"
@@ -33,7 +36,7 @@ x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHt
       {{#if _required}}required{{/if}}
       class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
-         :class="{'border-blue-500': valid || !wasFocused || isFocused,'border-red-500': !valid && wasFocused  && !isFocused}"
+         :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
       {{/if}}
    >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
@@ -57,16 +60,16 @@ x-data="{ textarea{{nextRandom}}: '{{#if _formField.isValid}}{{{_formField.forHt
       {{/if}}
    </label>
    {{#if _required}}
-      <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
-         {{> components/forms/error_icon _xclass="{'hidden': valid || !wasFocused || isFocused }"}}
-      </div>
+         <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
+            {{> components/forms/error_icon _xclass="{'hidden': hideError() }"}}
+         </div>
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500 min-h- " {{#if _required}}:class="{'hidden': !valid && wasFocused && !isFocused}"{{/if}}>{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': valid || !wasFocused || isFocused}" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
