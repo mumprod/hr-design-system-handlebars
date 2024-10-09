@@ -4,8 +4,7 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     // workaround damit darkmode nur in der Webview in Delivery funktioniert
-    darkMode: ['class', "[class~='tw-dark']"],
-
+    darkMode: 'selector',
     experimental: {
         optimizeUniversalDefaults: true,
     },
@@ -44,15 +43,15 @@ module.exports = {
         },
 
         extend: {
-            animation:{
+            animation: {
                 'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
             },
             keyframes: {
-                'shake' : {
+                'shake': {
                     '10%, 90%': {
                         transform: 'translate3d(-1px, 0, 0)'
                     },
-                    '20%, 80%' : {
+                    '20%, 80%': {
                         transform: 'translate3d(2px, 0, 0)'
                     },
                     '30%, 50%, 70%': {
@@ -453,7 +452,6 @@ module.exports = {
         },
     },
     plugins: [
-        require('tailwindcss-important')(),
         // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
         ({ addUtilities, e, theme, variants }) => {
             const colors = flattenColorPalette(theme('borderColor'))
@@ -470,7 +468,5 @@ module.exports = {
             addUtilities(utilities, variants('borderColor'))
         },
         require('tailwindcss-counter')(),
-        require('@tailwindcss/line-clamp'),
-        require('tailwindcss-hyphens'),
     ],
 }
