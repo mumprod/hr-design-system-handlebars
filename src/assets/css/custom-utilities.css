@@ -405,31 +405,28 @@
         content: attr(data-prop-loading);
     }
 
-    @responsive {
-        .brand-logo-size-lg {
-            padding-top: var(--logo-padding-top-lg);
-            padding-bottom: var(--logo-padding-bottom-lg);
-        }
-        .brand-logo-size-md {
-            padding-top: var(--logo-padding-top-md);
-            padding-bottom: var(--logo-padding-bottom-md);
-        }
-        .brand-logo-size {
-            padding-top: var(--logo-padding-top);
-            padding-bottom: var(--logo-padding-bottom);
-        }
+    .brand-logo-size-lg {
+        padding-top: var(--logo-padding-top-lg);
+        padding-bottom: var(--logo-padding-bottom-lg);
+    }
+    .brand-logo-size-md {
+        padding-top: var(--logo-padding-top-md);
+        padding-bottom: var(--logo-padding-bottom-md);
+    }
+    .brand-logo-size {
+        padding-top: var(--logo-padding-top);
+        padding-bottom: var(--logo-padding-bottom);
     }
 
     /*! ****************************/
     /*! Search-Box-border          */
     /*! ****************************/
-    @responsive {
-        .search-border-mobile {
-            border-color: var(--search-border-color-mobile);
-        }
-        .search-border-desktop {
-            border-color: var(--search-border-color-desktop);
-        }
+
+    .search-border-mobile {
+        border-color: var(--search-border-color-mobile);
+    }
+    .search-border-desktop {
+        border-color: var(--search-border-color-desktop);
     }
 
     /*! ***********************************/
@@ -450,15 +447,15 @@
     /*! FORMULAR SELECT          */
     /*! ****************************/
     /* Custom CSS to style the label when the first empty option is selected */
-    select:has(option:checked:not([value=""])) + label{
-        @apply top-px scale-75 translate-y-0
+    select:has(option:checked:not([value=''])) + label {
+        @apply top-px scale-75 translate-y-0;
     }
 
-    select:has(option:checked[value=""]) {
-        @apply text-transparent
+    select:has(option:checked[value='']) {
+        @apply text-transparent;
     }
 
-    input[type="checkbox"]:checked::after {
+    input[type='checkbox']:checked::after {
         position: absolute;
         content: '';
         width: 15px;
@@ -472,10 +469,10 @@
         transform: rotate(-45deg);
     }
 
-    input[type="radio"]::after {
+    input[type='radio']::after {
         content: '';
         position: absolute;
-        width: 16px; 
+        width: 16px;
         height: 16px;
         top: 50%;
         left: 50%;
@@ -483,9 +480,8 @@
         background-color: var(--color-primary-ds);
         border-radius: 50%;
     }
-    
-    input[type="radio"]:checked::after {
-        transform: translate(-50%, -50%) scale(1); 
+
+    input[type='radio']:checked::after {
+        transform: translate(-50%, -50%) scale(1);
     }
-    
 }

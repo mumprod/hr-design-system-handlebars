@@ -4,8 +4,7 @@ const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     // workaround damit darkmode nur in der Webview in Delivery funktioniert
-    darkMode: ['class', "[class~='tw-dark']"],
-
+    darkMode: 'selector',
     experimental: {
         optimizeUniversalDefaults: true,
     },
@@ -121,13 +120,6 @@ module.exports = {
                 2000: '2000ms',
             },
             padding: {
-                '1.5': '0.375rem',
-                '2.5': '0.625rem',
-                '5.5': '1.3125rem',
-                '6.5': '1.625rem',
-                '7.5': '1.875rem',
-                '11.5': '2.875rem',
-                '13': '3.25rem',
                 '3/4': '75%',
                 'logo-padding-top': 'var(--logo-padding-top)',
                 'logo-padding-bottom': 'var(--logo-padding-bottom)',
@@ -147,21 +139,31 @@ module.exports = {
                 '300': '300'
             },
             spacing: {
+                '4.5': '1.125rem',
+                '5.5': '1.375rem',
+                '6.5': '1.625rem',
+                '7.5': '1.875rem',
                 '9.5': '2.375rem',
+                '11.5': '2.875rem',
+                '13': '3.25rem',
+                '18': '4.5rem',
                 '22': '5.5rem',
+                '26': '6.5rem',
+                '30': '7.5rem',
+                '35': '8.75rem',
+                '42': '10.5rem',
+                '45': '11.25rem',
+                '46': '11.5rem',
+                '70': '17.5rem',
+                '88': '22rem',
+                '92': '23rem',
                 '135': '33.75rem',
+                '240': '60rem',
                 'stage': '56%',
                 'full-hd': '120rem',
                 'feature-box-height': 'var(--feature-box-height)'
             },
             width: {
-                '18': '4.5rem',
-                '30': '7.5rem',
-                '42': '10.5rem',
-                '46': '11.5rem',
-                '70': '17.5rem',
-                '88': '22rem',
-                '92': '23rem',
                 'half-screen': '50vw',
                 '15/12': '120%',
                 'footer-logo': 'var(--width-footer-logo)',
@@ -169,13 +171,6 @@ module.exports = {
                 'footer-logo-lg': 'var(--width-footer-logo-lg)',
             },
             height: {
-                '18': '4.5rem',
-                '22': '5.5rem',
-                '30': '7.5rem',
-                '35': '8.75rem',
-                '42': '10.5rem',
-                '45': '11.25rem',
-                '88': '22rem',
                 'header-lg-small': '8.8125rem',
                 'header-lg-big': '11.0625rem',
                 'header-md': '5.125rem',
@@ -187,11 +182,7 @@ module.exports = {
             maxHeight: {
                 stage: '34.3125rem',
             },
-            minHeight: ({ theme }) => ({
-                12: '3rem',
-                ...theme('spacing')
-            }),
-            maxWidth: ({ theme }) => ({
+            maxWidth: {
                 '1/4': '25%',
                 '1/3': '33.33333333%',
                 '2/4': '50%',
@@ -200,20 +191,8 @@ module.exports = {
                 '3/4': '75%',
                 '1/1': '100%',
                 'main-col': '63rem',
-                ...theme('spacing')
-            }),
-            minWidth: ({ theme }) => ({
-                ...theme('spacing')
-            }),
+            },
             margin: {
-                '4.5': '1.125rem',
-                '5.5': '1.375rem',
-                '6.5': '1.625rem',
-                '7.5': '1.875rem',
-                '13': '3.125rem',
-                '26': '6.5rem',
-                '30': '7.5rem',
-                '240': '60rem',
                 'half-screen': '50vw',
             },
             inset: {
@@ -453,7 +432,6 @@ module.exports = {
         },
     },
     plugins: [
-        require('tailwindcss-important')(),
         // plugin to separate border colors, found here: https://github.com/tailwindlabs/tailwindcss/pull/560
         ({ addUtilities, e, theme, variants }) => {
             const colors = flattenColorPalette(theme('borderColor'))
@@ -470,7 +448,5 @@ module.exports = {
             addUtilities(utilities, variants('borderColor'))
         },
         require('tailwindcss-counter')(),
-        require('@tailwindcss/line-clamp'),
-        require('tailwindcss-hyphens'),
     ],
 }
