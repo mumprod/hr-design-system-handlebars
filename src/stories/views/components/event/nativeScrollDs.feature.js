@@ -18,7 +18,7 @@ const NativeScroll = function (context) {
     }
     const doScroll = function (e) {
         let step = scrollbar.clientWidth - oneScrollbarItem.clientWidth * 1.5,
-            direction = e.currentTarget.classList.contains('-left') ? -1 : 1,
+            direction = e.currentTarget.classList.contains('js-left') ? -1 : 1,
             distance = direction * step
         console.log(
             '🚀 ~ file: nativeScroll.feature.js ~ line 22 ~ doScroll ~ direction',
@@ -90,14 +90,14 @@ const NativeScroll = function (context) {
             : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1
     }
 
-    if (hr$('.js-ns-scroll.-horizontal', rootElement).length > 0) {
-        scrollbar = hr$('.js-ns-scroll.-horizontal', rootElement)[0]
+    if (hr$('.js-ns-scroll.js-horizontal', rootElement).length > 0) {
+        scrollbar = hr$('.js-ns-scroll.js-horizontal', rootElement)[0]
         buttons = hr$('.js-ns-button', rootElement)
         oneScrollbarItem = hr$('.js-ns-item', rootElement)[0]
         hasNativeSmoothScroll = isNativeSmoothScrollEnabledOn(scrollbar)
-        let initiallySelectedMonth = hr$('.js-ns-month.-selected', rootElement)[0]
+        let initiallySelectedMonth = hr$('.js-ns-month.js-selected', rootElement)[0]
         if (!initiallySelectedMonth) {
-            initiallySelectedMonth = hr$('.js-ns-month.-currentMonth', rootElement)[0]
+            initiallySelectedMonth = hr$('.js-ns-month.js-currentMonth', rootElement)[0]
         }
 
         if (initiallySelectedMonth) {
@@ -114,7 +114,7 @@ const NativeScroll = function (context) {
         }
     } else {
         console.log(
-            'Kein NativeScroll Element gefunden:' + rootElement + ' .js-ns-scroll.-horizontal'
+            'Kein NativeScroll Element gefunden:' + rootElement + ' .js-ns-scroll.js-horizontal'
         )
     }
 }

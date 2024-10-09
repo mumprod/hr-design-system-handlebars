@@ -23,11 +23,11 @@ const Filterer = (context) => {
         errorDomNodes = hr$(`.${errorClass}`),
         contentTargetDomNode = hr$(contentTargetClass, rootElement)[0]
     let targetDomNodes = hr$(`.${targetClass}`, rootElement),
-         currentMonth = document.getElementsByClassName('-currentMonth')[0];
+        currentMonth = document.getElementsByClassName('js-currentMonth')[0];
 
-    const init = function () {          
-            currentMonth.classList.add('text-white');
-            currentMonth.classList.add('bg-black');
+    const init = function () {
+        currentMonth.classList.add('text-white');
+        currentMonth.classList.add('bg-black');
 
 
         for (let i = 0; i < triggerDomNodes.length; i++) {
@@ -73,15 +73,15 @@ const Filterer = (context) => {
 
     const doSetSelectedFilter = function (e, forceReset) {
         clearSelected()
-        
-        
+
+
         let monthWrapper = e.currentTarget.closest('.js-ns-month');
-        let monthName = monthWrapper.querySelector('.js-monthName');    
-       
+        let monthName = monthWrapper.querySelector('.js-monthName');
+
         if (!forceReset) {
-            e.currentTarget.classList.add(navItemSelectedCssTrigger)      
+            e.currentTarget.classList.add(navItemSelectedCssTrigger)
             if (monthWrapper) {
-                
+
                 if (monthName) {
                     monthName.classList.remove('text-gray-scorpion')
                     monthName.classList.remove('bg-white')
@@ -106,7 +106,7 @@ const Filterer = (context) => {
         currentMonth.classList.add('text-gray-scorpion');
         currentMonth.classList.add('bg-white');
 
-        
+
         triggerDomNodes.forEach(function (triggerDomNode) {
 
             // hacky die würde bald verändert
