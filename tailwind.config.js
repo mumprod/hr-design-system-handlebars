@@ -44,15 +44,15 @@ module.exports = {
         },
 
         extend: {
-            animation:{
+            animation: {
                 'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
             },
             keyframes: {
-                'shake' : {
+                'shake': {
                     '10%, 90%': {
                         transform: 'translate3d(-1px, 0, 0)'
                     },
-                    '20%, 80%' : {
+                    '20%, 80%': {
                         transform: 'translate3d(2px, 0, 0)'
                     },
                     '30%, 50%, 70%': {
@@ -187,10 +187,11 @@ module.exports = {
             maxHeight: {
                 stage: '34.3125rem',
             },
-            minHeight: {
+            minHeight: ({ theme }) => ({
                 12: '3rem',
-            },
-            maxWidth: {
+                ...theme('spacing')
+            }),
+            maxWidth: ({ theme }) => ({
                 '1/4': '25%',
                 '1/3': '33.33333333%',
                 '2/4': '50%',
@@ -199,12 +200,11 @@ module.exports = {
                 '3/4': '75%',
                 '1/1': '100%',
                 'main-col': '63rem',
-            },
-            minWidth: {
-                7: '1.75rem',
-                10: '2.5rem',
-                11: '2.75rem',
-            },
+                ...theme('spacing')
+            }),
+            minWidth: ({ theme }) => ({
+                ...theme('spacing')
+            }),
             margin: {
                 '4.5': '1.125rem',
                 '5.5': '1.375rem',
