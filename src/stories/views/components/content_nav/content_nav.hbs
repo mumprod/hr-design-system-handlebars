@@ -1,6 +1,6 @@
 {{#with this.contentNav}}
     {{#if this.isListOrFlow}}
-        <nav class="w-full {{#if ../_isCopytext~}}px-0{{else}}px-5 sm:px-0{{/if}} c-content-nav {{inline-switch ../_teaserSize '["100","66","50","33","25"]' '[" teaser-size-100"," teaser-size-66"," teaser-size-50"," teaser-size-33"," teaser-size-25", ""]'}}">
+        <nav class="w-full {{#if ../_isCopytext~}}px-0{{else}}px-5 sm:px-0{{/if}} {{inline-switch ../_teaserSize '["100","66","50","33","25"]' '[" teaser-size-100"," teaser-size-66"," teaser-size-50"," teaser-size-33"," teaser-size-25", ""]'}}">
             {{> components/content_nav/content_nav_container
                     _teaserSize=../_teaserSize
                     _maindivclass="flex relative flex-wrap"
@@ -18,7 +18,7 @@
             {{> components/content_nav/content_nav_container
                     _teaserSize=_teaserSize
                     _maindivclass="flex flex-col w-full mt-0"
-                    _inputclass=(if this.isMixed 'mixed-input' 'dropdown-input')
+                    _inputclass=(if this.isMixed 'mixed-input' '')
             }}
             
         {{/decorator}}
