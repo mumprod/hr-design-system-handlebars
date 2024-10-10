@@ -9,12 +9,12 @@
             <button style="background-image: linear-gradient(90deg, {{_bgcolor}} 50%, transparent);" class="absolute left-0 z-10 flex items-center justify-start w-10 h-full text-{{_iconcolor}} disabled:hidden" @click="prev($refs.scrollContainer_{{getRandom}})" :disabled="!arrowLeftDisplay" tabindex="-1" aria-hidden="true" >
                 {{> components/base/image/icon _icon="arrow-left"  _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current" }}
             </button> 
-            <button style="background-image: linear-gradient(270deg, {{_bgcolor}} 50%, transparent);" class="bg-gradient-to-l from-[{{_bgcolor}}] absolute right-0 z-10 flex items-center justify-end w-10 h-full text-{{_iconcolor}} disabled:hidden group" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
+            <button style="background-image: linear-gradient(270deg, {{_bgcolor}} 50%, transparent);" class="bg-gradient-to-l absolute right-0 z-10 flex items-center justify-end w-10 h-full text-{{_iconcolor}} disabled:hidden group{{_css}}" @click="next($refs.scrollContainer_{{getRandom}})" :disabled="!arrowRightDisplay" tabindex="-1" aria-hidden="true">
                 {{> components/base/image/icon _icon="arrow-right" _iconmap="icons" _addClass="w-3.5 h-3.5 fill-current" }}
             </button>
         </div>
     </template>
-    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll transition-all duration-300 ease-in-out cursor-default hide-scroll-bar align-center">
+    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll transition-all duration-300 ease-in-out cursor-default hide-scroll-bar">
         {{> @partial-block }} 
     </div> 
 </div>
