@@ -14,7 +14,7 @@
             </button>
         </div>
     </template>
-    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll transition-all duration-300 ease-in-out cursor-default hide-scroll-bar align-center">
+    <div x-ref="scrollContainer_{{getRandom}}" @scroll="updateIndex($event.target)" class="w-full overflow-hidden overflow-x-scroll transition-all duration-300 ease-in-out cursor-default hide-scroll-bar">
         {{> @partial-block }} 
     </div> 
 </div>
