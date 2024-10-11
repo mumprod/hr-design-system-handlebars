@@ -24,11 +24,11 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
         hideDescription() {
             switch (type) {
                 case "email":
-                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (this.typeMismatch && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]));
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (this.typeMismatch && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 case "checkbox":
-                    return Boolean(!this.valid && this.wasFocused && !this.isFocused && !this.isChecked || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]));
+                    return Boolean(!this.valid && this.wasFocused && !this.isFocused && !this.isChecked || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 case "select":
-                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]))
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ))
                 default:
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
             }
