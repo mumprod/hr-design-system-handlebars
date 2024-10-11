@@ -13,6 +13,7 @@ const config = {
     addons: [
         '@storybook/addon-themes',
         '@storybook/addon-links',
+        'storybook-addon-mock',
         {
             name: '@storybook/addon-essentials',
             options: {
