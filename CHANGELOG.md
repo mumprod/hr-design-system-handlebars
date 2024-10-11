@@ -1,3 +1,15 @@
+# v1.108.1 (Fri Oct 11 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3384 server errors [#1100](https://github.com/mumprod/hr-design-system-handlebars/pull/1100) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.108.0 (Fri Oct 11 2024)
 
 #### 🚀 Enhancement
