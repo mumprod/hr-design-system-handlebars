@@ -5,38 +5,46 @@
         <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12">
             {{this.title}}
         </h3>
-        
-        <form
-            x-ref="form{{nextRandom}}"
-            ax-load
-            x-data="contactForm('form{{getRandom}}')"
-            x-init="formInit()"
-            x-ignore
+        <div id="formWrapper">
+            <form
+                x-ref="form{{nextRandom}}"
+                ax-load
+                x-data="contactForm('form{{getRandom}}','{{this.jsonURL}}','{{this.errorMessages}}','{{this.isMultipart}}','{{this.trackingInformations}}')"
+                x-init="formInit()"
+                x-ignore
 
-            @submit.prevent="submitData"
-            id="form{{getRandom}}"     
-            class="relative flex flex-col justify-center overflow-hidden group" 
-            action="{{this.url}}" 
-            method="post" 
-            enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" 
-            accept-charset="utf-8"
-            
-            >
-           
-            <div class="">
-                <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
-                    DEBUG
+                @submit.prevent="submitData"
+                id="form{{getRandom}}"     
+                class="relative flex flex-col justify-center overflow-hidden group" 
+                action="{{this.url}}" 
+                method="post" 
+                enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" 
+                accept-charset="utf-8"
+                
+                >
+        
+                <div class="">
+                    <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
+                        DEBUG
+                    </div>
+                    <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
+                        <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-red-700'"></span></div>
+                        <div>isPosting:<span x-text="isPosting" class="font-bold" :class="isPosting ? 'text-green-800' : 'text-red-700'"></span></div>
+                    
+                    </div> 
                 </div>
-                <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
-                    <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-red-700'"></span></div>
-                </div> 
-            </div>
-            {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }} 
+                {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }} 
 
-            {{> components/forms/controls }}
-
-        </form>
-        
+                {{> components/forms/controls }}
+                <template id="successMessage">
+                    <h2>SUPER DAS HAT ALLES FUNKTIONIERT</h2>
+                </template>
+                <template id="errorMessage">
+                    <h2>DAS HAT LEIDER NICHT FUNKTIONIERT</h2>
+                </template>
+                
+            </form>
+        </div>   
     {{/components/forms/backgroundBox }}
 {{~else~}}
     {{> content/webform/components/webform _addClass="print:hidden copytext__clearBox marginTrailer--m"}}
