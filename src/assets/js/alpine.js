@@ -53,7 +53,8 @@ Alpine.store('sharingBottomPos', {
     current: '0'
 })
 Alpine.store('forms', {
-    submissionAttempted: []
+    submissionAttempted: [],
+    serverErrorFields: []
 })
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)
