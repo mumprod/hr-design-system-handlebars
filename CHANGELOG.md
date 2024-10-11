@@ -1,3 +1,15 @@
+# v1.108.0 (Fri Oct 11 2024)
+
+#### 🚀 Enhancement
+
+- :recycle: Remove unused css classes from footer. [#1101](https://github.com/mumprod/hr-design-system-handlebars/pull/1101) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.107.1 (Wed Oct 09 2024)
 
 #### 🐛 Bug Fix
