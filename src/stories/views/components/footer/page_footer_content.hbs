@@ -1,12 +1,12 @@
-<div class="flex w-full md:w-1/2 md:w-max-1/2 md:first:pr-4 --first ">
-    {{~> components/footer/page_footer_column _columns=this.groups.[0].columns _columnSize=this.groups.[0].columnSize _title=this.groups.[0].title ~}} 
+<div class="flex w-full md:w-1/2 md:first:pr-4">
+    {{~> components/footer/page_footer_column _columns=this.groups.[0].columns _title=this.groups.[0].title ~}} 
 </div>
 
-<div class="flex w-full md:w-1/4 md:w-max-1/4 -second ">
+<div class="flex w-full md:w-1/4">
     {{~> components/footer/page_footer_column _columns=this.groups.[1].columns _hasCookieSettings=true _title=this.groups.[1].title ~}} 
 </div> 
 
-<div class="flex flex-col w-full pt-4 md:w-1/4 md:w-max-1/4 md:pt-0 md:pr-0 -third">
+<div class="flex flex-col w-full pt-4 md:w-1/4 md:pt-0 md:pr-0">
 
     <div class="p-0 pb-4 m-0 md:pt-10 md:mt-10 md:border-t border-footer-heading">
         {{> components/footer/page_footer_search }}

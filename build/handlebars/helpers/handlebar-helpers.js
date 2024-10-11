@@ -2,6 +2,7 @@
 
 const fs = require('fs'),
     path = require('path')
+const { type } = require('os')
 let handlebars
 
 var decoratorStack
@@ -272,7 +273,6 @@ var helpers = {
         const valuesArray = eval(values)
         const defaultValue =
             casesArray.length < valuesArray.length ? valuesArray[valuesArray.length - 1] : ''
-
         return casesArray.indexOf(input) > -1
             ? valuesArray[casesArray.indexOf(input)]
             : defaultValue
@@ -558,7 +558,7 @@ var helpers = {
      * 
      * Function implementation:
      */
-    'joinStrings': function (...args) {    
+    'joinStrings': function (...args) {
         return args.filter(arg => typeof arg === 'string' || typeof arg === 'number').join('');
     }
 
