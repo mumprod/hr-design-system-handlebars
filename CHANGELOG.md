@@ -1,3 +1,15 @@
+# v1.110.7 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- remove if-statement [#1111](https://github.com/mumprod/hr-design-system-handlebars/pull/1111) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.110.6 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix
