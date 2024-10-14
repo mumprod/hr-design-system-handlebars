@@ -1,3 +1,15 @@
+# v1.110.3 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- changed jsonURL to jsonUrl [#1106](https://github.com/mumprod/hr-design-system-handlebars/pull/1106) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.2 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix
