@@ -447,8 +447,18 @@
     /*! FORMULAR SELECT          */
     /*! ****************************/
     /* Custom CSS to style the label when the first empty option is selected */
+    select + label {
+        @apply !scale-75 !translate-y-0 !top-px;
+    }
+
+    @supports selector(:has(+ *)) {
+        select + label {
+            @apply !top-0 !scale-100 !translate-y-3;
+        }
+    }
+
     select:has(option:checked:not([value=''])) + label {
-        @apply top-px scale-75 translate-y-0;
+        @apply !scale-75 !translate-y-0 !top-px;
     }
 
     select:has(option:checked[value='']) {
