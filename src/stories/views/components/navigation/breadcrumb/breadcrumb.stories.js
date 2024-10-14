@@ -58,7 +58,7 @@ export default {
     decorators: [
         (Story) => {
             return `
-            <div class="breadcrumb-container grid grid-page">
+            <div class="grid grid-page">
                 <div class="grid-cols-12 py-6 col-full sm:px-9.5 sm:col-main">  
                     ${Story()} 
                 </div>
