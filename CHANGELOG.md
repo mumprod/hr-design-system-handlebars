@@ -1,3 +1,15 @@
+# v1.110.5 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: remove unused css classes [#1109](https://github.com/mumprod/hr-design-system-handlebars/pull/1109) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.110.4 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix
