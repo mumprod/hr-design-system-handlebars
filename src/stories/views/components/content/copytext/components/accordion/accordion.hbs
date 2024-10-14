@@ -1,12 +1,12 @@
 {{#if this.title}}
-    <h2 class="clear-both mt-12 mb-5 text-lg font-normal accordion sm480:mt-14 sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h2>
+    <h2 class="clear-both mt-12 mb-5 text-lg font-normal sm480:mt-14 sm480:text-2xl font-headingSerif dark:text-text-dark">{{this.title}}</h2>
 {{/if}}
 <div x-cloak x-data="{selected:0}" class="print:hidden pb-3{{#unless this.title}} clear-both mt-12 sm480:mt-14{{/unless}}">
     {{#each this.copytextParagraph }}
         {{#if this.isHeadline}}
             {{#unless @first}}</div></div>{{/unless}}
             <button type="button"
-                    class="w-full text-left accordion link-focus"
+                    class="w-full text-left scroll-mt-12 lg:scroll-mt-28 link-focus"
                     @click="selected !== {{nextRandom}} ? (selected = {{getRandom}}, setTimeout(() => {if($el.getBoundingClientRect().top<0){$el.scrollIntoView({ block: 'start' })}}, 700)) : selected = null"
                     x-effect="$el.setAttribute('aria-label', selected  == {{getRandom}} ? 'Abschnitt {{strip this.text html}} schließen' : 'Abschnitt {{strip this.text html}} öffnen');$el.setAttribute('aria-expanded', selected  == {{getRandom}} ? 'true' : 'false')"
                     data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Akkordeon::{{strip this.text html}}-Link geklickt"}]}'
@@ -29,7 +29,7 @@
                 x-ref="container{{getRandom}}"
                 x-bind:style="selected == {{getRandom}} ? 'max-height: ' + $refs.container{{getRandom}}.scrollHeight + 'px' : ''"
             >
-                <div class="mb-8 accordionItem">
+                <div class="mb-8">
         {{else}}
             {{#if (isStorybook)}}  
                 {{> components/content/copytext/components/accordion/accordion_item }}   

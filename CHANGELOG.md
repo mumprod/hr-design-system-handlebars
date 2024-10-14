@@ -1,3 +1,15 @@
+# v1.109.1 (Fri Oct 11 2024)
+
+#### 🐛 Bug Fix
+
+- remove unnecessary css (accordion) [#1102](https://github.com/mumprod/hr-design-system-handlebars/pull/1102) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.109.0 (Fri Oct 11 2024)
 
 #### 🚀 Enhancement
