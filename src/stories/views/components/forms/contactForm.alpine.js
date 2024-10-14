@@ -1,4 +1,4 @@
-export default function contactForm(formId, jsonURL, errorMessages, multipart, trackingInformations, jsonp = false) {
+export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, jsonp = false) {
     return {
         isPosting: false,
         isWebview:false,
@@ -7,8 +7,8 @@ export default function contactForm(formId, jsonURL, errorMessages, multipart, t
         formWrapper: this.$refs[formId].closest("#formWrapper"),
         actionUrl: this.form && this.form.getAttribute('action'),
         checkForJsonURL () {
-            if (jsonURL) {
-                this.actionUrl = jsonURL
+            if (jsonUrl) {
+                this.actionUrl = jsonUrl
             }
         },
         formInit(){
@@ -17,7 +17,7 @@ export default function contactForm(formId, jsonURL, errorMessages, multipart, t
             console.log("%cform:", 'color: green' ,this.form);
             console.log("%cformWrapper:", 'color: green' ,this.formWrapper);
             console.log("%cactionUrl:", 'color: green' ,this.actionUrl);
-            console.log("%cjsonURL:", 'color: green', jsonURL);
+            console.log("%cjsonUrl:", 'color: green', jsonUrl);
             console.log("%cerrorMessages:", 'color: green', errorMessages);
             console.log("%cmultipart:", 'color: green', multipart);
             console.log("%ctrackingInformations:", 'color: green', trackingInformations);
@@ -117,7 +117,7 @@ export default function contactForm(formId, jsonURL, errorMessages, multipart, t
                     if (response.ok) {
                         console.log('Done');
                         console.log(data);
-                        if (jsonURL) {
+                        if (jsonUrl) {
                             const responseData = JSON.parse(data);
                             switch (responseData.status) {
                                 case 'VALIDATION_ERROR':
