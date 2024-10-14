@@ -23,6 +23,14 @@
                         "@->contentpath": "input-text-nachname-required"
                     },
                     {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "checkbox-group"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "radio-group"
+                    },
+                    {
                       "@->jsoninclude": "forms/form_fields.inc.json",
                       "@->contentpath": "checkbox",
                       "@->overrides": [
