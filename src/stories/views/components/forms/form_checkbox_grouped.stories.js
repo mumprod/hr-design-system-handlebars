@@ -19,8 +19,8 @@ export default {
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#>components/forms/backgroundBox  }}  
-            <form class="relative flex flex-col justify-center overflow-hidden group" id="form--{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
-                {{> components/forms/fields }}
+            <form class="relative flex flex-col justify-center overflow-hidden group" id="form{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
+                 {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }}
             </form>
     {{/components/forms/backgroundBox }}
   `)

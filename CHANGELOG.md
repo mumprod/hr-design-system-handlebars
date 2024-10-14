@@ -1,3 +1,28 @@
+# v1.110.4 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- add choice-group validation [#1107](https://github.com/mumprod/hr-design-system-handlebars/pull/1107) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.110.3 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- changed jsonURL to jsonUrl [#1106](https://github.com/mumprod/hr-design-system-handlebars/pull/1106) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.2 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix

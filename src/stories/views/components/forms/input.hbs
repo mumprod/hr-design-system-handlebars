@@ -1,6 +1,6 @@
 <div class="  relative flex flex-col w-full mb-5 {{_wrapperClass}}"
    ax-load
-   x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
+   x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}','{{_name}}')"
    x-init="validateField()"
    x-ignore
    >
@@ -89,7 +89,6 @@
          <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>
          <div>valueMissing:<span x-text="valueMissing" class="font-bold" ></span></div>
          <div>typeMismatch:<span x-text="typeMismatch" class="font-bold" ></span></div>
-         <div>serverErrorFields[form{{getRandom}}][name]:<span x-text="getServerErrorFields('{{_name}}')" class="font-bold" ></span></div>
          <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-red-700'"></span></div>
                     
       </div> 

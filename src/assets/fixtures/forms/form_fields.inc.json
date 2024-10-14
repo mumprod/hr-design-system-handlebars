@@ -104,7 +104,7 @@
         "label":"Wählen Sie Ihre Interessen",
         "isMeta":false,
         "description":"Bitte kreuzen Sie alle Interessen an, die auf Sie zutreffen. Ihre Auswahl hilft uns, Ihnen relevante Inhalte anzubieten.",
-        "isRequired":true,
+        "isRequired":false,
         "options":[
             {
                 "value":"sport",
@@ -161,6 +161,7 @@
         "isGrouped":true,
         "type":{
             "isChoice":true,
+            "isRadioChoice":true,
             "asString":"radio"
         },
         "name":"lieblingsfarbe",
@@ -234,5 +235,16 @@
         },
         "caption": "Eine Gruppe mit Überschrift",
         "fields": []
+    },
+    "upload":
+    {
+        "type":{
+            "isUpload":true,
+            "asString":"upload"
+        },
+        "name":"lieblingsfarbe",
+        "label":"Wählen Sie Ihre Lieblingsfarbe",
+        "description":"Bitte wählen Sie eine der folgenden Farben aus.",
+        "isRequired":false
     }
 }

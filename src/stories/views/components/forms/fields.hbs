@@ -65,6 +65,7 @@
                         _description=this.description
                         _items=this.options
                         _required=this.isRequired
+                        _isRadio=this.type.isRadioChoice
                         _multipleChoice=../_multipleChoice
                         _addClass=../_addClass
                         _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
@@ -85,7 +86,7 @@
                     }}
                 {{/if}}
             {{else if this.type.isUpload}}
-                {{~> modules/forms/upload
+                {{~> components/forms/upload
                     _name=this.name
                     _label=this.label
                     _description=this.description

@@ -1,11 +1,9 @@
-export default function inputHandler(element, formId, errorMandatory, type, errorEmail, prefilledText = '') {
+export default function inputHandler(element, formId, errorMandatory, type, errorEmail, prefilledText = '', name) {
     return { 
         [element]: prefilledText,
-        name: document.getElementById(element).getAttribute("name"),
         valid: false, 
         wasFocused: false, 
         isFocused: false,
-        isChecked: false,
         typeMismatch: true,
         valueMissing: true,
 
@@ -21,14 +19,25 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
                 }
             }
         },
+        anyChecked() {
+            var formElement = document.getElementById(formId);
+            var form_data = new FormData(formElement)
+            if(form_data.has(name)){
+                this.valid = true
+            }else{
+                this.valid = false
+            }
+        },
         hideDescription() {
             switch (type) {
                 case "email":
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (this.typeMismatch && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 case "checkbox":
-                    return Boolean(!this.valid && this.wasFocused && !this.isFocused && !this.isChecked || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 case "select":
-                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ))
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
+                case "choice-group":
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]));
                 default:
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
             }
@@ -42,12 +51,16 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
             this.valueMissing  = field.validity.valueMissing;
             this.valid = field.checkValidity()
         },
+        validateChoice() {
+            var choice = document.getElementById(element)  
+            this.valid = choice.checkValidity()
+        },
         hasServerError() {
-            return Boolean(this.$store.forms.serverErrorFields[formId][this.name])
+            return Boolean(this.$store.forms.serverErrorFields[formId]?.[name]);
         },
         getServerError() {
             let serverError = "Server Error: "
-            switch (this.$store.forms.serverErrorFields[formId][this.name]) {
+            switch (this.$store.forms.serverErrorFields[formId][name]) {
 
                 case 'form_error_required':
                     serverError += "Pflichtfeld"
