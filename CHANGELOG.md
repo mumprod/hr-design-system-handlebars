@@ -1,3 +1,15 @@
+# v1.110.0 (Mon Oct 14 2024)
+
+#### 🚀 Enhancement
+
+- :wrench: update postcss-preset-env package and deactivate postcss-has… [#1103](https://github.com/mumprod/hr-design-system-handlebars/pull/1103) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.109.1 (Fri Oct 11 2024)
 
 #### 🐛 Bug Fix
