@@ -1,3 +1,15 @@
+# v1.110.1 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: Remove unused class breadcrumb-container [#1104](https://github.com/mumprod/hr-design-system-handlebars/pull/1104) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.110.0 (Mon Oct 14 2024)
 
 #### 🚀 Enhancement
