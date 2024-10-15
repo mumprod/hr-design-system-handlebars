@@ -34,9 +34,9 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
+      class="relative w-full px-4 pb-px text-black placeholder-transparent bg-white border-link dark:border-link-dark min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
-         :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+         :class="{'border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       {{/if}}
    >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
@@ -46,11 +46,11 @@
         {{~else~}}
             {{~_defaultValue~}}
         {{~/if}}{{/if}}</textarea>
-   <label for="textarea{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+   <label for="textarea{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500 origin-top-left transform transition-transform">
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-link origin-top-left transform transition-transform">
       {{#if _locaKey}}
          {{loca _locaKey}}
       {{else}}
@@ -66,13 +66,13 @@
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
-         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+         <div class="px-4 ml-auto text-xs text-gray-scorpion"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
 </div>
