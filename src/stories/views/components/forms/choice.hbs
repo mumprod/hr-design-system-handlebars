@@ -11,7 +11,7 @@
 <div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
   <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer {{~inline-switch _type '["checkbox","radio"]' '["  border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent","  border-blue-science-hex checked:bg-white checked:border-blue-congress-hex rounded-full",""]'}}"
       {{#if _required}}
-            :class="{' border-blue-science-hex': hideError(),'border-red-700': hideDescription() }"
+            :class="{' border-blue-science-hex': hideError(),'border-error': hideDescription() }"
       {{/if}}
       {{#if _inGroup }}
          {{#if _required}}
@@ -79,7 +79,7 @@
          <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+         <div class="hidden text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       {{/if}}
    </div>
 {{/unless}}

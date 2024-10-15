@@ -42,7 +42,7 @@
          <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+         <div class="hidden text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       {{/if}}
    </div>
 </div>

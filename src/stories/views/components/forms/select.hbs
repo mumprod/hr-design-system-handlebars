@@ -4,8 +4,8 @@
    x-ignore
 >
     <select
-        class="relative w-full h-12 pt-4 pl-4 text-gray-800 bg-white border-blue-500 appearance-none bg- pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none"
-        :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+        class="relative w-full h-12 pt-4 pl-4 text-gray-800 bg-white border-link appearance-none bg- pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none"
+        :class="{'border-link': hideError(),'border-error': hideDescription() }"
         x-model="select{{getRandom}}"
         id="select{{getRandom}}"
         title="{{#if _locaKey}}{{loca _locaKey}}{{else}}{{#if _Label}}{{_label}}{{#if _required}}*{{/if}}{{/if}}{{/if}}"
@@ -48,7 +48,7 @@
             <div class="pl-4 text-xs text-gray-500 " :class="{'hidden': hideDescription()}">{{_description}}</div>
         {{/if}}
         {{#if _required}}
-            <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+            <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
         {{/if}}
     </div>
     <div class="absolute right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">

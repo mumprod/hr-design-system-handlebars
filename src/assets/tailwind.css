@@ -75,7 +75,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Infografik */
@@ -93,7 +93,7 @@
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Event */
-    --color-event-status: theme('colors.red.thunderbird');
+    --color-event-status: theme('colors.red.thunderbird.hex');
     /* Eventkalender */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
     --color-eventcalendar-primary: var(--color-primary-ds);
@@ -162,6 +162,8 @@
     --structure-nav-background: var(--color-primary-ds);
     --structure-nav-text: theme('colors.white.DEFAULT');
     --structure-nav-text-mobile: var(--color-primary-ds);
+
+    --color-error: theme('colors.red.thunderbird.hex');
 
     --feature-box-height: 0;
 
@@ -263,7 +265,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Infografik */
@@ -392,7 +394,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -504,7 +506,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.pink.rose.hex');
     /* Download */
@@ -624,7 +626,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -751,7 +753,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -867,7 +869,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.green.goBen');
     /* Download */
@@ -976,7 +978,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.yellow.hokeyPokey');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.blue.blueStone');
     /* Download */
@@ -1094,7 +1096,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -1327,7 +1329,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.paprika.hex');
     /* Download */
@@ -1575,7 +1577,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.blue.dodgerBlue');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.pink.fuchsie');
     /* Download */
@@ -1714,7 +1716,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.blue.lightCerulean');
     /* Download */

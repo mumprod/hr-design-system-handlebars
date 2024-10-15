@@ -34,9 +34,9 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-blue-500 min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
+      class="relative w-full px-4 pb-px text-gray-800 placeholder-transparent bg-white border-link min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
-         :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+         :class="{'border-link': hideError(),'border-error': hideDescription() }"
       {{/if}}
    >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
@@ -69,7 +69,7 @@
          <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
