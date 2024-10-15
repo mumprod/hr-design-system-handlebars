@@ -6,7 +6,7 @@
     {{/if}}
 >
 <div class="relative flex flex-col w-full mb-6 md:mb-12 gap-y-4 md:gap-y-5">
-    <legend class="text-lg font-bold text-black md:text-xl font-heading">
+    <legend class="text-lg font-bold text-text dark:text-text-dark md:text-xl font-heading">
         {{#if _hasBody}}
             {{decorator_body}}{{#if _required}}*{{/if}}
         {{else}}
@@ -39,7 +39,7 @@
     </div>
     <div class="font-heading">     
       {{#if _description}}  
-         <div class="text-xs text-gray-scorpion" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+         <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
          <div class="hidden text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>

@@ -4,8 +4,8 @@
    x-init="validateField()"
    x-ignore
    >
-   <input class="relative w-full h-12 pt-4 pl-4 text-black placeholder-transparent bg-white autofill:shadow-autofill border-link pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
-      :class="{'border-link': hideError(),'border-error': hideDescription() }"
+   <input class="relative w-full h-12 pt-4 pl-4 placeholder-transparent bg-white text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-link dark:border-link-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none" 
+      :class="{'border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
       x-bind:data-is-valid="valid ? 'true' : 'false'"     
@@ -42,11 +42,11 @@
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
       
-  <label for="input{{getRandom}}" class="{{_labelClass}} absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion
+  <label for="input{{getRandom}}" class="{{_labelClass}} absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion dark:text-text-dark
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-link origin-top-left transform transition-transform">
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-link peer-focus:dark:text-text-dark origin-top-left transform transition-transform">
       {{#if _hasBody}}
         {{decorator_body}}
       {{else}}
@@ -66,7 +66,7 @@
  
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       
       <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
