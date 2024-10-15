@@ -15,7 +15,7 @@
 
     --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
-    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
     --color-highlight-1-dark: theme('colors.blue.nightRider.hex');
@@ -377,7 +377,6 @@
 [data-theme='hr-fernsehen'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -485,7 +484,7 @@
 [data-theme='hr-inforadio'] {
     --color-primary-ds: theme('colors.blue.jellyBean.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.aqua');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border-Color */
@@ -596,7 +595,6 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -718,7 +716,7 @@
 [data-theme='hr-werbung'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -843,7 +841,6 @@
 [data-theme='hr-sinfonieorchester'] {
     --color-primary-ds: theme('colors.red.burntUmber');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1064,7 +1061,6 @@
 [data-theme='hr'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007396;
-    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -1304,7 +1300,6 @@
 [data-theme='hr2'] {
     --color-primary-ds: theme('colors.orange.clementine');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1439,7 +1434,7 @@
 [data-theme='hr3'] {
     --color-primary-ds: theme('colors.red.monza.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.mercury');
+
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1555,7 +1550,7 @@
 [data-theme='hr4'] {
     --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.white.azureish');
+    --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border Color */
@@ -1671,7 +1666,6 @@
 [data-theme='you-fm'] {
     --color-primary-ds: #007179 /* #c20016 */;
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
