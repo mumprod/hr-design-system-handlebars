@@ -4,7 +4,7 @@
    x-init="validateField()"
    x-ignore
    >
-   <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-link pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
+   <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white autofill:shadow-autofill border-link pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
       :class="{'border-link': hideError(),'border-error': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
