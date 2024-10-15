@@ -39,7 +39,7 @@
     </div>
     <div class="font-heading">     
       {{#if _description}}  
-         <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+         <div class="text-xs text-gray-scorpion" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
          <div class="hidden text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>

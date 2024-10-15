@@ -37,7 +37,7 @@
         {{/if}}
     </select>
     <label for="select{{getRandom}}"
-        class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-500
+        class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-scorpion
               peer-focus:text-blue-500 peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px
               origin-top-left transform transition-transform 
     ">      
@@ -45,7 +45,7 @@
     </label>
     <div class="flex items-end justify-between h-5 font-heading">     
         {{#if _description}}  
-            <div class="pl-4 text-xs text-gray-500 " :class="{'hidden': hideDescription()}">{{_description}}</div>
+            <div class="pl-4 text-xs text-gray-scorpion " :class="{'hidden': hideDescription()}">{{_description}}</div>
         {{/if}}
         {{#if _required}}
             <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>

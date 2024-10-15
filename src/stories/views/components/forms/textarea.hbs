@@ -46,7 +46,7 @@
         {{~else~}}
             {{~_defaultValue~}}
         {{~/if}}{{/if}}</textarea>
-   <label for="textarea{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+   <label for="textarea{{getRandom}}" class="absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      
@@ -66,13 +66,13 @@
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       {{#if _required}}
          <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
-         <div class="px-4 ml-auto text-xs text-gray-500"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+         <div class="px-4 ml-auto text-xs text-gray-scorpion"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
       {{/if~}}
    </div>
 </div>
