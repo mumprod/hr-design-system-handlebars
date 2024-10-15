@@ -24,6 +24,10 @@
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "select"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "checkbox-group"
                     },
                     {

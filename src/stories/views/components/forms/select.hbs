@@ -4,7 +4,7 @@
    x-ignore
 >
     <select
-        class="relative w-full h-12 pt-4 pl-4 text-black bg-white appearance-none border-link bg- pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none"
+        class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none text-text dark:bg-black dark:text-text-dark border-link bg- pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
         :class="{'border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
         x-model="select{{getRandom}}"
         id="select{{getRandom}}"
@@ -17,7 +17,7 @@
             x-on:change ="select{{getRandom}}.value != '' ? valid = true : valid = false;"
         {{/if}}
         >
-        <option  class="text-white bg-gray-400" value=""{{#if _required}} disabled{{/if}} selected>
+        <option  class="text-text dark:text-text-dark bg-highlight-1 dark:bg-highlight-1-dark" value=""{{#if _required}} disabled{{/if}} selected>
             {{#if _locaKey}}
                 {{loca _locaKey}}{{#if _required}}*{{/if}}
             {{else}}
@@ -28,16 +28,16 @@
         </option>
         {{#if _options}}
             {{~#each _options~}}
-                <option class="text-black" value="{{this.id}}" {{#if this.isSelected}}selected{{/if}}>{{this.name}}</option>
+                <option class="text-gray-scorpion dark:text-text-dark" value="{{this.id}}" {{#if this.isSelected}}selected{{/if}}>{{this.name}}</option>
             {{~/each~}}
         {{else}}
             {{#each _items}}
-                <option class="text-black" value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+                <option class="text-gray-scorpion dark:text-text-dark" value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
             {{/each}}
         {{/if}}
     </select>
     <label for="select{{getRandom}}"
-        class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-scorpion
+        class="absolute pointer-events-none left-[16px] top-0 translate-y-3 translate-x-0 scale-100 text-gray-scorpion dark:text-text-dark
               peer-focus:text-link peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px
               origin-top-left transform transition-transform 
     ">      
@@ -45,7 +45,7 @@
     </label>
     <div class="flex items-end justify-between h-5 font-heading">     
         {{#if _description}}  
-            <div class="pl-4 text-xs text-gray-scorpion " :class="{'hidden': hideDescription()}">{{_description}}</div>
+            <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription()}">{{_description}}</div>
         {{/if}}
         {{#if _required}}
             <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
