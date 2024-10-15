@@ -9,9 +9,9 @@
    {{/unless}}
 >
 <div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
-  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer border-link dark:border-link-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-link checked:border-link"," checked:bg-white checked:border-link rounded-full",""]'}}"
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight"," checked:bg-white checked:border-form-highlight rounded-full",""]'}}"
       {{#if _required}}
-            :class="{' border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
+            :class="{' border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       {{/if}}
       {{#if _inGroup }}
          {{#if _required}}

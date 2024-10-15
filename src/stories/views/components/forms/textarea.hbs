@@ -34,9 +34,9 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pb-px text-black placeholder-transparent bg-white border-link dark:border-link-dark min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
+      class="relative w-full px-4 pb-px text-black placeholder-transparent bg-white border-form-highlight dark:border-form-highlight-dark min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
-         :class="{'border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
+         :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       {{/if}}
    >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
@@ -50,7 +50,7 @@
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-link origin-top-left transform transition-transform">
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-form-highlight peer-focus:dark:text-form-highlight-dark origin-top-left transform transition-transform">
       {{#if _locaKey}}
          {{loca _locaKey}}
       {{else}}

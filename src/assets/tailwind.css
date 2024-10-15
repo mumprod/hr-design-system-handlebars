@@ -164,6 +164,8 @@
     --structure-nav-text-mobile: var(--color-primary-ds);
 
     --color-error: theme('colors.red.thunderbird.hex');
+    --color-form-highlight: var(--color-link);
+    --color-form-highlight-dark: var(--color-link-dark);
 
     --feature-box-height: 0;
 
@@ -910,6 +912,9 @@
     --font-title: theme('fontFamily.heading');
     --font-weight-title: theme('fontWeight.bold');
 
+    --color-form-highlight: var(--color-secondary-ds);
+    --color-form-highlight-dark: var(--color-secondary-ds);
+
     .ardplayer {
         &.ardplayer-light-mode {
             --ardplayer-color-primary-base: theme('colors.red.wellRead.hex');
@@ -1377,6 +1382,9 @@
 
     --feature-box-height: 96px;
 
+    --color-form-highlight: var(--color-secondary-ds);
+    --color-form-highlight-dark: var(--color-secondary-ds);
+
     .ardplayer {
         &.ardplayer-light-mode {
             --ardplayer-color-primary-base: theme('colors.red.paprika.hex');
@@ -1507,6 +1515,9 @@
     --search-border-color-desktop: theme('colors.gray.scorpion');
 
     --feature-box-height: 96px;
+
+    --color-form-highlight: var(--color-secondary-ds);
+    --color-form-highlight-dark: var(--color-secondary-ds);
 
     .ardplayer {
         &.ardplayer-light-mode {
