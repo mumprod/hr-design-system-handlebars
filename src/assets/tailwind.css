@@ -15,7 +15,7 @@
 
     --color-primary-ds: theme('colors.blue.congress.hex');
     --color-secondary-ds: #606060;
-    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-1: theme('colors.gray.mercury');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
     --color-highlight-3: theme('colors.gray.dark');
     --color-highlight-1-dark: theme('colors.blue.nightRider.hex');
@@ -75,7 +75,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Infografik */
@@ -93,7 +93,7 @@
     /* Dachzeile */
     --color-topline: #006dc1;
     /* Event */
-    --color-event-status: theme('colors.red.thunderbird');
+    --color-event-status: theme('colors.red.thunderbird.hex');
     /* Eventkalender */
     --color-label-event-calendar-title: theme('colors.teal.deeperPool');
     --color-eventcalendar-primary: var(--color-primary-ds);
@@ -162,6 +162,8 @@
     --structure-nav-background: var(--color-primary-ds);
     --structure-nav-text: theme('colors.white.DEFAULT');
     --structure-nav-text-mobile: var(--color-primary-ds);
+
+    --color-error: theme('colors.red.thunderbird.hex');
 
     --feature-box-height: 0;
 
@@ -263,7 +265,7 @@
     /* Event */
     --color-label-event: theme('colors.black.DEFAULT');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Infografik */
@@ -375,7 +377,6 @@
 [data-theme='hr-fernsehen'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.white.blackhaze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -392,7 +393,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -483,7 +484,7 @@
 [data-theme='hr-inforadio'] {
     --color-primary-ds: theme('colors.blue.jellyBean.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.aqua');
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border-Color */
@@ -504,7 +505,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.pink.rose.hex');
     /* Download */
@@ -594,7 +595,6 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -624,7 +624,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -716,7 +716,7 @@
 [data-theme='hr-werbung'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.blue.accented');
+    --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -751,7 +751,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -841,7 +841,6 @@
 [data-theme='hr-sinfonieorchester'] {
     --color-primary-ds: theme('colors.red.burntUmber');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -867,7 +866,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.green.goBen');
     /* Download */
@@ -976,7 +975,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.yellow.hokeyPokey');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.blue.blueStone');
     /* Download */
@@ -1062,7 +1061,6 @@
 [data-theme='hr'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007396;
-    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -1094,7 +1092,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.blue.deeperPool');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.mexican');
     /* Download */
@@ -1302,7 +1300,6 @@
 [data-theme='hr2'] {
     --color-primary-ds: theme('colors.orange.clementine');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.alto');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1327,7 +1324,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.red.paprika.hex');
     /* Download */
@@ -1437,7 +1434,7 @@
 [data-theme='hr3'] {
     --color-primary-ds: theme('colors.red.monza.hex');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.mercury');
+
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1553,7 +1550,7 @@
 [data-theme='hr4'] {
     --color-primary-ds: theme('colors.pink.fuchsie');
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.white.azureish');
+    --color-highlight-1: theme('colors.blue.blackSqueeze');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Service/Sectionnavigation Border Color */
@@ -1575,7 +1572,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.blue.dodgerBlue');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.pink.fuchsie');
     /* Download */
@@ -1669,7 +1666,6 @@
 [data-theme='you-fm'] {
     --color-primary-ds: #007179 /* #c20016 */;
     --color-secondary-ds: #007179;
-    --color-highlight-1: theme('colors.gray.platinum');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Brandnavigation Border and :before Colors*/
@@ -1714,7 +1710,7 @@
     /* Kommentar */
     --color-label-comment: theme('colors.green.tropicalRainForest');
     /* Eilmeldung */
-    --color-label-breakingnews: theme('colors.red.thunderbird');
+    --color-label-breakingnews: theme('colors.red.thunderbird.hex');
     /* Sendung */
     --color-label-program: theme('colors.blue.lightCerulean');
     /* Download */

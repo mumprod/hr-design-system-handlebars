@@ -54,7 +54,7 @@
         <ul>
             {{~#each this~}}
                 <li class="{{#unless @last}}border-b{{/unless}}"> 
-                    <a class="{{if (isUserConsentNeeded this.podcastHosterUrl) 'js-user-consent-needed ' ''}}flex px-2 py-2 text-left ds-link whitespace-nowrap hover:underline disabled:text-gray-500 js-load"
+                    <a class="{{if (isUserConsentNeeded this.podcastHosterUrl) 'js-user-consent-needed ' ''}}flex px-2 py-2 text-left ds-link whitespace-nowrap hover:underline disabled:text-gray-scorpion js-load"
                         title="{{this.podcastHosterName}}" 
                         target="_blank"
                         rel="noopener noreferrer"
