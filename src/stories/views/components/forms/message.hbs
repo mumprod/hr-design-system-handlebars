@@ -2,14 +2,16 @@
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
                 {{> components/forms/success_icon}}
-                <span class="font-bold text-green-800">{{_messageText}}</span>
-                </div>    
+                <span class="font-bold text-green-800">{{_messageText}}</span>       
             {{else}}
                 {{> components/forms/error_icon}}
-                <span class="font-bold text-red-700">{{_messageText}}</span>
-                </div>
-                {{#> components/button/button _variant="primary"_size="lg" _css="" _type="reset"}} 
-                    <span class="text-base ds-button-label ">Nochmal versuchen</span>        
-                {{/components/button/button}}  
+                <span class="font-bold text-red-700">{{_messageText}}</span>  
             {{/if}}
+        </div>
+        {{#unless _success}}
+            {{#> components/button/button _variant="primary"_size="lg" _css="" _type="reset"}} 
+                <span class="text-base ds-button-label ">Nochmal versuchen</span>        
+            {{/components/button/button}}  
+        {{/unless}}
+        
 </div>
