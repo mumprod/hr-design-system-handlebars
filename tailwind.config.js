@@ -426,7 +426,9 @@ module.exports = {
                 'structure-nav': 'var(--structure-nav-background)',
                 'structure-nav-text': 'var(--structure-nav-text)',
                 'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)',
-                'error':'var(--color-error)'
+                'error':'var(--color-error)',
+                'form-highlight':'var(--color-form-highlight)',
+                'form-highlight-dark':'var(--color-form-highlight-dark)'
             },
         },
     },

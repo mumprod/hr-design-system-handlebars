@@ -1,17 +1,18 @@
+{{~changeRandom~}}
 <div class="relative flex flex-col w-full {{#unless _inGroup}} mb-6 md:mb-12{{/unless}} gap-y-4 md:gap-y-5" 
    {{#unless _inGroup}}
       {{#if _required}}
          ax-load
-         x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','{{_type}}','', '', '{{_name}}')"
+         x-data="inputHandler('input{{getRandom}}','{{_formId}}','{{_errorMandatory}}','{{_type}}','', '', '{{_name}}')"
          x-init="validateChoice()"
          x-ignore
       {{/if}}
    {{/unless}}
 >
-<div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
-  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer border-link dark:border-link-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-link checked:border-link"," checked:bg-white checked:border-link rounded-full",""]'}}"
+<div class="flex flex-row items-center w-full cursor-pointer ">
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight"," checked:bg-white checked:border-form-highlight rounded-full",""]'}}"
       {{#if _required}}
-            :class="{' border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
+            :class="{' border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       {{/if}}
       {{#if _inGroup }}
          {{#if _required}}
@@ -59,7 +60,7 @@
          {{/if}}
       {{/if~}}
    >
-  <label for="input{{getRandom}}" class="items-center justify-center text-xs text-text dark:text-text-dark md:text-sm font-headingSerif ">
+  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 text-xs cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-sm font-headingSerif ">
       {{#if _hasBody}}
         {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
       {{else}}
