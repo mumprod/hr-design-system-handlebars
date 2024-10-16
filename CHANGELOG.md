@@ -1,3 +1,52 @@
+# v1.110.8 (Tue Oct 15 2024)
+
+#### 🐛 Bug Fix
+
+- Forms colors and spacings [#1112](https://github.com/mumprod/hr-design-system-handlebars/pull/1112) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.110.7 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- remove if-statement [#1111](https://github.com/mumprod/hr-design-system-handlebars/pull/1111) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.110.6 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- bugfix [#1110](https://github.com/mumprod/hr-design-system-handlebars/pull/1110) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.110.5 (Mon Oct 14 2024)
+
+#### 🐛 Bug Fix
+
+- :recycle: remove unused css classes [#1109](https://github.com/mumprod/hr-design-system-handlebars/pull/1109) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.110.4 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix

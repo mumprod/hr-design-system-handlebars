@@ -24,11 +24,35 @@
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "select"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "checkbox-group"
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "radio-group"
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "radio-group",
+                        "@->overrides": [
+                         {
+                            "@->contentpath": "isRequired",
+                            "@->value": false
+                         }
+                      ]
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "checkbox",
+                        "@->overrides": [
+                           {
+                            "@->contentpath": "isRequired",
+                            "@->value": false   
+                           }
+                        ]
                     },
                     {
                       "@->jsoninclude": "forms/form_fields.inc.json",

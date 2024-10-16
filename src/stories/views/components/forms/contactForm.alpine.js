@@ -134,7 +134,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                                 default:
                                     console.log("default");
-                                    replaceAnimated(
+                                    this.replaceAnimated(
                                         this.formWrapper,
                                         this.form.querySelector('#errorMessage').innerHTML,
                                         true
@@ -142,7 +142,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                             }
                         } else {
-                            replaceAnimated(this.formWrapper, data, true);
+                            this.replaceAnimated(this.formWrapper, data, true);
                         }
 /*         
                         if (eventOnSuccess) {
@@ -158,7 +158,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                 })
                 .catch((error) => {
                     console.error('Fail:', error);
-                    replaceAnimated(
+                    this.replaceAnimated(
                         this.formWrapper,
                         '<div class="c-form success">Das hat leider nicht funktioniert!</div>',
                         true

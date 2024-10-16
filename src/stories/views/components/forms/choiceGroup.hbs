@@ -6,7 +6,7 @@
     {{/if}}
 >
 <div class="relative flex flex-col w-full mb-6 md:mb-12 gap-y-4 md:gap-y-5">
-    <legend class="text-lg font-bold text-black md:text-xl font-heading">
+    <legend class="text-lg font-bold text-text dark:text-text-dark md:text-xl font-heading">
         {{#if _hasBody}}
             {{decorator_body}}{{#if _required}}*{{/if}}
         {{else}}
@@ -25,7 +25,7 @@
                 {{> components/forms/choice
                         _type=../_type
                         _name=../_name
-                        _required=(if ../_isRadio ../_required false)
+                        _required=(if ../_isRadio ../_required)
                         _value=this.value
                         _inGroup=true
                         _label=this.label
@@ -39,10 +39,10 @@
     </div>
     <div class="font-heading">     
       {{#if _description}}  
-         <div class="text-xs text-gray-500" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+         <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+         <div class="hidden text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       {{/if}}
    </div>
 </div>

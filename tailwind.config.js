@@ -90,6 +90,7 @@ module.exports = {
                 'stage': '0 .3125rem 1.0625rem rgba(0,0,0,0.3)',
                 'teaser-focus': '0 0 0 0.25rem',
                 'teaser-focus-big': '0 0 0 0.365rem',
+                'autofill': '0 0 0px 1000px var(--color-standard-text-dark) inset'
             },
             dropShadow: {
                 md: '0 5px 3px rgb(0 0 0 / 0.07)',
@@ -288,7 +289,7 @@ module.exports = {
                     monza: { rgb: '194 0 22', hex: '#c20016' },
                     paprika: { rgb: '140 3 61', hex: '#8C033D' },
                     scarlett: '#9b0112',
-                    thunderbird: '#cc1a14',
+                    thunderbird: { hex: '#cc1a14' },
                     wellRead: { rgb: '171 47 45', hex: '#AB2F2D' },
                 },
                 'pink': {
@@ -424,7 +425,8 @@ module.exports = {
                 'toggle-default': 'var(--color-toggle-default)',
                 'structure-nav': 'var(--structure-nav-background)',
                 'structure-nav-text': 'var(--structure-nav-text)',
-                'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)'
+                'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)',
+                'error':'var(--color-error)'
             },
         },
     },

@@ -1,11 +1,11 @@
-<div class="  relative flex flex-col w-full mb-5 {{_wrapperClass}}"
+<div class="relative flex flex-col w-full mb-5 {{_wrapperClass}}"
    ax-load
    x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}','{{_name}}')"
    x-init="validateField()"
    x-ignore
    >
-   <input class="relative w-full h-12 pt-4 pl-4 text-gray-800 placeholder-transparent bg-white border-blue-500 pr-9 peer border-y focus:border-y-2 border-t-transparent focus:outline-none" 
-      :class="{'border-blue-500': hideError(),'border-red-700': hideDescription() }"
+   <input class="relative w-full h-12 pt-4 pl-4 placeholder-transparent bg-white text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-link dark:border-link-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none" 
+      :class="{'border-link dark:border-link-dark': hideError(),'border-error dark:border-error': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
       x-bind:data-is-valid="valid ? 'true' : 'false'"     
@@ -42,11 +42,11 @@
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
       
-  <label for="input{{getRandom}}" class="{{_labelClass}} absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-500
+  <label for="input{{getRandom}}" class="{{_labelClass}} absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion dark:text-text-dark
      
      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
      
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500 origin-top-left transform transition-transform">
+     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-link peer-focus:dark:text-text-dark origin-top-left transform transition-transform">
       {{#if _hasBody}}
         {{decorator_body}}
       {{else}}
@@ -66,30 +66,30 @@
  
    <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-500" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       
-      <div class="hidden pl-4 text-xs text-red-700" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+      <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       
    </div>
    <div class="hidden">
       <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
          DEBUG
       </div>
-      <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
+      <div class="px-4 py-3 bg-red-100 border border-t-0 border-red-400 rounded-b text-error">
          <div>name:<span x-text="name" class="font-bold" ></span></div>
-         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-red-700'"></span></div>
-         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-red-700'"></span></div>
-         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>isFocused:<span x-text="isFocused" class="font-bold" :class="isFocused ? 'text-green-800' : 'text-error'"></span></div>
+         <div>wasFocused:<span x-text="wasFocused" class="font-bold" :class="wasFocused ? 'text-green-800' : 'text-error'"></span></div>
+         <div>valid:<span x-text="valid" class="font-bold" :class="valid ? 'text-green-800' : 'text-error'"></span></div>
         
-         <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-red-700'"></span></div>   
-         <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-red-700'"></span></div>   
+         <div>hideDescription:<span x-text="hideDescription()" class="font-bold" :class="hideDescription() ? 'text-green-800' : 'text-error'"></span></div>   
+         <div>hideError:<span x-text="hideError()" class="font-bold" :class="hideError() ? 'text-green-800' : 'text-error'"></span></div>   
          <div>input.length:<span x-text="input{{getRandom}}.length " class="font-bold" ></span></div>  
          <div>input:<span x-text="input{{getRandom}}" class="font-bold" ></span></div>
          <div>errorMessage:<span x-text="errorMessage" class="font-bold" ></span></div>
          <div>valueMissing:<span x-text="valueMissing" class="font-bold" ></span></div>
          <div>typeMismatch:<span x-text="typeMismatch" class="font-bold" ></span></div>
-         <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-red-700'"></span></div>
+         <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-error'"></span></div>
                     
       </div> 
    </div>

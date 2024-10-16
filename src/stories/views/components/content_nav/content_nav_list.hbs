@@ -5,7 +5,7 @@
           
         {{~#if this.isGroup~}}
         
-            {{#if ../isDropdown}}               
+                           
                 <li class="w-full h-auto overflow-hidden text-base list-none border-b border-gray-400 bg-highlight-1 text-content-nav md:mx-0 font-copy fill-content-nav">
                     <div class="flex items-center h-10 p-2">{{this.title}}</div>
                     <ul class="!px-0 mt-0">
@@ -19,7 +19,7 @@
                         {{~/each~}}
                     </ul>
                 </li> 
-            {{/if}}
+            
         {{else}}           
             {{> components/content_nav/content_nav_item  
                 _teaserSize=../_teaserSize 
