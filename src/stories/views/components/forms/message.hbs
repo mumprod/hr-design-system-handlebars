@@ -1,0 +1,18 @@
+<div class="flex flex-row items-center justify-between w-full">
+        <div class="flex items-center gap-x-2 md:gap-x-3">
+            {{#if _success}}
+                {{> components/forms/success_icon}}
+                <span class="font-bold text-green-800">{{_messageText}}</span>
+        </div>    
+            {{else}}
+                {{> components/forms/error_icon}}
+                <span class="font-bold text-red-700">{{_messageText}}</span>
+        </div>
+            
+                {{#> components/button/button _variant="primary"_size="lg" _css="order-1 mr-4" _type="reset"}} 
+                    <span class="text-base ds-button-label ">Nochmal versuchen</span>        
+                {{/components/button/button}}
+              
+            {{/if}}
+
+</div>
