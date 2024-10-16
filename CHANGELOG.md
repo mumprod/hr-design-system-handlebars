@@ -1,3 +1,16 @@
+# v1.110.10 (Wed Oct 16 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3308 error&success message [#1114](https://github.com/mumprod/hr-design-system-handlebars/pull/1114) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.9 (Wed Oct 16 2024)
 
 #### 🐛 Bug Fix
