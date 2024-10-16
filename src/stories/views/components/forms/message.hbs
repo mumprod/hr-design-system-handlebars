@@ -2,7 +2,7 @@
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
                 {{> components/forms/success_icon}}
-                <span class="h-5 font-bold text-green-800">{{#if this.successText}}this.successText.richtext{{else}}{{~loca "webform_send_text_success"}}{{/if}}</span>       
+                <span class="h-5 font-bold text-green-800">{{#if this.successText}}{{this.successText.richtext}}{{else}}{{~loca "webform_send_text_success"}}{{/if}}</span>       
             {{else}}
                 {{> components/forms/error_icon _class="!block"}}
                 <span class="h-5 font-bold text-red-700">{{~loca "webform_send_text_error"}}</span>  
