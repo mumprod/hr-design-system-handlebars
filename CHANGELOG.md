@@ -1,3 +1,15 @@
+# v1.110.11 (Wed Oct 16 2024)
+
+#### 🐛 Bug Fix
+
+- Forms colors and spacing v2 [#1115](https://github.com/mumprod/hr-design-system-handlebars/pull/1115) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.10 (Wed Oct 16 2024)
 
 #### 🐛 Bug Fix
