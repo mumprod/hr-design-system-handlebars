@@ -453,7 +453,7 @@
  
     @supports selector(:has(+ *)) {
         select + label {
-            @apply !top-0 !scale-100 !translate-y-3;
+            @apply !top-px !scale-100 !translate-y-3;
         }
     }
 
