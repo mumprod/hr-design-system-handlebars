@@ -4,7 +4,7 @@
    x-ignore
 >
     <select
-        class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none text-text dark:bg-black dark:text-text-dark border-form-highlight dark:border-form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
+        class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none cursor-pointer text-text dark:bg-black dark:text-text-dark border-form-highlight dark:border-form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
         :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
         x-model="select{{getRandom}}"
         id="select{{getRandom}}"
