@@ -24,7 +24,9 @@ export default {
                 method: 'POST',
                 status: 200,
                 response: {
-                    "status":"VALIDATION_ERROR","errors":{"vorname":"form_error_required"},
+                     "status":""
+                    // "status":"OK"
+                    // "status":"VALIDATION_ERROR", "errors":{"vorname":"form_error_required"}
                 },
             },
         ],

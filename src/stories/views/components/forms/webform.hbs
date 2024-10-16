@@ -25,11 +25,13 @@
                 {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }} 
 
                 {{> components/forms/controls }}
+
                 <template id="successMessage">
-                    <h2>SUPER DAS HAT ALLES FUNKTIONIERT</h2>
+                    {{> components/forms/message _success=true _messageText="Das Formular wurde erforlgreich versendet." }}
                 </template>
+
                 <template id="errorMessage">
-                    <h2>DAS HAT LEIDER NICHT FUNKTIONIERT</h2>
+                    {{> components/forms/message _success=false _messageText="Das Formular konnte nicht versendet werden." }}
                 </template>
                 
             </form>

@@ -85,7 +85,7 @@
         {{!-- AudioElement --}}
         {{~#if this.audioUrl ~}}
             <audio   
-                class="{{_id}} hidden" 
+                class="hidden" 
                 data-id="{{_id}}"
                 x-init="registerPlayer('{{_podcastDuration}}','{{_id}}')"
                 @stopotherplayers.window="stopAllOtherPlayers({{_id}})" 
