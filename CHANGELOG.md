@@ -1,3 +1,15 @@
+# v1.110.12 (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- reactivate error icon in message.hbs [#1116](https://github.com/mumprod/hr-design-system-handlebars/pull/1116) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.110.11 (Wed Oct 16 2024)
 
 #### 🐛 Bug Fix
