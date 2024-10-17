@@ -36,7 +36,7 @@
       {{#if _required}}required{{/if}}
       class="relative w-full px-4 pb-px text-black placeholder-transparent bg-white border-form-highlight dark:border-form-highlight-dark min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
-         :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
+         :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
       {{/if}}
    >{{~#if _formField.isValid~}}
         {{{_formField.forHtmlContent}}}
@@ -61,7 +61,7 @@
    </label>
    {{#if _required}}
          <div class="absolute top-0 z-10 flex items-center justify-center h-12 right-4">
-            {{> components/forms/error_icon _class="hidden" _xclass="{'hidden': hideError() }"}}
+            {{> components/forms/components/error_icon _class="hidden" _xclass="{'hidden': hideError() }"}}
          </div>
   {{/if}}
    <div class="flex items-end justify-between h-5 font-heading">     
@@ -69,7 +69,7 @@
          <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       {{#if _required}}
-         <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+         <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
       {{/if}}
       {{#if _maxLength}}
          <div class="px-4 ml-auto text-xs text-gray-scorpion"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>

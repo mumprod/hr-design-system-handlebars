@@ -290,6 +290,7 @@ module.exports = {
                     paprika: { rgb: '140 3 61', hex: '#8C033D' },
                     scarlett: '#9b0112',
                     thunderbird: { hex: '#cc1a14' },
+                    thunderbirdLight: { hex: '#e07672'},
                     wellRead: { rgb: '171 47 45', hex: '#AB2F2D' },
                 },
                 'pink': {
@@ -427,6 +428,8 @@ module.exports = {
                 'structure-nav-text': 'var(--structure-nav-text)',
                 'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)',
                 'error':'var(--color-error)',
+                'error-dark':'var(--color-error-dark)',
+                'success':'var(--color-success)',
                 'form-highlight':'var(--color-form-highlight)',
                 'form-highlight-dark':'var(--color-form-highlight-dark)'
             },

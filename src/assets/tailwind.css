@@ -164,6 +164,8 @@
     --structure-nav-text-mobile: var(--color-primary-ds);
 
     --color-error: theme('colors.red.thunderbird.hex');
+    --color-error-dark: theme('colors.red.thunderbirdLight.hex');
+    --color-success: #2c7e13;
     --color-form-highlight: var(--color-link);
     --color-form-highlight-dark: var(--color-link-dark);
 
