@@ -429,6 +429,7 @@ module.exports = {
                 'structure-nav-text-mobile': 'var(--structure-nav-text-mobile)',
                 'error':'var(--color-error)',
                 'error-dark':'var(--color-error-dark)',
+                'success':'var(--color-success)',
                 'form-highlight':'var(--color-form-highlight)',
                 'form-highlight-dark':'var(--color-form-highlight-dark)'
             },
