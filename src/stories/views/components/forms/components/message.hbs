@@ -1,10 +1,10 @@
 <div class="flex flex-row items-center justify-between w-full">
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
-                {{> components/forms/success_icon}}
+                {{> components/forms/components/success_icon}}
                 <span class="h-5 font-bold text-success">{{#if this.successText}}{{this.successText.richtext}}{{else}}{{~loca "webform_send_text_success"}}{{/if}}</span>       
             {{else}}
-                {{> components/forms/error_icon _class="!block"}}
+                {{> components/forms/components/error_icon _class="!block"}}
                 <span class="h-5 font-bold text-error dark:text-error-dark">{{~loca "webform_send_text_error"}}</span>  
             {{/if}}
         </div>
