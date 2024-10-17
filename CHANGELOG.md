@@ -1,3 +1,15 @@
+# v1.110.14 (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- path adjusted [#1118](https://github.com/mumprod/hr-design-system-handlebars/pull/1118) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.13 (Thu Oct 17 2024)
 
 #### 🐛 Bug Fix
