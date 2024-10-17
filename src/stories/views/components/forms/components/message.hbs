@@ -1,17 +1,16 @@
 <div class="flex flex-row items-center justify-between w-full">
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
-                {{> components/forms/components/success_icon}}
-                <span class="font-bold text-green-800">{{_messageText}}</span>       
+                {{> components/forms/success_icon}}
+                <span class="h-5 font-bold text-success">{{#if this.successText}}{{this.successText.richtext}}{{else}}{{~loca "webform_send_text_success"}}{{/if}}</span>       
             {{else}}
-                {{> components/forms/components/error_icon}}
-                <span class="font-bold text-red-700">{{_messageText}}</span>  
+                {{> components/forms/error_icon _class="!block"}}
+                <span class="h-5 font-bold text-error dark:text-error-dark">{{~loca "webform_send_text_error"}}</span>  
             {{/if}}
         </div>
         {{#unless _success}}
             {{#> components/button/button _variant="primary"_size="lg" _css="" _type="reset"}} 
                 <span class="text-base ds-button-label ">Nochmal versuchen</span>        
             {{/components/button/button}}  
-        {{/unless}}
-        
+        {{/unless}}   
 </div>
