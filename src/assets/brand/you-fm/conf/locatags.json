@@ -1,5 +1,7 @@
 {
     "event_calendar_title": "Eventkalender",
+    "ext_service_datapolicy_text": "An dieser Stelle befindet sich ein von unserer Redaktion empfohlener Inhalt von <b>{0}</b>. Beim Laden des Inhalts werden Daten an den Anbieter und ggf. weitere Dritte übertragen. Nähere Informationen erhältst du in unseren ",
+    "ext_service_datapolicy_no_js_text": "An dieser Stelle befindet sich ein von unserer Redaktion empfohlener Inhalt von <b>{0}</b>. Da du in deinem Browser Javascript deaktiviert hast, kann dieser hier nicht angezeigt werden. Der nachfolgende Link öffnet den Inhalt auf der Seite des Anbieters.",
     "header_homepage_link_title": "Startseite you-fm . d e",
-	"meta_application_name": "you-fm.de"
+    "meta_application_name": "you-fm.de"
 }
