@@ -4,18 +4,18 @@
         {{#if this.caption}}         
             <fieldset>
                 <legend class="mb-5 text-lg font-bold text-text dark:text-text-dark md:text-xl font-heading">{{this.caption}}</legend>
-                {{~> components/forms/fields}}
+                {{~> components/forms/components/fields}}
             </fieldset>            
         {{else}}
             <fieldset>
-                {{~> components/forms/fields}}
+                {{~> components/forms/components/fields}}
             </fieldset>
         {{/if}}
         
     {{else}}
         <div class="js-wrapper-{{this.name}}">
             {{#if this.type.isTextarea}}
-                {{~> components/forms/textarea
+                {{~> components/forms/components/textarea
                     _name=this.name
                     _label=this.label
                     _description=this.description
@@ -29,7 +29,7 @@
                     _formId=../_formId
                 }}
             {{else if this.type.isText}}
-                {{~> components/forms/input
+                {{~> components/forms/components/input
                     _type=this.type.asString
                     _isEmail=this.type.isEmail
                     _name=this.name
@@ -46,7 +46,7 @@
                     _formId=../_formId
                 }}
             {{else if this.type.isSelect}}
-                {{~> components/forms/select
+                {{~> components/forms/components/select
                     _name=this.name
                     _label=this.label
                     _labelClass="hide"
@@ -58,7 +58,7 @@
                 }}
             {{else if this.type.isChoice}}
                 {{#if this.isGrouped }}
-                    {{~> components/forms/choiceGroup
+                    {{~> components/forms/components/choiceGroup
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label
@@ -72,7 +72,7 @@
                         _formId=../_formId  
                     }}
                 {{else}}
-                    {{~> components/forms/choice
+                    {{~> components/forms/components/choice
                         _type=this.type.asString
                         _name=this.name
                         _label=this.label

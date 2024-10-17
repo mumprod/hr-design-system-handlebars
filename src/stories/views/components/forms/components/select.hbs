@@ -5,7 +5,7 @@
 >
     <select
         class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none cursor-pointer text-text dark:bg-black dark:text-text-dark border-form-highlight dark:border-form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
-        :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error': hideDescription() }"
+        :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
         x-model="select{{getRandom}}"
         id="select{{getRandom}}"
         title="{{#if _locaKey}}{{loca _locaKey}}{{else}}{{#if _Label}}{{_label}}{{#if _required}}*{{/if}}{{/if}}{{/if}}"
@@ -48,7 +48,7 @@
             <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription()}">{{_description}}</div>
         {{/if}}
         {{#if _required}}
-            <div class="hidden pl-4 text-xs text-error" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+            <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
         {{/if}}
     </div>
     <div class="absolute right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">

@@ -1,5 +1,5 @@
 {{~#if _newWebForm ~}}
-    {{#>components/forms/backgroundBox  }}  
+    {{#>components/forms/components/backgroundBox  }}  
 
         
         <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
@@ -22,21 +22,21 @@
                 accept-charset="utf-8"
                 
                 >
-                {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }} 
+                {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
 
-                {{> components/forms/controls }}
+                {{> components/forms/components/controls }}
 
                 <template id="successMessage">
-                    {{> components/forms/message _success=true _messageText="Das Formular wurde erforlgreich versendet." }}
+                    {{> components/forms/components/message _success=true _messageText="Das Formular wurde erforlgreich versendet." }}
                 </template>
 
                 <template id="errorMessage">
-                    {{> components/forms/message _success=false _messageText="Das Formular konnte nicht versendet werden." }}
+                    {{> components/forms/components/message _success=false _messageText="Das Formular konnte nicht versendet werden." }}
                 </template>
                 
             </form>
         </div>   
-    {{/components/forms/backgroundBox }}
+    {{/components/forms/components/backgroundBox }}
 {{~else~}}
     {{> content/webform/components/webform _addClass="print:hidden copytext__clearBox marginTrailer--m"}}
 {{~/if~}}
