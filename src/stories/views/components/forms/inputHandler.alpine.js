@@ -6,6 +6,30 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
         isFocused: false,
         typeMismatch: true,
         valueMissing: true,
+        outputText: "",
+        isFileSelected: false,
+
+        setFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                this.fileName = file.name;
+                this.isFileSelected = true;
+            }
+            else{
+                this.fileName = "";
+                this.isFileSelected = false;
+            }
+        },
+        getFileName() {
+            return this.fileName;
+        },
+        clearFile() {
+            this.fileName = "";
+            this.isFileSelected = false;
+            this.valid = false;
+            var uploadEelement = document.getElementById(element);
+            uploadEelement.value = null;
+        },
 
         errorMessage() { 
             if( type == "email"){
@@ -37,7 +61,10 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
                 case "select":
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 case "choice-group":
+                    //to-do: Server error
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]));
+                case "upload":
+                    return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
                 default:
                     return Boolean((!this.valid && this.wasFocused && !this.isFocused) || (!this.valid && !this.isFocused && this.$store.forms.submissionAttempted[formId]) || (this.hasServerError() && !this.isFocused ));
             }
@@ -52,6 +79,10 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
             this.valid = field.checkValidity()
         },
         validateChoice() {
+            var choice = document.getElementById(element)  
+            this.valid = choice.checkValidity()
+        },
+        validateUpload() {
             var choice = document.getElementById(element)  
             this.valid = choice.checkValidity()
         },

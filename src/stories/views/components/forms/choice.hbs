@@ -9,7 +9,7 @@
    {{/unless}}
 >
 <div class="flex flex-row items-center w-full gap-x-2 md:gap-x-3">
-  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer {{~inline-switch _type '["checkbox","radio"]' '["  border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent","  border-blue-science-hex checked:bg-white checked:border-blue-congress-hex rounded-full",""]'}}"
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white border appearance-none cursor-pointer {{~inline-switch _type '["checkbox","radio"]' '["  border-blue-science-hex checked:bg-blue-congress-hex checked:border-transparent form-checkbox","  border-blue-science-hex checked:bg-white checked:border-blue-congress-hex rounded-full form-radio",""]'}}"
       {{#if _required}}
             :class="{' border-blue-science-hex': hideError(),'border-red-700': hideDescription() }"
       {{/if}}
