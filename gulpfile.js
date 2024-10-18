@@ -461,7 +461,7 @@ exports.default = series(
 exports.optimizeSvgs = parallel(createSvgMaps, minimizeSvgSrcFiles)
 exports.parseJson = series(parseJson, watchForChanges)
 exports.createModernizrConfig = series(createModernizr, addCustomModernizrTests)
-exports.mergeLocatags = mergeLocatags
+exports.mergeLocatags = series(mergeLocatags)
 exports.convertPartialsToJs = convertPartialsToJs
 exports.preparePartialsForDelivery = series(
     preparePartialsForDelivery,
