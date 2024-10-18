@@ -1,3 +1,17 @@
+# v1.111.4 (Fri Oct 18 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3307: Upload [#1123](https://github.com/mumprod/hr-design-system-handlebars/pull/1123) (saad.elbaciri@hr.de [@vascoeduardo](https://github.com/vascoeduardo) [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 3
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.111.3 (Fri Oct 18 2024)
 
 #### 🐛 Bug Fix
