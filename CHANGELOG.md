@@ -1,3 +1,15 @@
+# v1.111.2 (Fri Oct 18 2024)
+
+#### 🐛 Bug Fix
+
+- new templates for NoJS response sites [#1121](https://github.com/mumprod/hr-design-system-handlebars/pull/1121) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.111.1 (Fri Oct 18 2024)
 
 #### 🐛 Bug Fix
