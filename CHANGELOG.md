@@ -1,3 +1,15 @@
+# v1.111.3 (Fri Oct 18 2024)
+
+#### 🐛 Bug Fix
+
+- - adds margin top to bgBox [#1122](https://github.com/mumprod/hr-design-system-handlebars/pull/1122) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.111.2 (Fri Oct 18 2024)
 
 #### 🐛 Bug Fix
