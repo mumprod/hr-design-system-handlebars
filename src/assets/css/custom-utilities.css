@@ -465,7 +465,7 @@
         @apply text-transparent;
     }
 
-    input[type='checkbox']:checked::after {
+    .form-checkbox:checked::after {
         position: absolute;
         content: '';
         width: 15px;
@@ -479,7 +479,7 @@
         transform: rotate(-45deg);
     }
 
-    input[type='radio']::after {
+    .form-radio::after {
         content: '';
         position: absolute;
         width: 16px;
@@ -491,7 +491,7 @@
         border-radius: 50%;
     }
 
-    input[type='radio']:checked::after {
+    .form-radio:checked::after {
         transform: translate(-50%, -50%) scale(1);
     }
 }

@@ -24,6 +24,16 @@
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "upload",
+                        "@->overrides": [
+                         {
+                            "@->contentpath": "isRequired",
+                            "@->value": true
+                         }
+                      ]
+                    },
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "select"
                     },
                     {

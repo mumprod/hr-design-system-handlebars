@@ -192,6 +192,7 @@
 	"teaser_more_video_livestream_sr": "zum Livestream",
 	"webform_send_text_success": "Das Formular wurde erfolgreich versendet.",
 	"webform_send_text_error": "Das Formular konnte nicht versendet werden.",
+	"webform_upload_label": "Datei auswählen",
 	"header_homepage_link_title": "Startseite you-fm . d e",
 	"meta_application_name": "you-fm.de"
 }

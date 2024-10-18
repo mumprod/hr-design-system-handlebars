@@ -1,0 +1,73 @@
+<div class="relative flex flex-col w-full mb-6 gap-y-1 md:mb-12"
+        ax-load
+        x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','{{_type}}','', '', '{{_name}}')"
+        x-init="validateUpload()"
+        x-ignore
+>
+    <div @change="setFile($event)" class="relative flex flex-row items-center w-full gap-x-2 md:gap-x-3">   
+        <input class="absolute w-2 opacity-0 appearance-none cursor-pointer -z-1" 
+            type="file"
+            size="36700160" {{!-- 35MB --}}
+            id="input{{getRandom}}"
+            {{#if _required}}
+                @focus="isFocused = true"
+                @blur="wasFocused = true; isFocused=false"
+            {{/if}}
+            
+            {{#if _required}}
+                @change="validateUpload()"
+            {{/if}}
+
+            {{#if _multiple}}
+                multiple
+                data-multiple-caption="{count} Dateien ausgewählt"
+            {{/if}}
+            name="{{#if _name}}{{_name}}{{/if}}"
+            {{#if _accept}}
+                accept="{{_accept}}"
+            {{/if}}
+
+            {{#if _locaKeyButton}}
+                title="{{~loca _locaKeyButton}}"
+            {{else}}
+                {{#if _label}}
+                    title="{{_label}}{{#if _required}}*{{/if}}"
+                {{/if}}
+            {{/if}}
+                    
+            {{#if _formField.forHtmlAttribute}}
+                value="{{_formField.forHtmlAttribute}}"
+            {{else}}
+                {{#if _value}}
+                    value="{{_value}}"
+                {{else}}
+                    value="{{_defaultValue}}"
+                {{/if}}
+            {{/if}}
+            
+            {{#if _required}}required{{/if}}
+        />
+        <label for="input{{getRandom}}" class="cursor-pointer min-w-min {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant='primary'}} {{> components/button/utilities/button_dimension_classes _size='lg'}}">     
+            <span class="pr-1 md:pr-2">
+                {{> components/base/image/icon _icon="upload" _addClass="w-6 h-6 fill-white dark:fill-text-dark"}}
+            </span>
+            <span class="text-nowrap">{{loca "webform_upload_label" }}</span>
+        </label>
+        <span x-show="!isFileSelected" class="items-center justify-center text-base text-black md:text-lg" >{{_label}}{{#if _required}}*{{/if}}</span>
+        <div x-show="isFileSelected" class="flex items-center gap-2 p-1 text-sm bg-gray-300 md:text-base">
+            <span x-text="getFileName" class="items-center justify-center text-black" ></span>
+            <button class="flex-shrink-0" @click="clearFile" type="button">
+                <span >{{~> components/base/image/icon _icon="close" _addClass="h-3 w-3 fill-red-600" _iconmap="icons"~}}</span>
+            </button>
+        </div>
+    </div>
+    <div class="font-heading">     
+        {{#if _description}}  
+            <div class="pl-3 text-xs text-gray-500 md:pl-4" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+        {{/if}}
+        {{#if _required}}
+            <div class="hidden pl-3 text-xs text-red-700 md:pl-4" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+        {{/if}}
+    </div>
+</div>
+

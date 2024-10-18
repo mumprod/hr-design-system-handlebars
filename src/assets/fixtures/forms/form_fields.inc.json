@@ -242,9 +242,9 @@
             "isUpload":true,
             "asString":"upload"
         },
-        "name":"lieblingsfarbe",
-        "label":"Wählen Sie Ihre Lieblingsfarbe",
-        "description":"Bitte wählen Sie eine der folgenden Farben aus.",
-        "isRequired":false
+        "name":"Datei Hochladen",
+        "label":"Wählen Sie eine Datei zum Hochladen",
+        "description":"Erlaubte Dateiformate: PDF, DOCX, PNG, JPG. Maximale Dateigröße: 5 MB.",
+        "isRequired":true
     }
 }
