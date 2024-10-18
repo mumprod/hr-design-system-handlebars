@@ -1,3 +1,124 @@
+# v1.111.2 (Fri Oct 18 2024)
+
+#### 🐛 Bug Fix
+
+- new templates for NoJS response sites [#1121](https://github.com/mumprod/hr-design-system-handlebars/pull/1121) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.111.1 (Fri Oct 18 2024)
+
+#### 🐛 Bug Fix
+
+- Bug/dpe 3316 [#1120](https://github.com/mumprod/hr-design-system-handlebars/pull/1120) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.111.0 (Thu Oct 17 2024)
+
+#### 🚀 Enhancement
+
+- Bug/dpe 3316 [#1119](https://github.com/mumprod/hr-design-system-handlebars/pull/1119) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.110.14 (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- path adjusted [#1118](https://github.com/mumprod/hr-design-system-handlebars/pull/1118) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.110.13 (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- Forms colors and spacing v2 [#1117](https://github.com/mumprod/hr-design-system-handlebars/pull/1117) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.110.12 (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- reactivate error icon in message.hbs [#1116](https://github.com/mumprod/hr-design-system-handlebars/pull/1116) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.110.11 (Wed Oct 16 2024)
+
+#### 🐛 Bug Fix
+
+- Forms colors and spacing v2 [#1115](https://github.com/mumprod/hr-design-system-handlebars/pull/1115) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.110.10 (Wed Oct 16 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3308 error&success message [#1114](https://github.com/mumprod/hr-design-system-handlebars/pull/1114) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.110.9 (Wed Oct 16 2024)
+
+#### 🐛 Bug Fix
+
+- Feature/dpe 3394 [#1113](https://github.com/mumprod/hr-design-system-handlebars/pull/1113) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.110.8 (Tue Oct 15 2024)
+
+#### 🐛 Bug Fix
+
+- Forms colors and spacings [#1112](https://github.com/mumprod/hr-design-system-handlebars/pull/1112) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.110.7 (Mon Oct 14 2024)
 
 #### 🐛 Bug Fix

@@ -51,7 +51,7 @@
             <span class="pr-1 md:pr-2">
                 {{> components/base/image/icon _icon="upload" _addClass="w-6 h-6 fill-white dark:fill-text-dark"}}
             </span>
-            <span class="text-nowrap">{{loca "uploadForm_label_file_button" }}</span>
+            <span class="text-nowrap">{{loca "webform_upload_label" }}</span>
         </label>
         <span x-show="!isFileSelected" class="items-center justify-center text-base text-black md:text-lg" >{{_label}}{{#if _required}}*{{/if}}</span>
         <div x-show="isFileSelected" class="flex items-center gap-2 p-1 text-sm bg-gray-300 md:text-base">

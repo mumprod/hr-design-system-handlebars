@@ -22,11 +22,11 @@ export default {
 }
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
-    {{#>components/forms/backgroundBox  }}  
+    {{#>components/forms/components/backgroundBox  }}  
             <form class="relative flex flex-col justify-center overflow-hidden group" id="form{{nextRandom}}" action="{{this.url}}" method="post" enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" accept-charset="utf-8" >     
-                {{> components/forms/fields }}
+                {{> components/forms/components/fields }}
             </form>
-    {{/components/forms/backgroundBox }}
+    {{/components/forms/components/backgroundBox }}
   `)
     return hbsTemplate({ ...args })
 }

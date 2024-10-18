@@ -1,8 +1,8 @@
 {{~#if _newWebForm ~}}
-    {{#>components/forms/backgroundBox  }}  
+    {{#>components/forms/components/backgroundBox  }}  
 
         
-        <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12">
+        <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
             {{this.title}}
         </h3>
         <div id="formWrapper">
@@ -22,30 +22,21 @@
                 accept-charset="utf-8"
                 
                 >
-        
-                <div class="">
-                    <div class="px-4 py-2 font-bold text-white bg-red-500 rounded-t">
-                        DEBUG
-                    </div>
-                    <div class="px-4 py-3 text-red-700 bg-red-100 border border-t-0 border-red-400 rounded-b">
-                        <div>submissionAttempted[form{{getRandom}}]:<span x-text="getSubmissionAttempted()" class="font-bold" :class="getSubmissionAttempted() ? 'text-green-800' : 'text-red-700'"></span></div>
-                        <div>isPosting:<span x-text="isPosting" class="font-bold" :class="isPosting ? 'text-green-800' : 'text-red-700'"></span></div>
-                    
-                    </div> 
-                </div>
-                {{> components/forms/fields _formId=(joinStrings 'form' (getRandom)) }} 
+                {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
 
-                {{> components/forms/controls }}
+                {{> components/forms/components/controls }}
+
                 <template id="successMessage">
-                    <h2>SUPER DAS HAT ALLES FUNKTIONIERT</h2>
+                    {{> components/forms/components/message _success=true _messageText="Das Formular wurde erforlgreich versendet." }}
                 </template>
+
                 <template id="errorMessage">
-                    <h2>DAS HAT LEIDER NICHT FUNKTIONIERT</h2>
+                    {{> components/forms/components/message _success=false _messageText="Das Formular konnte nicht versendet werden." }}
                 </template>
                 
             </form>
         </div>   
-    {{/components/forms/backgroundBox }}
+    {{/components/forms/components/backgroundBox }}
 {{~else~}}
     {{> content/webform/components/webform _addClass="print:hidden copytext__clearBox marginTrailer--m"}}
 {{~/if~}}

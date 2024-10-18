@@ -1,0 +1,13 @@
+{{~#partial "body"~}}
+    <article class="grid grid-page">
+        <div class="grid pt-6 col-main grid-content">
+            {{#>components/forms/components/backgroundBox  }}  
+                {{> components/forms/components/message _success=false _messageText="Das Formular konnte nicht versendet werden." }}
+            {{/components/forms/components/backgroundBox }}
+
+            {{{ this.relatedContentSsi }}}
+        </div>
+    </article>
+{{/partial}}
+
+{{> modules/page/base }}

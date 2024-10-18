@@ -13,9 +13,9 @@ import {
 } from 'hrQuery'
 
 const ExternalService = function (context) {
-    const   { options } = context,
-            { element: rootElement } = context,
-            rootParent = rootElement.parentNode
+    const { options } = context,
+        { element: rootElement } = context,
+        rootParent = rootElement.parentNode
     let dataPolicyBox = hr$('.js-datapolicy', rootElement)[0]
     const dataPolicyBoxHTML = typeof dataPolicyBox !== 'undefined' ? dataPolicyBox.outerHTML : '',
         contentSettingsButton = hr$('.js-content-settings-button', rootParent)[0],
@@ -33,7 +33,7 @@ const ExternalService = function (context) {
         gemeindewahlergebnis,
         uniqueId,
         isExternalServiceLoaded = false
-        
+
     const testDOMElements = function () {
         console.log(rootElement)
         console.log(rootParent)
@@ -71,19 +71,16 @@ const ExternalService = function (context) {
             })
     }
 
-   const insertExternalService = function () {
+    const insertExternalService = function () {
         switch (embedType) {
             case 'js':
                 switch (id) {
                     case 'facebook-post':
                         createFacebookEmbed()
                         break
-                    case 'instagram-post':
+                    case 'instagram':
                         createInstagramEmbed()
                         break
-                    case 'instagram-story':
-                        createInstagramEmbed()
-                        break    
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -101,10 +98,10 @@ const ExternalService = function (context) {
                         break
                     case 'wahlomat':
                         createWahlOMatEmbed()
-                        break  
+                        break
                     case 'wahl-gemeinde-ergebnis':
                         createWahlGemeindeErgebnisEmbed()
-                        break  
+                        break
                     default:
                         console.error('No JS Config for external service ' + id)
                         break
@@ -114,9 +111,9 @@ const ExternalService = function (context) {
                 loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
         }
     }
-   
+
     const createWahlGemeindeErgebnisEmbed = function () {
-        gemeindewahlergebnis = new CreateWahlGemeindeErgebnis(embedCode,rootElement)
+        gemeindewahlergebnis = new CreateWahlGemeindeErgebnis(embedCode, rootElement)
         gemeindewahlergebnis.createErgebnis()
     }
     const createWahlOMatEmbed = function () {
@@ -150,9 +147,9 @@ const ExternalService = function (context) {
         script.type = 'text/javascript'
         rootElement.appendChild(script)
     }
-    const createUniqueID = function() {
-       console.log("Erzeuge einzigartige ID")
-       uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
+    const createUniqueID = function () {
+        console.log("Erzeuge einzigartige ID")
+        uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
     }
 
     const getAspectRatioClass = function () {
@@ -166,36 +163,36 @@ const ExternalService = function (context) {
             case '100x27':
                 return "ar-100-27"
             case '100':
-                return "ar-1-1"                
+                return "ar-1-1"
             case '9x16':
                 return "ar-9-16"
             case '7x16':
                 return "ar-7-16"
             default:
                 return "ar-16-9"
-        }   
+        }
     }
 
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
         createUniqueID()
-        console.log("UniqueID"+uniqueId)
+        console.log("UniqueID" + uniqueId)
         if (iFrameConfig.noResponsiveIframe == 'true') {
 
-             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-             noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
-             noResponsiveIframe.createNoResponsiveIframe()
- 
-             if (iFrameConfig.refreshContent == 'true') {
-                 console.log("contentRefresher anfügen")
-                 contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
-                 contentRefresher.createRefresher()
-             }
-            
-        } 
+            //Klassisches Iframe mit AR-Wrapper oder fester Höhe
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
+            noResponsiveIframe.createNoResponsiveIframe()
+
+            if (iFrameConfig.refreshContent == 'true') {
+                console.log("contentRefresher anfügen")
+                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                contentRefresher.createRefresher()
+            }
+
+        }
         else {
-            if(iFrameConfig.webcomponent == 'true') {
-                
+            if (iFrameConfig.webcomponent == 'true') {
+
                 // Webcomponent
                 const divTag = document.createElement('div')
                 divTag.id = 'datawrapper-chart-' + uniqueId
@@ -239,16 +236,16 @@ const ExternalService = function (context) {
                     'datawrapper-js',
                     'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
                     true
-                ) 
+                )
                 if (iFrameConfig.refreshContent == 'true') {
                     console.log("contentRefresher anfügen")
                     contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
                     contentRefresher.createRefresher()
                 }
-               
+
             }
-           
-           
+
+
         }
     }
 
@@ -291,7 +288,7 @@ const ExternalService = function (context) {
     const createInstagramEmbed = function () {
         loadScript('instagram-js', '//www.instagram.com/embed.js', true)
         embedCode = options.embedCode
-        var instagramPostEmbedCode =
+        var instagramEmbedCode =
             "<blockquote class='instagram-media' data-instgrm-captioned " +
             "data-instgrm-permalink='" +
             embedCode +
@@ -341,15 +338,15 @@ const ExternalService = function (context) {
 
     const loadIframe = function () {
         console.log('load iframe ' + id)
-        iframe = "<iframe id='i_frame' data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        iframe = "<iframe id='i_frame' data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
-            iframe ="<div class='!h-full'><div class='"+ getAspectRatioClass() +"'><iframe id='i_frame' data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+            iframe = "<div class='!h-full'><div class='" + getAspectRatioClass() + "'><iframe id='i_frame' data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
             if (iFrameConfig.fixedHeight) {
-                iframe = "<div style='height:"+ iFrameConfig.fixedHeight +"px'><iframe data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div style='height:" + iFrameConfig.fixedHeight + "px'><iframe data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
-                iframe = "<div class='!h-full'><iframe data-isloaded='0' src='"+ embedCode +"' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div class='!h-full'><iframe data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
         replaceAnimated(rootElement, iframe, false)
@@ -359,28 +356,28 @@ const ExternalService = function (context) {
         if (dataPolicyCheck) {
             acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
             listen('click', handleDatapolicy, acceptButton)
-            if(settingsCookie.isSettingsCookieExistent(id)){
-                console.log("Dienst "+ id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
-                if(settingsCookie.isSettingsCookieAccepted(id)) {
-                  console.log("Lade den Dienst")
-                  loadServiceWithDataPolicyButton();
+            if (settingsCookie.isSettingsCookieExistent(id)) {
+                console.log("Dienst " + id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
+                if (settingsCookie.isSettingsCookieAccepted(id)) {
+                    console.log("Lade den Dienst")
+                    loadServiceWithDataPolicyButton();
                 }
                 else {
-                  console.log("Zeige Datapolicy-Box")
-                  dataPolicyBox.style.visibility = 'visible';
+                    console.log("Zeige Datapolicy-Box")
+                    dataPolicyBox.style.visibility = 'visible';
                 }
             }
-              else{
-                console.log("Dienst "+ id + " ist im Cookie nicht enthalten, prüfe daher den Default")
-                if(document.getElementById(id).getAttribute("data-whitelist") == "true"){
-                  console.log("Ist per Default eingeschaltet")
-                  console.log("Lade den Dienst")
-                  loadServiceWithDataPolicyButton();
+            else {
+                console.log("Dienst " + id + " ist im Cookie nicht enthalten, prüfe daher den Default")
+                if (document.getElementById(id).getAttribute("data-whitelist") == "true") {
+                    console.log("Ist per Default eingeschaltet")
+                    console.log("Lade den Dienst")
+                    loadServiceWithDataPolicyButton();
                 }
-                else{
-                  console.log("Ist per Default ausgeschaltet")
-                  console.log("Zeige Datapolicy-Box")
-                  dataPolicyBox.style.visibility = 'visible';
+                else {
+                    console.log("Ist per Default ausgeschaltet")
+                    console.log("Zeige Datapolicy-Box")
+                    dataPolicyBox.style.visibility = 'visible';
                 }
             }
             listen('hr:externalService-activate-' + id, loadServiceWithDataPolicyButton)

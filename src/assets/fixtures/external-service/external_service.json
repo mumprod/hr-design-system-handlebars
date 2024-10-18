@@ -138,7 +138,7 @@
     },
     "Instagram": {
         "config": {
-            "useAsSnapshot": false
+            "useAsSnapshot": true
         },
         "args": {
             "@->jsoninclude": "external-service/external_service.inc.json",
