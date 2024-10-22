@@ -4,11 +4,11 @@
         {{#if this.caption}}         
             <fieldset>
                 <legend class="mb-5 text-lg font-bold text-text dark:text-text-dark md:text-xl font-heading">{{this.caption}}</legend>
-                {{~> components/forms/components/fields}}
+                {{~> components/forms/components/fields _formId=../_formId}}
             </fieldset>            
         {{else}}
             <fieldset>
-                {{~> components/forms/components/fields}}
+                {{~> components/forms/components/fields _formId=../_formId}}
             </fieldset>
         {{/if}}
         
@@ -94,6 +94,7 @@
                     _required=this.isRequired
                     _errorMandatory="Bitte laden Sie eine Datei hoch"
                     _formId=../_formId
+                    _type=(if this.type.isUpload "upload")
                 }}
             {{/if}}
         </div>

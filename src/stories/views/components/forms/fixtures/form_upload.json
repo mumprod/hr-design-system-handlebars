@@ -1,1 +1,1 @@
-{"fields":[{"type":{"isUpload":true,"asString":"upload"},"name":"Datei Hochladen","label":"Wählen Sie eine Datei zum Hochladen","description":"Erlaubte Dateiformate: PDF, DOCX, PNG, JPG. Maximale Dateigröße: 5 MB.","isRequired":true}]}
+{"fields":[{"type":{"isUpload":true,"asString":"upload"},"name":"Datei Hochladen","label":"Wählen Sie eine Datei zum Hochladen","description":"Maximale Dateigröße: 35 MB.","isRequired":true}]}
