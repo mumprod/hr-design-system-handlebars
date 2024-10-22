@@ -53,9 +53,9 @@
             </span>
             <span class="text-nowrap">{{loca "webform_upload_label" }}</span>
         </label>
-        <span x-show="!isFileSelected" class="items-center justify-center text-base text-black md:text-lg" >{{_label}}{{#if _required}}*{{/if}}</span>
-        <div x-show="isFileSelected" class="flex items-center gap-2 p-1 text-sm bg-gray-300 md:text-base">
-            <span x-text="getFileName" class="items-center justify-center text-black" ></span>
+        <span x-show="!isFileSelected" class="items-center justify-center text-sm text-text dark:text-text-dark md:text-base" >{{_label}}{{#if _required}}*{{/if}}</span>
+        <div x-cloak x-show="isFileSelected" class="flex items-center gap-2 p-1 text-sm bg-gray-300">
+            <span x-text="getFileName" class="items-center justify-center text-black overflow-anywhere" ></span>
             <button class="flex-shrink-0" @click="clearFile" type="button">
                 <span >{{~> components/base/image/icon _icon="close" _addClass="h-3 w-3 fill-red-600" _iconmap="icons"~}}</span>
             </button>
@@ -63,10 +63,10 @@
     </div>
     <div class="font-heading">     
         {{#if _description}}  
-            <div class="pl-3 text-xs text-gray-500 md:pl-4" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+            <div class="pl-3 text-xs text-gray-500 md:pl-4 dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
         {{/if}}
         {{#if _required}}
-            <div class="hidden pl-3 text-xs text-red-700 md:pl-4" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+            <div class="hidden pl-3 text-xs text-error dark:text-error-dark md:pl-4" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
         {{/if}}
     </div>
 </div>
