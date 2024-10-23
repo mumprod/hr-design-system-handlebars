@@ -1,0 +1,117 @@
+{
+    "multivote-1": {
+        "teasersize": 100,
+        "realTeasersize": 100,
+        "topline": "Voting-Topline",
+        "toplineSize": "h5",
+        "title": "Voting-Title",
+        "shorttext": "Voting-Shorttext",
+        "backlink": "backlink-url",
+        "uuid": "UUID",
+        "headingSize": "h2",
+        "isVoting": true,
+        "isMultiVote": true,
+        "hasRedirect": true,
+        "isMultipleChoice": false,
+        "maxAnswerCount": 1,
+        "votingSuccessText": {
+            "richtext": "Success-Text"
+        },
+        "isSimpleSecured": true,
+        "cookieLifetime": "12",
+        "sophoraId": "Sophora-Id",
+        "hasBarchart": true,
+        "showAbsoluteResult": true,
+        "showVoteResult": true,
+        "summarizedResult": "666",
+        "votingResult": [
+            {
+                "label": "Label-Result-Option-1",
+                "count": "222",
+                "percentageCount": "33,33",
+                "roundedPercentageCount": "33,0"
+            },
+            {
+                "label": "Label-Result-Option-2",
+                "count": "222",
+                "percentageCount": "33,33",
+                "roundedPercentageCount": "33,0"
+            },
+            {
+                "label": "Label-Result-Option-3",
+                "count": "222",
+                "percentageCount": "33,33",
+                "roundedPercentageCount": "33,0"
+            }                        
+        ],
+        "form": {
+            "isVotingOver": false,
+            "is2FSecured": true,
+            "jsonUrl": "json-url",
+            "errorMessages": "Error-Messages",
+            "isSimpleSecured": true,
+            "url": "action-url",
+            "isHorizontalLayout": false,
+            "hideVotingResult": true,
+            "fields": [
+                {
+                    "type": {
+                        "isGroup": false,
+                        "isChoice": true,
+                        "asString": "radio"
+                    },
+                    "name": "multivote-1",
+                    "isGrouped": true,
+                    "isRequired": false,
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Answer 1",
+                            "title": "Voting-Answer 1",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]                                
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": "Answer 2",
+                            "title": "Voting-Answer 2",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "buchmesse-fahnen-102"
+                                    }
+                                ]                                
+                            }                            
+                        },
+                        {
+                            "value": "3",
+                            "label": "Answer 3",
+                            "title": "Voting-Answer 3",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "lehrerin-ukraine-104"
+                                    }
+                                ]                                
+                            }                            
+                        }                                                
+                    ]
+                }
+            ]
+        }
+    }    
+}
