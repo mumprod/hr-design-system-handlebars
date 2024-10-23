@@ -1,3 +1,15 @@
+# v1.112.0 (Wed Oct 23 2024)
+
+#### 🚀 Enhancement
+
+- add voting-json [#1125](https://github.com/mumprod/hr-design-system-handlebars/pull/1125) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.111.5 (Tue Oct 22 2024)
 
 #### 🐛 Bug Fix
