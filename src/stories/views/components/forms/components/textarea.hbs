@@ -4,8 +4,9 @@
    x-init="validateField()"
    x-ignore
 >
-   <div class="w-full h-4 bg-white"></div>
+   <div class="w-full h-4 bg-white dark:bg-black dark:text-text-dark"></div>
    <textarea
+      class="relative w-full pl-4 placeholder-transparent bg-white text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
       {{#if _required}}
