@@ -63,10 +63,10 @@
     </div>
     <div class="font-heading">     
         {{#if _description}}  
-            <div class="pl-3 text-xs text-gray-500 md:pl-4 dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
+            <div class="text-xs text-gray-500 dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
         {{/if}}
         {{#if _required}}
-            <div class="hidden pl-3 text-xs text-error dark:text-error-dark md:pl-4" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
+            <div class="hidden text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
         {{/if}}
     </div>
 </div>
