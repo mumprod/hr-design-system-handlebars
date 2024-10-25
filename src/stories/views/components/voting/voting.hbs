@@ -1,0 +1,13 @@
+{{#with this.form}}
+    {{#unless this.isVotingOver}}
+        
+        {{> components/voting/voting_header _title=../this.title _topline=../this.topline}}
+        
+        {{#if this.shorttext}}
+            <p class="mt-4 text-base font-copy sm:text-lg sm:mt-5 dark:text-text-dark">{{this.shorttext}}</p>
+        {{/if}}
+        
+    {{else}}
+        {{> components/voting/voting_result _isVotingOver=true _title=../this.title _topline=../this.topline}}
+    {{/unless}}
+{{/with}}

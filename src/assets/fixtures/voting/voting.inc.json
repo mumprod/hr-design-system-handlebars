@@ -3,9 +3,8 @@
         "teasersize": 100,
         "realTeasersize": 100,
         "topline": "Voting-Topline",
-        "toplineSize": "h5",
-        "title": "Voting-Title",
-        "shorttext": "Voting-Shorttext",
+        "toplineSize": "h3",
+        "title": "Voting-Titel beziehungsweise Voting-Frage",
         "backlink": "backlink-url",
         "uuid": "UUID",
         "headingSize": "h2",
@@ -45,6 +44,7 @@
             }                        
         ],
         "form": {
+            "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
             "isVotingOver": false,
             "is2FSecured": true,
             "jsonUrl": "json-url",

@@ -1,0 +1,5 @@
+{{> components/voting/voting_header _title=_title _topline=_topline}}
+
+{{#if _isVotingOver}}
+    <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{loca "votingform_voting_finished"}}</p>
+{{/if}}
