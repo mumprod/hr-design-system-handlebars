@@ -1,0 +1,32 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Formular"
+        },
+        {
+            "paragraphBoxItem": {
+                "isWebForm": true,
+                "hasNewWebForm": true,
+                "title": "Kontaktformular",
+                "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
+                "errorMessages": 
+                    {
+                        "@->jsoninclude": "forms/error_messages.inc.json",
+                        "@->contentpath": "error-messages"
+
+                    },
+                "isMultipart": "isMultipart",
+                "trackingInformations": "trackingInformations",
+                "fields":[
+                    {
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "input-text-vorname"
+                    }
+                ]
+                
+            }
+        }
+        
+    ]
+}
