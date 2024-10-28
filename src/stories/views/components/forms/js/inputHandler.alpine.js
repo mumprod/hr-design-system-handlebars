@@ -90,42 +90,8 @@ export default function inputHandler(element, formId, errorMandatory, type, erro
             return Boolean(this.$store.forms.serverErrorFields[formId]?.[name]);
         },
         getServerError() {
-            let serverError = "Server Error: "
-            switch (this.$store.forms.serverErrorFields[formId][name]) {
-
-                case 'form_error_required':
-                    serverError += "Pflichtfeld"
-                    break
-                case 'form_error_max':
-                    serverError += "Zu viele Zeichen"
-                    break
-                case 'form_error_validurl':
-                    serverError += "Ungültige URL"
-                    break
-                case 'form_error_empty':
-                    serverError += "Darf nicht ausgefüllt werden"
-                    break
-                case 'form_error_constants_or_null':
-                    serverError += "Ungültiger Wert"
-                    break
-                case 'form_error_constants':
-                    serverError += "Ungültiger Wert"
-                    break
-                case 'form_error_max_multivalue':
-                    serverError += "Die maximale Anzahl an Antwortmöglichkeiten wurde überschritten"
-                    break
-                case 'vote_error_identity_already_used':
-                    serverError += "Unter dieser E-Mail-Adresse wurde bereits abgestimmt. Eine weitere Abstimmung ist nicht möglich."
-                    break
-                case 'vote_error_token_request_count_exceeded':
-                    serverError += "Die maximale Anzahl an Bestätigungs-E-Mails wurde bereits verschickt."   
-                    break               
-                case 'form_error_email':
-                    serverError += "Ungültige E-Mail-Adresse"   
-                    break 
-                default:
-                    return false     
-            }
+            let errorName = this.$store.forms.serverErrorFields[formId][name]
+            let serverError = this.$store.forms.errorMessages[errorName] 
             return serverError
         }
     };
