@@ -10,7 +10,12 @@
                 "hasNewWebForm": true,
                 "title": "Kontaktformular",
                 "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
-                "errorMessages": "errorMessages",
+                "errorMessages": 
+                    {
+                        "@->jsoninclude": "forms/error_messages.inc.json",
+                        "@->contentpath": "error-messages"
+
+                    },
                 "isMultipart": "isMultipart",
                 "trackingInformations": "trackingInformations",
                 "fields":[

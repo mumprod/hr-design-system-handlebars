@@ -6,7 +6,7 @@
 >
    <div class="w-full h-4 bg-white dark:bg-black dark:text-text-dark"></div>
    <textarea
-      class="relative w-full pl-4 placeholder-transparent bg-white text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
+      class="relative w-full py-px pl-4 placeholder-transparent bg-white placeholder:select-none dark:border-form-highlight-dark min-h-12 peer focus:border-b-2 focus:py-0 text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
       x-model="textarea{{getRandom}}"
       id="textarea{{getRandom}}"
       {{#if _required}}
@@ -35,7 +35,6 @@
          maxlength="{{_maxLength}}"
       {{/if~}}
       {{#if _required}}required{{/if}}
-      class="relative w-full px-4 pb-px text-black placeholder-transparent bg-white border-form-highlight dark:border-form-highlight-dark min-h-12 peer border-y focus:border-b-2 focus:pb-0 border-t-transparent focus:outline-none" 
       {{#if _required}}
          :class="{'border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
       {{/if}}
