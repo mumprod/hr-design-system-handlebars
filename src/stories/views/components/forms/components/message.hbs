@@ -9,8 +9,11 @@
             {{/if}}
         </div>
         {{#unless _success}}
-            {{#> components/button/button _variant="primary"_size="lg" _css="" _type="reset"}} 
+            {{#> components/button/button _variant="primary"_size="lg" }} 
                 <span class="text-base ds-button-label ">Nochmal versuchen</span>        
             {{/components/button/button}}  
+            {{#*inline "htmlProperties"}}        
+                @click="retryHandler"
+            {{/inline}}
         {{/unless}}   
 </div>

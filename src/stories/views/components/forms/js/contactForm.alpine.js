@@ -1,7 +1,12 @@
+import { uxAction } from 'base/tracking/pianoHelper.subfeature'
+
 export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, jsonp = false) {
     return {
         isPosting: false,
-        isWebview:false,
+        wasPosted: false,
+        wasPostedWithSuccess: false,
+        wasPostedWithError: false,
+        isWebview: window.parent.document.documentElement.classList.contains('webview'),
         ajaxTimeout: 60 * 1000,
         form: this.$refs[formId],
         formWrapper: this.$refs[formId].closest("#formWrapper"),
@@ -15,29 +20,17 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             this.checkForJsonURL()
             this.$store.forms.submissionAttempted[formId] = false; 
             this.$store.forms.errorMessages = JSON.parse( "{" + errorMessages.replace(/&quot;/g,'"') + "}")
-
-            console.log("%cformId:", 'color: green' ,formId);
-            console.log("%cform:", 'color: green' ,this.form);
-            console.log("%cformWrapper:", 'color: green' ,this.formWrapper);
-            console.log("%cactionUrl:", 'color: green' ,this.actionUrl);
-            console.log("%cjsonUrl:", 'color: green', jsonUrl);
-            console.log("%cerrorMessages:", 'color: green', errorMessages);
-            console.log("%cerrorMessages store:", 'color: green', this.$store.forms.errorMessages);
-            console.log("%cmultipart:", 'color: green', multipart);
-            console.log("%ctrackingInformations:", 'color: green', trackingInformations);
- 
         },
-        clickHandler(event) {
-            console.log("event:",event);
-            console.log('check for Error:',formId); 
-            console.log('form:',this.form);
-     
+        submitButtonHandler(event) {
             if(this.form.reportValidity()){
-               // this.logData(event,form);
                 this.handleSubmit(event,this.form)
             } else {
                 this.$store.forms.submissionAttempted[formId] = true;
             }
+        },
+        retryHandler() {
+            this.wasPosted = false;
+            this.wasPostedWithError = false;  
         },
         handleValidationErrors(errors) {
             console.log('Validation Errors:', errors);
@@ -46,14 +39,12 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         },
         resetValidationErrors() {    
             this.$store.forms.serverErrorFields[formId] = {}
-        },
-        
+        },   
         handleSubmit(event, form ) {
             event.preventDefault();
         
-            if (!this.isWebview) {
-                // TODO TRACKING
-                // uxAction(trackingInformations); 
+            if (!this.isWebview) {    
+                uxAction(trackingInformations); 
             }
         
             if (this.isPosting) return;
@@ -61,7 +52,6 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             
             console.log('DATA:', new URLSearchParams(new FormData(form)).toString());
         
-            // Define ajaxOptions based on form type (without jQuery $.ajax)
             let ajaxOptions = {
                 method: jsonp ? 'GET' : 'POST',
                 headers: {
@@ -74,13 +64,13 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             if (jsonp) {
                 ajaxOptions.url = this.actionUrl;
                 ajaxOptions.headers['Content-Type'] = 'application/json; charset=utf-8';
-                ajaxOptions.body = new URLSearchParams(new FormData(form)).toString(); // For JSONP case
+                ajaxOptions.body = new URLSearchParams(new FormData(form)).toString(); 
             } else if (multipart) {
                 ajaxOptions = {
                     method: 'POST',
                     url: this.actionUrl,
                     timeout: 600 * 1000,
-                    body: new FormData(form), // No URLSearchParams, we use FormData for multipart
+                    body: new FormData(form), 
                     processData: false,
                     headers: {}
                 };
@@ -88,10 +78,9 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                 ajaxOptions.url = `${this.actionUrl}?${responseFormatParam}`;
             }
         
-            // Using fetch API instead of $.ajax
             fetch(ajaxOptions.url, ajaxOptions)
                 .then(async (response) => {
-                    const data = await response.text(); // Assuming the rponse is text or JSON
+                    const data = await response.text();
                     if (response.ok) {
                         console.log('Done');
                         console.log(data);
@@ -104,60 +93,39 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                                 case 'OK':
                                     console.log("OK");
-                                    //TODO: replaceAnimated mit alpine umsetzen
-                                    this.replaceAnimated(
-                                        this.formWrapper,
-                                        this.form.querySelector('#successMessage').innerHTML,
-                                        true
-                                    ); 
+                                    this.wasPosted = true;
+                                    this.wasPostedWithSuccess = true;
                                     break;
                                 default:
                                     console.log("default");
-                                    //TODO: replaceAnimated mit alpine umsetzen
-                                    this.replaceAnimated(
-                                        this.formWrapper,
-                                        this.form.querySelector('#errorMessage').innerHTML,
-                                        true
-                                    ); 
+                                    this.wasPosted = true;
+                                    this.wasPostedWithError = true;
                                     break;
                             }
                         } else {
-                            //TODO: replaceAnimated mit alpine umsetzen
-                            this.replaceAnimated(this.formWrapper, data, true);
+                            
+                            this.wasPosted = true;
+                            this.wasPostedWithError = true;
                         }
                         if (formId) {
                             window.location.hash = formId;
                         } 
                     } else {
+                        this.wasPosted = true;
+                        this.wasPostedWithError = true;
                         throw new Error('Network response was not ok.');
+                        
                     }
                 })
                 .catch((error) => {
                     console.error('Fail:', error);
-                    //TODO: replaceAnimated mit alpine umsetzen
-                    this.replaceAnimated(
-                        this.formWrapper,
-                        '<div class="c-form success">Das hat leider nicht funktioniert!</div>',
-                        true
-                    );
+                    this.wasPosted = true;
+                    this.wasPostedWithError = true;
                 })
                 .finally(() => {
                     console.log('Always');
                     this.isPosting = false;
                 });
-        },
-        // Helper function to replace content with animation (replacing hrQuery's replaceAnimated)
-        // TODO: replaceAnimated mit alpine umsetzen
-        replaceAnimated(wrapper, newContent, withFade = true)  {
-            if (withFade) {
-                wrapper.style.opacity = 0;
-                setTimeout(() => {
-                    wrapper.innerHTML = newContent;
-                    wrapper.style.opacity = 1;
-                }, 300);
-            } else {
-                wrapper.innerHTML = newContent;
-            }
         },
         getSubmissionAttempted() {
             return this.$store.forms.submissionAttempted[formId]
