@@ -1,5 +1,25 @@
-{{> components/voting/voting_header _title=_title _topline=_topline}}
+{{#unless _isResultOnRedirectPage}}
+    {{> components/voting/voting_header _title=_title _topline=_topline}}
+{{/unless}}
+
+{{#if _hideVotingResult}}
+    {{#if _isVotingOver}}
+        <p class="c-teaser__text text__copytext">{{{_resultBoxMessageText}}}</p>
+    {{else}}
+        {{~> components/base/image/icon _icon=(if _statusDone "status-done" "status-error") _iconmap="icons" _addClass=(if _statusDone "" "float-left w-6 h-6 text-red-thunderbird-hex fill-current mt-6 sm:mt-12")}}
+        <p class="mt-6 ml-8 text-base font-bold sm:ml-9 text-red-thunderbird-hex sm:text-lg font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
+        <div class="mt-6 sm:mt-12">
+            {{#> components/button/link_button _size="lg" _css="float-right"}}
+                {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
+            {{/components/button/link_button}}
+        </div>
+    {{/if}}
+{{else}}
+
+{{/if}}
 
 {{#if _isVotingOver}}
     <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{loca "votingform_voting_finished"}}</p>
 {{/if}}
+
+
