@@ -13,16 +13,19 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         },
         formInit(){
             this.checkForJsonURL()
+            this.$store.forms.submissionAttempted[formId] = false; 
+            this.$store.forms.errorMessages = JSON.parse( "{" + errorMessages.replace(/&quot;/g,'"') + "}")
+
             console.log("%cformId:", 'color: green' ,formId);
             console.log("%cform:", 'color: green' ,this.form);
             console.log("%cformWrapper:", 'color: green' ,this.formWrapper);
             console.log("%cactionUrl:", 'color: green' ,this.actionUrl);
             console.log("%cjsonUrl:", 'color: green', jsonUrl);
             console.log("%cerrorMessages:", 'color: green', errorMessages);
+            console.log("%cerrorMessages store:", 'color: green', this.$store.forms.errorMessages);
             console.log("%cmultipart:", 'color: green', multipart);
             console.log("%ctrackingInformations:", 'color: green', trackingInformations);
-            
-            this.$store.forms.submissionAttempted[formId] = false; 
+ 
         },
         clickHandler(event) {
             console.log("event:",event);
@@ -36,24 +39,6 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                 this.$store.forms.submissionAttempted[formId] = true;
             }
         },
-        logData(event,form) {
-            // TODO - FOR DEBUGGIN CN BE REMOVED AT THE END
-            const formData = new FormData(form);
-            const fields = Array.from(form.elements);
-            // Log the serialized form data
-            console.log(fields);
-
-            // Convert the FormData to a serialized string
-            const serializedData = Array.from(formData.entries())
-                .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-                .join('&');
-
-            // Log the serialized form data
-            console.log('serialized DATA: ' + serializedData);
-            console.log('DATA:', new URLSearchParams(new FormData(form)).toString());
-            
-        },
-        // TODO - Validation error handler (adapt to your case)
         handleValidationErrors(errors) {
             console.log('Validation Errors:', errors);
             this.$store.forms.serverErrorFields[formId] = errors;
@@ -67,20 +52,13 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             event.preventDefault();
         
             if (!this.isWebview) {
-                //uxAction(trackingInformations); // Assuming this is a tracking library
+                // TODO TRACKING
+                // uxAction(trackingInformations); 
             }
         
             if (this.isPosting) return;
             this.isPosting = true;
             
-            // TODO mit alpine umsetzen
-            //const preloadIcon = formWrapper.querySelector('.js-preloadIcon');
-            //const loadingIcon = formWrapper.querySelector('.js-loadingIcon');
-        
-            // Show loading indicator
-            //preloadIcon.classList.add('-isHidden');
-            //loadingIcon.classList.remove('-isHidden');
-        
             console.log('DATA:', new URLSearchParams(new FormData(form)).toString());
         
             // Define ajaxOptions based on form type (without jQuery $.ajax)
@@ -126,6 +104,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                                 case 'OK':
                                     console.log("OK");
+                                    //TODO: replaceAnimated mit alpine umsetzen
                                     this.replaceAnimated(
                                         this.formWrapper,
                                         this.form.querySelector('#successMessage').innerHTML,
@@ -134,6 +113,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                                 default:
                                     console.log("default");
+                                    //TODO: replaceAnimated mit alpine umsetzen
                                     this.replaceAnimated(
                                         this.formWrapper,
                                         this.form.querySelector('#errorMessage').innerHTML,
@@ -142,22 +122,19 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     break;
                             }
                         } else {
+                            //TODO: replaceAnimated mit alpine umsetzen
                             this.replaceAnimated(this.formWrapper, data, true);
                         }
-/*         
-                        if (eventOnSuccess) {
-                            fireEvent(eventOnSuccess, true);
-                        } */
-        
-/*                         if (rootElement.id) {
-                            window.location.hash = rootElement.id;
-                        } */
+                        if (formId) {
+                            window.location.hash = formId;
+                        } 
                     } else {
                         throw new Error('Network response was not ok.');
                     }
                 })
                 .catch((error) => {
                     console.error('Fail:', error);
+                    //TODO: replaceAnimated mit alpine umsetzen
                     this.replaceAnimated(
                         this.formWrapper,
                         '<div class="c-form success">Das hat leider nicht funktioniert!</div>',
@@ -166,13 +143,11 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                 })
                 .finally(() => {
                     console.log('Always');
-                    // TODO MIT ALPINE UMSETZEN
-                    //preloadIcon.classList.remove('-isHidden');
-                    //loadingIcon.classList.add('-isHidden');
                     this.isPosting = false;
                 });
         },
         // Helper function to replace content with animation (replacing hrQuery's replaceAnimated)
+        // TODO: replaceAnimated mit alpine umsetzen
         replaceAnimated(wrapper, newContent, withFade = true)  {
             if (withFade) {
                 wrapper.style.opacity = 0;
@@ -184,16 +159,8 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                 wrapper.innerHTML = newContent;
             }
         },
-        // Fire event utility (could be Alpine.js specific or custom)
-        fireEvent(eventName, success){
-            const event = new CustomEvent(eventName, { detail: success });
-            document.dispatchEvent(event);
-        },
         getSubmissionAttempted() {
             return this.$store.forms.submissionAttempted[formId]
-        }
-        
+        }        
     }
 }
-
-
