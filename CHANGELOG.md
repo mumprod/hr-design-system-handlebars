@@ -1,3 +1,16 @@
+# v1.113.2 (Mon Oct 28 2024)
+
+#### 🐛 Bug Fix
+
+- Form validation script optimization [#1128](https://github.com/mumprod/hr-design-system-handlebars/pull/1128) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.1 (Mon Oct 28 2024)
 
 #### 🐛 Bug Fix
