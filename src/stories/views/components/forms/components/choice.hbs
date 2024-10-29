@@ -1,5 +1,5 @@
 {{~changeRandom~}}
-<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-6 md:mb-12{{/unless}} gap-y-4 md:gap-y-5" 
+<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
    {{#unless _inGroup}}
       {{#if _required}}
          ax-load
@@ -75,7 +75,7 @@
    </label>
 </div>  
 {{#unless _inGroup}}
-   <div class="font-heading">     
+   <div class="flex items-end justify-between h-5 font-heading">     
       {{#if _description}}  
          <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
       {{/if}}
