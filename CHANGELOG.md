@@ -1,3 +1,15 @@
+# v1.113.3 (Tue Oct 29 2024)
+
+#### 🐛 Bug Fix
+
+- added some improvements to contactform response view [#1130](https://github.com/mumprod/hr-design-system-handlebars/pull/1130) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.2 (Mon Oct 28 2024)
 
 #### 🐛 Bug Fix
