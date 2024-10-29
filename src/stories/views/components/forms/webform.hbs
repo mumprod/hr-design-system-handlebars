@@ -32,21 +32,25 @@
 
                     {{> components/forms/components/controls }}
                 </div>
-                <div id="successMessage" x-show="wasPostedWithSuccess"  
+                <div class="flex flex-col gap-6 md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
                     x-transition:enter="transition ease-out duration-300 delay-75"
                     x-transition:enter-start="opacity-0 transform scale-90"
                     x-transition:enter-end="opacity-100 transform scale-100"
                     x-cloak
                     >
-                    {{> components/forms/components/message _success=true }}
+                    {{#if this.successText}}
+                        {{> components/forms/components/message _success=true _locaKeyTitle="webform_send_title_success" _text=this.successText.richtext }}
+                    {{else}}
+                        {{> components/forms/components/message _success=true _locaKeyTitle="webform_send_title_success" _locaKeyText="webform_send_text_success" }}
+                    {{/if}}
                 </div>
 
-                <div id="errorMessage"  x-show="wasPostedWithError" 
+                <div class="flex flex-col gap-6 md:gap-10" id="errorMessage"  x-show="wasPostedWithError" 
                     x-transition:enter="transition ease-out duration-300 delay-75"
                     x-transition:enter-start="opacity-0 transform scale-90"
                     x-transition:enter-end="opacity-100 transform scale-100"
                     x-cloak>
-                    {{> components/forms/components/message _success=false }}
+                    {{> components/forms/components/message _success=false _locaKeyTitle="webform_send_title_error" _locaKeyText="webform_send_text_error"}}
                 </div>
 
             </form>

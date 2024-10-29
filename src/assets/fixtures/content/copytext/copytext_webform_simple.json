@@ -9,6 +9,10 @@
                 "isWebForm": true,
                 "hasNewWebForm": true,
                 "title": "Kontaktformular",
+                "successText":
+                {
+                    "richtext":"Liebe Nutzerin, lieber Nutzer,<br><br>ich werde mich so schnell wie möglich um Ihr Anliegen kümmern. Hier geht's zur <a class='' href='https://www.hessenschau.de/index.html'>hessenschau.de-Startseite</a> mit aktuellen Nachrichten aus Hessen.<br><br>Viele Grüße, <br><br>Karsten Hufer"
+                },
                 "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
                 "errorMessages": 
                     {
