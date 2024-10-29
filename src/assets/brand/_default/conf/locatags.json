@@ -207,5 +207,8 @@
     "webform_upload_label": "Datei auswählen",
     "webform_send_title_error": "Das hat leider nicht geklappt!",
 	"webform_send_title_success": "Vielen Dank! Die Nachricht wurde verschickt.",
-    "webform_send_form_back": "Zurück zum Formular"
+    "webform_send_form_back": "Zurück zum Formular",
+    "form_text_required": "* Pflichtfeld",
+	"form_button_reset": "Zurücksetzen",
+	"form_button_submit": "Absenden"
 }
