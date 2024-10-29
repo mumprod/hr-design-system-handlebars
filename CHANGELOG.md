@@ -1,3 +1,16 @@
+# v1.113.4 (Tue Oct 29 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3413: adjust form spacing [#1131](https://github.com/mumprod/hr-design-system-handlebars/pull/1131) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.113.3 (Tue Oct 29 2024)
 
 #### 🐛 Bug Fix
