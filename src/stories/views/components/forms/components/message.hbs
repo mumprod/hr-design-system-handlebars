@@ -1,19 +1,28 @@
-<div class="flex flex-row items-center justify-between w-full">
+<div class="flex flex-col justify-between w-full gap-6 md:gap-10">
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
                 {{> components/forms/components/success_icon}}
-                <span class="h-5 font-bold text-success">{{#if this.successText}}{{this.successText.richtext}}{{else}}{{~loca "webform_send_text_success"}}{{/if}}</span>       
+                <h3 class="font-bold text-success">{{~loca "webform_send_title_success"}}</h3>       
             {{else}}
                 {{> components/forms/components/error_icon _class="!block"}}
-                <span class="h-5 font-bold text-error dark:text-error-dark">{{~loca "webform_send_text_error"}}</span>  
+                <h3 class="font-bold text-error dark:text-error-dark">{{~loca "webform_send_title_error"}}</h3>  
             {{/if}}
-        </div>
-        {{#unless _success}}
-            {{#> components/button/button _variant="primary"_size="lg" }} 
-                <span class="text-base ds-button-label ">Nochmal versuchen</span>        
-            {{/components/button/button}}  
-            {{#*inline "htmlProperties"}}        
-                @click="retryHandler"
-            {{/inline}}
-        {{/unless}}   
+        </div>      
 </div>
+<span class="font-copy">
+    {{#if _locaKeyText}}
+        {{loca _locaKeyText}}
+    {{else}}
+        {{{_text}}}
+    {{/if}}
+</span>
+{{#unless _success}}
+    <div class="flex justify-end">
+        {{#> components/button/button _variant="primary" _size="lg" }} 
+            <span class="text-base ds-button-label ">{{loca "webform_send_form_back"}}</span>        
+        {{/components/button/button}}  
+        {{#*inline "htmlProperties"}}        
+            @click="retryHandler"
+        {{/inline}}
+    </div>
+{{/unless}}  

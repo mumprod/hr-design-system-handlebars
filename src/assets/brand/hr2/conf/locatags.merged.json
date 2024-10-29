@@ -205,6 +205,9 @@
 	"webform_send_text_success": "Das Formular wurde erfolgreich versendet.",
 	"webform_send_text_error": "Das Formular konnte nicht versendet werden.",
 	"webform_upload_label": "Datei auswählen",
+	"webform_send_title_error": "Das hat leider nicht geklappt!",
+	"webform_send_title_success": "Vielen Dank! Die Nachricht wurde verschickt.",
+	"webform_send_form_back": "Zurück zum Formular",
 	"header_homepage_link_title": "Startseite hr2 . d e",
 	"meta_application_name": "hr2.de"
 }
