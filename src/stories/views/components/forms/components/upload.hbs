@@ -1,4 +1,4 @@
-<div class="relative flex flex-col w-full mb-6 gap-y-1 md:mb-12"
+<div class="relative flex flex-col w-full mb-5 gap-y-1 md:mb-7"
         ax-load
         x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','{{_type}}','', '', '{{_name}}')"
         x-init="validateUpload()"
@@ -61,7 +61,7 @@
             </button>
         </div>
     </div>
-    <div class="font-heading">     
+    <div class="flex items-end justify-between min-h-5 font-heading">     
         {{#if _description}}  
             <div class="text-xs text-gray-500 dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{_description}}</div>
         {{/if}}
