@@ -1,4 +1,5 @@
 import votingJson from './fixtures/voting.json'
+import votingResultAbsoluteJson from './fixtures/voting_result_absolute.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -27,4 +28,10 @@ export const Voting_Success = {
     render: Template.bind({}),
     name: 'Ergebnis Barchart prozentual',
     args: votingJson,
+}
+
+export const Voting_Result_Absolute = {
+    render: Template.bind({}),
+    name: 'Ergebnis Barchart absolut',
+    args: votingResultAbsoluteJson,
 }
