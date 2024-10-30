@@ -1,3 +1,15 @@
+# v1.113.6 (Wed Oct 30 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3353 add votingresult-barchart [#1133](https://github.com/mumprod/hr-design-system-handlebars/pull/1133) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.113.5 (Wed Oct 30 2024)
 
 #### 🐛 Bug Fix
