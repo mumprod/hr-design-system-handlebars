@@ -2,14 +2,14 @@
         <div class="flex items-center gap-x-2 md:gap-x-3">
             {{#if _success}}
                 {{> components/forms/components/success_icon}}
-                <h3 class="font-bold text-success">{{~loca "webform_send_title_success"}}</h3>       
+                <h3 class="font-bold text-success pt-0.5">{{~loca "webform_send_title_success"}}</h3>       
             {{else}}
                 {{> components/forms/components/error_icon _class="!block"}}
-                <h3 class="font-bold text-error dark:text-error-dark">{{~loca "webform_send_title_error"}}</h3>  
+                <h3 class="font-bold text-error dark:text-error-dark pt-0.5">{{~loca "webform_send_title_error"}}</h3>  
             {{/if}}
         </div>      
 </div>
-<span class="font-copy">
+<span class="font-copy text-text dark:text-text-dark">
     {{#if _locaKeyText}}
         {{loca _locaKeyText}}
     {{else}}
