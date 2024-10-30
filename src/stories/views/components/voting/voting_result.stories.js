@@ -25,6 +25,6 @@ const Template = (args) => {
 
 export const Voting_Over = {
     render: Template.bind({}),
-    name: 'Voting beeendet',
+    name: 'Beeendet',
     args: votingOverJson,
 }

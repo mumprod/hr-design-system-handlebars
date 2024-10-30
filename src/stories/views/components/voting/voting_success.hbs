@@ -1,0 +1,27 @@
+{{#if this.votingSuccessText}}
+    {{> components/voting/voting_result
+                _title=this.title
+                _topline=this.topline
+                _resultBoxMessageTitle=(loca "votingform_title_success")
+                _resultBoxMessageText=this.votingSuccessText.richtext
+                _isInline=_isInline
+                _voteResults=this.votingResult
+                _isResultOnRedirectPage=_isResultOnRedirectPage
+                _hideVotingResult=this.hideVotingResult
+                _statusDone=_statusDone
+
+    }}
+{{else}}
+    {{> components/voting/voting_result
+                _title=this.title
+                _topline=this.topline
+                _resultBoxMessageTitle=(loca "votingform_title_success")
+                _resultBoxMessageText=(loca "votingform_text_success")
+                _isInline=_isInline
+                _voteResults=this.votingResult
+                _isResultOnRedirectPage=_isResultOnRedirectPage
+                _hideVotingResult=this.hideVotingResult
+                _statusDone=_statusDone
+    }}
+{{/if}}
+

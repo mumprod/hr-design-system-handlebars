@@ -1,4 +1,4 @@
-import votingErrorJson from './fixtures/voting_error.json'
+import votingJson from './fixtures/voting.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -17,14 +17,14 @@ export default {
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
         {{#>components/forms/components/backgroundBox  }}  
-            {{> components/voting/voting_error }}
+            {{> components/voting/voting_success }}
         {{/components/forms/components/backgroundBox }}
     `)
     return hbsTemplate({ ...args })
 }
 
-export const Voting_Error = {
+export const Voting_Success = {
     render: Template.bind({}),
-    name: 'Fehlermeldung',
-    args: votingErrorJson,
+    name: 'Ergebnis Barchart prozentual',
+    args: votingJson,
 }

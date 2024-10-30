@@ -4,7 +4,7 @@
         "realTeasersize": 100,
         "topline": "Voting-Topline",
         "toplineSize": "h3",
-        "title": "Voting-Titel beziehungsweise Voting-Frage",
+        "title": "Wie finden Sie hessenschau.de?",
         "backlink": "backlink-url",
         "uuid": "UUID",
         "headingSize": "h2",
@@ -14,34 +14,41 @@
         "isMultipleChoice": false,
         "maxAnswerCount": 1,
         "votingSuccessText": {
-            "richtext": "Success-Text"
+            "richtext": "Danke für Ihre Abstimmung!"
         },
         "isSimpleSecured": true,
         "cookieLifetime": "12",
         "sophoraId": "Sophora-Id",
         "hasBarchart": true,
-        "showAbsoluteResult": true,
+        "showAbsoluteResult": false,
         "showVoteResult": true,
         "summarizedResult": "666",
         "votingResult": [
             {
-                "label": "Label-Result-Option-1",
-                "count": "222",
-                "percentageCount": "33,33",
-                "roundedPercentageCount": "33,0"
+                "label": "Gut, beste website ever",
+                "count": "27",
+                "percentageCount": "4,1",
+                "roundedPercentageCount": "4.0"
             },
             {
-                "label": "Label-Result-Option-2",
-                "count": "222",
-                "percentageCount": "33,33",
-                "roundedPercentageCount": "33,0"
+                "label": "Super, allerbeste website ever",
+                "count": "117",
+                "percentageCount": "17,6",
+                "roundedPercentageCount": "18.0"
             },
             {
-                "label": "Label-Result-Option-3",
-                "count": "222",
-                "percentageCount": "33,33",
-                "roundedPercentageCount": "33,0"
-            }                        
+                "label": "Mega, allerallerbeste website ever",
+                "count": "242",
+                "percentageCount": "36,3",
+                "roundedPercentageCount": "36.0"
+            },
+            {
+                "label": "Hammer, allerallerbesteste website ever",
+                "count": "280",
+                "percentageCount": "42,0",
+                "roundedPercentageCount": "42.0",
+                "isWinner": true
+            }                                    
         ],
         "form": {
             "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
