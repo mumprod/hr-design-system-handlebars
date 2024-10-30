@@ -494,4 +494,20 @@
     .form-radio:checked::after {
         transform: translate(-50%, -50%) scale(1);
     }
+
+    /* keyframes for barchart-animation */
+    @keyframes progressAnimationDS {
+        0% {
+            width: 0;
+        }
+    }
+
+    @keyframes percentageAnimationDS {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100;
+        }
+    }
 }
