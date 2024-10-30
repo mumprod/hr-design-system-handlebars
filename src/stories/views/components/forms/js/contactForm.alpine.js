@@ -19,7 +19,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         formInit(){
             this.checkForJsonURL()
             this.$store.forms.submissionAttempted[formId] = false; 
-            this.$store.forms.errorMessages = JSON.parse( "{" + errorMessages.replace(/&quot;/g,'"') + "}")
+            this.$store.forms.errorMessages = JSON.parse(errorMessages.replace(/&quot;/g,'"'))
         },
         submitButtonHandler(event) {
             if(this.form.reportValidity()){
@@ -30,7 +30,8 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         },
         retryHandler() {
             this.wasPosted = false;
-            this.wasPostedWithError = false;  
+            this.wasPostedWithError = false;
+            this.formWrapper.scrollIntoView({ behavior: 'smooth' })
         },
         handleValidationErrors(errors) {
             console.log('Validation Errors:', errors);
@@ -95,11 +96,13 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     console.log("OK");
                                     this.wasPosted = true;
                                     this.wasPostedWithSuccess = true;
+                                    this.formWrapper.scrollIntoView({ behavior: 'smooth' })
                                     break;
                                 default:
                                     console.log("default");
                                     this.wasPosted = true;
                                     this.wasPostedWithError = true;
+                                    this.formWrapper.scrollIntoView({ behavior: 'smooth' })
                                     break;
                             }
                         } else {
