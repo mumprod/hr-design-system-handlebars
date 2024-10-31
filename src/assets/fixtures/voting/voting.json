@@ -1,0 +1,4 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1"
+}

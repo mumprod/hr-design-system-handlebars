@@ -1,5 +1,5 @@
 {{~changeRandom~}}
-<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-6 md:mb-12{{/unless}} gap-y-4 md:gap-y-5" 
+<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
    {{#unless _inGroup}}
       {{#if _required}}
          ax-load
@@ -60,7 +60,7 @@
          {{/if}}
       {{/if~}}
    >
-  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 text-xs cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-sm font-headingSerif ">
+  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm">
       {{#if _hasBody}}
         {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
       {{else}}
@@ -75,7 +75,7 @@
    </label>
 </div>  
 {{#unless _inGroup}}
-   <div class="font-heading">     
+   <div class="flex items-end justify-between min-h-5 font-heading">     
       {{#if _description}}  
          <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
       {{/if}}

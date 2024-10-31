@@ -1,7 +1,5 @@
 {{~#if _newWebForm ~}}
-    {{#>components/forms/components/backgroundBox  }}  
-
-        
+    {{#>components/forms/components/backgroundBox  }} 
         <h3 class="mb-6 text-2xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
             {{this.title}}
         </h3>
@@ -13,7 +11,7 @@
                 x-init="formInit()"
                 x-ignore
 
-                @submit.prevent="submitData"
+                @submit.prevent
                 id="form{{getRandom}}"     
                 class="relative flex flex-col justify-center overflow-hidden group" 
                 action="{{this.url}}" 
@@ -21,20 +19,43 @@
                 enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" 
                 accept-charset="utf-8"
                 
+            >
+                <div x-show="!wasPosted"             
+                    x-transition:enter="transition ease-out duration-300 delay-300"
+                    x-transition:enter-start="opacity-0 transform scale-90"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-transition:leave="transition ease-in duration-75 delay-0"
+                    x-transition:leave-start="opacity-100 transform scale-100"
+                    x-transition:leave-end="opacity-0 transform scale-90"
                 >
-                {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
+                    {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
 
-                {{> components/forms/components/controls }}
+                    {{> components/forms/components/controls }}
+                </div>
+                <div class="flex flex-col gap-6 md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
+                    x-transition:enter="transition ease-out duration-300 delay-75"
+                    x-transition:enter-start="opacity-0 transform scale-90"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-cloak
+                    >
+                    {{#if this.successText}}
+                        {{> components/forms/components/message _success=true _locaKeyTitle="webform_send_title_success" _text=this.successText.richtext }}
+                    {{else}}
+                        {{> components/forms/components/message _success=true _locaKeyTitle="webform_send_title_success" _locaKeyText="webform_send_text_success" }}
+                    {{/if}}
+                </div>
 
-                <template id="successMessage">
-                    {{> components/forms/components/message _success=true }}
-                </template>
+                <div class="flex flex-col gap-6 md:gap-10" id="errorMessage"  x-show="wasPostedWithError" 
+                    x-transition:enter="transition ease-out duration-300 delay-75"
+                    x-transition:enter-start="opacity-0 transform scale-90"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-cloak>
+                    {{> components/forms/components/message _success=false _locaKeyTitle="webform_send_title_error" _locaKeyText="webform_send_text_error"}}
+                </div>
 
-                <template id="errorMessage">
-                    {{> components/forms/components/message _success=false }}
-                </template>
-                
             </form>
+
+            
         </div>   
     {{/components/forms/components/backgroundBox }}
 {{~else~}}

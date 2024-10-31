@@ -4,7 +4,7 @@
    x-init="validateField()"
    x-ignore
    >
-   <input class="relative w-full h-12 pt-4 pl-4 placeholder-transparent bg-white text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none" 
+   <input class="relative w-full h-12 pt-4 pl-4 placeholder-transparent bg-white placeholder:select-none text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none" 
       :class="{'border-form-highlight dark:form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
       x-model="input{{getRandom}}"
       id="input{{getRandom}}"
@@ -64,7 +64,7 @@
       {{> components/forms/components/error_icon _class="hidden" _xclass="{'hidden': hideError() }"}}
    </div>
  
-   <div class="flex items-end justify-between h-5 font-heading">     
+   <div class="flex items-end justify-between min-h-5 font-heading">     
       {{#if _description}}  
          <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}

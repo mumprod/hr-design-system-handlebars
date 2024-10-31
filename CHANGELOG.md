@@ -1,3 +1,139 @@
+# v1.113.7 (Wed Oct 30 2024)
+
+#### 🐛 Bug Fix
+
+- add votingresult-barchart absolute [#1134](https://github.com/mumprod/hr-design-system-handlebars/pull/1134) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.6 (Wed Oct 30 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3353 add votingresult-barchart [#1133](https://github.com/mumprod/hr-design-system-handlebars/pull/1133) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.5 (Wed Oct 30 2024)
+
+#### 🐛 Bug Fix
+
+- Contactform some fixes [#1132](https://github.com/mumprod/hr-design-system-handlebars/pull/1132) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.113.4 (Tue Oct 29 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3413: adjust form spacing [#1131](https://github.com/mumprod/hr-design-system-handlebars/pull/1131) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.113.3 (Tue Oct 29 2024)
+
+#### 🐛 Bug Fix
+
+- added some improvements to contactform response view [#1130](https://github.com/mumprod/hr-design-system-handlebars/pull/1130) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.113.2 (Mon Oct 28 2024)
+
+#### 🐛 Bug Fix
+
+- Form validation script optimization [#1128](https://github.com/mumprod/hr-design-system-handlebars/pull/1128) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.113.1 (Mon Oct 28 2024)
+
+#### 🐛 Bug Fix
+
+- add voting error-message [#1129](https://github.com/mumprod/hr-design-system-handlebars/pull/1129) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.0 (Fri Oct 25 2024)
+
+#### 🚀 Enhancement
+
+- add voting-basics [#1127](https://github.com/mumprod/hr-design-system-handlebars/pull/1127) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.112.1 (Fri Oct 25 2024)
+
+#### 🐛 Bug Fix
+
+- some bugfixes [#1126](https://github.com/mumprod/hr-design-system-handlebars/pull/1126) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.112.0 (Wed Oct 23 2024)
+
+#### 🚀 Enhancement
+
+- add voting-json [#1125](https://github.com/mumprod/hr-design-system-handlebars/pull/1125) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.111.5 (Tue Oct 22 2024)
+
+#### 🐛 Bug Fix
+
+- some bugfixes for UploadForm [#1124](https://github.com/mumprod/hr-design-system-handlebars/pull/1124) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.111.4 (Fri Oct 18 2024)
 
 #### 🐛 Bug Fix

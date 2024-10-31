@@ -244,7 +244,7 @@
         },
         "name":"Datei Hochladen",
         "label":"Wählen Sie eine Datei zum Hochladen",
-        "description":"Erlaubte Dateiformate: PDF, DOCX, PNG, JPG. Maximale Dateigröße: 5 MB.",
+        "description":"Maximale Dateigröße: 35 MB.",
         "isRequired":true
     }
 }

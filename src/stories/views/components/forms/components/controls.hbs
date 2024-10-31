@@ -1,14 +1,14 @@
 <div class="flex flex-col-reverse items-center justify-between sm:flex-row gap-y-6">
-    <div class="w-full text-xs basis-full text-gray-scorpion dark:text-text-dark font-headingSerif">Pflichtfeld*</div>
+    <div class="w-full text-xs basis-full text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
     <div class="flex items-center justify-end w-full basis-full">
         <label class="order-2 cursor-pointer {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant='primary'}} {{> components/button/utilities/button_dimension_classes _size='lg'}}">     
             <span class="hidden" :class="{'hidden': !isPosting}">{{> components/base/image/icon _icon="reload" _addClass="w-5 h-5 fill-white dark:fill-text-dark animate-spin"}}</span>
             <span class="" :class="{'hidden': isPosting}">{{> components/base/image/icon _icon="send-ds" _addClass="w-5 h-5 fill-white dark:fill-text-dark "}}</span>
-            <input type="submit" class="pl-2 cursor-pointer" value="Absenden" @click.prevent="clickHandler($event)"/>
+            <input type="submit" class="pl-2 cursor-pointer" value="{{loca "form_button_submit"}}" @click.prevent="submitButtonHandler($event)"/>
         </label>
 
         {{#> components/button/button _variant="tertiary"_size="lg" _css="order-1 mr-4" _type="reset"}} 
-            <span class="text-base ds-button-label ">Zurücksetzen</span>        
+            <span class="text-base ds-button-label ">{{loca "form_button_reset"}}</span>        
         {{/components/button/button}}
 
     </div>
