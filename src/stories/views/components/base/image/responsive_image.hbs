@@ -13,11 +13,6 @@
 {{#withParam this.responsiveImage _type _variant }}
     {{#if this.asPicture}}
         <picture class="{{~#if ../_addClass}} {{../_addClass}}{{/if}}">
-            {{#unless _disableNoScript}}
-                <noscript>
-                    <img class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}">
-                </noscript>
-            {{/unless}}
             {{#with this.sources}}
                 {{#each this}}
                     <source{{#with this.media}} media="{{this}}"{{/with}}
@@ -32,11 +27,6 @@
     {{#if this.asImage}}
         {{#with this.sources.[0]}}
             {{~#with ../../_addClass }}<div class="{{this}}">{{/with}}
-            {{#unless ../../_disableNoScript}}
-                <noscript>
-                    <img class="w-full{{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
-                </noscript>
-            {{/unless}}
             <img{{#if ../../_isWebview}} data-primary-type="hr-nt:image"
                         data-image-id="{{nextRandom}}"{{/if}}
                 {{#with this.sizes}} sizes="{{this}}" {{/with~}}
