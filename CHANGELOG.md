@@ -1,3 +1,15 @@
+# v1.113.11 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- added scrollToElementAndCenterWithTimeout to fix center problems [#1138](https://github.com/mumprod/hr-design-system-handlebars/pull/1138) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.10 (Fri Nov 01 2024)
 
 #### 🐛 Bug Fix
