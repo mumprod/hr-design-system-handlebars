@@ -1,3 +1,15 @@
+# v1.113.13 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- add success-message [#1140](https://github.com/mumprod/hr-design-system-handlebars/pull/1140) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.113.12 (Fri Nov 01 2024)
 
 #### 🐛 Bug Fix
