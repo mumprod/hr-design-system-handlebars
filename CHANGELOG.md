@@ -1,3 +1,28 @@
+# v1.113.10 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- Update font size of form title [#1137](https://github.com/mumprod/hr-design-system-handlebars/pull/1137) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.113.9 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- scroll to active element with offset implemented to prevent Sticky he… [#1136](https://github.com/mumprod/hr-design-system-handlebars/pull/1136) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.8 (Thu Oct 31 2024)
 
 #### 🐛 Bug Fix
