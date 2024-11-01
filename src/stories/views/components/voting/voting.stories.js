@@ -1,4 +1,5 @@
 import votingJson from './fixtures/voting.json'
+import votingOverJson from './fixtures/voting_over.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -27,4 +28,10 @@ export const Default = {
     render: Template.bind({}),
     name: 'default',
     args: votingJson,
+}
+
+export const Voting_Over = {
+    render: Template.bind({}),
+    name: 'Beeendet',
+    args: votingOverJson,
 }

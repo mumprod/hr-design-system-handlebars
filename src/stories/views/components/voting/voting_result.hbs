@@ -1,5 +1,5 @@
 {{#unless _isResultOnRedirectPage}}
-    {{> components/voting/voting_header _title=_title _topline=_topline}}
+    {{> components/voting/components/voting_header _title=_title _topline=_topline}}
 {{/unless}}
 
 {{#if _hideVotingResult}}
@@ -28,13 +28,13 @@
         </div>
     {{/each}}
     
-    {{#unless this.showAbsoluteResult}}
+    {{!#unless this.showAbsoluteResult}}
         {{#if this.showVoteResult}}
             <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion">
                 {{loca "votingform_vote_result"}}{{this.summarizedResult}}
             </p>
         {{/if}}
-    {{/unless}}    
+    {{!/unless}}    
 {{/if}}
 
 {{#if _isVotingOver}}

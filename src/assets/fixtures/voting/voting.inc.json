@@ -60,6 +60,7 @@
             "url": "action-url",
             "isHorizontalLayout": false,
             "hideVotingResult": true,
+            "sophoraId": "Sophora-Id",
             "fields": [
                 {
                     "type": {
@@ -67,13 +68,13 @@
                         "isChoice": true,
                         "asString": "radio"
                     },
-                    "name": "multivote-1",
+                    "name": "multivoting",
                     "isGrouped": true,
                     "isRequired": false,
                     "options": [
                         {
                             "value": "1",
-                            "label": "Answer 1",
+                            "label": "Gut, beste website ever",
                             "title": "Voting-Answer 1",
                             "mediaItem": {                                                                
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -88,7 +89,7 @@
                         },
                         {
                             "value": "2",
-                            "label": "Answer 2",
+                            "label": "Super, allerbeste website ever",
                             "title": "Voting-Answer 2",
                             "mediaItem": {                                                                
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -103,7 +104,7 @@
                         },
                         {
                             "value": "3",
-                            "label": "Answer 3",
+                            "label": "Mega, allerallerbeste website ever",
                             "title": "Voting-Answer 3",
                             "mediaItem": {                                                                
                                 "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -115,7 +116,22 @@
                                     }
                                 ]                                
                             }                            
-                        }                                                
+                        },
+                        {
+                            "value": "4",
+                            "label": "Hammer, allerallerbesteste website ever",
+                            "title": "Voting-Answer 4",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "connichi-106"
+                                    }
+                                ]                                
+                            }                            
+                        }                                                                        
                     ]
                 }
             ]
