@@ -196,6 +196,7 @@
     "votingform_text_error": "Ihre Stimme konnte nicht gezählt werden, weil ein Fehler aufgetreten ist. Bitte versuchen Sie es später wieder.",
     "votingform_text_success": "Ihre Stimme wurde gezählt.",
     "votingform_open_answers_text": "Bis zu {0} Antworten möglich",
+    "votingform_single_answer_text": "Nur eine Antwort ist möglich",
     "votingform2F_title_success": "Vielen Dank für Ihre Stimme.",
     "votingform2F_text_success": "Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner.",
     "votingform2F_privacy_protection_disclaimer": "Ich stimme der Verarbeitung meiner E-Mail-Adresse zum Zweck der Teilnahme sowie der <a href=\"https://hr.de/datenschutz\" class=\"{nuc https://hr.de/datenschutz nuc}link unbreakable\" target=\"_blank\"><span class=\"unbreakable\">Datenschutzerklärung<svg class=\"icon icon--primary icon--textRight\" role=\"presentation\"><use xlink:href=\"{<% hrcms.delivery.current.assetBaseUrl %>}base/icons/icons/svgmap.min.svg#extern\"/></svg></span></a> des hr zu.",

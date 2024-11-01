@@ -1,12 +1,53 @@
 {{#with this.form}}
     {{#unless this.isVotingOver}}
-        
-        {{> components/voting/voting_header _title=../this.title _topline=../this.topline}}
-        
-        {{#if this.shorttext}}
-            <p class="mt-4 text-base font-copy sm:text-lg sm:mt-5 dark:text-text-dark">{{this.shorttext}}</p>
-        {{/if}}
-        
+        {{#unless ../this.hasRedirect}}
+            <div class="js-load {{../_addClass}}"
+                data-hr-voting-ds='{"jsonURL":"{{this.jsonUrl}}", "errorMessages": {{this.errorMessages}} }'
+                data-hr-voting-validator-ds='{"isMultipleChoice": {{../this.isMultipleChoice}}, "minAnswerCount": 1, "maxAnswerCount": {{../this.maxAnswerCount}} }'
+                {{#if this.isSimpleSecured}}
+                    data-hr-voting-cookie-checker-ds='{ "alreadyVotedHintText": "{{loca "votingform_already_voted_cookie_hint"}}" , "hideVotingResult": {{this.hideVotingResult}} , "votingId": "{{this.sophoraId}}" }'
+                    id="{{this.sophoraId}}"
+                {{/if}}
+            >
+        {{else}}
+            <div class="js-load {{../_addClass}}"
+                {{#if this.is2FSecured}}data-hr-voting-ds='{"jsonURL":"{{this.jsonUrl}}", "errorMessages": {{this.errorMessages}} }'{{/if}}
+                data-hr-voting-validator-ds='{"isMultipleChoice": {{../this.isMultipleChoice}}, "minAnswerCount": 1, "maxAnswerCount": {{../this.maxAnswerCount}} }'
+                {{#if this.isSimpleSecured}}
+                    data-hr-voting-cookie-checker-ds='{ "alreadyVotedHintText": "{{loca "votingform_already_voted_cookie_hint"}}" , "hideVotingResult": {{this.hideVotingResult}} , "votingId": "{{this.sophoraId}}" }'
+                    id="{{this.sophoraId}}"
+                {{/if}}
+            >
+        {{/unless}}    
+            <div class="js-voting-wrapper">
+                <form class="js-votingForm" 
+                    action="{{this.url}}" 
+                    method="post"
+                    enctype="application/x-www-form-urlencoded" 
+                    accept-charset="utf-8" 
+                    autocomplete="off"
+                >
+                    {{> components/voting/components/voting_header _title=../this.title _topline=../this.topline}}
+                    
+                    <div class="c-voting-form__bottomWrapper">
+                        {{#if this.shorttext}}
+                            <p class="mt-4 text-base font-copy sm:text-lg sm:mt-5 dark:text-text-dark">{{this.shorttext}}</p>
+                        {{/if}}
+
+                        <div class="w-full mt-6 text-xs text-right sm:mt-12 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                            {{#if ../this.isMultipleChoice}}
+                                {{loca "votingform_open_answers_text" ../this.maxAnswerCount}}
+                            {{else}}
+                                {{loca "votingform_single_answer_text"}}
+                            {{/if}}
+                            <span class="block float-right w-8 js-voting-counter">(0/{{../this.maxAnswerCount}})</span>
+                        </div>
+                        {{> components/forms/components/fields _multipleChoice=../this.isMultipleChoice _addClassGroup="!flex-col mt-5" _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex bg-white p-4" _addClassLabel="!text-base sm:!text-lg md:!text-lg"}}
+                        {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="-inactive js-voting-submit-button"}}
+                    </div>
+                </form>
+            </div>
+        </div>
     {{else}}
         {{> components/voting/voting_result _isVotingOver=true _title=../this.title _topline=../this.topline}}
     {{/unless}}
