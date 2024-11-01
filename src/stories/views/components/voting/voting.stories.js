@@ -26,7 +26,7 @@ const Template = (args) => {
 
 export const Default = {
     render: Template.bind({}),
-    name: 'default',
+    name: 'Einfachauswahl',
     args: votingJson,
 }
 
