@@ -1,3 +1,15 @@
+# v1.113.14 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- modify display-logic for total number of votes [#1141](https://github.com/mumprod/hr-design-system-handlebars/pull/1141) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.113.13 (Fri Nov 01 2024)
 
 #### 🐛 Bug Fix
