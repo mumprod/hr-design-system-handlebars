@@ -4,7 +4,7 @@ const pianoErrorSecondLevelId = 99;
 
 const isTrackingAllowed = () => {
     const settingsCookie = new SettingsCookie();
-    return settingsCookie.isSettingsCookieAccepted('ati');
+    return !settingsCookie.isSettingsCookieExistent("ati") || settingsCookie.isSettingsCookieAccepted('ati');
 };
 
 const sendEvent = (eventType, event) => {

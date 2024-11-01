@@ -21,17 +21,27 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             this.$store.forms.submissionAttempted[formId] = false; 
             this.$store.forms.errorMessages = JSON.parse(errorMessages.replace(/&quot;/g,'"'))
         },
+        scrollToElementAndCenterWithTimeout(element, timeout){
+            setTimeout(() => {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                 });
+             }, timeout);
+        },
         submitButtonHandler(event) {
-            if(this.form.reportValidity()){
+            this.$store.forms.submissionAttempted[formId] = true;
+            if(this.form.reportValidity()){               
                 this.handleSubmit(event,this.form)
             } else {
-                this.$store.forms.submissionAttempted[formId] = true;
+                this.scrollToElementAndCenterWithTimeout(document.activeElement, 50)                
             }
         },
         retryHandler() {
             this.wasPosted = false;
             this.wasPostedWithError = false;
-            this.formWrapper.scrollIntoView({ behavior: 'smooth' })
+            this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 50)
+            
         },
         handleValidationErrors(errors) {
             console.log('Validation Errors:', errors);
@@ -96,19 +106,21 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                                     console.log("OK");
                                     this.wasPosted = true;
                                     this.wasPostedWithSuccess = true;
-                                    this.formWrapper.scrollIntoView({ behavior: 'smooth' })
+                                    this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
+                                    
                                     break;
                                 default:
                                     console.log("default");
                                     this.wasPosted = true;
                                     this.wasPostedWithError = true;
-                                    this.formWrapper.scrollIntoView({ behavior: 'smooth' })
+                                    this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
                                     break;
                             }
                         } else {
                             
                             this.wasPosted = true;
                             this.wasPostedWithError = true;
+                            this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
                         }
                         if (formId) {
                             window.location.hash = formId;
@@ -116,7 +128,9 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                     } else {
                         this.wasPosted = true;
                         this.wasPostedWithError = true;
+                        this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
                         throw new Error('Network response was not ok.');
+                        
                         
                     }
                 })
@@ -124,6 +138,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
                     console.error('Fail:', error);
                     this.wasPosted = true;
                     this.wasPostedWithError = true;
+                    this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
                 })
                 .finally(() => {
                     console.log('Always');
