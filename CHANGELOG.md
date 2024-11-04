@@ -1,3 +1,15 @@
+# v1.113.15 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- new colors for PB buttons [#1142](https://github.com/mumprod/hr-design-system-handlebars/pull/1142) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.14 (Fri Nov 01 2024)
 
 #### 🐛 Bug Fix
