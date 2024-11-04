@@ -1,3 +1,15 @@
+# v1.113.16 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- changed link color from primary to link [#1143](https://github.com/mumprod/hr-design-system-handlebars/pull/1143) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.113.15 (Mon Nov 04 2024)
 
 #### 🐛 Bug Fix
