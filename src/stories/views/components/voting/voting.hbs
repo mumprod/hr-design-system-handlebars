@@ -42,7 +42,7 @@
                             {{/if}}
                             <span class="block float-right w-8 js-voting-counter">(0/{{../this.maxAnswerCount}})</span>
                         </div>
-                        {{> components/forms/components/fields _multipleChoice=../this.isMultipleChoice _addClassGroup="!flex-col mt-5" _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex bg-white p-4" _addClassLabel="!text-base sm:!text-lg md:!text-lg"}}
+                        {{> components/forms/components/fields _multipleChoice=../this.isMultipleChoice _addClassGroup="!flex-col mt-5" _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex bg-white p-3 sm:p-4 has-[input:disabled]:opacity-50 has-[input:disabled]:cursor-not-allowed" _addClassLabel="!text-base sm:!text-lg md:!text-lg"}}
                         {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="-inactive js-voting-submit-button"}}
                     </div>
                 </form>
