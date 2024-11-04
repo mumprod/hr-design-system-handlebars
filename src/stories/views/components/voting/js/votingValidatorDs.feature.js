@@ -155,7 +155,7 @@ const VotingValidator = (context) => {
                 let label = hr$('label[for=' + uncheckedOptions.id + ']')
                 label = label.item(0)
                 label.classList.add('-inactive')
-                label.classList.add('cursor-not-allowed')
+                label.classList.add('!cursor-not-allowed')
             }
         })
     }
@@ -169,7 +169,7 @@ const VotingValidator = (context) => {
             let label = hr$('label[for=' + disabledCheckboxes.id + ']')
             label = label.item(0)
             label.classList.remove('-inactive')
-            label.classList.remove('cursor-not-allowed')
+            label.classList.remove('!cursor-not-allowed')
         })
     }
 
