@@ -20,13 +20,23 @@
                            {{#with this.srcset}} srcset="{{this}}"{{/with}}>
                 {{/each}}
             {{/with}}
-                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}"{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
+                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}"{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
         </picture>
+        {{#unless _disableNoScript}}
+            <noscript>
+                <img class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}">
+            </noscript>
+        {{/unless}}
     {{/if}}
 
     {{#if this.asImage}}
         {{#with this.sources.[0]}}
             {{~#with ../../_addClass }}<div class="{{this}}">{{/with}}
+            {{#unless ../../_disableNoScript}}
+                <noscript>
+                    <img class="w-full{{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
+                </noscript>
+            {{/unless}}
             <img{{#if ../../_isWebview}} data-primary-type="hr-nt:image"
                         data-image-id="{{nextRandom}}"{{/if}}
                 {{#with this.sizes}} sizes="{{this}}" {{/with~}}
@@ -35,7 +45,7 @@
                     fetchpriority="high"
                 {{/if}}
                 {{#with this.srcset}} {{#if ../../../_noDelay}}srcset{{else}}data-srcset{{/if}}="{{this}}"{{/with}}
-                src="{{../this.fallback}}"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                 alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}"
                 class="w-full{{~#with ../../_addClassImg }} {{this}}{{/with}}"
                 {{~#if ../../_title}} title="{{../../_title}}"{{~/if}}
