@@ -1,67 +1,14 @@
 {
-    "multivote-1": {
-        "teasersize": 100,
-        "realTeasersize": 100,
-        "topline": "Voting-Topline",
-        "toplineSize": "h3",
-        "title": "Wie finden Sie hessenschau.de?",
-        "backlink": "backlink-url",
-        "uuid": "UUID",
-        "headingSize": "h2",
-        "isVoting": true,
-        "isMultiVote": true,
-        "hasRedirect": true,
-        "isMultipleChoice": false,
-        "maxAnswerCount": 1,
-        "votingSuccessText": {
-            "richtext": "Danke für Ihre Abstimmung!"
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath":"form.is2FSecured",
+            "@->value": true
         },
-        "isSimpleSecured": true,
-        "cookieLifetime": "12",
-        "sophoraId": "Sophora-Id",
-        "hasBarchart": true,
-        "showAbsoluteResult": false,
-        "showVoteResult": true,
-        "summarizedResult": "666",
-        "votingResult": [
-            {
-                "label": "Gut, beste website ever",
-                "count": "27",
-                "percentageCount": "4,1",
-                "roundedPercentageCount": "4.0"
-            },
-            {
-                "label": "Super, allerbeste website ever",
-                "count": "117",
-                "percentageCount": "17,6",
-                "roundedPercentageCount": "18.0"
-            },
-            {
-                "label": "Mega, allerallerbeste website ever",
-                "count": "242",
-                "percentageCount": "36,3",
-                "roundedPercentageCount": "36.0"
-            },
-            {
-                "label": "Hammer, allerallerbesteste website ever",
-                "count": "280",
-                "percentageCount": "42,0",
-                "roundedPercentageCount": "42.0",
-                "isWinner": true
-            }                                    
-        ],
-        "form": {
-            "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-            "isVotingOver": false,
-            "is2FSecured": false,
-            "jsonUrl": "json-url",
-            "errorMessages": "Error-Messages",
-            "isSimpleSecured": true,
-            "url": "action-url",
-            "isHorizontalLayout": false,
-            "hideVotingResult": true,
-            "sophoraId": "Sophora-Id",
-            "fields": [
+        {
+            "@->contentpath":"form.fields",
+            "@->value": [
                 {
                     "type": {
                         "isGroup": false,
@@ -133,8 +80,32 @@
                             }                            
                         }                                                                        
                     ]
-                }
+                },
+                {
+                    "@->jsoninclude": "forms/form_fields.inc.json",
+                    "@->contentpath": "input-email",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "description",
+                            "@->value": ""
+                        }
+                    ]
+                },                
+                {
+                    "@->jsoninclude": "forms/form_fields.inc.json",
+                    "@->contentpath": "checkbox",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "label",
+                            "@->value": "Ich stimme der Verarbeitung meiner E-Mail-Adresse zum Zweck der Teilnahme sowie der <a href=\"https://hr.de/datenschutz\" class=\"link whitespace-nowrap\" target=\"_blank\"><span class=\"text-link ds-link hover:underline\">Datenschutzerklärung <svg class=\"sb-icon inline -mt-0.5 w-5 h-5 text-toplineColor fill-current ml-1 \" role=\"presentation\" aria-hidden=\"true\"><use xlink:href=\"https://www.hessenschau.de/assets_4.2.2/base/icons/icons/svgmap.min.svg#extern\"></use></svg></a> des hr zu."
+                        },
+                        {
+                            "@->contentpath": "description",
+                            "@->value": ""
+                        }
+                    ]
+                }                
             ]
         }
-    }    
+    ]
 }
