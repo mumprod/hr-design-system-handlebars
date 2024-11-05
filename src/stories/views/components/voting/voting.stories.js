@@ -2,6 +2,7 @@ import votingJson from './fixtures/voting.json'
 import votingOverJson from './fixtures/voting_over.json'
 import votingMultipleChoiceJson from './fixtures/voting_multiple_choice.json'
 import votingEmailJson from './fixtures/voting_email.json'
+import votingMediaJson from './fixtures/voting_media.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -36,6 +37,12 @@ export const Voting_Email = {
     render: Template.bind({}),
     name: 'Einfachauswahl mit E-Mail',
     args: votingEmailJson,
+}
+
+export const Voting_Media = {
+    render: Template.bind({}),
+    name: 'Einfachauswahl mit Bild, Audio, Video',
+    args: votingMediaJson,
 }
 
 export const Voting_Multiple_Choice = {
