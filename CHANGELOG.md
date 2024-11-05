@@ -1,3 +1,15 @@
+# v1.113.20 (Tue Nov 05 2024)
+
+#### 🐛 Bug Fix
+
+- add json and story for media-voting [#1147](https://github.com/mumprod/hr-design-system-handlebars/pull/1147) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.113.19 (Tue Nov 05 2024)
 
 #### 🐛 Bug Fix
