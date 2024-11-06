@@ -1,3 +1,15 @@
+# v1.114.1 (Wed Nov 06 2024)
+
+#### 🐛 Bug Fix
+
+- make voting-options clickable all over [#1149](https://github.com/mumprod/hr-design-system-handlebars/pull/1149) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.0 (Wed Nov 06 2024)
 
 #### 🚀 Enhancement
