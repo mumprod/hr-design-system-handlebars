@@ -1,0 +1,46 @@
+{
+    "useNewNewsletter":true,
+    "title":"hessenschau update - Der Newsletter für Hessen",
+    "description":"Hier können Sie sich für das hessenschau update anmelden. Der Newsletter wird Ihnen von Montag bis Freitag kostenlos und unverbindlich zugestellt. Wenn Sie sich in unseren Verteiler eintragen, erhalten Sie eine E-Mail mit der Bitte, Ihre Aufnahme noch einmal zu bestätigen. Sie können den Newsletter jederzeit wieder ",        
+    "fields":[
+           {
+              "type":{
+                 "isText":true,
+                 "asString":"email",
+                 "isEmail": true
+              },
+              "name":"email",
+              "label":"Email",
+              "description":"Das ist der Beschreibungstext (*Pflichtfeld)",
+              "defaultValue":"",
+              "isHidden":false,
+              "isRequired":true,
+              "maxLength":"140"
+           },
+           {
+            "isGrouped":false,
+            "type":{
+                   "isChoice":true,
+                   "asString":"checkbox"
+            },
+            "name":"checkbox",
+            "label":"Ich bin damit einverstanden, dass der hr die von mir im vorstehenden Formular angegebenen personenbezogenen Daten für den Zweck der Kontaktaufnahme mit Upload verarbeitet. Eine Weitergabe an Dritte findet nicht statt, es sei denn, es wird ausdrücklich darauf hingewiesen. Unsere Datenschutzerklärung mit sämtlichen Informationen gemäß Art 13 DSGVO zur Datenverarbeitung durch den hr und zu Ihren Rechten können Sie unter Datenschutzerklärung einsehen. Den Datenschutzbeauftragten des hr erreichen Sie unter datenschutz@hr.de.",
+            "isMeta":false,
+            "description":"Das ist der Beschreibungstext von Checkbox",
+            "isRequired":true
+           },
+           {
+            "isGrouped":false,
+            "type":{
+                   "isChoice":true,
+                   "asString":"checkbox"
+            },
+            "name":"checkbox",
+            "label":"",
+            "isMeta":false,
+            "description":"Das ist der Beschreibungstext von Checkbox",
+            "isRequired":true
+           }
+    ]
+    
+ }
