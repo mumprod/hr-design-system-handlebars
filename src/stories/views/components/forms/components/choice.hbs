@@ -10,7 +10,7 @@
    {{/unless}}
 >
 <div class="flex flex-row items-center w-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
-  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer disabled:cursor-not-allowed border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight form-checkbox"," checked:bg-white checked:border-form-highlight rounded-full form-radio",""]'}}"
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer disabled:cursor-not-allowed border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight form-checkbox"," checked:bg-white checked:border-form-highlight rounded-full form-radio",""]'}}{{#if _addClassInput}} {{_addClassInput}}{{/if}}"
       {{#if _required}}
             :class="{' border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
       {{/if}}
