@@ -20,10 +20,10 @@
                     _noDelay=true}}
             {{/if}}
             {{#if this.isVideoOnDemand}}
-               {{> components/content/copytext/components/media/media_figure _playerLocation="Aufmacher" _isLead=true _playerSize="100" _addClass="print:hidden article-full-width md:article-breakout mt-12 mb-6 sm:mt-14 sm:mb-8" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
+               {{> components/content/copytext/components/media/media_figure _playerLocation="Aufmacher" _isFullsize=true _isLead=true _playerSize="100" _addClass="print:hidden article-full-width md:article-breakout mt-12 mb-6 sm:mt-14 sm:mb-8" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
             {{/if}}
             {{#if this.isLivestream}}
-               {{> components/content/copytext/components/media/media_figure _playerLocation="Aufmacher" _isLead=true _playerSize="100" _addClass="print:hidden article-full-width md:article-breakout mt-12 mb-6 sm:mt-14 sm:mb-8" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_livestream_intro_sr" _a11yOutro-loca="story_video_livestream_outro_sr" }}
+               {{> components/content/copytext/components/media/media_figure _playerLocation="Aufmacher" _isFullsize=true _isLead=true _playerSize="100" _addClass="print:hidden article-full-width md:article-breakout mt-12 mb-6 sm:mt-14 sm:mb-8" _cssClassCaption="mx-5 md:mx-0" _a11yIntro-loca="story_video_livestream_intro_sr" _a11yOutro-loca="story_video_livestream_outro_sr" }}
             {{/if}}
         {{/with}}
     {{/unless}}

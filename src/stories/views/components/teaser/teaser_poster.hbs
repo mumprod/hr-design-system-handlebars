@@ -5,10 +5,10 @@
                 {{#if this.showStretched.isTrue }}
                     {{~> components/base/image/responsive_image this.teaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{else}}
-                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="copytext_full" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{/if}}
             {{else}}
-                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="50" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="copytext_narrow" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
             {{/if}}
         {{else}}
             {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
