@@ -4,7 +4,7 @@
             x-data="{ isOpen: false}">
             <div class="relative flex flex-wrap items-center mx-auto" @click.outside="isOpen = false"> 
                 {{#> components/button/button _size="lg" _variant="tertiary" _disableButtonPress=true _alpineClick="isOpen = !isOpen" _css="md:hidden mr-2 fill-structure-nav-text text-structure-nav-text hover:text-structure-nav-text-mobile hover:fill-structure-nav-text-mobile" _onBackground=true}}
-                    <span class="hidden" :class="{ 'hidden': isOpen }">
+                    <span class="" :class="{ 'hidden': isOpen }">
                         {{> components/button/components/button_icon _icon="burger--weiss" _iconmap="icons" _css="" }}
                     </span> 
                     <span class="hidden" :class="{ 'hidden': !isOpen }">
@@ -12,8 +12,8 @@
                     </span>
                 {{/components/button/button}}
                 <span class="md:hidden text-structure-nav-text">{{this.title}}</span>
-                <div class="absolute z-10 w-full top-9 md:static md:block md:w-auto" id="navbar-default" 
-                    :class="isOpen ? '' : 'hidden'"
+                <div class="absolute z-10 hidden w-full top-9 md:static md:block md:w-auto" id="navbar-default"
+                    :class="{'hidden': !isOpen}"
                     >
                     <ul class="flex flex-col font-medium bg-white md:bg-transparent md:flex-row md:space-x-3 rtl:space-x-reverse"> 
                         {{~#each this.contentNavEntries~}}
