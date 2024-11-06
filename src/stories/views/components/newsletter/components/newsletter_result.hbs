@@ -1,0 +1,15 @@
+<div class="c-feedbackBox"></div>
+    <h2 class="c-feedbackBox__headline">{{loca _locaKeyTitle}}</h2>
+    <p class="c-feedbackBox__button">
+        {{#with this.backlink}}
+            <a class="c-form__button js-formReload" href="{{this}}#{{../uuid}}">{{loca "newsletter_form_back"}}</a>
+        {{/with}}
+    </p>
+    <p class="c-feedbackBox__text">
+        {{#if _locaKeyText}}
+            {{loca _locaKeyText}}
+        {{else}}
+            {{{_text}}}
+        {{/if}}
+    </p>
+</div>
