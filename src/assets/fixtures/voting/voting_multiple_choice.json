@@ -1,0 +1,18 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath": "isMultipleChoice",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "maxAnswerCount",
+            "@->value": 3
+        },
+        {
+            "@->contentpath": "form.fields.0.type.asString",
+            "@->value": "checkbox"
+        }        
+    ]    
+}

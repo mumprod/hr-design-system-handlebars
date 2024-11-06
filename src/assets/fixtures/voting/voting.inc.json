@@ -53,13 +53,14 @@
         "form": {
             "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
             "isVotingOver": false,
-            "is2FSecured": true,
+            "is2FSecured": false,
             "jsonUrl": "json-url",
             "errorMessages": "Error-Messages",
             "isSimpleSecured": true,
             "url": "action-url",
             "isHorizontalLayout": false,
             "hideVotingResult": true,
+            "sophoraId": "Sophora-Id",
             "fields": [
                 {
                     "type": {
@@ -67,55 +68,30 @@
                         "isChoice": true,
                         "asString": "radio"
                     },
-                    "name": "multivote-1",
+                    "name": "multivoting",
                     "isGrouped": true,
                     "isRequired": false,
                     "options": [
                         {
                             "value": "1",
-                            "label": "Answer 1",
-                            "title": "Voting-Answer 1",
-                            "mediaItem": {                                                                
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "copytext_image_50",
-                                "@->replaceToken": [
-                                    {
-                                        "@->token": "image",
-                                        "@->value": "rueckkehr-nach-abschiebung-102"
-                                    }
-                                ]                                
-                            }
+                            "label": "Gut, beste website ever",
+                            "title": "Voting-Answer 1"
                         },
                         {
                             "value": "2",
-                            "label": "Answer 2",
-                            "title": "Voting-Answer 2",
-                            "mediaItem": {                                                                
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "copytext_image_50",
-                                "@->replaceToken": [
-                                    {
-                                        "@->token": "image",
-                                        "@->value": "buchmesse-fahnen-102"
-                                    }
-                                ]                                
-                            }                            
+                            "label": "Super, allerbeste website ever",
+                            "title": "Voting-Answer 2"                            
                         },
                         {
                             "value": "3",
-                            "label": "Answer 3",
-                            "title": "Voting-Answer 3",
-                            "mediaItem": {                                                                
-                                "@->jsoninclude": "teaser/teaser_images.inc.json",
-                                "@->contentpath": "copytext_image_50",
-                                "@->replaceToken": [
-                                    {
-                                        "@->token": "image",
-                                        "@->value": "lehrerin-ukraine-104"
-                                    }
-                                ]                                
-                            }                            
-                        }                                                
+                            "label": "Mega, allerallerbeste website ever",
+                            "title": "Voting-Answer 3"
+                        },
+                        {
+                            "value": "4",
+                            "label": "Hammer, allerallerbesteste website ever",
+                            "title": "Voting-Answer 4"                            
+                        }                                                                        
                     ]
                 }
             ]

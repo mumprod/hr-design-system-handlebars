@@ -1,4 +1,4 @@
-import votingOverJson from './fixtures/voting_over.json'
+import votingJson from './fixtures/voting.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -17,14 +17,14 @@ export default {
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
         {{#>components/forms/components/backgroundBox  }}  
-            {{> components/voting/voting }}
+            {{> components/voting/voting_success_2F }}
         {{/components/forms/components/backgroundBox }}
     `)
     return hbsTemplate({ ...args })
 }
 
-export const Voting_Over = {
+export const Voting_Success_2F = {
     render: Template.bind({}),
-    name: 'Beeendet',
-    args: votingOverJson,
+    name: 'Successmeldung',
+    args: votingJson,
 }

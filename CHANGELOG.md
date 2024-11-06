@@ -1,3 +1,111 @@
+# v1.113.20 (Tue Nov 05 2024)
+
+#### 🐛 Bug Fix
+
+- add json and story for media-voting [#1147](https://github.com/mumprod/hr-design-system-handlebars/pull/1147) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.19 (Tue Nov 05 2024)
+
+#### 🐛 Bug Fix
+
+- add voting with email [#1146](https://github.com/mumprod/hr-design-system-handlebars/pull/1146) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.18 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- add important rule [#1145](https://github.com/mumprod/hr-design-system-handlebars/pull/1145) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.17 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- add multiple-choice voting [#1144](https://github.com/mumprod/hr-design-system-handlebars/pull/1144) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.16 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- changed link color from primary to link [#1143](https://github.com/mumprod/hr-design-system-handlebars/pull/1143) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.113.15 (Mon Nov 04 2024)
+
+#### 🐛 Bug Fix
+
+- new colors for PB buttons [#1142](https://github.com/mumprod/hr-design-system-handlebars/pull/1142) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.113.14 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- modify display-logic for total number of votes [#1141](https://github.com/mumprod/hr-design-system-handlebars/pull/1141) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.13 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- add success-message [#1140](https://github.com/mumprod/hr-design-system-handlebars/pull/1140) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.113.12 (Fri Nov 01 2024)
+
+#### 🐛 Bug Fix
+
+- add single-choice voting [#1139](https://github.com/mumprod/hr-design-system-handlebars/pull/1139) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.113.11 (Fri Nov 01 2024)
 
 #### 🐛 Bug Fix

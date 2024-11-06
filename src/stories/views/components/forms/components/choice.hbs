@@ -9,8 +9,8 @@
       {{/if}}
    {{/unless}}
 >
-<div class="flex flex-row items-center w-full cursor-pointer ">
-  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight form-checkbox"," checked:bg-white checked:border-form-highlight rounded-full form-radio",""]'}}"
+<div class="flex flex-row items-center w-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
+  <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer disabled:cursor-not-allowed border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight form-checkbox"," checked:bg-white checked:border-form-highlight rounded-full form-radio",""]'}}"
       {{#if _required}}
             :class="{' border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
       {{/if}}
@@ -60,7 +60,7 @@
          {{/if}}
       {{/if~}}
    >
-  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm">
+  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm{{#if _addClassLabel}} {{_addClassLabel}}{{/if}}">
       {{#if _hasBody}}
         {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
       {{else}}

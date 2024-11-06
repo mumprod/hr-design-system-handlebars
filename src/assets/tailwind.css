@@ -424,8 +424,8 @@
     --color-cluster-teaser-link: theme('colors.blue.blueLuxury.hex');
     --color-cluster-teaser-headline: theme('colors.purple.pompadour');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
-    --color-button--dark: theme('colors.purple.pompadour');
+    --color-button: theme('colors.blue.blueLuxury.hex');
+    --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -535,7 +535,7 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
+    --color-button: theme('colors.blue.jellyBean.hex');
     --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -783,8 +783,8 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.blueLuxury.hex');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
-    --color-button--dark: theme('colors.blue.blueLuxury.hex');
+    --color-button: theme('colors.blue.blueLuxury.hex');
+    --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -896,7 +896,7 @@
     --color-cluster-teaser-link: theme('colors.red.wellRead.hex');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
+    --color-button: theme('colors.red.wellRead.hex');
     --color-button--dark: theme('colors.red.burntUmber');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -1008,7 +1008,7 @@
     --color-cluster-teaser-link: theme('colors.green.teal');
     --color-cluster-teaser-headline: var(--color-primary-ds);
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
+    --color-button: theme('colors.teal.DEFAULT.hex');
     --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
@@ -1127,8 +1127,8 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.blue.astronautBlue');
     /* Button */
-    --color-button: theme('colors.gray.darker');
-    --color-button--dark: theme('colors.blue.blueLuxury.hex');
+    --color-button: theme('colors.blue.blueLuxury.hex');
+    --color-button--dark: theme('colors.blue.astronautBlue');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.gray.lightGray');
     --color-button-disabled: theme('colors.gray.lightGray');
@@ -1241,8 +1241,8 @@
     --color-cluster-teaser-link: theme('colors.black.DEFAULT');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: #433d37;
-    --color-button--dark: theme('colors.green.goBen');
+    --color-button: theme('colors.yellow.corn');
+    --color-button--dark: theme('colors.yellow.olive.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
@@ -1358,7 +1358,7 @@
     --color-cluster-teaser-link: theme('colors.red.paprika.hex');
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: #433d37;
+    --color-button: theme('colors.red.paprika.hex');
     --color-button--dark: theme('colors.purple.pompadour');
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: #433d37;
@@ -1496,9 +1496,9 @@
     --color-cluster-teaser-link: var(--color-primary-ds);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.gray.scorpion');
-    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button: theme('colors.red.monza.hex');
     --color-button--dark: theme('colors.red.burntUmber');
+    --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
     --color-media-button: var(--color-primary-ds);
@@ -1614,9 +1614,9 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
-    --color-button-inverted: theme('colors.white.DEFAULT');
+    --color-button: theme('colors.green.genoa');
     --color-button--dark: theme('colors.green.eden.hex');
+    --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
     --color-media-button: theme('colors.green.eden.hex');
@@ -1750,9 +1750,9 @@
     --color-cluster-teaser-link: var(--color-link);
     --color-cluster-teaser-headline: theme('colors.black.DEFAULT');
     /* Button */
-    --color-button: theme('colors.black.DEFAULT');
+    --color-button: theme('colors.blue.lightCerulean');
+    --color-button--dark: theme('colors.blue.sea.hex');
     --color-button-inverted: theme('colors.white.DEFAULT');
-    --color-button--dark: theme('colors.blue.blueStone');
     --color-button-inverted--dark: theme('colors.blue.accented');
     /* Media-Button */
     --color-media-button: theme('colors.black.DEFAULT');

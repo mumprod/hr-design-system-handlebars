@@ -1,0 +1,111 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath":"form.is2FSecured",
+            "@->value": true
+        },
+        {
+            "@->contentpath":"form.fields",
+            "@->value": [
+                {
+                    "type": {
+                        "isGroup": false,
+                        "isChoice": true,
+                        "asString": "radio"
+                    },
+                    "name": "multivoting",
+                    "isGrouped": true,
+                    "isRequired": false,
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Gut, beste website ever",
+                            "title": "Voting-Answer 1",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "rueckkehr-nach-abschiebung-102"
+                                    }
+                                ]                                
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": "Super, allerbeste website ever",
+                            "title": "Voting-Answer 2",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "buchmesse-fahnen-102"
+                                    }
+                                ]                                
+                            }                            
+                        },
+                        {
+                            "value": "3",
+                            "label": "Mega, allerallerbeste website ever",
+                            "title": "Voting-Answer 3",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "lehrerin-ukraine-104"
+                                    }
+                                ]                                
+                            }                            
+                        },
+                        {
+                            "value": "4",
+                            "label": "Hammer, allerallerbesteste website ever",
+                            "title": "Voting-Answer 4",
+                            "mediaItem": {                                                                
+                                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                "@->contentpath": "copytext_image_50",
+                                "@->replaceToken": [
+                                    {
+                                        "@->token": "image",
+                                        "@->value": "connichi-106"
+                                    }
+                                ]                                
+                            }                            
+                        }                                                                        
+                    ]
+                },
+                {
+                    "@->jsoninclude": "forms/form_fields.inc.json",
+                    "@->contentpath": "input-email",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "description",
+                            "@->value": ""
+                        }
+                    ]
+                },                
+                {
+                    "@->jsoninclude": "forms/form_fields.inc.json",
+                    "@->contentpath": "checkbox",
+                    "@->overrides": [
+                        {
+                            "@->contentpath": "label",
+                            "@->value": "Ich stimme der Verarbeitung meiner E-Mail-Adresse zum Zweck der Teilnahme sowie der <a href=\"https://hr.de/datenschutz\" class=\"link whitespace-nowrap\" target=\"_blank\"><span class=\"text-link dark:text-link-dark ds-link hover:underline\">Datenschutzerklärung<svg class=\"sb-icon inline -mt-0.5 w-5 h-5 text-link dark:text-link-dark fill-current ml-1 \" viewBox=\"0 0 30.4 28.1\" preserveAspectRatio=\"xMidYMid meet\" role=\"presentation\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path d=\"M21.6 14.8v4.6c0 .5-.4 1-1 1H7.3c-.5 0-1-.4-1-1l-.1-8.9c0-.5.4-1 1-1h9.6l.1-2H5.8c-.8 0-1.5.7-1.5 1.5v11.9c0 .8.7 1.5 1.5 1.5h16.4c.8 0 1.5-.7 1.5-1.5v-6.1h-2.1z\"/><path d=\"M17.7 6.3c0 .6.4 1 1 1h3.5c.2 0 .3 0 .5.1l-6.1 5.9c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l6-5.8c.1.2.1.4.1.6V13c0 .6.4 1 1 1h.1c.6 0 1-.4 1-1l.1-4.5c0-1.7-1.3-3-3-3l-4.5-.1c-.7-.1-1.1.4-1.1.9z\"/></svg></a> des hr zu."
+                        },
+                        {
+                            "@->contentpath": "description",
+                            "@->value": ""
+                        }
+                    ]
+                }                
+            ]
+        }
+    ]
+}
