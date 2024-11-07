@@ -1,3 +1,15 @@
+# v1.114.3 (Thu Nov 07 2024)
+
+#### 🐛 Bug Fix
+
+- add voting-cookie [#1152](https://github.com/mumprod/hr-design-system-handlebars/pull/1152) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.2 (Wed Nov 06 2024)
 
 #### 🐛 Bug Fix
