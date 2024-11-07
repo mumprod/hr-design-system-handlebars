@@ -6,7 +6,7 @@ const VotingCookieChecker = (context) => {
         votingId = options.votingId,
         votingWrapper = hr$('.js-voting-wrapper', rootElement)[0],
         hideVotingResult = options.hideVotingResult,
-        alreadyVotedTmpl = '<p>' + options.alreadyVotedHintText + '<p>'
+        alreadyVotedTmpl = '<p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">' + options.alreadyVotedHintText + '<p>'
     let cookie = ''
 
     const checkForVotingCookie = function () {
