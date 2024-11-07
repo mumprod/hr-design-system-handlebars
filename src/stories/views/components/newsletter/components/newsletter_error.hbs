@@ -1,0 +1,11 @@
+{{#if this.errorText}}
+    {{> components/newsletter/components/newsletter_result
+            _locaKeyTitle="newsletter_title_error"
+            _text=this.errorText.richText
+    }}
+{{else}}
+    {{> components/newsletter/components/newsletter_result
+            _locaKeyTitle="newsletter_title_error"
+            _locaKeyText="newsletter_text_error"
+    }}
+{{/if}}

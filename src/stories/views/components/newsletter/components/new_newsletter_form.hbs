@@ -1,0 +1,62 @@
+<form class="c-form o-box -accented -breakout js-form js-load" id="form--{{nextRandom}}" data-hr-new-newsletter='{
+"trackingInformations": {{this.trackingInformations}} }'
+      action="{{configProperty "newsletter.subscription.endpoint"}}" method="post" accept-charset="utf-8">
+
+    <div class="c-form__row -expanded">
+        {{~> components/forms/components/input
+            _type="email"
+            _isEmail="true"
+            _name="email"
+            _label="E-Mail"
+            _labelClass="hide"
+            _description=""
+            _wrapperClass=(if this.isHidden "hidden")
+            _tabindex=(if this.isHidden "-1")
+            _required="true"
+            _maxLength="140"
+            _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
+            _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
+            _formId=../_formId
+        }}
+    </div>
+
+    <div class="c-form__row">
+        {{~> components/forms/components/choice
+            _inGroup="false"
+            _type="checkbox"
+            _name="checkbox"
+            _label=(loca "accept_data_privacy_regulation_link")
+            _description="Das ist der Beschreibungstext von Checkbox"
+            _required="true"
+            _errorMandatory="Bitte wählen Sie dieses Pflichtfeld aus"
+        }}
+        </a>
+    </div>
+
+    {{~> components/forms/components/controls }}
+
+
+    {{~> components/forms/components/input
+        _name="newsletter"
+        _type="hidden"
+        _value=this.mailingList
+        _hasLabel=false
+    }}
+
+    {{~>components/forms/components/input
+        _name="newsletter-type"
+        _type="hidden"
+        _value="html"
+        _hasLabel=false
+    }}
+
+    <script type="text/html" class="js-successMessage">
+            {{{include "components/newsletter/components/newsletter_success" }}}
+    </script>
+    <script type="text/html" class="js-errorMessage">
+            {{{include "components/newsletter/components/newsletter_error" }}}
+    </script>
+    <script type="text/html" class="js-alreadyRegisteredMessage">
+            {{{include "components/newsletter/components/newsletter_already_registered" }}}
+    </script>
+</form>

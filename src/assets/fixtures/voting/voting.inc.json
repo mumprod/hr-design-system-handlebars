@@ -16,7 +16,7 @@
         "votingSuccessText": {
             "richtext": "Danke für Ihre Abstimmung!"
         },
-        "isSimpleSecured": true,
+        "isSimpleSecured": false,
         "cookieLifetime": "12",
         "sophoraId": "Sophora-Id",
         "hasBarchart": true,
@@ -54,10 +54,10 @@
             "shorttext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
             "isVotingOver": false,
             "is2FSecured": false,
-            "jsonUrl": "json-url",
+            "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
             "errorMessages": "Error-Messages",
-            "isSimpleSecured": true,
-            "url": "action-url",
+            "isSimpleSecured": false,
+            "url": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
             "isHorizontalLayout": false,
             "hideVotingResult": true,
             "sophoraId": "Sophora-Id",

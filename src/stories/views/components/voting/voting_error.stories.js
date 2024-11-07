@@ -13,13 +13,18 @@ export default {
                     </div>`
         },
     ],
+    parameters: { 
+        layout: 'fullscreen',
+        chromatic: { disableSnapshot: true }
+    }
 }
+
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
-        {{#>components/forms/components/backgroundBox  }}  
-            {{> components/voting/voting_error }}
-        {{/components/forms/components/backgroundBox }}
-    `)
+    {{#>components/forms/components/backgroundBox  }}  
+        {{> components/voting/voting_error _title=this.title _topline=this.topline}}        
+    {{/components/forms/components/backgroundBox }}
+  `)
     return hbsTemplate({ ...args })
 }
 

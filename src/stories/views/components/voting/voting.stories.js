@@ -1,10 +1,13 @@
+import voting from './voting.hbs'
 import votingJson from './fixtures/voting.json'
 import votingOverJson from './fixtures/voting_over.json'
 import votingMultipleChoiceJson from './fixtures/voting_multiple_choice.json'
 import votingEmailJson from './fixtures/voting_email.json'
 import votingMediaJson from './fixtures/voting_media.json'
 
-const handlebars = require('hrHandlebars')
+const Template = ({ ...args }) => {
+    return voting({ ...args })
+}
 
 export default {
     title: 'Komponenten/Voting',
@@ -17,26 +20,58 @@ export default {
                     </div>`
         },
     ],
-}
-const Template = (args) => {
-    let hbsTemplate = handlebars.compile(`
-        {{#>components/forms/components/backgroundBox  }}  
-            {{> components/voting/voting }}
-        {{/components/forms/components/backgroundBox }}
-    `)
-    return hbsTemplate({ ...args })
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":""
+                    // "status":"OK"
+                    // "status":"VALIDATION_ERROR", "errors":{"vorname":"form_error_required"}
+                },
+            },
+        ],
+        layout: 'fullscreen',
+        chromatic: { disableSnapshot: true }
+    }
 }
 
 export const Default = {
     render: Template.bind({}),
     name: 'Einfachauswahl',
     args: votingJson,
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":"OK"
+                },
+            },
+        ]
+    }
 }
 
 export const Voting_Email = {
     render: Template.bind({}),
     name: 'Einfachauswahl mit E-Mail',
     args: votingEmailJson,
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":"OK"
+                },
+            },
+        ]
+    }
 }
 
 export const Voting_Media = {
@@ -53,6 +88,6 @@ export const Voting_Multiple_Choice = {
 
 export const Voting_Over = {
     render: Template.bind({}),
-    name: 'Beeendet',
+    name: 'Beendet',
     args: votingOverJson,
 }
