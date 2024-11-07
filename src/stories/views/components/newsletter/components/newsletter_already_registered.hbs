@@ -1,0 +1,11 @@
+{{#if this.alreadyRegisteredText}}
+    {{> components/newsletter/components/newsletter_result
+            _locaKeyTitle="newsletter_title_already_registered"
+            _text=this.alreadyRegisteredText.richtext
+    }}
+{{else}}
+    {{> components/newsletter/components/newsletter_result
+            _locaKeyTitle="newsletter_title_already_registered"
+            _locaKeyText="newsletter_text_already_registered"
+    }}
+{{/if}}

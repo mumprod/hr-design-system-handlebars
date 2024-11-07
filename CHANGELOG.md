@@ -1,3 +1,15 @@
+# v1.114.2 (Wed Nov 06 2024)
+
+#### 🐛 Bug Fix
+
+- Adding playground for newsletter [#1151](https://github.com/mumprod/hr-design-system-handlebars/pull/1151) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.1 (Wed Nov 06 2024)
 
 #### 🐛 Bug Fix
