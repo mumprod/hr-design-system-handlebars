@@ -10,7 +10,7 @@
         "headingSize": "h2",
         "isVoting": true,
         "isMultiVote": true,
-        "hasRedirect": true,
+        "hasRedirect": false,
         "isMultipleChoice": false,
         "maxAnswerCount": 1,
         "votingSuccessText": {
@@ -55,11 +55,11 @@
             "isVotingOver": false,
             "is2FSecured": false,
             "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
-            "errorMessages": "Error-Messages",
+            "errorMessages": "{\"form_error_required\":\"Pflichtfeld\",\"form_error_max\":\"Zu viele Zeichen\",\"form_error_validurl\":\"Ungültige URL\",\"form_error_empty\":\"Darf nicht ausgefüllt werden\",\"form_error_constants_or_null\":\"Ungültiger Wert\",\"form_error_constants\":\"Ungültiger Wert\",\"form_error_max_multivalue\":\"Die maximale Anzahl an Antwortmöglichkeiten wurde überschritten\",\"vote_error_identity_already_used\":\"Unter dieser E-Mail-Adresse wurde bereits abgestimmt. Eine weitere Abstimmung ist nicht möglich.\",\"vote_error_token_request_count_exceeded\":\"Die maximale Anzahl an Bestätigungs-E-Mails wurde bereits verschickt.\",\"form_error_email\":\"Ungültige E-Mail-Adresse\"}",
             "isSimpleSecured": false,
             "url": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
             "isHorizontalLayout": false,
-            "hideVotingResult": true,
+            "hideVotingResult": false,
             "sophoraId": "Sophora-Id",
             "fields": [
                 {

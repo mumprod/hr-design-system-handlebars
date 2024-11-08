@@ -23,7 +23,7 @@ export default {
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_success _title=this.title _topline=this.topline}}        
+        {{> components/voting/voting_success _title=this.title _topline=this.topline _voteResults=this.votingResult}}        
     {{/components/forms/components/backgroundBox }}
   `)
     return hbsTemplate({ ...args })

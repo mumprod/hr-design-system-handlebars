@@ -54,7 +54,12 @@ const Voting = (context) => {
                 console.log(data)
 
                 if (jsonUrl) {
-                    responseStatus = JSON.parse(data).status
+                    try {
+                        responseStatus = JSON.parse(data).status
+                    } catch (exceptionVar) {
+                        //mockData already delivers a json-pbject!
+                        responseStatus = data.status
+                    }
                     switch (responseStatus) {
                         case 'VALIDATION_ERROR':
                             console.log('Validation Error')

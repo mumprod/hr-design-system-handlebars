@@ -23,7 +23,7 @@ export default {
     parameters: { 
         mockData: [
             {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
                 method: 'POST',
                 status: 200,
                 response: {
@@ -45,7 +45,7 @@ export const Default = {
     parameters: { 
         mockData: [
             {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
                 method: 'POST',
                 status: 200,
                 response: {
@@ -63,7 +63,7 @@ export const Voting_Email = {
     parameters: { 
         mockData: [
             {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
                 method: 'POST',
                 status: 200,
                 response: {
@@ -78,6 +78,18 @@ export const Voting_Media = {
     render: Template.bind({}),
     name: 'Einfachauswahl mit Bild, Audio, Video',
     args: votingMediaJson,
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":"OK"
+                },
+            },
+        ]
+    }
 }
 
 export const Voting_Multiple_Choice = {
