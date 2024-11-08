@@ -12,10 +12,10 @@
 
     {{#if _hideVotingResult}}
         {{#if _isVotingOver}}
-            <p class="mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-lg font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
+            <p class="mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
         {{else}}
-            {{~> components/base/image/icon _icon=(if _statusDone "status-done" "status-error") _iconmap="icons" _addClass=(if _statusDone "" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
-            <p class="mt-6 ml-8 text-base font-bold sm:ml-9 text-error sm:text-lg font-heading sm:mt-12 dark:text-error-dark">{{{_resultBoxMessageText}}}</p>
+            {{~> components/base/image/icon _icon=(if _statusDone "status-done" "status-error") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
+            <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
         {{/if}}
     {{else}}
         <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
