@@ -1,3 +1,15 @@
+# v1.114.5 (Fri Nov 08 2024)
+
+#### 🐛 Bug Fix
+
+- add mockData for voting [#1153](https://github.com/mumprod/hr-design-system-handlebars/pull/1153) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.4 (Thu Nov 07 2024)
 
 #### 🐛 Bug Fix
