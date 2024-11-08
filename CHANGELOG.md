@@ -1,3 +1,16 @@
+# v1.114.4 (Thu Nov 07 2024)
+
+#### 🐛 Bug Fix
+
+- Bug mobile flyout nav is visible [#1150](https://github.com/mumprod/hr-design-system-handlebars/pull/1150) ([@vascoeduardo](https://github.com/vascoeduardo) [@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.3 (Thu Nov 07 2024)
 
 #### 🐛 Bug Fix
