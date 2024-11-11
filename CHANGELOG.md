@@ -1,3 +1,15 @@
+# v1.114.6 (Mon Nov 11 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 1781 2 [#1154](https://github.com/mumprod/hr-design-system-handlebars/pull/1154) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.5 (Fri Nov 08 2024)
 
 #### 🐛 Bug Fix
