@@ -1,4 +1,5 @@
 import votingJson from './fixtures/voting.json'
+import votingResultAbsoluteJson from './fixtures/voting_result_absolute.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -22,14 +23,26 @@ export default {
 const Template = (args) => {
     let hbsTemplate = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_success_2F _title=this.title _topline=this.topline}}        
+        {{> components/voting/voting_result this 
+                _isInline=true 
+                _statusDone=true 
+                _hideVotingResult=this.form.hideVotingResult 
+                _resultBoxMessageTitle="Danke für ihre Teilnahme!" 
+                _resultBoxMessageText=this.votingSuccessText.richtext
+        }}        
     {{/components/forms/components/backgroundBox }}
   `)
     return hbsTemplate({ ...args })
 }
 
-export const Voting_Success_2F = {
+export const Voting_Result = {
     render: Template.bind({}),
-    name: 'Successmeldung',
+    name: 'Ergebnis Barchart prozentual',
     args: votingJson,
+}
+
+export const Voting_Result_Absolute = {
+    render: Template.bind({}),
+    name: 'Ergebnis Barchart absolut',
+    args: votingResultAbsoluteJson,
 }

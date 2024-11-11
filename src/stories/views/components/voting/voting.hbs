@@ -58,30 +58,32 @@
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}
-                                    {{{include "components/voting/voting_success_2F" _isInline=true _statusDone=true _title=../this.title _topline=../this.topline}}}
+                                    {{> components/voting/voting_result_2F ../this 
+                                            _isInline=true _statusDone=true  
+                                            _resultBoxMessageTitle=(loca "votingform2F_title_success") 
+                                            _resultBoxMessageText=(loca "votingform2F_text_success")
+                                    }}
                                 {{else}}
-                                    {{{include "components/voting/voting_success" _isInline=true _voteResults=../this.votingResult _statusDone=true _title=../this.title _topline=../this.topline}}}
+                                    {{> components/voting/voting_result ../this 
+                                            _isInline=true 
+                                            _statusDone=true 
+                                            _hideVotingResult=this.hideVotingResult 
+                                            _resultBoxMessageTitle=(loca "votingform_title_success") 
+                                            _resultBoxMessageText=../this.votingSuccessText.richtext
+                                    }}
                                 {{/if}}
                         </script>
-                        <script type="text/html" class="js-errorMessage">
-                                {{#if this.is2FSecured}}
-                                    {{{include "components/voting/voting_error" _isInline=true _statusDone=error _title=../this.title _topline=../this.topline}}}
-                                {{else}}
-                                    {{{include "components/voting/voting_error" _isInline=true _statusDone=false _title=../this.title _topline=../this.topline}}}
-                                {{/if}}
+                        <script type="text/html" class="js-errorMessage">    
+                            {{> components/voting/voting_result ../this _isInline=true _statusDone=false _hideVotingResult=true _showBackButton=true  _resultBoxMessageTitle=(loca "votingform_title_error") _resultBoxMessageText=(loca "votingform_text_error")}}
                         </script>
                         {{#unless this.hideVotingResult}}
                             <script type="text/html" class="js-result">
                                     {{#unless this.is2FSecured}}
-                                        {{> components/voting/voting_result 
-                                                _resultBoxMessageText=(loca "votingform_already_voted_cookie_hint") 
-                                                _voteResults=../this.votingResult 
-                                                _isResultOnRedirectPage=_isResultOnRedirectPage 
-                                                _isSimpleSecured=../this.isSimpleSecured 
+                                        {{> components/voting/voting_result ../this
+                                                _resultBoxMessageText=(loca "votingform_already_voted_cookie_hint")   
                                                 _statusDone=true 
                                                 _addClass=../_addClass 
-                                                _hideVotingResult=this.hideVotingResult 
-                                                _isVotingOver=this.isVotingOver 
+                                                _hideVotingResult=this.hideVotingResult
                                         }}
                                     {{/unless}}
                             </script>
@@ -90,7 +92,7 @@
                 </div>
             </div>
         {{else}}
-            {{> components/voting/voting_result _isVotingOver=true _title=../this.title _topline=../this.topline}}
+            {{> components/voting/voting_result ../this _hideVotingResult=this.hideVotingResult}}
         {{/unless}}
     {{/with}}
 {{/components/forms/components/backgroundBox }}

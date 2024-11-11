@@ -58,7 +58,7 @@ export const Default = {
 
 export const Voting_Email = {
     render: Template.bind({}),
-    name: 'Einfachauswahl mit E-Mail',
+    name: 'Einfachauswahl mit E-Mail und Successmeldung',
     args: votingEmailJson,
     parameters: { 
         mockData: [
@@ -94,7 +94,7 @@ export const Voting_Media = {
 
 export const Voting_Multiple_Choice = {
     render: Template.bind({}),
-    name: 'Mehrfachauswahl',
+    name: 'Mehrfachauswahl mit Fehlermeldung',
     args: votingMultipleChoiceJson,
 }
 

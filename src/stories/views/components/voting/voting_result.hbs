@@ -1,26 +1,27 @@
 <div class="{{#if this.isSimpleSecured}}js-load{{/if}}{{#if _addClass}} {{_addClass}}{{/if}}" 
-    {{#unless _isVotingOver}}
+    {{#unless this.form.isVotingOver}}
         {{#if this.isSimpleSecured}}
             data-hr-voting-result-cookie-ds='{"cookieLifetime":"{{this.cookieLifetime}}","votingId":"{{this.sophoraId}}"}'
         {{/if}}
     {{/unless}}
 >
 
-    {{#unless _isResultOnRedirectPage}}
-        {{> components/voting/components/voting_header _title=_title _topline=_topline}}
+    {{#unless this.hasRedirect}}
+        {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
     {{/unless}}
 
     {{#if _hideVotingResult}}
-        {{#if _isVotingOver}}
-            <p class="mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
+        {{#if this.form.isVotingOver}}
+            <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12">{{loca "votingform_voting_finished"}}</p>
         {{else}}
             {{~> components/base/image/icon _icon=(if _statusDone "status-done" "status-error") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
             <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
         {{/if}}
     {{else}}
-        <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
         
-        {{#each _voteResults}}
+        <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{#if this.form.isVotingOver}}{{loca "votingform_voting_finished"}}{{else}}{{{_resultBoxMessageText}}}{{/if}}</p>
+        
+        {{#each this.votingResult}}
             <div class="flex">
                 <div class="grow">
                     <div class="{{#if @first}}mt-7 sm:mt-9{{else}}mt-3 sm:mt-4{{/if}} text-base sm:text-lg font-copy dark:text-text-dark">{{this.label}}</div>
@@ -53,18 +54,16 @@
         {{/if}}    
     {{/if}}
 
-    {{#if _isVotingOver}}
-        <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{loca "votingform_voting_finished"}}</p>
-    {{/if}}
-
-    {{#unless _isResultOnRedirectPage}}
+    {{#unless this.hasRedirect}}
         {{#unless this.isSimpleSecured}}
-            {{#unless _isVotingOver}}
-                <div class="mt-6 sm:mt-12">
-                    {{#> components/button/link_button _size="lg" _css="float-right"}}
-                        {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
-                    {{/components/button/link_button}}
-                </div>            
+            {{#unless this.form.isVotingOver}}
+                {{#if _showBackButton}}
+                    <div class="mt-6 sm:mt-12">
+                        {{#> components/button/link_button _size="lg" _css="float-right"}}
+                            {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
+                        {{/components/button/link_button}}
+                    </div>
+                {{/if}}            
             {{/unless}}
         {{/unless}}
     {{/unless}}
