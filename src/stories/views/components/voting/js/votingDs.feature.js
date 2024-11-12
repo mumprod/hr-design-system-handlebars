@@ -56,7 +56,7 @@ const Voting = (context) => {
                 if (jsonUrl) {
                     try {
                         responseStatus = JSON.parse(data).status
-                    } catch (exceptionVar) {
+                    } catch {
                         //mockData already delivers a json-pbject!
                         responseStatus = data.status
                     }
@@ -70,7 +70,7 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                                false,
+                                true,
                                 scrollIntoVoting
                             )
                             break
@@ -78,7 +78,7 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-successMessage', rootElement)[0].innerHTML,
-                                false,
+                                true,
                                 scrollIntoVoting
                             )
                             break
@@ -86,13 +86,13 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                                false,
+                                true,
                                 scrollIntoVoting
                             )
                             break
                     }
                 } else {
-                    replaceAnimated(votingWrapper, data, false, scrollIntoVoting)
+                    replaceAnimated(votingWrapper, data, true, scrollIntoVoting)
                 }
             })
 
@@ -103,7 +103,7 @@ const Voting = (context) => {
                 replaceAnimated(
                     votingWrapper,
                     hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                    false,
+                    true,
                     scrollIntoVoting
                 )
             })
@@ -151,7 +151,7 @@ const Voting = (context) => {
 
     const handleFormReload = function (event) {
         event.preventDefault()
-        replaceAnimated(votingWrapper, votingTmpl, false, scrollIntoVoting)
+        replaceAnimated(votingWrapper, votingTmpl, true, scrollIntoVoting)
     }
 
     const handleKeydown = function (event) {
