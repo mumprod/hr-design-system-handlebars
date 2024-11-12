@@ -297,7 +297,11 @@ const replaceAnimated = function (
 
         if (rescan) {
             Initializer.run(elem, loadFeature)
-            hrScriptLoad.rescanForModulesAndVariants(elem)
+            try {
+                hrScriptLoad.rescanForModulesAndVariants(elem)
+            } catch {
+                console.log('hrScriptLoad is not defined');
+            }
         }
 
         if (callback) {
