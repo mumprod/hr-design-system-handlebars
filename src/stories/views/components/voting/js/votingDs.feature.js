@@ -70,7 +70,7 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                                true,
+                                false,
                                 scrollIntoVoting
                             )
                             break
@@ -78,7 +78,7 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-successMessage', rootElement)[0].innerHTML,
-                                true,
+                                false,
                                 scrollIntoVoting
                             )
                             break
@@ -86,13 +86,13 @@ const Voting = (context) => {
                             replaceAnimated(
                                 votingWrapper,
                                 hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                                true,
+                                false,
                                 scrollIntoVoting
                             )
                             break
                     }
                 } else {
-                    replaceAnimated(votingWrapper, data, true, scrollIntoVoting)
+                    replaceAnimated(votingWrapper, data, false, scrollIntoVoting)
                 }
             })
 
@@ -103,7 +103,7 @@ const Voting = (context) => {
                 replaceAnimated(
                     votingWrapper,
                     hr$('.js-errorMessage', rootElement)[0].innerHTML,
-                    true,
+                    false,
                     scrollIntoVoting
                 )
             })
@@ -151,7 +151,7 @@ const Voting = (context) => {
 
     const handleFormReload = function (event) {
         event.preventDefault()
-        replaceAnimated(votingWrapper, votingTmpl, true, scrollIntoVoting)
+        replaceAnimated(votingWrapper, votingTmpl, false, scrollIntoVoting)
     }
 
     const handleKeydown = function (event) {
