@@ -1,3 +1,15 @@
+# v1.114.8 (Tue Nov 12 2024)
+
+#### 🐛 Bug Fix
+
+- fix voting-js error 2nd try [#1156](https://github.com/mumprod/hr-design-system-handlebars/pull/1156) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.7 (Tue Nov 12 2024)
 
 #### 🐛 Bug Fix
