@@ -1,16 +1,38 @@
-import voting from './voting.hbs'
-import votingJson from './fixtures/voting.json'
-import votingOverJson from './fixtures/voting_over.json'
-import votingMultipleChoiceJson from './fixtures/voting_multiple_choice.json'
-import votingEmailJson from './fixtures/voting_email.json'
-import votingMediaJson from './fixtures/voting_media.json'
+import { getSnapshotsTemplate } from '/src/assets/js/utils.js'
+import fixtures from './fixtures/voting.json'
 
-const Template = ({ ...args }) => {
-    return voting({ ...args })
+const handlebars = require('hrHandlebars')
+const hbsTemplates = []
+hbsTemplates['default'] = handlebars.compile(`
+  {{> components/voting/voting }}   
+`)
+
+hbsTemplates['result'] = handlebars.compile(`
+    {{#>components/forms/components/backgroundBox  }}  
+        {{> components/voting/voting_result this 
+                _isInline=true 
+                _statusDone=true 
+                _hideVotingResult=this.form.hideVotingResult 
+                _resultBoxMessageText=this.votingSuccessText.richtext
+        }}        
+    {{/components/forms/components/backgroundBox }}  
+`)
+
+const TemplateVoting = (args) => {
+    return hbsTemplates['default']({ ...args })
+}
+
+const TemplateResult = (args) => {
+    return hbsTemplates['result']({ ...args })
+}
+
+const snapshotTemplate = (args) => {
+    return getSnapshotsTemplate({ hbsTemplates, args })
 }
 
 export default {
     title: 'Komponenten/Voting',
+    argTypes: {},
     decorators: [
         (Story) => {
             return `<div class="grid grid-page">
@@ -28,8 +50,6 @@ export default {
                 status: 200,
                 response: {
                      "status":""
-                    // "status":"OK"
-                    // "status":"VALIDATION_ERROR", "errors":{"vorname":"form_error_required"}
                 },
             },
         ],
@@ -39,9 +59,9 @@ export default {
 }
 
 export const Default = {
-    render: Template.bind({}),
+    render: TemplateVoting.bind({}),
     name: 'Einfachauswahl',
-    args: votingJson,
+    args: fixtures.voting.args,
     parameters: { 
         mockData: [
             {
@@ -57,9 +77,9 @@ export const Default = {
 }
 
 export const Voting_Email = {
-    render: Template.bind({}),
+    render: TemplateVoting.bind({}),
     name: 'Einfachauswahl mit E-Mail und Successmeldung',
-    args: votingEmailJson,
+    args: fixtures.voting_email.args,
     parameters: { 
         mockData: [
             {
@@ -75,9 +95,9 @@ export const Voting_Email = {
 }
 
 export const Voting_Media = {
-    render: Template.bind({}),
+    render: TemplateVoting.bind({}),
     name: 'Einfachauswahl mit Bild, Audio, Video',
-    args: votingMediaJson,
+    args: fixtures.voting_media.args,
     parameters: { 
         mockData: [
             {
@@ -93,13 +113,34 @@ export const Voting_Media = {
 }
 
 export const Voting_Multiple_Choice = {
-    render: Template.bind({}),
+    render: TemplateVoting.bind({}),
     name: 'Mehrfachauswahl mit Fehlermeldung',
-    args: votingMultipleChoiceJson,
+    args: fixtures.voting_multiple_choice.args,
 }
 
 export const Voting_Over = {
-    render: Template.bind({}),
+    render: TemplateVoting.bind({}),
     name: 'Beendet',
-    args: votingOverJson,
+    args: fixtures.voting_over.args,
+}
+
+export const Voting_Result = {
+    render: TemplateResult.bind({}),
+    name: 'Ergebnis Barchart prozentual',
+    args: fixtures.voting.args,
+}
+
+export const Voting_Result_Absolute = {
+    render: TemplateResult.bind({}),
+    name: 'Ergebnis Barchart absolut',
+    args: fixtures.voting_result_absolute.args,
+}
+
+export const Snapshot = {
+    render: snapshotTemplate.bind({}),
+    name: 'Snapshot',
+    args: fixtures,
+    parameters: {
+        chromatic: { disableSnapshot: false },
+    }
 }
