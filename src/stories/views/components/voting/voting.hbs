@@ -58,8 +58,7 @@
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}
-                                    {{> components/voting/voting_result_2F ../this 
-                                            _isInline=true _statusDone=true  
+                                    {{> components/voting/voting_result ../this  
                                             _resultBoxMessageTitle=(loca "votingform2F_title_success") 
                                             _resultBoxMessageText=(loca "votingform2F_text_success")
                                     }}
@@ -74,7 +73,14 @@
                                 {{/if}}
                         </script>
                         <script type="text/html" class="js-errorMessage">    
-                            {{> components/voting/voting_result ../this _isInline=true _statusDone=false _hideVotingResult=true _showBackButton=true  _resultBoxMessageTitle=(loca "votingform_title_error") _resultBoxMessageText=(loca "votingform_text_error")}}
+                            {{> components/voting/voting_result ../this 
+                                    _isInline=true 
+                                    _statusDone=false 
+                                    _hideVotingResult=true 
+                                    _showBackButton=true  
+                                    _resultBoxMessageTitle=(loca "votingform_title_error") 
+                                    _resultBoxMessageText=(loca "votingform_text_error")
+                            }}
                         </script>
                         {{#unless this.hideVotingResult}}
                             <script type="text/html" class="js-result">

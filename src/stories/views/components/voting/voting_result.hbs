@@ -1,70 +1,79 @@
-<div class="{{#if this.isSimpleSecured}}js-load{{/if}}{{#if _addClass}} {{_addClass}}{{/if}}" 
-    {{#unless this.form.isVotingOver}}
-        {{#if this.isSimpleSecured}}
-            data-hr-voting-result-cookie-ds='{"cookieLifetime":"{{this.cookieLifetime}}","votingId":"{{this.sophoraId}}"}'
-        {{/if}}
-    {{/unless}}
->
+{{#if this.form.is2FSecured}}
+    {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
+    {{~> components/base/image/icon _icon="status-done" _iconmap="icons" _addClass="float-left w-6 h-6 text-success fill-current mt-6 sm:mt-12"}}
+    <p class="mt-6 ml-8 text-base font-bold sm:ml-9 text-success sm:text-lg font-heading sm:mt-12">{{{_resultBoxMessageTitle}}}<br/>{{{_resultBoxMessageText}}}</p>
+{{else}}
+    <div class="{{#if this.isSimpleSecured}}js-load{{/if}}{{#if _addClass}} {{_addClass}}{{/if}}" 
+        {{#unless this.form.isVotingOver}}
+            {{#if this.isSimpleSecured}}
+                data-hr-voting-result-cookie-ds='{"cookieLifetime":"{{this.cookieLifetime}}","votingId":"{{this.sophoraId}}"}'
+            {{/if}}
+        {{/unless}}
+    >
 
-    {{#unless this.hasRedirect}}
-        {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
-    {{/unless}}
+        {{#unless this.hasRedirect}}
+            {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
+        {{/unless}}
 
-    {{#if _hideVotingResult}}
-        {{#if this.form.isVotingOver}}
-            <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12">{{loca "votingform_voting_finished"}}</p>
+        {{#if _hideVotingResult}}
+            {{#if this.form.isVotingOver}}
+                <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12">{{loca "votingform_voting_finished"}}</p>
+            {{else}}
+                {{~> components/base/image/icon _icon=(if _statusDone "status-done" "error-ds") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
+                <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
+            {{/if}}
         {{else}}
-            {{~> components/base/image/icon _icon=(if _statusDone "status-done" "status-error") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
-            <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{{_resultBoxMessageText}}}</p>
-        {{/if}}
-    {{else}}
-        
-        <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{#if this.form.isVotingOver}}{{loca "votingform_voting_finished"}}{{else}}{{{_resultBoxMessageText}}}{{/if}}</p>
-        
-        {{#each this.votingResult}}
-            <div class="flex">
-                <div class="grow">
-                    <div class="{{#if @first}}mt-7 sm:mt-9{{else}}mt-3 sm:mt-4{{/if}} text-base sm:text-lg font-copy dark:text-text-dark">{{this.label}}</div>
-                    <div class="mt-0.5 sm:mt-1 w-full bg-gray-alto rounded-full h-2">
-                        <div class="{{#if this.isWinner}}bg-orange-spicyCarrot-hex{{else}}bg-blue-congress-hex{{/if}} h-2 rounded-full" style="width:{{this.roundedPercentageCount}}%;animation: progressAnimationDS 5s"></div>
+            
+            <p class="mt-6 text-base font-bold sm:text-xl font-heading sm:mt-12 dark:text-text-dark">{{#if this.form.isVotingOver}}{{loca "votingform_voting_finished"}}{{else}}{{{_resultBoxMessageText}}}{{/if}}</p>
+            
+            {{#each this.votingResult}}
+                <div class="flex">
+                    <div class="grow">
+                        <div class="{{#if @first}}mt-7 sm:mt-9{{else}}mt-3 sm:mt-4{{/if}} text-base sm:text-lg font-copy dark:text-text-dark">{{this.label}}</div>
+                        <div class="mt-0.5 sm:mt-1 w-full bg-gray-alto rounded-full h-2">
+                            <div class="{{#if this.isWinner}}bg-orange-spicyCarrot-hex{{else}}bg-blue-congress-hex{{/if}} h-2 rounded-full" style="width:{{this.roundedPercentageCount}}%;animation: progressAnimationDS 5s"></div>
+                        </div>
+                    </div>
+                    <div class="self-end flex-none w-16">
+                        <span class="float-right block mt-2 text-2xl font-bold font-headingSerif {{#if this.isWinner}}text-orange-spicyCarrot-hex{{else}}text-blue-congress-hex{{/if}}" style="animation: percentageAnimationDS 5s">
+                            {{#if ../this.showAbsoluteResult}}{{this.count}}{{else}}{{this.percentageCount}}%{{/if}}
+                        </span>
                     </div>
                 </div>
-                <div class="self-end flex-none w-16">
-                    <span class="float-right block mt-2 text-2xl font-bold font-headingSerif {{#if this.isWinner}}text-orange-spicyCarrot-hex{{else}}text-blue-congress-hex{{/if}}" style="animation: percentageAnimationDS 5s">
-                        {{#if ../this.showAbsoluteResult}}{{this.count}}{{else}}{{this.percentageCount}}%{{/if}}
-                    </span>
-                </div>
-            </div>
-        {{/each}}
-        
-        {{#if this.isMultipleChoice}}
-            {{#unless this.showAbsoluteResult}}
+            {{/each}}
+            
+            {{#if this.isMultipleChoice}}
+                {{#unless this.showAbsoluteResult}}
+                    {{#if this.showVoteResult}}
+                        <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                            {{loca "votingform_vote_result"}}{{this.summarizedResult}}
+                        </p>
+                    {{/if}}
+                {{/unless}}
+            {{else}}
                 {{#if this.showVoteResult}}
-                    <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion">
+                    <p class="float-left text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
                         {{loca "votingform_vote_result"}}{{this.summarizedResult}}
                     </p>
                 {{/if}}
-            {{/unless}}
-        {{else}}
-            {{#if this.showVoteResult}}
-                <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion">
-                    {{loca "votingform_vote_result"}}{{this.summarizedResult}}
-                </p>
             {{/if}}
-        {{/if}}    
-    {{/if}}
+            {{!#if this.showAbsoluteResult}} 
+                <!--p class="float-right text-xs pt-7 sm:pt-9 font-headingSerif text-gray-scorpion dark:text-text-dark">Stimmen</p-->
+            {{!/if}}   
+        {{/if}}
 
-    {{#unless this.hasRedirect}}
-        {{#unless this.isSimpleSecured}}
-            {{#unless this.form.isVotingOver}}
-                {{#if _showBackButton}}
-                    <div class="mt-6 sm:mt-12">
-                        {{#> components/button/link_button _size="lg" _css="float-right"}}
-                            {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
-                        {{/components/button/link_button}}
-                    </div>
-                {{/if}}            
+        {{#unless this.hasRedirect}}
+            {{#unless this.isSimpleSecured}}
+                {{#unless this.form.isVotingOver}}
+                    {{#if _showBackButton}}
+                        <div class="mt-6 sm:mt-12">
+                            {{#> components/button/link_button _size="lg" _css="float-right"}}
+                                {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
+                            {{/components/button/link_button}}
+                        </div>
+                    {{/if}}            
+                {{/unless}}
             {{/unless}}
         {{/unless}}
-    {{/unless}}
-</div>
+    </div>
+{{/if}}
