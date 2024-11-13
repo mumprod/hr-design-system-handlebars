@@ -45,22 +45,26 @@
             {{#if this.isMultipleChoice}}
                 {{#unless this.showAbsoluteResult}}
                     {{#if this.showVoteResult}}
-                        <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                        {{#>components/voting/components/voting_hint}}
                             {{loca "votingform_vote_result"}}{{this.summarizedResult}}
-                        </p>
+                        {{/components/voting/components/voting_hint}}
                     {{/if}}
                 {{else}}
-                    <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">{{loca "votingform_vote_result_absolute_hint"}}</p>
+                    {{#>components/voting/components/voting_hint}}
+                        {{loca "votingform_vote_result_absolute_hint"}}
+                    {{/components/voting/components/voting_hint}}
                 {{/unless}}
             {{else}}
                 {{#if this.showVoteResult}}
-                    <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                    {{#>components/voting/components/voting_hint}}
                         {{#if this.showAbsoluteResult}}{{loca "votingform_vote_result_absolute_hint"}} |{{/if}}
                         {{loca "votingform_vote_result"}}{{this.summarizedResult}}
-                    </p>
+                    {{/components/voting/components/voting_hint}}
                 {{else}}
                     {{#if this.showAbsoluteResult}}
-                        <p class="clear-both text-xs pt-7 sm:pt-9 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">{{loca "votingform_vote_result_absolute_hint"}}</p>
+                        {{#>components/voting/components/voting_hint}}
+                            {{loca "votingform_vote_result_absolute_hint"}}
+                        {{/components/voting/components/voting_hint}}
                     {{/if}}    
                 {{/if}}
             {{/if}}
