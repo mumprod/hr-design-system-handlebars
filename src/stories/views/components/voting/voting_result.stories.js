@@ -27,7 +27,6 @@ const Template = (args) => {
                 _isInline=true 
                 _statusDone=true 
                 _hideVotingResult=this.form.hideVotingResult 
-                _resultBoxMessageTitle="Danke für ihre Teilnahme!" 
                 _resultBoxMessageText=this.votingSuccessText.richtext
         }}        
     {{/components/forms/components/backgroundBox }}
