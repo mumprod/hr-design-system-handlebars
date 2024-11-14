@@ -63,5 +63,23 @@
         "args": {
             "@->jsoninclude": "voting/voting_result_absolute.json"
         }
+    },
+    "voting_success": {
+        "config": {
+            "template": "success",
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_email.json"
+        }
+    },
+    "voting_error": {
+        "config": {
+            "template": "error",
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_result_absolute.json"
+        }
     }
 }
