@@ -1,3 +1,15 @@
+# v1.114.13 (Thu Nov 14 2024)
+
+#### 🐛 Bug Fix
+
+- add success- and errormessage to snapshotstory [#1161](https://github.com/mumprod/hr-design-system-handlebars/pull/1161) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.12 (Wed Nov 13 2024)
 
 #### 🐛 Bug Fix
