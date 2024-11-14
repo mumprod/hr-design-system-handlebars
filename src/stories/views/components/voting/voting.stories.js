@@ -18,12 +18,42 @@ hbsTemplates['result'] = handlebars.compile(`
     {{/components/forms/components/backgroundBox }}  
 `)
 
+hbsTemplates['success'] = handlebars.compile(`
+    {{#>components/forms/components/backgroundBox  }}  
+        {{> components/voting/voting_result this  
+                _resultBoxMessageTitle="Vielen Dank für Ihre Stimme." 
+                _resultBoxMessageText="Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner."
+        }}        
+    {{/components/forms/components/backgroundBox }}  
+`)
+
+hbsTemplates['error'] = handlebars.compile(`
+    {{#>components/forms/components/backgroundBox  }}  
+        {{> components/voting/voting_result this 
+                _isInline=true 
+                _statusDone=false 
+                _hideVotingResult=true 
+                _showBackButton=true  
+                _resultBoxMessageTitle="Das hat leider nicht geklappt!" 
+                _resultBoxMessageText="Ihre Stimme konnte nicht gezählt werden, weil ein Fehler aufgetreten ist. Bitte versuchen Sie es später wieder."
+        }}
+    {{/components/forms/components/backgroundBox }}  
+`)
+
 const TemplateVoting = (args) => {
     return hbsTemplates['default']({ ...args })
 }
 
 const TemplateResult = (args) => {
     return hbsTemplates['result']({ ...args })
+}
+
+const TemplateSuccess = (args) => {
+    return hbsTemplates['success']({ ...args })
+}
+
+const TemplateError = (args) => {
+    return hbsTemplates['error']({ ...args })
 }
 
 const snapshotTemplate = (args) => {
@@ -134,6 +164,18 @@ export const Voting_Result_Absolute = {
     render: TemplateResult.bind({}),
     name: 'Ergebnis Barchart absolut',
     args: fixtures.voting_result_absolute.args,
+}
+
+export const Voting_Success = {
+    render: TemplateSuccess.bind({}),
+    name: 'Successmeldung',
+    args: fixtures.voting_success.args,
+}
+
+export const Voting_Error = {
+    render: TemplateError.bind({}),
+    name: 'Fehlermeldung',
+    args: fixtures.voting_error.args,
 }
 
 export const Snapshot = {
