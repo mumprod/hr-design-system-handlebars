@@ -6,6 +6,7 @@ export default (module) => ({
     isDesktop: true,
     sharingModuleWasNeverShown: true,
     desktopSharingModuleWasNeverShown: true,
+    copySuccess: false,
     toggle() {
         
         var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
@@ -51,6 +52,21 @@ export default (module) => ({
             uxAction('socialShareClick::'+module+'Desktop::shown');
             this.desktopSharingModuleWasNeverShown = false;
         }
+    },
+    copyToClipboard(url) {
+
+        navigator.clipboard
+        .writeText(url)
+        .then(() => {
+            console.log("successfully copied");
+            this.copySuccess = true
+            window.setTimeout(() => {
+                this.copySuccess = false
+            }, 2000)
+        })
+        .catch(() => {
+            console.log("something went wrong with copy");
+        });
     }
     
 })
