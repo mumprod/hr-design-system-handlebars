@@ -166,18 +166,6 @@ export const Voting_Result_Absolute = {
     args: fixtures.voting_result_absolute.args,
 }
 
-export const Voting_Success = {
-    render: TemplateSuccess.bind({}),
-    name: 'Successmeldung',
-    args: fixtures.voting_success.args,
-}
-
-export const Voting_Error = {
-    render: TemplateError.bind({}),
-    name: 'Fehlermeldung',
-    args: fixtures.voting_error.args,
-}
-
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',

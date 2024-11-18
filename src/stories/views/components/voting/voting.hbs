@@ -30,7 +30,7 @@
                     >
                         {{> components/voting/components/voting_header _title=../this.title _topline=../this.topline}}
                         
-                        <div class="c-voting-form__bottomWrapper">
+                        <div class="js-voting-form__bottomWrapper">
                             {{#if this.shorttext}}
                                 <p class="mt-4 text-base font-copy sm:text-lg sm:mt-5 dark:text-text-dark">{{this.shorttext}}</p>
                             {{/if}}
@@ -54,7 +54,7 @@
                             {{#if this.is2FSecured}}
                                 <div class="float-left mt-1 text-xs text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
                             {{/if}}                            
-                            {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="-inactive js-voting-submit-button"}}
+                            {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="js-voting-submit-button"}}
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}

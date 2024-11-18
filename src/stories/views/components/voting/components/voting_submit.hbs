@@ -1,4 +1,4 @@
 <label class="{{#if _addClass}}{{_addClass}} {{/if}}float-right cursor-pointer has-[input:disabled]:cursor-not-allowed has-[input:disabled]:opacity-75 {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant='primary'}} {{> components/button/utilities/button_dimension_classes _size='lg'}}">     
     {{> components/base/image/icon _icon="send-ds" _addClass="w-5 h-5 fill-white dark:fill-text-dark "}}
-    <input type="submit" class="pl-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed" value="{{#if _label}}{{_label}}{{else}}{{loca 'form_button_submit'}}{{/if}}" {{#if _inactive}}disabled{{/if}}/>
+    <input type="submit" class="pl-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed" value="{{#if _label}}{{_label}}{{else}}{{loca 'form_button_submit'}}{{/if}}" />
 </label>

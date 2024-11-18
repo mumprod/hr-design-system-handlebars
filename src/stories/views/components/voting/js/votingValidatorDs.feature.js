@@ -93,20 +93,19 @@ const VotingValidator = (context) => {
     const { element: rootElement } = context
     const maxAnswerCount = options.maxAnswerCount,
         isMultipleChoice = options.isMultipleChoice || false,
-        votingOptions = Array.from(hr$('input[name=multivoting]', rootElement)),
+        //votingOptions = Array.from(hr$('input[name=multivoting]', rootElement)),
         submit = hr$('input[type=submit]', rootElement)[0],
         submitLabel = hr$('.js-voting-submit-button', rootElement)[0]
     let counter = hr$('.js-voting-counter', rootElement),
-        selectedCheckboxes = 0
+        selectedCheckboxes = 0,
+        votingOptions = []
 
     const countSelectedCheckboxes = function (event) {
         console.log(submitLabel)
         if (countCheckedCheckboxes() != 0) {
             submit.disabled = false
-            submitLabel.classList.remove('-inactive')
         } else {
             submit.disabled = true
-            submitLabel.classList.add('-inactive')
         }
 
         if (selectedCheckboxes < maxAnswerCount) {
@@ -154,7 +153,6 @@ const VotingValidator = (context) => {
                 uncheckedOptions.disabled = true
                 let label = hr$('label[for=' + uncheckedOptions.id + ']')
                 label = label.item(0)
-                label.classList.add('-inactive')
                 label.classList.add('!cursor-not-allowed')
             }
         })
@@ -168,26 +166,29 @@ const VotingValidator = (context) => {
             disabledCheckboxes.disabled = false
             let label = hr$('label[for=' + disabledCheckboxes.id + ']')
             label = label.item(0)
-            label.classList.remove('-inactive')
             label.classList.remove('!cursor-not-allowed')
         })
     }
 
     const initVotingValidation = function () {
-        //if (isMultipleChoice) {
-            counter = counter.item(0)
-            submit.disabled = true
+        counter = counter.item(0)
+        submit.disabled = true
 
-            // Uncheck all checkboxes if User was faster than JS loading
-            for (let i = 0; i < votingOptions.length; i++) {
-                votingOptions[i].checked = false
-            }
+        if (isMultipleChoice) {
+            votingOptions = Array.from(hr$('input[name=multivoting]', rootElement))
+        } else {
+            votingOptions = Array.from(hr$('input[name=voting]', rootElement))
+        }
 
-            for (let i = 0; i < votingOptions.length; i++) {
-                votingOptions[i].disabled = false
-                listen('click', countSelectedCheckboxes, votingOptions[i])
-            }
-        //}
+        // Uncheck all checkboxes if User was faster than JS loading
+        for (let i = 0; i < votingOptions.length; i++) {
+            votingOptions[i].checked = false
+        }
+
+        for (let i = 0; i < votingOptions.length; i++) {
+            votingOptions[i].disabled = false
+            listen('click', countSelectedCheckboxes, votingOptions[i])
+        }
     }
 
     initVotingValidation()
