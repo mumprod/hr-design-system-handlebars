@@ -49,7 +49,7 @@
                         "isChoice": true,
                         "asString": "radio"
                     },
-                    "name": "multivoting",
+                    "name": "voting",
                     "isGrouped": true,
                     "isRequired": false,
                     "options": [

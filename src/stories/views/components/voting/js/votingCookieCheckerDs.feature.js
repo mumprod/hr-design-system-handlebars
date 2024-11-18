@@ -13,7 +13,7 @@ const VotingCookieChecker = (context) => {
         cookie = getJSONCookie(votingId)
         if (cookie) {
             let voting = hr$('#' + votingId)[0]
-            let votingText = voting.querySelector('.c-voting-form__bottomWrapper')
+            let votingText = voting.querySelector('.js-voting-form__bottomWrapper')
             hideVotingResult
                 ? replaceAnimated(votingText, alreadyVotedTmpl, true)
                 : replaceAnimated(votingWrapper, hr$('.js-result', rootElement)[0].innerHTML, true)
