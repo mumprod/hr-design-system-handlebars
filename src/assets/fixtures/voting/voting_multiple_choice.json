@@ -13,6 +13,10 @@
         {
             "@->contentpath": "form.fields.0.type.asString",
             "@->value": "checkbox"
+        },
+        {
+            "@->contentpath": "form.fields.0.name",
+            "@->value": "multivoting"
         }        
     ]    
 }
