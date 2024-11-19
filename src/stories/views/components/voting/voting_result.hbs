@@ -74,8 +74,8 @@
             {{#unless this.isSimpleSecured}}
                 {{#unless this.form.isVotingOver}}
                     {{#if _showBackButton}}
-                        <div class="mt-6 sm:mt-12">
-                            {{#> components/button/link_button _size="lg" _css="float-right"}}
+                        <div class="w-full h-12 mt-6 sm:mt-12">
+                            {{#> components/button/link_button _size="lg" _css="js-formReload float-right"}}
                                 {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
                             {{/components/button/link_button}}
                         </div>
