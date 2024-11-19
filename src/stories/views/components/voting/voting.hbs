@@ -51,10 +51,12 @@
                                     _addClassLabelForDataPolicy="!pt-0"
                                     _addClassInput="!my-3 sm:!my-4 !ml-3 sm:!ml-4"
                             }}
-                            {{#if this.is2FSecured}}
-                                <div class="float-left mt-1 text-xs text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
-                            {{/if}}                            
-                            {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="js-voting-submit-button"}}
+                            <div class="w-full h-12">
+                                {{#if this.is2FSecured}}
+                                    <div class="float-left mt-1 text-xs text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
+                                {{/if}}                            
+                                {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="js-voting-submit-button"}}
+                            </div>
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}
