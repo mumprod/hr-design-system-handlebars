@@ -1,3 +1,16 @@
+# v1.114.16 (Tue Nov 19 2024)
+
+#### 🐛 Bug Fix
+
+- Seo/optimize copy to clipboard [#1162](https://github.com/mumprod/hr-design-system-handlebars/pull/1162) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.15 (Tue Nov 19 2024)
 
 #### 🐛 Bug Fix
