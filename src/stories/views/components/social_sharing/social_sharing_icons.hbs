@@ -1,6 +1,8 @@
 {{~#with this.copyToClipboardLink}}
-<li x-data="copyHandler()" x-on:click="copyToClipboard" class="relative">
-    <button class="{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
+<li class="relative">
+    <button
+        x-on:click="copyToClipboard('{{this}}')"
+        class="{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
         title="{{loca "share_copy_linktitle" }}"
         data-url="{{this}}"
         {{#with ../_trackingData}}
@@ -14,30 +16,6 @@
         {{loca "share_copy_message" }}
     </div>
 </li>
-<script>
-    function copyHandler(){
-        return  {  
-            copySuccess: false,
-            copyToClipboard(event) {
-                const clickedContainer = event.currentTarget.parentNode
-                const url = clickedContainer.querySelector ("button:first-of-type").getAttribute('data-url');
-                //TODO: maby do this with a magical helper in alpine
-                navigator.clipboard
-                .writeText(url)
-                .then(() => {
-                    console.log("successfully copied");
-                    this.copySuccess = true
-                    window.setTimeout(() => {
-                        this.copySuccess = false
-                    }, 2000)
-                })
-                .catch(() => {
-                    console.log("something went wrong with copy");
-                });
-            }
-        }
-    }
-</script>
 {{/with}}
 {{~#with this.twitterLink ~}}
 <li>
