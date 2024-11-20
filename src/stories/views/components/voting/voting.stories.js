@@ -20,7 +20,8 @@ hbsTemplates['result'] = handlebars.compile(`
 
 hbsTemplates['success'] = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_result this  
+        {{> components/voting/voting_result this
+                _statusDone=true  
                 _resultBoxMessageTitle="Vielen Dank für Ihre Stimme." 
                 _resultBoxMessageText="Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner."
         }}        

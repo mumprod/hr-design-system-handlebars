@@ -1,3 +1,27 @@
+# v1.114.20 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- adaptions for delivery 3 [#1169](https://github.com/mumprod/hr-design-system-handlebars/pull/1169) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.19 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- SEO - WOFF2 Fonts [#1168](https://github.com/mumprod/hr-design-system-handlebars/pull/1168) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.18 (Wed Nov 20 2024)
 
 #### 🐛 Bug Fix
