@@ -1,3 +1,16 @@
+# v1.114.18 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- Add voting with image and horizontal layout options [#1167](https://github.com/mumprod/hr-design-system-handlebars/pull/1167) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.17 (Tue Nov 19 2024)
 
 #### 🐛 Bug Fix
