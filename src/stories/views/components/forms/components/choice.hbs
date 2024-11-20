@@ -1,5 +1,5 @@
 {{~changeRandom~}}
-<div class="relative flex flex-col w-full {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
+<div class="relative flex flex-col {{#if _isHorizontalLayout}} flex-grow{{/if}}{{#if this.mediaItem}} sm:basis-1/2-gap-6{{/if}} {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
    {{#unless _inGroup}}
       {{#if _required}}
          ax-load
@@ -9,7 +9,11 @@
       {{/if}}
    {{/unless}}
 >
-<div class="flex flex-row items-center w-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
+<div class="flex {{#if this.mediaItem}} flex-col {{else}} flex-row{{/if}} items-center w-full h-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
+   {{#if this.mediaItem}}
+      {{> components/forms/components/mediaChoice}}
+      <div class="flex flex-row w-full">
+   {{/if}}
   <input class="relative self-start flex-shrink-0 w-6 h-6 bg-white dark:bg-black border appearance-none cursor-pointer disabled:cursor-not-allowed border-form-highlight dark:border-form-highlight-dark {{~inline-switch _type '["checkbox","radio"]' '[" checked:bg-form-highlight checked:border-form-highlight form-checkbox"," checked:bg-white checked:border-form-highlight rounded-full form-radio",""]'}}{{#if _addClassInput}} {{_addClassInput}}{{/if}}"
       {{#if _required}}
             :class="{' border-form-highlight dark:border-form-highlight-dark': hideError(),'border-error dark:border-error-dark': hideDescription() }"
@@ -73,6 +77,9 @@
         {{/if}}
       {{/if}}
    </label>
+   {{#if this.mediaItem}}
+      </div>
+   {{/if}}
 </div>  
 {{#unless _inGroup}}
    <div class="flex items-end justify-between min-h-5 font-heading">     
