@@ -1,3 +1,15 @@
+# v1.114.21 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- adaptions for delivery 4 [#1171](https://github.com/mumprod/hr-design-system-handlebars/pull/1171) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.20 (Wed Nov 20 2024)
 
 #### 🐛 Bug Fix
