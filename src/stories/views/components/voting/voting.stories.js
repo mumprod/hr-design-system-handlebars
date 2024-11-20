@@ -106,10 +106,10 @@ export const Default = {
     }
 }
 
-export const Voting_Email = {
+export const Voting_horizontal = {
     render: TemplateVoting.bind({}),
-    name: 'Einfachauswahl mit E-Mail und Successmeldung',
-    args: fixtures.voting_email.args,
+    name: 'Einfachauswahl Horizontal',
+    args: fixtures.voting_horizontal.args,
     parameters: { 
         mockData: [
             {
@@ -124,10 +124,47 @@ export const Voting_Email = {
     }
 }
 
-export const Voting_Media = {
+export const voting_media_image_horizontal = {
     render: TemplateVoting.bind({}),
-    name: 'Einfachauswahl mit Bild, Audio, Video',
-    args: fixtures.voting_media.args,
+    name: 'Mehrfachauswahl mit Bild Horizontal',
+    args: fixtures.voting_media_image_horizontal.args,
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":"OK"
+                },
+            },
+        ]
+    }
+}
+
+export const voting_media_image_vertical = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Bild Vertikal',
+    args: fixtures.voting_media_image_vertical.args,
+    parameters: { 
+        mockData: [
+            {
+                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
+                method: 'POST',
+                status: 200,
+                response: {
+                     "status":"OK"
+                },
+            },
+        ]
+    }
+}
+
+
+export const Voting_Email = {
+    render: TemplateVoting.bind({}),
+    name: 'Einfachauswahl mit E-Mail und Successmeldung',
+    args: fixtures.voting_email.args,
     parameters: { 
         mockData: [
             {

@@ -19,9 +19,8 @@
             {{/if}}
         {{/if}}
     </legend>
-    <div class="flex flex-row flex-wrap gap-x-6 md:gap-x-7 gap-y-5{{#if _addClassGroup}} {{_addClassGroup}}{{/if}}" >
-        {{#each _items}}   
-            <div>
+    <div class="flex flex-row gap-x-6 gap-y-5 {{#if _isHorizontalLayout}} flex-wrap sm:flex-nowrap flex-col sm:flex-row{{else}} flex-wrap {{#unless _isMultimediaVoting}}{{_addClassGroup}}{{/unless}}{{/if}}">
+        {{#each _items}}
                 {{> components/forms/components/choice
                         _type=../_type
                         _name=../_name
@@ -35,9 +34,9 @@
                         _formId=../_formId 
                         _addClass=../_addClassChoice
                         _addClassLabel=../_addClassLabel
-                        _addClassInput=../_addClassInput 
+                        _addClassInput=../_addClassInput
+                        _isHorizontalLayout=../_isHorizontalLayout
                 }}
-            </div>  
         {{/each}}
     </div>
     <div class="flex items-end justify-between min-h-5 font-heading">     

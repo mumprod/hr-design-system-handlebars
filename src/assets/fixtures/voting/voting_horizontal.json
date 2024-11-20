@@ -1,0 +1,47 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath":"form.isHorizontalLayout",
+            "@->value": true
+        },
+        {
+            "@->contentpath":"form.fields",
+            "@->value": [
+                {
+                    "type": {
+                        "isGroup": false,
+                        "isChoice": true,
+                        "asString": "radio"
+                    },
+                    "name": "multivoting",
+                    "isGrouped": true,
+                    "isRequired": false,
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Gut",
+                            "title": "Voting-Answer 1"
+                        },
+                        {
+                            "value": "2",
+                            "label": "Super",
+                            "title": "Voting-Answer 2"                            
+                        },
+                        {
+                            "value": "3",
+                            "label": "Mega",
+                            "title": "Voting-Answer 3"
+                        },
+                        {
+                            "value": "4",
+                            "label": "Hammer",
+                            "title": "Voting-Answer 4"                            
+                        }                                                                                                                             
+                    ]
+                }                
+            ]
+        }
+    ]
+}

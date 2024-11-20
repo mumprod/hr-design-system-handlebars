@@ -44,7 +44,9 @@
                                 <span class="block float-right w-8 js-voting-counter">(0/{{../this.maxAnswerCount}})</span>
                             </div>
                             {{> components/forms/components/fields 
-                                    _multipleChoice=../this.isMultipleChoice 
+                                    _multipleChoice=../this.isMultipleChoice
+                                    _isHorizontalLayout=this.isHorizontalLayout
+                                    _isMultimediaVoting=../this.isMultimediaVoting
                                     _addClassGroup="!flex-col mt-2" 
                                     _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex bg-white has-[input:disabled]:opacity-50 has-[input:disabled]:cursor-not-allowed" 
                                     _addClassLabel="w-full !py-3 sm:!py-4 !pr-3 sm:!pr-4 !text-base sm:!text-lg md:!text-lg" 

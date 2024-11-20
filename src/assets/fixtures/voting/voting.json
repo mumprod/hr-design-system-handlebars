@@ -13,6 +13,14 @@
             "@->contentpath": "multivote-1"
         }
     },
+    "voting_horizontal": {
+        "config": {
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_horizontal.json"
+        }
+    },
     "voting_email": {
         "config": {
             "useAsSnapshot": true
@@ -21,12 +29,20 @@
             "@->jsoninclude": "voting/voting_email.json"
         }
     },
-    "voting_media": {
+    "voting_media_image_horizontal": {
         "config": {
             "useAsSnapshot": true
         },
         "args": {
-            "@->jsoninclude": "voting/voting_media.json"
+            "@->jsoninclude": "voting/voting_media_image_horizontal.json"
+        }
+    },
+    "voting_media_image_vertical": {
+        "config": {
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_media_image_vertical.json"
         }
     },
     "voting_multiple_choice": {
