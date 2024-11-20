@@ -62,7 +62,8 @@
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}
-                                    {{> components/voting/voting_result ../this  
+                                    {{> components/voting/voting_result ../this
+                                            _statusDone=true  
                                             _resultBoxMessageTitle=(loca "votingform2F_title_success") 
                                             _resultBoxMessageText=(loca "votingform2F_text_success")
                                     }}

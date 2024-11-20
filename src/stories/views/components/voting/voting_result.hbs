@@ -1,7 +1,12 @@
 {{#if this.form.is2FSecured}}
     {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
-    {{~> components/base/image/icon _icon="status-done" _iconmap="icons" _addClass="float-left w-6 h-6 text-success fill-current mt-6 sm:mt-12"}}
-    <p class="mt-6 ml-8 text-base font-bold sm:ml-9 text-success sm:text-lg font-heading sm:mt-12">{{{_resultBoxMessageTitle}}}<br/>{{{_resultBoxMessageText}}}</p>
+    {{~> components/base/image/icon _icon=(if _statusDone "status-done" "error-ds") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
+    <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{#if _statusDone}}{{{_resultBoxMessageTitle}}}<br/>{{/if}}{{{_resultBoxMessageText}}}</p>
+        {{#if _showBackButton}}
+            <div class="w-full h-12 mt-6 js-load sm:mt-12">
+                {{> components/voting/components/voting_backbutton}}
+            </div>
+        {{/if}}
 {{else}}
     <div class="{{#if this.isSimpleSecured}}js-load{{/if}}{{#if _addClass}} {{_addClass}}{{/if}}" 
         {{#unless this.form.isVotingOver}}
@@ -75,9 +80,7 @@
                 {{#unless this.form.isVotingOver}}
                     {{#if _showBackButton}}
                         <div class="w-full h-12 mt-6 sm:mt-12">
-                            {{#> components/button/link_button _size="lg" _css="js-formReload float-right"}}
-                                {{> components/button/components/button_label _label=(loca "votingform_form_back")}}
-                            {{/components/button/link_button}}
+                            {{> components/voting/components/voting_backbutton}}
                         </div>
                     {{/if}}            
                 {{/unless}}
