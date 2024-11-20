@@ -14,8 +14,8 @@
     @font-face {
         font-family: 'DIN';
         font-display: auto;
-        src: url('fonts/DINPro-Bold.woff2') format('woff2'),
-        url('fonts/DINPro-Bold.woff') format('woff');
+        src:    url('fonts/DINPro-Bold.woff2') format('woff2'),
+                url('fonts/DINPro-Bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
         font-stretch: normal;
@@ -23,8 +23,8 @@
     @font-face {
         font-family: 'RobotoSlab';
         font-display: auto;
-        src: url('fonts/RobotoSlabbed.woff2') format('woff2'),
-        url('fonts/RobotoSlabbed.woff') format('woff');
+        src:    url('fonts/RobotoSlabbed.woff2') format('woff2'),
+                url('fonts/RobotoSlabbed.woff') format('woff');
         font-weight: 400;
         font-style: normal;
         font-stretch: normal;
@@ -32,8 +32,8 @@
     @font-face {
         font-family: 'RobotoCond';
         font-display: auto;
-        src: url('fonts/RobotoCondensed.woff2') format('woff2'),
-        url('fonts/RobotoCondensed.woff') format('woff');
+        src:    url('fonts/RobotoCondensed.woff2') format('woff2'),
+                url('fonts/RobotoCondensed.woff') format('woff');
         font-weight: 400;
         font-style: normal;
         font-stretch: condensed;
@@ -41,8 +41,8 @@
     @font-face {
         font-family: 'RobotoCond';
         font-display: auto;
-        src: url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
-        url('fonts/RobotoCondensed-Bold.woff') format('woff');
+        src:    url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+                url('fonts/RobotoCondensed-Bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
         font-stretch: condensed;
