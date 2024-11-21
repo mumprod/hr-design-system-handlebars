@@ -1,5 +1,5 @@
 {{~changeRandom~}}
-<div class="relative flex flex-col {{#if _isHorizontalLayout}} flex-grow{{/if}}{{#if this.mediaItem}} sm:basis-1/2-gap-6{{/if}} {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
+<div class="relative flex flex-col {{#if _isHorizontalLayout}} flex-grow flex-1{{/if}}{{#if this.mediaItem}} sm:basis-1/2-gap-6{{/if}} {{#unless _inGroup}} mb-5 md:mb-7{{/unless}} gap-y-1 md:gap-y-2" 
    {{#unless _inGroup}}
       {{#if _required}}
          ax-load
@@ -9,7 +9,7 @@
       {{/if}}
    {{/unless}}
 >
-<div class="flex {{#if this.mediaItem}} flex-col {{else}} flex-row{{/if}} items-center w-full h-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
+<div class="flex {{#if this.mediaItem}} flex-col {{else}} flex-row{{/if}} w-full h-full cursor-pointer{{#if _addClass}} {{_addClass}}{{/if}}">
    {{#if this.mediaItem}}
       {{> components/forms/components/mediaChoice}}
       <div class="flex flex-row w-full">
@@ -64,7 +64,7 @@
          {{/if}}
       {{/if~}}
    >
-  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-center justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm{{#if _addClassLabel}} {{_addClassLabel}}{{/if}}">
+  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-stretch justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm{{#if _addClassLabel}} {{_addClassLabel}}{{/if}}">
       {{#if _hasBody}}
         {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
       {{else}}
