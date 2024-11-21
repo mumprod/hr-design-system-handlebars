@@ -1,3 +1,16 @@
+# v1.114.22 (Thu Nov 21 2024)
+
+#### 🐛 Bug Fix
+
+- Refactor choice.hbs to improve horizontal voting layout [#1172](https://github.com/mumprod/hr-design-system-handlebars/pull/1172) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.21 (Wed Nov 20 2024)
 
 #### 🐛 Bug Fix
