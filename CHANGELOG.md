@@ -1,3 +1,15 @@
+# v1.114.24 (Tue Nov 26 2024)
+
+#### 🐛 Bug Fix
+
+- changed bg-color from container to ticker_body to prevent colorbleed [#1174](https://github.com/mumprod/hr-design-system-handlebars/pull/1174) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.23 (Tue Nov 26 2024)
 
 #### 🐛 Bug Fix
