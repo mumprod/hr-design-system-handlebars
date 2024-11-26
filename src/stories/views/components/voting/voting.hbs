@@ -62,13 +62,13 @@
                         </div>
                         <script type="text/html" class="js-successMessage">
                                 {{#if this.is2FSecured}}
-                                    {{> components/voting/voting_result ../this
+                                    {{> components/voting/voting_result
                                             _statusDone=true  
                                             _resultBoxMessageTitle=(loca "votingform2F_title_success") 
                                             _resultBoxMessageText=(loca "votingform2F_text_success")
                                     }}
                                 {{else}}
-                                    {{> components/voting/voting_result ../this 
+                                    {{> components/voting/voting_result
                                             _isInline=true 
                                             _statusDone=true 
                                             _hideVotingResult=this.hideVotingResult 
@@ -78,7 +78,7 @@
                                 {{/if}}
                         </script>
                         <script type="text/html" class="js-errorMessage">    
-                            {{> components/voting/voting_result ../this 
+                            {{> components/voting/voting_result
                                     _isInline=true 
                                     _statusDone=false 
                                     _hideVotingResult=true 
@@ -90,7 +90,7 @@
                         {{#unless this.hideVotingResult}}
                             <script type="text/html" class="js-result">
                                     {{#unless this.is2FSecured}}
-                                        {{> components/voting/voting_result ../this
+                                        {{> components/voting/voting_result
                                                 _resultBoxMessageText=(loca "votingform_already_voted_cookie_hint")   
                                                 _statusDone=true 
                                                 _addClass=../_addClass 
