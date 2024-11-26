@@ -29,12 +29,12 @@
             "@->jsoninclude": "voting/voting_email.json"
         }
     },
-    "voting_media_image_horizontal": {
+    "voting_multiple_choice": {
         "config": {
             "useAsSnapshot": true
         },
         "args": {
-            "@->jsoninclude": "voting/voting_media_image_horizontal.json"
+            "@->jsoninclude": "voting/voting_multiple_choice.json"
         }
     },
     "voting_media_image_vertical": {
@@ -45,48 +45,12 @@
             "@->jsoninclude": "voting/voting_media_image_vertical.json"
         }
     },
-    "voting_multiple_choice": {
+    "voting_media_image_horizontal": {
         "config": {
             "useAsSnapshot": true
         },
         "args": {
-            "@->jsoninclude": "voting/voting_multiple_choice.json"
-        }
-    },
-    "voting_over": {
-        "config": {
-            "useAsSnapshot": true
-        },
-        "args": {
-            "@->jsoninclude": "voting/voting_over.json"
-        }
-    },
-    "voting_result": {
-        "config": {
-            "template": "result",
-            "useAsSnapshot": true
-        },
-        "args": {
-            "@->jsoninclude": "voting/voting.inc.json",
-            "@->contentpath": "multivote-1"
-        }
-    },
-    "voting_result_absolute": {
-        "config": {
-            "template": "result",
-            "useAsSnapshot": true
-        },
-        "args": {
-            "@->jsoninclude": "voting/voting_result_absolute.json"
-        }
-    },
-    "voting_success": {
-        "config": {
-            "template": "success",
-            "useAsSnapshot": true
-        },
-        "args": {
-            "@->jsoninclude": "voting/voting_email.json"
+            "@->jsoninclude": "voting/voting_media_image_horizontal.json"
         }
     },
     "voting_error": {
