@@ -1,3 +1,15 @@
+# v1.114.26 (Wed Nov 27 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3432 - Form Bugs [#1175](https://github.com/mumprod/hr-design-system-handlebars/pull/1175) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.25 (Wed Nov 27 2024)
 
 #### 🐛 Bug Fix
