@@ -64,12 +64,12 @@
       {{> components/forms/components/error_icon _class="hidden" _xclass="{'hidden': hideError() }"}}
    </div>
  
-   <div class="flex items-end justify-between min-h-5 font-heading">     
+   {{#>components/forms/components/supportingTextBox }}      
       {{#if _description}}  
          <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
       {{/if}}
       
       <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       
-   </div>
+   {{/components/forms/components/supportingTextBox }}
 </div>

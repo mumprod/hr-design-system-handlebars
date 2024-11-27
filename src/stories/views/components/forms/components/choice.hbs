@@ -82,13 +82,13 @@
    {{/if}}
 </div>  
 {{#unless _inGroup}}
-   <div class="flex items-end justify-between min-h-5 font-heading">     
+   {{#>components/forms/components/supportingTextBox }}      
       {{#if _description}}  
          <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription() }"{{/if}}>{{_description}}</div>
       {{/if}}
       {{#if _required}}
          <div class="hidden text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       {{/if}}
-   </div>
+   {{/components/forms/components/supportingTextBox }}
 {{/unless}}
 </div>
