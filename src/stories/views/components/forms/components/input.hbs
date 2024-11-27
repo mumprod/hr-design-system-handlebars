@@ -42,11 +42,7 @@
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
       
-  <label for="input{{getRandom}}" class="{{_labelClass}} cursor-text absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion dark:text-text-dark
-     
-     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
-     
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-form-highlight peer-focus:dark:text-form-highlight-dark origin-top-left transform transition-transform">
+  <label for="input{{getRandom}}" class="{{_labelClass}} peer-placeholder-shown:whitespace-nowrap {{> components/forms/components/labelClasses }}">
       {{#if _hasBody}}
         {{decorator_body}}
       {{else}}
