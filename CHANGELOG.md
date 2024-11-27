@@ -1,3 +1,16 @@
+# v1.114.25 (Wed Nov 27 2024)
+
+#### 🐛 Bug Fix
+
+- adds hidden in classList if context is not SectionNav [#1166](https://github.com/mumprod/hr-design-system-handlebars/pull/1166) ([@StefanVesper](https://github.com/StefanVesper) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.24 (Tue Nov 26 2024)
 
 #### 🐛 Bug Fix
