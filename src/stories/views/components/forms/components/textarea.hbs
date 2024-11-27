@@ -1,4 +1,4 @@
-<div class="relative flex flex-col w-full mb-5"
+<div class="relative flex flex-col w-full mb-4"
    ax-load
    x-data="inputHandler('textarea{{nextRandom}}','{{_formId}}','{{_errorMandatory}}','textarea','','{{#if _formField.isValid}}{{{_formField.forHtmlContent}}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}')"
    x-init="validateField()"

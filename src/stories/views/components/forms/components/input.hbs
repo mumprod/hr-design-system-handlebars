@@ -1,4 +1,4 @@
-<div class="relative flex flex-col w-full mb-5 {{_wrapperClass}}"
+<div class="relative flex flex-col w-full mb-4 {{_wrapperClass}}"
    ax-load
    x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}','{{_name}}')"
    x-init="validateField()"
