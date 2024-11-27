@@ -1,4 +1,4 @@
-<div class="relative flex flex-col w-full mb-5 {{_wrapperClass}}"
+<div class="relative flex flex-col w-full mb-4 {{_wrapperClass}}"
    ax-load
    x-data="inputHandler('input{{nextRandom}}','{{_formId}}','{{_errorMandatory}}',{{#if _isEmail}}'email'{{else}}'{{_type}}'{{/if}},'{{_errorEmail}}','{{#if _formField.forHtmlAttribute}}{{_formField.forHtmlAttribute}}{{else}}{{#if _value}}{{_value}}{{else}}{{_defaultValue}}{{/if}}{{/if}}','{{_name}}')"
    x-init="validateField()"
@@ -42,11 +42,7 @@
          data-hr-search-suggest='{"templateUrl":"{{resourceUrl "suche/index~suggest.jsp"}}"}'{{/if}}
       >
       
-  <label for="input{{getRandom}}" class="{{_labelClass}} cursor-text absolute left-[16px] top-px translate-y-0 translate-x-0 scale-75 text-gray-scorpion dark:text-text-dark
-     
-     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0 peer-placeholder-shown:translate-y-3 
-     
-     peer-focus:translate-x-0 peer-focus:-translate-y-0 peer-focus:scale-75 peer-focus:text-form-highlight peer-focus:dark:text-form-highlight-dark origin-top-left transform transition-transform">
+  <label for="input{{getRandom}}" class="{{_labelClass}} peer-placeholder-shown:whitespace-nowrap {{> components/forms/components/labelClasses }}">
       {{#if _hasBody}}
         {{decorator_body}}
       {{else}}
@@ -64,12 +60,12 @@
       {{> components/forms/components/error_icon _class="hidden" _xclass="{'hidden': hideError() }"}}
    </div>
  
-   <div class="flex items-end justify-between min-h-5 font-heading">     
+   {{#>components/forms/components/supportingTextBox }}      
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{{_description}}}</div>
       {{/if}}
       
       <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
       
-   </div>
+   {{/components/forms/components/supportingTextBox }}
 </div>

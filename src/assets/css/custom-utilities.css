@@ -447,21 +447,21 @@
     /*! FORMULAR SELECT          */
     /*! ****************************/
     /* Custom CSS to style the label when the first empty option is selected */
-    select + label {
-        @apply !scale-75 !translate-y-0 !top-px;
+    .form-select + label {
+        @apply !scale-75 !translate-y-0 !top-px !w-[calc(133.333%-80px)];
     }
  
     @supports selector(:has(+ *)) {
-        select + label {
-            @apply !top-px !scale-100 !translate-y-3;
+        .form-select + label {
+            @apply !top-px !scale-100 !translate-y-3 !w-auto;
         }
     }
 
-    select:has(option:checked:not([value=''])) + label {
-        @apply !top-px !scale-75 !translate-y-0;
+    .form-select:has(option:checked:not([value=''])) + label {
+        @apply !top-px !scale-75 !translate-y-0 !w-[calc(133.333%-80px)];
     }
 
-    select:has(option:checked[value='']) {
+    .form-select:has(option:checked[value='']) {
         @apply text-transparent select-none;
     }
 
