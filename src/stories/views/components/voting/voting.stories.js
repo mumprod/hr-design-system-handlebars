@@ -9,21 +9,22 @@ hbsTemplates['default'] = handlebars.compile(`
 
 hbsTemplates['result'] = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_result this 
+        {{> components/voting/voting_result this
                 _isInline=true 
                 _statusDone=true 
-                _hideVotingResult=this.form.hideVotingResult 
-                _resultBoxMessageText=this.votingSuccessText.richtext
-        }}        
+                _hideVotingResult=false
+                _resultBoxMessageText="Danke für Ihre Abstimmung!"
+        }}       
     {{/components/forms/components/backgroundBox }}  
 `)
 
 hbsTemplates['success'] = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
         {{> components/voting/voting_result this  
+                _statusDone=true  
                 _resultBoxMessageTitle="Vielen Dank für Ihre Stimme." 
                 _resultBoxMessageText="Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner."
-        }}        
+        }}    
     {{/components/forms/components/backgroundBox }}  
 `)
 
@@ -73,16 +74,6 @@ export default {
         },
     ],
     parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":""
-                },
-            },
-        ],
         layout: 'fullscreen',
         chromatic: { disableSnapshot: true }
     }
@@ -92,78 +83,36 @@ export const Default = {
     render: TemplateVoting.bind({}),
     name: 'Einfachauswahl',
     args: fixtures.voting.args,
-    parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":"OK"
-                },
-            },
-        ]
-    }
+}
+
+export const Voting_horizontal = {
+    render: TemplateVoting.bind({}),
+    name: 'Einfachauswahl Horizontal',
+    args: fixtures.voting_horizontal.args,
 }
 
 export const Voting_Email = {
     render: TemplateVoting.bind({}),
-    name: 'Einfachauswahl mit E-Mail und Successmeldung',
+    name: 'Einfachauswahl mit E-Mail',
     args: fixtures.voting_email.args,
-    parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":"OK"
-                },
-            },
-        ]
-    }
-}
-
-export const Voting_Media = {
-    render: TemplateVoting.bind({}),
-    name: 'Einfachauswahl mit Bild, Audio, Video',
-    args: fixtures.voting_media.args,
-    parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/?rf=inline',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":"OK"
-                },
-            },
-        ]
-    }
 }
 
 export const Voting_Multiple_Choice = {
     render: TemplateVoting.bind({}),
-    name: 'Mehrfachauswahl mit Fehlermeldung',
+    name: 'Mehrfachauswahl',
     args: fixtures.voting_multiple_choice.args,
 }
 
-export const Voting_Over = {
+export const voting_media_image_vertical = {
     render: TemplateVoting.bind({}),
-    name: 'Beendet',
-    args: fixtures.voting_over.args,
+    name: 'Mehrfachauswahl mit Bild Vertikal',
+    args: fixtures.voting_media_image_vertical.args,
 }
 
-export const Voting_Result = {
-    render: TemplateResult.bind({}),
-    name: 'Ergebnis Barchart prozentual',
-    args: fixtures.voting.args,
-}
-
-export const Voting_Result_Absolute = {
-    render: TemplateResult.bind({}),
-    name: 'Ergebnis Barchart absolut',
-    args: fixtures.voting_result_absolute.args,
+export const voting_media_image_horizontal = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Bild Horizontal',
+    args: fixtures.voting_media_image_horizontal.args,
 }
 
 export const Snapshot = {

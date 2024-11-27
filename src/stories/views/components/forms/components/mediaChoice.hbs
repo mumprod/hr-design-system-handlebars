@@ -1,0 +1,13 @@
+<div onclick="event.preventDefault()">
+        {{#with this.mediaItem}}
+            {{~#if this.isImage}}
+                    {{> components/content/copytext/components/image/figure 
+                        _type="story"
+                        _variant="copytext"
+                        _pictureAddClass="ar-16-9"
+                        _noDelay=true
+                        _voting-option="true"
+                        _isWebview=_isWebview}}
+            {{/if~}}
+        {{/with}}
+</div>

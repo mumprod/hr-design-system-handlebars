@@ -10,6 +10,7 @@
         "headingSize": "h2",
         "isVoting": true,
         "isMultiVote": true,
+        "isMultimediaVoting": false,
         "hasRedirect": false,
         "isMultipleChoice": false,
         "maxAnswerCount": 1,
