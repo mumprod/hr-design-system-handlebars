@@ -12,7 +12,7 @@
                 {{/with}}
             {{/inline}}                         
         {{else}}
-            {{> components/base/image/responsive_image _type=_type _variant=_variant _addClass=_pictureAddClass _isWebview=_isWebview _noDelay=_noDelay}}
+            {{> components/base/image/responsive_image _title=(if _voting-option (loca "figures_copyright_voting" (strip this.copyrightWithLinks html))) _type=_type _variant=_variant _addClass=_pictureAddClass _isWebview=_isWebview _noDelay=_noDelay}}
         {{/if}}
     {{/if}}
     {{#unless _voting-option}}

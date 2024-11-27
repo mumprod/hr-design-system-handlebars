@@ -1,3 +1,89 @@
+# v1.114.24 (Tue Nov 26 2024)
+
+#### 🐛 Bug Fix
+
+- changed bg-color from container to ticker_body to prevent colorbleed [#1174](https://github.com/mumprod/hr-design-system-handlebars/pull/1174) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.23 (Tue Nov 26 2024)
+
+#### 🐛 Bug Fix
+
+- adaptions for delivery 5 [#1173](https://github.com/mumprod/hr-design-system-handlebars/pull/1173) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.22 (Thu Nov 21 2024)
+
+#### 🐛 Bug Fix
+
+- Refactor choice.hbs to improve horizontal voting layout [#1172](https://github.com/mumprod/hr-design-system-handlebars/pull/1172) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.21 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- adaptions for delivery 4 [#1171](https://github.com/mumprod/hr-design-system-handlebars/pull/1171) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.20 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- adaptions for delivery 3 [#1169](https://github.com/mumprod/hr-design-system-handlebars/pull/1169) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.19 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- SEO - WOFF2 Fonts [#1168](https://github.com/mumprod/hr-design-system-handlebars/pull/1168) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.18 (Wed Nov 20 2024)
+
+#### 🐛 Bug Fix
+
+- Add voting with image and horizontal layout options [#1167](https://github.com/mumprod/hr-design-system-handlebars/pull/1167) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.17 (Tue Nov 19 2024)
 
 #### 🐛 Bug Fix
