@@ -62,7 +62,7 @@
  
    {{#>components/forms/components/supportingTextBox }}      
       {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{_description}}</div>
+         <div class="pl-4 text-xs text-gray-scorpion dark:text-text-dark" :class="{'hidden': hideDescription() }">{{{_description}}}</div>
       {{/if}}
       
       <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
