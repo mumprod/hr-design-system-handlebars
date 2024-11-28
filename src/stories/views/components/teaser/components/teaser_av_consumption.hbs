@@ -29,7 +29,7 @@
      {{~#if this.isAudioEventLivestream ~}}
           {{#with this.toModel.audioLivestreamElementForVideoView}}
                {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-audio-livestream-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}             
-               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
+               {{~> components/teaser/components/teaser_media_player ../../this _playerId=this.ardPlayerConfig.playerId _mediaButtonIcon="audio_button" _mediaButtonLabel="Live" _isLivestream=true _aspectRatio=../../_aspectRatio _addClassImg=../../_addClassImg _noDelay=../../this.dontLazyload}}
                {{#if ../../_isMobile1to1~}}  
                     {{> components/teaser/components/teaser_av_consumption_close_button _playerId=this.ardPlayerConfig.playerId }}
                {{~/if~}}
