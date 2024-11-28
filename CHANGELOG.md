@@ -1,3 +1,15 @@
+# v1.114.27 (Thu Nov 28 2024)
+
+#### 🐛 Bug Fix
+
+- Adding new Icon for audio event livestream [#1177](https://github.com/mumprod/hr-design-system-handlebars/pull/1177) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.26 (Wed Nov 27 2024)
 
 #### 🐛 Bug Fix
