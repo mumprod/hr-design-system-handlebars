@@ -1,13 +1,19 @@
-<div onclick="event.preventDefault()">
-        {{#with this.mediaItem}}
+{{#with this.mediaItem}}
+    <div onclick="event.preventDefault()">
             {{~#if this.isImage}}
-                    {{> components/content/copytext/components/image/figure 
-                        _type="story"
-                        _variant="copytext"
-                        _pictureAddClass="ar-16-9"
-                        _noDelay=true
-                        _voting-option="true"
-                        _isWebview=_isWebview}}
-            {{/if~}}
-        {{/with}}
-</div>
+                {{> components/content/copytext/components/image/figure 
+                    _type="story"
+                    _variant="copytext"
+                    _pictureAddClass="ar-16-9"
+                    _noDelay=true
+                    _voting-option="true"
+                    _isWebview=_isWebview}}
+            {{/if}}
+            {{~#if this.isAudioOnDemand}}
+                {{> components/content/copytext/components/media/media_figure_voting _voting-option="true" _playerLocation="Copytext" _isFullsize=true _playerSize="100" _addClass="print:hidden"  _a11yIntro-loca="story_audio_intro_sr" _a11yOutro-loca="story_audio_outro_sr" }}
+            {{/if}}
+            {{~#if this.isVideoOnDemand}}
+                {{> components/content/copytext/components/media/media_figure_voting _voting-option="true" _playerLocation="Copytext" _isFullsize=true _playerSize="100" _addClass="print:hidden" _a11yIntro-loca="story_video_intro_sr" _a11yOutro-loca="story_video_outro_sr" }}
+            {{/if}}
+    </div>
+{{/with}}

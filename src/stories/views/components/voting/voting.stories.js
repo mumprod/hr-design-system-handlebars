@@ -115,6 +115,30 @@ export const voting_media_image_horizontal = {
     args: fixtures.voting_media_image_horizontal.args,
 }
 
+export const voting_media_audio_horizontal = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Audio Horizontal',
+    args: fixtures.voting_media_audio_horizontal.args,
+}
+
+export const voting_media_audio_vertical = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Audio Vertical',
+    args: fixtures.voting_media_audio_vertical.args,
+}
+
+export const voting_media_video_vertical = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Video Vertical',
+    args: fixtures.voting_media_video_vertical.args,
+}
+
+export const voting_media_video_horizontal = {
+    render: TemplateVoting.bind({}),
+    name: 'Mehrfachauswahl mit Video Horizontal',
+    args: fixtures.voting_media_video_horizontal.args,
+}
+
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
