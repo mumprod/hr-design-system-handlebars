@@ -1,0 +1,6 @@
+<div class="relative{{#if _css}} {{_css}}{{/if}} {{_aspectRatio}}" x-show="!avStart" >
+    {{~> components/base/image/responsive_image this.teaseritem _type=(if this.teaserType this.teaserType 'story') _variant=(if this.imageVariant this.imageVariant (if _isLead '100-top-sb' (if _isFullsize '100-copytext' 'copytext'))) _addClassImg=_addClassImg _noDelay=_noDelay ~}}
+    {{#with this}}
+        {{> components/mediaplayer/mediaplayer_button _css="" _playerId=_playerId _isLead=_isLead _isLivestream=_isLivestream _icon=_mediaButtonIcon _label=_mediaButtonLabel _teaserSize=this.teaserSize _teaserType="standard" _isMobile1to1=this.isMobile1to1}}   
+    {{/with}} 
+</div>

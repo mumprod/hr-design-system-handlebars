@@ -1,0 +1,17 @@
+<figure class="relative {{_addClass}}" x-data="{ avStart: false }">
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
+    {{#if this.isAudioOnDemand}}
+        {{#with this.toModel.audioElementForVideoView}}
+                {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-audio-ondemand-player"  _isUsedInTeaser=true _addClassImg=../_addClassImg ~}}
+                {{~> components/voting/voting_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="audio_button" _mediaButtonLabel="Audio" _aspectRatio="ar-16-9" _noDelay=../_isLead }}
+        {{/with}}
+    {{/if}}
+    {{#if this.isVideoOnDemand}}
+        {{#with this.toModel.videoElement}}
+            {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg ~}}
+            {{~> components/voting/voting_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=../_isLead }}
+        {{/with}}
+    {{/if}}
+
+    {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
+</figure>

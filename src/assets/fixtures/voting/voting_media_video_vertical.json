@@ -1,0 +1,197 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath": "isMultipleChoice",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "maxAnswerCount",
+            "@->value": 3
+        },
+        {
+            "@->contentpath":"isMultimediaVoting",
+            "@->value": true
+        },
+        {
+            "@->contentpath":"form.shorttext",
+            "@->value": ""
+        },
+        {
+            "@->contentpath":"title",
+            "@->value": "Welches Video gefällt Ihnen am besten?"
+        },
+        {
+            "@->contentpath":"votingResult",
+            "@->value": [
+                {
+                    "label": "Video 1",
+                    "count": "27",
+                    "percentageCount": "4,1",
+                    "roundedPercentageCount": "4.0"
+                },
+                {
+                    "label": "Video 2",
+                    "count": "117",
+                    "percentageCount": "17,6",
+                    "roundedPercentageCount": "18.0"
+                },
+                {
+                    "label": "Video 3",
+                    "count": "242",
+                    "percentageCount": "36,3",
+                    "roundedPercentageCount": "36.0"
+                },
+                {
+                    "label": "Video 4",
+                    "count": "280",
+                    "percentageCount": "42,0",
+                    "roundedPercentageCount": "42.0",
+                    "isWinner": true
+                }
+            ]
+        },
+        {
+            "@->contentpath":"form.fields",
+            "@->value": [
+                {
+                    "type": {
+                        "isGroup": false,
+                        "isChoice": true,
+                        "asString": "checkbox"
+                    },
+                    "name": "multivoting",
+                    "isGrouped": true,
+                    "isRequired": false,
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Video 1",
+                            "title": "Voting-Answer 1",
+                            "mediaItem": {
+                                "isVideo": true,
+                                "isVideoOnDemand": true,
+                                "toModel": {
+                                    "videoElement": {
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-2"
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-2"
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "lehrerin-ukraine-104"
+                                        }
+                                    ]
+                                }                                                                           
+                            }        
+                        },
+                        {
+                            "value": "2",
+                            "label": "Video 2",
+                            "title": "Voting-Answer 2",
+                            "mediaItem": {                                                                
+                                "isVideo": true,
+                                "isVideoOnDemand": true,
+                                "toModel": {
+                                    "videoElement": {
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "hasebe-kane-102"
+                                        }
+                                    ]
+                                }                  
+                            }               
+                        },
+                        {
+                            "value": "3",
+                            "label": "Video 3",
+                            "title": "Voting-Answer 3",
+                            "mediaItem": {                                                                
+                                "isVideo": true,
+                                "isVideoOnDemand": true,
+                                "toModel": {
+                                    "videoElement": {
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "connichi-106"
+                                        }
+                                    ]
+                                }       
+                            }                                
+                        },
+                        {
+                            "value": "4",
+                            "label": "Video 4",
+                            "title": "Voting-Answer 4",
+                            "mediaItem": {                                                                
+                                "isVideo": true,
+                                "isVideoOnDemand": true,
+                                "toModel": {
+                                    "videoElement": {
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "video/videos.inc.json",
+                                            "@->contentpath": "video-1"
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "buchmesse-fahnen-102"
+                                        }
+                                    ]
+                                }     
+                            }                  
+                        }                                                   
+                    ]
+                }                
+            ]
+        }
+    ]
+}

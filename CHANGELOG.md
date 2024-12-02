@@ -1,3 +1,28 @@
+# v1.114.28 (Fri Nov 29 2024)
+
+#### 🐛 Bug Fix
+
+- Add voting with audio/video [#1178](https://github.com/mumprod/hr-design-system-handlebars/pull/1178) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.27 (Thu Nov 28 2024)
+
+#### 🐛 Bug Fix
+
+- Adding new Icon for audio event livestream [#1177](https://github.com/mumprod/hr-design-system-handlebars/pull/1177) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.26 (Wed Nov 27 2024)
 
 #### 🐛 Bug Fix
