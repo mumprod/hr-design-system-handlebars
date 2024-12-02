@@ -1,3 +1,15 @@
+# v1.114.29 (Mon Dec 02 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3432 success color Bug [#1176](https://github.com/mumprod/hr-design-system-handlebars/pull/1176) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.28 (Fri Nov 29 2024)
 
 #### 🐛 Bug Fix
