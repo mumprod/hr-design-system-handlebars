@@ -1,3 +1,16 @@
+# v1.114.30 (Tue Dec 03 2024)
+
+#### 🐛 Bug Fix
+
+- BUG/videos-dont-play-because-of-mock-plugin [#1179](https://github.com/mumprod/hr-design-system-handlebars/pull/1179) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.29 (Mon Dec 02 2024)
 
 #### 🐛 Bug Fix
