@@ -102,7 +102,7 @@
     "remark-gfm": "^4.0.0",
     "rimraf": "^3.0.2",
     "storybook": "^8.2.6",
-    "storybook-addon-mock": "^5.0.0",
+    "storybook-addon-fetch-mock": "^2.0.1",
     "storybook-conditional-toolbar-selector": "^1.0.3",
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.0.23",
