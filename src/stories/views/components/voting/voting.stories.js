@@ -7,30 +7,23 @@ hbsTemplates['default'] = handlebars.compile(`
   {{> components/voting/voting }}   
 `)
 
-hbsTemplates['result'] = handlebars.compile(`
-    {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_result this
-                _isInline=true 
-                _statusDone=true 
-                _hideVotingResult=false
-                _resultBoxMessageText="Danke für Ihre Abstimmung!"
-        }}       
-    {{/components/forms/components/backgroundBox }}  
+hbsTemplates['teaser_50'] = handlebars.compile(`
+    {{> components/voting/voting _isTeaser=true}}   
 `)
 
 hbsTemplates['success'] = handlebars.compile(`
     {{#>components/forms/components/backgroundBox  }}  
         {{> components/voting/voting_result this  
-                _statusDone=true  
-                _resultBoxMessageTitle="Vielen Dank für Ihre Stimme." 
-                _resultBoxMessageText="Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner."
+                _statusDone=true 
+                _hideVotingResult=true  
+                _resultBoxMessageText="Vielen Dank für Ihre Stimme.</br>Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner."
         }}    
     {{/components/forms/components/backgroundBox }}  
 `)
 
 hbsTemplates['error'] = handlebars.compile(`
-    {{#>components/forms/components/backgroundBox  }}  
-        {{> components/voting/voting_result this 
+    {{#>components/forms/components/backgroundBox  }}      
+        {{> components/voting/voting_result this  
                 _isInline=true 
                 _statusDone=false 
                 _hideVotingResult=true 
@@ -45,8 +38,8 @@ const TemplateVoting = (args) => {
     return hbsTemplates['default']({ ...args })
 }
 
-const TemplateResult = (args) => {
-    return hbsTemplates['result']({ ...args })
+const TemplateVotingTeaser50 = (args) => {
+    return hbsTemplates['teaser_50']({ ...args })
 }
 
 const TemplateSuccess = (args) => {
@@ -137,6 +130,31 @@ export const voting_media_video_horizontal = {
     render: TemplateVoting.bind({}),
     name: 'Mehrfachauswahl mit Video Horizontal',
     args: fixtures.voting_media_video_horizontal.args,
+}
+
+export const voting_teaser_50 = {
+    render: TemplateVotingTeaser50.bind({}),
+    name: 'Voting-Teaser 50%',
+    decorators: [
+        (Story) => {
+            return `<div class="sm:w-1/2 mt-12">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    args: fixtures.voting_teaser_50.args,
+}
+
+export const voting_error = {
+    render: TemplateError.bind({}),
+    name: 'Error-Meldung',
+    args: fixtures.voting.args,
+}
+
+export const voting_success = {
+    render: TemplateSuccess.bind({}),
+    name: 'Success-Meldung',
+    args: fixtures.voting_email.args,
 }
 
 export const Snapshot = {

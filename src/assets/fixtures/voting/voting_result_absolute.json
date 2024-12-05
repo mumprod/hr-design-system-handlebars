@@ -1,10 +1,14 @@
 {
-    "@->jsoninclude": "voting/voting.inc.json",
-    "@->contentpath": "multivote-1",
+    "@->jsoninclude": "voting/voting_result.inc.json",
+    "@->contentpath": "result-1",
     "@->overrides": [
         {
-            "@->contentpath": "showAbsoluteResult",
+            "@->contentpath": "votingDoc.showAbsoluteResult",
             "@->value": true
+        },
+        {
+            "@->contentpath": "votingDoc.cmsFields.showVoteResult",
+            "@->value": false
         }
     ]    
 }
