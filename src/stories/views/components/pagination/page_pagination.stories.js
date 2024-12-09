@@ -6,9 +6,16 @@ const hbsTemplates = []
 hbsTemplates['default'] = handlebars.compile(`
     {{> components/pagination/pagination }} 
   `)
+  hbsTemplates['hideLastPage'] = handlebars.compile(`
+    {{> components/pagination/pagination _hideLastPage=true }}
+`)
+
 
 const Template = (args) => {
     return hbsTemplates['default']({ ...args })
+}
+const TemplateHideLastPage = (args) => {
+    return hbsTemplates['hideLastPage']({ ...args })
 }
 
 const snapshotTemplate = (args) => {
@@ -70,6 +77,17 @@ export const MitPagination7 = {
     render: Template.bind({}),
     name: 'Pagination mit nur 3 Seiten',
     args: fixtures.only_three.args,
+}
+
+export const MitPagination8 = {
+    render: TemplateHideLastPage.bind({}),
+    name: 'Pagination mehr als 3 Seiten (Seite mitten drin aktiv) und letzte Seite ausgeblendet',
+    args: fixtures.more_than_three_one_but_not_last.args,
+}
+export const MitPagination9 = {
+    render: TemplateHideLastPage.bind({}),
+    name: 'Pagination mehr als 3 Seiten (letzte Seite aktiv) und letzte Seite ausgeblendet',
+    args: fixtures.more_than_three_second.args,
 }
 
 export const Snapshot = {
