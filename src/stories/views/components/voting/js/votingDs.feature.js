@@ -1,4 +1,4 @@
-import { hr$, listen, replaceAnimated } from 'hrQuery'
+import { hr$, listen, replaceAnimated, reinitializeFeature } from 'hrQuery'
 import $ from 'zepto-modules'
 
 require('zepto-modules/callbacks')
@@ -136,6 +136,17 @@ const Voting = (context) => {
             })
         }, 850)
     }
+
+    const scrollIntoVotingAndReinitialize = function (vertical) {
+        setTimeout(function () {
+            rootElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+            })
+            reinitializeFeature(votingWrapper.parentNode.parentNode)
+        }, 850)
+    }
+
     /**
      * Handles click events globally
      * and delegates to concrete handlers
@@ -151,7 +162,7 @@ const Voting = (context) => {
 
     const handleFormReload = function (event) {
         event.preventDefault()
-        replaceAnimated(votingWrapper, votingTmpl, true, scrollIntoVoting)
+        replaceAnimated(votingWrapper, votingTmpl, true, scrollIntoVotingAndReinitialize)
     }
 
     const handleKeydown = function (event) {
