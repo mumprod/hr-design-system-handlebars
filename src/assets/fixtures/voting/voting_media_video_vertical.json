@@ -76,11 +76,23 @@
                                     "videoElement": {
                                         "ardPlayerConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-2"
+                                            "@->contentpath": "video-2",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1234"
+                                                }
+                                            ]
                                         },
                                         "ardPlayerJsonConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-2"
+                                            "@->contentpath": "video-2",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1234"
+                                                }
+                                            ]
                                         }
                                     }
                                 },
@@ -107,11 +119,23 @@
                                     "videoElement": {
                                         "ardPlayerConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "5678"
+                                                }
+                                            ]
                                         },
                                         "ardPlayerJsonConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "5678"
+                                                }
+                                            ]
                                         }
                                     }
                                 },
@@ -138,11 +162,23 @@
                                     "videoElement": {
                                         "ardPlayerConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "9123"
+                                                }
+                                            ]
                                         },
                                         "ardPlayerJsonConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "9123"
+                                                }
+                                            ]
                                         }
                                     }
                                 },
@@ -169,11 +205,23 @@
                                     "videoElement": {
                                         "ardPlayerConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1478"
+                                                }
+                                            ]
                                         },
                                         "ardPlayerJsonConfig": {
                                             "@->jsoninclude": "video/videos.inc.json",
-                                            "@->contentpath": "video-1"
+                                            "@->contentpath": "video-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1478"
+                                                }
+                                            ]
                                         }
                                     }
                                 },
