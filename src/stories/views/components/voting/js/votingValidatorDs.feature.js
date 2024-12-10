@@ -95,7 +95,9 @@ const VotingValidator = (context) => {
         isMultipleChoice = options.isMultipleChoice || false,
         //votingOptions = Array.from(hr$('input[name=multivoting]', rootElement)),
         submit = hr$('input[type=submit]', rootElement)[0],
-        submitLabel = hr$('.js-voting-submit-button', rootElement)[0]
+        submitLabel = hr$('.js-voting-submit-button', rootElement)[0],
+        submitHint = hr$('.js-submit-hint')[0]
+        
     let counter = hr$('.js-voting-counter', rootElement),
         selectedCheckboxes = 0,
         votingOptions = []
@@ -104,8 +106,10 @@ const VotingValidator = (context) => {
         console.log(submitLabel)
         if (countCheckedCheckboxes() != 0) {
             submit.disabled = false
+            submitHint.classList.replace("visible", "invisible")
         } else {
             submit.disabled = true
+            submitHint.classList.replace("invisible", "visible")
         }
 
         if (selectedCheckboxes < maxAnswerCount) {

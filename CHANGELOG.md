@@ -1,3 +1,27 @@
+# v1.114.33 (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- add submit-hint to voting-button [#1182](https://github.com/mumprod/hr-design-system-handlebars/pull/1182) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.32 (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- fix javascript bug in voting [#1181](https://github.com/mumprod/hr-design-system-handlebars/pull/1181) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.31 (Thu Dec 05 2024)
 
 #### 🐛 Bug Fix
