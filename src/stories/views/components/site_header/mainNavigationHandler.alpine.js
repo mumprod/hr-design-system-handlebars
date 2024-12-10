@@ -90,7 +90,7 @@ export default () => ({
 
     // returns true if user scrolled >50% and scrolls down, no burger menu is open and the screen size is desktop. If scroll was initiated by script, ignore scroll direction.
     shouldSectionNavBeHidden() {
-        if (window.userScroll == true) {
+        if (window.userScroll === true) {
             return (
                 this.percent > 50 &&
                 this.scrollingDown &&
@@ -98,7 +98,7 @@ export default () => ({
                 this.$screen('lg')
             )
         } else {
-            return this.percent > 50 && this.$store.burgeropen == false && this.$screen('lg')
+            return this.percent > 50 && this.$store.burgeropen == false && this.$screen('lg') && this.scrollingDown
         }
     },
 

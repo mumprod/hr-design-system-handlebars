@@ -1,3 +1,15 @@
+# v1.114.36 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- - added classes to the safelist [#1186](https://github.com/mumprod/hr-design-system-handlebars/pull/1186) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.35 (Tue Dec 10 2024)
 
 #### 🐛 Bug Fix

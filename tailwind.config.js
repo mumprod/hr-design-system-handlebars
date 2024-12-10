@@ -8,7 +8,7 @@ module.exports = {
     experimental: {
         optimizeUniversalDefaults: true,
     },
-    safelist: ['mt-12', 'bg-gray-100', '-weather_warning'],
+    safelist: ['mt-12', 'bg-gray-100', '-weather_warning', 'scroll-smooth', 'scroll-mt-[128px]', 'scroll-mt-[117px]'],
     content: [
         './src/stories/*.mdx',
         './src/stories/views/**/*.{mdx,hbs,js,json}',
