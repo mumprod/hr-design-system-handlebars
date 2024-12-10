@@ -4,9 +4,9 @@ import fixtures from './fixtures/page_pagination.json'
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
 hbsTemplates['default'] = handlebars.compile(`
-    {{> components/pagination/pagination }} 
-  `)
-
+    {{> components/pagination/pagination _unlinkLastPage=true }}
+`)
+ 
 
 
 const Template = (args) => {
@@ -18,7 +18,7 @@ const snapshotTemplate = (args) => {
 }
 
 export default {
-    title: 'Komponenten/Pagination',
+    title: 'Komponenten/Pagination/Letzte Seite nicht verlinkt',
     argTypes: {},
 
     parameters: {
@@ -60,18 +60,6 @@ export const MitPagination5 = {
     render: Template.bind({}),
     name: 'Pagination mehr als 3 Seiten (letzte Seite aktiv)',
     args: fixtures.more_than_three_last.args,
-}
-
-export const MitPagination6 = {
-    render: Template.bind({}),
-    name: 'Pagination mit nur 2 Seiten',
-    args: fixtures.only_two.args,
-}
-
-export const MitPagination7 = {
-    render: Template.bind({}),
-    name: 'Pagination mit nur 3 Seiten',
-    args: fixtures.only_three.args,
 }
 
 export const Snapshot = {
