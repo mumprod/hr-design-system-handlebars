@@ -4,7 +4,7 @@ import fixtures from './fixtures/page_pagination.json'
 const handlebars = require('hrHandlebars')
 const hbsTemplates = []
 hbsTemplates['default'] = handlebars.compile(`
-    {{> components/pagination/pagination _hideLastPage=true }}
+    {{> components/pagination/pagination _unlinkLastPage=true }}
 `)
  
 

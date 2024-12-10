@@ -11,7 +11,7 @@
             {{/inline}}  
         {{/with}}
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>
-        {{#if _hideLastPage}}          
+        {{#if _unlinkLastPage}}          
             {{#with this}}
                 <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
             {{/with}}
@@ -44,7 +44,7 @@
             {{/inline}}  
         {{/with}}   
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>
-        {{#if _hideLastPage}}            
+        {{#if _unlinkLastPage}}            
             {{#with this}}
                 <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
             {{/with}}
@@ -80,7 +80,7 @@
                 {{~#if _notLastButOnePage~}}   
                         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>   
                 {{~/if~}}   
-                {{#if _hideLastPage}}       
+                {{#if _unlinkLastPage}}       
                     {{#with this}}
                         <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
                     {{/with}}
