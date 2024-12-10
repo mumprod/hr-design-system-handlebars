@@ -1,3 +1,15 @@
+# v1.114.34 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- SEO: Ticker-Paginierung anpassen [#1183](https://github.com/mumprod/hr-design-system-handlebars/pull/1183) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.33 (Mon Dec 09 2024)
 
 #### 🐛 Bug Fix
