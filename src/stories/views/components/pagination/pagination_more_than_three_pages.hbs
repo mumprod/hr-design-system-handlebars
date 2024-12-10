@@ -11,7 +11,11 @@
             {{/inline}}  
         {{/with}}
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>
-        {{#unless _hideLastPage}}     
+        {{#if _hideLastPage}}          
+            {{#with this}}
+                <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
+            {{/with}}
+        {{else}}
             {{#with this}}
                 {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
                     <span class="sr-only">Zur Seite: </span>
@@ -19,7 +23,7 @@
                 {{/components/button/link_button}}
                 {{#*inline "htmlProperties"}}{{/inline}}
             {{/with}}
-        {{/unless}}
+        {{/if}}
         {{> components/pagination/pagination_button_right_linked }} 
     </div>     
 {{else}}   
@@ -40,15 +44,19 @@
             {{/inline}}  
         {{/with}}   
         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>
-        {{#unless _hideLastPage}}            
+        {{#if _hideLastPage}}            
+            {{#with this}}
+                <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
+            {{/with}}
+        {{else}}
             {{#with this}}
                 {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
                     <span class="sr-only">Zur Seite: </span>
                     {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
                 {{/components/button/link_button}}
                 {{#*inline "htmlProperties"}}{{/inline}}
-            {{/with}}
-        {{/unless}}   
+            {{/with}}           
+        {{/if}}   
         {{> components/pagination/pagination_button_right_linked }} 
     </div>   
     {{else}}
@@ -72,15 +80,20 @@
                 {{~#if _notLastButOnePage~}}   
                         <span class="pt-1 ml-2 mr-2 font-title dark:text-link-dark">&hellip;</span>   
                 {{~/if~}}   
-                {{#unless _hideLastPage}}       
+                {{#if _hideLastPage}}       
+                    {{#with this}}
+                        <span class="text-button-disabled--dark {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_dimension_classes _size='md' ~}}">{{ _totalPages-adjust_context}}</span>
+                    {{/with}}
+                {{else}}
                     {{#with this}}
                         {{#> components/button/link_button _size="md" _variant="secondary" _link=this.lastPageItemLink _css="mr-1 ml-1"}}
                             <span class="sr-only">Zur Seite: </span>
                             {{> components/button/components/button_label _label=_totalPages-adjust_context _css=""}}
                         {{/components/button/link_button}}
                         {{#*inline "htmlProperties"}}{{/inline}}
-                    {{/with}}
-                {{/unless}}
+                    {{/with}}                 
+                {{/if}}
+                
             {{~/if~}}      
             {{~#if _notLastPage~}}   
                 {{> components/pagination/pagination_button_right_linked }}  
