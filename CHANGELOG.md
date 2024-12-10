@@ -1,3 +1,15 @@
+# v1.114.35 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- removed -adjust_context because not needed in this context [#1184](https://github.com/mumprod/hr-design-system-handlebars/pull/1184) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.34 (Tue Dec 10 2024)
 
 #### 🐛 Bug Fix
