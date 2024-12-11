@@ -1,3 +1,15 @@
+# v1.114.40 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds rule for commentsList [#1189](https://github.com/mumprod/hr-design-system-handlebars/pull/1189) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.39 (Wed Dec 11 2024)
 
 #### 🐛 Bug Fix
