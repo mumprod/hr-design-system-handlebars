@@ -1,3 +1,15 @@
+# v1.114.41 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes typo [#1190](https://github.com/mumprod/hr-design-system-handlebars/pull/1190) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.40 (Wed Dec 11 2024)
 
 #### 🐛 Bug Fix
