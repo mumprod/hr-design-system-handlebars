@@ -1,3 +1,15 @@
+# v1.114.42 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3467 - Neuen Copytext im Tickeritem einbauen [#1191](https://github.com/mumprod/hr-design-system-handlebars/pull/1191) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.41 (Wed Dec 11 2024)
 
 #### 🐛 Bug Fix
