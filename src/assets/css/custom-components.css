@@ -310,9 +310,13 @@ article.indexTextDS .indexTextHighlighted .link {
 }
 
 /* -----------------------------COPYTEXT ---------------------------- */
+
+article #commentsList {
+    @apply scroll-mt-[117px] md:scroll-mt-[128px];
+}
 .hrds-copytext {
     a[name] {
-        @apply scroll-mt-[117px] md:scroll-mt-[128px] scroll-smooth;
+        @apply scroll-mt-[117px] md:scroll-mt-[128px];
     }
     
     &__link {
