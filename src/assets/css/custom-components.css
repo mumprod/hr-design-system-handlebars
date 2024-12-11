@@ -311,6 +311,9 @@ article.indexTextDS .indexTextHighlighted .link {
 
 /* -----------------------------COPYTEXT ---------------------------- */
 .hrds-copytext {
+    a[name] {
+        @apply scroll-mt-[117px] md:scroll-mt-[128px] scroll-smooth;
+    }
     &__link {
         @apply underline text-link decoration-1 hover:decoration-1 dark:text-link-dark ds-link;
     }
@@ -335,4 +338,6 @@ article.indexTextDS .indexTextHighlighted .link {
             @apply not-italic;
         }
     }
+
+
 }
