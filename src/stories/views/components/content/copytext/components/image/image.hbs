@@ -2,7 +2,7 @@
         {{#if this.showFullSize.isTrue }}
             {{> components/content/copytext/components/image/figure 
                 _cssClass="mt-12 mb-8 [&+h2]:mt-4 [&+.hrds-copytext-teaser-half]:mt-4 sm:[&+.hrds-copytext-teaser-half]:mt-0 sm:my-14 clear-both article-full-width sm:article-narrow"
-                _cssClassCaption="mx-5 sm:mx-0"
+                _cssClassCaption=(if _isTickerCopytext "" "mx-5 sm:mx-0" )
                 _type="story"
                 _variant="100-copytext-portrait"
                 _noAr="true"
@@ -10,7 +10,7 @@
         {{else}}
             {{> components/content/copytext/components/image/figure 
                 _cssClass="hrds-copytext-teaser-half mt-12 mb-8 article-full-width sm:article-narrow sm:mt-6 sm:mb-5 sm:mr-5 sm:w-1/2 w-auto flex-col float-none sm:float-left break-inside-avoid"
-                _cssClassCaption="mx-5 sm:mx-0"
+                _cssClassCaption=(if _isTickerCopytext "" "mx-5 sm:mx-0" )
                 _type="story"
                 _variant="copytext-portrait"
                 _noAr="true"
@@ -20,7 +20,7 @@
         {{#if this.showFullSize.isTrue}}
             {{> components/content/copytext/components/image/figure 
                 _cssClass="mt-12 mb-8 [&+h2]:mt-4 [&+.hrds-copytext-teaser-half]:mt-4 sm:[&+.hrds-copytext-teaser-half]:mt-0 sm:my-14 clear-both article-full-width sm:article-narrow"
-                _cssClassCaption="mx-5 sm:mx-0"
+                _cssClassCaption=(if _isTickerCopytext "" "mx-5 sm:mx-0" )
                 _type="story"
                 _variant="100-copytext"
                 _pictureAddClass="ar-16-9"
@@ -28,7 +28,7 @@
         {{else}}
             {{> components/content/copytext/components/image/figure 
                 _cssClass="hrds-copytext-teaser-half mt-12 mb-8 sm:mt-6 sm:mb-5 article-full-width sm:article-narrow sm:mr-5 sm:w-1/2 w-auto flex-col float-none sm:float-left break-inside-avoid"
-                _cssClassCaption="mx-5 sm:mx-0"
+                _cssClassCaption=(if _isTickerCopytext "" "mx-5 sm:mx-0" )
                 _type="story"
                 _variant="copytext"
                 _pictureAddClass="ar-16-9"
