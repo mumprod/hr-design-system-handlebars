@@ -15,7 +15,7 @@
         {{~> components/base/a11y/hiddenText _locaTag="story_newsletter_outro_sr" ~}}
     </div>
 {{else}}
-    <div id="{{this.uuid}}" class="{{_addClass}} js-load" data-hr-newsletter='{"url": "{{this.url.nocache}}"}'>
+    <div id="{{this.uuid}}" class="{{_addClass}} js-load" data-hr-newsletter-ds='{"url": "{{this.url.nocache}}"}'>
         {{~> components/base/a11y/hiddenText _locaTag="story_newsletter_intro_sr" ~}}
         <h3 class="mb-6 text-2xl md:text-3xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
             {{this.title}}
