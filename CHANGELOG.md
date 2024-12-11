@@ -1,3 +1,15 @@
+# v1.114.38 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds new rule for anchor destinations [#1187](https://github.com/mumprod/hr-design-system-handlebars/pull/1187) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.37 (Tue Dec 10 2024)
 
 #### 🐛 Bug Fix
