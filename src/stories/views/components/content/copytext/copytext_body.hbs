@@ -4,7 +4,7 @@
 {{#unless this.isInfoBox}}
     {{~#with this.paragraphBoxItem }}
         {{~#if this.isImage}}
-            {{~> components/content/copytext/components/image/image _isWebview=../_isWebview}}
+            {{~> components/content/copytext/components/image/image _isWebview=../_isWebview _isTickerCopytext=../_isTickerCopytext}}
         {{/if~}}
         {{~#if this.isContentBox}}
             {{~> components/content/copytext/components/contentbox/contentbox _isWebview=../_isWebview ~}}
@@ -28,19 +28,19 @@
             {{> components/content/copytext/components/newsletter }}
         {{/if~}}
         {{~#if this.isAudioOnDemand}}
-            {{> components/content/copytext/components/audio }}
+            {{> components/content/copytext/components/audio _isTickerCopytext=../_isTickerCopytext }}
         {{/if~}}
         {{~#if this.isAudioEventLivestream}}
-            {{> components/content/copytext/components/audioeventlivestream }}
+            {{> components/content/copytext/components/audioeventlivestream _isTickerCopytext=../_isTickerCopytext }}
         {{/if~}}
         {{~#if this.isPodcastEpisode}}
             {{> components/content/copytext/components/podcastepisode }}
         {{/if~}}
         {{~#if this.isVideoOnDemand}}
-            {{> components/content/copytext/components/video/video }}
+            {{> components/content/copytext/components/video/video _isTickerCopytext=../_isTickerCopytext }}
         {{/if~}}
         {{~#if this.isLivestream}}
-            {{> components/content/copytext/components/videolivestream }}
+            {{> components/content/copytext/components/videolivestream _isTickerCopytext=../_isTickerCopytext }}
         {{/if~}}
         {{~#if this.isTweet}}
             {{> components/content/copytext/components/tweet }}
@@ -65,37 +65,37 @@
 {{~#with this.paragraphTeaserItem }}
     {{~#if this.isTopictag}}
         {{#with this.toModel.baseTeaserDS}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isTicker}}
         {{#with this.toModel.baseTeaserDS}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isLink}}
         {{#with this.toModel.baseTeaserDS}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isStructureNodeDocument}}
         {{#with this.toModel.structureNodeTeaser}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isStory}}
         {{#with this.toModel.baseTeaserDS}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isProgram}}
         {{#with this.toModel.baseTeaserDS}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
     {{~#if this.isEvent}}
         {{#with this.toModel.eventTeaser}}
-            {{> components/content/copytext/components/posterteaser }}
+            {{> components/content/copytext/components/posterteaser _isTickerCopytext=../../_isTickerCopytext }}
         {{/with}}
     {{/if~}}
 {{~/with}}
