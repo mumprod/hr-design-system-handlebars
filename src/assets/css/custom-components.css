@@ -311,7 +311,7 @@ article.indexTextDS .indexTextHighlighted .link {
 
 /* -----------------------------COPYTEXT ---------------------------- */
 
-article #commentsList {
+article #commentList {
     @apply scroll-mt-[117px] md:scroll-mt-[128px];
 }
 .hrds-copytext {
