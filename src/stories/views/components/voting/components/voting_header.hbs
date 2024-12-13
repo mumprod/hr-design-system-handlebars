@@ -1,5 +1,5 @@
 {{> components/label/label _type="media" _text=(loca "label_voting")}}
 
-<h2 class="block clear-both mt-2 text-2xl sm:text-3xl font-headingSerif dark:text-text-dark">
+<h2 class="block clear-both mt-2 text-2xl {{#if _isTeaser}}{{~inline-switch ../../this.teasersize '["100","50"]' '[" sm:text-3xl"," sm:text-2xl"]'}}{{else}} sm:text-3xl {{/if}} font-headingSerif dark:text-text-dark">
     {{_title}}
 </h2>

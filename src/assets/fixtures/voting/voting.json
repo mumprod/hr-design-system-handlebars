@@ -85,13 +85,31 @@
             "@->jsoninclude": "voting/voting_media_video_horizontal.json"
         }
     },
+    "voting_teaser_50": {
+        "config": {
+            "template": "teaser_50",
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_teaser_50.json"
+        }
+    },   
     "voting_error": {
         "config": {
             "template": "error",
             "useAsSnapshot": true
         },
         "args": {
-            "@->jsoninclude": "voting/voting_result_absolute.json"
+            "@->jsoninclude": "voting/voting_horizontal.json"
+        }
+    },
+    "voting_success": {
+        "config": {
+            "template": "success",
+            "useAsSnapshot": true
+        },
+        "args": {
+            "@->jsoninclude": "voting/voting_email.json"
         }
     }
 }

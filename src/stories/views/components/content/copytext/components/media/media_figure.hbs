@@ -41,7 +41,7 @@
     {{#unless _voting-option}}
         {{#if this.teaseritem}}
             {{#if this.isAudio}}
-                {{~#> components/content/copytext/components/image/caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
+                {{~#> components/content/copytext/components/image/caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
                     {{~> components/content/copytext/components/image/image_copyright~}}
                     <span class="mx-1.5">|</span>
                     {{~#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context~}}
@@ -56,7 +56,7 @@
                     {{~/with~}}
                 {{~/components/content/copytext/components/image/caption~}}
             {{else}}
-                {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption="mx-5 sm:mx-0"~}}
+                {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
                     {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
                     {{~> components/content/copytext/components/image/image_copyright~}}
                 {{~/components/content/copytext/components/image/collapsible_caption~}}

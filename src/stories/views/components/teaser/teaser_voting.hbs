@@ -1,0 +1,7 @@
+{{~#if this.isVoting}}
+    <div class="items-start relative col-span-12 flex gap-x-4 gap-y-3 flex-col {{~inline-switch this.teasersize '["25","33","50"]' '[" md:col-span-3"," md:col-span-4"," md:col-span-6",""]'}}">
+        {{#if this.isMultiVote}}
+            {{> components/voting/voting _isTeaser=true}}
+        {{/if}}
+    </div>
+{{/if~}}

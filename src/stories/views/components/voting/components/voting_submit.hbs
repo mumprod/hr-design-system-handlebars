@@ -1,4 +1,10 @@
-<label class="{{#if _addClass}}{{_addClass}} {{/if}}float-right cursor-pointer has-[input:disabled]:cursor-not-allowed has-[input:disabled]:opacity-75 {{> components/button/utilities/button_base_classes}} {{> components/button/utilities/button_variation_classes _variant='primary'}} {{> components/button/utilities/button_dimension_classes _size='lg'}}">     
-    {{> components/base/image/icon _icon="send-ds" _addClass="w-5 h-5 fill-white dark:fill-text-dark "}}
+<label class="{{#if _addClass}}{{_addClass}} {{/if}}float-right cursor-pointer has-[input:disabled]:cursor-not-allowed has-[input:disabled]:opacity-75 
+    {{> components/button/utilities/button_base_classes}} 
+    {{> components/button/utilities/button_variation_classes _variant='primary'}} 
+    {{> components/button/utilities/button_dimension_classes _size='lg'}}
+    has-[input:disabled]:text-button-disabled--dark has-[input:disabled]:bg-button-disabled has-[input:disabled]:border-button-disabled"
+>     
+    {{> components/base/image/icon _icon="send-ds" _addClass="w-5 h-5 fill-white has-[+input:disabled]:fill-black has-[+input:disabled]:opacity-25 dark:fill-text-dark "}}
     <input type="submit" class="pl-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed" value="{{#if _label}}{{_label}}{{else}}{{loca 'form_button_submit'}}{{/if}}" />
 </label>
+<span class="visible float-right clear-both mt-2 text-xs text-right js-submit-hint font-heading sm:text-sm text-gray-scorpion dark:text-text-dark">{{loca 'votingform_submit_hint'}}</span>
