@@ -1,0 +1,61 @@
+<form class="c-form o-box -accented -breakout js-form" id="form--{{nextRandom}}"
+      action="{{configProperty "mailserver.newsletter"}}" method="post" enctype="application/x-www-form-urlencoded"
+      accept-charset="utf-8">
+
+        {{~> components/forms/components/input
+            _type="email"
+            _isEmail="true"
+            _name="email"
+            _label="E-Mail"
+            _labelClass="hide"
+            _description=""
+            _required="true"
+            _maxLength="140"
+            _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
+            _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
+            _formId=../_formId
+        }}
+
+        {{> components/forms/components/choiceGroup
+                _name="Registrierung"
+                _required=true
+                _inputClass=""
+                _type="radio"
+                _locaKey="newsletter_subscribe_text"
+                _inGroup=true
+                _isHorizontalLayout=true
+                _multipleChoice=false
+                _formId=../_formId
+                _items=this.items
+        }}
+
+
+   {{~> components/forms/components/controls }}
+
+   {{~> components/forms/components/input
+            _formField=this.formData.INXMAIL_HTTP_REDIRECT
+            _name="INXMAIL_HTTP_REDIRECT"
+            _type="hidden"
+            _wrapperClass="hidden"
+            _value=this.successLink
+            _hasLabel=false
+    }}
+
+    {{~>components/forms/components/input
+            _formField=this.formData.INXMAIL_HTTP_REDIRECT_ERROR
+            _name="INXMAIL_HTTP_REDIRECT_ERROR"
+            _type="hidden"
+            _wrapperClass="hidden"
+            _value=this.errorLink
+            _hasLabel=false
+    }}
+
+    {{~> components/forms/components/input
+            _formField=this.formData.backlink
+            _name="backlink"
+            _type="hidden"
+            _wrapperClass="hidden"
+            _value=this.backlinkUuid
+            _hasLabel=false
+    }}
+</form>
