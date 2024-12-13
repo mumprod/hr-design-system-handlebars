@@ -1,3 +1,15 @@
+# v1.114.44 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- Newsletter form test for delivery [#1193](https://github.com/mumprod/hr-design-system-handlebars/pull/1193) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.43 (Fri Dec 13 2024)
 
 #### 🐛 Bug Fix
