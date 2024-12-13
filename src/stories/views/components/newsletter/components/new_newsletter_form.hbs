@@ -1,37 +1,33 @@
+<div class="js-newsletterFormWrapper">
 <form class="c-form o-box -accented -breakout js-form js-load" id="form--{{nextRandom}}" data-hr-new-newsletter='{
-"trackingInformations": {{this.trackingInformations}} }'
-      action="{{configProperty "newsletter.subscription.endpoint"}}" method="post" accept-charset="utf-8">
+"trackingInformations": {{this.trackingInformations}} }' action="{{configProperty "newsletter.subscription.endpoint"}}" method="post" accept-charset="utf-8">
 
-    <div class="c-form__row -expanded">
         {{~> components/forms/components/input
             _type="email"
-            _isEmail="true"
+            _isEmail=true
             _name="email"
             _label="E-Mail"
             _labelClass="hide"
             _description=""
             _wrapperClass=(if this.isHidden "hidden")
             _tabindex=(if this.isHidden "-1")
-            _required="true"
+            _required=true
             _maxLength="140"
             _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
             _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
             _formId=../_formId
         }}
-    </div>
-
-    <div class="c-form__row">
+    
         {{~> components/forms/components/choice
-            _inGroup="false"
+            _inGroup=false
             _type="checkbox"
             _name="checkbox"
             _label=(loca "accept_data_privacy_regulation_link")
-            _description="Das ist der Beschreibungstext von Checkbox"
-            _required="true"
+            _description=""
+            _required=true
             _errorMandatory="Bitte wählen Sie dieses Pflichtfeld aus"
         }}
-        </a>
-    </div>
+  
 
     {{~> components/forms/components/controls }}
 
@@ -60,3 +56,4 @@
             {{{include "components/newsletter/components/newsletter_already_registered" }}}
     </script>
 </form>
+</div>
