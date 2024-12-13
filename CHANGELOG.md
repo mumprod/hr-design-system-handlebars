@@ -1,3 +1,16 @@
+# v1.114.45 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- :bento: Replace twitter with tiktok logo [#1194](https://github.com/mumprod/hr-design-system-handlebars/pull/1194) ([@Sunny1112358](https://github.com/Sunny1112358) [@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
 # v1.114.44 (Fri Dec 13 2024)
 
 #### 🐛 Bug Fix
