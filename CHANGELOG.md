@@ -1,3 +1,113 @@
+# v1.114.45 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- :bento: Replace twitter with tiktok logo [#1194](https://github.com/mumprod/hr-design-system-handlebars/pull/1194) ([@Sunny1112358](https://github.com/Sunny1112358) [@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.114.44 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- Newsletter form test for delivery [#1193](https://github.com/mumprod/hr-design-system-handlebars/pull/1193) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.43 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3415 b [#1192](https://github.com/mumprod/hr-design-system-handlebars/pull/1192) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.42 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3467 - Neuen Copytext im Tickeritem einbauen [#1191](https://github.com/mumprod/hr-design-system-handlebars/pull/1191) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.41 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes typo [#1190](https://github.com/mumprod/hr-design-system-handlebars/pull/1190) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.40 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds rule for commentsList [#1189](https://github.com/mumprod/hr-design-system-handlebars/pull/1189) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.39 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- some small fixes [#1188](https://github.com/mumprod/hr-design-system-handlebars/pull/1188) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.38 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds new rule for anchor destinations [#1187](https://github.com/mumprod/hr-design-system-handlebars/pull/1187) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.37 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- Fix player size issue in voting [#1185](https://github.com/mumprod/hr-design-system-handlebars/pull/1185) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.36 (Tue Dec 10 2024)
 
 #### 🐛 Bug Fix
