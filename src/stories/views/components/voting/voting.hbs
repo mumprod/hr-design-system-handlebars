@@ -1,4 +1,4 @@
-{{#>components/forms/components/backgroundBox  }}
+{{#>components/forms/components/backgroundBox _isTeaser=_isTeaser }}
     {{#with this.form}}
         {{#unless this.isVotingOver}}
             {{#unless ../this.hasRedirect}}
@@ -28,7 +28,7 @@
                         accept-charset="utf-8" 
                         autocomplete="off"
                     >
-                        {{> components/voting/components/voting_header _title=../this.title _topline=../this.topline}}
+                        {{> components/voting/components/voting_header _isTeaser=../../_isTeaser _title=../this.title _topline=../this.topline}}
                         
                         <div class="js-voting-form__bottomWrapper">
                             {{#if this.shorttext}}
@@ -66,6 +66,7 @@
                                             _statusDone=true  
                                             _resultBoxMessageTitle=(loca "votingform2F_title_success") 
                                             _resultBoxMessageText=(loca "votingform2F_text_success")
+                                            _isTeaser=../../_isTeaser
                                     }}
                                 {{else}}
                                     {{> components/voting/voting_result
@@ -74,6 +75,7 @@
                                             _hideVotingResult=this.hideVotingResult 
                                             _resultBoxMessageTitle=(loca "votingform_title_success") 
                                             _resultBoxMessageText=../this.votingSuccessText.richtext
+                                            _isTeaser=../../_isTeaser
                                     }}
                                 {{/if}}
                         </script>
@@ -85,6 +87,7 @@
                                     _showBackButton=true  
                                     _resultBoxMessageTitle=(loca "votingform_title_error") 
                                     _resultBoxMessageText=(loca "votingform_text_error")
+                                    _isTeaser=../../_isTeaser
                             }}
                         </script>
                         {{#unless this.hideVotingResult}}
@@ -95,6 +98,7 @@
                                                 _statusDone=true 
                                                 _addClass=../_addClass 
                                                 _hideVotingResult=this.hideVotingResult
+                                                _isTeaser=../../_isTeaser
                                         }}
                                     {{/unless}}
                             </script>
@@ -103,7 +107,7 @@
                 </div>
             </div>
         {{else}}
-            {{> components/voting/voting_result ../this _hideVotingResult=this.hideVotingResult}}
+            {{> components/voting/voting_result _hideVotingResult=this.hideVotingResult}}
         {{/unless}}
     {{/with}}
 {{/components/forms/components/backgroundBox }}

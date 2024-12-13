@@ -1,4 +1,6 @@
 @layer utilities {
+    html { scroll-behavior: smooth; }
+
     .placeholder-text-xs::placeholder {
         @apply text-xs;
     }

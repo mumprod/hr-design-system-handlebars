@@ -219,8 +219,11 @@ export const parameters = {
                     'Page',
                     'Header',
                     'Teaser',
-                    'grid',
+                    'Grid',
                     'Label',
+                    'Navigation',
+                    'Content',
+                    ['Copytext', 'Content-Footer', 'SocialMediaLinks']
                 ],
                 '*',
             ],

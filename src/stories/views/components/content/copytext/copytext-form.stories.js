@@ -19,18 +19,19 @@ export default {
         },
     ],
     parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":""
-                    // "status":"OK"
-                    // "status":"VALIDATION_ERROR", "errors":{"vorname":"form_error_required"}
-                },
-            },
-        ],
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                    response: {
+                        status: 200,
+                        body: {
+                            status: '',
+                        },
+                    },
+                }
+            ],
+        },
         layout: 'fullscreen',
         chromatic: { disableSnapshot: true }
     }
@@ -46,16 +47,19 @@ export const WithWebformStatusOk = {
     name: 'Formular Status OK',
     args: copytext_webform_simple_json,
     parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":"OK"
-                },
-            },
-        ]
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                    response: {
+                        status: 200,
+                        body: {
+                            status: 'OK'
+                        },
+                    },
+                }
+            ],
+        }
     }
 }
 export const WithWebformStatusNone = {
@@ -63,16 +67,19 @@ export const WithWebformStatusNone = {
     name: 'Formular Status None',
     args: copytext_webform_simple_json,
     parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
-                method: 'POST',
-                status: 200,
-                response: {
-                    "status":""
-                },
-            },
-        ]
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                    response: {
+                        status: 200,
+                        body: {
+                            status: '',
+                        },
+                    },
+                }
+            ],
+        }
     }
 }
 export const WithWebformStatusValidationError = {
@@ -80,15 +87,21 @@ export const WithWebformStatusValidationError = {
     name: 'Formular Status Validation Error',
     args: copytext_webform_simple_json,
     parameters: { 
-        mockData: [
-            {
-                url: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
-                method: 'POST',
-                status: 200,
-                response: {
-                     "status":"VALIDATION_ERROR", "errors":{"vorname":"form_error_required"}
-                },
-            },
-        ]
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
+                    response: {
+                        status: 200,
+                        body: {
+                            status: 'VALIDATION_ERROR',
+                            errors: {
+                                "vorname":"form_error_required"
+                            }
+                        },
+                    },
+                }
+            ],
+        }
     }
 }

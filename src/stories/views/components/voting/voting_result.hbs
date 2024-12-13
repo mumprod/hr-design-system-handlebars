@@ -1,5 +1,5 @@
 {{#if ../this.is2FSecured}}
-    {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
+    {{> components/voting/components/voting_header _isTeaser=_isTeaser _title=this.title _topline=this.topline}}
     {{~> components/base/image/icon _icon=(if _statusDone "status-done" "error-ds") _iconmap="icons" _addClass=(if _statusDone "float-left w-6 h-6 text-success dark:text-success-dark fill-current mt-6 sm:mt-12" "float-left w-6 h-6 text-error dark:text-error-dark fill-current mt-6 sm:mt-12")}}
     <p class="{{#if _statusDone}}text-success dark:text-success-dark{{else}}text-error dark:text-error-dark{{/if}} mt-6 ml-8 text-base font-bold sm:ml-9 sm:text-xl font-heading sm:mt-12">{{#if _statusDone}}{{{_resultBoxMessageTitle}}}<br/>{{/if}}{{{_resultBoxMessageText}}}</p>
         {{#if _showBackButton}}
@@ -17,7 +17,7 @@
     >
 
         {{#unless ../this.hasRedirect}}
-            {{> components/voting/components/voting_header _title=this.title _topline=this.topline}}
+            {{> components/voting/components/voting_header _isTeaser=_isTeaser _title=this.title _topline=this.topline}}
         {{/unless}}
 
         {{#if _hideVotingResult}}

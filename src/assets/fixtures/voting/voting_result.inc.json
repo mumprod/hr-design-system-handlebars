@@ -1,0 +1,47 @@
+{
+    "result-1": {
+        "votingResult": [
+            {
+                "label": "Gut, beste website ever",
+                "count": "27",
+                "percentageCount": "4,1",
+                "roundedPercentageCount": "4.0"
+            },
+            {
+                "label": "Super, allerbeste website ever",
+                "count": "117",
+                "percentageCount": "17,6",
+                "roundedPercentageCount": "18.0"
+            },
+            {
+                "label": "Mega, allerallerbeste website ever",
+                "count": "242",
+                "percentageCount": "36,3",
+                "roundedPercentageCount": "36.0"
+            },
+            {
+                "label": "Hammer, allerallerbesteste website ever",
+                "count": "280",
+                "percentageCount": "42,0",
+                "roundedPercentageCount": "42.0",
+                "isWinner": true
+            }                                    
+        ],
+        "summarizedResult": "666",
+        "isMultipleChoice": false,
+        "votingDoc": {
+            "showAbsoluteResult": false,
+            "hasRedirect": false,
+            "isVotingOver": false,
+            "isSimpleSecured": false,
+            "is2FSecured": false,
+            "cmsFields": {
+                "title": "Wie finden Sie hessenschau.de?",
+                "cookieLifetime": "12",
+                "sophoraId": "Sophora-Id",
+                "showVoteResult": true,
+                "_resultBoxMessageText": "Danke für Ihre Abstimmung!"
+            }
+        }
+    }    
+}

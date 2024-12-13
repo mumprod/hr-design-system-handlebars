@@ -1,3 +1,173 @@
+# v1.114.42 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3467 - Neuen Copytext im Tickeritem einbauen [#1191](https://github.com/mumprod/hr-design-system-handlebars/pull/1191) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.41 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- fixes typo [#1190](https://github.com/mumprod/hr-design-system-handlebars/pull/1190) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.40 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds rule for commentsList [#1189](https://github.com/mumprod/hr-design-system-handlebars/pull/1189) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.39 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- some small fixes [#1188](https://github.com/mumprod/hr-design-system-handlebars/pull/1188) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.38 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- adds new rule for anchor destinations [#1187](https://github.com/mumprod/hr-design-system-handlebars/pull/1187) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.37 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- Fix player size issue in voting [#1185](https://github.com/mumprod/hr-design-system-handlebars/pull/1185) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.36 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- - added classes to the safelist [#1186](https://github.com/mumprod/hr-design-system-handlebars/pull/1186) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.35 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- removed -adjust_context because not needed in this context [#1184](https://github.com/mumprod/hr-design-system-handlebars/pull/1184) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.34 (Tue Dec 10 2024)
+
+#### 🐛 Bug Fix
+
+- SEO: Ticker-Paginierung anpassen [#1183](https://github.com/mumprod/hr-design-system-handlebars/pull/1183) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.33 (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- add submit-hint to voting-button [#1182](https://github.com/mumprod/hr-design-system-handlebars/pull/1182) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.32 (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- fix javascript bug in voting [#1181](https://github.com/mumprod/hr-design-system-handlebars/pull/1181) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.31 (Thu Dec 05 2024)
+
+#### 🐛 Bug Fix
+
+- add voting-teaser [#1180](https://github.com/mumprod/hr-design-system-handlebars/pull/1180) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.30 (Tue Dec 03 2024)
+
+#### 🐛 Bug Fix
+
+- BUG/videos-dont-play-because-of-mock-plugin [#1179](https://github.com/mumprod/hr-design-system-handlebars/pull/1179) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.29 (Mon Dec 02 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3432 success color Bug [#1176](https://github.com/mumprod/hr-design-system-handlebars/pull/1176) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.28 (Fri Nov 29 2024)
 
 #### 🐛 Bug Fix
