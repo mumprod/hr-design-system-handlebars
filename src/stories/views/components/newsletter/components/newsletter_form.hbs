@@ -9,8 +9,6 @@
             _label="E-Mail"
             _labelClass="hide"
             _description=""
-            _wrapperClass=(if this.isHidden "hidden")
-            _tabindex=(if this.isHidden "-1")
             _required="true"
             _maxLength="140"
             _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
@@ -38,6 +36,7 @@
             _formField=this.formData.INXMAIL_HTTP_REDIRECT
             _name="INXMAIL_HTTP_REDIRECT"
             _type="hidden"
+            _wrapperClass="hidden"
             _value=this.successLink
             _hasLabel=false
     }}
@@ -46,6 +45,7 @@
             _formField=this.formData.INXMAIL_HTTP_REDIRECT_ERROR
             _name="INXMAIL_HTTP_REDIRECT_ERROR"
             _type="hidden"
+            _wrapperClass="hidden"
             _value=this.errorLink
             _hasLabel=false
     }}
@@ -54,6 +54,7 @@
             _formField=this.formData.backlink
             _name="backlink"
             _type="hidden"
+            _wrapperClass="hidden"
             _value=this.backlinkUuid
             _hasLabel=false
     }}

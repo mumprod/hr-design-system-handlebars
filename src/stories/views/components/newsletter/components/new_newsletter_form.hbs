@@ -1,5 +1,5 @@
 <div class="js-newsletterFormWrapper">
-<form class="c-form o-box -accented -breakout js-form js-load" id="form--{{nextRandom}}" data-hr-new-newsletter='{
+<form class="c-form o-box -accented -breakout js-form js-load" id="form--{{nextRandom}}" data-hr-new-newsletter-ds='{
 "trackingInformations": {{this.trackingInformations}} }' action="{{configProperty "newsletter.subscription.endpoint"}}" method="post" accept-charset="utf-8">
 
         {{~> components/forms/components/input
@@ -9,8 +9,6 @@
             _label="E-Mail"
             _labelClass="hide"
             _description=""
-            _wrapperClass=(if this.isHidden "hidden")
-            _tabindex=(if this.isHidden "-1")
             _required=true
             _maxLength="140"
             _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
@@ -36,12 +34,14 @@
         _name="newsletter"
         _type="hidden"
         _value=this.mailingList
+        _wrapperClass="hidden"
         _hasLabel=false
     }}
 
     {{~>components/forms/components/input
         _name="newsletter-type"
         _type="hidden"
+        _wrapperClass="hidden"
         _value="html"
         _hasLabel=false
     }}
