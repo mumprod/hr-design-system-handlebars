@@ -32,10 +32,10 @@
                         
                         <div class="js-voting-form__bottomWrapper">
                             {{#if this.shorttext}}
-                                <p class="mt-4 text-base font-copy sm:text-lg sm:mt-5 dark:text-text-dark">{{this.shorttext}}</p>
+                                <p class="mt-3 text-base font-copy sm:text-lg dark:text-text-dark">{{this.shorttext}}</p>
                             {{/if}}
 
-                            <div class="w-full mt-6 text-xs text-right sm:mt-12 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                            <div class="w-full mt-6 text-xs text-right sm:mt-8 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
                                 {{#if ../this.isMultipleChoice}}
                                     {{loca "votingform_open_answers_text" ../this.maxAnswerCount}}
                                 {{else}}
@@ -49,7 +49,7 @@
                                     _isMultimediaVoting=../this.isMultimediaVoting
                                     _addClassGroup="!flex-col mt-2" 
                                     _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex hover:!outline-2 hover:!outline-blue-science-hex bg-white has-[input:disabled]:opacity-50 has-[input:disabled]:cursor-not-allowed" 
-                                    _addClassLabel="w-full !py-3 sm:!py-4 !pr-3 sm:!pr-4 !text-base sm:!text-lg md:!text-lg" 
+                                    _addClassLabel="w-full !pt-[15px] sm:!pt-[18px] !pb-[9px] sm:!pb-3.5 !pr-3 sm:!pr-4" 
                                     _addClassLabelForDataPolicy="!pt-0"
                                     _addClassInput="!my-3 sm:!my-4 !ml-3 sm:!ml-4"
                             }}
