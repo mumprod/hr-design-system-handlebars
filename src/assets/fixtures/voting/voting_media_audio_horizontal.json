@@ -1,0 +1,253 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath":"form.isHorizontalLayout",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "isMultipleChoice",
+            "@->value": true
+        },
+        {
+            "@->contentpath": "maxAnswerCount",
+            "@->value": 3
+        },
+        {
+            "@->contentpath":"isMultimediaVoting",
+            "@->value": true
+        },
+        {
+            "@->contentpath":"form.shorttext",
+            "@->value": ""
+        },
+        {
+            "@->contentpath":"title",
+            "@->value": "Welches Audio gefällt Ihnen am besten?"
+        },
+        {
+            "@->contentpath":"votingResult",
+            "@->value": [
+                {
+                    "label": "Audio 1",
+                    "count": "27",
+                    "percentageCount": "4,1",
+                    "roundedPercentageCount": "4.0"
+                },
+                {
+                    "label": "Audio 2",
+                    "count": "117",
+                    "percentageCount": "17,6",
+                    "roundedPercentageCount": "18.0"
+                },
+                {
+                    "label": "Audio 3",
+                    "count": "242",
+                    "percentageCount": "36,3",
+                    "roundedPercentageCount": "36.0"
+                },
+                {
+                    "label": "Audio 4",
+                    "count": "280",
+                    "percentageCount": "42,0",
+                    "roundedPercentageCount": "42.0",
+                    "isWinner": true
+                }
+            ]
+        },
+        {
+            "@->contentpath":"form.fields",
+            "@->value": [
+                {
+                    "type": {
+                        "isGroup": false,
+                        "isChoice": true,
+                        "asString": "checkbox"
+                    },
+                    "name": "multivoting",
+                    "isGrouped": true,
+                    "isRequired": false,
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Audio 1",
+                            "title": "Voting-Answer 1",
+                            "mediaItem": {
+                                "isAudio": true,
+                                "isAudioOnDemand": true,
+                                "toModel": {
+                                    "audioElementForVideoView": {
+                                        "isPodcast": false,
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1234"
+                                                }
+                                            ]
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1234"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "lehrerin-ukraine-104"
+                                        }
+                                    ]
+                                }                                                                           
+                            }        
+                        },
+                        {
+                            "value": "2",
+                            "label": "Audio 2",
+                            "title": "Voting-Answer 2",
+                            "mediaItem": {                                                                
+                                "isAudio": true,
+                                "isAudioOnDemand": true,
+                                "toModel": {
+                                    "audioElementForVideoView": {
+                                        "isPodcast": false,
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-2",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "5678"
+                                                }
+                                            ]
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-2",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "5678"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "buchmesse-fahnen-102"
+                                        }
+                                    ]
+                                }                  
+                            }               
+                        },
+                        {
+                            "value": "3",
+                            "label": "Audio 3",
+                            "title": "Voting-Answer 3",
+                            "mediaItem": {                                                                
+                                "isAudio": true,
+                                "isAudioOnDemand": true,
+                                "toModel": {
+                                    "audioElementForVideoView": {
+                                        "isPodcast": false,
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "9123"
+                                                }
+                                            ]
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "9123"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "connichi-106"
+                                        }
+                                    ]
+                                }       
+                            }                                
+                        },
+                        {
+                            "value": "4",
+                            "label": "Audio 4",
+                            "title": "Voting-Answer 4",
+                            "mediaItem": {                                                                
+                                "isAudio": true,
+                                "isAudioOnDemand": true,
+                                "toModel": {
+                                    "audioElementForVideoView": {
+                                        "isPodcast": false,
+                                        "ardPlayerConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1478"
+                                                }
+                                            ]
+                                        },
+                                        "ardPlayerJsonConfig": {
+                                            "@->jsoninclude": "audio/audios.inc.json",
+                                            "@->contentpath": "audio-1",
+                                            "@->overrides": [
+                                                {
+                                                    "@->contentpath": "playerId",
+                                                    "@->value": "1478"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "teaseritem": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "copytext_image_50",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "hasebe-kane-102"
+                                        }
+                                    ]
+                                }     
+                            }                  
+                        }                                                   
+                    ]
+                }                
+            ]
+        }
+    ]
+}

@@ -7,6 +7,8 @@ hbsTemplates['default'] = handlebars.compile(`
     {{> components/pagination/pagination }} 
   `)
 
+
+
 const Template = (args) => {
     return hbsTemplates['default']({ ...args })
 }

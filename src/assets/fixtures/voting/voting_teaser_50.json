@@ -1,0 +1,10 @@
+{
+    "@->jsoninclude": "voting/voting.inc.json",
+    "@->contentpath": "multivote-1",
+    "@->overrides": [
+        {
+            "@->contentpath": "teasersize",
+            "@->value": "50"
+        }
+    ]    
+}
