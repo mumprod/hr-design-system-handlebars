@@ -1,3 +1,15 @@
+# v1.114.48 (Mon Dec 16 2024)
+
+#### 🐛 Bug Fix
+
+- Add ticker item time and title components with appropriate styles [#1197](https://github.com/mumprod/hr-design-system-handlebars/pull/1197) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.47 (Mon Dec 16 2024)
 
 #### 🐛 Bug Fix
