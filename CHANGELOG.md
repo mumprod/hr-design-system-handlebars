@@ -1,3 +1,15 @@
+# v1.114.47 (Mon Dec 16 2024)
+
+#### 🐛 Bug Fix
+
+- Tiktok-Icon [#1196](https://github.com/mumprod/hr-design-system-handlebars/pull/1196) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.46 (Fri Dec 13 2024)
 
 #### 🐛 Bug Fix
