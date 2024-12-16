@@ -1,3 +1,76 @@
+# v1.114.47 (Mon Dec 16 2024)
+
+#### 🐛 Bug Fix
+
+- Tiktok-Icon [#1196](https://github.com/mumprod/hr-design-system-handlebars/pull/1196) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.46 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- adjust spaces [#1195](https://github.com/mumprod/hr-design-system-handlebars/pull/1195) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.45 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- :bento: Replace twitter with tiktok logo [#1194](https://github.com/mumprod/hr-design-system-handlebars/pull/1194) ([@Sunny1112358](https://github.com/Sunny1112358) [@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 2
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- [@Sunny1112358](https://github.com/Sunny1112358)
+
+---
+
+# v1.114.44 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- Newsletter form test for delivery [#1193](https://github.com/mumprod/hr-design-system-handlebars/pull/1193) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.43 (Fri Dec 13 2024)
+
+#### 🐛 Bug Fix
+
+- Dpe 3415 b [#1192](https://github.com/mumprod/hr-design-system-handlebars/pull/1192) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.42 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- DPE-3467 - Neuen Copytext im Tickeritem einbauen [#1191](https://github.com/mumprod/hr-design-system-handlebars/pull/1191) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.41 (Wed Dec 11 2024)
 
 #### 🐛 Bug Fix
