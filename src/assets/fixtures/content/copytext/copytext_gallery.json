@@ -1,0 +1,94 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Bildergalerie"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isGallery": true,
+                "label": {
+                    "type": "gallery",
+                    "loca": "label_gallery",
+                    "byline": {
+                        "bylineText": "5 Bilder"
+                    }
+                },
+                "toModel": {
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/galleryseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Bildergalerie",
+                        "title": "Bildergalerie title",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Bildergalerie-Einzelseite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "gallery":[
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "copytext_image_100",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "jugendfeuerwehr-102"
+                            }
+                        ],
+                        "caption": "Bild 1 Beschreibung"
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "copytext_image_100",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "buchmesse-fahnen-102"
+                            }
+                        ],
+                        "caption": "Bild 2 Beschreibung"
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "copytext_image_100",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "connichi-106"
+                            }
+                        ],
+                        "caption": "Bild 3 Beschreibung"
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "copytext_image_100",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "emmanuel-tjeknavorian-108"
+                            }
+                        ],
+                        "caption": "Bild 4 Beschreibung"
+                    },
+                    {
+                        "@->jsoninclude": "teaser/teaser_images.inc.json",
+                        "@->contentpath": "copytext_image_100",
+                        "@->replaceToken": [
+                            {
+                                "@->token": "image",
+                                "@->value": "greenteams-grafik-100"
+                            }
+                        ],
+                        "caption": "Bild 5 Beschreibung"
+                    }
+                ]
+            }
+        }
+    ]
+}

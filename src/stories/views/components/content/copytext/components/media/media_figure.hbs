@@ -18,6 +18,13 @@
                     {{/components/base/link}}
                 {{/with}}
             {{/if}}
+            {{#if this.isGallery}}
+                {{#with this.toModel.mediaBacklinkToStoryTeaser}}
+                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
+                        {{> components/content/copytext/components/media/media_figure_headline}}
+                    {{/components/base/link}}
+                {{/with}}
+            {{/if}}
         </div>
     {{/unless}}
     {{#if this.isAudioOnDemand}}
@@ -37,6 +44,9 @@
             {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg ~}}
             {{~> components/teaser/components/teaser_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLivestream=true _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Live" _aspectRatio="ar-16-9" _noDelay=../_isLead }}
         {{/with}}
+    {{/if}}
+    {{#if this.isGallery}}
+        {{> components/content/copytext/components/gallery/galleryitem_copytext }}
     {{/if}}
     {{#unless _voting-option}}
         {{#if this.teaseritem}}
