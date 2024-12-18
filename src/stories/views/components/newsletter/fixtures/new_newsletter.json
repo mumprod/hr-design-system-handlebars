@@ -6,6 +6,10 @@
        {"value":"","label":"Anmelden","title":"Anmelden","name":"Registrierung","isSelected":false},
        {"value":"","label":"Abmelden","title":"Abmelden","name":"Registrierung","isSelected":false}
     ],
+    "successText":{"richText":"Ficken sie sich oder wie sie heißen"},
+    "registeredText":{"richText":"Ficken sie sich oder wie sie heißen, sie sind bereits bei uns"},
+    "errorText":{"richText":"Ficken sie sich oder wie sie heißen, leider nicht funktioniert"},
+    "uuid":"d91b7e16-d476-425f-a535-587c6957df37",
     "successLink":"Link wenn erfolgreich",
     "errorLink": "Link wenn Fehler",
     "backlinkUuid": "Backlink mit UUID (altes Voting)",

@@ -21,6 +21,7 @@ AsyncAlpine.init(Alpine)
     .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .data('inputHandler', ()=> import('components/forms/js/inputHandler.alpine.js'))
     .data('contactForm', ()=> import('components/forms/js/contactForm.alpine.js'))
+    .data('newsletterForm', ()=> import('components/newsletter/js/newsletterForm.alpine.js'))
     .start()
 
 window.Alpine = Alpine
