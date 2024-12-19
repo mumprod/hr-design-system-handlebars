@@ -1,3 +1,16 @@
+# v1.114.49 (Thu Dec 19 2024)
+
+#### 🐛 Bug Fix
+
+- Add overflow handling and hyphenation to label class in choice component [#1198](https://github.com/mumprod/hr-design-system-handlebars/pull/1198) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.48 (Mon Dec 16 2024)
 
 #### 🐛 Bug Fix
