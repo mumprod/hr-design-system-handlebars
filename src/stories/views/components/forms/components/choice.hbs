@@ -64,7 +64,7 @@
          {{/if}}
       {{/if~}}
    >
-  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-stretch justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm{{#if _addClassLabel}} {{_addClassLabel}}{{/if}}">
+  <label for="input{{getRandom}}" class="min-h-6 pt-0.5 items-stretch justify-center pl-2 cursor-pointer md:pl-3 text-text dark:text-text-dark md:text-base text-sm{{#if _isHorizontalLayout}} overflow-anywhere hyphens-auto{{/if}}{{#if _addClassLabel}} {{_addClassLabel}}{{/if}}">
       {{#if _hasBody}}
         {{decorator_body}}{{#unless _inGroup}}{{#if _required}}*{{/if}}{{/unless}}
       {{else}}
