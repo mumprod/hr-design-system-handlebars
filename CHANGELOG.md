@@ -1,3 +1,15 @@
+# v1.114.51 (Mon Jan 06 2025)
+
+#### 🐛 Bug Fix
+
+- add Zeilenteaser to voting [#1200](https://github.com/mumprod/hr-design-system-handlebars/pull/1200) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.50 (Mon Jan 06 2025)
 
 #### 🐛 Bug Fix
