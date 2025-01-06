@@ -1,4 +1,5 @@
-<form class="c-form o-box -accented -breakout js-form" id="form--{{nextRandom}}"
+<div id="formWrapper" class="mt-4">
+<form class="relative flex flex-col justify-center overflow-hidden group js-form" id="form{{nextRandom}}" x-ref="form{{getRandom}}" ax-load="" x-data="" x-init="" @submit.prevent=""
       action="{{configProperty "mailserver.newsletter"}}" method="post" enctype="application/x-www-form-urlencoded"
       accept-charset="utf-8">
 
@@ -7,7 +8,7 @@
             _isEmail="true"
             _name="email"
             _label="E-Mail"
-            _labelClass="hide"
+            _labelClass=""
             _description=""
             _required="true"
             _maxLength="140"
@@ -30,7 +31,7 @@
         }}
 
 
-   {{~> components/forms/components/controls }}
+   {{~> components/forms/components/controls}}
 
    {{~> components/forms/components/input
             _formField=this.formData.INXMAIL_HTTP_REDIRECT
@@ -59,3 +60,4 @@
             _hasLabel=false
     }}
 </form>
+</div>

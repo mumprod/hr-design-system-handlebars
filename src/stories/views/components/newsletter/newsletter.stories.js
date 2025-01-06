@@ -14,21 +14,33 @@ export default {
                     </div>`
         },
     ],
+    parameters: { 
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'http://localhost:6006/',
+                    response: {
+                        status: 200,
+                        message: 'success',
+                        body: {
+                            status: ''
+                        },
+                    },
+                }
+            ],
+        }
+    }
 }
 const TemplateNewsletterNew = (args) => {
     let hbsTemplate = handlebars.compile(`
-        {{#>components/forms/components/backgroundBox  }}  
             {{> components/newsletter/newsletter }}
-        {{/components/forms/components/backgroundBox }}
     `)
     return hbsTemplate({ ...args })
 }
 
 const TemplateNewsletterOld = (args) => {
     let hbsTemplate = handlebars.compile(`
-        {{#>components/forms/components/backgroundBox  }}  
             {{> components/newsletter/newsletter }}
-        {{/components/forms/components/backgroundBox }}
     `)
     return hbsTemplate({ ...args })
 }
@@ -37,6 +49,22 @@ export const Default = {
     render: TemplateNewsletterNew.bind({}),
     name: 'Neuer Newsletter',
     args: NewNewsletterJson,
+    parameters: { 
+        fetchMock: {
+            mocks: [
+                {
+                    matcher: 'http://localhost:6006/',
+                    response: {
+                        status: 200,
+                        message: 'no_valid_newsletters',
+                        body: {
+                            status: ''
+                        },
+                    },
+                }
+            ],
+        }
+    }
 }
 
 export const Newsletter_old = {
