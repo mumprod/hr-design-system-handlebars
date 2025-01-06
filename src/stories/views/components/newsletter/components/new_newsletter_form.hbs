@@ -1,15 +1,13 @@
 <div id="formWrapper" class="mt-4">
-<form class="relative flex flex-col justify-center overflow-hidden group js-form js-load" 
+<form class="relative flex flex-col justify-center overflow-hidden group" 
     id="form{{nextRandom}}" 
     x-ref="form{{getRandom}}" 
     ax-load 
-    x-data="newsletterForm('form{{getRandom}}','{&quot;form_error_max&quot;:&quot;Zu viele Zeichen&quot;,&quot;form_error_email&quot;:&quot;Ungültige E-Mail-Adresse&quot;,&quot;form_error_validurl&quot;:&quot;Ungültige URL&quot;}','&quot;Newsletterformular abgeschickt - Dokumenten-Id:{{this.uuid}}&quot;')" 
+    x-data="newsletterForm('form{{getRandom}}','{{this.trackingInformations}}')" 
     x-init="formInit()" 
     x-ignore
-    @submit.prevent="" 
-    data-hr-new-newsletter-ds='{
-    "trackingInformations": {{this.trackingInformations}} }' 
-    action="http://localhost:6006/" 
+    @submit.prevent
+    action="index.html" 
     method="post" 
     accept-charset="utf-8"
 >

@@ -1,6 +1,6 @@
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
-export default function newsletterForm(formId, errorMessages, trackingInformations, jsonp = false) {
+export default function newsletterForm(formId,trackingInformations) {
     return {
         isPosting: false,
         wasPosted: false,
@@ -14,7 +14,7 @@ export default function newsletterForm(formId, errorMessages, trackingInformatio
         actionUrl: "",
         formInit(){
             this.$store.forms.submissionAttempted[formId] = false; 
-            this.$store.forms.errorMessages = JSON.parse(errorMessages.replace(/&quot;/g,'"'))
+            //this.$store.forms.errorMessages = JSON.parse(errorMessages.replace(/&quot;/g,'"'))
             this.actionUrl = this.form.getAttribute('action')
             console.log("FORMID: "+formId)
             console.log("FORM: ", this.form)
@@ -73,16 +73,17 @@ export default function newsletterForm(formId, errorMessages, trackingInformatio
             this.isPosting = true;
 
             this.postData()
-                .then((response) => {
+                .then(async response => {
+                    console.log(await response)
                     if (!response.ok) {
-                        console.log(response)
+                       
                         throw new Error('Netzwerk- oder Serverfehler')
                     }
-                    return response.json()
+                    return response
                 })
-                .then((responseStatus) => {
-                    switch (responseStatus.status) {
-                        case 'success':
+                .then(async response => {
+                    switch (response.body) {
+                        case 'OK':
                             console.log("OK");
                             this.wasPosted = true;
                             this.wasPostedWithSuccess = true;
@@ -104,7 +105,9 @@ export default function newsletterForm(formId, errorMessages, trackingInformatio
                 })
                 .catch((error) => {
                     console.error('Beim Ausführen des Fetch ist ein Fehler aufgetreten.', error)
-                   
+                    this.wasPosted = true;
+                    this.wasPostedWithError = true;
+                    this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)
                 })
         },   
         handleOldSubmit(event, form ) {

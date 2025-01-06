@@ -21,8 +21,9 @@ export default {
                     matcher: 'http://localhost:6006/',
                     response: {
                         status: 200,
+                        message: 'success',
                         body: {
-                            status: 'no_valid_newsletters'
+                            status: ''
                         },
                     },
                 }
@@ -55,8 +56,9 @@ export const Default = {
                     matcher: 'http://localhost:6006/',
                     response: {
                         status: 200,
+                        message: 'no_valid_newsletters',
                         body: {
-                            status: 'no_valid_newsletters'
+                            status: ''
                         },
                     },
                 }
