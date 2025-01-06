@@ -1,3 +1,15 @@
+# v1.114.52 (Mon Jan 06 2025)
+
+#### 🐛 Bug Fix
+
+- remove unneeded conditions [#1201](https://github.com/mumprod/hr-design-system-handlebars/pull/1201) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.51 (Mon Jan 06 2025)
 
 #### 🐛 Bug Fix
