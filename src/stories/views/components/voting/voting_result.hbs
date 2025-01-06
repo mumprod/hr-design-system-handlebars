@@ -74,17 +74,14 @@
                 {{/if}}
             {{/if}}
         {{/if}}
-
-        {{#unless ../this.hasRedirect}}
-            {{#unless ../this.isSimpleSecured}}
-                {{#unless ../this.isVotingOver}}
-                    {{#if _showBackButton}}
-                        <div class="w-full h-12 mt-6 sm:mt-12">
-                            {{> components/voting/components/voting_backbutton}}
-                        </div>
-                    {{/if}}            
-                {{/unless}}
-            {{/unless}}
+        
+        {{#unless ../this.isVotingOver}}
+            {{#if _showBackButton}}
+                <div class="w-full h-12 mt-6 sm:mt-12">
+                    {{> components/voting/components/voting_backbutton}}
+                </div>
+            {{/if}}            
         {{/unless}}
+        
     </div>
 {{/if}}
