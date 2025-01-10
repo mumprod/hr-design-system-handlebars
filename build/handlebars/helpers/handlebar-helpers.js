@@ -538,6 +538,26 @@ var helpers = {
     'strip': function (input, param) {
         return input
     },
+
+    /**
+     Handlebars-Helper: isTrue
+     *
+     * Prüft, ob mindestens eine der übergebenen Bedingungen wahr ist.
+     * Nützlich für "ODER"-Bedingungen (`||`) in Templates.
+     *
+     * Nutzung:
+     * {{#isTrue value1 value2}}
+     *     // Wird ausgeführt, wenn eine Bedingung wahr ist
+     * {{else}}
+     *     // Wird ausgeführt, wenn alle Bedingungen falsch sind
+     * {{/isTrue}}
+     */
+    'isTrue': function () {
+        const args = Array.prototype.slice.call(arguments);
+        const options = args.pop();
+        return args.some(Boolean) ? options.fn(this) : options.inverse(this);
+    },
+
     /**
      * Handlebars Helper: joinString
      * 

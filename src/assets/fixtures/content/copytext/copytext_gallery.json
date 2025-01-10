@@ -31,6 +31,7 @@
                         "iconName": "extern"
                     }
                 },
+                
                 "gallery":[
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -40,8 +41,14 @@
                                 "@->token": "image",
                                 "@->value": "jugendfeuerwehr-102"
                             }
+                            
                         ],
-                        "caption": "Bild 1 Beschreibung"
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "caption",
+                                "@->value": "Jugendfeuerwehr"
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -52,7 +59,12 @@
                                 "@->value": "buchmesse-fahnen-102"
                             }
                         ],
-                        "caption": "Bild 2 Beschreibung"
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "caption",
+                                "@->value": "buchmesse"
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -63,7 +75,12 @@
                                 "@->value": "connichi-106"
                             }
                         ],
-                        "caption": "Bild 3 Beschreibung"
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "caption",
+                                "@->value": "connichi"
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -74,7 +91,12 @@
                                 "@->value": "emmanuel-tjeknavorian-108"
                             }
                         ],
-                        "caption": "Bild 4 Beschreibung"
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "caption",
+                                "@->value": "emmanuel-tjeknavorian"
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
@@ -85,7 +107,12 @@
                                 "@->value": "greenteams-grafik-100"
                             }
                         ],
-                        "caption": "Bild 5 Beschreibung"
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "caption",
+                                "@->value": "greenteams-grafik"
+                            }
+                        ]
                     }
                 ]
             }

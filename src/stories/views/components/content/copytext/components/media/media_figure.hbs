@@ -11,20 +11,13 @@
                     {{~> components/content/copytext/components/media/media_figure_byline this}}
                 {{/components/label/label_group}}
             {{/if~}}
-            {{#if this.isVideo}}
+            {{#isTrue this.isVideo this.isGallery }}
                 {{#with this.toModel.mediaBacklinkToStoryTeaser}}
                     {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
                         {{> components/content/copytext/components/media/media_figure_headline}}
                     {{/components/base/link}}
                 {{/with}}
-            {{/if}}
-            {{#if this.isGallery}}
-                {{#with this.toModel.mediaBacklinkToStoryTeaser}}
-                    {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
-                        {{> components/content/copytext/components/media/media_figure_headline}}
-                    {{/components/base/link}}
-                {{/with}}
-            {{/if}}
+            {{/isTrue}}
         </div>
     {{/unless}}
     {{#if this.isAudioOnDemand}}
@@ -46,7 +39,7 @@
         {{/with}}
     {{/if}}
     {{#if this.isGallery}}
-        {{> components/content/copytext/components/gallery/galleryitem_copytext }}
+        {{~> components/content/copytext/components/gallery/galleryitem_copytext _cssClassCaption=_cssClassCaption ~}}
     {{/if}}
     {{#unless _voting-option}}
         {{#if this.teaseritem}}
