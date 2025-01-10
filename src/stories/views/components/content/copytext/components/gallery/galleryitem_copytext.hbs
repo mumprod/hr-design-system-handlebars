@@ -2,6 +2,7 @@
 <div class="relative w-full overflow-hidden"
     x-data="{ 
         slides: [],
+        captions: [],
         currentSlideIndex: 1,
         previous() {                
             this.currentSlideIndex = (this.currentSlideIndex - 1 > 0) ? this.currentSlideIndex - 1 : this.slides.length;            
@@ -13,25 +14,26 @@
         } 
     }" 
     x-init="
-        slides = [...$el.querySelectorAll('.gallery-slider__slide')];
+        slides = [...$el.querySelectorAll('.gallery-slider__image')];
         slides.forEach((slide, index) => slide.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
+        captions = [...$el.querySelectorAll('.gallery-slider__caption')];
+        captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
     ">
 
     <!-- Slider Container -->
     <div class="relative w-full">
         {{#each this}}
-            <div class="gallery-slider__slide">
+            <div class="gallery-slider__image">
                 {{> components/base/image/responsive_image  
                     _type="story" 
                     _variant="100-copytext-portrait" 
                     _addClass="" 
                     _isWebview=true 
                     _noDelay=true}}
-                {{~> components/content/copytext/components/gallery/galleryitem_description_copytext _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption~}}
             </div>
         {{/each}}
 
-        <div class="absolute inset-0 flex items-center justify-between px-4">
+        <div class="relative">
             {{#> components/button/button _variant="primary"  _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
                     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
@@ -40,6 +42,9 @@
             {{/components/button/button}}
         </div>
 
+        {{#each this}}
+            {{~> components/content/copytext/components/gallery/galleryitem_description_copytext _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption~}}
+        {{/each}}
     </div>
 </div>
 {{~/with~}}
