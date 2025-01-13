@@ -1,3 +1,15 @@
+# v1.114.53 (Mon Jan 13 2025)
+
+#### 🐛 Bug Fix
+
+- Introducing switch for three aspectRatio values [#1202](https://github.com/mumprod/hr-design-system-handlebars/pull/1202) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.52 (Mon Jan 06 2025)
 
 #### 🐛 Bug Fix
