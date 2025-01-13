@@ -1,3 +1,17 @@
+# v1.114.54 (Mon Jan 13 2025)
+
+#### 🐛 Bug Fix
+
+- Form Bug - Context Problems fixed [#1203](https://github.com/mumprod/hr-design-system-handlebars/pull/1203) (saad.elbaciri@hr.de [@eduardo-hr](https://github.com/eduardo-hr) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 3
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.53 (Mon Jan 13 2025)
 
 #### 🐛 Bug Fix
