@@ -1,3 +1,15 @@
+# v1.114.55 (Tue Jan 14 2025)
+
+#### 🐛 Bug Fix
+
+- Roll-back image aspectRatio [#1204](https://github.com/mumprod/hr-design-system-handlebars/pull/1204) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.54 (Mon Jan 13 2025)
 
 #### 🐛 Bug Fix
