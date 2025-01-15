@@ -1,5 +1,6 @@
 <div class="gallery-slider__caption">
-    {{~#> components/content/copytext/components/image/caption  _cssClassCaption=_cssClassCaption~}}
+    {{~#> components/content/copytext/components/image/caption _isGallery=true  _cssClassCaption=_cssClassCaption~}}
+        <span class="block font-bold">{{loca "gallery_image_number"}} {{this.number}}/{{this.totalNumber}} {{~#with this.title}} <span class="mx-1.5">|</span>{{this}}{{/with~}}</span>
         {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
         {{~> components/content/copytext/components/image/image_copyright~}}
         <span class="mx-1.5">|</span>
