@@ -96,7 +96,7 @@ const VotingValidator = (context) => {
         //votingOptions = Array.from(hr$('input[name=multivoting]', rootElement)),
         submit = hr$('input[type=submit]', rootElement)[0],
         submitLabel = hr$('.js-voting-submit-button', rootElement)[0],
-        submitHint = hr$('.js-submit-hint')[0]
+        submitHint = hr$('.js-submit-hint', rootElement)[0]
         
     let counter = hr$('.js-voting-counter', rootElement),
         selectedCheckboxes = 0,

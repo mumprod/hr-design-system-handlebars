@@ -6,6 +6,7 @@
        {"value":"","label":"Anmelden","title":"Anmelden","name":"Registrierung","isSelected":false},
        {"value":"","label":"Abmelden","title":"Abmelden","name":"Registrierung","isSelected":false}
     ],
+    "uuid":"d91b7e16-d476-425f-a535-587c6957df37",
     "successLink":"Link wenn erfolgreich",
     "errorLink": "Link wenn Fehler",
     "backlinkUuid": "Backlink mit UUID (altes Voting)",

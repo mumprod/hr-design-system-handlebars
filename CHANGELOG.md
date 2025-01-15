@@ -1,3 +1,90 @@
+# v1.114.55 (Tue Jan 14 2025)
+
+#### 🐛 Bug Fix
+
+- Roll-back image aspectRatio [#1204](https://github.com/mumprod/hr-design-system-handlebars/pull/1204) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.54 (Mon Jan 13 2025)
+
+#### 🐛 Bug Fix
+
+- Form Bug - Context Problems fixed [#1203](https://github.com/mumprod/hr-design-system-handlebars/pull/1203) (saad.elbaciri@hr.de [@eduardo-hr](https://github.com/eduardo-hr) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 3
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- selbaciri (saad.elbaciri@hr.de)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.53 (Mon Jan 13 2025)
+
+#### 🐛 Bug Fix
+
+- Introducing switch for three aspectRatio values [#1202](https://github.com/mumprod/hr-design-system-handlebars/pull/1202) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.52 (Mon Jan 06 2025)
+
+#### 🐛 Bug Fix
+
+- remove unneeded conditions [#1201](https://github.com/mumprod/hr-design-system-handlebars/pull/1201) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.51 (Mon Jan 06 2025)
+
+#### 🐛 Bug Fix
+
+- add Zeilenteaser to voting [#1200](https://github.com/mumprod/hr-design-system-handlebars/pull/1200) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.50 (Mon Jan 06 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3328 c [#1199](https://github.com/mumprod/hr-design-system-handlebars/pull/1199) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.49 (Thu Dec 19 2024)
+
+#### 🐛 Bug Fix
+
+- Add overflow handling and hyphenation to label class in choice component [#1198](https://github.com/mumprod/hr-design-system-handlebars/pull/1198) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.48 (Mon Dec 16 2024)
 
 #### 🐛 Bug Fix

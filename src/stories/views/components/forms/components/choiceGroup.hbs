@@ -40,10 +40,10 @@
         {{/each}}
     </div>
     {{#>components/forms/components/supportingTextBox }}      
-        {{#if _description}}  
-            <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required}}:class="{'hidden': hideDescription()}"{{/if}}>{{{_description}}}</div>
+        {{#if _description-adjust_context}}  
+            <div class="text-xs text-gray-scorpion dark:text-text-dark" {{#if _required-adjust_context}}:class="{'hidden': hideDescription()}"{{/if}}>{{{_description-adjust_context}}}</div>
         {{/if}}
-        {{#if _required}}
+        {{#if _required-adjust_context}}
             <div class="hidden text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" x-text="errorMessage"></div>
         {{/if}}
     {{/components/forms/components/supportingTextBox }}

@@ -1,13 +1,23 @@
-<div class="js-newsletterFormWrapper">
-<form class="c-form o-box -accented -breakout js-form js-load" id="form--{{nextRandom}}" data-hr-new-newsletter-ds='{
-"trackingInformations": {{this.trackingInformations}} }' action="{{configProperty "newsletter.subscription.endpoint"}}" method="post" accept-charset="utf-8">
+<div id="formWrapper" class="mt-4">
+<form class="relative flex flex-col justify-center overflow-hidden group" 
+    id="form{{nextRandom}}" 
+    x-ref="form{{getRandom}}" 
+    ax-load 
+    x-data="newsletterForm('form{{getRandom}}','{{this.trackingInformations}}')" 
+    x-init="formInit()" 
+    x-ignore
+    @submit.prevent
+    action="index.html" 
+    method="post" 
+    accept-charset="utf-8"
+>
 
         {{~> components/forms/components/input
             _type="email"
             _isEmail=true
             _name="email"
             _label="E-Mail"
-            _labelClass="hide"
+            _labelClass=""
             _description=""
             _required=true
             _maxLength="140"
@@ -27,7 +37,7 @@
         }}
   
 
-    {{~> components/forms/components/controls }}
+    {{~> components/forms/components/controls}}
 
 
     {{~> components/forms/components/input
@@ -46,14 +56,29 @@
         _hasLabel=false
     }}
 
-    <script type="text/html" class="js-successMessage">
+    <div class="flex flex-col gap-6 js-successMessage md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
+        x-transition:enter="transition ease-out duration-300 delay-75"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-cloak
+    >
             {{{include "components/newsletter/components/newsletter_success" }}}
-    </script>
-    <script type="text/html" class="js-errorMessage">
+    </div>
+    <div class="flex flex-col gap-6 js-errorMessage md:gap-10" id="errorMessage" x-show="wasPostedWithError"
+        x-transition:enter="transition ease-out duration-300 delay-75"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-cloak
+    >
             {{{include "components/newsletter/components/newsletter_error" }}}
-    </script>
-    <script type="text/html" class="js-alreadyRegisteredMessage">
+    </div>
+    <div class="flex flex-col gap-6 js-alreadyRegisteredMessage md:gap-10" id="alreadyRegisteredMessage" x-show="wasPostedAlreadyRegistered"
+        x-transition:enter="transition ease-out duration-300 delay-75"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-cloak
+    >
             {{{include "components/newsletter/components/newsletter_already_registered" }}}
-    </script>
+    </div>
 </form>
 </div>
