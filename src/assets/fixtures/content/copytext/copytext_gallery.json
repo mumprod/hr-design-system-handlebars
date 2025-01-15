@@ -35,7 +35,7 @@
                 "gallery":[
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "copytext_image_100",
+                        "@->contentpath": "copytext_gallery",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -52,7 +52,7 @@
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "copytext_image_100",
+                        "@->contentpath": "copytext_gallery",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -63,12 +63,16 @@
                             {
                                 "@->contentpath": "caption",
                                 "@->value": "buchmesse"
+                            },
+                            {
+                                "@->contentpath": "number",
+                                "@->value": "2"
                             }
                         ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "copytext_image_100",
+                        "@->contentpath": "copytext_gallery",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -79,12 +83,16 @@
                             {
                                 "@->contentpath": "caption",
                                 "@->value": "connichi"
+                            },
+                            {
+                                "@->contentpath": "number",
+                                "@->value": "3"
                             }
                         ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "copytext_image_100",
+                        "@->contentpath": "copytext_gallery",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -95,12 +103,16 @@
                             {
                                 "@->contentpath": "caption",
                                 "@->value": "emmanuel-tjeknavorian"
+                            },
+                            {
+                                "@->contentpath": "number",
+                                "@->value": "4"
                             }
                         ]
                     },
                     {
                         "@->jsoninclude": "teaser/teaser_images.inc.json",
-                        "@->contentpath": "copytext_image_100",
+                        "@->contentpath": "copytext_gallery",
                         "@->replaceToken": [
                             {
                                 "@->token": "image",
@@ -111,6 +123,10 @@
                             {
                                 "@->contentpath": "caption",
                                 "@->value": "greenteams-grafik"
+                            },
+                            {
+                                "@->contentpath": "number",
+                                "@->value": "5"
                             }
                         ]
                     }
