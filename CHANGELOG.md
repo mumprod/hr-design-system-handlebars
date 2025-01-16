@@ -1,3 +1,15 @@
+# v1.114.56 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- After rollback fixed version of aspect ratio [#1205](https://github.com/mumprod/hr-design-system-handlebars/pull/1205) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.55 (Tue Jan 14 2025)
 
 #### 🐛 Bug Fix
