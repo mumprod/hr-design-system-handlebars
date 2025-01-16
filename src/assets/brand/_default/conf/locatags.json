@@ -214,7 +214,7 @@
     "votingform_single_answer_text": "Nur eine Antwort ist möglich",
     "votingform2F_title_success": "Vielen Dank für Ihre Stimme.",
     "votingform2F_text_success": "Eine E-Mail zur Bestätigung Ihrer Abstimmung wurde Ihnen geschickt. Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner.",
-    "votingform2F_privacy_protection_disclaimer": "Ich stimme der Verarbeitung meiner E-Mail-Adresse zum Zweck der Teilnahme sowie der <a href=\"https://hr.de/datenschutz\" class=\"{nuc https://hr.de/datenschutz nuc}link unbreakable\" target=\"_blank\"><span class=\"unbreakable\">Datenschutzerklärung<svg class=\"icon icon--primary icon--textRight\" role=\"presentation\"><use xlink:href=\"{<% hrcms.delivery.current.assetBaseUrl %>}base/icons/icons/svgmap.min.svg#extern\"/></svg></span></a> des hr zu.",
+    "votingform2F_privacy_protection_disclaimer": "Ich stimme der Verarbeitung meiner E-Mail-Adresse zum Zweck der Teilnahme sowie der <a href=\"https://hr.de/datenschutz\" class=\"{nuc https://hr.de/datenschutz nuc}link unbreakable whitespace-nowrap\" target=\"_blank\"><span class=\"unbreakable text-link dark:text-link-dark ds-link hover:underline\">Datenschutzerklärung<svg class=\"icon icon--primary icon--textRight sb-icon inline -mt-0.5 w-5 h-5 text-link dark:text-link-dark fill-current ml-1\" role=\"presentation\"><use xlink:href=\"{<% hrcms.delivery.current.assetBaseUrl %>}base/icons/icons/svgmap.min.svg#extern\"/></svg></span></a> des hr zu.",
     "votingform_voting_finished": "Diese Abstimmung ist beendet",
     "votingform_already_voted_cookie_hint": "Sie haben bereits an der Abstimmung teilgenommen.",
     "votingform_vote_result": "Anzahl der abgegebenen Stimmen: ",
