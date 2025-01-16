@@ -1,7 +1,7 @@
 <figure class="relative {{_addClass}}" x-data="{ avStart: false }">
     {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
     {{#unless _voting-option}}
-        <div class="py-3 sm:py-4 border-t-[3px] border-gray-boulder dark:border-text-dark {{_cssClassCaption}}">
+        <div class="py-3 sm:py-4 {{#unless _noBorder}}border-t-[3px] border-gray-boulder dark:border-text-dark {{/unless}}{{_cssClassCaption}}">
             {{#if this.label}}
                 {{#> components/label/label_group _css="dark:text-text-dark"}}
                     {{#with this.label}}
