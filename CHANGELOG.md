@@ -1,3 +1,15 @@
+# v1.114.57 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Changing User Consent Text [#1206](https://github.com/mumprod/hr-design-system-handlebars/pull/1206) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.56 (Thu Jan 16 2025)
 
 #### 🐛 Bug Fix
