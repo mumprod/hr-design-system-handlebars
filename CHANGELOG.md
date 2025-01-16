@@ -1,3 +1,15 @@
+# v1.114.60 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Adding externalservice for Butawa 2025 changing name for Europawahl [#1209](https://github.com/mumprod/hr-design-system-handlebars/pull/1209) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.59 (Thu Jan 16 2025)
 
 #### 🐛 Bug Fix
