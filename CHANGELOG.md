@@ -1,3 +1,16 @@
+# v1.114.58 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Refactor media_figure.hbs to conditionally apply border class based o… [#1207](https://github.com/mumprod/hr-design-system-handlebars/pull/1207) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.57 (Thu Jan 16 2025)
 
 #### 🐛 Bug Fix
