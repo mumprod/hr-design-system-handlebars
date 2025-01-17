@@ -1,3 +1,15 @@
+# v1.114.62 (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- Adding new structure for butawa [#1211](https://github.com/mumprod/hr-design-system-handlebars/pull/1211) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.61 (Thu Jan 16 2025)
 
 #### 🐛 Bug Fix
