@@ -138,7 +138,7 @@ const ExternalService = function (context) {
         rootElement.insertBefore(divTag, null)
         loadScript(
             'wahl-o-mat-js',
-            'https://static.hr.de/wahl-o-mat/embed.js',
+            'https://static.hr.de/wahl-o-mat/bundestagswahl/embed.js',
             true
         )
 
