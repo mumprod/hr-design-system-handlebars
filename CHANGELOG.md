@@ -1,3 +1,15 @@
+# v1.114.63 (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- New label "Hessen am Abend" [#1212](https://github.com/mumprod/hr-design-system-handlebars/pull/1212) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.62 (Fri Jan 17 2025)
 
 #### 🐛 Bug Fix
