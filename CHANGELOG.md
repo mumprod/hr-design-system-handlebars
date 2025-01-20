@@ -1,3 +1,16 @@
+# v1.114.65 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- Add optional sticky media player wrapper for video on demand and live… [#1214](https://github.com/mumprod/hr-design-system-handlebars/pull/1214) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.64 (Mon Jan 20 2025)
 
 #### 🐛 Bug Fix
