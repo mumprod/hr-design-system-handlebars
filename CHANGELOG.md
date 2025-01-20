@@ -1,3 +1,16 @@
+# v1.114.67 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- Disable uxAction logging for first-time sharing module display, becau… [#1216](https://github.com/mumprod/hr-design-system-handlebars/pull/1216) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.66 (Mon Jan 20 2025)
 
 #### 🐛 Bug Fix
