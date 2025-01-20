@@ -8,11 +8,22 @@ const hbsTemplates = []
 hbsTemplates['mediaplayer'] = handlebars.compile(`
     {{> components/mediaplayer/media_player}}  
   `)
-
+hbsTemplates['stickyMediaplayer'] = handlebars.compile(` 
+    <div class="w-135">  
+    {{#> components/mediaplayer/mediaPlayer_stickyWrapper}}
+        {{> components/mediaplayer/media_player}}
+    {{/components/mediaplayer/mediaPlayer_stickyWrapper}}
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>`)
 const Template = (args) => {
     return hbsTemplates['mediaplayer']({ ...args })
 }
-
+const Template2 = (args) => {
+    return hbsTemplates['stickyMediaplayer']({ ...args })
+}
 const snapshotTemplate = (args) => {
     return getSnapshotsTemplate({ hbsTemplates, args })
 }
@@ -43,7 +54,18 @@ export default {
         chromatic: { disableSnapshot: true }
     },
 }
-
+export const StickyVideoplayer = {
+    render: Template2.bind({}),
+    name: 'StickyVideoplayer',
+    decorators: [
+        (Story) => {
+            return `<div class="flex flex-row pt-5">
+                         ${Story()} 
+                     </div>`
+        },
+    ],
+    args: snapshotsJson.video.args,
+}
 export const Videoplayer = {
     render: Template.bind({}),
     name: 'Videoplayer',

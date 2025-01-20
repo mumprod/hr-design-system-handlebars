@@ -1,0 +1,82 @@
+
+    <div x-data="stickyPlayer" x-init="init()" class="relative ar-16-9 bg-slate-400" x-intersect:leave.threshold.15="inViewport = false" x-intersect:enter.threshold.15="inViewport = true; videoWasStopedWhenSticky = false">
+        <div x-ref="videoElementWrapper"
+            class="" 
+            :class="{ 'ar-16-9 w-96 fixed right-12 bottom-12 z-300 ': shouldVideoBeFixed() }">
+            {{> @partial-block }} 	
+        </div>
+        	<div  class="absolute hidden bg-white -bottom-20 -right-80">
+        shouldVideoBeFixed: <span x-text="shouldVideoBeFixed()"></span><br>
+		inViewport: <span x-text="inViewport"></span><br>
+		videoStarted: <span x-text="videoStarted"></span><br>
+		videoStoped: <span x-text="videoStoped"></span><br>
+		videoPlaying: <span x-text="videoPlaying"></span><br>
+		videoWasStopedWhenSticky: <span x-text="videoWasStopedWhenSticky"></span><br>
+       
+
+	</div>
+        <script>
+            var stickyPlayer = () => {
+                return {
+                    eventListenerInitialized: false,
+                    inViewport: true, 
+                    videoStarted: false,
+                    videoStoped: true,
+                    videoPlaying: false,
+                    videoWasStopedWhenSticky: false,
+                    videoElement: null,
+                    shouldVideoBeFixed: function () {
+                        return (!this.inViewport && this.videoPlaying) || (!this.inViewport && this.videoWasStopedWhenSticky) 
+                        //return !this.inViewport;
+                    },
+                    setupVideoEventListeners: function () {
+                        console.log("setupVideoEventListeners");
+                        if(!this.eventListenerInitialized) {                          
+                            this.videoElement.addEventListener("play", () => {
+                                console.log("video:play");
+                                this.videoStarted = true;
+                                this.videoPlaying = true;
+                                this.videoStoped = false;
+                            });
+                            this.videoElement.addEventListener("pause", () => {
+                                console.log("video:pause");
+                                this.videoPlaying = false;
+                                this.videoStoped = true;
+                                if (!this.inViewport) {
+                                    this.videoWasStopedWhenSticky = true;
+                                }
+                            });
+                            this.eventListenerInitialized = true;
+                        }
+                    },
+                    init: function () {
+                        this.videoElement = this.$refs.videoElementWrapper.querySelector("video");
+                        if(this.videoElement) {
+                            this.setupVideoEventListeners();
+                        } else {
+                            console.log("No video element found in sticky player.");
+                            const self = this; // Save a reference to the Alpine instance
+                            const observer = new MutationObserver(function() {
+                                console.log("MutationObserver: Mutation observed in sticky player.");
+                                
+                                // Re-check for the video element
+                                self.videoElement = self.$refs.videoElementWrapper.querySelector("video");
+                                if (self.videoElement) {
+                                    console.log(self.videoElement)
+                                    self.setupVideoEventListeners();
+                                    observer.disconnect(); // Stop observing after the video is found
+                                }
+                            });
+
+                            observer.observe(this.$refs.videoElementWrapper, {
+                                subtree: true,
+                                childList: true
+                            });
+                        }
+                        
+                    },
+                }
+            }               
+        </script>
+    
+    </div>
