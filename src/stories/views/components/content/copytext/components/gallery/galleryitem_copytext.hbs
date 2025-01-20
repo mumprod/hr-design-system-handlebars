@@ -23,21 +23,7 @@
 
     <!-- Slider Container -->
     <div class="relative w-full">
-        {{#each this}}
-            <div class="gallery-slider__image"
-                x-transition:enter="transition ease-out duration-700 delay-75"
-                x-transition:enter-start="opacity-0 transform scale-90"
-                x-transition:enter-end="opacity-100 transform scale-100">
-                {{> components/base/image/responsive_image  
-                    _type="story" 
-                    _variant="100-copytext-portrait" 
-                    _addClass="" 
-                    _isWebview=true 
-                    _noDelay=true}}
-            </div>
-        {{/each}}
-
-        <div class="relative">
+        <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center">
             {{#> components/button/button _variant="transparent"  _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
                     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
@@ -45,10 +31,11 @@
                 {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
         </div>
-
-        {{#each this}}
-            {{~> components/content/copytext/components/gallery/galleryitem_description_copytext _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption~}}
+        {{#each this.items}}
+         {{~> components/content/copytext/components/gallery/galleryitem_figure _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption-adjust_context ~}}
         {{/each}}
+
+
     </div>
 </div>
 {{~/with~}}
