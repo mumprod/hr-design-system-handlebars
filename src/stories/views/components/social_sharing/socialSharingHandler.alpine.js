@@ -44,12 +44,12 @@ export default (module) => ({
 
         if(this.sharingModuleWasNeverShown && !desktop){
             console.log('Sharing Module '+module+' was shown for the first time!!!');
-            uxAction('socialShareClick::'+module+'::shown');
+            //uxAction('socialShareClick::'+module+'::shown');
             this.sharingModuleWasNeverShown = false;
         }
         if(this.desktopSharingModuleWasNeverShown && desktop){
             console.log('Sharing Module '+module+'Desktop was shown for the first time!!!');
-            uxAction('socialShareClick::'+module+'Desktop::shown');
+            //uxAction('socialShareClick::'+module+'Desktop::shown');
             this.desktopSharingModuleWasNeverShown = false;
         }
     },
