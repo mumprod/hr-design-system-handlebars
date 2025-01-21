@@ -4,7 +4,9 @@
         class="transition-all lg:transition-none right-4" 
         :class="{   'ar-16-9 w-1/2 max-w-70 sm:w-70 fixed z-300 animate-fade-right animate-once animate-duration-1000': shouldVideoBeFixed(),
                     'animate-fade animate-duration-1000 animate-ease-in-out': !shouldVideoBeFixed(),
-                    'top-14 md:top-16 lg:top-31': $store.navIsVisible,
+                    'top-14 md:top-16': $store.navIsVisible,
+                    'lg:top-31': $store.navIsVisible && !$store.subNavIsVisible,
+                    'lg:top-40': $store.navIsVisible && $store.subNavIsVisible,
                     'top-4 lg:top-20': !$store.navIsVisible}">                   
         {{> @partial-block }} 
         <button @click="closeVideo()" class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 z-300 hover:scale-105"
@@ -15,7 +17,6 @@
             </div>
         </button>	
     </div>
-    
     <script>
         var stickyPlayer = () => {
             return {
