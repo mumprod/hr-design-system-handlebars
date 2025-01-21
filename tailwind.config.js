@@ -154,6 +154,7 @@ module.exports = {
                 '22': '5.5rem',
                 '26': '6.5rem',
                 '30': '7.5rem',
+                '31': '7.75rem',
                 '35': '8.75rem',
                 '37': '9.25rem',
                 '-37': '-9.25rem',
@@ -452,5 +453,6 @@ module.exports = {
             addUtilities(utilities, variants('borderColor'))
         },
         require('tailwindcss-counter')(),
+        require('tailwindcss-animated')
     ],
 }
