@@ -1,3 +1,16 @@
+# v1.114.68 (Tue Jan 21 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-1087 - Ticker: Livestreams ohne Unterbrechung (Enhancements) [#1217](https://github.com/mumprod/hr-design-system-handlebars/pull/1217) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.67 (Mon Jan 20 2025)
 
 #### 🐛 Bug Fix
