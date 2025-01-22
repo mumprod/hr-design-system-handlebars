@@ -1,5 +1,5 @@
 
-<div x-data="stickyPlayer" class="relative ar-16-9 bg-slate-400" x-intersect:leave.threshold.45="inViewport = false" x-intersect:enter.threshold.45="inViewport = true; videoWasStopedWhenSticky = false">
+<div x-data="stickyPlayer" class="relative ar-16-9" x-intersect:leave.threshold.45="inViewport = false" x-intersect:enter.threshold.45="inViewport = true; videoWasStopedWhenSticky = false">
     <div x-ref="videoElementWrapper"
         class="transition-all lg:transition-none right-4" 
         :class="{   'ar-16-9 w-1/2 max-w-70 sm:w-70 fixed z-300 animate-fade-right animate-once animate-duration-1000': shouldVideoBeFixed(),
@@ -7,7 +7,7 @@
                     'top-14 md:top-16': $store.navIsVisible,
                     'lg:top-31': $store.navIsVisible && !$store.subNavIsVisible,
                     'lg:top-40': $store.navIsVisible && $store.subNavIsVisible,
-                    'top-4 lg:top-20': !$store.navIsVisible}">                   
+                    'top-14 lg:top-20': !$store.navIsVisible}">                   
         {{> @partial-block }} 
         <button @click="closeVideo()" class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 z-300 hover:scale-105"
                 :class="{'hidden': !shouldVideoBeFixed(),
@@ -26,7 +26,7 @@
                 videoStoped: true,
                 videoPlaying: false,
                 videoWasStopedWhenSticky: false,
-                videoWasStopedByUser: false,
+                videoWasClosedByUser: false,
                 videoElement: null,
 
                 shouldVideoBeFixed: function () {
@@ -46,8 +46,8 @@
                             this.videoPlaying = false;
                             this.videoStoped = true;
                             if (!this.inViewport ) {
-                                if(this.videoWasStopedByUser){
-                                    this.videoWasStopedByUser = false
+                                if(this.videoWasClosedByUser){
+                                    this.videoWasClosedByUser = false
                                 } else {
                                     this.videoWasStopedWhenSticky = true;
                                 }                               
@@ -57,8 +57,9 @@
                     }
                 },
                 closeVideo: function () {
-                    this.videoElement.pause();
-                    this.videoWasStopedByUser = true;
+                    this.videoWasStopedWhenSticky = false;
+                    this.videoWasClosedByUser = true;
+                    this.videoElement.pause();                 
                 },
                 init: function () {
                     this.videoElement = this.$refs.videoElementWrapper.querySelector("video");

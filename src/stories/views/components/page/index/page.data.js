@@ -2,7 +2,7 @@ import structuredClone from 'core-js-pure/actual/structured-clone'
 import NavigationData from '../../site_header/fixtures/site_header.json'
 import teaserStandard from '../../teaser/fixtures/teaser_standard.json'
 
-import data_story from '../story/fixtures/story.json'
+import data_story from '../story/fixtures/story_with_video.json'
 import data_breadcrumb from '../../navigation/breadcrumb/fixtures/breadcrumb.json'
 
 const NavigationDataWithTeaser = structuredClone(
