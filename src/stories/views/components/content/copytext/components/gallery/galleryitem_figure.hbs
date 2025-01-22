@@ -1,23 +1,35 @@
-<figure class="">
-    <div class="relative ar-16-9 gallery-slider__image"
+<figure class="" {{#unless @first}} x-cloak {{/unless}}>
+    <div class="relative ar-16-9 gallery-slider__image" 
         x-transition:enter="transition ease-out duration-700 delay-75"
         x-transition:enter-start="opacity-0 transform scale-90"
         x-transition:enter-end="opacity-100 transform scale-100">
         {{~#if this.displayOriginal.isTrue ~}}
+            <div aria-hidden="true">
+                {{> components/base/image/responsive_image
+                        _type="gallery"
+                        _variant="default"
+                        _addClass="ar-16-9"
+                        _noDelay=(if @first true '')
+                        _isWebview=true}}
+                <div class="absolute top-0 bottom-0 left-0 right-0 w-full bg-white/80 backdrop-blur-md" />
+            </div>
             {{> components/base/image/responsive_image
                 _type="gallery"
                 _variant="portrait"
                 _addClass="absolute top-0 left-0 right-0 bottom-0"
                 _addClassImg="!w-auto h-full absolute left-1/2 -translate-x-1/2"
-                _noDelay=(if @first true false)
+                _noDelay=(if @first true '')
                 _isWebview=true}}
         {{else}}
             {{> components/base/image/responsive_image  
                 _type="gallery" 
                 _variant="default" 
                 _addClass="ar-16-9"
-                _noDelay=(if @first true false)
+                _noDelay=(if @first true '')
                 _isWebview=true}}
+                <div class="absolute top-0 bottom-0 left-0 right-0 w-full bg-white/80 backdrop-blur-md">
+
+                </div>
         {{~/if~}}
     </div>
     {{~> components/content/copytext/components/gallery/galleryitem_description_copytext _mediaBacklinkToStoryTeaser=_mediaBacklinkToStoryTeaser _cssClassCaption=_cssClassCaption~}}
