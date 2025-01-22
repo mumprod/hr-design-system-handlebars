@@ -21,9 +21,8 @@
         captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
     ">
 
-    <!-- Slider Container -->
     <div class="relative w-full">
-        <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center">
+        <div class="absolute top-0 bottom-0 left-0 right-0 ar-16-9">
             {{#> components/button/button _variant="transparent"  _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
                     {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
