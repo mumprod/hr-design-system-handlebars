@@ -1,3 +1,190 @@
+# v1.114.70 (Wed Jan 22 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3517 c [#1219](https://github.com/mumprod/hr-design-system-handlebars/pull/1219) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.69 (Tue Jan 21 2025)
+
+#### 🐛 Bug Fix
+
+- Enhance media player sticky wrapper positioning based on subnavigation visibility [#1218](https://github.com/mumprod/hr-design-system-handlebars/pull/1218) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.68 (Tue Jan 21 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-1087 - Ticker: Livestreams ohne Unterbrechung (Enhancements) [#1217](https://github.com/mumprod/hr-design-system-handlebars/pull/1217) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.67 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- Disable uxAction logging for first-time sharing module display, becau… [#1216](https://github.com/mumprod/hr-design-system-handlebars/pull/1216) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.66 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- voting fine-tuning [#1215](https://github.com/mumprod/hr-design-system-handlebars/pull/1215) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.65 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- Add optional sticky media player wrapper for video on demand and live… [#1214](https://github.com/mumprod/hr-design-system-handlebars/pull/1214) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.64 (Mon Jan 20 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3517 [#1213](https://github.com/mumprod/hr-design-system-handlebars/pull/1213) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.63 (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- New label "Hessen am Abend" [#1212](https://github.com/mumprod/hr-design-system-handlebars/pull/1212) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.62 (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- Adding new structure for butawa [#1211](https://github.com/mumprod/hr-design-system-handlebars/pull/1211) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.61 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- switch to new voting [#1210](https://github.com/mumprod/hr-design-system-handlebars/pull/1210) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.60 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Adding externalservice for Butawa 2025 changing name for Europawahl [#1209](https://github.com/mumprod/hr-design-system-handlebars/pull/1209) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.59 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Adding missing merged json [#1208](https://github.com/mumprod/hr-design-system-handlebars/pull/1208) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.58 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Refactor media_figure.hbs to conditionally apply border class based o… [#1207](https://github.com/mumprod/hr-design-system-handlebars/pull/1207) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.57 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- Changing User Consent Text [#1206](https://github.com/mumprod/hr-design-system-handlebars/pull/1206) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.56 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- After rollback fixed version of aspect ratio [#1205](https://github.com/mumprod/hr-design-system-handlebars/pull/1205) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.55 (Tue Jan 14 2025)
 
 #### 🐛 Bug Fix
