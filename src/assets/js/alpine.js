@@ -22,6 +22,7 @@ AsyncAlpine.init(Alpine)
     .data('inputHandler', ()=> import('components/forms/js/inputHandler.alpine.js'))
     .data('contactForm', ()=> import('components/forms/js/contactForm.alpine.js'))
     .data('newsletterForm', ()=> import('components/newsletter/js/newsletterForm.alpine.js'))
+    .data('gallerySlider', () => import('components/content/copytext/components/gallery/js/gallerySlider.alpine.js'))
     .start()
 
 window.Alpine = Alpine

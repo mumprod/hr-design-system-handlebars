@@ -1,0 +1,142 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Bildergalerie"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isGallery": true,
+                "toModel": {
+                    "galleryPage":{
+                        "isGallery": true,
+                        "label": {
+                            "type": "gallery",
+                            "loca": "label_gallery",
+                            "byline": {
+                            "bylineText": "5 Bilder"
+                            }
+                        },
+                        "toModel": {
+                            "mediaBacklinkToStoryTeaser": {
+                                "link": {
+                                    "url": "/galleryseite",
+                                    "isTargetBlank": false
+                                },
+                                "readMoreScreenreader": "zur hr3.de Bildergalerie",
+                                "title": "Bildergalerie title",
+                                "isForeignBrand": true,
+                                "readMore": "zur hr3.de Bildergalerie-Einzelseite",
+                                "hasIcon": true,
+                                "iconName": "extern"
+                            }
+                        },
+                        "gallery":{
+                            "items":[
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "jugendfeuerwehr-102"
+                                        }    
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "Jugendfeuerwehr"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "buchmesse-fahnen-102"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "buchmesse"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "connichi-106"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "connichi"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "emmanuel-tjeknavorian-108"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "emmanuel-tjeknavorian"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "4"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "greenteams-grafik-100"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "greenteams-grafik"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

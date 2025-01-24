@@ -1,0 +1,102 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Bildergalerie-Hochkantbildern"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isGallery": true,
+                "toModel": {
+                    "galleryPage":{
+                        "isGallery": true,
+                        "label": {
+                            "type": "gallery",
+                            "loca": "label_gallery",
+                            "byline": {
+                            "bylineText": "3 Bilder"
+                            }
+                        },
+                        "toModel": {
+                            "mediaBacklinkToStoryTeaser": {
+                                "link": {
+                                    "url": "/galleryseite",
+                                    "isTargetBlank": false
+                                },
+                                "readMoreScreenreader": "zur hr3.de Bildergalerie",
+                                "title": "Bildergalerie title",
+                                "isForeignBrand": true,
+                                "readMore": "zur hr3.de Bildergalerie-Einzelseite",
+                                "hasIcon": true,
+                                "iconName": "extern"
+                            }
+                        },
+                        "gallery":{
+                            "items":[
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery_portrait",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "decke-uni-marburg-104"
+                                        }    
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "decke uni marburg 1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery_portrait",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "decke-uni-marburg-102"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "decke uni marburg 2"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@->jsoninclude": "page/story/story_images.inc.json",
+                                    "@->contentpath": "copytext_gallery_portrait",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "dach-uni-marburg-101"
+                                        }
+                                    ],
+                                    "@->overrides": [
+                                        {
+                                            "@->contentpath": "caption",
+                                            "@->value": "decke uni marburg 3"
+                                        },
+                                        {
+                                            "@->contentpath": "number",
+                                            "@->value": "3"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
