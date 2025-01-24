@@ -18,6 +18,7 @@ import copytext_audio_json from './fixtures/copytext_audio.json'
 import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
 import copytext_livestream_json from './fixtures/copytext_livestream.json'
 import copytext_gallery_json from './fixtures/copytext_gallery.json'
+import copytext_gallery_portrait_json from './fixtures/copytext_gallery_portrait.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -144,6 +145,12 @@ export const WithGallery = {
     render: Template.bind({}),
     name: 'Bildergalerie',
     args: copytext_gallery_json,
+}
+
+export const WithGalleryPortrait = {
+    render: Template.bind({}),
+    name: 'Bildergalerie mit Hochkantbildern',
+    args: copytext_gallery_portrait_json,
 }
 
 export const SnapshotWithMedia = {
