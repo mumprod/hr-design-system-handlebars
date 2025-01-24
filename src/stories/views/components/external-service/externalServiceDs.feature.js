@@ -96,8 +96,11 @@ const ExternalService = function (context) {
                     case 'wahlkreiskarte':
                         createWahlEmbed()
                         break
-                    case 'wahlomat':
-                        createWahlOMatEmbed()
+                    case 'wahlomat-euwa':
+                        createWahlOMatEuwaEmbed()
+                        break
+                    case 'wahlomat-butawa':
+                        createWahlOMatButawaEmbed()
                         break
                     case 'wahl-gemeinde-ergebnis':
                         createWahlGemeindeErgebnisEmbed()
@@ -116,14 +119,26 @@ const ExternalService = function (context) {
         gemeindewahlergebnis = new CreateWahlGemeindeErgebnis(embedCode, rootElement)
         gemeindewahlergebnis.createErgebnis()
     }
-    const createWahlOMatEmbed = function () {
+    const createWahlOMatEuwaEmbed = function () {
 
         const divTag = document.createElement('div')
-        divTag.id = 'wahl-o-mat'
+        divTag.id = 'wahl-o-mat-europawahl-2024'
         rootElement.insertBefore(divTag, null)
         loadScript(
             'wahl-o-mat-js',
             'https://static.hr.de/wahl-o-mat/embed.js',
+            true
+        )
+
+    }
+    const createWahlOMatButawaEmbed = function () {
+
+        const divTag = document.createElement('div')
+        divTag.id = 'wahl-o-mat-bundestagswahl-2025'
+        rootElement.insertBefore(divTag, null)
+        loadScript(
+            'wahl-o-mat-js',
+            'https://static.hr.de/wahl-o-mat/bundestagswahl/embed.js',
             true
         )
 

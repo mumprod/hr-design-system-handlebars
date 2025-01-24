@@ -11,7 +11,9 @@
     <div class="{{#if ../this.isSimpleSecured}}js-load{{/if}}{{#if _addClass}} {{_addClass}}{{/if}}"
         {{#unless ../this.isVotingOver}}
             {{#if ../this.isSimpleSecured}}
-                data-hr-voting-result-cookie-ds='{"cookieLifetime":"{{this.cookieLifetime}}","votingId":"{{this.sophoraId}}"}'
+                {{#if _statusDone}}
+                    data-hr-voting-result-cookie-ds='{"cookieLifetime":"{{this.cookieLifetime}}","votingId":"{{this.sophoraId}}"}'
+                {{/if}}
             {{/if}}
         {{/unless}}
     >
@@ -35,7 +37,7 @@
                 <div class="flex">
                     <div class="grow">
                         <div class="{{#if @first}}mt-7 sm:mt-9{{else}}mt-3 sm:mt-4{{/if}} text-base sm:text-lg font-copy dark:text-text-dark">{{this.label}}</div>
-                        <div class="mt-0.5 sm:mt-1 w-full bg-gray-alto rounded-full h-2">
+                        <div class="mt-0.5 mb-[9px] sm:mt-1 w-full bg-gray-alto rounded-full h-2">
                             <div class="{{#if this.isWinner}}bg-orange-spicyCarrot-hex{{else}}bg-blue-congress-hex{{/if}} h-2 rounded-full" style="width:{{this.roundedPercentageCount}}%;animation: progressAnimationDS 5s"></div>
                         </div>
                     </div>

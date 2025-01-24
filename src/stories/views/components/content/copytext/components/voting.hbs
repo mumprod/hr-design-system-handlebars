@@ -2,7 +2,8 @@
     <div class="mt-6 italic text-gray-dark">coming soon: Voting-component</div>
 {{~else~}}
     {{#if this.isMultiVote}}
-        {{> modules/teaser/voting-teaser/multiVotingTeaser _addClass="print:hidden copytext__clearBox"}}
+        {{!> modules/teaser/voting-teaser/multiVotingTeaser _addClass="print:hidden copytext__clearBox"}}
+        {{> components/voting/voting}}
     {{else}}
         {{> modules/teaser/voting-teaser/singleVotingTeaser _addClass="print:hidden copytext__clearBox"}}
     {{/if}}
