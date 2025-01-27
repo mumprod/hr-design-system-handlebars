@@ -538,6 +538,7 @@ var helpers = {
     'strip': function (input, param) {
         return input
     },
+    
     /**
      * Handlebars Helper: joinString
      * 

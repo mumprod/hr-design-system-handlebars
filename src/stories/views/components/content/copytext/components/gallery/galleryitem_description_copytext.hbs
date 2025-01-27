@@ -1,0 +1,18 @@
+<figcaption class="gallery-slider__caption">
+    {{~#> components/content/copytext/components/image/caption _isFullTextVisible=true  _cssClassCaption=_cssClassCaption~}}
+        <span class="block font-bold">{{loca "gallery_image_number"}} {{this.number}}/{{this.totalNumber}} {{~#with this.title}} <span class="mx-1.5">|</span>{{this}}{{/with~}}</span>
+        {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
+        {{~> components/content/copytext/components/image/image_copyright~}}
+        <span class="mx-1.5">|</span>
+        {{~#with _mediaBacklinkToStoryTeaser-adjust_context~}}
+            {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
+                <span>
+                    {{~this.readMore~}}
+                    {{~#if this.hasIcon}}
+                        {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
+                    {{~/if~}}
+                </span>
+            {{~/components/base/link~}}
+        {{~/with~}}
+    {{~/components/content/copytext/components/image/caption~}}
+</figcaption>

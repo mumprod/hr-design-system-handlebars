@@ -99,5 +99,58 @@
                 }
             ]
         }
-    }    
+    },
+    "copytext_gallery": {
+        "isImage": true,
+        "showFullSize": {
+            "isTrue": true
+        },
+        "displayOriginal": {
+            "isTrue": false
+        },
+        "number": "1",
+        "totalNumber": "5",
+        "title":"title",
+        "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
+        "copyrightWithLinks": "Karsten Hufer",
+        "imageJson": "Beispiel JSON",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-16to9__small.jpg 320w, images/{#image}_v-16to9__medium.jpg 480w, images/{#image}_v-16to9__medium__extended.jpg 640w, images/{#image}_v-16to9.jpg 960w, images/{#image}_v-16to9__retina.jpg 1920w"
+                }
+            ]
+        }
+    },
+    "copytext_gallery_portrait": {
+        "isImage": true,
+        "showFullSize": {
+            "isTrue": true
+        },
+        "displayOriginal": {
+            "isTrue": true
+        },
+        "number": "1",
+        "totalNumber": "5",
+        "title":"title",
+        "caption": "Zum Glück ragt Hessens höchster Berg, die Wasserkuppe, gelegentlich aus der derzeitigen Nebelsuppe heraus, und so gelang mit dem Sternenteleskop ein Blick auf den magischen Rosetten-Nebel, einer Himmelsregion, in der gerade neue Sterne geboren werden. - Diese spektakuläre Momentaufnahme hat uns hessenschau.de-Nutzer Michael Keusgen zukommen lassen",
+        "copyrightWithLinks": "Karsten Hufer",
+        "imageJson": "Beispiel JSON",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-16to9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-Xto9__small.jpg 135w, images/{#image}_v-Xto9__medium.jpg 203w, images/{#image}_v-Xto9.jpg 405w, images/{#image}_v-Xto9__retina.jpg 810w"
+                }
+            ]
+        }
+    }
+
 }

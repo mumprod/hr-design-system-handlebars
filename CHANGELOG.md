@@ -1,3 +1,16 @@
+# v1.114.71 (Fri Jan 24 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-3381: Bildergalerie im Artikel kommt aus Storybook [#1220](https://github.com/mumprod/hr-design-system-handlebars/pull/1220) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.70 (Wed Jan 22 2025)
 
 #### 🐛 Bug Fix

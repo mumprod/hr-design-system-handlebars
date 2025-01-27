@@ -11,7 +11,7 @@
                     {{~> components/content/copytext/components/media/media_figure_byline this}}
                 {{/components/label/label_group}}
             {{/if~}}
-            {{#if this.isVideo}}
+            {{#if _hasHeadline}}
                 {{#with this.toModel.mediaBacklinkToStoryTeaser}}
                     {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark ds-link block"}}
                         {{> components/content/copytext/components/media/media_figure_headline}}
@@ -52,30 +52,35 @@
             {{/if}} 
         {{/with}}
     {{/if}}
+    {{#if this.isGallery}}
+        {{~> components/content/copytext/components/gallery/galleryitem_copytext _cssClassCaption=_cssClassCaption ~}}
+    {{/if}}
     {{#unless _voting-option}}
-        {{#if this.teaseritem}}
-            {{#if this.isAudio}}
-                {{~#> components/content/copytext/components/image/caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
-                    {{~> components/content/copytext/components/image/image_copyright~}}
-                    <span class="mx-1.5">|</span>
-                    {{~#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context~}}
-                        {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
-                            <span>
-                                {{~this.readMore~}}
-                                {{~#if this.hasIcon}}
-                                    {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
-                                {{~/if~}}
-                            </span>
-                        {{~/components/base/link~}}
-                    {{~/with~}}
-                {{~/components/content/copytext/components/image/caption~}}
-            {{else}}
-                {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
-                    {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
-                    {{~> components/content/copytext/components/image/image_copyright~}}
-                {{~/components/content/copytext/components/image/collapsible_caption~}}
+        {{#unless this.isGallery}}
+            {{#if this.teaseritem}}
+                {{#if this.isAudio}}
+                    {{~#> components/content/copytext/components/image/caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
+                        {{~> components/content/copytext/components/image/image_copyright~}}
+                        <span class="mx-1.5">|</span>
+                        {{~#with ../this.toModel.mediaBacklinkToStoryTeaser-adjust_context~}}
+                            {{~#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"~}}
+                                <span>
+                                    {{~this.readMore~}}
+                                    {{~#if this.hasIcon}}
+                                        {{~> components/base/image/icon _icon=this.iconName _iconmap="icons" _addClass="inline -mt-0.5 ml-1 w-5 h-5 fill-current"~}}
+                                    {{~/if~}}
+                                </span>
+                            {{~/components/base/link~}}
+                        {{~/with~}}
+                    {{~/components/content/copytext/components/image/caption~}}
+                {{else}}
+                    {{~#> components/content/copytext/components/image/collapsible_caption this.teaseritem _cssClassCaption=_cssClassCaption~}}
+                        {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text~}} {{/if}}
+                        {{~> components/content/copytext/components/image/image_copyright~}}
+                    {{~/components/content/copytext/components/image/collapsible_caption~}}
+                {{/if}}
             {{/if}}
-        {{/if}}
+        {{/unless}}
     {{/unless}}
     {{~> components/base/a11y/hiddenText _locaTag=_a11yOutro-loca ~}}
 </figure>

@@ -116,6 +116,8 @@
     /* Button */
     --color-button-inverted: theme('colors.white.DEFAULT');
     --color-button-hollow: theme('colors.blue.science.hex');
+    --color-button-transparent: rgba(255, 255, 255, 0.80);
+    --color-button-transparent--dark: rgba(255, 255, 255, 0.55);
     /* Media-Button */
     --color-media-button: theme('colors.blue.jellyBean.hex');
     /* Media-Button Live */
