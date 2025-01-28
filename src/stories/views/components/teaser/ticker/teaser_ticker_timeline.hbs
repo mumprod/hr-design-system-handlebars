@@ -17,9 +17,9 @@
                             {{this.broadcastDate }}
                         {{else}}
                             {{#if ../../../this.isOlderThanToday}}
-                                {{loca "date_time_ticker" this.broadcastDate }} Uhr
+                                {{this.broadcastDate }}
                             {{else}}
-                                {{loca "date_time_ticker" this.time }} Uhr
+                                {{this.time }}
                             {{/if}}
                         {{/if}}
                     </div>
