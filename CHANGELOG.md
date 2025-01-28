@@ -1,3 +1,15 @@
+# v1.114.73 (Tue Jan 28 2025)
+
+#### 🐛 Bug Fix
+
+- show complete date item is not from today [#1222](https://github.com/mumprod/hr-design-system-handlebars/pull/1222) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.72 (Mon Jan 27 2025)
 
 #### 🐛 Bug Fix
