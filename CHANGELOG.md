@@ -1,3 +1,15 @@
+# v1.114.79 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add adjust context to if [#1228](https://github.com/mumprod/hr-design-system-handlebars/pull/1228) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.78 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix
