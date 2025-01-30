@@ -1,3 +1,15 @@
+# v1.114.76 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add dark-class in result [#1225](https://github.com/mumprod/hr-design-system-handlebars/pull/1225) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.75 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix
