@@ -1,3 +1,16 @@
+# v1.114.75 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- Update hidden field wrapper class to use 'sr-only' for honeypot [#1224](https://github.com/mumprod/hr-design-system-handlebars/pull/1224) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.74 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix
