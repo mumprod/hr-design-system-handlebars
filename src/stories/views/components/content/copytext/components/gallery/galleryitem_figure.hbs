@@ -1,9 +1,6 @@
 <figure {{#unless @first}} x-cloak {{/unless}}>
     <div class="relative ar-16-9 gallery-slider__image animate-duration-500 animate-delay-100 animate-once animate-ease-in-out" 
-        :class="animationEnabled ? (slideToRight ? 'animate-fade-left' : 'animate-fade-right') : ''"
-        {{!-- x-transition:enter="transition ease-out duration-700 delay-75"
-        x-transition:enter-start="opacity-0 transform scale-90"
-        x-transition:enter-end="opacity-100 transform scale-100" --}}>
+        :class="animationEnabled ? (slideToRight ? 'animate-fade-left' : 'animate-fade-right') : ''">
         {{~#if this.displayOriginal.isTrue ~}}
             <div class="relative" aria-hidden="true">
                 {{> components/base/image/responsive_image
