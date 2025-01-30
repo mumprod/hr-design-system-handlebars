@@ -1,3 +1,16 @@
+# v1.114.78 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- Add support for wahlmonitor_v2 and wahlkreiskarte_v2 in ExternalService [#1227](https://github.com/mumprod/hr-design-system-handlebars/pull/1227) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.77 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix
