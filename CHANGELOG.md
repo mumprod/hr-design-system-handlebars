@@ -1,3 +1,15 @@
+# v1.114.74 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add dark-class in choice-background [#1223](https://github.com/mumprod/hr-design-system-handlebars/pull/1223) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.73 (Tue Jan 28 2025)
 
 #### 🐛 Bug Fix
