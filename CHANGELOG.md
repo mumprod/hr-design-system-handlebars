@@ -1,3 +1,16 @@
+# v1.114.80 (Fri Jan 31 2025)
+
+#### 🐛 Bug Fix
+
+- Update wrapper class for hidden fields to include margin, padding and… [#1229](https://github.com/mumprod/hr-design-system-handlebars/pull/1229) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.79 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix
