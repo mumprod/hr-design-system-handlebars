@@ -1,3 +1,15 @@
+# v1.114.81 (Tue Feb 04 2025)
+
+#### 🐛 Bug Fix
+
+- add condition for show date in ticker-timelline [#1230](https://github.com/mumprod/hr-design-system-handlebars/pull/1230) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.80 (Fri Jan 31 2025)
 
 #### 🐛 Bug Fix
