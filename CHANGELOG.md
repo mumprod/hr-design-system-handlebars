@@ -1,3 +1,16 @@
+# v1.114.84 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- add spinning wheel loading and Fix issue two galleries [#1233](https://github.com/mumprod/hr-design-system-handlebars/pull/1233) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.83 (Wed Feb 05 2025)
 
 #### 🐛 Bug Fix
