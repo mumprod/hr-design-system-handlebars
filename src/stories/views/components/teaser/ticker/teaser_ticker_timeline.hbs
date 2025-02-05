@@ -26,7 +26,7 @@
                         </div>
                     {{~/with}}
                 {{/unless}}                    
-                <a class="{{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+                <a class="{{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
             </li>
         {{~/each~}}
     </ul>
