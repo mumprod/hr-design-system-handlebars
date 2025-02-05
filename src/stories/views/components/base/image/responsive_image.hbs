@@ -20,7 +20,7 @@
                            {{#with this.srcset}} srcset="{{this}}"{{/with}}>
                 {{/each}}
             {{/with}}
-                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}"{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}}>
+                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}" loading="{{#if ../_noDelay}}auto{{else}}lazy{{/if}}"{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}} {{~#if ../../_loadHandler}} x-on:load="{{../../_loadHandler}}" {{~/if}}>
         </picture>
         {{#unless _disableNoScript}}
             <noscript>
@@ -49,7 +49,8 @@
                 alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}"
                 class="w-full{{~#with ../../_addClassImg }} {{this}}{{/with}}"
                 {{~#if ../../_title}} title="{{../../_title}}"{{~/if}}
-                {{~#if ../../_errorHandler}} onerror="this.onerror=null; {{../../_errorHandler}}" {{~/if}}>
+                {{~#if ../../_errorHandler}} onerror="this.onerror=null; {{../../_errorHandler}}" {{~/if}}
+                {{~#if ../../_loadHandler}} x-on:load="{{../../_loadHandler}}" {{~/if}}>
             {{~#with ../../_addClass }}</div>{{/with}}
         {{/with}}
     {{/if}}
