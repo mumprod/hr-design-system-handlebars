@@ -37,7 +37,7 @@
                     <img class="w-full{{~#if ../../_addClassImg}} {{../../_addClassImg}}{{/if}}" src="{{../this.fallback}}" alt="{{#if ../../_alttext}}{{../../_alttext}}{{else}}{{../../this.alttext}}{{/if}}">
                 </noscript>
             {{/unless}}
-            <img{{#if ../../_isWebview-adjust_context}} data-primary-type="hr-nt:image"
+            <img{{#if ../../_isWebview }} data-primary-type="hr-nt:image"
                         data-image-id="{{nextRandom}}"{{/if}}
                 {{#with this.sizes}} sizes="{{this}}" {{/with~}}
                 loading="{{#if ../../_noDelay}}auto{{else}}lazy{{/if}}"
