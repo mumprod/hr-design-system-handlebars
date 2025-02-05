@@ -1,3 +1,15 @@
+# v1.114.82 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- align-top in timeline-link if date is not shown [#1231](https://github.com/mumprod/hr-design-system-handlebars/pull/1231) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.81 (Tue Feb 04 2025)
 
 #### 🐛 Bug Fix
