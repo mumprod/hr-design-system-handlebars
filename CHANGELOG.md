@@ -1,3 +1,52 @@
+# v1.114.82 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- align-top in timeline-link if date is not shown [#1231](https://github.com/mumprod/hr-design-system-handlebars/pull/1231) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.81 (Tue Feb 04 2025)
+
+#### 🐛 Bug Fix
+
+- add condition for show date in ticker-timelline [#1230](https://github.com/mumprod/hr-design-system-handlebars/pull/1230) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.80 (Fri Jan 31 2025)
+
+#### 🐛 Bug Fix
+
+- Update wrapper class for hidden fields to include margin, padding and… [#1229](https://github.com/mumprod/hr-design-system-handlebars/pull/1229) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.79 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add adjust context to if [#1228](https://github.com/mumprod/hr-design-system-handlebars/pull/1228) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.78 (Thu Jan 30 2025)
 
 #### 🐛 Bug Fix

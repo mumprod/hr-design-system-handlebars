@@ -11,20 +11,22 @@
                         </div> 
                     {{/unless}}           
                 </div>
-                {{#with this.tickerItemDateTime~}}
-                    <div class="text-xs{{#if ../../../_color}} text-{{../../../_color}}{{/if}}">
-                        {{#if ../../../this.isMultiDay}}
-                            {{this.broadcastDate }}
-                        {{else}}
-                            {{#if ../../../this.isOlderThanToday}}
+                {{#unless this.hideDateTime}}
+                    {{#with this.tickerItemDateTime~}}
+                        <div class="text-xs{{#if ../../../_color}} text-{{../../../_color}}{{/if}}">
+                            {{#if ../../../this.isMultiDay}}
                                 {{this.broadcastDate }}
                             {{else}}
-                                {{this.time }}
+                                {{#if ../../../this.isOlderThanToday}}
+                                    {{this.broadcastDate }}
+                                {{else}}
+                                    {{this.time }}
+                                {{/if}}
                             {{/if}}
-                        {{/if}}
-                    </div>
-                {{~/with}}                    
-                <a class="{{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+                        </div>
+                    {{~/with}}
+                {{/unless}}                    
+                <a class="{{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white text-base js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} underline decoration-1 ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
             </li>
         {{~/each~}}
     </ul>
