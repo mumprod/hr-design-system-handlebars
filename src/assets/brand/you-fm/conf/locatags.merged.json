@@ -135,6 +135,8 @@
 	"newsletter_title_already_registered": "Sie haben den Newsletter bereits abonniert.",
 	"newsletter_title_registered": "Sie haben sich erfolgreich für den Newsletter angemeldet.",
 	"newsletter_title_success": "Vielen Dank für Ihre Anmeldung.",
+	"story_newsletter_intro_sr": "Formular",
+	"story_newsletter_outro_sr": "Ende des Formulars",
 	"newsletter_unsubscribe": "Abmelden",
 	"poster_copyright": "Bild &copy; {0}",
 	"search_input_aria_submit": "Suche starten",
