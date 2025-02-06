@@ -82,7 +82,10 @@ export default function newsletterForm(formId,trackingInformations) {
                     return response
                 })
                 .then(async response => {
-                    switch (response.body) {
+                    const data = await response.text();
+                    const responseData = JSON.parse(data);
+                    console.log(responseData);
+                    switch (responseData.status) {
                         case 'OK':
                             console.log("OK");
                             this.wasPosted = true;
