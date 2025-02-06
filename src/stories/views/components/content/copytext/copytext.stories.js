@@ -19,7 +19,6 @@ import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestre
 import copytext_livestream_json from './fixtures/copytext_livestream.json'
 import copytext_gallery_json from './fixtures/copytext_gallery.json'
 import copytext_gallery_portrait_json from './fixtures/copytext_gallery_portrait.json'
-import copytext_newsletter_json from './fixtures/copytext_newsletter.json'
 
 const Template = ({ ...args }) => {
     return copytext({ ...args })
@@ -153,68 +152,6 @@ export const WithGalleryPortrait = {
     name: 'Bildergalerie mit Hochkantbildern',
     args: copytext_gallery_portrait_json,
 }
-
-export const WithNewsletterOK = {
-    render: Template.bind({}),
-    name: 'Newsletter OK',
-    args: copytext_newsletter_json,
-    parameters: { 
-        fetchMock: {
-            mocks: [
-                {
-                    matcher: 'http://localhost:6006/?path=OK',
-                    response: {
-                        status: 200,
-                        body: {
-                            statusText: 'OK'
-                        },
-                    },
-                }
-            ],
-        }
-    }
-}
-
-export const WithNewsletterAlreadyRegistered = {
-    render: Template.bind({}),
-    name: 'Newsletter Already Registered',
-    args: copytext_newsletter_json,
-    parameters: { 
-        fetchMock: {
-            mocks: [
-                {
-                    matcher: 'http://localhost:6006/?path=Registered',
-                    response: {
-                        status: 200,
-                        body: {
-                            statusText: 'no_valid_newsletters'
-                        },
-                    },
-                }
-            ],
-        }
-    }
-}
-export const WithNewsletterError = {
-    render: Template.bind({}),
-    name: 'Newsletter Error',
-    args: copytext_newsletter_json,
-    parameters: { 
-        fetchMock: {
-            mocks: [
-                {
-                    matcher: 'http://localhost:6006/?path=error',
-                    response: {
-                        status: 404,
-                        body: {
-                            statusText: ''
-                        },
-                    },
-                }
-            ],
-        }
-    }
-}
 export const SnapshotWithMedia = {
     render: Template.bind({}),
     name: 'Snapshot 1',
@@ -223,7 +160,6 @@ export const SnapshotWithMedia = {
         chromatic: { disableSnapshot: false },
     },
 }
-
 export const SnapshotWithoutMedia = {
     render: Template.bind({}),
     name: 'Snapshot 2',
