@@ -1,3 +1,16 @@
+# v1.114.85 (Thu Feb 06 2025)
+
+#### 🐛 Bug Fix
+
+- Fix image load handler + remove _isWebview for gallery images [#1234](https://github.com/mumprod/hr-design-system-handlebars/pull/1234) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.84 (Wed Feb 05 2025)
 
 #### 🐛 Bug Fix
