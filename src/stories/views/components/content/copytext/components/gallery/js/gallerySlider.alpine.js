@@ -32,6 +32,8 @@ export default function gallerySlider(gallerySelector) {
                 this.captions = [...galleryContainer.querySelectorAll('.js-gallery-slider-caption')];
                 this.captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
             }
+            this.handleImageLoad(this.slides[0].querySelector('.js-gallery-image'));
+
         },
         handleTouchStart(event) {
             this.touchStartX = event.touches[0].clientX
@@ -51,8 +53,7 @@ export default function gallerySlider(gallerySelector) {
                 this.touchEndX = null
             }
         },
-        handleImageLoad(event) {
-           const img = event.target; 
+        handleImageLoad(img) {
             if (img.complete) {
                 this.loading = false;
                 this.loadedImages.push(img);
