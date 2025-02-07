@@ -1,3 +1,177 @@
+# v1.114.85 (Thu Feb 06 2025)
+
+#### 🐛 Bug Fix
+
+- Fix image load handler + remove _isWebview for gallery images [#1234](https://github.com/mumprod/hr-design-system-handlebars/pull/1234) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.84 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- add spinning wheel loading and Fix issue two galleries [#1233](https://github.com/mumprod/hr-design-system-handlebars/pull/1233) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.83 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3523 2 [#1232](https://github.com/mumprod/hr-design-system-handlebars/pull/1232) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.82 (Wed Feb 05 2025)
+
+#### 🐛 Bug Fix
+
+- align-top in timeline-link if date is not shown [#1231](https://github.com/mumprod/hr-design-system-handlebars/pull/1231) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.81 (Tue Feb 04 2025)
+
+#### 🐛 Bug Fix
+
+- add condition for show date in ticker-timelline [#1230](https://github.com/mumprod/hr-design-system-handlebars/pull/1230) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.80 (Fri Jan 31 2025)
+
+#### 🐛 Bug Fix
+
+- Update wrapper class for hidden fields to include margin, padding and… [#1229](https://github.com/mumprod/hr-design-system-handlebars/pull/1229) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.79 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add adjust context to if [#1228](https://github.com/mumprod/hr-design-system-handlebars/pull/1228) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
+# v1.114.78 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- Add support for wahlmonitor_v2 and wahlkreiskarte_v2 in ExternalService [#1227](https://github.com/mumprod/hr-design-system-handlebars/pull/1227) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.77 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-3381: some fixes [#1226](https://github.com/mumprod/hr-design-system-handlebars/pull/1226) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.114.76 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add dark-class in result [#1225](https://github.com/mumprod/hr-design-system-handlebars/pull/1225) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.75 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- Update hidden field wrapper class to use 'sr-only' for honeypot [#1224](https://github.com/mumprod/hr-design-system-handlebars/pull/1224) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.114.74 (Thu Jan 30 2025)
+
+#### 🐛 Bug Fix
+
+- add dark-class in choice-background [#1223](https://github.com/mumprod/hr-design-system-handlebars/pull/1223) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.73 (Tue Jan 28 2025)
+
+#### 🐛 Bug Fix
+
+- show complete date item is not from today [#1222](https://github.com/mumprod/hr-design-system-handlebars/pull/1222) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
+# v1.114.72 (Mon Jan 27 2025)
+
+#### 🐛 Bug Fix
+
+- Removing unused classew [#1221](https://github.com/mumprod/hr-design-system-handlebars/pull/1221) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.71 (Fri Jan 24 2025)
 
 #### 🐛 Bug Fix

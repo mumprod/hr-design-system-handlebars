@@ -1,4 +1,4 @@
-export default function gallerySlider() {
+export default function gallerySlider(gallerySelector) {
     return { 
         slides: [],
         captions: [],
@@ -8,23 +8,32 @@ export default function gallerySlider() {
         touchStartX: null,
         touchEndX: null,
         swipeThreshold: 50,
+        loadedImages: [],
+        loading: true,
         previous() {
             this.animationEnabled = true;
             this.slideToRight = false;    
-            this.currentSlideIndex = (this.currentSlideIndex - 1 > 0) ? this.currentSlideIndex - 1 : this.slides.length;            
+            this.currentSlideIndex = (this.currentSlideIndex - 1 > 0) ? this.currentSlideIndex - 1 : this.slides.length;
+            this.updateLoadingState(this.currentSlideIndex - 1);          
         },            
-        next() {                
+        next() {  
             if (this.slides.length > 0) {
                 this.animationEnabled = true;
                 this.slideToRight = true;
                 this.currentSlideIndex = (this.currentSlideIndex % this.slides.length) + 1;
             }
+            this.updateLoadingState(this.currentSlideIndex - 1);  
         },
         loadSlider() {
-            this.slides = [...document.querySelectorAll('.gallery-slider__image')];
-            this.slides.forEach((slide, index) => slide.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
-            this.captions = [...document.querySelectorAll('.gallery-slider__caption')];
-            this.captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
+            const galleryContainer = document.querySelector(`.${gallerySelector}`);
+            if (galleryContainer) {
+                this.slides = [...galleryContainer.querySelectorAll('.js-gallery-slider-image')];
+                this.slides.forEach((slide, index) => slide.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
+                this.captions = [...galleryContainer.querySelectorAll('.js-gallery-slider-caption')];
+                this.captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
+            }
+            this.handleImageLoad(this.slides[0].querySelector('.js-gallery-image'));
+
         },
         handleTouchStart(event) {
             this.touchStartX = event.touches[0].clientX
@@ -43,7 +52,18 @@ export default function gallerySlider() {
                 this.touchStartX = null
                 this.touchEndX = null
             }
+        },
+        handleImageLoad(img) {
+            if (img.complete) {
+                this.loading = false;
+                this.loadedImages.push(img);
+            }          
+        },
+        updateLoadingState(currentSlideIndex) {
+            const currentSlide = this.slides[currentSlideIndex];
+            if (currentSlide) {
+                this.loading = !this.loadedImages.includes(currentSlide.querySelector('.js-gallery-image'));
+            }
         }
-
     };
 }

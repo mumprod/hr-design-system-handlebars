@@ -1,21 +1,25 @@
+{{~changeRandom~}}
 {{~#with this.gallery ~}}
-<div class="relative w-full overflow-hidden" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()"
-    x-data="gallerySlider()"
+<div class="relative w-full overflow-hidden js-gallery{{getRandom}}" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()"
+    x-data="gallerySlider('js-gallery{{getRandom}}')"
     x-init="loadSlider()"
     ax-load
     x-ignore
      >
     <div class="relative w-full select-none">
-        <div class="absolute top-0 bottom-0 left-0 right-0 ar-16-9">
-            {{#> components/button/button _variant="transparent"  _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
-                    {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
+        <div class="absolute top-0 bottom-0 left-0 right-0 z-30 ar-16-9">
+            {{#> components/button/button _variant="transparent" _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
+                    {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
-            {{#> components/button/button _variant="transparent"  _alpineClick="next()" _css="absolute z-10 flex items-center justify-center right-4 bottom-4 sm:right-5 sm:bottom-5" _onBackground=true}}
-                {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css="w-8 h-8 sm:w-12 sm:h-12 pr-0.5 fill-link dark:fill-link-dark" }}
+            {{#> components/button/button _variant="transparent" _alpineClick="next()" _css="absolute z-10 flex items-center justify-center right-4 bottom-4 sm:right-5 sm:bottom-5" _onBackground=true}}
+                {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
             {{/components/button/button}}
         </div>
+        <div class="absolute inset-0 z-20 flex items-center justify-center ar-16-9" aria-hidden="true" x-show="loading">
+            {{> components/base/image/icon _icon="loading" _addClass="animate-spin animate-infinite h-8 w-8 md:w-11 md:h-11 fill-link dark:fill-link-dark" }}
+        </div>
         {{#each this.items}}
-         {{~> components/content/copytext/components/gallery/galleryitem_figure _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption ~}}
+            {{~> components/content/copytext/components/gallery/galleryitem_figure _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption ~}}
         {{/each}}
     </div>
 </div>

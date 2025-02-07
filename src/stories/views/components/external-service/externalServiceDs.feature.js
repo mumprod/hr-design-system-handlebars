@@ -93,7 +93,13 @@ const ExternalService = function (context) {
                     case 'wahlmonitor':
                         createWahlEmbed()
                         break
+                    case 'wahlmonitor_v2':
+                        createWahlEmbed()
+                        break
                     case 'wahlkreiskarte':
+                        createWahlEmbed()
+                        break
+                    case 'wahlkreiskarte_v2':
                         createWahlEmbed()
                         break
                     case 'wahlomat-euwa':
