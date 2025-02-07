@@ -46,7 +46,7 @@ export const WithNewsletterOK = {
                     response: {
                         status: 200,
                         body: {
-                            status: 'OK'
+                            status: 'success'
                         },
                     },
                 }

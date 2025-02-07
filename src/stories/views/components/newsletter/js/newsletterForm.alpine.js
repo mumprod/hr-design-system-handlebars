@@ -38,10 +38,13 @@ export default function newsletterForm(formId,trackingInformations) {
             }
         },
         retryHandler() {
-            this.wasPosted = false;
-            this.wasPostedWithError = false;
-            this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 50)
-            
+                this.wasPosted = false;
+                this.wasPostedWithSuccess = false;
+                this.wasPostedWithError = false;
+                this.wasPostedAlreadyRegistered = false;
+                this.isPosting = false;
+                this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 50)
+                       
         },
         handleValidationErrors(errors) {
             console.log('Validation Errors:', errors);
@@ -86,8 +89,8 @@ export default function newsletterForm(formId,trackingInformations) {
                     const responseData = JSON.parse(data);
                     console.log(responseData);
                     switch (responseData.status) {
-                        case 'OK':
-                            console.log("OK");
+                        case 'success':
+                            console.log("success");
                             this.wasPosted = true;
                             this.wasPostedWithSuccess = true;
                             this.scrollToElementAndCenterWithTimeout(this.formWrapper.previousElementSibling, 0)

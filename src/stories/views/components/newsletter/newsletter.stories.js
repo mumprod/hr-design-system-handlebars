@@ -18,27 +18,21 @@ export default {
         fetchMock: {
             mocks: [
                 {
-                    matcher: 'http://localhost:6006/',
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
                     response: {
                         status: 200,
-                        message: 'success',
                         body: {
-                            status: ''
+                            status: 'success',
                         },
                     },
                 }
             ],
-        }
+        },
+        layout: 'fullscreen',
+        chromatic: { disableSnapshot: true }
     }
 }
 const TemplateNewsletterNew = (args) => {
-    let hbsTemplate = handlebars.compile(`
-            {{> components/newsletter/newsletter }}
-    `)
-    return hbsTemplate({ ...args })
-}
-
-const TemplateNewsletterOld = (args) => {
     let hbsTemplate = handlebars.compile(`
             {{> components/newsletter/newsletter }}
     `)
@@ -67,10 +61,5 @@ export const Default = {
     }
 }
 
-export const Newsletter_old = {
-    render: TemplateNewsletterOld.bind({}),
-    name: 'Alter Newsletter',
-    args: OldNewsletterJson,
-}
 
 

@@ -1,5 +1,7 @@
-<div id="formWrapper" class="mt-4">
-
+<h3 class="mb-6 text-2xl md:text-3xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
+    {{this.title}}
+</h3>
+<div id="formWrapper">
 <form class="relative flex flex-col justify-center overflow-hidden group" 
     id="form{{nextRandom}}" 
     x-ref="form{{getRandom}}" 
@@ -12,7 +14,6 @@
     method="post" 
     accept-charset="utf-8"
 >
-
 <div x-show="!wasPosted"             
             x-transition:enter="transition ease-out duration-300 delay-300"
             x-transition:enter-start="opacity-0 transform scale-90"
@@ -32,7 +33,7 @@
     x-transition:enter-end="opacity-100 transform scale-100"
     x-cloak
 >
-        {{{include "components/newsletter/components/newsletter_success" _success="true"}}}
+        {{{include "components/newsletter/components/newsletter_success" _success="true" _locaKeyText="newsletter_text_success"}}}
 </div>
 <div class="flex flex-col gap-6 js-errorMessage md:gap-10" id="errorMessage" x-show="wasPostedWithError"
     x-transition:enter="transition ease-out duration-300 delay-75"
@@ -40,7 +41,7 @@
     x-transition:enter-end="opacity-100 transform scale-100"
     x-cloak
 >
-        {{{include "components/newsletter/components/newsletter_error" }}}
+        {{{include "components/newsletter/components/newsletter_error" _locaKeyText="newsletter_text_error"}}}
 </div>
 <div class="flex flex-col gap-6 js-alreadyRegisteredMessage md:gap-10" id="alreadyRegisteredMessage" x-show="wasPostedAlreadyRegistered"
     x-transition:enter="transition ease-out duration-300 delay-75"
@@ -48,7 +49,7 @@
     x-transition:enter-end="opacity-100 transform scale-100"
     x-cloak
 >
-        {{{include "components/newsletter/components/newsletter_already_registered" }}}
+        {{{include "components/newsletter/components/newsletter_already_registered" _alreadyRegistered="true" _locaKeyText="newsletter_text_already_registered" }}}
 </div>
 </form>
 </div>
