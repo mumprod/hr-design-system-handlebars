@@ -1,15 +1,31 @@
-<div class="c-feedbackBox">
-    <h2 class="c-feedbackBox__headline">{{loca _locaKeyTitle}}</h2>
-    <p class="c-feedbackBox__button">
-        {{#with this.backlink}}
-            <a class="c-form__button js-formReload" href="{{this}}#{{../uuid}}">{{loca "newsletter_form_back"}}</a>
-        {{/with}}
-    </p>
-    <p class="c-feedbackBox__text">
-        {{#if _locaKeyText}}
-            {{loca _locaKeyText}}
-        {{else}}
-            {{{_text}}}
-        {{/if}}
-    </p>
+<div class="flex flex-col justify-between w-full gap-6 md:gap-10">
+        <div class="flex items-center gap-x-2 md:gap-x-3">
+            {{#if _success}}
+                {{> components/forms/components/success_icon}}
+                <h3 class="font-bold text-success pt-0.5">{{~loca "newsletter_title_success"}}</h3>       
+            {{else}}
+                 {{#if _alreadyRegistered}}
+                    {{> components/forms/components/error_icon _class="!block"}}
+                    <h3 class="font-bold text-error dark:text-error-dark pt-0.5">{{~loca "newsletter_title_already_registered"}}</h3>  
+                    {{else}}
+                    {{> components/forms/components/error_icon _class="!block"}}
+                    <h3 class="font-bold text-error dark:text-error-dark pt-0.5">{{~loca "newsletter_title_error"}}</h3>  
+                {{/if}}
+            {{/if}}
+        </div>      
+</div>
+<span class="font-copy text-text dark:text-text-dark">
+    {{#if _locaKeyText}}
+        {{loca _locaKeyText}}
+    {{else}}
+        {{{_text}}}
+    {{/if}}
+</span>
+<div class="flex justify-end">
+        {{#> components/button/button _variant="primary" _size="lg" }} 
+            <span class="text-base ds-button-label ">{{loca "newsletter_form_back"}}</span>        
+        {{/components/button/button}}  
+        {{#*inline "htmlProperties"}}        
+            @click="retryHandler"
+        {{/inline}}
 </div>

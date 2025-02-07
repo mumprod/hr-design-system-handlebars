@@ -1,0 +1,44 @@
+{{#if this.description}}
+<p class="mb-6 text-base font-copy sm:text-lg dark:text-text-dark">
+    {{{this.description}}}
+</p>
+{{/if}}  
+{{~> components/forms/components/input
+    _type="email"
+    _isEmail=true
+    _name="email"
+    _label="E-Mail"
+    _labelClass=""
+    _description=""
+    _required=true
+    _maxLength="140"
+    _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
+    _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
+    _formId=../_formId
+}}
+    
+{{~> components/forms/components/choice
+    _inGroup=false
+    _type="checkbox"
+    _name="checkbox"
+    _label=(loca "accept_data_privacy_regulation_link")
+    _description=""
+    _required=true
+    _errorMandatory="Bitte wählen Sie dieses Pflichtfeld aus"
+}}
+
+ {{~> components/forms/components/input
+    _name="newsletter"
+    _type="hidden"
+    _value=this.mailingList
+    _wrapperClass="hidden"
+    _hasLabel=false
+}}
+
+{{~>components/forms/components/input
+    _name="newsletter-type"
+    _type="hidden"
+    _wrapperClass="hidden"
+    _value="html"
+    _hasLabel=false
+}}

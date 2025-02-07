@@ -1,4 +1,7 @@
-<div id="formWrapper" class="mt-4">
+<h3 class="mb-6 text-2xl md:text-3xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
+    {{this.title}}
+</h3>
+<div id="formWrapper">
 <form class="relative flex flex-col justify-center overflow-hidden group" 
     id="form{{nextRandom}}" 
     x-ref="form{{getRandom}}" 
@@ -7,78 +10,46 @@
     x-init="formInit()" 
     x-ignore
     @submit.prevent
-    action="index.html" 
+    action="{{~#if (isStorybook)~}}{{this.jsonURL}}{{else}}{{configProperty "newsletter.subscription.endpoint"}}{{/if}}" 
     method="post" 
     accept-charset="utf-8"
 >
+<div x-show="!wasPosted"             
+            x-transition:enter="transition ease-out duration-300 delay-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-75 delay-0"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90"
+        >
+            {{> components/newsletter/components/newsletter_fields }} 
 
-        {{~> components/forms/components/input
-            _type="email"
-            _isEmail=true
-            _name="email"
-            _label="E-Mail"
-            _labelClass=""
-            _description=""
-            _required=true
-            _maxLength="140"
-            _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
-            _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
-            _formId=../_formId
-        }}
-    
-        {{~> components/forms/components/choice
-            _inGroup=false
-            _type="checkbox"
-            _name="checkbox"
-            _label=(loca "accept_data_privacy_regulation_link")
-            _description=""
-            _required=true
-            _errorMandatory="Bitte wählen Sie dieses Pflichtfeld aus"
-        }}
-  
+            {{> components/newsletter/components/newsletter_controls }}
+</div>
 
-    {{~> components/forms/components/controls}}
-
-
-    {{~> components/forms/components/input
-        _name="newsletter"
-        _type="hidden"
-        _value=this.mailingList
-        _wrapperClass="hidden"
-        _hasLabel=false
-    }}
-
-    {{~>components/forms/components/input
-        _name="newsletter-type"
-        _type="hidden"
-        _wrapperClass="hidden"
-        _value="html"
-        _hasLabel=false
-    }}
-
-    <div class="flex flex-col gap-6 js-successMessage md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
-        x-transition:enter="transition ease-out duration-300 delay-75"
-        x-transition:enter-start="opacity-0 transform scale-90"
-        x-transition:enter-end="opacity-100 transform scale-100"
-        x-cloak
-    >
-            {{{include "components/newsletter/components/newsletter_success" }}}
-    </div>
-    <div class="flex flex-col gap-6 js-errorMessage md:gap-10" id="errorMessage" x-show="wasPostedWithError"
-        x-transition:enter="transition ease-out duration-300 delay-75"
-        x-transition:enter-start="opacity-0 transform scale-90"
-        x-transition:enter-end="opacity-100 transform scale-100"
-        x-cloak
-    >
-            {{{include "components/newsletter/components/newsletter_error" }}}
-    </div>
-    <div class="flex flex-col gap-6 js-alreadyRegisteredMessage md:gap-10" id="alreadyRegisteredMessage" x-show="wasPostedAlreadyRegistered"
-        x-transition:enter="transition ease-out duration-300 delay-75"
-        x-transition:enter-start="opacity-0 transform scale-90"
-        x-transition:enter-end="opacity-100 transform scale-100"
-        x-cloak
-    >
-            {{{include "components/newsletter/components/newsletter_already_registered" }}}
-    </div>
+<div class="flex flex-col gap-6 js-successMessage md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
+    x-transition:enter="transition ease-out duration-300 delay-75"
+    x-transition:enter-start="opacity-0 transform scale-90"
+    x-transition:enter-end="opacity-100 transform scale-100"
+    x-cloak
+>
+        {{{include "components/newsletter/components/newsletter_success" _success="true" _locaKeyText="newsletter_text_success"}}}
+</div>
+<div class="flex flex-col gap-6 js-errorMessage md:gap-10" id="errorMessage" x-show="wasPostedWithError"
+    x-transition:enter="transition ease-out duration-300 delay-75"
+    x-transition:enter-start="opacity-0 transform scale-90"
+    x-transition:enter-end="opacity-100 transform scale-100"
+    x-cloak
+>
+        {{{include "components/newsletter/components/newsletter_error" _locaKeyText="newsletter_text_error"}}}
+</div>
+<div class="flex flex-col gap-6 js-alreadyRegisteredMessage md:gap-10" id="alreadyRegisteredMessage" x-show="wasPostedAlreadyRegistered"
+    x-transition:enter="transition ease-out duration-300 delay-75"
+    x-transition:enter-start="opacity-0 transform scale-90"
+    x-transition:enter-end="opacity-100 transform scale-100"
+    x-cloak
+>
+        {{{include "components/newsletter/components/newsletter_already_registered" _alreadyRegistered="true" _locaKeyText="newsletter_text_already_registered" }}}
+</div>
 </form>
 </div>

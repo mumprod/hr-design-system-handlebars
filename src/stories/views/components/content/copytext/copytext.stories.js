@@ -152,7 +152,6 @@ export const WithGalleryPortrait = {
     name: 'Bildergalerie mit Hochkantbildern',
     args: copytext_gallery_portrait_json,
 }
-
 export const SnapshotWithMedia = {
     render: Template.bind({}),
     name: 'Snapshot 1',
@@ -161,7 +160,6 @@ export const SnapshotWithMedia = {
         chromatic: { disableSnapshot: false },
     },
 }
-
 export const SnapshotWithoutMedia = {
     render: Template.bind({}),
     name: 'Snapshot 2',
