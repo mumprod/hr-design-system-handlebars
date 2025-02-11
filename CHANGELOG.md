@@ -1,3 +1,15 @@
+# v1.114.87 (Tue Feb 11 2025)
+
+#### 🐛 Bug Fix
+
+- adjust background-colors [#1236](https://github.com/mumprod/hr-design-system-handlebars/pull/1236) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.86 (Fri Feb 07 2025)
 
 #### 🐛 Bug Fix
