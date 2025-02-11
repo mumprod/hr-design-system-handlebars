@@ -450,7 +450,7 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.blue.blueLuxury.rgb') / 70%
             );
-            --ardplayer-color-primary-dark-base: theme('colors.white.blackhaze');
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
             --ardplayer-color-tertiary-base: theme('colors.blue.blueLuxury.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
 
@@ -565,7 +565,7 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.blue.jellyBean.rgb') / 70%
             );
-            --ardplayer-color-primary-dark-base: theme('colors.blue.aqua');
+            --ardplayer-color-primary-dark-base: theme('colors.blue.accented');
             --ardplayer-color-tertiary-base: theme('colors.blue.jellyBean.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.jellyBean.hex');
@@ -601,6 +601,7 @@
 [data-theme='hr-rundfunkrat'] {
     --color-primary-ds: theme('colors.gray.scorpion');
     --color-secondary-ds: #007179;
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -925,7 +926,7 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.red.wellRead.rgb') / 70%
             );
-            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
             --ardplayer-color-tertiary-base: theme('colors.red.wellRead.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.wellRead.hex');
@@ -1070,6 +1071,7 @@
 [data-theme='hr'] {
     --color-primary-ds: theme('colors.blue.blueLuxury.hex');
     --color-secondary-ds: #007396;
+    --color-highlight-1: theme('colors.blue.accented');
     --color-highlight-2: theme('colors.orange.spicyCarrot.hex');
 
     /* Navigation Hintergrund */
@@ -1395,7 +1397,7 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.red.paprika.rgb') / 70%
             );
-            --ardplayer-color-primary-dark-base: theme('colors.gray.alto');
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
             --ardplayer-color-tertiary-base: theme('colors.red.paprika.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.red.paprika.hex');
@@ -1645,7 +1647,7 @@
             --ardplayer-color-primary-base-transparent-30: rgba(
                 theme('colors.green.eden.rgb') / 70%
             );
-            --ardplayer-color-primary-dark-base: theme('colors.white.azureish');
+            --ardplayer-color-primary-dark-base: theme('colors.blue.blackSqueeze');
             --ardplayer-color-tertiary-base: theme('colors.green.eden.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.green.eden.hex');
@@ -1781,7 +1783,7 @@
         &.ardplayer-light-mode {
             --ardplayer-color-primary-base: theme('colors.blue.sea.hex');
             --ardplayer-color-primary-base-transparent-30: rgba(theme('colors.blue.sea.rgb') / 70%);
-            --ardplayer-color-primary-dark-base: theme('colors.gray.platinum');
+            --ardplayer-color-primary-dark-base: theme('colors.gray.mercury');
             --ardplayer-color-tertiary-base: theme('colors.blue.sea.hex');
             --ardplayer-color-lightest: theme('colors.white.DEFAULT');
             --ardplayer-lightmode-color-lightest-transparent-30: theme('colors.blue.sea.hex');
