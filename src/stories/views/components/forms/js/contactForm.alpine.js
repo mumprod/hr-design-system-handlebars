@@ -1,6 +1,6 @@
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
-export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, jsonp = false) {
+export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, jsonp = false, hasSpamProtection) {
     return {
         isPosting: false,
         wasPosted: false,
@@ -12,15 +12,29 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         formWrapper: this.$refs[formId].closest("#formWrapper"),
         honeypot: this.$refs[formId].querySelector('input[data-name="x-message"]'),
         actionUrl: this.form && this.form.getAttribute('action'),
+        interacted: true,
+
         checkForJsonURL () {
             if (jsonUrl) {
                 this.actionUrl = jsonUrl
             }
         },
         formInit(){
+            
             this.checkForJsonURL()
             this.$store.forms.submissionAttempted[formId] = false; 
             this.$store.forms.errorMessages = JSON.parse(errorMessages.replace(/&quot;/g,'"'))
+            console.log('hasSpamProtection:', hasSpamProtection);
+            if(hasSpamProtection){
+                console.log('Spam Protection');
+                this.initSpamProtection();
+            }
+
+        },
+        initSpamProtection(){
+            this.interacted = false;
+            addEventListener('mousemove', () => this.interacted = true );
+            addEventListener('keypress', () => this.interacted = true );
         },
         scrollToElementAndCenterWithTimeout(element, timeout){
             setTimeout(() => {
@@ -35,8 +49,8 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             if (this.honeypot) {
                 this.honeypot.removeAttribute('required');
             }
-            if(this.form.reportValidity()){               
-                this.handleSubmit(event,this.form)
+            if(this.form.reportValidity() && this.interacted){                  
+                this.handleSubmit(event,this.form)                                       
             } else {
                 this.scrollToElementAndCenterWithTimeout(document.activeElement, 50)    
                 if (this.honeypot) {

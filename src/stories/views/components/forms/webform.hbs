@@ -7,14 +7,14 @@
             <form
                 x-ref="form{{nextRandom}}"
                 ax-load
-                x-data="contactForm('form{{getRandom}}','{{this.jsonUrl}}','{{this.errorMessages}}','{{this.isMultipart}}','{{this.trackingInformations}}')"
+                x-data="contactForm('form{{getRandom}}','{{this.jsonUrl}}','{{this.errorMessages}}','{{this.isMultipart}}','{{this.trackingInformations}}', 'false', '{{this.hasSpamProtection}}')"
                 x-init="formInit()"
                 x-ignore
 
                 @submit.prevent
                 id="form{{getRandom}}"     
                 class="relative flex flex-col justify-center overflow-hidden group" 
-                action="{{this.url}}" 
+                action="{{if this.hasSpamProtection '#' this.url}}" 
                 method="post" 
                 enctype="{{if this.isMultipart 'multipart/form-data' 'application/x-www-form-urlencoded'}}" 
                 accept-charset="utf-8"
@@ -29,8 +29,16 @@
                     x-transition:leave-end="opacity-0 transform scale-90"
                 >
                     {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
-
-                    {{> components/forms/components/controls }}
+                    {{#if this.hasSpamProtection }}
+                        <noscript>
+                            <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+                                <p class="font-bold">Hinweis</p>
+                                <p>Bitte Aktivieren Sie JavaScript um dieses Formular Absenden zu können.</p>
+                            </div>
+                        </noscript>
+                    {{/if}}
+                    {{> components/forms/components/controls }}                       
+                    
                 </div>
                 <div class="flex flex-col gap-6 md:gap-10" id="successMessage" x-show="wasPostedWithSuccess"  
                     x-transition:enter="transition ease-out duration-300 delay-75"
