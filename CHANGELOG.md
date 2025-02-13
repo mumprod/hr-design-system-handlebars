@@ -1,3 +1,15 @@
+# v1.114.89 (Thu Feb 13 2025)
+
+#### 🐛 Bug Fix
+
+- add voting-documentation [#1238](https://github.com/mumprod/hr-design-system-handlebars/pull/1238) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.88 (Thu Feb 13 2025)
 
 #### 🐛 Bug Fix
