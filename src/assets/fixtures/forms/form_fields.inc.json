@@ -24,6 +24,20 @@
         "isRequired": true,
         "maxLength": "140"
     },
+    "input-honeypot-required": {
+        "type": {
+            "isText": true,
+            "asString": "text"
+        },
+        "name": "message",
+        "label": "message",
+        "description": "message",
+        "defaultValue": "",
+        "isHidden": true,
+        "hasSpamProtection":true,
+        "isRequired": false,
+        "maxLength": "140"
+    },
     "input-text-nachname-required": {
         "type": {
             "isText": true,

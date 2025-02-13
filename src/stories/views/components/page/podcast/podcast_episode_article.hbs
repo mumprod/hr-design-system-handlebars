@@ -7,7 +7,7 @@
             {{#if (isStorybook)}} 
                 {{> components/podcast/components/podcast_player_shorttext _isSinglePage=true}}
             {{else}}
-                {{> modules/story/copytext _isWebview=_webview~}}
+                {{~> components/content/copytext/copytext _isWebview=_webview ~}}
             {{/if}}
             {{> components/content/content_footer/content_footer
                     _author=this.audioAuthor
