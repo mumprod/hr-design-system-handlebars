@@ -1,6 +1,6 @@
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
 
-export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, jsonp = false, hasSpamProtection) {
+export default function contactForm(formId, jsonUrl, errorMessages, multipart, trackingInformations, hasSpamProtection, jsonp = false) {
     return {
         isPosting: false,
         wasPosted: false,
@@ -109,7 +109,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             } else {
                 ajaxOptions.url = `${this.actionUrl}?${responseFormatParam}`;
             }
-        
+            console.log('ajaxOptions:', ajaxOptions);
             fetch(ajaxOptions.url, ajaxOptions)
                 .then(async (response) => {
                     const data = await response.text();
