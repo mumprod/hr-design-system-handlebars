@@ -44,6 +44,7 @@
                     _errorMandatory="Bitte füllen Sie dieses Pflichtfeld aus"
                     _errorEmail="Bitte geben Sie eine gültige E-Mail-Adresse ein."
                     _formId=../_formId
+                    _isHoneypot=this.hasSpamProtection
                 }}
             {{else if this.type.isSelect}}
                 {{~> components/forms/components/select

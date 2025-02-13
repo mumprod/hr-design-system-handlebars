@@ -10,6 +10,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         ajaxTimeout: 60 * 1000,
         form: this.$refs[formId],
         formWrapper: this.$refs[formId].closest("#formWrapper"),
+        honeypot: this.$refs[formId].querySelector('input[data-name="x-message"]'),
         actionUrl: this.form && this.form.getAttribute('action'),
         checkForJsonURL () {
             if (jsonUrl) {
@@ -31,10 +32,16 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
         },
         submitButtonHandler(event) {
             this.$store.forms.submissionAttempted[formId] = true;
+            if (this.honeypot) {
+                this.honeypot.removeAttribute('required');
+            }
             if(this.form.reportValidity()){               
                 this.handleSubmit(event,this.form)
             } else {
-                this.scrollToElementAndCenterWithTimeout(document.activeElement, 50)                
+                this.scrollToElementAndCenterWithTimeout(document.activeElement, 50)    
+                if (this.honeypot) {
+                    this.honeypot.setAttribute('required', '');
+                }            
             }
         },
         retryHandler() {

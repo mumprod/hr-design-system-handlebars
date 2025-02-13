@@ -26,6 +26,10 @@
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "input-text-vorname"
+                    },
+                    {
+                      "@->jsoninclude": "forms/form_fields.inc.json",
+                      "@->contentpath": "input-honeypot-required"
                     }
                 ]
                 
