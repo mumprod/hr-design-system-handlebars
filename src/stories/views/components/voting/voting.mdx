@@ -1,0 +1,71 @@
+import { ArgTypes, Meta, Story, Canvas } from '@storybook/blocks'
+import * as votingStories from './voting.stories'
+
+<Meta of={votingStories} />
+
+# Voting
+
+## Beschreibung
+
+Das Voting besteht aus den Hauptkomponenten <b>voting.hbs</b>, <b>voting_media_player.hbs</b> und <b>voting_result.hbs</b>.<br/><br/>
+Diese verwenden die folgenden Unter-Komponenten:<br/>
+voting_backbutton.hbs, voting_header.hbs, voting_hint.hbs und voting_submit.hbs.<br/><br/>
+Die Funktionalität wird über diese javascript-Dateien bereitgestellt:<br/>
+votingCookieCheckerDs.feature.js, votingDs.feature.js, votingResultCookieDs.feature.js und votingValidatorDs.feature.js.<br/><br/>
+Alle genannten Dateien werden nachfolgend beschrieben.
+
+### voting.hbs
+Dies ist die Hauptkomponente. Sie kann in anderen Komponenten inkludiert werden (siehe Verwendung).
+Sie enthält im umschließenden div-Element die data-Attribute für das javascript (data-hr-voting-ds, data-hr-voting-validator-ds, data-hr-voting-cookie-checker-ds)
+und übergibt diesen jeweils Daten-Objekte.<br/>
+Die nächste Ebene ist ein div-Element mit der css-Klasse "js-voting-wrapper", anhand derer diesem div Inhalte per javascript zugefügt werden.<br/>
+Nachfolgend das form-Element, welches die Daten an den ugc-Server sendet. Die voting-Felder werden per Einbindung der Komponente fields.hbs erzeugt. Um diese den grafischen Vorlagen entsprechend darzustellen, werden diverse css-Parameter benötigt.<br/>
+Ferner enthält voting.hbs drei script-Elemente mit den jeweiligen css-Klassen js-successMessage, js-errorMessage und js-result. Mit Hilfe dieser Klassennamen wird hier jeweils die Komponente voting_result.hbs in verschiedenen Ausprägungen eingebunden.<br/>
+Am Ende von voting.hbs wird die Komponente teaser_featured_content.hbs inkludiert, welche die "Mehr zum Thema"-Links enthält.
+
+### voting_media_player.hbs
+Mit dieser Komponente werden Audios und Videos in den voting-Optionen dargestellt.
+
+### voting_result.hbs
+Diese Komponente wird per javascript in voting.hbs inkludiert und stellt - abhängig von den ihr übergebenen Parametern - das voting-Ergebnis in einem per css keyframes animierten barchart, ein Danke-Text oder eine Fehlermeldung dar.
+
+### voting_backbutton.hbs
+Enthält den "Zurück zur Abstimmung"-Button. Dieser wird nur im Fehlerfall, also in der Fehler-Message dargestellt.
+
+### voting_header.hbs
+Diese Komponente stellt Label (Voting) und Titel dar.
+
+### voting_hint.hbs
+Wird für die Anzeige diverser Hinweistexte verwendet, zB. Anzahl der Stimmen, "Werte Stimmen" bei absoluten Werten.
+
+### voting_submit.hbs
+Beinhaltet den "Abstimmen"-Button + Icon + Hinweistext.
+
+### votingDs.feature.js
+Hier sind u.a. die Handler für das Versenden des Voting-Formulars, die Verarbeitung der response vom ugc-Server sowie das Laden der voting_result-Komponente in den verschiedenen Ausprägungen definiert.
+
+### votingCookieCheckerDs.feature.js
+Prüft, ob ein voting-cookie existiert und lädt ggf. eine Message ("Sie haben bereits abgestimmt").
+
+### votingResultCookieDs.feature.js
+Setzt das voting-cookie.
+
+### votingValidatorDs.feature.js
+Steuert das enablen/disablen des Submit-Buttons sowie die Anzeige der Anzahl der gewählten Optionen (n/x).
+
+## Verwendung
+
+Das Voting wird in handlebars wie folgt eingebaut:
+
+1. Im copytext
+```html
+{{> components/voting/voting}}
+```
+2. Als Teaser
+```html
+{{> components/voting/voting _isTeaser=true}}
+```
+
+<Canvas withToolbar>
+    <Story of={votingStories.Default} />
+</Canvas>
