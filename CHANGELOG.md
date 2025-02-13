@@ -1,3 +1,16 @@
+# v1.114.92 (Thu Feb 13 2025)
+
+#### 🐛 Bug Fix
+
+- Fix syntax in contactForm data binding for hasSpamProtection [#1241](https://github.com/mumprod/hr-design-system-handlebars/pull/1241) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.91 (Thu Feb 13 2025)
 
 #### 🐛 Bug Fix
