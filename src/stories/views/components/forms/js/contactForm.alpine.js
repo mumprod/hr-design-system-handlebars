@@ -109,7 +109,7 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             } else {
                 ajaxOptions.url = `${this.actionUrl}?${responseFormatParam}`;
             }
-        
+            console.log('ajaxOptions:', ajaxOptions);
             fetch(ajaxOptions.url, ajaxOptions)
                 .then(async (response) => {
                     const data = await response.text();
