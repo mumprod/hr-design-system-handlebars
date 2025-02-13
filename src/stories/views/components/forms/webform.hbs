@@ -7,7 +7,7 @@
             <form
                 x-ref="form{{nextRandom}}"
                 ax-load
-                x-data="contactForm('form{{getRandom}}','{{this.jsonUrl}}','{{this.errorMessages}}','{{this.isMultipart}}','{{this.trackingInformations}}','{{this.hasSpamProtection}}')"
+                x-data="contactForm('form{{getRandom}}','{{this.jsonUrl}}','{{this.errorMessages}}','{{this.isMultipart}}','{{this.trackingInformations}}', {{this.hasSpamProtection}})"
                 x-init="formInit()"
                 x-ignore
 
