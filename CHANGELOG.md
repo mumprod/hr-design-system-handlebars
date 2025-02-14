@@ -1,3 +1,15 @@
+# v1.114.93 (Fri Feb 14 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Enhance contact form interaction by adding touch event listeners and improve German translation in noscript message ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.92 (Thu Feb 13 2025)
 
 #### 🐛 Bug Fix
