@@ -35,6 +35,8 @@ export default function contactForm(formId, jsonUrl, errorMessages, multipart, t
             this.interacted = false;
             addEventListener('mousemove', () => this.interacted = true );
             addEventListener('keypress', () => this.interacted = true );
+            addEventListener('touchstart', () => this.interacted = true ); 
+            addEventListener('touchmove', () => this.interacted = true );   
         },
         scrollToElementAndCenterWithTimeout(element, timeout){
             setTimeout(() => {
