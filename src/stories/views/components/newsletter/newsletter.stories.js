@@ -1,5 +1,4 @@
-import NewNewsletterJson from './fixtures/new_newsletter.json'
-import OldNewsletterJson from './fixtures/newsletter.json'
+import newsletterJson from './fixtures/newsletter.json'
 
 const handlebars = require('hrHandlebars')
 
@@ -32,7 +31,7 @@ export default {
         chromatic: { disableSnapshot: true }
     }
 }
-const TemplateNewsletterNew = (args) => {
+const TemplateNewsletter = (args) => {
     let hbsTemplate = handlebars.compile(`
             {{> components/newsletter/newsletter }}
     `)
@@ -40,17 +39,17 @@ const TemplateNewsletterNew = (args) => {
 }
 
 export const Default = {
-    render: TemplateNewsletterNew.bind({}),
-    name: 'Neuer Newsletter',
-    args: NewNewsletterJson,
+    render: TemplateNewsletter.bind({}),
+    name: 'Newsletter',
+    args: newsletterJson,
     parameters: { 
         fetchMock: {
             mocks: [
                 {
-                    matcher: 'http://localhost:6006/',
+                    matcher: 'https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de',
                     response: {
                         status: 200,
-                        message: 'no_valid_newsletters',
+                        message: 'success',
                         body: {
                             status: ''
                         },
