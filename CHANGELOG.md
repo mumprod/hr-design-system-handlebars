@@ -1,3 +1,15 @@
+# v1.114.94 (Mon Feb 17 2025)
+
+#### 🐛 Bug Fix
+
+- Fixing clearance float bug + Refactor [#1242](https://github.com/mumprod/hr-design-system-handlebars/pull/1242) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.93 (Fri Feb 14 2025)
 
 #### ⚠️ Pushed to `main`
