@@ -111,6 +111,9 @@ const ExternalService = function (context) {
                     case 'wahl-gemeinde-ergebnis':
                         createWahlGemeindeErgebnisEmbed()
                         break
+                    case 'wer-waehlte-wen':
+                        werWaehlteWenEmbed()
+                        break
                     default:
                         console.error('No JS Config for external service ' + id)
                         break
@@ -168,6 +171,39 @@ const ExternalService = function (context) {
         script.type = 'text/javascript'
         rootElement.appendChild(script)
     }
+
+    const werWaehlteWenEmbed = function () {
+        let iframe = document.createElement('iframe');
+        let cleanUrl;
+        const parts = embedCode.split('*');
+        if (parts.length === 2) {
+            const params = parts[1].split(' ');
+            cleanUrl = parts[0].trim();
+            for (const param of params) {
+                const [key, value] = param.split('=');
+                if (key === 'id') {
+                    iframe.id = value;
+                } else {
+                    iframe.setAttribute(key, value);
+                }
+            }
+        }
+
+        iframe.src = cleanUrl;
+        iframe.style.width = "100%";
+        iframe.style.border = "0";
+        rootElement.appendChild(iframe);
+
+        window.addEventListener("message", function (e) {
+            if (e.data.contentUrl && e.data.contentUrl.includes("/wahl/embed/2025-02-23-BT-DE/wer-waehlte-wen/")) {
+                let h = parseInt(e.data.height, 10) + 2;
+                if (iframe.id === "ts-embed-wer-waehlte-wen-2025-02-23-BT-DE") {
+                    iframe.style.height = h + "px";
+                }
+            }
+        });
+    }
+    
     const createUniqueID = function () {
         console.log("Erzeuge einzigartige ID")
         uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
