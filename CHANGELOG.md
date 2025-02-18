@@ -1,3 +1,15 @@
+# v1.114.96 (Tue Feb 18 2025)
+
+#### 🐛 Bug Fix
+
+- new getter for posterteaser-image [#1244](https://github.com/mumprod/hr-design-system-handlebars/pull/1244) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.95 (Mon Feb 17 2025)
 
 #### 🐛 Bug Fix
