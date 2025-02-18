@@ -39,6 +39,16 @@
                         }
                     ]
                 },
+                "posterTeaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "teaser_standard",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "rueckkehr-nach-abschiebung-102"
+                        }
+                    ]
+                },
                 "displayTeaserBodyAsImageOverlay": false,
                 "hasMediaButtons": false,
                 "dontLazyload": true,

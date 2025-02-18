@@ -3,15 +3,15 @@
         {{#if _isCopytext~}}
             {{#if this.showFullSize.isTrue }}
                 {{#if this.showStretched.isTrue }}
-                    {{~> components/base/image/responsive_image this.teaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+                    {{~> components/base/image/responsive_image this.posterTeaserImage _type="poster_wide" _variant="default" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{else}}
-                    {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="copytext_full" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+                    {{~> components/base/image/responsive_image this.posterTeaserImage _type="poster" _variant="copytext_full" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
                 {{/if}}
             {{else}}
-                {{~> components/base/image/responsive_image this.teaserImage _type="poster" _variant="copytext_narrow" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+                {{~> components/base/image/responsive_image this.posterTeaserImage _type="poster" _variant="copytext_narrow" _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
             {{/if}}
         {{else}}
-            {{~> components/base/image/responsive_image this.teaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
+            {{~> components/base/image/responsive_image this.posterTeaserImage _type=this.teaserType _variant=this.content.imageVariant _noDelay=../_noDelay _addClassImg="rounded-tl-hr rounded-br-hr" ~}}
         {{/if}}
     </figure>
     <div class="absolute flex flex-col justify-end w-full h-full {{#if _isCopytext~}}{{#if this.showFullSize.isTrue~}}{{inline-switch this.showStretched.isTrue '["false","true"]' '["pb-[70px] sm480:pb-24 md:pb-32","pb-[70px] sm480:pb-[86px] sm:pb-16 md:pb-[70px]","pb-[70px] sm480:pb-24 md:pb-32"]'}}{{else}}pb-[70px] sm480:pb-24 sm:pb-[86px] md:pb-24{{/if}}{{else}}{{inline-switch this.realTeaserSize '["33","50"]' '["pb-16 sm:pb-24 md:pb-16","pb-16 sm:pb-24 md:pb-24"]'}}{{/if}} bg-gradient-to-t to-80% from-black rounded-tl-hr rounded-br-hr">
