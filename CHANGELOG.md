@@ -1,3 +1,15 @@
+# v1.114.99 (Wed Feb 19 2025)
+
+#### 🐛 Bug Fix
+
+- move sticky player script to main alpine.js script and load it async [#1246](https://github.com/mumprod/hr-design-system-handlebars/pull/1246) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.98 (Wed Feb 19 2025)
 
 #### ⚠️ Pushed to `main`
