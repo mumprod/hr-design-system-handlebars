@@ -1,3 +1,16 @@
+# v1.114.100 (Wed Feb 19 2025)
+
+#### 🐛 Bug Fix
+
+- Enhance publication date handling and add ticker component [#1247](https://github.com/mumprod/hr-design-system-handlebars/pull/1247) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.99 (Wed Feb 19 2025)
 
 #### 🐛 Bug Fix
