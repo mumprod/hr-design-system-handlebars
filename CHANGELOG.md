@@ -1,3 +1,15 @@
+# v1.114.97 (Wed Feb 19 2025)
+
+#### 🐛 Bug Fix
+
+- Removin webform new flag [#1245](https://github.com/mumprod/hr-design-system-handlebars/pull/1245) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.96 (Tue Feb 18 2025)
 
 #### 🐛 Bug Fix
