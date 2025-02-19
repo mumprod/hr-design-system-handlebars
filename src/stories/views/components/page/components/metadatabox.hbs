@@ -6,10 +6,10 @@
 
                 {{#if _showDate }}
                     {{#if this.hasMoreThanOneAuthor}}
-                        {{> components/page/components/publicationdate }}
+                        {{> components/page/components/publicationdate _isTicker=_isTicker}}
                     {{else}}
                         {{#unless this.hasOneAuthor}}
-                            {{> components/page/components/publicationdate }}
+                            {{> components/page/components/publicationdate _isTicker=_isTicker}}
                         {{/unless}}
                     {{/if}}
                 {{/if}}

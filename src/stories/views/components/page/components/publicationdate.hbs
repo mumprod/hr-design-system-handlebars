@@ -7,6 +7,10 @@
             {{~else}}
                 {{#if this.isPublicationDate ~}}
                     <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
+                {{else}}
+                    {{#if ../_isTicker ~}}
+                        <time datetime="{{this.htmlDateTime}}">{{loca "date_lastChanged" this.date this.time }}</time>
+                    {{~/if}}
                 {{~/if}}
             {{~/if}}
                
