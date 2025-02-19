@@ -10,14 +10,13 @@ import mainNavigationHandler from 'components/site_header/mainNavigationHandler.
 import flyoutHandler from 'components/site_header/flyoutHandler.alpine'
 import overlayHandler from 'components/site_header/overlayHandler.alpine'
 import dropdown from 'components/site_header/dropdown.alpine'
- 
 
 AsyncAlpine.init(Alpine)
     .data('podcastPlayer', () => import('components/podcast/podcast_player.alpine.js'))
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )
-    
+    .data('stickyPlayer', () => import('components/mediaplayer/stickyPlayer.alpine.js'))
     .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
     .data('inputHandler', ()=> import('components/forms/js/inputHandler.alpine.js'))
     .data('contactForm', ()=> import('components/forms/js/contactForm.alpine.js'))
