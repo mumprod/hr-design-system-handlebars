@@ -217,7 +217,7 @@
             minmax(var(--mobile-padding), var(--desktop-padding)) [full-width-end];
         grid-column: main;
     }
-    .grid-article > :not(.article-breakout, .article-full-width, .sticky) {
+    .grid-article > :not(.article-breakout, .article-full-width, .article-narrow, .sticky) {
         grid-column: narrow;
     }
     .article-breakout {
