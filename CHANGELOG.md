@@ -1,3 +1,15 @@
+# v1.114.104 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Refactoring search result page ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.103 (Fri Feb 21 2025)
 
 #### 🐛 Bug Fix
