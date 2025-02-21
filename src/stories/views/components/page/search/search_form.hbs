@@ -1,6 +1,6 @@
 <form id="search_form" method="GET" action="#">
-            <div class="relative flex px-2 pt-6 pb-6 mt-8 mb-8 sm:px-4 bg-highlight-1 dark:bg-highlight-1-dark sm:pt-6 sm:pb-6 sm:mt-8 article-full-width sm:article-narrow">
-                <div class="relative h-12 basis-full width-full">
+            <div class="relative flex flex-col px-2 pt-6 pb-6 mt-8 mb-8 sm:flex-row sm:px-4 bg-highlight-1 dark:bg-highlight-1-dark sm:pt-6 sm:pb-6 sm:mt-8 article-full-width sm:article-narrow">
+                <div class="relative h-12 sm:mr-4 basis-full width-full">
                     {{~> components/forms/components/input
                             _locaKey="search_form_label_searchTerm"
                             _name="query"
@@ -13,7 +13,7 @@
                             _autoSuggestFeature=true
                     }}
                 </div>
-                <div class="relative flex h-12 mr-2 sm:mr-4 basis-full width-full">
+                <div class="relative flex h-12 basis-full width-full">
                     <div class="relative h-12 basis-full">
                         <select class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none cursor-pointer form-select text-text dark:bg-black dark:text-text-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none border-form-highlight dark:border-form-highlight-dark"  id="select_search" title="" name="all" isFocused="false">
                             <option class="text-gray-scorpion dark:text-text-dark" value="false" {{#unless this.searchInAllWebsites}} selected{{/unless}}>{{loca
