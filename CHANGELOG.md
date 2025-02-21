@@ -1,3 +1,15 @@
+# v1.114.106 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Refactor ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.105 (Fri Feb 21 2025)
 
 #### ⚠️ Pushed to `main`
