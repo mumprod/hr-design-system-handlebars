@@ -1,3 +1,15 @@
+# v1.114.107 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Terms of Use and dataPolicy text classes changed ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.106 (Fri Feb 21 2025)
 
 #### ⚠️ Pushed to `main`
