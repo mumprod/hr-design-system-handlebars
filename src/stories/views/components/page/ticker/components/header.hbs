@@ -1,0 +1,18 @@
+<header class="mt-1 sm:mt-8">
+    {{#with this.label}}
+        {{#> components/label/label_group _css=(if ../../../this.tickerTopic "mb-2 float-left block" "mb-2")}}            
+            {{> components/label/label _type=this.type _text=(loca this.loca)}}
+        {{/components/label/label_group}}
+    {{/with}}   
+    <h2>
+        {{#unless this.label }}  
+            {{~#if topline}}
+                <span class="block mb-2 text-base sm480:text-xl font-heading dark:text-text-dark">{{this.topline}}</span>
+            {{/if~}}
+        {{/unless~}}
+        {{#if ../../this.tickerTopic}}
+            {{> components/label/label_byline _css="ml-2 mb-2 pt-1 h-6 inline-block" _text=../../../this.tickerTopic}}
+        {{/if}} 
+        <span class="block text-3xl ui-test-story-title font-headingSerif sm480:text-4xl dark:text-text-dark">{{this.title}}</span>
+    </h2>
+</header>

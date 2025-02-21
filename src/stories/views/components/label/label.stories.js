@@ -8,12 +8,23 @@ hbsTemplates['label'] = handlebars.compile(`
     {{> components/label/label}}
   `)
 
+hbsTemplates['label_with_byline'] = handlebars.compile(`
+{{#> components/label/label_group _css="mb-2" _tag=_tag}}
+    {{> components/label/label}}
+    {{> components/label/label_byline _css="ml-2" _text=_byline}}
+{{/components/label/label_group}}
+`)
+
 const Template = (args) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
     return hbsTemplates['label']({ ...args })
 }
-
+const Template_withByline = (args) => {
+    // You can either use a function to create DOM elements or use a plain html string!
+    // return `<div>${label}</div>`;
+    return hbsTemplates['label_with_byline']({ ...args })
+}
 const snapshotTemplate = (args) => {
     return getSnapshotsTemplate({ hbsTemplates, args })
 }
@@ -199,7 +210,17 @@ export const Kurzmeldung = {
         _text: 'Kurzmeldung',
     },
 }
+export const TickerMitByline = {
+    render: Template_withByline.bind({}),
+    name: 'Ticker mit Byline',
 
+    args: {
+        _type: 'ticker',
+        _text: 'Ticker',
+        _byline: 'Hessen am Morgen',
+        _tag: "h3"
+    },
+}
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
