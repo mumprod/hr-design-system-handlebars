@@ -3,6 +3,13 @@
         <div id="newsletter_form">
             {{> components/newsletter/components/newsletter_form}}
         </div>
+        <noscript>
+        <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+            <p class="font-bold">Hinweis</p>
+            <p>Bitte aktivieren Sie JavaScript, um den Newsletter zu abonnieren.</p>
+            <p>Alternativ können Sie die verfügbaren Newsletter-Abonnements des HR <a href="https://hessenschau-nl.sr.de/newsletter-login.php" class="" target="_blank"><strong>hier</strong></a> abschließen / verwalten / beenden. </p>
+        </div>
+        </noscript>
     {{~> components/base/a11y/hiddenText _locaTag="story_newsletter_outro_sr" ~}}
 </div>
 <noscript>
@@ -11,9 +18,4 @@
     display: none; 
     }
 </style>
-<div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
-    <p class="font-bold">Hinweis</p>
-    <p>Bitte aktivieren Sie JavaScript, um den Newsletter zu abonnieren.</p>
-    <p>Alternativ können Sie die verfügbaren Newsletter-Abonnements des HR <a href="https://hessenschau-nl.sr.de/newsletter-login.php" class="" target="_blank"><strong>hier</strong></a> abschließen / verwalten / beenden. </p>
-</div>
 </noscript>
