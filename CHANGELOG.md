@@ -1,3 +1,16 @@
+# v1.114.110 (Mon Feb 24 2025)
+
+#### 🐛 Bug Fix
+
+- Add height class to label group in ticker header component [#1252](https://github.com/mumprod/hr-design-system-handlebars/pull/1252) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.109 (Mon Feb 24 2025)
 
 #### 🐛 Bug Fix
