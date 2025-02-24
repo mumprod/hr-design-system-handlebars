@@ -1,6 +1,6 @@
 <header class="mt-1 sm:mt-8">
     {{#with this.label}}
-        {{#> components/label/label_group _css=(if ../../../this.tickerTopic "mb-2 float-left block" "mb-2")}}            
+        {{#> components/label/label_group _css=(if ../../../this.tickerTopic "mb-2 float-left block h-6" "mb-2")}}            
             {{> components/label/label _type=this.type _text=(loca this.loca)}}
         {{/components/label/label_group}}
     {{/with}}   
