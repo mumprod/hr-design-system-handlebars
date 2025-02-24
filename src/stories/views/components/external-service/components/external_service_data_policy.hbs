@@ -1,19 +1,18 @@
 <div id="service--{{nextRandom}}" class="grid col-span-12 p-5 sm:mx-0 bg-highlight-1 dark:bg-highlight-1-dark dark:text-text-dark rounded-tl-hr rounded-br-hr js-datapolicy">
-    <h3 class="text-2xl font-headingSerif">
+    <div id="externalService_form">
+        <h3 class="text-2xl font-headingSerif">
         {{loca "ext_service_datapolicy_headline" this.externalServiceConfig.externalServiceName}}
-    </h3>
-    <div>
+        </h3>
         <p class="pt-4 text-base font-copy">
-            {{loca "ext_service_datapolicy_text" this.externalServiceConfig.externalServiceName}}
-            {{~> components/external-service/components/data_policy_link ~}}
+        {{loca "ext_service_datapolicy_text" this.externalServiceConfig.externalServiceName}}
         </p>
         <div class="pt-4">
-            {{~> components/external-service/components/external_service_form_checkbox ~}}
+        {{~> components/external-service/components/external_service_form_checkbox ~}}
         </div>
         <div class="float-right pt-4">
             {{#with this}}
                 <div class="inline-flex">
-                 {{~> components/external-service/components/external_service_settings_button _css="js-settings-inner-button"~}}
+                    {{~> components/external-service/components/external_service_settings_button _css="js-settings-inner-button"~}}
                 {{#*inline "htmlProperties"}}
                     data-piano-tracking='{"label":"DSGVO-Overlay"}'
                     data-a11y-dialog-show="datapolicy-settings-dialog"
@@ -27,16 +26,24 @@
         </div>
     </div> 
     <noscript>
-        <p class="pt-4 text-base font-copy">
-            {{loca "ext_service_datapolicy_no_js_text" this.externalServiceConfig.externalServiceName}}
-        </p>
-        {{#>components/base/link _link=this.link _css="relative inline text-link z-20 ds-focus"}}
-            <span class="hover:underline decoration-1 font-copy">
-                {{loca "ext_service_datapolicy_no_js_link" this.content.externalServiceConfig.externalServiceName}}
-                {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="inline -mt-0.5 w-5 h-5 fill-current ml-1"}}
-            </span>
-        {{/components/base/link}}
-        {{#*inline "htmlProperties"~}}
-        {{~/inline}}
+        <style>
+            #externalService {
+                display: none;
+            }
+        </style>
+        <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+            <p class="font-bold">Hinweis</p>
+            <p class="pt-4 text-base font-copy">
+                {{loca "ext_service_datapolicy_no_js_text" this.externalServiceConfig.externalServiceName}}
+            </p>
+            {{#>components/base/link _link=this.link _css="relative inline text-link z-20 ds-focus"}}
+                <span class="hover:underline decoration-1 font-copy">
+                    {{loca "ext_service_datapolicy_no_js_link" this.content.externalServiceConfig.externalServiceName}}
+                    {{> components/base/image/icon _icon="extern" _iconmap="icons" _addClass="inline -mt-0.5 w-5 h-5 fill-current ml-1"}}
+                </span>
+            {{/components/base/link}}
+            {{#*inline "htmlProperties"~}}
+            {{~/inline}}
+        </div>
     </noscript>
 </div>
