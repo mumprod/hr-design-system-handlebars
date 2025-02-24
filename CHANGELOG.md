@@ -1,3 +1,64 @@
+# v1.114.107 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Terms of Use and dataPolicy text classes changed ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.106 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Refactor ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.105 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Adding ns-solution for newsletter - styling search_form ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.104 (Fri Feb 21 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Refactoring search result page ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.114.103 (Fri Feb 21 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3552 b [#1249](https://github.com/mumprod/hr-design-system-handlebars/pull/1249) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.102 (Thu Feb 20 2025)
 
 #### ⚠️ Pushed to `main`
