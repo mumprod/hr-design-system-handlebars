@@ -1,3 +1,16 @@
+# v1.114.108 (Mon Feb 24 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3552 B - Pass _isTicker parameter to author component in metadata box [#1250](https://github.com/mumprod/hr-design-system-handlebars/pull/1250) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.107 (Fri Feb 21 2025)
 
 #### ⚠️ Pushed to `main`
