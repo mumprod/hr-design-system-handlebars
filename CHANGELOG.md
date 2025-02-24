@@ -1,3 +1,15 @@
+# v1.114.109 (Mon Feb 24 2025)
+
+#### 🐛 Bug Fix
+
+- Refactor External Services Link [#1251](https://github.com/mumprod/hr-design-system-handlebars/pull/1251) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.108 (Mon Feb 24 2025)
 
 #### 🐛 Bug Fix
