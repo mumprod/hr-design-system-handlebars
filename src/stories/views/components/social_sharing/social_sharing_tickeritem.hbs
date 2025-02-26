@@ -18,7 +18,7 @@
             >
                 {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
             </button>
-            <div
+            <div :class="{ 'flex': $store.sharingIsOpen.tickeritem,'hidden': !$store.sharingIsOpen.tickeritem }"    
                 x-ref="panel"
                 :id="$id('dropdown-button')"
                 class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"

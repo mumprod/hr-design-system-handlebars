@@ -49,7 +49,7 @@ Alpine.store('sharingIsVisible', false)
 Alpine.store('sharingIsOpen', {
     metadatabox: false,
     mobilesticky: false,
-    tickeritem: true
+    tickeritem: false
 })
 Alpine.store('sharingBottomPos', {
     current: '0'
