@@ -1,0 +1,32 @@
+{{~#with this.socialSharing ~}}
+    <div
+        x-data="socialSharingHandler('tickeritem')"
+        class="flex self-center justify-end ml-3 print:hidden grow"
+        x-on:keydown.escape.prevent.stop="close()"
+        @click.outside="close()"
+        ax-load
+        x-ignore
+    >
+        <div class="relative right-0 flex gap-3 bg-white md:h-auto"  >
+            <button
+                class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
+                x-ref="button"
+                x-on:click="toggle()"
+                :aria-expanded="open"
+                :aria-controls="$id('dropdown-button')"
+                aria-label="{{loca "share_linktitle" }}"
+            >
+                {{> components/base/image/icon _addClass="w-5 h-5 fill-current group-hover:fill-link--dark" _icon="sharing" _iconmap="icons" }}
+            </button>
+            <div
+                x-ref="panel"
+                :id="$id('dropdown-button')"
+                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
+            >
+                <ul class="flex gap-3">
+                    {{> components/social_sharing/social_sharing_icons _socialSharingType="metadatabox" _trackingData=../this.trackingData}}
+                </ul>
+            </div>
+        </div>
+    </div>
+{{/with}}
