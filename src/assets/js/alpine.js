@@ -48,7 +48,8 @@ Alpine.store('sectionNavIsVisible', false)
 Alpine.store('sharingIsVisible', false)
 Alpine.store('sharingIsOpen', {
     metadatabox: false,
-    mobilesticky: false
+    mobilesticky: false,
+    tickeritem: false
 })
 Alpine.store('sharingBottomPos', {
     current: '0'
