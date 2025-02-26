@@ -30,13 +30,21 @@
             >
                 {{> components/forms/components/fields _formId=(joinStrings 'form' (getRandom)) }} 
                 {{#if this.hasSpamProtection }}
-                    <noscript>
+                    <div id="webform_form_spam_hint">
+                            <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+                                <p class="font-bold">Hinweis</p>
+                                <p>Bitte aktivieren Sie JavaScript, um dieses Formular absenden zu können.</p>
+                            </div>
+                    </div>
+                {{else}}
+                    <div id="webform_form_hint">
                         <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
                             <p class="font-bold">Hinweis</p>
-                            <p>Bitte aktivieren Sie JavaScript, um dieses Formular absenden zu können.</p>
+                            <p>Javascript ist deaktiviert. Das Formular kann aber weiterhin normal benutzt werden.</p>
                         </div>
-                    </noscript>
+                    </div>
                 {{/if}}
+
                 {{> components/forms/components/controls }}                       
                 
             </div>

@@ -1,6 +1,7 @@
 <h3 class="mb-6 text-2xl md:text-3xl font-headingSerif sm:mb-12 text-text dark:text-text-dark">
     {{this.title}}
 </h3>
+<div id="newsletter_form">
 <div id="formWrapper">
 <form class="relative flex flex-col justify-center overflow-hidden group" 
     id="form{{nextRandom}}" 
@@ -51,4 +52,12 @@
         {{{include "components/newsletter/components/newsletter_already_registered" _alreadyRegistered="true" _locaKeyText="newsletter_text_already_registered" }}}
 </div>
 </form>
+</div>
+</div>
+<div id="newsletter_form_hint">
+    <div class="p-4 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+        <p class="font-bold">Hinweis</p>
+        <p>Bitte aktivieren Sie JavaScript, um den Newsletter zu abonnieren.</p>
+        <p>Alternativ können Sie die verfügbaren Newsletter-Abonnements des HR <a href="https://hessenschau-nl.sr.de/newsletter-login.php" class="" target="_blank"><strong>hier</strong></a> abschließen / verwalten / beenden. </p>
+    </div>
 </div>
