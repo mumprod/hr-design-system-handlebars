@@ -1,3 +1,15 @@
+# v1.114.111 (Wed Feb 26 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Refactor Disabled JS Hints in interactive elements ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.110 (Mon Feb 24 2025)
 
 #### 🐛 Bug Fix
