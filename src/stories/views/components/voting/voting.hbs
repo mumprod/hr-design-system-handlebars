@@ -30,34 +30,36 @@
                     >
                         {{> components/voting/components/voting_header _isTeaser=../../_isTeaser _title=../this.title _topline=../this.topline}}
                         
-                        <div class="js-voting-form__bottomWrapper">
-                            {{#if this.shorttext}}
-                                <p class="mt-3 text-base font-copy sm:text-lg dark:text-text-dark">{{this.shorttext}}</p>
-                            {{/if}}
-
-                            <div class="w-full mt-6 text-xs text-right sm:mt-8 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
-                                {{#if ../this.isMultipleChoice}}
-                                    {{loca "votingform_open_answers_text" ../this.maxAnswerCount}}
-                                {{else}}
-                                    {{loca "votingform_single_answer_text"}}
+                        <div id="voting_form">
+                            <div class="js-voting-form__bottomWrapper">
+                                {{#if this.shorttext}}
+                                    <p class="mt-3 text-base font-copy sm:text-lg dark:text-text-dark">{{this.shorttext}}</p>
                                 {{/if}}
-                                <span class="block float-right w-8 js-voting-counter">(0/{{../this.maxAnswerCount}})</span>
-                            </div>
-                            {{> components/forms/components/fields 
-                                    _multipleChoice=../this.isMultipleChoice
-                                    _isHorizontalLayout=this.isHorizontalLayout
-                                    _isMultimediaVoting=../this.isMultimediaVoting
-                                    _addClassGroup="!flex-col mt-2" 
-                                    _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex hover:!outline-2 hover:!outline-blue-science-hex bg-white dark:bg-black has-[input:disabled]:opacity-50 has-[input:disabled]:cursor-not-allowed" 
-                                    _addClassLabel="w-full !pt-[15px] sm:!pt-[18px] !pb-[9px] sm:!pb-3.5 !pr-3 sm:!pr-4" 
-                                    _addClassLabelForDataPolicy="!pt-0"
-                                    _addClassInput="!my-3 sm:!my-4 !ml-3 sm:!ml-4"
-                            }}
-                            <div class="w-full h-12">
-                                {{#if this.is2FSecured}}
-                                    <div class="float-left mt-1 text-xs text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
-                                {{/if}}                            
-                                {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="js-voting-submit-button"}}
+
+                                <div class="w-full mt-6 text-xs text-right sm:mt-8 font-headingSerif sm:text-sm text-gray-scorpion dark:text-text-dark">
+                                    {{#if ../this.isMultipleChoice}}
+                                        {{loca "votingform_open_answers_text" ../this.maxAnswerCount}}
+                                    {{else}}
+                                        {{loca "votingform_single_answer_text"}}
+                                    {{/if}}
+                                    <span class="block float-right w-8 js-voting-counter">(0/{{../this.maxAnswerCount}})</span>
+                                </div>
+                                {{> components/forms/components/fields 
+                                        _multipleChoice=../this.isMultipleChoice
+                                        _isHorizontalLayout=this.isHorizontalLayout
+                                        _isMultimediaVoting=../this.isMultimediaVoting
+                                        _addClassGroup="!flex-col mt-2" 
+                                        _addClassChoice="has-[input:checked]:outline outline-2 outline-blue-science-hex hover:!outline-2 hover:!outline-blue-science-hex bg-white dark:bg-black has-[input:disabled]:opacity-50 has-[input:disabled]:cursor-not-allowed" 
+                                        _addClassLabel="w-full !pt-[15px] sm:!pt-[18px] !pb-[9px] sm:!pb-3.5 !pr-3 sm:!pr-4" 
+                                        _addClassLabelForDataPolicy="!pt-0"
+                                        _addClassInput="!my-3 sm:!my-4 !ml-3 sm:!ml-4"
+                                }}
+                                <div class="w-full h-12">
+                                    {{#if this.is2FSecured}}
+                                        <div class="float-left mt-1 text-xs text-gray-scorpion dark:text-text-dark font-headingSerif">{{loca "form_text_required"}}</div>
+                                    {{/if}}                            
+                                    {{> components/voting/components/voting_submit _label="Abstimmen" _addClass="js-voting-submit-button"}}
+                                </div>
                             </div>
                         </div>
                         <script type="text/html" class="js-successMessage">
@@ -110,6 +112,12 @@
             {{> components/voting/voting_result _hideVotingResult=this.hideVotingResult}}
         {{/unless}}
     {{/with}}
+<div id="voting_form_hint">
+<div class="p-4 mt-6 mb-3 text-orange-700 bg-orange-100 border-l-4 border-orange-500" role="alert">
+    <p class="font-bold">Hinweis</p>
+    <p>Bitte aktivieren Sie JavaScript, um bei einem Voting abstimmen zu können.</p>
+</div>           
+</div>
 {{/components/forms/components/backgroundBox }}
 
 {{!--Featured Content--}}
