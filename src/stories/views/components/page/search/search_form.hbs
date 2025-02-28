@@ -1,40 +1,143 @@
 <form id="search_form" method="GET" action="#">
-            <div class="relative flex flex-col px-2 pt-6 pb-6 mt-8 mb-8 sm:flex-row sm:px-4 bg-highlight-1 dark:bg-highlight-1-dark sm:pt-6 sm:pb-6 sm:mt-8 article-full-width sm:article-narrow">
-                <div class="relative h-12 sm:mr-4 basis-full width-full">
-                    {{~> components/forms/components/input
-                            _locaKey="search_form_label_searchTerm"
-                            _name="query"
-                            _label="Suchbegriff"
-                            _labelClass=""
-                            _description=""
-                            _type="text"
-                            _value=this.queryString
-                            _autocompleteOff=true
-                            _autoSuggestFeature=true
-                    }}
-                </div>
-                <div class="relative flex h-12 basis-full width-full">
-                    <div class="relative h-12 basis-full">
-                        <select class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none cursor-pointer form-select text-text dark:bg-black dark:text-text-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none border-form-highlight dark:border-form-highlight-dark"  id="select_search" title="" name="all" isFocused="false">
-                            <option class="text-gray-scorpion dark:text-text-dark" value="false" {{#unless this.searchInAllWebsites}} selected{{/unless}}>{{loca
-                                    "website_name_search_button"}}</option>
-                            <option class="text-gray-scorpion dark:text-text-dark" value="true" {{#if this.searchInAllWebsites}} selected{{/if}}>{{loca
-                                    "search_select_all"}}</option>
-                        </select>
-                        <label for="select_search" class="absolute top-0 truncate transition-transform origin-top-left transform scale-100 translate-x-0 translate-y-3 pointer-events-none left-4 right-11 text-gray-scorpion dark:text-text-dark peer-focus:text-form-highlight peer-focus:dark:text-form-highlight-dark peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px ">
-                            {{loca "search_form_label_searchType"}}
-                        </label>
-                        <div class="absolute bg-white right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">
-                            {{~> components/base/image/icon _icon="arrow-down" _addClass="sb-icon w-3 h-3 fill-form-highlight dark:fill-form-highlight-dark" ~}}
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <button aria-label="{{loca "search_input_aria_submit" }}" type="submit"
-                                class="inline-flex items-center justify-center order-2 w-12 h-12 border rounded-r cursor-pointer ds-button font-heading text-button-inverted bg-button border-button hover:bg-button--dark hover:border-button--dark active:bg-button--dark active:scale-95 min-w-11">
-                            {{> components/base/image/icon _icon="suche" _addClass="sb-icon w-5 h-5 fill-white dark:fill-text-dark"}}
-                            <span class="hide">{{loca "search_button_label"}}</span>
-                        </button>
-                    </div>
+    <div class="relative flex flex-col px-2 pt-6 pb-6 mt-8 mb-8 sm:flex-row sm:px-4 bg-highlight-1 dark:bg-highlight-1-dark sm:pt-6 sm:pb-6 sm:mt-8 article-full-width sm:article-narrow">
+        <div class="relative h-12 basis-full width-full "  x-data="searchSuggest()">
+            <div id="search-content"
+                @click.away="active=false; cursorIndex=-1"
+                @keydown.arrow-down="moveDownList()"
+                @keydown.arrow-up="moveUpList()"
+            >     
+                <input 
+                    @input.debounce="getSuggestionsForInput();cursorIndex=-1"
+                    @click="active=true" 
+                    name="query" 
+                    x-model="query"
+                    placeholder='{{loca "search_input_placeholder" }}' 
+                    class="relative w-full h-12 pt-4 pl-4 placeholder-transparent bg-white border-r border-r-gray-mercury placeholder:select-none text-text dark:bg-black dark:text-text-dark autofill:shadow-autofill border-form-highlight dark:form-highlight-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none"
+                    type="text"
+                    id="searchInput--{{nextRandom}}"
+                    autocomplete="off"
+                    role="combobox" 
+                    aria-haspopup="listbox" 
+                    aria-autocomplete="list" 
+                    x-effect="$el.setAttribute('aria-expanded', (query.length > 1 && active && suggestions.length > 0))"
+                    title="{{loca 'search_form_label_searchTerm'}}"
+                    placeholder="{{loca 'search_form_label_searchTerm'}}"
+                    
+                > 
+                <label for="searchInput--{{getRandom}}"
+                        class="{{_labelClass}} peer-placeholder-shown:whitespace-nowrap {{> components/forms/components/labelClasses }}">
+                    {{loca "search_form_label_searchTerm" }}
+                </label>
+                <div 
+                    class="absolute left-0 w-auto min-w-full z-100 top-11.5" 
+                    x-show="query.length > 1 && active && suggestions.length"
+                    x-cloak
+                    x-transition:leave="transition ease-in duration-100"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                >
+                    <ul 
+                        role="listbox" 
+                        id="suggestionlist--{{getRandom}}" 
+                        aria-label="Suche öffnen"
+                        x-effect="$el.setAttribute('aria-expanded', query.length > 1 && active && suggestions.length > 0);$el.setAttribute('aria-hidden', !(query.length > 1 && active && suggestions.length > 0))"
+                        class=" w-full mt-1 lg:mt-0.5 bg-white border rounded divide-y shadow-xl"
+                        x-ref="list"
+                    >
+                        
+                        <template x-for="(suggestion, index) in suggestions" :key="index">
+                            <li class="first-of-type:border-none">
+                                <a  
+                                    x-bind:active="false"
+                                    x-bind:href="'{{resourceUrl "suche/index.nocache"}}?query=' + suggestion"
+                                    x-bind:class="{'py-1.5 px-2 link-focus-inset text-base flex w-full text-secondary rounded hover:bg-primary hover:text-white': true, 'bg-primary text-white':index==cursorIndex }"
+                                >
+                                    <span x-text="suggestion"></span>
+                                </a>
+                            </li>
+                        </template>
+                        
+                    </ul>
+                </div> 
+            </div>
+            <script type="text/javascript">
+
+                function searchSuggest() {
+
+                    return {
+                        active:true,
+                        cursorIndex: -1,
+                        query: "",
+                        suggestions: [],
+
+                        getSuggestionsForInput() {
+
+                            suggestionDataUrl = '{{resourceUrl "suche/index~suggest.jsp"}}' + '?suggestions=' + this.query;
+
+                            fetch(suggestionDataUrl)
+
+                                .then((res) =>{  return res.text()})
+
+                                .then((data) => {
+                                    data = JSON.parse(data.replace(/&quot;/g, '"'))
+                                    data.solrSuggestions = this.filterStartwith(data.solrSuggestions, this.query)
+                                    this.suggestions= this.filterSortbylength(data.solrSuggestions)
+                                });
+
+                        },
+
+                        filterStartwith(data, query) {
+                        return data.filter(Suggestion => Suggestion.toLowerCase().startsWith(query.toLowerCase().trim()))
+                        },
+
+                        filterSortbylength(data) {
+                        return data.sort((a, b) => a.length - b.length)
+                        },
+
+                        moveDownList() {
+                                if (this.suggestions.length > 0 && this.cursorIndex < this.suggestions.length - 1) 
+                                {
+                                    this.cursorIndex++;
+                                    this.query = this.suggestions[this.cursorIndex];
+                                }
+                        },
+
+                        moveUpList() {
+                                if (this.suggestions.length > 0 && this.cursorIndex > 0) 
+                                {
+                                    this.cursorIndex--;
+                                    this.query = this.suggestions[this.cursorIndex];
+                                }
+                        },
+
+                    };
+
+                }
+
+            </script>
+        </div>
+        <div class="relative flex h-12 basis-full width-full">
+            <div class="relative h-12 basis-full">
+                <select class="relative w-full h-12 pt-4 pl-4 bg-white appearance-none cursor-pointer form-select text-text dark:bg-black dark:text-text-dark pr-9 peer border-y focus:border-y-2 border-t-transparent dark:border-t-transparent focus:outline-none border-form-highlight dark:border-form-highlight-dark"  id="select_search" title="" name="all" isFocused="false">
+                    <option class="text-gray-scorpion dark:text-text-dark" value="false" {{#unless this.searchInAllWebsites}} selected{{/unless}}>{{loca
+                            "website_name_search_button"}}</option>
+                    <option class="text-gray-scorpion dark:text-text-dark" value="true" {{#if this.searchInAllWebsites}} selected{{/if}}>{{loca
+                            "search_select_all"}}</option>
+                </select>
+                <label for="select_search" class="absolute top-0 truncate transition-transform origin-top-left transform scale-100 translate-x-0 translate-y-3 pointer-events-none left-4 right-11 text-gray-scorpion dark:text-text-dark peer-focus:text-form-highlight peer-focus:dark:text-form-highlight-dark peer-focus:scale-75 peer-focus:translate-y-0 peer-focus:top-px ">
+                    {{loca "search_form_label_searchType"}}
+                </label>
+                <div class="absolute bg-white right-0 p-4 py-3 transform border-l peer-focus:border-r peer-focus:border-l-0 pointer-events-none top-1.5 peer-focus:rotate-180">
+                    {{~> components/base/image/icon _icon="arrow-down" _addClass="sb-icon w-3 h-3 fill-form-highlight dark:fill-form-highlight-dark" ~}}
                 </div>
             </div>
-        </form>
+            <div class="relative">
+                <button aria-label="{{loca "search_input_aria_submit" }}" type="submit"
+                        class="inline-flex items-center justify-center order-2 w-12 h-12 border rounded-r cursor-pointer ds-button font-heading text-button-inverted bg-button border-button hover:bg-button--dark hover:border-button--dark active:bg-button--dark active:scale-95 min-w-11">
+                    {{> components/base/image/icon _icon="suche-ds" _addClass="sb-icon w-7 h-7 fill-white dark:fill-text-dark"}}
+                    <span class="sr-only">{{loca "search_input_aria_submit" }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

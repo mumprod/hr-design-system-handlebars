@@ -142,6 +142,9 @@
 	"poster_copyright": "Bild &copy; {0}",
 	"search_input_aria_submit": "Suche starten",
 	"search_input_placeholder": "Ort oder Thema suchen",
+	"search_form_label_searchTerm": "Suchbegriff",
+	"search_form_label_searchType": "Suche in",
+	"search_select_all": "allen hr-Webseiten",
 	"share_facebook_linktitle": "Bei Facebook teilen",
 	"share_linktitle": "Artikel teilen",
 	"share_headline": "Teilen",
@@ -240,5 +243,6 @@
 	"form_button_reset": "Zurücksetzen",
 	"form_button_submit": "Absenden",
 	"header_homepage_link_title": "Startseite hr-bigband . d e",
-	"meta_application_name": "hr-bigband.de"
+	"meta_application_name": "hr-bigband.de",
+	"website_name_search_button": "hr-bigband.de"
 }
