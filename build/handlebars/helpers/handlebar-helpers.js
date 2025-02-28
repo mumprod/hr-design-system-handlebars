@@ -262,7 +262,7 @@ var helpers = {
         if (text.includes('suche/index~suggest.jsp'))
             resourceUrl = text.replace(
                 'suche/index~suggest.jsp',
-                'https://hessenschau-dev-red.hr.de/suche/index~suggest.jsp'
+                'https://www-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de/suche/index~suggest.jsp'
             )
 
         return resourceUrl
