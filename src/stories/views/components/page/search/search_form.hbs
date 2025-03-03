@@ -22,7 +22,9 @@
                     x-effect="$el.setAttribute('aria-expanded', (query.length > 1 && active && suggestions.length > 0))"
                     title="{{loca 'search_form_label_searchTerm'}}"
                     placeholder="{{loca 'search_form_label_searchTerm'}}"
-                    
+                    {{#if this.queryString}}
+                        value="{{this.queryString}}"
+                    {{/if}}      
                 > 
                 <label for="searchInput--{{getRandom}}"
                         class="{{_labelClass}} peer-placeholder-shown:whitespace-nowrap {{> components/forms/components/labelClasses }}">
