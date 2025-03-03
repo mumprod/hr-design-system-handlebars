@@ -1,3 +1,16 @@
+# v1.114.114 (Mon Mar 03 2025)
+
+#### 🐛 Bug Fix
+
+- Add conditional value binding for search input field [#1255](https://github.com/mumprod/hr-design-system-handlebars/pull/1255) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.113 (Fri Feb 28 2025)
 
 #### 🐛 Bug Fix
