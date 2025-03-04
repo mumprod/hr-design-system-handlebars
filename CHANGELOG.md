@@ -1,3 +1,16 @@
+# v1.114.116 (Tue Mar 04 2025)
+
+#### 🐛 Bug Fix
+
+- Add social sharing ticker item component [#1257](https://github.com/mumprod/hr-design-system-handlebars/pull/1257) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.115 (Tue Mar 04 2025)
 
 #### 🐛 Bug Fix
