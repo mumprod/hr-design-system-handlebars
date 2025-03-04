@@ -1,6 +1,6 @@
 <form id="search_form" method="GET" action="#">
     <div class="relative flex flex-col px-2 pt-6 pb-6 mt-8 mb-8 sm:flex-row sm:px-4 bg-highlight-1 dark:bg-highlight-1-dark sm:pt-6 sm:pb-6 sm:mt-8 article-full-width sm:article-narrow">
-        <div class="relative h-12 basis-full width-full "  x-data="searchSuggest()">
+        <div class="relative h-12 basis-full width-full "  x-data="searchSuggestResultPage()">
             <div id="search-content"
                 @click.away="active=false; cursorIndex=-1"
                 @keydown.arrow-down="moveDownList()"
@@ -64,12 +64,12 @@
             </div>
             <script type="text/javascript">
 
-                function searchSuggest() {
+                function searchSuggestResultPage() {
 
                     return {
                         active:true,
                         cursorIndex: -1,
-                        query: "",
+                        query: "{{this.queryString}}",
                         suggestions: [],
 
                         getSuggestionsForInput() {
