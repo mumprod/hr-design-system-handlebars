@@ -1,3 +1,16 @@
+# v1.114.115 (Tue Mar 04 2025)
+
+#### 🐛 Bug Fix
+
+- Rename searchSuggest to searchSuggestResultPage and bind query to thi… [#1256](https://github.com/mumprod/hr-design-system-handlebars/pull/1256) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.114 (Mon Mar 03 2025)
 
 #### 🐛 Bug Fix
