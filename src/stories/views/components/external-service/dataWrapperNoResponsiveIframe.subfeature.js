@@ -1,4 +1,4 @@
-const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight, id, embedCode) {
+const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHeight, id, embedCode, isFirst) {
     
     const { element: rootElement } = context
     let aspectRatio = configAR
@@ -67,6 +67,9 @@ const DataWrapperNoResponsiveIframe = function (context, configAR, configFixedHe
     iframe.setAttribute('frameborder', '0')
     iframe.src = embedCode
     iframe.id = 'datawrapper-chart-' + uniqueId
+    if (!isFirst) {
+        iframe.loading = "lazy";
+    }
     
     div.appendChild(iframe)
     parentDiv.appendChild(div)

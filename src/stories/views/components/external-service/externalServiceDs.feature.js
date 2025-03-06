@@ -22,7 +22,8 @@ const ExternalService = function (context) {
         embedType = options.embedType,
         dataPolicyCheck = options.dataPolicyCheck || false,
         id = options.id,
-        iFrameConfig = options.iFrameConfig
+        iFrameConfig = options.iFrameConfig,
+        isFirst = options.isFirst
     let acceptButton,
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0]
     let embedCode = options.embedCode,
@@ -192,6 +193,9 @@ const ExternalService = function (context) {
         iframe.src = cleanUrl;
         iframe.style.width = "100%";
         iframe.style.border = "0";
+        if (!isFirst) {
+            iframe.loading = "lazy";
+        }
         rootElement.appendChild(iframe);
 
         window.addEventListener("message", function (e) {
@@ -237,7 +241,7 @@ const ExternalService = function (context) {
         if (iFrameConfig.noResponsiveIframe == 'true') {
 
             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode, isFirst)
             noResponsiveIframe.createNoResponsiveIframe()
 
             if (iFrameConfig.refreshContent == 'true') {
@@ -287,6 +291,9 @@ const ExternalService = function (context) {
                 iframe.setAttribute('frameborder', '0')
                 iframe.src = embedCode
                 iframe.id = 'datawrapper-chart-' + uniqueId
+                if (!isFirst) {
+                    iframe.loading = "lazy";
+                }
                 rootElement.insertBefore(iframe, null)
 
                 loadScript(
@@ -395,15 +402,16 @@ const ExternalService = function (context) {
 
     const loadIframe = function () {
         console.log('load iframe ' + id)
-        iframe = "<iframe id='i_frame' data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        const loadingAttribute = isFirst ? "" : "loading='lazy'";
+        iframe = "<iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
-            iframe = "<div class='!h-full'><div class='" + getAspectRatioClass() + "'><iframe id='i_frame' data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+            iframe = "<div class='!h-full'><div class='" + getAspectRatioClass() + "'><iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
             if (iFrameConfig.fixedHeight) {
-                iframe = "<div style='height:" + iFrameConfig.fixedHeight + "px'><iframe data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div style='height:" + iFrameConfig.fixedHeight + "px'><iframe data-isloaded='0' "+ loadingAttribute +" src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
-                iframe = "<div class='!h-full'><iframe data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe = "<div class='!h-full'><iframe data-isloaded='0' "+ loadingAttribute +" src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
         replaceAnimated(rootElement, iframe, false)

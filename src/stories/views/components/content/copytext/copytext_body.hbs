@@ -2,64 +2,72 @@
     {{> components/content/copytext/components/headline }}
 {{/if}}
 {{#unless this.isInfoBox}}
-    {{~#with this.paragraphBoxItem }}
-        {{~#if this.isImage}}
-            {{~> components/content/copytext/components/image/image _isWebview=../_isWebview _isTickerCopytext=../_isTickerCopytext}}
-        {{/if~}}
-        {{~#if this.isContentBox}}
-            {{~> components/content/copytext/components/contentbox/contentbox _isWebview=../_isWebview ~}}
-        {{/if~}}
-        {{~#if this.isAccordion}}
-        {{~> components/content/copytext/components/accordion/accordion ~}}
-        {{/if~}}
-        {{~#if this.isGallery}}
-            {{> components/content/copytext/components/gallery/gallery _isTickerCopytext=../_isTickerCopytext }}
-        {{/if~}}
-        {{~#if this.isFileDownload}}
-            {{> components/content/copytext/components/filedownload }}
-        {{/if~}}
-        {{~#if this.isMap}}
-            {{> components/content/copytext/components/map }}
-        {{/if~}}
-        {{~#if this.isWebForm}}
-            {{> components/forms/webform }}
-        {{/if~}}
-        {{~#if this.isNewsletter}}
-            {{> components/newsletter/newsletter }}
-        {{/if~}}
-        {{~#if this.isAudioOnDemand}}
-            {{> components/content/copytext/components/audio _isTickerCopytext=../_isTickerCopytext }}
-        {{/if~}}
-        {{~#if this.isAudioEventLivestream}}
-            {{> components/content/copytext/components/audioeventlivestream _isTickerCopytext=../_isTickerCopytext }}
-        {{/if~}}
-        {{~#if this.isPodcastEpisode}}
-            {{> components/content/copytext/components/podcastepisode }}
-        {{/if~}}
-        {{~#if this.isVideoOnDemand}}
-            {{> components/content/copytext/components/video/video _isTickerCopytext=../_isTickerCopytext }}
-        {{/if~}}
-        {{~#if this.isLivestream}}
-            {{> components/content/copytext/components/videolivestream _isTickerCopytext=../_isTickerCopytext }}
-        {{/if~}}
-        {{~#if this.isTweet}}
-            {{> components/content/copytext/components/tweet }}
-        {{~/if}}
-        {{~#if this.isRadioPlaylist}}
-            {{> components/content/copytext/components/radioplaylist }}
-        {{~/if}}
-        {{~#if this.isVoting}}
-            {{> components/content/copytext/components/voting }}
-        {{/if~}}
-        {{~#if this.isExternalService}}
-            {{> components/content/copytext/components/externalservice }}
-        {{/if~}}
-        {{~#if this.isContentNav}}
-            {{#with this.toModel.contentNavigationTeaser}}
-                {{~> components/teaser/content_nav/teaser_content_nav _isCopytext=true ~}}
-            {{/with}}
-        {{/if~}}
-    {{~/with}}
+    {{~#if @first~}}
+        {{~#with this.paragraphBoxItem }}
+            {{~#if this.isExternalService}}
+                {{> components/content/copytext/components/externalservice _isFirst=true }}
+            {{/if~}}
+        {{~/with}}
+    {{else}}
+        {{~#with this.paragraphBoxItem }}
+            {{~#if this.isImage}}
+                {{~> components/content/copytext/components/image/image _isWebview=../_isWebview _isTickerCopytext=../_isTickerCopytext}}
+            {{/if~}}
+            {{~#if this.isContentBox}}
+                {{~> components/content/copytext/components/contentbox/contentbox _isWebview=../_isWebview ~}}
+            {{/if~}}
+            {{~#if this.isAccordion}}
+                {{~> components/content/copytext/components/accordion/accordion ~}}
+            {{/if~}}
+            {{~#if this.isGallery}}
+                {{> components/content/copytext/components/gallery/gallery _isTickerCopytext=../_isTickerCopytext }}
+            {{/if~}}
+            {{~#if this.isFileDownload}}
+                {{> components/content/copytext/components/filedownload }}
+            {{/if~}}
+            {{~#if this.isMap}}
+                {{> components/content/copytext/components/map }}
+            {{/if~}}
+            {{~#if this.isWebForm}}
+                {{> components/forms/webform }}
+            {{/if~}}
+            {{~#if this.isNewsletter}}
+                {{> components/newsletter/newsletter }}
+            {{/if~}}
+            {{~#if this.isAudioOnDemand}}
+                {{> components/content/copytext/components/audio _isTickerCopytext=../_isTickerCopytext }}
+            {{/if~}}
+            {{~#if this.isAudioEventLivestream}}
+                {{> components/content/copytext/components/audioeventlivestream _isTickerCopytext=../_isTickerCopytext }}
+            {{/if~}}
+            {{~#if this.isPodcastEpisode}}
+                {{> components/content/copytext/components/podcastepisode }}
+            {{/if~}}
+            {{~#if this.isVideoOnDemand}}
+                {{> components/content/copytext/components/video/video _isTickerCopytext=../_isTickerCopytext }}
+            {{/if~}}
+            {{~#if this.isLivestream}}
+                {{> components/content/copytext/components/videolivestream _isTickerCopytext=../_isTickerCopytext }}
+            {{/if~}}
+            {{~#if this.isTweet}}
+                {{> components/content/copytext/components/tweet }}
+            {{~/if}}
+            {{~#if this.isRadioPlaylist}}
+                {{> components/content/copytext/components/radioplaylist }}
+            {{~/if}}
+            {{~#if this.isVoting}}
+                {{> components/content/copytext/components/voting }}
+            {{/if~}}
+            {{~#if this.isExternalService}}
+                {{> components/content/copytext/components/externalservice _isFirst=false }}
+            {{/if~}}
+            {{~#if this.isContentNav}}
+                {{#with this.toModel.contentNavigationTeaser}}
+                    {{~> components/teaser/content_nav/teaser_content_nav _isCopytext=true ~}}
+                {{/with}}
+            {{/if~}}
+        {{~/with}}
+    {{/if}}
 {{/unless}}
 
 {{~#with this.paragraphTeaserItem }}
