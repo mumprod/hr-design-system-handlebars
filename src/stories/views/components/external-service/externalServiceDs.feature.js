@@ -241,7 +241,7 @@ const ExternalService = function (context) {
         if (iFrameConfig.noResponsiveIframe == 'true') {
 
             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode)
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode, isFirst)
             noResponsiveIframe.createNoResponsiveIframe()
 
             if (iFrameConfig.refreshContent == 'true') {
