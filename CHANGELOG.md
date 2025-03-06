@@ -1,3 +1,15 @@
+# v1.114.117 (Thu Mar 06 2025)
+
+#### 🐛 Bug Fix
+
+- Converting no-js hint blocks back to noscript [#1258](https://github.com/mumprod/hr-design-system-handlebars/pull/1258) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.116 (Tue Mar 04 2025)
 
 #### 🐛 Bug Fix
