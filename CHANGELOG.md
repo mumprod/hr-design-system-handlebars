@@ -1,3 +1,16 @@
+# v1.114.118 (Thu Mar 06 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-3524: Lazy Loading für Ext. Dienste [#1259](https://github.com/mumprod/hr-design-system-handlebars/pull/1259) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.117 (Thu Mar 06 2025)
 
 #### 🐛 Bug Fix
