@@ -1,3 +1,15 @@
+# v1.114.121 (Fri Mar 07 2025)
+
+#### 🐛 Bug Fix
+
+- fix padding-bug [#1262](https://github.com/mumprod/hr-design-system-handlebars/pull/1262) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.120 (Fri Mar 07 2025)
 
 #### 🐛 Bug Fix
