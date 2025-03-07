@@ -5,7 +5,7 @@
     {{~#if @first~}}
         {{~#with this.paragraphBoxItem }}
             {{~#if this.isExternalService}}
-                {{> components/content/copytext/components/externalservice _isFirst=true }}
+                {{> components/content/copytext/components/externalservice _lazyLoad=false }}
             {{/if~}}
         {{~/with}}
     {{else}}
@@ -59,7 +59,7 @@
                 {{> components/content/copytext/components/voting }}
             {{/if~}}
             {{~#if this.isExternalService}}
-                {{> components/content/copytext/components/externalservice _isFirst=false }}
+                {{> components/content/copytext/components/externalservice _lazyLoad=true }}
             {{/if~}}
             {{~#if this.isContentNav}}
                 {{#with this.toModel.contentNavigationTeaser}}

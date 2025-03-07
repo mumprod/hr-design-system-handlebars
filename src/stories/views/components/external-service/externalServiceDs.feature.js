@@ -23,7 +23,7 @@ const ExternalService = function (context) {
         dataPolicyCheck = options.dataPolicyCheck || false,
         id = options.id,
         iFrameConfig = options.iFrameConfig,
-        isFirst = options.isFirst
+        lazyLoad = options.lazyLoad
     let acceptButton,
         acceptAlwaysCheckbox = hr$('.js-dataPolicy-acceptPermanentely', rootElement)[0]
     let embedCode = options.embedCode,
@@ -193,7 +193,7 @@ const ExternalService = function (context) {
         iframe.src = cleanUrl;
         iframe.style.width = "100%";
         iframe.style.border = "0";
-        if (!isFirst) {
+        if (lazyLoad) {
             iframe.loading = "lazy";
         }
         rootElement.appendChild(iframe);
@@ -241,7 +241,7 @@ const ExternalService = function (context) {
         if (iFrameConfig.noResponsiveIframe == 'true') {
 
             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode, isFirst)
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode, lazyLoad)
             noResponsiveIframe.createNoResponsiveIframe()
 
             if (iFrameConfig.refreshContent == 'true') {
@@ -291,7 +291,7 @@ const ExternalService = function (context) {
                 iframe.setAttribute('frameborder', '0')
                 iframe.src = embedCode
                 iframe.id = 'datawrapper-chart-' + uniqueId
-                if (!isFirst) {
+                if (lazyLoad) {
                     iframe.loading = "lazy";
                 }
                 rootElement.insertBefore(iframe, null)
@@ -402,7 +402,7 @@ const ExternalService = function (context) {
 
     const loadIframe = function () {
         console.log('load iframe ' + id)
-        const loadingAttribute = isFirst ? "" : "loading='lazy'";
+        const loadingAttribute = lazyLoad ? "loading='lazy'" : "";
         iframe = "<iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
         if (iFrameConfig.aspectRatio) {
             iframe = "<div class='!h-full'><div class='" + getAspectRatioClass() + "'><iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
