@@ -1,3 +1,15 @@
+# v1.114.120 (Fri Mar 07 2025)
+
+#### 🐛 Bug Fix
+
+- adapt ticker-timeline to tickerpage [#1261](https://github.com/mumprod/hr-design-system-handlebars/pull/1261) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.119 (Fri Mar 07 2025)
 
 #### 🐛 Bug Fix
