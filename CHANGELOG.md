@@ -1,3 +1,16 @@
+# v1.114.119 (Fri Mar 07 2025)
+
+#### 🐛 Bug Fix
+
+- change _isFirst to _loadLazy & set _LoadLazy in Teaser to false [#1260](https://github.com/mumprod/hr-design-system-handlebars/pull/1260) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.118 (Thu Mar 06 2025)
 
 #### 🐛 Bug Fix
