@@ -1,3 +1,15 @@
+# v1.114.122 (Mon Mar 10 2025)
+
+#### 🐛 Bug Fix
+
+- add variable for inner-radius in alternativ-ticker-teaser [#1263](https://github.com/mumprod/hr-design-system-handlebars/pull/1263) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.121 (Fri Mar 07 2025)
 
 #### 🐛 Bug Fix
