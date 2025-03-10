@@ -71,6 +71,7 @@ module.exports = {
             borderRadius: {
                 hr: 'var(--border-radius-hr)',
                 'logo-footer': 'var(--rounded-logo-footer)',
+                'hrInner': 'var(--border-radius-hr-inner)',
             },
             fontSize: {
                 'xs': ['0.75rem', '1.0625rem'],

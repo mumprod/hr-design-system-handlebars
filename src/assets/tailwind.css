@@ -140,6 +140,7 @@
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border Radius */
     --border-radius-hr: theme('borderRadius.none');
+    --border-radius-hr-inner: theme('borderRadius.none');
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
@@ -327,6 +328,7 @@
     --font-weight-titleCluster: theme('fontWeight.bold');
     /* Border */
     --border-radius-hr: theme('borderRadius.3xl');
+    --border-radius-hr-inner: theme('borderRadius.DEFAULT');
     /* ticker-Teaser*/
     --color-ticker-teaser-headline: theme('colors.white.DEFAULT');
     --color-ticker-teaser-label-byline: theme('colors.white.DEFAULT');
