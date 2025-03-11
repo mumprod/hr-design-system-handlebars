@@ -1,3 +1,16 @@
+# v1.114.123 (Tue Mar 11 2025)
+
+#### 🐛 Bug Fix
+
+- Refactor external service loading logic in copytext_body.hbs [#1264](https://github.com/mumprod/hr-design-system-handlebars/pull/1264) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.122 (Mon Mar 10 2025)
 
 #### 🐛 Bug Fix
