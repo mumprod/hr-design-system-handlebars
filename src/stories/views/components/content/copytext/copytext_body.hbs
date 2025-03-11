@@ -2,13 +2,7 @@
     {{> components/content/copytext/components/headline }}
 {{/if}}
 {{#unless this.isInfoBox}}
-    {{~#if @first~}}
-        {{~#with this.paragraphBoxItem }}
-            {{~#if this.isExternalService}}
-                {{> components/content/copytext/components/externalservice _lazyLoad=false }}
-            {{/if~}}
-        {{~/with}}
-    {{else}}
+
         {{~#with this.paragraphBoxItem }}
             {{~#if this.isImage}}
                 {{~> components/content/copytext/components/image/image _isWebview=../_isWebview _isTickerCopytext=../_isTickerCopytext}}
@@ -59,7 +53,11 @@
                 {{> components/content/copytext/components/voting }}
             {{/if~}}
             {{~#if this.isExternalService}}
-                {{> components/content/copytext/components/externalservice _lazyLoad=true }}
+                {{~#if ../@first}}
+                    {{> components/content/copytext/components/externalservice _lazyLoad=false }}
+                {{else}}
+                    {{> components/content/copytext/components/externalservice _lazyLoad=true }}
+                {{/if~}}
             {{/if~}}
             {{~#if this.isContentNav}}
                 {{#with this.toModel.contentNavigationTeaser}}
@@ -67,7 +65,6 @@
                 {{/with}}
             {{/if~}}
         {{~/with}}
-    {{/if}}
 {{/unless}}
 
 {{~#with this.paragraphTeaserItem }}
