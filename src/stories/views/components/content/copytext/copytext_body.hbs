@@ -2,7 +2,6 @@
     {{> components/content/copytext/components/headline }}
 {{/if}}
 {{#unless this.isInfoBox}}
-
         {{~#with this.paragraphBoxItem }}
             {{~#if this.isImage}}
                 {{~> components/content/copytext/components/image/image _isWebview=../_isWebview _isTickerCopytext=../_isTickerCopytext}}
@@ -53,7 +52,7 @@
                 {{> components/content/copytext/components/voting }}
             {{/if~}}
             {{~#if this.isExternalService}}
-                {{~#if ../@first}}
+                {{~#if @../first}}
                     {{> components/content/copytext/components/externalservice _lazyLoad=false }}
                 {{else}}
                     {{> components/content/copytext/components/externalservice _lazyLoad=true }}
