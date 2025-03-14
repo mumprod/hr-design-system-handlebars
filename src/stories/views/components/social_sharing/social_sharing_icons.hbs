@@ -17,22 +17,6 @@
     </div>
 </li>
 {{/with}}
-{{~#with this.twitterLink ~}}
-<li>
-    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
-        
-        href="{{this}}"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="{{loca "share_x_linktitle" }}"
-        {{#with ../_trackingData}}
-            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::{{if ../../_socialSharingType ../../_socialSharingType "default" }}::X"}]}'
-        {{/with}}
-    >
-        {{~> components/base/image/icon _addClass="w-full h-full fill-link hover:scale-105 " _icon="x-ds" _iconmap="icons" ~}}
-    </a>
-</li>
-{{/with}}
 {{~#with this.facebookLink}}
 <li class="">
     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../_trackingData}} js-load{{/with}} flex order-2 ds-button font-heading active:scale-95 w-8 h-8"
