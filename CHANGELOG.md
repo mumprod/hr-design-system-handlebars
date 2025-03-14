@@ -1,3 +1,15 @@
+# v1.114.124 (Fri Mar 14 2025)
+
+#### 🐛 Bug Fix
+
+- removes twitterLink from Social Sharing Icons template [#1265](https://github.com/mumprod/hr-design-system-handlebars/pull/1265) ([@StefanVesper](https://github.com/StefanVesper))
+
+#### Authors: 1
+
+- SonicSoulSurfer ([@StefanVesper](https://github.com/StefanVesper))
+
+---
+
 # v1.114.123 (Tue Mar 11 2025)
 
 #### 🐛 Bug Fix
