@@ -130,8 +130,7 @@
             "title": "Gesundheit"
         }                        
     ],
-    "socialSharing": {
-        "twitterLink": "/twitterLink-url",
+    "socialSharing": { 
         "facebookLink": "/facebookLink-url",
         "whatsappLink": "/whatsappLink-url",
         "mailtoLink": "/mailtoLink-url",

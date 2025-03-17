@@ -2,21 +2,6 @@
     <div class="self-center hidden sm:block grow">
 
         <ul class="flex justify-end">
-            {{~#with this.twitterLink ~}}
-                <li class="float-left mr-3">
-                    <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"
-                        href="{{this}}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="{{loca "share_x_linktitle" }}"
-                        {{#with ../../this.content.trackingData}}
-                            data-hr-click-tracking='{"settings": [{"type":"uxAction","secondLevelId": "{{this.secondLevelId}}","clickLabel": "socialShareClick::X"}]}'
-                        {{/with}}
-                    >
-                        {{~> components/base/image/icon _addClass="w-8 h-8 rounded-lg fill-[#0f1419] hover:scale-105" _icon="x" _iconmap="icons" ~}}
-                    </a>
-                </li>
-            {{~/with~}}
             {{~#with this.facebookLink ~}}
                 <li class="float-left mr-3">
                     <a class="{{if (isUserConsentNeeded this) 'js-user-consent-needed ' ''}}{{#with ../../this.content.trackingData}} js-load{{/with}}"

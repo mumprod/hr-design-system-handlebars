@@ -11,7 +11,6 @@
             "time": "19:30"
         },
         "socialSharing": {
-            "twitterLink": "/twitterLink-url",
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
             "mailtoLink": "/mailtoLink-url",
@@ -45,7 +44,6 @@
             "time": "19:30"
         },
         "socialSharing": {
-            "twitterLink": "/twitterLink-url",
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
             "mailtoLink": "/mailtoLink-url",
@@ -88,7 +86,6 @@
             }
         ],
         "socialSharing": {
-            "twitterLink": "/twitterLink-url",
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
             "mailtoLink": "/mailtoLink-url",
