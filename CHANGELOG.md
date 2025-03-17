@@ -1,3 +1,15 @@
+# v1.114.125 (Mon Mar 17 2025)
+
+#### 🐛 Bug Fix
+
+- Removing X Link [#1266](https://github.com/mumprod/hr-design-system-handlebars/pull/1266) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.114.124 (Fri Mar 14 2025)
 
 #### 🐛 Bug Fix
