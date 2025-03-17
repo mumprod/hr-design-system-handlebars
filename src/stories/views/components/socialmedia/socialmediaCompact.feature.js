@@ -14,13 +14,10 @@ const ShareCompact = (context) => {
         /(Android)|(webOS)|(Blackberry)|(Windows Phone)/i
     )
     const isWebview = window.parent.document.documentElement.classList.contains('webview')
-    //const isWebview = window.location.href.match(/(app)(\.[a-zA-Z]*)(\.de)/i) //App URL ...app.hr.de
-    //const isWebview = window.location.href.match(/(app)/i)
     let cookie = {}
     const trackingCookieLifetime = 1000 * 60 * 60 * 24 * 365 * 10
 
     const shareLinks = {
-        twitter: hr$('.js-shareLinkTwitter', rootElement)[0],
         facebook: hr$('.js-shareLinkFacebook', rootElement)[0],
         whatsapp: hr$('.js-shareLinkWhatsapp', rootElement)[0],
         mail: hr$('.js-shareLinkMail', rootElement)[0],
@@ -134,14 +131,6 @@ const ShareCompact = (context) => {
         }
     }
     const initializeShareLinksTracking = () => {
-        listen(
-            'click',
-            function () {
-                console.log('twitter')
-                uxAction('newSocialShareClick::twitter')
-            },
-            shareLinks.twitter
-        )
         listen(
             'click',
             function () {
