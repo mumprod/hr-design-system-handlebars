@@ -1,3 +1,16 @@
+# v1.114.126 (Tue Mar 18 2025)
+
+#### 🐛 Bug Fix
+
+- Remove noscript fallback images from responsive_image.hbs [#1267](https://github.com/mumprod/hr-design-system-handlebars/pull/1267) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.125 (Mon Mar 17 2025)
 
 #### 🐛 Bug Fix
