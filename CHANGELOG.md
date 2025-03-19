@@ -1,3 +1,16 @@
+# v1.114.127 (Wed Mar 19 2025)
+
+#### 🐛 Bug Fix
+
+- Enhance social sharing icons with dark mode support in HBS components [#1268](https://github.com/mumprod/hr-design-system-handlebars/pull/1268) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.126 (Tue Mar 18 2025)
 
 #### 🐛 Bug Fix
