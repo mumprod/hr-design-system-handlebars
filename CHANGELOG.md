@@ -1,3 +1,15 @@
+# v1.114.128 (Wed Mar 19 2025)
+
+#### 🐛 Bug Fix
+
+- add dark classes in ticker-timeline [#1269](https://github.com/mumprod/hr-design-system-handlebars/pull/1269) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.127 (Wed Mar 19 2025)
 
 #### 🐛 Bug Fix
