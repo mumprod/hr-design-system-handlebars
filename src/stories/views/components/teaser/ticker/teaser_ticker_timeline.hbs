@@ -17,7 +17,7 @@
                 </div>
                 {{#unless this.hideDateTime}}
                     {{#with this.tickerItemDateTime~}}
-                        <div class="font-headingSerif {{#if ../../../_isTickerpage}}text-sm{{else}}text-xs{{/if}}{{#if ../../../_color}} text-{{../../../_color}}{{else}} text-gray-scorpion{{/if}}">
+                        <div class="font-headingSerif {{#if ../../../_isTickerpage}}text-sm{{else}}text-xs{{/if}}{{#if ../../../_color}} text-{{../../../_color}}{{else}} text-gray-scorpion dark:text-gray-mercury{{/if}}">
                             {{#if ../../../this.isMultiDay}}
                                 {{this.broadcastDate }}
                             {{else}}
@@ -30,7 +30,7 @@
                         </div>
                     {{~/with}}
                 {{/unless}}
-                <a class="font-headingSerif {{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white {{#if ../../_isTickerpage}}text-[15px]{{else}}text-base{{/if}} js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-toplineColor{{/if}} ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+                <a class="font-headingSerif {{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white {{#if ../../_isTickerpage}}text-[15px] leading-[18px]{{else}}text-base{{/if}} js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-link dark:text-link-dark{{/if}} ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
             </li>
         {{~/each~}}
     </ul>
