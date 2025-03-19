@@ -9,7 +9,7 @@
         ax-load 
         x-ignore
     >
-        <div class="relative right-0 flex gap-3 bg-white md:h-auto"  >
+        <div class="relative right-0 flex gap-3 bg-white dark:bg-black md:h-auto"  >
             <button 
                 class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
                 x-ref="button"
@@ -25,7 +25,7 @@
                 x-ref="panel"   
                 :class="{ 'hidden': !$store.sharingIsOpen.tickerItem{{getRandom}},'flex': $store.sharingIsOpen.tickerItem{{getRandom}} }"           
                 :id="$id('dropdown-button')"
-                class="self-center bg-white h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
+                class="self-center bg-white dark:bg-black h-8 absolute right-[50px] md:relative md:right-0 md:h-auto hidden lg:flex"
             >
                 <ul class="flex gap-3">  
                     {{> components/social_sharing/social_sharing_icons _socialSharingType="tickerItem" _trackingData=../this.trackingData}}
