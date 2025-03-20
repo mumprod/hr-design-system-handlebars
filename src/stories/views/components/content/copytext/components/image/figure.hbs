@@ -16,9 +16,13 @@
         {{/if}}
     {{/if}}
     {{#unless _voting-option}}
-        {{~#> components/content/copytext/components/image/collapsible_caption _cssClassCaption=_cssClassCaption~}}
+        {{#if _isTickerLeadImage }}
+            {{~> components/content/copytext/components/image/caption_ticker_lead ~}}
+        {{else}}
+            {{~#> components/content/copytext/components/image/collapsible_caption _cssClassCaption=_cssClassCaption~}}
                 {{#if this.caption}} {{~> components/content/copytext/components/image/image_caption_text}} {{/if}}
                 {{~> components/content/copytext/components/image/image_copyright}}
-        {{/components/content/copytext/components/image/collapsible_caption }}
+            {{/components/content/copytext/components/image/collapsible_caption }}
+        {{/if}}
     {{/unless}}
 </figure>
