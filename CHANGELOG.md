@@ -1,3 +1,16 @@
+# v1.114.130 (Thu Mar 20 2025)
+
+#### 🐛 Bug Fix
+
+- Add conditional rendering for ticker lead image caption [#1271](https://github.com/mumprod/hr-design-system-handlebars/pull/1271) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.129 (Thu Mar 20 2025)
 
 #### 🐛 Bug Fix
