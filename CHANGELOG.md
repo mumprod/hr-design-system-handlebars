@@ -1,3 +1,16 @@
+# v1.114.129 (Thu Mar 20 2025)
+
+#### 🐛 Bug Fix
+
+- Add caption ticker lead component with copyright information [#1270](https://github.com/mumprod/hr-design-system-handlebars/pull/1270) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.128 (Wed Mar 19 2025)
 
 #### 🐛 Bug Fix
