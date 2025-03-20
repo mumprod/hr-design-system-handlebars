@@ -1,3 +1,16 @@
+# v1.114.131 (Thu Mar 20 2025)
+
+#### 🐛 Bug Fix
+
+- Refactor ticker timeline component for improved layout and user conse… [#1272](https://github.com/mumprod/hr-design-system-handlebars/pull/1272) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.130 (Thu Mar 20 2025)
 
 #### 🐛 Bug Fix
