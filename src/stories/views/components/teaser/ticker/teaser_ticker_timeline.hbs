@@ -6,31 +6,34 @@
             {{else}}
                 <li class="relative h-auto [&:not(:last-child)]:pb-5">
             {{/if}}
-                <div class="absolute h-full">
-                    <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-tickerTeaserTimelineScore -left-5"></div>
+                <div class="absolute h-full -left-5 top-0.5">
+                    <div class="relative w-[9px] h-[9px] rounded-full top-0.5 bg-tickerTeaserTimelineScore "></div>
                     {{#unless @last}}
-                        <div class="relative flex flex-col w-0 h-full timelineBorder -left-4">
+                        <div class="relative flex flex-col w-0 h-full timelineBorder left-1">
                             <div class="h-full my-2 border-l{{#if ../../_color}} border-{{../../_color}}{{else}} border-gray-boulder{{/if}}"></div>
                             <div class="h-2"></div>
                         </div>
                     {{/unless}}
                 </div>
-                {{#unless this.hideDateTime}}
-                    {{#with this.tickerItemDateTime~}}
-                        <div class="font-headingSerif {{#if ../../../_isTickerpage}}text-sm{{else}}text-xs{{/if}}{{#if ../../../_color}} text-{{../../../_color}}{{else}} text-gray-scorpion dark:text-gray-mercury{{/if}}">
-                            {{#if ../../../this.isMultiDay}}
-                                {{this.broadcastDate }}
-                            {{else}}
-                                {{#if ../../../this.isOlderThanToday}}
+                
+                <a class="font-headingSerif {{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white {{#if ../../_isTickerpage}}text-sm{{else}}text-base{{/if}} js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-link dark:text-link-dark{{/if}} ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>
+                    {{#unless this.hideDateTime}}
+                        {{#with this.tickerItemDateTime~}}
+                            <div class="font-headingSerif text-xs pb-0.5{{#if ../../../_color}} text-{{../../../_color}}{{else}} text-gray-scorpion dark:text-gray-mercury{{/if}}">
+                                {{#if ../../../this.isMultiDay}}
                                     {{this.broadcastDate }}
                                 {{else}}
-                                    {{this.time }}
+                                    {{#if ../../../this.isOlderThanToday}}
+                                        {{this.broadcastDate }}
+                                    {{else}}
+                                        {{this.time }}
+                                    {{/if}}
                                 {{/if}}
-                            {{/if}}
-                        </div>
-                    {{~/with}}
-                {{/unless}}
-                <a class="font-headingSerif {{if (isUserConsentNeeded this.tickerItemUrl) 'js-user-consent-needed ' ''}}link-focus-white {{#if ../../_isTickerpage}}text-[15px] leading-[18px]{{else}}text-base{{/if}} js-load {{#if ../../_color}} text-{{../../_color}}{{else}} text-link dark:text-link-dark{{/if}} ds-link{{#if this.hideDateTime}} align-top{{/if}}" href="{{this.tickerItemUrl}}" data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "TickerTeaser::{{../../this.sophoraId}}-TeaserPostLink geklickt"}]}'>{{this.relevantTitle}}</a>
+                            </div>
+                        {{~/with}}
+                    {{/unless}}
+                    {{this.relevantTitle}}
+                </a>
             </li>
         {{~/each~}}
     </ul>
