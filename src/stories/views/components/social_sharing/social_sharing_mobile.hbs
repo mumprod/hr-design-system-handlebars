@@ -1,6 +1,7 @@
 
 {{~#with this.socialSharing ~}}    
 <div x-data="socialSharingHandler('mobilesticky')"
+    x-init="initBrowserDetection();"    
     class=" relative ml-5 z-100 h-9.5 w-9.5"
     :class="$store.footerIsVisible ? '-mt-6' : '-mt-12'"  
     x-on:resize.window="$store.sharingIsOpen.mobilesticky = false"    

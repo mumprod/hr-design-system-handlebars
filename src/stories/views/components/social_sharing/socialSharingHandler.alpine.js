@@ -1,4 +1,5 @@
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
+import { fireEvent, getJSONCookie } from 'hrQuery'
 
 export default (module) => ({
     open: false,
@@ -7,31 +8,80 @@ export default (module) => ({
     sharingModuleWasNeverShown: true,
     desktopSharingModuleWasNeverShown: true,
     copySuccess: false,
-    toggle() {
-        
-        var isMobileApple = /^iP/.test(navigator.platform) || /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
-        var isMobileOther= navigator.userAgent.match(/(Android)|(webOS)|(Blackberry)|(Windows Phone)/i);
-        var isMobile= isMobileApple || isMobileOther;
-        
-        if (navigator.share && isMobile) {
-            navigator.share({
-                title: document.title,
-                url: window.location.href,
+    cookie: {},
+    isMobileApple: false,
+    isMobileOther: false,
+    isMobile: false,
+    isWebview: false, 
+    initBrowserDetection(){
+        console.log('Pre initBrowserDetection', this.isMobileApple,this.isMobileOther,this.isMobile,this.isWebview);
+        this.isMobileApple = /iP/.test(navigator.userAgent) || /Mac/.test(navigator.userAgent) && navigator.maxTouchPoints > 4;
+        this.isMobileOther = /(Android|webOS|BlackBerry|Windows Phone)/i.test(navigator.userAgent);
+        this.isMobile = this.isMobileApple || this.isMobileOther;
+
+        try {
+            this.isWebview = window.parent.document.documentElement.classList.contains('webview');
+        } catch (e) {
+            this.isWebview = false;
+            console.warn("Could not access window.parent.document due to cross-origin restrictions", e);
+        }
+        console.log('initBrowserDetection', this.isMobileApple,this.isMobileOther,this.isMobile,this.isWebview);
+    },
+    readAppVersionCookie() {
+        this.cookie = getJSONCookie('appSettings') || {}
+    },
+    nativeShare(title, url, uxActionValue) {
+        console.log("Native Share", title, url, uxActionValue);
+        navigator
+            .share({
+                title,
+                url,
             })
-            .then(() => {
-                console.log('Shared successfully');
-                uxAction('socialShareClick::'+module+'::nativeShare');
-                console.log('tracked: socialShareClick::'+module+'::nativeShare');
+            .then(function () {
+                console.log('Native Shared successfully');
+                if (uxActionValue) {
+                    uxAction(uxActionValue);
+                }
+                console.log('tracked: '+ uxActionValue);
             })
             .catch((error) => console.error('Sharing failed:', error));
-        } else {
-            if (this.$store.sharingIsOpen[module]) {
-                return this.close(true)
+    },
+    shareInWebview(title, url) {
+        this.readAppVersionCookie();
+        if(this.isMobileApple){
+            console.log('apple mobile browser')
+            this.nativeShare(title, url, 'socialShareClick::webview::nativeShareApple');
+        } else if (this.isMobileOther) {
+            console.log('non-apple mobile browser')
+            /*Check Build Version of App*/
+            if (this.cookie['fireCustomJsShareEvent'] === true) {
+                /*Custom Event für App unter Android*/
+                fireEvent('hr:global:shareCompactClickAndroidApp', {
+                    title: title,
+                    url: url,
+                })
+                uxAction('socialShareClick::webview::nativeShareAndroid::customEvent');
+                console.log('Custom-Event für Android')
+            } else {
+                this.nativeShare(title, url, 'socialShareClick::webview::nativeShareAndroid::noCustomEventCookie');
             }
-            this.$refs.button.focus()
-            this.$store.sharingIsOpen[module] = true
-            uxAction('socialShareClick::'+module+'::sharingIconOpen');
-        }               
+        }
+    },
+    toggle(title, url) {
+        if (this.isWebview) {
+            this.shareInWebview(title,url)
+        }  else {  
+            if (navigator.share && this.isMobile) {
+                this.nativeShare(document.title, window.location.href,'socialShareClick::'+module+'::nativeShare')
+            } else {
+                if (this.$store.sharingIsOpen[module]) {
+                    return this.close(true)
+                }
+                this.$refs.button.focus()
+                this.$store.sharingIsOpen[module] = true
+                uxAction('socialShareClick::'+module+'::sharingIconOpen');
+            }    
+        }           
     },
     close(trackClick) {
         if (!this.$store.sharingIsOpen[module]) return
