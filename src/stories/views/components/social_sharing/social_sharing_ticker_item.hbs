@@ -2,6 +2,7 @@
     <div 
         x-data="socialSharingHandler('tickerItem{{nextRandom}}')"
         class="flex self-center justify-end ml-3 print:hidden grow"
+        x-init="initBrowserDetection();"
         x-on:resize.window="$store.sharingIsOpen.ticker = false"       
         x-on:keydown.escape.prevent.stop="close()"
         @click.outside="close()"
@@ -13,7 +14,7 @@
             <button 
                 class="order-2 p-2 text-white border border-button bg-button ds-button font-heading hover:bg-button--dark hover:border-button--dark active:bg-button--dark group lg:hidden"
                 x-ref="button"
-                x-on:click="toggle()"
+                x-on:click="toggle('{{../this.escapedTitle}}','{{../this.socialSharingUrl}}')"
                 :aria-expanded="open"
                 :aria-controls="$id('dropdown-button')"
                 aria-label="{{loca "share_linktitle" }}"
