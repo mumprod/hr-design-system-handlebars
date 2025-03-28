@@ -1,3 +1,16 @@
+# v1.114.133 (Fri Mar 28 2025)
+
+#### 🐛 Bug Fix
+
+- Add js-hook class for timestamp and ticker headline class [#1274](https://github.com/mumprod/hr-design-system-handlebars/pull/1274) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.132 (Mon Mar 24 2025)
 
 #### 🐛 Bug Fix
