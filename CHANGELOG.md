@@ -1,3 +1,16 @@
+# v1.114.134 (Mon Mar 31 2025)
+
+#### 🐛 Bug Fix
+
+- Enhance social sharing functionality by adding fallback for title and… [#1275](https://github.com/mumprod/hr-design-system-handlebars/pull/1275) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.133 (Fri Mar 28 2025)
 
 #### 🐛 Bug Fix
