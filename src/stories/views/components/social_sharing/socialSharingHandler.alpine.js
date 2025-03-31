@@ -72,7 +72,9 @@ export default (module) => ({
             this.shareInWebview(title,url)
         }  else {  
             if (navigator.share && this.isMobile) {
-                this.nativeShare(document.title, window.location.href,'socialShareClick::'+module+'::nativeShare')
+                const shareTitle = title || document.title;
+                const shareUrl = url || window.location.href;
+                this.nativeShare(shareTitle, shareUrl, `socialShareClick::${module}::nativeShare`);
             } else {
                 if (this.$store.sharingIsOpen[module]) {
                     return this.close(true)
