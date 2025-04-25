@@ -1,6 +1,24 @@
 @layer utilities {
     html { scroll-behavior: smooth; }
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hyphens-limit-15{
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
 
+        -webkit-hyphenate-limit-before: 3; /* For Safari */
+        -webkit-hyphenate-limit-after: 4; /* For Safari */
+        -ms-hyphenate-limit-chars: 15 3 4;
+        hyphenate-limit-chars: 15 3 4;
+    }
     .placeholder-text-xs::placeholder {
         @apply text-xs;
     }
