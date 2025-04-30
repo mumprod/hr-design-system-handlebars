@@ -5,8 +5,7 @@
     @font-face {
         font-family: 'DIN';
         font-display: auto;
-        src:    url('fonts/DINPro.woff2') format('woff2'),
-                url('fonts/DINPro.woff') format('woff');
+        src: url('fonts/DINWebPro.woff') format('woff');
         font-weight: 400;
         font-style: normal;
         font-stretch: normal;
@@ -14,8 +13,7 @@
     @font-face {
         font-family: 'DIN';
         font-display: auto;
-        src:    url('fonts/DINPro-Bold.woff2') format('woff2'),
-                url('fonts/DINPro-Bold.woff') format('woff');
+        src: url('fonts/DINWebPro-Bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
         font-stretch: normal;
