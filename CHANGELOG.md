@@ -1,3 +1,16 @@
+# v1.114.137 (Fri May 09 2025)
+
+#### 🐛 Bug Fix
+
+- Add background color to site header to prevent background flash in 90… [#1278](https://github.com/mumprod/hr-design-system-handlebars/pull/1278) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.136 (Wed Apr 30 2025)
 
 #### 🐛 Bug Fix
