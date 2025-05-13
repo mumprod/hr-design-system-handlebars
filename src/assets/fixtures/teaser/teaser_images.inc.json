@@ -476,5 +476,28 @@
                 }
             ]
         }
+    },
+    "copytext_vertical_video": {
+        "isImage": true,
+        "showFullSize": {
+            "isTrue": false
+        },
+        "showPortrait": {
+            "isTrue": false
+        },
+        "caption": "Ela und Pippa",
+        "copyrightWithLinks": "Vasco",
+        "imageJson": "Beispiel JSON",
+        "responsiveImage": {
+            "asPicture": false,
+            "asImage": true,
+            "fallback": "images/{#image}_v-Xto9__medium.jpg",
+            "sources": [
+                {
+                    "sizes": "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 4rem), 100vw",
+                    "srcset": "images/{#image}_v-Xto9__small.jpg 101w, images/{#image}_v-Xto9__medium.jpg 152w, images/{#image}_v-Xto9.jpg 152w, images/{#image}_v-Xto9__retina.jpg 608w"
+                }
+            ]
+        }
     }
 }

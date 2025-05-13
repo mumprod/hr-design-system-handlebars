@@ -1,0 +1,182 @@
+{
+    "copytextParagraph": [
+        {
+            "isHeadline": true,
+            "text": "Copytext mit Hochkant Video"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "isVerticalVideo": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-hochkant"
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-hochkant"
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": true,
+                        "readMore": "zur hr3.de Video-Einzelseite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_vertical_video",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "hochkant-100"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_vertical_video",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "hochkant-100"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "isHeadline": true,
+            "text": "Zwischenüberschrift unter Video"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "isVerticalVideo": true,
+                "showFullSize": {
+                    "isTrue": false
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-hochkant",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "6666"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-hochkant",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "6666"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur hr3.de VideoEinzel-seite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_vertical_video",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "hochkant-100"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_vertical_video",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "hochkant-100"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teaser_images.inc.json",
+                "@->contentpath": "copytext_vertical_video",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "buchmesse-fahnen-102"
+                    }
+                ]
+            }
+        }
+    ]
+}

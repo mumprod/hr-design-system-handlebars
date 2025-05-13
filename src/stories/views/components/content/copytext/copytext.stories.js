@@ -14,6 +14,7 @@ import copytext_downloadbox_json from './fixtures/copytext_downloadbox.json'
 import copytext_filedownload_json from './fixtures/copytext_filedownload.json'
 import copytext_externalservice_json from './fixtures/copytext_externalservice.json'
 import copytext_video_json from './fixtures/copytext_video.json'
+import copytext_vertical_video_json from './fixtures/copytext_video_vertical.json'
 import copytext_audio_json from './fixtures/copytext_audio.json'
 import copytext_audio_event_stream_json from './fixtures/copytext_audio_livestream.json'
 import copytext_livestream_json from './fixtures/copytext_livestream.json'
@@ -122,6 +123,11 @@ export const WithVideo = {
     render: Template.bind({}),
     name: 'Video',
     args: copytext_video_json,
+}
+export const WithVerticalVideo = {
+    render: Template.bind({}),
+    name: 'Hochkant Video',
+    args: copytext_vertical_video_json,
 }
 
 export const WithLivestream = {

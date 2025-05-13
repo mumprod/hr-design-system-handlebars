@@ -37,7 +37,7 @@
                 {{> components/content/copytext/components/podcastepisode }}
             {{/if~}}
             {{~#if this.isVideoOnDemand}}
-                {{> components/content/copytext/components/video/video _isTickerCopytext=../_isTickerCopytext }}
+                {{> components/content/copytext/components/video/video _isTickerCopytext=../_isTickerCopytext _isVertical=this.isVerticalVideo}}
             {{/if~}}
             {{~#if this.isLivestream}}
                 {{> components/content/copytext/components/videolivestream _isTickerCopytext=../_isTickerCopytext }}
