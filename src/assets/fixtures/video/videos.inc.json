@@ -78,6 +78,85 @@
         "realTeaserSize": "100",
         "isDarkmodeAllowed": true
     },
+    "video-hochkant": {
+        "playerConfig": {
+            "generic": {
+                "isAutoplay": true,
+                "imageTemplateConfig": {
+                    "size": [
+                        { "minWidth": 0, "value": "480/270" },
+                        { "minWidth": 480, "value": "640/360" },
+                        { "minWidth": 640, "value": "960/540" },
+                        { "minWidth": 960, "value": "1920/1080" }
+                    ]
+                }
+            },
+            "web": {
+                "baseUrl": "./vendor/ardplayer/",
+                "isForcedAutoplay": true,
+                "isForcedVideoView": true
+            },
+            "pluginData": {
+                "trackingAti@all": {
+                    "isEnabled": false
+                },
+                "trackingAgf@all": {
+                    "isEnabled": false
+                }
+            }
+        },
+        "mediaCollection": {
+            "streams": [
+                {
+                    "kind": "main",
+                    "videoLanguageCode": "de",
+                    "media": [
+                        {
+                            "url": "https://hr-vh.akamaihd.net/i/odinson/202504/c772dcfd-def6-444b-96f7-bee1ffdf8e6c/4d97b06f-ea46-45b6-a791-1ecc619b7ef4/0fbb1119-4289-44e9-860a-c4fb79aed207_sendeton_,1080x1920-50p-5000,720x1280-50p-3200,540x960-50p-1600,360x640-50p-1200,270x480-50p-700,kbit.mp4/master.m3u8",
+                            "mimeType": "application/vnd.apple.mpegurl",
+                            "isAdaptiveQualitySelectable": true,
+                            "audios": [{ "kind": "standard", "languageCode": "de" }]
+                        }
+                    ]
+                }
+            ],
+            "subTitles": [
+                {
+                    "kind": "normal",
+                    "languageCode": "de",
+                    "sources": [
+                        {
+                            "kind": "webvtt",
+                            "url": "https://hr-a.akamaihd.net/video/as/hessenschau/2022_03/hrLogo_220317201045_L422955_512x288-25p-500kbit.vtt"
+                        }
+                    ]
+                }
+            ],
+            "meta": {
+                "durationSeconds": 10,
+                "images": [
+                    {
+                        "kind": "preview",
+                        "url": "https://picsum.photos/id/101/{size}"
+                    }
+                ],
+                "title": "Hochkantvideo | hessenschau vom 13.05.2025",
+                "synopsis": "Hochkantvideo"
+            },
+            "pluginData": {},
+            "geoBlocked": false
+        },
+        "playerId": "5413",
+        "type": "videoOndemand",
+        "typeLabel": "Video-On-Demand",
+        "cssUrl": "./vendor/ardplayer/ardplayer-hr-6.9.2.3be63dd6.css",
+        "jsUrl": "./vendor/ardplayer/ardplayer-hr-6.9.2.930e5d37.js",
+        "isAutoplay": true,
+        "isPlayerDebug": false,
+        "teaserSize": "100",
+        "realTeaserSize": "100",
+        "isDarkmodeAllowed": true
+    },
     "video-2": {
         "playerConfig": {
             "generic": {
