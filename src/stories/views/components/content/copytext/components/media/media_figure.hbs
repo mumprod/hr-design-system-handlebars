@@ -1,4 +1,4 @@
-<figure class="relative {{_addClass}}" x-data="{ avStart: false }">
+<figure class="relative {{_addClass}}{{#if _isVertical}} max-w-[600px] md:max-w-88 mx-auto{{/if}}" x-data="{ avStart: false }">
     {{~> components/base/a11y/hiddenText _locaTag=_a11yIntro-loca ~}}
     {{#unless _voting-option}}
         <div class="py-3 sm:py-4 {{#unless _noBorder}}border-t-[3px] border-gray-boulder dark:border-text-dark {{/unless}}{{_cssClassCaption}}">
@@ -30,12 +30,12 @@
         {{#with this.toModel.videoElement}}
             {{#if ../_isSticky}}
                 {{#> components/mediaplayer/mediaPlayer_stickyWrapper}}
-                    {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg ~}}
-                    {{~> components/teaser/components/teaser_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=../_isLead }}
+                    {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg _isVertical=../_isVertical~}}
+                    {{~> components/teaser/components/teaser_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio=(if ../_isVertical "ar-9-16" "ar-16-9") _noDelay=../_isLead }}
                 {{/components/mediaplayer/mediaPlayer_stickyWrapper}}
             {{else}}
-                {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg ~}}
-                {{~> components/teaser/components/teaser_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio="ar-16-9" _noDelay=../_isLead }}
+                {{~> components/mediaplayer/media_player this _playerLocation=../_playerLocation _playerSize=../_playerSize _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../_addClassImg _isVertical=../_isVertical~}}
+                {{~> components/teaser/components/teaser_media_player ../this _isFullsize=../_isFullsize _playerId=this.ardPlayerConfig.playerId _css="flex items-center justify-center" _isLead=../_isLead _isUsedInCopytext=true _mediaButtonIcon="play_button" _mediaButtonLabel="Video" _aspectRatio=(if ../_isVertical "ar-9-16" "ar-16-9") _noDelay=../_isLead }}
             {{/if}} 
         {{/with}}
     {{/if}}
