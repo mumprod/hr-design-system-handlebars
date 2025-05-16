@@ -9,7 +9,7 @@
     {{/unless}}
 
     {{#if this.isTickerTeaser}}<a href="{{this.link.url}}" aria-label="Zum Ticker" tabindex="-1"{{#if (isUserConsentNeeded this.link.url)}} class="js-user-consent-needed"{{/if}}>{{/if}}
-    {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.imageVariant this.imageVariant (if _isLead '100-top-sb' (if _isFullsize '100-copytext' 'copytext'))) _addClassImg=_addClassImg _noDelay=_noDelay ~}}                          
+    {{~> components/base/image/responsive_image this.teaserImage _type=(if this.teaserType this.teaserType 'story') _variant=(if this.imageVariant this.imageVariant (if _isLead '100-top-sb' (if _isVertical 'copytext-portrait' (if _isFullsize '100-copytext' 'copytext')))) _addClassImg=_addClassImg _noDelay=_noDelay ~}}                          
     {{#if this.isTickerTeaser}}</a>{{/if}}
 
 
