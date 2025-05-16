@@ -1,3 +1,16 @@
+# v1.114.139 (Fri May 16 2025)
+
+#### 🐛 Bug Fix
+
+- Enhance vertical video support in media components [#1280](https://github.com/mumprod/hr-design-system-handlebars/pull/1280) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.138 (Tue May 13 2025)
 
 #### 🐛 Bug Fix
