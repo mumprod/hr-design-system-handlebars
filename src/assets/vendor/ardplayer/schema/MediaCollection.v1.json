@@ -206,6 +206,7 @@
                         "enum": [
                             "normal",
                             "simple-language",
+                            "forced",
                             "closed-captions"
                         ],
                         "description": "(Inhaltlicher) Typ des Untertitels (einfache Sprache, Normal usw). Für mögliche Typen siehe Enum-Beschreibung."
@@ -316,7 +317,8 @@
                                 "enum": [
                                     "preview",
                                     "audio",
-                                    "maturityContentBlocked"
+                                    "maturityContentBlocked",
+                                    "publisherLogo"
                                 ]
                             },
                             "url": {
@@ -333,6 +335,17 @@
                             "alt": {
                                 "type": "string",
                                 "description": "Alternativer Titel"
+                            },
+                            "colorScheme": {
+                                "enum": [
+                                    "dark",
+                                    "light"
+                                ],
+                                "description": "Gibt an, ob es sich um eine dunkle oder helle Variante handelt. \nWird insbesondere bei der Auswahl der Logos fürs CI-Branding verwendet.\n(bei kind: publisherLogo)"
+                            },
+                            "mimeType": {
+                                "type": "string",
+                                "example": "image/png oder image/svg"
                             }
                         },
                         "required": [
@@ -368,6 +381,28 @@
                 "clipSourceName": {
                     "type": "string",
                     "description": "Allgemeine Quellenangabe; alias für \"clipContentSrc\""
+                },
+                "ciBranding": {
+                    "type": "object",
+                    "required": [
+                        "backgroundColor",
+                        "preferredColorScheme",
+                        "textColor"
+                    ],
+                    "properties": {
+                        "backgroundColor": {
+                            "type": "string"
+                        },
+                        "preferredColorScheme": {
+                            "enum": [
+                                "light",
+                                "dark"
+                            ]
+                        },
+                        "textColor": {
+                            "type": "string"
+                        }
+                    }
                 },
                 "publicationService": {
                     "type": "object",

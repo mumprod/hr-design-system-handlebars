@@ -52,10 +52,10 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const createPlayer = function () {
         if (undefined != playerConfig.pluginData['trackingPiano@all']) {
-            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieAccepted('ati')
+            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieExistent('ati') ? settingsCookie.isSettingsCookieAccepted('ati') : true
         }
         if (undefined != playerConfig.pluginData['trackingAgf@all']) {
-            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieAccepted('agf')
+            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieExistent('agf') ? settingsCookie.isSettingsCookieAccepted('agf') : true
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
