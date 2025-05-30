@@ -6,7 +6,7 @@
         },
         {
             "isHeadline": true,
-            "text": "Wahl Gemeinde Ergebnis"
+            "text": "TikTok"
         },
         {
             "paragraphBoxItem": {
@@ -14,142 +14,18 @@
                 "toModel": {
                     "externalService": {
                         "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Wahl_Gemeinde_Ergebnis"
+                        "@->contentpath": "TikTok"
                     }
                 }
             }
         },
         {
-            "isHeadline": true,
-            "text": "360Grad"
-        },
-        {
             "paragraphBoxItem": {
                 "isExternalService": true,
                 "toModel": {
                     "externalService": {
                         "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "360Grad"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "ARD-Mediathek (Video)"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "ARD_Mediathek_Video"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "ARTE Concert 2.0"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "ARTE_concert_new"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Bundesliga Audiostream"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Bundesliga_Audiostream"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Datawrapper CDN"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Datawrapper_CDN"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Esri Karte"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Esri"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Facebook"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Facebook"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Flourish"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Flourish"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Giphy"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Giphy"
+                        "@->contentpath": "TikTok2"
                     }
                 }
             }
@@ -213,81 +89,6 @@
                     }
                 }
             }
-        },
-        {
-            "isHeadline": true,
-            "text": "Youtube 360°"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Youtube_360"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Statischer Dienst"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Statischer_Dienst"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Wahlmonitor"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Wahlmonitor"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Wahlkreiskarte"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Wahlkreiskarte"
-                    }
-                }
-            }
-        },
-        {
-            "isHeadline": true,
-            "text": "Koalitionsrechner"
-        },
-        {
-            "paragraphBoxItem": {
-                "isExternalService": true,
-                "toModel": {
-                    "externalService": {
-                        "@->jsoninclude": "external-service/external_service.inc.json",
-                        "@->contentpath": "Koalitionsrechner"
-                    }
-                }
-            }
         }
     ],
     "dataPolicy": {
@@ -301,6 +102,7 @@
             { "key": "flourish", "value": "Flourish (Datengrafik)" },
             { "key": "giphy", "value": "Giphy (animiertes GIF)" },
             { "key": "instagram", "value": "Instagram" },
+            { "key": "tiktok", "value": "TikTok" },
             { "key": "twitter-post", "value": "Twitter" },
             { "key": "vimeo", "value": "Vimeo (Video)" },
             { "key": "youtube", "value": "YouTube (Video)" },
