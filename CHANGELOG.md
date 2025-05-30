@@ -1,3 +1,15 @@
+# v1.114.141 (Fri May 30 2025)
+
+#### 🐛 Bug Fix
+
+- expand external-services to include TikTok-Videos [#1282](https://github.com/mumprod/hr-design-system-handlebars/pull/1282) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.140 (Tue May 20 2025)
 
 #### 🐛 Bug Fix
