@@ -33,7 +33,9 @@ const ExternalService = function (context) {
         contentRefresher,
         gemeindewahlergebnis,
         uniqueId,
-        isExternalServiceLoaded = false
+        isExternalServiceLoaded = false,
+        tiktokOnPage = []
+
 
     const testDOMElements = function () {
         console.log(rootElement)
@@ -82,6 +84,9 @@ const ExternalService = function (context) {
                     case 'instagram':
                         createInstagramEmbed()
                         break
+                    case 'tiktok':
+                        createTikTokEmbed()
+                        break    
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -371,6 +376,25 @@ const ExternalService = function (context) {
                 reloadInstagramEmbed()
             }
         }, 250)
+    }
+
+    async function createTikTokEmbed() {
+        loadScript('tiktok-js', '//www.tiktok.com/embed.js', true)
+        const tiktokEmbedDataUrl = `https://www.tiktok.com/oembed?url=${options.embedCode}`;
+        const tiktokEmbedData = await fetch(tiktokEmbedDataUrl);
+        const tiktokEmbedDataJson = await tiktokEmbedData.json(); 
+        replaceAnimated(rootElement, tiktokEmbedDataJson.html, false, reloadTikTokEmbed)
+    }
+
+    const reloadTikTokEmbed = function() {
+        if(!tiktokOnPage.length) {
+            tiktokOnPage = Array.from(document.querySelectorAll('blockquote.tiktok-embed'),);
+        }
+        if (typeof tiktokEmbed !== 'undefined' && tiktokOnPage.length) {
+            tiktokEmbed.lib.render(tiktokOnPage);
+        } else {
+            reloadTikTokEmbed();
+        }
     }
 
     const createTwitterEmbed = function () {

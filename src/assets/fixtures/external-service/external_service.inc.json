@@ -147,6 +147,34 @@
         "setTimedReloadIframe": false,
         "setTimeForReload": ""
     },
+    "TikTok": {
+        "externalServiceConfig": {
+            "isWhitelisted": false,
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "tiktok",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "TikTok"
+        },
+        "serviceUrl": "https://www.tiktok.com/@hessenschau/video/7497190033804283158",
+        "setResponsiveIframe": false,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
+    },
+    "TikTok2": {
+        "externalServiceConfig": {
+            "isWhitelisted": false,
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "tiktok",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "TikTok"
+        },
+        "serviceUrl": "https://www.tiktok.com/@ratingmyfood.ffm/video/7488362181789158658",
+        "setResponsiveIframe": false,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
+    },
     "Twitter": {
         "externalServiceConfig": {
             "isWhitelisted": false,
