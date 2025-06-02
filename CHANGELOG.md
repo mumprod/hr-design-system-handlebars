@@ -1,3 +1,15 @@
+# v1.114.142 (Mon Jun 02 2025)
+
+#### 🐛 Bug Fix
+
+- fix bug in tiktok-embed [#1283](https://github.com/mumprod/hr-design-system-handlebars/pull/1283) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.114.141 (Fri May 30 2025)
 
 #### 🐛 Bug Fix
