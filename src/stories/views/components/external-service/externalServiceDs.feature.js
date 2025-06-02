@@ -379,7 +379,9 @@ const ExternalService = function (context) {
     }
 
     async function createTikTokEmbed() {
-        loadScript('tiktok-js', '//www.tiktok.com/embed.js', true)
+        if (!document.getElementById('tiktok-js')) {
+            loadScript('tiktok-js', '//www.tiktok.com/embed.js', true)
+        }
         const tiktokEmbedDataUrl = `https://www.tiktok.com/oembed?url=${options.embedCode}`;
         const tiktokEmbedData = await fetch(tiktokEmbedDataUrl);
         const tiktokEmbedDataJson = await tiktokEmbedData.json(); 
@@ -388,7 +390,8 @@ const ExternalService = function (context) {
 
     const reloadTikTokEmbed = function() {
         if(!tiktokOnPage.length) {
-            tiktokOnPage = Array.from(document.querySelectorAll('blockquote.tiktok-embed'),);
+            const selector = `blockquote.tiktok-embed[cite="${options.embedCode}"]`;
+            tiktokOnPage = Array.from(document.querySelectorAll(selector),);
         }
         if (typeof tiktokEmbed !== 'undefined' && tiktokOnPage.length) {
             tiktokEmbed.lib.render(tiktokOnPage);
