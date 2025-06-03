@@ -1,3 +1,16 @@
+# v1.114.143 (Tue Jun 03 2025)
+
+#### 🐛 Bug Fix
+
+- Add group teaser vertical video component template [#1284](https://github.com/mumprod/hr-design-system-handlebars/pull/1284) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.142 (Mon Jun 02 2025)
 
 #### 🐛 Bug Fix
