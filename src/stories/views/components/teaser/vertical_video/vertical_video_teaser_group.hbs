@@ -1,0 +1,28 @@
+{{#if this.hasGroupItems}}
+    {{#>components/grid/grid_group_highlight _backgroundColor="1" }}
+        {{~#if this.hasGroupTitle}}
+            <{{if this.headlineTag this.headlineTag "h2"}} class="text-2xl {{#unless
+                    this.isRelatedContent}} md:text-5xl{{else}} justifyLine{{/unless}} col-span-full py-0 font-title {{#if
+                    this.backgroundColor}} text-center{{else}} headline-barrier{{/if}}">
+            {{~#if this.hasLink}}<a class="{{if (isUserConsentNeeded this.link.url) 'js-user-consent-needed '
+                                                ''}}no-underline hover:underline decoration-1 md:decoration-2 text-link"
+                                    href="{{this.link.url}}">{{/if~}}
+            {{this.groupTitle}}
+            {{~#if this.hasLink}}</a>{{/if~}}
+            </{{if this.headlineTag this.headlineTag "h2"}}>
+        {{/if}}
+        <div class="grid items-start content-start grid-cols-12 col-span-12 gap-y-10 md:gap-y-14{{#if
+                this.isRelatedContent}} js-load{{/if}}{{inline-switch this.teaserSize '["25"]' '[""," gap-x-6"]'}}"
+            {{#if this.isRelatedContent}}
+             data-hr-click-tracking='{"settings": [{"type": "uxAction", "clickLabel": "Related-Content geklickt"}]}'{{/if}}
+        >
+          <div class="flex col-span-full">
+            <div class="overflow-x-auto no-scrollbar [scroll-snap-type:x_mandatory] w-full">
+              <div class="flex w-full gap-4 sm:justify-between"> 
+                {{~> components/teaser/teaser_logic/teaser_logic ~}}
+              </div>
+            </div>
+          </div>
+        </div>
+    {{/components/grid/grid_group_highlight }}
+{{/if}}
