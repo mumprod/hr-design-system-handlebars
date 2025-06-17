@@ -23,7 +23,6 @@
                 {{~/if~}}
             {{~/with~}}
             {{~#with this.label.byline~}}
-            <span class="mx-1 last-of-type:hidden">|</span>
                 {{~#if this.bylineSsi~}}
                     {{~> components/base/loadSSI this.bylineSsi _context=this.context _templatePath=this.bylineSsi~}}
                 {{~else~}}   
