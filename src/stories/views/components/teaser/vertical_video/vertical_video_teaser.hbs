@@ -18,7 +18,8 @@
             {{~#with this.teaserInfo~}}
                 {{~#if this.showTeaserInfo~}}        
                         {{~#with ../this.teaserDate~}}
-                            <time datetime="{{this.htmlDateTime}}">{{this.date}}</time><span class="mx-1 last-of-type:hidden">|</span>
+                            <time datetime="{{this.htmlDateTime}}">{{this.date}}</time>
+                            <span class="mx-1">|</span>
                         {{~/with~}}
                 {{~/if~}}
             {{~/with~}}
