@@ -1,6 +1,6 @@
-<article class="shrink-0 w-[90vw] sm:w-[calc(25%-12px)] rounded-lg [scroll-snap-align:start]" x-data="{ avStart: false }">
-    <section class="bg-white">
-        <div class="relative">
+<article class="shrink-0 w-[75vw] sm:w-[calc(25%-18px)] rounded-lg [scroll-snap-align:center]" x-data="{ avStart: false }">
+    <section>
+        <div class="relative bg-white">
             <figure class="{{> components/teaser/utilities/teaser_image_cypress_hook_classes}} relative ar-9-16 w-full" >    
                 {{#with this.toModel.videoElement}}
                     {{~> components/mediaplayer/media_player _playerLocation="Teaser" _uiTestHook="ui-test-video-ondemand-player" _isUsedInTeaser=true _addClassImg=../../_addClassImg~}}
@@ -8,11 +8,29 @@
                 {{/with}}
             </figure>
             <div class="absolute left-0 w-full pr-2 bottom-16">
-                <span class="w-full px-2 py-1 text-lg text-white hyphens-limit-15 bg-primary box-decoration-clone font-title ">
+                <span class="w-full px-2 py-1 text-3xl text-white sm:text-lg hyphens-limit-15 bg-primary box-decoration-clone font-title ">
                    {{this.title }}
                 </span>  
             </div>
         </div>
-            <p class="mt-2 ml-2 text-xs sm:ml-0 text-gray-scorpion font-headingSerif empty:hidden overflow-anywhere hyphens-auto">{{_meta}}</p>
+        
+        <span class='text-xs font-headingSerif text-gray-scorpion empty:hidden'>
+            {{~#with this.teaserInfo~}}
+                {{~#if this.showTeaserInfo~}}        
+                        {{~#with ../this.teaserDate~}}
+                            <time datetime="{{this.htmlDateTime}}">{{this.date}}</time><span class="mx-1 last-of-type:hidden">|</span>
+                        {{~/with~}}
+                {{~/if~}}
+            {{~/with~}}
+            {{~#with this.label.byline~}}
+            <span class="mx-1 last-of-type:hidden">|</span>
+                {{~#if this.bylineSsi~}}
+                    {{~> components/base/loadSSI this.bylineSsi _context=this.context _templatePath=this.bylineSsi~}}
+                {{~else~}}   
+                    {{~this.bylineText~}}
+                {{~/if~}}
+            {{/with}}
+        </span>
+
     </section>
 </article>
