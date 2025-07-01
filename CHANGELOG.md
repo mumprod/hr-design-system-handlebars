@@ -1,3 +1,16 @@
+# v1.114.149 (Tue Jul 01 2025)
+
+#### 🐛 Bug Fix
+
+- Fix media figure responsive width class for consistency [#1290](https://github.com/mumprod/hr-design-system-handlebars/pull/1290) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.114.148 (Tue Jul 01 2025)
 
 #### 🐛 Bug Fix
