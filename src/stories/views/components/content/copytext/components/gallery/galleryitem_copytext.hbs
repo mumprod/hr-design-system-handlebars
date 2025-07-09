@@ -8,12 +8,22 @@
      >
     <div class="relative w-full select-none">
         <div class="absolute top-0 bottom-0 left-0 right-0 z-30 ar-16-9">
-            {{#> components/button/button _variant="transparent" _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5" _onBackground=true}}
-                    {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
-            {{/components/button/button}}
-            {{#> components/button/button _variant="transparent" _alpineClick="next()" _css="absolute z-10 flex items-center justify-center right-4 bottom-4 sm:right-5 sm:bottom-5" _onBackground=true}}
-                {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
-            {{/components/button/button}}
+            {{#with this}}
+                {{#> components/button/button _variant="transparent" _alpineClick="previous()" _css="absolute z-10 flex items-center justify-center left-4 bottom-4 sm:left-5 sm:bottom-5 js-load" _onBackground=true}}
+                        {{> components/button/components/button_icon _icon="arrow-left" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
+                {{/components/button/button}}
+                {{#*inline "htmlProperties"}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": "Bildergalerie:back:{{../../../this.sophoraId}}" }]}'
+                {{/inline}}
+            {{/with}}
+            {{#with this}}
+                {{#> components/button/button _variant="transparent" _alpineClick="next()" _css="absolute z-10 flex items-center justify-center right-4 bottom-4 sm:right-5 sm:bottom-5 js-load" _onBackground=true}}
+                    {{> components/button/components/button_icon _icon="arrow-right" _iconmap="icons" _css="w-8 h-8 sm:w-11 sm:h-11 py-1 sm:py-2 fill-link dark:fill-link-dark" }}
+                {{/components/button/button}}
+                {{#*inline "htmlProperties"}}
+                    data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": "Bildergalerie:next:{{../../../this.sophoraId}}" }]}'
+                {{/inline}}
+            {{/with}}
         </div>
         <div class="absolute inset-0 z-20 flex items-center justify-center ar-16-9" aria-hidden="true" x-show="loading">
             {{> components/base/image/icon _icon="loading" _addClass="animate-spin animate-infinite h-8 w-8 md:w-11 md:h-11 fill-link dark:fill-link-dark" }}
