@@ -53,10 +53,8 @@ export default function gallerySlider(gallerySelector) {
         },
         handleTouchEnd() {
             if(this.touchEndX){
-                if (this.touchStartX - this.touchEndX > this.swipeThreshold) { 
+                if (this.touchStartX - this.touchEndX > this.swipeThreshold) {
                     this.next()
-                            const event = new CustomEvent('alpineClickTracking', { detail: { direction: 'next', index: this.currentSlideIndex } });
-                            window.dispatchEvent(event);
                 }
                 if (this.touchStartX - this.touchEndX < -this.swipeThreshold) {
                     this.previous()
