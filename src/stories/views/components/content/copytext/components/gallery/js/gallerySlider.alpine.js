@@ -32,7 +32,17 @@ export default function gallerySlider(gallerySelector) {
                 this.captions = [...galleryContainer.querySelectorAll('.js-gallery-slider-caption')];
                 this.captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
             }
-            this.handleImageLoad(this.slides[0].querySelector('.js-gallery-image'));
+
+            this.slides.forEach(slide => {
+                const img = slide.querySelector('.js-gallery-image');
+                if (img) {
+                    if (img.complete && img.naturalHeight !== 0) {
+                        this.handleImageLoad(img);
+                    } else {
+                        img.onload = () => this.handleImageLoad(img);
+                    }
+                }
+            });
 
         },
         handleTouchStart(event) {
