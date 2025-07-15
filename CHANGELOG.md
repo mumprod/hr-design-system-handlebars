@@ -1,3 +1,15 @@
+# v1.114.151 (Tue Jul 15 2025)
+
+#### 🐛 Bug Fix
+
+- :art: Change margin-top of shorttext when it directly follows a metad… [#1292](https://github.com/mumprod/hr-design-system-handlebars/pull/1292) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.114.150 (Wed Jul 09 2025)
 
 #### 🐛 Bug Fix
