@@ -32,7 +32,17 @@ export default function gallerySlider(gallerySelector) {
                 this.captions = [...galleryContainer.querySelectorAll('.js-gallery-slider-caption')];
                 this.captions.forEach((caption, index) => caption.setAttribute('x-show', `currentSlideIndex === ${index + 1}`));
             }
-            this.handleImageLoad(this.slides[0].querySelector('.js-gallery-image'));
+
+            this.slides.forEach(slide => {
+                const img = slide.querySelector('.js-gallery-image');
+                if (img) {
+                    if (img.complete && img.naturalHeight !== 0) {
+                        this.handleImageLoad(img);
+                    } else {
+                        img.onload = () => this.handleImageLoad(img);
+                    }
+                }
+            });
 
         },
         handleTouchStart(event) {
@@ -43,8 +53,10 @@ export default function gallerySlider(gallerySelector) {
         },
         handleTouchEnd() {
             if(this.touchEndX){
-                if (this.touchStartX - this.touchEndX > this.swipeThreshold) {
+                if (this.touchStartX - this.touchEndX > this.swipeThreshold) { 
                     this.next()
+                            const event = new CustomEvent('alpineClickTracking', { detail: { direction: 'next', index: this.currentSlideIndex } });
+                            window.dispatchEvent(event);
                 }
                 if (this.touchStartX - this.touchEndX < -this.swipeThreshold) {
                     this.previous()
