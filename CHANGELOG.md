@@ -1,3 +1,16 @@
+# v1.114.153 (Tue Jul 15 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-3711: prevent endless loading spinner for hero image in gallery [#1294](https://github.com/mumprod/hr-design-system-handlebars/pull/1294) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.152 (Tue Jul 15 2025)
 
 #### 🐛 Bug Fix
