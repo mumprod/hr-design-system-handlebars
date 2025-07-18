@@ -1,3 +1,16 @@
+# v1.114.154 (Fri Jul 18 2025)
+
+#### 🐛 Bug Fix
+
+- Add click tracking to Poster-teaser in Copytext [#1295](https://github.com/mumprod/hr-design-system-handlebars/pull/1295) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.114.153 (Tue Jul 15 2025)
 
 #### 🐛 Bug Fix
