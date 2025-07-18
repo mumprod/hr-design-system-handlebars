@@ -1,4 +1,5 @@
-<article class="{{#if _isCopytext~}}mx-0{{else}}mx-5 sm:mx-0{{/if}} relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} ">
+<article class="{{#if _isCopytext~}}mx-0 js-load{{else}}mx-5 sm:mx-0{{/if}} relative col-span-12 flex gap-y-5 gap-x-4 {{inline-switch this.teaserSize '["33","50"]' '["md:col-span-4 flex-col","md:col-span-6 flex-col","flex-col"]'}} "
+        {{#if _isCopytext~}} data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": "Posterteaser:{{../../../../../../this.sophoraId}}:{{this.sophoraId}}" }]}' {{/if}}>
     <figure class="ar-1-1{{#if _isCopytext~}}{{#if this.showFullSize.isTrue }}{{#if this.showStretched.isTrue }} sm:ar-16-9{{/if}}{{/if}}{{/if}}" aria-hidden="true">
         {{#if _isCopytext~}}
             {{#if this.showFullSize.isTrue }}
