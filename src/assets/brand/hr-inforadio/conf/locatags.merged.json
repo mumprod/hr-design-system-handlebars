@@ -215,6 +215,8 @@
 	"teaser_more_video_livestream_brand": "zum {0} Livestream",
 	"teaser_more_video_livestream_brand_sr": "zum {0} Livestream",
 	"teaser_more_video_livestream_sr": "zum Livestream",
+	"tracking_label_teaser": "Teaser:{0}:{1}",
+	"tracking_label_external_link": "Externer-Link::{0} gecklickt",
 	"votingform_form_back": "Zurück zur Abstimmung",
 	"votingform_title_success": "Danke für ihre Teilnahme!",
 	"votingform_title_error": "Das hat leider nicht geklappt!",
