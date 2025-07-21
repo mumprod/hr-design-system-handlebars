@@ -1,3 +1,15 @@
+# v1.115.0 (Mon Jul 21 2025)
+
+#### 🚀 Enhancement
+
+- :sparkles: generate click tracking code in link template if the link … [#1296](https://github.com/mumprod/hr-design-system-handlebars/pull/1296) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.114.154 (Fri Jul 18 2025)
 
 #### 🐛 Bug Fix
