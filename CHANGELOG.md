@@ -1,3 +1,15 @@
+# v1.116.0 (Tue Jul 22 2025)
+
+#### 🚀 Enhancement
+
+- :sparkles: add tracking label for poster teaser in locatags.json and … [#1297](https://github.com/mumprod/hr-design-system-handlebars/pull/1297) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.115.0 (Mon Jul 21 2025)
 
 #### 🚀 Enhancement
