@@ -10,7 +10,7 @@
     {{/if}}
     {{#if _link.isStaticUrl}}href="{{#if _link.site}}{{resourceUrl _link.url _site=_link.site}}{{else}}{{resourceUrl _link.url}}{{/if}}{{else}}href="{{_link.url}}{{/if}}{{#if this.hasComments}}#commentList{{/if}}"
     class="ds-link js-load{{#if _link.isUserConsentNeeded}} js-user-consent-needed{{/if}} {{#if _isSelected}} {{defaultIfEmpty _selectedCssClass "-current"}}{{/if}}{{#if _css}} {{_css}}{{/if}} {{#> css}}{{/css}}"
-    {{#if _link.trackingLabel}} data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": {{_link.trackingLabel}}]}'{{/if}}{{#if _link.isTargetBlank}} target="_blank"  rel="noopener{{#if _link.hasNoReferrerFlag}} noreferrer{{/if}}"{{/if}}
+    {{#if _link.trackingLabel}} data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": "{{_link.trackingLabel}}"}]}'{{/if}}{{#if _link.isTargetBlank}} target="_blank"  rel="noopener{{#if _link.hasNoReferrerFlag}} noreferrer{{/if}}"{{/if}}
     {{#if _isAriaHidden}} aria-hidden="true" tabindex="-1"{{/if}}
     {{#> htmlProperties}}{{/htmlProperties}}
     >{{~> @partial-block ~}}</a>
