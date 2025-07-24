@@ -1,8 +1,11 @@
 import { download, pi, uxAction, uxNavigation } from 'base/tracking/pianoHelper.subfeature';
+import { hr$ } from 'hrQuery'
 
 const ClickTracking = (context) => {
     const { options, element: elementToTrack } = context;
-    const settings = options.settings || [];
+    const settingsFromChildNode = JSON.parse(hr$('[data-click-tracking-settings]', elementToTrack)[0]?.dataset.clickTrackingSettings || '{"settings":[]}')
+        .settings || '[]';
+    const settings = options.settings || settingsFromChildNode;
 
     const clickHandler = (event) => {
         settings.forEach(({ type, clickLabel, secondLevelId }) => {
