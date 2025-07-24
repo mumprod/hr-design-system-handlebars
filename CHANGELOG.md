@@ -1,3 +1,15 @@
+# v1.117.0 (Thu Jul 24 2025)
+
+#### 🚀 Enhancement
+
+- :sparkles: Allow to define json settings in a child node  of the trac… [#1298](https://github.com/mumprod/hr-design-system-handlebars/pull/1298) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.116.0 (Tue Jul 22 2025)
 
 #### 🚀 Enhancement
