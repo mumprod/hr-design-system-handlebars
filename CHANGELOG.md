@@ -1,3 +1,15 @@
+# v1.118.0 (Mon Aug 11 2025)
+
+#### 🚀 Enhancement
+
+- fix: adjust margin class for top button on medium screens [#1299](https://github.com/mumprod/hr-design-system-handlebars/pull/1299) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.117.0 (Thu Jul 24 2025)
 
 #### 🚀 Enhancement
