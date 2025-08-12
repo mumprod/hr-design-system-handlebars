@@ -1,3 +1,16 @@
+# v1.118.2 (Tue Aug 12 2025)
+
+#### 🐛 Bug Fix
+
+- fix: correct spelling in external link tracking label across multiple… [#1301](https://github.com/mumprod/hr-design-system-handlebars/pull/1301) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.118.1 (Tue Aug 12 2025)
 
 #### 🐛 Bug Fix
