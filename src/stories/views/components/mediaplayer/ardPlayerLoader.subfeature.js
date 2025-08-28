@@ -18,8 +18,8 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
         isPlayerStarted = false,
-        isWebview = window.parent.document.documentElement.classList.contains('webview')
-    player
+        isWebview = window.parent.document.documentElement.classList.contains('webview'),
+        player
 
     const setupPlayer = function () {
         loadArdPlayerScript()
