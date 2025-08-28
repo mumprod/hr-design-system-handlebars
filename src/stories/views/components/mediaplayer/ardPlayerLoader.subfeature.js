@@ -18,6 +18,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
         isPlayerStarted = false,
+        isWebview = window.parent.document.documentElement.classList.contains('webview'),
         player
 
     const setupPlayer = function () {
@@ -52,10 +53,10 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const createPlayer = function () {
         if (undefined != playerConfig.pluginData['trackingPiano@all']) {
-            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieExistent('ati') ? settingsCookie.isSettingsCookieAccepted('ati') : true
+            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieExistent('ati') ? settingsCookie.isSettingsCookieAccepted('ati') : !isWebview
         }
         if (undefined != playerConfig.pluginData['trackingAgf@all']) {
-            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieExistent('agf') ? settingsCookie.isSettingsCookieAccepted('agf') : true
+            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieExistent('agf') ? settingsCookie.isSettingsCookieAccepted('agf') : !isWebview
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
