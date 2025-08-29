@@ -1,3 +1,15 @@
+# v1.119.1 (Fri Aug 29 2025)
+
+#### 🐛 Bug Fix
+
+- Removing ugly fat border for all media in paragraph [#1303](https://github.com/mumprod/hr-design-system-handlebars/pull/1303) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.119.0 (Thu Aug 28 2025)
 
 #### 🚀 Enhancement
