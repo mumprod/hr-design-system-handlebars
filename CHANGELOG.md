@@ -1,3 +1,15 @@
+# v1.119.3 (Wed Sep 17 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Adding new data-policy link ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.119.2 (Wed Sep 03 2025)
 
 #### 🐛 Bug Fix
