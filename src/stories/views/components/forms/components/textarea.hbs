@@ -61,14 +61,14 @@
          </div>
   {{/if}}
    {{#>components/forms/components/supportingTextBox }}      
-      {{#if _description}}  
-         <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{{_description}}}</div>
+      {{#if _description-adjust_context}}  
+         <div class="pl-4 text-xs text-gray-scorpion" :class="{'hidden': hideDescription() }">{{{_description-adjust_context}}}</div>
       {{/if}}
-      {{#if _required}}
-         <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" >{{_errorMessage}}</div>
+      {{#if _required-adjust_context}}
+         <div class="hidden pl-4 text-xs text-error dark:text-error-dark" :class="{'hidden': hideError()}" >{{_errorMessage-adjust_context}}</div>
       {{/if}}
-      {{#if _maxLength}}
-         <div class="px-4 ml-auto text-xs text-gray-scorpion"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength}}</div>
+      {{#if _maxLength-adjust_context}}
+         <div class="px-4 ml-auto text-xs text-gray-scorpion"><span x-text="textarea{{getRandom}}.length">0</span>/{{_maxLength-adjust_context}}</div>
       {{/if~}}
    {{/components/forms/components/supportingTextBox }}
 </div>
