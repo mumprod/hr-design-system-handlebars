@@ -1,3 +1,15 @@
+# v1.119.5 (Thu Oct 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Create a new content footer for ticker item ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.119.4 (Mon Sep 29 2025)
 
 #### 🐛 Bug Fix
