@@ -1,0 +1,57 @@
+<footer class="flex flex-col mt-12 sm:mt-14 text-xs md:text-sm text-gray-scorpion dark:text-text-dark font-headingSerif{{#if _addClass}} {{_addClass}}{{/if}}">
+    {{> components/page/components/author _hideFrom=false _isTicker=_isTicker }}
+    {{~#with this.programReferenceAlt~}}
+        {{~#if this.hasReference~}}
+            <div>
+                <span>{{~loca "broadcast"}}:</span>
+                {{#if this.link}}
+                    {{#>components/base/link _link=this.link _css="text-link dark:text-link-dark hover:underline"~}}
+                        <span>{{~ this.programLabel ~}}</span>{{/components/base/link~}}{{~#if this.date~}},
+                        <span>
+                                <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                                      class="{{#if _isArticle}}{{else}}{{/if}} ">
+                                    {{#if this.displayWithTime}}
+                                        {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                                    {{else}}
+                                        {{this.date.date}}
+                                    {{/if}}
+                                </time>
+                            </span>
+                    {{/if}}
+                {{else}}
+                    <span>{{this.programLabel}}{{#if this.date}}, 
+                        <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                              class="{{#if _isArticle}}{{else}}{{/if}} ">
+                            {{#if this.displayWithTime}}
+                                {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                            {{else}}
+                                {{this.date.date}}
+                            {{/if}}
+                        </time>
+                    {{/if}}
+                    </span>
+                {{/if}}
+            </div>
+        {{~/if~}}
+    {{~/with~}}
+    {{~#with _source}}
+        <p>
+            {{~loca "copyright_source"~}}
+            {{~#each this}}
+                {{~#if @first}} {{this}}{{else}}, {{this}}{{/if~}}
+            {{/each~}}
+        </p>
+    {{/with~}}
+    {{~#if _isArchiveContent}}
+        <p>
+            {{loca "archive_content"}}
+        </p>
+    {{/if}}
+    {{#if _showDate ~}}
+        {{#with _date}}
+            <p>
+                <time datetime="{{this.htmlDateTime}}">{{loca "date_published" this.date this.time }}</time>
+            </p>
+        {{/with~}}
+    {{/if}}
+</footer>
