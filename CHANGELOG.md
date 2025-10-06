@@ -1,3 +1,15 @@
+# v1.119.6 (Mon Oct 06 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Reorder elements in content footer ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.119.5 (Thu Oct 02 2025)
 
 #### ⚠️ Pushed to `main`
