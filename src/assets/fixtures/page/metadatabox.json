@@ -59,7 +59,7 @@
             "@->contentpath": "with_author",
             "@->overrides": [
                 {
-                    "@->contentpath": "authorImage",
+                    "@->contentpath": "firstAuthorItem.profileImage",
                     "@->value": {}
                 }
             ]

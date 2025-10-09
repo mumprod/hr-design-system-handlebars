@@ -1,7 +1,8 @@
 {
     "default": {
         "_showDate": true,
-        "hasMoreThanOneAuthor": false,
+        "hasAuthors": false,
+        "hasMultipleAuthors": false,
         "hasDwellTime": true,
         "documentModificationDate": {
             "isModificationDate": false,
@@ -20,22 +21,30 @@
     "with_author": {
         "_showDate": true,
         "hasOneAuthor": true,
-        "hasMoreThanOneAuthor": false,
+        "hasAuthors": true,
+        "hasMultipleAuthors": false,
         "hasDwellTime": true,
-        "authorTitle": "Steffen Rebhahn",
-        "textAfterAuthor": "(Redaktion hessenschau.de)",
-        "authorImage": {
-            "@->jsoninclude": "page/story/story_images.inc.json",
-            "@->contentpath": "author",
-            "@->replaceToken": [
-                {
-                    "@->token": "image",
-                    "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
-                }
-            ]
+        "firstAuthorItem": {
+            "hasProfileLink": true,
+            "from": "Von",
+            "authorName": "Steffen Rebhahn",
+            "delimiter": "",
+            "link": {
+                "url": "/author-url",
+                "isTargetBlank": false
+            },
+            "textAfterAuthor": "(Redaktion hessenschau.de)",
+            "profileImage": {
+                "@->jsoninclude": "page/story/story_images.inc.json",
+                "@->contentpath": "author",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                    }
+                ]
+            }
         },
-        "authorUrl": "/author-url",
-        "webviewAuthorUrl": "webview-author-url",
         "documentModificationDate": {
             "isModificationDate": false,
             "isPublicationDate": true,
@@ -52,7 +61,8 @@
     },
     "with_more_authors": {
         "_showDate": true,
-        "hasMoreThanOneAuthor": true,
+        "hasAuthors": true,
+        "hasMultipleAuthors": true,
         "hasDwellTime": true,
         "documentModificationDate": {
             "isModificationDate": false,
