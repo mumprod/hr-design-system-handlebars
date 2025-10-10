@@ -10,7 +10,8 @@
     "_hasDwellTime": true,
     "_isArticle": true,
     "_copyright": "All rights reserved",
-    "_source": ["DPA","Wikipedia"],
+    "_source": ["DPA", "Wikipedia"],
+    "_author": "Anna Magel",
     "_author": "Anna Magel",
     "_isArchiveContent": true,
     "editorialStaffItems": [
@@ -33,16 +34,17 @@
             "delimiter": "",
             "link": {
                 "url": "/author-url",
-                "isTargetBlank": false   
-            }            
-        }],
-    "programReferenceAlt":{
-         "hasReference": true,
-         "programLabel": "Hessenschau",
-         "link": {
+                "isTargetBlank": false
+            }
+        }
+    ],
+    "programReferenceAlt": {
+        "hasReference": true,
+        "programLabel": "Hessenschau",
+        "link": {
             "url": "/programReference-url",
-            "isTargetBlank": false   
-            },
+            "isTargetBlank": false
+        },
         "name": "Testtitel",
         "displayWithTime": true,
         "date": {
@@ -51,6 +53,6 @@
             "date": "31.10.22",
             "time": "19:30",
             "dateSeparatorTime": "31.10.22, 19:30"
-        }      
+        }
     }
 }
