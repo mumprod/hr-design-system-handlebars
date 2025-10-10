@@ -1,7 +1,7 @@
-{{#if this.hasAuthors}}
+{{#if this.editorialData.hasAuthors}}
     {{!-- Multiple Authors --}}
-    {{#if this.hasMultipleAuthors}}      
-        {{#with this.authorItems}}
+    {{#if this.editorialData.hasMultipleAuthors}}      
+        {{#with this.editorialData.authorItems}}
             <p class="text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
                 {{#each this}}
                     {{#if this.hasProfileLink}}
@@ -19,7 +19,7 @@
         {{~> @partial-block ~}}
     {{else}}
         <div class="flex items-center">
-            {{#with this.firstAuthorItem}}
+            {{#with this.editorialData.firstAuthorItem}}
                 {{#if this.profileImage.isImage}}
                     <div class="w-10 h-10 mr-4 basis-10 grow-0">
                         {{~> components/base/image/responsive_image this.profileImage
@@ -33,15 +33,17 @@
             {{/with}}
             <div class="text-xs sm480:text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
                 <div>
-                    {{#unless _hideFrom }}{{this.firstAuthorItem.from}}{{/unless}}
-                    {{#with this.firstAuthorItem}}
-                        {{#if this.hasProfileLink~}}
-                            {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
-                                <span>{{../this.authorName~}}</span>{{~/components/base/link~}}
-                        {{else}}
-                            {{this.from}}
-                        {{/if}}
-                        {{~#with this.textAfterAuthor}} {{this}}{{/with~}}{{~this.delimiter}}
+                    {{#with this.editorialData}}
+                        {{#unless _hideFrom }}{{this.firstAuthorItem.from}}{{/unless}}
+                        {{#with this.firstAuthorItem}}
+                            {{#if this.hasProfileLink~}}
+                                {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
+                                    <span>{{../this.authorName~}}</span>{{~/components/base/link~}}
+                            {{else}}
+                                {{this.from}}
+                            {{/if}}
+                            {{~#with this.textAfterAuthor}} {{this}}{{/with~}}{{~this.delimiter}}
+                        {{/with}}
                     {{/with}}
                 </div>
                 {{~> @partial-block ~}}

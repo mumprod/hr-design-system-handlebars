@@ -20,29 +20,32 @@
     },
     "with_author": {
         "_showDate": true,
-        "hasOneAuthor": true,
-        "hasAuthors": true,
-        "hasMultipleAuthors": false,
+
         "hasDwellTime": true,
-        "firstAuthorItem": {
-            "hasProfileLink": true,
-            "from": "Von",
-            "authorName": "Steffen Rebhahn",
-            "delimiter": "",
-            "link": {
-                "url": "/author-url",
-                "isTargetBlank": false
-            },
-            "textAfterAuthor": "(Redaktion hessenschau.de)",
-            "profileImage": {
-                "@->jsoninclude": "page/story/story_images.inc.json",
-                "@->contentpath": "author",
-                "@->replaceToken": [
-                    {
-                        "@->token": "image",
-                        "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
-                    }
-                ]
+        "editorialData": {
+            "hasOneAuthor": true,
+            "hasAuthors": true,
+            "hasMultipleAuthors": false,
+            "firstAuthorItem": {
+                "hasProfileLink": true,
+                "from": "Von",
+                "authorName": "Steffen Rebhahn",
+                "delimiter": "",
+                "link": {
+                    "url": "/author-url",
+                    "isTargetBlank": false
+                },
+                "textAfterAuthor": "(Redaktion hessenschau.de)",
+                "profileImage": {
+                    "@->jsoninclude": "page/story/story_images.inc.json",
+                    "@->contentpath": "author",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                        }
+                    ]
+                }
             }
         },
         "documentModificationDate": {
@@ -64,6 +67,35 @@
         "hasAuthors": true,
         "hasMultipleAuthors": true,
         "hasDwellTime": true,
+        "editorialData": {
+            "hasOneAuthor": false,
+            "hasAuthors": true,
+            "hasMultipleAuthors": true,
+            "authorItems": [
+                {
+                    "hasProfileLink": false,
+                    "from": "Von",
+                    "textAfterAuthor": "Horst Schlämmer",
+                    "delimiter": ", "
+                },
+                {
+                    "hasProfileLink": false,
+                    "from": "",
+                    "textAfterAuthor": "Karl Dall",
+                    "delimiter": " und "
+                },
+                {
+                    "hasProfileLink": true,
+                    "from": "",
+                    "authorName": "Peter Lustig",
+                    "delimiter": "",
+                    "link": {
+                        "url": "/author-url",
+                        "isTargetBlank": false
+                    }
+                }
+            ]
+        },
         "documentModificationDate": {
             "isModificationDate": false,
             "isPublicationDate": true,
@@ -71,30 +103,6 @@
             "date": "15.02.24",
             "time": "19:30"
         },
-        "authorItems": [
-            {
-                "hasProfileLink": false,
-                "from": "Von",
-                "textAfterAuthor": "Horst Schlämmer",
-                "delimiter": ", "
-            },
-            {
-                "hasProfileLink": false,
-                "from": "",
-                "textAfterAuthor": "Karl Dall",
-                "delimiter": " und "
-            },
-            {
-                "hasProfileLink": true,
-                "from": "",
-                "authorName": "Peter Lustig",
-                "delimiter": "",
-                "link": {
-                    "url": "/author-url",
-                    "isTargetBlank": false
-                }
-            }
-        ],
         "socialSharing": {
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",

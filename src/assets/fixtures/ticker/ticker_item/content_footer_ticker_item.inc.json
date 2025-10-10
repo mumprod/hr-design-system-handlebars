@@ -17,31 +17,33 @@
                 "dateSeparatorTime": "09.10.25, 16:45"
             }
         },
-        "hasOneAuthor": true,
-        "hasAuthors": true,
-        "hasMultipleAuthors": false,
-        "hasDwellTime": true,
-        "firstAuthorItem": {
-            "hasProfileLink": true,
-            "from": "Von",
-            "authorName": "Steffen Rebhahn",
-            "delimiter": "",
-            "link": {
-                "url": "/author-url",
-                "isTargetBlank": false
-            },
-            "textAfterAuthor": "(Redaktion hessenschau.de)",
-            "profileImage": {
-                "@->jsoninclude": "page/story/story_images.inc.json",
-                "@->contentpath": "author",
-                "@->replaceToken": [
-                    {
-                        "@->token": "image",
-                        "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
-                    }
-                ]
+        "editorialData": {
+            "hasOneAuthor": true,
+            "hasAuthors": true,
+            "hasMultipleAuthors": false,
+            "firstAuthorItem": {
+                "hasProfileLink": true,
+                "from": "Von",
+                "authorName": "Steffen Rebhahn",
+                "delimiter": "",
+                "link": {
+                    "url": "/author-url",
+                    "isTargetBlank": false
+                },
+                "textAfterAuthor": "(Redaktion hessenschau.de)",
+                "profileImage": {
+                    "@->jsoninclude": "page/story/story_images.inc.json",
+                    "@->contentpath": "author",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                        }
+                    ]
+                }
             }
         },
+        "hasDwellTime": true,
         "socialSharing": {
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
@@ -51,34 +53,36 @@
     },
 
     "with_multiple_authors": {
-        "hasOneAuthor": false,
-        "hasAuthors": true,
-        "hasMultipleAuthors": true,
         "hasDwellTime": true,
-        "authorItems": [
-            {
-                "hasProfileLink": false,
-                "from": "Von",
-                "textAfterAuthor": "Horst Schlämmer",
-                "delimiter": ", "
-            },
-            {
-                "hasProfileLink": false,
-                "from": "",
-                "textAfterAuthor": "Karl Dall",
-                "delimiter": " und "
-            },
-            {
-                "hasProfileLink": true,
-                "from": "",
-                "authorName": "Peter Lustig",
-                "delimiter": "",
-                "link": {
-                    "url": "/author-url",
-                    "isTargetBlank": false
+        "editorialData": {
+            "hasOneAuthor": false,
+            "hasAuthors": true,
+            "hasMultipleAuthors": true,
+            "authorItems": [
+                {
+                    "hasProfileLink": false,
+                    "from": "Von",
+                    "textAfterAuthor": "Horst Schlämmer",
+                    "delimiter": ", "
+                },
+                {
+                    "hasProfileLink": false,
+                    "from": "",
+                    "textAfterAuthor": "Karl Dall",
+                    "delimiter": " und "
+                },
+                {
+                    "hasProfileLink": true,
+                    "from": "",
+                    "authorName": "Peter Lustig",
+                    "delimiter": "",
+                    "link": {
+                        "url": "/author-url",
+                        "isTargetBlank": false
+                    }
                 }
-            }
-        ],
+            ]
+        },
         "programReferenceAlt": {
             "hasReference": true,
             "programLabel": "hr-fernsehen, hessenschau",
