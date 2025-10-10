@@ -1,0 +1,106 @@
+{
+    "default": {
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
+        },
+        "hasOneAuthor": true,
+        "hasAuthors": true,
+        "hasMultipleAuthors": false,
+        "hasDwellTime": true,
+        "firstAuthorItem": {
+            "hasProfileLink": true,
+            "from": "Von",
+            "authorName": "Steffen Rebhahn",
+            "delimiter": "",
+            "link": {
+                "url": "/author-url",
+                "isTargetBlank": false
+            },
+            "textAfterAuthor": "(Redaktion hessenschau.de)",
+            "profileImage": {
+                "@->jsoninclude": "page/story/story_images.inc.json",
+                "@->contentpath": "author",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                    }
+                ]
+            }
+        },
+        "socialSharing": {
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    },
+
+    "with_multiple_authors": {
+        "hasOneAuthor": false,
+        "hasAuthors": true,
+        "hasMultipleAuthors": true,
+        "hasDwellTime": true,
+        "authorItems": [
+            {
+                "hasProfileLink": false,
+                "from": "Von",
+                "textAfterAuthor": "Horst Schlämmer",
+                "delimiter": ", "
+            },
+            {
+                "hasProfileLink": false,
+                "from": "",
+                "textAfterAuthor": "Karl Dall",
+                "delimiter": " und "
+            },
+            {
+                "hasProfileLink": true,
+                "from": "",
+                "authorName": "Peter Lustig",
+                "delimiter": "",
+                "link": {
+                    "url": "/author-url",
+                    "isTargetBlank": false
+                }
+            }
+        ],
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
+        },
+        "socialSharing": {
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    }
+}
