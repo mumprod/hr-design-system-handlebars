@@ -19,6 +19,12 @@ const snapshotTemplate = (args) => {
 
 export default {
     title: 'Komponenten/Ticker/Ticker-Item/Content-Footer',
+    argTypes: {
+        _css: {
+            description: 'Erlaubt die Angabe zusätzlicher CSS Klassen für den Content-Footer',
+            control: 'text',
+        },
+    },
     parameters: {
         controls: {
             sort: 'alpha',
