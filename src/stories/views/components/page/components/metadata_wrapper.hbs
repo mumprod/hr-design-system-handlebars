@@ -2,7 +2,7 @@
     {{!-- Multiple Authors --}}
     {{#if this.hasMultipleAuthors}}      
         {{#with this.authorItems}}
-            <p class="mb-1 text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
+            <p class="text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
                 {{#each this}}
                     {{#if this.hasProfileLink}}
                         {{this.from}}
@@ -21,7 +21,7 @@
         <div class="flex items-center">
             {{#with this.firstAuthorItem}}
                 {{#if this.profileImage.isImage}}
-                    <div class="self-start w-10 h-10 mr-4 basis-10 grow-0">
+                    <div class="w-10 h-10 mr-4 basis-10 grow-0">
                         {{~> components/base/image/responsive_image this.profileImage
                                 _type="profile" 
                                 _variant="ticker" 
@@ -31,8 +31,8 @@
                     </div>
                 {{/if}}
             {{/with}}
-            <div class="self-start text-xs sm480:text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
-                <div class="mb-1">
+            <div class="text-xs sm480:text-sm basis-0 grow font-headingSerif text-gray-scorpion dark:text-text-dark">
+                <div>
                     {{#unless _hideFrom }}{{this.firstAuthorItem.from}}{{/unless}}
                     {{#with this.firstAuthorItem}}
                         {{#if this.hasProfileLink~}}

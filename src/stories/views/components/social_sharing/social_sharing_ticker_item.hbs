@@ -1,7 +1,7 @@
 {{~#with this.socialSharing ~}}
     <div 
         x-data="socialSharingHandler('tickerItem{{nextRandom}}')"
-        class="flex self-center justify-end ml-3 print:hidden grow"
+        class="flex justify-end ml-3 print:hidden grow"
         x-init="initBrowserDetection();"
         x-on:resize.window="$store.sharingIsOpen.ticker = false"       
         x-on:keydown.escape.prevent.stop="close()"
