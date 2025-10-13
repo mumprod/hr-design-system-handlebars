@@ -2,8 +2,33 @@
     "topline": "Quer über den großen Sylter Deich",
     "title": "Zwei flinke Boxer jagen die quirlige Eva und ihren Mops",
     "shorttext": "Vogel Quax zwickt Johnys Pferd Bim. Sylvia wagt quick den Jux bei Pforzheim. Polyfon zwitschernd aßen Mäxchens Vögel Rüben, Joghurt und Quark. Fix quäkt Jürgen blöd vom Paß. Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. Falsches Üben von Xylophonmusik quält jeden größeren Zwerg.",
-    "hasMoreThanOneAuthor": false,
-    "hasOneAuthor": true,
+    "editorialData": {
+        "hasOneAuthor": true,
+        "hasAuthors": true,
+        "hasMultipleAuthors": false,
+        "firstAuthorItem": {
+            "hasProfileLink": true,
+            "from": "Von",
+            "authorName": "Steffen Rebhahn",
+            "delimiter": "",
+            "link": {
+                "url": "/author-url",
+                "isTargetBlank": false
+            },
+            "textAfterAuthor": "(Redaktion hessenschau.de)",
+            "profileImage": {
+                "@->jsoninclude": "page/story/story_images.inc.json",
+                "@->contentpath": "author",
+                "@->replaceToken": [
+                    {
+                        "@->token": "image",
+                        "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
+                    }
+                ]
+            }
+        }
+    },
+
     "hasDwellTime": true,
     "isArchiveContent": false,
     "displayPageLead": {
@@ -17,7 +42,7 @@
                 "@->token": "image",
                 "@->value": "connichi-106"
             }
-        ]    
+        ]
     },
     "documentModificationDate": {
         "isModificationDate": false,
@@ -30,54 +55,18 @@
         "htmlDateTime": "2024-02-15T19:30+0200",
         "date": "15.02.24",
         "time": "19:30"
-    },    
+    },
     "userComments": {
         "HasOneComment": false,
         "quantity": "117"
     },
     "byline": "Bylinetext",
-    "authorTitle": "Steffen Rebhahn",
-    "authorImage": {
-        "@->jsoninclude": "page/story/story_images.inc.json",
-        "@->contentpath": "author",
-        "@->replaceToken": [
-            {
-                "@->token": "image",
-                "@->value": "mitarbeiter-portraet-steffen-rebhahn-106"
-            }
-        ]            
-    },
-    "authorUrl": "/author-url",
-    "webviewAuthorUrl": "webview-author-url",
-    "authorItems": [
-        {
-            "hasProfileLink": false,
-            "from": "Von",
-            "textAfterAuthor": "Horst Schlämmer",
-            "delimiter": ", "
-        },
-        {
-            "hasProfileLink": false,
-            "from": "",
-            "textAfterAuthor": "Karl Dall",
-            "delimiter": " und "
-        },
-        {
-            "hasProfileLink": true,
-            "from": "",
-            "authorName": "Peter Lustig",
-            "delimiter": "",
-            "link": {
-                "url": "/author-url",
-                "isTargetBlank": false   
-            }            
-        }
-    ],
+
     "copytextParagraph": {
         "@->jsoninclude": "content/copytext/copytext.json",
         "@->contentpath": "copytextParagraph"
     },
-    "source": ["Horst Schlämmer","hessenschau.de"],
+    "source": ["Horst Schlämmer", "hessenschau.de"],
     "geotag": [
         {
             "url": "/Frankfurt-url",
@@ -98,7 +87,7 @@
         {
             "url": "/Hanau-url",
             "title": "Hanau"
-        }                
+        }
     ],
     "topictags": [
         {
@@ -128,9 +117,9 @@
         {
             "url": "/Gesundheit-url",
             "title": "Gesundheit"
-        }                        
+        }
     ],
-    "socialSharing": { 
+    "socialSharing": {
         "facebookLink": "/facebookLink-url",
         "whatsappLink": "/whatsappLink-url",
         "mailtoLink": "/mailtoLink-url",
@@ -141,14 +130,14 @@
         "name": "hessenschau",
         "link": {
             "url": "/Program-url",
-            "isTargetBlank": true   
+            "isTargetBlank": true
         },
         "displayWithTime": true,
         "date": {
             "htmlDateTime": "2024-02-15T19:30+0200",
             "date": "15.02.24",
             "dateSeparatorTime": "19:30"
-        }           
+        }
     },
     "relatedContentSsi": {
         "relatedContent": {
