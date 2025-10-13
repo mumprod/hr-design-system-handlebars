@@ -1,0 +1,32 @@
+<footer class="{{#if _css}}{{_css}} {{/if}}flex items-center clear-both w-full my-4 sm:my-4">
+    <div>
+        {{#> components/page/components/metadata_wrapper _hideFrom=false _isTicker=_isTicker }}
+            {{~#with this.programReferenceAlt~}}
+                {{~#if this.hasReference~}}
+                    <div class="text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
+                        <span>{{~loca "broadcast"}}:</span>
+                        {{#if this.link}}
+                            {{#>components/base/link _link=this.link _css="text-link dark:text-link-dark hover:underline"~}}
+                                <span>{{~ this.programLabel ~}}</span>{{/components/base/link~}}
+                        {{else~}}
+                            <span>{{this.programLabel}}</span> 
+                        {{/if~}}
+                        {{~#if this.date~}}
+                            <span>, </span> 
+                            <time datetime="{{#if this.displayWithTime}}{{this.date.htmlDateTime}}{{else}}{{this.date.date}}{{/if}}"
+                                    class="{{#if _isArticle}}{{else}}{{/if}} ">
+                                {{#if this.displayWithTime}}
+                                    {{loca "date_simple_at" this.date.dateSeparatorTime}}
+                                {{else}}
+                                    {{this.date.date}}
+                                {{/if}}
+                            </time>
+                            
+                        {{/if}}
+                    </div>
+                {{~/if~}}
+            {{~/with~}}
+        {{/components/page/components/metadata_wrapper }}
+    </div>
+    {{> components/social_sharing/social_sharing_ticker_item }}
+</footer>

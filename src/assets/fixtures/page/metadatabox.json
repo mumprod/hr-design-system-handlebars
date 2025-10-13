@@ -35,6 +35,15 @@
             "@->contentpath": "with_author"
         }
     },
+    "metadatabox_with_one_guest_author": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "page/metadatabox.inc.json",
+            "@->contentpath": "with_guest_author"
+        }
+    },
     "metadatabox_with_one_author_and_comments": {
         "config": {
             "css": "w-[724px] mx-auto"
@@ -59,7 +68,7 @@
             "@->contentpath": "with_author",
             "@->overrides": [
                 {
-                    "@->contentpath": "authorImage",
+                    "@->contentpath": "editorialData.firstAuthorItem.profileImage",
                     "@->value": {}
                 }
             ]

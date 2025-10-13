@@ -1,0 +1,77 @@
+{
+    "config": {
+        "template": "default"
+    },
+    "content_footer_with_one_author_program_reference": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "default"
+        }
+    },
+    "content_footer_with_one_author": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "default",
+            "@->overrides": [
+                {
+                    "@->contentpath": "programReferenceAlt.hasReference",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "content_footer_with_one_guest_author": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "with_guest_author",
+            "@->overrides": [
+                {
+                    "@->contentpath": "programReferenceAlt.hasReference",
+                    "@->value": false
+                }
+            ]
+        }
+    },
+    "content_footer_with_one_guest_author_program_reference": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "with_guest_author"
+        }
+    },
+    "content_footer_with_multiple_authors_program_reference": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "with_multiple_authors"
+        }
+    },
+    "content_footer_with_multiple_authors": {
+        "config": {
+            "css": "w-[724px] mx-auto"
+        },
+        "args": {
+            "@->jsoninclude": "ticker/ticker_item/content_footer_ticker_item.inc.json",
+            "@->contentpath": "with_multiple_authors",
+            "@->overrides": [
+                {
+                    "@->contentpath": "programReferenceAlt.hasReference",
+                    "@->value": false
+                }
+            ]
+        }
+    }
+}

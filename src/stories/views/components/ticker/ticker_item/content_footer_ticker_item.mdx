@@ -1,0 +1,29 @@
+import { ArgTypes, Meta, Story, Canvas } from '@storybook/blocks'
+import * as ContentFooterTickerItemStories from './content_footer_ticker_item.stories'
+
+<Meta of={ContentFooterTickerItemStories} />
+
+# Copytext
+
+## Beschreibung
+
+Footerbereich eines Tickereintrags. 
+
+## Verwendung
+
+Die Content-Footer-Komponente wird in handlebars wie folgt eingebaut:
+
+```html
+{{> components/content/content_footer/content_footer
+        _showDate=this.hasDwellTime
+        _date=this.documentPublicationDate
+        _source=this.source
+        _isArchiveContent=this.isArchiveContent
+        }} 
+```
+
+<Canvas withToolbar>
+    <Story of={ContentFooterTickerItemStories.Default} />
+</Canvas>
+
+<ArgTypes story="default" />

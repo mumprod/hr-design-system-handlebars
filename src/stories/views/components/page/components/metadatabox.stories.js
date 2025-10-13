@@ -7,10 +7,8 @@ hbsTemplates['default'] = handlebars.compile(`
     {{> components/page/components/metadatabox}}  
   `)
 
-
-
 const Template = (args) => {
-    console.log("Args: ", args)
+    console.log('Args: ', args)
     return hbsTemplates['default']({ ...args })
 }
 
@@ -31,7 +29,7 @@ export default {
             sort: 'alpha',
         },
         chromatic: {
-            disableSnapshot: true
+            disableSnapshot: true,
         },
     },
 }
@@ -73,6 +71,19 @@ export const WithOneAuthor = {
     ],
     name: 'Ein Autor',
     args: fixtures.metadatabox_with_one_author.args,
+}
+
+export const WithOneGuestAuthor = {
+    render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[724px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    name: 'Ein Gastautor',
+    args: fixtures.metadatabox_with_one_guest_author.args,
 }
 
 export const WithOneAuthorWithoutPicture = {
@@ -133,5 +144,5 @@ export const Snapshot = {
     args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
-    }
+    },
 }

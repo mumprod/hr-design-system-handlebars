@@ -1,27 +1,22 @@
 {
     "default": {
-        "_showDate": true,
-        "hasAuthors": false,
-        "hasMultipleAuthors": false,
-        "hasDwellTime": true,
-        "documentModificationDate": {
-            "isModificationDate": false,
-            "isPublicationDate": true,
-            "htmlDateTime": "2024-02-15T19:30+0200",
-            "date": "15.02.24",
-            "time": "19:30"
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
         },
-        "socialSharing": {
-            "facebookLink": "/facebookLink-url",
-            "whatsappLink": "/whatsappLink-url",
-            "mailtoLink": "/mailtoLink-url",
-            "copyToClipboardLink": "/copyToClipboard-url"
-        }
-    },
-    "with_author": {
-        "_showDate": true,
-
-        "hasDwellTime": true,
         "editorialData": {
             "hasOneAuthor": true,
             "hasAuthors": true,
@@ -48,13 +43,7 @@
                 }
             }
         },
-        "documentModificationDate": {
-            "isModificationDate": false,
-            "isPublicationDate": true,
-            "htmlDateTime": "2024-02-15T19:30+0200",
-            "date": "15.02.24",
-            "time": "19:30"
-        },
+        "hasDwellTime": true,
         "socialSharing": {
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
@@ -63,9 +52,23 @@
         }
     },
     "with_guest_author": {
-        "_showDate": true,
-
-        "hasDwellTime": true,
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
+        },
         "editorialData": {
             "hasOneAuthor": true,
             "hasAuthors": true,
@@ -77,13 +80,7 @@
                 "textAfterAuthor": "Gast Autor"
             }
         },
-        "documentModificationDate": {
-            "isModificationDate": false,
-            "isPublicationDate": true,
-            "htmlDateTime": "2024-02-15T19:30+0200",
-            "date": "15.02.24",
-            "time": "19:30"
-        },
+        "hasDwellTime": true,
         "socialSharing": {
             "facebookLink": "/facebookLink-url",
             "whatsappLink": "/whatsappLink-url",
@@ -91,10 +88,8 @@
             "copyToClipboardLink": "/copyToClipboard-url"
         }
     },
-    "with_more_authors": {
-        "_showDate": true,
-        "hasAuthors": true,
-        "hasMultipleAuthors": true,
+
+    "with_multiple_authors": {
         "hasDwellTime": true,
         "editorialData": {
             "hasOneAuthor": false,
@@ -125,12 +120,22 @@
                 }
             ]
         },
-        "documentModificationDate": {
-            "isModificationDate": false,
-            "isPublicationDate": true,
-            "htmlDateTime": "2024-02-15T19:30+0200",
-            "date": "15.02.24",
-            "time": "19:30"
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
         },
         "socialSharing": {
             "facebookLink": "/facebookLink-url",
