@@ -62,6 +62,35 @@
             "copyToClipboardLink": "/copyToClipboard-url"
         }
     },
+    "with_guest_author": {
+        "_showDate": true,
+
+        "hasDwellTime": true,
+        "editorialData": {
+            "hasOneAuthor": true,
+            "hasAuthors": true,
+            "hasMultipleAuthors": false,
+            "firstAuthorItem": {
+                "hasProfileLink": false,
+                "from": "Von",
+                "delimiter": "",
+                "textAfterAuthor": "Gast Autor"
+            }
+        },
+        "documentModificationDate": {
+            "isModificationDate": false,
+            "isPublicationDate": true,
+            "htmlDateTime": "2024-02-15T19:30+0200",
+            "date": "15.02.24",
+            "time": "19:30"
+        },
+        "socialSharing": {
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    },
     "with_more_authors": {
         "_showDate": true,
         "hasAuthors": true,

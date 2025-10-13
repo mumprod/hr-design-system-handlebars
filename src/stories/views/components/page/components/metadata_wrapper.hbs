@@ -39,10 +39,10 @@
                             {{#if this.hasProfileLink~}}
                                 {{#>components/base/link _link=this.link _css="hover:underline hover:!decoration-1 text-link dark:text-link-dark"}}
                                     <span>{{../this.authorName~}}</span>{{~/components/base/link~}}
+                                    {{~#with this.textAfterAuthor}} {{this}}{{/with~}}{{~this.delimiter}}
                             {{else}}
-                                {{this.from}}
+                                {{~#with this.textAfterAuthor}}{{this}}{{/with~}}{{~this.delimiter}}
                             {{/if}}
-                            {{~#with this.textAfterAuthor}} {{this}}{{/with~}}{{~this.delimiter}}
                         {{/with}}
                     {{/with}}
                 </div>

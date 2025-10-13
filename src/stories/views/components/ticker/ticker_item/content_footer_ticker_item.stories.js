@@ -61,6 +61,32 @@ export const OneAuthorWithoutProgramReference = {
     args: fixtures.content_footer_with_one_author.args,
 }
 
+export const OneGuestAuthorWithProgramReference = {
+    render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[625px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    name: 'Ein Gast-Autor mit Program-Referenz',
+    args: fixtures.content_footer_with_one_guest_author_program_reference.args,
+}
+
+export const OneGuestAuthorWithoutProgramReference = {
+    render: Template.bind({}),
+    decorators: [
+        (Story) => {
+            return `<div class="max-w-[625px] mx-auto mt-60">  
+             ${Story()} 
+             </div>`
+        },
+    ],
+    name: 'Ein Gast-Autor ohne Program-Referenz',
+    args: fixtures.content_footer_with_one_guest_author.args,
+}
+
 export const MultipleAuthorsWithProgramReference = {
     render: Template.bind({}),
     decorators: [

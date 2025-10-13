@@ -51,6 +51,43 @@
             "copyToClipboardLink": "/copyToClipboard-url"
         }
     },
+    "with_guest_author": {
+        "programReferenceAlt": {
+            "hasReference": true,
+            "programLabel": "hr-fernsehen, hessenschau",
+            "link": {
+                "url": "/programReference-url",
+                "isTargetBlank": false
+            },
+            "name": "Testtitel",
+            "displayWithTime": true,
+            "date": {
+                "htmlDateTime": "2025-10-09T16:45+0200",
+                "htmlDate": "09.10.2025",
+                "date": "09.10.25",
+                "time": "16:45",
+                "dateSeparatorTime": "09.10.25, 16:45"
+            }
+        },
+        "editorialData": {
+            "hasOneAuthor": true,
+            "hasAuthors": true,
+            "hasMultipleAuthors": false,
+            "firstAuthorItem": {
+                "hasProfileLink": false,
+                "from": "Von",
+                "delimiter": "",
+                "textAfterAuthor": "Gast Autor"
+            }
+        },
+        "hasDwellTime": true,
+        "socialSharing": {
+            "facebookLink": "/facebookLink-url",
+            "whatsappLink": "/whatsappLink-url",
+            "mailtoLink": "/mailtoLink-url",
+            "copyToClipboardLink": "/copyToClipboard-url"
+        }
+    },
 
     "with_multiple_authors": {
         "hasDwellTime": true,
