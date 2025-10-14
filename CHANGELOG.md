@@ -1,3 +1,15 @@
+# v1.120.1 (Tue Oct 14 2025)
+
+#### 🐛 Bug Fix
+
+- add link in Ticker-Headline [#1307](https://github.com/mumprod/hr-design-system-handlebars/pull/1307) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.120.0 (Mon Oct 13 2025)
 
 #### 🚀 Enhancement
