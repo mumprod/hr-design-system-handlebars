@@ -5,10 +5,10 @@
                 {{~#if this.hasReference~}}
                     <div class="text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
                         <span>{{~loca "broadcast"}}:</span>
-                        {{#if this.link}}
+                        {{~#if this.link~}}
                             {{#>components/base/link _link=this.link _css="text-link dark:text-link-dark hover:underline"~}}
-                                <span>{{~ this.programLabel ~}}</span>{{/components/base/link~}}
-                        {{else~}}
+                                <span>{{~ this.programLabel ~}}</span>{{~/components/base/link~}}
+                        {{~else~}}
                             <span>{{this.programLabel}}</span> 
                         {{/if~}}
                         {{~#if this.date~}}
