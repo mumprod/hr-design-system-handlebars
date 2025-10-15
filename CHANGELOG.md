@@ -1,3 +1,15 @@
+# v1.120.5 (Wed Oct 15 2025)
+
+#### 🐛 Bug Fix
+
+- Ticker-Header: include title as ssi [#1311](https://github.com/mumprod/hr-design-system-handlebars/pull/1311) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.120.4 (Wed Oct 15 2025)
 
 #### 🐛 Bug Fix
