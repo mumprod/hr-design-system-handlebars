@@ -1,3 +1,15 @@
+# v1.120.3 (Wed Oct 15 2025)
+
+#### 🐛 Bug Fix
+
+- :bug: remove whitespace after unlinked program reference [#1309](https://github.com/mumprod/hr-design-system-handlebars/pull/1309) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.120.2 (Wed Oct 15 2025)
 
 #### 🐛 Bug Fix
