@@ -4,7 +4,7 @@
             <div class="self-center">
                 {{#> components/page/components/metadata_wrapper _hideFrom=false _isTicker=_isTicker }}
                     {{#if _showDate-adjust_context }}
-                        {{> components/page/components/publicationdate _isTicker=_isTicker}}
+                        {{> components/page/components/publicationdate _isTicker=_isTicker-adjust_context}}
                     {{/if}}
                     {{> components/page/components/commentinfo }}
                 {{/components/page/components/metadata_wrapper }}
