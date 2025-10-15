@@ -1,3 +1,15 @@
+# v1.120.2 (Wed Oct 15 2025)
+
+#### 🐛 Bug Fix
+
+- removes withespace from template [#1308](https://github.com/mumprod/hr-design-system-handlebars/pull/1308) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.120.1 (Tue Oct 14 2025)
 
 #### 🐛 Bug Fix
