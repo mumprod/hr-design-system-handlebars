@@ -1,3 +1,15 @@
+# v1.120.4 (Wed Oct 15 2025)
+
+#### 🐛 Bug Fix
+
+- :bug: adjusts the context for _isTicker property inside metadata_wrap… [#1310](https://github.com/mumprod/hr-design-system-handlebars/pull/1310) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.120.3 (Wed Oct 15 2025)
 
 #### 🐛 Bug Fix
