@@ -32,7 +32,7 @@ jobs:
             - uses: bahmutov/npm-install@v1.10.1
             - name: Create Release
               env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
               run: |
                   npm run build
                   npm run release
