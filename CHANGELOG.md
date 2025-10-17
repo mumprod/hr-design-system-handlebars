@@ -1,3 +1,18 @@
+# v1.120.6 (Fri Oct 17 2025)
+
+#### 🐛 Bug Fix
+
+- Remove unnecessary permissions from release workflow [#1315](https://github.com/mumprod/hr-design-system-handlebars/pull/1315) ([@szuelch](https://github.com/szuelch))
+- Trusted npm publishing [#1314](https://github.com/mumprod/hr-design-system-handlebars/pull/1314) ([@szuelch](https://github.com/szuelch))
+- Update release workflow to use GITHUB_TOKEN instead of NPM_TOKEN [#1313](https://github.com/mumprod/hr-design-system-handlebars/pull/1313) ([@szuelch](https://github.com/szuelch))
+- Configure releae workflow to use [#1312](https://github.com/mumprod/hr-design-system-handlebars/pull/1312) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.120.5 (Wed Oct 15 2025)
 
 #### 🐛 Bug Fix
