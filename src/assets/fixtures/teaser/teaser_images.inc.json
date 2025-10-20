@@ -432,6 +432,7 @@
         }
     },
     "copytext_image_100": {
+        "aspectRatio": "16to9",
         "isImage": true,
         "showFullSize": {
             "isTrue": true
@@ -455,6 +456,7 @@
         }
     },
     "copytext_image_50": {
+        "aspectRatio": "16to9",
         "isImage": true,
         "showFullSize": {
             "isTrue": false

@@ -267,11 +267,23 @@
                     "videoElement": {
                         "ardPlayerConfig": {
                             "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-2"
+                            "@->contentpath": "video-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2568"
+                                }
+                            ]
                         },
                         "ardPlayerJsonConfig": {
                             "@->jsoninclude": "video/videos.inc.json",
-                            "@->contentpath": "video-2"
+                            "@->contentpath": "video-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2568"
+                                }
+                            ]
                         }
                     },
                     "mediaBacklinkToStoryTeaser": {
@@ -312,6 +324,88 @@
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isVideo": true,
+                "isVideoOnDemand": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "video",
+                    "loca": "label_video",
+                    "byline": {
+                        "bylineText": "03:20 Min."
+                    }
+                },
+                "copyright": "hessenschau",
+                "showAirdate": true,
+                "airdateWithoutTime": true,
+                "airdateDate": {
+                    "htmlDateTime": "2022-10-31T19:30+0200",
+                    "htmlDate": "31.10.2022",
+                    "date": "31.10.22",
+                    "dateSeparatorTime": "31.10.22, 19:30"
+                },
+                "toModel": {
+                    "videoElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2569"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "video/videos.inc.json",
+                            "@->contentpath": "video-2",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2569"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/videoseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum hr3.de Video",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zur hr3.de VideoEinzel-seite",
+                        "hasIcon": true,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_100",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }

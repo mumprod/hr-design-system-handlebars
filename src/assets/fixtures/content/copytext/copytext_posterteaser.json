@@ -263,6 +263,61 @@
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphTeaserItem": {
+                "isStory": true,
+                "toModel": {
+                    "baseTeaserDS": {
+                        "@->jsoninclude": "teaser/teasers.inc.json",
+                        "@->contentpath": "teaser.logicItem.includeModel",
+                        "@->extends": {
+                            "showFullSize": {
+                                "isTrue": true
+                            },
+                            "showStretched": {
+                                "isTrue": "true"
+                            }
+                        },
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "title",
+                                "@->value": "Abgeschobene Geschwister aus Syrien zurück in Wolfhagen Abgeschobene Geschwister aus Syrien zurück in Wolfhagen"
+                            },
+                            {
+                                "@->contentpath": "teaserType",
+                                "@->value": "poster"
+                            },
+                            {
+                                "@->contentpath": "teaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "realTeaserSize",
+                                "@->value": "50"
+                            },
+                            {
+                                "@->contentpath": "link.readMoreText.readMoreLong",
+                                "@->value": "Zum Artikel"
+                            },
+                            {
+                                "@->contentpath": "posterTeaserImage",
+                                "@->value": {
+                                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                                    "@->contentpath": "teaser_poster_16_to_9",
+                                    "@->replaceToken": [
+                                        {
+                                            "@->token": "image",
+                                            "@->value": "rueckkehr-nach-abschiebung-102"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
         }
     ]
 }

@@ -146,6 +146,19 @@
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "isParagraph": true,
+            "paragraphBoxItem": {
+                "@->jsoninclude": "teaser/teasers.inc.json",
+                "@->contentpath": "teaser_podcast_episode.logicItem.includeModel",
+                "@->extends": {
+                    "isPodcastEpisode": true,
+                    "showFullSize": {
+                        "isTrue": true
+                    }
+                }
+            }
         }
     ]
 }
