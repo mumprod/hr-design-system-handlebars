@@ -302,6 +302,98 @@
         },
         {
             "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isAudio": true,
+                "isAudioEventLivestream": true,
+                "showFullSize": {
+                    "isTrue": true
+                },
+                "label": {
+                    "type": "livestream",
+                    "loca": "label_audio_event_livestream",
+                    "byline": {
+                        "bylineText": "Jetzt Live"
+                    }
+                },
+                "showAirdate": false,
+                "airdateDate": {
+                    "htmlDateTime": "2024-06-25T08:30+0200",
+                    "htmlDate": "25.06.2024",
+                    "date": "25.06.24",
+                    "dateSeparatorTime": "25.06.24, 08:30"
+                },
+                "toModel": {
+                    "audioLivestreamElement": {
+                        "ardPlayerConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2568"
+                                }
+                            ]
+                        },
+                        "ardPlayerJsonConfig": {
+                            "@->jsoninclude": "audio/audios.inc.json",
+                            "@->contentpath": "audio-event-livestream",
+                            "@->overrides": [
+                                {
+                                    "@->contentpath": "isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.generic.isAutoplay",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerConfig.web.isForcedVideoView",
+                                    "@->value": false
+                                },
+                                {
+                                    "@->contentpath": "playerId",
+                                    "@->value": "2568"
+                                }
+                            ]
+                        }
+                    },
+                    "mediaBacklinkToStoryTeaser": {
+                        "link": {
+                            "url": "/audioseite",
+                            "isTargetBlank": false
+                        },
+                        "readMoreScreenreader": "zum Audio-Livestream",
+                        "title": "Musik macht deinen Tag",
+                        "isForeignBrand": false,
+                        "readMore": "zum Audio-Livestream",
+                        "hasIcon": false,
+                        "iconName": "extern"
+                    }
+                },
+                "teaseritem": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                },
+
+                "teaserImage": {
+                    "@->jsoninclude": "teaser/teaser_images.inc.json",
+                    "@->contentpath": "copytext_image_50",
+                    "@->replaceToken": [
+                        {
+                            "@->token": "image",
+                            "@->value": "lehrerin-ukraine-104"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
