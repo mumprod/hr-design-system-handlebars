@@ -22,7 +22,7 @@
                 {{> components/content/copytext/components/map }}
             {{/if~}}
             {{~#if this.isWebForm}}
-                {{> components/forms/webform }}
+                {{> components/forms/webform _isTickerCopytext=../_isTickerCopytext }}
             {{/if~}}
             {{~#if this.isNewsletter}}
                 {{> components/newsletter/newsletter }}
