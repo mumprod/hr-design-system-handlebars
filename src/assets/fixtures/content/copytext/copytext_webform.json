@@ -5,23 +5,24 @@
             "text": "Copytext mit Formular"
         },
         {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
             "paragraphBoxItem": {
                 "isWebForm": true,
                 "hasNewWebForm": true,
                 "title": "Kontaktformular",
                 "jsonUrl": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
-                "successText":
-                {
-                    "richtext":"Liebe Nutzerin, lieber Nutzer,<br><br>ich werde mich so schnell wie möglich um Ihr Anliegen kümmern. Hier geht's zur <a class='' href='https://www.hessenschau.de/index.html'>hessenschau.de-Startseite</a> mit aktuellen Nachrichten aus Hessen.<br><br>Viele Grüße, <br><br>Karsten Hufer"
+                "successText": {
+                    "richtext": "Liebe Nutzerin, lieber Nutzer,<br><br>ich werde mich so schnell wie möglich um Ihr Anliegen kümmern. Hier geht's zur <a class='' href='https://www.hessenschau.de/index.html'>hessenschau.de-Startseite</a> mit aktuellen Nachrichten aus Hessen.<br><br>Viele Grüße, <br><br>Karsten Hufer"
                 },
-                "errorMessages": 
-                {
+                "errorMessages": {
                     "@->jsoninclude": "forms/error_messages.inc.json",
                     "@->contentpath": "error-messages"
                 },
                 "isMultipart": "isMultipart",
                 "trackingInformations": "trackingInformations",
-                "fields":[
+                "fields": [
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "input-text-vorname-required"
@@ -34,11 +35,11 @@
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "upload",
                         "@->overrides": [
-                         {
-                            "@->contentpath": "isRequired",
-                            "@->value": true
-                         }
-                      ]
+                            {
+                                "@->contentpath": "isRequired",
+                                "@->value": true
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
@@ -56,36 +57,37 @@
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "radio-group",
                         "@->overrides": [
-                         {
-                            "@->contentpath": "isRequired",
-                            "@->value": false
-                         }
-                      ]
+                            {
+                                "@->contentpath": "isRequired",
+                                "@->value": false
+                            }
+                        ]
                     },
                     {
                         "@->jsoninclude": "forms/form_fields.inc.json",
                         "@->contentpath": "checkbox",
                         "@->overrides": [
-                           {
-                            "@->contentpath": "isRequired",
-                            "@->value": false   
-                           }
+                            {
+                                "@->contentpath": "isRequired",
+                                "@->value": false
+                            }
                         ]
                     },
                     {
-                      "@->jsoninclude": "forms/form_fields.inc.json",
-                      "@->contentpath": "checkbox",
-                      "@->overrides": [
-                         {
-                            "@->contentpath": "label",
-                            "@->value": "Ich bin damit einverstanden, dass der hr die von mir im vorstehenden Formular angegebenen personenbezogenen Daten für den Zweck der Kontaktaufnahme mit Upload verarbeitet. Eine Weitergabe an Dritte findet nicht statt, es sei denn, es wird ausdrücklich darauf hingewiesen. Unsere Datenschutzerklärung mit sämtlichen Informationen gemäß Art 13 DSGVO zur Datenverarbeitung durch den hr und zu Ihren Rechten können Sie unter Datenschutzerklärung einsehen. Den Datenschutzbeauftragten des hr erreichen Sie unter datenschutz@hr.de."
-                         }
-                      ]
+                        "@->jsoninclude": "forms/form_fields.inc.json",
+                        "@->contentpath": "checkbox",
+                        "@->overrides": [
+                            {
+                                "@->contentpath": "label",
+                                "@->value": "Ich bin damit einverstanden, dass der hr die von mir im vorstehenden Formular angegebenen personenbezogenen Daten für den Zweck der Kontaktaufnahme mit Upload verarbeitet. Eine Weitergabe an Dritte findet nicht statt, es sei denn, es wird ausdrücklich darauf hingewiesen. Unsere Datenschutzerklärung mit sämtlichen Informationen gemäß Art 13 DSGVO zur Datenverarbeitung durch den hr und zu Ihren Rechten können Sie unter Datenschutzerklärung einsehen. Den Datenschutzbeauftragten des hr erreichen Sie unter datenschutz@hr.de."
+                            }
+                        ]
                     }
                 ]
-                
             }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         }
-        
     ]
 }
