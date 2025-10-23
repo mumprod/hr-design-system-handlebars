@@ -1,4 +1,4 @@
-<div class="grid clear-both{{#unless _isTeaser}} mt-10{{/unless}}">
+<div class="grid clear-both{{#unless _isTeaser}} mt-6 mb-2 [&:has(+div+h2)]:mb-0 sm:my-8{{/unless}}">
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}   
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}}{{#unless
                 this.fixedHeight }} -noFixedHeight{{/unless}} js-load"
