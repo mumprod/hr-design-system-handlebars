@@ -15,8 +15,8 @@ export default {
                         </div>
                     </div>`
         },
-    ],   
-    parameters: { 
+    ],
+    parameters: {
         fetchMock: {
             mocks: [
                 {
@@ -27,18 +27,18 @@ export default {
                             status: '',
                         },
                     },
-                }
+                },
             ],
         },
         layout: 'fullscreen',
-        chromatic: { disableSnapshot: true }
-    }
+        chromatic: { disableSnapshot: true },
+    },
 }
 export const WithNewsletterOK = {
     render: Template.bind({}),
     name: 'Newsletter OK',
     args: copytext_newsletter_json,
-    parameters: { 
+    parameters: {
         fetchMock: {
             mocks: [
                 {
@@ -46,20 +46,20 @@ export const WithNewsletterOK = {
                     response: {
                         status: 200,
                         body: {
-                            status: 'success'
+                            status: 'success',
                         },
                     },
-                }
+                },
             ],
-        }
-    }
+        },
+    },
 }
 
 export const WithNewsletterAlreadyRegistered = {
     render: Template.bind({}),
     name: 'Newsletter Already Registered',
     args: copytext_newsletter_json,
-    parameters: { 
+    parameters: {
         fetchMock: {
             mocks: [
                 {
@@ -67,19 +67,19 @@ export const WithNewsletterAlreadyRegistered = {
                     response: {
                         status: 200,
                         body: {
-                            status: 'no_valid_newsletters'
+                            status: 'no_valid_newsletters',
                         },
                     },
-                }
+                },
             ],
-        }
-    }
+        },
+    },
 }
 export const WithNewsletterError = {
     render: Template.bind({}),
     name: 'Newsletter Error',
     args: copytext_newsletter_json,
-    parameters: { 
+    parameters: {
         fetchMock: {
             mocks: [
                 {
@@ -87,11 +87,11 @@ export const WithNewsletterError = {
                     response: {
                         status: 200,
                         body: {
-                            status: ''
+                            status: '',
                         },
                     },
-                }
+                },
             ],
-        }
-    }
+        },
+    },
 }
