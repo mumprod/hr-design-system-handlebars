@@ -1,0 +1,35 @@
+{
+    "copytextParagraph": [
+        { "isHeadline": true, "text": "Copytext mit Newsletter" },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isNewsletter": true,
+                "title": "hessenschau update - Der Newsletter für Hessen",
+                "description": "Hier können Sie sich für das hessenschau update anmelden. Der Newsletter wird Ihnen von Montag bis Freitag kostenlos und unverbindlich zugestellt. Wenn Sie sich in unseren Verteiler eintragen, erhalten Sie eine E-Mail mit der Bitte, Ihre Aufnahme noch einmal zu bestätigen. Sie können den Newsletter jederzeit wieder abbestellen.",
+                "jsonURL": "https://ugc-hessenschau.dev-ext.hrcms.gcp.cloud.hr.de",
+                "successText": {
+                    "richText": "Sie erhalten in wenigen Minuten eine E-Mail an die von Ihnen angegebene Adresse. Erst nach einem Klick auf den darin enthaltenen Bestätigungslink erhalten Sie unseren Newsletter."
+                },
+                "registeredText": {
+                    "richText": "Sollten Sie ihr Abonnement kündigen oder verwalten wollen, können Sie dies <a href=\"https://hessenschau-nl.sr.de/newsletter-login.php\" class=\"{nuc https://hessenschau-nl.sr.de/newsletter-login.php nuc}link unbreakable\" target=\"_blank\"><span class=\"unbreakable\">hier</a> tun."
+                },
+                "errorText": {
+                    "richText": "Aufgrund eines technischen Fehlers können wir derzeit Ihre Anfrage nicht bearbeiten. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal."
+                },
+                "uuid": "d91b7e16-d476-425f-a535-587c6957df37",
+                "successLink": "Link wenn erfolgreich",
+                "errorLink": "Link wenn Fehler",
+                "backlinkUuid": "Backlink mit UUID (altes Voting)",
+                "mailingList": "E-Mail-Liste",
+                "trackingInformations": "Tracking",
+                "isHidden": true
+            }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        }
+    ]
+}

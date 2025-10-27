@@ -11,13 +11,13 @@
             "paragraphBoxItem": {
                 "isGallery": true,
                 "toModel": {
-                    "galleryPage":{
+                    "galleryPage": {
                         "isGallery": true,
                         "label": {
                             "type": "gallery",
                             "loca": "label_gallery",
                             "byline": {
-                            "bylineText": "5 Bilder"
+                                "bylineText": "5 Bilder"
                             }
                         },
                         "toModel": {
@@ -34,8 +34,8 @@
                                 "iconName": "extern"
                             }
                         },
-                        "gallery":{
-                            "items":[
+                        "gallery": {
+                            "items": [
                                 {
                                     "@->jsoninclude": "page/story/story_images.inc.json",
                                     "@->contentpath": "copytext_gallery",
@@ -43,7 +43,7 @@
                                         {
                                             "@->token": "image",
                                             "@->value": "jugendfeuerwehr-102"
-                                        }    
+                                        }
                                     ],
                                     "@->overrides": [
                                         {
@@ -137,6 +137,9 @@
                     }
                 }
             }
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
         }
     ]
 }
