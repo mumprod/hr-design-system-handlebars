@@ -323,8 +323,8 @@
                             },
                             "playerId": "4076",
                             "type": "audioOndemand",
-                            "cssUrl": "./vendor/ardplayer/ardplayer-hr-7.2.0.bdf782df.css",
-                            "jsUrl": "./vendor/ardplayer/ardplayer-hr-7.2.0.07145e1b.js",
+                            "cssUrl": "./vendor/ardplayer/ardplayer-hr-7.7.0.074b3034.css",
+                            "jsUrl": "./vendor/ardplayer/ardplayer-hr-7.7.0.eeb199f0.js",
                             "isAutoplay": true,
                             "teaserSize": "50",
                             "realTeaserSize": "50"
@@ -426,8 +426,8 @@
                             },
                             "playerId": "4076",
                             "type": "audioOndemand",
-                            "cssUrl": "./vendor/ardplayer/ardplayer-hr-7.2.0.bdf782df.css",
-                            "jsUrl": "./vendor/ardplayer/ardplayer-hr-7.2.0.07145e1b.js",
+                            "cssUrl": "./vendor/ardplayer/ardplayer-hr-7.7.0.074b3034.css",
+                            "jsUrl": "./vendor/ardplayer/ardplayer-hr-7.7.0.eeb199f0.js",
                             "isAutoplay": true,
                             "teaserSize": "50",
                             "realTeaserSize": "50"
