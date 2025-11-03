@@ -1,3 +1,15 @@
+# v1.123.0 (Mon Nov 03 2025)
+
+#### 🚀 Enhancement
+
+- :lipstick: Raise the margin of the play button on vertical video teasers [#1319](https://github.com/mumprod/hr-design-system-handlebars/pull/1319) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.122.0 (Tue Oct 28 2025)
 
 #### 🚀 Enhancement
