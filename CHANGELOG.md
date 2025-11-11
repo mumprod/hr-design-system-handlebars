@@ -1,3 +1,15 @@
+# v1.123.1 (Tue Nov 11 2025)
+
+#### 🐛 Bug Fix
+
+- :bug: Remove falsy context switch when calling voting template [#1320](https://github.com/mumprod/hr-design-system-handlebars/pull/1320) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.123.0 (Mon Nov 03 2025)
 
 #### 🚀 Enhancement
