@@ -2,7 +2,7 @@
         {{~> components/base/a11y/hiddenText _locaTag="story_externalservice_intro_sr" ~}}   
         <div class="c-externalService c-externalService__{{this.externalServiceConfig.externalServiceId}}{{#unless
                 this.fixedHeight }} -noFixedHeight{{/unless}} js-load"
-             data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType":"{{this.externalServiceConfig.externalServiceEmbedType}}","lazyLoad":{{_lazyLoad}},"dataPolicyCheck": true, "whiteList":{{this.externalServiceConfig.isWhitelisted}},"iFrameConfig": { {{~#if this.fixedHeight~}}
+             data-hr-external-service-ds='{"id":"{{this.externalServiceConfig.externalServiceId}}","embedCode":"{{this.serviceUrl}}","embedType":"{{this.externalServiceConfig.externalServiceEmbedType}}","lazyLoad":{{defaultIfEmpty _lazyLoad false}},"dataPolicyCheck": true, "whiteList":{{this.externalServiceConfig.isWhitelisted}},"iFrameConfig": { {{~#if this.fixedHeight~}}
                 "fixedHeight":"{{this.fixedHeight}}"{{~else~}}{{~#if this.aspectRatio}}"aspectRatio":"{{this.aspectRatio}}"{{~else~}}"aspectRatio":"16x9"{{/if}}{{~/if}},"noResponsiveIframe":"{{{this.setResponsiveIframe}}}","webcomponent":"{{{this.setWebcomponent}}}"{{~#if this.setTimedReloadIframe}},"refreshContent":"{{{this.setTimedReloadIframe}}}","refreshIntervall":"{{this.setTimeForReload}}"{{~/if}} }}'>
             {{~> components/external-service/components/external_service_data_policy ~}}
         </div>
