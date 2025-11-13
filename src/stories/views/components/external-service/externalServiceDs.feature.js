@@ -370,7 +370,7 @@ const ExternalService = function (context) {
             style.textContent = css
 
             const iFrame = document.createElement('iframe')
-            iFrame.src = embedCode
+            iFrame.src = decodeURIComponent(embedCode)
             iFrame.style.position = 'absolute'
             iFrame.style.top = '0'
             iFrame.style.left = '0'
