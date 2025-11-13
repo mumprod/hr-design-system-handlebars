@@ -9,7 +9,7 @@ import {
     loadScript,
     removeScript,
     replaceAnimated,
-    requestTimeout
+    requestTimeout,
 } from 'hrQuery'
 
 const ExternalService = function (context) {
@@ -35,7 +35,6 @@ const ExternalService = function (context) {
         uniqueId,
         isExternalServiceLoaded = false,
         tiktokOnPage = []
-
 
     const testDOMElements = function () {
         console.log(rootElement)
@@ -78,6 +77,9 @@ const ExternalService = function (context) {
         switch (embedType) {
             case 'js':
                 switch (id) {
+                    case '23degrees':
+                        createTwentyThreeDegreesEmbed()
+                        break
                     case 'facebook-post':
                         createFacebookEmbed()
                         break
@@ -86,7 +88,7 @@ const ExternalService = function (context) {
                         break
                     case 'tiktok':
                         createTikTokEmbed()
-                        break    
+                        break
                     case 'twitter':
                         createTwitterEmbed()
                         break
@@ -135,28 +137,16 @@ const ExternalService = function (context) {
         gemeindewahlergebnis.createErgebnis()
     }
     const createWahlOMatEuwaEmbed = function () {
-
         const divTag = document.createElement('div')
         divTag.id = 'wahl-o-mat-europawahl-2024'
         rootElement.insertBefore(divTag, null)
-        loadScript(
-            'wahl-o-mat-js',
-            'https://static.hr.de/wahl-o-mat/embed.js',
-            true
-        )
-
+        loadScript('wahl-o-mat-js', 'https://static.hr.de/wahl-o-mat/embed.js', true)
     }
     const createWahlOMatButawaEmbed = function () {
-
         const divTag = document.createElement('div')
         divTag.id = 'wahl-o-mat-bundestagswahl-2025'
         rootElement.insertBefore(divTag, null)
-        loadScript(
-            'wahl-o-mat-js',
-            'https://static.hr.de/wahl-o-mat/bundestagswahl/embed.js',
-            true
-        )
-
+        loadScript('wahl-o-mat-js', 'https://static.hr.de/wahl-o-mat/bundestagswahl/embed.js', true)
     }
 
     const createWahlEmbed = function () {
@@ -179,86 +169,100 @@ const ExternalService = function (context) {
     }
 
     const werWaehlteWenEmbed = function () {
-        let iframe = document.createElement('iframe');
-        let cleanUrl;
-        const parts = embedCode.split('*');
+        let iframe = document.createElement('iframe')
+        let cleanUrl
+        const parts = embedCode.split('*')
         if (parts.length === 2) {
-            const params = parts[1].split(' ');
-            cleanUrl = parts[0].trim();
+            const params = parts[1].split(' ')
+            cleanUrl = parts[0].trim()
             for (const param of params) {
-                const [key, value] = param.split('=');
+                const [key, value] = param.split('=')
                 if (key === 'id') {
-                    iframe.id = value;
+                    iframe.id = value
                 } else {
-                    iframe.setAttribute(key, value);
+                    iframe.setAttribute(key, value)
                 }
             }
         }
 
-        iframe.src = cleanUrl;
-        iframe.style.width = "100%";
-        iframe.style.border = "0";
+        iframe.src = cleanUrl
+        iframe.style.width = '100%'
+        iframe.style.border = '0'
         if (lazyLoad) {
-            iframe.loading = "lazy";
+            iframe.loading = 'lazy'
         }
-        rootElement.appendChild(iframe);
+        rootElement.appendChild(iframe)
 
-        window.addEventListener("message", function (e) {
-            if (e.data.contentUrl && e.data.contentUrl.includes("/wahl/embed/2025-02-23-BT-DE/wer-waehlte-wen/")) {
-                let h = parseInt(e.data.height, 10) + 2;
-                if (iframe.id === "ts-embed-wer-waehlte-wen-2025-02-23-BT-DE") {
-                    iframe.style.height = h + "px";
+        window.addEventListener('message', function (e) {
+            if (
+                e.data.contentUrl &&
+                e.data.contentUrl.includes('/wahl/embed/2025-02-23-BT-DE/wer-waehlte-wen/')
+            ) {
+                let h = parseInt(e.data.height, 10) + 2
+                if (iframe.id === 'ts-embed-wer-waehlte-wen-2025-02-23-BT-DE') {
+                    iframe.style.height = h + 'px'
                 }
             }
-        });
+        })
     }
-    
+
     const createUniqueID = function () {
-        console.log("Erzeuge einzigartige ID")
-        uniqueId = Math.random().toString(36).replace(/[^a-z]+/g, '').substring(2, 10)
+        console.log('Erzeuge einzigartige ID')
+        uniqueId = Math.random()
+            .toString(36)
+            .replace(/[^a-z]+/g, '')
+            .substring(2, 10)
     }
 
     const getAspectRatioClass = function () {
         switch (iFrameConfig.aspectRatio) {
             case '16x9':
-                return "ar-16-9"
+                return 'ar-16-9'
             case '16x7':
-                return "ar-16-7"
+                return 'ar-16-7'
             case '4x3':
-                return "ar-4-3"
+                return 'ar-4-3'
             case '100x27':
-                return "ar-100-27"
+                return 'ar-100-27'
             case '100':
-                return "ar-1-1"
+                return 'ar-1-1'
             case '9x16':
-                return "ar-9-16"
+                return 'ar-9-16'
             case '7x16':
-                return "ar-7-16"
+                return 'ar-7-16'
             default:
-                return "ar-16-9"
+                return 'ar-16-9'
         }
     }
 
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
         createUniqueID()
-        console.log("UniqueID" + uniqueId)
+        console.log('UniqueID' + uniqueId)
         if (iFrameConfig.noResponsiveIframe == 'true') {
-
             //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(context, iFrameConfig.aspectRatio, iFrameConfig.fixedHeight, uniqueId, embedCode, lazyLoad)
+            noResponsiveIframe = new DataWrapperNoResponsiveIframe(
+                context,
+                iFrameConfig.aspectRatio,
+                iFrameConfig.fixedHeight,
+                uniqueId,
+                embedCode,
+                lazyLoad
+            )
             noResponsiveIframe.createNoResponsiveIframe()
 
             if (iFrameConfig.refreshContent == 'true') {
-                console.log("contentRefresher anfügen")
-                contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                console.log('contentRefresher anfügen')
+                contentRefresher = new DataWrapperContentRefresher(
+                    context,
+                    uniqueId,
+                    iFrameConfig.refreshIntervall,
+                    false
+                )
                 contentRefresher.createRefresher()
             }
-
-        }
-        else {
+        } else {
             if (iFrameConfig.webcomponent == 'true') {
-
                 // Webcomponent
                 const divTag = document.createElement('div')
                 divTag.id = 'datawrapper-chart-' + uniqueId
@@ -278,13 +282,16 @@ const ExternalService = function (context) {
                 divTag.appendChild(noScriptTag)
 
                 if (iFrameConfig.refreshContent == 'true') {
-                    console.log("contentRefresher anfügen")
-                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, true)
+                    console.log('contentRefresher anfügen')
+                    contentRefresher = new DataWrapperContentRefresher(
+                        context,
+                        uniqueId,
+                        iFrameConfig.refreshIntervall,
+                        true
+                    )
                     contentRefresher.createRefresher()
                 }
-            }
-            else {
-
+            } else {
                 //Responsives Iframe
                 var iframe = document.createElement('iframe')
                 //Auflösen nach Tailwind-Klassen //dataWrapper-embed
@@ -297,7 +304,7 @@ const ExternalService = function (context) {
                 iframe.src = embedCode
                 iframe.id = 'datawrapper-chart-' + uniqueId
                 if (lazyLoad) {
-                    iframe.loading = "lazy";
+                    iframe.loading = 'lazy'
                 }
                 rootElement.insertBefore(iframe, null)
 
@@ -307,14 +314,80 @@ const ExternalService = function (context) {
                     true
                 )
                 if (iFrameConfig.refreshContent == 'true') {
-                    console.log("contentRefresher anfügen")
-                    contentRefresher = new DataWrapperContentRefresher(context, uniqueId, iFrameConfig.refreshIntervall, false)
+                    console.log('contentRefresher anfügen')
+                    contentRefresher = new DataWrapperContentRefresher(
+                        context,
+                        uniqueId,
+                        iFrameConfig.refreshIntervall,
+                        false
+                    )
                     contentRefresher.createRefresher()
                 }
+            }
+        }
+    }
 
+    const createTwentyThreeDegreesEmbed = function () {
+        removeDatapolicyBox()
+        const foundMatchesForSlug = embedCode.match(/embed\/([^/?]+)/)
+        const slug =
+            foundMatchesForSlug && foundMatchesForSlug.length > 1 ? foundMatchesForSlug[1] : null
+        if (slug) {
+            const script = document.createElement('script')
+            script.src = `https://app.23degrees.io/services/public/embed-code/${slug}`
+            script.type = 'text/javascript'
+
+            const css = `
+            .responsive23-${slug} {
+                width: 100%;
+                padding-top: 100%;
             }
 
+            @media (max-width: 800px) {
+                .responsive23-${slug} {
+                padding-top: 80%;
+                }
+            }
 
+            @media (max-width: 600px) {
+                .responsive23-${slug} {
+                padding-top: 90.91%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .responsive23-${slug} {
+                padding-top: 111.11%;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .responsive23-${slug} {
+                padding-top: 142.86%;
+                }
+            }`
+            const style = document.createElement('style')
+            style.textContent = css
+
+            const iFrame = document.createElement('iframe')
+            iFrame.src = embedCode
+            iFrame.style.position = 'absolute'
+            iFrame.style.top = '0'
+            iFrame.style.left = '0'
+            iFrame.style.width = '100%'
+            iFrame.style.height = '100%'
+            iFrame.style.border = '0'
+            iFrame.allowFullscreen = true
+            iFrame.title = '23degrees Embed'
+            const div = document.createElement('div')
+            div.className = `responsive23-${slug}`
+            div.id = `container23-${slug}`
+            div.style.position = 'relative'
+            div.appendChild(iFrame)
+
+            rootElement.appendChild(style)
+            rootElement.appendChild(div)
+            rootElement.appendChild(script)
         }
     }
 
@@ -382,21 +455,21 @@ const ExternalService = function (context) {
         if (!document.getElementById('tiktok-js')) {
             loadScript('tiktok-js', '//www.tiktok.com/embed.js', true)
         }
-        const tiktokEmbedDataUrl = `https://www.tiktok.com/oembed?url=${options.embedCode}`;
-        const tiktokEmbedData = await fetch(tiktokEmbedDataUrl);
-        const tiktokEmbedDataJson = await tiktokEmbedData.json(); 
+        const tiktokEmbedDataUrl = `https://www.tiktok.com/oembed?url=${options.embedCode}`
+        const tiktokEmbedData = await fetch(tiktokEmbedDataUrl)
+        const tiktokEmbedDataJson = await tiktokEmbedData.json()
         replaceAnimated(rootElement, tiktokEmbedDataJson.html, false, reloadTikTokEmbed)
     }
 
-    const reloadTikTokEmbed = function() {
-        if(!tiktokOnPage.length) {
-            const selector = `blockquote.tiktok-embed[cite="${options.embedCode}"]`;
-            tiktokOnPage = Array.from(document.querySelectorAll(selector),);
+    const reloadTikTokEmbed = function () {
+        if (!tiktokOnPage.length) {
+            const selector = `blockquote.tiktok-embed[cite="${options.embedCode}"]`
+            tiktokOnPage = Array.from(document.querySelectorAll(selector))
         }
         if (typeof tiktokEmbed !== 'undefined' && tiktokOnPage.length) {
-            tiktokEmbed.lib.render(tiktokOnPage);
+            tiktokEmbed.lib.render(tiktokOnPage)
         } else {
-            reloadTikTokEmbed();
+            reloadTikTokEmbed()
         }
     }
 
@@ -429,16 +502,40 @@ const ExternalService = function (context) {
 
     const loadIframe = function () {
         console.log('load iframe ' + id)
-        const loadingAttribute = lazyLoad ? "loading='lazy'" : "";
-        iframe = "<iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
-        if (iFrameConfig.aspectRatio) {
-            iframe = "<div class='!h-full'><div class='" + getAspectRatioClass() + "'><iframe id='i_frame' "+ loadingAttribute +" data-isloaded='0' src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
+        const loadingAttribute = lazyLoad ? "loading='lazy'" : ''
+        iframe =
+            "<iframe id='i_frame' " +
+            loadingAttribute +
+            " data-isloaded='0' src='" +
+            embedCode +
+            "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        if (iFrameConfig && iFrameConfig.aspectRatio) {
+            iframe =
+                "<div class='!h-full'><div class='" +
+                getAspectRatioClass() +
+                "'><iframe id='i_frame' " +
+                loadingAttribute +
+                " data-isloaded='0' src='" +
+                embedCode +
+                "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>"
             //TODO Weiche Animation der Inhalte
         } else {
-            if (iFrameConfig.fixedHeight) {
-                iframe = "<div style='height:" + iFrameConfig.fixedHeight + "px'><iframe data-isloaded='0' "+ loadingAttribute +" src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+            if (iFrameConfig && iFrameConfig.fixedHeight) {
+                iframe =
+                    "<div style='height:" +
+                    iFrameConfig.fixedHeight +
+                    "px'><iframe data-isloaded='0' " +
+                    loadingAttribute +
+                    " src='" +
+                    embedCode +
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             } else {
-                iframe = "<div class='!h-full'><iframe data-isloaded='0' "+ loadingAttribute +" src='" + embedCode + "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
+                iframe =
+                    "<div class='!h-full'><iframe data-isloaded='0' " +
+                    loadingAttribute +
+                    " src='" +
+                    embedCode +
+                    "' frameborder='0' class='w-full h-full' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>"
             }
         }
         replaceAnimated(rootElement, iframe, false)
@@ -447,29 +544,33 @@ const ExternalService = function (context) {
     const initDataPolicy = function () {
         if (dataPolicyCheck) {
             acceptButton = hr$('.js-dataPolicy-accept', rootElement)[0]
-            listen('click', handleDatapolicy, acceptButton)
+            acceptButton && listen('click', handleDatapolicy, acceptButton)
             if (settingsCookie.isSettingsCookieExistent(id)) {
-                console.log("Dienst " + id + " ist im Cookie enthalten und hat den Wert " + settingsCookie.isSettingsCookieAccepted(id))
+                console.log(
+                    'Dienst ' +
+                        id +
+                        ' ist im Cookie enthalten und hat den Wert ' +
+                        settingsCookie.isSettingsCookieAccepted(id)
+                )
                 if (settingsCookie.isSettingsCookieAccepted(id)) {
-                    console.log("Lade den Dienst")
-                    loadServiceWithDataPolicyButton();
+                    console.log('Lade den Dienst')
+                    loadServiceWithDataPolicyButton()
+                } else {
+                    console.log('Zeige Datapolicy-Box')
+                    dataPolicyBox.style.visibility = 'visible'
                 }
-                else {
-                    console.log("Zeige Datapolicy-Box")
-                    dataPolicyBox.style.visibility = 'visible';
-                }
-            }
-            else {
-                console.log("Dienst " + id + " ist im Cookie nicht enthalten, prüfe daher den Default")
-                if (document.getElementById(id).getAttribute("data-whitelist") == "true") {
-                    console.log("Ist per Default eingeschaltet")
-                    console.log("Lade den Dienst")
-                    loadServiceWithDataPolicyButton();
-                }
-                else {
-                    console.log("Ist per Default ausgeschaltet")
-                    console.log("Zeige Datapolicy-Box")
-                    dataPolicyBox.style.visibility = 'visible';
+            } else {
+                console.log(
+                    'Dienst ' + id + ' ist im Cookie nicht enthalten, prüfe daher den Default'
+                )
+                if (document.getElementById(id).getAttribute('data-whitelist') == 'true') {
+                    console.log('Ist per Default eingeschaltet')
+                    console.log('Lade den Dienst')
+                    loadServiceWithDataPolicyButton()
+                } else {
+                    console.log('Ist per Default ausgeschaltet')
+                    console.log('Zeige Datapolicy-Box')
+                    dataPolicyBox.style.visibility = 'visible'
                 }
             }
             listen('hr:externalService-activate-' + id, loadServiceWithDataPolicyButton)

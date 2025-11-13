@@ -10,8 +10,6 @@ hbsTemplates['noDatapolicyCheck'] = handlebars.compile(`
     {{> components/external-service/external_service_with_datapolicy_check }}   
   `)
 
-
-
 const TemplatePageExternalService = (args) => {
     return hbsTemplates['default']({ ...args })
 }
@@ -34,7 +32,7 @@ export default {
             iframeHeight: 400,
         },
         chromatic: {
-            disableSnapshot: true
+            disableSnapshot: true,
         },
     },
 }
@@ -62,7 +60,7 @@ export const ExterneDiensteDatawrapperNoResponsiveFixedHeight = {
 export const ExterneDiensteDatawrapperNoResponsiveAspectRatio = {
     render: TemplatePageExternalService.bind({}),
     name: 'Externe Dienste Datawrapper OHNE Responsivem Iframe (Aspect Ratio)',
-    args: fixtures.Datawrapper_CDN_NoResponsiveAspectRatio.args
+    args: fixtures.Datawrapper_CDN_NoResponsiveAspectRatio.args,
 }
 export const ExterneDiensteDatawrapperContentRefresher = {
     render: TemplatePageExternalService.bind({}),
@@ -75,6 +73,12 @@ export const WahlGemeindeErgebnis = {
     args: fixtures.Wahl_Gemeinde_Ergebnis.args,
 }
 
+export const twentyThreeDegrees = {
+    render: TemplatePageExternalService.bind({}),
+    name: '23 Degrees (Kommunalwahl 2026)',
+    args: fixtures.twentyThreeDegrees.args,
+}
+
 export const Snapshot = {
     render: snapshotTemplate.bind({}),
     name: 'Snapshot',
@@ -82,5 +86,5 @@ export const Snapshot = {
     args: fixtures,
     parameters: {
         chromatic: { disableSnapshot: false },
-    }
+    },
 }

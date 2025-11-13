@@ -107,10 +107,29 @@
                     }
                 }
             }
+        },
+        {
+            "isHeadline": true,
+            "text": "23Degrees"
+        },
+        {
+            "@->jsoninclude": "content/copytext/copytext_paragraph.inc.json"
+        },
+        {
+            "paragraphBoxItem": {
+                "isExternalService": true,
+                "toModel": {
+                    "externalService": {
+                        "@->jsoninclude": "external-service/external_service.inc.json",
+                        "@->contentpath": "23degrees"
+                    }
+                }
+            }
         }
     ],
     "dataPolicy": {
         "serviceList": [
+            { "key": "23degrees", "value": "23Degrees (Kommunalwahl 2026)" },
             { "key": "ard_mediathek", "value": "ARD Mediathek (Video)" },
             { "key": "arte_concert", "value": "Arte Concert" },
             { "key": "arte_concert_new", "value": "Arte Concert 2.0" },

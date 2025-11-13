@@ -127,6 +127,15 @@
             "@->contentpath": "Flourish"
         }
     },
+    "twentyThreeDegrees": {
+        "config": {
+            "useAsSnapshot": false
+        },
+        "args": {
+            "@->jsoninclude": "external-service/external_service.inc.json",
+            "@->contentpath": "23degrees"
+        }
+    },
     "Giphy": {
         "config": {
             "useAsSnapshot": false

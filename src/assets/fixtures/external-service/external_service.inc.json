@@ -1,4 +1,18 @@
 {
+    "23degrees": {
+        "externalServiceConfig": {
+            "isWhitelisted": true,
+            "makeConfigurable": true,
+            "embedAsIFrame": false,
+            "externalServiceId": "23degrees",
+            "externalServiceEmbedType": "js",
+            "externalServiceName": "23degrees (Kommunalwahl 2026)"
+        },
+        "serviceUrl": "https://app.23degrees.io/embed/Qbk0sdqMq9V7oZj0-bar-horizontal-test-parametrisierung-and?filter=JTdCJTIyYTAlMjIlM0ElMjJTdWx6YSUyMiU3RA==",
+        "setResponsiveIframe": false,
+        "setTimedReloadIframe": false,
+        "setTimeForReload": ""
+    },
     "360Grad": {
         "externalServiceConfig": {
             "isWhitelisted": true,
