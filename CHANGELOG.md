@@ -1,3 +1,16 @@
+# v1.123.2 (Thu Nov 13 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Add support for 23 Degrees embed and refactor external service component ([@szuelch](https://github.com/szuelch))
+- :bug: Fix lazyLoad default value in external service data policy component ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.123.1 (Tue Nov 11 2025)
 
 #### 🐛 Bug Fix
