@@ -329,66 +329,49 @@ const ExternalService = function (context) {
 
     const createTwentyThreeDegreesEmbed = function () {
         removeDatapolicyBox()
-        const foundMatchesForSlug = embedCode.match(/embed\/([^/?]+)/)
-        const slug =
-            foundMatchesForSlug && foundMatchesForSlug.length > 1 ? foundMatchesForSlug[1] : null
-        if (slug) {
-            const script = document.createElement('script')
-            script.src = `https://app.23degrees.io/services/public/embed-code/${slug}`
-            script.type = 'text/javascript'
 
-            const css = `
-            .responsive23-${slug} {
-                width: 100%;
-                padding-top: 100%;
-            }
+        const slugMatch = embedCode.match(/embed\/([^/?]+)/)
+        const slug = slugMatch?.[1] || null
+        if (!slug) return
 
-            @media (max-width: 800px) {
-                .responsive23-${slug} {
-                padding-top: 80%;
-                }
-            }
+        // Style-Element erzeugen und einfügen
+        const style = document.createElement('style')
+        style.textContent = `
+        .responsive23-${slug} { width: 100%; padding-top: 100%; }
+        @media (max-width: 800px) { .responsive23-${slug} { padding-top: 80%; } }
+        @media (max-width: 600px) { .responsive23-${slug} { padding-top: 90.91%; } }
+        @media (max-width: 480px) { .responsive23-${slug} { padding-top: 111.11%; } }
+        @media (max-width: 360px) { .responsive23-${slug} { padding-top: 142.86%; } }
+    `
+        rootElement.appendChild(style)
 
-            @media (max-width: 600px) {
-                .responsive23-${slug} {
-                padding-top: 90.91%;
-                }
-            }
+        // Responsive Container und Iframe erzeugen
+        const div = document.createElement('div')
+        div.className = `responsive23-${slug}`
+        div.id = `container23-${slug}`
+        div.style.position = 'relative'
 
-            @media (max-width: 480px) {
-                .responsive23-${slug} {
-                padding-top: 111.11%;
-                }
-            }
+        const iFrame = document.createElement('iframe')
+        iFrame.src = decodeURIComponent(embedCode)
+        Object.assign(iFrame.style, {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%',
+            border: '0',
+        })
+        iFrame.allowFullscreen = true
+        iFrame.title = '23degrees Embed'
 
-            @media (max-width: 360px) {
-                .responsive23-${slug} {
-                padding-top: 142.86%;
-                }
-            }`
-            const style = document.createElement('style')
-            style.textContent = css
+        div.appendChild(iFrame)
+        rootElement.appendChild(div)
 
-            const iFrame = document.createElement('iframe')
-            iFrame.src = decodeURIComponent(embedCode)
-            iFrame.style.position = 'absolute'
-            iFrame.style.top = '0'
-            iFrame.style.left = '0'
-            iFrame.style.width = '100%'
-            iFrame.style.height = '100%'
-            iFrame.style.border = '0'
-            iFrame.allowFullscreen = true
-            iFrame.title = '23degrees Embed'
-            const div = document.createElement('div')
-            div.className = `responsive23-${slug}`
-            div.id = `container23-${slug}`
-            div.style.position = 'relative'
-            div.appendChild(iFrame)
-
-            rootElement.appendChild(style)
-            rootElement.appendChild(div)
-            rootElement.appendChild(script)
-        }
+        // Script einfügen
+        const script = document.createElement('script')
+        script.src = `https://app.23degrees.io/services/public/embed-code/${slug}`
+        script.type = 'text/javascript'
+        rootElement.appendChild(script)
     }
 
     const createFacebookEmbed = function () {
