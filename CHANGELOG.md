@@ -1,3 +1,16 @@
+# v1.124.2 (Mon Nov 24 2025)
+
+#### 🐛 Bug Fix
+
+- added Link to vertical Video group [#1323](https://github.com/mumprod/hr-design-system-handlebars/pull/1323) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.124.1 (Mon Nov 17 2025)
 
 #### 🐛 Bug Fix
