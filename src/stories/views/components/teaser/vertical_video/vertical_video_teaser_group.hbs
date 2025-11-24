@@ -2,7 +2,9 @@
     {{#>components/grid/grid_group_highlight _backgroundColor="1" }}
         {{~#if this.hasGroupTitle}}
             <h2 class="py-0 text-2xl text-center md:text-5xl col-span-full font-title">
-              {{this.groupTitle}}
+              {{~#if this.hasLink}}<a class="{{if (isUserConsentNeeded this.link.url) 'js-user-consent-needed ' ''}}no-underline hover:underline decoration-1 md:decoration-2 text-link" href="{{this.link.url}}">{{/if~}}
+                {{this.groupTitle}}  
+              {{~#if this.hasLink}}</a>{{/if~}}
             </h2 >
         {{/if}}
         <div class="grid items-start content-start grid-cols-12 col-span-12 gap-y-10 md:gap-y-14{{#if
