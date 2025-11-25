@@ -23,7 +23,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const setupPlayer = function () {
         loadArdPlayerScript()
-        fetchPlayerStyle(skinPath).then(createPlayer())
+        fetchPlayerStyle(skinPath,skinPath.replace(/[^a-zA-Z0-9\s]/g, '')).then((value) => {console.log(value);}).then(createPlayer)
     }
 
     const loadArdPlayerScript = function () {
@@ -32,21 +32,17 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const fetchPlayerStyle = function (url, id) {
         return new Promise(function (resolve, reject) {
-            if (document.getElementById(id)) {
+            if (document.getElementById(id)) {                
                 resolve('Style wurde bereits geladen')
-                console.log('style was already loaded before')
             } else {
                 const link = document.createElement('link')
                 link.type = 'text/css'
                 link.rel = 'stylesheet'
                 link.id = id
-                link.onload = function () {
-                    resolve()
-                }
                 link.href = url
                 const headScript = document.querySelector('script')
                 headScript.parentNode.insertBefore(link, headScript)
-                resolve('Style wurde neu geladen')
+                link.onload = () => resolve('Style wurde neu geladen')
             }
         })
     }
