@@ -1,3 +1,16 @@
+# v1.124.3 (Tue Nov 25 2025)
+
+#### 🐛 Bug Fix
+
+- create player only if detchPlayerStyle is resolved [#1324](https://github.com/mumprod/hr-design-system-handlebars/pull/1324) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.124.2 (Mon Nov 24 2025)
 
 #### 🐛 Bug Fix
