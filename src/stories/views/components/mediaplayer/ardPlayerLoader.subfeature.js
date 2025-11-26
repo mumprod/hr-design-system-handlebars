@@ -11,10 +11,10 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
         typeLabel = options.typeLabel,
         settingsCookie = new SettingsCookie(),
         isPlayerDebug = options.isPlayerDebug || false,
-        playerLocation = trackingData.playerLocation || "Default",
+        playerLocation = trackingData.playerLocation || 'Default',
         playerSize = trackingData.playerSize || options.teaserSize,
         isDarkmodeAllowed = options.isDarkmodeAllowed,
-        darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+        darkModePreference = window.matchMedia('(prefers-color-scheme: dark)')
     let mediaCollection = options.mediaCollection,
         playerConfig = options.playerConfig,
         isPlayerStarted = false,
@@ -23,7 +23,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const setupPlayer = function () {
         loadArdPlayerScript()
-        fetchPlayerStyle(skinPath,skinPath.replace(/[^a-zA-Z0-9\s]/g, '')).then((value) => {console.log(value);}).then(createPlayer)
+        fetchPlayerStyle(skinPath, skinPath.replace(/[^a-zA-Z0-9\s]/g, '')).then(createPlayer)
     }
 
     const loadArdPlayerScript = function () {
@@ -32,7 +32,7 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const fetchPlayerStyle = function (url, id) {
         return new Promise(function (resolve, reject) {
-            if (document.getElementById(id)) {                
+            if (document.getElementById(id)) {
                 resolve('Style wurde bereits geladen')
             } else {
                 const link = document.createElement('link')
@@ -49,17 +49,21 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
 
     const createPlayer = function () {
         if (undefined != playerConfig.pluginData['trackingPiano@all']) {
-            playerConfig.pluginData['trackingPiano@all'].isEnabled = settingsCookie.isSettingsCookieExistent('ati') ? settingsCookie.isSettingsCookieAccepted('ati') : !isWebview
+            playerConfig.pluginData['trackingPiano@all'].isEnabled =
+                settingsCookie.isSettingsCookieExistent('ati')
+                    ? settingsCookie.isSettingsCookieAccepted('ati')
+                    : !isWebview
         }
         if (undefined != playerConfig.pluginData['trackingAgf@all']) {
-            playerConfig.pluginData['trackingAgf@all'].isEnabled = settingsCookie.isSettingsCookieExistent('agf') ? settingsCookie.isSettingsCookieAccepted('agf') : !isWebview
+            playerConfig.pluginData['trackingAgf@all'].isEnabled =
+                settingsCookie.isSettingsCookieExistent('agf')
+                    ? settingsCookie.isSettingsCookieAccepted('agf')
+                    : !isWebview
         }
         whenAvailable('ardplayer', function () {
             player = new ardplayer.Player(playerId.toString(), playerConfig, mediaCollection)
 
-
             player.setLightMode(isDarkmodeAllowed ? !darkModePreference.matches : true)
-
 
             if (isPlayerDebug) {
                 ardplayer.debug(true, true, true, true)
@@ -77,7 +81,6 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
             }
         }, interval)
     }
-
 
     const bindPlayerEvents = function () {
         listen(ardplayer.Player.EVENT_PLAY_STREAM, handlePlayStream, player)
@@ -107,13 +110,13 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
             }
         })
 
-        listen("change", handleThemeSwitch, darkModePreference)
+        listen('change', handleThemeSwitch, darkModePreference)
     }
 
     const handlePlayStream = function (event) {
         const geotag = hr$('.js-geotag', rootElement)[0]
         if (!isPlayerStarted) {
-            trackPlayerStart()
+            !isWebview && trackPlayerStart()
             isPlayerStarted = true
         }
         if (typeof geotag != 'undefined') {
@@ -129,12 +132,13 @@ const ArdPlayerLoader = function (options, trackingData, rootElement) {
     }
 
     const handleThemeSwitch = function (event) {
-
         player.setLightMode(isDarkmodeAllowed ? !event.matches : true)
     }
 
     const trackPlayerStart = function () {
-        uxAction(`Playbutton geklickt::${typeLabel} \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`)
+        uxAction(
+            `Playbutton geklickt::${typeLabel} \"${mediaCollection.meta.title}\"::${playerLocation}::Breite ${playerSize}`
+        )
     }
 
     setupPlayer()
