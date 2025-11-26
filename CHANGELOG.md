@@ -1,3 +1,15 @@
+# v1.124.4 (Wed Nov 26 2025)
+
+#### 🐛 Bug Fix
+
+- Only call trackPlayerStart() when we are not inside a webview to prev… [#1325](https://github.com/mumprod/hr-design-system-handlebars/pull/1325) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.124.3 (Tue Nov 25 2025)
 
 #### 🐛 Bug Fix
