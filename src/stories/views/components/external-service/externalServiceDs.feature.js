@@ -74,61 +74,34 @@ const ExternalService = function (context) {
     }
 
     const insertExternalService = function () {
-        switch (embedType) {
-            case 'js':
-                switch (id) {
-                    case '23degrees':
-                        createTwentyThreeDegreesEmbed()
-                        break
-                    case 'facebook-post':
-                        createFacebookEmbed()
-                        break
-                    case 'instagram':
-                        createInstagramEmbed()
-                        break
-                    case 'tiktok':
-                        createTikTokEmbed()
-                        break
-                    case 'twitter':
-                        createTwitterEmbed()
-                        break
-                    case 'twitter-post':
-                        createTwitterPostEmbed()
-                        break
-                    case 'datawrapper_cdn':
-                        createDataWrapperEmbed()
-                        break
-                    case 'wahlmonitor':
-                        createWahlEmbed()
-                        break
-                    case 'wahlmonitor_v2':
-                        createWahlEmbed()
-                        break
-                    case 'wahlkreiskarte':
-                        createWahlEmbed()
-                        break
-                    case 'wahlkreiskarte_v2':
-                        createWahlEmbed()
-                        break
-                    case 'wahlomat-euwa':
-                        createWahlOMatEuwaEmbed()
-                        break
-                    case 'wahlomat-butawa':
-                        createWahlOMatButawaEmbed()
-                        break
-                    case 'wahl-gemeinde-ergebnis':
-                        createWahlGemeindeErgebnisEmbed()
-                        break
-                    case 'wer-waehlte-wen':
-                        werWaehlteWenEmbed()
-                        break
-                    default:
-                        console.error('No JS Config for external service ' + id)
-                        break
-                }
-                break
-            default:
-                loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
+        if (embedType !== 'js') {
+            loadIframe() // Für alle Dienste, die nicht der DSGVO Datapolicy unterliegen
+            return
+        }
+
+        const externalServiceMap = {
+            '23degrees': createTwentyThreeDegreesEmbed,
+            'facebook-post': createFacebookEmbed,
+            'instagram': createInstagramEmbed,
+            'tiktok': createTikTokEmbed,
+            'twitter': createTwitterEmbed,
+            'twitter-post': createTwitterPostEmbed,
+            'datawrapper_cdn': createDataWrapperEmbed,
+            'wahlmonitor': createWahlEmbed,
+            'wahlmonitor_v2': createWahlEmbed,
+            'wahlkreiskarte': createWahlEmbed,
+            'wahlkreiskarte_v2': createWahlEmbed,
+            'wahlomat-euwa': createWahlOMatEuwaEmbed,
+            'wahlomat-butawa': createWahlOMatButawaEmbed,
+            'wahl-gemeinde-ergebnis': createWahlGemeindeErgebnisEmbed,
+            'wer-waehlte-wen': werWaehlteWenEmbed,
+        }
+
+        const service = externalServiceMap[id]
+        if (service) {
+            service()
+        } else {
+            console.error(`No JS Config for external service ${id}`)
         }
     }
 
