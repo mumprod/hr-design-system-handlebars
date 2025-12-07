@@ -1,3 +1,16 @@
+# v1.124.7 (Sun Dec 07 2025)
+
+#### 🐛 Bug Fix
+
+- Fix podcast channel link [#1327](https://github.com/mumprod/hr-design-system-handlebars/pull/1327) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.124.6 (Sun Dec 07 2025)
 
 #### ⚠️ Pushed to `main`
