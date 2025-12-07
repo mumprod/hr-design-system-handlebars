@@ -1,3 +1,28 @@
+# v1.124.6 (Sun Dec 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Removing deprecated old xlink:use to use for better compatibility with modern browsers ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.124.5 (Wed Dec 03 2025)
+
+#### 🐛 Bug Fix
+
+- DPE-3773-B: revert changes [#1326](https://github.com/mumprod/hr-design-system-handlebars/pull/1326) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
 # v1.124.4 (Wed Nov 26 2025)
 
 #### 🐛 Bug Fix
