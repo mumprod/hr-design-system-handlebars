@@ -1,3 +1,15 @@
+# v1.124.6 (Sun Dec 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Removing deprecated old xlink:use to use for better compatibility with modern browsers ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.124.5 (Wed Dec 03 2025)
 
 #### 🐛 Bug Fix
