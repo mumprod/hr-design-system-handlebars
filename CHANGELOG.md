@@ -1,3 +1,15 @@
+# v1.124.8 (Wed Dec 10 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Introducing new geoMap fetures in article ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.124.7 (Sun Dec 07 2025)
 
 #### 🐛 Bug Fix
