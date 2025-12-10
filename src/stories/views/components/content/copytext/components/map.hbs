@@ -2,7 +2,7 @@
     <div class="mt-6 italic text-gray-dark">coming soon: Map-component</div>
 {{~else~}}
     {{> content/geomap/page/components/map
-        _addClass="copytext__clearBox"
+        _addClass="copytext__clearBox region--wide"
         _id=this.uuid
         _tilesURL=this.mapTilesUrl
         _iconURLStyle1=this.markerIconUrl
@@ -17,6 +17,14 @@
         _initLng=this.initViewLong
         _initZoom=this.initZoom
         _border=this.showBorders
+        _additionalOverlay=this.borderJsonUrl
+        _borderJsonStrokeColor=this.borderJsonStrokeColor
+        _borderJsonStrokeWeight=this.borderJsonStrokeWeight
+        _borderJsonPolygonFill=this.borderJsonPolygonFill
+        _borderJsonPolygonFillActive=this.borderJsonPolygonFillActive
+        _borderJsonPolygonOpacity=this.borderJsonPolygonOpacity
+        _showGeoJsonInteractive=this.showGeoJsonInteractive
+        _showGeoJsonMetadata=this.showGeoJsonMetadata
         _colorBorder=this.borderColor
         _borderStrokeWeight=this.borderStrokeWeight
         _countryFillColor=this.countryFillColor
