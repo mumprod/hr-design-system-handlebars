@@ -210,13 +210,12 @@ const ExternalService = function (context) {
         } = iFrameConfig
 
         const addContentRefresher = (isWebcomponent) => {
-            const contentRefresher = new DataWrapperContentRefresher({
+            new DataWrapperContentRefresher({
                 rootElement,
                 id: uniqueId,
                 refreshIntervall,
                 isWebcomponent,
-            })
-            contentRefresher.createRefresher()
+            }).createRefresher()
         }
 
         if (isNoResponsiveIframe == 'true') {
@@ -240,7 +239,7 @@ const ExternalService = function (context) {
             // Webcomponent
             const divTag = document.createElement('div')
             divTag.id = `datawrapper-chart-${uniqueId}`
-            rootElement.insertBefore(divTag, null)
+            rootElement.appendChild(divTag)
 
             const scriptTag = document.createElement('script')
             Object.assign(scriptTag, {
@@ -256,6 +255,7 @@ const ExternalService = function (context) {
             imageTag.src = `${embedCode}full.png`
             imageTag.alt = ''
             noScriptTag.appendChild(imageTag)
+
             divTag.append(scriptTag, noScriptTag)
 
             if (refreshContent == 'true') {
@@ -264,7 +264,7 @@ const ExternalService = function (context) {
             return
         }
         //Responsives Iframe
-        var iframe = document.createElement('iframe')
+        const iframe = document.createElement('iframe')
         //Auflösen nach Tailwind-Klassen //dataWrapper-embed
         iframe.className = 'w-0 !min-w-full border-0'
         iframe.setAttribute('webkitallowfullscreen', '')
