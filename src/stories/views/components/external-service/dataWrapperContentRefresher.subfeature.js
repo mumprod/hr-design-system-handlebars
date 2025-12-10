@@ -1,88 +1,95 @@
-        
-const DataWrapperContentRefresher = function (context, id, refreshIntervall, webcomponent, datapolicy) {
-    const { element: rootElement } = context
+const DataWrapperContentRefresher = function ({
+    rootElement,
+    id,
+    refreshIntervall,
+    isWebcomponent,
+    datapolicy,
+}) {
     let remainingTime
     let timer
-    let uniqueID = id
     let intervall = refreshIntervall
     let container
-    let script 
+    let script
     let iframeRefresh
-    
-    if (webcomponent) {
-    container = document.getElementById('datawrapper-chart-' + uniqueID)
-    script = document.getElementById('datawrapper-component-js')
+
+    if (isWebcomponent) {
+        container = document.getElementById(`datawrapper-chart-${id}`)
+        script = document.getElementById('datawrapper-component-js')
+    } else {
+        iframeRefresh = document.getElementById(`datawrapper-chart-${id}`)
     }
-    else{
-    iframeRefresh = document.getElementById('datawrapper-chart-' + uniqueID)
-    }
-    
+
     const createRefresher = function () {
-        console.log("Refresher bauen")
-        let divCounter = document.createElement('div')
+        console.log('Refresher bauen')
+        const divCounter = document.createElement('div')
+        divCounter.id = 'counter' + id
+        Object.assign(divCounter.style, {
+            backgroundColor: '#006dc1',
+            color: '#fff',
+            fontSize: '12px',
+            padding: '8px',
+            borderRadius: '0 0 4px 4px',
+        })
+
         let divOverlay = document.createElement('div')
+        divOverlay.id = 'overlay' + id
+        Object.assign(divOverlay.style, {
+            position: 'absolute',
+            top: '0',
+            display: 'none',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#d8e9f6',
+            width: '100%',
+            height: 'calc(100% - 36px)',
+        })
+
         let divTextOverlay = document.createElement('div')
-        divOverlay.id = 'overlay' + uniqueID
-        divOverlay.style.position = 'absolute'
-        divOverlay.style.top = '0'
-        divOverlay.style.display = 'none'
-        divOverlay.style.alignItems = 'center'
-        divOverlay.style.justifyContent = 'center'
-        divOverlay.style.backgroundColor = '#fff'
-        divOverlay.style.width = '100%'
-        divOverlay.style.height = 'calc(100% - 36px)'
-        divOverlay.style.backgroundColor = '#d8e9f6'
         divTextOverlay.innerHTML = 'Lade Inhalt neu...'
-        divTextOverlay.style.backgroundColor = '#005293'
-        divTextOverlay.style.padding = '8px'
-        divTextOverlay.style.color = '#fff'
-        divTextOverlay.style.fontWeight = '800'
-        divTextOverlay.style.fontFamily = 'RobotoSlab'
-        divTextOverlay.style.borderRadius = '6px 6px 6px 6px'
+        Object.assign(divTextOverlay.style, {
+            backgroundColor: '#005293',
+            padding: '8px',
+            color: '#fff',
+            fontWeight: '800',
+            fontFamily: 'RobotoSlab',
+            borderRadius: '6px',
+        })
+
         divOverlay.appendChild(divTextOverlay)
-        divCounter.id = 'counter' + uniqueID
-        divCounter.style.backgroundColor = '#006dc1'
-        divCounter.style.color = '#fff'
-        divCounter.style.fontSize = '12px'
-        divCounter.style.padding = '8px'
-        divCounter.style.borderRadius = '0 0 4px 4px'
-        
+
         rootElement.style.position = 'relative'
-        if(!datapolicy) {
-        rootElement.appendChild(divCounter)
-        rootElement.appendChild(divOverlay)
-        startCountdown()
-        } 
-        else {
-        rootElement.removeChild(divCounter)
-        rootElement.removeChild(divOverlay)
-        stopCountdown()
+
+        if (!datapolicy) {
+            rootElement.appendChild(divCounter)
+            rootElement.appendChild(divOverlay)
+            startCountdown()
+        } else {
+            rootElement.removeChild(divCounter)
+            rootElement.removeChild(divOverlay)
+            stopCountdown()
         }
     }
 
     const refreshIframe = function () {
         console.log('Reload')
-        if(webcomponent) {
+        if (isWebcomponent) {
             container.style.opacity = '0'
             script.src = script.src.split('?')[0] + '?_=' + new Date().getTime()
-        }
-        else{
+        } else {
             iframeRefresh.style.opacity = '0'
-            iframeRefresh.src =
-                iframeRefresh.src.split('?')[0] + '?_=' + new Date().getTime()
+            iframeRefresh.src = iframeRefresh.src.split('?')[0] + '?_=' + new Date().getTime()
         }
         clearInterval(timer)
     }
     const startCountdown = function () {
         remainingTime = Number(intervall)
         setTimeout(function () {
-            if(webcomponent) {
-                container.style.opacity = '1'    
-            }
-            else{
+            if (isWebcomponent) {
+                container.style.opacity = '1'
+            } else {
                 iframeRefresh.style.opacity = '1'
             }
-            document.getElementById('overlay' + uniqueID).style.display = 'none'
+            document.getElementById('overlay' + id).style.display = 'none'
         }, 1000)
         timer = setInterval(function () {
             checkTimer()
@@ -92,33 +99,34 @@ const DataWrapperContentRefresher = function (context, id, refreshIntervall, web
         clearInterval(timer)
     }
     const checkTimer = function () {
-        if(document.getElementById('counter' + uniqueID) !== null) {
+        if (document.getElementById('counter' + id) !== null) {
             if (remainingTime >= 0) {
-                document.getElementById('counter' + uniqueID).innerHTML =
+                document.getElementById('counter' + id).innerHTML =
                     'Dieser Inhalt wird automatisch aktualisiert in ' +
                     secondsToTimeString(remainingTime) +
                     ' Min.'
                 remainingTime -= 1
                 if (remainingTime == -1) {
-                    document.getElementById('overlay' + uniqueID).style.display = 'flex'
-                    document.getElementById('counter' + uniqueID).innerHTML =
+                    document.getElementById('overlay' + id).style.display = 'flex'
+                    document.getElementById('counter' + id).innerHTML =
                         'Zeitintervall wird neu gestartet...'
                 }
             } else {
                 refreshIframe()
                 startCountdown()
             }
-        }else{
-            console.log("Element wurde entfernt")
+        } else {
+            console.log('Element wurde entfernt')
             clearInterval(timer)
         }
     }
+
     const secondsToTimeString = function (seconds) {
         return new Date(seconds * 1000).toISOString().substr(14, 5)
     }
     return {
-        createRefresher: createRefresher
+        createRefresher: createRefresher,
     }
 }
 
-export default DataWrapperContentRefresher            
+export default DataWrapperContentRefresher
