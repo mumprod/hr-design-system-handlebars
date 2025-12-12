@@ -31,7 +31,7 @@
     {{#unless _webview-adjust_context}}        
         {{> components/social_sharing/social_sharing_copytext _useSticky=(configProperty "templates.useStickyNav")}}
     {{/unless}}
-    {{~> components/content/copytext/copytext _isWebview=_webview-adjust_context ~}}
+    {{~> components/content/copytext/copytext _measureScrollDepth=true _isWebview=_webview-adjust_context ~}}
 
      {{~> components/content/content_footer/content_footer 
         _showDate=this.hasDwellTime
