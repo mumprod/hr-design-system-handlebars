@@ -1,11 +1,12 @@
+import { scrollDepth } from 'base/tracking/pianoHelper.subfeature'
 export default function measureScrollDepth() {
     let fired = {}
     function handleIntersect(entries) {
         entries.forEach((entry) => {
             if (entry.isIntersecting && !fired[entry.target.dataset.scrollDepth]) {
                 fired[entry.target.dataset.scrollDepth] = true
+                scrollDepth(entry.target.dataset.scrollDepth)
                 console.log(entry.target.dataset.scrollDepth)
-                // Here you can send the scroll depth data to your analytics service
             }
         })
     }
