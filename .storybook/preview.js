@@ -23,6 +23,7 @@ configureActions({
 
 // Create CheckCSS instance
 const checkcss = new CheckCSS();
+window.IS_STORYBOOK = true;
 
 checkcss.onClassnameDetected = function (classname, element) {
     // Return `false` to disable checks for `classname`.
