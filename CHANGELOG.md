@@ -1,3 +1,15 @@
+# v1.125.0 (Tue Dec 16 2025)
+
+#### 🚀 Enhancement
+
+- Recycle/external service js [#1330](https://github.com/mumprod/hr-design-system-handlebars/pull/1330) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.124.10 (Tue Dec 16 2025)
 
 #### 🐛 Bug Fix
