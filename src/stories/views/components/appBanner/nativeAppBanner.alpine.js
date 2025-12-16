@@ -25,10 +25,10 @@ export default function nativeAppBanner() {
                 this.deferredPrompt.userChoice
                     .then((choiceResult) => {
                     if (choiceResult.outcome === 'accepted') {
-                        uxAction('installNativeApp::promt::accepted');
+                        uxAction('nativeAppBanner::promt::accepted');
                         console.log('User accepted the A2HS prompt');
                     } else {
-                        uxAction('installNativeApp::promt::dismissed');
+                        uxAction('nativeAppBanner::promt::dismissed');
                         console.log('User dismissed the A2HS prompt');
                     }
                     this.deferredPrompt = null;
@@ -37,7 +37,7 @@ export default function nativeAppBanner() {
             this.showBanner = false
         },
         closeClickHandler: function(){
-            uxAction('installNativeApp::bannerClosed');
+            uxAction('nativeAppBanner::bannerClosed');
             this.showBanner = false
         }
     }

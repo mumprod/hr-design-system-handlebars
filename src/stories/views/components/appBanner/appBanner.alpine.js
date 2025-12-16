@@ -19,7 +19,7 @@ export default function appBanner() {
             this.showBanner = false
         },
         closeClickHandler: function(){
-            uxAction('installNativeApp::bannerClosed');
+            uxAction('appBanner::bannerClosed');
             this.showBanner = false
         },
         openPlayStore: function() {
@@ -29,10 +29,12 @@ export default function appBanner() {
 
             // Try to open the Play Store app
             window.location.href = intentUrl;
-
+            uxAction('appBanner::intentUrl');
             // Fallback to web after a short delay
             setTimeout(() => {
+                uxAction('appBanner::url');
                 window.location.href = `https://play.google.com/store/apps/details?id=${this.packageId}`;
+                
             }, 700);
         }
     }
