@@ -13,6 +13,8 @@ import dropdown from 'components/site_header/dropdown.alpine'
 
 AsyncAlpine.init(Alpine)
     .data('podcastPlayer', () => import('components/podcast/podcast_player.alpine.js'))
+    .data('appBanner', () => import('components/appBanner/appBanner.alpine.js'))
+    .data('nativeAppBanner', () => import('components/appBanner/nativeAppBanner.alpine.js'))
     .data('slider', () =>
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )

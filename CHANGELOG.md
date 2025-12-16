@@ -1,3 +1,64 @@
+# v1.124.10 (Tue Dec 16 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 b [#1329](https://github.com/mumprod/hr-design-system-handlebars/pull/1329) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.124.9 (Mon Dec 15 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 [#1328](https://github.com/mumprod/hr-design-system-handlebars/pull/1328) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.124.8 (Wed Dec 10 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Introducing new geoMap fetures in article ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
+# v1.124.7 (Sun Dec 07 2025)
+
+#### 🐛 Bug Fix
+
+- Fix podcast channel link [#1327](https://github.com/mumprod/hr-design-system-handlebars/pull/1327) (saad.elbaciri@hr.de [@selbaciri](https://github.com/selbaciri))
+
+#### Authors: 2
+
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+- selbaciri (saad.elbaciri@hr.de)
+
+---
+
+# v1.124.6 (Sun Dec 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Removing deprecated old xlink:use to use for better compatibility with modern browsers ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.124.5 (Wed Dec 03 2025)
 
 #### 🐛 Bug Fix
