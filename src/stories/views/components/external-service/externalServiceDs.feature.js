@@ -29,10 +29,7 @@ const ExternalService = function (context) {
     let embedCode = options.embedCode,
         iframe,
         settingsCookie = new SettingsCookie(),
-        noResponsiveIframe,
-        contentRefresher,
         gemeindewahlergebnis,
-        uniqueId,
         isExternalServiceLoaded = false,
         tiktokOnPage = []
 
@@ -74,61 +71,34 @@ const ExternalService = function (context) {
     }
 
     const insertExternalService = function () {
-        switch (embedType) {
-            case 'js':
-                switch (id) {
-                    case '23degrees':
-                        createTwentyThreeDegreesEmbed()
-                        break
-                    case 'facebook-post':
-                        createFacebookEmbed()
-                        break
-                    case 'instagram':
-                        createInstagramEmbed()
-                        break
-                    case 'tiktok':
-                        createTikTokEmbed()
-                        break
-                    case 'twitter':
-                        createTwitterEmbed()
-                        break
-                    case 'twitter-post':
-                        createTwitterPostEmbed()
-                        break
-                    case 'datawrapper_cdn':
-                        createDataWrapperEmbed()
-                        break
-                    case 'wahlmonitor':
-                        createWahlEmbed()
-                        break
-                    case 'wahlmonitor_v2':
-                        createWahlEmbed()
-                        break
-                    case 'wahlkreiskarte':
-                        createWahlEmbed()
-                        break
-                    case 'wahlkreiskarte_v2':
-                        createWahlEmbed()
-                        break
-                    case 'wahlomat-euwa':
-                        createWahlOMatEuwaEmbed()
-                        break
-                    case 'wahlomat-butawa':
-                        createWahlOMatButawaEmbed()
-                        break
-                    case 'wahl-gemeinde-ergebnis':
-                        createWahlGemeindeErgebnisEmbed()
-                        break
-                    case 'wer-waehlte-wen':
-                        werWaehlteWenEmbed()
-                        break
-                    default:
-                        console.error('No JS Config for external service ' + id)
-                        break
-                }
-                break
-            default:
-                loadIframe() //für alle Dienste die nicht der DSGVO Datapolicy unterliegen
+        if (embedType !== 'js') {
+            loadIframe() // Für alle Dienste, die nicht der DSGVO Datapolicy unterliegen
+            return
+        }
+
+        const externalServiceMap = {
+            '23degrees': createTwentyThreeDegreesEmbed,
+            'facebook-post': createFacebookEmbed,
+            'instagram': createInstagramEmbed,
+            'tiktok': createTikTokEmbed,
+            'twitter': createTwitterEmbed,
+            'twitter-post': createTwitterPostEmbed,
+            'datawrapper_cdn': createDataWrapperEmbed,
+            'wahlmonitor': createWahlEmbed,
+            'wahlmonitor_v2': createWahlEmbed,
+            'wahlkreiskarte': createWahlEmbed,
+            'wahlkreiskarte_v2': createWahlEmbed,
+            'wahlomat-euwa': createWahlOMatEuwaEmbed,
+            'wahlomat-butawa': createWahlOMatButawaEmbed,
+            'wahl-gemeinde-ergebnis': createWahlGemeindeErgebnisEmbed,
+            'wer-waehlte-wen': werWaehlteWenEmbed,
+        }
+
+        const service = externalServiceMap[id]
+        if (service) {
+            service()
+        } else {
+            console.error(`No JS Config for external service ${id}`)
         }
     }
 
@@ -206,14 +176,6 @@ const ExternalService = function (context) {
         })
     }
 
-    const createUniqueID = function () {
-        console.log('Erzeuge einzigartige ID')
-        uniqueId = Math.random()
-            .toString(36)
-            .replace(/[^a-z]+/g, '')
-            .substring(2, 10)
-    }
-
     const getAspectRatioClass = function () {
         switch (iFrameConfig.aspectRatio) {
             case '16x9':
@@ -237,94 +199,102 @@ const ExternalService = function (context) {
 
     const createDataWrapperEmbed = function () {
         removeDatapolicyBox()
-        createUniqueID()
-        console.log('UniqueID' + uniqueId)
-        if (iFrameConfig.noResponsiveIframe == 'true') {
-            //Klassisches Iframe mit AR-Wrapper oder fester Höhe
-            noResponsiveIframe = new DataWrapperNoResponsiveIframe(
-                context,
-                iFrameConfig.aspectRatio,
-                iFrameConfig.fixedHeight,
-                uniqueId,
-                embedCode,
-                lazyLoad
-            )
-            noResponsiveIframe.createNoResponsiveIframe()
+        const uniqueId = createUniqueID()
+        const {
+            isNoResponsiveIframe,
+            isWebcomponent,
+            refreshContent,
+            aspectRatio,
+            fixedHeight,
+            refreshIntervall,
+        } = iFrameConfig
 
-            if (iFrameConfig.refreshContent == 'true') {
-                console.log('contentRefresher anfügen')
-                contentRefresher = new DataWrapperContentRefresher(
-                    context,
-                    uniqueId,
-                    iFrameConfig.refreshIntervall,
-                    false
-                )
-                contentRefresher.createRefresher()
-            }
-        } else {
-            if (iFrameConfig.webcomponent == 'true') {
-                // Webcomponent
-                const divTag = document.createElement('div')
-                divTag.id = 'datawrapper-chart-' + uniqueId
-                rootElement.insertBefore(divTag, null)
-                const scriptTag = document.createElement('script')
-                scriptTag.setAttribute('id', 'datawrapper-component-js')
-                scriptTag.setAttribute('type', 'text/javascript')
-                scriptTag.setAttribute('defer', 'defer')
-                scriptTag.setAttribute('src', embedCode + 'embed.js?v=1')
-                scriptTag.setAttribute('charset', 'utf-8')
-                const noScriptTag = document.createElement('noscript')
-                const imageTag = document.createElement('img')
-                imageTag.src = embedCode + 'full.png'
-                imageTag.alt = ''
-                noScriptTag.appendChild(imageTag)
-                divTag.appendChild(scriptTag)
-                divTag.appendChild(noScriptTag)
-
-                if (iFrameConfig.refreshContent == 'true') {
-                    console.log('contentRefresher anfügen')
-                    contentRefresher = new DataWrapperContentRefresher(
-                        context,
-                        uniqueId,
-                        iFrameConfig.refreshIntervall,
-                        true
-                    )
-                    contentRefresher.createRefresher()
-                }
-            } else {
-                //Responsives Iframe
-                var iframe = document.createElement('iframe')
-                //Auflösen nach Tailwind-Klassen //dataWrapper-embed
-                iframe.className = 'w-0 !min-w-full border-0'
-                iframe.setAttribute('webkitallowfullscreen', '')
-                iframe.setAttribute('mozallowfullscreen', '')
-                iframe.setAttribute('allowfullscreen', '')
-                iframe.setAttribute('scrolling', 'no')
-                iframe.setAttribute('frameborder', '0')
-                iframe.src = embedCode
-                iframe.id = 'datawrapper-chart-' + uniqueId
-                if (lazyLoad) {
-                    iframe.loading = 'lazy'
-                }
-                rootElement.insertBefore(iframe, null)
-
-                loadScript(
-                    'datawrapper-js',
-                    'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
-                    true
-                )
-                if (iFrameConfig.refreshContent == 'true') {
-                    console.log('contentRefresher anfügen')
-                    contentRefresher = new DataWrapperContentRefresher(
-                        context,
-                        uniqueId,
-                        iFrameConfig.refreshIntervall,
-                        false
-                    )
-                    contentRefresher.createRefresher()
-                }
-            }
+        const addContentRefresher = (isWebcomponent) => {
+            new DataWrapperContentRefresher({
+                rootElement,
+                id: uniqueId,
+                refreshIntervall,
+                isWebcomponent,
+            }).createRefresher()
         }
+
+        if (isNoResponsiveIframe == 'true') {
+            //Klassisches Iframe mit AR-Wrapper oder fester Höhe
+            new DataWrapperNoResponsiveIframe({
+                rootElement: rootElement,
+                aspectRatio: aspectRatio,
+                fixedHeight: fixedHeight,
+                id: uniqueId,
+                embedCode: embedCode,
+                lazyLoad: lazyLoad,
+            }).createNoResponsiveIframe()
+
+            if (refreshContent == 'true') {
+                addContentRefresher(false)
+            }
+            return
+        }
+
+        if (isWebcomponent == 'true') {
+            // Webcomponent
+            const divTag = document.createElement('div')
+            divTag.id = `datawrapper-chart-${uniqueId}`
+            rootElement.appendChild(divTag)
+
+            const scriptTag = document.createElement('script')
+            Object.assign(scriptTag, {
+                id: 'datawrapper-component-js',
+                type: 'text/javascript',
+                defer: true,
+                src: `${embedCode}embed.js?v=1`,
+                charset: 'utf-8',
+            })
+
+            const noScriptTag = document.createElement('noscript')
+            const imageTag = document.createElement('img')
+            imageTag.src = `${embedCode}full.png`
+            imageTag.alt = ''
+            noScriptTag.appendChild(imageTag)
+
+            divTag.append(scriptTag, noScriptTag)
+
+            if (refreshContent == 'true') {
+                addContentRefresher(true)
+            }
+            return
+        }
+        //Responsives Iframe
+        const iframe = document.createElement('iframe')
+        //Auflösen nach Tailwind-Klassen //dataWrapper-embed
+        iframe.className = 'w-0 !min-w-full border-0'
+        iframe.setAttribute('webkitallowfullscreen', '')
+        iframe.setAttribute('mozallowfullscreen', '')
+        iframe.setAttribute('allowfullscreen', '')
+        iframe.setAttribute('scrolling', 'no')
+        iframe.setAttribute('frameborder', '0')
+        iframe.src = embedCode
+        iframe.id = `datawrapper-chart-${uniqueId}`
+        if (lazyLoad) {
+            iframe.loading = 'lazy'
+        }
+        rootElement.appendChild(iframe)
+
+        loadScript(
+            'datawrapper-js',
+            'https://static.hr.de/hessenschau/datawrapper/responsiveIframe.js',
+            true
+        )
+        if (refreshContent == 'true') {
+            addContentRefresher(false)
+        }
+    }
+
+    const createUniqueID = function () {
+        console.log('Erzeuge einzigartige ID')
+        return Math.random()
+            .toString(36)
+            .replace(/[^a-z]+/g, '')
+            .substring(2, 10)
     }
 
     const createTwentyThreeDegreesEmbed = function () {
