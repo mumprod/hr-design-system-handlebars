@@ -4,38 +4,47 @@ export default function appBanner() {
     return {
         showBanner: false,
         deferredPrompt: null,
+        isAndroid: /Android/i.test(navigator.userAgent),
+        packageId: "de.hr.hessenschau",
         init: function () {
-            window.addEventListener('beforeinstallprompt', (e) => {
-                // Prevent Chrome 67 and earlier from automatically showing the prompt
-                e.preventDefault();
-                // Stash the event so it can be triggered later.
-                this.deferredPrompt = e;
-                // Update UI notify the user they can add to home screen
+
+            if(this.isAndroid){
                 this.showBanner = true;
-            });
+            }
+            
             if(window.IS_STORYBOOK){ this.showBanner = true;}
         },
         installClickHandler: function(){
-            if(this.deferredPrompt){
-                this.deferredPrompt.prompt();
-                // Wait for the user to respond to the prompt
-                this.deferredPrompt.userChoice
-                    .then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        uxAction('installNativeApp::promt::accepted');
-                        console.log('User accepted the A2HS prompt');
-                    } else {
-                        uxAction('installNativeApp::promt::dismissed');
-                        console.log('User dismissed the A2HS prompt');
-                    }
-                    this.deferredPrompt = null;
-                    });
-            }
+            this.openPlayStore()
             this.showBanner = false
         },
         closeClickHandler: function(){
-            uxAction('installNativeApp::bannerClosed');
+            uxAction('appBanner::bannerClosed');
             this.showBanner = false
+        },
+        openPlayStore: function() {
+            let fallbackTriggered = false;
+
+            const fallback = () => {
+                if (fallbackTriggered) return;
+                fallbackTriggered = true;
+
+                window.open(`https://play.google.com/store/apps/details?id=${this.packageId}`, "googlePlayStore");
+      
+            };
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                // App switch happened → cancel fallback
+                fallbackTriggered = true;
+                }
+            }, { once: true });
+
+            window.location.href =
+                `intent://details?id=${this.packageId}` +
+                `#Intent;scheme=market;package=com.android.vending;end`;
+
+            setTimeout(fallback, 700);
         }
     }
 }

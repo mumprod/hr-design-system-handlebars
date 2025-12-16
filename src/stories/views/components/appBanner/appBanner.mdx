@@ -1,14 +1,14 @@
 import { ArgTypes, Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks'
 import * as AppBannerStories from './appBanner.stories';
 
-import geoTag from './appBanner.hbs'
+import appBanner from './appBanner.hbs'
 
 <Meta of={AppBannerStories} />
 
 export const Template = ({ ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${geoTag}</div>`;
-    return geoTag({ ...args })
+    // return `<div>${appBanner}</div>`;
+    return appBanner({ ...args })
 }
 
 # AppBanner
@@ -16,4 +16,3 @@ export const Template = ({ ...args }) => {
 <Canvas withToolbar>
   <Story of={AppBannerStories.AppBanner} />
 </Canvas>
-
