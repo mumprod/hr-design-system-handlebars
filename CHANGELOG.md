@@ -1,3 +1,16 @@
+# v1.125.1 (Wed Dec 17 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 b - added cookie and some top button fixes [#1331](https://github.com/mumprod/hr-design-system-handlebars/pull/1331) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.125.0 (Tue Dec 16 2025)
 
 #### 🚀 Enhancement
