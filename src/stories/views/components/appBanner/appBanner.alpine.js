@@ -1,4 +1,5 @@
 import { uxAction } from 'base/tracking/pianoHelper.subfeature'
+import { getJSONCookie, setJSONCookie } from 'hrQuery'
 
 export default function appBanner() {
     return {
@@ -6,24 +7,37 @@ export default function appBanner() {
         deferredPrompt: null,
         isAndroid: /Android/i.test(navigator.userAgent),
         packageId: "de.hr.hessenschau",
+        cookie: {},
+        cookieLifetime: 1000 * 60 * 60 * 24 * 30, 
         init: function () {
-
-            if(this.isAndroid){
+            this.readTrackingCookie()
+            if(this.cookie["closed"] !== true){
+                if(this.isAndroid){
+                    this.showBanner = true;
+                    this.$store.appBannerIsVisible = true;
+                }
+            }    
+            if(window.IS_STORYBOOK){ 
                 this.showBanner = true;
+                this.$store.appBannerIsVisible = true;
             }
             
-            if(window.IS_STORYBOOK){ this.showBanner = true;}
         },
         installClickHandler: function(){
             this.openPlayStore()
+            this.writeCookie()
             this.showBanner = false
+            this.$store.appBannerIsVisible = false
         },
         closeClickHandler: function(){
             uxAction('appBanner::bannerClosed');
             this.showBanner = false
+            this.$store.appBannerIsVisible = false
+            this.writeCookie()
         },
         openPlayStore: function() {
             let fallbackTriggered = false;
+            uxAction('appBanner::playStoreOpened');
 
             const fallback = () => {
                 if (fallbackTriggered) return;
@@ -45,6 +59,13 @@ export default function appBanner() {
                 `#Intent;scheme=market;package=com.android.vending;end`;
 
             setTimeout(fallback, 700);
+        },
+        writeCookie: function() {
+            this.cookie["closed"] = true
+            setJSONCookie('appBanner', this.cookie, this.cookieLifetime)
+        },
+        readTrackingCookie: function() {
+            this.cookie = getJSONCookie('appBanner') || {}
         }
     }
 }
