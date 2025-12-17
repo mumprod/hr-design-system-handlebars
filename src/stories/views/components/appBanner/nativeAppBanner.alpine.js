@@ -14,9 +14,13 @@ export default function nativeAppBanner() {
                 // Update UI notify the user they can add to home screen
                 if(this.isAndroid){
                     this.showBanner = true;
+                    this.$store.appBannerIsVisible = true;
                 }
             });
-            if(window.IS_STORYBOOK){ this.showBanner = true;}
+            if(window.IS_STORYBOOK){
+                this.showBanner = true;
+                this.$store.appBannerIsVisible = true;
+            }
         },
         installClickHandler: function(){
             if(this.deferredPrompt){
@@ -35,10 +39,12 @@ export default function nativeAppBanner() {
                     });
             }
             this.showBanner = false
+            this.$store.appBannerIsVisible = false
         },
         closeClickHandler: function(){
             uxAction('nativeAppBanner::bannerClosed');
             this.showBanner = false
+            this.$store.appBannerIsVisible = false
         }
     }
 }
