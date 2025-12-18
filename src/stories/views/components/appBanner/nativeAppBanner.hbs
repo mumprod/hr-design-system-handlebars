@@ -1,0 +1,27 @@
+<div 
+    x-data="nativeAppBanner()" x-cloak x-show="showBanner" ax-load x-ignore
+    id="marketing-banner" tabindex="-1" class="fixed bottom-0 flex flex-row justify-end w-full gap-4 p-4 -translate-x-1/2 z-300 flex-nowrap bg-blue-aqua lg:max-w-7xl left-1/2">
+    <div class="flex flex-row items-center gap-4 grow">
+        <div class="flex items-center justify-center rounded-lg w-11 h-11 bg-blue-congress-hex shrink-0">
+           <img width="24" height="24" src="{{resourceUrl "assets/base/icons/logo/brandlogo--mobile.min.svg" _brand=(defaultIfEmpty this.brand "hessenschau")}}" 
+                class="w-7 h-7" alt="{{loca "meta_application_name"}}">   
+        </div>
+        <div class="flex flex-col items-start text-sm sm:text-base font-heading">
+            <span class="font-bold">hessenschau App</span>
+            <span>Kostenlos bei Google Play</span>
+        </div>
+    </div>
+    <div class="flex items-center gap-4 ">
+        {{#> components/button/button _size="md" _alpineClick="installClickHandler"}}
+            {{> components/button/components/button_label _label="Laden" _css="text-sm sm:text-base"}}
+        {{/components/button/button}}
+        {{#> components/button/button _size="md" _variant="tertiary" _css="h-10" _alpineClick="closeClickHandler"}}
+            {{> components/button/components/button_icon _icon="close" _css="" _iconmap="icons"}}
+            {{> components/button/components/button_label _label="schließen" _css="sr-only"}}
+        {{/components/button/button}}
+    </div>   
+</div>
+
+
+
+

@@ -1,3 +1,52 @@
+# v1.125.1 (Wed Dec 17 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 b - added cookie and some top button fixes [#1331](https://github.com/mumprod/hr-design-system-handlebars/pull/1331) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.125.0 (Tue Dec 16 2025)
+
+#### 🚀 Enhancement
+
+- Recycle/external service js [#1330](https://github.com/mumprod/hr-design-system-handlebars/pull/1330) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
+# v1.124.10 (Tue Dec 16 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 b [#1329](https://github.com/mumprod/hr-design-system-handlebars/pull/1329) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
+# v1.124.9 (Mon Dec 15 2025)
+
+#### 🐛 Bug Fix
+
+- Dpe 3046 [#1328](https://github.com/mumprod/hr-design-system-handlebars/pull/1328) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.124.8 (Wed Dec 10 2025)
 
 #### ⚠️ Pushed to `main`
