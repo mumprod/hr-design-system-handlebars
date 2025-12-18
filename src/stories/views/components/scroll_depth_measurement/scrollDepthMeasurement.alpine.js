@@ -6,7 +6,6 @@ export default function measureScrollDepth() {
             if (entry.isIntersecting && !fired[entry.target.dataset.scrollDepth]) {
                 fired[entry.target.dataset.scrollDepth] = true
                 scrollDepth(entry.target.dataset.scrollDepth)
-                console.log(entry.target.dataset.scrollDepth)
             }
         })
     }
@@ -18,6 +17,7 @@ export default function measureScrollDepth() {
 
         init() {
             const observer = new IntersectionObserver(handleIntersect)
+            observer.observe(this.scrollDepthContainer0)
             observer.observe(this.scrollDepthContainer25)
             observer.observe(this.scrollDepthContainer50)
             observer.observe(this.scrollDepthContainer75)
