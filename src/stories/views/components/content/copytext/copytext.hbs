@@ -1,7 +1,4 @@
-<div class="mt-2 hrds-copytext contents sm:block copytextWrapper{{#if _measureScrollDepth}} relative{{/if}}">
-    {{#if _measureScrollDepth}}
-        {{> components/scroll_depth_measurement/scroll_depth_measurement}}
-    {{/if}}
+<div class="mt-2 hrds-copytext contents sm:block copytextWrapper">
     {{~#with this.leadAudio }}
         {{> components/content/copytext/components/media/media_figure _isFullsize=true _playerLocation="Copytext" _playerSize="100" _addClass="print:hidden article-full-width mt-12 mb-6 sm:article-narrow sm:my-14" _cssClassCaption="mx-5 sm:mx-0" _a11yIntro-loca="story_audio_intro_sr" _a11yOutro-loca="story_audio_outro_sr" }}
     {{~/with}}    
