@@ -10,6 +10,7 @@ export default function measureScrollDepth() {
         })
     }
     return {
+        scrollDepthContainer0: this.$refs.scroll_depth_0W,
         scrollDepthContainer25: this.$refs.scroll_depth_25,
         scrollDepthContainer50: this.$refs.scroll_depth_50,
         scrollDepthContainer75: this.$refs.scroll_depth_75,
