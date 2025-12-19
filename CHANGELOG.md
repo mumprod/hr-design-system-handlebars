@@ -1,3 +1,15 @@
+# v1.126.1 (Fri Dec 19 2025)
+
+#### 🐛 Bug Fix
+
+- :sparkles: Add hr_sophora_id to data send by page.scroll event [#1334](https://github.com/mumprod/hr-design-system-handlebars/pull/1334) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.126.0 (Fri Dec 19 2025)
 
 #### 🚀 Enhancement
