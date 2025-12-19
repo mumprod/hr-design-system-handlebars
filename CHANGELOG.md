@@ -1,3 +1,19 @@
+# v1.126.0 (Fri Dec 19 2025)
+
+#### 🚀 Enhancement
+
+- Feature/dpe 3470 [#1333](https://github.com/mumprod/hr-design-system-handlebars/pull/1333) ([@szuelch](https://github.com/szuelch))
+
+#### 🔩 Dependency Updates
+
+- :arrow_up: Upgrade storybook to latest patch version 8.6.15 to secure… [#1332](https://github.com/mumprod/hr-design-system-handlebars/pull/1332) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.125.1 (Wed Dec 17 2025)
 
 #### 🐛 Bug Fix
