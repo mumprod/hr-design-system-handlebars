@@ -19,11 +19,18 @@ AsyncAlpine.init(Alpine)
         import('components/horizontal_scroll_container/horizontal_scroll_container.alpine.js')
     )
     .data('stickyPlayer', () => import('components/mediaplayer/stickyPlayer.alpine.js'))
-    .data('socialSharingHandler', ()=> import('components/social_sharing/socialSharingHandler.alpine.js'))
-    .data('inputHandler', ()=> import('components/forms/js/inputHandler.alpine.js'))
-    .data('contactForm', ()=> import('components/forms/js/contactForm.alpine.js'))
-    .data('newsletterForm', ()=> import('components/newsletter/js/newsletterForm.alpine.js'))
-    .data('gallerySlider', () => import('components/content/copytext/components/gallery/js/gallerySlider.alpine.js'))
+    .data('socialSharingHandler', () =>
+        import('components/social_sharing/socialSharingHandler.alpine.js')
+    )
+    .data('inputHandler', () => import('components/forms/js/inputHandler.alpine.js'))
+    .data('contactForm', () => import('components/forms/js/contactForm.alpine.js'))
+    .data('newsletterForm', () => import('components/newsletter/js/newsletterForm.alpine.js'))
+    .data('gallerySlider', () =>
+        import('components/content/copytext/components/gallery/js/gallerySlider.alpine.js')
+    )
+    .data('measureScrollDepth', () =>
+        import('components/scroll_depth_measurement/scrollDepthMeasurement.alpine.js')
+    )
     .start()
 
 window.Alpine = Alpine
@@ -51,15 +58,15 @@ Alpine.store('sectionNavIsVisible', false)
 Alpine.store('sharingIsVisible', false)
 Alpine.store('sharingIsOpen', {
     metadatabox: false,
-    mobilesticky: false
+    mobilesticky: false,
 })
 Alpine.store('sharingBottomPos', {
-    current: '0'
+    current: '0',
 })
 Alpine.store('forms', {
     submissionAttempted: [],
     serverErrorFields: [{}],
-    errorMessages: [{}]
+    errorMessages: [{}],
 })
 // Initialization of data handlers
 Alpine.data('mainNavigationHandler', mainNavigationHandler)
