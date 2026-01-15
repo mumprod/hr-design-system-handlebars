@@ -1,3 +1,15 @@
+# v1.126.2 (Thu Jan 15 2026)
+
+#### 🐛 Bug Fix
+
+- changed wording of App Banner [#1335](https://github.com/mumprod/hr-design-system-handlebars/pull/1335) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.1 (Fri Dec 19 2025)
 
 #### 🐛 Bug Fix
