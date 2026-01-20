@@ -1,3 +1,19 @@
+# v1.126.3 (Tue Jan 20 2026)
+
+#### 🐛 Bug Fix
+
+- Fix z-index issue in scroll depth measurement component [#1337](https://github.com/mumprod/hr-design-system-handlebars/pull/1337) ([@szuelch](https://github.com/szuelch))
+
+#### 📝 Documentation
+
+- Add Copilot instructions for HR Design System [#1336](https://github.com/mumprod/hr-design-system-handlebars/pull/1336) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.126.2 (Thu Jan 15 2026)
 
 #### 🐛 Bug Fix
