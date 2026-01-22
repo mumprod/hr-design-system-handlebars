@@ -1,3 +1,15 @@
+# v1.126.4 (Thu Jan 22 2026)
+
+#### 🐛 Bug Fix
+
+- Dpe 3833 Hochkantvideos: Link zur Einzelseite [#1338](https://github.com/mumprod/hr-design-system-handlebars/pull/1338) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.3 (Tue Jan 20 2026)
 
 #### 🐛 Bug Fix
