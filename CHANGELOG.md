@@ -1,3 +1,16 @@
+# v1.126.5 (Mon Jan 26 2026)
+
+#### 🐛 Bug Fix
+
+- changed vertical Video Teaser appearance to match "Marketing" expecta… [#1339](https://github.com/mumprod/hr-design-system-handlebars/pull/1339) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.4 (Thu Jan 22 2026)
 
 #### 🐛 Bug Fix
