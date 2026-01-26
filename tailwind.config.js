@@ -98,6 +98,7 @@ module.exports = {
                 dropdown: '0 7px 29px 0 rgb(100, 100, 111, 0.2)',
             },
             lineHeight: {
+                8.5: '2.125rem',
                 7.5: '1.875rem',
                 11: '2.75rem',
                 5.5: '1.375rem',
