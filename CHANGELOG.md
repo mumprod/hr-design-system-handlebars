@@ -1,3 +1,15 @@
+# v1.126.6 (Tue Jan 27 2026)
+
+#### 🐛 Bug Fix
+
+- DPE-3851 - some cosmetic fixes [#1340](https://github.com/mumprod/hr-design-system-handlebars/pull/1340) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.5 (Mon Jan 26 2026)
 
 #### 🐛 Bug Fix
