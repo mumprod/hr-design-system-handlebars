@@ -1,3 +1,15 @@
+# v1.126.7 (Thu Jan 29 2026)
+
+#### 🐛 Bug Fix
+
+- overflow-anywhere hyphens-auto and new padding to fix overflow problem [#1341](https://github.com/mumprod/hr-design-system-handlebars/pull/1341) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.6 (Tue Jan 27 2026)
 
 #### 🐛 Bug Fix
