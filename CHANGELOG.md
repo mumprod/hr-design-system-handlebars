@@ -1,3 +1,15 @@
+# v1.126.8 (Tue Feb 03 2026)
+
+#### 🐛 Bug Fix
+
+- "Zurück zum Artikel"-Link aus Podcast raus [#1342](https://github.com/mumprod/hr-design-system-handlebars/pull/1342) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.126.7 (Thu Jan 29 2026)
 
 #### 🐛 Bug Fix
