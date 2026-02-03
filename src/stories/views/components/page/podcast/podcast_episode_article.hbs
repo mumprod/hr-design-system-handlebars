@@ -22,10 +22,6 @@
                aria-label='{{loca "appendix_title"}}'>
             <div class="flex flex-col first:border-t last:border-b py-6 gap-y-6 border-dotted border-[#797979] ">
                 {{#unless _webview}}
-                    {{~#with this.backLinkUrl ~}}
-                        {{~> components/base/backlink ~}}
-                    {{~/with~}}
-
                     {{~#with this.geotag ~}}
                         {{~> components/geoTag/geoTag_list ~}}
                     {{~/with~}}
