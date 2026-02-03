@@ -1,3 +1,15 @@
+# v1.126.9 (Tue Feb 03 2026)
+
+#### 🐛 Bug Fix
+
+- fix layout-bug in form [#1343](https://github.com/mumprod/hr-design-system-handlebars/pull/1343) ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+#### Authors: 1
+
+- Geraldo ([@hanswurstsalat](https://github.com/hanswurstsalat))
+
+---
+
 # v1.126.8 (Tue Feb 03 2026)
 
 #### 🐛 Bug Fix
