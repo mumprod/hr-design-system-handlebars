@@ -1,3 +1,15 @@
+# v1.126.10 (Fri Feb 06 2026)
+
+#### 🐛 Bug Fix
+
+- :bug: Remove scrollDepthContainer0 from scroll depth measurement beca… [#1344](https://github.com/mumprod/hr-design-system-handlebars/pull/1344) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.126.9 (Tue Feb 03 2026)
 
 #### 🐛 Bug Fix
