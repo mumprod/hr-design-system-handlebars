@@ -1,3 +1,15 @@
+# v1.126.11 (Wed Feb 11 2026)
+
+#### 🐛 Bug Fix
+
+- :bug: Delay scroll depth measurement execution by 2.5 seconds to make… [#1345](https://github.com/mumprod/hr-design-system-handlebars/pull/1345) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.126.10 (Fri Feb 06 2026)
 
 #### 🐛 Bug Fix
