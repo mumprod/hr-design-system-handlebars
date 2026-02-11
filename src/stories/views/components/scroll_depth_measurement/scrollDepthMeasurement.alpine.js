@@ -5,7 +5,9 @@ export default function measureScrollDepth() {
         entries.forEach((entry) => {
             if (entry.isIntersecting && !fired[entry.target.dataset.scrollDepth]) {
                 fired[entry.target.dataset.scrollDepth] = true
-                scrollDepth(entry.target.dataset.scrollDepth)
+                setTimeout(() => {
+                    scrollDepth(entry.target.dataset.scrollDepth)
+                }, 2500)
             }
         })
     }
