@@ -46,6 +46,8 @@ const scrollDepth = (depth) => {
     sendEvent('page.scroll', {
         scroll_depth: depth,
         page: undefined !== pageDisplayConfig ? pageDisplayConfig.page : 'unknown',
+        hr_document_type:
+            undefined !== pageDisplayConfig ? pageDisplayConfig.hr_document_type : 'unknown',
         hr_sophora_id:
             undefined !== pageDisplayConfig ? pageDisplayConfig.hr_sophora_id : 'unknown',
     })
