@@ -1,3 +1,15 @@
+# v1.126.12 (Fri Feb 13 2026)
+
+#### 🐛 Bug Fix
+
+- :bug: Add hr_document_type to scroll depth event payload for improved… [#1346](https://github.com/mumprod/hr-design-system-handlebars/pull/1346) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.126.11 (Wed Feb 11 2026)
 
 #### 🐛 Bug Fix
