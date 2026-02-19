@@ -301,9 +301,9 @@ const ExternalService = function (context) {
         removeDatapolicyBox()
         const regex = /embed\/([^?]+)\?(.*)&title=([^&]*)$/
         const match = decodeURIComponent(embedCode).match(regex)
-        const slug = null
-        const url = null
-        const iframeTitle = null
+        let slug = null
+        let url = null
+        let iframeTitle = null
         if (match) {
             slug = match[1]
             url = embedCode.split('&title')[0]
