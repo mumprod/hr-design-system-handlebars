@@ -300,7 +300,7 @@ const ExternalService = function (context) {
     const createTwentyThreeDegreesEmbed = function () {
         removeDatapolicyBox()
         const regex = /embed\/([^?]+)\?(.*)&title=([^&]*)$/
-        const match = embedCode.match(regex)
+        const match = decodeURIComponent(embedCode).match(regex)
         const slug = null
         const url = null
         const iframeTitle = null
