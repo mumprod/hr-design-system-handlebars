@@ -300,9 +300,17 @@ const ExternalService = function (context) {
     const createTwentyThreeDegreesEmbed = function () {
         removeDatapolicyBox()
 
-        const slugMatch = embedCode.match(/embed\/([^/?]+)/)
-        const slug = slugMatch?.[1] || null
-        if (!slug) return
+        const slugMatch = embedCode.match(/embed\/([^?]+)\?(.*)&title=([^&]*)$/)
+        const match = url.match(regex)
+        const slug = null
+        const url = null
+        const iframeTitle = null
+        if (match) {
+            slug = match[1]
+            url = embedCode.split('&title')[0]
+            iframeTitle = match[3] || '23degrees Embed'
+        }
+        if (!slug || !url) return
 
         // Style-Element erzeugen und einfügen
         const style = document.createElement('style')
@@ -332,7 +340,7 @@ const ExternalService = function (context) {
             border: '0',
         })
         iFrame.allowFullscreen = true
-        iFrame.title = '23degrees Embed'
+        iFrame.title = iframeTitle
 
         div.appendChild(iFrame)
         rootElement.appendChild(div)
