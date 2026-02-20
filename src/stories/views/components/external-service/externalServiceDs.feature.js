@@ -299,17 +299,16 @@ const ExternalService = function (context) {
 
     const createTwentyThreeDegreesEmbed = function () {
         removeDatapolicyBox()
-        const regex = /embed\/([^?]+)\?(.*)&title=([^&]*)$/
-        const match = decodeURIComponent(embedCode).match(regex)
-        let slug = null
-        let url = null
-        let iframeTitle = null
-        if (match) {
-            slug = match[1]
-            url = embedCode.split('&title')[0]
-            iframeTitle = match[3] || '23degrees Embed'
+        const decodedEmbedCode = decodeURIComponent(embedCode)
+        const embedCodeParts = decodedEmbedCode.split('&title=')
+        const iframeTitle = embedCodeParts.length > 1 ? embedCodeParts[1] : '23degrees Embed'
+        const url = embedCodeParts[0]
+        const slugMatch = url.match(/embed\/([^?]+)/)
+        const slug = slugMatch?.[1] || null
+        if (!slug) {
+            console.error('Ungültiger Embed-Code: Slug konnte nicht extrahiert werden.')
+            return
         }
-        if (!slug || !url) return
 
         // Style-Element erzeugen und einfügen
         const style = document.createElement('style')
@@ -329,7 +328,7 @@ const ExternalService = function (context) {
         div.style.position = 'relative'
 
         const iFrame = document.createElement('iframe')
-        iFrame.src = decodeURIComponent(embedCode)
+        iFrame.src = url
         Object.assign(iFrame.style, {
             position: 'absolute',
             top: '0',
