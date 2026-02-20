@@ -328,7 +328,7 @@ const ExternalService = function (context) {
         div.style.position = 'relative'
 
         const iFrame = document.createElement('iframe')
-        iFrame.src = decodeURIComponent(embedCode)
+        iFrame.src = url
         Object.assign(iFrame.style, {
             position: 'absolute',
             top: '0',
