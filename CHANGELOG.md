@@ -1,3 +1,15 @@
+# v1.128.0 (Tue Mar 03 2026)
+
+#### 🚀 Enhancement
+
+- :bug: [DPE-3895] Make sure that videos in article copytexts are displ… [#1349](https://github.com/mumprod/hr-design-system-handlebars/pull/1349) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.127.1 (Fri Feb 20 2026)
 
 #### 🐛 Bug Fix
