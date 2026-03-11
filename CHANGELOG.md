@@ -1,3 +1,16 @@
+# v1.128.1 (Wed Mar 11 2026)
+
+#### 🐛 Bug Fix
+
+- [SEO] Links auf ardsounds.de einbauen [#1350](https://github.com/mumprod/hr-design-system-handlebars/pull/1350) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.128.0 (Tue Mar 03 2026)
 
 #### 🚀 Enhancement
