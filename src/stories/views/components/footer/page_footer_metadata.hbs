@@ -92,4 +92,28 @@
         {{/inline}}
         {{/with}}
     </div>
+    {{#if _ardSoundsLink}}
+        <span class="hidden px-2 md:flex ">|</span>
+        <div class="flex items-center justify-center w-auto h-8 md:justify-start md:h-auto">
+            {{#with this}}
+                {{#> components/base/link _link=_ardSoundsLink _css="flex whitespace-nowrap hover:underline"}}
+                    {{{_ardSoundsLink-adjust_context.text}}}
+                        {{~#if _ardSoundsLink-adjust_context.hiddenText~}}
+                            <span class="sr-only">
+                                {{~_ardSoundsLink-adjust_context.hiddenText~}}
+                            </span>
+                        {{~/if~}}
+                        {{~#if _ardSoundsLink-adjust_context.isTargetBlank}}
+                            <span class="inline-flex">
+                                {{> components/base/image/icon _icon=_iconName-adjust_context _iconmap="icons" _addClass="ml-1 w-4 h-4 fill-footer-text"}}
+                            </span>
+                        {{/if~}}
+                {{/components/base/link}}
+                {{#*inline "htmlProperties"}}
+                    {{#if _ardSoundsLink-adjust_context.labelText}} aria-label="{{_ardSoundsLink-adjust_context.labelText}}"{{/if}}
+                    {{#if _ardSoundsLink-adjust_context.title}} title="{{_ardSoundsLink-adjust_context.title}}"{{/if}}
+                {{/inline}}
+            {{/with}}
+        </div>
+    {{/if}}    
 </div>
