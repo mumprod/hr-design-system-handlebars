@@ -1,4 +1,5 @@
-import { FooterContent } from './page_footer.data.js'
+import { FooterContent,FooterContent_sounds } from './page_footer.data.js'
+
 import pageFooter from './page_footer.hbs'
 
 const TemplatePageFooter = (args, { globals: { theme } }) => {
@@ -25,4 +26,9 @@ export const Seitenfooter = {
     render: TemplatePageFooter.bind({}),
     name: 'Seitenfooter',
     args: FooterContent,
+}
+export const SeitenfooterSounds = {
+    render: TemplatePageFooter.bind({}),
+    name: 'Seitenfooter mit Sounds Link',
+    args: FooterContent_sounds,
 }
