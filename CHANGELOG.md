@@ -1,3 +1,22 @@
+# v1.129.0 (Thu Apr 02 2026)
+
+#### 🚀 Enhancement
+
+- Feature/npm trusted publishing [#1352](https://github.com/mumprod/hr-design-system-handlebars/pull/1352) ([@szuelch](https://github.com/szuelch))
+- :construction_worker: Configure npm trusted publishing instead of gra… [#1351](https://github.com/mumprod/hr-design-system-handlebars/pull/1351) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- fix: downgrade actions to v4 for compatibility with Node.js 20.x [#1355](https://github.com/mumprod/hr-design-system-handlebars/pull/1355) ([@szuelch](https://github.com/szuelch))
+- Feature/npm trusted publishing [#1354](https://github.com/mumprod/hr-design-system-handlebars/pull/1354) ([@szuelch](https://github.com/szuelch))
+- Feature/npm trusted publishing [#1353](https://github.com/mumprod/hr-design-system-handlebars/pull/1353) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 1
+
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.128.1 (Wed Mar 11 2026)
 
 #### 🐛 Bug Fix
