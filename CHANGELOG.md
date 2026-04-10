@@ -1,3 +1,15 @@
+# v1.130.1 (Fri Apr 10 2026)
+
+#### ⚠️ Pushed to `main`
+
+- Adding new params for geomap ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 1
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+
+---
+
 # v1.129.0 (Thu Apr 02 2026)
 
 #### 🚀 Enhancement
