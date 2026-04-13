@@ -12,13 +12,15 @@
         </div>
     </div>
     <div class="flex items-center gap-4 ">
-        {{#> components/button/button _size="md" _alpineClick="installClickHandler"}}
+        {{#> components/button/button _type="button" _size="md" _alpineClick="installClickHandler"}}
             {{> components/button/components/button_label _label="Laden" _css="text-sm sm:text-base"}}
         {{/components/button/button}}
-        {{#> components/button/button _size="md" _variant="tertiary" _css="h-10" _alpineClick="closeClickHandler"}}
+        {{#*inline "htmlProperties"~}}{{~/inline}}
+        {{#> components/button/button _type="button" _size="md" _variant="tertiary" _css="h-10" _alpineClick="closeClickHandler"}}
             {{> components/button/components/button_icon _icon="close" _css="" _iconmap="icons"}}
             {{> components/button/components/button_label _label="schließen" _css="sr-only"}}
         {{/components/button/button}}
+        {{#*inline "htmlProperties"~}}{{~/inline}}
     </div>   
 </div>
 
