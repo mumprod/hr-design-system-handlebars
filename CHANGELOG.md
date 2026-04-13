@@ -1,3 +1,15 @@
+# v1.130.2 (Mon Apr 13 2026)
+
+#### 🐛 Bug Fix
+
+- added empty htmlProperties to prevent context error in delivery [#1356](https://github.com/mumprod/hr-design-system-handlebars/pull/1356) ([@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 1
+
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.130.1 (Fri Apr 10 2026)
 
 #### ⚠️ Pushed to `main`
