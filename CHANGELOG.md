@@ -1,3 +1,15 @@
+# v1.131.0 (Thu Apr 16 2026)
+
+#### 🚀 Enhancement
+
+- Bump axios from 1.6.8 to 1.15.0 [#1357](https://github.com/mumprod/hr-design-system-handlebars/pull/1357) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 1
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+
+---
+
 # v1.130.2 (Mon Apr 13 2026)
 
 #### 🐛 Bug Fix
