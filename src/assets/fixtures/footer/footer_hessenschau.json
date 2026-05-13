@@ -160,6 +160,13 @@
             {
                 "links": [
                     {
+                        "text": "google-ds",
+                        "url": "https://profile.google.com/cp/CgsvZy8xMjM0aDdtNg",
+                        "extern": true,
+                        "isTargetBlank": true,
+                        "title": "Push-Benachrichtigung in der App"
+                    }, 
+                    {
                         "text": "tiktok-ds",
                         "url": "https://www.tiktok.com/@hessenschau",
                         "extern": true,
