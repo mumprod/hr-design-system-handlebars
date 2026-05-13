@@ -1,3 +1,16 @@
+# v1.131.1 (Wed May 13 2026)
+
+#### 🐛 Bug Fix
+
+- new logo for google share [#1358](https://github.com/mumprod/hr-design-system-handlebars/pull/1358) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.131.0 (Thu Apr 16 2026)
 
 #### 🚀 Enhancement
