@@ -1,3 +1,16 @@
+# v1.131.2 (Fri May 15 2026)
+
+#### 🐛 Bug Fix
+
+- smaller googe Logo [#1359](https://github.com/mumprod/hr-design-system-handlebars/pull/1359) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.131.1 (Wed May 13 2026)
 
 #### 🐛 Bug Fix
