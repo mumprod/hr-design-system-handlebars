@@ -159,13 +159,7 @@
         "columns": [
             {
                 "links": [
-                    {
-                        "text": "google-ds",
-                        "url": "https://profile.google.com/cp/CgsvZy8xMjM0aDdtNg",
-                        "extern": true,
-                        "isTargetBlank": true,
-                        "title": "Push-Benachrichtigung in der App"
-                    }, 
+                    
                     {
                         "text": "tiktok-ds",
                         "url": "https://www.tiktok.com/@hessenschau",
@@ -193,30 +187,48 @@
                         "extern": true,
                         "isTargetBlank": true,
                         "title": "hessenschau YouTube"
+                    },
+                    {
+                        "text": "whatsapp-ds",
+                        "url": "https://whatsapp.com/channel/0029VaDcqVJAu3aJgJtKhX25",
+                        "extern": true,
+                        "isTargetBlank": true,
+                        "title": "hessenschau WhatsApp"
                     }
                 ]
             },
             {
                 "links": [
                     {
-                        "text": "push-ds",
-                        "url": "push/index.html",
-                        "title": "Push-Benachrichtigung in der App"
-                    },
-                    {
-                        "text": "voice-ds",
-                        "url": "voice/index.html",
-                        "title": "hessenschau in 100 Sekunden"
+                        "text": "google-ds",
+                        "url": "https://profile.google.com/cp/CgsvZy8xMjM0aDdtNg",
+                        "extern": true,
+                        "isTargetBlank": true,
+                        "title": "hessenschau bei Google"
                     },
                     {
                         "text": "kontakt-ds",
                         "url": "kontakt/index.html",
-                        "title": "Zum Kontaktformular"
+                        "title": "Zum Kontaktformular",
+                        "isStaticUrl": true
+                    },
+                    {
+                        "text": "videopodcast-ds",
+                        "url": "video-podcast/index.html",
+                        "title": "Videos bei Hessenschau",
+                        "isStaticUrl": true
+                    },
+                    {
+                        "text": "push-ds",
+                        "url": "push/index.html",
+                        "title": "Push-Benachrichtigung in der App",
+                        "isStaticUrl": true
                     },
                     {
                         "text": "rss-ds",
                         "url": "rss/index.html",
-                        "title": "hessenschau.de RSS-Feed"
+                        "title": "hessenschau.de RSS-Feed",
+                        "isStaticUrl": true
                     }
                 ]
             }
