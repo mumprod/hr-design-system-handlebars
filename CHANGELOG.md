@@ -1,3 +1,16 @@
+# v1.131.3 (Tue May 19 2026)
+
+#### 🐛 Bug Fix
+
+- changed brand nav item template so external URL for dasding.de is pos… [#1360](https://github.com/mumprod/hr-design-system-handlebars/pull/1360) ([@vascoeduardo](https://github.com/vascoeduardo) [@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.131.2 (Fri May 15 2026)
 
 #### 🐛 Bug Fix
