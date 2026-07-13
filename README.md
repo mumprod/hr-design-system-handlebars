@@ -2,13 +2,13 @@
 
 ## Installation
 
-Das Designsystem ist mit Node.js LTS Version 16.14.2 gebaut. Vor der Installation daher bitte Node.js und NPM
+Das Designsystem ist mit Node.js LTS Version 24.14.1 gebaut. Vor der Installation daher bitte Node.js und NPM
 auf die folgenden Versionen aktualisieren.
 
 | Werkzeug | Version |
 | -------- | ------- |
-| Node.js  | 20.11.1 |
-| NPM      | 10.2.4  |
+| Node.js  | 24.14.1 |
+| NPM      | 11.11.0  |
 
 ---
 
@@ -83,18 +83,9 @@ PROMPT_COMMAND="_chpwd_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 ```
 ---
 
-Zur Verwaltung der Node Packages des Design Systems verwenden wir statt npm den Paketmanager [yarn](https://classic.yarnpkg.com/en/).
-Dieser verwendet einen anderen Algorithmus zur Auflösung der Abhängigkeiten der einzelnen Node Packages und hat
-sich insbesondere beim Update von Storybook als die verlässlichere Alternative erwiesen. Um yarn nutzen zu können, muss es zunächst mit dem
-Befehl
+Zur Verwaltung der Node Packages des Design Systems verwenden wir npm. 
 
-```
-npm install --global yarn
-```
-
-installiert werden.
-
-Zur Installation des Designsystems bitte anschließend das Projekt in ein beliebiges Verzeichnis auf der Festplatte mit
+Zur Installation des Designsystems bitte das Projekt in ein beliebiges Verzeichnis auf der Festplatte mit
 
 ```
 git clone https://github.com/mumprod/hr-design-system-handlebars.git
@@ -104,20 +95,20 @@ klonen. Im Anschluss daran in das Installationsverzeichnis wechseln und alle not
 npm Pakete mit dem Befehl
 
 ```
-yarn
+npm install
 ```
 
 installieren.
 Mit dem Befehl
 
 ```
-yarn storybook
+npm run storybook
 ```
 
 kann das Designsystem lokal gestartet werden. Damit dieses immer mit den aktuellsten Daten arbeitet, muss in einem weiteren Terminalfenster zudem das Skript `optimize-assets` mit dem Befehl
 
 ```
-yarn optimize-assets
+npm run optimize-assets
 ```
 
 gestartet werden. Dieses Skript erzeugt für die einzelnen Features JSON-Testdaten, optimiert im SVG-Format vorliegende Icons, erzeugt eine angepasste Version von Modernizr.js und stellt alle Handelbars-Templates als JS-Exporte zur Verfügung. Es läuft im Watch-Modus,
@@ -144,12 +135,12 @@ settings.json
             "workbench.action.terminal.focusPreviousPane",
             {
                 "command": "workbench.action.terminal.sendSequence",
-                "args": { "text": "yarn storybook\r" }
+                "args": { "text": "npm run storybook\r" }
             },
             "workbench.action.terminal.focusNextPane",
             {
                 "command": "workbench.action.terminal.sendSequence",
-                "args": { "text": "yarn optimize-assets\r" }
+                "args": { "text": "npm run optimize-assets\r" }
             }
         ]
     }
@@ -178,9 +169,9 @@ Makro hintereinander aus:
 2. Öffnen eines neuen Terminal Fensters
 3. Teilen des Terminal Fensters
 4. Setze den Fokus auf das linke Terminal Fenster
-5. Setze den Befehl `yarn storybook` ab und führe ihn aus
+5. Setze den Befehl `npm run storybook` ab und führe ihn aus
 6. Setze den Fokus auf das rechte Terminal Fenster
-7. Setze den Befehl `yarn optimize-assets` ab und führe ihn aus
+7. Setze den Befehl `npm run optimize-assets` ab und führe ihn aus
 
 Weitere Details und Grundlagen zum Gebrauch des Designsystems können direkt in dessen Dokumentation eingesehen werden.
 
