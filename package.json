@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "repository": "https://github.com/mumprod/hr-design-system-handlebars",
-  "version": "1.131.3",
+  "version": "1.135.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006 public",
@@ -31,16 +31,16 @@
     "test-storybook": "test-storybook"
   },
   "auto": {
-"plugins": [
-[
-"npm",
-{
-"setRcToken": false
-}
-],
-"released"
-]
-},
+    "plugins": [
+      [
+        "npm",
+        {
+          "setRcToken": false
+        }
+      ],
+      "released"
+    ]
+  },
   "browserslist": [
     "last 2 versions",
     "not dead",
