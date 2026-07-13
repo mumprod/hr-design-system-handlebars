@@ -1,39 +1,36 @@
 ## name of our action
 name: Release
 
-# the event that will trigger the action
 on:
-    push:
-        branches: [main]
-permissions:
-  id-token: write  # Required for OIDC
-  contents: read
+  push:
+    branches: [main]
 
-# what the action will do
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
-    release:
-        # the operating system it will run on
-        runs-on: ubuntu-latest
-        # this check needs to be in place to prevent a publish loop with auto and github actions
-        if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
-        # the list of steps that the action will go through
-        steps:
-            - uses: actions/checkout@v6
-            - name: Prepare repository
-              run: git fetch --unshallow --tags
-            # - name: Unset header
-              # checkout@v2 adds a header that makes branch protection report errors ):
-              # run: git config --local --unset http.https://github.com/.extraheader
-            - name: Use Node.js 24.x
-              uses: actions/setup-node@v6
-              with:
-                  node-version: 24.x
-                  registry-url: https://registry.npmjs.org
-                  package-manager-cache: false
-            - uses: bahmutov/npm-install@v1.12.0
-            - name: Create Release
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-              run: |
-                  npm run build
-                  npm run release
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
+      - name: Use Node.js 24.x
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - uses: bahmutov/npm-install@v1.12.0
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          npm run build
+          npm run release
