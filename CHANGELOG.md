@@ -1,3 +1,30 @@
+# v1.132.0 (Mon Jul 13 2026)
+
+#### 🚀 Enhancement
+
+- :wrench: Sets write permission to contents to make sure that auto can… [#1367](https://github.com/mumprod/hr-design-system-handlebars/pull/1367) ([@szuelch](https://github.com/szuelch))
+- :wrench: remove version-file from auto plugin config [#1366](https://github.com/mumprod/hr-design-system-handlebars/pull/1366) ([@szuelch](https://github.com/szuelch))
+- :wrench: Change repository-url in package.json and configure auto plu… [#1365](https://github.com/mumprod/hr-design-system-handlebars/pull/1365) ([@szuelch](https://github.com/szuelch))
+- :wrench: Add missing oidc permissions [#1364](https://github.com/mumprod/hr-design-system-handlebars/pull/1364) ([@szuelch](https://github.com/szuelch))
+- :wrench: Hopefully use npm trusted publishing. Switch from yarn to npm [#1363](https://github.com/mumprod/hr-design-system-handlebars/pull/1363) ([@szuelch](https://github.com/szuelch))
+
+#### 🐛 Bug Fix
+
+- changing from at-internet to piano [#1362](https://github.com/mumprod/hr-design-system-handlebars/pull/1362) ([@selbaciri](https://github.com/selbaciri))
+- Changing AT Internet to Piano [#1361](https://github.com/mumprod/hr-design-system-handlebars/pull/1361) ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### ⚠️ Pushed to `main`
+
+- Changing AT Internet to PIano ([@Paul-Atreidis](https://github.com/Paul-Atreidis))
+
+#### Authors: 3
+
+- [@Paul-Atreidis](https://github.com/Paul-Atreidis)
+- [@szuelch](https://github.com/szuelch)
+- Saad El Baciri ([@selbaciri](https://github.com/selbaciri))
+
+---
+
 # v1.131.3 (Tue May 19 2026)
 
 #### 🐛 Bug Fix
