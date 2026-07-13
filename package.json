@@ -5,7 +5,7 @@
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "https://github.com/szuelch/hr-design-system-handlebars",
+  "repository": "https://github.com/mumprod/hr-design-system-handlebars",
   "version": "1.131.3",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +30,18 @@
     "prepare": "npm run build",
     "test-storybook": "test-storybook"
   },
+  "auto": {
+"plugins": [
+[
+"npm",
+{
+"setRcToken": false
+}
+],
+"released",
+"version-file"
+]
+},
   "browserslist": [
     "last 2 versions",
     "not dead",
