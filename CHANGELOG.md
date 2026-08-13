@@ -1,3 +1,20 @@
+# v1.135.1 (Thu Aug 13 2026)
+
+#### 🐛 Bug Fix
+
+- Refactor image loading attributes in responsive_image.hbs for improve… [#1369](https://github.com/mumprod/hr-design-system-handlebars/pull/1369) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### 📝 Documentation
+
+- :memo:  Update node version and package manager references in readme [#1368](https://github.com/mumprod/hr-design-system-handlebars/pull/1368) ([@szuelch](https://github.com/szuelch))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- [@szuelch](https://github.com/szuelch)
+
+---
+
 # v1.132.0 (Mon Jul 13 2026)
 
 #### 🚀 Enhancement
