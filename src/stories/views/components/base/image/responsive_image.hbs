@@ -20,7 +20,7 @@
                            {{#with this.srcset}} srcset="{{this}}"{{/with}}>
                 {{/each}}
             {{/with}}
-                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}"{{#unless ../../_noDelay}} loading="lazy"{{/unless~}}{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="{{../this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}} {{~#if ../../_loadHandler}} x-on:load="{{../../_loadHandler}}" {{~/if}}>
+                <img {{#if ../_isWebview}}data-primary-type="hr-nt:image" data-image-id="{{nextRandom}}"{{/if}} class="w-full{{~#if ../_addClassImg}} {{../_addClassImg}}{{/if}}"{{#unless ../_noDelay}} loading="lazy"{{/unless~}}{{#if ../_noDelay}} fetchpriority="high"{{/if}} src="{{this.fallback}}" alt="{{#if ../_alttext}}{{../_alttext}}{{else}}{{../this.alttext}}{{/if}}" {{~#if ../_title}} title="{{../_title}}"{{~/if}} {{~#if ../_errorHandler }} onerror="this.onerror=null; {{../_errorHandler}}"{{/if}} {{~#if ../../_loadHandler}} x-on:load="{{../../_loadHandler}}" {{~/if}}>
         </picture>
     {{/if}}
 
