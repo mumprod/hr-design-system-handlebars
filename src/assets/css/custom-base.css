@@ -4,7 +4,7 @@
     }
     @font-face {
         font-family: 'DIN';
-        font-display: auto;
+        font-display: swap;
         src: url('fonts/DINWebPro.woff') format('woff');
         font-weight: 400;
         font-style: normal;
@@ -12,7 +12,7 @@
     }
     @font-face {
         font-family: 'DIN';
-        font-display: auto;
+        font-display: swap;
         src: url('fonts/DINWebPro-Bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
@@ -20,7 +20,7 @@
     }
     @font-face {
         font-family: 'RobotoSlab';
-        font-display: auto;
+        font-display: swap;
         src:    url('fonts/RobotoSlabbed.woff2') format('woff2'),
                 url('fonts/RobotoSlabbed.woff') format('woff');
         font-weight: 400;
@@ -29,7 +29,7 @@
     }
     @font-face {
         font-family: 'RobotoCond';
-        font-display: auto;
+        font-display: swap;
         src:    url('fonts/RobotoCondensed.woff2') format('woff2'),
                 url('fonts/RobotoCondensed.woff') format('woff');
         font-weight: 400;
@@ -38,11 +38,137 @@
     }
     @font-face {
         font-family: 'RobotoCond';
-        font-display: auto;
+        font-display: swap;
         src:    url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
                 url('fonts/RobotoCondensed-Bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
         font-stretch: condensed;
+    }
+    
+    /*
+    * FALLBACK-FONTS
+    * Diese Fonts werden nur verwendet, wenn die Webfonts nicht geladen werden können.
+    */
+    @font-face {
+        font-family: "DIN Fallback";
+
+        /*
+        * "Arial" ist meist der Familien-/Full-Name,
+        * "ArialMT" ist ein verbreiteter PostScript-Name.
+        */
+        src:
+            local("Arial"),
+            local("ArialMT");
+
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+
+        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
+    }
+
+    /* DIN Bold, 700 */
+    @font-face {
+        font-family: "DIN Fallback";
+
+        src:
+            local("Arial Bold"),
+            local("Arial-BoldMT");
+
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+
+        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
+    }
+
+    @font-face {
+        font-family: "RobotoSlab Fallback";
+
+        src:
+            local("Georgia"),
+            local("Georgia Regular"),
+            local("Georgia-Regular");
+
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+
+        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
+    }
+
+
+    @font-face {
+        font-family: "RobotoSlab Fallback";
+
+        src:
+            local("Georgia Bold"),
+            local("Georgia-Bold");
+
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+
+        /*
+        * Diese Werte müssen später gegen die tatsächlich verwendete
+        * RobotoSlab-700-Darstellung berechnet werden:
+        * entweder gegen einen echten 700er-Font oder gegen den
+        * synthetisch gefetteten 400er-Font.
+        */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
+    }
+
+
+    @font-face {
+        font-family: "RobotoCond Fallback";
+
+        src:
+            local("Arial Narrow"),
+            local("ArialNarrow");
+
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: condensed;
+
+        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
+    }
+
+    /* RobotoCond Bold, 700 */
+    @font-face {
+        font-family: "RobotoCond Fallback";
+
+        src:
+            local("Arial Narrow Bold"),
+            local("ArialNarrow-Bold");
+
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: condensed;
+
+        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
+        size-adjust: 100%;
+        ascent-override: normal;
+        descent-override: normal;
+        line-gap-override: normal;
     }
 }
