@@ -1,3 +1,15 @@
+# v1.135.2 (Fri Aug 14 2026)
+
+#### 🐛 Bug Fix
+
+- Fix image tag src attribute in responsive_image.hbs for correct fallb… [#1370](https://github.com/mumprod/hr-design-system-handlebars/pull/1370) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 1
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+
+---
+
 # v1.135.1 (Thu Aug 13 2026)
 
 #### 🐛 Bug Fix
