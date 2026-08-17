@@ -65,9 +65,8 @@
         font-weight: 400;
         font-stretch: normal;
 
-        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
-        size-adjust: 100%;
-        ascent-override: normal;
+        size-adjust: 98%;
+        ascent-override: 78%;
         descent-override: normal;
         line-gap-override: normal;
     }
@@ -77,16 +76,15 @@
         font-family: "DIN Fallback";
 
         src:
-            local("Arial Bold"),
-            local("Arial-BoldMT");
+            local("Arial"),
+            local("ArialMT");
 
         font-style: normal;
         font-weight: 700;
         font-stretch: normal;
 
-        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
-        size-adjust: 100%;
-        ascent-override: normal;
+        size-adjust: 98%;
+        ascent-override: 78%;
         descent-override: normal;
         line-gap-override: normal;
     }
@@ -103,9 +101,8 @@
         font-weight: 400;
         font-stretch: normal;
 
-        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
-        size-adjust: 100%;
-        ascent-override: normal;
+        size-adjust: 106%;
+        ascent-override: 101%;
         descent-override: normal;
         line-gap-override: normal;
     }
@@ -115,21 +112,16 @@
         font-family: "RobotoSlab Fallback";
 
         src:
-            local("Georgia Bold"),
-            local("Georgia-Bold");
+            local("Georgia"),
+            local("Georgia Regular"),
+            local("Georgia-Regular");
 
         font-style: normal;
         font-weight: 700;
         font-stretch: normal;
 
-        /*
-        * Diese Werte müssen später gegen die tatsächlich verwendete
-        * RobotoSlab-700-Darstellung berechnet werden:
-        * entweder gegen einen echten 700er-Font oder gegen den
-        * synthetisch gefetteten 400er-Font.
-        */
-        size-adjust: 100%;
-        ascent-override: normal;
+        size-adjust: 106%;
+        ascent-override: 101%;
         descent-override: normal;
         line-gap-override: normal;
     }
@@ -146,7 +138,6 @@
         font-weight: 400;
         font-stretch: condensed;
 
-        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
         size-adjust: 100%;
         ascent-override: normal;
         descent-override: normal;
@@ -158,16 +149,15 @@
         font-family: "RobotoCond Fallback";
 
         src:
-            local("Arial Narrow Bold"),
-            local("ArialNarrow-Bold");
+            local("Arial Narrow"),
+            local("ArialNarrow");
 
         font-style: normal;
         font-weight: 700;
         font-stretch: condensed;
 
-        /* PLATZHALTER – vor dem Produktiveinsatz berechnen */
-        size-adjust: 100%;
-        ascent-override: normal;
+        size-adjust: 107%;
+        ascent-override: 88%;
         descent-override: normal;
         line-gap-override: normal;
     }
