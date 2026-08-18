@@ -209,9 +209,10 @@ module.exports = {
                 85: '.85',
             },
             fontFamily: {
-                sans: ['DIN', ...defaultTheme.fontFamily.sans],
+                sans: ['DIN','"DIN Fallback"', ...defaultTheme.fontFamily.sans],
                 copy: [
                     'DIN',
+                    '"DIN Fallback"', 
                     'ui-sans-serif',
                     'system-ui',
                     '-apple-system',
@@ -222,9 +223,10 @@ module.exports = {
                     '"Noto Sans"',
                     'sans-serif',
                 ],
-                serif: ['RobotoSlab', ...defaultTheme.fontFamily.serif],
+                serif: ['RobotoSlab','"RobotoSlab Fallback"',  ...defaultTheme.fontFamily.serif],
                 headingSerif: [
                     'RobotoSlab',
+                    '"RobotoSlab Fallback"',
                     'ui-serif',
                     'Georgia',
                     'Cambria',
@@ -234,6 +236,7 @@ module.exports = {
                 ],
                 heading: [
                     'RobotoCond',
+                    '"RobotoCond Fallback"',
                     'ui-sans-serif',
                     'system-ui',
                     '-apple-system',
