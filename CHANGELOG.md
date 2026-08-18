@@ -1,3 +1,16 @@
+# v1.135.3 (Tue Aug 18 2026)
+
+#### 🐛 Bug Fix
+
+- Seo lcp improvements [#1371](https://github.com/mumprod/hr-design-system-handlebars/pull/1371) ([@eduardo-hr](https://github.com/eduardo-hr) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.135.2 (Fri Aug 14 2026)
 
 #### 🐛 Bug Fix
