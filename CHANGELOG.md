@@ -1,3 +1,15 @@
+# v1.135.5 (Fri Aug 21 2026)
+
+#### 🐛 Bug Fix
+
+- Update gallery item templates to conditionally set _noDelay based on … [#1373](https://github.com/mumprod/hr-design-system-handlebars/pull/1373) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 1
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+
+---
+
 # v1.135.4 (Fri Aug 21 2026)
 
 #### 🐛 Bug Fix
