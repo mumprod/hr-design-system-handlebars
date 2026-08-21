@@ -29,7 +29,7 @@
             {{> components/base/image/icon _icon="loading" _addClass="animate-spin animate-infinite h-8 w-8 md:w-11 md:h-11 fill-link dark:fill-link-dark" }}
         </div>
         {{#each this.items}}
-            {{~> components/content/copytext/components/gallery/galleryitem_figure _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption ~}}
+            {{~> components/content/copytext/components/gallery/galleryitem_figure _mediaBacklinkToStoryTeaser=../../this.toModel.mediaBacklinkToStoryTeaser-adjust_context _cssClassCaption=../../_cssClassCaption _isInCopytext=true ~}}
         {{/each}}
     </div>
 </div>
