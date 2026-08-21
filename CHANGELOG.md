@@ -1,3 +1,15 @@
+# v1.135.4 (Fri Aug 21 2026)
+
+#### 🐛 Bug Fix
+
+- Set _noDelay to false for author profile image rendering [#1372](https://github.com/mumprod/hr-design-system-handlebars/pull/1372) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 1
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+
+---
+
 # v1.135.3 (Tue Aug 18 2026)
 
 #### 🐛 Bug Fix
