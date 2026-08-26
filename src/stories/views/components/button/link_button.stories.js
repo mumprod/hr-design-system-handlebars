@@ -178,6 +178,17 @@ export default {
                 },
             },
         },
+        '_icon': {
+            description: 'Der Name des Icons in der Iconmap',
+            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right', 'google-big-ds'],
+            control: {
+                type: 'select',
+            },
+
+            table: {
+                category: 'Icon',
+            },
+        },
     },
 
     parameters: {
