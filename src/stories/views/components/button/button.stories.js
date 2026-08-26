@@ -237,7 +237,7 @@ export default {
 
         '_icon': {
             description: 'Der Name des Icons in der Iconmap',
-            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right'],
+            options: ['ortsmarke', 'taglabel', 'settings', 'arrow-left', 'arrow-right', 'google-big-ds'],
             control: {
                 type: 'select',
             },
@@ -437,13 +437,9 @@ export const ButtonIconRechts = {
     name: 'Button - Icon rechts',
 
     argTypes: {
-        _size: {
-            control: false,
-        },
+        
 
-        _variant: {
-            control: false,
-        },
+       
     },
 
     args: snapshotsJson['button-icon-right'].args,
@@ -454,13 +450,9 @@ export const ButtonIconLinks = {
     name: 'Button - Icon links',
 
     argTypes: {
-        _size: {
-            control: false,
-        },
+        
 
-        _variant: {
-            control: false,
-        },
+       
     },
 
     args: snapshotsJson['button-icon-left'].args,
