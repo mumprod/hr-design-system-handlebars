@@ -9,7 +9,8 @@
 
         {{> components/page/components/metadatabox _showDate=this.hasDwellTime _webview=_webview-adjust_context}}
         
-        
+        {{> components/page/components/follow_on_google_button }}
+
         {{#unless this.displayPageLead.isFalse}}
             {{#with this.teaseritemDS }}
                 {{#if this.isImage}}

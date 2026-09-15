@@ -34,6 +34,19 @@ export const Webview = {
         layout: 'fullscreen',
     }
 }
+export const GoogleButton = {
+    render: Template.bind({}),
+    name: 'Artikel mit Google-Button',
+    args: {
+        ...data_story,
+        hasGoogleSourcePreferences: true,
+        googleSourcePreferencesFaqUrl: "https://www.hessenschau.de/service/hessenschaude-bei-google-als-bevorzugte-quelle-einrichten-so-gehts-v4,bevorzugte-quelle-google-100.html",
+        googleSourcePreferencesUrl:"https://www.google.com/preferences/source?q=hessenschau.de"
+    },
+    parameters: {
+        layout: 'fullscreen',
+    }
+}
 export const WithSquareImage = {
     render: Template.bind({}),
     name: 'Artikel mit 1:1-Bild',
