@@ -1,5 +1,8 @@
 {{~#if _url~}}
-    <a class="{{#if _css}}{{_css}}{{/if}} {{#> css}}{{/css}}" href="{{_url}}">
+    <a class="{{#if _css}}{{_css}}{{/if}} {{#> css}}{{/css}}" href="{{_url}}"
+        {{#if _targetBlank}} target="_blank"  rel="noopener"{{/if}}
+        {{#if _trackingLabel}} data-hr-click-tracking='{"settings": [{"type":"uxAction", "clickLabel": "{{_trackingLabel}}"}]}'{{/if}}
+        >
         {{~> @partial-block ~}}
     </a>
     {{~else~}}
