@@ -4,9 +4,9 @@
     <span class="text-xs sm480:text-sm font-headingSerif text-gray-scorpion dark:text-text-dark">
         hessenschau in Google-Ergebnissen bevorzugen ({{#> components/base/link _css="ds-link hover:underline hover:!decoration-1 text-link dark:text-link-dark" _url=this.googleSourcePreferencesFaqUrl }}mehr erfahren{{/components/base/link}})
     </span>
-        {{#> components/button/link_button _trackingLabel="followOnGoogleButton geklickt" _size="lg" _variant="secondary" _css="shrink-0" _targetBlank=true _url=this.googleSourcePreferencesUrl}}
-            {{> components/button/components/button_icon _icon="google-color-ds" _iconmap="icons" _css="w-6 h-6"}}
-            {{> components/button/components/button_label _label="Bevorzugen"}}
+        {{#> components/button/link_button _trackingLabel="followOnGoogleButton geklickt" _size="sm" _variant="secondary" _css="js-load shrink-0 md:px-4 md:py-2.5" _targetBlank=true _url=this.googleSourcePreferencesUrl}}
+            {{> components/button/components/button_icon _icon="google-color-ds" _iconmap="icons" _css="md:w-6 md:h-6"}}
+            {{> components/button/components/button_label _css="" _label="Bevorzugen"}}
         {{/components/button/link_button}}
     </div>
 {{/if}}
