@@ -1,3 +1,15 @@
+# v1.135.7 (Tue Sep 15 2026)
+
+#### 🐛 Bug Fix
+
+- feat: Enhance link component with tracking and target options [#1375](https://github.com/mumprod/hr-design-system-handlebars/pull/1375) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 1
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+
+---
+
 # v1.135.6 (Wed Aug 26 2026)
 
 #### 🐛 Bug Fix
