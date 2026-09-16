@@ -1,3 +1,15 @@
+# v1.135.9 (Wed Sep 16 2026)
+
+#### 🐛 Bug Fix
+
+- fix: Update padding styles for link_button in follow_on_google_button… [#1377](https://github.com/mumprod/hr-design-system-handlebars/pull/1377) ([@eduardo-hr](https://github.com/eduardo-hr))
+
+#### Authors: 1
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+
+---
+
 # v1.135.8 (Tue Sep 15 2026)
 
 #### 🐛 Bug Fix
