@@ -1,3 +1,16 @@
+# v1.135.10 (Wed Sep 23 2026)
+
+#### 🐛 Bug Fix
+
+- feat: Add rel="nofollow" attribute to link component and update usage… [#1378](https://github.com/mumprod/hr-design-system-handlebars/pull/1378) ([@eduardo-hr](https://github.com/eduardo-hr) [@vascoeduardo](https://github.com/vascoeduardo))
+
+#### Authors: 2
+
+- [@eduardo-hr](https://github.com/eduardo-hr)
+- Vasco ([@vascoeduardo](https://github.com/vascoeduardo))
+
+---
+
 # v1.135.9 (Wed Sep 16 2026)
 
 #### 🐛 Bug Fix
