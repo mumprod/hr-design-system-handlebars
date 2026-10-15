@@ -3,7 +3,7 @@
 ## Installation
 
 Das Designsystem ist mit Node.js LTS Version 24.14.1 gebaut. Vor der Installation daher bitte Node.js und NPM
-auf die folgenden Versionen aktualisieren.
+auf die folgenden Versionen aktualisieren. 
 
 | Werkzeug | Version |
 | -------- | ------- |
