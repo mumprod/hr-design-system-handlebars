@@ -11,7 +11,7 @@ auf die folgenden Versionen aktualisieren.
 | NPM      | 11.11.0  |
 
 ---
- 
+
 **Hinweis**
 
 Node.js installiert man am besten mit dem Node Version Manager NVM. Dies ist zwar eigentlich ein Linux Projekt, kann aber als nvm-windows auch unter Windows genutzt werden. Die Installationsdateien können unter https://github.com/coreybutler/nvm-windows/releases heruntergeladen werden. NVM gestattet es je nach Bedarf schnell über die Konsole zwischen mehreren Versionen von node.js zu wechseln. Seit der Version 1.18 von NVM müssen zur korrekten Nutzung die Hinweise unter https://github.com/coreybutler/nvm-windows/wiki/Common-Issues#permissions-exit-1-exit-5-access-denied-exit-145 beachtet werden.
